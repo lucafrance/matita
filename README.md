@@ -1,7 +1,25 @@
-# pyvba-parser
+# python-vba
 
 Parser of the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview).
 Creates a json of the structure of the [Office VBA Object library](https://learn.microsoft.com/en-us/office/vba/api/overview/library-reference/reference-object-library-reference-for-office) as described in the Office VBA Reference.
+
+## Installation
+
+Install the package with:
+
+```bash
+pip install .
+```
+
+## Usage
+
+The `python_vba` package contains the parser and related modules. To run the parser, use the included script:
+
+```bash
+python scripts/__main__.py
+```
+
+The output will be generated in `data/office-vba-api.json`.
 
 ## Attribution
 
