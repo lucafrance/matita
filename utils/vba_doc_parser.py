@@ -79,20 +79,6 @@ class VbaDocs:
         keys_and_values = zip(self.pages.keys(), dictionaries)
         return {key: value for key, value in keys_and_values}
 
-    def to_python(self):
-        code = ["import pyvba.genmodules.Excel", ""]
-        for page_key, page in self.pages.items():
-            try:
-                page_code = None
-                if page.is_object:
-                    page_code = page.to_python()
-            except Exception as e:
-                logging.warning("Can't export '{}' to python code. {}".format(page_key, traceback.format_exc()))
-            else:
-                if page_code is not None:
-                    code.append(page_code)
-        return "\n".join(code)
-    
     def apply_manual_adjustments(self):
         # Add parameters for Cell properties, whose parameters are not properly imported
         for p in self.pages.values():
