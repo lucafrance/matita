@@ -10,8 +10,6 @@ logging.basicConfig(
 )
 
 docs = VbaDocs()
-docs.read_directory("VBA-Docs/api")
+docs.read_directory("office-vba-reference/api")
 docs.process_pages()
-json.dump(docs.to_dict(), open("docs.json", "wt"), indent=4)
-with open("pyvba/Excel.py", "wt") as f:
-    f.write(docs.to_python())
+json.dump(docs.to_dict(), open("office-vba-api.json", "wt"), indent=4)
