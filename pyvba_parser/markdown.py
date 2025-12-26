@@ -1,4 +1,3 @@
-
 class MarkdownTree:
 
     def __init__(self, raw_txt):

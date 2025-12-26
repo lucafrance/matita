@@ -1,7 +1,11 @@
 import json
 import logging
+import os
+import sys
 
-from utils.vba_doc_parser import VbaDocs
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from pyvba_parser.parser import VbaDocs
 
 logging.basicConfig(
     level = logging.INFO,
