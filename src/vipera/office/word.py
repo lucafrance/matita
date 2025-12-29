@@ -310,8 +310,8 @@ class Application:
     def FileConverters(self):
         return self.application.FileConverters
 
-    def FileDialog(self, *args,  `_FileDialogType_` =None):
-        arguments = {" `_FileDialogType_` ":  `_FileDialogType_` }
+    def FileDialog(self, *args, FileDialogType=None):
+        arguments = {"FileDialogType": FileDialogType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.FileDialog(*args, **arguments)
 
@@ -323,8 +323,8 @@ class Application:
     def FileValidation(self, value):
         self.application.FileValidation = value
 
-    def FindKey(self, *args,  `_KeyCode_` =None, `_ KeyCode2_` =None):
-        arguments = {" `_KeyCode_` ":  `_KeyCode_` , "`_ KeyCode2_` ": `_ KeyCode2_` }
+    def FindKey(self, *args, KeyCode=None, KeyCode2=None):
+        arguments = {"KeyCode": KeyCode, "KeyCode2": KeyCode2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return KeyBinding(self.application.FindKey(*args, **arguments))
 
@@ -353,8 +353,8 @@ class Application:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.International(*args, **arguments)
 
-    def IsObjectValid(self, *args,  `_Object_` =None):
-        arguments = {" `_Object_` ":  `_Object_` }
+    def IsObjectValid(self, *args, Object=None):
+        arguments = {"Object": Object}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.IsObjectValid(*args, **arguments)
 
@@ -366,8 +366,8 @@ class Application:
     def KeyBindings(self):
         return self.application.KeyBindings
 
-    def KeysBoundTo(self, *args,  `_KeyCategory_` =None, `_Command_` =None, `_CommandParameter_` =None):
-        arguments = {" `_KeyCategory_` ":  `_KeyCategory_` , "`_Command_` ": `_Command_` , "`_CommandParameter_` ": `_CommandParameter_` }
+    def KeysBoundTo(self, *args, KeyCategory=None, Command=None, CommandParameter=None):
+        arguments = {"KeyCategory": KeyCategory, "Command": Command, "CommandParameter": CommandParameter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.KeysBoundTo(*args, **arguments)
 
@@ -555,8 +555,8 @@ class Application:
     def StatusBar(self):
         return self.application.StatusBar
 
-    def SynonymInfo(self, *args,  `_Word_` =None, `_LanguageID_` =None):
-        arguments = {" `_Word_` ":  `_Word_` , "`_LanguageID_` ": `_LanguageID_` }
+    def SynonymInfo(self, *args, Word=None, LanguageID=None):
+        arguments = {"Word": Word, "LanguageID": LanguageID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return SynonymInfo(self.application.SynonymInfo(*args, **arguments))
 
@@ -667,8 +667,8 @@ class Application:
     def Activate(self):
         self.application.Activate()
 
-    def AddAddress(self, *args, **_TagID_**=None, **_Value_**=None):
-        arguments = {"**_TagID_**": **_TagID_**, "**_Value_**": **_Value_**}
+    def AddAddress(self, *args, TagID=None, Value=None):
+        arguments = {"TagID": TagID, "Value": Value}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.AddAddress(*args, **arguments)
 
@@ -683,18 +683,18 @@ class Application:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.BuildKeyCode(*args, **arguments)
 
-    def CentimetersToPoints(self, *args,  `_Centimeters_` =None):
-        arguments = {" `_Centimeters_` ":  `_Centimeters_` }
+    def CentimetersToPoints(self, *args, Centimeters=None):
+        arguments = {"Centimeters": Centimeters}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.CentimetersToPoints(*args, **arguments)
 
-    def ChangeFileOpenDirectory(self, *args,  `_Path_` =None):
-        arguments = {" `_Path_` ":  `_Path_` }
+    def ChangeFileOpenDirectory(self, *args, Path=None):
+        arguments = {"Path": Path}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.ChangeFileOpenDirectory(*args, **arguments)
 
-    def CheckGrammar(self, *args,  `_String_` =None):
-        arguments = {" `_String_` ":  `_String_` }
+    def CheckGrammar(self, *args, String=None):
+        arguments = {"String": String}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.CheckGrammar(*args, **arguments)
 
@@ -703,33 +703,33 @@ class Application:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.CheckSpelling(*args, **arguments)
 
-    def CleanString(self, *args,  `_String_` =None):
-        arguments = {" `_String_` ":  `_String_` }
+    def CleanString(self, *args, String=None):
+        arguments = {"String": String}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.CleanString(*args, **arguments)
 
-    def CompareDocuments(self, *args,  `_OriginalDocument_` =None, `_RevisedDocument_` =None, `_Destination_` =None, `_Granularity_` =None, `_CompareFormatting_` =None, `_CompareCaseChanges_` =None, `_CompareWhitespace_` =None, `_CompareTables_` =None, `_CompareHeaders_` =None, `_CompareFootnotes_` =None, `_CompareTextboxes_` =None, `_CompareFields_` =None, `_CompareComments_` =None, `_CompareMoves_` =None, `_RevisedAuthor_` =None, `_IgnoreAllComparisonWarnings_` =None):
-        arguments = {" `_OriginalDocument_` ":  `_OriginalDocument_` , "`_RevisedDocument_` ": `_RevisedDocument_` , "`_Destination_` ": `_Destination_` , "`_Granularity_` ": `_Granularity_` , "`_CompareFormatting_` ": `_CompareFormatting_` , "`_CompareCaseChanges_` ": `_CompareCaseChanges_` , "`_CompareWhitespace_` ": `_CompareWhitespace_` , "`_CompareTables_` ": `_CompareTables_` , "`_CompareHeaders_` ": `_CompareHeaders_` , "`_CompareFootnotes_` ": `_CompareFootnotes_` , "`_CompareTextboxes_` ": `_CompareTextboxes_` , "`_CompareFields_` ": `_CompareFields_` , "`_CompareComments_` ": `_CompareComments_` , "`_CompareMoves_` ": `_CompareMoves_` , "`_RevisedAuthor_` ": `_RevisedAuthor_` , "`_IgnoreAllComparisonWarnings_` ": `_IgnoreAllComparisonWarnings_` }
+    def CompareDocuments(self, *args, OriginalDocument=None, RevisedDocument=None, Destination=None, Granularity=None, CompareFormatting=None, CompareCaseChanges=None, CompareWhitespace=None, CompareTables=None, CompareHeaders=None, CompareFootnotes=None, CompareTextboxes=None, CompareFields=None, CompareComments=None, CompareMoves=None, RevisedAuthor=None, IgnoreAllComparisonWarnings=None):
+        arguments = {"OriginalDocument": OriginalDocument, "RevisedDocument": RevisedDocument, "Destination": Destination, "Granularity": Granularity, "CompareFormatting": CompareFormatting, "CompareCaseChanges": CompareCaseChanges, "CompareWhitespace": CompareWhitespace, "CompareTables": CompareTables, "CompareHeaders": CompareHeaders, "CompareFootnotes": CompareFootnotes, "CompareTextboxes": CompareTextboxes, "CompareFields": CompareFields, "CompareComments": CompareComments, "CompareMoves": CompareMoves, "RevisedAuthor": RevisedAuthor, "IgnoreAllComparisonWarnings": IgnoreAllComparisonWarnings}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.CompareDocuments(*args, **arguments)
 
-    def DDEInitiate(self, *args,  `_App_` =None, `_Topic_` =None):
-        arguments = {" `_App_` ":  `_App_` , "`_Topic_` ": `_Topic_` }
+    def DDEInitiate(self, *args, App=None, Topic=None):
+        arguments = {"App": App, "Topic": Topic}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.DDEInitiate(*args, **arguments)
 
-    def DDEPoke(self, *args,  `_Channel_` =None, `_Item_` =None, `_Data_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` , "`_Item_` ": `_Item_` , "`_Data_` ": `_Data_` }
+    def DDEPoke(self, *args, Channel=None, Item=None, Data=None):
+        arguments = {"Channel": Channel, "Item": Item, "Data": Data}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.DDEPoke(*args, **arguments)
 
-    def DDERequest(self, *args,  `_Channel_` =None, `_Item_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` , "`_Item_` ": `_Item_` }
+    def DDERequest(self, *args, Channel=None, Item=None):
+        arguments = {"Channel": Channel, "Item": Item}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.DDERequest(*args, **arguments)
 
-    def DDETerminate(self, *args,  `_Channel_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` }
+    def DDETerminate(self, *args, Channel=None):
+        arguments = {"Channel": Channel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.DDETerminate(*args, **arguments)
 
@@ -739,18 +739,18 @@ class Application:
     def DefaultWebOptions(self):
         return self.application.DefaultWebOptions()
 
-    def GetAddress(self, *args, **_Name_**=None, **_AddressProperties_**=None, **_UseAutoText_**=None, **_DisplaySelectDialog_**=None, **_SelectDialog_**=None, **_CheckNamesDialog_**=None, **_RecentAddressesChoice_**=None, **_UpdateRecentAddresses_**=None):
-        arguments = {"**_Name_**": **_Name_**, "**_AddressProperties_**": **_AddressProperties_**, "**_UseAutoText_**": **_UseAutoText_**, "**_DisplaySelectDialog_**": **_DisplaySelectDialog_**, "**_SelectDialog_**": **_SelectDialog_**, "**_CheckNamesDialog_**": **_CheckNamesDialog_**, "**_RecentAddressesChoice_**": **_RecentAddressesChoice_**, "**_UpdateRecentAddresses_**": **_UpdateRecentAddresses_**}
+    def GetAddress(self, *args, Name=None, AddressProperties=None, UseAutoText=None, DisplaySelectDialog=None, SelectDialog=None, CheckNamesDialog=None, RecentAddressesChoice=None, UpdateRecentAddresses=None):
+        arguments = {"Name": Name, "AddressProperties": AddressProperties, "UseAutoText": UseAutoText, "DisplaySelectDialog": DisplaySelectDialog, "SelectDialog": SelectDialog, "CheckNamesDialog": CheckNamesDialog, "RecentAddressesChoice": RecentAddressesChoice, "UpdateRecentAddresses": UpdateRecentAddresses}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.GetAddress(*args, **arguments)
 
-    def GetDefaultTheme(self, *args,  `_DocumentType_` =None):
-        arguments = {" `_DocumentType_` ":  `_DocumentType_` }
+    def GetDefaultTheme(self, *args, DocumentType=None):
+        arguments = {"DocumentType": DocumentType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.GetDefaultTheme(*args, **arguments)
 
-    def GetSpellingSuggestions(self, *args,  `_Word_` =None, `_CustomDictionary_` =None, `_IgnoreUppercase_` =None, `_MainDictionary_` =None, `_SuggestionMode_` =None, `_CustomDictionary2_` =None, `_CustomDictionary3_` =None, `_CustomDictionary4_` =None, `_CustomDictionary5_` =None, `_CustomDictionary6_` =None, `_CustomDictionary7_` =None, `_CustomDictionary8_` =None, `_CustomDictionary9_` =None, `_CustomDictionary10_` =None):
-        arguments = {" `_Word_` ":  `_Word_` , "`_CustomDictionary_` ": `_CustomDictionary_` , "`_IgnoreUppercase_` ": `_IgnoreUppercase_` , "`_MainDictionary_` ": `_MainDictionary_` , "`_SuggestionMode_` ": `_SuggestionMode_` , "`_CustomDictionary2_` ": `_CustomDictionary2_` , "`_CustomDictionary3_` ": `_CustomDictionary3_` , "`_CustomDictionary4_` ": `_CustomDictionary4_` , "`_CustomDictionary5_` ": `_CustomDictionary5_` , "`_CustomDictionary6_` ": `_CustomDictionary6_` , "`_CustomDictionary7_` ": `_CustomDictionary7_` , "`_CustomDictionary8_` ": `_CustomDictionary8_` , "`_CustomDictionary9_` ": `_CustomDictionary9_` , "`_CustomDictionary10_` ": `_CustomDictionary10_` }
+    def GetSpellingSuggestions(self, *args, Word=None, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, SuggestionMode=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
+        arguments = {"Word": Word, "CustomDictionary": CustomDictionary, "IgnoreUppercase": IgnoreUppercase, "MainDictionary": MainDictionary, "SuggestionMode": SuggestionMode, "CustomDictionary2": CustomDictionary2, "CustomDictionary3": CustomDictionary3, "CustomDictionary4": CustomDictionary4, "CustomDictionary5": CustomDictionary5, "CustomDictionary6": CustomDictionary6, "CustomDictionary7": CustomDictionary7, "CustomDictionary8": CustomDictionary8, "CustomDictionary9": CustomDictionary9, "CustomDictionary10": CustomDictionary10}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.GetSpellingSuggestions(*args, **arguments)
 
@@ -760,21 +760,21 @@ class Application:
     def GoForward(self):
         self.application.GoForward()
 
-    def Help(self, *args,  `_HelpType_` =None):
-        arguments = {" `_HelpType_` ":  `_HelpType_` }
+    def Help(self, *args, HelpType=None):
+        arguments = {"HelpType": HelpType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.Help(*args, **arguments)
 
     def HelpTool(self):
         self.application.HelpTool()
 
-    def InchesToPoints(self, *args,  `_Inches_` =None):
-        arguments = {" `_Inches_` ":  `_Inches_` }
+    def InchesToPoints(self, *args, Inches=None):
+        arguments = {"Inches": Inches}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.InchesToPoints(*args, **arguments)
 
-    def Keyboard(self, *args,  `_LangId_` =None):
-        arguments = {" `_LangId_` ":  `_LangId_` }
+    def Keyboard(self, *args, LangId=None):
+        arguments = {"LangId": LangId}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.Keyboard(*args, **arguments)
 
@@ -784,106 +784,106 @@ class Application:
     def KeyboardLatin(self):
         self.application.KeyboardLatin()
 
-    def KeyString(self, *args,  `_KeyCode_` =None, `_KeyCode2_` =None):
-        arguments = {" `_KeyCode_` ":  `_KeyCode_` , "`_KeyCode2_` ": `_KeyCode2_` }
+    def KeyString(self, *args, KeyCode=None, KeyCode2=None):
+        arguments = {"KeyCode": KeyCode, "KeyCode2": KeyCode2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.KeyString(*args, **arguments)
 
-    def LinesToPoints(self, *args,  `_Lines_` =None):
-        arguments = {" `_Lines_` ":  `_Lines_` }
+    def LinesToPoints(self, *args, Lines=None):
+        arguments = {"Lines": Lines}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.LinesToPoints(*args, **arguments)
 
-    def ListCommands(self, *args,  `_ListAllCommands_` =None):
-        arguments = {" `_ListAllCommands_` ":  `_ListAllCommands_` }
+    def ListCommands(self, *args, ListAllCommands=None):
+        arguments = {"ListAllCommands": ListAllCommands}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.ListCommands(*args, **arguments)
 
-    def LoadMasterList(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def LoadMasterList(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.LoadMasterList(*args, **arguments)
 
-    def LookupNameProperties(self, *args,  `_Name_` =None):
-        arguments = {" `_Name_` ":  `_Name_` }
+    def LookupNameProperties(self, *args, Name=None):
+        arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.LookupNameProperties(*args, **arguments)
 
-    def MergeDocuments(self, *args,  `_OriginalDocument_` =None, `_RevisedDocument_` =None, `_Destination_` =None, `_Granularity_` =None, `_CompareFormatting_` =None, `_CompareCaseChanges_` =None, `_CompareWhitespace_` =None, `_CompareTables_` =None, `_CompareHeaders_` =None, `_CompareFootnotes_` =None, `_CompareTextboxes_` =None, `_CompareFields_` =None, `_CompareComments_` =None, `_OriginalAuthor_` =None, `_RevisedAuthor_` =None, `_FormatFrom_` =None):
-        arguments = {" `_OriginalDocument_` ":  `_OriginalDocument_` , "`_RevisedDocument_` ": `_RevisedDocument_` , "`_Destination_` ": `_Destination_` , "`_Granularity_` ": `_Granularity_` , "`_CompareFormatting_` ": `_CompareFormatting_` , "`_CompareCaseChanges_` ": `_CompareCaseChanges_` , "`_CompareWhitespace_` ": `_CompareWhitespace_` , "`_CompareTables_` ": `_CompareTables_` , "`_CompareHeaders_` ": `_CompareHeaders_` , "`_CompareFootnotes_` ": `_CompareFootnotes_` , "`_CompareTextboxes_` ": `_CompareTextboxes_` , "`_CompareFields_` ": `_CompareFields_` , "`_CompareComments_` ": `_CompareComments_` , "`_OriginalAuthor_` ": `_OriginalAuthor_` , "`_RevisedAuthor_` ": `_RevisedAuthor_` , "`_FormatFrom_` ": `_FormatFrom_` }
+    def MergeDocuments(self, *args, OriginalDocument=None, RevisedDocument=None, Destination=None, Granularity=None, CompareFormatting=None, CompareCaseChanges=None, CompareWhitespace=None, CompareTables=None, CompareHeaders=None, CompareFootnotes=None, CompareTextboxes=None, CompareFields=None, CompareComments=None, OriginalAuthor=None, RevisedAuthor=None, FormatFrom=None):
+        arguments = {"OriginalDocument": OriginalDocument, "RevisedDocument": RevisedDocument, "Destination": Destination, "Granularity": Granularity, "CompareFormatting": CompareFormatting, "CompareCaseChanges": CompareCaseChanges, "CompareWhitespace": CompareWhitespace, "CompareTables": CompareTables, "CompareHeaders": CompareHeaders, "CompareFootnotes": CompareFootnotes, "CompareTextboxes": CompareTextboxes, "CompareFields": CompareFields, "CompareComments": CompareComments, "OriginalAuthor": OriginalAuthor, "RevisedAuthor": RevisedAuthor, "FormatFrom": FormatFrom}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.MergeDocuments(*args, **arguments)
 
-    def MillimetersToPoints(self, *args,  `_Millimeters_` =None):
-        arguments = {" `_Millimeters_` ":  `_Millimeters_` }
+    def MillimetersToPoints(self, *args, Millimeters=None):
+        arguments = {"Millimeters": Millimeters}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.MillimetersToPoints(*args, **arguments)
 
-    def Move(self, *args,  `_Left_` =None, `_Top_` =None):
-        arguments = {" `_Left_` ":  `_Left_` , "`_Top_` ": `_Top_` }
+    def Move(self, *args, Left=None, Top=None):
+        arguments = {"Left": Left, "Top": Top}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.Move(*args, **arguments)
 
     def NewWindow(self):
         return self.application.NewWindow()
 
-    def OnTime(self, *args,  `_When_` =None, `_Name_` =None, `_Tolerance_` =None):
-        arguments = {" `_When_` ":  `_When_` , "`_Name_` ": `_Name_` , "`_Tolerance_` ": `_Tolerance_` }
+    def OnTime(self, *args, When=None, Name=None, Tolerance=None):
+        arguments = {"When": When, "Name": Name, "Tolerance": Tolerance}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.OnTime(*args, **arguments)
 
-    def OrganizerCopy(self, *args,  `_Source_` =None, `_Destination_` =None, `_Name_` =None, `_Object_` =None):
-        arguments = {" `_Source_` ":  `_Source_` , "`_Destination_` ": `_Destination_` , "`_Name_` ": `_Name_` , "`_Object_` ": `_Object_` }
+    def OrganizerCopy(self, *args, Source=None, Destination=None, Name=None, Object=None):
+        arguments = {"Source": Source, "Destination": Destination, "Name": Name, "Object": Object}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.OrganizerCopy(*args, **arguments)
 
-    def OrganizerDelete(self, *args,  `_Source_` =None, `_Name_` =None, `_Object_` =None):
-        arguments = {" `_Source_` ":  `_Source_` , "`_Name_` ": `_Name_` , "`_Object_` ": `_Object_` }
+    def OrganizerDelete(self, *args, Source=None, Name=None, Object=None):
+        arguments = {"Source": Source, "Name": Name, "Object": Object}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.OrganizerDelete(*args, **arguments)
 
-    def OrganizerRename(self, *args,  `_Source_` =None, `_Name_` =None, `_NewName_` =None, `_Object_` =None):
-        arguments = {" `_Source_` ":  `_Source_` , "`_Name_` ": `_Name_` , "`_NewName_` ": `_NewName_` , "`_Object_` ": `_Object_` }
+    def OrganizerRename(self, *args, Source=None, Name=None, NewName=None, Object=None):
+        arguments = {"Source": Source, "Name": Name, "NewName": NewName, "Object": Object}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.OrganizerRename(*args, **arguments)
 
-    def PicasToPoints(self, *args,  `_Picas_` =None):
-        arguments = {" `_Picas_` ":  `_Picas_` }
+    def PicasToPoints(self, *args, Picas=None):
+        arguments = {"Picas": Picas}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PicasToPoints(*args, **arguments)
 
-    def PixelsToPoints(self, *args,  `_Pixels_` =None, `_fVertical_` =None):
-        arguments = {" `_Pixels_` ":  `_Pixels_` , "`_fVertical_` ": `_fVertical_` }
+    def PixelsToPoints(self, *args, Pixels=None, fVertical=None):
+        arguments = {"Pixels": Pixels, "fVertical": fVertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PixelsToPoints(*args, **arguments)
 
-    def PointsToCentimeters(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToCentimeters(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PointsToCentimeters(*args, **arguments)
 
-    def PointsToInches(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToInches(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PointsToInches(*args, **arguments)
 
-    def PointsToLines(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToLines(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PointsToLines(*args, **arguments)
 
-    def PointsToMillimeters(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToMillimeters(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PointsToMillimeters(*args, **arguments)
 
-    def PointsToPicas(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToPicas(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PointsToPicas(*args, **arguments)
 
-    def PointsToPixels(self, *args,  `_Points_` =None, `_fVertical_` =None):
-        arguments = {" `_Points_` ":  `_Points_` , "`_fVertical_` ": `_fVertical_` }
+    def PointsToPixels(self, *args, Points=None, fVertical=None):
+        arguments = {"Points": Points, "fVertical": fVertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.PointsToPixels(*args, **arguments)
 
@@ -924,8 +924,8 @@ class Application:
     def ScreenRefresh(self):
         self.application.ScreenRefresh()
 
-    def SetDefaultTheme(self, *args, **_Name_**=None, **_DocumentType_**=None):
-        arguments = {"**_Name_**": **_Name_**, "**_DocumentType_**": **_DocumentType_**}
+    def SetDefaultTheme(self, *args, Name=None, DocumentType=None):
+        arguments = {"Name": Name, "DocumentType": DocumentType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.SetDefaultTheme(*args, **arguments)
 
@@ -935,8 +935,8 @@ class Application:
     def ShowMe(self):
         self.application.ShowMe()
 
-    def SubstituteFont(self, *args,  `_UnavailableFont_` =None, `_SubstituteFont_` =None):
-        arguments = {" `_UnavailableFont_` ":  `_UnavailableFont_` , "`_SubstituteFont_` ": `_SubstituteFont_` }
+    def SubstituteFont(self, *args, UnavailableFont=None, SubstituteFont=None):
+        arguments = {"UnavailableFont": UnavailableFont, "SubstituteFont": SubstituteFont}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.SubstituteFont(*args, **arguments)
 
@@ -2210,18 +2210,18 @@ class CanvasShapes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.canvasshapes.AddLine(*args, **arguments)
 
-    def AddPicture(self, *args,  `_FileName_` =None, `_LinkToFile_` =None, `_SaveWithDocument_` =None, `_Left_` =None, `_Top_` =None, `_Width_` =None, `_Height_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` , "`_LinkToFile_` ": `_LinkToFile_` , "`_SaveWithDocument_` ": `_SaveWithDocument_` , "`_Left_` ": `_Left_` , "`_Top_` ": `_Top_` , "`_Width_` ": `_Width_` , "`_Height_` ": `_Height_` }
+    def AddPicture(self, *args, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"FileName": FileName, "LinkToFile": LinkToFile, "SaveWithDocument": SaveWithDocument, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.canvasshapes.AddPicture(*args, **arguments)
 
-    def AddPolyline(self, *args,  `_SafeArrayOfPoints_` =None):
-        arguments = {" `_SafeArrayOfPoints_` ":  `_SafeArrayOfPoints_` }
+    def AddPolyline(self, *args, SafeArrayOfPoints=None):
+        arguments = {"SafeArrayOfPoints": SafeArrayOfPoints}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.canvasshapes.AddPolyline(*args, **arguments)
 
-    def AddShape(self, *args,  `_Type_` =None, `_Left_` =None, `_Top_` =None, `_Width_` =None, `_Height_` =None):
-        arguments = {" `_Type_` ":  `_Type_` , "`_Left_` ": `_Left_` , "`_Top_` ": `_Top_` , "`_Width_` ": `_Width_` , "`_Height_` ": `_Height_` }
+    def AddShape(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.canvasshapes.AddShape(*args, **arguments)
 
@@ -2235,8 +2235,8 @@ class CanvasShapes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.canvasshapes.AddTextEffect(*args, **arguments)
 
-    def BuildFreeform(self, *args,  `_EditingType_` =None, `_X1_` =None, `_Y1_` =None):
-        arguments = {" `_EditingType_` ":  `_EditingType_` , "`_X1_` ": `_X1_` , "`_Y1_` ": `_Y1_` }
+    def BuildFreeform(self, *args, EditingType=None, X1=None, Y1=None):
+        arguments = {"EditingType": EditingType, "X1": X1, "Y1": Y1}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.canvasshapes.BuildFreeform(*args, **arguments)
 
@@ -2540,8 +2540,8 @@ class Cell:
     def AutoSum(self):
         self.cell.AutoSum()
 
-    def Delete(self, *args,  `_ShiftCells_` =None):
-        arguments = {" `_ShiftCells_` ":  `_ShiftCells_` }
+    def Delete(self, *args, ShiftCells=None):
+        arguments = {"ShiftCells": ShiftCells}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.cell.Delete(*args, **arguments)
 
@@ -2558,13 +2558,13 @@ class Cell:
     def Select(self):
         self.cell.Select()
 
-    def SetHeight(self, *args,  `_RowHeight_` =None, `_HeightRule_` =None):
-        arguments = {" `_RowHeight_` ":  `_RowHeight_` , "`_HeightRule_` ": `_HeightRule_` }
+    def SetHeight(self, *args, RowHeight=None, HeightRule=None):
+        arguments = {"RowHeight": RowHeight, "HeightRule": HeightRule}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.cell.SetHeight(*args, **arguments)
 
-    def SetWidth(self, *args,  `_ColumnWidth_` =None, `_RulerStyle_` =None):
-        arguments = {" `_ColumnWidth_` ":  `_ColumnWidth_` , "`_RulerStyle_` ": `_RulerStyle_` }
+    def SetWidth(self, *args, ColumnWidth=None, RulerStyle=None):
+        arguments = {"ColumnWidth": ColumnWidth, "RulerStyle": RulerStyle}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.cell.SetWidth(*args, **arguments)
 
@@ -2811,8 +2811,8 @@ class Chart:
     def Walls(self):
         return Walls(self.chart.Walls)
 
-    def ApplyChartTemplate(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def ApplyChartTemplate(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ApplyChartTemplate(*args, **arguments)
 
@@ -2821,8 +2821,8 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ApplyDataLabels(*args, **arguments)
 
-    def ApplyLayout(self, *args,  `_Layout_` =None, `_ChartType_` =None):
-        arguments = {" `_Layout_` ":  `_Layout_` , "`_ChartType_` ": `_ChartType_` }
+    def ApplyLayout(self, *args, Layout=None, ChartType=None):
+        arguments = {"Layout": Layout, "ChartType": ChartType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ApplyLayout(*args, **arguments)
 
@@ -2831,8 +2831,8 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.chart.Axes(*args, **arguments)
 
-    def ChartWizard(self, *args, **_Source_**=None, **_Gallery_**=None, **_Format_**=None, **_PlotBy_**=None, **_CategoryLabels_**=None, **_SeriesLabels_**=None, **_HasLegend_**=None, **_Title_**=None, **_CategoryTitle_**=None, **_ValueTitle_**=None, **_ExtraTitle_**=None):
-        arguments = {"**_Source_**": **_Source_**, "**_Gallery_**": **_Gallery_**, "**_Format_**": **_Format_**, "**_PlotBy_**": **_PlotBy_**, "**_CategoryLabels_**": **_CategoryLabels_**, "**_SeriesLabels_**": **_SeriesLabels_**, "**_HasLegend_**": **_HasLegend_**, "**_Title_**": **_Title_**, "**_CategoryTitle_**": **_CategoryTitle_**, "**_ValueTitle_**": **_ValueTitle_**, "**_ExtraTitle_**": **_ExtraTitle_**}
+    def ChartWizard(self, *args, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
+        arguments = {"Source": Source, "Gallery": Gallery, "Format": Format, "PlotBy": PlotBy, "CategoryLabels": CategoryLabels, "SeriesLabels": SeriesLabels, "HasLegend": HasLegend, "Title": Title, "CategoryTitle": CategoryTitle, "ValueTitle": ValueTitle, "ExtraTitle": ExtraTitle}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ChartWizard(*args, **arguments)
 
@@ -3999,13 +3999,13 @@ class Column:
     def Select(self):
         self.column.Select()
 
-    def SetWidth(self, *args,  `_ColumnWidth_` =None, `_RulerStyle_` =None):
-        arguments = {" `_ColumnWidth_` ":  `_ColumnWidth_` , "`_RulerStyle_` ": `_RulerStyle_` }
+    def SetWidth(self, *args, ColumnWidth=None, RulerStyle=None):
+        arguments = {"ColumnWidth": ColumnWidth, "RulerStyle": RulerStyle}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.column.SetWidth(*args, **arguments)
 
-    def Sort(self, *args,  `_ExcludeHeader_` =None, `_SortFieldType_` =None, `_SortOrder_` =None, `_CaseSensitive_` =None, `_BidiSort_` =None, `_IgnoreThe_` =None, `_IgnoreKashida_` =None, `_IgnoreDiacritics_` =None, `_IgnoreHe_` =None, `_LanguageID_` =None):
-        arguments = {" `_ExcludeHeader_` ":  `_ExcludeHeader_` , "`_SortFieldType_` ": `_SortFieldType_` , "`_SortOrder_` ": `_SortOrder_` , "`_CaseSensitive_` ": `_CaseSensitive_` , "`_BidiSort_` ": `_BidiSort_` , "`_IgnoreThe_` ": `_IgnoreThe_` , "`_IgnoreKashida_` ": `_IgnoreKashida_` , "`_IgnoreDiacritics_` ": `_IgnoreDiacritics_` , "`_IgnoreHe_` ": `_IgnoreHe_` , "`_LanguageID_` ": `_LanguageID_` }
+    def Sort(self, *args, ExcludeHeader=None, SortFieldType=None, SortOrder=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
+        arguments = {"ExcludeHeader": ExcludeHeader, "SortFieldType": SortFieldType, "SortOrder": SortOrder, "CaseSensitive": CaseSensitive, "BidiSort": BidiSort, "IgnoreThe": IgnoreThe, "IgnoreKashida": IgnoreKashida, "IgnoreDiacritics": IgnoreDiacritics, "IgnoreHe": IgnoreHe, "LanguageID": LanguageID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.column.Sort(*args, **arguments)
 
@@ -4359,23 +4359,23 @@ class ContentControl:
     def Cut(self):
         self.contentcontrol.Cut()
 
-    def Delete(self, *args,  `_DeleteContents_` =None):
-        arguments = {" `_DeleteContents_` ":  `_DeleteContents_` }
+    def Delete(self, *args, DeleteContents=None):
+        arguments = {"DeleteContents": DeleteContents}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.contentcontrol.Delete(*args, **arguments)
 
-    def SetCheckedSymbol(self, *args,  `_CharacterNumber_` =None, `_Font_` =None):
-        arguments = {" `_CharacterNumber_` ":  `_CharacterNumber_` , "`_Font_` ": `_Font_` }
+    def SetCheckedSymbol(self, *args, CharacterNumber=None, Font=None):
+        arguments = {"CharacterNumber": CharacterNumber, "Font": Font}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.contentcontrol.SetCheckedSymbol(*args, **arguments)
 
-    def SetPlaceholderText(self, *args,  `_BuildingBlock_` =None, `_Range_` =None, `_Text_` =None):
-        arguments = {" `_BuildingBlock_` ":  `_BuildingBlock_` , "`_Range_` ": `_Range_` , "`_Text_` ": `_Text_` }
+    def SetPlaceholderText(self, *args, BuildingBlock=None, Range=None, Text=None):
+        arguments = {"BuildingBlock": BuildingBlock, "Range": Range, "Text": Text}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.contentcontrol.SetPlaceholderText(*args, **arguments)
 
-    def SetUncheckedSymbol(self, *args,  `_CharacterNumber_` =None, `_Font_` =None):
-        arguments = {" `_CharacterNumber_` ":  `_CharacterNumber_` , "`_Font_` ": `_Font_` }
+    def SetUncheckedSymbol(self, *args, CharacterNumber=None, Font=None):
+        arguments = {"CharacterNumber": CharacterNumber, "Font": Font}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.contentcontrol.SetUncheckedSymbol(*args, **arguments)
 
@@ -5225,16 +5225,16 @@ class Dialog:
     def Type(self):
         return WdWordDialog(self.dialog.Type)
 
-    def Display(self, *args,  `_TimeOut_` =None):
-        arguments = {" `_TimeOut_` ":  `_TimeOut_` }
+    def Display(self, *args, TimeOut=None):
+        arguments = {"TimeOut": TimeOut}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.dialog.Display(*args, **arguments)
 
     def Execute(self):
         self.dialog.Execute()
 
-    def Show(self, *args,  `_TimeOut_` =None):
-        arguments = {" `_TimeOut_` ":  `_TimeOut_` }
+    def Show(self, *args, TimeOut=None):
+        arguments = {"TimeOut": TimeOut}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.dialog.Show(*args, **arguments)
 
@@ -5538,8 +5538,8 @@ class Document:
     def Comments(self):
         return self.document.Comments
 
-    def Compatibility(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def Compatibility(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.Compatibility(*args, **arguments)
 
@@ -6387,13 +6387,13 @@ class Document:
     def AddToFavorites(self):
         self.document.AddToFavorites()
 
-    def ApplyQuickStyleSet2(self, *args,  `_Style_` =None):
-        arguments = {" `_Style_` ":  `_Style_` }
+    def ApplyQuickStyleSet2(self, *args, Style=None):
+        arguments = {"Style": Style}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.ApplyQuickStyleSet2(*args, **arguments)
 
-    def ApplyTheme(self, *args,  `_Name_` =None):
-        arguments = {" `_Name_` ":  `_Name_` }
+    def ApplyTheme(self, *args, Name=None):
+        arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.ApplyTheme(*args, **arguments)
 
@@ -6414,8 +6414,8 @@ class Document:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.CheckIn(*args, **arguments)
 
-    def CheckInWithVersion(self, *args,  `_SaveChanges_` =None, `_Comments_` =None, `_MakePublic_` =None, `_VersionType_` =None):
-        arguments = {" `_SaveChanges_` ":  `_SaveChanges_` , "`_Comments_` ": `_Comments_` , "`_MakePublic_` ": `_MakePublic_` , "`_VersionType_` ": `_VersionType_` }
+    def CheckInWithVersion(self, *args, SaveChanges=None, Comments=None, MakePublic=None, VersionType=None):
+        arguments = {"SaveChanges": SaveChanges, "Comments": Comments, "MakePublic": MakePublic, "VersionType": VersionType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.CheckInWithVersion(*args, **arguments)
 
@@ -6432,13 +6432,13 @@ class Document:
     def ClosePrintPreview(self):
         self.document.ClosePrintPreview()
 
-    def Compare(self, *args,  `_Name_` =None, `_AuthorName_` =None, `_CompareTarget_` =None, `_DetectFormatChanges_` =None, `_IgnoreAllComparisonWarnings_` =None, `_AddToRecentFiles_` =None, `_RemovePersonalInformation_` =None, `_RemoveDateAndTime_` =None):
-        arguments = {" `_Name_` ":  `_Name_` , "`_AuthorName_` ": `_AuthorName_` , "`_CompareTarget_` ": `_CompareTarget_` , "`_DetectFormatChanges_` ": `_DetectFormatChanges_` , "`_IgnoreAllComparisonWarnings_` ": `_IgnoreAllComparisonWarnings_` , "`_AddToRecentFiles_` ": `_AddToRecentFiles_` , "`_RemovePersonalInformation_` ": `_RemovePersonalInformation_` , "`_RemoveDateAndTime_` ": `_RemoveDateAndTime_` }
+    def Compare(self, *args, Name=None, AuthorName=None, CompareTarget=None, DetectFormatChanges=None, IgnoreAllComparisonWarnings=None, AddToRecentFiles=None, RemovePersonalInformation=None, RemoveDateAndTime=None):
+        arguments = {"Name": Name, "AuthorName": AuthorName, "CompareTarget": CompareTarget, "DetectFormatChanges": DetectFormatChanges, "IgnoreAllComparisonWarnings": IgnoreAllComparisonWarnings, "AddToRecentFiles": AddToRecentFiles, "RemovePersonalInformation": RemovePersonalInformation, "RemoveDateAndTime": RemoveDateAndTime}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.Compare(*args, **arguments)
 
-    def ComputeStatistics(self, *args,  `_Statistic_` =None, `_IncludeFootnotesAndEndnotes_` =None):
-        arguments = {" `_Statistic_` ":  `_Statistic_` , "`_IncludeFootnotesAndEndnotes_` ": `_IncludeFootnotesAndEndnotes_` }
+    def ComputeStatistics(self, *args, Statistic=None, IncludeFootnotesAndEndnotes=None):
+        arguments = {"Statistic": Statistic, "IncludeFootnotesAndEndnotes": IncludeFootnotesAndEndnotes}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.ComputeStatistics(*args, **arguments)
 
@@ -6451,23 +6451,23 @@ class Document:
     def ConvertNumbersToText(self):
         self.document.ConvertNumbersToText()
 
-    def ConvertVietDoc(self, *args,  `_CodePageOrigin_` =None):
-        arguments = {" `_CodePageOrigin_` ":  `_CodePageOrigin_` }
+    def ConvertVietDoc(self, *args, CodePageOrigin=None):
+        arguments = {"CodePageOrigin": CodePageOrigin}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.ConvertVietDoc(*args, **arguments)
 
-    def CopyStylesFromTemplate(self, *args,  `_Template_` =None):
-        arguments = {" `_Template_` ":  `_Template_` }
+    def CopyStylesFromTemplate(self, *args, Template=None):
+        arguments = {"Template": Template}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.CopyStylesFromTemplate(*args, **arguments)
 
-    def CountNumberedItems(self, *args,  `_NumberType_` =None, `_Level_` =None):
-        arguments = {" `_NumberType_` ":  `_NumberType_` , "`_Level_` ": `_Level_` }
+    def CountNumberedItems(self, *args, NumberType=None, Level=None):
+        arguments = {"NumberType": NumberType, "Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.CountNumberedItems(*args, **arguments)
 
-    def CreateLetterContent(self, *args,  `_DateFormat_` =None, `_IncludeHeaderFooter_` =None, `_PageDesign_` =None, `_LetterStyle_` =None, `_Letterhead_` =None, `_LetterheadLocation_` =None, `_LetterheadSize_` =None, `_RecipientName_` =None, `_RecipientAddress_` =None, `_Salutation_` =None, `_SalutationType_` =None, `_RecipientReference_` =None, `_MailingInstructions_` =None, `_AttentionLine_` =None, `_Subject_` =None, `_CCList_` =None, `_ReturnAddress_` =None, `_SenderName_` =None, `_Closing_` =None, `_SenderCompany_` =None, `_SenderJobTitle_` =None, `_SenderInitials_` =None, `_EnclosureNumber_` =None, `_InfoBlock_` =None, `_RecipientCode_` =None, `_RecipientGender_` =None, `_ReturnAddressShortForm_` =None, `_SenderCity_` =None, `_SenderCode_` =None, `_SenderGender_` =None, `_SenderReference_` =None):
-        arguments = {" `_DateFormat_` ":  `_DateFormat_` , "`_IncludeHeaderFooter_` ": `_IncludeHeaderFooter_` , "`_PageDesign_` ": `_PageDesign_` , "`_LetterStyle_` ": `_LetterStyle_` , "`_Letterhead_` ": `_Letterhead_` , "`_LetterheadLocation_` ": `_LetterheadLocation_` , "`_LetterheadSize_` ": `_LetterheadSize_` , "`_RecipientName_` ": `_RecipientName_` , "`_RecipientAddress_` ": `_RecipientAddress_` , "`_Salutation_` ": `_Salutation_` , "`_SalutationType_` ": `_SalutationType_` , "`_RecipientReference_` ": `_RecipientReference_` , "`_MailingInstructions_` ": `_MailingInstructions_` , "`_AttentionLine_` ": `_AttentionLine_` , "`_Subject_` ": `_Subject_` , "`_CCList_` ": `_CCList_` , "`_ReturnAddress_` ": `_ReturnAddress_` , "`_SenderName_` ": `_SenderName_` , "`_Closing_` ": `_Closing_` , "`_SenderCompany_` ": `_SenderCompany_` , "`_SenderJobTitle_` ": `_SenderJobTitle_` , "`_SenderInitials_` ": `_SenderInitials_` , "`_EnclosureNumber_` ": `_EnclosureNumber_` , "`_InfoBlock_` ": `_InfoBlock_` , "`_RecipientCode_` ": `_RecipientCode_` , "`_RecipientGender_` ": `_RecipientGender_` , "`_ReturnAddressShortForm_` ": `_ReturnAddressShortForm_` , "`_SenderCity_` ": `_SenderCity_` , "`_SenderCode_` ": `_SenderCode_` , "`_SenderGender_` ": `_SenderGender_` , "`_SenderReference_` ": `_SenderReference_` }
+    def CreateLetterContent(self, *args, DateFormat=None, IncludeHeaderFooter=None, PageDesign=None, LetterStyle=None, Letterhead=None, LetterheadLocation=None, LetterheadSize=None, RecipientName=None, RecipientAddress=None, Salutation=None, SalutationType=None, RecipientReference=None, MailingInstructions=None, AttentionLine=None, Subject=None, CCList=None, ReturnAddress=None, SenderName=None, Closing=None, SenderCompany=None, SenderJobTitle=None, SenderInitials=None, EnclosureNumber=None, InfoBlock=None, RecipientCode=None, RecipientGender=None, ReturnAddressShortForm=None, SenderCity=None, SenderCode=None, SenderGender=None, SenderReference=None):
+        arguments = {"DateFormat": DateFormat, "IncludeHeaderFooter": IncludeHeaderFooter, "PageDesign": PageDesign, "LetterStyle": LetterStyle, "Letterhead": Letterhead, "LetterheadLocation": LetterheadLocation, "LetterheadSize": LetterheadSize, "RecipientName": RecipientName, "RecipientAddress": RecipientAddress, "Salutation": Salutation, "SalutationType": SalutationType, "RecipientReference": RecipientReference, "MailingInstructions": MailingInstructions, "AttentionLine": AttentionLine, "Subject": Subject, "CCList": CCList, "ReturnAddress": ReturnAddress, "SenderName": SenderName, "Closing": Closing, "SenderCompany": SenderCompany, "SenderJobTitle": SenderJobTitle, "SenderInitials": SenderInitials, "EnclosureNumber": EnclosureNumber, "InfoBlock": InfoBlock, "RecipientCode": RecipientCode, "RecipientGender": RecipientGender, "ReturnAddressShortForm": ReturnAddressShortForm, "SenderCity": SenderCity, "SenderCode": SenderCode, "SenderGender": SenderGender, "SenderReference": SenderReference}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.CreateLetterContent(*args, **arguments)
 
@@ -6480,8 +6480,8 @@ class Document:
     def DeleteAllCommentsShown(self):
         self.document.DeleteAllCommentsShown()
 
-    def DeleteAllEditableRanges(self, *args,  `_EditorID_` =None):
-        arguments = {" `_EditorID_` ":  `_EditorID_` }
+    def DeleteAllEditableRanges(self, *args, EditorID=None):
+        arguments = {"EditorID": EditorID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.DeleteAllEditableRanges(*args, **arguments)
 
@@ -6515,16 +6515,16 @@ class Document:
     def FitToPages(self):
         self.document.FitToPages()
 
-    def FollowHyperlink(self, *args,  `_Address_` =None, `_SubAddress_` =None, `_NewWindow_` =None, `_AddHistory_` =None, `_ExtraInfo_` =None, `_Method_` =None, `_HeaderInfo_` =None):
-        arguments = {" `_Address_` ":  `_Address_` , "`_SubAddress_` ": `_SubAddress_` , "`_NewWindow_` ": `_NewWindow_` , "`_AddHistory_` ": `_AddHistory_` , "`_ExtraInfo_` ": `_ExtraInfo_` , "`_Method_` ": `_Method_` , "`_HeaderInfo_` ": `_HeaderInfo_` }
+    def FollowHyperlink(self, *args, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        arguments = {"Address": Address, "SubAddress": SubAddress, "NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.FollowHyperlink(*args, **arguments)
 
     def FreezeLayout(self):
         self.document.FreezeLayout()
 
-    def GetCrossReferenceItems(self, *args,  `_ReferenceType_` =None):
-        arguments = {" `_ReferenceType_` ":  `_ReferenceType_` }
+    def GetCrossReferenceItems(self, *args, ReferenceType=None):
+        arguments = {"ReferenceType": ReferenceType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.GetCrossReferenceItems(*args, **arguments)
 
@@ -6537,8 +6537,8 @@ class Document:
     def GetWorkflowTemplates(self):
         return self.document.GetWorkflowTemplates()
 
-    def GoTo(self, *args,  `_What_` =None, `_Which_` =None, `_Count_` =None, `_Name_` =None):
-        arguments = {" `_What_` ":  `_What_` , "`_Which_` ": `_Which_` , "`_Count_` ": `_Count_` , "`_Name_` ": `_Name_` }
+    def GoTo(self, *args, What=None, Which=None, Count=None, Name=None):
+        arguments = {"What": What, "Which": Which, "Count": Count, "Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.GoTo(*args, **arguments)
 
@@ -6589,21 +6589,21 @@ class Document:
     def Reload(self):
         self.document.Reload()
 
-    def ReloadAs(self, *args,  `_Encoding_` =None):
-        arguments = {" `_Encoding_` ":  `_Encoding_` }
+    def ReloadAs(self, *args, Encoding=None):
+        arguments = {"Encoding": Encoding}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.ReloadAs(*args, **arguments)
 
-    def RemoveDocumentInformation(self, *args,  `_RemoveDocInfoType_` =None):
-        arguments = {" `_RemoveDocInfoType_` ":  `_RemoveDocInfoType_` }
+    def RemoveDocumentInformation(self, *args, RemoveDocInfoType=None):
+        arguments = {"RemoveDocInfoType": RemoveDocInfoType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.RemoveDocumentInformation(*args, **arguments)
 
     def RemoveLockedStyles(self):
         self.document.RemoveLockedStyles()
 
-    def RemoveNumbers(self, *args,  `_NumberType_` =None):
-        arguments = {" `_NumberType_` ":  `_NumberType_` }
+    def RemoveNumbers(self, *args, NumberType=None):
+        arguments = {"NumberType": NumberType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.RemoveNumbers(*args, **arguments)
 
@@ -6613,108 +6613,108 @@ class Document:
     def Repaginate(self):
         self.document.Repaginate()
 
-    def ReplyWithChanges(self, *args,  `_ShowMessage_` =None):
-        arguments = {" `_ShowMessage_` ":  `_ShowMessage_` }
+    def ReplyWithChanges(self, *args, ShowMessage=None):
+        arguments = {"ShowMessage": ShowMessage}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.ReplyWithChanges(*args, **arguments)
 
     def ResetFormFields(self):
         self.document.ResetFormFields()
 
-    def RunAutoMacro(self, *args,  `_Which_` =None):
-        arguments = {" `_Which_` ":  `_Which_` }
+    def RunAutoMacro(self, *args, Which=None):
+        arguments = {"Which": Which}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.RunAutoMacro(*args, **arguments)
 
-    def RunLetterWizard(self, *args,  `_LetterContent_` =None, `_WizardMode_` =None):
-        arguments = {" `_LetterContent_` ":  `_LetterContent_` , "`_WizardMode_` ": `_WizardMode_` }
+    def RunLetterWizard(self, *args, LetterContent=None, WizardMode=None):
+        arguments = {"LetterContent": LetterContent, "WizardMode": WizardMode}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.RunLetterWizard(*args, **arguments)
 
     def Save(self):
         self.document.Save()
 
-    def SaveAsQuickStyleSet(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def SaveAsQuickStyleSet(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SaveAsQuickStyleSet(*args, **arguments)
 
     def Select(self):
         self.document.Select()
 
-    def SelectAllEditableRanges(self, *args,  `_EditorID_` =None):
-        arguments = {" `_EditorID_` ":  `_EditorID_` }
+    def SelectAllEditableRanges(self, *args, EditorID=None):
+        arguments = {"EditorID": EditorID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SelectAllEditableRanges(*args, **arguments)
 
-    def SelectContentControlsByTag(self, *args,  `_Tag_` =None):
-        arguments = {" `_Tag_` ":  `_Tag_` }
+    def SelectContentControlsByTag(self, *args, Tag=None):
+        arguments = {"Tag": Tag}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.SelectContentControlsByTag(*args, **arguments)
 
-    def SelectContentControlsByTitle(self, *args,  `_Title_` =None):
-        arguments = {" `_Title_` ":  `_Title_` }
+    def SelectContentControlsByTitle(self, *args, Title=None):
+        arguments = {"Title": Title}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.SelectContentControlsByTitle(*args, **arguments)
 
-    def SelectLinkedControls(self, *args,  `_Node_` =None):
-        arguments = {" `_Node_` ":  `_Node_` }
+    def SelectLinkedControls(self, *args, Node=None):
+        arguments = {"Node": Node}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.SelectLinkedControls(*args, **arguments)
 
-    def SelectNodes(self, *args,  `_XPath_` =None, `_PrefixMapping_` =None, `_FastSearchSkippingTextNodes_` =None):
-        arguments = {" `_XPath_` ":  `_XPath_` , "`_PrefixMapping_` ": `_PrefixMapping_` , "`_FastSearchSkippingTextNodes_` ": `_FastSearchSkippingTextNodes_` }
+    def SelectNodes(self, *args, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
+        arguments = {"XPath": XPath, "PrefixMapping": PrefixMapping, "FastSearchSkippingTextNodes": FastSearchSkippingTextNodes}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.SelectNodes(*args, **arguments)
 
-    def SelectSingleNode(self, *args,  `_XPath_` =None, `_PrefixMapping_` =None, `_FastSearchSkippingTextNodes_` =None):
-        arguments = {" `_XPath_` ":  `_XPath_` , "`_PrefixMapping_` ": `_PrefixMapping_` , "`_FastSearchSkippingTextNodes_` ": `_FastSearchSkippingTextNodes_` }
+    def SelectSingleNode(self, *args, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
+        arguments = {"XPath": XPath, "PrefixMapping": PrefixMapping, "FastSearchSkippingTextNodes": FastSearchSkippingTextNodes}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.SelectSingleNode(*args, **arguments)
 
-    def SelectUnlinkedControls(self, *args,  `_Stream_` =None):
-        arguments = {" `_Stream_` ":  `_Stream_` }
+    def SelectUnlinkedControls(self, *args, Stream=None):
+        arguments = {"Stream": Stream}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.document.SelectUnlinkedControls(*args, **arguments)
 
-    def SendFax(self, *args,  `_Address_` =None, `_Subject_` =None):
-        arguments = {" `_Address_` ":  `_Address_` , "`_Subject_` ": `_Subject_` }
+    def SendFax(self, *args, Address=None, Subject=None):
+        arguments = {"Address": Address, "Subject": Subject}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SendFax(*args, **arguments)
 
-    def SendFaxOverInternet(self, *args,  `_Recipients_` =None, `_Subject_` =None, `_ShowMessage_` =None):
-        arguments = {" `_Recipients_` ":  `_Recipients_` , "`_Subject_` ": `_Subject_` , "`_ShowMessage_` ": `_ShowMessage_` }
+    def SendFaxOverInternet(self, *args, Recipients=None, Subject=None, ShowMessage=None):
+        arguments = {"Recipients": Recipients, "Subject": Subject, "ShowMessage": ShowMessage}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SendFaxOverInternet(*args, **arguments)
 
-    def SendForReview(self, *args,  `_Recipients_` =None, `_Subject_` =None, `_ShowMessage_` =None, `_IncludeAttachment_` =None):
-        arguments = {" `_Recipients_` ":  `_Recipients_` , "`_Subject_` ": `_Subject_` , "`_ShowMessage_` ": `_ShowMessage_` , "`_IncludeAttachment_` ": `_IncludeAttachment_` }
+    def SendForReview(self, *args, Recipients=None, Subject=None, ShowMessage=None, IncludeAttachment=None):
+        arguments = {"Recipients": Recipients, "Subject": Subject, "ShowMessage": ShowMessage, "IncludeAttachment": IncludeAttachment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SendForReview(*args, **arguments)
 
     def SendMail(self):
         self.document.SendMail()
 
-    def SetDefaultTableStyle(self, *args,  `_Style_` =None, `_SetInTemplate_` =None):
-        arguments = {" `_Style_` ":  `_Style_` , "`_SetInTemplate_` ": `_SetInTemplate_` }
+    def SetDefaultTableStyle(self, *args, Style=None, SetInTemplate=None):
+        arguments = {"Style": Style, "SetInTemplate": SetInTemplate}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SetDefaultTableStyle(*args, **arguments)
 
-    def SetLetterContent(self, *args,  `_LetterContent_` =None):
-        arguments = {" `_LetterContent_` ":  `_LetterContent_` }
+    def SetLetterContent(self, *args, LetterContent=None):
+        arguments = {"LetterContent": LetterContent}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SetLetterContent(*args, **arguments)
 
-    def SetPasswordEncryptionOptions(self, *args,  `_PasswordEncryptionProvider_` =None, `_PasswordEncryptionAlgorithm_` =None, `_PasswordEncryptionKeyLength_` =None, `_PasswordEncryptionFileProperties_` =None):
-        arguments = {" `_PasswordEncryptionProvider_` ":  `_PasswordEncryptionProvider_` , "`_PasswordEncryptionAlgorithm_` ": `_PasswordEncryptionAlgorithm_` , "`_PasswordEncryptionKeyLength_` ": `_PasswordEncryptionKeyLength_` , "`_PasswordEncryptionFileProperties_` ": `_PasswordEncryptionFileProperties_` }
+    def SetPasswordEncryptionOptions(self, *args, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
+        arguments = {"PasswordEncryptionProvider": PasswordEncryptionProvider, "PasswordEncryptionAlgorithm": PasswordEncryptionAlgorithm, "PasswordEncryptionKeyLength": PasswordEncryptionKeyLength, "PasswordEncryptionFileProperties": PasswordEncryptionFileProperties}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.SetPasswordEncryptionOptions(*args, **arguments)
 
     def ToggleFormsDesign(self):
         self.document.ToggleFormsDesign()
 
-    def TransformDocument(self, *args,  `_Path_` =None, `_DataOnly_` =None):
-        arguments = {" `_Path_` ":  `_Path_` , "`_DataOnly_` ": `_DataOnly_` }
+    def TransformDocument(self, *args, Path=None, DataOnly=None):
+        arguments = {"Path": Path, "DataOnly": DataOnly}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.document.TransformDocument(*args, **arguments)
 
@@ -7938,8 +7938,8 @@ class FillFormat:
     def Visible(self):
         return self.fillformat.Visible
 
-    def OneColorGradient(self, *args,  `_Style_` =None, `_Variant_` =None, `_Degree_` =None):
-        arguments = {" `_Style_` ":  `_Style_` , "`_Variant_` ": `_Variant_` , "`_Degree_` ": `_Degree_` }
+    def OneColorGradient(self, *args, Style=None, Variant=None, Degree=None):
+        arguments = {"Style": Style, "Variant": Variant, "Degree": Degree}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.fillformat.OneColorGradient(*args, **arguments)
 
@@ -8188,8 +8188,8 @@ class Find:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.find.Execute2007(*args, **arguments)
 
-    def HitHighlight(self, *args, **_FindText_**=None, **_HighlightColor_**=None, **_TextColor_**=None, **_MatchCase_**=None, **_MatchWholeWord_**=None, **_MatchPrefix_**=None, **_MatchSuffix_**=None, **_MatchPhrase_**=None, **_MatchWildcards_**=None, **_MatchSoundsLike_**=None, **_MatchAllWordForms_**=None, **_MatchByte_**=None, **_MatchFuzzy_**=None, **_MatchKashida_**=None, **_MatchDiacritics_**=None, **_MatchAlefHamza_**=None, **_MatchControl_**=None, **_IgnoreSpace_**=None, **_IgnorePunct_**=None, **_HanjaPhoneticHangul_**=None):
-        arguments = {"**_FindText_**": **_FindText_**, "**_HighlightColor_**": **_HighlightColor_**, "**_TextColor_**": **_TextColor_**, "**_MatchCase_**": **_MatchCase_**, "**_MatchWholeWord_**": **_MatchWholeWord_**, "**_MatchPrefix_**": **_MatchPrefix_**, "**_MatchSuffix_**": **_MatchSuffix_**, "**_MatchPhrase_**": **_MatchPhrase_**, "**_MatchWildcards_**": **_MatchWildcards_**, "**_MatchSoundsLike_**": **_MatchSoundsLike_**, "**_MatchAllWordForms_**": **_MatchAllWordForms_**, "**_MatchByte_**": **_MatchByte_**, "**_MatchFuzzy_**": **_MatchFuzzy_**, "**_MatchKashida_**": **_MatchKashida_**, "**_MatchDiacritics_**": **_MatchDiacritics_**, "**_MatchAlefHamza_**": **_MatchAlefHamza_**, "**_MatchControl_**": **_MatchControl_**, "**_IgnoreSpace_**": **_IgnoreSpace_**, "**_IgnorePunct_**": **_IgnorePunct_**, "**_HanjaPhoneticHangul_**": **_HanjaPhoneticHangul_**}
+    def HitHighlight(self, *args, FindText=None, HighlightColor=None, TextColor=None, MatchCase=None, MatchWholeWord=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, MatchByte=None, MatchFuzzy=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, IgnoreSpace=None, IgnorePunct=None, HanjaPhoneticHangul=None):
+        arguments = {"FindText": FindText, "HighlightColor": HighlightColor, "TextColor": TextColor, "MatchCase": MatchCase, "MatchWholeWord": MatchWholeWord, "MatchPrefix": MatchPrefix, "MatchSuffix": MatchSuffix, "MatchPhrase": MatchPhrase, "MatchWildcards": MatchWildcards, "MatchSoundsLike": MatchSoundsLike, "MatchAllWordForms": MatchAllWordForms, "MatchByte": MatchByte, "MatchFuzzy": MatchFuzzy, "MatchKashida": MatchKashida, "MatchDiacritics": MatchDiacritics, "MatchAlefHamza": MatchAlefHamza, "MatchControl": MatchControl, "IgnoreSpace": IgnoreSpace, "IgnorePunct": IgnorePunct, "HanjaPhoneticHangul": HanjaPhoneticHangul}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.find.HitHighlight(*args, **arguments)
 
@@ -9038,8 +9038,8 @@ class Frameset:
     def WidthType(self, value):
         self.frameset.WidthType = value
 
-    def AddNewFrame(self, *args,  `_Where_` =None):
-        arguments = {" `_Where_` ":  `_Where_` }
+    def AddNewFrame(self, *args, Where=None):
+        arguments = {"Where": Where}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.frameset.AddNewFrame(*args, **arguments)
 
@@ -9068,8 +9068,8 @@ class FreeformBuilder:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.freeformbuilder.AddNodes(*args, **arguments)
 
-    def ConvertToShape(self, *args,  `_Anchor_` =None):
-        arguments = {" `_Anchor_` ":  `_Anchor_` }
+    def ConvertToShape(self, *args, Anchor=None):
+        arguments = {"Anchor": Anchor}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.freeformbuilder.ConvertToShape(*args, **arguments)
 
@@ -9154,8 +9154,8 @@ class Global:
     def FileConverters(self):
         return self.global.FileConverters
 
-    def FindKey(self, *args,  `_KeyCode_` =None, `_KeyCode2_` =None):
-        arguments = {" `_KeyCode_` ":  `_KeyCode_` , "`_KeyCode2_` ": `_KeyCode2_` }
+    def FindKey(self, *args, KeyCode=None, KeyCode2=None):
+        arguments = {"KeyCode": KeyCode, "KeyCode2": KeyCode2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return KeyBinding(self.global.FindKey(*args, **arguments))
 
@@ -9167,8 +9167,8 @@ class Global:
     def HangulHanjaDictionaries(self):
         return self.global.HangulHanjaDictionaries
 
-    def IsObjectValid(self, *args,  `_Object_` =None):
-        arguments = {" `_Object_` ":  `_Object_` }
+    def IsObjectValid(self, *args, Object=None):
+        arguments = {"Object": Object}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.IsObjectValid(*args, **arguments)
 
@@ -9180,8 +9180,8 @@ class Global:
     def KeyBindings(self):
         return self.global.KeyBindings
 
-    def KeysBoundTo(self, *args,  `_KeyCategory_` =None, `_Command_` =None, `_CommandParameter_` =None):
-        arguments = {" `_KeyCategory_` ":  `_KeyCategory_` , "`_Command_` ": `_Command_` , "`_CommandParameter_` ": `_CommandParameter_` }
+    def KeysBoundTo(self, *args, KeyCategory=None, Command=None, CommandParameter=None):
+        arguments = {"KeyCategory": KeyCategory, "Command": Command, "CommandParameter": CommandParameter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.KeysBoundTo(*args, **arguments)
 
@@ -9249,8 +9249,8 @@ class Global:
     def StatusBar(self):
         return self.global.StatusBar
 
-    def SynonymInfo(self, *args,  `_Word_` =None, `_LanguageID_` =None):
-        arguments = {" `_Word_` ":  `_Word_` , "`_LanguageID_` ": `_LanguageID_` }
+    def SynonymInfo(self, *args, Word=None, LanguageID=None):
+        arguments = {"Word": Word, "LanguageID": LanguageID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return SynonymInfo(self.global.SynonymInfo(*args, **arguments))
 
@@ -9283,13 +9283,13 @@ class Global:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.BuildKeyCode(*args, **arguments)
 
-    def CentimetersToPoints(self, *args,  `_Centimeters_` =None):
-        arguments = {" `_Centimeters_` ":  `_Centimeters_` }
+    def CentimetersToPoints(self, *args, Centimeters=None):
+        arguments = {"Centimeters": Centimeters}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.CentimetersToPoints(*args, **arguments)
 
-    def ChangeFileOpenDirectory(self, *args,  `_Path_` =None):
-        arguments = {" `_Path_` ":  `_Path_` }
+    def ChangeFileOpenDirectory(self, *args, Path=None):
+        arguments = {"Path": Path}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.ChangeFileOpenDirectory(*args, **arguments)
 
@@ -9298,109 +9298,109 @@ class Global:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.CheckSpelling(*args, **arguments)
 
-    def CleanString(self, *args,  `_String_` =None):
-        arguments = {" `_String_` ":  `_String_` }
+    def CleanString(self, *args, String=None):
+        arguments = {"String": String}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.CleanString(*args, **arguments)
 
-    def DDEExecute(self, *args,  `_Channel_` =None, `_Command_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` , "`_Command_` ": `_Command_` }
+    def DDEExecute(self, *args, Channel=None, Command=None):
+        arguments = {"Channel": Channel, "Command": Command}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.DDEExecute(*args, **arguments)
 
-    def DDEInitiate(self, *args,  `_App_` =None, `_Topic_` =None):
-        arguments = {" `_App_` ":  `_App_` , "`_Topic_` ": `_Topic_` }
+    def DDEInitiate(self, *args, App=None, Topic=None):
+        arguments = {"App": App, "Topic": Topic}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.DDEInitiate(*args, **arguments)
 
-    def DDEPoke(self, *args,  `_Channel_` =None, `_Item_` =None, `_Data_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` , "`_Item_` ": `_Item_` , "`_Data_` ": `_Data_` }
+    def DDEPoke(self, *args, Channel=None, Item=None, Data=None):
+        arguments = {"Channel": Channel, "Item": Item, "Data": Data}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.DDEPoke(*args, **arguments)
 
-    def DDERequest(self, *args,  `_Channel_` =None, `_Item_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` , "`_Item_` ": `_Item_` }
+    def DDERequest(self, *args, Channel=None, Item=None):
+        arguments = {"Channel": Channel, "Item": Item}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.DDERequest(*args, **arguments)
 
-    def DDETerminate(self, *args,  `_Channel_` =None):
-        arguments = {" `_Channel_` ":  `_Channel_` }
+    def DDETerminate(self, *args, Channel=None):
+        arguments = {"Channel": Channel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.DDETerminate(*args, **arguments)
 
     def DDETerminateAll(self):
         self.global.DDETerminateAll()
 
-    def GetSpellingSuggestions(self, *args,  `_Word_` =None, `_CustomDictionary_` =None, `_IgnoreUppercase_` =None, `_MainDictionary_` =None, `_SuggestionMode_` =None, `_CustomDictionary2_` =None, `_CustomDictionary3_` =None, `_CustomDictionary4_` =None, `_CustomDictionary5_` =None, `_CustomDictionary6_` =None, `_CustomDictionary7_` =None, `_CustomDictionary8_` =None, `_CustomDictionary9_` =None, `_CustomDictionary10_` =None):
-        arguments = {" `_Word_` ":  `_Word_` , "`_CustomDictionary_` ": `_CustomDictionary_` , "`_IgnoreUppercase_` ": `_IgnoreUppercase_` , "`_MainDictionary_` ": `_MainDictionary_` , "`_SuggestionMode_` ": `_SuggestionMode_` , "`_CustomDictionary2_` ": `_CustomDictionary2_` , "`_CustomDictionary3_` ": `_CustomDictionary3_` , "`_CustomDictionary4_` ": `_CustomDictionary4_` , "`_CustomDictionary5_` ": `_CustomDictionary5_` , "`_CustomDictionary6_` ": `_CustomDictionary6_` , "`_CustomDictionary7_` ": `_CustomDictionary7_` , "`_CustomDictionary8_` ": `_CustomDictionary8_` , "`_CustomDictionary9_` ": `_CustomDictionary9_` , "`_CustomDictionary10_` ": `_CustomDictionary10_` }
+    def GetSpellingSuggestions(self, *args, Word=None, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, SuggestionMode=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
+        arguments = {"Word": Word, "CustomDictionary": CustomDictionary, "IgnoreUppercase": IgnoreUppercase, "MainDictionary": MainDictionary, "SuggestionMode": SuggestionMode, "CustomDictionary2": CustomDictionary2, "CustomDictionary3": CustomDictionary3, "CustomDictionary4": CustomDictionary4, "CustomDictionary5": CustomDictionary5, "CustomDictionary6": CustomDictionary6, "CustomDictionary7": CustomDictionary7, "CustomDictionary8": CustomDictionary8, "CustomDictionary9": CustomDictionary9, "CustomDictionary10": CustomDictionary10}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.GetSpellingSuggestions(*args, **arguments)
 
-    def Help(self, *args,  `_HelpType_` =None):
-        arguments = {" `_HelpType_` ":  `_HelpType_` }
+    def Help(self, *args, HelpType=None):
+        arguments = {"HelpType": HelpType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.global.Help(*args, **arguments)
 
-    def InchesToPoints(self, *args,  `_Inches_` =None):
-        arguments = {" `_Inches_` ":  `_Inches_` }
+    def InchesToPoints(self, *args, Inches=None):
+        arguments = {"Inches": Inches}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.InchesToPoints(*args, **arguments)
 
-    def KeyString(self, *args,  `_KeyCode_` =None, `_KeyCode2_` =None):
-        arguments = {" `_KeyCode_` ":  `_KeyCode_` , "`_KeyCode2_` ": `_KeyCode2_` }
+    def KeyString(self, *args, KeyCode=None, KeyCode2=None):
+        arguments = {"KeyCode": KeyCode, "KeyCode2": KeyCode2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.KeyString(*args, **arguments)
 
-    def LinesToPoints(self, *args,  `_Lines_` =None):
-        arguments = {" `_Lines_` ":  `_Lines_` }
+    def LinesToPoints(self, *args, Lines=None):
+        arguments = {"Lines": Lines}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.LinesToPoints(*args, **arguments)
 
-    def MillimetersToPoints(self, *args,  `_Millimeters_` =None):
-        arguments = {" `_Millimeters_` ":  `_Millimeters_` }
+    def MillimetersToPoints(self, *args, Millimeters=None):
+        arguments = {"Millimeters": Millimeters}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.MillimetersToPoints(*args, **arguments)
 
     def NewWindow(self):
         return self.global.NewWindow()
 
-    def PicasToPoints(self, *args,  `_Picas_` =None):
-        arguments = {" `_Picas_` ":  `_Picas_` }
+    def PicasToPoints(self, *args, Picas=None):
+        arguments = {"Picas": Picas}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PicasToPoints(*args, **arguments)
 
-    def PixelsToPoints(self, *args,  `_Pixels_` =None, `_fVertical_` =None):
-        arguments = {" `_Pixels_` ":  `_Pixels_` , "`_fVertical_` ": `_fVertical_` }
+    def PixelsToPoints(self, *args, Pixels=None, fVertical=None):
+        arguments = {"Pixels": Pixels, "fVertical": fVertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PixelsToPoints(*args, **arguments)
 
-    def PointsToCentimeters(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToCentimeters(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PointsToCentimeters(*args, **arguments)
 
-    def PointsToInches(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToInches(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PointsToInches(*args, **arguments)
 
-    def PointsToLines(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToLines(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PointsToLines(*args, **arguments)
 
-    def PointsToMillimeters(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToMillimeters(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PointsToMillimeters(*args, **arguments)
 
-    def PointsToPicas(self, *args,  `_Points_` =None):
-        arguments = {" `_Points_` ":  `_Points_` }
+    def PointsToPicas(self, *args, Points=None):
+        arguments = {"Points": Points}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PointsToPicas(*args, **arguments)
 
-    def PointsToPixels(self, *args,  `_Points_` =None, `_fVertical_` =None):
-        arguments = {" `_Points_` ":  `_Points_` , "`_fVertical_` ": `_fVertical_` }
+    def PointsToPixels(self, *args, Points=None, fVertical=None):
+        arguments = {"Points": Points, "fVertical": fVertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.global.PointsToPixels(*args, **arguments)
 
@@ -9726,8 +9726,8 @@ class HTMLDivision:
     def Delete(self):
         self.htmldivision.Delete()
 
-    def HTMLDivisionParent(self, *args,  `_LevelsUp_` =None):
-        arguments = {" `_LevelsUp_` ":  `_LevelsUp_` }
+    def HTMLDivisionParent(self, *args, LevelsUp=None):
+        arguments = {"LevelsUp": LevelsUp}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.htmldivision.HTMLDivisionParent(*args, **arguments)
 
@@ -9865,8 +9865,8 @@ class Hyperlink:
     def Delete(self):
         self.hyperlink.Delete()
 
-    def Follow(self, *args,  `_NewWindow_` =None, `_AddHistory_` =None, `_ExtraInfo_` =None, `_Method_` =None, `_HeaderInfo_` =None):
-        arguments = {" `_NewWindow_` ":  `_NewWindow_` , "`_AddHistory_` ": `_AddHistory_` , "`_ExtraInfo_` ": `_ExtraInfo_` , "`_Method_` ": `_Method_` , "`_HeaderInfo_` ": `_HeaderInfo_` }
+    def Follow(self, *args, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        arguments = {"NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.hyperlink.Follow(*args, **arguments)
 
@@ -10241,8 +10241,8 @@ class KeyBinding:
     def Execute(self):
         self.keybinding.Execute()
 
-    def Rebind(self, *args,  `_KeyCategory_` =None, `_Command_` =None, `_CommandParameter_` =None):
-        arguments = {" `_KeyCategory_` ":  `_KeyCategory_` , "`_Command_` ": `_Command_` , "`_CommandParameter_` ": `_CommandParameter_` }
+    def Rebind(self, *args, KeyCategory=None, Command=None, CommandParameter=None):
+        arguments = {"KeyCategory": KeyCategory, "Command": Command, "CommandParameter": CommandParameter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.keybinding.Rebind(*args, **arguments)
 
@@ -11232,13 +11232,13 @@ class List:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.list.ApplyListTemplate(*args, **arguments)
 
-    def ApplyListTemplateWithLevel(self, *args,  `_ListTemplate_` =None, `_ContinuePreviousList_` =None, `_DefaultListBehavior_` =None, `_ApplyLevel_` =None):
-        arguments = {" `_ListTemplate_` ":  `_ListTemplate_` , "`_ContinuePreviousList_` ": `_ContinuePreviousList_` , "`_DefaultListBehavior_` ": `_DefaultListBehavior_` , "`_ApplyLevel_` ": `_ApplyLevel_` }
+    def ApplyListTemplateWithLevel(self, *args, ListTemplate=None, ContinuePreviousList=None, DefaultListBehavior=None, ApplyLevel=None):
+        arguments = {"ListTemplate": ListTemplate, "ContinuePreviousList": ContinuePreviousList, "DefaultListBehavior": DefaultListBehavior, "ApplyLevel": ApplyLevel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.list.ApplyListTemplateWithLevel(*args, **arguments)
 
-    def CanContinuePreviousList(self, *args,  `_ListTemplate_` =None):
-        arguments = {" `_ListTemplate_` ":  `_ListTemplate_` }
+    def CanContinuePreviousList(self, *args, ListTemplate=None):
+        arguments = {"ListTemplate": ListTemplate}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.list.CanContinuePreviousList(*args, **arguments)
 
@@ -11248,8 +11248,8 @@ class List:
     def CountNumberedItems(self):
         self.list.CountNumberedItems()
 
-    def RemoveNumbers(self, *args,  `_NumberType_` =None):
-        arguments = {" `_NumberType_` ":  `_NumberType_` }
+    def RemoveNumbers(self, *args, NumberType=None):
+        arguments = {"NumberType": NumberType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.list.RemoveNumbers(*args, **arguments)
 
@@ -11342,33 +11342,33 @@ class ListFormat:
     def SingleListTemplate(self):
         return self.listformat.SingleListTemplate
 
-    def ApplyBulletDefault(self, *args,  `_DefaultListBehavior_` =None):
-        arguments = {" `_DefaultListBehavior_` ":  `_DefaultListBehavior_` }
+    def ApplyBulletDefault(self, *args, DefaultListBehavior=None):
+        arguments = {"DefaultListBehavior": DefaultListBehavior}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.ApplyBulletDefault(*args, **arguments)
 
-    def ApplyListTemplate(self, *args,  `_ListTemplate_` =None, `_ContinuePreviousList_` =None, `_ApplyTo_` =None, `_DefaultListBehavior_` =None):
-        arguments = {" `_ListTemplate_` ":  `_ListTemplate_` , "`_ContinuePreviousList_` ": `_ContinuePreviousList_` , "`_ApplyTo_` ": `_ApplyTo_` , "`_DefaultListBehavior_` ": `_DefaultListBehavior_` }
+    def ApplyListTemplate(self, *args, ListTemplate=None, ContinuePreviousList=None, ApplyTo=None, DefaultListBehavior=None):
+        arguments = {"ListTemplate": ListTemplate, "ContinuePreviousList": ContinuePreviousList, "ApplyTo": ApplyTo, "DefaultListBehavior": DefaultListBehavior}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.ApplyListTemplate(*args, **arguments)
 
-    def ApplyListTemplateWithLevel(self, *args,  `_ListTemplate_` =None, `_ContinuePreviousList_` =None, `_ApplyTo_` =None, `_DefaultListBehavior_` =None, `_ApplyLevel_` =None):
-        arguments = {" `_ListTemplate_` ":  `_ListTemplate_` , "`_ContinuePreviousList_` ": `_ContinuePreviousList_` , "`_ApplyTo_` ": `_ApplyTo_` , "`_DefaultListBehavior_` ": `_DefaultListBehavior_` , "`_ApplyLevel_` ": `_ApplyLevel_` }
+    def ApplyListTemplateWithLevel(self, *args, ListTemplate=None, ContinuePreviousList=None, ApplyTo=None, DefaultListBehavior=None, ApplyLevel=None):
+        arguments = {"ListTemplate": ListTemplate, "ContinuePreviousList": ContinuePreviousList, "ApplyTo": ApplyTo, "DefaultListBehavior": DefaultListBehavior, "ApplyLevel": ApplyLevel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.ApplyListTemplateWithLevel(*args, **arguments)
 
-    def ApplyNumberDefault(self, *args,  `_DefaultListBehavior_` =None):
-        arguments = {" `_DefaultListBehavior_` ":  `_DefaultListBehavior_` }
+    def ApplyNumberDefault(self, *args, DefaultListBehavior=None):
+        arguments = {"DefaultListBehavior": DefaultListBehavior}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.ApplyNumberDefault(*args, **arguments)
 
-    def ApplyOutlineNumberDefault(self, *args,  `_DefaultListBehavior_` =None):
-        arguments = {" `_DefaultListBehavior_` ":  `_DefaultListBehavior_` }
+    def ApplyOutlineNumberDefault(self, *args, DefaultListBehavior=None):
+        arguments = {"DefaultListBehavior": DefaultListBehavior}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.ApplyOutlineNumberDefault(*args, **arguments)
 
-    def CanContinuePreviousList(self, *args,  `_ListTemplate_` =None):
-        arguments = {" `_ListTemplate_` ":  `_ListTemplate_` }
+    def CanContinuePreviousList(self, *args, ListTemplate=None):
+        arguments = {"ListTemplate": ListTemplate}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.CanContinuePreviousList(*args, **arguments)
 
@@ -11384,8 +11384,8 @@ class ListFormat:
     def ListOutdent(self):
         self.listformat.ListOutdent()
 
-    def RemoveNumbers(self, *args,  `_NumberType_` =None):
-        arguments = {" `_NumberType_` ":  `_NumberType_` }
+    def RemoveNumbers(self, *args, NumberType=None):
+        arguments = {"NumberType": NumberType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.RemoveNumbers(*args, **arguments)
 
@@ -11529,8 +11529,8 @@ class ListLevel:
     def TrailingCharacter(self, value):
         self.listlevel.TrailingCharacter = value
 
-    def ApplyPictureBullet(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def ApplyPictureBullet(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listlevel.ApplyPictureBullet(*args, **arguments)
 
@@ -11567,8 +11567,8 @@ class ListTemplate:
     def Parent(self):
         return self.listtemplate.Parent
 
-    def Convert(self, *args,  `_Level_` =None):
-        arguments = {" `_Level_` ":  `_Level_` }
+    def Convert(self, *args, Level=None):
+        arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listtemplate.Convert(*args, **arguments)
 
@@ -11613,13 +11613,13 @@ class MailingLabel:
     def Vertical(self):
         return self.mailinglabel.Vertical
 
-    def CreateNewDocument(self, *args,  `_Name_` =None, `_Address_` =None, `_AutoText_` =None, `_ExtractAddress_` =None, `_LaserTray_` =None, `_PrintEPostageLabel_` =None, `_Vertical_` =None):
-        arguments = {" `_Name_` ":  `_Name_` , "`_Address_` ": `_Address_` , "`_AutoText_` ": `_AutoText_` , "`_ExtractAddress_` ": `_ExtractAddress_` , "`_LaserTray_` ": `_LaserTray_` , "`_PrintEPostageLabel_` ": `_PrintEPostageLabel_` , "`_Vertical_` ": `_Vertical_` }
+    def CreateNewDocument(self, *args, Name=None, Address=None, AutoText=None, ExtractAddress=None, LaserTray=None, PrintEPostageLabel=None, Vertical=None):
+        arguments = {"Name": Name, "Address": Address, "AutoText": AutoText, "ExtractAddress": ExtractAddress, "LaserTray": LaserTray, "PrintEPostageLabel": PrintEPostageLabel, "Vertical": Vertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mailinglabel.CreateNewDocument(*args, **arguments)
 
-    def CreateNewDocumentByID(self, *args,  `_LabelID_` =None, `_Address_` =None, `_AutoText_` =None, `_ExtractAddress_` =None, `_LaserTray_` =None, `_PrintEPostageLabel_` =None, `_Vertical_` =None):
-        arguments = {" `_LabelID_` ":  `_LabelID_` , "`_Address_` ": `_Address_` , "`_AutoText_` ": `_AutoText_` , "`_ExtractAddress_` ": `_ExtractAddress_` , "`_LaserTray_` ": `_LaserTray_` , "`_PrintEPostageLabel_` ": `_PrintEPostageLabel_` , "`_Vertical_` ": `_Vertical_` }
+    def CreateNewDocumentByID(self, *args, LabelID=None, Address=None, AutoText=None, ExtractAddress=None, LaserTray=None, PrintEPostageLabel=None, Vertical=None):
+        arguments = {"LabelID": LabelID, "Address": Address, "AutoText": AutoText, "ExtractAddress": ExtractAddress, "LaserTray": LaserTray, "PrintEPostageLabel": PrintEPostageLabel, "Vertical": Vertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mailinglabel.CreateNewDocumentByID(*args, **arguments)
 
@@ -11631,8 +11631,8 @@ class MailingLabel:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailinglabel.PrintOut(*args, **arguments)
 
-    def PrintOutByID(self, *args,  `_LabelID_` =None, `_Address_` =None, `_ExtractAddress_` =None, `_LaserTray_` =None, `_SingleLabel_` =None, `_Row_` =None, `_Column_` =None, `_PrintEPostageLabel_` =None, `_Vertical_` =None):
-        arguments = {" `_LabelID_` ":  `_LabelID_` , "`_Address_` ": `_Address_` , "`_ExtractAddress_` ": `_ExtractAddress_` , "`_LaserTray_` ": `_LaserTray_` , "`_SingleLabel_` ": `_SingleLabel_` , "`_Row_` ": `_Row_` , "`_Column_` ": `_Column_` , "`_PrintEPostageLabel_` ": `_PrintEPostageLabel_` , "`_Vertical_` ": `_Vertical_` }
+    def PrintOutByID(self, *args, LabelID=None, Address=None, ExtractAddress=None, LaserTray=None, SingleLabel=None, Row=None, Column=None, PrintEPostageLabel=None, Vertical=None):
+        arguments = {"LabelID": LabelID, "Address": Address, "ExtractAddress": ExtractAddress, "LaserTray": LaserTray, "SingleLabel": SingleLabel, "Row": Row, "Column": Column, "PrintEPostageLabel": PrintEPostageLabel, "Vertical": Vertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailinglabel.PrintOutByID(*args, **arguments)
 
@@ -11741,8 +11741,8 @@ class MailMerge:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.CreateDataSource(*args, **arguments)
 
-    def CreateHeaderSource(self, *args,  `_Name_` =None, `_PasswordDocument_` =None, `_WritePasswordDocument_` =None, `_HeaderRecord_` =None):
-        arguments = {" `_Name_` ":  `_Name_` , "`_PasswordDocument_` ": `_PasswordDocument_` , "`_WritePasswordDocument_` ": `_WritePasswordDocument_` , "`_HeaderRecord_` ": `_HeaderRecord_` }
+    def CreateHeaderSource(self, *args, Name=None, PasswordDocument=None, WritePasswordDocument=None, HeaderRecord=None):
+        arguments = {"Name": Name, "PasswordDocument": PasswordDocument, "WritePasswordDocument": WritePasswordDocument, "HeaderRecord": HeaderRecord}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.CreateHeaderSource(*args, **arguments)
 
@@ -11755,23 +11755,23 @@ class MailMerge:
     def EditMainDocument(self):
         self.mailmerge.EditMainDocument()
 
-    def Execute(self, *args,  `_Pause_` =None):
-        arguments = {" `_Pause_` ":  `_Pause_` }
+    def Execute(self, *args, Pause=None):
+        arguments = {"Pause": Pause}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.Execute(*args, **arguments)
 
-    def OpenDataSource(self, *args,  `_Name_` =None, `_Format_` =None, `_ConfirmConversions_` =None, `_ReadOnly_` =None, `_LinkToSource_` =None, `_AddToRecentFiles_` =None, `_PasswordDocument_` =None, `_PasswordTemplate_` =None, `_Revert_` =None, `_WritePasswordDocument_` =None, `_WritePasswordTemplate_` =None, `_Connection_` =None, `_SQLStatement_` =None, `_SQLStatement1_` =None, `_OpenExclusive_` =None, `_SubType_` =None):
-        arguments = {" `_Name_` ":  `_Name_` , "`_Format_` ": `_Format_` , "`_ConfirmConversions_` ": `_ConfirmConversions_` , "`_ReadOnly_` ": `_ReadOnly_` , "`_LinkToSource_` ": `_LinkToSource_` , "`_AddToRecentFiles_` ": `_AddToRecentFiles_` , "`_PasswordDocument_` ": `_PasswordDocument_` , "`_PasswordTemplate_` ": `_PasswordTemplate_` , "`_Revert_` ": `_Revert_` , "`_WritePasswordDocument_` ": `_WritePasswordDocument_` , "`_WritePasswordTemplate_` ": `_WritePasswordTemplate_` , "`_Connection_` ": `_Connection_` , "`_SQLStatement_` ": `_SQLStatement_` , "`_SQLStatement1_` ": `_SQLStatement1_` , "`_OpenExclusive_` ": `_OpenExclusive_` , "`_SubType_` ": `_SubType_` }
+    def OpenDataSource(self, *args, Name=None, Format=None, ConfirmConversions=None, ReadOnly=None, LinkToSource=None, AddToRecentFiles=None, PasswordDocument=None, PasswordTemplate=None, Revert=None, WritePasswordDocument=None, WritePasswordTemplate=None, Connection=None, SQLStatement=None, SQLStatement1=None, OpenExclusive=None, SubType=None):
+        arguments = {"Name": Name, "Format": Format, "ConfirmConversions": ConfirmConversions, "ReadOnly": ReadOnly, "LinkToSource": LinkToSource, "AddToRecentFiles": AddToRecentFiles, "PasswordDocument": PasswordDocument, "PasswordTemplate": PasswordTemplate, "Revert": Revert, "WritePasswordDocument": WritePasswordDocument, "WritePasswordTemplate": WritePasswordTemplate, "Connection": Connection, "SQLStatement": SQLStatement, "SQLStatement1": SQLStatement1, "OpenExclusive": OpenExclusive, "SubType": SubType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.OpenDataSource(*args, **arguments)
 
-    def OpenHeaderSource(self, *args,  `_Name_` =None, `_Format_` =None, `_ConfirmConversions_` =None, `_ReadOnly_` =None, `_AddToRecentFiles_` =None, `_PasswordDocument_` =None, `_PasswordTemplate_` =None, `_Revert_` =None, `_WritePasswordDocument_` =None, `_WritePasswordTemplate_` =None, `_OpenExclusive_` =None):
-        arguments = {" `_Name_` ":  `_Name_` , "`_Format_` ": `_Format_` , "`_ConfirmConversions_` ": `_ConfirmConversions_` , "`_ReadOnly_` ": `_ReadOnly_` , "`_AddToRecentFiles_` ": `_AddToRecentFiles_` , "`_PasswordDocument_` ": `_PasswordDocument_` , "`_PasswordTemplate_` ": `_PasswordTemplate_` , "`_Revert_` ": `_Revert_` , "`_WritePasswordDocument_` ": `_WritePasswordDocument_` , "`_WritePasswordTemplate_` ": `_WritePasswordTemplate_` , "`_OpenExclusive_` ": `_OpenExclusive_` }
+    def OpenHeaderSource(self, *args, Name=None, Format=None, ConfirmConversions=None, ReadOnly=None, AddToRecentFiles=None, PasswordDocument=None, PasswordTemplate=None, Revert=None, WritePasswordDocument=None, WritePasswordTemplate=None, OpenExclusive=None):
+        arguments = {"Name": Name, "Format": Format, "ConfirmConversions": ConfirmConversions, "ReadOnly": ReadOnly, "AddToRecentFiles": AddToRecentFiles, "PasswordDocument": PasswordDocument, "PasswordTemplate": PasswordTemplate, "Revert": Revert, "WritePasswordDocument": WritePasswordDocument, "WritePasswordTemplate": WritePasswordTemplate, "OpenExclusive": OpenExclusive}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.OpenHeaderSource(*args, **arguments)
 
-    def ShowWizard(self, *args,  `_InitialState_` =None, `_ShowDocumentStep_` =None, `_ShowTemplateStep_` =None, `_ShowDataStep_` =None, `_ShowWriteStep_` =None, `_ShowPreviewStep_` =None, `_ShowMergeStep_` =None):
-        arguments = {" `_InitialState_` ":  `_InitialState_` , "`_ShowDocumentStep_` ": `_ShowDocumentStep_` , "`_ShowTemplateStep_` ": `_ShowTemplateStep_` , "`_ShowDataStep_` ": `_ShowDataStep_` , "`_ShowWriteStep_` ": `_ShowWriteStep_` , "`_ShowPreviewStep_` ": `_ShowPreviewStep_` , "`_ShowMergeStep_` ": `_ShowMergeStep_` }
+    def ShowWizard(self, *args, InitialState=None, ShowDocumentStep=None, ShowTemplateStep=None, ShowDataStep=None, ShowWriteStep=None, ShowPreviewStep=None, ShowMergeStep=None):
+        arguments = {"InitialState": InitialState, "ShowDocumentStep": ShowDocumentStep, "ShowTemplateStep": ShowTemplateStep, "ShowDataStep": ShowDataStep, "ShowWriteStep": ShowWriteStep, "ShowPreviewStep": ShowPreviewStep, "ShowMergeStep": ShowMergeStep}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.ShowWizard(*args, **arguments)
 
@@ -11908,18 +11908,18 @@ class MailMergeDataSource:
     def Close(self):
         self.mailmergedatasource.Close()
 
-    def FindRecord(self, *args,  `_FindText_` =None, `_Field_` =None):
-        arguments = {" `_FindText_` ":  `_FindText_` , "`_Field_` ": `_Field_` }
+    def FindRecord(self, *args, FindText=None, Field=None):
+        arguments = {"FindText": FindText, "Field": Field}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mailmergedatasource.FindRecord(*args, **arguments)
 
-    def SetAllErrorFlags(self, *args,  `_Invalid_` =None, `_InvalidComment_` =None):
-        arguments = {" `_Invalid_` ":  `_Invalid_` , "`_InvalidComment_` ": `_InvalidComment_` }
+    def SetAllErrorFlags(self, *args, Invalid=None, InvalidComment=None):
+        arguments = {"Invalid": Invalid, "InvalidComment": InvalidComment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmergedatasource.SetAllErrorFlags(*args, **arguments)
 
-    def SetAllIncludedFlags(self, *args,  `_Included_` =None):
-        arguments = {" `_Included_` ":  `_Included_` }
+    def SetAllIncludedFlags(self, *args, Included=None):
+        arguments = {"Included": Included}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmergedatasource.SetAllIncludedFlags(*args, **arguments)
 
@@ -12274,18 +12274,18 @@ class OLEFormat:
     def Activate(self):
         self.oleformat.Activate()
 
-    def ActivateAs(self, *args,  `_ClassType_` =None):
-        arguments = {" `_ClassType_` ":  `_ClassType_` }
+    def ActivateAs(self, *args, ClassType=None):
+        arguments = {"ClassType": ClassType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.oleformat.ActivateAs(*args, **arguments)
 
-    def ConvertTo(self, *args,  _ClassType=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel_ =None):
-        arguments = {" _ClassType":  _ClassType, "DisplayAsIcon": DisplayAsIcon, "IconFileName": IconFileName, "IconIndex": IconIndex, "IconLabel_ ": IconLabel_ }
+    def ConvertTo(self, *args, ClassType=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None):
+        arguments = {"ClassType": ClassType, "DisplayAsIcon": DisplayAsIcon, "IconFileName": IconFileName, "IconIndex": IconIndex, "IconLabel": IconLabel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.oleformat.ConvertTo(*args, **arguments)
 
-    def DoVerb(self, *args,  `_VerbIndex_` =None):
-        arguments = {" `_VerbIndex_` ":  `_VerbIndex_` }
+    def DoVerb(self, *args, VerbIndex=None):
+        arguments = {"VerbIndex": VerbIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.oleformat.DoVerb(*args, **arguments)
 
@@ -13253,8 +13253,8 @@ class OMathMat:
     def Application(self):
         return Application(self.omathmat.Application)
 
-    def Cell(self, *args,  `_Row_` =None, `_Col_` =None):
-        arguments = {" `_Row_` ":  `_Row_` , "`_Col_` ": `_Col_` }
+    def Cell(self, *args, Row=None, Col=None):
+        arguments = {"Row": Row, "Col": Col}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return OMath(self.omathmat.Cell(*args, **arguments))
 
@@ -15512,8 +15512,8 @@ class Pane:
     def Activate(self):
         self.pane.Activate()
 
-    def AutoScroll(self, *args,  `_Velocity_` =None):
-        arguments = {" `_Velocity_` ":  `_Velocity_` }
+    def AutoScroll(self, *args, Velocity=None):
+        arguments = {"Velocity": Velocity}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pane.AutoScroll(*args, **arguments)
 
@@ -15528,8 +15528,8 @@ class Pane:
     def NewFrameset(self):
         self.pane.NewFrameset()
 
-    def PageScroll(self, *args,  `_Down_` =None, `_Up_` =None):
-        arguments = {" `_Down_` ":  `_Down_` , "`_Up_` ": `_Up_` }
+    def PageScroll(self, *args, Down=None, Up=None):
+        arguments = {"Down": Down, "Up": Up}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pane.PageScroll(*args, **arguments)
 
@@ -15710,8 +15710,8 @@ class Paragraph:
     def LineUnitBefore(self, value):
         self.paragraph.LineUnitBefore = value
 
-    def ListNumberOriginal(self, *args,  `_Level_` =None):
-        arguments = {" `_Level_` ":  `_Level_` }
+    def ListNumberOriginal(self, *args, Level=None):
+        arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.paragraph.ListNumberOriginal(*args, **arguments)
 
@@ -15829,21 +15829,21 @@ class Paragraph:
     def Indent(self):
         self.paragraph.Indent()
 
-    def IndentCharWidth(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def IndentCharWidth(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraph.IndentCharWidth(*args, **arguments)
 
-    def IndentFirstLineCharWidth(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def IndentFirstLineCharWidth(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraph.IndentFirstLineCharWidth(*args, **arguments)
 
     def JoinList(self):
         self.paragraph.JoinList()
 
-    def ListAdvanceTo(self, *args,  `_Level1_` =None, `_Level2_` =None, `_Level3_` =None, `_Level4_` =None, `_Level5_` =None, `_Level6_` =None, `_Level7_` =None, `_Level8_` =None, `_Level9_` =None):
-        arguments = {" `_Level1_` ":  `_Level1_` , "`_Level2_` ": `_Level2_` , "`_Level3_` ": `_Level3_` , "`_Level4_` ": `_Level4_` , "`_Level5_` ": `_Level5_` , "`_Level6_` ": `_Level6_` , "`_Level7_` ": `_Level7_` , "`_Level8_` ": `_Level8_` , "`_Level9_` ": `_Level9_` }
+    def ListAdvanceTo(self, *args, Level1=None, Level2=None, Level3=None, Level4=None, Level5=None, Level6=None, Level7=None, Level8=None, Level9=None):
+        arguments = {"Level1": Level1, "Level2": Level2, "Level3": Level3, "Level4": Level4, "Level5": Level5, "Level6": Level6, "Level7": Level7, "Level8": Level8, "Level9": Level9}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraph.ListAdvanceTo(*args, **arguments)
 
@@ -15896,13 +15896,13 @@ class Paragraph:
     def Space2(self):
         self.paragraph.Space2()
 
-    def TabHangingIndent(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def TabHangingIndent(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraph.TabHangingIndent(*args, **arguments)
 
-    def TabIndent(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def TabIndent(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraph.TabIndent(*args, **arguments)
 
@@ -16162,13 +16162,13 @@ class ParagraphFormat:
     def CloseUp(self):
         self.paragraphformat.CloseUp()
 
-    def IndentCharWidth(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def IndentCharWidth(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraphformat.IndentCharWidth(*args, **arguments)
 
-    def IndentFirstLineCharWidth(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def IndentFirstLineCharWidth(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraphformat.IndentFirstLineCharWidth(*args, **arguments)
 
@@ -16190,13 +16190,13 @@ class ParagraphFormat:
     def Space2(self):
         self.paragraphformat.Space2()
 
-    def TabHangingIndent(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def TabHangingIndent(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraphformat.TabHangingIndent(*args, **arguments)
 
-    def TabIndent(self, *args,  `_Count_` =None):
-        arguments = {" `_Count_` ":  `_Count_` }
+    def TabIndent(self, *args, Count=None):
+        arguments = {"Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraphformat.TabIndent(*args, **arguments)
 
@@ -16951,8 +16951,8 @@ class Range:
     def ID(self, value):
         self.range.ID = value
 
-    def Information(self, *args,  _Type_ =None):
-        arguments = {" _Type_ ":  _Type_ }
+    def Information(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.Information(*args, **arguments)
 
@@ -17230,23 +17230,23 @@ class Range:
     def CheckSynonyms(self):
         self.range.CheckSynonyms()
 
-    def Collapse(self, *args,  `_Direction_` =None):
-        arguments = {" `_Direction_` ":  `_Direction_` }
+    def Collapse(self, *args, Direction=None):
+        arguments = {"Direction": Direction}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.Collapse(*args, **arguments)
 
-    def ComputeStatistics(self, *args,  `_Statistic_` =None):
-        arguments = {" `_Statistic_` ":  `_Statistic_` }
+    def ComputeStatistics(self, *args, Statistic=None):
+        arguments = {"Statistic": Statistic}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.ComputeStatistics(*args, **arguments)
 
-    def ConvertHangulAndHanja(self, *args,  `_ConversionsMode_` =None, `_FastConversion_` =None, `_CheckHangulEnding_` =None, `_EnableRecentOrdering_` =None, `_CustomDictionary_` =None):
-        arguments = {" `_ConversionsMode_` ":  `_ConversionsMode_` , "`_FastConversion_` ": `_FastConversion_` , "`_CheckHangulEnding_` ": `_CheckHangulEnding_` , "`_EnableRecentOrdering_` ": `_EnableRecentOrdering_` , "`_CustomDictionary_` ": `_CustomDictionary_` }
+    def ConvertHangulAndHanja(self, *args, ConversionsMode=None, FastConversion=None, CheckHangulEnding=None, EnableRecentOrdering=None, CustomDictionary=None):
+        arguments = {"ConversionsMode": ConversionsMode, "FastConversion": FastConversion, "CheckHangulEnding": CheckHangulEnding, "EnableRecentOrdering": EnableRecentOrdering, "CustomDictionary": CustomDictionary}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.ConvertHangulAndHanja(*args, **arguments)
 
-    def ConvertToTable(self, *args,  `_Separator_` =None, `_NumRows_` =None, `_NumColumns_` =None, `_InitialColumnWidth_` =None, `_Format_` =None, `_ApplyBorders_` =None, `_ApplyShading_` =None, `_ApplyFont_` =None, `_ApplyColor_` =None, `_ApplyHeadingRows_` =None, `_ApplyLastRow_` =None, `_ApplyFirstColumn_` =None, `_ApplyLastColumn_` =None, `_AutoFit_` =None, `_AutoFitBehavior_` =None, `_DefaultTableBehavior_` =None):
-        arguments = {" `_Separator_` ":  `_Separator_` , "`_NumRows_` ": `_NumRows_` , "`_NumColumns_` ": `_NumColumns_` , "`_InitialColumnWidth_` ": `_InitialColumnWidth_` , "`_Format_` ": `_Format_` , "`_ApplyBorders_` ": `_ApplyBorders_` , "`_ApplyShading_` ": `_ApplyShading_` , "`_ApplyFont_` ": `_ApplyFont_` , "`_ApplyColor_` ": `_ApplyColor_` , "`_ApplyHeadingRows_` ": `_ApplyHeadingRows_` , "`_ApplyLastRow_` ": `_ApplyLastRow_` , "`_ApplyFirstColumn_` ": `_ApplyFirstColumn_` , "`_ApplyLastColumn_` ": `_ApplyLastColumn_` , "`_AutoFit_` ": `_AutoFit_` , "`_AutoFitBehavior_` ": `_AutoFitBehavior_` , "`_DefaultTableBehavior_` ": `_DefaultTableBehavior_` }
+    def ConvertToTable(self, *args, Separator=None, NumRows=None, NumColumns=None, InitialColumnWidth=None, Format=None, ApplyBorders=None, ApplyShading=None, ApplyFont=None, ApplyColor=None, ApplyHeadingRows=None, ApplyLastRow=None, ApplyFirstColumn=None, ApplyLastColumn=None, AutoFit=None, AutoFitBehavior=None, DefaultTableBehavior=None):
+        arguments = {"Separator": Separator, "NumRows": NumRows, "NumColumns": NumColumns, "InitialColumnWidth": InitialColumnWidth, "Format": Format, "ApplyBorders": ApplyBorders, "ApplyShading": ApplyShading, "ApplyFont": ApplyFont, "ApplyColor": ApplyColor, "ApplyHeadingRows": ApplyHeadingRows, "ApplyLastRow": ApplyLastRow, "ApplyFirstColumn": ApplyFirstColumn, "ApplyLastColumn": ApplyLastColumn, "AutoFit": AutoFit, "AutoFitBehavior": AutoFitBehavior, "DefaultTableBehavior": DefaultTableBehavior}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.ConvertToTable(*args, **arguments)
 
@@ -17267,13 +17267,13 @@ class Range:
     def DetectLanguage(self):
         self.range.DetectLanguage()
 
-    def EndOf(self, *args,  `_Unit_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Extend_` ": `_Extend_` }
+    def EndOf(self, *args, Unit=None, Extend=None):
+        arguments = {"Unit": Unit, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.EndOf(*args, **arguments)
 
-    def Expand(self, *args,  `_Unit_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` }
+    def Expand(self, *args, Unit=None):
+        arguments = {"Unit": Unit}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.Expand(*args, **arguments)
 
@@ -17292,8 +17292,8 @@ class Range:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.ExportAsFixedFormat3(*args, **arguments)
 
-    def ExportFragment(self, *args,  `_FileName_` =None, `_Format_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` , "`_Format_` ": `_Format_` }
+    def ExportFragment(self, *args, FileName=None, Format=None):
+        arguments = {"FileName": FileName, "Format": Format}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.ExportFragment(*args, **arguments)
 
@@ -17302,66 +17302,66 @@ class Range:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.GetSpellingSuggestions(*args, **arguments)
 
-    def GoTo(self, *args,  _What_ =None, Which_ =None, Count_ =None, Name_ =None):
-        arguments = {" _What_ ":  _What_ , "Which_ ": Which_ , "Count_ ": Count_ , "Name_ ": Name_ }
+    def GoTo(self, *args, What=None, Which=None, Count=None, Name=None):
+        arguments = {"What": What, "Which": Which, "Count": Count, "Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.GoTo(*args, **arguments)
 
-    def GoToEditableRange(self, *args,  `_EditorID_` =None):
-        arguments = {" `_EditorID_` ":  `_EditorID_` }
+    def GoToEditableRange(self, *args, EditorID=None):
+        arguments = {"EditorID": EditorID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.GoToEditableRange(*args, **arguments)
 
-    def GoToNext(self, *args,  `_What_` =None):
-        arguments = {" `_What_` ":  `_What_` }
+    def GoToNext(self, *args, What=None):
+        arguments = {"What": What}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.GoToNext(*args, **arguments)
 
-    def GoToPrevious(self, *args,  `_What_` =None):
-        arguments = {" `_What_` ":  `_What_` }
+    def GoToPrevious(self, *args, What=None):
+        arguments = {"What": What}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.GoToPrevious(*args, **arguments)
 
-    def ImportFragment(self, *args,  `_FileName_` =None, `_MatchDestination_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` , "`_MatchDestination_` ": `_MatchDestination_` }
+    def ImportFragment(self, *args, FileName=None, MatchDestination=None):
+        arguments = {"FileName": FileName, "MatchDestination": MatchDestination}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.ImportFragment(*args, **arguments)
 
-    def InRange(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def InRange(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.InRange(*args, **arguments)
 
-    def InsertAfter(self, *args,  `_Text_` =None):
-        arguments = {" `_Text_` ":  `_Text_` }
+    def InsertAfter(self, *args, Text=None):
+        arguments = {"Text": Text}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertAfter(*args, **arguments)
 
-    def InsertAlignmentTab(self, *args,  `_Alignment_` =None, `_RelativeTo_` =None):
-        arguments = {" `_Alignment_` ":  `_Alignment_` , "`_RelativeTo_` ": `_RelativeTo_` }
+    def InsertAlignmentTab(self, *args, Alignment=None, RelativeTo=None):
+        arguments = {"Alignment": Alignment, "RelativeTo": RelativeTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertAlignmentTab(*args, **arguments)
 
     def InsertAutoText(self):
         self.range.InsertAutoText()
 
-    def InsertBefore(self, *args,  `_Text_` =None):
-        arguments = {" `_Text_` ":  `_Text_` }
+    def InsertBefore(self, *args, Text=None):
+        arguments = {"Text": Text}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertBefore(*args, **arguments)
 
-    def InsertBreak(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def InsertBreak(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertBreak(*args, **arguments)
 
-    def InsertCaption(self, *args,  `_Label_` =None, `_Title_` =None, `_TitleAutoText_` =None, `_Position_` =None, `_ExcludeLabel_` =None):
-        arguments = {" `_Label_` ":  `_Label_` , "`_Title_` ": `_Title_` , "`_TitleAutoText_` ": `_TitleAutoText_` , "`_Position_` ": `_Position_` , "`_ExcludeLabel_` ": `_ExcludeLabel_` }
+    def InsertCaption(self, *args, Label=None, Title=None, TitleAutoText=None, Position=None, ExcludeLabel=None):
+        arguments = {"Label": Label, "Title": Title, "TitleAutoText": TitleAutoText, "Position": Position, "ExcludeLabel": ExcludeLabel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertCaption(*args, **arguments)
 
-    def InsertCrossReference(self, *args,  `_ReferenceType_` =None, `_ReferenceKind_` =None, `_ReferenceItem_` =None, `_InsertAsHyperlink_` =None, `_IncludePosition_` =None, `_SeparateNumbers_` =None, `_SeparatorString_` =None):
-        arguments = {" `_ReferenceType_` ":  `_ReferenceType_` , "`_ReferenceKind_` ": `_ReferenceKind_` , "`_ReferenceItem_` ": `_ReferenceItem_` , "`_InsertAsHyperlink_` ": `_InsertAsHyperlink_` , "`_IncludePosition_` ": `_IncludePosition_` , "`_SeparateNumbers_` ": `_SeparateNumbers_` , "`_SeparatorString_` ": `_SeparatorString_` }
+    def InsertCrossReference(self, *args, ReferenceType=None, ReferenceKind=None, ReferenceItem=None, InsertAsHyperlink=None, IncludePosition=None, SeparateNumbers=None, SeparatorString=None):
+        arguments = {"ReferenceType": ReferenceType, "ReferenceKind": ReferenceKind, "ReferenceItem": ReferenceItem, "InsertAsHyperlink": InsertAsHyperlink, "IncludePosition": IncludePosition, "SeparateNumbers": SeparateNumbers, "SeparatorString": SeparatorString}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertCrossReference(*args, **arguments)
 
@@ -17389,8 +17389,8 @@ class Range:
     def InsertParagraphBefore(self):
         self.range.InsertParagraphBefore()
 
-    def InsertSymbol(self, *args,  `_CharacterNumber_` =None, `_Font_` =None, `_Unicode_` =None, `_Bias_` =None):
-        arguments = {" `_CharacterNumber_` ":  `_CharacterNumber_` , "`_Font_` ": `_Font_` , "`_Unicode_` ": `_Unicode_` , "`_Bias_` ": `_Bias_` }
+    def InsertSymbol(self, *args, CharacterNumber=None, Font=None, Unicode=None, Bias=None):
+        arguments = {"CharacterNumber": CharacterNumber, "Font": Font, "Unicode": Unicode, "Bias": Bias}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.InsertSymbol(*args, **arguments)
 
@@ -17399,66 +17399,66 @@ class Range:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.InsertXML(*args, **arguments)
 
-    def InStory(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def InStory(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.InStory(*args, **arguments)
 
-    def IsEqual(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def IsEqual(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.IsEqual(*args, **arguments)
 
     def LookupNameProperties(self):
         self.range.LookupNameProperties()
 
-    def ModifyEnclosure(self, *args,  `_Style_` =None, `_Symbol_` =None, `_EnclosedText_` =None):
-        arguments = {" `_Style_` ":  `_Style_` , "`_Symbol_` ": `_Symbol_` , "`_EnclosedText_` ": `_EnclosedText_` }
+    def ModifyEnclosure(self, *args, Style=None, Symbol=None, EnclosedText=None):
+        arguments = {"Style": Style, "Symbol": Symbol, "EnclosedText": EnclosedText}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.ModifyEnclosure(*args, **arguments)
 
-    def Move(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def Move(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.Move(*args, **arguments)
 
-    def MoveEnd(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def MoveEnd(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveEnd(*args, **arguments)
 
-    def MoveEndUntil(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveEndUntil(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveEndUntil(*args, **arguments)
 
-    def MoveEndWhile(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveEndWhile(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveEndWhile(*args, **arguments)
 
-    def MoveStart(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def MoveStart(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.MoveStart(*args, **arguments)
 
-    def MoveStartUntil(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveStartUntil(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveStartUntil(*args, **arguments)
 
-    def MoveStartWhile(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveStartWhile(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveStartWhile(*args, **arguments)
 
-    def MoveUntil(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveUntil(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveUntil(*args, **arguments)
 
-    def MoveWhile(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveWhile(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.MoveWhile(*args, **arguments)
 
@@ -17473,8 +17473,8 @@ class Range:
     def Paste(self):
         self.range.Paste()
 
-    def PasteAndFormat(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def PasteAndFormat(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.PasteAndFormat(*args, **arguments)
 
@@ -17484,8 +17484,8 @@ class Range:
     def PasteAsNestedTable(self):
         self.range.PasteAsNestedTable()
 
-    def PasteExcelTable(self, *args,  `_LinkedToExcel_` =None, `_WordFormatting_` =None, `_RTF_` =None):
-        arguments = {" `_LinkedToExcel_` ":  `_LinkedToExcel_` , "`_WordFormatting_` ": `_WordFormatting_` , "`_RTF_` ": `_RTF_` }
+    def PasteExcelTable(self, *args, LinkedToExcel=None, WordFormatting=None, RTF=None):
+        arguments = {"LinkedToExcel": LinkedToExcel, "WordFormatting": WordFormatting, "RTF": RTF}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.PasteExcelTable(*args, **arguments)
 
@@ -17494,8 +17494,8 @@ class Range:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.PasteSpecial(*args, **arguments)
 
-    def PhoneticGuide(self, *args,  `_Text_` =None, `_Alignment_` =None, `_Raise_` =None, `_FontSize_` =None, `_FontName_` =None):
-        arguments = {" `_Text_` ":  `_Text_` , "`_Alignment_` ": `_Alignment_` , "`_Raise_` ": `_Raise_` , "`_FontSize_` ": `_FontSize_` , "`_FontName_` ": `_FontName_` }
+    def PhoneticGuide(self, *args, Text=None, Alignment=None, Raise=None, FontSize=None, FontName=None):
+        arguments = {"Text": Text, "Alignment": Alignment, "Raise": Raise, "FontSize": FontSize, "FontName": FontName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.PhoneticGuide(*args, **arguments)
 
@@ -17507,21 +17507,21 @@ class Range:
     def PreviousSubdocument(self):
         self.range.PreviousSubdocument()
 
-    def Relocate(self, *args,  `_Direction_` =None):
-        arguments = {" `_Direction_` ":  `_Direction_` }
+    def Relocate(self, *args, Direction=None):
+        arguments = {"Direction": Direction}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.Relocate(*args, **arguments)
 
     def Select(self):
         self.range.Select()
 
-    def SetListLevel(self, *args,  `_Level_` =None):
-        arguments = {" `_Level_` ":  `_Level_` }
+    def SetListLevel(self, *args, Level=None):
+        arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.SetListLevel(*args, **arguments)
 
-    def SetRange(self, *args,  `_Start_` =None, `_End_` =None):
-        arguments = {" `_Start_` ":  `_Start_` , "`_End_` ": `_End_` }
+    def SetRange(self, *args, Start=None, End=None):
+        arguments = {"Start": Start, "End": End}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.SetRange(*args, **arguments)
 
@@ -17536,13 +17536,13 @@ class Range:
     def SortDescending(self):
         self.range.SortDescending()
 
-    def StartOf(self, *args,  `_Unit_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Extend_` ": `_Extend_` }
+    def StartOf(self, *args, Unit=None, Extend=None):
+        arguments = {"Unit": Unit, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.StartOf(*args, **arguments)
 
-    def TCSCConverter(self, *args,  `_WdTCSCConverterDirection_` =None, `_CommonTerms_` =None, `_UseVariants_` =None):
-        arguments = {" `_WdTCSCConverterDirection_` ":  `_WdTCSCConverterDirection_` , "`_CommonTerms_` ": `_CommonTerms_` , "`_UseVariants_` ": `_UseVariants_` }
+    def TCSCConverter(self, *args, WdTCSCConverterDirection=None, CommonTerms=None, UseVariants=None):
+        arguments = {"WdTCSCConverterDirection": WdTCSCConverterDirection, "CommonTerms": CommonTerms, "UseVariants": UseVariants}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.TCSCConverter(*args, **arguments)
 
@@ -17853,13 +17853,13 @@ class Research:
     def Parent(self):
         return self.research.Parent
 
-    def IsResearchService(self, *args,  `_ServiceID_` =None):
-        arguments = {" `_ServiceID_` ":  `_ServiceID_` }
+    def IsResearchService(self, *args, ServiceID=None):
+        arguments = {"ServiceID": ServiceID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.research.IsResearchService(*args, **arguments)
 
-    def Query(self, *args,  `_ServiceID_` =None, `_QueryString_` =None, `_QueryLanguage_` =None, `_UseSelection_` =None, `_RequeryContextXML_` =None, `_NewQueryContextXML_` =None, `_LaunchQuery_` =None):
-        arguments = {" `_ServiceID_` ":  `_ServiceID_` , "`_QueryString_` ": `_QueryString_` , "`_QueryLanguage_` ": `_QueryLanguage_` , "`_UseSelection_` ": `_UseSelection_` , "`_RequeryContextXML_` ": `_RequeryContextXML_` , "`_NewQueryContextXML_` ": `_NewQueryContextXML_` , "`_LaunchQuery_` ": `_LaunchQuery_` }
+    def Query(self, *args, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
+        arguments = {"ServiceID": ServiceID, "QueryString": QueryString, "QueryLanguage": QueryLanguage, "UseSelection": UseSelection, "RequeryContextXML": RequeryContextXML, "NewQueryContextXML": NewQueryContextXML, "LaunchQuery": LaunchQuery}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.research.Query(*args, **arguments)
 
@@ -18092,8 +18092,8 @@ class Row:
     def SpaceBetweenColumns(self, value):
         self.row.SpaceBetweenColumns = value
 
-    def ConvertToText(self, *args,  `_Separator_` =None, `_NestedTables_` =None):
-        arguments = {" `_Separator_` ":  `_Separator_` , "`_NestedTables_` ": `_NestedTables_` }
+    def ConvertToText(self, *args, Separator=None, NestedTables=None):
+        arguments = {"Separator": Separator, "NestedTables": NestedTables}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.row.ConvertToText(*args, **arguments)
 
@@ -18103,13 +18103,13 @@ class Row:
     def Select(self):
         self.row.Select()
 
-    def SetHeight(self, *args,  `_RowHeight_` =None, `_HeightRule_` =None):
-        arguments = {" `_RowHeight_` ":  `_RowHeight_` , "`_HeightRule_` ": `_HeightRule_` }
+    def SetHeight(self, *args, RowHeight=None, HeightRule=None):
+        arguments = {"RowHeight": RowHeight, "HeightRule": HeightRule}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.row.SetHeight(*args, **arguments)
 
-    def SetLeftIndent(self, *args,  `_LeftIndent_` =None, `_RulerStyle_` =None):
-        arguments = {" `_LeftIndent_` ":  `_LeftIndent_` , "`_RulerStyle_` ": `_RulerStyle_` }
+    def SetLeftIndent(self, *args, LeftIndent=None, RulerStyle=None):
+        arguments = {"LeftIndent": LeftIndent, "RulerStyle": RulerStyle}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.row.SetLeftIndent(*args, **arguments)
 
@@ -18316,8 +18316,8 @@ class Selection:
     def Hyperlinks(self):
         return self.selection.Hyperlinks
 
-    def Information(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def Information(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.Information(*args, **arguments)
 
@@ -18517,8 +18517,8 @@ class Selection:
     def ClearParagraphStyle(self):
         self.selection.ClearParagraphStyle()
 
-    def Collapse(self, *args,  `_Direction_` =None):
-        arguments = {" `_Direction_` ":  `_Direction_` }
+    def Collapse(self, *args, Direction=None):
+        arguments = {"Direction": Direction}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.Collapse(*args, **arguments)
 
@@ -18536,8 +18536,8 @@ class Selection:
     def CopyFormat(self):
         self.selection.CopyFormat()
 
-    def CreateAutoTextEntry(self, *args,  `_Name_` =None, `_StyleName_` =None):
-        arguments = {" `_Name_` ":  `_Name_` , "`_StyleName_` ": `_StyleName_` }
+    def CreateAutoTextEntry(self, *args, Name=None, StyleName=None):
+        arguments = {"Name": Name, "StyleName": StyleName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.CreateAutoTextEntry(*args, **arguments)
 
@@ -18547,29 +18547,29 @@ class Selection:
     def Cut(self):
         self.selection.Cut()
 
-    def Delete(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def Delete(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.Delete(*args, **arguments)
 
     def DetectLanguage(self):
         self.selection.DetectLanguage()
 
-    def EndKey(self, *args,  `_Unit_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Extend_` ": `_Extend_` }
+    def EndKey(self, *args, Unit=None, Extend=None):
+        arguments = {"Unit": Unit, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.EndKey(*args, **arguments)
 
-    def EndOf(self, *args,  `_Unit_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Extend_` ": `_Extend_` }
+    def EndOf(self, *args, Unit=None, Extend=None):
+        arguments = {"Unit": Unit, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.EndOf(*args, **arguments)
 
     def EscapeKey(self):
         self.selection.EscapeKey()
 
-    def Expand(self, *args,  `_Unit_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` }
+    def Expand(self, *args, Unit=None):
+        arguments = {"Unit": Unit}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.Expand(*args, **arguments)
 
@@ -18593,58 +18593,58 @@ class Selection:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.Extend(*args, **arguments)
 
-    def GoTo(self, *args,  `_What_` =None, `_Which_` =None, `_Count_` =None, `_Name_` =None):
-        arguments = {" `_What_` ":  `_What_` , "`_Which_` ": `_Which_` , "`_Count_` ": `_Count_` , "`_Name_` ": `_Name_` }
+    def GoTo(self, *args, What=None, Which=None, Count=None, Name=None):
+        arguments = {"What": What, "Which": Which, "Count": Count, "Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.GoTo(*args, **arguments)
 
-    def GoToEditableRange(self, *args,  `_EditorID_` =None):
-        arguments = {" `_EditorID_` ":  `_EditorID_` }
+    def GoToEditableRange(self, *args, EditorID=None):
+        arguments = {"EditorID": EditorID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.GoToEditableRange(*args, **arguments)
 
-    def GoToNext(self, *args,  `_What_` =None):
-        arguments = {" `_What_` ":  `_What_` }
+    def GoToNext(self, *args, What=None):
+        arguments = {"What": What}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.GoToNext(*args, **arguments)
 
-    def GoToPrevious(self, *args,  `_What_` =None):
-        arguments = {" `_What_` ":  `_What_` }
+    def GoToPrevious(self, *args, What=None):
+        arguments = {"What": What}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.GoToPrevious(*args, **arguments)
 
-    def HomeKey(self, *args,  `_Unit_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Extend_` ": `_Extend_` }
+    def HomeKey(self, *args, Unit=None, Extend=None):
+        arguments = {"Unit": Unit, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.HomeKey(*args, **arguments)
 
-    def InRange(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def InRange(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.InRange(*args, **arguments)
 
-    def InsertAfter(self, *args,  `_Text_` =None):
-        arguments = {" `_Text_` ":  `_Text_` }
+    def InsertAfter(self, *args, Text=None):
+        arguments = {"Text": Text}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertAfter(*args, **arguments)
 
-    def InsertBefore(self, *args,  `_Text_` =None):
-        arguments = {" `_Text_` ":  `_Text_` }
+    def InsertBefore(self, *args, Text=None):
+        arguments = {"Text": Text}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertBefore(*args, **arguments)
 
-    def InsertBreak(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def InsertBreak(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertBreak(*args, **arguments)
 
-    def InsertCaption(self, *args,  `_Label_` =None, `_Title_` =None, `_TitleAutoText_` =None, `_Position_` =None, `_ExcludeLabel_` =None):
-        arguments = {" `_Label_` ":  `_Label_` , "`_Title_` ": `_Title_` , "`_TitleAutoText_` ": `_TitleAutoText_` , "`_Position_` ": `_Position_` , "`_ExcludeLabel_` ": `_ExcludeLabel_` }
+    def InsertCaption(self, *args, Label=None, Title=None, TitleAutoText=None, Position=None, ExcludeLabel=None):
+        arguments = {"Label": Label, "Title": Title, "TitleAutoText": TitleAutoText, "Position": Position, "ExcludeLabel": ExcludeLabel}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertCaption(*args, **arguments)
 
-    def InsertCells(self, *args,  `_ShiftCells_` =None):
-        arguments = {" `_ShiftCells_` ":  `_ShiftCells_` }
+    def InsertCells(self, *args, ShiftCells=None):
+        arguments = {"ShiftCells": ShiftCells}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertCells(*args, **arguments)
 
@@ -18654,18 +18654,18 @@ class Selection:
     def InsertColumnsRight(self):
         self.selection.InsertColumnsRight()
 
-    def InsertCrossReference(self, *args,  `_ReferenceType_` =None, `_ReferenceKind_` =None, `_ReferenceItem_` =None, `_InsertAsHyperlink_` =None, `_IncludePosition_` =None, `_SeparateNumbers_` =None, `_SeparatorString_` =None):
-        arguments = {" `_ReferenceType_` ":  `_ReferenceType_` , "`_ReferenceKind_` ": `_ReferenceKind_` , "`_ReferenceItem_` ": `_ReferenceItem_` , "`_InsertAsHyperlink_` ": `_InsertAsHyperlink_` , "`_IncludePosition_` ": `_IncludePosition_` , "`_SeparateNumbers_` ": `_SeparateNumbers_` , "`_SeparatorString_` ": `_SeparatorString_` }
+    def InsertCrossReference(self, *args, ReferenceType=None, ReferenceKind=None, ReferenceItem=None, InsertAsHyperlink=None, IncludePosition=None, SeparateNumbers=None, SeparatorString=None):
+        arguments = {"ReferenceType": ReferenceType, "ReferenceKind": ReferenceKind, "ReferenceItem": ReferenceItem, "InsertAsHyperlink": InsertAsHyperlink, "IncludePosition": IncludePosition, "SeparateNumbers": SeparateNumbers, "SeparatorString": SeparatorString}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertCrossReference(*args, **arguments)
 
-    def InsertDateTime(self, *args,  `_DateTimeFormat_` =None, `_InsertAsField_` =None, `_InsertAsFullWidth_` =None, `_DateLanguage_` =None, `_CalendarType_` =None):
-        arguments = {" `_DateTimeFormat_` ":  `_DateTimeFormat_` , "`_InsertAsField_` ": `_InsertAsField_` , "`_InsertAsFullWidth_` ": `_InsertAsFullWidth_` , "`_DateLanguage_` ": `_DateLanguage_` , "`_CalendarType_` ": `_CalendarType_` }
+    def InsertDateTime(self, *args, DateTimeFormat=None, InsertAsField=None, InsertAsFullWidth=None, DateLanguage=None, CalendarType=None):
+        arguments = {"DateTimeFormat": DateTimeFormat, "InsertAsField": InsertAsField, "InsertAsFullWidth": InsertAsFullWidth, "DateLanguage": DateLanguage, "CalendarType": CalendarType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertDateTime(*args, **arguments)
 
-    def InsertFile(self, *args,  `_FileName_` =None, `_Range_` =None, `_ConfirmConversions_` =None, `_Link_` =None, `_Attachment_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` , "`_Range_` ": `_Range_` , "`_ConfirmConversions_` ": `_ConfirmConversions_` , "`_Link_` ": `_Link_` , "`_Attachment_` ": `_Attachment_` }
+    def InsertFile(self, *args, FileName=None, Range=None, ConfirmConversions=None, Link=None, Attachment=None):
+        arguments = {"FileName": FileName, "Range": Range, "ConfirmConversions": ConfirmConversions, "Link": Link, "Attachment": Attachment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertFile(*args, **arguments)
 
@@ -18686,8 +18686,8 @@ class Selection:
     def InsertParagraphBefore(self):
         self.selection.InsertParagraphBefore()
 
-    def InsertRows(self, *args,  `_NumRows_` =None):
-        arguments = {" `_NumRows_` ":  `_NumRows_` }
+    def InsertRows(self, *args, NumRows=None):
+        arguments = {"NumRows": NumRows}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertRows(*args, **arguments)
 
@@ -18700,23 +18700,23 @@ class Selection:
     def InsertStyleSeparator(self):
         self.selection.InsertStyleSeparator()
 
-    def InsertSymbol(self, *args,  `_CharacterNumber_` =None, `_Font_` =None, `_Unicode_` =None, `_Bias_` =None):
-        arguments = {" `_CharacterNumber_` ":  `_CharacterNumber_` , "`_Font_` ": `_Font_` , "`_Unicode_` ": `_Unicode_` , "`_Bias_` ": `_Bias_` }
+    def InsertSymbol(self, *args, CharacterNumber=None, Font=None, Unicode=None, Bias=None):
+        arguments = {"CharacterNumber": CharacterNumber, "Font": Font, "Unicode": Unicode, "Bias": Bias}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.InsertSymbol(*args, **arguments)
 
-    def InsertXML(self, *args,  `_XML_` =None, `_Transform_` =None):
-        arguments = {" `_XML_` ":  `_XML_` , "`_Transform_` ": `_Transform_` }
+    def InsertXML(self, *args, XML=None, Transform=None):
+        arguments = {"XML": XML, "Transform": Transform}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.InsertXML(*args, **arguments)
 
-    def InStory(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def InStory(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.InStory(*args, **arguments)
 
-    def IsEqual(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def IsEqual(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.IsEqual(*args, **arguments)
 
@@ -18729,58 +18729,58 @@ class Selection:
     def LtrRun(self):
         self.selection.LtrRun()
 
-    def Move(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def Move(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.Move(*args, **arguments)
 
-    def MoveDown(self, *args,  `_Unit_` =None, `_Count_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` , "`_Extend_` ": `_Extend_` }
+    def MoveDown(self, *args, Unit=None, Count=None, Extend=None):
+        arguments = {"Unit": Unit, "Count": Count, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveDown(*args, **arguments)
 
-    def MoveEnd(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def MoveEnd(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.MoveEnd(*args, **arguments)
 
-    def MoveEndUntil(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveEndUntil(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.MoveEndUntil(*args, **arguments)
 
-    def MoveEndWhile(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveEndWhile(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveEndWhile(*args, **arguments)
 
-    def MoveLeft(self, *args,  `_Unit_` =None, `_Count_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` , "`_Extend_` ": `_Extend_` }
+    def MoveLeft(self, *args, Unit=None, Count=None, Extend=None):
+        arguments = {"Unit": Unit, "Count": Count, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveLeft(*args, **arguments)
 
-    def MoveRight(self, *args,  `_Unit_` =None, `_Count_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` , "`_Extend_` ": `_Extend_` }
+    def MoveRight(self, *args, Unit=None, Count=None, Extend=None):
+        arguments = {"Unit": Unit, "Count": Count, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.MoveRight(*args, **arguments)
 
-    def MoveStart(self, *args,  `_Unit_` =None, `_Count_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Count_` ": `_Count_` }
+    def MoveStart(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.MoveStart(*args, **arguments)
 
-    def MoveStartUntil(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveStartUntil(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveStartUntil(*args, **arguments)
 
-    def MoveStartWhile(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveStartWhile(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveStartWhile(*args, **arguments)
 
-    def MoveUntil(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveUntil(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveUntil(*args, **arguments)
 
@@ -18789,8 +18789,8 @@ class Selection:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.MoveUp(*args, **arguments)
 
-    def MoveWhile(self, *args,  `_Cset_` =None, `_Count_` =None):
-        arguments = {" `_Cset_` ":  `_Cset_` , "`_Count_` ": `_Count_` }
+    def MoveWhile(self, *args, Cset=None, Count=None):
+        arguments = {"Cset": Cset, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.MoveWhile(*args, **arguments)
 
@@ -18802,8 +18802,8 @@ class Selection:
     def NextField(self):
         return self.selection.NextField()
 
-    def NextRevision(self, *args,  `_Wrap_` =None):
-        arguments = {" `_Wrap_` ":  `_Wrap_` }
+    def NextRevision(self, *args, Wrap=None):
+        arguments = {"Wrap": Wrap}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.NextRevision(*args, **arguments)
 
@@ -18813,8 +18813,8 @@ class Selection:
     def Paste(self):
         self.selection.Paste()
 
-    def PasteAndFormat(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def PasteAndFormat(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.PasteAndFormat(*args, **arguments)
 
@@ -18824,8 +18824,8 @@ class Selection:
     def PasteAsNestedTable(self):
         self.selection.PasteAsNestedTable()
 
-    def PasteExcelTable(self, *args,  `_LinkedToExcel_` =None, `_WordFormatting_` =None, `_RTF_` =None):
-        arguments = {" `_LinkedToExcel_` ":  `_LinkedToExcel_` , "`_WordFormatting_` ": `_WordFormatting_` , "`_RTF_` ": `_RTF_` }
+    def PasteExcelTable(self, *args, LinkedToExcel=None, WordFormatting=None, RTF=None):
+        arguments = {"LinkedToExcel": LinkedToExcel, "WordFormatting": WordFormatting, "RTF": RTF}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.PasteExcelTable(*args, **arguments)
 
@@ -18845,8 +18845,8 @@ class Selection:
     def PreviousField(self):
         return self.selection.PreviousField()
 
-    def PreviousRevision(self, *args,  `_Wrap_` =None):
-        arguments = {" `_Wrap_` ":  `_Wrap_` }
+    def PreviousRevision(self, *args, Wrap=None):
+        arguments = {"Wrap": Wrap}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.PreviousRevision(*args, **arguments)
 
@@ -18895,8 +18895,8 @@ class Selection:
     def SelectRow(self):
         self.selection.SelectRow()
 
-    def SetRange(self, *args,  `_Start_` =None, `_End_` =None):
-        arguments = {" `_Start_` ":  `_Start_` , "`_End_` ": `_End_` }
+    def SetRange(self, *args, Start=None, End=None):
+        arguments = {"Start": Start, "End": End}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.SetRange(*args, **arguments)
 
@@ -18906,8 +18906,8 @@ class Selection:
     def ShrinkDiscontiguousSelection(self):
         self.selection.ShrinkDiscontiguousSelection()
 
-    def Sort(self, *args,  `_ExcludeHeader_` =None, `_FieldNumber_` =None, `_SortFieldType_` =None, `_SortOrder_` =None, `_FieldNumber2_` =None, `_SortFieldType2_` =None, `_SortOrder2_` =None, `_FieldNumber3_` =None, `_SortFieldType3_` =None, `_SortOrder3_` =None, `_SortColumn_` =None, `_Separator_` =None, `_CaseSensitive_` =None, `_BidiSort_` =None, `_IgnoreThe_` =None, `_IgnoreKashida_` =None, `_IgnoreDiacritics_` =None, `_IgnoreHe_` =None, `_LanguageID_` =None, `_SubFieldNumber_` =None, `_SubFieldNumber2_` =None, `_SubFieldNumber3_` =None):
-        arguments = {" `_ExcludeHeader_` ":  `_ExcludeHeader_` , "`_FieldNumber_` ": `_FieldNumber_` , "`_SortFieldType_` ": `_SortFieldType_` , "`_SortOrder_` ": `_SortOrder_` , "`_FieldNumber2_` ": `_FieldNumber2_` , "`_SortFieldType2_` ": `_SortFieldType2_` , "`_SortOrder2_` ": `_SortOrder2_` , "`_FieldNumber3_` ": `_FieldNumber3_` , "`_SortFieldType3_` ": `_SortFieldType3_` , "`_SortOrder3_` ": `_SortOrder3_` , "`_SortColumn_` ": `_SortColumn_` , "`_Separator_` ": `_Separator_` , "`_CaseSensitive_` ": `_CaseSensitive_` , "`_BidiSort_` ": `_BidiSort_` , "`_IgnoreThe_` ": `_IgnoreThe_` , "`_IgnoreKashida_` ": `_IgnoreKashida_` , "`_IgnoreDiacritics_` ": `_IgnoreDiacritics_` , "`_IgnoreHe_` ": `_IgnoreHe_` , "`_LanguageID_` ": `_LanguageID_` , "`_SubFieldNumber_` ": `_SubFieldNumber_` , "`_SubFieldNumber2_` ": `_SubFieldNumber2_` , "`_SubFieldNumber3_` ": `_SubFieldNumber3_` }
+    def Sort(self, *args, ExcludeHeader=None, FieldNumber=None, SortFieldType=None, SortOrder=None, FieldNumber2=None, SortFieldType2=None, SortOrder2=None, FieldNumber3=None, SortFieldType3=None, SortOrder3=None, SortColumn=None, Separator=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None, SubFieldNumber=None, SubFieldNumber2=None, SubFieldNumber3=None):
+        arguments = {"ExcludeHeader": ExcludeHeader, "FieldNumber": FieldNumber, "SortFieldType": SortFieldType, "SortOrder": SortOrder, "FieldNumber2": FieldNumber2, "SortFieldType2": SortFieldType2, "SortOrder2": SortOrder2, "FieldNumber3": FieldNumber3, "SortFieldType3": SortFieldType3, "SortOrder3": SortOrder3, "SortColumn": SortColumn, "Separator": Separator, "CaseSensitive": CaseSensitive, "BidiSort": BidiSort, "IgnoreThe": IgnoreThe, "IgnoreKashida": IgnoreKashida, "IgnoreDiacritics": IgnoreDiacritics, "IgnoreHe": IgnoreHe, "LanguageID": LanguageID, "SubFieldNumber": SubFieldNumber, "SubFieldNumber2": SubFieldNumber2, "SubFieldNumber3": SubFieldNumber3}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.Sort(*args, **arguments)
 
@@ -18920,8 +18920,8 @@ class Selection:
     def SplitTable(self):
         self.selection.SplitTable()
 
-    def StartOf(self, *args,  `_Unit_` =None, `_Extend_` =None):
-        arguments = {" `_Unit_` ":  `_Unit_` , "`_Extend_` ": `_Extend_` }
+    def StartOf(self, *args, Unit=None, Extend=None):
+        arguments = {"Unit": Unit, "Extend": Extend}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.StartOf(*args, **arguments)
 
@@ -18934,8 +18934,8 @@ class Selection:
     def TypeParagraph(self):
         self.selection.TypeParagraph()
 
-    def TypeText(self, *args,  `_Text_` =None):
-        arguments = {" `_Text_` ":  `_Text_` }
+    def TypeText(self, *args, Text=None):
+        arguments = {"Text": Text}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selection.TypeText(*args, **arguments)
 
@@ -19203,8 +19203,8 @@ class Series:
     def XValues(self, value):
         self.series.XValues = value
 
-    def ApplyDataLabels(self, *args, `Type`=None, `LegendKey`=None, `AutoText`=None, `HasLeaderLines`=None, `ShowSeriesName`=None, `ShowCategoryName`=None, `ShowValue`=None, `ShowPercentage`=None, `ShowBubbleSize`=None, `Separator`=None):
-        arguments = {"`Type`": `Type`, "`LegendKey`": `LegendKey`, "`AutoText`": `AutoText`, "`HasLeaderLines`": `HasLeaderLines`, "`ShowSeriesName`": `ShowSeriesName`, "`ShowCategoryName`": `ShowCategoryName`, "`ShowValue`": `ShowValue`, "`ShowPercentage`": `ShowPercentage`, "`ShowBubbleSize`": `ShowBubbleSize`, "`Separator`": `Separator`}
+    def ApplyDataLabels(self, *args, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
+        arguments = {"Type": Type, "LegendKey": LegendKey, "AutoText": AutoText, "HasLeaderLines": HasLeaderLines, "ShowSeriesName": ShowSeriesName, "ShowCategoryName": ShowCategoryName, "ShowValue": ShowValue, "ShowPercentage": ShowPercentage, "ShowBubbleSize": ShowBubbleSize, "Separator": Separator}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.series.ApplyDataLabels(*args, **arguments)
 
@@ -19809,23 +19809,23 @@ class Shape:
     def Apply(self):
         self.shape.Apply()
 
-    def CanvasCropBottom(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def CanvasCropBottom(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.CanvasCropBottom(*args, **arguments)
 
-    def CanvasCropLeft(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def CanvasCropLeft(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.CanvasCropLeft(*args, **arguments)
 
-    def CanvasCropRight(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def CanvasCropRight(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.CanvasCropRight(*args, **arguments)
 
-    def CanvasCropTop(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def CanvasCropTop(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.CanvasCropTop(*args, **arguments)
 
@@ -19845,18 +19845,18 @@ class Shape:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.Flip(*args, **arguments)
 
-    def IncrementLeft(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementLeft(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.IncrementLeft(*args, **arguments)
 
-    def IncrementRotation(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotation(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.IncrementRotation(*args, **arguments)
 
-    def IncrementTop(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementTop(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.IncrementTop(*args, **arguments)
 
@@ -19968,8 +19968,8 @@ class Source:
     def Creator(self):
         return self.source.Creator
 
-    def Field(self, *args,  `_Name_` =None):
-        arguments = {" `_Name_` ":  `_Name_` }
+    def Field(self, *args, Name=None):
+        arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.source.Field(*args, **arguments)
 
@@ -20204,8 +20204,8 @@ class Style:
     def Delete(self):
         self.style.Delete()
 
-    def LinkToListTemplate(self, *args,  `_ListTemplate_` =None, `_ListLevelNumber_` =None):
-        arguments = {" `_ListTemplate_` ":  `_ListTemplate_` , "`_ListLevelNumber_` ": `_ListLevelNumber_` }
+    def LinkToListTemplate(self, *args, ListTemplate=None, ListLevelNumber=None):
+        arguments = {"ListTemplate": ListTemplate, "ListLevelNumber": ListLevelNumber}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.style.LinkToListTemplate(*args, **arguments)
 
@@ -20261,8 +20261,8 @@ class StyleSheet:
     def Delete(self):
         self.stylesheet.Delete()
 
-    def Move(self, *args,  `_Precedence_` =None):
-        arguments = {" `_Precedence_` ":  `_Precedence_` }
+    def Move(self, *args, Precedence=None):
+        arguments = {"Precedence": Precedence}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.stylesheet.Move(*args, **arguments)
 
@@ -20397,8 +20397,8 @@ class SynonymInfo:
     def RelatedWordList(self):
         return self.synonyminfo.RelatedWordList
 
-    def SynonymList(self, *args,  `_Meaning_` =None):
-        arguments = {" `_Meaning_` ":  `_Meaning_` }
+    def SynonymList(self, *args, Meaning=None):
+        arguments = {"Meaning": Meaning}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.synonyminfo.SynonymList(*args, **arguments)
 
@@ -20491,8 +20491,8 @@ class System:
     def VerticalResolution(self):
         return self.system.VerticalResolution
 
-    def Connect(self, *args,  `_Path_` =None, `_Drive_` =None, `_Password_` =None):
-        arguments = {" `_Path_` ":  `_Path_` , "`_Drive_` ": `_Drive_` , "`_Password_` ": `_Password_` }
+    def Connect(self, *args, Path=None, Drive=None, Password=None):
+        arguments = {"Path": Path, "Drive": Drive, "Password": Password}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.system.Connect(*args, **arguments)
 
@@ -20684,28 +20684,28 @@ class Table:
     def Uniform(self):
         return self.table.Uniform
 
-    def ApplyStyleDirectFormatting(self, *args,  `_StyleName_` =None):
-        arguments = {" `_StyleName_` ":  `_StyleName_` }
+    def ApplyStyleDirectFormatting(self, *args, StyleName=None):
+        arguments = {"StyleName": StyleName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.ApplyStyleDirectFormatting(*args, **arguments)
 
-    def AutoFitBehavior(self, *args,  `_Behavior_` =None):
-        arguments = {" `_Behavior_` ":  `_Behavior_` }
+    def AutoFitBehavior(self, *args, Behavior=None):
+        arguments = {"Behavior": Behavior}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.AutoFitBehavior(*args, **arguments)
 
-    def AutoFormat(self, *args,  `_Format_` =None, `_ApplyBorders_` =None, `_ApplyShading_` =None, `_ApplyFont_` =None, `_ApplyColor_` =None, `_ApplyHeadingRows_` =None, `_ApplyLastRow_` =None, `_ApplyFirstColumn_` =None, `_ApplyLastColumn_` =None, `_AutoFit_` =None):
-        arguments = {" `_Format_` ":  `_Format_` , "`_ApplyBorders_` ": `_ApplyBorders_` , "`_ApplyShading_` ": `_ApplyShading_` , "`_ApplyFont_` ": `_ApplyFont_` , "`_ApplyColor_` ": `_ApplyColor_` , "`_ApplyHeadingRows_` ": `_ApplyHeadingRows_` , "`_ApplyLastRow_` ": `_ApplyLastRow_` , "`_ApplyFirstColumn_` ": `_ApplyFirstColumn_` , "`_ApplyLastColumn_` ": `_ApplyLastColumn_` , "`_AutoFit_` ": `_AutoFit_` }
+    def AutoFormat(self, *args, Format=None, ApplyBorders=None, ApplyShading=None, ApplyFont=None, ApplyColor=None, ApplyHeadingRows=None, ApplyLastRow=None, ApplyFirstColumn=None, ApplyLastColumn=None, AutoFit=None):
+        arguments = {"Format": Format, "ApplyBorders": ApplyBorders, "ApplyShading": ApplyShading, "ApplyFont": ApplyFont, "ApplyColor": ApplyColor, "ApplyHeadingRows": ApplyHeadingRows, "ApplyLastRow": ApplyLastRow, "ApplyFirstColumn": ApplyFirstColumn, "ApplyLastColumn": ApplyLastColumn, "AutoFit": AutoFit}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.AutoFormat(*args, **arguments)
 
-    def Cell(self, *args,  `_Row_` =None, `_Column_` =None):
-        arguments = {" `_Row_` ":  `_Row_` , "`_Column_` ": `_Column_` }
+    def Cell(self, *args, Row=None, Column=None):
+        arguments = {"Row": Row, "Column": Column}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.table.Cell(*args, **arguments)
 
-    def ConvertToText(self, *args,  `_Separator_` =None, `_NestedTables_` =None):
-        arguments = {" `_Separator_` ":  `_Separator_` , "`_NestedTables_` ": `_NestedTables_` }
+    def ConvertToText(self, *args, Separator=None, NestedTables=None):
+        arguments = {"Separator": Separator, "NestedTables": NestedTables}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.ConvertToText(*args, **arguments)
 
@@ -20715,8 +20715,8 @@ class Table:
     def Select(self):
         self.table.Select()
 
-    def Sort(self, *args,  `_ExcludeHeader_` =None, `_FieldNumber_` =None, `_SortFieldType_` =None, `_SortOrder_` =None, `_FieldNumber2_` =None, `_SortFieldType2_` =None, `_SortOrder2_` =None, `_FieldNumber3_` =None, `_SortFieldType3_` =None, `_SortOrder3_` =None, `_CaseSensitive_` =None, `_BidiSort_` =None, `_IgnoreThe_` =None, `_IgnoreKashida_` =None, `_IgnoreDiacritics_` =None, `_IgnoreHe_` =None, `_LanguageID_` =None):
-        arguments = {" `_ExcludeHeader_` ":  `_ExcludeHeader_` , "`_FieldNumber_` ": `_FieldNumber_` , "`_SortFieldType_` ": `_SortFieldType_` , "`_SortOrder_` ": `_SortOrder_` , "`_FieldNumber2_` ": `_FieldNumber2_` , "`_SortFieldType2_` ": `_SortFieldType2_` , "`_SortOrder2_` ": `_SortOrder2_` , "`_FieldNumber3_` ": `_FieldNumber3_` , "`_SortFieldType3_` ": `_SortFieldType3_` , "`_SortOrder3_` ": `_SortOrder3_` , "`_CaseSensitive_` ": `_CaseSensitive_` , "`_BidiSort_` ": `_BidiSort_` , "`_IgnoreThe_` ": `_IgnoreThe_` , "`_IgnoreKashida_` ": `_IgnoreKashida_` , "`_IgnoreDiacritics_` ": `_IgnoreDiacritics_` , "`_IgnoreHe_` ": `_IgnoreHe_` , "`_LanguageID_` ": `_LanguageID_` }
+    def Sort(self, *args, ExcludeHeader=None, FieldNumber=None, SortFieldType=None, SortOrder=None, FieldNumber2=None, SortFieldType2=None, SortOrder2=None, FieldNumber3=None, SortFieldType3=None, SortOrder3=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
+        arguments = {"ExcludeHeader": ExcludeHeader, "FieldNumber": FieldNumber, "SortFieldType": SortFieldType, "SortOrder": SortOrder, "FieldNumber2": FieldNumber2, "SortFieldType2": SortFieldType2, "SortOrder2": SortOrder2, "FieldNumber3": FieldNumber3, "SortFieldType3": SortFieldType3, "SortOrder3": SortOrder3, "CaseSensitive": CaseSensitive, "BidiSort": BidiSort, "IgnoreThe": IgnoreThe, "IgnoreKashida": IgnoreKashida, "IgnoreDiacritics": IgnoreDiacritics, "IgnoreHe": IgnoreHe, "LanguageID": LanguageID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.Sort(*args, **arguments)
 
@@ -21183,8 +21183,8 @@ class TableStyle:
     def TopPadding(self, value):
         self.tablestyle.TopPadding = value
 
-    def Condition(self, *args,  `_ConditionCode_` =None):
-        arguments = {" `_ConditionCode_` ":  `_ConditionCode_` }
+    def Condition(self, *args, ConditionCode=None):
+        arguments = {"ConditionCode": ConditionCode}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.tablestyle.Condition(*args, **arguments)
 
@@ -21317,8 +21317,8 @@ class Task:
     def Close(self):
         self.task.Close()
 
-    def Move(self, *args,  `_Left_` =None, `_Top_` =None):
-        arguments = {" `_Left_` ":  `_Left_` , "`_Top_` ": `_Top_` }
+    def Move(self, *args, Left=None, Top=None):
+        arguments = {"Left": Left, "Top": Top}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.task.Move(*args, **arguments)
 
@@ -21327,8 +21327,8 @@ class Task:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.task.Resize(*args, **arguments)
 
-    def SendWindowMessage(self, *args,  `_Message_` =None, `_wParam_` =None, `_IParam_` =None):
-        arguments = {" `_Message_` ":  `_Message_` , "`_wParam_` ": `_wParam_` , "`_IParam_` ": `_IParam_` }
+    def SendWindowMessage(self, *args, Message=None, wParam=None, IParam=None):
+        arguments = {"Message": Message, "wParam": wParam, "IParam": IParam}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.task.SendWindowMessage(*args, **arguments)
 
@@ -21785,8 +21785,8 @@ class TextFrame:
     def DeleteText(self):
         self.textframe.DeleteText()
 
-    def ValidLinkTarget(self, *args,  `_TargetTextFrame_` =None):
-        arguments = {" `_TargetTextFrame_` ":  `_TargetTextFrame_` }
+    def ValidLinkTarget(self, *args, TargetTextFrame=None):
+        arguments = {"TargetTextFrame": TargetTextFrame}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textframe.ValidLinkTarget(*args, **arguments)
 
@@ -21838,8 +21838,8 @@ class TextInput:
     def Clear(self):
         self.textinput.Clear()
 
-    def EditType(self, *args,  `_Type_` =None, `_Default_` =None, `_Format_` =None, `_Enabled_` =None):
-        arguments = {" `_Type_` ":  `_Type_` , "`_Default_` ": `_Default_` , "`_Format_` ": `_Format_` , "`_Enabled_` ": `_Enabled_` }
+    def EditType(self, *args, Type=None, Default=None, Format=None, Enabled=None):
+        arguments = {"Type": Type, "Default": Default, "Format": Format, "Enabled": Enabled}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.textinput.EditType(*args, **arguments)
 
@@ -22089,13 +22089,13 @@ class ThreeDFormat:
     def Z(self, value):
         self.threedformat.Z = value
 
-    def IncrementRotationHorizontal(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationHorizontal(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationHorizontal(*args, **arguments)
 
-    def IncrementRotationVertical(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationVertical(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationVertical(*args, **arguments)
 
@@ -22104,31 +22104,31 @@ class ThreeDFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationX(*args, **arguments)
 
-    def IncrementRotationY(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationY(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationY(*args, **arguments)
 
-    def IncrementRotationZ(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationZ(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationZ(*args, **arguments)
 
     def ResetRotation(self):
         self.threedformat.ResetRotation()
 
-    def SetExtrusionDirection(self, *args,  `_PresetExtrusionDirection_` =None):
-        arguments = {" `_PresetExtrusionDirection_` ":  `_PresetExtrusionDirection_` }
+    def SetExtrusionDirection(self, *args, PresetExtrusionDirection=None):
+        arguments = {"PresetExtrusionDirection": PresetExtrusionDirection}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetExtrusionDirection(*args, **arguments)
 
-    def SetPresetCamera(self, *args,  `_PresetCamera_` =None):
-        arguments = {" `_PresetCamera_` ":  `_PresetCamera_` }
+    def SetPresetCamera(self, *args, PresetCamera=None):
+        arguments = {"PresetCamera": PresetCamera}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetPresetCamera(*args, **arguments)
 
-    def SetThreeDFormat(self, *args,  `_PresetThreeDFormat_` =None):
-        arguments = {" `_PresetThreeDFormat_` ":  `_PresetThreeDFormat_` }
+    def SetThreeDFormat(self, *args, PresetThreeDFormat=None):
+        arguments = {"PresetThreeDFormat": PresetThreeDFormat}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetThreeDFormat(*args, **arguments)
 
@@ -22436,8 +22436,8 @@ class UndoRecord:
     def EndCustomRecord(self):
         self.undorecord.EndCustomRecord()
 
-    def StartCustomRecord(self, *args,  `_Name_` =None):
-        arguments = {" `_Name_` ":  `_Name_` }
+    def StartCustomRecord(self, *args, Name=None):
+        arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.undorecord.StartCustomRecord(*args, **arguments)
 
@@ -22832,13 +22832,13 @@ class View:
     def Zoom(self):
         return Zoom(self.view.Zoom)
 
-    def CollapseOutline(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def CollapseOutline(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.view.CollapseOutline(*args, **arguments)
 
-    def ExpandOutline(self, *args,  `_Range_` =None):
-        arguments = {" `_Range_` ":  `_Range_` }
+    def ExpandOutline(self, *args, Range=None):
+        arguments = {"Range": Range}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.view.ExpandOutline(*args, **arguments)
 
@@ -22851,8 +22851,8 @@ class View:
     def ShowAllHeadings(self):
         self.view.ShowAllHeadings()
 
-    def ShowHeading(self, *args,  `_Level_` =None):
-        arguments = {" `_Level_` ":  `_Level_` }
+    def ShowHeading(self, *args, Level=None):
+        arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.view.ShowHeading(*args, **arguments)
 
@@ -23215,8 +23215,8 @@ class Window:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.window.Close(*args, **arguments)
 
-    def GetPoint(self, *args,  `_ScreenPixelsLeft_` =None, `_ScreenPixelsTop_` =None, `_ScreenPixelsWidth_` =None, `_ScreenPixelsHeight_` =None, `_obj_` =None):
-        arguments = {" `_ScreenPixelsLeft_` ":  `_ScreenPixelsLeft_` , "`_ScreenPixelsTop_` ": `_ScreenPixelsTop_` , "`_ScreenPixelsWidth_` ": `_ScreenPixelsWidth_` , "`_ScreenPixelsHeight_` ": `_ScreenPixelsHeight_` , "`_obj_` ": `_obj_` }
+    def GetPoint(self, *args, ScreenPixelsLeft=None, ScreenPixelsTop=None, ScreenPixelsWidth=None, ScreenPixelsHeight=None, obj=None):
+        arguments = {"ScreenPixelsLeft": ScreenPixelsLeft, "ScreenPixelsTop": ScreenPixelsTop, "ScreenPixelsWidth": ScreenPixelsWidth, "ScreenPixelsHeight": ScreenPixelsHeight, "obj": obj}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.window.GetPoint(*args, **arguments)
 
@@ -23228,8 +23228,8 @@ class Window:
     def NewWindow(self):
         return self.window.NewWindow()
 
-    def PageScroll(self, *args,  `_Down_` =None, `_Up_` =None):
-        arguments = {" `_Down_` ":  `_Down_` , "`_Up_` ": `_Up_` }
+    def PageScroll(self, *args, Down=None, Up=None):
+        arguments = {"Down": Down, "Up": Up}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.window.PageScroll(*args, **arguments)
 
@@ -23368,13 +23368,13 @@ class XMLMapping:
     def Delete(self):
         self.xmlmapping.Delete()
 
-    def SetMapping(self, *args,  `_XPath_` =None, `_PrefixMapping_` =None, `_Source_` =None):
-        arguments = {" `_XPath_` ":  `_XPath_` , "`_PrefixMapping_` ": `_PrefixMapping_` , "`_Source_` ": `_Source_` }
+    def SetMapping(self, *args, XPath=None, PrefixMapping=None, Source=None):
+        arguments = {"XPath": XPath, "PrefixMapping": PrefixMapping, "Source": Source}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlmapping.SetMapping(*args, **arguments)
 
-    def SetMappingByNode(self, *args,  `_Node_` =None):
-        arguments = {" `_Node_` ":  `_Node_` }
+    def SetMappingByNode(self, *args, Node=None):
+        arguments = {"Node": Node}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlmapping.SetMappingByNode(*args, **arguments)
 
@@ -23415,8 +23415,8 @@ class XMLNamespace:
     def XSLTransforms(self):
         return self.xmlnamespace.XSLTransforms
 
-    def AttachToDocument(self, *args,  `_Document_` =None):
-        arguments = {" `_Document_` ":  `_Document_` }
+    def AttachToDocument(self, *args, Document=None):
+        arguments = {"Document": Document}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.xmlnamespace.AttachToDocument(*args, **arguments)
 
@@ -23516,8 +23516,8 @@ class XMLNode:
     def Text(self, value):
         self.xmlnode.Text = value
 
-    def ValidationErrorText(self, *args,  `_Advanced_` =None):
-        arguments = {" `_Advanced_` ":  `_Advanced_` }
+    def ValidationErrorText(self, *args, Advanced=None):
+        arguments = {"Advanced": Advanced}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlnode.ValidationErrorText(*args, **arguments)
 
@@ -23538,23 +23538,23 @@ class XMLNode:
     def Delete(self):
         self.xmlnode.Delete()
 
-    def RemoveChild(self, *args,  `_ChildElement_` =None):
-        arguments = {" `_ChildElement_` ":  `_ChildElement_` }
+    def RemoveChild(self, *args, ChildElement=None):
+        arguments = {"ChildElement": ChildElement}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlnode.RemoveChild(*args, **arguments)
 
-    def SelectNodes(self, *args,  `_XPath_` =None, `_PrefixMapping_` =None, `_FastSearchSkippingTextNodes_` =None):
-        arguments = {" `_XPath_` ":  `_XPath_` , "`_PrefixMapping_` ": `_PrefixMapping_` , "`_FastSearchSkippingTextNodes_` ": `_FastSearchSkippingTextNodes_` }
+    def SelectNodes(self, *args, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
+        arguments = {"XPath": XPath, "PrefixMapping": PrefixMapping, "FastSearchSkippingTextNodes": FastSearchSkippingTextNodes}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlnode.SelectNodes(*args, **arguments)
 
-    def SelectSingleNode(self, *args,  `_XPath_` =None, `_PrefixMapping_` =None, `_FastSearchSkippingTextNodes_` =None):
-        arguments = {" `_XPath_` ":  `_XPath_` , "`_PrefixMapping_` ": `_PrefixMapping_` , "`_FastSearchSkippingTextNodes_` ": `_FastSearchSkippingTextNodes_` }
+    def SelectSingleNode(self, *args, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
+        arguments = {"XPath": XPath, "PrefixMapping": PrefixMapping, "FastSearchSkippingTextNodes": FastSearchSkippingTextNodes}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlnode.SelectSingleNode(*args, **arguments)
 
-    def SetValidationError(self, *args,  `_Status_` =None, `_ErrorText_` =None, `_ClearedAutomatically_` =None):
-        arguments = {" `_Status_` ":  `_Status_` , "`_ErrorText_` ": `_ErrorText_` , "`_ClearedAutomatically_` ": `_ClearedAutomatically_` }
+    def SetValidationError(self, *args, Status=None, ErrorText=None, ClearedAutomatically=None):
+        arguments = {"Status": Status, "ErrorText": ErrorText, "ClearedAutomatically": ClearedAutomatically}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.xmlnode.SetValidationError(*args, **arguments)
 

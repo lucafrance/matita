@@ -527,13 +527,13 @@ class Application:
     def FeatureInstall(self, value):
         self.application.FeatureInstall = value
 
-    def FileConverters(self, *args,  `_Index1_`=None, `_Index2_` =None):
-        arguments = {" `_Index1_`":  `_Index1_`, "`_Index2_` ": `_Index2_` }
+    def FileConverters(self, *args, Index1=None, Index2=None):
+        arguments = {"Index1": Index1, "Index2": Index2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.FileConverters(*args, **arguments)
 
-    def FileDialog(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def FileDialog(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.FileDialog(*args, **arguments)
 
@@ -676,8 +676,8 @@ class Application:
     def Activate(self):
         self.application.Activate()
 
-    def Help(self, *args,  `_HelpFile_`=None, `_ContextID_` =None):
-        arguments = {" `_HelpFile_`":  `_HelpFile_`, "`_ContextID_` ": `_ContextID_` }
+    def Help(self, *args, HelpFile=None, ContextID=None):
+        arguments = {"HelpFile": HelpFile, "ContextID": ContextID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.Help(*args, **arguments)
 
@@ -1027,8 +1027,8 @@ class AxisTitle:
     def Caption(self, value):
         self.axistitle.Caption = value
 
-    def Characters(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Characters(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartCharacters(self.axistitle.Characters(*args, **arguments))
 
@@ -1691,8 +1691,8 @@ class Chart:
     def Walls(self):
         return Walls(self.chart.Walls)
 
-    def ApplyChartTemplate(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def ApplyChartTemplate(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ApplyChartTemplate(*args, **arguments)
 
@@ -1701,8 +1701,8 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ApplyDataLabels(*args, **arguments)
 
-    def ApplyLayout(self, *args,  `_Layout_`=None, `_ChartType_` =None):
-        arguments = {" `_Layout_`":  `_Layout_`, "`_ChartType_` ": `_ChartType_` }
+    def ApplyLayout(self, *args, Layout=None, ChartType=None):
+        arguments = {"Layout": Layout, "ChartType": ChartType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ApplyLayout(*args, **arguments)
 
@@ -1716,8 +1716,8 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ChartGroups(*args, **arguments)
 
-    def ChartWizard(self, *args, **_Source_**=None, **_Gallery_**=None, **_Format_**=None, **_PlotBy_**=None, **_CategoryLabels_**=None, **_SeriesLabels_**=None, **_HasLegend_**=None, **_Title_**=None, **_CategoryTitle_**=None, **_ValueTitle_**=None, **_ExtraTitle_**=None):
-        arguments = {"**_Source_**": **_Source_**, "**_Gallery_**": **_Gallery_**, "**_Format_**": **_Format_**, "**_PlotBy_**": **_PlotBy_**, "**_CategoryLabels_**": **_CategoryLabels_**, "**_SeriesLabels_**": **_SeriesLabels_**, "**_HasLegend_**": **_HasLegend_**, "**_Title_**": **_Title_**, "**_CategoryTitle_**": **_CategoryTitle_**, "**_ValueTitle_**": **_ValueTitle_**, "**_ExtraTitle_**": **_ExtraTitle_**}
+    def ChartWizard(self, *args, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
+        arguments = {"Source": Source, "Gallery": Gallery, "Format": Format, "PlotBy": PlotBy, "CategoryLabels": CategoryLabels, "SeriesLabels": SeriesLabels, "HasLegend": HasLegend, "Title": Title, "CategoryTitle": CategoryTitle, "ValueTitle": ValueTitle, "ExtraTitle": ExtraTitle}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.ChartWizard(*args, **arguments)
 
@@ -1742,8 +1742,8 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.Export(*args, **arguments)
 
-    def GetChartElement(self, *args,  `_x_`=None, `_y_`=None, `_ElementID_`=None, `_Arg1_`=None, `_Arg2_` =None):
-        arguments = {" `_x_`":  `_x_`, "`_y_`": `_y_`, "`_ElementID_`": `_ElementID_`, "`_Arg1_`": `_Arg1_`, "`_Arg2_` ": `_Arg2_` }
+    def GetChartElement(self, *args, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
+        arguments = {"x": x, "y": y, "ElementID": ElementID, "Arg1": Arg1, "Arg2": Arg2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.GetChartElement(*args, **arguments)
 
@@ -1785,8 +1785,8 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.SetElement(*args, **arguments)
 
-    def SetSourceData(self, *args,  `_Source_`=None, `_PlotBy_` =None):
-        arguments = {" `_Source_`":  `_Source_`, "`_PlotBy_` ": `_PlotBy_` }
+    def SetSourceData(self, *args, Source=None, PlotBy=None):
+        arguments = {"Source": Source, "PlotBy": PlotBy}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.SetSourceData(*args, **arguments)
 
@@ -2322,8 +2322,8 @@ class ChartTitle:
     def Caption(self, value):
         self.charttitle.Caption = value
 
-    def Characters(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Characters(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartCharacters(self.charttitle.Characters(*args, **arguments))
 
@@ -2841,16 +2841,16 @@ class ConnectorFormat:
     def Type(self):
         return self.connectorformat.Type
 
-    def BeginConnect(self, *args,  `_ConnectedShape_`=None, `_ConnectionSite_` =None):
-        arguments = {" `_ConnectedShape_`":  `_ConnectedShape_`, "`_ConnectionSite_` ": `_ConnectionSite_` }
+    def BeginConnect(self, *args, ConnectedShape=None, ConnectionSite=None):
+        arguments = {"ConnectedShape": ConnectedShape, "ConnectionSite": ConnectionSite}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.connectorformat.BeginConnect(*args, **arguments)
 
     def BeginDisconnect(self):
         self.connectorformat.BeginDisconnect()
 
-    def EndConnect(self, *args,  `_ConnectedShape_`=None, `_ConnectionSite_` =None):
-        arguments = {" `_ConnectedShape_`":  `_ConnectedShape_`, "`_ConnectionSite_` ": `_ConnectionSite_` }
+    def EndConnect(self, *args, ConnectedShape=None, ConnectionSite=None):
+        arguments = {"ConnectedShape": ConnectedShape, "ConnectionSite": ConnectionSite}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.connectorformat.EndConnect(*args, **arguments)
 
@@ -2877,8 +2877,8 @@ class CustomerData:
     def Add(self):
         return self.customerdata.Add()
 
-    def Delete(self, *args,  `_Id_` =None):
-        arguments = {" `_Id_` ":  `_Id_` }
+    def Delete(self, *args, Id=None):
+        arguments = {"Id": Id}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.customerdata.Delete(*args, **arguments)
 
@@ -2980,8 +2980,8 @@ class CustomLayout:
     def Duplicate(self):
         return self.customlayout.Duplicate()
 
-    def MoveTo(self, *args,  `_toPos_` =None):
-        arguments = {" `_toPos_` ":  `_toPos_` }
+    def MoveTo(self, *args, toPos=None):
+        arguments = {"toPos": toPos}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.customlayout.MoveTo(*args, **arguments)
 
@@ -3041,8 +3041,8 @@ class DataLabel:
     def Caption(self, value):
         self.datalabel.Caption = value
 
-    def Characters(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Characters(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartCharacters(self.datalabel.Characters(*args, **arguments))
 
@@ -3454,8 +3454,8 @@ class Design:
     def Delete(self):
         self.design.Delete()
 
-    def MoveTo(self, *args,  `_toPos_` =None):
-        arguments = {" `_toPos_` ":  `_toPos_` }
+    def MoveTo(self, *args, toPos=None):
+        arguments = {"toPos": toPos}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.design.MoveTo(*args, **arguments)
 
@@ -3481,8 +3481,8 @@ class Designs:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.designs.Add(*args, **arguments)
 
-    def Clone(self, *args,  `_pOriginal_`=None, `_Index_` =None):
-        arguments = {" `_pOriginal_`":  `_pOriginal_`, "`_Index_` ": `_Index_` }
+    def Clone(self, *args, pOriginal=None, Index=None):
+        arguments = {"pOriginal": pOriginal, "Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.designs.Clone(*args, **arguments)
 
@@ -3491,8 +3491,8 @@ class Designs:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.designs.Item(*args, **arguments)
 
-    def Load(self, *args,  `_TemplateName_`=None, `_Index_` =None):
-        arguments = {" `_TemplateName_`":  `_TemplateName_`, "`_Index_` ": `_Index_` }
+    def Load(self, *args, TemplateName=None, Index=None):
+        arguments = {"TemplateName": TemplateName, "Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.designs.Load(*args, **arguments)
 
@@ -3513,8 +3513,8 @@ class DisplayUnitLabel:
     def Caption(self, value):
         self.displayunitlabel.Caption = value
 
-    def Characters(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Characters(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartCharacters(self.displayunitlabel.Characters(*args, **arguments))
 
@@ -3767,16 +3767,16 @@ class DocumentWindow:
     def Close(self):
         self.documentwindow.Close()
 
-    def ExpandSection(self, *args,  `_sectionIndex_`=None, `_Expand_` =None):
-        arguments = {" `_sectionIndex_`":  `_sectionIndex_`, "`_Expand_` ": `_Expand_` }
+    def ExpandSection(self, *args, sectionIndex=None, Expand=None):
+        arguments = {"sectionIndex": sectionIndex, "Expand": Expand}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.documentwindow.ExpandSection(*args, **arguments)
 
     def FitToPage(self):
         self.documentwindow.FitToPage()
 
-    def IsSectionExpanded(self, *args,  `_sectionIndex_` =None):
-        arguments = {" `_sectionIndex_` ":  `_sectionIndex_` }
+    def IsSectionExpanded(self, *args, sectionIndex=None):
+        arguments = {"sectionIndex": sectionIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.documentwindow.IsSectionExpanded(*args, **arguments)
 
@@ -3833,8 +3833,8 @@ class DocumentWindows:
     def Parent(self):
         return self.documentwindows.Parent
 
-    def Arrange(self, *args,  `_arrangeStyle_` =None):
-        arguments = {" `_arrangeStyle_` ":  `_arrangeStyle_` }
+    def Arrange(self, *args, arrangeStyle=None):
+        arguments = {"arrangeStyle": arrangeStyle}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.documentwindows.Arrange(*args, **arguments)
 
@@ -3985,18 +3985,18 @@ class Effect:
     def Delete(self):
         self.effect.Delete()
 
-    def MoveAfter(self, *args,  `_Effect_` =None):
-        arguments = {" `_Effect_` ":  `_Effect_` }
+    def MoveAfter(self, *args, Effect=None):
+        arguments = {"Effect": Effect}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.effect.MoveAfter(*args, **arguments)
 
-    def MoveBefore(self, *args,  `_Effect_` =None):
-        arguments = {" `_Effect_` ":  `_Effect_` }
+    def MoveBefore(self, *args, Effect=None):
+        arguments = {"Effect": Effect}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.effect.MoveBefore(*args, **arguments)
 
-    def MoveTo(self, *args,  `_toPos_` =None):
-        arguments = {" `_toPos_` ":  `_toPos_` }
+    def MoveTo(self, *args, toPos=None):
+        arguments = {"toPos": toPos}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.effect.MoveTo(*args, **arguments)
 
@@ -4404,8 +4404,8 @@ class FillFormat:
     def Background(self):
         self.fillformat.Background()
 
-    def OneColorGradient(self, *args,  `_Style_`=None, `_Variant_`=None, `_Degree_` =None):
-        arguments = {" `_Style_`":  `_Style_`, "`_Variant_`": `_Variant_`, "`_Degree_` ": `_Degree_` }
+    def OneColorGradient(self, *args, Style=None, Variant=None, Degree=None):
+        arguments = {"Style": Style, "Variant": Variant, "Degree": Degree}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.fillformat.OneColorGradient(*args, **arguments)
 
@@ -4681,8 +4681,8 @@ class FreeformBuilder:
     def Parent(self):
         return self.freeformbuilder.Parent
 
-    def AddNodes(self, *args, **_SegmentType_**=None, **_EditingType_**=None, **_X1_**=None, **_Y1_**=None, **_X2_**=None, **_Y2_**=None, **_X3_**=None, **_Y3_**=None):
-        arguments = {"**_SegmentType_**": **_SegmentType_**, "**_EditingType_**": **_EditingType_**, "**_X1_**": **_X1_**, "**_Y1_**": **_Y1_**, "**_X2_**": **_X2_**, "**_Y2_**": **_Y2_**, "**_X3_**": **_X3_**, "**_Y3_**": **_Y3_**}
+    def AddNodes(self, *args, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
+        arguments = {"SegmentType": SegmentType, "EditingType": EditingType, "X1": X1, "Y1": Y1, "X2": X2, "Y2": Y2, "X3": X3, "Y3": Y3}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.freeformbuilder.AddNodes(*args, **arguments)
 
@@ -4927,8 +4927,8 @@ class Hyperlink:
     def AddToFavorites(self):
         self.hyperlink.AddToFavorites()
 
-    def CreateNewDocument(self, *args,  `_FileName_`=None, `_EditNow_`=None, `_Overwrite_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_EditNow_`": `_EditNow_`, "`_Overwrite_` ": `_Overwrite_` }
+    def CreateNewDocument(self, *args, FileName=None, EditNow=None, Overwrite=None):
+        arguments = {"FileName": FileName, "EditNow": EditNow, "Overwrite": Overwrite}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.hyperlink.CreateNewDocument(*args, **arguments)
 
@@ -5592,8 +5592,8 @@ class Master:
     def Width(self):
         return self.master.Width
 
-    def ApplyTheme(self, *args,  `_themeName_` =None):
-        arguments = {" `_themeName_` ":  `_themeName_` }
+    def ApplyTheme(self, *args, themeName=None):
+        arguments = {"themeName": themeName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.master.ApplyTheme(*args, **arguments)
 
@@ -5723,23 +5723,23 @@ class MediaFormat:
     def Volume(self):
         return self.mediaformat.Volume
 
-    def Resample(self, *args,  `_Trim_`=None, `_SampleHeight_`=None, `_SampleWidth_`=None, `_VideoFrameRate_`=None, `_AudioSamplingRate_`=None, `_VideoBitRate_` =None):
-        arguments = {" `_Trim_`":  `_Trim_`, "`_SampleHeight_`": `_SampleHeight_`, "`_SampleWidth_`": `_SampleWidth_`, "`_VideoFrameRate_`": `_VideoFrameRate_`, "`_AudioSamplingRate_`": `_AudioSamplingRate_`, "`_VideoBitRate_` ": `_VideoBitRate_` }
+    def Resample(self, *args, Trim=None, SampleHeight=None, SampleWidth=None, VideoFrameRate=None, AudioSamplingRate=None, VideoBitRate=None):
+        arguments = {"Trim": Trim, "SampleHeight": SampleHeight, "SampleWidth": SampleWidth, "VideoFrameRate": VideoFrameRate, "AudioSamplingRate": AudioSamplingRate, "VideoBitRate": VideoBitRate}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediaformat.Resample(*args, **arguments)
 
-    def ResampleFromProfile(self, *args,  `_profile_` =None):
-        arguments = {" `_profile_` ":  `_profile_` }
+    def ResampleFromProfile(self, *args, profile=None):
+        arguments = {"profile": profile}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediaformat.ResampleFromProfile(*args, **arguments)
 
-    def SetDisplayPicture(self, *args,  `_Position_` =None):
-        arguments = {" `_Position_` ":  `_Position_` }
+    def SetDisplayPicture(self, *args, Position=None):
+        arguments = {"Position": Position}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediaformat.SetDisplayPicture(*args, **arguments)
 
-    def SetDisplayPictureFromFile(self, *args,  `_FilePath_` =None):
-        arguments = {" `_FilePath_` ":  `_FilePath_` }
+    def SetDisplayPictureFromFile(self, *args, FilePath=None):
+        arguments = {"FilePath": FilePath}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediaformat.SetDisplayPictureFromFile(*args, **arguments)
 
@@ -7090,39 +7090,39 @@ class Presentation:
     def AddToFavorites(self):
         self.presentation.AddToFavorites()
 
-    def ApplyTemplate(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def ApplyTemplate(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.ApplyTemplate(*args, **arguments)
 
-    def ApplyTheme(self, *args,  `_themeName_` =None):
-        arguments = {" `_themeName_` ":  `_themeName_` }
+    def ApplyTheme(self, *args, themeName=None):
+        arguments = {"themeName": themeName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.ApplyTheme(*args, **arguments)
 
     def CanCheckIn(self):
         return self.presentation.CanCheckIn()
 
-    def CheckIn(self, *args,  `_SaveChanges_`=None, `_Comments_`=None, `_MakePublic_` =None):
-        arguments = {" `_SaveChanges_`":  `_SaveChanges_`, "`_Comments_`": `_Comments_`, "`_MakePublic_` ": `_MakePublic_` }
+    def CheckIn(self, *args, SaveChanges=None, Comments=None, MakePublic=None):
+        arguments = {"SaveChanges": SaveChanges, "Comments": Comments, "MakePublic": MakePublic}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.CheckIn(*args, **arguments)
 
-    def CheckInWithVersion(self, *args,  `_SaveChanges_`=None, `_Comments_`=None, `_MakePublic_`=None, `_VersionType_` =None):
-        arguments = {" `_SaveChanges_`":  `_SaveChanges_`, "`_Comments_`": `_Comments_`, "`_MakePublic_`": `_MakePublic_`, "`_VersionType_` ": `_VersionType_` }
+    def CheckInWithVersion(self, *args, SaveChanges=None, Comments=None, MakePublic=None, VersionType=None):
+        arguments = {"SaveChanges": SaveChanges, "Comments": Comments, "MakePublic": MakePublic, "VersionType": VersionType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.CheckInWithVersion(*args, **arguments)
 
     def Close(self):
         self.presentation.Close()
 
-    def Convert2(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def Convert2(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.Convert2(*args, **arguments)
 
-    def CreateVideo(self, *args,  `_FileName_`=None, `_UseTimingsAndNarrations_`=None, `_DefaultSlideDuration_`=None, `_VertResolution_`=None, `_FramesPerSecond_`=None, `_Quality_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_UseTimingsAndNarrations_`": `_UseTimingsAndNarrations_`, "`_DefaultSlideDuration_`": `_DefaultSlideDuration_`, "`_VertResolution_`": `_VertResolution_`, "`_FramesPerSecond_`": `_FramesPerSecond_`, "`_Quality_` ": `_Quality_` }
+    def CreateVideo(self, *args, FileName=None, UseTimingsAndNarrations=None, DefaultSlideDuration=None, VertResolution=None, FramesPerSecond=None, Quality=None):
+        arguments = {"FileName": FileName, "UseTimingsAndNarrations": UseTimingsAndNarrations, "DefaultSlideDuration": DefaultSlideDuration, "VertResolution": VertResolution, "FramesPerSecond": FramesPerSecond, "Quality": Quality}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.CreateVideo(*args, **arguments)
 
@@ -7142,8 +7142,8 @@ class Presentation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.ExportAsFixedFormat(*args, **arguments)
 
-    def FollowHyperlink(self, *args,  `_Address_`=None, `_SubAddress_`=None, `_NewWindow_`=None, `_AddHistory_`=None, `_ExtraInfo_`=None, `_Method_`=None, `_HeaderInfo_` =None):
-        arguments = {" `_Address_`":  `_Address_`, "`_SubAddress_`": `_SubAddress_`, "`_NewWindow_`": `_NewWindow_`, "`_AddHistory_`": `_AddHistory_`, "`_ExtraInfo_`": `_ExtraInfo_`, "`_Method_`": `_Method_`, "`_HeaderInfo_` ": `_HeaderInfo_` }
+    def FollowHyperlink(self, *args, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        arguments = {"Address": Address, "SubAddress": SubAddress, "NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.presentation.FollowHyperlink(*args, **arguments)
 
@@ -7156,8 +7156,8 @@ class Presentation:
     def LockServerFile(self):
         self.presentation.LockServerFile()
 
-    def MergeWithBaseline(self, *args,  `_withPresentation_`=None, `_baselinePresentation_` =None):
-        arguments = {" `_withPresentation_`":  `_withPresentation_`, "`_baselinePresentation_` ": `_baselinePresentation_` }
+    def MergeWithBaseline(self, *args, withPresentation=None, baselinePresentation=None):
+        arguments = {"withPresentation": withPresentation, "baselinePresentation": baselinePresentation}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.presentation.MergeWithBaseline(*args, **arguments)
 
@@ -7169,16 +7169,16 @@ class Presentation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.PrintOut(*args, **arguments)
 
-    def PublishSlides(self, *args,  `_SlideLibraryUrl_`=None, `_Overwrite_` =None):
-        arguments = {" `_SlideLibraryUrl_`":  `_SlideLibraryUrl_`, "`_Overwrite_` ": `_Overwrite_` }
+    def PublishSlides(self, *args, SlideLibraryUrl=None, Overwrite=None):
+        arguments = {"SlideLibraryUrl": SlideLibraryUrl, "Overwrite": Overwrite}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.PublishSlides(*args, **arguments)
 
     def RejectAll(self):
         return self.presentation.RejectAll()
 
-    def RemoveDocumentInformation(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def RemoveDocumentInformation(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.RemoveDocumentInformation(*args, **arguments)
 
@@ -7190,23 +7190,23 @@ class Presentation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.SaveAs(*args, **arguments)
 
-    def SaveCopyAs(self, *args,  `_FileName_`=None, `_FileFormat_`=None, `_EmbedTrueTypeFonts_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_FileFormat_`": `_FileFormat_`, "`_EmbedTrueTypeFonts_` ": `_EmbedTrueTypeFonts_` }
+    def SaveCopyAs(self, *args, FileName=None, FileFormat=None, EmbedTrueTypeFonts=None):
+        arguments = {"FileName": FileName, "FileFormat": FileFormat, "EmbedTrueTypeFonts": EmbedTrueTypeFonts}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.SaveCopyAs(*args, **arguments)
 
-    def SaveCopyAs2(self, *args,  `_FileName_`=None, `_FileFormat_`=None, `_EmbedTrueTypeFonts_`=None, `_ReadOnlyRecommended_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_FileFormat_`": `_FileFormat_`, "`_EmbedTrueTypeFonts_`": `_EmbedTrueTypeFonts_`, "`_ReadOnlyRecommended_` ": `_ReadOnlyRecommended_` }
+    def SaveCopyAs2(self, *args, FileName=None, FileFormat=None, EmbedTrueTypeFonts=None, ReadOnlyRecommended=None):
+        arguments = {"FileName": FileName, "FileFormat": FileFormat, "EmbedTrueTypeFonts": EmbedTrueTypeFonts, "ReadOnlyRecommended": ReadOnlyRecommended}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.SaveCopyAs2(*args, **arguments)
 
-    def SendFaxOverInternet(self, *args,  `_Recipients_`=None, `_Subject_`=None, `_ShowMessage_` =None):
-        arguments = {" `_Recipients_`":  `_Recipients_`, "`_Subject_`": `_Subject_`, "`_ShowMessage_` ": `_ShowMessage_` }
+    def SendFaxOverInternet(self, *args, Recipients=None, Subject=None, ShowMessage=None):
+        arguments = {"Recipients": Recipients, "Subject": Subject, "ShowMessage": ShowMessage}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.SendFaxOverInternet(*args, **arguments)
 
-    def SetPasswordEncryptionOptions(self, *args,  `_PasswordEncryptionProvider_`=None, `_PasswordEncryptionAlgorithm_`=None, `_PasswordEncryptionKeyLength_`=None, `_PasswordEncryptionFileProperties_` =None):
-        arguments = {" `_PasswordEncryptionProvider_`":  `_PasswordEncryptionProvider_`, "`_PasswordEncryptionAlgorithm_`": `_PasswordEncryptionAlgorithm_`, "`_PasswordEncryptionKeyLength_`": `_PasswordEncryptionKeyLength_`, "`_PasswordEncryptionFileProperties_` ": `_PasswordEncryptionFileProperties_` }
+    def SetPasswordEncryptionOptions(self, *args, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
+        arguments = {"PasswordEncryptionProvider": PasswordEncryptionProvider, "PasswordEncryptionAlgorithm": PasswordEncryptionAlgorithm, "PasswordEncryptionKeyLength": PasswordEncryptionKeyLength, "PasswordEncryptionFileProperties": PasswordEncryptionFileProperties}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.SetPasswordEncryptionOptions(*args, **arguments)
 
@@ -7238,8 +7238,8 @@ class Presentations:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Presentation(self.presentations.Add(*args, **arguments))
 
-    def CanCheckOut(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def CanCheckOut(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.presentations.CanCheckOut(*args, **arguments)
 
@@ -7258,8 +7258,8 @@ class Presentations:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Presentation(self.presentations.Open(*args, **arguments))
 
-    def Open2007(self, *args,  `_FileName_`=None, `_ReadOnly_`=None, `_Untitled_`=None, `_WithWindow_`=None, `_OpenAndRepair_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_ReadOnly_`": `_ReadOnly_`, "`_Untitled_`": `_Untitled_`, "`_WithWindow_`": `_WithWindow_`, "`_OpenAndRepair_` ": `_OpenAndRepair_` }
+    def Open2007(self, *args, FileName=None, ReadOnly=None, Untitled=None, WithWindow=None, OpenAndRepair=None):
+        arguments = {"FileName": FileName, "ReadOnly": ReadOnly, "Untitled": Untitled, "WithWindow": WithWindow, "OpenAndRepair": OpenAndRepair}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Presentation(self.presentations.Open2007(*args, **arguments))
 
@@ -7701,13 +7701,13 @@ class Research:
     def Parent(self):
         return self.research.Parent
 
-    def IsResearchService(self, *args,  `_ServiceID_` =None):
-        arguments = {" `_ServiceID_` ":  `_ServiceID_` }
+    def IsResearchService(self, *args, ServiceID=None):
+        arguments = {"ServiceID": ServiceID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.research.IsResearchService(*args, **arguments)
 
-    def Query(self, *args,  `_ServiceID_`=None, `_QueryString_`=None, `_QueryLanguage_`=None, `_UseSelection_`=None, `_RequeryContextXML_`=None, `_NewQueryContextXML_`=None, `_LaunchQuery_` =None):
-        arguments = {" `_ServiceID_`":  `_ServiceID_`, "`_QueryString_`": `_QueryString_`, "`_QueryLanguage_`": `_QueryLanguage_`, "`_UseSelection_`": `_UseSelection_`, "`_RequeryContextXML_`": `_RequeryContextXML_`, "`_NewQueryContextXML_`": `_NewQueryContextXML_`, "`_LaunchQuery_` ": `_LaunchQuery_` }
+    def Query(self, *args, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
+        arguments = {"ServiceID": ServiceID, "QueryString": QueryString, "QueryLanguage": QueryLanguage, "UseSelection": UseSelection, "RequeryContextXML": RequeryContextXML, "NewQueryContextXML": NewQueryContextXML, "LaunchQuery": LaunchQuery}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.research.Query(*args, **arguments)
 
@@ -7961,48 +7961,48 @@ class SectionProperties:
     def Parent(self):
         return self.sectionproperties.Parent
 
-    def AddBeforeSlide(self, *args,  `_SlideIndex_`=None, `_sectionName_` =None):
-        arguments = {" `_SlideIndex_`":  `_SlideIndex_`, "`_sectionName_` ": `_sectionName_` }
+    def AddBeforeSlide(self, *args, SlideIndex=None, sectionName=None):
+        arguments = {"SlideIndex": SlideIndex, "sectionName": sectionName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.AddBeforeSlide(*args, **arguments)
 
-    def AddSection(self, *args,  `_sectionIndex_`=None, `_sectionName_` =None):
-        arguments = {" `_sectionIndex_`":  `_sectionIndex_`, "`_sectionName_` ": `_sectionName_` }
+    def AddSection(self, *args, sectionIndex=None, sectionName=None):
+        arguments = {"sectionIndex": sectionIndex, "sectionName": sectionName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.AddSection(*args, **arguments)
 
-    def Delete(self, *args,  `_sectionIndex_`=None, `_deleteSlides_` =None):
-        arguments = {" `_sectionIndex_`":  `_sectionIndex_`, "`_deleteSlides_` ": `_deleteSlides_` }
+    def Delete(self, *args, sectionIndex=None, deleteSlides=None):
+        arguments = {"sectionIndex": sectionIndex, "deleteSlides": deleteSlides}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sectionproperties.Delete(*args, **arguments)
 
-    def FirstSlide(self, *args,  `_sectionIndex_` =None):
-        arguments = {" `_sectionIndex_` ":  `_sectionIndex_` }
+    def FirstSlide(self, *args, sectionIndex=None):
+        arguments = {"sectionIndex": sectionIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.FirstSlide(*args, **arguments)
 
-    def Move(self, *args,  `_sectionIndex_`=None, `_toPos_` =None):
-        arguments = {" `_sectionIndex_`":  `_sectionIndex_`, "`_toPos_` ": `_toPos_` }
+    def Move(self, *args, sectionIndex=None, toPos=None):
+        arguments = {"sectionIndex": sectionIndex, "toPos": toPos}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sectionproperties.Move(*args, **arguments)
 
-    def Name(self, *args,  `_sectionIndex_` =None):
-        arguments = {" `_sectionIndex_` ":  `_sectionIndex_` }
+    def Name(self, *args, sectionIndex=None):
+        arguments = {"sectionIndex": sectionIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.Name(*args, **arguments)
 
-    def Rename(self, *args,  `_sectionIndex_`=None, `_sectionName_` =None):
-        arguments = {" `_sectionIndex_`":  `_sectionIndex_`, "`_sectionName_` ": `_sectionName_` }
+    def Rename(self, *args, sectionIndex=None, sectionName=None):
+        arguments = {"sectionIndex": sectionIndex, "sectionName": sectionName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sectionproperties.Rename(*args, **arguments)
 
-    def SectionID(self, *args,  `_sectionIndex_` =None):
-        arguments = {" `_sectionIndex_` ":  `_sectionIndex_` }
+    def SectionID(self, *args, sectionIndex=None):
+        arguments = {"sectionIndex": sectionIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.SectionID(*args, **arguments)
 
-    def SlidesCount(self, *args,  `_sectionIndex_` =None):
-        arguments = {" `_sectionIndex_` ":  `_sectionIndex_` }
+    def SlidesCount(self, *args, sectionIndex=None):
+        arguments = {"sectionIndex": sectionIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.SlidesCount(*args, **arguments)
 
@@ -8076,53 +8076,53 @@ class Sequence:
     def Parent(self):
         return self.sequence.Parent
 
-    def AddEffect(self, *args,  `_Shape_`=None, `_effectId_`=None, `_Level_`=None, `_trigger_`=None, `_Index_` =None):
-        arguments = {" `_Shape_`":  `_Shape_`, "`_effectId_`": `_effectId_`, "`_Level_`": `_Level_`, "`_trigger_`": `_trigger_`, "`_Index_` ": `_Index_` }
+    def AddEffect(self, *args, Shape=None, effectId=None, Level=None, trigger=None, Index=None):
+        arguments = {"Shape": Shape, "effectId": effectId, "Level": Level, "trigger": trigger, "Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.AddEffect(*args, **arguments)
 
-    def AddTriggerEffect(self, *args,  `_pShape_`=None, `_effectId_`=None, `_trigger_`=None, `_pTriggerShape_`=None, `_bookmark_`=None, `_Level_` =None):
-        arguments = {" `_pShape_`":  `_pShape_`, "`_effectId_`": `_effectId_`, "`_trigger_`": `_trigger_`, "`_pTriggerShape_`": `_pTriggerShape_`, "`_bookmark_`": `_bookmark_`, "`_Level_` ": `_Level_` }
+    def AddTriggerEffect(self, *args, pShape=None, effectId=None, trigger=None, pTriggerShape=None, bookmark=None, Level=None):
+        arguments = {"pShape": pShape, "effectId": effectId, "trigger": trigger, "pTriggerShape": pTriggerShape, "bookmark": bookmark, "Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.AddTriggerEffect(*args, **arguments)
 
-    def Clone(self, *args,  `_Effect_`=None, `_Index_` =None):
-        arguments = {" `_Effect_`":  `_Effect_`, "`_Index_` ": `_Index_` }
+    def Clone(self, *args, Effect=None, Index=None):
+        arguments = {"Effect": Effect, "Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.Clone(*args, **arguments)
 
-    def ConvertToAfterEffect(self, *args,  `_Effect_`=None, `_After_`=None, `_DimColor_`=None, `_DimSchemeColor_` =None):
-        arguments = {" `_Effect_`":  `_Effect_`, "`_After_`": `_After_`, "`_DimColor_`": `_DimColor_`, "`_DimSchemeColor_` ": `_DimSchemeColor_` }
+    def ConvertToAfterEffect(self, *args, Effect=None, After=None, DimColor=None, DimSchemeColor=None):
+        arguments = {"Effect": Effect, "After": After, "DimColor": DimColor, "DimSchemeColor": DimSchemeColor}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.ConvertToAfterEffect(*args, **arguments)
 
-    def ConvertToAnimateBackground(self, *args,  `_Effect_`=None, `_AnimateBackground_` =None):
-        arguments = {" `_Effect_`":  `_Effect_`, "`_AnimateBackground_` ": `_AnimateBackground_` }
+    def ConvertToAnimateBackground(self, *args, Effect=None, AnimateBackground=None):
+        arguments = {"Effect": Effect, "AnimateBackground": AnimateBackground}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.ConvertToAnimateBackground(*args, **arguments)
 
-    def ConvertToAnimateInReverse(self, *args,  `_Effect_`=None, `_animateInReverse_` =None):
-        arguments = {" `_Effect_`":  `_Effect_`, "`_animateInReverse_` ": `_animateInReverse_` }
+    def ConvertToAnimateInReverse(self, *args, Effect=None, animateInReverse=None):
+        arguments = {"Effect": Effect, "animateInReverse": animateInReverse}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.ConvertToAnimateInReverse(*args, **arguments)
 
-    def ConvertToBuildLevel(self, *args,  `_Effect_`=None, `_Level_` =None):
-        arguments = {" `_Effect_`":  `_Effect_`, "`_Level_` ": `_Level_` }
+    def ConvertToBuildLevel(self, *args, Effect=None, Level=None):
+        arguments = {"Effect": Effect, "Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.ConvertToBuildLevel(*args, **arguments)
 
-    def ConvertToTextUnitEffect(self, *args,  `_Effect_`=None, `_unitEffect_` =None):
-        arguments = {" `_Effect_`":  `_Effect_`, "`_unitEffect_` ": `_unitEffect_` }
+    def ConvertToTextUnitEffect(self, *args, Effect=None, unitEffect=None):
+        arguments = {"Effect": Effect, "unitEffect": unitEffect}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.ConvertToTextUnitEffect(*args, **arguments)
 
-    def FindFirstAnimationFor(self, *args,  `_Shape_` =None):
-        arguments = {" `_Shape_` ":  `_Shape_` }
+    def FindFirstAnimationFor(self, *args, Shape=None):
+        arguments = {"Shape": Shape}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.FindFirstAnimationFor(*args, **arguments)
 
-    def FindFirstAnimationForClick(self, *args,  `_click_` =None):
-        arguments = {" `_click_` ":  `_click_` }
+    def FindFirstAnimationForClick(self, *args, click=None):
+        arguments = {"click": click}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.FindFirstAnimationForClick(*args, **arguments)
 
@@ -8415,8 +8415,8 @@ class Series:
     def XValues(self, value):
         self.series.XValues = value
 
-    def ApplyDataLabels(self, *args, `Type`=None, `LegendKey`=None, `AutoText`=None, `HasLeaderLines`=None, `ShowSeriesName`=None, `ShowCategoryName`=None, `ShowValue`=None, `ShowPercentage`=None, `ShowBubbleSize`=None, `Separator`=None):
-        arguments = {"`Type`": `Type`, "`LegendKey`": `LegendKey`, "`AutoText`": `AutoText`, "`HasLeaderLines`": `HasLeaderLines`, "`ShowSeriesName`": `ShowSeriesName`, "`ShowCategoryName`": `ShowCategoryName`, "`ShowValue`": `ShowValue`, "`ShowPercentage`": `ShowPercentage`, "`ShowBubbleSize`": `ShowBubbleSize`, "`Separator`": `Separator`}
+    def ApplyDataLabels(self, *args, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
+        arguments = {"Type": Type, "LegendKey": LegendKey, "AutoText": AutoText, "HasLeaderLines": HasLeaderLines, "ShowSeriesName": ShowSeriesName, "ShowCategoryName": ShowCategoryName, "ShowValue": ShowValue, "ShowPercentage": ShowPercentage, "ShowBubbleSize": ShowBubbleSize, "Separator": Separator}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.series.ApplyDataLabels(*args, **arguments)
 
@@ -8481,8 +8481,8 @@ class SeriesCollection:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Series(self.seriescollection.Add(*args, **arguments))
 
-    def Extend(self, *args,  `_Source_`=None, `_Rowcol_`=None, `_CategoryLabels_` =None):
-        arguments = {" `_Source_`":  `_Source_`, "`_Rowcol_`": `_Rowcol_`, "`_CategoryLabels_` ": `_CategoryLabels_` }
+    def Extend(self, *args, Source=None, Rowcol=None, CategoryLabels=None):
+        arguments = {"Source": Source, "Rowcol": Rowcol, "CategoryLabels": CategoryLabels}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.seriescollection.Extend(*args, **arguments)
 
@@ -8956,8 +8956,8 @@ class Shape:
     def ApplyAnimation(self):
         self.shape.ApplyAnimation()
 
-    def ConvertTextToSmartArt(self, *args,  `_Layout_` =None):
-        arguments = {" `_Layout_` ":  `_Layout_` }
+    def ConvertTextToSmartArt(self, *args, Layout=None):
+        arguments = {"Layout": Layout}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.ConvertTextToSmartArt(*args, **arguments)
 
@@ -8978,13 +8978,13 @@ class Shape:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.Flip(*args, **arguments)
 
-    def IncrementLeft(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementLeft(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.IncrementLeft(*args, **arguments)
 
-    def IncrementRotation(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotation(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.IncrementRotation(*args, **arguments)
 
@@ -9099,8 +9099,8 @@ class ShapeNodes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapenodes.Item(*args, **arguments)
 
-    def SetEditingType(self, *args,  `_Index_`=None, `_EditingType_` =None):
-        arguments = {" `_Index_`":  `_Index_`, "`_EditingType_` ": `_EditingType_` }
+    def SetEditingType(self, *args, Index=None, EditingType=None):
+        arguments = {"Index": Index, "EditingType": EditingType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shapenodes.SetEditingType(*args, **arguments)
 
@@ -9109,8 +9109,8 @@ class ShapeNodes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shapenodes.SetPosition(*args, **arguments)
 
-    def SetSegmentType(self, *args,  `_Index_`=None, `_SegmentType_` =None):
-        arguments = {" `_Index_`":  `_Index_`, "`_SegmentType_` ": `_SegmentType_` }
+    def SetSegmentType(self, *args, Index=None, SegmentType=None):
+        arguments = {"Index": Index, "SegmentType": SegmentType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shapenodes.SetSegmentType(*args, **arguments)
 
@@ -9411,8 +9411,8 @@ class ShapeRange:
     def ZOrderPosition(self):
         return self.shaperange.ZOrderPosition
 
-    def Align(self, *args,  `_AlignCmd_`=None, `_RelativeTo_` =None):
-        arguments = {" `_AlignCmd_`":  `_AlignCmd_`, "`_RelativeTo_` ": `_RelativeTo_` }
+    def Align(self, *args, AlignCmd=None, RelativeTo=None):
+        arguments = {"AlignCmd": AlignCmd, "RelativeTo": RelativeTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shaperange.Align(*args, **arguments)
 
@@ -9422,8 +9422,8 @@ class ShapeRange:
     def ApplyAnimation(self):
         self.shaperange.ApplyAnimation()
 
-    def ConvertTextToSmartArt(self, *args,  `_Layout_` =None):
-        arguments = {" `_Layout_` ":  `_Layout_` }
+    def ConvertTextToSmartArt(self, *args, Layout=None):
+        arguments = {"Layout": Layout}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shaperange.ConvertTextToSmartArt(*args, **arguments)
 
@@ -9436,8 +9436,8 @@ class ShapeRange:
     def Delete(self):
         self.shaperange.Delete()
 
-    def Distribute(self, *args,  `_DistributeCmd_`=None, `_RelativeTo_` =None):
-        arguments = {" `_DistributeCmd_`":  `_DistributeCmd_`, "`_RelativeTo_` ": `_RelativeTo_` }
+    def Distribute(self, *args, DistributeCmd=None, RelativeTo=None):
+        arguments = {"DistributeCmd": DistributeCmd, "RelativeTo": RelativeTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shaperange.Distribute(*args, **arguments)
 
@@ -9452,13 +9452,13 @@ class ShapeRange:
     def Group(self):
         return self.shaperange.Group()
 
-    def IncrementLeft(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementLeft(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shaperange.IncrementLeft(*args, **arguments)
 
-    def IncrementRotation(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotation(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shaperange.IncrementRotation(*args, **arguments)
 
@@ -9484,8 +9484,8 @@ class ShapeRange:
     def RerouteConnections(self):
         self.shaperange.RerouteConnections()
 
-    def ScaleHeight(self, *args,  _Factor=None, RelativeToOriginalSize=None, fScale_ =None):
-        arguments = {" _Factor":  _Factor, "RelativeToOriginalSize": RelativeToOriginalSize, "fScale_ ": fScale_ }
+    def ScaleHeight(self, *args, Factor=None, RelativeToOriginalSize=None, fScale=None):
+        arguments = {"Factor": Factor, "RelativeToOriginalSize": RelativeToOriginalSize, "fScale": fScale}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shaperange.ScaleHeight(*args, **arguments)
 
@@ -9554,8 +9554,8 @@ class Shapes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.Add3DModel(*args, **arguments)
 
-    def AddCallout(self, *args,  `_Type_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_Type_`":  `_Type_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddCallout(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddCallout(*args, **arguments)
 
@@ -9569,81 +9569,81 @@ class Shapes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddCurve(*args, **arguments)
 
-    def AddLabel(self, *args,  `_Orientation_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_Orientation_`":  `_Orientation_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddLabel(self, *args, Orientation=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Orientation": Orientation, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddLabel(*args, **arguments)
 
-    def AddLine(self, *args,  `_BeginX_`=None, `_BeginY_`=None, `_EndX_`=None, `_EndY_` =None):
-        arguments = {" `_BeginX_`":  `_BeginX_`, "`_BeginY_`": `_BeginY_`, "`_EndX_`": `_EndX_`, "`_EndY_` ": `_EndY_` }
+    def AddLine(self, *args, BeginX=None, BeginY=None, EndX=None, EndY=None):
+        arguments = {"BeginX": BeginX, "BeginY": BeginY, "EndX": EndX, "EndY": EndY}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddLine(*args, **arguments)
 
-    def AddMediaObject(self, *args,  `_FileName_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddMediaObject(self, *args, FileName=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"FileName": FileName, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddMediaObject(*args, **arguments)
 
-    def AddMediaObject2(self, *args,  `_FileName_`=None, `_LinkToFile_`=None, `_SaveWithDocument_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_LinkToFile_`": `_LinkToFile_`, "`_SaveWithDocument_`": `_SaveWithDocument_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddMediaObject2(self, *args, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"FileName": FileName, "LinkToFile": LinkToFile, "SaveWithDocument": SaveWithDocument, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddMediaObject2(*args, **arguments)
 
-    def AddMediaObjectFromEmbedTag(self, *args,  `_EmbedTag_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_EmbedTag_`":  `_EmbedTag_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddMediaObjectFromEmbedTag(self, *args, EmbedTag=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"EmbedTag": EmbedTag, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddMediaObjectFromEmbedTag(*args, **arguments)
 
-    def AddOLEObject(self, *args,  `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_`=None, `_ClassName_`=None, `_FileName_`=None, `_DisplayAsIcon_`=None, `_IconFileName_`=None, `_IconIndex_`=None, `_IconLabel_`=None, `_Link_` =None):
-        arguments = {" `_Left_`":  `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_`": `_Height_`, "`_ClassName_`": `_ClassName_`, "`_FileName_`": `_FileName_`, "`_DisplayAsIcon_`": `_DisplayAsIcon_`, "`_IconFileName_`": `_IconFileName_`, "`_IconIndex_`": `_IconIndex_`, "`_IconLabel_`": `_IconLabel_`, "`_Link_` ": `_Link_` }
+    def AddOLEObject(self, *args, Left=None, Top=None, Width=None, Height=None, ClassName=None, FileName=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Link=None):
+        arguments = {"Left": Left, "Top": Top, "Width": Width, "Height": Height, "ClassName": ClassName, "FileName": FileName, "DisplayAsIcon": DisplayAsIcon, "IconFileName": IconFileName, "IconIndex": IconIndex, "IconLabel": IconLabel, "Link": Link}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddOLEObject(*args, **arguments)
 
-    def AddPicture(self, *args,  `_FileName_`=None, `_LinkToFile_`=None, `_SaveWithDocument_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_LinkToFile_`": `_LinkToFile_`, "`_SaveWithDocument_`": `_SaveWithDocument_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddPicture(self, *args, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"FileName": FileName, "LinkToFile": LinkToFile, "SaveWithDocument": SaveWithDocument, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddPicture(*args, **arguments)
 
-    def AddPlaceholder(self, *args,  `_Type_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_Type_`":  `_Type_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddPlaceholder(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddPlaceholder(*args, **arguments)
 
-    def AddPolyline(self, *args,  `_SafeArrayOfPoints_` =None):
-        arguments = {" `_SafeArrayOfPoints_` ":  `_SafeArrayOfPoints_` }
+    def AddPolyline(self, *args, SafeArrayOfPoints=None):
+        arguments = {"SafeArrayOfPoints": SafeArrayOfPoints}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddPolyline(*args, **arguments)
 
-    def AddShape(self, *args,  `_Type_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_Type_`":  `_Type_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddShape(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddShape(*args, **arguments)
 
-    def AddSmartArt(self, *args,  `_Layout_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_Layout_`":  `_Layout_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddSmartArt(self, *args, Layout=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Layout": Layout, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddSmartArt(*args, **arguments)
 
-    def AddTable(self, *args,  `_NumRows_`=None, `_NumColumns_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_NumRows_`":  `_NumRows_`, "`_NumColumns_`": `_NumColumns_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddTable(self, *args, NumRows=None, NumColumns=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"NumRows": NumRows, "NumColumns": NumColumns, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddTable(*args, **arguments)
 
-    def AddTextbox(self, *args,  `_Orientation_`=None, `_Left_`=None, `_Top_`=None, `_Width_`=None, `_Height_` =None):
-        arguments = {" `_Orientation_`":  `_Orientation_`, "`_Left_`": `_Left_`, "`_Top_`": `_Top_`, "`_Width_`": `_Width_`, "`_Height_` ": `_Height_` }
+    def AddTextbox(self, *args, Orientation=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = {"Orientation": Orientation, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddTextbox(*args, **arguments)
 
-    def AddTextEffect(self, *args,  `_PresetTextEffect_`=None, `_Text_`=None, `_FontName_`=None, `_FontSize_`=None, `_FontBold_`=None, `_FontItalic_`=None, `_Left_`=None, `_Top_` =None):
-        arguments = {" `_PresetTextEffect_`":  `_PresetTextEffect_`, "`_Text_`": `_Text_`, "`_FontName_`": `_FontName_`, "`_FontSize_`": `_FontSize_`, "`_FontBold_`": `_FontBold_`, "`_FontItalic_`": `_FontItalic_`, "`_Left_`": `_Left_`, "`_Top_` ": `_Top_` }
+    def AddTextEffect(self, *args, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
+        arguments = {"PresetTextEffect": PresetTextEffect, "Text": Text, "FontName": FontName, "FontSize": FontSize, "FontBold": FontBold, "FontItalic": FontItalic, "Left": Left, "Top": Top}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.AddTextEffect(*args, **arguments)
 
     def AddTitle(self):
         return self.shapes.AddTitle()
 
-    def BuildFreeform(self, *args,  `_EditingType_`=None, `_X1_`=None, `_Y1_` =None):
-        arguments = {" `_EditingType_`":  `_EditingType_`, "`_X1_`": `_X1_`, "`_Y1_` ": `_Y1_` }
+    def BuildFreeform(self, *args, EditingType=None, X1=None, Y1=None):
+        arguments = {"EditingType": EditingType, "X1": X1, "Y1": Y1}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shapes.BuildFreeform(*args, **arguments)
 
@@ -9793,18 +9793,18 @@ class Slide:
     def TimeLine(self):
         return TimeLine(self.slide.TimeLine)
 
-    def ApplyTemplate(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def ApplyTemplate(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slide.ApplyTemplate(*args, **arguments)
 
-    def ApplyTheme(self, *args,  `_themeName_` =None):
-        arguments = {" `_themeName_` ":  `_themeName_` }
+    def ApplyTheme(self, *args, themeName=None):
+        arguments = {"themeName": themeName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slide.ApplyTheme(*args, **arguments)
 
-    def ApplyThemeColorScheme(self, *args,  `_themeColorSchemeName_` =None):
-        arguments = {" `_themeColorSchemeName_` ":  `_themeColorSchemeName_` }
+    def ApplyThemeColorScheme(self, *args, themeColorSchemeName=None):
+        arguments = {"themeColorSchemeName": themeColorSchemeName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slide.ApplyThemeColorScheme(*args, **arguments)
 
@@ -9825,18 +9825,18 @@ class Slide:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slide.Export(*args, **arguments)
 
-    def MoveTo(self, *args,  `_toPos_` =None):
-        arguments = {" `_toPos_` ":  `_toPos_` }
+    def MoveTo(self, *args, toPos=None):
+        arguments = {"toPos": toPos}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slide.MoveTo(*args, **arguments)
 
-    def MoveToSectionStart(self, *args,  `_toSection_` =None):
-        arguments = {" `_toSection_` ":  `_toSection_` }
+    def MoveToSectionStart(self, *args, toSection=None):
+        arguments = {"toSection": toSection}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slide.MoveToSectionStart(*args, **arguments)
 
-    def PublishSlides(self, *args,  `_SlideLibraryUrl_`=None, `_Overwrite_`=None, `_UseSlideOrder_` =None):
-        arguments = {" `_SlideLibraryUrl_`":  `_SlideLibraryUrl_`, "`_Overwrite_`": `_Overwrite_`, "`_UseSlideOrder_` ": `_UseSlideOrder_` }
+    def PublishSlides(self, *args, SlideLibraryUrl=None, Overwrite=None, UseSlideOrder=None):
+        arguments = {"SlideLibraryUrl": SlideLibraryUrl, "Overwrite": Overwrite, "UseSlideOrder": UseSlideOrder}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slide.PublishSlides(*args, **arguments)
 
@@ -9975,18 +9975,18 @@ class SlideRange:
     def TimeLine(self):
         return TimeLine(self.sliderange.TimeLine)
 
-    def ApplyTemplate(self, *args,  `_FileName_` =None):
-        arguments = {" `_FileName_` ":  `_FileName_` }
+    def ApplyTemplate(self, *args, FileName=None):
+        arguments = {"FileName": FileName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sliderange.ApplyTemplate(*args, **arguments)
 
-    def ApplyTheme(self, *args,  `_themeName_` =None):
-        arguments = {" `_themeName_` ":  `_themeName_` }
+    def ApplyTheme(self, *args, themeName=None):
+        arguments = {"themeName": themeName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sliderange.ApplyTheme(*args, **arguments)
 
-    def ApplyThemeColorScheme(self, *args,  `_themeColorSchemeName_` =None):
-        arguments = {" `_themeColorSchemeName_` ":  `_themeColorSchemeName_` }
+    def ApplyThemeColorScheme(self, *args, themeColorSchemeName=None):
+        arguments = {"themeColorSchemeName": themeColorSchemeName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sliderange.ApplyThemeColorScheme(*args, **arguments)
 
@@ -10012,18 +10012,18 @@ class SlideRange:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sliderange.Item(*args, **arguments)
 
-    def MoveTo(self, *args,  `_toPos_` =None):
-        arguments = {" `_toPos_` ":  `_toPos_` }
+    def MoveTo(self, *args, toPos=None):
+        arguments = {"toPos": toPos}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sliderange.MoveTo(*args, **arguments)
 
-    def MoveToSectionStart(self, *args,  `_toSection_` =None):
-        arguments = {" `_toSection_` ":  `_toSection_` }
+    def MoveToSectionStart(self, *args, toSection=None):
+        arguments = {"toSection": toSection}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sliderange.MoveToSectionStart(*args, **arguments)
 
-    def PublishSlides(self, *args,  `_SlideLibraryUrl_`=None, `_Overwrite_` =None):
-        arguments = {" `_SlideLibraryUrl_`":  `_SlideLibraryUrl_`, "`_Overwrite_` ": `_Overwrite_` }
+    def PublishSlides(self, *args, SlideLibraryUrl=None, Overwrite=None):
+        arguments = {"SlideLibraryUrl": SlideLibraryUrl, "Overwrite": Overwrite}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sliderange.PublishSlides(*args, **arguments)
 
@@ -10050,18 +10050,18 @@ class Slides:
     def Parent(self):
         return self.slides.Parent
 
-    def AddSlide(self, *args,  `_Index_`=None, `_pCustomLayout_` =None):
-        arguments = {" `_Index_`":  `_Index_`, "`_pCustomLayout_` ": `_pCustomLayout_` }
+    def AddSlide(self, *args, Index=None, pCustomLayout=None):
+        arguments = {"Index": Index, "pCustomLayout": pCustomLayout}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slides.AddSlide(*args, **arguments)
 
-    def FindBySlideID(self, *args,  `_SlideID_` =None):
-        arguments = {" `_SlideID_` ":  `_SlideID_` }
+    def FindBySlideID(self, *args, SlideID=None):
+        arguments = {"SlideID": SlideID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slides.FindBySlideID(*args, **arguments)
 
-    def InsertFromFile(self, *args,  `_FileName_`=None, `_Index_`=None, `_SlideStart_`=None, `_SlideEnd_` =None):
-        arguments = {" `_FileName_`":  `_FileName_`, "`_Index_`": `_Index_`, "`_SlideStart_`": `_SlideStart_`, "`_SlideEnd_` ": `_SlideEnd_` }
+    def InsertFromFile(self, *args, FileName=None, Index=None, SlideStart=None, SlideEnd=None):
+        arguments = {"FileName": FileName, "Index": Index, "SlideStart": SlideStart, "SlideEnd": SlideEnd}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slides.InsertFromFile(*args, **arguments)
 
@@ -10330,8 +10330,8 @@ class SlideShowView:
     def Zoom(self):
         return self.slideshowview.Zoom
 
-    def DrawLine(self, *args,  `_BeginX_`=None, `_BeginY_`=None, `_EndX_`=None, `_EndY_` =None):
-        arguments = {" `_BeginX_`":  `_BeginX_`, "`_BeginY_`": `_BeginY_`, "`_EndX_`": `_EndX_`, "`_EndY_` ": `_EndY_` }
+    def DrawLine(self, *args, BeginX=None, BeginY=None, EndX=None, EndY=None):
+        arguments = {"BeginX": BeginX, "BeginY": BeginY, "EndX": EndX, "EndY": EndY}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slideshowview.DrawLine(*args, **arguments)
 
@@ -10361,13 +10361,13 @@ class SlideShowView:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slideshowview.GotoClick(*args, **arguments)
 
-    def GotoNamedShow(self, *args,  `_SlideShowName_` =None):
-        arguments = {" `_SlideShowName_` ":  `_SlideShowName_` }
+    def GotoNamedShow(self, *args, SlideShowName=None):
+        arguments = {"SlideShowName": SlideShowName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slideshowview.GotoNamedShow(*args, **arguments)
 
-    def GotoSlide(self, *args,  `_Index_`=None, `_ResetSlide_` =None):
-        arguments = {" `_Index_`":  `_Index_`, "`_ResetSlide_` ": `_ResetSlide_` }
+    def GotoSlide(self, *args, Index=None, ResetSlide=None):
+        arguments = {"Index": Index, "ResetSlide": ResetSlide}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.slideshowview.GotoSlide(*args, **arguments)
 
@@ -10377,8 +10377,8 @@ class SlideShowView:
     def Next(self):
         self.slideshowview.Next()
 
-    def Player(self, *args,  `_ShapeId_` =None):
-        arguments = {" `_ShapeId_` ":  `_ShapeId_` }
+    def Player(self, *args, ShapeId=None):
+        arguments = {"ShapeId": ShapeId}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slideshowview.Player(*args, **arguments)
 
@@ -10502,8 +10502,8 @@ class SoundEffect:
     def Type(self):
         return self.soundeffect.Type
 
-    def ImportFromFile(self, *args,  `_FullName_` =None):
-        arguments = {" `_FullName_` ":  `_FullName_` }
+    def ImportFromFile(self, *args, FullName=None):
+        arguments = {"FullName": FullName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.soundeffect.ImportFromFile(*args, **arguments)
 
@@ -10587,18 +10587,18 @@ class Table:
     def VertBanding(self):
         return self.table.VertBanding
 
-    def ApplyStyle(self, *args,  `_StyleID_`=None, `_SaveFormatting_` =None):
-        arguments = {" `_StyleID_`":  `_StyleID_`, "`_SaveFormatting_` ": `_SaveFormatting_` }
+    def ApplyStyle(self, *args, StyleID=None, SaveFormatting=None):
+        arguments = {"StyleID": StyleID, "SaveFormatting": SaveFormatting}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.ApplyStyle(*args, **arguments)
 
-    def Cell(self, *args,  `_Row_`=None, `_Column_` =None):
-        arguments = {" `_Row_`":  `_Row_`, "`_Column_` ": `_Column_` }
+    def Cell(self, *args, Row=None, Column=None):
+        arguments = {"Row": Row, "Column": Column}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.table.Cell(*args, **arguments)
 
-    def ScaleProportionally(self, *args,  `_scale_` =None):
-        arguments = {" `_scale_` ":  `_scale_` }
+    def ScaleProportionally(self, *args, scale=None):
+        arguments = {"scale": scale}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.ScaleProportionally(*args, **arguments)
 
@@ -10724,8 +10724,8 @@ class Tags:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.tags.Add(*args, **arguments)
 
-    def Delete(self, *args,  `_Name_` =None):
-        arguments = {" `_Name_` ":  `_Name_` }
+    def Delete(self, *args, Name=None):
+        arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.tags.Delete(*args, **arguments)
 
@@ -11156,13 +11156,13 @@ class TextRange:
     def AddPeriods(self):
         self.textrange.AddPeriods()
 
-    def ChangeCase(self, *args,  `_Type_` =None):
-        arguments = {" `_Type_` ":  `_Type_` }
+    def ChangeCase(self, *args, Type=None):
+        arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.textrange.ChangeCase(*args, **arguments)
 
-    def Characters(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Characters(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Characters(*args, **arguments)
 
@@ -11180,39 +11180,39 @@ class TextRange:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Find(*args, **arguments)
 
-    def InsertAfter(self, *args,  `_NewText_` =None):
-        arguments = {" `_NewText_` ":  `_NewText_` }
+    def InsertAfter(self, *args, NewText=None):
+        arguments = {"NewText": NewText}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.textrange.InsertAfter(*args, **arguments)
 
-    def InsertBefore(self, *args,  `_NewText_` =None):
-        arguments = {" `_NewText_` ":  `_NewText_` }
+    def InsertBefore(self, *args, NewText=None):
+        arguments = {"NewText": NewText}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.textrange.InsertBefore(*args, **arguments)
 
-    def InsertDateTime(self, *args,  _DateTimeFormat=None, InsertAsField_ =None):
-        arguments = {" _DateTimeFormat":  _DateTimeFormat, "InsertAsField_ ": InsertAsField_ }
+    def InsertDateTime(self, *args, DateTimeFormat=None, InsertAsField=None):
+        arguments = {"DateTimeFormat": DateTimeFormat, "InsertAsField": InsertAsField}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.InsertDateTime(*args, **arguments)
 
     def InsertSlideNumber(self):
         return self.textrange.InsertSlideNumber()
 
-    def InsertSymbol(self, *args,  `_FontName_`=None, `_CharNumber_`=None, `_UniCode_` =None):
-        arguments = {" `_FontName_`":  `_FontName_`, "`_CharNumber_`": `_CharNumber_`, "`_UniCode_` ": `_UniCode_` }
+    def InsertSymbol(self, *args, FontName=None, CharNumber=None, UniCode=None):
+        arguments = {"FontName": FontName, "CharNumber": CharNumber, "UniCode": UniCode}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.InsertSymbol(*args, **arguments)
 
-    def Lines(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Lines(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Lines(*args, **arguments)
 
     def LtrRun(self):
         self.textrange.LtrRun()
 
-    def Paragraphs(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Paragraphs(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Paragraphs(*args, **arguments)
 
@@ -11232,32 +11232,32 @@ class TextRange:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Replace(*args, **arguments)
 
-    def RotatedBounds(self, *args,  `_X1_`=None, `_Y1_`=None, `_X2_`=None, `_Y2_`=None, `_X3_`=None, `_Y3_`=None, `_X4_`=None, `_Y4_` =None):
-        arguments = {" `_X1_`":  `_X1_`, "`_Y1_`": `_Y1_`, "`_X2_`": `_X2_`, "`_Y2_`": `_Y2_`, "`_X3_`": `_X3_`, "`_Y3_`": `_Y3_`, "`_X4_`": `_X4_`, "`_Y4_` ": `_Y4_` }
+    def RotatedBounds(self, *args, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None, X4=None, Y4=None):
+        arguments = {"X1": X1, "Y1": Y1, "X2": X2, "Y2": Y2, "X3": X3, "Y3": Y3, "X4": X4, "Y4": Y4}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.textrange.RotatedBounds(*args, **arguments)
 
     def RtlRun(self):
         self.textrange.RtlRun()
 
-    def Runs(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Runs(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Runs(*args, **arguments)
 
     def Select(self):
         self.textrange.Select()
 
-    def Sentences(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Sentences(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Sentences(*args, **arguments)
 
     def TrimText(self):
         return self.textrange.TrimText()
 
-    def Words(self, *args,  `_Start_`=None, `_Length_` =None):
-        arguments = {" `_Start_`":  `_Start_`, "`_Length_` ": `_Length_` }
+    def Words(self, *args, Start=None, Length=None):
+        arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Words(*args, **arguments)
 
@@ -11550,46 +11550,46 @@ class ThreeDFormat:
     def Z(self, value):
         self.threedformat.Z = value
 
-    def IncrementRotationHorizontal(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationHorizontal(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationHorizontal(*args, **arguments)
 
-    def IncrementRotationVertical(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationVertical(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationVertical(*args, **arguments)
 
-    def IncrementRotationX(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationX(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationX(*args, **arguments)
 
-    def IncrementRotationY(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationY(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationY(*args, **arguments)
 
-    def IncrementRotationZ(self, *args,  `_Increment_` =None):
-        arguments = {" `_Increment_` ":  `_Increment_` }
+    def IncrementRotationZ(self, *args, Increment=None):
+        arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.IncrementRotationZ(*args, **arguments)
 
     def ResetRotation(self):
         self.threedformat.ResetRotation()
 
-    def SetExtrusionDirection(self, *args,  `_PresetExtrusionDirection_` =None):
-        arguments = {" `_PresetExtrusionDirection_` ":  `_PresetExtrusionDirection_` }
+    def SetExtrusionDirection(self, *args, PresetExtrusionDirection=None):
+        arguments = {"PresetExtrusionDirection": PresetExtrusionDirection}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetExtrusionDirection(*args, **arguments)
 
-    def SetPresetCamera(self, *args,  `_PresetCamera_` =None):
-        arguments = {" `_PresetCamera_` ":  `_PresetCamera_` }
+    def SetPresetCamera(self, *args, PresetCamera=None):
+        arguments = {"PresetCamera": PresetCamera}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetPresetCamera(*args, **arguments)
 
-    def SetThreeDFormat(self, *args,  `_PresetThreeDFormat_` =None):
-        arguments = {" `_PresetThreeDFormat_` ":  `_PresetThreeDFormat_` }
+    def SetThreeDFormat(self, *args, PresetThreeDFormat=None):
+        arguments = {"PresetThreeDFormat": PresetThreeDFormat}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetThreeDFormat(*args, **arguments)
 
@@ -12056,8 +12056,8 @@ class View:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.view.PasteSpecial(*args, **arguments)
 
-    def Player(self, *args,  `_ShapeId_` =None):
-        arguments = {" `_ShapeId_` ":  `_ShapeId_` }
+    def Player(self, *args, ShapeId=None):
+        arguments = {"ShapeId": ShapeId}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.view.Player(*args, **arguments)
 

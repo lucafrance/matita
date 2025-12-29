@@ -14583,8 +14583,8 @@ class Range:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.PrintPreview(*args, **arguments)
 
-    def RemoveDuplicates(self, *args, Columns_ =None, Header=None):
-        arguments = {"Columns_ ": Columns_ , "Header": Header}
+    def RemoveDuplicates(self, *args, Columns=None, Header=None):
+        arguments = {"Columns": Columns, "Header": Header}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.range.RemoveDuplicates(*args, **arguments)
 
