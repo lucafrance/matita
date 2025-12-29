@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "python-vba"
+name = "vipera"
 version = "0.1.0"
 description = "Parser for Office VBA Reference documentation"
 authors = [{name = "Luca Franceschini", email = "lucaf@lucaf.eu"}]
