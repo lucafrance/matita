@@ -302,7 +302,7 @@ class VbaDocs:
     def read_directory(self, path):
         with os.scandir(path) as it:
             for entry in it:
-                if entry.is_file() and entry.name.startswith("Excel."):
+                if entry.is_file():
                     page_key = page_filename_to_key(entry.name).lower()
                     if "-" in page_key:
                         logging.info("Ignoring page '{}', because the object name includes a dash.".format(entry.name))
@@ -359,9 +359,13 @@ class VbaDocs:
             if p.property_name == "Cells" and len(p.parameters) == 0:
                 p.parameters = ["RowIndex", "ColumnIndex"]
 
-    def to_python(self):
-        code = ["import pyvba.genmodules.Excel", ""]
+    def to_python(self, application):
+        code = []
         for page_key, page in self.pages.items():
+            if page.module_name is None:
+                continue
+            if page.module_name.lower() != application.lower():
+                continue
             try:
                 page_code = None
                 if page.is_object:

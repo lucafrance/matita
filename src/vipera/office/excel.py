@@ -1,5 +1,3 @@
-import pyvba.genmodules.Excel
-
 class AboveAverage:
 
     def __init__(self, aboveaverage=None):
