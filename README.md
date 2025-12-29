@@ -23,7 +23,9 @@ The output will be generated in `data/office-vba-api.json`.
 
 ## Inconsistencies
 
-The [Break object (Word)](https://learn.microsoft.com/en-us/office/vba/api/word.break), as it conflicts with the `break` reserved keyword in Python.
+The following objects are ignored, as their name  conflicts with reserved keywords in Python.
+- [Break object (Word)](https://learn.microsoft.com/en-us/office/vba/api/word.break)
+- [Global object (Word)](https://learn.microsoft.com/en-us/office/vba/api/word.global)
 
 ## Attribution
 

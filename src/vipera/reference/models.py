@@ -304,7 +304,7 @@ class VbaDocs:
             for entry in it:
                 if entry.is_file():
                     page_key = page_filename_to_key(entry.name).lower()
-                    if page_key == "word.break":
+                    if page_key in ["word.break", "word.global"]:
                         logging.info("Ignoring page '{}', because it conflicts with a Python keyword.".format(entry.name))
                     elif "-" in page_key:
                         logging.info("Ignoring page '{}', because the object name includes a dash.".format(entry.name))

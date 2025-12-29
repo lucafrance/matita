@@ -1,6 +1,6 @@
 import unittest
 
-from vipera.office import excel
+from vipera.office import excel, word
 
 class TestApplicationOpenClose(unittest.TestCase):
     
