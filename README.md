@@ -21,6 +21,10 @@ python -m scripts
 
 The output will be generated in `data/office-vba-api.json`.
 
+## Inconsistencies
+
+The [Break object (Word)](https://learn.microsoft.com/en-us/office/vba/api/word.break), as it conflicts with the `break` reserved keyword in Python.
+
 ## Attribution
 
 This project is based on the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft Corporation, [licensed](https://github.com/MicrosoftDocs/VBA-Docs/blob/main/LICENSE) under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).

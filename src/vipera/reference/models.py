@@ -304,7 +304,9 @@ class VbaDocs:
             for entry in it:
                 if entry.is_file():
                     page_key = page_filename_to_key(entry.name).lower()
-                    if "-" in page_key:
+                    if page_key == "word.break":
+                        logging.info("Ignoring page '{}', because it conflicts with a Python keyword.".format(entry.name))
+                    elif "-" in page_key:
                         logging.info("Ignoring page '{}', because the object name includes a dash.".format(entry.name))
                     else:
                         self.pages[page_key] = DocPage(open(entry, "rt", encoding="utf8").read())

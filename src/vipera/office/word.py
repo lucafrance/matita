@@ -1805,31 +1805,6 @@ class Border:
     def Visible(self):
         return self.border.Visible
 
-class Break:
-
-    def __init__(self, break=None):
-        self.break = break
-
-    @property
-    def Application(self):
-        return Application(self.break.Application)
-
-    @property
-    def Creator(self):
-        return self.break.Creator
-
-    @property
-    def PageIndex(self):
-        return self.break.PageIndex
-
-    @property
-    def Parent(self):
-        return self.break.Parent
-
-    @property
-    def Range(self):
-        return Range(self.break.Range)
-
 class Breaks:
 
     def __init__(self, breaks=None):
