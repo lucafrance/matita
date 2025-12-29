@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
-from python_vba.parser import VbaDocs
+from vipera.parser import VbaDocs
 
 def main():
     logging.basicConfig(

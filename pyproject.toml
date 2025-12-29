@@ -19,8 +19,8 @@ classifiers = [
 dependencies = []
 
 [project.scripts]
-python-vba = "scripts.__main__:main"
+vipera = "scripts.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["python_vba*"]
+include = ["vipera*"]
