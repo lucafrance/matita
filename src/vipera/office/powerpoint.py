@@ -7137,8 +7137,8 @@ class Presentation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.Export(*args, **arguments)
 
-    def ExportAsFixedFormat(self, *args, Path=None, FixedFormatType=None, Intent=None, FrameSlides=None, HandoutOrder=None, OutputType=None, PrintHiddenSlides=None, PrintRange=None, RangeType=None, SlideShowName=None, IncludeDocProperties=None, KeepIRMSettings=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005\_1=None, ExternalExporter=None):
-        arguments = {"Path": Path, "FixedFormatType": FixedFormatType, "Intent": Intent, "FrameSlides": FrameSlides, "HandoutOrder": HandoutOrder, "OutputType": OutputType, "PrintHiddenSlides": PrintHiddenSlides, "PrintRange": PrintRange, "RangeType": RangeType, "SlideShowName": SlideShowName, "IncludeDocProperties": IncludeDocProperties, "KeepIRMSettings": KeepIRMSettings, "DocStructureTags": DocStructureTags, "BitmapMissingFonts": BitmapMissingFonts, "UseISO19005\_1": UseISO19005\_1, "ExternalExporter": ExternalExporter}
+    def ExportAsFixedFormat(self, *args, Path=None, FixedFormatType=None, Intent=None, FrameSlides=None, HandoutOrder=None, OutputType=None, PrintHiddenSlides=None, PrintRange=None, RangeType=None, SlideShowName=None, IncludeDocProperties=None, KeepIRMSettings=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, ExternalExporter=None):
+        arguments = {"Path": Path, "FixedFormatType": FixedFormatType, "Intent": Intent, "FrameSlides": FrameSlides, "HandoutOrder": HandoutOrder, "OutputType": OutputType, "PrintHiddenSlides": PrintHiddenSlides, "PrintRange": PrintRange, "RangeType": RangeType, "SlideShowName": SlideShowName, "IncludeDocProperties": IncludeDocProperties, "KeepIRMSettings": KeepIRMSettings, "DocStructureTags": DocStructureTags, "BitmapMissingFonts": BitmapMissingFonts, "UseISO19005_1": UseISO19005_1, "ExternalExporter": ExternalExporter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.presentation.ExportAsFixedFormat(*args, **arguments)
 

@@ -98,7 +98,7 @@ class DocPage:
             if "(" in line:
                 parameters = line.split("(", 1)[1].split(")", 1)[0]
                 parameters = parameters.split(", ")
-                parameters = [p.strip(" _`*") for p in parameters]
+                parameters = [p.strip(" _`*").replace("\\_", "_") for p in parameters]
                 self.parameters = parameters
         
         # Find the return value of a property. The section looks like this:
