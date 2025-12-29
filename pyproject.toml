@@ -17,3 +17,9 @@ classifiers = [
     "Topic :: Office/Business :: Office Suites",
 ]
 dependencies = []
+
+[tool.hatch.build.targets.sdist]
+exclude = ["office-vba-reference/*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vipera"]
