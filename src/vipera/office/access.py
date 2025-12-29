@@ -1,3 +1,5 @@
+import win32com.client
+
 class AccessObject:
 
     def __init__(self, accessobject=None):
@@ -323,7 +325,7 @@ class Application:
         self.application = application
 
     def new(self):
-        self.application = pyvba.genmodules.Access.Application()
+        self.application = win32com.client.Dispatch("Access.Application")
         return self
 
     @property

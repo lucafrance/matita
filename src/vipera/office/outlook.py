@@ -1,3 +1,5 @@
+import win32com.client
+
 class Account:
 
     def __init__(self, account=None):
@@ -575,7 +577,7 @@ class Application:
         self.application = application
 
     def new(self):
-        self.application = pyvba.genmodules.Outlook.Application()
+        self.application = win32com.client.Dispatch("Outlook.Application")
         return self
 
     @property

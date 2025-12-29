@@ -1,3 +1,5 @@
+import win32com.client
+
 class AboveAverage:
 
     def __init__(self, aboveaverage=None):
@@ -382,7 +384,7 @@ class Application:
         self.application = application
 
     def new(self):
-        self.application = pyvba.genmodules.Excel.Application()
+        self.application = win32com.client.Dispatch("Excel.Application")
         return self
 
     @property

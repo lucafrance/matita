@@ -188,10 +188,10 @@ class DocPage:
 
         # New method for Application objects
         if self.object_name == "Application" and self.is_object:
-            code.append("    def new(self):")
-            code.append(f"        self.application = pyvba.genmodules.{self.module_name}.Application()")
-            code.append("        return self")
-            code.append("")
+            code.append(f"    def new(self):")
+            code.append(f"        self.application = win32com.client.Dispatch(\"{self.module_name}.Application\")")
+            code.append(f"        return self")
+            code.append(f"")
 
         # Call method for collections
         if self.is_collection:
@@ -360,7 +360,7 @@ class VbaDocs:
                 p.parameters = ["RowIndex", "ColumnIndex"]
 
     def to_python(self, application):
-        code = []
+        code = ["import win32com.client", ""]
         for page_key, page in self.pages.items():
             if page.module_name is None:
                 continue

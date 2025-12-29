@@ -1,3 +1,5 @@
+import win32com.client
+
 class AddIn:
 
     def __init__(self, addin=None):
@@ -77,7 +79,7 @@ class Application:
         self.application = application
 
     def new(self):
-        self.application = pyvba.genmodules.Word.Application()
+        self.application = win32com.client.Dispatch("Word.Application")
         return self
 
     @property

@@ -1,3 +1,5 @@
+import win32com.client
+
 class ActionSetting:
 
     def __init__(self, actionsetting=None):
@@ -438,7 +440,7 @@ class Application:
         self.application = application
 
     def new(self):
-        self.application = pyvba.genmodules.PowerPoint.Application()
+        self.application = win32com.client.Dispatch("PowerPoint.Application")
         return self
 
     @property
