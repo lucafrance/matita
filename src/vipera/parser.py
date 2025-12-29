@@ -5,11 +5,11 @@ from .models import DocPage
 
 
 def reset_ignored_pages():
-    f = open("ignored_pages.log", "wt")
+    f = open("logs/ignored_pages.log", "wt")
     f.close()
 
 def log_ignored_page(page_key, page):
-    with open("ignored_pages.log", "at") as f:
+    with open("logs/ignored_pages.log", "at") as f:
         if page.title is not None:
             f.write(page.title.lower())
         else:

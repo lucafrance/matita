@@ -8,10 +8,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from vipera.parser import VbaDocs
 
 def main():
+    os.makedirs("logs", exist_ok=True)
     logging.basicConfig(
         level = logging.INFO,
         format = "%(asctime)s [%(levelname)s] %(message)s",
-        handlers = [logging.FileHandler("utils.log", mode="w")],
+        handlers = [logging.FileHandler("logs/utils.log", mode="w")],
     )
 
     docs = VbaDocs()
