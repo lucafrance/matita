@@ -20,7 +20,3 @@ dependencies = []
 
 [project.scripts]
 vipera = "scripts.__main__:main"
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["vipera*"]
