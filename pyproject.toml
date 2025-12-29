@@ -17,6 +17,3 @@ classifiers = [
     "Topic :: Office/Business :: Office Suites",
 ]
 dependencies = []
-
-[project.scripts]
-vipera = "scripts.__main__:main"
