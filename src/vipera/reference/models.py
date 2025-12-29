@@ -373,7 +373,7 @@ class VbaDocs:
                 if page.is_object:
                     page_code = page.to_python()
             except Exception as e:
-                logging.warning("Can't export '{}' to python code. {}".format(page_key, traceback.format_exc()))
+                logging.warning(f"Can't export '{page_key}' to python code. {e}")
             else:
                 if page_code is not None:
                     code.append(page_code)
