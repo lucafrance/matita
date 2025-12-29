@@ -20,6 +20,8 @@ def main():
     docs.process_pages()
     os.makedirs("data", exist_ok=True)
     json.dump(docs.to_dict(), open("data/office-vba-api.json", "wt"), indent=4)
+    with open("src/vipera/office/excel.py", "wt") as f:
+        f.write(docs.to_python())
 
 if __name__ == "__main__":
     main()

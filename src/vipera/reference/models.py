@@ -223,10 +223,12 @@ class DocPage:
                 code += p.to_python_arguments_expansion()
                 # If the genmodule includes a Get... method for a property, use that one.
                 # E.g. `Range.GetAddress` for `Range.Address`
-                if f"Get{p.property_name}" in dir(self.genmodule_object()):
-                    code_line = f"self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)"
-                else:
-                    code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
+                # TODO fix to check for existence of get property without genmodule object
+                # if f"Get{p.property_name}" in dir(self.genmodule_object()):
+                #     code_line = f"self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)"
+                # else:
+                #     code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
+                code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
             # If there is a class for the property, wrap it
             if p.property_class is not None:
                 code_line = f"{p.property_class}({code_line})"
