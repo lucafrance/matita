@@ -7,7 +7,8 @@ name = "vipera"
 version = "0.1.0"
 description = "Parser for Office VBA Reference documentation"
 authors = [{name = "Luca Franceschini", email = "lucaf@lucaf.eu"}]
-license = {file = "LICENSE.md"}
+license = "MIT"
+license-files = ["LICENSE.md"]
 readme = "README.md"
 requires-python = ">=3.13"
 classifiers = [
