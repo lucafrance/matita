@@ -7,16 +7,16 @@ Creates a json of the structure of the [Office VBA Object library](https://learn
 
 Install the package with:
 
-```bash
-pip install .
+```powershell
+python -m pip install .
 ```
 
 ## Usage
 
-The `python_vba` package contains the parser and related modules. To run the parser, use the included script:
+The `vipera` package contains the parser and related modules. To run the parser, use the included script:
 
-```bash
-python scripts/__main__.py
+```powershell
+python -m scripts
 ```
 
 The output will be generated in `data/office-vba-api.json`.
