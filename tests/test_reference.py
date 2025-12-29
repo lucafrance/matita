@@ -42,25 +42,25 @@ class TestParser(unittest.TestCase):
         self.assertEqual(rows[3][2], "i")
 
 
-with open("src/vipera/excel.py", "rt") as f:
+with open("src/vipera/office/excel.py", "rt") as f:
     excel_src = f.read()
 
 class TestExcelModule(unittest.TestCase):
 
     def test_application_class(self):
-        self.assertIn("    def new(self):\n        self.application = pyvba.genmodules.Excel.Application()\n        return self", excel_src)
+        self.assertTrue("    def new(self):\n        self.application = win32com.client.Dispatch(\"Excel.Application\")\n        return self" in excel_src, msg="def new... not found")
 
     def test_collections(self):
-        self.assertIn("def __call__(self, item):\n        return Worksheet(self.worksheets(item))", excel_src)
+        self.assertTrue("def __call__(self, item):\n        return Worksheet(self.worksheets(item))" in excel_src, msg="__call__... not found")
 
     def test_properties(self):
-        self.assertIn("def __init__(self, aboveaverage=None):", excel_src)
-        self.assertIn("@property\n    def Name(self):\n        return self.worksheet.Name", excel_src)
-        self.assertIn("def Range(self, *args, Cell1=None, Cell2=None):\n        arguments = {\"Cell1\": Cell1, \"Cell2\": Cell2}\n        arguments = {key: value for key, value in arguments.items() if value is not None}\n        return Range(self.worksheet.Range(*args, **arguments))", excel_src)
-        self.assertIn("@Visible.setter\n    def Visible(self, value):\n        self.application.Visible = value", excel_src)
-        self.assertIn("@property\n    def Value(self):\n        return self.range.Value\n\n    @Value.setter\n    def Value(self, value):\n        self.range.Value = value", excel_src)
-        self.assertIn("def Columns(self):\n        return Range(self.range.Columns)", excel_src)
+        self.assertTrue("def __init__(self, aboveaverage=None):" in excel_src, msg="__init__... not found")
+        self.assertTrue("@property\n    def Name(self):\n        return self.worksheet.Name" in excel_src, msg="@property Name... not found")
+        self.assertTrue("def Range(self, *args, Cell1=None, Cell2=None):\n        arguments = {\"Cell1\": Cell1, \"Cell2\": Cell2}\n        arguments = {key: value for key, value in arguments.items() if value is not None}\n        return Range(self.worksheet.Range(*args, **arguments))" in excel_src, msg="def Range... not found")
+        self.assertTrue("@Visible.setter\n    def Visible(self, value):\n        self.application.Visible = value" in excel_src, msg="@Visible.setter... not found")
+        self.assertTrue("@property\n    def Value(self):\n        return self.range.Value\n\n    @Value.setter\n    def Value(self, value):\n        self.range.Value = value" in excel_src, msg="@property Value... not found")
+        self.assertTrue("def Columns(self):\n        return Range(self.range.Columns)" in excel_src, msg="def Columns... not found")
 
     def test_methods(self):
-        self.assertIn("def Quit(self):\n        self.application.Quit()", excel_src)
-        self.assertIn("def Add(self, *args, Template=None):\n        arguments = {\"Template\": Template}\n        arguments = {key: value for key, value in arguments.items() if value is not None}\n        return Workbook(self.workbooks.Add(*args, **arguments))", excel_src)
+        self.assertTrue("def Quit(self):\n        self.application.Quit()" in excel_src, msg="def Quit... not found")
+        self.assertTrue("def Add(self, *args, Template=None):\n        arguments = {\"Template\": Template}\n        arguments = {key: value for key, value in arguments.items() if value is not None}\n        return Workbook(self.workbooks.Add(*args, **arguments))" in excel_src, msg="def Add... not found")

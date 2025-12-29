@@ -4,6 +4,5 @@ if (-not (Test-Path "office-vba-reference\.git")) {
 
 python -m scripts
 python -m pip install -e .
-# TODO run tests
+python -m tests
 python -m build
-
