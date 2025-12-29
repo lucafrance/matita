@@ -16898,8 +16898,8 @@ class Range:
     def Cut(self):
         self.range.Cut()
 
-    def Delete(self, *args, \[_Unit_\]=None, \[_Count_\]=None):
-        arguments = {"\[_Unit_\]": \[_Unit_\], "\[_Count_\]": \[_Count_\]}
+    def Delete(self, *args, Unit=None, Count=None):
+        arguments = {"Unit": Unit, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.range.Delete(*args, **arguments)
 
