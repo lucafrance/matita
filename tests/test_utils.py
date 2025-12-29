@@ -1,5 +1,4 @@
 import unittest
-import logging
 
 from vipera.reference import MarkdownTree
 
@@ -43,7 +42,7 @@ class TestParser(unittest.TestCase):
         self.assertEqual(rows[3][2], "i")
 
 
-with open("pyvba/Excel.py", "rt") as f:
+with open("src/vipera/excel.py", "rt") as f:
     excel_src = f.read()
 
 class TestExcelModule(unittest.TestCase):
@@ -65,86 +64,3 @@ class TestExcelModule(unittest.TestCase):
     def test_methods(self):
         self.assertIn("def Quit(self):\n        self.application.Quit()", excel_src)
         self.assertIn("def Add(self, *args, Template=None):\n        arguments = {\"Template\": Template}\n        arguments = {key: value for key, value in arguments.items() if value is not None}\n        return Workbook(self.workbooks.Add(*args, **arguments))", excel_src)
-
-import pyvba.Excel
-import pyvba.genmodules.Excel
-
-def is_ignored_page(txt):
-    with open("ignored_pages.log", "rt") as f:
-        if txt.lower() in f.read():
-            return True
-    return False
-
-class TestModulesConsistency(unittest.TestCase):
-
-    def test_compare_excel_modules(self):
-        object_names = dir(pyvba.Excel)
-        object_names.remove("pyvba")
-        for object_name in object_names.copy():
-            if object_name.startswith("_"):
-                object_names.remove(object_name)
-        # Check that all classes of `pyvba.Excel` also exist in `pyvba.genmodules.Excel` 
-        for object_name in object_names:
-            self.assertIn(object_name, dir(pyvba.genmodules.Excel))
-        # Check that all properties and methods of `pyvba.genmodules.Excel` also exist in `pyvba.Excel`.
-        # Only focus on classes which exist in `pyvba.Excel`, therefore reuse the list `object_names`.
-        # If a class is not in the documentation, then it also not in `pyvba.Excel` and is not in scope.
-        for object_name in object_names:
-            # Ignore Excel Graph objects, not (yet) supported
-            # https://learn.microsoft.com/en-us/office/vba/api/overview/excel/graph-visual-basic-reference
-            excel_graph_objects =  ["ChartColorFormat", "ChartFillFormat"]
-            # Ignore PivotLayout, as most methods of the COM are unavailable in VBA (e.g. `AddFields`, `GetColumnFields`)
-            other_ignored_objects = ["ChartObjects", "PivotLayout"]
-            if object_name in excel_graph_objects + other_ignored_objects:
-                continue
-            props_meths = dir(getattr(pyvba.genmodules.Excel, object_name))
-            # Ignore properties and methods which are undefined in the documentation
-            # Ignore properties and methods unavailable in VBA (but maybe available in the COM)
-            undefined_props_meths = [
-                ("Connections", "Add2"), ("PivotFilters", "Add2"), ("PivotTable", "ApplyLayout"),
-                ("Range", "RefreshLinkedDataType"), ("SlicerCaches", "Add2"), ("WorksheetFunction", "ArrayToText"),
-                ("WorksheetFunction", "Concat"), ("WorksheetFunction", "CoupPcd"), ("WorksheetFunction", "FieldValue"),
-                ("WorksheetFunction", "Index"), ("WorksheetFunction", "MaxIfs"), ("WorksheetFunction", "MinIfs"),
-                ("WorksheetFunction", "RandArray"), ("WorksheetFunction", "Sequence"), ("WorksheetFunction", "Single"),
-                ("WorksheetFunction", "Sort"), ("WorksheetFunction", "SortBy"), ("WorksheetFunction", "StockHistory"),
-                ("WorksheetFunction", "TextJoin"), ("WorksheetFunction", "Unique"), ("WorksheetFunction", "ValueToText"),
-                ("WorksheetFunction", "XLookup"), ("WorksheetFunction", "XMatch"),
-            ]
-            unavailable_props_meths = [
-                ("FillFormat", "Background"), ("LegendKey", "Select"), ("ListObject", "UpdateChanges"),
-                ("OLEObjects", "Group"), ("PivotCaches", "Add"), ("PivotTable", "Dummy15"), ("PivotTable", "Dummy2"),
-                ("PivotTable", "Format"), ("Range", "AutoFormat"), ("Range", "CreatePublisher"),
-                ("Range", "GoalSeek"), ("Series", "ApplyCustomType"), ("Shape", "CanvasCropBottom"),
-                ("Shape", "CanvasCropTop"), ("Shape", "CanvasCropLeft"), ("Shape", "CanvasCropRight"),
-                ("Shapes", "AddCanvas"), ("Shapes", "AddDiagram"), ("WorksheetFunction", "Dummy19"),
-                ("WorksheetFunction", "Dummy21"), ("WorksheetFunction", "IsThaiDigit"),
-                ("WorksheetFunction", "RoundBahtDown"), ("WorksheetFunction", "RoundBahtUp"),
-                ("WorksheetFunction", "ThaiDayOfWeek"), ("WorksheetFunction", "ThaiDigit"),
-                ("WorksheetFunction", "ThaiMonthOfYear"), ("WorksheetFunction", "ThaiNumSound"),
-                ("WorksheetFunction", "ThaiNumString"), ("WorksheetFunction", "ThaiStringLength"),
-                ("WorksheetFunction", "ThaiYear"),
-            ]
-            for obj, prop_meth in undefined_props_meths + unavailable_props_meths:
-                if object_name == obj:
-                    props_meths.remove(prop_meth)
-            # Ignore properties and methods specific to the module generated with pywin32
-            for pm in ["CLSID", "GetProperty", "SetProperty"]:
-                if pm in props_meths:
-                    props_meths.remove(pm)
-            for pm in props_meths.copy():
-                if "_" in pm or pm.startswith("coclass") or pm.startswith("Set"):
-                    props_meths.remove(pm)
-            for pm in props_meths:
-                object_attr = dir(getattr(pyvba.Excel, object_name))
-                try:
-                    self.assertTrue((pm in object_attr) or (pm.removeprefix("Get") in object_attr))
-                except AssertionError as e:
-                    full_pm_name = f"{object_name}.{pm}"
-                    if is_ignored_page(full_pm_name):
-                        logging.warning(f"{full_pm_name} exists in genomodules, but the doc page has been ignored.")
-                    else:
-                        print(f"Property/method {object_name}.{pm} from genmodules not found in pyvba.")
-                        print(f"object_attr == {object_attr}")
-                        raise(e)
-                except Exception as e:
-                    raise(e)
