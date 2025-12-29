@@ -16,7 +16,7 @@ classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Topic :: Office/Business :: Office Suites",
 ]
-dependencies = []
+dependencies = ["pywin32"]
 
 [tool.hatch.build.targets.sdist]
 exclude = ["office-vba-reference/*"]
