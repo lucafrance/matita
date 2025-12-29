@@ -29,6 +29,10 @@ class AddIn:
     def Installed(self):
         return self.addin.Installed
 
+    @Installed.setter
+    def Installed(self, value):
+        self.addin.Installed = value
+
     @property
     def Name(self):
         return self.addin.Name
@@ -158,6 +162,10 @@ class Application:
     def BrowseExtraFileTypes(self):
         return self.application.BrowseExtraFileTypes
 
+    @BrowseExtraFileTypes.setter
+    def BrowseExtraFileTypes(self, value):
+        self.application.BrowseExtraFileTypes = value
+
     @property
     def Browser(self):
         return Browser(self.application.Browser)
@@ -186,6 +194,10 @@ class Application:
     def CheckLanguage(self):
         return self.application.CheckLanguage
 
+    @CheckLanguage.setter
+    def CheckLanguage(self, value):
+        self.application.CheckLanguage = value
+
     @property
     def COMAddIns(self):
         return self.application.COMAddIns
@@ -213,6 +225,10 @@ class Application:
     @property
     def DefaultLegalBlackline(self):
         return self.application.DefaultLegalBlackline
+
+    @DefaultLegalBlackline.setter
+    def DefaultLegalBlackline(self, value):
+        self.application.DefaultLegalBlackline = value
 
     @property
     def DefaultSaveFormat(self):
@@ -246,6 +262,10 @@ class Application:
     def DisplayAutoCompleteTips(self):
         return self.application.DisplayAutoCompleteTips
 
+    @DisplayAutoCompleteTips.setter
+    def DisplayAutoCompleteTips(self, value):
+        self.application.DisplayAutoCompleteTips = value
+
     @property
     def DisplayDocumentInformationPanel(self):
         return self.application.DisplayDocumentInformationPanel
@@ -258,13 +278,25 @@ class Application:
     def DisplayRecentFiles(self):
         return self.application.DisplayRecentFiles
 
+    @DisplayRecentFiles.setter
+    def DisplayRecentFiles(self, value):
+        self.application.DisplayRecentFiles = value
+
     @property
     def DisplayScreenTips(self):
         return self.application.DisplayScreenTips
 
+    @DisplayScreenTips.setter
+    def DisplayScreenTips(self, value):
+        self.application.DisplayScreenTips = value
+
     @property
     def DisplayScrollBars(self):
         return self.application.DisplayScrollBars
+
+    @DisplayScrollBars.setter
+    def DisplayScrollBars(self, value):
+        self.application.DisplayScrollBars = value
 
     @property
     def Documents(self):
@@ -483,6 +515,10 @@ class Application:
     def PrintPreview(self):
         return self.application.PrintPreview
 
+    @PrintPreview.setter
+    def PrintPreview(self, value):
+        self.application.PrintPreview = value
+
     @property
     def ProtectedViewWindows(self):
         return self.application.ProtectedViewWindows
@@ -503,6 +539,10 @@ class Application:
     def ScreenUpdating(self):
         return self.application.ScreenUpdating
 
+    @ScreenUpdating.setter
+    def ScreenUpdating(self, value):
+        self.application.ScreenUpdating = value
+
     @property
     def Selection(self):
         return Selection(self.application.Selection)
@@ -515,6 +555,10 @@ class Application:
     def ShowStartupDialog(self):
         return self.application.ShowStartupDialog
 
+    @ShowStartupDialog.setter
+    def ShowStartupDialog(self, value):
+        self.application.ShowStartupDialog = value
+
     @property
     def ShowStylePreviews(self):
         return self.application.ShowStylePreviews
@@ -526,6 +570,10 @@ class Application:
     @property
     def ShowVisualBasicEditor(self):
         return self.application.ShowVisualBasicEditor
+
+    @ShowVisualBasicEditor.setter
+    def ShowVisualBasicEditor(self, value):
+        self.application.ShowVisualBasicEditor = value
 
     @property
     def SmartArtColors(self):
@@ -635,6 +683,10 @@ class Application:
     @property
     def Visible(self):
         return self.application.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.application.Visible = value
 
     @property
     def Width(self):
@@ -956,6 +1008,10 @@ class AutoCaption:
     def AutoInsert(self):
         return self.autocaption.AutoInsert
 
+    @AutoInsert.setter
+    def AutoInsert(self, value):
+        self.autocaption.AutoInsert = value
+
     @property
     def CaptionLabel(self):
         return self.autocaption.CaptionLabel
@@ -997,29 +1053,57 @@ class AutoCorrect:
     def CorrectCapsLock(self):
         return self.autocorrect.CorrectCapsLock
 
+    @CorrectCapsLock.setter
+    def CorrectCapsLock(self, value):
+        self.autocorrect.CorrectCapsLock = value
+
     @property
     def CorrectDays(self):
         return self.autocorrect.CorrectDays
+
+    @CorrectDays.setter
+    def CorrectDays(self, value):
+        self.autocorrect.CorrectDays = value
 
     @property
     def CorrectHangulAndAlphabet(self):
         return self.autocorrect.CorrectHangulAndAlphabet
 
+    @CorrectHangulAndAlphabet.setter
+    def CorrectHangulAndAlphabet(self, value):
+        self.autocorrect.CorrectHangulAndAlphabet = value
+
     @property
     def CorrectInitialCaps(self):
         return self.autocorrect.CorrectInitialCaps
+
+    @CorrectInitialCaps.setter
+    def CorrectInitialCaps(self, value):
+        self.autocorrect.CorrectInitialCaps = value
 
     @property
     def CorrectKeyboardSetting(self):
         return self.autocorrect.CorrectKeyboardSetting
 
+    @CorrectKeyboardSetting.setter
+    def CorrectKeyboardSetting(self, value):
+        self.autocorrect.CorrectKeyboardSetting = value
+
     @property
     def CorrectSentenceCaps(self):
         return self.autocorrect.CorrectSentenceCaps
 
+    @CorrectSentenceCaps.setter
+    def CorrectSentenceCaps(self, value):
+        self.autocorrect.CorrectSentenceCaps = value
+
     @property
     def CorrectTableCells(self):
         return self.autocorrect.CorrectTableCells
+
+    @CorrectTableCells.setter
+    def CorrectTableCells(self, value):
+        self.autocorrect.CorrectTableCells = value
 
     @property
     def Creator(self):
@@ -1029,6 +1113,10 @@ class AutoCorrect:
     def DisplayAutoCorrectOptions(self):
         return self.autocorrect.DisplayAutoCorrectOptions
 
+    @DisplayAutoCorrectOptions.setter
+    def DisplayAutoCorrectOptions(self, value):
+        self.autocorrect.DisplayAutoCorrectOptions = value
+
     @property
     def Entries(self):
         return self.autocorrect.Entries
@@ -1036,6 +1124,10 @@ class AutoCorrect:
     @property
     def FirstLetterAutoAdd(self):
         return self.autocorrect.FirstLetterAutoAdd
+
+    @FirstLetterAutoAdd.setter
+    def FirstLetterAutoAdd(self, value):
+        self.autocorrect.FirstLetterAutoAdd = value
 
     @property
     def FirstLetterExceptions(self):
@@ -1045,6 +1137,10 @@ class AutoCorrect:
     def HangulAndAlphabetAutoAdd(self):
         return self.autocorrect.HangulAndAlphabetAutoAdd
 
+    @HangulAndAlphabetAutoAdd.setter
+    def HangulAndAlphabetAutoAdd(self, value):
+        self.autocorrect.HangulAndAlphabetAutoAdd = value
+
     @property
     def HangulAndAlphabetExceptions(self):
         return self.autocorrect.HangulAndAlphabetExceptions
@@ -1052,6 +1148,10 @@ class AutoCorrect:
     @property
     def OtherCorrectionsAutoAdd(self):
         return self.autocorrect.OtherCorrectionsAutoAdd
+
+    @OtherCorrectionsAutoAdd.setter
+    def OtherCorrectionsAutoAdd(self, value):
+        self.autocorrect.OtherCorrectionsAutoAdd = value
 
     @property
     def OtherCorrectionsExceptions(self):
@@ -1065,13 +1165,25 @@ class AutoCorrect:
     def ReplaceText(self):
         return self.autocorrect.ReplaceText
 
+    @ReplaceText.setter
+    def ReplaceText(self, value):
+        self.autocorrect.ReplaceText = value
+
     @property
     def ReplaceTextFromSpellingChecker(self):
         return self.autocorrect.ReplaceTextFromSpellingChecker
 
+    @ReplaceTextFromSpellingChecker.setter
+    def ReplaceTextFromSpellingChecker(self, value):
+        self.autocorrect.ReplaceTextFromSpellingChecker = value
+
     @property
     def TwoInitialCapsAutoAdd(self):
         return self.autocorrect.TwoInitialCapsAutoAdd
+
+    @TwoInitialCapsAutoAdd.setter
+    def TwoInitialCapsAutoAdd(self, value):
+        self.autocorrect.TwoInitialCapsAutoAdd = value
 
     @property
     def TwoInitialCapsExceptions(self):
@@ -1214,6 +1326,10 @@ class Axis:
     def AxisBetweenCategories(self):
         return self.axis.AxisBetweenCategories
 
+    @AxisBetweenCategories.setter
+    def AxisBetweenCategories(self, value):
+        self.axis.AxisBetweenCategories = value
+
     @property
     def AxisGroup(self):
         return self.axis.AxisGroup
@@ -1233,6 +1349,10 @@ class Axis:
     @property
     def BaseUnitIsAuto(self):
         return self.axis.BaseUnitIsAuto
+
+    @BaseUnitIsAuto.setter
+    def BaseUnitIsAuto(self, value):
+        self.axis.BaseUnitIsAuto = value
 
     @property
     def Border(self):
@@ -1286,6 +1406,10 @@ class Axis:
     def DisplayUnitCustom(self):
         return self.axis.DisplayUnitCustom
 
+    @DisplayUnitCustom.setter
+    def DisplayUnitCustom(self, value):
+        self.axis.DisplayUnitCustom = value
+
     @property
     def DisplayUnitLabel(self):
         return DisplayUnitLabel(self.axis.DisplayUnitLabel)
@@ -1298,17 +1422,33 @@ class Axis:
     def HasDisplayUnitLabel(self):
         return self.axis.HasDisplayUnitLabel
 
+    @HasDisplayUnitLabel.setter
+    def HasDisplayUnitLabel(self, value):
+        self.axis.HasDisplayUnitLabel = value
+
     @property
     def HasMajorGridlines(self):
         return self.axis.HasMajorGridlines
+
+    @HasMajorGridlines.setter
+    def HasMajorGridlines(self, value):
+        self.axis.HasMajorGridlines = value
 
     @property
     def HasMinorGridlines(self):
         return self.axis.HasMinorGridlines
 
+    @HasMinorGridlines.setter
+    def HasMinorGridlines(self, value):
+        self.axis.HasMinorGridlines = value
+
     @property
     def HasTitle(self):
         return self.axis.HasTitle
+
+    @HasTitle.setter
+    def HasTitle(self, value):
+        self.axis.HasTitle = value
 
     @property
     def Height(self):
@@ -1350,6 +1490,10 @@ class Axis:
     def MajorUnitIsAuto(self):
         return self.axis.MajorUnitIsAuto
 
+    @MajorUnitIsAuto.setter
+    def MajorUnitIsAuto(self, value):
+        self.axis.MajorUnitIsAuto = value
+
     @property
     def MajorUnitScale(self):
         return self.axis.MajorUnitScale
@@ -1370,6 +1514,10 @@ class Axis:
     def MaximumScaleIsAuto(self):
         return self.axis.MaximumScaleIsAuto
 
+    @MaximumScaleIsAuto.setter
+    def MaximumScaleIsAuto(self, value):
+        self.axis.MaximumScaleIsAuto = value
+
     @property
     def MinimumScale(self):
         return self.axis.MinimumScale
@@ -1381,6 +1529,10 @@ class Axis:
     @property
     def MinimumScaleIsAuto(self):
         return self.axis.MinimumScaleIsAuto
+
+    @MinimumScaleIsAuto.setter
+    def MinimumScaleIsAuto(self, value):
+        self.axis.MinimumScaleIsAuto = value
 
     @property
     def MinorGridlines(self):
@@ -1406,6 +1558,10 @@ class Axis:
     def MinorUnitIsAuto(self):
         return self.axis.MinorUnitIsAuto
 
+    @MinorUnitIsAuto.setter
+    def MinorUnitIsAuto(self, value):
+        self.axis.MinorUnitIsAuto = value
+
     @property
     def MinorUnitScale(self):
         return self.axis.MinorUnitScale
@@ -1422,6 +1578,10 @@ class Axis:
     def ReversePlotOrder(self):
         return self.axis.ReversePlotOrder
 
+    @ReversePlotOrder.setter
+    def ReversePlotOrder(self, value):
+        self.axis.ReversePlotOrder = value
+
     @property
     def ScaleType(self):
         return self.axis.ScaleType
@@ -1433,6 +1593,10 @@ class Axis:
     @property
     def TickLabelPosition(self):
         return self.axis.TickLabelPosition
+
+    @TickLabelPosition.setter
+    def TickLabelPosition(self, value):
+        self.axis.TickLabelPosition = value
 
     @property
     def TickLabels(self):
@@ -1514,6 +1678,10 @@ class AxisTitle:
     def Formula(self):
         return self.axistitle.Formula
 
+    @Formula.setter
+    def Formula(self, value):
+        self.axistitle.Formula = value
+
     @property
     def FormulaLocal(self):
         return self.axistitle.FormulaLocal
@@ -1553,6 +1721,10 @@ class AxisTitle:
     @property
     def IncludeInLayout(self):
         return self.axistitle.IncludeInLayout
+
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.axistitle.IncludeInLayout = value
 
     @property
     def Left(self):
@@ -1804,6 +1976,10 @@ class Border:
     @property
     def Visible(self):
         return self.border.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.border.Visible = value
 
 class Breaks:
 
@@ -2064,6 +2240,10 @@ class CalloutFormat:
     def Accent(self):
         return self.calloutformat.Accent
 
+    @Accent.setter
+    def Accent(self, value):
+        self.calloutformat.Accent = value
+
     @property
     def Angle(self):
         return self.calloutformat.Angle
@@ -2261,6 +2441,10 @@ class CaptionLabel:
     def IncludeChapterNumber(self):
         return self.captionlabel.IncludeChapterNumber
 
+    @IncludeChapterNumber.setter
+    def IncludeChapterNumber(self, value):
+        self.captionlabel.IncludeChapterNumber = value
+
     @property
     def Name(self):
         return self.captionlabel.Name
@@ -2392,6 +2576,10 @@ class Cell:
     def FitText(self):
         return self.cell.FitText
 
+    @FitText.setter
+    def FitText(self, value):
+        self.cell.FitText = value
+
     @property
     def Height(self):
         return self.cell.Height
@@ -2512,6 +2700,10 @@ class Cell:
     def WordWrap(self):
         return self.cell.WordWrap
 
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.cell.WordWrap = value
+
     def AutoSum(self):
         self.cell.AutoSum()
 
@@ -2560,6 +2752,10 @@ class Chart:
     @property
     def AutoScaling(self):
         return self.chart.AutoScaling
+
+    @AutoScaling.setter
+    def AutoScaling(self, value):
+        self.chart.AutoScaling = value
 
     @property
     def BackWall(self):
@@ -2662,13 +2858,25 @@ class Chart:
     def HasDataTable(self):
         return self.chart.HasDataTable
 
+    @HasDataTable.setter
+    def HasDataTable(self, value):
+        self.chart.HasDataTable = value
+
     @property
     def HasLegend(self):
         return self.chart.HasLegend
 
+    @HasLegend.setter
+    def HasLegend(self, value):
+        self.chart.HasLegend = value
+
     @property
     def HasTitle(self):
         return self.chart.HasTitle
+
+    @HasTitle.setter
+    def HasTitle(self, value):
+        self.chart.HasTitle = value
 
     @property
     def HeightPercent(self):
@@ -2714,9 +2922,17 @@ class Chart:
     def PlotVisibleOnly(self):
         return self.chart.PlotVisibleOnly
 
+    @PlotVisibleOnly.setter
+    def PlotVisibleOnly(self, value):
+        self.chart.PlotVisibleOnly = value
+
     @property
     def RightAngleAxes(self):
         return self.chart.RightAngleAxes
+
+    @RightAngleAxes.setter
+    def RightAngleAxes(self, value):
+        self.chart.RightAngleAxes = value
 
     @property
     def Rotation(self):
@@ -3135,6 +3351,10 @@ class ChartFont:
     def Bold(self):
         return self.chartfont.Bold
 
+    @Bold.setter
+    def Bold(self, value):
+        self.chartfont.Bold = value
+
     @property
     def Color(self):
         return self.chartfont.Color
@@ -3167,6 +3387,10 @@ class ChartFont:
     def Italic(self):
         return self.chartfont.Italic
 
+    @Italic.setter
+    def Italic(self, value):
+        self.chartfont.Italic = value
+
     @property
     def Name(self):
         return self.chartfont.Name
@@ -3191,13 +3415,25 @@ class ChartFont:
     def StrikeThrough(self):
         return self.chartfont.StrikeThrough
 
+    @StrikeThrough.setter
+    def StrikeThrough(self, value):
+        self.chartfont.StrikeThrough = value
+
     @property
     def Subscript(self):
         return self.chartfont.Subscript
 
+    @Subscript.setter
+    def Subscript(self, value):
+        self.chartfont.Subscript = value
+
     @property
     def Superscript(self):
         return self.chartfont.Superscript
+
+    @Superscript.setter
+    def Superscript(self, value):
+        self.chartfont.Superscript = value
 
     @property
     def Underline(self):
@@ -3269,6 +3505,10 @@ class ChartGroup:
     def AxisGroup(self):
         return self.chartgroup.AxisGroup
 
+    @AxisGroup.setter
+    def AxisGroup(self, value):
+        self.chartgroup.AxisGroup = value
+
     @property
     def BubbleScale(self):
         return self.chartgroup.BubbleScale
@@ -3309,29 +3549,57 @@ class ChartGroup:
     def GapWidth(self):
         return self.chartgroup.GapWidth
 
+    @GapWidth.setter
+    def GapWidth(self, value):
+        self.chartgroup.GapWidth = value
+
     @property
     def Has3DShading(self):
         return self.chartgroup.Has3DShading
+
+    @Has3DShading.setter
+    def Has3DShading(self, value):
+        self.chartgroup.Has3DShading = value
 
     @property
     def HasDropLines(self):
         return self.chartgroup.HasDropLines
 
+    @HasDropLines.setter
+    def HasDropLines(self, value):
+        self.chartgroup.HasDropLines = value
+
     @property
     def HasHiLoLines(self):
         return self.chartgroup.HasHiLoLines
+
+    @HasHiLoLines.setter
+    def HasHiLoLines(self, value):
+        self.chartgroup.HasHiLoLines = value
 
     @property
     def HasRadarAxisLabels(self):
         return self.chartgroup.HasRadarAxisLabels
 
+    @HasRadarAxisLabels.setter
+    def HasRadarAxisLabels(self, value):
+        self.chartgroup.HasRadarAxisLabels = value
+
     @property
     def HasSeriesLines(self):
         return self.chartgroup.HasSeriesLines
 
+    @HasSeriesLines.setter
+    def HasSeriesLines(self, value):
+        self.chartgroup.HasSeriesLines = value
+
     @property
     def HasUpDownBars(self):
         return self.chartgroup.HasUpDownBars
+
+    @HasUpDownBars.setter
+    def HasUpDownBars(self, value):
+        self.chartgroup.HasUpDownBars = value
 
     @property
     def HiLoLines(self):
@@ -3344,6 +3612,10 @@ class ChartGroup:
     @property
     def Overlap(self):
         return self.chartgroup.Overlap
+
+    @Overlap.setter
+    def Overlap(self, value):
+        self.chartgroup.Overlap = value
 
     @property
     def Parent(self):
@@ -3368,6 +3640,10 @@ class ChartGroup:
     @property
     def ShowNegativeBubbles(self):
         return self.chartgroup.ShowNegativeBubbles
+
+    @ShowNegativeBubbles.setter
+    def ShowNegativeBubbles(self, value):
+        self.chartgroup.ShowNegativeBubbles = value
 
     @property
     def SizeRepresents(self):
@@ -3400,6 +3676,10 @@ class ChartGroup:
     @property
     def VaryByCategories(self):
         return self.chartgroup.VaryByCategories
+
+    @VaryByCategories.setter
+    def VaryByCategories(self, value):
+        self.chartgroup.VaryByCategories = value
 
     def SeriesCollection(self, *args, Index=None):
         arguments = {"Index": Index}
@@ -3466,6 +3746,10 @@ class ChartTitle:
     def Formula(self):
         return self.charttitle.Formula
 
+    @Formula.setter
+    def Formula(self, value):
+        self.charttitle.Formula = value
+
     @property
     def FormulaLocal(self):
         return self.charttitle.FormulaLocal
@@ -3505,6 +3789,10 @@ class ChartTitle:
     @property
     def IncludeInLayout(self):
         return self.charttitle.IncludeInLayout
+
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.charttitle.IncludeInLayout = value
 
     @property
     def Left(self):
@@ -3601,6 +3889,10 @@ class CheckBox:
     def AutoSize(self):
         return self.checkbox.AutoSize
 
+    @AutoSize.setter
+    def AutoSize(self, value):
+        self.checkbox.AutoSize = value
+
     @property
     def Creator(self):
         return self.checkbox.Creator
@@ -3632,6 +3924,10 @@ class CheckBox:
     @property
     def Value(self):
         return self.checkbox.Value
+
+    @Value.setter
+    def Value(self, value):
+        self.checkbox.Value = value
 
 class CoAuthLock:
 
@@ -3851,6 +4147,10 @@ class ColorFormat:
     def Brightness(self):
         return self.colorformat.Brightness
 
+    @Brightness.setter
+    def Brightness(self, value):
+        self.colorformat.Brightness = value
+
     @property
     def Creator(self):
         return self.colorformat.Creator
@@ -3878,6 +4178,10 @@ class ColorFormat:
     @property
     def TintAndShade(self):
         return self.colorformat.TintAndShade
+
+    @TintAndShade.setter
+    def TintAndShade(self, value):
+        self.colorformat.TintAndShade = value
 
     @property
     def Type(self):
@@ -4228,6 +4532,10 @@ class ContentControl:
     def DateDisplayLocale(self):
         return WdLanguageID(self.contentcontrol.DateDisplayLocale)
 
+    @DateDisplayLocale.setter
+    def DateDisplayLocale(self, value):
+        self.contentcontrol.DateDisplayLocale = value
+
     @property
     def DateStorageFormat(self):
         return WdContentControlDateStorageFormat(self.contentcontrol.DateStorageFormat)
@@ -4271,6 +4579,10 @@ class ContentControl:
     @property
     def MultiLine(self):
         return self.contentcontrol.MultiLine
+
+    @MultiLine.setter
+    def MultiLine(self, value):
+        self.contentcontrol.MultiLine = value
 
     @property
     def Parent(self):
@@ -4669,6 +4981,10 @@ class DataLabel:
     def AutoText(self):
         return self.datalabel.AutoText
 
+    @AutoText.setter
+    def AutoText(self, value):
+        self.datalabel.AutoText = value
+
     @property
     def Caption(self):
         return self.datalabel.Caption
@@ -4693,6 +5009,10 @@ class DataLabel:
     @property
     def Formula(self):
         return self.datalabel.Formula
+
+    @Formula.setter
+    def Formula(self, value):
+        self.datalabel.Formula = value
 
     @property
     def FormulaLocal(self):
@@ -4721,6 +5041,10 @@ class DataLabel:
     @property
     def Height(self):
         return self.datalabel.Height
+
+    @Height.setter
+    def Height(self, value):
+        self.datalabel.Height = value
 
     @property
     def HorizontalAlignment(self):
@@ -4753,6 +5077,10 @@ class DataLabel:
     @property
     def NumberFormatLinked(self):
         return self.datalabel.NumberFormatLinked
+
+    @NumberFormatLinked.setter
+    def NumberFormatLinked(self, value):
+        self.datalabel.NumberFormatLinked = value
 
     @property
     def NumberFormatLocal(self):
@@ -4810,25 +5138,49 @@ class DataLabel:
     def ShowBubbleSize(self):
         return self.datalabel.ShowBubbleSize
 
+    @ShowBubbleSize.setter
+    def ShowBubbleSize(self, value):
+        self.datalabel.ShowBubbleSize = value
+
     @property
     def ShowCategoryName(self):
         return self.datalabel.ShowCategoryName
+
+    @ShowCategoryName.setter
+    def ShowCategoryName(self, value):
+        self.datalabel.ShowCategoryName = value
 
     @property
     def ShowLegendKey(self):
         return self.datalabel.ShowLegendKey
 
+    @ShowLegendKey.setter
+    def ShowLegendKey(self, value):
+        self.datalabel.ShowLegendKey = value
+
     @property
     def ShowPercentage(self):
         return self.datalabel.ShowPercentage
+
+    @ShowPercentage.setter
+    def ShowPercentage(self, value):
+        self.datalabel.ShowPercentage = value
 
     @property
     def ShowSeriesName(self):
         return self.datalabel.ShowSeriesName
 
+    @ShowSeriesName.setter
+    def ShowSeriesName(self, value):
+        self.datalabel.ShowSeriesName = value
+
     @property
     def ShowValue(self):
         return self.datalabel.ShowValue
+
+    @ShowValue.setter
+    def ShowValue(self, value):
+        self.datalabel.ShowValue = value
 
     @property
     def Text(self):
@@ -4858,6 +5210,10 @@ class DataLabel:
     def Width(self):
         return self.datalabel.Width
 
+    @Width.setter
+    def Width(self, value):
+        self.datalabel.Width = value
+
     def Delete(self):
         self.datalabel.Delete()
 
@@ -4879,6 +5235,10 @@ class DataLabels:
     @property
     def AutoText(self):
         return self.datalabels.AutoText
+
+    @AutoText.setter
+    def AutoText(self, value):
+        self.datalabels.AutoText = value
 
     @property
     def Count(self):
@@ -4915,6 +5275,10 @@ class DataLabels:
     @property
     def NumberFormatLinked(self):
         return self.datalabels.NumberFormatLinked
+
+    @NumberFormatLinked.setter
+    def NumberFormatLinked(self, value):
+        self.datalabels.NumberFormatLinked = value
 
     @property
     def NumberFormatLocal(self):
@@ -4956,6 +5320,10 @@ class DataLabels:
     def Separator(self):
         return self.datalabels.Separator
 
+    @Separator.setter
+    def Separator(self, value):
+        self.datalabels.Separator = value
+
     @property
     def Shadow(self):
         return self.datalabels.Shadow
@@ -4968,25 +5336,49 @@ class DataLabels:
     def ShowBubbleSize(self):
         return self.datalabels.ShowBubbleSize
 
+    @ShowBubbleSize.setter
+    def ShowBubbleSize(self, value):
+        self.datalabels.ShowBubbleSize = value
+
     @property
     def ShowCategoryName(self):
         return self.datalabels.ShowCategoryName
+
+    @ShowCategoryName.setter
+    def ShowCategoryName(self, value):
+        self.datalabels.ShowCategoryName = value
 
     @property
     def ShowLegendKey(self):
         return self.datalabels.ShowLegendKey
 
+    @ShowLegendKey.setter
+    def ShowLegendKey(self, value):
+        self.datalabels.ShowLegendKey = value
+
     @property
     def ShowPercentage(self):
         return self.datalabels.ShowPercentage
+
+    @ShowPercentage.setter
+    def ShowPercentage(self, value):
+        self.datalabels.ShowPercentage = value
 
     @property
     def ShowSeriesName(self):
         return self.datalabels.ShowSeriesName
 
+    @ShowSeriesName.setter
+    def ShowSeriesName(self, value):
+        self.datalabels.ShowSeriesName = value
+
     @property
     def ShowValue(self):
         return self.datalabels.ShowValue
+
+    @ShowValue.setter
+    def ShowValue(self, value):
+        self.datalabels.ShowValue = value
 
     @property
     def VerticalAlignment(self):
@@ -5036,13 +5428,25 @@ class DataTable:
     def HasBorderHorizontal(self):
         return self.datatable.HasBorderHorizontal
 
+    @HasBorderHorizontal.setter
+    def HasBorderHorizontal(self, value):
+        self.datatable.HasBorderHorizontal = value
+
     @property
     def HasBorderOutline(self):
         return self.datatable.HasBorderOutline
 
+    @HasBorderOutline.setter
+    def HasBorderOutline(self, value):
+        self.datatable.HasBorderOutline = value
+
     @property
     def HasBorderVertical(self):
         return self.datatable.HasBorderVertical
+
+    @HasBorderVertical.setter
+    def HasBorderVertical(self, value):
+        self.datatable.HasBorderVertical = value
 
     @property
     def Parent(self):
@@ -5051,6 +5455,10 @@ class DataTable:
     @property
     def ShowLegendKey(self):
         return self.datatable.ShowLegendKey
+
+    @ShowLegendKey.setter
+    def ShowLegendKey(self, value):
+        self.datatable.ShowLegendKey = value
 
     def Delete(self):
         self.datatable.Delete()
@@ -5067,9 +5475,17 @@ class DefaultWebOptions:
     def AllowPNG(self):
         return self.defaultweboptions.AllowPNG
 
+    @AllowPNG.setter
+    def AllowPNG(self, value):
+        self.defaultweboptions.AllowPNG = value
+
     @property
     def AlwaysSaveInDefaultEncoding(self):
         return self.defaultweboptions.AlwaysSaveInDefaultEncoding
+
+    @AlwaysSaveInDefaultEncoding.setter
+    def AlwaysSaveInDefaultEncoding(self, value):
+        self.defaultweboptions.AlwaysSaveInDefaultEncoding = value
 
     @property
     def Application(self):
@@ -5087,9 +5503,17 @@ class DefaultWebOptions:
     def CheckIfOfficeIsHTMLEditor(self):
         return self.defaultweboptions.CheckIfOfficeIsHTMLEditor
 
+    @CheckIfOfficeIsHTMLEditor.setter
+    def CheckIfOfficeIsHTMLEditor(self, value):
+        self.defaultweboptions.CheckIfOfficeIsHTMLEditor = value
+
     @property
     def CheckIfWordIsDefaultHTMLEditor(self):
         return self.defaultweboptions.CheckIfWordIsDefaultHTMLEditor
+
+    @CheckIfWordIsDefaultHTMLEditor.setter
+    def CheckIfWordIsDefaultHTMLEditor(self, value):
+        self.defaultweboptions.CheckIfWordIsDefaultHTMLEditor = value
 
     @property
     def Creator(self):
@@ -5115,9 +5539,17 @@ class DefaultWebOptions:
     def OptimizeForBrowser(self):
         return self.defaultweboptions.OptimizeForBrowser
 
+    @OptimizeForBrowser.setter
+    def OptimizeForBrowser(self, value):
+        self.defaultweboptions.OptimizeForBrowser = value
+
     @property
     def OrganizeInFolder(self):
         return self.defaultweboptions.OrganizeInFolder
+
+    @OrganizeInFolder.setter
+    def OrganizeInFolder(self, value):
+        self.defaultweboptions.OrganizeInFolder = value
 
     @property
     def Parent(self):
@@ -5135,13 +5567,25 @@ class DefaultWebOptions:
     def RelyOnCSS(self):
         return self.defaultweboptions.RelyOnCSS
 
+    @RelyOnCSS.setter
+    def RelyOnCSS(self, value):
+        self.defaultweboptions.RelyOnCSS = value
+
     @property
     def RelyOnVML(self):
         return self.defaultweboptions.RelyOnVML
 
+    @RelyOnVML.setter
+    def RelyOnVML(self, value):
+        self.defaultweboptions.RelyOnVML = value
+
     @property
     def SaveNewWebPagesAsWebArchives(self):
         return self.defaultweboptions.SaveNewWebPagesAsWebArchives
+
+    @SaveNewWebPagesAsWebArchives.setter
+    def SaveNewWebPagesAsWebArchives(self, value):
+        self.defaultweboptions.SaveNewWebPagesAsWebArchives = value
 
     @property
     def ScreenSize(self):
@@ -5155,13 +5599,25 @@ class DefaultWebOptions:
     def TargetBrowser(self):
         return self.defaultweboptions.TargetBrowser
 
+    @TargetBrowser.setter
+    def TargetBrowser(self, value):
+        self.defaultweboptions.TargetBrowser = value
+
     @property
     def UpdateLinksOnSave(self):
         return self.defaultweboptions.UpdateLinksOnSave
 
+    @UpdateLinksOnSave.setter
+    def UpdateLinksOnSave(self, value):
+        self.defaultweboptions.UpdateLinksOnSave = value
+
     @property
     def UseLongFileNames(self):
         return self.defaultweboptions.UseLongFileNames
+
+    @UseLongFileNames.setter
+    def UseLongFileNames(self, value):
+        self.defaultweboptions.UseLongFileNames = value
 
 class Dialog:
 
@@ -5241,6 +5697,10 @@ class Dictionary:
     def LanguageSpecific(self):
         return self.dictionary.LanguageSpecific
 
+    @LanguageSpecific.setter
+    def LanguageSpecific(self, value):
+        self.dictionary.LanguageSpecific = value
+
     @property
     def Name(self):
         return self.dictionary.Name
@@ -5298,6 +5758,10 @@ class DisplayUnitLabel:
     def Formula(self):
         return self.displayunitlabel.Formula
 
+    @Formula.setter
+    def Formula(self, value):
+        self.displayunitlabel.Formula = value
+
     @property
     def FormulaLocal(self):
         return self.displayunitlabel.FormulaLocal
@@ -5337,6 +5801,10 @@ class DisplayUnitLabel:
     @property
     def IncludeInLayout(self):
         return self.displayunitlabel.IncludeInLayout
+
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.displayunitlabel.IncludeInLayout = value
 
     @property
     def Left(self):
@@ -5453,6 +5921,10 @@ class Document:
     def AttachedTemplate(self):
         return Template(self.document.AttachedTemplate)
 
+    @AttachedTemplate.setter
+    def AttachedTemplate(self, value):
+        self.document.AttachedTemplate = value
+
     @property
     def AutoFormatOverride(self):
         return self.document.AutoFormatOverride
@@ -5465,9 +5937,17 @@ class Document:
     def AutoHyphenation(self):
         return self.document.AutoHyphenation
 
+    @AutoHyphenation.setter
+    def AutoHyphenation(self, value):
+        self.document.AutoHyphenation = value
+
     @property
     def AutoSaveOn(self):
         return self.document.AutoSaveOn
+
+    @AutoSaveOn.setter
+    def AutoSaveOn(self, value):
+        self.document.AutoSaveOn = value
 
     @property
     def Background(self):
@@ -5513,10 +5993,13 @@ class Document:
     def Comments(self):
         return self.document.Comments
 
-    def Compatibility(self, *args, Type=None):
-        arguments = {"Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.document.Compatibility(*args, **arguments)
+    @property
+    def Compatibility(self):
+        return self.document.Compatibility
+
+    @Compatibility.setter
+    def Compatibility(self, value):
+        self.document.Compatibility = value
 
     @property
     def CompatibilityMode(self):
@@ -5586,9 +6069,17 @@ class Document:
     def DisableFeatures(self):
         return self.document.DisableFeatures
 
+    @DisableFeatures.setter
+    def DisableFeatures(self, value):
+        self.document.DisableFeatures = value
+
     @property
     def DisableFeaturesIntroducedAfter(self):
         return self.document.DisableFeaturesIntroducedAfter
+
+    @DisableFeaturesIntroducedAfter.setter
+    def DisableFeaturesIntroducedAfter(self, value):
+        self.document.DisableFeaturesIntroducedAfter = value
 
     @property
     def DocumentInspectors(self):
@@ -5606,6 +6097,10 @@ class Document:
     def DoNotEmbedSystemFonts(self):
         return self.document.DoNotEmbedSystemFonts
 
+    @DoNotEmbedSystemFonts.setter
+    def DoNotEmbedSystemFonts(self, value):
+        self.document.DoNotEmbedSystemFonts = value
+
     @property
     def Email(self):
         return Email(self.document.Email)
@@ -5614,13 +6109,25 @@ class Document:
     def EmbedLinguisticData(self):
         return self.document.EmbedLinguisticData
 
+    @EmbedLinguisticData.setter
+    def EmbedLinguisticData(self, value):
+        self.document.EmbedLinguisticData = value
+
     @property
     def EmbedTrueTypeFonts(self):
         return self.document.EmbedTrueTypeFonts
 
+    @EmbedTrueTypeFonts.setter
+    def EmbedTrueTypeFonts(self, value):
+        self.document.EmbedTrueTypeFonts = value
+
     @property
     def EncryptionProvider(self):
         return self.document.EncryptionProvider
+
+    @EncryptionProvider.setter
+    def EncryptionProvider(self, value):
+        self.document.EncryptionProvider = value
 
     @property
     def Endnotes(self):
@@ -5674,13 +6181,25 @@ class Document:
     def FormattingShowClear(self):
         return self.document.FormattingShowClear
 
+    @FormattingShowClear.setter
+    def FormattingShowClear(self, value):
+        self.document.FormattingShowClear = value
+
     @property
     def FormattingShowFilter(self):
         return self.document.FormattingShowFilter
 
+    @FormattingShowFilter.setter
+    def FormattingShowFilter(self, value):
+        self.document.FormattingShowFilter = value
+
     @property
     def FormattingShowFont(self):
         return self.document.FormattingShowFont
+
+    @FormattingShowFont.setter
+    def FormattingShowFont(self, value):
+        self.document.FormattingShowFont = value
 
     @property
     def FormattingShowNextLevel(self):
@@ -5694,9 +6213,17 @@ class Document:
     def FormattingShowNumbering(self):
         return self.document.FormattingShowNumbering
 
+    @FormattingShowNumbering.setter
+    def FormattingShowNumbering(self, value):
+        self.document.FormattingShowNumbering = value
+
     @property
     def FormattingShowParagraph(self):
         return self.document.FormattingShowParagraph
+
+    @FormattingShowParagraph.setter
+    def FormattingShowParagraph(self, value):
+        self.document.FormattingShowParagraph = value
 
     @property
     def FormattingShowUserStyleName(self):
@@ -5730,6 +6257,10 @@ class Document:
     def GrammarChecked(self):
         return self.document.GrammarChecked
 
+    @GrammarChecked.setter
+    def GrammarChecked(self, value):
+        self.document.GrammarChecked = value
+
     @property
     def GrammaticalErrors(self):
         return self.document.GrammaticalErrors
@@ -5753,6 +6284,10 @@ class Document:
     @property
     def GridOriginFromMargin(self):
         return self.document.GridOriginFromMargin
+
+    @GridOriginFromMargin.setter
+    def GridOriginFromMargin(self, value):
+        self.document.GridOriginFromMargin = value
 
     @property
     def GridOriginHorizontal(self):
@@ -5806,6 +6341,10 @@ class Document:
     def HyphenateCaps(self):
         return self.document.HyphenateCaps
 
+    @HyphenateCaps.setter
+    def HyphenateCaps(self, value):
+        self.document.HyphenateCaps = value
+
     @property
     def HyphenationZone(self):
         return self.document.HyphenationZone
@@ -5841,6 +6380,10 @@ class Document:
     @property
     def KerningByAlgorithm(self):
         return self.document.KerningByAlgorithm
+
+    @KerningByAlgorithm.setter
+    def KerningByAlgorithm(self, value):
+        self.document.KerningByAlgorithm = value
 
     @property
     def Kind(self):
@@ -6006,6 +6549,10 @@ class Document:
     def OptimizeForWord97(self):
         return self.document.OptimizeForWord97
 
+    @OptimizeForWord97.setter
+    def OptimizeForWord97(self, value):
+        self.document.OptimizeForWord97 = value
+
     @property
     def OriginalDocumentTitle(self):
         return self.document.OriginalDocumentTitle
@@ -6054,13 +6601,25 @@ class Document:
     def PrintFormsData(self):
         return self.document.PrintFormsData
 
+    @PrintFormsData.setter
+    def PrintFormsData(self, value):
+        self.document.PrintFormsData = value
+
     @property
     def PrintPostScriptOverText(self):
         return self.document.PrintPostScriptOverText
 
+    @PrintPostScriptOverText.setter
+    def PrintPostScriptOverText(self, value):
+        self.document.PrintPostScriptOverText = value
+
     @property
     def PrintRevisions(self):
         return self.document.PrintRevisions
+
+    @PrintRevisions.setter
+    def PrintRevisions(self, value):
+        self.document.PrintRevisions = value
 
     @property
     def ProtectionType(self):
@@ -6090,6 +6649,10 @@ class Document:
     def ReadOnlyRecommended(self):
         return self.document.ReadOnlyRecommended
 
+    @ReadOnlyRecommended.setter
+    def ReadOnlyRecommended(self, value):
+        self.document.ReadOnlyRecommended = value
+
     @property
     def RemoveDateAndTime(self):
         return self.document.RemoveDateAndTime
@@ -6097,6 +6660,10 @@ class Document:
     @property
     def RemovePersonalInformation(self):
         return self.document.RemovePersonalInformation
+
+    @RemovePersonalInformation.setter
+    def RemovePersonalInformation(self, value):
+        self.document.RemovePersonalInformation = value
 
     @property
     def Research(self):
@@ -6114,6 +6681,10 @@ class Document:
     def Saved(self):
         return self.document.Saved
 
+    @Saved.setter
+    def Saved(self, value):
+        self.document.Saved = value
+
     @property
     def SaveEncoding(self):
         return self.document.SaveEncoding
@@ -6130,9 +6701,17 @@ class Document:
     def SaveFormsData(self):
         return self.document.SaveFormsData
 
+    @SaveFormsData.setter
+    def SaveFormsData(self, value):
+        self.document.SaveFormsData = value
+
     @property
     def SaveSubsetFonts(self):
         return self.document.SaveSubsetFonts
+
+    @SaveSubsetFonts.setter
+    def SaveSubsetFonts(self, value):
+        self.document.SaveSubsetFonts = value
 
     @property
     def Scripts(self):
@@ -6162,9 +6741,17 @@ class Document:
     def ShowGrammaticalErrors(self):
         return self.document.ShowGrammaticalErrors
 
+    @ShowGrammaticalErrors.setter
+    def ShowGrammaticalErrors(self, value):
+        self.document.ShowGrammaticalErrors = value
+
     @property
     def ShowSpellingErrors(self):
         return self.document.ShowSpellingErrors
+
+    @ShowSpellingErrors.setter
+    def ShowSpellingErrors(self, value):
+        self.document.ShowSpellingErrors = value
 
     @property
     def Signatures(self):
@@ -6178,13 +6765,25 @@ class Document:
     def SnapToGrid(self):
         return self.document.SnapToGrid
 
+    @SnapToGrid.setter
+    def SnapToGrid(self, value):
+        self.document.SnapToGrid = value
+
     @property
     def SnapToShapes(self):
         return self.document.SnapToShapes
 
+    @SnapToShapes.setter
+    def SnapToShapes(self, value):
+        self.document.SnapToShapes = value
+
     @property
     def SpellingChecked(self):
         return self.document.SpellingChecked
+
+    @SpellingChecked.setter
+    def SpellingChecked(self, value):
+        self.document.SpellingChecked = value
 
     @property
     def SpellingErrors(self):
@@ -6274,6 +6873,10 @@ class Document:
     def TrackRevisions(self):
         return self.document.TrackRevisions
 
+    @TrackRevisions.setter
+    def TrackRevisions(self, value):
+        self.document.TrackRevisions = value
+
     @property
     def Type(self):
         return WdDocumentType(self.document.Type)
@@ -6281,6 +6884,10 @@ class Document:
     @property
     def UpdateStylesOnOpen(self):
         return self.document.UpdateStylesOnOpen
+
+    @UpdateStylesOnOpen.setter
+    def UpdateStylesOnOpen(self, value):
+        self.document.UpdateStylesOnOpen = value
 
     @property
     def UseMathDefaults(self):
@@ -6293,6 +6900,10 @@ class Document:
     @property
     def UserControl(self):
         return self.document.UserControl
+
+    @UserControl.setter
+    def UserControl(self, value):
+        self.document.UserControl = value
 
     @property
     def Variables(self):
@@ -7019,89 +7630,177 @@ class EmailOptions:
     def AutoFormatAsYouTypeApplyBorders(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyBorders
 
+    @AutoFormatAsYouTypeApplyBorders.setter
+    def AutoFormatAsYouTypeApplyBorders(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyBorders = value
+
     @property
     def AutoFormatAsYouTypeApplyBulletedLists(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyBulletedLists
+
+    @AutoFormatAsYouTypeApplyBulletedLists.setter
+    def AutoFormatAsYouTypeApplyBulletedLists(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyBulletedLists = value
 
     @property
     def AutoFormatAsYouTypeApplyClosings(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyClosings
 
+    @AutoFormatAsYouTypeApplyClosings.setter
+    def AutoFormatAsYouTypeApplyClosings(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyClosings = value
+
     @property
     def AutoFormatAsYouTypeApplyDates(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyDates
+
+    @AutoFormatAsYouTypeApplyDates.setter
+    def AutoFormatAsYouTypeApplyDates(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyDates = value
 
     @property
     def AutoFormatAsYouTypeApplyFirstIndents(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyFirstIndents
 
+    @AutoFormatAsYouTypeApplyFirstIndents.setter
+    def AutoFormatAsYouTypeApplyFirstIndents(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyFirstIndents = value
+
     @property
     def AutoFormatAsYouTypeApplyHeadings(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyHeadings
+
+    @AutoFormatAsYouTypeApplyHeadings.setter
+    def AutoFormatAsYouTypeApplyHeadings(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyHeadings = value
 
     @property
     def AutoFormatAsYouTypeApplyNumberedLists(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyNumberedLists
 
+    @AutoFormatAsYouTypeApplyNumberedLists.setter
+    def AutoFormatAsYouTypeApplyNumberedLists(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyNumberedLists = value
+
     @property
     def AutoFormatAsYouTypeApplyTables(self):
         return self.emailoptions.AutoFormatAsYouTypeApplyTables
+
+    @AutoFormatAsYouTypeApplyTables.setter
+    def AutoFormatAsYouTypeApplyTables(self, value):
+        self.emailoptions.AutoFormatAsYouTypeApplyTables = value
 
     @property
     def AutoFormatAsYouTypeAutoLetterWizard(self):
         return self.emailoptions.AutoFormatAsYouTypeAutoLetterWizard
 
+    @AutoFormatAsYouTypeAutoLetterWizard.setter
+    def AutoFormatAsYouTypeAutoLetterWizard(self, value):
+        self.emailoptions.AutoFormatAsYouTypeAutoLetterWizard = value
+
     @property
     def AutoFormatAsYouTypeDefineStyles(self):
         return self.emailoptions.AutoFormatAsYouTypeDefineStyles
+
+    @AutoFormatAsYouTypeDefineStyles.setter
+    def AutoFormatAsYouTypeDefineStyles(self, value):
+        self.emailoptions.AutoFormatAsYouTypeDefineStyles = value
 
     @property
     def AutoFormatAsYouTypeDeleteAutoSpaces(self):
         return self.emailoptions.AutoFormatAsYouTypeDeleteAutoSpaces
 
+    @AutoFormatAsYouTypeDeleteAutoSpaces.setter
+    def AutoFormatAsYouTypeDeleteAutoSpaces(self, value):
+        self.emailoptions.AutoFormatAsYouTypeDeleteAutoSpaces = value
+
     @property
     def AutoFormatAsYouTypeFormatListItemBeginning(self):
         return self.emailoptions.AutoFormatAsYouTypeFormatListItemBeginning
+
+    @AutoFormatAsYouTypeFormatListItemBeginning.setter
+    def AutoFormatAsYouTypeFormatListItemBeginning(self, value):
+        self.emailoptions.AutoFormatAsYouTypeFormatListItemBeginning = value
 
     @property
     def AutoFormatAsYouTypeInsertClosings(self):
         return self.emailoptions.AutoFormatAsYouTypeInsertClosings
 
+    @AutoFormatAsYouTypeInsertClosings.setter
+    def AutoFormatAsYouTypeInsertClosings(self, value):
+        self.emailoptions.AutoFormatAsYouTypeInsertClosings = value
+
     @property
     def AutoFormatAsYouTypeInsertOvers(self):
         return self.emailoptions.AutoFormatAsYouTypeInsertOvers
+
+    @AutoFormatAsYouTypeInsertOvers.setter
+    def AutoFormatAsYouTypeInsertOvers(self, value):
+        self.emailoptions.AutoFormatAsYouTypeInsertOvers = value
 
     @property
     def AutoFormatAsYouTypeMatchParentheses(self):
         return self.emailoptions.AutoFormatAsYouTypeMatchParentheses
 
+    @AutoFormatAsYouTypeMatchParentheses.setter
+    def AutoFormatAsYouTypeMatchParentheses(self, value):
+        self.emailoptions.AutoFormatAsYouTypeMatchParentheses = value
+
     @property
     def AutoFormatAsYouTypeReplaceFarEastDashes(self):
         return self.emailoptions.AutoFormatAsYouTypeReplaceFarEastDashes
+
+    @AutoFormatAsYouTypeReplaceFarEastDashes.setter
+    def AutoFormatAsYouTypeReplaceFarEastDashes(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplaceFarEastDashes = value
 
     @property
     def AutoFormatAsYouTypeReplaceFractions(self):
         return self.emailoptions.AutoFormatAsYouTypeReplaceFractions
 
+    @AutoFormatAsYouTypeReplaceFractions.setter
+    def AutoFormatAsYouTypeReplaceFractions(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplaceFractions = value
+
     @property
     def AutoFormatAsYouTypeReplaceHyperlinks(self):
         return self.emailoptions.AutoFormatAsYouTypeReplaceHyperlinks
+
+    @AutoFormatAsYouTypeReplaceHyperlinks.setter
+    def AutoFormatAsYouTypeReplaceHyperlinks(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplaceHyperlinks = value
 
     @property
     def AutoFormatAsYouTypeReplaceOrdinals(self):
         return self.emailoptions.AutoFormatAsYouTypeReplaceOrdinals
 
+    @AutoFormatAsYouTypeReplaceOrdinals.setter
+    def AutoFormatAsYouTypeReplaceOrdinals(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplaceOrdinals = value
+
     @property
     def AutoFormatAsYouTypeReplacePlainTextEmphasis(self):
         return self.emailoptions.AutoFormatAsYouTypeReplacePlainTextEmphasis
+
+    @AutoFormatAsYouTypeReplacePlainTextEmphasis.setter
+    def AutoFormatAsYouTypeReplacePlainTextEmphasis(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplacePlainTextEmphasis = value
 
     @property
     def AutoFormatAsYouTypeReplaceQuotes(self):
         return self.emailoptions.AutoFormatAsYouTypeReplaceQuotes
 
+    @AutoFormatAsYouTypeReplaceQuotes.setter
+    def AutoFormatAsYouTypeReplaceQuotes(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplaceQuotes = value
+
     @property
     def AutoFormatAsYouTypeReplaceSymbols(self):
         return self.emailoptions.AutoFormatAsYouTypeReplaceSymbols
+
+    @AutoFormatAsYouTypeReplaceSymbols.setter
+    def AutoFormatAsYouTypeReplaceSymbols(self, value):
+        self.emailoptions.AutoFormatAsYouTypeReplaceSymbols = value
 
     @property
     def ComposeStyle(self):
@@ -7119,9 +7818,17 @@ class EmailOptions:
     def HTMLFidelity(self):
         return self.emailoptions.HTMLFidelity
 
+    @HTMLFidelity.setter
+    def HTMLFidelity(self, value):
+        self.emailoptions.HTMLFidelity = value
+
     @property
     def MarkComments(self):
         return self.emailoptions.MarkComments
+
+    @MarkComments.setter
+    def MarkComments(self, value):
+        self.emailoptions.MarkComments = value
 
     @property
     def MarkCommentsWith(self):
@@ -7135,6 +7842,10 @@ class EmailOptions:
     def NewColorOnReply(self):
         return self.emailoptions.NewColorOnReply
 
+    @NewColorOnReply.setter
+    def NewColorOnReply(self, value):
+        self.emailoptions.NewColorOnReply = value
+
     @property
     def Parent(self):
         return self.emailoptions.Parent
@@ -7147,6 +7858,10 @@ class EmailOptions:
     def RelyOnCSS(self):
         return self.emailoptions.RelyOnCSS
 
+    @RelyOnCSS.setter
+    def RelyOnCSS(self, value):
+        self.emailoptions.RelyOnCSS = value
+
     @property
     def ReplyStyle(self):
         return Style(self.emailoptions.ReplyStyle)
@@ -7154,6 +7869,10 @@ class EmailOptions:
     @property
     def TabIndentKey(self):
         return self.emailoptions.TabIndentKey
+
+    @TabIndentKey.setter
+    def TabIndentKey(self, value):
+        self.emailoptions.TabIndentKey = value
 
     @property
     def ThemeName(self):
@@ -7167,9 +7886,17 @@ class EmailOptions:
     def UseThemeStyle(self):
         return self.emailoptions.UseThemeStyle
 
+    @UseThemeStyle.setter
+    def UseThemeStyle(self, value):
+        self.emailoptions.UseThemeStyle = value
+
     @property
     def UseThemeStyleOnReply(self):
         return self.emailoptions.UseThemeStyleOnReply
+
+    @UseThemeStyleOnReply.setter
+    def UseThemeStyleOnReply(self, value):
+        self.emailoptions.UseThemeStyleOnReply = value
 
 class EmailSignature:
 
@@ -7396,6 +8123,10 @@ class Envelope:
     def DefaultFaceUp(self):
         return self.envelope.DefaultFaceUp
 
+    @DefaultFaceUp.setter
+    def DefaultFaceUp(self, value):
+        self.envelope.DefaultFaceUp = value
+
     @property
     def DefaultHeight(self):
         return self.envelope.DefaultHeight
@@ -7408,6 +8139,10 @@ class Envelope:
     def DefaultOmitReturnAddress(self):
         return self.envelope.DefaultOmitReturnAddress
 
+    @DefaultOmitReturnAddress.setter
+    def DefaultOmitReturnAddress(self, value):
+        self.envelope.DefaultOmitReturnAddress = value
+
     @property
     def DefaultOrientation(self):
         return WdEnvelopeOrientation(self.envelope.DefaultOrientation)
@@ -7419,6 +8154,10 @@ class Envelope:
     @property
     def DefaultPrintFIMA(self):
         return self.envelope.DefaultPrintFIMA
+
+    @DefaultPrintFIMA.setter
+    def DefaultPrintFIMA(self, value):
+        self.envelope.DefaultPrintFIMA = value
 
     @property
     def DefaultSize(self):
@@ -7540,6 +8279,10 @@ class Envelope:
     def Vertical(self):
         return self.envelope.Vertical
 
+    @Vertical.setter
+    def Vertical(self, value):
+        self.envelope.Vertical = value
+
     def Insert(self, *args, ExtractAddress=None, Address=None, AutoText=None, OmitReturnAddress=None, ReturnAddress=None, ReturnAutoText=None, PrintBarCode=None, PrintFIMA=None, Size=None, Height=None, Width=None, FeedSource=None, AddressFromLeft=None, AddressFromTop=None, ReturnAddressFromLeft=None, ReturnAddressFromTop=None, DefaultFaceUp=None, DefaultOrientation=None, PrintEPostage=None, Vertical=None, RecipientNamefromLeft=None, RecipientNamefromTop=None, RecipientPostalfromLeft=None, RecipientPostalfromTop=None, SenderNamefromLeft=None, SenderNamefromTop=None, SenderPostalfromLeft=None, SenderPostalfromTop=None):
         arguments = {"ExtractAddress": ExtractAddress, "Address": Address, "AutoText": AutoText, "OmitReturnAddress": OmitReturnAddress, "ReturnAddress": ReturnAddress, "ReturnAutoText": ReturnAutoText, "PrintBarCode": PrintBarCode, "PrintFIMA": PrintFIMA, "Size": Size, "Height": Height, "Width": Width, "FeedSource": FeedSource, "AddressFromLeft": AddressFromLeft, "AddressFromTop": AddressFromTop, "ReturnAddressFromLeft": ReturnAddressFromLeft, "ReturnAddressFromTop": ReturnAddressFromTop, "DefaultFaceUp": DefaultFaceUp, "DefaultOrientation": DefaultOrientation, "PrintEPostage": PrintEPostage, "Vertical": Vertical, "RecipientNamefromLeft": RecipientNamefromLeft, "RecipientNamefromTop": RecipientNamefromTop, "RecipientPostalfromLeft": RecipientPostalfromLeft, "RecipientPostalfromTop": RecipientPostalfromTop, "SenderNamefromLeft": SenderNamefromLeft, "SenderNamefromTop": SenderNamefromTop, "SenderPostalfromLeft": SenderPostalfromLeft, "SenderPostalfromTop": SenderPostalfromTop}
         arguments = {key: value for key, value in arguments.items() if value is not None}
@@ -7615,6 +8358,10 @@ class Field:
     def Code(self):
         return Range(self.field.Code)
 
+    @Code.setter
+    def Code(self, value):
+        self.field.Code = value
+
     @property
     def Creator(self):
         return self.field.Creator
@@ -7647,6 +8394,10 @@ class Field:
     def Locked(self):
         return self.field.Locked
 
+    @Locked.setter
+    def Locked(self, value):
+        self.field.Locked = value
+
     @property
     def Next(self):
         return self.field.Next
@@ -7667,9 +8418,17 @@ class Field:
     def Result(self):
         return Range(self.field.Result)
 
+    @Result.setter
+    def Result(self, value):
+        self.field.Result = value
+
     @property
     def ShowCodes(self):
         return self.field.ShowCodes
+
+    @ShowCodes.setter
+    def ShowCodes(self, value):
+        self.field.ShowCodes = value
 
     @property
     def Type(self):
@@ -7913,6 +8672,10 @@ class FillFormat:
     def Visible(self):
         return self.fillformat.Visible
 
+    @Visible.setter
+    def Visible(self, value):
+        self.fillformat.Visible = value
+
     def OneColorGradient(self, *args, Style=None, Variant=None, Degree=None):
         arguments = {"Style": Style, "Variant": Variant, "Degree": Degree}
         arguments = {key: value for key, value in arguments.items() if value is not None}
@@ -7964,6 +8727,10 @@ class Find:
     def CorrectHangulEndings(self):
         return self.find.CorrectHangulEndings
 
+    @CorrectHangulEndings.setter
+    def CorrectHangulEndings(self, value):
+        self.find.CorrectHangulEndings = value
+
     @property
     def Creator(self):
         return self.find.Creator
@@ -7980,9 +8747,17 @@ class Find:
     def Format(self):
         return self.find.Format
 
+    @Format.setter
+    def Format(self, value):
+        self.find.Format = value
+
     @property
     def Forward(self):
         return self.find.Forward
+
+    @Forward.setter
+    def Forward(self, value):
+        self.find.Forward = value
 
     @property
     def Found(self):
@@ -8003,6 +8778,10 @@ class Find:
     @property
     def Highlight(self):
         return self.find.Highlight
+
+    @Highlight.setter
+    def Highlight(self, value):
+        self.find.Highlight = value
 
     @property
     def IgnorePunct(self):
@@ -8048,61 +8827,121 @@ class Find:
     def MatchAlefHamza(self):
         return self.find.MatchAlefHamza
 
+    @MatchAlefHamza.setter
+    def MatchAlefHamza(self, value):
+        self.find.MatchAlefHamza = value
+
     @property
     def MatchAllWordForms(self):
         return self.find.MatchAllWordForms
+
+    @MatchAllWordForms.setter
+    def MatchAllWordForms(self, value):
+        self.find.MatchAllWordForms = value
 
     @property
     def MatchByte(self):
         return self.find.MatchByte
 
+    @MatchByte.setter
+    def MatchByte(self, value):
+        self.find.MatchByte = value
+
     @property
     def MatchCase(self):
         return self.find.MatchCase
+
+    @MatchCase.setter
+    def MatchCase(self, value):
+        self.find.MatchCase = value
 
     @property
     def MatchControl(self):
         return self.find.MatchControl
 
+    @MatchControl.setter
+    def MatchControl(self, value):
+        self.find.MatchControl = value
+
     @property
     def MatchDiacritics(self):
         return self.find.MatchDiacritics
+
+    @MatchDiacritics.setter
+    def MatchDiacritics(self, value):
+        self.find.MatchDiacritics = value
 
     @property
     def MatchFuzzy(self):
         return self.find.MatchFuzzy
 
+    @MatchFuzzy.setter
+    def MatchFuzzy(self, value):
+        self.find.MatchFuzzy = value
+
     @property
     def MatchKashida(self):
         return self.find.MatchKashida
+
+    @MatchKashida.setter
+    def MatchKashida(self, value):
+        self.find.MatchKashida = value
 
     @property
     def MatchPhrase(self):
         return self.find.MatchPhrase
 
+    @MatchPhrase.setter
+    def MatchPhrase(self, value):
+        self.find.MatchPhrase = value
+
     @property
     def MatchPrefix(self):
         return self.find.MatchPrefix
+
+    @MatchPrefix.setter
+    def MatchPrefix(self, value):
+        self.find.MatchPrefix = value
 
     @property
     def MatchSoundsLike(self):
         return self.find.MatchSoundsLike
 
+    @MatchSoundsLike.setter
+    def MatchSoundsLike(self, value):
+        self.find.MatchSoundsLike = value
+
     @property
     def MatchSuffix(self):
         return self.find.MatchSuffix
+
+    @MatchSuffix.setter
+    def MatchSuffix(self, value):
+        self.find.MatchSuffix = value
 
     @property
     def MatchWholeWord(self):
         return self.find.MatchWholeWord
 
+    @MatchWholeWord.setter
+    def MatchWholeWord(self, value):
+        self.find.MatchWholeWord = value
+
     @property
     def MatchWildcards(self):
         return self.find.MatchWildcards
 
+    @MatchWildcards.setter
+    def MatchWildcards(self, value):
+        self.find.MatchWildcards = value
+
     @property
     def NoProofing(self):
         return self.find.NoProofing
+
+    @NoProofing.setter
+    def NoProofing(self, value):
+        self.find.NoProofing = value
 
     @property
     def ParagraphFormat(self):
@@ -8258,6 +9097,10 @@ class Font:
     def AllCaps(self):
         return self.font.AllCaps
 
+    @AllCaps.setter
+    def AllCaps(self, value):
+        self.font.AllCaps = value
+
     @property
     def Application(self):
         return Application(self.font.Application)
@@ -8266,9 +9109,17 @@ class Font:
     def Bold(self):
         return self.font.Bold
 
+    @Bold.setter
+    def Bold(self, value):
+        self.font.Bold = value
+
     @property
     def BoldBi(self):
         return self.font.BoldBi
+
+    @BoldBi.setter
+    def BoldBi(self, value):
+        self.font.BoldBi = value
 
     @property
     def Borders(self):
@@ -8294,6 +9145,10 @@ class Font:
     def ContextualAlternates(self):
         return self.font.ContextualAlternates
 
+    @ContextualAlternates.setter
+    def ContextualAlternates(self, value):
+        self.font.ContextualAlternates = value
+
     @property
     def Creator(self):
         return self.font.Creator
@@ -8310,6 +9165,10 @@ class Font:
     def DisableCharacterSpaceGrid(self):
         return self.font.DisableCharacterSpaceGrid
 
+    @DisableCharacterSpaceGrid.setter
+    def DisableCharacterSpaceGrid(self, value):
+        self.font.DisableCharacterSpaceGrid = value
+
     @property
     def DoubleStrikeThrough(self):
         return self.font.DoubleStrikeThrough
@@ -8321,6 +9180,10 @@ class Font:
     @property
     def Emboss(self):
         return self.font.Emboss
+
+    @Emboss.setter
+    def Emboss(self, value):
+        self.font.Emboss = value
 
     @property
     def EmphasisMark(self):
@@ -8334,6 +9197,10 @@ class Font:
     def Engrave(self):
         return self.font.Engrave
 
+    @Engrave.setter
+    def Engrave(self, value):
+        self.font.Engrave = value
+
     @property
     def Fill(self):
         return self.font.Fill
@@ -8346,13 +9213,25 @@ class Font:
     def Hidden(self):
         return self.font.Hidden
 
+    @Hidden.setter
+    def Hidden(self, value):
+        self.font.Hidden = value
+
     @property
     def Italic(self):
         return self.font.Italic
 
+    @Italic.setter
+    def Italic(self, value):
+        self.font.Italic = value
+
     @property
     def ItalicBi(self):
         return self.font.ItalicBi
+
+    @ItalicBi.setter
+    def ItalicBi(self, value):
+        self.font.ItalicBi = value
 
     @property
     def Kerning(self):
@@ -8373,6 +9252,10 @@ class Font:
     @property
     def Line(self):
         return self.font.Line
+
+    @Line.setter
+    def Line(self, value):
+        self.font.Line = value
 
     @property
     def Name(self):
@@ -8434,6 +9317,10 @@ class Font:
     def Outline(self):
         return self.font.Outline
 
+    @Outline.setter
+    def Outline(self, value):
+        self.font.Outline = value
+
     @property
     def Parent(self):
         return self.font.Parent
@@ -8466,6 +9353,10 @@ class Font:
     def Shadow(self):
         return self.font.Shadow
 
+    @Shadow.setter
+    def Shadow(self, value):
+        self.font.Shadow = value
+
     @property
     def Size(self):
         return self.font.Size
@@ -8486,6 +9377,10 @@ class Font:
     def SmallCaps(self):
         return self.font.SmallCaps
 
+    @SmallCaps.setter
+    def SmallCaps(self, value):
+        self.font.SmallCaps = value
+
     @property
     def Spacing(self):
         return self.font.Spacing
@@ -8498,17 +9393,33 @@ class Font:
     def StrikeThrough(self):
         return self.font.StrikeThrough
 
+    @StrikeThrough.setter
+    def StrikeThrough(self, value):
+        self.font.StrikeThrough = value
+
     @property
     def StylisticSet(self):
         return self.font.StylisticSet
+
+    @StylisticSet.setter
+    def StylisticSet(self, value):
+        self.font.StylisticSet = value
 
     @property
     def Subscript(self):
         return self.font.Subscript
 
+    @Subscript.setter
+    def Subscript(self, value):
+        self.font.Subscript = value
+
     @property
     def Superscript(self):
         return self.font.Superscript
+
+    @Superscript.setter
+    def Superscript(self, value):
+        self.font.Superscript = value
 
     @property
     def TextColor(self):
@@ -8670,6 +9581,10 @@ class FormField:
     def CalculateOnExit(self):
         return self.formfield.CalculateOnExit
 
+    @CalculateOnExit.setter
+    def CalculateOnExit(self, value):
+        self.formfield.CalculateOnExit = value
+
     @property
     def CheckBox(self):
         return CheckBox(self.formfield.CheckBox)
@@ -8685,6 +9600,10 @@ class FormField:
     @property
     def Enabled(self):
         return self.formfield.Enabled
+
+    @Enabled.setter
+    def Enabled(self, value):
+        self.formfield.Enabled = value
 
     @property
     def EntryMacro(self):
@@ -8726,9 +9645,17 @@ class FormField:
     def OwnHelp(self):
         return self.formfield.OwnHelp
 
+    @OwnHelp.setter
+    def OwnHelp(self, value):
+        self.formfield.OwnHelp = value
+
     @property
     def OwnStatus(self):
         return self.formfield.OwnStatus
+
+    @OwnStatus.setter
+    def OwnStatus(self, value):
+        self.formfield.OwnStatus = value
 
     @property
     def Parent(self):
@@ -8745,6 +9672,10 @@ class FormField:
     @property
     def Result(self):
         return self.formfield.Result
+
+    @Result.setter
+    def Result(self, value):
+        self.formfield.Result = value
 
     @property
     def StatusText(self):
@@ -8827,6 +9758,10 @@ class Frame:
     def LockAnchor(self):
         return self.frame.LockAnchor
 
+    @LockAnchor.setter
+    def LockAnchor(self, value):
+        self.frame.LockAnchor = value
+
     @property
     def Parent(self):
         return self.frame.Parent
@@ -8839,9 +9774,17 @@ class Frame:
     def RelativeHorizontalPosition(self):
         return self.frame.RelativeHorizontalPosition
 
+    @RelativeHorizontalPosition.setter
+    def RelativeHorizontalPosition(self, value):
+        self.frame.RelativeHorizontalPosition = value
+
     @property
     def RelativeVerticalPosition(self):
         return self.frame.RelativeVerticalPosition
+
+    @RelativeVerticalPosition.setter
+    def RelativeVerticalPosition(self, value):
+        self.frame.RelativeVerticalPosition = value
 
     @property
     def Shading(self):
@@ -8850,6 +9793,10 @@ class Frame:
     @property
     def TextWrap(self):
         return self.frame.TextWrap
+
+    @TextWrap.setter
+    def TextWrap(self, value):
+        self.frame.TextWrap = value
 
     @property
     def VerticalDistanceFromText(self):
@@ -8929,9 +9876,17 @@ class Frameset:
     def FrameDisplayBorders(self):
         return self.frameset.FrameDisplayBorders
 
+    @FrameDisplayBorders.setter
+    def FrameDisplayBorders(self, value):
+        self.frameset.FrameDisplayBorders = value
+
     @property
     def FrameLinkToFile(self):
         return self.frameset.FrameLinkToFile
+
+    @FrameLinkToFile.setter
+    def FrameLinkToFile(self, value):
+        self.frameset.FrameLinkToFile = value
 
     @property
     def FrameName(self):
@@ -8944,6 +9899,10 @@ class Frameset:
     @property
     def FrameResizable(self):
         return self.frameset.FrameResizable
+
+    @FrameResizable.setter
+    def FrameResizable(self, value):
+        self.frameset.FrameResizable = value
 
     @property
     def FrameScrollbarType(self):
@@ -9157,6 +10116,10 @@ class HeaderFooter:
     def Exists(self):
         return self.headerfooter.Exists
 
+    @Exists.setter
+    def Exists(self, value):
+        self.headerfooter.Exists = value
+
     @property
     def Index(self):
         return WdHeaderFooterIndex(self.headerfooter.Index)
@@ -9168,6 +10131,10 @@ class HeaderFooter:
     @property
     def LinkToPrevious(self):
         return self.headerfooter.LinkToPrevious
+
+    @LinkToPrevious.setter
+    def LinkToPrevious(self, value):
+        self.headerfooter.LinkToPrevious = value
 
     @property
     def PageNumbers(self):
@@ -9280,6 +10247,10 @@ class HorizontalLineFormat:
     @property
     def NoShade(self):
         return self.horizontallineformat.NoShade
+
+    @NoShade.setter
+    def NoShade(self, value):
+        self.horizontallineformat.NoShade = value
 
     @property
     def Parent(self):
@@ -9518,6 +10489,10 @@ class Index:
     def AccentedLetters(self):
         return self.index.AccentedLetters
 
+    @AccentedLetters.setter
+    def AccentedLetters(self, value):
+        self.index.AccentedLetters = value
+
     @property
     def Application(self):
         return Application(self.index.Application)
@@ -9554,6 +10529,10 @@ class Index:
     def NumberOfColumns(self):
         return self.index.NumberOfColumns
 
+    @NumberOfColumns.setter
+    def NumberOfColumns(self, value):
+        self.index.NumberOfColumns = value
+
     @property
     def Parent(self):
         return self.index.Parent
@@ -9565,6 +10544,10 @@ class Index:
     @property
     def RightAlignPageNumbers(self):
         return self.index.RightAlignPageNumbers
+
+    @RightAlignPageNumbers.setter
+    def RightAlignPageNumbers(self, value):
+        self.index.RightAlignPageNumbers = value
 
     @property
     def SortBy(self):
@@ -9681,6 +10664,10 @@ class InlineShape:
     def LockAspectRatio(self):
         return self.inlineshape.LockAspectRatio
 
+    @LockAspectRatio.setter
+    def LockAspectRatio(self, value):
+        self.inlineshape.LockAspectRatio = value
+
     @property
     def OLEFormat(self):
         return OLEFormat(self.inlineshape.OLEFormat)
@@ -9705,9 +10692,17 @@ class InlineShape:
     def ScaleHeight(self):
         return self.inlineshape.ScaleHeight
 
+    @ScaleHeight.setter
+    def ScaleHeight(self, value):
+        self.inlineshape.ScaleHeight = value
+
     @property
     def ScaleWidth(self):
         return self.inlineshape.ScaleWidth
+
+    @ScaleWidth.setter
+    def ScaleWidth(self, value):
+        self.inlineshape.ScaleWidth = value
 
     @property
     def Script(self):
@@ -9793,6 +10788,10 @@ class Interior:
     @property
     def InvertIfNegative(self):
         return self.interior.InvertIfNegative
+
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.interior.InvertIfNegative = value
 
     @property
     def Parent(self):
@@ -10010,6 +11009,10 @@ class Legend:
     def IncludeInLayout(self):
         return self.legend.IncludeInLayout
 
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.legend.IncludeInLayout = value
+
     @property
     def Left(self):
         return self.legend.Left
@@ -10175,6 +11178,10 @@ class LegendKey:
     def InvertIfNegative(self):
         return self.legendkey.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.legendkey.InvertIfNegative = value
+
     @property
     def Left(self):
         return self.legendkey.Left
@@ -10182,6 +11189,10 @@ class LegendKey:
     @property
     def MarkerBackgroundColor(self):
         return self.legendkey.MarkerBackgroundColor
+
+    @MarkerBackgroundColor.setter
+    def MarkerBackgroundColor(self, value):
+        self.legendkey.MarkerBackgroundColor = value
 
     @property
     def MarkerBackgroundColorIndex(self):
@@ -10194,6 +11205,10 @@ class LegendKey:
     @property
     def MarkerForegroundColor(self):
         return self.legendkey.MarkerForegroundColor
+
+    @MarkerForegroundColor.setter
+    def MarkerForegroundColor(self, value):
+        self.legendkey.MarkerForegroundColor = value
 
     @property
     def MarkerForegroundColorIndex(self):
@@ -10250,6 +11265,10 @@ class LegendKey:
     @property
     def Smooth(self):
         return self.legendkey.Smooth
+
+    @Smooth.setter
+    def Smooth(self, value):
+        self.legendkey.Smooth = value
 
     @property
     def Top(self):
@@ -10326,6 +11345,10 @@ class LetterContent:
     def IncludeHeaderFooter(self):
         return self.lettercontent.IncludeHeaderFooter
 
+    @IncludeHeaderFooter.setter
+    def IncludeHeaderFooter(self, value):
+        self.lettercontent.IncludeHeaderFooter = value
+
     @property
     def InfoBlock(self):
         return self.lettercontent.InfoBlock
@@ -10333,6 +11356,10 @@ class LetterContent:
     @property
     def Letterhead(self):
         return self.lettercontent.Letterhead
+
+    @Letterhead.setter
+    def Letterhead(self, value):
+        self.lettercontent.Letterhead = value
 
     @property
     def LetterheadLocation(self):
@@ -10510,6 +11537,10 @@ class LetterContent:
     def SenderReference(self):
         return self.lettercontent.SenderReference
 
+    @SenderReference.setter
+    def SenderReference(self, value):
+        self.lettercontent.SenderReference = value
+
     @property
     def Subject(self):
         return self.lettercontent.Subject
@@ -10656,6 +11687,10 @@ class LineFormat:
     def InsetPen(self):
         return self.lineformat.InsetPen
 
+    @InsetPen.setter
+    def InsetPen(self, value):
+        self.lineformat.InsetPen = value
+
     @property
     def Parent(self):
         return self.lineformat.Parent
@@ -10688,6 +11723,10 @@ class LineFormat:
     def Visible(self):
         return self.lineformat.Visible
 
+    @Visible.setter
+    def Visible(self, value):
+        self.lineformat.Visible = value
+
     @property
     def Weight(self):
         return self.lineformat.Weight
@@ -10704,6 +11743,10 @@ class LineNumbering:
     @property
     def Active(self):
         return self.linenumbering.Active
+
+    @Active.setter
+    def Active(self, value):
+        self.linenumbering.Active = value
 
     @property
     def Application(self):
@@ -10791,6 +11834,10 @@ class LinkFormat:
     def AutoUpdate(self):
         return self.linkformat.AutoUpdate
 
+    @AutoUpdate.setter
+    def AutoUpdate(self, value):
+        self.linkformat.AutoUpdate = value
+
     @property
     def Creator(self):
         return self.linkformat.Creator
@@ -10799,6 +11846,10 @@ class LinkFormat:
     def Locked(self):
         return self.linkformat.Locked
 
+    @Locked.setter
+    def Locked(self, value):
+        self.linkformat.Locked = value
+
     @property
     def Parent(self):
         return self.linkformat.Parent
@@ -10806,6 +11857,10 @@ class LinkFormat:
     @property
     def SavePictureWithDocument(self):
         return self.linkformat.SavePictureWithDocument
+
+    @SavePictureWithDocument.setter
+    def SavePictureWithDocument(self, value):
+        self.linkformat.SavePictureWithDocument = value
 
     @property
     def SourceFullName(self):
@@ -11136,6 +12191,10 @@ class ListLevel:
     def ResetOnHigher(self):
         return self.listlevel.ResetOnHigher
 
+    @ResetOnHigher.setter
+    def ResetOnHigher(self, value):
+        self.listlevel.ResetOnHigher = value
+
     @property
     def StartAt(self):
         return ListLevel(self.listlevel.StartAt)
@@ -11202,6 +12261,10 @@ class ListTemplate:
     def OutlineNumbered(self):
         return self.listtemplate.OutlineNumbered
 
+    @OutlineNumbered.setter
+    def OutlineNumbered(self, value):
+        self.listtemplate.OutlineNumbered = value
+
     @property
     def Parent(self):
         return self.listtemplate.Parent
@@ -11251,6 +12314,10 @@ class MailingLabel:
     @property
     def Vertical(self):
         return self.mailinglabel.Vertical
+
+    @Vertical.setter
+    def Vertical(self, value):
+        self.mailinglabel.Vertical = value
 
     def CreateNewDocument(self, *args, Name=None, Address=None, AutoText=None, ExtractAddress=None, LaserTray=None, PrintEPostageLabel=None, Vertical=None):
         arguments = {"Name": Name, "Address": Address, "AutoText": AutoText, "ExtractAddress": ExtractAddress, "LaserTray": LaserTray, "PrintEPostageLabel": PrintEPostageLabel, "Vertical": Vertical}
@@ -11308,6 +12375,10 @@ class MailMerge:
     def HighlightMergeFields(self):
         return self.mailmerge.HighlightMergeFields
 
+    @HighlightMergeFields.setter
+    def HighlightMergeFields(self, value):
+        self.mailmerge.HighlightMergeFields = value
+
     @property
     def MailAddressFieldName(self):
         return self.mailmerge.MailAddressFieldName
@@ -11320,9 +12391,17 @@ class MailMerge:
     def MailAsAttachment(self):
         return self.mailmerge.MailAsAttachment
 
+    @MailAsAttachment.setter
+    def MailAsAttachment(self, value):
+        self.mailmerge.MailAsAttachment = value
+
     @property
     def MailFormat(self):
         return WdMailMergeMailFormat(self.mailmerge.MailFormat)
+
+    @MailFormat.setter
+    def MailFormat(self, value):
+        self.mailmerge.MailFormat = value
 
     @property
     def MailSubject(self):
@@ -11360,9 +12439,17 @@ class MailMerge:
     def SuppressBlankLines(self):
         return self.mailmerge.SuppressBlankLines
 
+    @SuppressBlankLines.setter
+    def SuppressBlankLines(self, value):
+        self.mailmerge.SuppressBlankLines = value
+
     @property
     def ViewMailMergeFieldCodes(self):
         return self.mailmerge.ViewMailMergeFieldCodes
+
+    @ViewMailMergeFieldCodes.setter
+    def ViewMailMergeFieldCodes(self, value):
+        self.mailmerge.ViewMailMergeFieldCodes = value
 
     @property
     def WizardState(self):
@@ -11496,13 +12583,25 @@ class MailMergeDataSource:
     def Included(self):
         return self.mailmergedatasource.Included
 
+    @Included.setter
+    def Included(self, value):
+        self.mailmergedatasource.Included = value
+
     @property
     def InvalidAddress(self):
         return self.mailmergedatasource.InvalidAddress
 
+    @InvalidAddress.setter
+    def InvalidAddress(self, value):
+        self.mailmergedatasource.InvalidAddress = value
+
     @property
     def InvalidComments(self):
         return self.mailmergedatasource.InvalidComments
+
+    @InvalidComments.setter
+    def InvalidComments(self, value):
+        self.mailmergedatasource.InvalidComments = value
 
     @property
     def LastRecord(self):
@@ -11575,6 +12674,10 @@ class MailMergeField:
     def Code(self):
         return Range(self.mailmergefield.Code)
 
+    @Code.setter
+    def Code(self, value):
+        self.mailmergefield.Code = value
+
     @property
     def Creator(self):
         return self.mailmergefield.Creator
@@ -11582,6 +12685,10 @@ class MailMergeField:
     @property
     def Locked(self):
         return self.mailmergefield.Locked
+
+    @Locked.setter
+    def Locked(self, value):
+        self.mailmergefield.Locked = value
 
     @property
     def Next(self):
@@ -11711,6 +12818,10 @@ class MappedDataField:
     def DataFieldName(self):
         return self.mappeddatafield.DataFieldName
 
+    @DataFieldName.setter
+    def DataFieldName(self, value):
+        self.mappeddatafield.DataFieldName = value
+
     @property
     def Index(self):
         return self.mappeddatafield.Index
@@ -11769,17 +12880,33 @@ class Model3DFormat:
     def AutoFit(self):
         return self.model3dformat.AutoFit
 
+    @AutoFit.setter
+    def AutoFit(self, value):
+        self.model3dformat.AutoFit = value
+
     @property
     def CameraPositionX(self):
         return self.model3dformat.CameraPositionX
+
+    @CameraPositionX.setter
+    def CameraPositionX(self, value):
+        self.model3dformat.CameraPositionX = value
 
     @property
     def CameraPositionY(self):
         return self.model3dformat.CameraPositionY
 
+    @CameraPositionY.setter
+    def CameraPositionY(self, value):
+        self.model3dformat.CameraPositionY = value
+
     @property
     def CameraPositionZ(self):
         return self.model3dformat.CameraPositionZ
+
+    @CameraPositionZ.setter
+    def CameraPositionZ(self, value):
+        self.model3dformat.CameraPositionZ = value
 
     @property
     def Creator(self):
@@ -11789,17 +12916,33 @@ class Model3DFormat:
     def FieldOfView(self):
         return self.model3dformat.FieldOfView
 
+    @FieldOfView.setter
+    def FieldOfView(self, value):
+        self.model3dformat.FieldOfView = value
+
     @property
     def LookAtPointX(self):
         return self.model3dformat.LookAtPointX
+
+    @LookAtPointX.setter
+    def LookAtPointX(self, value):
+        self.model3dformat.LookAtPointX = value
 
     @property
     def LookAtPointY(self):
         return self.model3dformat.LookAtPointY
 
+    @LookAtPointY.setter
+    def LookAtPointY(self, value):
+        self.model3dformat.LookAtPointY = value
+
     @property
     def LookAtPointZ(self):
         return self.model3dformat.LookAtPointZ
+
+    @LookAtPointZ.setter
+    def LookAtPointZ(self, value):
+        self.model3dformat.LookAtPointZ = value
 
     @property
     def Parent(self):
@@ -11809,13 +12952,25 @@ class Model3DFormat:
     def RotationX(self):
         return self.model3dformat.RotationX
 
+    @RotationX.setter
+    def RotationX(self, value):
+        self.model3dformat.RotationX = value
+
     @property
     def RotationY(self):
         return self.model3dformat.RotationY
 
+    @RotationY.setter
+    def RotationY(self, value):
+        self.model3dformat.RotationY = value
+
     @property
     def RotationZ(self):
         return self.model3dformat.RotationZ
+
+    @RotationZ.setter
+    def RotationZ(self, value):
+        self.model3dformat.RotationZ = value
 
     def IncrementRotationX(self, *args, Increment=None):
         arguments = {"Increment": Increment}
@@ -11862,6 +13017,10 @@ class OLEFormat:
     def DisplayAsIcon(self):
         return self.oleformat.DisplayAsIcon
 
+    @DisplayAsIcon.setter
+    def DisplayAsIcon(self, value):
+        self.oleformat.DisplayAsIcon = value
+
     @property
     def IconIndex(self):
         return self.oleformat.IconIndex
@@ -11905,6 +13064,10 @@ class OLEFormat:
     @property
     def PreserveFormattingOnUpdate(self):
         return self.oleformat.PreserveFormattingOnUpdate
+
+    @PreserveFormattingOnUpdate.setter
+    def PreserveFormattingOnUpdate(self, value):
+        self.oleformat.PreserveFormattingOnUpdate = value
 
     @property
     def ProgID(self):
@@ -13498,33 +14661,65 @@ class Options:
     def AddBiDirectionalMarksWhenSavingTextFile(self):
         return self.options.AddBiDirectionalMarksWhenSavingTextFile
 
+    @AddBiDirectionalMarksWhenSavingTextFile.setter
+    def AddBiDirectionalMarksWhenSavingTextFile(self, value):
+        self.options.AddBiDirectionalMarksWhenSavingTextFile = value
+
     @property
     def AddControlCharacters(self):
         return self.options.AddControlCharacters
+
+    @AddControlCharacters.setter
+    def AddControlCharacters(self, value):
+        self.options.AddControlCharacters = value
 
     @property
     def AddHebDoubleQuote(self):
         return self.options.AddHebDoubleQuote
 
+    @AddHebDoubleQuote.setter
+    def AddHebDoubleQuote(self, value):
+        self.options.AddHebDoubleQuote = value
+
     @property
     def AllowAccentedUppercase(self):
         return self.options.AllowAccentedUppercase
+
+    @AllowAccentedUppercase.setter
+    def AllowAccentedUppercase(self, value):
+        self.options.AllowAccentedUppercase = value
 
     @property
     def AllowClickAndTypeMouse(self):
         return self.options.AllowClickAndTypeMouse
 
+    @AllowClickAndTypeMouse.setter
+    def AllowClickAndTypeMouse(self, value):
+        self.options.AllowClickAndTypeMouse = value
+
     @property
     def AllowCombinedAuxiliaryForms(self):
         return self.options.AllowCombinedAuxiliaryForms
+
+    @AllowCombinedAuxiliaryForms.setter
+    def AllowCombinedAuxiliaryForms(self, value):
+        self.options.AllowCombinedAuxiliaryForms = value
 
     @property
     def AllowCompoundNounProcessing(self):
         return self.options.AllowCompoundNounProcessing
 
+    @AllowCompoundNounProcessing.setter
+    def AllowCompoundNounProcessing(self, value):
+        self.options.AllowCompoundNounProcessing = value
+
     @property
     def AllowDragAndDrop(self):
         return self.options.AllowDragAndDrop
+
+    @AllowDragAndDrop.setter
+    def AllowDragAndDrop(self, value):
+        self.options.AllowDragAndDrop = value
 
     @property
     def AllowOpenInDraftView(self):
@@ -13538,13 +14733,25 @@ class Options:
     def AllowPixelUnits(self):
         return self.options.AllowPixelUnits
 
+    @AllowPixelUnits.setter
+    def AllowPixelUnits(self, value):
+        self.options.AllowPixelUnits = value
+
     @property
     def AllowReadingMode(self):
         return self.options.AllowReadingMode
 
+    @AllowReadingMode.setter
+    def AllowReadingMode(self, value):
+        self.options.AllowReadingMode = value
+
     @property
     def AnimateScreenMovements(self):
         return self.options.AnimateScreenMovements
+
+    @AnimateScreenMovements.setter
+    def AnimateScreenMovements(self, value):
+        self.options.AnimateScreenMovements = value
 
     @property
     def Application(self):
@@ -13553,6 +14760,10 @@ class Options:
     @property
     def ApplyFarEastFontsToAscii(self):
         return self.options.ApplyFarEastFontsToAscii
+
+    @ApplyFarEastFontsToAscii.setter
+    def ApplyFarEastFontsToAscii(self, value):
+        self.options.ApplyFarEastFontsToAscii = value
 
     @property
     def ArabicMode(self):
@@ -13574,169 +14785,337 @@ class Options:
     def AutoCreateNewDrawings(self):
         return self.options.AutoCreateNewDrawings
 
+    @AutoCreateNewDrawings.setter
+    def AutoCreateNewDrawings(self, value):
+        self.options.AutoCreateNewDrawings = value
+
     @property
     def AutoFormatApplyBulletedLists(self):
         return self.options.AutoFormatApplyBulletedLists
+
+    @AutoFormatApplyBulletedLists.setter
+    def AutoFormatApplyBulletedLists(self, value):
+        self.options.AutoFormatApplyBulletedLists = value
 
     @property
     def AutoFormatApplyFirstIndents(self):
         return self.options.AutoFormatApplyFirstIndents
 
+    @AutoFormatApplyFirstIndents.setter
+    def AutoFormatApplyFirstIndents(self, value):
+        self.options.AutoFormatApplyFirstIndents = value
+
     @property
     def AutoFormatApplyHeadings(self):
         return self.options.AutoFormatApplyHeadings
+
+    @AutoFormatApplyHeadings.setter
+    def AutoFormatApplyHeadings(self, value):
+        self.options.AutoFormatApplyHeadings = value
 
     @property
     def AutoFormatApplyLists(self):
         return self.options.AutoFormatApplyLists
 
+    @AutoFormatApplyLists.setter
+    def AutoFormatApplyLists(self, value):
+        self.options.AutoFormatApplyLists = value
+
     @property
     def AutoFormatApplyOtherParas(self):
         return self.options.AutoFormatApplyOtherParas
+
+    @AutoFormatApplyOtherParas.setter
+    def AutoFormatApplyOtherParas(self, value):
+        self.options.AutoFormatApplyOtherParas = value
 
     @property
     def AutoFormatAsYouTypeApplyBorders(self):
         return self.options.AutoFormatAsYouTypeApplyBorders
 
+    @AutoFormatAsYouTypeApplyBorders.setter
+    def AutoFormatAsYouTypeApplyBorders(self, value):
+        self.options.AutoFormatAsYouTypeApplyBorders = value
+
     @property
     def AutoFormatAsYouTypeApplyBulletedLists(self):
         return self.options.AutoFormatAsYouTypeApplyBulletedLists
+
+    @AutoFormatAsYouTypeApplyBulletedLists.setter
+    def AutoFormatAsYouTypeApplyBulletedLists(self, value):
+        self.options.AutoFormatAsYouTypeApplyBulletedLists = value
 
     @property
     def AutoFormatAsYouTypeApplyClosings(self):
         return self.options.AutoFormatAsYouTypeApplyClosings
 
+    @AutoFormatAsYouTypeApplyClosings.setter
+    def AutoFormatAsYouTypeApplyClosings(self, value):
+        self.options.AutoFormatAsYouTypeApplyClosings = value
+
     @property
     def AutoFormatAsYouTypeApplyDates(self):
         return self.options.AutoFormatAsYouTypeApplyDates
+
+    @AutoFormatAsYouTypeApplyDates.setter
+    def AutoFormatAsYouTypeApplyDates(self, value):
+        self.options.AutoFormatAsYouTypeApplyDates = value
 
     @property
     def AutoFormatAsYouTypeApplyFirstIndents(self):
         return self.options.AutoFormatAsYouTypeApplyFirstIndents
 
+    @AutoFormatAsYouTypeApplyFirstIndents.setter
+    def AutoFormatAsYouTypeApplyFirstIndents(self, value):
+        self.options.AutoFormatAsYouTypeApplyFirstIndents = value
+
     @property
     def AutoFormatAsYouTypeApplyHeadings(self):
         return self.options.AutoFormatAsYouTypeApplyHeadings
+
+    @AutoFormatAsYouTypeApplyHeadings.setter
+    def AutoFormatAsYouTypeApplyHeadings(self, value):
+        self.options.AutoFormatAsYouTypeApplyHeadings = value
 
     @property
     def AutoFormatAsYouTypeApplyNumberedLists(self):
         return self.options.AutoFormatAsYouTypeApplyNumberedLists
 
+    @AutoFormatAsYouTypeApplyNumberedLists.setter
+    def AutoFormatAsYouTypeApplyNumberedLists(self, value):
+        self.options.AutoFormatAsYouTypeApplyNumberedLists = value
+
     @property
     def AutoFormatAsYouTypeApplyTables(self):
         return self.options.AutoFormatAsYouTypeApplyTables
+
+    @AutoFormatAsYouTypeApplyTables.setter
+    def AutoFormatAsYouTypeApplyTables(self, value):
+        self.options.AutoFormatAsYouTypeApplyTables = value
 
     @property
     def AutoFormatAsYouTypeAutoLetterWizard(self):
         return self.options.AutoFormatAsYouTypeAutoLetterWizard
 
+    @AutoFormatAsYouTypeAutoLetterWizard.setter
+    def AutoFormatAsYouTypeAutoLetterWizard(self, value):
+        self.options.AutoFormatAsYouTypeAutoLetterWizard = value
+
     @property
     def AutoFormatAsYouTypeDefineStyles(self):
         return self.options.AutoFormatAsYouTypeDefineStyles
+
+    @AutoFormatAsYouTypeDefineStyles.setter
+    def AutoFormatAsYouTypeDefineStyles(self, value):
+        self.options.AutoFormatAsYouTypeDefineStyles = value
 
     @property
     def AutoFormatAsYouTypeDeleteAutoSpaces(self):
         return self.options.AutoFormatAsYouTypeDeleteAutoSpaces
 
+    @AutoFormatAsYouTypeDeleteAutoSpaces.setter
+    def AutoFormatAsYouTypeDeleteAutoSpaces(self, value):
+        self.options.AutoFormatAsYouTypeDeleteAutoSpaces = value
+
     @property
     def AutoFormatAsYouTypeFormatListItemBeginning(self):
         return self.options.AutoFormatAsYouTypeFormatListItemBeginning
+
+    @AutoFormatAsYouTypeFormatListItemBeginning.setter
+    def AutoFormatAsYouTypeFormatListItemBeginning(self, value):
+        self.options.AutoFormatAsYouTypeFormatListItemBeginning = value
 
     @property
     def AutoFormatAsYouTypeInsertClosings(self):
         return self.options.AutoFormatAsYouTypeInsertClosings
 
+    @AutoFormatAsYouTypeInsertClosings.setter
+    def AutoFormatAsYouTypeInsertClosings(self, value):
+        self.options.AutoFormatAsYouTypeInsertClosings = value
+
     @property
     def AutoFormatAsYouTypeInsertOvers(self):
         return self.options.AutoFormatAsYouTypeInsertOvers
+
+    @AutoFormatAsYouTypeInsertOvers.setter
+    def AutoFormatAsYouTypeInsertOvers(self, value):
+        self.options.AutoFormatAsYouTypeInsertOvers = value
 
     @property
     def AutoFormatAsYouTypeMatchParentheses(self):
         return self.options.AutoFormatAsYouTypeMatchParentheses
 
+    @AutoFormatAsYouTypeMatchParentheses.setter
+    def AutoFormatAsYouTypeMatchParentheses(self, value):
+        self.options.AutoFormatAsYouTypeMatchParentheses = value
+
     @property
     def AutoFormatAsYouTypeReplaceFarEastDashes(self):
         return self.options.AutoFormatAsYouTypeReplaceFarEastDashes
+
+    @AutoFormatAsYouTypeReplaceFarEastDashes.setter
+    def AutoFormatAsYouTypeReplaceFarEastDashes(self, value):
+        self.options.AutoFormatAsYouTypeReplaceFarEastDashes = value
 
     @property
     def AutoFormatAsYouTypeReplaceFractions(self):
         return self.options.AutoFormatAsYouTypeReplaceFractions
 
+    @AutoFormatAsYouTypeReplaceFractions.setter
+    def AutoFormatAsYouTypeReplaceFractions(self, value):
+        self.options.AutoFormatAsYouTypeReplaceFractions = value
+
     @property
     def AutoFormatAsYouTypeReplaceHyperlinks(self):
         return self.options.AutoFormatAsYouTypeReplaceHyperlinks
+
+    @AutoFormatAsYouTypeReplaceHyperlinks.setter
+    def AutoFormatAsYouTypeReplaceHyperlinks(self, value):
+        self.options.AutoFormatAsYouTypeReplaceHyperlinks = value
 
     @property
     def AutoFormatAsYouTypeReplaceOrdinals(self):
         return self.options.AutoFormatAsYouTypeReplaceOrdinals
 
+    @AutoFormatAsYouTypeReplaceOrdinals.setter
+    def AutoFormatAsYouTypeReplaceOrdinals(self, value):
+        self.options.AutoFormatAsYouTypeReplaceOrdinals = value
+
     @property
     def AutoFormatAsYouTypeReplacePlainTextEmphasis(self):
         return self.options.AutoFormatAsYouTypeReplacePlainTextEmphasis
+
+    @AutoFormatAsYouTypeReplacePlainTextEmphasis.setter
+    def AutoFormatAsYouTypeReplacePlainTextEmphasis(self, value):
+        self.options.AutoFormatAsYouTypeReplacePlainTextEmphasis = value
 
     @property
     def AutoFormatAsYouTypeReplaceQuotes(self):
         return self.options.AutoFormatAsYouTypeReplaceQuotes
 
+    @AutoFormatAsYouTypeReplaceQuotes.setter
+    def AutoFormatAsYouTypeReplaceQuotes(self, value):
+        self.options.AutoFormatAsYouTypeReplaceQuotes = value
+
     @property
     def AutoFormatAsYouTypeReplaceSymbols(self):
         return self.options.AutoFormatAsYouTypeReplaceSymbols
+
+    @AutoFormatAsYouTypeReplaceSymbols.setter
+    def AutoFormatAsYouTypeReplaceSymbols(self, value):
+        self.options.AutoFormatAsYouTypeReplaceSymbols = value
 
     @property
     def AutoFormatDeleteAutoSpaces(self):
         return self.options.AutoFormatDeleteAutoSpaces
 
+    @AutoFormatDeleteAutoSpaces.setter
+    def AutoFormatDeleteAutoSpaces(self, value):
+        self.options.AutoFormatDeleteAutoSpaces = value
+
     @property
     def AutoFormatMatchParentheses(self):
         return self.options.AutoFormatMatchParentheses
+
+    @AutoFormatMatchParentheses.setter
+    def AutoFormatMatchParentheses(self, value):
+        self.options.AutoFormatMatchParentheses = value
 
     @property
     def AutoFormatPlainTextWordMail(self):
         return self.options.AutoFormatPlainTextWordMail
 
+    @AutoFormatPlainTextWordMail.setter
+    def AutoFormatPlainTextWordMail(self, value):
+        self.options.AutoFormatPlainTextWordMail = value
+
     @property
     def AutoFormatPreserveStyles(self):
         return self.options.AutoFormatPreserveStyles
+
+    @AutoFormatPreserveStyles.setter
+    def AutoFormatPreserveStyles(self, value):
+        self.options.AutoFormatPreserveStyles = value
 
     @property
     def AutoFormatReplaceFarEastDashes(self):
         return self.options.AutoFormatReplaceFarEastDashes
 
+    @AutoFormatReplaceFarEastDashes.setter
+    def AutoFormatReplaceFarEastDashes(self, value):
+        self.options.AutoFormatReplaceFarEastDashes = value
+
     @property
     def AutoFormatReplaceFractions(self):
         return self.options.AutoFormatReplaceFractions
+
+    @AutoFormatReplaceFractions.setter
+    def AutoFormatReplaceFractions(self, value):
+        self.options.AutoFormatReplaceFractions = value
 
     @property
     def AutoFormatReplaceHyperlinks(self):
         return self.options.AutoFormatReplaceHyperlinks
 
+    @AutoFormatReplaceHyperlinks.setter
+    def AutoFormatReplaceHyperlinks(self, value):
+        self.options.AutoFormatReplaceHyperlinks = value
+
     @property
     def AutoFormatReplaceOrdinals(self):
         return self.options.AutoFormatReplaceOrdinals
+
+    @AutoFormatReplaceOrdinals.setter
+    def AutoFormatReplaceOrdinals(self, value):
+        self.options.AutoFormatReplaceOrdinals = value
 
     @property
     def AutoFormatReplacePlainTextEmphasis(self):
         return self.options.AutoFormatReplacePlainTextEmphasis
 
+    @AutoFormatReplacePlainTextEmphasis.setter
+    def AutoFormatReplacePlainTextEmphasis(self, value):
+        self.options.AutoFormatReplacePlainTextEmphasis = value
+
     @property
     def AutoFormatReplaceQuotes(self):
         return self.options.AutoFormatReplaceQuotes
+
+    @AutoFormatReplaceQuotes.setter
+    def AutoFormatReplaceQuotes(self, value):
+        self.options.AutoFormatReplaceQuotes = value
 
     @property
     def AutoFormatReplaceSymbols(self):
         return self.options.AutoFormatReplaceSymbols
 
+    @AutoFormatReplaceSymbols.setter
+    def AutoFormatReplaceSymbols(self, value):
+        self.options.AutoFormatReplaceSymbols = value
+
     @property
     def AutoKeyboardSwitching(self):
         return self.options.AutoKeyboardSwitching
+
+    @AutoKeyboardSwitching.setter
+    def AutoKeyboardSwitching(self, value):
+        self.options.AutoKeyboardSwitching = value
 
     @property
     def AutoWordSelection(self):
         return self.options.AutoWordSelection
 
+    @AutoWordSelection.setter
+    def AutoWordSelection(self, value):
+        self.options.AutoWordSelection = value
+
     @property
     def BackgroundSave(self):
         return self.options.BackgroundSave
+
+    @BackgroundSave.setter
+    def BackgroundSave(self, value):
+        self.options.BackgroundSave = value
 
     @property
     def BibliographySort(self):
@@ -13774,17 +15153,33 @@ class Options:
     def CheckGrammarAsYouType(self):
         return self.options.CheckGrammarAsYouType
 
+    @CheckGrammarAsYouType.setter
+    def CheckGrammarAsYouType(self, value):
+        self.options.CheckGrammarAsYouType = value
+
     @property
     def CheckGrammarWithSpelling(self):
         return self.options.CheckGrammarWithSpelling
+
+    @CheckGrammarWithSpelling.setter
+    def CheckGrammarWithSpelling(self, value):
+        self.options.CheckGrammarWithSpelling = value
 
     @property
     def CheckHangulEndings(self):
         return self.options.CheckHangulEndings
 
+    @CheckHangulEndings.setter
+    def CheckHangulEndings(self, value):
+        self.options.CheckHangulEndings = value
+
     @property
     def CheckSpellingAsYouType(self):
         return self.options.CheckSpellingAsYouType
+
+    @CheckSpellingAsYouType.setter
+    def CheckSpellingAsYouType(self, value):
+        self.options.CheckSpellingAsYouType = value
 
     @property
     def CommentsColor(self):
@@ -13798,6 +15193,10 @@ class Options:
     def ConfirmConversions(self):
         return self.options.ConfirmConversions
 
+    @ConfirmConversions.setter
+    def ConfirmConversions(self, value):
+        self.options.ConfirmConversions = value
+
     @property
     def ContextualSpeller(self):
         return self.options.ContextualSpeller
@@ -13810,9 +15209,17 @@ class Options:
     def ConvertHighAnsiToFarEast(self):
         return self.options.ConvertHighAnsiToFarEast
 
+    @ConvertHighAnsiToFarEast.setter
+    def ConvertHighAnsiToFarEast(self, value):
+        self.options.ConvertHighAnsiToFarEast = value
+
     @property
     def CreateBackup(self):
         return self.options.CreateBackup
+
+    @CreateBackup.setter
+    def CreateBackup(self, value):
+        self.options.CreateBackup = value
 
     @property
     def Creator(self):
@@ -13821,6 +15228,10 @@ class Options:
     @property
     def CtrlClickHyperlinkToOpen(self):
         return self.options.CtrlClickHyperlinkToOpen
+
+    @CtrlClickHyperlinkToOpen.setter
+    def CtrlClickHyperlinkToOpen(self, value):
+        self.options.CtrlClickHyperlinkToOpen = value
 
     @property
     def CursorMovement(self):
@@ -13865,6 +15276,10 @@ class Options:
     @property
     def DefaultEPostageApp(self):
         return self.options.DefaultEPostageApp
+
+    @DefaultEPostageApp.setter
+    def DefaultEPostageApp(self, value):
+        self.options.DefaultEPostageApp = value
 
     @property
     def DefaultFilePath(self):
@@ -13950,17 +15365,33 @@ class Options:
     def DisableFeaturesbyDefault(self):
         return self.options.DisableFeaturesbyDefault
 
+    @DisableFeaturesbyDefault.setter
+    def DisableFeaturesbyDefault(self, value):
+        self.options.DisableFeaturesbyDefault = value
+
     @property
     def DisableFeaturesIntroducedAfterbyDefault(self):
         return self.options.DisableFeaturesIntroducedAfterbyDefault
+
+    @DisableFeaturesIntroducedAfterbyDefault.setter
+    def DisableFeaturesIntroducedAfterbyDefault(self, value):
+        self.options.DisableFeaturesIntroducedAfterbyDefault = value
 
     @property
     def DisplayGridLines(self):
         return self.options.DisplayGridLines
 
+    @DisplayGridLines.setter
+    def DisplayGridLines(self, value):
+        self.options.DisplayGridLines = value
+
     @property
     def DisplayPasteOptions(self):
         return self.options.DisplayPasteOptions
+
+    @DisplayPasteOptions.setter
+    def DisplayPasteOptions(self, value):
+        self.options.DisplayPasteOptions = value
 
     @property
     def DocumentViewDirection(self):
@@ -13974,9 +15405,17 @@ class Options:
     def DoNotPromptForConvert(self):
         return self.options.DoNotPromptForConvert
 
+    @DoNotPromptForConvert.setter
+    def DoNotPromptForConvert(self, value):
+        self.options.DoNotPromptForConvert = value
+
     @property
     def EnableHangulHanjaRecentOrdering(self):
         return self.options.EnableHangulHanjaRecentOrdering
+
+    @EnableHangulHanjaRecentOrdering.setter
+    def EnableHangulHanjaRecentOrdering(self, value):
+        self.options.EnableHangulHanjaRecentOrdering = value
 
     @property
     def EnableLegacyIMEMode(self):
@@ -13990,13 +15429,25 @@ class Options:
     def EnableLivePreview(self):
         return self.options.EnableLivePreview
 
+    @EnableLivePreview.setter
+    def EnableLivePreview(self, value):
+        self.options.EnableLivePreview = value
+
     @property
     def EnableMisusedWordsDictionary(self):
         return self.options.EnableMisusedWordsDictionary
 
+    @EnableMisusedWordsDictionary.setter
+    def EnableMisusedWordsDictionary(self, value):
+        self.options.EnableMisusedWordsDictionary = value
+
     @property
     def EnableSound(self):
         return self.options.EnableSound
+
+    @EnableSound.setter
+    def EnableSound(self, value):
+        self.options.EnableSound = value
 
     @property
     def EnvelopeFeederInstalled(self):
@@ -14005,6 +15456,10 @@ class Options:
     @property
     def FormatScanning(self):
         return self.options.FormatScanning
+
+    @FormatScanning.setter
+    def FormatScanning(self, value):
+        self.options.FormatScanning = value
 
     @property
     def FrenchReform(self):
@@ -14050,6 +15505,10 @@ class Options:
     def HangulHanjaFastConversion(self):
         return self.options.HangulHanjaFastConversion
 
+    @HangulHanjaFastConversion.setter
+    def HangulHanjaFastConversion(self, value):
+        self.options.HangulHanjaFastConversion = value
+
     @property
     def HebrewMode(self):
         return WdHebSpellStart(self.options.HebrewMode)
@@ -14062,21 +15521,41 @@ class Options:
     def IgnoreInternetAndFileAddresses(self):
         return self.options.IgnoreInternetAndFileAddresses
 
+    @IgnoreInternetAndFileAddresses.setter
+    def IgnoreInternetAndFileAddresses(self, value):
+        self.options.IgnoreInternetAndFileAddresses = value
+
     @property
     def IgnoreMixedDigits(self):
         return self.options.IgnoreMixedDigits
+
+    @IgnoreMixedDigits.setter
+    def IgnoreMixedDigits(self, value):
+        self.options.IgnoreMixedDigits = value
 
     @property
     def IgnoreUppercase(self):
         return self.options.IgnoreUppercase
 
+    @IgnoreUppercase.setter
+    def IgnoreUppercase(self, value):
+        self.options.IgnoreUppercase = value
+
     @property
     def IMEAutomaticControl(self):
         return self.options.IMEAutomaticControl
 
+    @IMEAutomaticControl.setter
+    def IMEAutomaticControl(self, value):
+        self.options.IMEAutomaticControl = value
+
     @property
     def InlineConversion(self):
         return self.options.InlineConversion
+
+    @InlineConversion.setter
+    def InlineConversion(self, value):
+        self.options.InlineConversion = value
 
     @property
     def InsertedCellColor(self):
@@ -14106,9 +15585,17 @@ class Options:
     def INSKeyForOvertype(self):
         return self.options.INSKeyForOvertype
 
+    @INSKeyForOvertype.setter
+    def INSKeyForOvertype(self, value):
+        self.options.INSKeyForOvertype = value
+
     @property
     def INSKeyForPaste(self):
         return self.options.INSKeyForPaste
+
+    @INSKeyForPaste.setter
+    def INSKeyForPaste(self, value):
+        self.options.INSKeyForPaste = value
 
     @property
     def InterpretHighAnsi(self):
@@ -14122,81 +15609,161 @@ class Options:
     def LocalNetworkFile(self):
         return self.options.LocalNetworkFile
 
+    @LocalNetworkFile.setter
+    def LocalNetworkFile(self, value):
+        self.options.LocalNetworkFile = value
+
     @property
     def MapPaperSize(self):
         return self.options.MapPaperSize
+
+    @MapPaperSize.setter
+    def MapPaperSize(self, value):
+        self.options.MapPaperSize = value
 
     @property
     def MatchFuzzyAY(self):
         return self.options.MatchFuzzyAY
 
+    @MatchFuzzyAY.setter
+    def MatchFuzzyAY(self, value):
+        self.options.MatchFuzzyAY = value
+
     @property
     def MatchFuzzyBV(self):
         return self.options.MatchFuzzyBV
+
+    @MatchFuzzyBV.setter
+    def MatchFuzzyBV(self, value):
+        self.options.MatchFuzzyBV = value
 
     @property
     def MatchFuzzyByte(self):
         return self.options.MatchFuzzyByte
 
+    @MatchFuzzyByte.setter
+    def MatchFuzzyByte(self, value):
+        self.options.MatchFuzzyByte = value
+
     @property
     def MatchFuzzyCase(self):
         return self.options.MatchFuzzyCase
+
+    @MatchFuzzyCase.setter
+    def MatchFuzzyCase(self, value):
+        self.options.MatchFuzzyCase = value
 
     @property
     def MatchFuzzyDash(self):
         return self.options.MatchFuzzyDash
 
+    @MatchFuzzyDash.setter
+    def MatchFuzzyDash(self, value):
+        self.options.MatchFuzzyDash = value
+
     @property
     def MatchFuzzyDZ(self):
         return self.options.MatchFuzzyDZ
+
+    @MatchFuzzyDZ.setter
+    def MatchFuzzyDZ(self, value):
+        self.options.MatchFuzzyDZ = value
 
     @property
     def MatchFuzzyHF(self):
         return self.options.MatchFuzzyHF
 
+    @MatchFuzzyHF.setter
+    def MatchFuzzyHF(self, value):
+        self.options.MatchFuzzyHF = value
+
     @property
     def MatchFuzzyHiragana(self):
         return self.options.MatchFuzzyHiragana
+
+    @MatchFuzzyHiragana.setter
+    def MatchFuzzyHiragana(self, value):
+        self.options.MatchFuzzyHiragana = value
 
     @property
     def MatchFuzzyIterationMark(self):
         return self.options.MatchFuzzyIterationMark
 
+    @MatchFuzzyIterationMark.setter
+    def MatchFuzzyIterationMark(self, value):
+        self.options.MatchFuzzyIterationMark = value
+
     @property
     def MatchFuzzyKanji(self):
         return self.options.MatchFuzzyKanji
+
+    @MatchFuzzyKanji.setter
+    def MatchFuzzyKanji(self, value):
+        self.options.MatchFuzzyKanji = value
 
     @property
     def MatchFuzzyKiKu(self):
         return self.options.MatchFuzzyKiKu
 
+    @MatchFuzzyKiKu.setter
+    def MatchFuzzyKiKu(self, value):
+        self.options.MatchFuzzyKiKu = value
+
     @property
     def MatchFuzzyOldKana(self):
         return self.options.MatchFuzzyOldKana
+
+    @MatchFuzzyOldKana.setter
+    def MatchFuzzyOldKana(self, value):
+        self.options.MatchFuzzyOldKana = value
 
     @property
     def MatchFuzzyProlongedSoundMark(self):
         return self.options.MatchFuzzyProlongedSoundMark
 
+    @MatchFuzzyProlongedSoundMark.setter
+    def MatchFuzzyProlongedSoundMark(self, value):
+        self.options.MatchFuzzyProlongedSoundMark = value
+
     @property
     def MatchFuzzyPunctuation(self):
         return self.options.MatchFuzzyPunctuation
+
+    @MatchFuzzyPunctuation.setter
+    def MatchFuzzyPunctuation(self, value):
+        self.options.MatchFuzzyPunctuation = value
 
     @property
     def MatchFuzzySmallKana(self):
         return self.options.MatchFuzzySmallKana
 
+    @MatchFuzzySmallKana.setter
+    def MatchFuzzySmallKana(self, value):
+        self.options.MatchFuzzySmallKana = value
+
     @property
     def MatchFuzzySpace(self):
         return self.options.MatchFuzzySpace
+
+    @MatchFuzzySpace.setter
+    def MatchFuzzySpace(self, value):
+        self.options.MatchFuzzySpace = value
 
     @property
     def MatchFuzzyTC(self):
         return self.options.MatchFuzzyTC
 
+    @MatchFuzzyTC.setter
+    def MatchFuzzyTC(self, value):
+        self.options.MatchFuzzyTC = value
+
     @property
     def MatchFuzzyZJ(self):
         return self.options.MatchFuzzyZJ
+
+    @MatchFuzzyZJ.setter
+    def MatchFuzzyZJ(self, value):
+        self.options.MatchFuzzyZJ = value
 
     @property
     def MeasurementUnit(self):
@@ -14282,6 +15849,10 @@ class Options:
     def OptimizeForWord97byDefault(self):
         return self.options.OptimizeForWord97byDefault
 
+    @OptimizeForWord97byDefault.setter
+    def OptimizeForWord97byDefault(self, value):
+        self.options.OptimizeForWord97byDefault = value
+
     @property
     def Options(self):
         return self.options.Options
@@ -14290,9 +15861,17 @@ class Options:
     def Overtype(self):
         return self.options.Overtype
 
+    @Overtype.setter
+    def Overtype(self, value):
+        self.options.Overtype = value
+
     @property
     def Pagination(self):
         return self.options.Pagination
+
+    @Pagination.setter
+    def Pagination(self, value):
+        self.options.Pagination = value
 
     @property
     def Parent(self):
@@ -14302,13 +15881,25 @@ class Options:
     def PasteAdjustParagraphSpacing(self):
         return self.options.PasteAdjustParagraphSpacing
 
+    @PasteAdjustParagraphSpacing.setter
+    def PasteAdjustParagraphSpacing(self, value):
+        self.options.PasteAdjustParagraphSpacing = value
+
     @property
     def PasteAdjustTableFormatting(self):
         return self.options.PasteAdjustTableFormatting
 
+    @PasteAdjustTableFormatting.setter
+    def PasteAdjustTableFormatting(self, value):
+        self.options.PasteAdjustTableFormatting = value
+
     @property
     def PasteAdjustWordSpacing(self):
         return self.options.PasteAdjustWordSpacing
+
+    @PasteAdjustWordSpacing.setter
+    def PasteAdjustWordSpacing(self, value):
+        self.options.PasteAdjustWordSpacing = value
 
     @property
     def PasteFormatBetweenDocuments(self):
@@ -14346,13 +15937,25 @@ class Options:
     def PasteMergeFromPPT(self):
         return self.options.PasteMergeFromPPT
 
+    @PasteMergeFromPPT.setter
+    def PasteMergeFromPPT(self, value):
+        self.options.PasteMergeFromPPT = value
+
     @property
     def PasteMergeFromXL(self):
         return self.options.PasteMergeFromXL
 
+    @PasteMergeFromXL.setter
+    def PasteMergeFromXL(self, value):
+        self.options.PasteMergeFromXL = value
+
     @property
     def PasteMergeLists(self):
         return self.options.PasteMergeLists
+
+    @PasteMergeLists.setter
+    def PasteMergeLists(self, value):
+        self.options.PasteMergeLists = value
 
     @property
     def PasteOptionKeepBulletsAndNumbers(self):
@@ -14366,9 +15969,17 @@ class Options:
     def PasteSmartCutPaste(self):
         return self.options.PasteSmartCutPaste
 
+    @PasteSmartCutPaste.setter
+    def PasteSmartCutPaste(self, value):
+        self.options.PasteSmartCutPaste = value
+
     @property
     def PasteSmartStyleBehavior(self):
         return self.options.PasteSmartStyleBehavior
+
+    @PasteSmartStyleBehavior.setter
+    def PasteSmartStyleBehavior(self, value):
+        self.options.PasteSmartStyleBehavior = value
 
     @property
     def PictureEditor(self):
@@ -14381,6 +15992,10 @@ class Options:
     @property
     def PictureWrapType(self):
         return self.options.PictureWrapType
+
+    @PictureWrapType.setter
+    def PictureWrapType(self, value):
+        self.options.PictureWrapType = value
 
     @property
     def PortugalReform(self):
@@ -14402,6 +16017,10 @@ class Options:
     def PrintBackground(self):
         return self.options.PrintBackground
 
+    @PrintBackground.setter
+    def PrintBackground(self, value):
+        self.options.PrintBackground = value
+
     @property
     def PrintBackgrounds(self):
         return self.options.PrintBackgrounds
@@ -14410,37 +16029,73 @@ class Options:
     def PrintComments(self):
         return self.options.PrintComments
 
+    @PrintComments.setter
+    def PrintComments(self, value):
+        self.options.PrintComments = value
+
     @property
     def PrintDraft(self):
         return self.options.PrintDraft
+
+    @PrintDraft.setter
+    def PrintDraft(self, value):
+        self.options.PrintDraft = value
 
     @property
     def PrintDrawingObjects(self):
         return self.options.PrintDrawingObjects
 
+    @PrintDrawingObjects.setter
+    def PrintDrawingObjects(self, value):
+        self.options.PrintDrawingObjects = value
+
     @property
     def PrintEvenPagesInAscendingOrder(self):
         return self.options.PrintEvenPagesInAscendingOrder
+
+    @PrintEvenPagesInAscendingOrder.setter
+    def PrintEvenPagesInAscendingOrder(self, value):
+        self.options.PrintEvenPagesInAscendingOrder = value
 
     @property
     def PrintFieldCodes(self):
         return self.options.PrintFieldCodes
 
+    @PrintFieldCodes.setter
+    def PrintFieldCodes(self, value):
+        self.options.PrintFieldCodes = value
+
     @property
     def PrintHiddenText(self):
         return self.options.PrintHiddenText
+
+    @PrintHiddenText.setter
+    def PrintHiddenText(self, value):
+        self.options.PrintHiddenText = value
 
     @property
     def PrintOddPagesInAscendingOrder(self):
         return self.options.PrintOddPagesInAscendingOrder
 
+    @PrintOddPagesInAscendingOrder.setter
+    def PrintOddPagesInAscendingOrder(self, value):
+        self.options.PrintOddPagesInAscendingOrder = value
+
     @property
     def PrintProperties(self):
         return self.options.PrintProperties
 
+    @PrintProperties.setter
+    def PrintProperties(self, value):
+        self.options.PrintProperties = value
+
     @property
     def PrintReverse(self):
         return self.options.PrintReverse
+
+    @PrintReverse.setter
+    def PrintReverse(self, value):
+        self.options.PrintReverse = value
 
     @property
     def PrintXMLTag(self):
@@ -14449,6 +16104,10 @@ class Options:
     @property
     def PromptUpdateStyle(self):
         return self.options.PromptUpdateStyle
+
+    @PromptUpdateStyle.setter
+    def PromptUpdateStyle(self, value):
+        self.options.PromptUpdateStyle = value
 
     @property
     def RepeatWord(self):
@@ -14461,6 +16120,10 @@ class Options:
     @property
     def ReplaceSelection(self):
         return self.options.ReplaceSelection
+
+    @ReplaceSelection.setter
+    def ReplaceSelection(self, value):
+        self.options.ReplaceSelection = value
 
     @property
     def RevisedLinesColor(self):
@@ -14514,21 +16177,41 @@ class Options:
     def SaveNormalPrompt(self):
         return self.options.SaveNormalPrompt
 
+    @SaveNormalPrompt.setter
+    def SaveNormalPrompt(self, value):
+        self.options.SaveNormalPrompt = value
+
     @property
     def SavePropertiesPrompt(self):
         return self.options.SavePropertiesPrompt
+
+    @SavePropertiesPrompt.setter
+    def SavePropertiesPrompt(self, value):
+        self.options.SavePropertiesPrompt = value
 
     @property
     def SendMailAttach(self):
         return self.options.SendMailAttach
 
+    @SendMailAttach.setter
+    def SendMailAttach(self, value):
+        self.options.SendMailAttach = value
+
     @property
     def SequenceCheck(self):
         return self.options.SequenceCheck
 
+    @SequenceCheck.setter
+    def SequenceCheck(self, value):
+        self.options.SequenceCheck = value
+
     @property
     def ShowControlCharacters(self):
         return self.options.ShowControlCharacters
+
+    @ShowControlCharacters.setter
+    def ShowControlCharacters(self, value):
+        self.options.ShowControlCharacters = value
 
     @property
     def ShowDevTools(self):
@@ -14542,9 +16225,17 @@ class Options:
     def ShowDiacritics(self):
         return self.options.ShowDiacritics
 
+    @ShowDiacritics.setter
+    def ShowDiacritics(self, value):
+        self.options.ShowDiacritics = value
+
     @property
     def ShowFormatError(self):
         return self.options.ShowFormatError
+
+    @ShowFormatError.setter
+    def ShowFormatError(self, value):
+        self.options.ShowFormatError = value
 
     @property
     def ShowMarkupOpenSave(self):
@@ -14566,6 +16257,10 @@ class Options:
     def ShowReadabilityStatistics(self):
         return self.options.ShowReadabilityStatistics
 
+    @ShowReadabilityStatistics.setter
+    def ShowReadabilityStatistics(self, value):
+        self.options.ShowReadabilityStatistics = value
+
     @property
     def ShowSelectionFloaties(self):
         return self.options.ShowSelectionFloaties
@@ -14586,17 +16281,33 @@ class Options:
     def SmartCutPaste(self):
         return self.options.SmartCutPaste
 
+    @SmartCutPaste.setter
+    def SmartCutPaste(self, value):
+        self.options.SmartCutPaste = value
+
     @property
     def SmartParaSelection(self):
         return self.options.SmartParaSelection
+
+    @SmartParaSelection.setter
+    def SmartParaSelection(self, value):
+        self.options.SmartParaSelection = value
 
     @property
     def SnapToGrid(self):
         return self.options.SnapToGrid
 
+    @SnapToGrid.setter
+    def SnapToGrid(self, value):
+        self.options.SnapToGrid = value
+
     @property
     def SnapToShapes(self):
         return self.options.SnapToShapes
+
+    @SnapToShapes.setter
+    def SnapToShapes(self, value):
+        self.options.SnapToShapes = value
 
     @property
     def SpanishMode(self):
@@ -14618,53 +16329,105 @@ class Options:
     def StoreRSIDOnSave(self):
         return self.options.StoreRSIDOnSave
 
+    @StoreRSIDOnSave.setter
+    def StoreRSIDOnSave(self, value):
+        self.options.StoreRSIDOnSave = value
+
     @property
     def StrictFinalYaa(self):
         return self.options.StrictFinalYaa
+
+    @StrictFinalYaa.setter
+    def StrictFinalYaa(self, value):
+        self.options.StrictFinalYaa = value
 
     @property
     def StrictInitialAlefHamza(self):
         return self.options.StrictInitialAlefHamza
 
+    @StrictInitialAlefHamza.setter
+    def StrictInitialAlefHamza(self, value):
+        self.options.StrictInitialAlefHamza = value
+
     @property
     def StrictRussianE(self):
         return self.options.StrictRussianE
+
+    @StrictRussianE.setter
+    def StrictRussianE(self, value):
+        self.options.StrictRussianE = value
 
     @property
     def StrictTaaMarboota(self):
         return self.options.StrictTaaMarboota
 
+    @StrictTaaMarboota.setter
+    def StrictTaaMarboota(self, value):
+        self.options.StrictTaaMarboota = value
+
     @property
     def SuggestFromMainDictionaryOnly(self):
         return self.options.SuggestFromMainDictionaryOnly
+
+    @SuggestFromMainDictionaryOnly.setter
+    def SuggestFromMainDictionaryOnly(self, value):
+        self.options.SuggestFromMainDictionaryOnly = value
 
     @property
     def SuggestSpellingCorrections(self):
         return self.options.SuggestSpellingCorrections
 
+    @SuggestSpellingCorrections.setter
+    def SuggestSpellingCorrections(self, value):
+        self.options.SuggestSpellingCorrections = value
+
     @property
     def TabIndentKey(self):
         return self.options.TabIndentKey
+
+    @TabIndentKey.setter
+    def TabIndentKey(self, value):
+        self.options.TabIndentKey = value
 
     @property
     def TypeNReplace(self):
         return self.options.TypeNReplace
 
+    @TypeNReplace.setter
+    def TypeNReplace(self, value):
+        self.options.TypeNReplace = value
+
     @property
     def UpdateFieldsAtPrint(self):
         return self.options.UpdateFieldsAtPrint
+
+    @UpdateFieldsAtPrint.setter
+    def UpdateFieldsAtPrint(self, value):
+        self.options.UpdateFieldsAtPrint = value
 
     @property
     def UpdateFieldsWithTrackedChangesAtPrint(self):
         return self.options.UpdateFieldsWithTrackedChangesAtPrint
 
+    @UpdateFieldsWithTrackedChangesAtPrint.setter
+    def UpdateFieldsWithTrackedChangesAtPrint(self, value):
+        self.options.UpdateFieldsWithTrackedChangesAtPrint = value
+
     @property
     def UpdateLinksAtOpen(self):
         return self.options.UpdateLinksAtOpen
 
+    @UpdateLinksAtOpen.setter
+    def UpdateLinksAtOpen(self, value):
+        self.options.UpdateLinksAtOpen = value
+
     @property
     def UpdateLinksAtPrint(self):
         return self.options.UpdateLinksAtPrint
+
+    @UpdateLinksAtPrint.setter
+    def UpdateLinksAtPrint(self, value):
+        self.options.UpdateLinksAtPrint = value
 
     @property
     def UpdateStyleListBehavior(self):
@@ -14678,13 +16441,25 @@ class Options:
     def UseCharacterUnit(self):
         return self.options.UseCharacterUnit
 
+    @UseCharacterUnit.setter
+    def UseCharacterUnit(self, value):
+        self.options.UseCharacterUnit = value
+
     @property
     def UseDiffDiacColor(self):
         return self.options.UseDiffDiacColor
 
+    @UseDiffDiacColor.setter
+    def UseDiffDiacColor(self, value):
+        self.options.UseDiffDiacColor = value
+
     @property
     def UseGermanSpellingReform(self):
         return self.options.UseGermanSpellingReform
+
+    @UseGermanSpellingReform.setter
+    def UseGermanSpellingReform(self, value):
+        self.options.UseGermanSpellingReform = value
 
     @property
     def UseNormalStyleForList(self):
@@ -14705,6 +16480,10 @@ class Options:
     @property
     def WarnBeforeSavingPrintingSendingMarkup(self):
         return self.options.WarnBeforeSavingPrintingSendingMarkup
+
+    @WarnBeforeSavingPrintingSendingMarkup.setter
+    def WarnBeforeSavingPrintingSendingMarkup(self, value):
+        self.options.WarnBeforeSavingPrintingSendingMarkup = value
 
 class OtherCorrectionsException:
 
@@ -14833,6 +16612,10 @@ class PageSetup:
     def BookFoldPrinting(self):
         return self.pagesetup.BookFoldPrinting
 
+    @BookFoldPrinting.setter
+    def BookFoldPrinting(self, value):
+        self.pagesetup.BookFoldPrinting = value
+
     @property
     def BookFoldPrintingSheets(self):
         return self.pagesetup.BookFoldPrintingSheets
@@ -14844,6 +16627,10 @@ class PageSetup:
     @property
     def BookFoldRevPrinting(self):
         return self.pagesetup.BookFoldRevPrinting
+
+    @BookFoldRevPrinting.setter
+    def BookFoldRevPrinting(self, value):
+        self.pagesetup.BookFoldRevPrinting = value
 
     @property
     def BottomMargin(self):
@@ -14868,6 +16655,10 @@ class PageSetup:
     @property
     def DifferentFirstPageHeaderFooter(self):
         return self.pagesetup.DifferentFirstPageHeaderFooter
+
+    @DifferentFirstPageHeaderFooter.setter
+    def DifferentFirstPageHeaderFooter(self, value):
+        self.pagesetup.DifferentFirstPageHeaderFooter = value
 
     @property
     def FirstPageTray(self):
@@ -14953,9 +16744,17 @@ class PageSetup:
     def MirrorMargins(self):
         return self.pagesetup.MirrorMargins
 
+    @MirrorMargins.setter
+    def MirrorMargins(self, value):
+        self.pagesetup.MirrorMargins = value
+
     @property
     def OddAndEvenPagesHeaderFooter(self):
         return self.pagesetup.OddAndEvenPagesHeaderFooter
+
+    @OddAndEvenPagesHeaderFooter.setter
+    def OddAndEvenPagesHeaderFooter(self, value):
+        self.pagesetup.OddAndEvenPagesHeaderFooter = value
 
     @property
     def Orientation(self):
@@ -15029,6 +16828,10 @@ class PageSetup:
     def SuppressEndnotes(self):
         return self.pagesetup.SuppressEndnotes
 
+    @SuppressEndnotes.setter
+    def SuppressEndnotes(self, value):
+        self.pagesetup.SuppressEndnotes = value
+
     @property
     def TextColumns(self):
         return self.pagesetup.TextColumns
@@ -15044,6 +16847,10 @@ class PageSetup:
     @property
     def TwoPagesOnOne(self):
         return self.pagesetup.TwoPagesOnOne
+
+    @TwoPagesOnOne.setter
+    def TwoPagesOnOne(self, value):
+        self.pagesetup.TwoPagesOnOne = value
 
     @property
     def VerticalAlignment(self):
@@ -15080,9 +16887,17 @@ class Pane:
     def DisplayRulers(self):
         return self.pane.DisplayRulers
 
+    @DisplayRulers.setter
+    def DisplayRulers(self, value):
+        self.pane.DisplayRulers = value
+
     @property
     def DisplayVerticalRuler(self):
         return self.pane.DisplayVerticalRuler
+
+    @DisplayVerticalRuler.setter
+    def DisplayVerticalRuler(self, value):
+        self.pane.DisplayVerticalRuler = value
 
     @property
     def Document(self):
@@ -15189,9 +17004,17 @@ class Paragraph:
     def AddSpaceBetweenFarEastAndAlpha(self):
         return self.paragraph.AddSpaceBetweenFarEastAndAlpha
 
+    @AddSpaceBetweenFarEastAndAlpha.setter
+    def AddSpaceBetweenFarEastAndAlpha(self, value):
+        self.paragraph.AddSpaceBetweenFarEastAndAlpha = value
+
     @property
     def AddSpaceBetweenFarEastAndDigit(self):
         return self.paragraph.AddSpaceBetweenFarEastAndDigit
+
+    @AddSpaceBetweenFarEastAndDigit.setter
+    def AddSpaceBetweenFarEastAndDigit(self, value):
+        self.paragraph.AddSpaceBetweenFarEastAndDigit = value
 
     @property
     def Alignment(self):
@@ -15208,6 +17031,10 @@ class Paragraph:
     @property
     def AutoAdjustRightIndent(self):
         return self.paragraph.AutoAdjustRightIndent
+
+    @AutoAdjustRightIndent.setter
+    def AutoAdjustRightIndent(self, value):
+        self.paragraph.AutoAdjustRightIndent = value
 
     @property
     def BaseLineAlignment(self):
@@ -15253,6 +17080,10 @@ class Paragraph:
     def DisableLineHeightGrid(self):
         return self.paragraph.DisableLineHeightGrid
 
+    @DisableLineHeightGrid.setter
+    def DisableLineHeightGrid(self, value):
+        self.paragraph.DisableLineHeightGrid = value
+
     @property
     def DropCap(self):
         return DropCap(self.paragraph.DropCap)
@@ -15260,6 +17091,10 @@ class Paragraph:
     @property
     def FarEastLineBreakControl(self):
         return self.paragraph.FarEastLineBreakControl
+
+    @FarEastLineBreakControl.setter
+    def FarEastLineBreakControl(self, value):
+        self.paragraph.FarEastLineBreakControl = value
 
     @property
     def FirstLineIndent(self):
@@ -15281,13 +17116,25 @@ class Paragraph:
     def HalfWidthPunctuationOnTopOfLine(self):
         return self.paragraph.HalfWidthPunctuationOnTopOfLine
 
+    @HalfWidthPunctuationOnTopOfLine.setter
+    def HalfWidthPunctuationOnTopOfLine(self, value):
+        self.paragraph.HalfWidthPunctuationOnTopOfLine = value
+
     @property
     def HangingPunctuation(self):
         return self.paragraph.HangingPunctuation
 
+    @HangingPunctuation.setter
+    def HangingPunctuation(self, value):
+        self.paragraph.HangingPunctuation = value
+
     @property
     def Hyphenation(self):
         return self.paragraph.Hyphenation
+
+    @Hyphenation.setter
+    def Hyphenation(self, value):
+        self.paragraph.Hyphenation = value
 
     @property
     def ID(self):
@@ -15305,9 +17152,17 @@ class Paragraph:
     def KeepTogether(self):
         return self.paragraph.KeepTogether
 
+    @KeepTogether.setter
+    def KeepTogether(self, value):
+        self.paragraph.KeepTogether = value
+
     @property
     def KeepWithNext(self):
         return self.paragraph.KeepWithNext
+
+    @KeepWithNext.setter
+    def KeepWithNext(self, value):
+        self.paragraph.KeepWithNext = value
 
     @property
     def LeftIndent(self):
@@ -15366,6 +17221,10 @@ class Paragraph:
     def NoLineNumber(self):
         return self.paragraph.NoLineNumber
 
+    @NoLineNumber.setter
+    def NoLineNumber(self, value):
+        self.paragraph.NoLineNumber = value
+
     @property
     def OutlineLevel(self):
         return WdOutlineLevel(self.paragraph.OutlineLevel)
@@ -15377,6 +17236,10 @@ class Paragraph:
     @property
     def PageBreakBefore(self):
         return self.paragraph.PageBreakBefore
+
+    @PageBreakBefore.setter
+    def PageBreakBefore(self, value):
+        self.paragraph.PageBreakBefore = value
 
     @property
     def Parent(self):
@@ -15418,6 +17281,10 @@ class Paragraph:
     def SpaceAfterAuto(self):
         return self.paragraph.SpaceAfterAuto
 
+    @SpaceAfterAuto.setter
+    def SpaceAfterAuto(self, value):
+        self.paragraph.SpaceAfterAuto = value
+
     @property
     def SpaceBefore(self):
         return self.paragraph.SpaceBefore
@@ -15429,6 +17296,10 @@ class Paragraph:
     @property
     def SpaceBeforeAuto(self):
         return self.paragraph.SpaceBeforeAuto
+
+    @SpaceBeforeAuto.setter
+    def SpaceBeforeAuto(self, value):
+        self.paragraph.SpaceBeforeAuto = value
 
     @property
     def Style(self):
@@ -15458,9 +17329,17 @@ class Paragraph:
     def WidowControl(self):
         return self.paragraph.WidowControl
 
+    @WidowControl.setter
+    def WidowControl(self, value):
+        self.paragraph.WidowControl = value
+
     @property
     def WordWrap(self):
         return self.paragraph.WordWrap
+
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.paragraph.WordWrap = value
 
     def CloseUp(self):
         self.paragraph.CloseUp()
@@ -15554,9 +17433,17 @@ class ParagraphFormat:
     def AddSpaceBetweenFarEastAndAlpha(self):
         return self.paragraphformat.AddSpaceBetweenFarEastAndAlpha
 
+    @AddSpaceBetweenFarEastAndAlpha.setter
+    def AddSpaceBetweenFarEastAndAlpha(self, value):
+        self.paragraphformat.AddSpaceBetweenFarEastAndAlpha = value
+
     @property
     def AddSpaceBetweenFarEastAndDigit(self):
         return self.paragraphformat.AddSpaceBetweenFarEastAndDigit
+
+    @AddSpaceBetweenFarEastAndDigit.setter
+    def AddSpaceBetweenFarEastAndDigit(self, value):
+        self.paragraphformat.AddSpaceBetweenFarEastAndDigit = value
 
     @property
     def Alignment(self):
@@ -15573,6 +17460,10 @@ class ParagraphFormat:
     @property
     def AutoAdjustRightIndent(self):
         return self.paragraphformat.AutoAdjustRightIndent
+
+    @AutoAdjustRightIndent.setter
+    def AutoAdjustRightIndent(self, value):
+        self.paragraphformat.AutoAdjustRightIndent = value
 
     @property
     def BaseLineAlignment(self):
@@ -15618,6 +17509,10 @@ class ParagraphFormat:
     def DisableLineHeightGrid(self):
         return self.paragraphformat.DisableLineHeightGrid
 
+    @DisableLineHeightGrid.setter
+    def DisableLineHeightGrid(self, value):
+        self.paragraphformat.DisableLineHeightGrid = value
+
     @property
     def Duplicate(self):
         return ParagraphFormat(self.paragraphformat.Duplicate)
@@ -15625,6 +17520,10 @@ class ParagraphFormat:
     @property
     def FarEastLineBreakControl(self):
         return self.paragraphformat.FarEastLineBreakControl
+
+    @FarEastLineBreakControl.setter
+    def FarEastLineBreakControl(self, value):
+        self.paragraphformat.FarEastLineBreakControl = value
 
     @property
     def FirstLineIndent(self):
@@ -15638,21 +17537,41 @@ class ParagraphFormat:
     def HalfWidthPunctuationOnTopOfLine(self):
         return self.paragraphformat.HalfWidthPunctuationOnTopOfLine
 
+    @HalfWidthPunctuationOnTopOfLine.setter
+    def HalfWidthPunctuationOnTopOfLine(self, value):
+        self.paragraphformat.HalfWidthPunctuationOnTopOfLine = value
+
     @property
     def HangingPunctuation(self):
         return self.paragraphformat.HangingPunctuation
+
+    @HangingPunctuation.setter
+    def HangingPunctuation(self, value):
+        self.paragraphformat.HangingPunctuation = value
 
     @property
     def Hyphenation(self):
         return self.paragraphformat.Hyphenation
 
+    @Hyphenation.setter
+    def Hyphenation(self, value):
+        self.paragraphformat.Hyphenation = value
+
     @property
     def KeepTogether(self):
         return self.paragraphformat.KeepTogether
 
+    @KeepTogether.setter
+    def KeepTogether(self, value):
+        self.paragraphformat.KeepTogether = value
+
     @property
     def KeepWithNext(self):
         return self.paragraphformat.KeepWithNext
+
+    @KeepWithNext.setter
+    def KeepWithNext(self, value):
+        self.paragraphformat.KeepWithNext = value
 
     @property
     def LeftIndent(self):
@@ -15706,6 +17625,10 @@ class ParagraphFormat:
     def NoLineNumber(self):
         return self.paragraphformat.NoLineNumber
 
+    @NoLineNumber.setter
+    def NoLineNumber(self, value):
+        self.paragraphformat.NoLineNumber = value
+
     @property
     def OutlineLevel(self):
         return WdOutlineLevel(self.paragraphformat.OutlineLevel)
@@ -15717,6 +17640,10 @@ class ParagraphFormat:
     @property
     def PageBreakBefore(self):
         return self.paragraphformat.PageBreakBefore
+
+    @PageBreakBefore.setter
+    def PageBreakBefore(self, value):
+        self.paragraphformat.PageBreakBefore = value
 
     @property
     def Parent(self):
@@ -15754,6 +17681,10 @@ class ParagraphFormat:
     def SpaceAfterAuto(self):
         return self.paragraphformat.SpaceAfterAuto
 
+    @SpaceAfterAuto.setter
+    def SpaceAfterAuto(self, value):
+        self.paragraphformat.SpaceAfterAuto = value
+
     @property
     def SpaceBefore(self):
         return self.paragraphformat.SpaceBefore
@@ -15765,6 +17696,10 @@ class ParagraphFormat:
     @property
     def SpaceBeforeAuto(self):
         return self.paragraphformat.SpaceBeforeAuto
+
+    @SpaceBeforeAuto.setter
+    def SpaceBeforeAuto(self, value):
+        self.paragraphformat.SpaceBeforeAuto = value
 
     @property
     def Style(self):
@@ -15794,9 +17729,17 @@ class ParagraphFormat:
     def WidowControl(self):
         return self.paragraphformat.WidowControl
 
+    @WidowControl.setter
+    def WidowControl(self, value):
+        self.paragraphformat.WidowControl = value
+
     @property
     def WordWrap(self):
         return self.paragraphformat.WordWrap
+
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.paragraphformat.WordWrap = value
 
     def CloseUp(self):
         self.paragraphformat.CloseUp()
@@ -15932,6 +17875,10 @@ class PictureFormat:
     def TransparentBackground(self):
         return self.pictureformat.TransparentBackground
 
+    @TransparentBackground.setter
+    def TransparentBackground(self, value):
+        self.pictureformat.TransparentBackground = value
+
     def IncrementBrightness(self, *args, Increment=None):
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
@@ -16058,13 +18005,25 @@ class Point:
     def ApplyPictToEnd(self):
         return self.point.ApplyPictToEnd
 
+    @ApplyPictToEnd.setter
+    def ApplyPictToEnd(self, value):
+        self.point.ApplyPictToEnd = value
+
     @property
     def ApplyPictToFront(self):
         return self.point.ApplyPictToFront
 
+    @ApplyPictToFront.setter
+    def ApplyPictToFront(self, value):
+        self.point.ApplyPictToFront = value
+
     @property
     def ApplyPictToSides(self):
         return self.point.ApplyPictToSides
+
+    @ApplyPictToSides.setter
+    def ApplyPictToSides(self, value):
+        self.point.ApplyPictToSides = value
 
     @property
     def Creator(self):
@@ -16090,9 +18049,17 @@ class Point:
     def Has3DEffect(self):
         return self.point.Has3DEffect
 
+    @Has3DEffect.setter
+    def Has3DEffect(self, value):
+        self.point.Has3DEffect = value
+
     @property
     def HasDataLabel(self):
         return self.point.HasDataLabel
+
+    @HasDataLabel.setter
+    def HasDataLabel(self, value):
+        self.point.HasDataLabel = value
 
     @property
     def Height(self):
@@ -16102,6 +18069,10 @@ class Point:
     def InvertIfNegative(self):
         return self.point.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.point.InvertIfNegative = value
+
     @property
     def Left(self):
         return self.point.Left
@@ -16109,6 +18080,10 @@ class Point:
     @property
     def MarkerBackgroundColor(self):
         return self.point.MarkerBackgroundColor
+
+    @MarkerBackgroundColor.setter
+    def MarkerBackgroundColor(self, value):
+        self.point.MarkerBackgroundColor = value
 
     @property
     def MarkerBackgroundColorIndex(self):
@@ -16121,6 +18096,10 @@ class Point:
     @property
     def MarkerForegroundColor(self):
         return self.point.MarkerForegroundColor
+
+    @MarkerForegroundColor.setter
+    def MarkerForegroundColor(self, value):
+        self.point.MarkerForegroundColor = value
 
     @property
     def MarkerForegroundColorIndex(self):
@@ -16173,6 +18152,10 @@ class Point:
     @property
     def SecondaryPlot(self):
         return self.point.SecondaryPlot
+
+    @SecondaryPlot.setter
+    def SecondaryPlot(self, value):
+        self.point.SecondaryPlot = value
 
     @property
     def Shadow(self):
@@ -16317,6 +18300,10 @@ class ProtectedViewWindow:
     def Visible(self):
         return self.protectedviewwindow.Visible
 
+    @Visible.setter
+    def Visible(self, value):
+        self.protectedviewwindow.Visible = value
+
     @property
     def Width(self):
         return self.protectedviewwindow.Width
@@ -16389,9 +18376,17 @@ class Range:
     def Bold(self):
         return self.range.Bold
 
+    @Bold.setter
+    def Bold(self, value):
+        self.range.Bold = value
+
     @property
     def BoldBi(self):
         return self.range.BoldBi
+
+    @BoldBi.setter
+    def BoldBi(self, value):
+        self.range.BoldBi = value
 
     @property
     def BookmarkID(self):
@@ -16442,6 +18437,10 @@ class Range:
     def CombineCharacters(self):
         return self.range.CombineCharacters
 
+    @CombineCharacters.setter
+    def CombineCharacters(self, value):
+        self.range.CombineCharacters = value
+
     @property
     def Comments(self):
         return self.range.Comments
@@ -16461,6 +18460,10 @@ class Range:
     @property
     def DisableCharacterSpaceGrid(self):
         return self.range.DisableCharacterSpaceGrid
+
+    @DisableCharacterSpaceGrid.setter
+    def DisableCharacterSpaceGrid(self, value):
+        self.range.DisableCharacterSpaceGrid = value
 
     @property
     def Document(self):
@@ -16554,6 +18557,10 @@ class Range:
     def GrammarChecked(self):
         return self.range.GrammarChecked
 
+    @GrammarChecked.setter
+    def GrammarChecked(self, value):
+        self.range.GrammarChecked = value
+
     @property
     def GrammaticalErrors(self):
         return self.range.GrammaticalErrors
@@ -16607,9 +18614,17 @@ class Range:
     def Italic(self):
         return self.range.Italic
 
+    @Italic.setter
+    def Italic(self, value):
+        self.range.Italic = value
+
     @property
     def ItalicBi(self):
         return self.range.ItalicBi
+
+    @ItalicBi.setter
+    def ItalicBi(self, value):
+        self.range.ItalicBi = value
 
     @property
     def Kana(self):
@@ -16674,6 +18689,10 @@ class Range:
     @property
     def NoProofing(self):
         return self.range.NoProofing
+
+    @NoProofing.setter
+    def NoProofing(self, value):
+        self.range.NoProofing = value
 
     @property
     def OMaths(self):
@@ -16755,9 +18774,17 @@ class Range:
     def ShowAll(self):
         return self.range.ShowAll
 
+    @ShowAll.setter
+    def ShowAll(self, value):
+        self.range.ShowAll = value
+
     @property
     def SpellingChecked(self):
         return self.range.SpellingChecked
+
+    @SpellingChecked.setter
+    def SpellingChecked(self, value):
+        self.range.SpellingChecked = value
 
     @property
     def SpellingErrors(self):
@@ -16814,6 +18841,10 @@ class Range:
     @property
     def TextRetrievalMode(self):
         return TextRetrievalMode(self.range.TextRetrievalMode)
+
+    @TextRetrievalMode.setter
+    def TextRetrievalMode(self, value):
+        self.range.TextRetrievalMode = value
 
     @property
     def TopLevelTables(self):
@@ -17246,6 +19277,10 @@ class RecentFile:
     def ReadOnly(self):
         return self.recentfile.ReadOnly
 
+    @ReadOnly.setter
+    def ReadOnly(self, value):
+        self.recentfile.ReadOnly = value
+
     def Delete(self):
         self.recentfile.Delete()
 
@@ -17416,6 +19451,10 @@ class Replacement:
     def Highlight(self):
         return self.replacement.Highlight
 
+    @Highlight.setter
+    def Highlight(self, value):
+        self.replacement.Highlight = value
+
     @property
     def LanguageID(self):
         return WdLanguageID(self.replacement.LanguageID)
@@ -17435,6 +19474,10 @@ class Replacement:
     @property
     def NoProofing(self):
         return self.replacement.NoProofing
+
+    @NoProofing.setter
+    def NoProofing(self, value):
+        self.replacement.NoProofing = value
 
     @property
     def ParagraphFormat(self):
@@ -17527,6 +19570,10 @@ class Reviewer:
     @property
     def Visible(self):
         return self.reviewer.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.reviewer.Visible = value
 
 class Reviewers:
 
@@ -17634,6 +19681,10 @@ class Row:
     def AllowBreakAcrossPages(self):
         return self.row.AllowBreakAcrossPages
 
+    @AllowBreakAcrossPages.setter
+    def AllowBreakAcrossPages(self, value):
+        self.row.AllowBreakAcrossPages = value
+
     @property
     def Application(self):
         return Application(self.row.Application)
@@ -17654,6 +19705,10 @@ class Row:
     @property
     def HeadingFormat(self):
         return self.row.HeadingFormat
+
+    @HeadingFormat.setter
+    def HeadingFormat(self, value):
+        self.row.HeadingFormat = value
 
     @property
     def Height(self):
@@ -17793,6 +19848,10 @@ class Section:
     def ProtectedForForms(self):
         return self.section.ProtectedForForms
 
+    @ProtectedForForms.setter
+    def ProtectedForForms(self, value):
+        self.section.ProtectedForForms = value
+
     @property
     def Range(self):
         return Range(self.section.Range)
@@ -17843,6 +19902,10 @@ class Selection:
     def ColumnSelectMode(self):
         return self.selection.ColumnSelectMode
 
+    @ColumnSelectMode.setter
+    def ColumnSelectMode(self, value):
+        self.selection.ColumnSelectMode = value
+
     @property
     def Comments(self):
         return self.selection.Comments
@@ -17882,6 +19945,10 @@ class Selection:
     @property
     def ExtendMode(self):
         return self.selection.ExtendMode
+
+    @ExtendMode.setter
+    def ExtendMode(self, value):
+        self.selection.ExtendMode = value
 
     @property
     def Fields(self):
@@ -18008,6 +20075,10 @@ class Selection:
     def NoProofing(self):
         return self.selection.NoProofing
 
+    @NoProofing.setter
+    def NoProofing(self, value):
+        self.selection.NoProofing = value
+
     @property
     def OMaths(self):
         return OMaths(self.selection.OMaths)
@@ -18079,6 +20150,10 @@ class Selection:
     @property
     def StartIsActive(self):
         return self.selection.StartIsActive
+
+    @StartIsActive.setter
+    def StartIsActive(self, value):
+        self.selection.StartIsActive = value
 
     @property
     def StoryLength(self):
@@ -18594,17 +20669,33 @@ class Series:
     def ApplyPictToEnd(self):
         return self.series.ApplyPictToEnd
 
+    @ApplyPictToEnd.setter
+    def ApplyPictToEnd(self, value):
+        self.series.ApplyPictToEnd = value
+
     @property
     def ApplyPictToFront(self):
         return self.series.ApplyPictToFront
+
+    @ApplyPictToFront.setter
+    def ApplyPictToFront(self, value):
+        self.series.ApplyPictToFront = value
 
     @property
     def ApplyPictToSides(self):
         return self.series.ApplyPictToSides
 
+    @ApplyPictToSides.setter
+    def ApplyPictToSides(self, value):
+        self.series.ApplyPictToSides = value
+
     @property
     def AxisGroup(self):
         return self.series.AxisGroup
+
+    @AxisGroup.setter
+    def AxisGroup(self, value):
+        self.series.AxisGroup = value
 
     @property
     def BarShape(self):
@@ -18690,17 +20781,33 @@ class Series:
     def Has3DEffect(self):
         return self.series.Has3DEffect
 
+    @Has3DEffect.setter
+    def Has3DEffect(self, value):
+        self.series.Has3DEffect = value
+
     @property
     def HasDataLabels(self):
         return self.series.HasDataLabels
+
+    @HasDataLabels.setter
+    def HasDataLabels(self, value):
+        self.series.HasDataLabels = value
 
     @property
     def HasErrorBars(self):
         return self.series.HasErrorBars
 
+    @HasErrorBars.setter
+    def HasErrorBars(self, value):
+        self.series.HasErrorBars = value
+
     @property
     def HasLeaderLines(self):
         return self.series.HasLeaderLines
+
+    @HasLeaderLines.setter
+    def HasLeaderLines(self, value):
+        self.series.HasLeaderLines = value
 
     @property
     def InvertColor(self):
@@ -18722,6 +20829,10 @@ class Series:
     def InvertIfNegative(self):
         return self.series.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.series.InvertIfNegative = value
+
     @property
     def LeaderLines(self):
         return LeaderLines(self.series.LeaderLines)
@@ -18729,6 +20840,10 @@ class Series:
     @property
     def MarkerBackgroundColor(self):
         return self.series.MarkerBackgroundColor
+
+    @MarkerBackgroundColor.setter
+    def MarkerBackgroundColor(self, value):
+        self.series.MarkerBackgroundColor = value
 
     @property
     def MarkerBackgroundColorIndex(self):
@@ -18741,6 +20856,10 @@ class Series:
     @property
     def MarkerForegroundColor(self):
         return self.series.MarkerForegroundColor
+
+    @MarkerForegroundColor.setter
+    def MarkerForegroundColor(self, value):
+        self.series.MarkerForegroundColor = value
 
     @property
     def MarkerForegroundColorIndex(self):
@@ -18817,6 +20936,10 @@ class Series:
     @property
     def Smooth(self):
         return self.series.Smooth
+
+    @Smooth.setter
+    def Smooth(self, value):
+        self.series.Smooth = value
 
     @property
     def Type(self):
@@ -19046,6 +21169,10 @@ class ShadowFormat:
     def Obscured(self):
         return self.shadowformat.Obscured
 
+    @Obscured.setter
+    def Obscured(self, value):
+        self.shadowformat.Obscured = value
+
     @property
     def OffsetX(self):
         return self.shadowformat.OffsetX
@@ -19110,6 +21237,10 @@ class ShadowFormat:
     def Visible(self):
         return self.shadowformat.Visible
 
+    @Visible.setter
+    def Visible(self, value):
+        self.shadowformat.Visible = value
+
     def IncrementOffsetX(self, *args, Increment=None):
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
@@ -19157,6 +21288,10 @@ class Shape:
     def BackgroundStyle(self):
         return self.shape.BackgroundStyle
 
+    @BackgroundStyle.setter
+    def BackgroundStyle(self, value):
+        self.shape.BackgroundStyle = value
+
     @property
     def Callout(self):
         return CalloutFormat(self.shape.Callout)
@@ -19180,6 +21315,10 @@ class Shape:
     @property
     def Decorative(self):
         return self.shape.Decorative
+
+    @Decorative.setter
+    def Decorative(self, value):
+        self.shape.Decorative = value
 
     @property
     def Fill(self):
@@ -19269,9 +21408,17 @@ class Shape:
     def LockAnchor(self):
         return self.shape.LockAnchor
 
+    @LockAnchor.setter
+    def LockAnchor(self, value):
+        self.shape.LockAnchor = value
+
     @property
     def LockAspectRatio(self):
         return self.shape.LockAspectRatio
+
+    @LockAspectRatio.setter
+    def LockAspectRatio(self, value):
+        self.shape.LockAspectRatio = value
 
     @property
     def Model3D(self):
@@ -19313,6 +21460,10 @@ class Shape:
     def RelativeHorizontalPosition(self):
         return self.shape.RelativeHorizontalPosition
 
+    @RelativeHorizontalPosition.setter
+    def RelativeHorizontalPosition(self, value):
+        self.shape.RelativeHorizontalPosition = value
+
     @property
     def RelativeHorizontalSize(self):
         return WdRelativeVerticalSize(self.shape.RelativeHorizontalSize)
@@ -19324,6 +21475,10 @@ class Shape:
     @property
     def RelativeVerticalPosition(self):
         return self.shape.RelativeVerticalPosition
+
+    @RelativeVerticalPosition.setter
+    def RelativeVerticalPosition(self, value):
+        self.shape.RelativeVerticalPosition = value
 
     @property
     def RelativeVerticalSize(self):
@@ -19420,6 +21575,10 @@ class Shape:
     @property
     def Visible(self):
         return self.shape.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.shape.Visible = value
 
     @property
     def Width(self):
@@ -19692,6 +21851,10 @@ class Style:
     def AutomaticallyUpdate(self):
         return self.style.AutomaticallyUpdate
 
+    @AutomaticallyUpdate.setter
+    def AutomaticallyUpdate(self, value):
+        self.style.AutomaticallyUpdate = value
+
     @property
     def BaseStyle(self):
         return self.style.BaseStyle
@@ -19732,6 +21895,10 @@ class Style:
     def Hidden(self):
         return self.style.Hidden
 
+    @Hidden.setter
+    def Hidden(self, value):
+        self.style.Hidden = value
+
     @property
     def InUse(self):
         return self.style.InUse
@@ -19760,6 +21927,10 @@ class Style:
     def LinkStyle(self):
         return self.style.LinkStyle
 
+    @LinkStyle.setter
+    def LinkStyle(self, value):
+        self.style.LinkStyle = value
+
     @property
     def ListLevelNumber(self):
         return self.style.ListLevelNumber
@@ -19772,9 +21943,17 @@ class Style:
     def Locked(self):
         return self.style.Locked
 
+    @Locked.setter
+    def Locked(self, value):
+        self.style.Locked = value
+
     @property
     def NameLocal(self):
         return self.style.NameLocal
+
+    @NameLocal.setter
+    def NameLocal(self, value):
+        self.style.NameLocal = value
 
     @property
     def NextParagraphStyle(self):
@@ -19788,9 +21967,17 @@ class Style:
     def NoProofing(self):
         return self.style.NoProofing
 
+    @NoProofing.setter
+    def NoProofing(self, value):
+        self.style.NoProofing = value
+
     @property
     def NoSpaceBetweenParagraphsOfSameStyle(self):
         return self.style.NoSpaceBetweenParagraphsOfSameStyle
+
+    @NoSpaceBetweenParagraphsOfSameStyle.setter
+    def NoSpaceBetweenParagraphsOfSameStyle(self, value):
+        self.style.NoSpaceBetweenParagraphsOfSameStyle = value
 
     @property
     def ParagraphFormat(self):
@@ -19836,9 +22023,17 @@ class Style:
     def UnhideWhenUsed(self):
         return self.style.UnhideWhenUsed
 
+    @UnhideWhenUsed.setter
+    def UnhideWhenUsed(self, value):
+        self.style.UnhideWhenUsed = value
+
     @property
     def Visibility(self):
         return self.style.Visibility
+
+    @Visibility.setter
+    def Visibility(self, value):
+        self.style.Visibility = value
 
     def Delete(self):
         self.style.Delete()
@@ -19963,6 +22158,10 @@ class Subdocument:
     @property
     def Locked(self):
         return self.subdocument.Locked
+
+    @Locked.setter
+    def Locked(self, value):
+        self.subdocument.Locked = value
 
     @property
     def Name(self):
@@ -20147,6 +22346,10 @@ class Table:
     def AllowAutoFit(self):
         return self.table.AllowAutoFit
 
+    @AllowAutoFit.setter
+    def AllowAutoFit(self, value):
+        self.table.AllowAutoFit = value
+
     @property
     def Application(self):
         return Application(self.table.Application)
@@ -20163,17 +22366,33 @@ class Table:
     def ApplyStyleFirstColumn(self):
         return self.table.ApplyStyleFirstColumn
 
+    @ApplyStyleFirstColumn.setter
+    def ApplyStyleFirstColumn(self, value):
+        self.table.ApplyStyleFirstColumn = value
+
     @property
     def ApplyStyleHeadingRows(self):
         return self.table.ApplyStyleHeadingRows
+
+    @ApplyStyleHeadingRows.setter
+    def ApplyStyleHeadingRows(self, value):
+        self.table.ApplyStyleHeadingRows = value
 
     @property
     def ApplyStyleLastColumn(self):
         return self.table.ApplyStyleLastColumn
 
+    @ApplyStyleLastColumn.setter
+    def ApplyStyleLastColumn(self, value):
+        self.table.ApplyStyleLastColumn = value
+
     @property
     def ApplyStyleLastRow(self):
         return self.table.ApplyStyleLastRow
+
+    @ApplyStyleLastRow.setter
+    def ApplyStyleLastRow(self, value):
+        self.table.ApplyStyleLastRow = value
 
     @property
     def ApplyStyleRowBands(self):
@@ -20414,6 +22633,10 @@ class TableOfAuthorities:
     def IncludeCategoryHeader(self):
         return self.tableofauthorities.IncludeCategoryHeader
 
+    @IncludeCategoryHeader.setter
+    def IncludeCategoryHeader(self, value):
+        self.tableofauthorities.IncludeCategoryHeader = value
+
     @property
     def IncludeSequenceName(self):
         return self.tableofauthorities.IncludeSequenceName
@@ -20425,6 +22648,10 @@ class TableOfAuthorities:
     @property
     def KeepEntryFormatting(self):
         return self.tableofauthorities.KeepEntryFormatting
+
+    @KeepEntryFormatting.setter
+    def KeepEntryFormatting(self, value):
+        self.tableofauthorities.KeepEntryFormatting = value
 
     @property
     def PageNumberSeparator(self):
@@ -20449,6 +22676,10 @@ class TableOfAuthorities:
     @property
     def Passim(self):
         return self.tableofauthorities.Passim
+
+    @Passim.setter
+    def Passim(self, value):
+        self.tableofauthorities.Passim = value
 
     @property
     def Range(self):
@@ -20530,6 +22761,10 @@ class TableOfContents:
     def IncludePageNumbers(self):
         return self.tableofcontents.IncludePageNumbers
 
+    @IncludePageNumbers.setter
+    def IncludePageNumbers(self, value):
+        self.tableofcontents.IncludePageNumbers = value
+
     @property
     def LowerHeadingLevel(self):
         return self.tableofcontents.LowerHeadingLevel
@@ -20549,6 +22784,10 @@ class TableOfContents:
     @property
     def RightAlignPageNumbers(self):
         return self.tableofcontents.RightAlignPageNumbers
+
+    @RightAlignPageNumbers.setter
+    def RightAlignPageNumbers(self, value):
+        self.tableofcontents.RightAlignPageNumbers = value
 
     @property
     def TabLeader(self):
@@ -20578,9 +22817,17 @@ class TableOfContents:
     def UseFields(self):
         return self.tableofcontents.UseFields
 
+    @UseFields.setter
+    def UseFields(self, value):
+        self.tableofcontents.UseFields = value
+
     @property
     def UseHeadingStyles(self):
         return self.tableofcontents.UseHeadingStyles
+
+    @UseHeadingStyles.setter
+    def UseHeadingStyles(self, value):
+        self.tableofcontents.UseHeadingStyles = value
 
     @property
     def UseHyperlinks(self):
@@ -20636,9 +22883,17 @@ class TableOfFigures:
     def IncludeLabel(self):
         return self.tableoffigures.IncludeLabel
 
+    @IncludeLabel.setter
+    def IncludeLabel(self, value):
+        self.tableoffigures.IncludeLabel = value
+
     @property
     def IncludePageNumbers(self):
         return self.tableoffigures.IncludePageNumbers
+
+    @IncludePageNumbers.setter
+    def IncludePageNumbers(self, value):
+        self.tableoffigures.IncludePageNumbers = value
 
     @property
     def LowerHeadingLevel(self):
@@ -20659,6 +22914,10 @@ class TableOfFigures:
     @property
     def RightAlignPageNumbers(self):
         return self.tableoffigures.RightAlignPageNumbers
+
+    @RightAlignPageNumbers.setter
+    def RightAlignPageNumbers(self, value):
+        self.tableoffigures.RightAlignPageNumbers = value
 
     @property
     def TabLeader(self):
@@ -20688,9 +22947,17 @@ class TableOfFigures:
     def UseFields(self):
         return self.tableoffigures.UseFields
 
+    @UseFields.setter
+    def UseFields(self, value):
+        self.tableoffigures.UseFields = value
+
     @property
     def UseHeadingStyles(self):
         return self.tableoffigures.UseHeadingStyles
+
+    @UseHeadingStyles.setter
+    def UseHeadingStyles(self, value):
+        self.tableoffigures.UseHeadingStyles = value
 
     @property
     def UseHyperlinks(self):
@@ -20726,9 +22993,17 @@ class TableStyle:
     def AllowBreakAcrossPage(self):
         return self.tablestyle.AllowBreakAcrossPage
 
+    @AllowBreakAcrossPage.setter
+    def AllowBreakAcrossPage(self, value):
+        self.tablestyle.AllowBreakAcrossPage = value
+
     @property
     def AllowPageBreaks(self):
         return self.tablestyle.AllowPageBreaks
+
+    @AllowPageBreaks.setter
+    def AllowPageBreaks(self, value):
+        self.tablestyle.AllowPageBreaks = value
 
     @property
     def Application(self):
@@ -20932,6 +23207,10 @@ class Task:
     def Visible(self):
         return self.task.Visible
 
+    @Visible.setter
+    def Visible(self, value):
+        self.task.Visible = value
+
     @property
     def Width(self):
         return Task(self.task.Width)
@@ -20991,6 +23270,10 @@ class TaskPane:
     @property
     def Visible(self):
         return self.taskpane.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.taskpane.Visible = value
 
 class TaskPanes:
 
@@ -21082,6 +23365,10 @@ class Template:
     def KerningByAlgorithm(self):
         return self.template.KerningByAlgorithm
 
+    @KerningByAlgorithm.setter
+    def KerningByAlgorithm(self, value):
+        self.template.KerningByAlgorithm = value
+
     @property
     def LanguageID(self):
         return WdLanguageID(self.template.LanguageID)
@@ -21126,6 +23413,10 @@ class Template:
     def NoProofing(self):
         return self.template.NoProofing
 
+    @NoProofing.setter
+    def NoProofing(self, value):
+        self.template.NoProofing = value
+
     @property
     def Parent(self):
         return self.template.Parent
@@ -21137,6 +23428,10 @@ class Template:
     @property
     def Saved(self):
         return self.template.Saved
+
+    @Saved.setter
+    def Saved(self, value):
+        self.template.Saved = value
 
     @property
     def Type(self):
@@ -21210,9 +23505,17 @@ class TextEffectFormat:
     def FontBold(self):
         return self.texteffectformat.FontBold
 
+    @FontBold.setter
+    def FontBold(self, value):
+        self.texteffectformat.FontBold = value
+
     @property
     def FontItalic(self):
         return self.texteffectformat.FontItalic
+
+    @FontItalic.setter
+    def FontItalic(self, value):
+        self.texteffectformat.FontItalic = value
 
     @property
     def FontName(self):
@@ -21234,9 +23537,17 @@ class TextEffectFormat:
     def KernedPairs(self):
         return self.texteffectformat.KernedPairs
 
+    @KernedPairs.setter
+    def KernedPairs(self, value):
+        self.texteffectformat.KernedPairs = value
+
     @property
     def NormalizedHeight(self):
         return self.texteffectformat.NormalizedHeight
+
+    @NormalizedHeight.setter
+    def NormalizedHeight(self, value):
+        self.texteffectformat.NormalizedHeight = value
 
     @property
     def Parent(self):
@@ -21261,6 +23572,10 @@ class TextEffectFormat:
     @property
     def RotatedChars(self):
         return self.texteffectformat.RotatedChars
+
+    @RotatedChars.setter
+    def RotatedChars(self, value):
+        self.texteffectformat.RotatedChars = value
 
     @property
     def Text(self):
@@ -21362,6 +23677,10 @@ class TextFrame:
     def NoTextRotation(self):
         return self.textframe.NoTextRotation
 
+    @NoTextRotation.setter
+    def NoTextRotation(self, value):
+        self.textframe.NoTextRotation = value
+
     @property
     def Orientation(self):
         return self.textframe.Orientation
@@ -21417,6 +23736,10 @@ class TextFrame:
     @property
     def WordWrap(self):
         return self.textframe.WordWrap
+
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.textframe.WordWrap = value
 
     def BreakForwardLink(self):
         self.textframe.BreakForwardLink()
@@ -21503,9 +23826,17 @@ class TextRetrievalMode:
     def IncludeFieldCodes(self):
         return self.textretrievalmode.IncludeFieldCodes
 
+    @IncludeFieldCodes.setter
+    def IncludeFieldCodes(self, value):
+        self.textretrievalmode.IncludeFieldCodes = value
+
     @property
     def IncludeHiddenText(self):
         return self.textretrievalmode.IncludeHiddenText
+
+    @IncludeHiddenText.setter
+    def IncludeHiddenText(self, value):
+        self.textretrievalmode.IncludeHiddenText = value
 
     @property
     def Parent(self):
@@ -21640,6 +23971,10 @@ class ThreeDFormat:
     def Perspective(self):
         return self.threedformat.Perspective
 
+    @Perspective.setter
+    def Perspective(self, value):
+        self.threedformat.Perspective = value
+
     @property
     def PresetCamera(self):
         return self.threedformat.PresetCamera
@@ -21647,6 +23982,10 @@ class ThreeDFormat:
     @property
     def PresetExtrusionDirection(self):
         return self.threedformat.PresetExtrusionDirection
+
+    @PresetExtrusionDirection.setter
+    def PresetExtrusionDirection(self, value):
+        self.threedformat.PresetExtrusionDirection = value
 
     @property
     def PresetLighting(self):
@@ -21719,6 +24058,10 @@ class ThreeDFormat:
     @property
     def Visible(self):
         return self.threedformat.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.threedformat.Visible = value
 
     @property
     def Z(self):
@@ -21828,6 +24171,10 @@ class TickLabels:
     def NumberFormatLinked(self):
         return self.ticklabels.NumberFormatLinked
 
+    @NumberFormatLinked.setter
+    def NumberFormatLinked(self, value):
+        self.ticklabels.NumberFormatLinked = value
+
     @property
     def NumberFormatLocal(self):
         return self.ticklabels.NumberFormatLocal
@@ -21903,9 +24250,17 @@ class Trendline:
     def DisplayEquation(self):
         return self.trendline.DisplayEquation
 
+    @DisplayEquation.setter
+    def DisplayEquation(self, value):
+        self.trendline.DisplayEquation = value
+
     @property
     def DisplayRSquared(self):
         return self.trendline.DisplayRSquared
+
+    @DisplayRSquared.setter
+    def DisplayRSquared(self, value):
+        self.trendline.DisplayRSquared = value
 
     @property
     def Format(self):
@@ -21935,6 +24290,10 @@ class Trendline:
     def InterceptIsAuto(self):
         return self.trendline.InterceptIsAuto
 
+    @InterceptIsAuto.setter
+    def InterceptIsAuto(self, value):
+        self.trendline.InterceptIsAuto = value
+
     @property
     def Name(self):
         return self.trendline.Name
@@ -21946,6 +24305,10 @@ class Trendline:
     @property
     def NameIsAuto(self):
         return self.trendline.NameIsAuto
+
+    @NameIsAuto.setter
+    def NameIsAuto(self, value):
+        self.trendline.NameIsAuto = value
 
     @property
     def Order(self):
@@ -22211,6 +24574,10 @@ class View:
     def ConflictMode(self):
         return self.view.ConflictMode
 
+    @ConflictMode.setter
+    def ConflictMode(self, value):
+        self.view.ConflictMode = value
+
     @property
     def Creator(self):
         return self.view.Creator
@@ -22227,9 +24594,17 @@ class View:
     def DisplayPageBoundaries(self):
         return self.view.DisplayPageBoundaries
 
+    @DisplayPageBoundaries.setter
+    def DisplayPageBoundaries(self, value):
+        self.view.DisplayPageBoundaries = value
+
     @property
     def Draft(self):
         return self.view.Draft
+
+    @Draft.setter
+    def Draft(self, value):
+        self.view.Draft = value
 
     @property
     def FieldShading(self):
@@ -22243,13 +24618,25 @@ class View:
     def FullScreen(self):
         return self.view.FullScreen
 
+    @FullScreen.setter
+    def FullScreen(self, value):
+        self.view.FullScreen = value
+
     @property
     def Magnifier(self):
         return self.view.Magnifier
 
+    @Magnifier.setter
+    def Magnifier(self, value):
+        self.view.Magnifier = value
+
     @property
     def MailMergeDataView(self):
         return self.view.MailMergeDataView
+
+    @MailMergeDataView.setter
+    def MailMergeDataView(self, value):
+        self.view.MailMergeDataView = value
 
     @property
     def MarkupMode(self):
@@ -22299,6 +24686,10 @@ class View:
     def RevisionsBalloonShowConnectingLines(self):
         return self.view.RevisionsBalloonShowConnectingLines
 
+    @RevisionsBalloonShowConnectingLines.setter
+    def RevisionsBalloonShowConnectingLines(self, value):
+        self.view.RevisionsBalloonShowConnectingLines = value
+
     @property
     def RevisionsBalloonSide(self):
         return self.view.RevisionsBalloonSide
@@ -22307,9 +24698,17 @@ class View:
     def RevisionsBalloonWidth(self):
         return self.view.RevisionsBalloonWidth
 
+    @RevisionsBalloonWidth.setter
+    def RevisionsBalloonWidth(self, value):
+        self.view.RevisionsBalloonWidth = value
+
     @property
     def RevisionsBalloonWidthType(self):
         return self.view.RevisionsBalloonWidthType
+
+    @RevisionsBalloonWidthType.setter
+    def RevisionsBalloonWidthType(self, value):
+        self.view.RevisionsBalloonWidthType = value
 
     @property
     def SeekView(self):
@@ -22331,13 +24730,25 @@ class View:
     def ShowAll(self):
         return self.view.ShowAll
 
+    @ShowAll.setter
+    def ShowAll(self, value):
+        self.view.ShowAll = value
+
     @property
     def ShowBookmarks(self):
         return self.view.ShowBookmarks
 
+    @ShowBookmarks.setter
+    def ShowBookmarks(self, value):
+        self.view.ShowBookmarks = value
+
     @property
     def ShowComments(self):
         return self.view.ShowComments
+
+    @ShowComments.setter
+    def ShowComments(self, value):
+        self.view.ShowComments = value
 
     @property
     def ShowCropMarks(self):
@@ -22351,33 +24762,65 @@ class View:
     def ShowDrawings(self):
         return self.view.ShowDrawings
 
+    @ShowDrawings.setter
+    def ShowDrawings(self, value):
+        self.view.ShowDrawings = value
+
     @property
     def ShowFieldCodes(self):
         return self.view.ShowFieldCodes
+
+    @ShowFieldCodes.setter
+    def ShowFieldCodes(self, value):
+        self.view.ShowFieldCodes = value
 
     @property
     def ShowFirstLineOnly(self):
         return self.view.ShowFirstLineOnly
 
+    @ShowFirstLineOnly.setter
+    def ShowFirstLineOnly(self, value):
+        self.view.ShowFirstLineOnly = value
+
     @property
     def ShowFormat(self):
         return self.view.ShowFormat
+
+    @ShowFormat.setter
+    def ShowFormat(self, value):
+        self.view.ShowFormat = value
 
     @property
     def ShowFormatChanges(self):
         return self.view.ShowFormatChanges
 
+    @ShowFormatChanges.setter
+    def ShowFormatChanges(self, value):
+        self.view.ShowFormatChanges = value
+
     @property
     def ShowHiddenText(self):
         return self.view.ShowHiddenText
+
+    @ShowHiddenText.setter
+    def ShowHiddenText(self, value):
+        self.view.ShowHiddenText = value
 
     @property
     def ShowHighlight(self):
         return self.view.ShowHighlight
 
+    @ShowHighlight.setter
+    def ShowHighlight(self, value):
+        self.view.ShowHighlight = value
+
     @property
     def ShowHyphens(self):
         return self.view.ShowHyphens
+
+    @ShowHyphens.setter
+    def ShowHyphens(self, value):
+        self.view.ShowHyphens = value
 
     @property
     def ShowInkAnnotations(self):
@@ -22391,9 +24834,17 @@ class View:
     def ShowInsertionsAndDeletions(self):
         return self.view.ShowInsertionsAndDeletions
 
+    @ShowInsertionsAndDeletions.setter
+    def ShowInsertionsAndDeletions(self, value):
+        self.view.ShowInsertionsAndDeletions = value
+
     @property
     def ShowMainTextLayer(self):
         return self.view.ShowMainTextLayer
+
+    @ShowMainTextLayer.setter
+    def ShowMainTextLayer(self, value):
+        self.view.ShowMainTextLayer = value
 
     @property
     def ShowMarkupAreaHighlight(self):
@@ -22407,37 +24858,73 @@ class View:
     def ShowObjectAnchors(self):
         return self.view.ShowObjectAnchors
 
+    @ShowObjectAnchors.setter
+    def ShowObjectAnchors(self, value):
+        self.view.ShowObjectAnchors = value
+
     @property
     def ShowOptionalBreaks(self):
         return self.view.ShowOptionalBreaks
+
+    @ShowOptionalBreaks.setter
+    def ShowOptionalBreaks(self, value):
+        self.view.ShowOptionalBreaks = value
 
     @property
     def ShowOtherAuthors(self):
         return self.view.ShowOtherAuthors
 
+    @ShowOtherAuthors.setter
+    def ShowOtherAuthors(self, value):
+        self.view.ShowOtherAuthors = value
+
     @property
     def ShowParagraphs(self):
         return self.view.ShowParagraphs
+
+    @ShowParagraphs.setter
+    def ShowParagraphs(self, value):
+        self.view.ShowParagraphs = value
 
     @property
     def ShowPicturePlaceHolders(self):
         return self.view.ShowPicturePlaceHolders
 
+    @ShowPicturePlaceHolders.setter
+    def ShowPicturePlaceHolders(self, value):
+        self.view.ShowPicturePlaceHolders = value
+
     @property
     def ShowRevisionsAndComments(self):
         return self.view.ShowRevisionsAndComments
+
+    @ShowRevisionsAndComments.setter
+    def ShowRevisionsAndComments(self, value):
+        self.view.ShowRevisionsAndComments = value
 
     @property
     def ShowSpaces(self):
         return self.view.ShowSpaces
 
+    @ShowSpaces.setter
+    def ShowSpaces(self, value):
+        self.view.ShowSpaces = value
+
     @property
     def ShowTabs(self):
         return self.view.ShowTabs
 
+    @ShowTabs.setter
+    def ShowTabs(self, value):
+        self.view.ShowTabs = value
+
     @property
     def ShowTextBoundaries(self):
         return self.view.ShowTextBoundaries
+
+    @ShowTextBoundaries.setter
+    def ShowTextBoundaries(self, value):
+        self.view.ShowTextBoundaries = value
 
     @property
     def ShowXMLMarkup(self):
@@ -22455,6 +24942,10 @@ class View:
     def TableGridlines(self):
         return self.view.TableGridlines
 
+    @TableGridlines.setter
+    def TableGridlines(self, value):
+        self.view.TableGridlines = value
+
     @property
     def Type(self):
         return WdViewType(self.view.Type)
@@ -22466,6 +24957,10 @@ class View:
     @property
     def WrapToWindow(self):
         return self.view.WrapToWindow
+
+    @WrapToWindow.setter
+    def WrapToWindow(self, value):
+        self.view.WrapToWindow = value
 
     @property
     def Zoom(self):
@@ -22562,6 +25057,10 @@ class WebOptions:
     def AllowPNG(self):
         return self.weboptions.AllowPNG
 
+    @AllowPNG.setter
+    def AllowPNG(self, value):
+        self.weboptions.AllowPNG = value
+
     @property
     def Application(self):
         return Application(self.weboptions.Application)
@@ -22594,9 +25093,17 @@ class WebOptions:
     def OptimizeForBrowser(self):
         return self.weboptions.OptimizeForBrowser
 
+    @OptimizeForBrowser.setter
+    def OptimizeForBrowser(self, value):
+        self.weboptions.OptimizeForBrowser = value
+
     @property
     def OrganizeInFolder(self):
         return self.weboptions.OrganizeInFolder
+
+    @OrganizeInFolder.setter
+    def OrganizeInFolder(self, value):
+        self.weboptions.OrganizeInFolder = value
 
     @property
     def Parent(self):
@@ -22614,9 +25121,17 @@ class WebOptions:
     def RelyOnCSS(self):
         return self.weboptions.RelyOnCSS
 
+    @RelyOnCSS.setter
+    def RelyOnCSS(self, value):
+        self.weboptions.RelyOnCSS = value
+
     @property
     def RelyOnVML(self):
         return self.weboptions.RelyOnVML
+
+    @RelyOnVML.setter
+    def RelyOnVML(self, value):
+        self.weboptions.RelyOnVML = value
 
     @property
     def ScreenSize(self):
@@ -22630,9 +25145,17 @@ class WebOptions:
     def TargetBrowser(self):
         return self.weboptions.TargetBrowser
 
+    @TargetBrowser.setter
+    def TargetBrowser(self, value):
+        self.weboptions.TargetBrowser = value
+
     @property
     def UseLongFileNames(self):
         return self.weboptions.UseLongFileNames
+
+    @UseLongFileNames.setter
+    def UseLongFileNames(self, value):
+        self.weboptions.UseLongFileNames = value
 
     def UseDefaultFolderSuffix(self):
         self.weboptions.UseDefaultFolderSuffix()
@@ -22670,29 +25193,57 @@ class Window:
     def DisplayHorizontalScrollBar(self):
         return self.window.DisplayHorizontalScrollBar
 
+    @DisplayHorizontalScrollBar.setter
+    def DisplayHorizontalScrollBar(self, value):
+        self.window.DisplayHorizontalScrollBar = value
+
     @property
     def DisplayLeftScrollBar(self):
         return self.window.DisplayLeftScrollBar
+
+    @DisplayLeftScrollBar.setter
+    def DisplayLeftScrollBar(self, value):
+        self.window.DisplayLeftScrollBar = value
 
     @property
     def DisplayRightRuler(self):
         return self.window.DisplayRightRuler
 
+    @DisplayRightRuler.setter
+    def DisplayRightRuler(self, value):
+        self.window.DisplayRightRuler = value
+
     @property
     def DisplayRulers(self):
         return self.window.DisplayRulers
+
+    @DisplayRulers.setter
+    def DisplayRulers(self, value):
+        self.window.DisplayRulers = value
 
     @property
     def DisplayScreenTips(self):
         return self.window.DisplayScreenTips
 
+    @DisplayScreenTips.setter
+    def DisplayScreenTips(self, value):
+        self.window.DisplayScreenTips = value
+
     @property
     def DisplayVerticalRuler(self):
         return self.window.DisplayVerticalRuler
 
+    @DisplayVerticalRuler.setter
+    def DisplayVerticalRuler(self, value):
+        self.window.DisplayVerticalRuler = value
+
     @property
     def DisplayVerticalScrollBar(self):
         return self.window.DisplayVerticalScrollBar
+
+    @DisplayVerticalScrollBar.setter
+    def DisplayVerticalScrollBar(self, value):
+        self.window.DisplayVerticalScrollBar = value
 
     @property
     def Document(self):
@@ -22702,9 +25253,17 @@ class Window:
     def DocumentMap(self):
         return self.window.DocumentMap
 
+    @DocumentMap.setter
+    def DocumentMap(self, value):
+        self.window.DocumentMap = value
+
     @property
     def EnvelopeVisible(self):
         return self.window.EnvelopeVisible
+
+    @EnvelopeVisible.setter
+    def EnvelopeVisible(self, value):
+        self.window.EnvelopeVisible = value
 
     @property
     def Height(self):
@@ -22774,6 +25333,10 @@ class Window:
     def Split(self):
         return self.window.Split
 
+    @Split.setter
+    def Split(self, value):
+        self.window.Split = value
+
     @property
     def SplitVertical(self):
         return self.window.SplitVertical
@@ -22829,6 +25392,10 @@ class Window:
     @property
     def Visible(self):
         return self.window.Visible
+
+    @Visible.setter
+    def Visible(self, value):
+        self.window.Visible = value
 
     @property
     def Width(self):
@@ -22966,6 +25533,10 @@ class WrapFormat:
     @property
     def Type(self):
         return WdWrapType(self.wrapformat.Type)
+
+    @Type.setter
+    def Type(self, value):
+        self.wrapformat.Type = value
 
 class XMLMapping:
 
@@ -23284,9 +25855,17 @@ class XMLSchemaReferences:
     def HideValidationErrors(self):
         return self.xmlschemareferences.HideValidationErrors
 
+    @HideValidationErrors.setter
+    def HideValidationErrors(self, value):
+        self.xmlschemareferences.HideValidationErrors = value
+
     @property
     def IgnoreMixedContent(self):
         return self.xmlschemareferences.IgnoreMixedContent
+
+    @IgnoreMixedContent.setter
+    def IgnoreMixedContent(self, value):
+        self.xmlschemareferences.IgnoreMixedContent = value
 
     @property
     def Parent(self):

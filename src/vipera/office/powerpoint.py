@@ -25,6 +25,10 @@ class ActionSetting:
     def AnimateAction(self):
         return self.actionsetting.AnimateAction
 
+    @AnimateAction.setter
+    def AnimateAction(self, value):
+        self.actionsetting.AnimateAction = value
+
     @property
     def Application(self):
         return Application(self.actionsetting.Application)
@@ -48,6 +52,10 @@ class ActionSetting:
     @property
     def ShowAndReturn(self):
         return self.actionsetting.ShowAndReturn
+
+    @ShowAndReturn.setter
+    def ShowAndReturn(self, value):
+        self.actionsetting.ShowAndReturn = value
 
     @property
     def SlideShowName(self):
@@ -99,6 +107,10 @@ class AddIn:
     def AutoLoad(self):
         return self.addin.AutoLoad
 
+    @AutoLoad.setter
+    def AutoLoad(self, value):
+        self.addin.AutoLoad = value
+
     @property
     def FullName(self):
         return self.addin.FullName
@@ -106,6 +118,10 @@ class AddIn:
     @property
     def Loaded(self):
         return self.addin.Loaded
+
+    @Loaded.setter
+    def Loaded(self, value):
+        self.addin.Loaded = value
 
     @property
     def Name(self):
@@ -122,6 +138,10 @@ class AddIn:
     @property
     def Registered(self):
         return self.addin.Registered
+
+    @Registered.setter
+    def Registered(self, value):
+        self.addin.Registered = value
 
 class AddIns:
 
@@ -196,9 +216,17 @@ class AnimationBehavior:
     def Accumulate(self):
         return self.animationbehavior.Accumulate
 
+    @Accumulate.setter
+    def Accumulate(self, value):
+        self.animationbehavior.Accumulate = value
+
     @property
     def Additive(self):
         return self.animationbehavior.Additive
+
+    @Additive.setter
+    def Additive(self, value):
+        self.animationbehavior.Additive = value
 
     @property
     def Application(self):
@@ -247,6 +275,10 @@ class AnimationBehavior:
     @property
     def Type(self):
         return self.animationbehavior.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.animationbehavior.Type = value
 
     def Delete(self):
         self.animationbehavior.Delete()
@@ -303,9 +335,17 @@ class AnimationPoint:
     def Time(self):
         return self.animationpoint.Time
 
+    @Time.setter
+    def Time(self, value):
+        self.animationpoint.Time = value
+
     @property
     def Value(self):
         return self.animationpoint.Value
+
+    @Value.setter
+    def Value(self, value):
+        self.animationpoint.Value = value
 
     def Delete(self):
         self.animationpoint.Delete()
@@ -330,6 +370,10 @@ class AnimationPoints:
     @property
     def Smooth(self):
         return self.animationpoints.Smooth
+
+    @Smooth.setter
+    def Smooth(self, value):
+        self.animationpoints.Smooth = value
 
     def Add(self, *args, Index=None):
         arguments = {"Index": Index}
@@ -374,13 +418,25 @@ class AnimationSettings:
     def Animate(self):
         return self.animationsettings.Animate
 
+    @Animate.setter
+    def Animate(self, value):
+        self.animationsettings.Animate = value
+
     @property
     def AnimateBackground(self):
         return self.animationsettings.AnimateBackground
 
+    @AnimateBackground.setter
+    def AnimateBackground(self, value):
+        self.animationsettings.AnimateBackground = value
+
     @property
     def AnimateTextInReverse(self):
         return self.animationsettings.AnimateTextInReverse
+
+    @AnimateTextInReverse.setter
+    def AnimateTextInReverse(self, value):
+        self.animationsettings.AnimateTextInReverse = value
 
     @property
     def AnimationOrder(self):
@@ -414,6 +470,10 @@ class AnimationSettings:
     def EntryEffect(self):
         return self.animationsettings.EntryEffect
 
+    @EntryEffect.setter
+    def EntryEffect(self, value):
+        self.animationsettings.EntryEffect = value
+
     @property
     def Parent(self):
         return self.animationsettings.Parent
@@ -430,9 +490,17 @@ class AnimationSettings:
     def TextLevelEffect(self):
         return self.animationsettings.TextLevelEffect
 
+    @TextLevelEffect.setter
+    def TextLevelEffect(self, value):
+        self.animationsettings.TextLevelEffect = value
+
     @property
     def TextUnitEffect(self):
         return self.animationsettings.TextUnitEffect
+
+    @TextUnitEffect.setter
+    def TextUnitEffect(self, value):
+        self.animationsettings.TextUnitEffect = value
 
 class Application:
 
@@ -483,6 +551,10 @@ class Application:
     def AutomationSecurity(self):
         return self.application.AutomationSecurity
 
+    @AutomationSecurity.setter
+    def AutomationSecurity(self, value):
+        self.application.AutomationSecurity = value
+
     @property
     def Build(self):
         return self.application.Build
@@ -490,6 +562,10 @@ class Application:
     @property
     def Caption(self):
         return self.application.Caption
+
+    @Caption.setter
+    def Caption(self, value):
+        self.application.Caption = value
 
     @property
     def COMAddIns(self):
@@ -507,6 +583,10 @@ class Application:
     def DisplayAlerts(self):
         return self.application.DisplayAlerts
 
+    @DisplayAlerts.setter
+    def DisplayAlerts(self, value):
+        self.application.DisplayAlerts = value
+
     @property
     def DisplayDocumentInformationPanel(self):
         return self.application.DisplayDocumentInformationPanel
@@ -518,6 +598,10 @@ class Application:
     @property
     def DisplayGridLines(self):
         return self.application.DisplayGridLines
+
+    @DisplayGridLines.setter
+    def DisplayGridLines(self, value):
+        self.application.DisplayGridLines = value
 
     @property
     def FeatureInstall(self):
@@ -609,9 +693,17 @@ class Application:
     def ShowStartupDialog(self):
         return self.application.ShowStartupDialog
 
+    @ShowStartupDialog.setter
+    def ShowStartupDialog(self, value):
+        self.application.ShowStartupDialog = value
+
     @property
     def ShowWindowsInTaskbar(self):
         return self.application.ShowWindowsInTaskbar
+
+    @ShowWindowsInTaskbar.setter
+    def ShowWindowsInTaskbar(self, value):
+        self.application.ShowWindowsInTaskbar = value
 
     @property
     def SlideShowWindows(self):
@@ -701,9 +793,17 @@ class AutoCorrect:
     def DisplayAutoCorrectOptions(self):
         return self.autocorrect.DisplayAutoCorrectOptions
 
+    @DisplayAutoCorrectOptions.setter
+    def DisplayAutoCorrectOptions(self, value):
+        self.autocorrect.DisplayAutoCorrectOptions = value
+
     @property
     def DisplayAutoLayoutOptions(self):
         return self.autocorrect.DisplayAutoLayoutOptions
+
+    @DisplayAutoLayoutOptions.setter
+    def DisplayAutoLayoutOptions(self, value):
+        self.autocorrect.DisplayAutoLayoutOptions = value
 
 class Axes:
 
@@ -744,6 +844,10 @@ class Axis:
     def AxisBetweenCategories(self):
         return self.axis.AxisBetweenCategories
 
+    @AxisBetweenCategories.setter
+    def AxisBetweenCategories(self, value):
+        self.axis.AxisBetweenCategories = value
+
     @property
     def AxisGroup(self):
         return XlAxisGroup(self.axis.AxisGroup)
@@ -763,6 +867,10 @@ class Axis:
     @property
     def BaseUnitIsAuto(self):
         return self.axis.BaseUnitIsAuto
+
+    @BaseUnitIsAuto.setter
+    def BaseUnitIsAuto(self, value):
+        self.axis.BaseUnitIsAuto = value
 
     @property
     def Border(self):
@@ -816,6 +924,10 @@ class Axis:
     def DisplayUnitCustom(self):
         return self.axis.DisplayUnitCustom
 
+    @DisplayUnitCustom.setter
+    def DisplayUnitCustom(self, value):
+        self.axis.DisplayUnitCustom = value
+
     @property
     def DisplayUnitLabel(self):
         return DisplayUnitLabel(self.axis.DisplayUnitLabel)
@@ -828,17 +940,33 @@ class Axis:
     def HasDisplayUnitLabel(self):
         return self.axis.HasDisplayUnitLabel
 
+    @HasDisplayUnitLabel.setter
+    def HasDisplayUnitLabel(self, value):
+        self.axis.HasDisplayUnitLabel = value
+
     @property
     def HasMajorGridlines(self):
         return self.axis.HasMajorGridlines
+
+    @HasMajorGridlines.setter
+    def HasMajorGridlines(self, value):
+        self.axis.HasMajorGridlines = value
 
     @property
     def HasMinorGridlines(self):
         return self.axis.HasMinorGridlines
 
+    @HasMinorGridlines.setter
+    def HasMinorGridlines(self, value):
+        self.axis.HasMinorGridlines = value
+
     @property
     def HasTitle(self):
         return self.axis.HasTitle
+
+    @HasTitle.setter
+    def HasTitle(self, value):
+        self.axis.HasTitle = value
 
     @property
     def Height(self):
@@ -880,6 +1008,10 @@ class Axis:
     def MajorUnitIsAuto(self):
         return self.axis.MajorUnitIsAuto
 
+    @MajorUnitIsAuto.setter
+    def MajorUnitIsAuto(self, value):
+        self.axis.MajorUnitIsAuto = value
+
     @property
     def MajorUnitScale(self):
         return self.axis.MajorUnitScale
@@ -900,6 +1032,10 @@ class Axis:
     def MaximumScaleIsAuto(self):
         return self.axis.MaximumScaleIsAuto
 
+    @MaximumScaleIsAuto.setter
+    def MaximumScaleIsAuto(self, value):
+        self.axis.MaximumScaleIsAuto = value
+
     @property
     def MinimumScale(self):
         return self.axis.MinimumScale
@@ -911,6 +1047,10 @@ class Axis:
     @property
     def MinimumScaleIsAuto(self):
         return self.axis.MinimumScaleIsAuto
+
+    @MinimumScaleIsAuto.setter
+    def MinimumScaleIsAuto(self, value):
+        self.axis.MinimumScaleIsAuto = value
 
     @property
     def MinorGridlines(self):
@@ -936,6 +1076,10 @@ class Axis:
     def MinorUnitIsAuto(self):
         return self.axis.MinorUnitIsAuto
 
+    @MinorUnitIsAuto.setter
+    def MinorUnitIsAuto(self, value):
+        self.axis.MinorUnitIsAuto = value
+
     @property
     def MinorUnitScale(self):
         return self.axis.MinorUnitScale
@@ -952,6 +1096,10 @@ class Axis:
     def ReversePlotOrder(self):
         return self.axis.ReversePlotOrder
 
+    @ReversePlotOrder.setter
+    def ReversePlotOrder(self, value):
+        self.axis.ReversePlotOrder = value
+
     @property
     def ScaleType(self):
         return XlScaleType(self.axis.ScaleType)
@@ -963,6 +1111,10 @@ class Axis:
     @property
     def TickLabelPosition(self):
         return self.axis.TickLabelPosition
+
+    @TickLabelPosition.setter
+    def TickLabelPosition(self, value):
+        self.axis.TickLabelPosition = value
 
     @property
     def TickLabels(self):
@@ -1087,6 +1239,10 @@ class AxisTitle:
     @property
     def IncludeInLayout(self):
         return self.axistitle.IncludeInLayout
+
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.axistitle.IncludeInLayout = value
 
     @property
     def Left(self):
@@ -1281,13 +1437,25 @@ class BulletFormat:
     def Type(self):
         return self.bulletformat.Type
 
+    @Type.setter
+    def Type(self, value):
+        self.bulletformat.Type = value
+
     @property
     def UseTextColor(self):
         return self.bulletformat.UseTextColor
 
+    @UseTextColor.setter
+    def UseTextColor(self, value):
+        self.bulletformat.UseTextColor = value
+
     @property
     def UseTextFont(self):
         return self.bulletformat.UseTextFont
+
+    @UseTextFont.setter
+    def UseTextFont(self, value):
+        self.bulletformat.UseTextFont = value
 
     def Picture(self):
         self.bulletformat.Picture()
@@ -1300,6 +1468,10 @@ class CalloutFormat:
     @property
     def Accent(self):
         return self.calloutformat.Accent
+
+    @Accent.setter
+    def Accent(self, value):
+        self.calloutformat.Accent = value
 
     @property
     def Angle(self):
@@ -1317,6 +1489,10 @@ class CalloutFormat:
     def AutoAttach(self):
         return self.calloutformat.AutoAttach
 
+    @AutoAttach.setter
+    def AutoAttach(self, value):
+        self.calloutformat.AutoAttach = value
+
     @property
     def AutoLength(self):
         return self.calloutformat.AutoLength
@@ -1324,6 +1500,10 @@ class CalloutFormat:
     @property
     def Border(self):
         return self.calloutformat.Border
+
+    @Border.setter
+    def Border(self, value):
+        self.calloutformat.Border = value
 
     @property
     def Creator(self):
@@ -1356,6 +1536,10 @@ class CalloutFormat:
     @property
     def Type(self):
         return self.calloutformat.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.calloutformat.Type = value
 
     def AutomaticLength(self):
         self.calloutformat.AutomaticLength()
@@ -1463,6 +1647,10 @@ class Chart:
     def AutoScaling(self):
         return self.chart.AutoScaling
 
+    @AutoScaling.setter
+    def AutoScaling(self, value):
+        self.chart.AutoScaling = value
+
     @property
     def BackWall(self):
         return Walls(self.chart.BackWall)
@@ -1563,13 +1751,25 @@ class Chart:
     def HasDataTable(self):
         return self.chart.HasDataTable
 
+    @HasDataTable.setter
+    def HasDataTable(self, value):
+        self.chart.HasDataTable = value
+
     @property
     def HasLegend(self):
         return self.chart.HasLegend
 
+    @HasLegend.setter
+    def HasLegend(self, value):
+        self.chart.HasLegend = value
+
     @property
     def HasTitle(self):
         return self.chart.HasTitle
+
+    @HasTitle.setter
+    def HasTitle(self, value):
+        self.chart.HasTitle = value
 
     @property
     def HeightPercent(self):
@@ -1586,6 +1786,10 @@ class Chart:
     @property
     def Name(self):
         return self.chart.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.chart.Name = value
 
     @property
     def Parent(self):
@@ -1615,9 +1819,17 @@ class Chart:
     def PlotVisibleOnly(self):
         return self.chart.PlotVisibleOnly
 
+    @PlotVisibleOnly.setter
+    def PlotVisibleOnly(self, value):
+        self.chart.PlotVisibleOnly = value
+
     @property
     def RightAngleAxes(self):
         return self.chart.RightAngleAxes
+
+    @RightAngleAxes.setter
+    def RightAngleAxes(self, value):
+        self.chart.RightAngleAxes = value
 
     @property
     def Rotation(self):
@@ -1686,6 +1898,10 @@ class Chart:
     @property
     def Title(self):
         return self.chart.Title
+
+    @Title.setter
+    def Title(self, value):
+        self.chart.Title = value
 
     @property
     def Walls(self):
@@ -2012,6 +2228,10 @@ class ChartFont:
     def Bold(self):
         return self.chartfont.Bold
 
+    @Bold.setter
+    def Bold(self, value):
+        self.chartfont.Bold = value
+
     @property
     def Color(self):
         return self.chartfont.Color
@@ -2044,6 +2264,10 @@ class ChartFont:
     def Italic(self):
         return self.chartfont.Italic
 
+    @Italic.setter
+    def Italic(self, value):
+        self.chartfont.Italic = value
+
     @property
     def Name(self):
         return self.chartfont.Name
@@ -2068,9 +2292,17 @@ class ChartFont:
     def StrikeThrough(self):
         return self.chartfont.StrikeThrough
 
+    @StrikeThrough.setter
+    def StrikeThrough(self, value):
+        self.chartfont.StrikeThrough = value
+
     @property
     def Subscript(self):
         return self.chartfont.Subscript
+
+    @Subscript.setter
+    def Subscript(self, value):
+        self.chartfont.Subscript = value
 
     @property
     def Underline(self):
@@ -2142,6 +2374,10 @@ class ChartGroup:
     def AxisGroup(self):
         return XlAxisGroup(self.chartgroup.AxisGroup)
 
+    @AxisGroup.setter
+    def AxisGroup(self, value):
+        self.chartgroup.AxisGroup = value
+
     @property
     def BubbleScale(self):
         return self.chartgroup.BubbleScale
@@ -2182,29 +2418,57 @@ class ChartGroup:
     def GapWidth(self):
         return self.chartgroup.GapWidth
 
+    @GapWidth.setter
+    def GapWidth(self, value):
+        self.chartgroup.GapWidth = value
+
     @property
     def Has3DShading(self):
         return self.chartgroup.Has3DShading
+
+    @Has3DShading.setter
+    def Has3DShading(self, value):
+        self.chartgroup.Has3DShading = value
 
     @property
     def HasDropLines(self):
         return self.chartgroup.HasDropLines
 
+    @HasDropLines.setter
+    def HasDropLines(self, value):
+        self.chartgroup.HasDropLines = value
+
     @property
     def HasHiLoLines(self):
         return self.chartgroup.HasHiLoLines
+
+    @HasHiLoLines.setter
+    def HasHiLoLines(self, value):
+        self.chartgroup.HasHiLoLines = value
 
     @property
     def HasRadarAxisLabels(self):
         return self.chartgroup.HasRadarAxisLabels
 
+    @HasRadarAxisLabels.setter
+    def HasRadarAxisLabels(self, value):
+        self.chartgroup.HasRadarAxisLabels = value
+
     @property
     def HasSeriesLines(self):
         return self.chartgroup.HasSeriesLines
 
+    @HasSeriesLines.setter
+    def HasSeriesLines(self, value):
+        self.chartgroup.HasSeriesLines = value
+
     @property
     def HasUpDownBars(self):
         return self.chartgroup.HasUpDownBars
+
+    @HasUpDownBars.setter
+    def HasUpDownBars(self, value):
+        self.chartgroup.HasUpDownBars = value
 
     @property
     def HiLoLines(self):
@@ -2217,6 +2481,10 @@ class ChartGroup:
     @property
     def Overlap(self):
         return self.chartgroup.Overlap
+
+    @Overlap.setter
+    def Overlap(self, value):
+        self.chartgroup.Overlap = value
 
     @property
     def Parent(self):
@@ -2241,6 +2509,10 @@ class ChartGroup:
     @property
     def ShowNegativeBubbles(self):
         return self.chartgroup.ShowNegativeBubbles
+
+    @ShowNegativeBubbles.setter
+    def ShowNegativeBubbles(self, value):
+        self.chartgroup.ShowNegativeBubbles = value
 
     @property
     def SizeRepresents(self):
@@ -2273,6 +2545,10 @@ class ChartGroup:
     @property
     def VaryByCategories(self):
         return self.chartgroup.VaryByCategories
+
+    @VaryByCategories.setter
+    def VaryByCategories(self, value):
+        self.chartgroup.VaryByCategories = value
 
     def SeriesCollection(self, *args, Index=None):
         arguments = {"Index": Index}
@@ -2387,6 +2663,10 @@ class ChartTitle:
     def IncludeInLayout(self):
         return self.charttitle.IncludeInLayout
 
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.charttitle.IncludeInLayout = value
+
     @property
     def Left(self):
         return self.charttitle.Left
@@ -2486,6 +2766,10 @@ class Coauthoring:
     def FavorServerEditsDuringMerge(self):
         return self.coauthoring.FavorServerEditsDuringMerge
 
+    @FavorServerEditsDuringMerge.setter
+    def FavorServerEditsDuringMerge(self, value):
+        self.coauthoring.FavorServerEditsDuringMerge = value
+
     @property
     def MergeMode(self):
         return self.coauthoring.MergeMode
@@ -2525,6 +2809,10 @@ class ColorEffect:
     @property
     def To(self):
         return self.coloreffect.To
+
+    @To.setter
+    def To(self, value):
+        self.coloreffect.To = value
 
 class ColorFormat:
 
@@ -2578,6 +2866,10 @@ class ColorFormat:
     @property
     def TintAndShade(self):
         return self.colorformat.TintAndShade
+
+    @TintAndShade.setter
+    def TintAndShade(self, value):
+        self.colorformat.TintAndShade = value
 
     @property
     def Type(self):
@@ -2713,9 +3005,17 @@ class CommandEffect:
     def Bookmark(self):
         return self.commandeffect.Bookmark
 
+    @Bookmark.setter
+    def Bookmark(self, value):
+        self.commandeffect.Bookmark = value
+
     @property
     def Command(self):
         return self.commandeffect.Command
+
+    @Command.setter
+    def Command(self, value):
+        self.commandeffect.Command = value
 
     @property
     def Parent(self):
@@ -2724,6 +3024,10 @@ class CommandEffect:
     @property
     def Type(self):
         return self.commandeffect.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.commandeffect.Type = value
 
 class Comment:
 
@@ -2809,6 +3113,10 @@ class ConnectorFormat:
     def BeginConnected(self):
         return self.connectorformat.BeginConnected
 
+    @BeginConnected.setter
+    def BeginConnected(self, value):
+        self.connectorformat.BeginConnected = value
+
     @property
     def BeginConnectedShape(self):
         return Shape(self.connectorformat.BeginConnectedShape)
@@ -2840,6 +3148,10 @@ class ConnectorFormat:
     @property
     def Type(self):
         return self.connectorformat.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.connectorformat.Type = value
 
     def BeginConnect(self, *args, ConnectedShape=None, ConnectionSite=None):
         arguments = {"ConnectedShape": ConnectedShape, "ConnectionSite": ConnectionSite}
@@ -2912,9 +3224,17 @@ class CustomLayout:
     def DisplayMasterShapes(self):
         return self.customlayout.DisplayMasterShapes
 
+    @DisplayMasterShapes.setter
+    def DisplayMasterShapes(self, value):
+        self.customlayout.DisplayMasterShapes = value
+
     @property
     def FollowMasterBackground(self):
         return self.customlayout.FollowMasterBackground
+
+    @FollowMasterBackground.setter
+    def FollowMasterBackground(self, value):
+        self.customlayout.FollowMasterBackground = value
 
     @property
     def HeadersFooters(self):
@@ -2936,9 +3256,17 @@ class CustomLayout:
     def MatchingName(self):
         return self.customlayout.MatchingName
 
+    @MatchingName.setter
+    def MatchingName(self, value):
+        self.customlayout.MatchingName = value
+
     @property
     def Name(self):
         return self.customlayout.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.customlayout.Name = value
 
     @property
     def Parent(self):
@@ -2947,6 +3275,10 @@ class CustomLayout:
     @property
     def Preserved(self):
         return self.customlayout.Preserved
+
+    @Preserved.setter
+    def Preserved(self, value):
+        self.customlayout.Preserved = value
 
     @property
     def Shapes(self):
@@ -3032,6 +3364,10 @@ class DataLabel:
     @property
     def AutoText(self):
         return self.datalabel.AutoText
+
+    @AutoText.setter
+    def AutoText(self, value):
+        self.datalabel.AutoText = value
 
     @property
     def Caption(self):
@@ -3122,6 +3458,10 @@ class DataLabel:
     def NumberFormatLinked(self):
         return self.datalabel.NumberFormatLinked
 
+    @NumberFormatLinked.setter
+    def NumberFormatLinked(self, value):
+        self.datalabel.NumberFormatLinked = value
+
     @property
     def NumberFormatLocal(self):
         return self.datalabel.NumberFormatLocal
@@ -3178,25 +3518,49 @@ class DataLabel:
     def ShowBubbleSize(self):
         return self.datalabel.ShowBubbleSize
 
+    @ShowBubbleSize.setter
+    def ShowBubbleSize(self, value):
+        self.datalabel.ShowBubbleSize = value
+
     @property
     def ShowCategoryName(self):
         return self.datalabel.ShowCategoryName
+
+    @ShowCategoryName.setter
+    def ShowCategoryName(self, value):
+        self.datalabel.ShowCategoryName = value
 
     @property
     def ShowLegendKey(self):
         return self.datalabel.ShowLegendKey
 
+    @ShowLegendKey.setter
+    def ShowLegendKey(self, value):
+        self.datalabel.ShowLegendKey = value
+
     @property
     def ShowPercentage(self):
         return self.datalabel.ShowPercentage
+
+    @ShowPercentage.setter
+    def ShowPercentage(self, value):
+        self.datalabel.ShowPercentage = value
 
     @property
     def ShowSeriesName(self):
         return self.datalabel.ShowSeriesName
 
+    @ShowSeriesName.setter
+    def ShowSeriesName(self, value):
+        self.datalabel.ShowSeriesName = value
+
     @property
     def ShowValue(self):
         return self.datalabel.ShowValue
+
+    @ShowValue.setter
+    def ShowValue(self, value):
+        self.datalabel.ShowValue = value
 
     @property
     def Text(self):
@@ -3248,6 +3612,10 @@ class DataLabels:
     def AutoText(self):
         return self.datalabels.AutoText
 
+    @AutoText.setter
+    def AutoText(self, value):
+        self.datalabels.AutoText = value
+
     @property
     def Count(self):
         return self.datalabels.Count
@@ -3284,6 +3652,10 @@ class DataLabels:
     def NumberFormatLinked(self):
         return self.datalabels.NumberFormatLinked
 
+    @NumberFormatLinked.setter
+    def NumberFormatLinked(self, value):
+        self.datalabels.NumberFormatLinked = value
+
     @property
     def NumberFormatLocal(self):
         return self.datalabels.NumberFormatLocal
@@ -3316,6 +3688,10 @@ class DataLabels:
     def Separator(self):
         return self.datalabels.Separator
 
+    @Separator.setter
+    def Separator(self, value):
+        self.datalabels.Separator = value
+
     @property
     def Shadow(self):
         return self.datalabels.Shadow
@@ -3328,25 +3704,49 @@ class DataLabels:
     def ShowBubbleSize(self):
         return self.datalabels.ShowBubbleSize
 
+    @ShowBubbleSize.setter
+    def ShowBubbleSize(self, value):
+        self.datalabels.ShowBubbleSize = value
+
     @property
     def ShowCategoryName(self):
         return self.datalabels.ShowCategoryName
+
+    @ShowCategoryName.setter
+    def ShowCategoryName(self, value):
+        self.datalabels.ShowCategoryName = value
 
     @property
     def ShowLegendKey(self):
         return self.datalabels.ShowLegendKey
 
+    @ShowLegendKey.setter
+    def ShowLegendKey(self, value):
+        self.datalabels.ShowLegendKey = value
+
     @property
     def ShowPercentage(self):
         return self.datalabels.ShowPercentage
+
+    @ShowPercentage.setter
+    def ShowPercentage(self, value):
+        self.datalabels.ShowPercentage = value
 
     @property
     def ShowSeriesName(self):
         return self.datalabels.ShowSeriesName
 
+    @ShowSeriesName.setter
+    def ShowSeriesName(self, value):
+        self.datalabels.ShowSeriesName = value
+
     @property
     def ShowValue(self):
         return self.datalabels.ShowValue
+
+    @ShowValue.setter
+    def ShowValue(self, value):
+        self.datalabels.ShowValue = value
 
     @property
     def VerticalAlignment(self):
@@ -3396,13 +3796,25 @@ class DataTable:
     def HasBorderHorizontal(self):
         return self.datatable.HasBorderHorizontal
 
+    @HasBorderHorizontal.setter
+    def HasBorderHorizontal(self, value):
+        self.datatable.HasBorderHorizontal = value
+
     @property
     def HasBorderOutline(self):
         return self.datatable.HasBorderOutline
 
+    @HasBorderOutline.setter
+    def HasBorderOutline(self, value):
+        self.datatable.HasBorderOutline = value
+
     @property
     def HasBorderVertical(self):
         return self.datatable.HasBorderVertical
+
+    @HasBorderVertical.setter
+    def HasBorderVertical(self, value):
+        self.datatable.HasBorderVertical = value
 
     @property
     def Parent(self):
@@ -3411,6 +3823,10 @@ class DataTable:
     @property
     def ShowLegendKey(self):
         return self.datatable.ShowLegendKey
+
+    @ShowLegendKey.setter
+    def ShowLegendKey(self, value):
+        self.datatable.ShowLegendKey = value
 
     def Delete(self):
         self.datatable.Delete()
@@ -3446,6 +3862,10 @@ class Design:
     @property
     def Preserved(self):
         return self.design.Preserved
+
+    @Preserved.setter
+    def Preserved(self, value):
+        self.design.Preserved = value
 
     @property
     def SlideMaster(self):
@@ -3672,6 +4092,10 @@ class DocumentWindow:
     @property
     def BlackAndWhite(self):
         return self.documentwindow.BlackAndWhite
+
+    @BlackAndWhite.setter
+    def BlackAndWhite(self, value):
+        self.documentwindow.BlackAndWhite = value
 
     @property
     def Caption(self):
@@ -3938,9 +4362,17 @@ class Effect:
     def EffectType(self):
         return self.effect.EffectType
 
+    @EffectType.setter
+    def EffectType(self, value):
+        self.effect.EffectType = value
+
     @property
     def Exit(self):
         return self.effect.Exit
+
+    @Exit.setter
+    def Exit(self, value):
+        self.effect.Exit = value
 
     @property
     def Index(self):
@@ -4017,6 +4449,10 @@ class EffectInformation:
     def AnimateTextInReverse(self):
         return self.effectinformation.AnimateTextInReverse
 
+    @AnimateTextInReverse.setter
+    def AnimateTextInReverse(self, value):
+        self.effectinformation.AnimateTextInReverse = value
+
     @property
     def Application(self):
         return Application(self.effectinformation.Application)
@@ -4070,6 +4506,10 @@ class EffectParameters:
     def Direction(self):
         return self.effectparameters.Direction
 
+    @Direction.setter
+    def Direction(self, value):
+        self.effectparameters.Direction = value
+
     @property
     def FontName(self):
         return self.effectparameters.FontName
@@ -4085,6 +4525,10 @@ class EffectParameters:
     @property
     def Relative(self):
         return self.effectparameters.Relative
+
+    @Relative.setter
+    def Relative(self, value):
+        self.effectparameters.Relative = value
 
     @property
     def Size(self):
@@ -4459,13 +4903,25 @@ class FilterEffect:
     def Reveal(self):
         return self.filtereffect.Reveal
 
+    @Reveal.setter
+    def Reveal(self, value):
+        self.filtereffect.Reveal = value
+
     @property
     def Subtype(self):
         return self.filtereffect.Subtype
 
+    @Subtype.setter
+    def Subtype(self, value):
+        self.filtereffect.Subtype = value
+
     @property
     def Type(self):
         return self.filtereffect.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.filtereffect.Type = value
 
 class Floor:
 
@@ -4546,6 +5002,10 @@ class Font:
     def Bold(self):
         return self.font.Bold
 
+    @Bold.setter
+    def Bold(self, value):
+        self.font.Bold = value
+
     @property
     def Color(self):
         return Font(self.font.Color)
@@ -4565,6 +5025,10 @@ class Font:
     @property
     def Emboss(self):
         return self.font.Emboss
+
+    @Emboss.setter
+    def Emboss(self, value):
+        self.font.Emboss = value
 
     @property
     def Name(self):
@@ -4614,6 +5078,10 @@ class Font:
     def Shadow(self):
         return self.font.Shadow
 
+    @Shadow.setter
+    def Shadow(self, value):
+        self.font.Shadow = value
+
     @property
     def Size(self):
         return self.font.Size
@@ -4626,13 +5094,25 @@ class Font:
     def Subscript(self):
         return self.font.Subscript
 
+    @Subscript.setter
+    def Subscript(self, value):
+        self.font.Subscript = value
+
     @property
     def Superscript(self):
         return self.font.Superscript
 
+    @Superscript.setter
+    def Superscript(self, value):
+        self.font.Superscript = value
+
     @property
     def Underline(self):
         return self.font.Underline
+
+    @Underline.setter
+    def Underline(self, value):
+        self.font.Underline = value
 
 class Fonts:
 
@@ -4784,6 +5264,10 @@ class HeaderFooter:
     def UseFormat(self):
         return self.headerfooter.UseFormat
 
+    @UseFormat.setter
+    def UseFormat(self, value):
+        self.headerfooter.UseFormat = value
+
     @property
     def Visible(self):
         return self.headerfooter.Visible
@@ -4808,6 +5292,10 @@ class HeadersFooters:
     @property
     def DisplayOnTitleSlide(self):
         return self.headersfooters.DisplayOnTitleSlide
+
+    @DisplayOnTitleSlide.setter
+    def DisplayOnTitleSlide(self, value):
+        self.headersfooters.DisplayOnTitleSlide = value
 
     @property
     def Footer(self):
@@ -4904,6 +5392,10 @@ class Hyperlink:
     def ShowAndReturn(self):
         return self.hyperlink.ShowAndReturn
 
+    @ShowAndReturn.setter
+    def ShowAndReturn(self, value):
+        self.hyperlink.ShowAndReturn = value
+
     @property
     def SubAddress(self):
         return self.hyperlink.SubAddress
@@ -4996,6 +5488,10 @@ class Interior:
     def InvertIfNegative(self):
         return self.interior.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.interior.InvertIfNegative = value
+
     @property
     def Parent(self):
         return self.interior.Parent
@@ -5083,6 +5579,10 @@ class Legend:
     @property
     def IncludeInLayout(self):
         return self.legend.IncludeInLayout
+
+    @IncludeInLayout.setter
+    def IncludeInLayout(self, value):
+        self.legend.IncludeInLayout = value
 
     @property
     def Left(self):
@@ -5249,6 +5749,10 @@ class LegendKey:
     def InvertIfNegative(self):
         return self.legendkey.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.legendkey.InvertIfNegative = value
+
     @property
     def Left(self):
         return self.legendkey.Left
@@ -5256,6 +5760,10 @@ class LegendKey:
     @property
     def MarkerBackgroundColor(self):
         return self.legendkey.MarkerBackgroundColor
+
+    @MarkerBackgroundColor.setter
+    def MarkerBackgroundColor(self, value):
+        self.legendkey.MarkerBackgroundColor = value
 
     @property
     def MarkerBackgroundColorIndex(self):
@@ -5268,6 +5776,10 @@ class LegendKey:
     @property
     def MarkerForegroundColor(self):
         return self.legendkey.MarkerForegroundColor
+
+    @MarkerForegroundColor.setter
+    def MarkerForegroundColor(self, value):
+        self.legendkey.MarkerForegroundColor = value
 
     @property
     def MarkerForegroundColorIndex(self):
@@ -5324,6 +5836,10 @@ class LegendKey:
     @property
     def Smooth(self):
         return self.legendkey.Smooth
+
+    @Smooth.setter
+    def Smooth(self, value):
+        self.legendkey.Smooth = value
 
     @property
     def Top(self):
@@ -5428,6 +5944,10 @@ class LineFormat:
     def InsetPen(self):
         return self.lineformat.InsetPen
 
+    @InsetPen.setter
+    def InsetPen(self, value):
+        self.lineformat.InsetPen = value
+
     @property
     def Parent(self):
         return self.lineformat.Parent
@@ -5435,6 +5955,10 @@ class LineFormat:
     @property
     def Pattern(self):
         return self.lineformat.Pattern
+
+    @Pattern.setter
+    def Pattern(self, value):
+        self.lineformat.Pattern = value
 
     @property
     def Style(self):
@@ -5519,6 +6043,10 @@ class Master:
     @property
     def BackgroundStyle(self):
         return self.master.BackgroundStyle
+
+    @BackgroundStyle.setter
+    def BackgroundStyle(self, value):
+        self.master.BackgroundStyle = value
 
     @property
     def ColorScheme(self):
@@ -5663,13 +6191,25 @@ class MediaFormat:
     def EndPoint(self):
         return self.mediaformat.EndPoint
 
+    @EndPoint.setter
+    def EndPoint(self, value):
+        self.mediaformat.EndPoint = value
+
     @property
     def FadeInDuration(self):
         return self.mediaformat.FadeInDuration
 
+    @FadeInDuration.setter
+    def FadeInDuration(self, value):
+        self.mediaformat.FadeInDuration = value
+
     @property
     def FadeOutDuration(self):
         return self.mediaformat.FadeOutDuration
+
+    @FadeOutDuration.setter
+    def FadeOutDuration(self, value):
+        self.mediaformat.FadeOutDuration = value
 
     @property
     def IsEmbedded(self):
@@ -5691,6 +6231,10 @@ class MediaFormat:
     def Muted(self):
         return self.mediaformat.Muted
 
+    @Muted.setter
+    def Muted(self, value):
+        self.mediaformat.Muted = value
+
     @property
     def Parent(self):
         return self.mediaformat.Parent
@@ -5711,6 +6255,10 @@ class MediaFormat:
     def StartPoint(self):
         return self.mediaformat.StartPoint
 
+    @StartPoint.setter
+    def StartPoint(self, value):
+        self.mediaformat.StartPoint = value
+
     @property
     def VideoCompressionType(self):
         return self.mediaformat.VideoCompressionType
@@ -5722,6 +6270,10 @@ class MediaFormat:
     @property
     def Volume(self):
         return self.mediaformat.Volume
+
+    @Volume.setter
+    def Volume(self, value):
+        self.mediaformat.Volume = value
 
     def Resample(self, *args, Trim=None, SampleHeight=None, SampleWidth=None, VideoFrameRate=None, AudioSamplingRate=None, VideoBitRate=None):
         arguments = {"Trim": Trim, "SampleHeight": SampleHeight, "SampleWidth": SampleWidth, "VideoFrameRate": VideoFrameRate, "AudioSamplingRate": AudioSamplingRate, "VideoBitRate": VideoBitRate}
@@ -5756,17 +6308,33 @@ class Model3DFormat:
     def AutoFit(self):
         return self.model3dformat.AutoFit
 
+    @AutoFit.setter
+    def AutoFit(self, value):
+        self.model3dformat.AutoFit = value
+
     @property
     def CameraPositionX(self):
         return self.model3dformat.CameraPositionX
+
+    @CameraPositionX.setter
+    def CameraPositionX(self, value):
+        self.model3dformat.CameraPositionX = value
 
     @property
     def CameraPositionY(self):
         return self.model3dformat.CameraPositionY
 
+    @CameraPositionY.setter
+    def CameraPositionY(self, value):
+        self.model3dformat.CameraPositionY = value
+
     @property
     def CameraPositionZ(self):
         return self.model3dformat.CameraPositionZ
+
+    @CameraPositionZ.setter
+    def CameraPositionZ(self, value):
+        self.model3dformat.CameraPositionZ = value
 
     @property
     def Creator(self):
@@ -5776,17 +6344,33 @@ class Model3DFormat:
     def FieldOfView(self):
         return self.model3dformat.FieldOfView
 
+    @FieldOfView.setter
+    def FieldOfView(self, value):
+        self.model3dformat.FieldOfView = value
+
     @property
     def LookAtPointX(self):
         return self.model3dformat.LookAtPointX
+
+    @LookAtPointX.setter
+    def LookAtPointX(self, value):
+        self.model3dformat.LookAtPointX = value
 
     @property
     def LookAtPointY(self):
         return self.model3dformat.LookAtPointY
 
+    @LookAtPointY.setter
+    def LookAtPointY(self, value):
+        self.model3dformat.LookAtPointY = value
+
     @property
     def LookAtPointZ(self):
         return self.model3dformat.LookAtPointZ
+
+    @LookAtPointZ.setter
+    def LookAtPointZ(self, value):
+        self.model3dformat.LookAtPointZ = value
 
     @property
     def Parent(self):
@@ -5796,13 +6380,25 @@ class Model3DFormat:
     def RotationX(self):
         return self.model3dformat.RotationX
 
+    @RotationX.setter
+    def RotationX(self, value):
+        self.model3dformat.RotationX = value
+
     @property
     def RotationY(self):
         return self.model3dformat.RotationY
 
+    @RotationY.setter
+    def RotationY(self, value):
+        self.model3dformat.RotationY = value
+
     @property
     def RotationZ(self):
         return self.model3dformat.RotationZ
+
+    @RotationZ.setter
+    def RotationZ(self, value):
+        self.model3dformat.RotationZ = value
 
     def IncrementRotationX(self, *args, Increment=None):
         arguments = {"Increment": Increment}
@@ -5837,13 +6433,25 @@ class MotionEffect:
     def ByX(self):
         return self.motioneffect.ByX
 
+    @ByX.setter
+    def ByX(self, value):
+        self.motioneffect.ByX = value
+
     @property
     def ByY(self):
         return self.motioneffect.ByY
 
+    @ByY.setter
+    def ByY(self, value):
+        self.motioneffect.ByY = value
+
     @property
     def FromX(self):
         return self.motioneffect.FromX
+
+    @FromX.setter
+    def FromX(self, value):
+        self.motioneffect.FromX = value
 
     @property
     def FromY(self):
@@ -5861,9 +6469,17 @@ class MotionEffect:
     def Path(self):
         return self.motioneffect.Path
 
+    @Path.setter
+    def Path(self, value):
+        self.motioneffect.Path = value
+
     @property
     def ToX(self):
         return self.motioneffect.ToX
+
+    @ToX.setter
+    def ToX(self, value):
+        self.motioneffect.ToX = value
 
     @property
     def ToY(self):
@@ -6002,6 +6618,10 @@ class Options:
     @property
     def DisplayPasteOptions(self):
         return self.options.DisplayPasteOptions
+
+    @DisplayPasteOptions.setter
+    def DisplayPasteOptions(self, value):
+        self.options.DisplayPasteOptions = value
 
     @property
     def ShowCoauthoringMergeChanges(self):
@@ -6166,13 +6786,25 @@ class ParagraphFormat:
     def LineRuleAfter(self):
         return self.paragraphformat.LineRuleAfter
 
+    @LineRuleAfter.setter
+    def LineRuleAfter(self, value):
+        self.paragraphformat.LineRuleAfter = value
+
     @property
     def LineRuleBefore(self):
         return self.paragraphformat.LineRuleBefore
 
+    @LineRuleBefore.setter
+    def LineRuleBefore(self, value):
+        self.paragraphformat.LineRuleBefore = value
+
     @property
     def LineRuleWithin(self):
         return self.paragraphformat.LineRuleWithin
+
+    @LineRuleWithin.setter
+    def LineRuleWithin(self, value):
+        self.paragraphformat.LineRuleWithin = value
 
     @property
     def Parent(self):
@@ -6213,6 +6845,10 @@ class ParagraphFormat:
     @property
     def WordWrap(self):
         return self.paragraphformat.WordWrap
+
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.paragraphformat.WordWrap = value
 
 class PictureFormat:
 
@@ -6307,6 +6943,10 @@ class PictureFormat:
     def TransparentBackground(self):
         return self.pictureformat.TransparentBackground
 
+    @TransparentBackground.setter
+    def TransparentBackground(self, value):
+        self.pictureformat.TransparentBackground = value
+
     def IncrementBrightness(self, *args, Increment=None):
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
@@ -6389,6 +7029,10 @@ class Player:
     def CurrentPosition(self):
         return self.player.CurrentPosition
 
+    @CurrentPosition.setter
+    def CurrentPosition(self, value):
+        self.player.CurrentPosition = value
+
     @property
     def Parent(self):
         return self.player.Parent
@@ -6430,9 +7074,17 @@ class PlaySettings:
     def HideWhileNotPlaying(self):
         return self.playsettings.HideWhileNotPlaying
 
+    @HideWhileNotPlaying.setter
+    def HideWhileNotPlaying(self, value):
+        self.playsettings.HideWhileNotPlaying = value
+
     @property
     def LoopUntilStopped(self):
         return self.playsettings.LoopUntilStopped
+
+    @LoopUntilStopped.setter
+    def LoopUntilStopped(self, value):
+        self.playsettings.LoopUntilStopped = value
 
     @property
     def Parent(self):
@@ -6442,13 +7094,25 @@ class PlaySettings:
     def PauseAnimation(self):
         return self.playsettings.PauseAnimation
 
+    @PauseAnimation.setter
+    def PauseAnimation(self, value):
+        self.playsettings.PauseAnimation = value
+
     @property
     def PlayOnEntry(self):
         return self.playsettings.PlayOnEntry
 
+    @PlayOnEntry.setter
+    def PlayOnEntry(self, value):
+        self.playsettings.PlayOnEntry = value
+
     @property
     def RewindMovie(self):
         return self.playsettings.RewindMovie
+
+    @RewindMovie.setter
+    def RewindMovie(self, value):
+        self.playsettings.RewindMovie = value
 
     @property
     def StopAfterSlides(self):
@@ -6574,13 +7238,25 @@ class Point:
     def ApplyPictToEnd(self):
         return self.point.ApplyPictToEnd
 
+    @ApplyPictToEnd.setter
+    def ApplyPictToEnd(self, value):
+        self.point.ApplyPictToEnd = value
+
     @property
     def ApplyPictToFront(self):
         return self.point.ApplyPictToFront
 
+    @ApplyPictToFront.setter
+    def ApplyPictToFront(self, value):
+        self.point.ApplyPictToFront = value
+
     @property
     def ApplyPictToSides(self):
         return self.point.ApplyPictToSides
+
+    @ApplyPictToSides.setter
+    def ApplyPictToSides(self, value):
+        self.point.ApplyPictToSides = value
 
     @property
     def Creator(self):
@@ -6606,9 +7282,17 @@ class Point:
     def Has3DEffect(self):
         return self.point.Has3DEffect
 
+    @Has3DEffect.setter
+    def Has3DEffect(self, value):
+        self.point.Has3DEffect = value
+
     @property
     def HasDataLabel(self):
         return self.point.HasDataLabel
+
+    @HasDataLabel.setter
+    def HasDataLabel(self, value):
+        self.point.HasDataLabel = value
 
     @property
     def Height(self):
@@ -6618,6 +7302,10 @@ class Point:
     def InvertIfNegative(self):
         return self.point.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.point.InvertIfNegative = value
+
     @property
     def Left(self):
         return self.point.Left
@@ -6625,6 +7313,10 @@ class Point:
     @property
     def MarkerBackgroundColor(self):
         return self.point.MarkerBackgroundColor
+
+    @MarkerBackgroundColor.setter
+    def MarkerBackgroundColor(self, value):
+        self.point.MarkerBackgroundColor = value
 
     @property
     def MarkerBackgroundColorIndex(self):
@@ -6637,6 +7329,10 @@ class Point:
     @property
     def MarkerForegroundColor(self):
         return self.point.MarkerForegroundColor
+
+    @MarkerForegroundColor.setter
+    def MarkerForegroundColor(self, value):
+        self.point.MarkerForegroundColor = value
 
     @property
     def MarkerForegroundColorIndex(self):
@@ -6689,6 +7385,10 @@ class Point:
     @property
     def SecondaryPlot(self):
         return self.point.SecondaryPlot
+
+    @SecondaryPlot.setter
+    def SecondaryPlot(self, value):
+        self.point.SecondaryPlot = value
 
     @property
     def Shadow(self):
@@ -6773,6 +7473,10 @@ class Presentation:
     def AutoSaveOn(self):
         return self.presentation.AutoSaveOn
 
+    @AutoSaveOn.setter
+    def AutoSaveOn(self, value):
+        self.presentation.AutoSaveOn = value
+
     @property
     def Broadcast(self):
         return Broadcast(self.presentation.Broadcast)
@@ -6837,6 +7541,10 @@ class Presentation:
     def DisplayComments(self):
         return self.presentation.DisplayComments
 
+    @DisplayComments.setter
+    def DisplayComments(self, value):
+        self.presentation.DisplayComments = value
+
     @property
     def DocumentInspectors(self):
         return self.presentation.DocumentInspectors
@@ -6849,9 +7557,17 @@ class Presentation:
     def EncryptionProvider(self):
         return self.presentation.EncryptionProvider
 
+    @EncryptionProvider.setter
+    def EncryptionProvider(self, value):
+        self.presentation.EncryptionProvider = value
+
     @property
     def EnvelopeVisible(self):
         return self.presentation.EnvelopeVisible
+
+    @EnvelopeVisible.setter
+    def EnvelopeVisible(self, value):
+        self.presentation.EnvelopeVisible = value
 
     @property
     def ExtraColors(self):
@@ -6877,6 +7593,10 @@ class Presentation:
     def Final(self):
         return self.presentation.Final
 
+    @Final.setter
+    def Final(self, value):
+        self.presentation.Final = value
+
     @property
     def Fonts(self):
         return Fonts(self.presentation.Fonts)
@@ -6888,6 +7608,10 @@ class Presentation:
     @property
     def GridDistance(self):
         return self.presentation.GridDistance
+
+    @GridDistance.setter
+    def GridDistance(self, value):
+        self.presentation.GridDistance = value
 
     @property
     def HandoutMaster(self):
@@ -7001,6 +7725,10 @@ class Presentation:
     def RemovePersonalInformation(self):
         return self.presentation.RemovePersonalInformation
 
+    @RemovePersonalInformation.setter
+    def RemovePersonalInformation(self, value):
+        self.presentation.RemovePersonalInformation = value
+
     @property
     def Research(self):
         return Research(self.presentation.Research)
@@ -7008,6 +7736,10 @@ class Presentation:
     @property
     def Saved(self):
         return self.presentation.Saved
+
+    @Saved.setter
+    def Saved(self, value):
+        self.presentation.Saved = value
 
     @property
     def SectionProperties(self):
@@ -7049,6 +7781,10 @@ class Presentation:
     def SnapToGrid(self):
         return self.presentation.SnapToGrid
 
+    @SnapToGrid.setter
+    def SnapToGrid(self, value):
+        self.presentation.SnapToGrid = value
+
     @property
     def Sync(self):
         return self.presentation.Sync
@@ -7080,6 +7816,10 @@ class Presentation:
     @property
     def WritePassword(self):
         return self.presentation.WritePassword
+
+    @WritePassword.setter
+    def WritePassword(self, value):
+        self.presentation.WritePassword = value
 
     def AcceptAll(self):
         return self.presentation.AcceptAll()
@@ -7280,13 +8020,25 @@ class PrintOptions:
     def Collate(self):
         return self.printoptions.Collate
 
+    @Collate.setter
+    def Collate(self, value):
+        self.printoptions.Collate = value
+
     @property
     def FitToPage(self):
         return self.printoptions.FitToPage
 
+    @FitToPage.setter
+    def FitToPage(self, value):
+        self.printoptions.FitToPage = value
+
     @property
     def FrameSlides(self):
         return self.printoptions.FrameSlides
+
+    @FrameSlides.setter
+    def FrameSlides(self, value):
+        self.printoptions.FrameSlides = value
 
     @property
     def HandoutOrder(self):
@@ -7299,6 +8051,10 @@ class PrintOptions:
     @property
     def HighQuality(self):
         return self.printoptions.HighQuality
+
+    @HighQuality.setter
+    def HighQuality(self, value):
+        self.printoptions.HighQuality = value
 
     @property
     def NumberOfCopies(self):
@@ -7332,17 +8088,33 @@ class PrintOptions:
     def PrintComments(self):
         return self.printoptions.PrintComments
 
+    @PrintComments.setter
+    def PrintComments(self, value):
+        self.printoptions.PrintComments = value
+
     @property
     def PrintFontsAsGraphics(self):
         return self.printoptions.PrintFontsAsGraphics
+
+    @PrintFontsAsGraphics.setter
+    def PrintFontsAsGraphics(self, value):
+        self.printoptions.PrintFontsAsGraphics = value
 
     @property
     def PrintHiddenSlides(self):
         return self.printoptions.PrintHiddenSlides
 
+    @PrintHiddenSlides.setter
+    def PrintHiddenSlides(self, value):
+        self.printoptions.PrintHiddenSlides = value
+
     @property
     def PrintInBackground(self):
         return self.printoptions.PrintInBackground
+
+    @PrintInBackground.setter
+    def PrintInBackground(self, value):
+        self.printoptions.PrintInBackground = value
 
     @property
     def Ranges(self):
@@ -7359,6 +8131,10 @@ class PrintOptions:
     @property
     def sectionIndex(self):
         return PrintOptions(self.printoptions.sectionIndex)
+
+    @sectionIndex.setter
+    def sectionIndex(self, value):
+        self.printoptions.sectionIndex = value
 
     @property
     def SlideShowName(self):
@@ -7438,6 +8214,10 @@ class PropertyEffect:
     def From(self):
         return self.propertyeffect.From
 
+    @From.setter
+    def From(self, value):
+        self.propertyeffect.From = value
+
     @property
     def Parent(self):
         return self.propertyeffect.Parent
@@ -7450,9 +8230,17 @@ class PropertyEffect:
     def Property(self):
         return self.propertyeffect.Property
 
+    @Property.setter
+    def Property(self, value):
+        self.propertyeffect.Property = value
+
     @property
     def To(self):
         return self.propertyeffect.To
+
+    @To.setter
+    def To(self, value):
+        self.propertyeffect.To = value
 
 class ProtectedViewWindow:
 
@@ -7630,6 +8418,10 @@ class PublishObject:
     def SpeakerNotes(self):
         return self.publishobject.SpeakerNotes
 
+    @SpeakerNotes.setter
+    def SpeakerNotes(self, value):
+        self.publishobject.SpeakerNotes = value
+
     def Publish(self):
         self.publishobject.Publish()
 
@@ -7750,9 +8542,17 @@ class RotationEffect:
     def By(self):
         return self.rotationeffect.By
 
+    @By.setter
+    def By(self, value):
+        self.rotationeffect.By = value
+
     @property
     def From(self):
         return self.rotationeffect.From
+
+    @From.setter
+    def From(self, value):
+        self.rotationeffect.From = value
 
     @property
     def Parent(self):
@@ -7761,6 +8561,10 @@ class RotationEffect:
     @property
     def To(self):
         return self.rotationeffect.To
+
+    @To.setter
+    def To(self, value):
+        self.rotationeffect.To = value
 
 class Row:
 
@@ -7912,13 +8716,25 @@ class ScaleEffect:
     def ByX(self):
         return self.scaleeffect.ByX
 
+    @ByX.setter
+    def ByX(self, value):
+        self.scaleeffect.ByX = value
+
     @property
     def ByY(self):
         return self.scaleeffect.ByY
 
+    @ByY.setter
+    def ByY(self, value):
+        self.scaleeffect.ByY = value
+
     @property
     def FromX(self):
         return self.scaleeffect.FromX
+
+    @FromX.setter
+    def FromX(self, value):
+        self.scaleeffect.FromX = value
 
     @property
     def FromY(self):
@@ -7935,6 +8751,10 @@ class ScaleEffect:
     @property
     def ToX(self):
         return self.scaleeffect.ToX
+
+    @ToX.setter
+    def ToX(self, value):
+        self.scaleeffect.ToX = value
 
     @property
     def ToY(self):
@@ -8171,17 +8991,33 @@ class Series:
     def ApplyPictToEnd(self):
         return self.series.ApplyPictToEnd
 
+    @ApplyPictToEnd.setter
+    def ApplyPictToEnd(self, value):
+        self.series.ApplyPictToEnd = value
+
     @property
     def ApplyPictToFront(self):
         return self.series.ApplyPictToFront
+
+    @ApplyPictToFront.setter
+    def ApplyPictToFront(self, value):
+        self.series.ApplyPictToFront = value
 
     @property
     def ApplyPictToSides(self):
         return self.series.ApplyPictToSides
 
+    @ApplyPictToSides.setter
+    def ApplyPictToSides(self, value):
+        self.series.ApplyPictToSides = value
+
     @property
     def AxisGroup(self):
         return XlAxisGroup(self.series.AxisGroup)
+
+    @AxisGroup.setter
+    def AxisGroup(self, value):
+        self.series.AxisGroup = value
 
     @property
     def BarShape(self):
@@ -8263,17 +9099,33 @@ class Series:
     def Has3DEffect(self):
         return self.series.Has3DEffect
 
+    @Has3DEffect.setter
+    def Has3DEffect(self, value):
+        self.series.Has3DEffect = value
+
     @property
     def HasDataLabels(self):
         return self.series.HasDataLabels
+
+    @HasDataLabels.setter
+    def HasDataLabels(self, value):
+        self.series.HasDataLabels = value
 
     @property
     def HasErrorBars(self):
         return self.series.HasErrorBars
 
+    @HasErrorBars.setter
+    def HasErrorBars(self, value):
+        self.series.HasErrorBars = value
+
     @property
     def HasLeaderLines(self):
         return self.series.HasLeaderLines
+
+    @HasLeaderLines.setter
+    def HasLeaderLines(self, value):
+        self.series.HasLeaderLines = value
 
     @property
     def InvertColor(self):
@@ -8295,6 +9147,10 @@ class Series:
     def InvertIfNegative(self):
         return self.series.InvertIfNegative
 
+    @InvertIfNegative.setter
+    def InvertIfNegative(self, value):
+        self.series.InvertIfNegative = value
+
     @property
     def LeaderLines(self):
         return LeaderLines(self.series.LeaderLines)
@@ -8302,6 +9158,10 @@ class Series:
     @property
     def MarkerBackgroundColor(self):
         return self.series.MarkerBackgroundColor
+
+    @MarkerBackgroundColor.setter
+    def MarkerBackgroundColor(self, value):
+        self.series.MarkerBackgroundColor = value
 
     @property
     def MarkerBackgroundColorIndex(self):
@@ -8314,6 +9174,10 @@ class Series:
     @property
     def MarkerForegroundColor(self):
         return self.series.MarkerForegroundColor
+
+    @MarkerForegroundColor.setter
+    def MarkerForegroundColor(self, value):
+        self.series.MarkerForegroundColor = value
 
     @property
     def MarkerForegroundColorIndex(self):
@@ -8390,6 +9254,10 @@ class Series:
     @property
     def Smooth(self):
         return self.series.Smooth
+
+    @Smooth.setter
+    def Smooth(self, value):
+        self.series.Smooth = value
 
     @property
     def Type(self):
@@ -8546,9 +9414,17 @@ class SetEffect:
     def Property(self):
         return self.seteffect.Property
 
+    @Property.setter
+    def Property(self, value):
+        self.seteffect.Property = value
+
     @property
     def To(self):
         return self.seteffect.To
+
+    @To.setter
+    def To(self, value):
+        self.seteffect.To = value
 
 class ShadowFormat:
 
@@ -8582,6 +9458,10 @@ class ShadowFormat:
     @property
     def Obscured(self):
         return self.shadowformat.Obscured
+
+    @Obscured.setter
+    def Obscured(self, value):
+        self.shadowformat.Obscured = value
 
     @property
     def OffsetX(self):
@@ -8638,6 +9518,10 @@ class ShadowFormat:
     @property
     def Type(self):
         return self.shadowformat.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.shadowformat.Type = value
 
     @property
     def Visible(self):
@@ -8698,6 +9582,10 @@ class Shape:
     def BackgroundStyle(self):
         return self.shape.BackgroundStyle
 
+    @BackgroundStyle.setter
+    def BackgroundStyle(self, value):
+        self.shape.BackgroundStyle = value
+
     @property
     def BlackWhiteMode(self):
         return self.shape.BlackWhiteMode
@@ -8741,6 +9629,10 @@ class Shape:
     @property
     def Decorative(self):
         return self.shape.Decorative
+
+    @Decorative.setter
+    def Decorative(self, value):
+        self.shape.Decorative = value
 
     @property
     def Fill(self):
@@ -8814,6 +9706,10 @@ class Shape:
     def LockAspectRatio(self):
         return self.shape.LockAspectRatio
 
+    @LockAspectRatio.setter
+    def LockAspectRatio(self, value):
+        self.shape.LockAspectRatio = value
+
     @property
     def MediaFormat(self):
         return self.shape.MediaFormat
@@ -8829,6 +9725,10 @@ class Shape:
     @property
     def Name(self):
         return self.shape.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.shape.Name = value
 
     @property
     def Nodes(self):
@@ -8873,6 +9773,10 @@ class Shape:
     @property
     def ShapeStyle(self):
         return self.shape.ShapeStyle
+
+    @ShapeStyle.setter
+    def ShapeStyle(self, value):
+        self.shape.ShapeStyle = value
 
     @property
     def SmartArt(self):
@@ -9155,6 +10059,10 @@ class ShapeRange:
     def BackgroundStyle(self):
         return self.shaperange.BackgroundStyle
 
+    @BackgroundStyle.setter
+    def BackgroundStyle(self, value):
+        self.shaperange.BackgroundStyle = value
+
     @property
     def BlackWhiteMode(self):
         return self.shaperange.BlackWhiteMode
@@ -9202,6 +10110,10 @@ class ShapeRange:
     @property
     def Decorative(self):
         return self.shaperange.Decorative
+
+    @Decorative.setter
+    def Decorative(self, value):
+        self.shaperange.Decorative = value
 
     @property
     def Fill(self):
@@ -9275,6 +10187,10 @@ class ShapeRange:
     def LockAspectRatio(self):
         return self.shaperange.LockAspectRatio
 
+    @LockAspectRatio.setter
+    def LockAspectRatio(self, value):
+        self.shaperange.LockAspectRatio = value
+
     @property
     def MediaFormat(self):
         return MediaFormat(self.shaperange.MediaFormat)
@@ -9290,6 +10206,10 @@ class ShapeRange:
     @property
     def Name(self):
         return self.shaperange.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.shaperange.Name = value
 
     @property
     def Nodes(self):
@@ -9685,6 +10605,10 @@ class Slide:
     def BackgroundStyle(self):
         return self.slide.BackgroundStyle
 
+    @BackgroundStyle.setter
+    def BackgroundStyle(self, value):
+        self.slide.BackgroundStyle = value
+
     @property
     def ColorScheme(self):
         return ColorScheme(self.slide.ColorScheme)
@@ -9713,9 +10637,17 @@ class Slide:
     def DisplayMasterShapes(self):
         return self.slide.DisplayMasterShapes
 
+    @DisplayMasterShapes.setter
+    def DisplayMasterShapes(self, value):
+        self.slide.DisplayMasterShapes = value
+
     @property
     def FollowMasterBackground(self):
         return self.slide.FollowMasterBackground
+
+    @FollowMasterBackground.setter
+    def FollowMasterBackground(self, value):
+        self.slide.FollowMasterBackground = value
 
     @property
     def HasNotesPage(self):
@@ -9863,6 +10795,10 @@ class SlideRange:
     def BackgroundStyle(self):
         return self.sliderange.BackgroundStyle
 
+    @BackgroundStyle.setter
+    def BackgroundStyle(self, value):
+        self.sliderange.BackgroundStyle = value
+
     @property
     def ColorScheme(self):
         return ColorScheme(self.sliderange.ColorScheme)
@@ -9895,9 +10831,17 @@ class SlideRange:
     def DisplayMasterShapes(self):
         return self.sliderange.DisplayMasterShapes
 
+    @DisplayMasterShapes.setter
+    def DisplayMasterShapes(self, value):
+        self.sliderange.DisplayMasterShapes = value
+
     @property
     def FollowMasterBackground(self):
         return self.sliderange.FollowMasterBackground
+
+    @FollowMasterBackground.setter
+    def FollowMasterBackground(self, value):
+        self.sliderange.FollowMasterBackground = value
 
     @property
     def HasNotesPage(self):
@@ -9926,6 +10870,10 @@ class SlideRange:
     @property
     def Name(self):
         return self.sliderange.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.sliderange.Name = value
 
     @property
     def NotesPage(self):
@@ -10109,6 +11057,10 @@ class SlideShowSettings:
     def LoopUntilStopped(self):
         return self.slideshowsettings.LoopUntilStopped
 
+    @LoopUntilStopped.setter
+    def LoopUntilStopped(self, value):
+        self.slideshowsettings.LoopUntilStopped = value
+
     @property
     def NamedSlideShows(self):
         return NamedSlideShows(self.slideshowsettings.NamedSlideShows)
@@ -10133,13 +11085,25 @@ class SlideShowSettings:
     def ShowMediaControls(self):
         return self.slideshowsettings.ShowMediaControls
 
+    @ShowMediaControls.setter
+    def ShowMediaControls(self, value):
+        self.slideshowsettings.ShowMediaControls = value
+
     @property
     def ShowPresenterView(self):
         return SlideShowSettings(self.slideshowsettings.ShowPresenterView)
 
+    @ShowPresenterView.setter
+    def ShowPresenterView(self, value):
+        self.slideshowsettings.ShowPresenterView = value
+
     @property
     def ShowScrollbar(self):
         return self.slideshowsettings.ShowScrollbar
+
+    @ShowScrollbar.setter
+    def ShowScrollbar(self, value):
+        self.slideshowsettings.ShowScrollbar = value
 
     @property
     def ShowType(self):
@@ -10153,9 +11117,17 @@ class SlideShowSettings:
     def ShowWithAnimation(self):
         return self.slideshowsettings.ShowWithAnimation
 
+    @ShowWithAnimation.setter
+    def ShowWithAnimation(self, value):
+        self.slideshowsettings.ShowWithAnimation = value
+
     @property
     def ShowWithNarration(self):
         return self.slideshowsettings.ShowWithNarration
+
+    @ShowWithNarration.setter
+    def ShowWithNarration(self, value):
+        self.slideshowsettings.ShowWithNarration = value
 
     @property
     def SlideShowName(self):
@@ -10185,9 +11157,17 @@ class SlideShowTransition:
     def AdvanceOnClick(self):
         return self.slideshowtransition.AdvanceOnClick
 
+    @AdvanceOnClick.setter
+    def AdvanceOnClick(self, value):
+        self.slideshowtransition.AdvanceOnClick = value
+
     @property
     def AdvanceOnTime(self):
         return self.slideshowtransition.AdvanceOnTime
+
+    @AdvanceOnTime.setter
+    def AdvanceOnTime(self, value):
+        self.slideshowtransition.AdvanceOnTime = value
 
     @property
     def AdvanceTime(self):
@@ -10221,9 +11201,17 @@ class SlideShowTransition:
     def Hidden(self):
         return self.slideshowtransition.Hidden
 
+    @Hidden.setter
+    def Hidden(self, value):
+        self.slideshowtransition.Hidden = value
+
     @property
     def LoopSoundUntilNext(self):
         return self.slideshowtransition.LoopSoundUntilNext
+
+    @LoopSoundUntilNext.setter
+    def LoopSoundUntilNext(self, value):
+        self.slideshowtransition.LoopSoundUntilNext = value
 
     @property
     def Parent(self):
@@ -10237,6 +11225,10 @@ class SlideShowTransition:
     def Speed(self):
         return self.slideshowtransition.Speed
 
+    @Speed.setter
+    def Speed(self, value):
+        self.slideshowtransition.Speed = value
+
 class SlideShowView:
 
     def __init__(self, slideshowview=None):
@@ -10245,6 +11237,10 @@ class SlideShowView:
     @property
     def AcceleratorsEnabled(self):
         return self.slideshowview.AcceleratorsEnabled
+
+    @AcceleratorsEnabled.setter
+    def AcceleratorsEnabled(self, value):
+        self.slideshowview.AcceleratorsEnabled = value
 
     @property
     def AdvanceMode(self):
@@ -10313,6 +11309,10 @@ class SlideShowView:
     @property
     def SlideElapsedTime(self):
         return self.slideshowview.SlideElapsedTime
+
+    @SlideElapsedTime.setter
+    def SlideElapsedTime(self, value):
+        self.slideshowview.SlideElapsedTime = value
 
     @property
     def SlideShowName(self):
@@ -10502,6 +11502,10 @@ class SoundEffect:
     def Type(self):
         return self.soundeffect.Type
 
+    @Type.setter
+    def Type(self, value):
+        self.soundeffect.Type = value
+
     def ImportFromFile(self, *args, FullName=None):
         arguments = {"FullName": FullName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
@@ -10539,21 +11543,41 @@ class Table:
     def FirstCol(self):
         return self.table.FirstCol
 
+    @FirstCol.setter
+    def FirstCol(self, value):
+        self.table.FirstCol = value
+
     @property
     def FirstRow(self):
         return self.table.FirstRow
+
+    @FirstRow.setter
+    def FirstRow(self, value):
+        self.table.FirstRow = value
 
     @property
     def HorizBanding(self):
         return self.table.HorizBanding
 
+    @HorizBanding.setter
+    def HorizBanding(self, value):
+        self.table.HorizBanding = value
+
     @property
     def LastCol(self):
         return self.table.LastCol
 
+    @LastCol.setter
+    def LastCol(self, value):
+        self.table.LastCol = value
+
     @property
     def LastRow(self):
         return self.table.LastRow
+
+    @LastRow.setter
+    def LastRow(self, value):
+        self.table.LastRow = value
 
     @property
     def Parent(self):
@@ -10586,6 +11610,10 @@ class Table:
     @property
     def VertBanding(self):
         return self.table.VertBanding
+
+    @VertBanding.setter
+    def VertBanding(self, value):
+        self.table.VertBanding = value
 
     def ApplyStyle(self, *args, StyleID=None, SaveFormatting=None):
         arguments = {"StyleID": StyleID, "SaveFormatting": SaveFormatting}
@@ -10660,6 +11688,10 @@ class TabStop:
     @property
     def Type(self):
         return self.tabstop.Type
+
+    @Type.setter
+    def Type(self, value):
+        self.tabstop.Type = value
 
     def Clear(self):
         self.tabstop.Clear()
@@ -10769,9 +11801,17 @@ class TextEffectFormat:
     def FontBold(self):
         return self.texteffectformat.FontBold
 
+    @FontBold.setter
+    def FontBold(self, value):
+        self.texteffectformat.FontBold = value
+
     @property
     def FontItalic(self):
         return self.texteffectformat.FontItalic
+
+    @FontItalic.setter
+    def FontItalic(self, value):
+        self.texteffectformat.FontItalic = value
 
     @property
     def FontName(self):
@@ -10793,9 +11833,17 @@ class TextEffectFormat:
     def KernedPairs(self):
         return self.texteffectformat.KernedPairs
 
+    @KernedPairs.setter
+    def KernedPairs(self, value):
+        self.texteffectformat.KernedPairs = value
+
     @property
     def NormalizedHeight(self):
         return self.texteffectformat.NormalizedHeight
+
+    @NormalizedHeight.setter
+    def NormalizedHeight(self, value):
+        self.texteffectformat.NormalizedHeight = value
 
     @property
     def Parent(self):
@@ -10820,6 +11868,10 @@ class TextEffectFormat:
     @property
     def RotatedChars(self):
         return self.texteffectformat.RotatedChars
+
+    @RotatedChars.setter
+    def RotatedChars(self, value):
+        self.texteffectformat.RotatedChars = value
 
     @property
     def Text(self):
@@ -10937,6 +11989,10 @@ class TextFrame:
     def WordWrap(self):
         return self.textframe.WordWrap
 
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.textframe.WordWrap = value
+
     def DeleteText(self):
         self.textframe.DeleteText()
 
@@ -11013,6 +12069,10 @@ class TextFrame2:
     def NoTextRotation(self):
         return self.textframe2.NoTextRotation
 
+    @NoTextRotation.setter
+    def NoTextRotation(self, value):
+        self.textframe2.NoTextRotation = value
+
     @property
     def Orientation(self):
         return self.textframe2.Orientation
@@ -11072,6 +12132,10 @@ class TextFrame2:
     @property
     def WordWrap(self):
         return self.textframe2.WordWrap
+
+    @WordWrap.setter
+    def WordWrap(self, value):
+        self.textframe2.WordWrap = value
 
     def DeleteText(self):
         return self.textframe2.DeleteText()
@@ -11386,6 +12450,10 @@ class ThreeDFormat:
     def BevelBottomType(self):
         return self.threedformat.BevelBottomType
 
+    @BevelBottomType.setter
+    def BevelBottomType(self, value):
+        self.threedformat.BevelBottomType = value
+
     @property
     def BevelTopDepth(self):
         return ThreeDFormat(self.threedformat.BevelTopDepth)
@@ -11405,6 +12473,10 @@ class ThreeDFormat:
     @property
     def BevelTopType(self):
         return self.threedformat.BevelTopType
+
+    @BevelTopType.setter
+    def BevelTopType(self, value):
+        self.threedformat.BevelTopType = value
 
     @property
     def ContourColor(self):
@@ -11454,6 +12526,10 @@ class ThreeDFormat:
     def LightAngle(self):
         return self.threedformat.LightAngle
 
+    @LightAngle.setter
+    def LightAngle(self, value):
+        self.threedformat.LightAngle = value
+
     @property
     def Parent(self):
         return self.threedformat.Parent
@@ -11461,6 +12537,10 @@ class ThreeDFormat:
     @property
     def Perspective(self):
         return self.threedformat.Perspective
+
+    @Perspective.setter
+    def Perspective(self, value):
+        self.threedformat.Perspective = value
 
     @property
     def PresetCamera(self):
@@ -11509,6 +12589,10 @@ class ThreeDFormat:
     @property
     def ProjectText(self):
         return self.threedformat.ProjectText
+
+    @ProjectText.setter
+    def ProjectText(self, value):
+        self.threedformat.ProjectText = value
 
     @property
     def RotationX(self):
@@ -11650,6 +12734,10 @@ class TickLabels:
     def NumberFormatLinked(self):
         return self.ticklabels.NumberFormatLinked
 
+    @NumberFormatLinked.setter
+    def NumberFormatLinked(self, value):
+        self.ticklabels.NumberFormatLinked = value
+
     @property
     def NumberFormatLocal(self):
         return self.ticklabels.NumberFormatLocal
@@ -11734,17 +12822,33 @@ class Timing:
     def AutoReverse(self):
         return self.timing.AutoReverse
 
+    @AutoReverse.setter
+    def AutoReverse(self, value):
+        self.timing.AutoReverse = value
+
     @property
     def BounceEnd(self):
         return self.timing.BounceEnd
+
+    @BounceEnd.setter
+    def BounceEnd(self, value):
+        self.timing.BounceEnd = value
 
     @property
     def BounceEndIntensity(self):
         return self.timing.BounceEndIntensity
 
+    @BounceEndIntensity.setter
+    def BounceEndIntensity(self, value):
+        self.timing.BounceEndIntensity = value
+
     @property
     def Decelerate(self):
         return self.timing.Decelerate
+
+    @Decelerate.setter
+    def Decelerate(self, value):
+        self.timing.Decelerate = value
 
     @property
     def Parent(self):
@@ -11754,25 +12858,49 @@ class Timing:
     def RepeatCount(self):
         return self.timing.RepeatCount
 
+    @RepeatCount.setter
+    def RepeatCount(self, value):
+        self.timing.RepeatCount = value
+
     @property
     def RepeatDuration(self):
         return self.timing.RepeatDuration
+
+    @RepeatDuration.setter
+    def RepeatDuration(self, value):
+        self.timing.RepeatDuration = value
 
     @property
     def Restart(self):
         return self.timing.Restart
 
+    @Restart.setter
+    def Restart(self, value):
+        self.timing.Restart = value
+
     @property
     def RewindAtEnd(self):
         return self.timing.RewindAtEnd
+
+    @RewindAtEnd.setter
+    def RewindAtEnd(self, value):
+        self.timing.RewindAtEnd = value
 
     @property
     def SmoothEnd(self):
         return self.timing.SmoothEnd
 
+    @SmoothEnd.setter
+    def SmoothEnd(self, value):
+        self.timing.SmoothEnd = value
+
     @property
     def SmoothStart(self):
         return self.timing.SmoothStart
+
+    @SmoothStart.setter
+    def SmoothStart(self, value):
+        self.timing.SmoothStart = value
 
     @property
     def Speed(self):
@@ -11786,17 +12914,33 @@ class Timing:
     def triggerBookmark(self):
         return self.timing.triggerBookmark
 
+    @triggerBookmark.setter
+    def triggerBookmark(self, value):
+        self.timing.triggerBookmark = value
+
     @property
     def TriggerDelayTime(self):
         return self.timing.TriggerDelayTime
+
+    @TriggerDelayTime.setter
+    def TriggerDelayTime(self, value):
+        self.timing.TriggerDelayTime = value
 
     @property
     def TriggerShape(self):
         return self.timing.TriggerShape
 
+    @TriggerShape.setter
+    def TriggerShape(self, value):
+        self.timing.TriggerShape = value
+
     @property
     def TriggerType(self):
         return self.timing.TriggerType
+
+    @TriggerType.setter
+    def TriggerType(self, value):
+        self.timing.TriggerType = value
 
 class Trendline:
 
@@ -11831,9 +12975,17 @@ class Trendline:
     def DisplayEquation(self):
         return self.trendline.DisplayEquation
 
+    @DisplayEquation.setter
+    def DisplayEquation(self, value):
+        self.trendline.DisplayEquation = value
+
     @property
     def DisplayRSquared(self):
         return self.trendline.DisplayRSquared
+
+    @DisplayRSquared.setter
+    def DisplayRSquared(self, value):
+        self.trendline.DisplayRSquared = value
 
     @property
     def Format(self):
@@ -11863,6 +13015,10 @@ class Trendline:
     def InterceptIsAuto(self):
         return self.trendline.InterceptIsAuto
 
+    @InterceptIsAuto.setter
+    def InterceptIsAuto(self, value):
+        self.trendline.InterceptIsAuto = value
+
     @property
     def Name(self):
         return self.trendline.Name
@@ -11874,6 +13030,10 @@ class Trendline:
     @property
     def NameIsAuto(self):
         return self.trendline.NameIsAuto
+
+    @NameIsAuto.setter
+    def NameIsAuto(self, value):
+        self.trendline.NameIsAuto = value
 
     @property
     def Order(self):
@@ -11991,6 +13151,10 @@ class View:
     def DisplaySlideMiniature(self):
         return self.view.DisplaySlideMiniature
 
+    @DisplaySlideMiniature.setter
+    def DisplaySlideMiniature(self, value):
+        self.view.DisplaySlideMiniature = value
+
     @property
     def MediaControlsHeight(self):
         return self.view.MediaControlsHeight
@@ -12042,6 +13206,10 @@ class View:
     @property
     def ZoomToFit(self):
         return self.view.ZoomToFit
+
+    @ZoomToFit.setter
+    def ZoomToFit(self, value):
+        self.view.ZoomToFit = value
 
     def GotoSlide(self, *args, Index=None):
         arguments = {"Index": Index}

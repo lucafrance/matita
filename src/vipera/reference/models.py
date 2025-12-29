@@ -81,7 +81,7 @@ class DocPage:
             self.property_class = property_class
 
         # Check whether the property is read only
-        if "Returns or sets" in p:
+        if "Returns or sets" in p or "Read/write" in p:
             self.is_read_only_property = False
         else:
             self.is_read_only_property = True

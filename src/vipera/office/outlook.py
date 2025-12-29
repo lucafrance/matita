@@ -722,6 +722,10 @@ class AppointmentItem:
     def AllDayEvent(self):
         return self.appointmentitem.AllDayEvent
 
+    @AllDayEvent.setter
+    def AllDayEvent(self, value):
+        self.appointmentitem.AllDayEvent = value
+
     @property
     def Application(self):
         return Application(self.appointmentitem.Application)
@@ -1038,13 +1042,25 @@ class AppointmentItem:
     def RequiredAttendees(self):
         return self.appointmentitem.RequiredAttendees
 
+    @RequiredAttendees.setter
+    def RequiredAttendees(self, value):
+        self.appointmentitem.RequiredAttendees = value
+
     @property
     def Resources(self):
         return self.appointmentitem.Resources
 
+    @Resources.setter
+    def Resources(self, value):
+        self.appointmentitem.Resources = value
+
     @property
     def ResponseRequested(self):
         return self.appointmentitem.ResponseRequested
+
+    @ResponseRequested.setter
+    def ResponseRequested(self, value):
+        self.appointmentitem.ResponseRequested = value
 
     @property
     def ResponseStatus(self):
@@ -2733,6 +2749,10 @@ class ContactItem:
     def Email1DisplayName(self):
         return self.contactitem.Email1DisplayName
 
+    @Email1DisplayName.setter
+    def Email1DisplayName(self, value):
+        self.contactitem.Email1DisplayName = value
+
     @property
     def Email1EntryID(self):
         return self.contactitem.Email1EntryID
@@ -2757,6 +2777,10 @@ class ContactItem:
     def Email2DisplayName(self):
         return self.contactitem.Email2DisplayName
 
+    @Email2DisplayName.setter
+    def Email2DisplayName(self, value):
+        self.contactitem.Email2DisplayName = value
+
     @property
     def Email2EntryID(self):
         return self.contactitem.Email2EntryID
@@ -2780,6 +2804,10 @@ class ContactItem:
     @property
     def Email3DisplayName(self):
         return self.contactitem.Email3DisplayName
+
+    @Email3DisplayName.setter
+    def Email3DisplayName(self, value):
+        self.contactitem.Email3DisplayName = value
 
     @property
     def Email3EntryID(self):
@@ -3004,6 +3032,10 @@ class ContactItem:
     @property
     def Journal(self):
         return self.contactitem.Journal
+
+    @Journal.setter
+    def Journal(self, value):
+        self.contactitem.Journal = value
 
     @property
     def Language(self):
@@ -4534,6 +4566,10 @@ class ExchangeDistributionList:
     def Comments(self):
         return self.exchangedistributionlist.Comments
 
+    @Comments.setter
+    def Comments(self, value):
+        self.exchangedistributionlist.Comments = value
+
     @property
     def DisplayType(self):
         return OlDisplayType(self.exchangedistributionlist.DisplayType)
@@ -4569,6 +4605,10 @@ class ExchangeDistributionList:
     @property
     def Type(self):
         return ExchangeDistributionList(self.exchangedistributionlist.Type)
+
+    @Type.setter
+    def Type(self, value):
+        self.exchangedistributionlist.Type = value
 
     def Delete(self):
         self.exchangedistributionlist.Delete()
@@ -4635,13 +4675,25 @@ class ExchangeUser:
     def AssistantName(self):
         return ExchangeUser(self.exchangeuser.AssistantName)
 
+    @AssistantName.setter
+    def AssistantName(self, value):
+        self.exchangeuser.AssistantName = value
+
     @property
     def BusinessTelephoneNumber(self):
         return ExchangeUser(self.exchangeuser.BusinessTelephoneNumber)
 
+    @BusinessTelephoneNumber.setter
+    def BusinessTelephoneNumber(self, value):
+        self.exchangeuser.BusinessTelephoneNumber = value
+
     @property
     def City(self):
         return ExchangeUser(self.exchangeuser.City)
+
+    @City.setter
+    def City(self, value):
+        self.exchangeuser.City = value
 
     @property
     def Class(self):
@@ -4651,13 +4703,25 @@ class ExchangeUser:
     def Comments(self):
         return self.exchangeuser.Comments
 
+    @Comments.setter
+    def Comments(self, value):
+        self.exchangeuser.Comments = value
+
     @property
     def CompanyName(self):
         return ExchangeUser(self.exchangeuser.CompanyName)
 
+    @CompanyName.setter
+    def CompanyName(self, value):
+        self.exchangeuser.CompanyName = value
+
     @property
     def Department(self):
         return ExchangeUser(self.exchangeuser.Department)
+
+    @Department.setter
+    def Department(self, value):
+        self.exchangeuser.Department = value
 
     @property
     def DisplayType(self):
@@ -4667,6 +4731,10 @@ class ExchangeUser:
     def FirstName(self):
         return ExchangeUser(self.exchangeuser.FirstName)
 
+    @FirstName.setter
+    def FirstName(self, value):
+        self.exchangeuser.FirstName = value
+
     @property
     def ID(self):
         return ExchangeUser(self.exchangeuser.ID)
@@ -4675,13 +4743,25 @@ class ExchangeUser:
     def JobTitle(self):
         return ExchangeUser(self.exchangeuser.JobTitle)
 
+    @JobTitle.setter
+    def JobTitle(self, value):
+        self.exchangeuser.JobTitle = value
+
     @property
     def LastName(self):
         return ExchangeUser(self.exchangeuser.LastName)
 
+    @LastName.setter
+    def LastName(self, value):
+        self.exchangeuser.LastName = value
+
     @property
     def MobileTelephoneNumber(self):
         return ExchangeUser(self.exchangeuser.MobileTelephoneNumber)
+
+    @MobileTelephoneNumber.setter
+    def MobileTelephoneNumber(self, value):
+        self.exchangeuser.MobileTelephoneNumber = value
 
     @property
     def Name(self):
@@ -4695,6 +4775,10 @@ class ExchangeUser:
     def OfficeLocation(self):
         return ExchangeUser(self.exchangeuser.OfficeLocation)
 
+    @OfficeLocation.setter
+    def OfficeLocation(self, value):
+        self.exchangeuser.OfficeLocation = value
+
     @property
     def Parent(self):
         return ExchangeUser(self.exchangeuser.Parent)
@@ -4702,6 +4786,10 @@ class ExchangeUser:
     @property
     def PostalCode(self):
         return ExchangeUser(self.exchangeuser.PostalCode)
+
+    @PostalCode.setter
+    def PostalCode(self, value):
+        self.exchangeuser.PostalCode = value
 
     @property
     def PrimarySmtpAddress(self):
@@ -4719,33 +4807,65 @@ class ExchangeUser:
     def StateOrProvince(self):
         return ExchangeUser(self.exchangeuser.StateOrProvince)
 
+    @StateOrProvince.setter
+    def StateOrProvince(self, value):
+        self.exchangeuser.StateOrProvince = value
+
     @property
     def StreetAddress(self):
         return ExchangeUser(self.exchangeuser.StreetAddress)
+
+    @StreetAddress.setter
+    def StreetAddress(self, value):
+        self.exchangeuser.StreetAddress = value
 
     @property
     def Type(self):
         return ExchangeUser(self.exchangeuser.Type)
 
+    @Type.setter
+    def Type(self, value):
+        self.exchangeuser.Type = value
+
     @property
     def YomiCompanyName(self):
         return ExchangeUser(self.exchangeuser.YomiCompanyName)
+
+    @YomiCompanyName.setter
+    def YomiCompanyName(self, value):
+        self.exchangeuser.YomiCompanyName = value
 
     @property
     def YomiDepartment(self):
         return ExchangeUser(self.exchangeuser.YomiDepartment)
 
+    @YomiDepartment.setter
+    def YomiDepartment(self, value):
+        self.exchangeuser.YomiDepartment = value
+
     @property
     def YomiDisplayName(self):
         return ExchangeUser(self.exchangeuser.YomiDisplayName)
+
+    @YomiDisplayName.setter
+    def YomiDisplayName(self, value):
+        self.exchangeuser.YomiDisplayName = value
 
     @property
     def YomiFirstName(self):
         return ExchangeUser(self.exchangeuser.YomiFirstName)
 
+    @YomiFirstName.setter
+    def YomiFirstName(self, value):
+        self.exchangeuser.YomiFirstName = value
+
     @property
     def YomiLastName(self):
         return ExchangeUser(self.exchangeuser.YomiLastName)
+
+    @YomiLastName.setter
+    def YomiLastName(self, value):
+        self.exchangeuser.YomiLastName = value
 
     def Delete(self):
         self.exchangeuser.Delete()
@@ -5083,6 +5203,10 @@ class Folder:
     def ShowItemCount(self):
         return self.folder.ShowItemCount
 
+    @ShowItemCount.setter
+    def ShowItemCount(self, value):
+        self.folder.ShowItemCount = value
+
     @property
     def Store(self):
         return Store(self.folder.Store)
@@ -5276,6 +5400,10 @@ class FormDescription:
     def Hidden(self):
         return self.formdescription.Hidden
 
+    @Hidden.setter
+    def Hidden(self, value):
+        self.formdescription.Hidden = value
+
     @property
     def Icon(self):
         return self.formdescription.Icon
@@ -5287,6 +5415,10 @@ class FormDescription:
     @property
     def Locked(self):
         return self.formdescription.Locked
+
+    @Locked.setter
+    def Locked(self, value):
+        self.formdescription.Locked = value
 
     @property
     def MessageClass(self):
@@ -5320,6 +5452,10 @@ class FormDescription:
     def OneOff(self):
         return self.formdescription.OneOff
 
+    @OneOff.setter
+    def OneOff(self, value):
+        self.formdescription.OneOff = value
+
     @property
     def Parent(self):
         return self.formdescription.Parent
@@ -5343,6 +5479,10 @@ class FormDescription:
     @property
     def UseWordMail(self):
         return self.formdescription.UseWordMail
+
+    @UseWordMail.setter
+    def UseWordMail(self, value):
+        self.formdescription.UseWordMail = value
 
     @property
     def Version(self):
@@ -5972,6 +6112,10 @@ class Items:
     def IncludeRecurrences(self):
         return Items(self.items.IncludeRecurrences)
 
+    @IncludeRecurrences.setter
+    def IncludeRecurrences(self, value):
+        self.items.IncludeRecurrences = value
+
     @property
     def Parent(self):
         return self.items.Parent
@@ -6120,17 +6264,33 @@ class JournalItem:
     def DocPosted(self):
         return self.journalitem.DocPosted
 
+    @DocPosted.setter
+    def DocPosted(self, value):
+        self.journalitem.DocPosted = value
+
     @property
     def DocPrinted(self):
         return self.journalitem.DocPrinted
+
+    @DocPrinted.setter
+    def DocPrinted(self, value):
+        self.journalitem.DocPrinted = value
 
     @property
     def DocRouted(self):
         return self.journalitem.DocRouted
 
+    @DocRouted.setter
+    def DocRouted(self, value):
+        self.journalitem.DocRouted = value
+
     @property
     def DocSaved(self):
         return self.journalitem.DocSaved
+
+    @DocSaved.setter
+    def DocSaved(self, value):
+        self.journalitem.DocSaved = value
 
     @property
     def DownloadState(self):
@@ -6407,6 +6567,10 @@ class MailItem:
     def AlternateRecipientAllowed(self):
         return self.mailitem.AlternateRecipientAllowed
 
+    @AlternateRecipientAllowed.setter
+    def AlternateRecipientAllowed(self, value):
+        self.mailitem.AlternateRecipientAllowed = value
+
     @property
     def Application(self):
         return Application(self.mailitem.Application)
@@ -6419,6 +6583,10 @@ class MailItem:
     def AutoForwarded(self):
         return self.mailitem.AutoForwarded
 
+    @AutoForwarded.setter
+    def AutoForwarded(self, value):
+        self.mailitem.AutoForwarded = value
+
     @property
     def AutoResolvedWinner(self):
         return self.mailitem.AutoResolvedWinner
@@ -6426,6 +6594,10 @@ class MailItem:
     @property
     def BCC(self):
         return MailItem(self.mailitem.BCC)
+
+    @BCC.setter
+    def BCC(self, value):
+        self.mailitem.BCC = value
 
     @property
     def BillingInformation(self):
@@ -6462,6 +6634,10 @@ class MailItem:
     @property
     def CC(self):
         return MailItem(self.mailitem.CC)
+
+    @CC.setter
+    def CC(self, value):
+        self.mailitem.CC = value
 
     @property
     def Class(self):
@@ -6639,9 +6815,17 @@ class MailItem:
     def Permission(self):
         return self.mailitem.Permission
 
+    @Permission.setter
+    def Permission(self, value):
+        self.mailitem.Permission = value
+
     @property
     def PermissionService(self):
         return self.mailitem.PermissionService
+
+    @PermissionService.setter
+    def PermissionService(self, value):
+        self.mailitem.PermissionService = value
 
     @property
     def PermissionTemplateGuid(self):
@@ -6682,6 +6866,10 @@ class MailItem:
     @property
     def RecipientReassignmentProhibited(self):
         return self.mailitem.RecipientReassignmentProhibited
+
+    @RecipientReassignmentProhibited.setter
+    def RecipientReassignmentProhibited(self, value):
+        self.mailitem.RecipientReassignmentProhibited = value
 
     @property
     def Recipients(self):
@@ -6818,6 +7006,10 @@ class MailItem:
     @property
     def SentOnBehalfOfName(self):
         return self.mailitem.SentOnBehalfOfName
+
+    @SentOnBehalfOfName.setter
+    def SentOnBehalfOfName(self, value):
+        self.mailitem.SentOnBehalfOfName = value
 
     @property
     def Session(self):
@@ -7099,6 +7291,10 @@ class MeetingItem:
     @property
     def AutoForwarded(self):
         return self.meetingitem.AutoForwarded
+
+    @AutoForwarded.setter
+    def AutoForwarded(self, value):
+        self.meetingitem.AutoForwarded = value
 
     @property
     def AutoResolvedWinner(self):
@@ -10924,6 +11120,10 @@ class Recipient:
     def AddressEntry(self):
         return AddressEntry(self.recipient.AddressEntry)
 
+    @AddressEntry.setter
+    def AddressEntry(self, value):
+        self.recipient.AddressEntry = value
+
     @property
     def Application(self):
         return Application(self.recipient.Application)
@@ -11139,6 +11339,10 @@ class RecurrencePattern:
     def NoEndDate(self):
         return self.recurrencepattern.NoEndDate
 
+    @NoEndDate.setter
+    def NoEndDate(self, value):
+        self.recurrencepattern.NoEndDate = value
+
     @property
     def Occurrences(self):
         return self.recurrencepattern.Occurrences
@@ -11178,6 +11382,10 @@ class RecurrencePattern:
     @property
     def Regenerate(self):
         return self.recurrencepattern.Regenerate
+
+    @Regenerate.setter
+    def Regenerate(self, value):
+        self.recurrencepattern.Regenerate = value
 
     @property
     def Session(self):
@@ -11802,6 +12010,10 @@ class Results:
     @property
     def DefaultItemType(self):
         return OlItemType(self.results.DefaultItemType)
+
+    @DefaultItemType.setter
+    def DefaultItemType(self, value):
+        self.results.DefaultItemType = value
 
     @property
     def Parent(self):
@@ -12474,6 +12686,10 @@ class SelectNamesDialog:
     def Recipients(self):
         return Recipients(self.selectnamesdialog.Recipients)
 
+    @Recipients.setter
+    def Recipients(self, value):
+        self.selectnamesdialog.Recipients = value
+
     @property
     def Session(self):
         return NameSpace(self.selectnamesdialog.Session)
@@ -12625,6 +12841,10 @@ class SharingItem:
     def BCC(self):
         return SharingItem(self.sharingitem.BCC)
 
+    @BCC.setter
+    def BCC(self, value):
+        self.sharingitem.BCC = value
+
     @property
     def BillingInformation(self):
         return SharingItem(self.sharingitem.BillingInformation)
@@ -12660,6 +12880,10 @@ class SharingItem:
     @property
     def CC(self):
         return SharingItem(self.sharingitem.CC)
+
+    @CC.setter
+    def CC(self, value):
+        self.sharingitem.CC = value
 
     @property
     def Class(self):
@@ -12837,9 +13061,17 @@ class SharingItem:
     def Permission(self):
         return self.sharingitem.Permission
 
+    @Permission.setter
+    def Permission(self, value):
+        self.sharingitem.Permission = value
+
     @property
     def PermissionService(self):
         return self.sharingitem.PermissionService
+
+    @PermissionService.setter
+    def PermissionService(self, value):
+        self.sharingitem.PermissionService = value
 
     @property
     def PermissionTemplateGuid(self):
@@ -12880,6 +13112,10 @@ class SharingItem:
     @property
     def RecipientReassignmentProhibited(self):
         return SharingItem(self.sharingitem.RecipientReassignmentProhibited)
+
+    @RecipientReassignmentProhibited.setter
+    def RecipientReassignmentProhibited(self, value):
+        self.sharingitem.RecipientReassignmentProhibited = value
 
     @property
     def Recipients(self):
@@ -13312,6 +13548,10 @@ class StorageItem:
     @property
     def Creator(self):
         return StorageItem(self.storageitem.Creator)
+
+    @Creator.setter
+    def Creator(self, value):
+        self.storageitem.Creator = value
 
     @property
     def EntryID(self):
@@ -13937,6 +14177,10 @@ class TaskItem:
     def Complete(self):
         return self.taskitem.Complete
 
+    @Complete.setter
+    def Complete(self, value):
+        self.taskitem.Complete = value
+
     @property
     def Conflicts(self):
         return self.taskitem.Conflicts
@@ -14241,6 +14485,10 @@ class TaskItem:
     def StatusUpdateRecipients(self):
         return self.taskitem.StatusUpdateRecipients
 
+    @StatusUpdateRecipients.setter
+    def StatusUpdateRecipients(self, value):
+        self.taskitem.StatusUpdateRecipients = value
+
     @property
     def Subject(self):
         return self.taskitem.Subject
@@ -14252,6 +14500,10 @@ class TaskItem:
     @property
     def TeamTask(self):
         return self.taskitem.TeamTask
+
+    @TeamTask.setter
+    def TeamTask(self, value):
+        self.taskitem.TeamTask = value
 
     @property
     def ToDoTaskOrdinal(self):
@@ -15732,6 +15984,10 @@ class ToOrFromRuleCondition:
     @property
     def Enabled(self):
         return self.toorfromrulecondition.Enabled
+
+    @Enabled.setter
+    def Enabled(self, value):
+        self.toorfromrulecondition.Enabled = value
 
     @property
     def Parent(self):
