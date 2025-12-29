@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from vipera.reference.parser import VbaDocs
+from vipera.reference.models import VbaDocs
 
 def main():
     os.makedirs("logs", exist_ok=True)
