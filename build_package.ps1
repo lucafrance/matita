@@ -5,4 +5,9 @@ if (-not (Test-Path "office-vba-reference\.git")) {
 python -m scripts
 python -m pip install -e .
 python -m tests
-python -m build
+if ($LASTEXITCODE -eq 0) {
+    python -m build
+} else {
+    Write-Error "Tests failed, aborting build."
+    exit 1
+}
