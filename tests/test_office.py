@@ -4,6 +4,13 @@ from vipera.office import access, excel, powerpoint, word
 
 class TestApplicationOpenClose(unittest.TestCase):
     
+    def test_access(self):
+        acc_app = access.Application().new()
+        self.assertIs(type(acc_app), access.Application)
+        acc_app.Visible = True
+        self.assertTrue(acc_app.Visible)
+        acc_app.Quit()
+    
     def test_excel(self):
         xl_app = excel.Application().new()
         self.assertIs(type(xl_app), excel.Application)
