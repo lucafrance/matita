@@ -17377,16 +17377,6 @@ class Report:
     def WindowWidth(self):
         return self.report.WindowWidth
 
-    def Circle(self, *args, Step_ (_x=None, y=None):
-        arguments = {"Step_ (_x": Step_ (_x, "y": y}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.report.Circle(*args, **arguments)
-
-    def Line(self, *args, Step_ (_x1=None, y1=None):
-        arguments = {"Step_ (_x1": Step_ (_x1, "y1": y1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.report.Line(*args, **arguments)
-
     def Move(self, *args, Left=None, Top=None, Width=None, Height=None):
         arguments = {"Left": Left, "Top": Top, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}

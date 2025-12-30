@@ -21,11 +21,15 @@ python -m scripts
 
 The output will be generated in `data/office-vba-api.json`.
 
-## Inconsistencies
+## Limitations
 
-The following objects are ignored, as their name  conflicts with reserved keywords in Python.
+The following objects are unsupported, because their name conflicts with reserved keywords in Python.
 - [Break object (Word)](https://learn.microsoft.com/en-us/office/vba/api/word.break)
 - [Global object (Word)](https://learn.microsoft.com/en-us/office/vba/api/word.global)
+
+The following objects are unsupported, because non-scalar arguments are not implemented.
+- [Report.Circle method (Access)](https://learn.microsoft.com/en-gb/office/vba/api/access.report.circle)
+- [Report.Line method (Access)](https://learn.microsoft.com/en-gb/office/vba/api/access.report.line)
 
 ## Attribution
 
