@@ -550,7 +550,7 @@ class Application:
     def Caller(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.Caller(*args, **arguments)
+        return self.application.GetCaller(*args, **arguments)
 
     @property
     def CanPlaySounds(self):
@@ -588,7 +588,7 @@ class Application:
     def ClipboardFormats(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.ClipboardFormats(*args, **arguments)
+        return self.application.GetClipboardFormats(*args, **arguments)
 
     @property
     def ClusterConnector(self):
@@ -953,7 +953,7 @@ class Application:
     def FileConverters(self, *args, Index1=None, Index2=None):
         arguments = {"Index1": Index1, "Index2": Index2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.FileConverters(*args, **arguments)
+        return self.application.GetFileConverters(*args, **arguments)
 
     def FileDialog(self, *args, fileDialogType=None):
         arguments = {"fileDialogType": fileDialogType}
@@ -1243,7 +1243,7 @@ class Application:
     def PreviousSelections(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.application.PreviousSelections(*args, **arguments))
+        return Range(self.application.GetPreviousSelections(*args, **arguments))
 
     @property
     def PrintCommunication(self):
@@ -1297,7 +1297,7 @@ class Application:
     def RegisteredFunctions(self, *args, Index1=None, Index2=None):
         arguments = {"Index1": Index1, "Index2": Index2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.RegisteredFunctions(*args, **arguments)
+        return self.application.GetRegisteredFunctions(*args, **arguments)
 
     @property
     def ReplaceFormat(self):
@@ -1978,7 +1978,7 @@ class AutoCorrect:
     def ReplacementList(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.autocorrect.ReplacementList(*args, **arguments)
+        return self.autocorrect.GetReplacementList(*args, **arguments)
 
     @property
     def ReplaceText(self):

@@ -3,6 +3,7 @@ import os
 
 from .markdown import MarkdownTree
 
+import win32com.client
 
 def reset_ignored_pages():
     f = open("logs/ignored_pages.log", "wt")
@@ -22,6 +23,16 @@ def page_filename_to_key(filename):
     # e.g. "(Object)" from "Excel.Application(Object)"
     key = key.split("(", 1)[0]
     return key
+
+class ComAppCache:
+    _instances = {}
+
+    @classmethod
+    def get(cls, module_name):
+        if module_name not in cls._instances:
+            progid = f"{module_name}.Application"
+            cls._instances[module_name] = win32com.client.Dispatch(progid)
+        return cls._instances[module_name]
 
 class DocPage:
 
@@ -154,6 +165,13 @@ class DocPage:
         if (self.module_name and self.object_name) is None:
             return None
         return ".".join([self.module_name, self.object_name]).lower()
+    
+    def genmodule_object(self):
+        try:
+            com_obj = ComAppCache.get(self.module_name)
+            return getattr(com_obj, self.object_name, None)
+        except Exception:
+            return None
 
     def to_dict(self):
         return {
@@ -242,13 +260,14 @@ class DocPage:
                 code.append(f"    def {p.property_name}(self, *args, {p.parameters_code()}):")
                 code += p.to_python_arguments_expansion()
                 # If the genmodule includes a Get... method for a property, use that one.
-                # E.g. `Range.GetAddress` for `Range.Address`
-                # TODO fix to check for existence of get property without genmodule object
-                # if f"Get{p.property_name}" in dir(self.genmodule_object()):
-                #     code_line = f"self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)"
-                # else:
-                #     code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
-                code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
+                # E.g. `Application.GetClipboardFormats` for `Application.ClipboardFormats`
+                com_class = self.genmodule_object()
+                if com_class and hasattr(com_class, f"Get{p.property_name}"):
+                    logging.info(f"Using Get{p.property_name} for property {p.property_name} of object {self.object_name} ({self.module_name}).")
+                    code_line = f"self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)"
+                else:
+                    code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
+
             # If there is a class for the property, wrap it
             if p.property_class is not None:
                 code_line = f"{p.property_class}({code_line})"
