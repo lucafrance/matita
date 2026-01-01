@@ -345,7 +345,10 @@ class Application:
     def FileDialog(self, *args, FileDialogType=None):
         arguments = {"FileDialogType": FileDialogType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.FileDialog(*args, **arguments)
+        if callable(self.application.FileDialog):
+            return self.application.FileDialog(*args, **arguments)
+        else:
+            return self.application.GetFileDialog(*args, **arguments)
 
     @property
     def FileValidation(self):
@@ -358,7 +361,10 @@ class Application:
     def FindKey(self, *args, KeyCode=None, KeyCode2=None):
         arguments = {"KeyCode": KeyCode, "KeyCode2": KeyCode2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return KeyBinding(self.application.FindKey(*args, **arguments))
+        if callable(self.application.FindKey):
+            return KeyBinding(self.application.FindKey(*args, **arguments))
+        else:
+            return KeyBinding(self.application.GetFindKey(*args, **arguments))
 
     @property
     def FocusInMailHeader(self):
@@ -383,12 +389,18 @@ class Application:
     def International(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.International(*args, **arguments)
+        if callable(self.application.International):
+            return self.application.International(*args, **arguments)
+        else:
+            return self.application.GetInternational(*args, **arguments)
 
     def IsObjectValid(self, *args, Object=None):
         arguments = {"Object": Object}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.IsObjectValid(*args, **arguments)
+        if callable(self.application.IsObjectValid):
+            return self.application.IsObjectValid(*args, **arguments)
+        else:
+            return self.application.GetIsObjectValid(*args, **arguments)
 
     @property
     def IsSandboxed(self):
@@ -401,7 +413,10 @@ class Application:
     def KeysBoundTo(self, *args, KeyCategory=None, Command=None, CommandParameter=None):
         arguments = {"KeyCategory": KeyCategory, "Command": Command, "CommandParameter": CommandParameter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.KeysBoundTo(*args, **arguments)
+        if callable(self.application.KeysBoundTo):
+            return self.application.KeysBoundTo(*args, **arguments)
+        else:
+            return self.application.GetKeysBoundTo(*args, **arguments)
 
     @property
     def LandscapeFontNames(self):
@@ -606,7 +621,10 @@ class Application:
     def SynonymInfo(self, *args, Word=None, LanguageID=None):
         arguments = {"Word": Word, "LanguageID": LanguageID}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return SynonymInfo(self.application.SynonymInfo(*args, **arguments))
+        if callable(self.application.SynonymInfo):
+            return SynonymInfo(self.application.SynonymInfo(*args, **arguments))
+        else:
+            return SynonymInfo(self.application.GetSynonymInfo(*args, **arguments))
 
     @property
     def System(self):
@@ -1664,7 +1682,10 @@ class AxisTitle:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.axistitle.Characters(*args, **arguments))
+        if callable(self.axistitle.Characters):
+            return ChartCharacters(self.axistitle.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.axistitle.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -2780,7 +2801,10 @@ class Chart:
     def ChartGroups(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.ChartGroups(*args, **arguments)
+        if callable(self.chart.ChartGroups):
+            return self.chart.ChartGroups(*args, **arguments)
+        else:
+            return self.chart.GetChartGroups(*args, **arguments)
 
     @property
     def ChartStyle(self):
@@ -3732,7 +3756,10 @@ class ChartTitle:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.charttitle.Characters(*args, **arguments))
+        if callable(self.charttitle.Characters):
+            return ChartCharacters(self.charttitle.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.charttitle.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -4207,7 +4234,10 @@ class Column:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.column.Cells(*args, **arguments)
+        if callable(self.column.Cells):
+            return self.column.Cells(*args, **arguments)
+        else:
+            return self.column.GetCells(*args, **arguments)
 
     @property
     def Creator(self):
@@ -4996,7 +5026,10 @@ class DataLabel:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.datalabel.Characters(*args, **arguments))
+        if callable(self.datalabel.Characters):
+            return ChartCharacters(self.datalabel.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.datalabel.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -5744,7 +5777,10 @@ class DisplayUnitLabel:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.displayunitlabel.Characters(*args, **arguments))
+        if callable(self.displayunitlabel.Characters):
+            return ChartCharacters(self.displayunitlabel.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.displayunitlabel.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -9858,7 +9894,10 @@ class Frameset:
     def ChildFramesetItem(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Frameset(self.frameset.ChildFramesetItem(*args, **arguments))
+        if callable(self.frameset.ChildFramesetItem):
+            return Frameset(self.frameset.ChildFramesetItem(*args, **arguments))
+        else:
+            return Frameset(self.frameset.GetChildFramesetItem(*args, **arguments))
 
     @property
     def Creator(self):
@@ -12103,7 +12142,10 @@ class ListGallery:
     def Modified(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listgallery.Modified(*args, **arguments)
+        if callable(self.listgallery.Modified):
+            return self.listgallery.Modified(*args, **arguments)
+        else:
+            return self.listgallery.GetModified(*args, **arguments)
 
     @property
     def Parent(self):
@@ -14058,7 +14100,10 @@ class OMathMat:
     def Cell(self, *args, Row=None, Col=None):
         arguments = {"Row": Row, "Col": Col}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return OMath(self.omathmat.Cell(*args, **arguments))
+        if callable(self.omathmat.Cell):
+            return OMath(self.omathmat.Cell(*args, **arguments))
+        else:
+            return OMath(self.omathmat.GetCell(*args, **arguments))
 
     @property
     def ColGap(self):
@@ -17207,7 +17252,10 @@ class Paragraph:
     def ListNumberOriginal(self, *args, Level=None):
         arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.paragraph.ListNumberOriginal(*args, **arguments)
+        if callable(self.paragraph.ListNumberOriginal):
+            return self.paragraph.ListNumberOriginal(*args, **arguments)
+        else:
+            return self.paragraph.GetListNumberOriginal(*args, **arguments)
 
     @property
     def MirrorIndents(self):
@@ -18411,7 +18459,10 @@ class Range:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Cells(*args, **arguments)
+        if callable(self.range.Cells):
+            return self.range.Cells(*args, **arguments)
+        else:
+            return self.range.GetCells(*args, **arguments)
 
     @property
     def Characters(self):
@@ -18600,7 +18651,10 @@ class Range:
     def Information(self, *args, Type=None):
         arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Information(*args, **arguments)
+        if callable(self.range.Information):
+            return self.range.Information(*args, **arguments)
+        else:
+            return self.range.GetInformation(*args, **arguments)
 
     @property
     def InlineShapes(self):
@@ -18881,7 +18935,10 @@ class Range:
     def XML(self, *args, DataOnly=None):
         arguments = {"DataOnly": DataOnly}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.XML(*args, **arguments)
+        if callable(self.range.XML):
+            return self.range.XML(*args, **arguments)
+        else:
+            return self.range.GetXML(*args, **arguments)
 
     def AutoFormat(self):
         self.range.AutoFormat()
@@ -19620,7 +19677,10 @@ class Revision:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.revision.Cells(*args, **arguments)
+        if callable(self.revision.Cells):
+            return self.revision.Cells(*args, **arguments)
+        else:
+            return self.revision.GetCells(*args, **arguments)
 
     @property
     def Creator(self):
@@ -19696,7 +19756,10 @@ class Row:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.row.Cells(*args, **arguments)
+        if callable(self.row.Cells):
+            return self.row.Cells(*args, **arguments)
+        else:
+            return self.row.GetCells(*args, **arguments)
 
     @property
     def Creator(self):
@@ -19884,7 +19947,10 @@ class Selection:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.selection.Cells(*args, **arguments)
+        if callable(self.selection.Cells):
+            return self.selection.Cells(*args, **arguments)
+        else:
+            return self.selection.GetCells(*args, **arguments)
 
     @property
     def Characters(self):
@@ -20025,7 +20091,10 @@ class Selection:
     def Information(self, *args, Type=None):
         arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.selection.Information(*args, **arguments)
+        if callable(self.selection.Information):
+            return self.selection.Information(*args, **arguments)
+        else:
+            return self.selection.GetInformation(*args, **arguments)
 
     @property
     def InlineShapes(self):
@@ -20202,7 +20271,10 @@ class Selection:
     def XML(self, *args, DataOnly=None):
         arguments = {"DataOnly": DataOnly}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.selection.XML(*args, **arguments)
+        if callable(self.selection.XML):
+            return self.selection.XML(*args, **arguments)
+        else:
+            return self.selection.GetXML(*args, **arguments)
 
     def BoldRun(self):
         self.selection.BoldRun()
@@ -21769,7 +21841,10 @@ class Source:
     def Field(self, *args, Name=None):
         arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.source.Field(*args, **arguments)
+        if callable(self.source.Field):
+            return self.source.Field(*args, **arguments)
+        else:
+            return self.source.GetField(*args, **arguments)
 
     @property
     def Parent(self):
@@ -22238,7 +22313,10 @@ class SynonymInfo:
     def SynonymList(self, *args, Meaning=None):
         arguments = {"Meaning": Meaning}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.synonyminfo.SynonymList(*args, **arguments)
+        if callable(self.synonyminfo.SynonymList):
+            return self.synonyminfo.SynonymList(*args, **arguments)
+        else:
+            return self.synonyminfo.GetSynonymList(*args, **arguments)
 
     @property
     def Word(self):
@@ -25729,7 +25807,10 @@ class XMLNode:
     def ValidationErrorText(self, *args, Advanced=None):
         arguments = {"Advanced": Advanced}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.xmlnode.ValidationErrorText(*args, **arguments)
+        if callable(self.xmlnode.ValidationErrorText):
+            return self.xmlnode.ValidationErrorText(*args, **arguments)
+        else:
+            return self.xmlnode.GetValidationErrorText(*args, **arguments)
 
     @property
     def ValidationStatus(self):

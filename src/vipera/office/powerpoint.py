@@ -614,12 +614,18 @@ class Application:
     def FileConverters(self, *args, Index1=None, Index2=None):
         arguments = {"Index1": Index1, "Index2": Index2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.FileConverters(*args, **arguments)
+        if callable(self.application.FileConverters):
+            return self.application.FileConverters(*args, **arguments)
+        else:
+            return self.application.GetFileConverters(*args, **arguments)
 
     def FileDialog(self, *args, Type=None):
         arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.FileDialog(*args, **arguments)
+        if callable(self.application.FileDialog):
+            return self.application.FileDialog(*args, **arguments)
+        else:
+            return self.application.GetFileDialog(*args, **arguments)
 
     @property
     def FileValidation(self):
@@ -1182,7 +1188,10 @@ class AxisTitle:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.axistitle.Characters(*args, **arguments))
+        if callable(self.axistitle.Characters):
+            return ChartCharacters(self.axistitle.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.axistitle.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -2601,7 +2610,10 @@ class ChartTitle:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.charttitle.Characters(*args, **arguments))
+        if callable(self.charttitle.Characters):
+            return ChartCharacters(self.charttitle.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.charttitle.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -2942,7 +2954,10 @@ class Column:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CellRange(self.column.Cells(*args, **arguments))
+        if callable(self.column.Cells):
+            return CellRange(self.column.Cells(*args, **arguments))
+        else:
+            return CellRange(self.column.GetCells(*args, **arguments))
 
     @property
     def Parent(self):
@@ -3380,7 +3395,10 @@ class DataLabel:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.datalabel.Characters(*args, **arguments))
+        if callable(self.datalabel.Characters):
+            return ChartCharacters(self.datalabel.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.datalabel.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -3936,7 +3954,10 @@ class DisplayUnitLabel:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCharacters(self.displayunitlabel.Characters(*args, **arguments))
+        if callable(self.displayunitlabel.Characters):
+            return ChartCharacters(self.displayunitlabel.Characters(*args, **arguments))
+        else:
+            return ChartCharacters(self.displayunitlabel.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -8578,7 +8599,10 @@ class Row:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CellRange(self.row.Cells(*args, **arguments))
+        if callable(self.row.Cells):
+            return CellRange(self.row.Cells(*args, **arguments))
+        else:
+            return CellRange(self.row.GetCells(*args, **arguments))
 
     @property
     def Height(self):

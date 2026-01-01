@@ -3,8 +3,6 @@ import os
 
 from .markdown import MarkdownTree
 
-import win32com.client
-
 def reset_ignored_pages():
     f = open("logs/ignored_pages.log", "wt")
     f.close()
@@ -155,7 +153,7 @@ class DocPage:
         self.module_name = api_name_split[0]
         self.object_name = api_name_split[1]
         if len(api_name_split) > 2:
-            suffix = api_name_split[2]
+            suffix = api_name_split[2].strip()
             if self.is_property:
                 self.property_name = suffix
             elif self.is_method:
@@ -166,13 +164,6 @@ class DocPage:
             return None
         return ".".join([self.module_name, self.object_name]).lower()
     
-    def genmodule_object(self):
-        try:
-            com_obj = ComAppCache.get(self.module_name)
-            return getattr(com_obj, self.object_name, None)
-        except Exception:
-            return None
-
     def to_dict(self):
         return {
             "title": self.title,
@@ -205,7 +196,7 @@ class DocPage:
         code.append("")
 
         # New method for Application objects
-        if self.object_name == "Application" and self.is_object:
+        if self.object_name == "Application":
             code.append(f"    def new(self):")
             code.append(f"        self.application = win32com.client.Dispatch(\"{self.module_name}.Application\")")
             code.append(f"        return self")
@@ -213,7 +204,7 @@ class DocPage:
 
         # Call method for collections
         if self.is_collection:
-            code.append("    def __call__(self, item):")
+            code.append(f"    def __call__(self, item):")
             code.append(f"        return {self.object_name[:-1]}(self.{self.object_name.lower()}(item))")
             code.append("")
 
@@ -250,38 +241,41 @@ class DocPage:
                 continue
 
             # Getter method
-            # If the property is not read only, it must have a setter method. If so, no argument can be used in the setter method.
-            # E.g. `Range.Value(RangeValueDataType)`
             if len(p.parameters) == 0 or not p.is_read_only_property:
-                code.append("    @property")
-                code.append(f"    def {p.property_name}(self):")
-                code_line = f"self.{self.object_name.lower()}.{p.property_name}"
+                if p.property_class is not None:
+                    code.append("    @property")
+                    code.append(f"    def {p.property_name}(self):")
+                    code.append(f"        return {p.property_class}(self.{self.object_name.lower()}.{p.property_name})")
+                    code.append(f"")
+                else:
+                    code.append("    @property")
+                    code.append(f"    def {p.property_name}(self):")
+                    code.append(f"        return self.{self.object_name.lower()}.{p.property_name}")
+                    code.append(f"")
             else:
                 code.append(f"    def {p.property_name}(self, *args, {p.parameters_code()}):")
                 code += p.to_python_arguments_expansion()
-                # If the genmodule includes a Get... method for a property, use that one.
-                # E.g. `Application.GetClipboardFormats` for `Application.ClipboardFormats`
-                com_class = self.genmodule_object()
-                if com_class and hasattr(com_class, f"Get{p.property_name}"):
-                    logging.info(f"Using Get{p.property_name} for property {p.property_name} of object {self.object_name} ({self.module_name}).")
-                    code_line = f"self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)"
+                if p.property_class is not None:
+                    code.append(f"        if callable(self.{self.object_name.lower()}.{p.property_name}):")
+                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.{p.property_name}(*args, **arguments))")
+                    code.append(f"        else:")
+                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments))")
+                    code.append(f"")
                 else:
-                    code_line = f"self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)"
+                    code.append(f"        if callable(self.{self.object_name.lower()}.{p.property_name}):")
+                    code.append(f"            return self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)")
+                    code.append(f"        else:")
+                    code.append(f"            return self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)")
+                    code.append(f"")
 
-            # If there is a class for the property, wrap it
-            if p.property_class is not None:
-                code_line = f"{p.property_class}({code_line})"
-            code.append("        return " + code_line)
-            code.append("")
-
-            if p.is_read_only_property:
-                continue
-            
             # Setter method
-            code.append(f"    @{p.property_name}.setter")
-            code.append(f"    def {p.property_name}(self, value):")
-            code.append(f"        self.{self.object_name.lower()}.{p.property_name} = value")
-            code.append("")
+            # If the property is editable, it must have a setter method.
+            # If so, no argument can be used in the setter method.
+            if not p.is_read_only_property:
+                code.append(f"    @{p.property_name}.setter")
+                code.append(f"    def {p.property_name}(self, value):")
+                code.append(f"        self.{self.object_name.lower()}.{p.property_name} = value")
+                code.append("")
 
         return code
     

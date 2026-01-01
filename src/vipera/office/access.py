@@ -73,7 +73,10 @@ class AccessObjectProperties:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.accessobjectproperties.Item(*args, **arguments)
+        if callable(self.accessobjectproperties.Item):
+            return self.accessobjectproperties.Item(*args, **arguments)
+        else:
+            return self.accessobjectproperties.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -118,7 +121,10 @@ class AdditionalData:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.additionaldata.Item(*args, **arguments)
+        if callable(self.additionaldata.Item):
+            return self.additionaldata.Item(*args, **arguments)
+        else:
+            return self.additionaldata.GetItem(*args, **arguments)
 
     @property
     def Name(self):
@@ -149,7 +155,10 @@ class AllDatabaseDiagrams:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.alldatabasediagrams.Item(*args, **arguments)
+        if callable(self.alldatabasediagrams.Item):
+            return self.alldatabasediagrams.Item(*args, **arguments)
+        else:
+            return self.alldatabasediagrams.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -171,7 +180,10 @@ class AllForms:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allforms.Item(*args, **arguments)
+        if callable(self.allforms.Item):
+            return self.allforms.Item(*args, **arguments)
+        else:
+            return self.allforms.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -193,7 +205,10 @@ class AllFunctions:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allfunctions.Item(*args, **arguments)
+        if callable(self.allfunctions.Item):
+            return self.allfunctions.Item(*args, **arguments)
+        else:
+            return self.allfunctions.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -215,7 +230,10 @@ class AllModules:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allmodules.Item(*args, **arguments)
+        if callable(self.allmodules.Item):
+            return self.allmodules.Item(*args, **arguments)
+        else:
+            return self.allmodules.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -237,7 +255,10 @@ class AllQueries:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allqueries.Item(*args, **arguments)
+        if callable(self.allqueries.Item):
+            return self.allqueries.Item(*args, **arguments)
+        else:
+            return self.allqueries.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -259,7 +280,10 @@ class AllReports:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allreports.Item(*args, **arguments)
+        if callable(self.allreports.Item):
+            return self.allreports.Item(*args, **arguments)
+        else:
+            return self.allreports.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -281,7 +305,10 @@ class AllStoredProcedures:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allstoredprocedures.Item(*args, **arguments)
+        if callable(self.allstoredprocedures.Item):
+            return self.allstoredprocedures.Item(*args, **arguments)
+        else:
+            return self.allstoredprocedures.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -303,7 +330,10 @@ class AllTables:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.alltables.Item(*args, **arguments)
+        if callable(self.alltables.Item):
+            return self.alltables.Item(*args, **arguments)
+        else:
+            return self.alltables.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -325,7 +355,10 @@ class AllViews:
     def Item(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.allviews.Item(*args, **arguments)
+        if callable(self.allviews.Item):
+            return self.allviews.Item(*args, **arguments)
+        else:
+            return self.allviews.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -349,8 +382,8 @@ class Application:
         return self.application.Application
 
     @property
-    def  AppTitle(self):
-        return self.application. AppTitle
+    def AppTitle(self):
+        return self.application.AppTitle
 
     @property
     def Assistance(self):
@@ -431,7 +464,10 @@ class Application:
     def FileDialog(self, *args, dialogType=None):
         arguments = {"dialogType": dialogType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.FileDialog(*args, **arguments)
+        if callable(self.application.FileDialog):
+            return self.application.FileDialog(*args, **arguments)
+        else:
+            return self.application.GetFileDialog(*args, **arguments)
 
     @property
     def Forms(self):
@@ -1140,17 +1176,26 @@ class Attachment:
     def FileName(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.attachment.FileName(*args, **arguments)
+        if callable(self.attachment.FileName):
+            return self.attachment.FileName(*args, **arguments)
+        else:
+            return self.attachment.GetFileName(*args, **arguments)
 
     def FileType(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.attachment.FileType(*args, **arguments)
+        if callable(self.attachment.FileType):
+            return self.attachment.FileType(*args, **arguments)
+        else:
+            return self.attachment.GetFileType(*args, **arguments)
 
     def FileURL(self, *args, var=None):
         arguments = {"var": var}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.attachment.FileURL(*args, **arguments)
+        if callable(self.attachment.FileURL):
+            return self.attachment.FileURL(*args, **arguments)
+        else:
+            return self.attachment.GetFileURL(*args, **arguments)
 
     @property
     def GridlineColor(self):
@@ -2097,7 +2142,10 @@ class BoundObjectFrame:
     def ObjectVerbs(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.boundobjectframe.ObjectVerbs(*args, **arguments)
+        if callable(self.boundobjectframe.ObjectVerbs):
+            return self.boundobjectframe.ObjectVerbs(*args, **arguments)
+        else:
+            return self.boundobjectframe.GetObjectVerbs(*args, **arguments)
 
     @property
     def ObjectVerbsCount(self):
@@ -3998,7 +4046,10 @@ class ComboBox:
     def Column(self, *args, Index=None, Row=None):
         arguments = {"Index": Index, "Row": Row}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.combobox.Column(*args, **arguments)
+        if callable(self.combobox.Column):
+            return self.combobox.Column(*args, **arguments)
+        else:
+            return self.combobox.GetColumn(*args, **arguments)
 
     @property
     def ColumnCount(self):
@@ -4371,7 +4422,10 @@ class ComboBox:
     def ItemData(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.combobox.ItemData(*args, **arguments)
+        if callable(self.combobox.ItemData):
+            return self.combobox.ItemData(*args, **arguments)
+        else:
+            return self.combobox.GetItemData(*args, **arguments)
 
     @property
     def ItemsSelected(self):
@@ -5918,7 +5972,10 @@ class Control:
     def Column(self, *args, Index=None, Row=None):
         arguments = {"Index": Index, "Row": Row}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.control.Column(*args, **arguments)
+        if callable(self.control.Column):
+            return self.control.Column(*args, **arguments)
+        else:
+            return self.control.GetColumn(*args, **arguments)
 
     @property
     def Controls(self):
@@ -6015,7 +6072,10 @@ class Control:
     def ItemData(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.control.ItemData(*args, **arguments)
+        if callable(self.control.ItemData):
+            return self.control.ItemData(*args, **arguments)
+        else:
+            return self.control.GetItemData(*args, **arguments)
 
     @property
     def ItemsSelected(self):
@@ -6048,7 +6108,10 @@ class Control:
     def ObjectVerbs(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.control.ObjectVerbs(*args, **arguments)
+        if callable(self.control.ObjectVerbs):
+            return self.control.ObjectVerbs(*args, **arguments)
+        else:
+            return self.control.GetObjectVerbs(*args, **arguments)
 
     @property
     def OldValue(self):
@@ -6142,7 +6205,10 @@ class Controls:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.controls.Item(*args, **arguments)
+        if callable(self.controls.Item):
+            return self.controls.Item(*args, **arguments)
+        else:
+            return self.controls.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -6614,7 +6680,10 @@ class CustomControl:
     def ObjectVerbs(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.customcontrol.ObjectVerbs(*args, **arguments)
+        if callable(self.customcontrol.ObjectVerbs):
+            return self.customcontrol.ObjectVerbs(*args, **arguments)
+        else:
+            return self.customcontrol.GetObjectVerbs(*args, **arguments)
 
     @property
     def ObjectVerbsCount(self):
@@ -6851,7 +6920,10 @@ class DependencyObjects:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.dependencyobjects.Item(*args, **arguments)
+        if callable(self.dependencyobjects.Item):
+            return self.dependencyobjects.Item(*args, **arguments)
+        else:
+            return self.dependencyobjects.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -7566,7 +7638,10 @@ class Entities:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.entities.Item(*args, **arguments)
+        if callable(self.entities.Item):
+            return self.entities.Item(*args, **arguments)
+        else:
+            return self.entities.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -8029,7 +8104,10 @@ class Form:
     def DefaultControl(self, *args, ControlType=None):
         arguments = {"ControlType": ControlType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.form.DefaultControl(*args, **arguments)
+        if callable(self.form.DefaultControl):
+            return self.form.DefaultControl(*args, **arguments)
+        else:
+            return self.form.GetDefaultControl(*args, **arguments)
 
     @property
     def DefaultView(self):
@@ -8802,7 +8880,10 @@ class Form:
     def Section(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.form.Section(*args, **arguments)
+        if callable(self.form.Section):
+            return self.form.Section(*args, **arguments)
+        else:
+            return self.form.GetSection(*args, **arguments)
 
     @property
     def SelectionChange(self):
@@ -9181,7 +9262,10 @@ class FormatConditions:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.formatconditions.Item(*args, **arguments)
+        if callable(self.formatconditions.Item):
+            return self.formatconditions.Item(*args, **arguments)
+        else:
+            return self.formatconditions.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -9211,7 +9295,10 @@ class Forms:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.forms.Item(*args, **arguments)
+        if callable(self.forms.Item):
+            return self.forms.Item(*args, **arguments)
+        else:
+            return self.forms.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -9960,7 +10047,10 @@ class ImportExportSpecifications:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.importexportspecifications.Item(*args, **arguments)
+        if callable(self.importexportspecifications.Item):
+            return self.importexportspecifications.Item(*args, **arguments)
+        else:
+            return self.importexportspecifications.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -10933,7 +11023,10 @@ class ListBox:
     def Column(self, *args, Index=None, Row=None):
         arguments = {"Index": Index, "Row": Row}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listbox.Column(*args, **arguments)
+        if callable(self.listbox.Column):
+            return self.listbox.Column(*args, **arguments)
+        else:
+            return self.listbox.GetColumn(*args, **arguments)
 
     @property
     def ColumnCount(self):
@@ -11270,7 +11363,10 @@ class ListBox:
     def ItemData(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listbox.ItemData(*args, **arguments)
+        if callable(self.listbox.ItemData):
+            return self.listbox.ItemData(*args, **arguments)
+        else:
+            return self.listbox.GetItemData(*args, **arguments)
 
     @property
     def ItemsSelected(self):
@@ -11756,7 +11852,10 @@ class Module:
     def Lines(self, *args, Line=None, NumLines=None):
         arguments = {"Line": Line, "NumLines": NumLines}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.module.Lines(*args, **arguments)
+        if callable(self.module.Lines):
+            return self.module.Lines(*args, **arguments)
+        else:
+            return self.module.GetLines(*args, **arguments)
 
     @property
     def Name(self):
@@ -11773,22 +11872,34 @@ class Module:
     def ProcBodyLine(self, *args, ProcName=None, ProcKind=None):
         arguments = {"ProcName": ProcName, "ProcKind": ProcKind}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.module.ProcBodyLine(*args, **arguments)
+        if callable(self.module.ProcBodyLine):
+            return self.module.ProcBodyLine(*args, **arguments)
+        else:
+            return self.module.GetProcBodyLine(*args, **arguments)
 
     def ProcCountLines(self, *args, ProcName=None, ProcKind=None):
         arguments = {"ProcName": ProcName, "ProcKind": ProcKind}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.module.ProcCountLines(*args, **arguments)
+        if callable(self.module.ProcCountLines):
+            return self.module.ProcCountLines(*args, **arguments)
+        else:
+            return self.module.GetProcCountLines(*args, **arguments)
 
     def ProcOfLine(self, *args, Line=None, ProcKind=None):
         arguments = {"Line": Line, "ProcKind": ProcKind}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.module.ProcOfLine(*args, **arguments)
+        if callable(self.module.ProcOfLine):
+            return self.module.ProcOfLine(*args, **arguments)
+        else:
+            return self.module.GetProcOfLine(*args, **arguments)
 
     def ProcStartLine(self, *args, ProcName=None, ProcKind=None):
         arguments = {"ProcName": ProcName, "ProcKind": ProcKind}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.module.ProcStartLine(*args, **arguments)
+        if callable(self.module.ProcStartLine):
+            return self.module.ProcStartLine(*args, **arguments)
+        else:
+            return self.module.GetProcStartLine(*args, **arguments)
 
     @property
     def Type(self):
@@ -11850,7 +11961,10 @@ class Modules:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.modules.Item(*args, **arguments)
+        if callable(self.modules.Item):
+            return self.modules.Item(*args, **arguments)
+        else:
+            return self.modules.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -13853,7 +13967,10 @@ class ObjectFrame:
     def ObjectVerbs(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.objectframe.ObjectVerbs(*args, **arguments)
+        if callable(self.objectframe.ObjectVerbs):
+            return self.objectframe.ObjectVerbs(*args, **arguments)
+        else:
+            return self.objectframe.GetObjectVerbs(*args, **arguments)
 
     @property
     def ObjectVerbsCount(self):
@@ -14207,7 +14324,10 @@ class Operations:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.operations.Item(*args, **arguments)
+        if callable(self.operations.Item):
+            return self.operations.Item(*args, **arguments)
+        else:
+            return self.operations.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -15737,7 +15857,10 @@ class Pages:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pages.Item(*args, **arguments)
+        if callable(self.pages.Item):
+            return self.pages.Item(*args, **arguments)
+        else:
+            return self.pages.GetItem(*args, **arguments)
 
     def Add(self, *args, Before=None):
         arguments = {"Before": Before}
@@ -15934,7 +16057,10 @@ class Printers:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.printers.Item(*args, **arguments)
+        if callable(self.printers.Item):
+            return self.printers.Item(*args, **arguments)
+        else:
+            return self.printers.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -15956,7 +16082,10 @@ class Properties:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.properties.Item(*args, **arguments)
+        if callable(self.properties.Item):
+            return self.properties.Item(*args, **arguments)
+        else:
+            return self.properties.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -16461,7 +16590,10 @@ class Report:
     def DefaultControl(self, *args, ControlType=None):
         arguments = {"ControlType": ControlType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.report.DefaultControl(*args, **arguments)
+        if callable(self.report.DefaultControl):
+            return self.report.DefaultControl(*args, **arguments)
+        else:
+            return self.report.GetDefaultControl(*args, **arguments)
 
     @property
     def DefaultView(self):
@@ -16622,7 +16754,10 @@ class Report:
     def GroupLevel(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.report.GroupLevel(*args, **arguments)
+        if callable(self.report.GroupLevel):
+            return self.report.GroupLevel(*args, **arguments)
+        else:
+            return self.report.GetGroupLevel(*args, **arguments)
 
     @property
     def GrpKeepTogether(self):
@@ -17279,7 +17414,10 @@ class Report:
     def Section(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.report.Section(*args, **arguments)
+        if callable(self.report.Section):
+            return self.report.Section(*args, **arguments)
+        else:
+            return self.report.GetSection(*args, **arguments)
 
     @property
     def ServerFilter(self):
@@ -17426,7 +17564,10 @@ class Reports:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.reports.Item(*args, **arguments)
+        if callable(self.reports.Item):
+            return self.reports.Item(*args, **arguments)
+        else:
+            return self.reports.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -17461,7 +17602,10 @@ class ReturnVars:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.returnvars.Item(*args, **arguments)
+        if callable(self.returnvars.Item):
+            return self.returnvars.Item(*args, **arguments)
+        else:
+            return self.returnvars.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -17844,7 +17988,10 @@ class SharedResources:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sharedresources.Item(*args, **arguments)
+        if callable(self.sharedresources.Item):
+            return self.sharedresources.Item(*args, **arguments)
+        else:
+            return self.sharedresources.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -17922,7 +18069,10 @@ class SmartTagActions:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.smarttagactions.Item(*args, **arguments)
+        if callable(self.smarttagactions.Item):
+            return self.smarttagactions.Item(*args, **arguments)
+        else:
+            return self.smarttagactions.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -17947,7 +18097,10 @@ class SmartTagProperties:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.smarttagproperties.Item(*args, **arguments)
+        if callable(self.smarttagproperties.Item):
+            return self.smarttagproperties.Item(*args, **arguments)
+        else:
+            return self.smarttagproperties.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -17998,7 +18151,10 @@ class SmartTags:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.smarttags.Item(*args, **arguments)
+        if callable(self.smarttags.Item):
+            return self.smarttags.Item(*args, **arguments)
+        else:
+            return self.smarttags.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -19298,7 +19454,10 @@ class TempVars:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.tempvars.Item(*args, **arguments)
+        if callable(self.tempvars.Item):
+            return self.tempvars.Item(*args, **arguments)
+        else:
+            return self.tempvars.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -21904,7 +22063,10 @@ class WebServices:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.webservices.Item(*args, **arguments)
+        if callable(self.webservices.Item):
+            return self.webservices.Item(*args, **arguments)
+        else:
+            return self.webservices.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -21943,7 +22105,10 @@ class WSParameters:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.wsparameters.Item(*args, **arguments)
+        if callable(self.wsparameters.Item):
+            return self.wsparameters.Item(*args, **arguments)
+        else:
+            return self.wsparameters.GetItem(*args, **arguments)
 
     @property
     def Parent(self):

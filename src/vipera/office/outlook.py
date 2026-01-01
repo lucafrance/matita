@@ -11033,7 +11033,10 @@ class PropertyPage:
     def Dirty(self, *args, Dirty=None):
         arguments = {"Dirty": Dirty}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.propertypage.Dirty(*args, **arguments)
+        if callable(self.propertypage.Dirty):
+            return self.propertypage.Dirty(*args, **arguments)
+        else:
+            return self.propertypage.GetDirty(*args, **arguments)
 
     def Apply(self):
         return self.propertypage.Apply()

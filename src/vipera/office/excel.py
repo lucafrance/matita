@@ -174,7 +174,10 @@ class Actions:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Actions(self.actions.Item(*args, **arguments))
+        if callable(self.actions.Item):
+            return Actions(self.actions.Item(*args, **arguments))
+        else:
+            return Actions(self.actions.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -252,7 +255,10 @@ class AddIns:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.addins.Item(*args, **arguments)
+        if callable(self.addins.Item):
+            return self.addins.Item(*args, **arguments)
+        else:
+            return self.addins.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -286,7 +292,10 @@ class AddIns2:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.addins2.Item(*args, **arguments)
+        if callable(self.addins2.Item):
+            return self.addins2.Item(*args, **arguments)
+        else:
+            return self.addins2.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -375,7 +384,10 @@ class AllowEditRanges:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.alloweditranges.Item(*args, **arguments)
+        if callable(self.alloweditranges.Item):
+            return self.alloweditranges.Item(*args, **arguments)
+        else:
+            return self.alloweditranges.GetItem(*args, **arguments)
 
     def Add(self, *args, Title=None, Range=None, Password=None):
         arguments = {"Title": Title, "Range": Range, "Password": Password}
@@ -550,7 +562,10 @@ class Application:
     def Caller(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetCaller(*args, **arguments)
+        if callable(self.application.Caller):
+            return self.application.Caller(*args, **arguments)
+        else:
+            return self.application.GetCaller(*args, **arguments)
 
     @property
     def CanPlaySounds(self):
@@ -579,7 +594,10 @@ class Application:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.application.Cells(*args, **arguments))
+        if callable(self.application.Cells):
+            return Range(self.application.Cells(*args, **arguments))
+        else:
+            return Range(self.application.GetCells(*args, **arguments))
 
     @property
     def Charts(self):
@@ -588,7 +606,10 @@ class Application:
     def ClipboardFormats(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetClipboardFormats(*args, **arguments)
+        if callable(self.application.ClipboardFormats):
+            return self.application.ClipboardFormats(*args, **arguments)
+        else:
+            return self.application.GetClipboardFormats(*args, **arguments)
 
     @property
     def ClusterConnector(self):
@@ -953,12 +974,18 @@ class Application:
     def FileConverters(self, *args, Index1=None, Index2=None):
         arguments = {"Index1": Index1, "Index2": Index2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetFileConverters(*args, **arguments)
+        if callable(self.application.FileConverters):
+            return self.application.FileConverters(*args, **arguments)
+        else:
+            return self.application.GetFileConverters(*args, **arguments)
 
     def FileDialog(self, *args, fileDialogType=None):
         arguments = {"fileDialogType": fileDialogType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.FileDialog(*args, **arguments)
+        if callable(self.application.FileDialog):
+            return self.application.FileDialog(*args, **arguments)
+        else:
+            return self.application.GetFileDialog(*args, **arguments)
 
     @property
     def FileExportConverters(self):
@@ -1243,7 +1270,10 @@ class Application:
     def PreviousSelections(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.application.GetPreviousSelections(*args, **arguments))
+        if callable(self.application.PreviousSelections):
+            return Range(self.application.PreviousSelections(*args, **arguments))
+        else:
+            return Range(self.application.GetPreviousSelections(*args, **arguments))
 
     @property
     def PrintCommunication(self):
@@ -1272,7 +1302,10 @@ class Application:
     def Range(self, *args, Cell1=None, Cell2=None):
         arguments = {"Cell1": Cell1, "Cell2": Cell2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.application.Range(*args, **arguments))
+        if callable(self.application.Range):
+            return Range(self.application.Range(*args, **arguments))
+        else:
+            return Range(self.application.GetRange(*args, **arguments))
 
     @property
     def Ready(self):
@@ -1297,7 +1330,10 @@ class Application:
     def RegisteredFunctions(self, *args, Index1=None, Index2=None):
         arguments = {"Index1": Index1, "Index2": Index2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetRegisteredFunctions(*args, **arguments)
+        if callable(self.application.RegisteredFunctions):
+            return self.application.RegisteredFunctions(*args, **arguments)
+        else:
+            return self.application.GetRegisteredFunctions(*args, **arguments)
 
     @property
     def ReplaceFormat(self):
@@ -1875,7 +1911,10 @@ class Areas:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.areas.Item(*args, **arguments)
+        if callable(self.areas.Item):
+            return self.areas.Item(*args, **arguments)
+        else:
+            return self.areas.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -1978,7 +2017,10 @@ class AutoCorrect:
     def ReplacementList(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.autocorrect.GetReplacementList(*args, **arguments)
+        if callable(self.autocorrect.ReplacementList):
+            return self.autocorrect.ReplacementList(*args, **arguments)
+        else:
+            return self.autocorrect.GetReplacementList(*args, **arguments)
 
     @property
     def ReplaceText(self):
@@ -2466,7 +2508,10 @@ class AxisTitle:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Characters(self.axistitle.Characters(*args, **arguments))
+        if callable(self.axistitle.Characters):
+            return Characters(self.axistitle.Characters(*args, **arguments))
+        else:
+            return Characters(self.axistitle.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -2714,7 +2759,10 @@ class Borders:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Border(self.borders.Item(*args, **arguments))
+        if callable(self.borders.Item):
+            return Border(self.borders.Item(*args, **arguments))
+        else:
+            return Border(self.borders.GetItem(*args, **arguments))
 
     @property
     def LineStyle(self):
@@ -2915,7 +2963,10 @@ class CalculatedMembers:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.calculatedmembers.Item(*args, **arguments)
+        if callable(self.calculatedmembers.Item):
+            return self.calculatedmembers.Item(*args, **arguments)
+        else:
+            return self.calculatedmembers.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -4429,7 +4480,10 @@ class Charts:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.charts.Item(*args, **arguments)
+        if callable(self.charts.Item):
+            return self.charts.Item(*args, **arguments)
+        else:
+            return self.charts.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -4495,7 +4549,10 @@ class ChartTitle:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Characters(self.charttitle.Characters(*args, **arguments))
+        if callable(self.charttitle.Characters):
+            return Characters(self.charttitle.Characters(*args, **arguments))
+        else:
+            return Characters(self.charttitle.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -4815,7 +4872,10 @@ class ColorScaleCriteria:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ColorScaleCriterion(self.colorscalecriteria.Item(*args, **arguments))
+        if callable(self.colorscalecriteria.Item):
+            return ColorScaleCriterion(self.colorscalecriteria.Item(*args, **arguments))
+        else:
+            return ColorScaleCriterion(self.colorscalecriteria.GetItem(*args, **arguments))
 
 class ColorScaleCriterion:
 
@@ -5579,7 +5639,10 @@ class CubeFields:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.cubefields.Item(*args, **arguments)
+        if callable(self.cubefields.Item):
+            return self.cubefields.Item(*args, **arguments)
+        else:
+            return self.cubefields.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -5613,7 +5676,10 @@ class CustomProperties:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.customproperties.Item(*args, **arguments)
+        if callable(self.customproperties.Item):
+            return self.customproperties.Item(*args, **arguments)
+        else:
+            return self.customproperties.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -5929,7 +5995,10 @@ class DataLabel:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Characters(self.datalabel.Characters(*args, **arguments))
+        if callable(self.datalabel.Characters):
+            return Characters(self.datalabel.Characters(*args, **arguments))
+        else:
+            return Characters(self.datalabel.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -6601,7 +6670,10 @@ class Dialogs:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.dialogs.Item(*args, **arguments)
+        if callable(self.dialogs.Item):
+            return self.dialogs.Item(*args, **arguments)
+        else:
+            return self.dialogs.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -6648,7 +6720,10 @@ class DisplayFormat:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Characters(self.displayformat.Characters(*args, **arguments))
+        if callable(self.displayformat.Characters):
+            return Characters(self.displayformat.Characters(*args, **arguments))
+        else:
+            return Characters(self.displayformat.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -6738,7 +6813,10 @@ class DisplayUnitLabel:
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Characters(self.displayunitlabel.Characters(*args, **arguments))
+        if callable(self.displayunitlabel.Characters):
+            return Characters(self.displayunitlabel.Characters(*args, **arguments))
+        else:
+            return Characters(self.displayunitlabel.GetCharacters(*args, **arguments))
 
     @property
     def Creator(self):
@@ -7136,7 +7214,10 @@ class Errors:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Error(self.errors.Item(*args, **arguments))
+        if callable(self.errors.Item):
+            return Error(self.errors.Item(*args, **arguments))
+        else:
+            return Error(self.errors.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -7194,7 +7275,10 @@ class FileExportConverters:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return FileExportConverter(self.fileexportconverters.Item(*args, **arguments))
+        if callable(self.fileexportconverters.Item):
+            return FileExportConverter(self.fileexportconverters.Item(*args, **arguments))
+        else:
+            return FileExportConverter(self.fileexportconverters.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -7463,7 +7547,10 @@ class Filters:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.filters.Item(*args, **arguments)
+        if callable(self.filters.Item):
+            return self.filters.Item(*args, **arguments)
+        else:
+            return self.filters.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -8076,7 +8163,10 @@ class GroupShapes:
     def Range(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ShapeRange(self.groupshapes.Range(*args, **arguments))
+        if callable(self.groupshapes.Range):
+            return ShapeRange(self.groupshapes.Range(*args, **arguments))
+        else:
+            return ShapeRange(self.groupshapes.GetRange(*args, **arguments))
 
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
@@ -8200,7 +8290,10 @@ class HPageBreaks:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.hpagebreaks.Item(*args, **arguments)
+        if callable(self.hpagebreaks.Item):
+            return self.hpagebreaks.Item(*args, **arguments)
+        else:
+            return self.hpagebreaks.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -8320,7 +8413,10 @@ class Hyperlinks:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.hyperlinks.Item(*args, **arguments)
+        if callable(self.hyperlinks.Item):
+            return self.hyperlinks.Item(*args, **arguments)
+        else:
+            return self.hyperlinks.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -8367,7 +8463,10 @@ class IconCriteria:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return IconCriterion(self.iconcriteria.Item(*args, **arguments))
+        if callable(self.iconcriteria.Item):
+            return IconCriterion(self.iconcriteria.Item(*args, **arguments))
+        else:
+            return IconCriterion(self.iconcriteria.GetItem(*args, **arguments))
 
 class IconCriterion:
 
@@ -8430,7 +8529,10 @@ class IconSet:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Icon(self.iconset.Item(*args, **arguments))
+        if callable(self.iconset.Item):
+            return Icon(self.iconset.Item(*args, **arguments))
+        else:
+            return Icon(self.iconset.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -8567,7 +8669,10 @@ class IconSets:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return IconSet(self.iconsets.Item(*args, **arguments))
+        if callable(self.iconsets.Item):
+            return IconSet(self.iconsets.Item(*args, **arguments))
+        else:
+            return IconSet(self.iconsets.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -9346,7 +9451,10 @@ class ListColumns:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listcolumns.Item(*args, **arguments)
+        if callable(self.listcolumns.Item):
+            return self.listcolumns.Item(*args, **arguments)
+        else:
+            return self.listcolumns.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -9651,7 +9759,10 @@ class ListObjects:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listobjects.Item(*args, **arguments)
+        if callable(self.listobjects.Item):
+            return self.listobjects.Item(*args, **arguments)
+        else:
+            return self.listobjects.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -9713,7 +9824,10 @@ class ListRows:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listrows.Item(*args, **arguments)
+        if callable(self.listrows.Item):
+            return self.listrows.Item(*args, **arguments)
+        else:
+            return self.listrows.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -11090,7 +11204,10 @@ class Pages:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Page(self.pages.Item(*args, **arguments))
+        if callable(self.pages.Item):
+            return Page(self.pages.Item(*args, **arguments))
+        else:
+            return Page(self.pages.GetItem(*args, **arguments))
 
 class PageSetup:
 
@@ -11537,7 +11654,10 @@ class Panes:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.panes.Item(*args, **arguments)
+        if callable(self.panes.Item):
+            return self.panes.Item(*args, **arguments)
+        else:
+            return self.panes.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -11738,7 +11858,10 @@ class Phonetics:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.phonetics.Item(*args, **arguments)
+        if callable(self.phonetics.Item):
+            return self.phonetics.Item(*args, **arguments)
+        else:
+            return self.phonetics.GetItem(*args, **arguments)
 
     @property
     def Length(self):
@@ -12322,7 +12445,10 @@ class PivotField:
     def ChildItems(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.pivotfield.ChildItems(*args, **arguments))
+        if callable(self.pivotfield.ChildItems):
+            return PivotItem(self.pivotfield.ChildItems(*args, **arguments))
+        else:
+            return PivotItem(self.pivotfield.GetChildItems(*args, **arguments))
 
     @property
     def Creator(self):
@@ -12487,7 +12613,10 @@ class PivotField:
     def HiddenItems(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.pivotfield.HiddenItems(*args, **arguments))
+        if callable(self.pivotfield.HiddenItems):
+            return PivotItem(self.pivotfield.HiddenItems(*args, **arguments))
+        else:
+            return PivotItem(self.pivotfield.GetHiddenItems(*args, **arguments))
 
     @property
     def HiddenItemsList(self):
@@ -12604,7 +12733,10 @@ class PivotField:
     def ParentItems(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.pivotfield.ParentItems(*args, **arguments))
+        if callable(self.pivotfield.ParentItems):
+            return PivotItem(self.pivotfield.ParentItems(*args, **arguments))
+        else:
+            return PivotItem(self.pivotfield.GetParentItems(*args, **arguments))
 
     @property
     def PivotFilters(self):
@@ -12725,7 +12857,10 @@ class PivotField:
     def VisibleItems(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.pivotfield.VisibleItems(*args, **arguments))
+        if callable(self.pivotfield.VisibleItems):
+            return PivotItem(self.pivotfield.VisibleItems(*args, **arguments))
+        else:
+            return PivotItem(self.pivotfield.GetVisibleItems(*args, **arguments))
 
     @property
     def VisibleItemsList(self):
@@ -12919,7 +13054,10 @@ class PivotFilters:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotFilters(self.pivotfilters.Item(*args, **arguments))
+        if callable(self.pivotfilters.Item):
+            return PivotFilters(self.pivotfilters.Item(*args, **arguments))
+        else:
+            return PivotFilters(self.pivotfilters.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -13029,7 +13167,10 @@ class PivotItem:
     def ChildItems(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.pivotitem.ChildItems(*args, **arguments))
+        if callable(self.pivotitem.ChildItems):
+            return PivotItem(self.pivotitem.ChildItems(*args, **arguments))
+        else:
+            return PivotItem(self.pivotitem.GetChildItems(*args, **arguments))
 
     @property
     def Creator(self):
@@ -13280,7 +13421,10 @@ class PivotLineCells:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotLineCells(self.pivotlinecells.Item(*args, **arguments))
+        if callable(self.pivotlinecells.Item):
+            return PivotLineCells(self.pivotlinecells.Item(*args, **arguments))
+        else:
+            return PivotLineCells(self.pivotlinecells.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -13306,7 +13450,10 @@ class PivotLines:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotLines(self.pivotlines.Item(*args, **arguments))
+        if callable(self.pivotlines.Item):
+            return PivotLines(self.pivotlines.Item(*args, **arguments))
+        else:
+            return PivotLines(self.pivotlines.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -13400,7 +13547,10 @@ class PivotTable:
     def ColumnFields(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.pivottable.ColumnFields(*args, **arguments))
+        if callable(self.pivottable.ColumnFields):
+            return PivotField(self.pivottable.ColumnFields(*args, **arguments))
+        else:
+            return PivotField(self.pivottable.GetColumnFields(*args, **arguments))
 
     @property
     def ColumnGrand(self):
@@ -13453,7 +13603,10 @@ class PivotTable:
     def DataFields(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.pivottable.DataFields(*args, **arguments))
+        if callable(self.pivottable.DataFields):
+            return PivotField(self.pivottable.DataFields(*args, **arguments))
+        else:
+            return PivotField(self.pivottable.GetDataFields(*args, **arguments))
 
     @property
     def DataLabelRange(self):
@@ -13602,7 +13755,10 @@ class PivotTable:
     def HiddenFields(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.pivottable.HiddenFields(*args, **arguments))
+        if callable(self.pivottable.HiddenFields):
+            return PivotField(self.pivottable.HiddenFields(*args, **arguments))
+        else:
+            return PivotField(self.pivottable.GetHiddenFields(*args, **arguments))
 
     @property
     def InGridDropZones(self):
@@ -13683,7 +13839,10 @@ class PivotTable:
     def PageFields(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.pivottable.PageFields(*args, **arguments))
+        if callable(self.pivottable.PageFields):
+            return PivotField(self.pivottable.PageFields(*args, **arguments))
+        else:
+            return PivotField(self.pivottable.GetPageFields(*args, **arguments))
 
     @property
     def PageFieldStyle(self):
@@ -13780,7 +13939,10 @@ class PivotTable:
     def RowFields(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.pivottable.RowFields(*args, **arguments))
+        if callable(self.pivottable.RowFields):
+            return PivotField(self.pivottable.RowFields(*args, **arguments))
+        else:
+            return PivotField(self.pivottable.GetRowFields(*args, **arguments))
 
     @property
     def RowGrand(self):
@@ -13973,7 +14135,10 @@ class PivotTable:
     def VisibleFields(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.pivottable.VisibleFields(*args, **arguments))
+        if callable(self.pivottable.VisibleFields):
+            return PivotField(self.pivottable.VisibleFields(*args, **arguments))
+        else:
+            return PivotField(self.pivottable.GetVisibleFields(*args, **arguments))
 
     @property
     def VisualTotals(self):
@@ -14119,7 +14284,10 @@ class PivotTableChangeList:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ValueChange(self.pivottablechangelist.Item(*args, **arguments))
+        if callable(self.pivottablechangelist.Item):
+            return ValueChange(self.pivottablechangelist.Item(*args, **arguments))
+        else:
+            return ValueChange(self.pivottablechangelist.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -14617,7 +14785,10 @@ class ProtectedViewWindows:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.protectedviewwindows.Item(*args, **arguments)
+        if callable(self.protectedviewwindows.Item):
+            return self.protectedviewwindows.Item(*args, **arguments)
+        else:
+            return self.protectedviewwindows.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -14777,7 +14948,10 @@ class PublishObjects:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.publishobjects.Item(*args, **arguments)
+        if callable(self.publishobjects.Item):
+            return self.publishobjects.Item(*args, **arguments)
+        else:
+            return self.publishobjects.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -15312,12 +15486,18 @@ class Range:
     def Address(self, *args, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
         arguments = {"RowAbsolute": RowAbsolute, "ColumnAbsolute": ColumnAbsolute, "ReferenceStyle": ReferenceStyle, "External": External, "RelativeTo": RelativeTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Address(*args, **arguments)
+        if callable(self.range.Address):
+            return self.range.Address(*args, **arguments)
+        else:
+            return self.range.GetAddress(*args, **arguments)
 
     def AddressLocal(self, *args, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
         arguments = {"RowAbsolute": RowAbsolute, "ColumnAbsolute": ColumnAbsolute, "ReferenceStyle": ReferenceStyle, "External": External, "RelativeTo": RelativeTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AddressLocal(*args, **arguments)
+        if callable(self.range.AddressLocal):
+            return self.range.AddressLocal(*args, **arguments)
+        else:
+            return self.range.GetAddressLocal(*args, **arguments)
 
     @property
     def AllowEdit(self):
@@ -15338,12 +15518,18 @@ class Range:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.range.Cells(*args, **arguments))
+        if callable(self.range.Cells):
+            return Range(self.range.Cells(*args, **arguments))
+        else:
+            return Range(self.range.GetCells(*args, **arguments))
 
     def Characters(self, *args, Start=None, Length=None):
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Characters(self.range.Characters(*args, **arguments))
+        if callable(self.range.Characters):
+            return Characters(self.range.Characters(*args, **arguments))
+        else:
+            return Characters(self.range.GetCharacters(*args, **arguments))
 
     @property
     def Column(self):
@@ -15408,7 +15594,10 @@ class Range:
     def End(self, *args, Direction=None):
         arguments = {"Direction": Direction}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.range.End(*args, **arguments))
+        if callable(self.range.End):
+            return Range(self.range.End(*args, **arguments))
+        else:
+            return Range(self.range.GetEnd(*args, **arguments))
 
     @property
     def EntireColumn(self):
@@ -15561,7 +15750,10 @@ class Range:
     def Item(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.range.Item(*args, **arguments))
+        if callable(self.range.Item):
+            return Range(self.range.Item(*args, **arguments))
+        else:
+            return Range(self.range.GetItem(*args, **arguments))
 
     @property
     def Left(self):
@@ -15638,7 +15830,10 @@ class Range:
     def Offset(self, *args, RowOffset=None, ColumnOffset=None):
         arguments = {"RowOffset": RowOffset, "ColumnOffset": ColumnOffset}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.range.Offset(*args, **arguments))
+        if callable(self.range.Offset):
+            return Range(self.range.Offset(*args, **arguments))
+        else:
+            return Range(self.range.GetOffset(*args, **arguments))
 
     @property
     def Orientation(self):
@@ -15711,7 +15906,10 @@ class Range:
     def Range(self, *args, Cell1=None, Cell2=None):
         arguments = {"Cell1": Cell1, "Cell2": Cell2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.range.Range(*args, **arguments))
+        if callable(self.range.Range):
+            return Range(self.range.Range(*args, **arguments))
+        else:
+            return Range(self.range.GetRange(*args, **arguments))
 
     @property
     def ReadingOrder(self):
@@ -15724,7 +15922,10 @@ class Range:
     def Resize(self, *args, RowSize=None, ColumnSize=None):
         arguments = {"RowSize": RowSize, "ColumnSize": ColumnSize}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.range.Resize(*args, **arguments))
+        if callable(self.range.Resize):
+            return Range(self.range.Resize(*args, **arguments))
+        else:
+            return Range(self.range.GetResize(*args, **arguments))
 
     @property
     def Row(self):
@@ -16237,7 +16438,10 @@ class Ranges:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.ranges.Item(*args, **arguments))
+        if callable(self.ranges.Item):
+            return Range(self.ranges.Item(*args, **arguments))
+        else:
+            return Range(self.ranges.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -16298,7 +16502,10 @@ class RecentFiles:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.recentfiles.Item(*args, **arguments)
+        if callable(self.recentfiles.Item):
+            return self.recentfiles.Item(*args, **arguments)
+        else:
+            return self.recentfiles.GetItem(*args, **arguments)
 
     @property
     def Maximum(self):
@@ -16529,7 +16736,10 @@ class Scenario:
     def Values(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.scenario.Values(*args, **arguments)
+        if callable(self.scenario.Values):
+            return self.scenario.Values(*args, **arguments)
+        else:
+            return self.scenario.GetValues(*args, **arguments)
 
     def ChangeScenario(self, *args, ChangingCells=None, Values=None):
         arguments = {"ChangingCells": ChangingCells, "Values": Values}
@@ -17682,7 +17892,10 @@ class Shapes:
     def Range(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ShapeRange(self.shapes.Range(*args, **arguments))
+        if callable(self.shapes.Range):
+            return ShapeRange(self.shapes.Range(*args, **arguments))
+        else:
+            return ShapeRange(self.shapes.GetRange(*args, **arguments))
 
     def Add3DModel(self, *args, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
         arguments = {"FileName": FileName, "LinkToFile": LinkToFile, "SaveWithDocument": SaveWithDocument, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
@@ -17794,7 +18007,10 @@ class Sheets:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sheets.Item(*args, **arguments)
+        if callable(self.sheets.Item):
+            return self.sheets.Item(*args, **arguments)
+        else:
+            return self.sheets.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -17873,7 +18089,10 @@ class SheetViews:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sheetviews.Item(*args, **arguments)
+        if callable(self.sheetviews.Item):
+            return self.sheetviews.Item(*args, **arguments)
+        else:
+            return self.sheetviews.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -18210,7 +18429,10 @@ class SlicerCacheLevels:
     def Item(self, *args, Level=None):
         arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return SlicerCacheLevel(self.slicercachelevels.Item(*args, **arguments))
+        if callable(self.slicercachelevels.Item):
+            return SlicerCacheLevel(self.slicercachelevels.Item(*args, **arguments))
+        else:
+            return SlicerCacheLevel(self.slicercachelevels.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -18236,7 +18458,10 @@ class SlicerCaches:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return SlicerCache(self.slicercaches.Item(*args, **arguments))
+        if callable(self.slicercaches.Item):
+            return SlicerCache(self.slicercaches.Item(*args, **arguments))
+        else:
+            return SlicerCache(self.slicercaches.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -18316,7 +18541,10 @@ class SlicerItems:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return SlicerItem(self.sliceritems.Item(*args, **arguments))
+        if callable(self.sliceritems.Item):
+            return SlicerItem(self.sliceritems.Item(*args, **arguments))
+        else:
+            return SlicerItem(self.sliceritems.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -18342,7 +18570,10 @@ class SlicerPivotTables:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotTable(self.slicerpivottables.Item(*args, **arguments))
+        if callable(self.slicerpivottables.Item):
+            return PivotTable(self.slicerpivottables.Item(*args, **arguments))
+        else:
+            return PivotTable(self.slicerpivottables.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -18381,7 +18612,10 @@ class Slicers:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Slicer(self.slicers.Item(*args, **arguments))
+        if callable(self.slicers.Item):
+            return Slicer(self.slicers.Item(*args, **arguments))
+        else:
+            return Slicer(self.slicers.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -18555,7 +18789,10 @@ class SortFields:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return SortField(self.sortfields.Item(*args, **arguments))
+        if callable(self.sortfields.Item):
+            return SortField(self.sortfields.Item(*args, **arguments))
+        else:
+            return SortField(self.sortfields.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -18744,7 +18981,10 @@ class SparklineGroup:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Sparkline(self.sparklinegroup.Item(*args, **arguments))
+        if callable(self.sparklinegroup.Item):
+            return Sparkline(self.sparklinegroup.Item(*args, **arguments))
+        else:
+            return Sparkline(self.sparklinegroup.GetItem(*args, **arguments))
 
     @property
     def LineWeight(self):
@@ -18829,7 +19069,10 @@ class SparklineGroups:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return SparklineGroup(self.sparklinegroups.Item(*args, **arguments))
+        if callable(self.sparklinegroups.Item):
+            return SparklineGroup(self.sparklinegroups.Item(*args, **arguments))
+        else:
+            return SparklineGroup(self.sparklinegroups.GetItem(*args, **arguments))
 
     @property
     def Parent(self):
@@ -19354,7 +19597,10 @@ class Styles:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.styles.Item(*args, **arguments)
+        if callable(self.styles.Item):
+            return self.styles.Item(*args, **arguments)
+        else:
+            return self.styles.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -20792,7 +21038,10 @@ class UsedObjects:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.usedobjects.Item(*args, **arguments)
+        if callable(self.usedobjects.Item):
+            return self.usedobjects.Item(*args, **arguments)
+        else:
+            return self.usedobjects.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -20837,7 +21086,10 @@ class UserAccessList:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.useraccesslist.Item(*args, **arguments)
+        if callable(self.useraccesslist.Item):
+            return self.useraccesslist.Item(*args, **arguments)
+        else:
+            return self.useraccesslist.GetItem(*args, **arguments)
 
     def Add(self, *args, Name=None, AllowEdit=None):
         arguments = {"Name": Name, "AllowEdit": AllowEdit}
@@ -21089,7 +21341,10 @@ class VPageBreaks:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.vpagebreaks.Item(*args, **arguments)
+        if callable(self.vpagebreaks.Item):
+            return self.vpagebreaks.Item(*args, **arguments)
+        else:
+            return self.vpagebreaks.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -21205,7 +21460,10 @@ class Watches:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.watches.Item(*args, **arguments)
+        if callable(self.watches.Item):
+            return self.watches.Item(*args, **arguments)
+        else:
+            return self.watches.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -21769,7 +22027,10 @@ class Windows:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.windows.Item(*args, **arguments)
+        if callable(self.windows.Item):
+            return self.windows.Item(*args, **arguments)
+        else:
+            return self.windows.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -22692,7 +22953,10 @@ class Workbooks:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.workbooks.Item(*args, **arguments)
+        if callable(self.workbooks.Item):
+            return self.workbooks.Item(*args, **arguments)
+        else:
+            return self.workbooks.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -22760,7 +23024,10 @@ class Worksheet:
     def Cells(self, *args, RowIndex=None, ColumnIndex=None):
         arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.worksheet.Cells(*args, **arguments))
+        if callable(self.worksheet.Cells):
+            return Range(self.worksheet.Cells(*args, **arguments))
+        else:
+            return Range(self.worksheet.GetCells(*args, **arguments))
 
     @property
     def CircularReference(self):
@@ -22949,7 +23216,10 @@ class Worksheet:
     def Range(self, *args, Cell1=None, Cell2=None):
         arguments = {"Cell1": Cell1, "Cell2": Cell2}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Range(self.worksheet.Range(*args, **arguments))
+        if callable(self.worksheet.Range):
+            return Range(self.worksheet.Range(*args, **arguments))
+        else:
+            return Range(self.worksheet.GetRange(*args, **arguments))
 
     @property
     def Rows(self):
@@ -24862,7 +25132,10 @@ class Worksheets:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheets.Item(*args, **arguments)
+        if callable(self.worksheets.Item):
+            return self.worksheets.Item(*args, **arguments)
+        else:
+            return self.worksheets.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -25143,7 +25416,10 @@ class XmlMaps:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.xmlmaps.Item(*args, **arguments)
+        if callable(self.xmlmaps.Item):
+            return self.xmlmaps.Item(*args, **arguments)
+        else:
+            return self.xmlmaps.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -25199,7 +25475,10 @@ class XmlNamespaces:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.xmlnamespaces.Item(*args, **arguments)
+        if callable(self.xmlnamespaces.Item):
+            return self.xmlnamespaces.Item(*args, **arguments)
+        else:
+            return self.xmlnamespaces.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
@@ -25263,7 +25542,10 @@ class XmlSchemas:
     def Item(self, *args, Index=None):
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.xmlschemas.Item(*args, **arguments)
+        if callable(self.xmlschemas.Item):
+            return self.xmlschemas.Item(*args, **arguments)
+        else:
+            return self.xmlschemas.GetItem(*args, **arguments)
 
     @property
     def Parent(self):
