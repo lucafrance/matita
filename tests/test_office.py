@@ -1,6 +1,6 @@
 import unittest
 
-from vipera.office import access, excel, powerpoint, word
+from vipera.office import access, excel, outlook, powerpoint, word
 
 class TestApplicationOpenClose(unittest.TestCase):
     
@@ -56,6 +56,13 @@ class TestApplicationOpenClose(unittest.TestCase):
         # Close workbook without saving
         wkb.Close(SaveChanges=False)
         xl_app.Quit()
+
+    def test_outlook(self):
+        ol_app = outlook.Application().new()
+        self.assertIs(type(ol_app), outlook.Application)
+        ol_app.Visible = True
+        self.assertTrue(ol_app.Visible)
+        ol_app.Quit()
 
     def test_powerpoint(self):
         pp_app = powerpoint.Application().new()
