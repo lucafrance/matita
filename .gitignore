@@ -1,4 +1,6 @@
+.ipynb_checkpoints/
 dist/
+__pycache__
 
 *.log
-__pycache__
+*.ipynb
