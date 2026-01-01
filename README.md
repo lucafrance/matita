@@ -13,7 +13,7 @@ python -m pip install .
 
 ## Usage
 
-The `vipera` package contains the parser and related modules. To run the parser, use the included script:
+The `matita` package contains the parser and related modules. To run the parser, use the included script:
 
 ```powershell
 python -m scripts

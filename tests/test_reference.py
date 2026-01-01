@@ -1,6 +1,6 @@
 import unittest
 
-from vipera.reference import MarkdownTree
+from matita.reference import MarkdownTree
 
 test_text = open("tests/test_doc_page.md", "rt").read()
 test_tree = MarkdownTree(test_text)
@@ -42,7 +42,7 @@ class TestParser(unittest.TestCase):
         self.assertEqual(rows[3][2], "i")
 
 
-with open("src/vipera/office/excel.py", "rt") as f:
+with open("src/matita/office/excel.py", "rt") as f:
     excel_src = f.read()
 
 class TestExcelModule(unittest.TestCase):

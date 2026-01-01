@@ -1,6 +1,6 @@
 import unittest
 
-from vipera.office import access, excel, outlook, powerpoint, word
+from matita.office import access, excel, outlook, powerpoint, word
 
 class TestApplicationOpenClose(unittest.TestCase):
     

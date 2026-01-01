@@ -5,7 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from vipera.reference.models import VbaDocs
+from matita.reference.models import VbaDocs
 
 def main():
     os.makedirs("logs", exist_ok=True)
@@ -21,7 +21,7 @@ def main():
     os.makedirs("data", exist_ok=True)
     json.dump(docs.to_dict(), open("data/office-vba-api.json", "wt"), indent=4)
     for app in ["Excel", "Word", "PowerPoint", "Outlook", "Access"]:
-        with open(f"src/vipera/office/{app.lower()}.py", "wt") as f:
+        with open(f"src/matita/office/{app.lower()}.py", "wt") as f:
             f.write(docs.to_python(application=app))
 
 if __name__ == "__main__":
