@@ -1,4 +1,5 @@
 import win32com.client
+import pythoncom
 
 class AboveAverage:
 
@@ -100,10 +101,11 @@ class AboveAverage:
     def Delete(self):
         self.aboveaverage.Delete()
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.aboveaverage.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.aboveaverage.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.aboveaverage.SetFirstPriority()
@@ -173,13 +175,14 @@ class Actions:
     def Creator(self):
         return self.actions.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.actions.Item):
-            return Actions(self.actions.Item(*args, **arguments))
+            return Actions(self.actions.Item(*params))
         else:
-            return Actions(self.actions.GetItem(*args, **arguments))
+            return Actions(self.actions.GetItem(*params))
 
     @property
     def Parent(self):
@@ -256,22 +259,25 @@ class AddIns:
     def Creator(self):
         return self.addins.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.addins.Item):
-            return self.addins.Item(*args, **arguments)
+            return self.addins.Item(*params)
         else:
-            return self.addins.GetItem(*args, **arguments)
+            return self.addins.GetItem(*params)
 
     @property
     def Parent(self):
         return self.addins.Parent
 
-    def Add(self, *args, FileName=None, CopyFile=None):
-        arguments = {"FileName": FileName, "CopyFile": CopyFile}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return AddIn(self.addins.Add(*args, **arguments))
+    def Add(self, FileName=None, CopyFile=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            CopyFile if CopyFile is not None else pythoncom.Missing,
+        ]
+        return AddIn(self.addins.Add(*params))
 
 
 class AddIns2:
@@ -294,22 +300,25 @@ class AddIns2:
     def Creator(self):
         return self.addins2.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.addins2.Item):
-            return self.addins2.Item(*args, **arguments)
+            return self.addins2.Item(*params)
         else:
-            return self.addins2.GetItem(*args, **arguments)
+            return self.addins2.GetItem(*params)
 
     @property
     def Parent(self):
         return self.addins2.Parent
 
-    def Add(self, *args, FileName=None, CopyFile=None):
-        arguments = {"FileName": FileName, "CopyFile": CopyFile}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return AddIns(self.addins2.Add(*args, **arguments))
+    def Add(self, FileName=None, CopyFile=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            CopyFile if CopyFile is not None else pythoncom.Missing,
+        ]
+        return AddIns(self.addins2.Add(*params))
 
 
 class Adjustments:
@@ -363,18 +372,20 @@ class AllowEditRange:
     def Users(self):
         return UserAccessList(self.alloweditrange.Users)
 
-    def ChangePassword(self, *args, Password=None):
-        arguments = {"Password": Password}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.alloweditrange.ChangePassword(*args, **arguments)
+    def ChangePassword(self, Password=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+        ]
+        self.alloweditrange.ChangePassword(*params)
 
     def Delete(self):
         self.alloweditrange.Delete()
 
-    def Unprotect(self, *args, Password=None):
-        arguments = {"Password": Password}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.alloweditrange.Unprotect(*args, **arguments)
+    def Unprotect(self, Password=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+        ]
+        self.alloweditrange.Unprotect(*params)
 
 
 class AllowEditRanges:
@@ -389,18 +400,22 @@ class AllowEditRanges:
     def Count(self):
         return self.alloweditranges.Count
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.alloweditranges.Item):
-            return self.alloweditranges.Item(*args, **arguments)
+            return self.alloweditranges.Item(*params)
         else:
-            return self.alloweditranges.GetItem(*args, **arguments)
+            return self.alloweditranges.GetItem(*params)
 
-    def Add(self, *args, Title=None, Range=None, Password=None):
-        arguments = {"Title": Title, "Range": Range, "Password": Password}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return AllowEditRange(self.alloweditranges.Add(*args, **arguments))
+    def Add(self, Title=None, Range=None, Password=None):
+        params = [
+            Title if Title is not None else pythoncom.Missing,
+            Range if Range is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+        ]
+        return AllowEditRange(self.alloweditranges.Add(*params))
 
 
 class Application:
@@ -568,13 +583,14 @@ class Application:
     def CalculationVersion(self):
         return self.application.CalculationVersion
 
-    def Caller(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Caller(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.application.Caller):
-            return self.application.Caller(*args, **arguments)
+            return self.application.Caller(*params)
         else:
-            return self.application.GetCaller(*args, **arguments)
+            return self.application.GetCaller(*params)
 
     @property
     def CanPlaySounds(self):
@@ -600,25 +616,28 @@ class Application:
     def CellDragAndDrop(self, value):
         self.application.CellDragAndDrop = value
 
-    def Cells(self, *args, RowIndex=None, ColumnIndex=None):
-        arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Cells(self, RowIndex=None, ColumnIndex=None):
+        params = [
+            RowIndex if RowIndex is not None else pythoncom.Missing,
+            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
+        ]
         if callable(self.application.Cells):
-            return Range(self.application.Cells(*args, **arguments))
+            return Range(self.application.Cells(*params))
         else:
-            return Range(self.application.GetCells(*args, **arguments))
+            return Range(self.application.GetCells(*params))
 
     @property
     def Charts(self):
         return Sheets(self.application.Charts)
 
-    def ClipboardFormats(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def ClipboardFormats(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.application.ClipboardFormats):
-            return self.application.ClipboardFormats(*args, **arguments)
+            return self.application.ClipboardFormats(*params)
         else:
-            return self.application.GetClipboardFormats(*args, **arguments)
+            return self.application.GetClipboardFormats(*params)
 
     @property
     def ClusterConnector(self):
@@ -980,21 +999,24 @@ class Application:
     def FeatureInstall(self, value):
         self.application.FeatureInstall = value
 
-    def FileConverters(self, *args, Index1=None, Index2=None):
-        arguments = {"Index1": Index1, "Index2": Index2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def FileConverters(self, Index1=None, Index2=None):
+        params = [
+            Index1 if Index1 is not None else pythoncom.Missing,
+            Index2 if Index2 is not None else pythoncom.Missing,
+        ]
         if callable(self.application.FileConverters):
-            return self.application.FileConverters(*args, **arguments)
+            return self.application.FileConverters(*params)
         else:
-            return self.application.GetFileConverters(*args, **arguments)
+            return self.application.GetFileConverters(*params)
 
-    def FileDialog(self, *args, fileDialogType=None):
-        arguments = {"fileDialogType": fileDialogType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def FileDialog(self, fileDialogType=None):
+        params = [
+            fileDialogType if fileDialogType is not None else pythoncom.Missing,
+        ]
         if callable(self.application.FileDialog):
-            return self.application.FileDialog(*args, **arguments)
+            return self.application.FileDialog(*params)
         else:
-            return self.application.GetFileDialog(*args, **arguments)
+            return self.application.GetFileDialog(*params)
 
     @property
     def FileExportConverters(self):
@@ -1276,13 +1298,14 @@ class Application:
     def PivotTableSelection(self, value):
         self.application.PivotTableSelection = value
 
-    def PreviousSelections(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def PreviousSelections(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.application.PreviousSelections):
-            return Range(self.application.PreviousSelections(*args, **arguments))
+            return Range(self.application.PreviousSelections(*params))
         else:
-            return Range(self.application.GetPreviousSelections(*args, **arguments))
+            return Range(self.application.GetPreviousSelections(*params))
 
     @property
     def PrintCommunication(self):
@@ -1308,13 +1331,15 @@ class Application:
     def ProtectedViewWindows(self):
         return ProtectedViewWindows(self.application.ProtectedViewWindows)
 
-    def Range(self, *args, Cell1=None, Cell2=None):
-        arguments = {"Cell1": Cell1, "Cell2": Cell2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Range(self, Cell1=None, Cell2=None):
+        params = [
+            Cell1 if Cell1 is not None else pythoncom.Missing,
+            Cell2 if Cell2 is not None else pythoncom.Missing,
+        ]
         if callable(self.application.Range):
-            return Range(self.application.Range(*args, **arguments))
+            return Range(self.application.Range(*params))
         else:
-            return Range(self.application.GetRange(*args, **arguments))
+            return Range(self.application.GetRange(*params))
 
     @property
     def Ready(self):
@@ -1336,13 +1361,15 @@ class Application:
     def ReferenceStyle(self, value):
         self.application.ReferenceStyle = value
 
-    def RegisteredFunctions(self, *args, Index1=None, Index2=None):
-        arguments = {"Index1": Index1, "Index2": Index2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def RegisteredFunctions(self, Index1=None, Index2=None):
+        params = [
+            Index1 if Index1 is not None else pythoncom.Missing,
+            Index2 if Index2 is not None else pythoncom.Missing,
+        ]
         if callable(self.application.RegisteredFunctions):
-            return self.application.RegisteredFunctions(*args, **arguments)
+            return self.application.RegisteredFunctions(*params)
         else:
-            return self.application.GetRegisteredFunctions(*args, **arguments)
+            return self.application.GetRegisteredFunctions(*params)
 
     @property
     def ReplaceFormat(self):
@@ -1664,15 +1691,18 @@ class Application:
     def Worksheets(self):
         return self.application.Worksheets
 
-    def ActivateMicrosoftApp(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.ActivateMicrosoftApp(*args, **arguments)
+    def ActivateMicrosoftApp(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        self.application.ActivateMicrosoftApp(*params)
 
-    def AddCustomList(self, *args, ListArray=None, ByRow=None):
-        arguments = {"ListArray": ListArray, "ByRow": ByRow}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.AddCustomList(*args, **arguments)
+    def AddCustomList(self, ListArray=None, ByRow=None):
+        params = [
+            ListArray if ListArray is not None else pythoncom.Missing,
+            ByRow if ByRow is not None else pythoncom.Missing,
+        ]
+        self.application.AddCustomList(*params)
 
     def Calculate(self):
         self.application.Calculate()
@@ -1686,216 +1716,390 @@ class Application:
     def CalculateUntilAsyncQueriesDone(self):
         self.application.CalculateUntilAsyncQueriesDone()
 
-    def CentimetersToPoints(self, *args, Centimeters=None):
-        arguments = {"Centimeters": Centimeters}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.CentimetersToPoints(*args, **arguments)
+    def CentimetersToPoints(self, Centimeters=None):
+        params = [
+            Centimeters if Centimeters is not None else pythoncom.Missing,
+        ]
+        return self.application.CentimetersToPoints(*params)
 
-    def CheckAbort(self, *args, KeepAbort=None):
-        arguments = {"KeepAbort": KeepAbort}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.CheckAbort(*args, **arguments)
+    def CheckAbort(self, KeepAbort=None):
+        params = [
+            KeepAbort if KeepAbort is not None else pythoncom.Missing,
+        ]
+        self.application.CheckAbort(*params)
 
-    def CheckSpelling(self, *args, Word=None, CustomDictionary=None, IgnoreUppercase=None):
-        arguments = {"Word": Word, "CustomDictionary": CustomDictionary, "IgnoreUppercase": IgnoreUppercase}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.CheckSpelling(*args, **arguments)
+    def CheckSpelling(self, Word=None, CustomDictionary=None, IgnoreUppercase=None):
+        params = [
+            Word if Word is not None else pythoncom.Missing,
+            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
+            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
+        ]
+        return self.application.CheckSpelling(*params)
 
-    def ConvertFormula(self, *args, Formula=None, FromReferenceStyle=None, ToReferenceStyle=None, ToAbsolute=None, RelativeTo=None):
-        arguments = {"Formula": Formula, "FromReferenceStyle": FromReferenceStyle, "ToReferenceStyle": ToReferenceStyle, "ToAbsolute": ToAbsolute, "RelativeTo": RelativeTo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.ConvertFormula(*args, **arguments)
+    def ConvertFormula(self, Formula=None, FromReferenceStyle=None, ToReferenceStyle=None, ToAbsolute=None, RelativeTo=None):
+        params = [
+            Formula if Formula is not None else pythoncom.Missing,
+            FromReferenceStyle if FromReferenceStyle is not None else pythoncom.Missing,
+            ToReferenceStyle if ToReferenceStyle is not None else pythoncom.Missing,
+            ToAbsolute if ToAbsolute is not None else pythoncom.Missing,
+            RelativeTo if RelativeTo is not None else pythoncom.Missing,
+        ]
+        return self.application.ConvertFormula(*params)
 
-    def DDEExecute(self, *args, Channel=None, String=None):
-        arguments = {"Channel": Channel, "String": String}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.DDEExecute(*args, **arguments)
+    def DDEExecute(self, Channel=None, String=None):
+        params = [
+            Channel if Channel is not None else pythoncom.Missing,
+            String if String is not None else pythoncom.Missing,
+        ]
+        self.application.DDEExecute(*params)
 
-    def DDEInitiate(self, *args, App=None, Topic=None):
-        arguments = {"App": App, "Topic": Topic}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.DDEInitiate(*args, **arguments)
+    def DDEInitiate(self, App=None, Topic=None):
+        params = [
+            App if App is not None else pythoncom.Missing,
+            Topic if Topic is not None else pythoncom.Missing,
+        ]
+        return self.application.DDEInitiate(*params)
 
-    def DDEPoke(self, *args, Channel=None, Item=None, Data=None):
-        arguments = {"Channel": Channel, "Item": Item, "Data": Data}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.DDEPoke(*args, **arguments)
+    def DDEPoke(self, Channel=None, Item=None, Data=None):
+        params = [
+            Channel if Channel is not None else pythoncom.Missing,
+            Item if Item is not None else pythoncom.Missing,
+            Data if Data is not None else pythoncom.Missing,
+        ]
+        self.application.DDEPoke(*params)
 
-    def DDERequest(self, *args, Channel=None, Item=None):
-        arguments = {"Channel": Channel, "Item": Item}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.DDERequest(*args, **arguments)
+    def DDERequest(self, Channel=None, Item=None):
+        params = [
+            Channel if Channel is not None else pythoncom.Missing,
+            Item if Item is not None else pythoncom.Missing,
+        ]
+        return self.application.DDERequest(*params)
 
-    def DDETerminate(self, *args, Channel=None):
-        arguments = {"Channel": Channel}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.DDETerminate(*args, **arguments)
+    def DDETerminate(self, Channel=None):
+        params = [
+            Channel if Channel is not None else pythoncom.Missing,
+        ]
+        self.application.DDETerminate(*params)
 
-    def DeleteCustomList(self, *args, ListNum=None):
-        arguments = {"ListNum": ListNum}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.DeleteCustomList(*args, **arguments)
+    def DeleteCustomList(self, ListNum=None):
+        params = [
+            ListNum if ListNum is not None else pythoncom.Missing,
+        ]
+        self.application.DeleteCustomList(*params)
 
-    def DisplayXMLSourcePane(self, *args, XmlMap=None):
-        arguments = {"XmlMap": XmlMap}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.DisplayXMLSourcePane(*args, **arguments)
+    def DisplayXMLSourcePane(self, XmlMap=None):
+        params = [
+            XmlMap if XmlMap is not None else pythoncom.Missing,
+        ]
+        self.application.DisplayXMLSourcePane(*params)
 
     def DoubleClick(self):
         self.application.DoubleClick()
 
-    def Evaluate(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.Evaluate(*args, **arguments)
+    def Evaluate(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return self.application.Evaluate(*params)
 
-    def ExecuteExcel4Macro(self, *args, String=None):
-        arguments = {"String": String}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.ExecuteExcel4Macro(*args, **arguments)
+    def ExecuteExcel4Macro(self, String=None):
+        params = [
+            String if String is not None else pythoncom.Missing,
+        ]
+        return self.application.ExecuteExcel4Macro(*params)
 
     def FindFile(self):
         return self.application.FindFile()
 
-    def GetCustomListContents(self, *args, ListNum=None):
-        arguments = {"ListNum": ListNum}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetCustomListContents(*args, **arguments)
+    def GetCustomListContents(self, ListNum=None):
+        params = [
+            ListNum if ListNum is not None else pythoncom.Missing,
+        ]
+        return self.application.GetCustomListContents(*params)
 
-    def GetCustomListNum(self, *args, ListArray=None):
-        arguments = {"ListArray": ListArray}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetCustomListNum(*args, **arguments)
+    def GetCustomListNum(self, ListArray=None):
+        params = [
+            ListArray if ListArray is not None else pythoncom.Missing,
+        ]
+        return self.application.GetCustomListNum(*params)
 
-    def GetOpenFilename(self, *args, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None, MultiSelect=None):
-        arguments = {"FileFilter": FileFilter, "FilterIndex": FilterIndex, "Title": Title, "ButtonText": ButtonText, "MultiSelect": MultiSelect}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetOpenFilename(*args, **arguments)
+    def GetOpenFilename(self, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None, MultiSelect=None):
+        params = [
+            FileFilter if FileFilter is not None else pythoncom.Missing,
+            FilterIndex if FilterIndex is not None else pythoncom.Missing,
+            Title if Title is not None else pythoncom.Missing,
+            ButtonText if ButtonText is not None else pythoncom.Missing,
+            MultiSelect if MultiSelect is not None else pythoncom.Missing,
+        ]
+        return self.application.GetOpenFilename(*params)
 
-    def GetPhonetic(self, *args, Text=None):
-        arguments = {"Text": Text}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetPhonetic(*args, **arguments)
+    def GetPhonetic(self, Text=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+        ]
+        return self.application.GetPhonetic(*params)
 
-    def GetSaveAsFilename(self, *args, InitialFilename=None, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None):
-        arguments = {"InitialFilename": InitialFilename, "FileFilter": FileFilter, "FilterIndex": FilterIndex, "Title": Title, "ButtonText": ButtonText}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.GetSaveAsFilename(*args, **arguments)
+    def GetSaveAsFilename(self, InitialFilename=None, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None):
+        params = [
+            InitialFilename if InitialFilename is not None else pythoncom.Missing,
+            FileFilter if FileFilter is not None else pythoncom.Missing,
+            FilterIndex if FilterIndex is not None else pythoncom.Missing,
+            Title if Title is not None else pythoncom.Missing,
+            ButtonText if ButtonText is not None else pythoncom.Missing,
+        ]
+        return self.application.GetSaveAsFilename(*params)
 
-    def Goto(self, *args, Reference=None, Scroll=None):
-        arguments = {"Reference": Reference, "Scroll": Scroll}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.Goto(*args, **arguments)
+    def Goto(self, Reference=None, Scroll=None):
+        params = [
+            Reference if Reference is not None else pythoncom.Missing,
+            Scroll if Scroll is not None else pythoncom.Missing,
+        ]
+        self.application.Goto(*params)
 
-    def Help(self, *args, HelpFile=None, HelpContextID=None):
-        arguments = {"HelpFile": HelpFile, "HelpContextID": HelpContextID}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.Help(*args, **arguments)
+    def Help(self, HelpFile=None, HelpContextID=None):
+        params = [
+            HelpFile if HelpFile is not None else pythoncom.Missing,
+            HelpContextID if HelpContextID is not None else pythoncom.Missing,
+        ]
+        self.application.Help(*params)
 
-    def InchesToPoints(self, *args, Inches=None):
-        arguments = {"Inches": Inches}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.InchesToPoints(*args, **arguments)
+    def InchesToPoints(self, Inches=None):
+        params = [
+            Inches if Inches is not None else pythoncom.Missing,
+        ]
+        return self.application.InchesToPoints(*params)
 
-    def InputBox(self, *args, Prompt=None, Title=None, Default=None, Left=None, Top=None, HelpFile=None, HelpContextID=None, Type=None):
-        arguments = {"Prompt": Prompt, "Title": Title, "Default": Default, "Left": Left, "Top": Top, "HelpFile": HelpFile, "HelpContextID": HelpContextID, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.InputBox(*args, **arguments)
+    def InputBox(self, Prompt=None, Title=None, Default=None, Left=None, Top=None, HelpFile=None, HelpContextID=None, Type=None):
+        params = [
+            Prompt if Prompt is not None else pythoncom.Missing,
+            Title if Title is not None else pythoncom.Missing,
+            Default if Default is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            HelpFile if HelpFile is not None else pythoncom.Missing,
+            HelpContextID if HelpContextID is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        return self.application.InputBox(*params)
 
-    def Intersect(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.Intersect(*args, **arguments)
+    def Intersect(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.application.Intersect(*params)
 
-    def MacroOptions(self, *args, Macro=None, Description=None, HasMenu=None, MenuText=None, HasShortcutKey=None, ShortcutKey=None, Category=None, StatusBar=None, HelpContextID=None, HelpFile=None, ArgumentDescriptions=None):
-        arguments = {"Macro": Macro, "Description": Description, "HasMenu": HasMenu, "MenuText": MenuText, "HasShortcutKey": HasShortcutKey, "ShortcutKey": ShortcutKey, "Category": Category, "StatusBar": StatusBar, "HelpContextID": HelpContextID, "HelpFile": HelpFile, "ArgumentDescriptions": ArgumentDescriptions}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.MacroOptions(*args, **arguments)
+    def MacroOptions(self, Macro=None, Description=None, HasMenu=None, MenuText=None, HasShortcutKey=None, ShortcutKey=None, Category=None, StatusBar=None, HelpContextID=None, HelpFile=None, ArgumentDescriptions=None):
+        params = [
+            Macro if Macro is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            HasMenu if HasMenu is not None else pythoncom.Missing,
+            MenuText if MenuText is not None else pythoncom.Missing,
+            HasShortcutKey if HasShortcutKey is not None else pythoncom.Missing,
+            ShortcutKey if ShortcutKey is not None else pythoncom.Missing,
+            Category if Category is not None else pythoncom.Missing,
+            StatusBar if StatusBar is not None else pythoncom.Missing,
+            HelpContextID if HelpContextID is not None else pythoncom.Missing,
+            HelpFile if HelpFile is not None else pythoncom.Missing,
+            ArgumentDescriptions if ArgumentDescriptions is not None else pythoncom.Missing,
+        ]
+        self.application.MacroOptions(*params)
 
     def MailLogoff(self):
         self.application.MailLogoff()
 
-    def MailLogon(self, *args, Name=None, Password=None, DownloadNewMail=None):
-        arguments = {"Name": Name, "Password": Password, "DownloadNewMail": DownloadNewMail}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.MailLogon(*args, **arguments)
+    def MailLogon(self, Name=None, Password=None, DownloadNewMail=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            DownloadNewMail if DownloadNewMail is not None else pythoncom.Missing,
+        ]
+        self.application.MailLogon(*params)
 
     def NextLetter(self):
         return self.application.NextLetter()
 
-    def OnKey(self, *args, Key=None, Procedure=None):
-        arguments = {"Key": Key, "Procedure": Procedure}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.OnKey(*args, **arguments)
+    def OnKey(self, Key=None, Procedure=None):
+        params = [
+            Key if Key is not None else pythoncom.Missing,
+            Procedure if Procedure is not None else pythoncom.Missing,
+        ]
+        self.application.OnKey(*params)
 
-    def OnRepeat(self, *args, Text=None, Procedure=None):
-        arguments = {"Text": Text, "Procedure": Procedure}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.OnRepeat(*args, **arguments)
+    def OnRepeat(self, Text=None, Procedure=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            Procedure if Procedure is not None else pythoncom.Missing,
+        ]
+        self.application.OnRepeat(*params)
 
-    def OnTime(self, *args, EarliestTime=None, Procedure=None, LatestTime=None, Schedule=None):
-        arguments = {"EarliestTime": EarliestTime, "Procedure": Procedure, "LatestTime": LatestTime, "Schedule": Schedule}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.OnTime(*args, **arguments)
+    def OnTime(self, EarliestTime=None, Procedure=None, LatestTime=None, Schedule=None):
+        params = [
+            EarliestTime if EarliestTime is not None else pythoncom.Missing,
+            Procedure if Procedure is not None else pythoncom.Missing,
+            LatestTime if LatestTime is not None else pythoncom.Missing,
+            Schedule if Schedule is not None else pythoncom.Missing,
+        ]
+        self.application.OnTime(*params)
 
-    def OnUndo(self, *args, Text=None, Procedure=None):
-        arguments = {"Text": Text, "Procedure": Procedure}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.OnUndo(*args, **arguments)
+    def OnUndo(self, Text=None, Procedure=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            Procedure if Procedure is not None else pythoncom.Missing,
+        ]
+        self.application.OnUndo(*params)
 
     def Quit(self):
         self.application.Quit()
 
-    def RecordMacro(self, *args, BasicCode=None, XlmCode=None):
-        arguments = {"BasicCode": BasicCode, "XlmCode": XlmCode}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.RecordMacro(*args, **arguments)
+    def RecordMacro(self, BasicCode=None, XlmCode=None):
+        params = [
+            BasicCode if BasicCode is not None else pythoncom.Missing,
+            XlmCode if XlmCode is not None else pythoncom.Missing,
+        ]
+        self.application.RecordMacro(*params)
 
-    def RegisterXLL(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.RegisterXLL(*args, **arguments)
+    def RegisterXLL(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        return self.application.RegisterXLL(*params)
 
     def Repeat(self):
         self.application.Repeat()
 
-    def Run(self, *args, Macro=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Macro": Macro, "Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.Run(*args, **arguments)
+    def Run(self, Macro=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Macro if Macro is not None else pythoncom.Missing,
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.application.Run(*params)
 
-    def SaveWorkspace(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.SaveWorkspace(*args, **arguments)
+    def SaveWorkspace(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.application.SaveWorkspace(*params)
 
-    def SendKeys(self, *args, Keys=None, Wait=None):
-        arguments = {"Keys": Keys, "Wait": Wait}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.SendKeys(*args, **arguments)
+    def SendKeys(self, Keys=None, Wait=None):
+        params = [
+            Keys if Keys is not None else pythoncom.Missing,
+            Wait if Wait is not None else pythoncom.Missing,
+        ]
+        self.application.SendKeys(*params)
 
-    def SharePointVersion(self, *args, bstrUrl=None):
-        arguments = {"bstrUrl": bstrUrl}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.SharePointVersion(*args, **arguments)
+    def SharePointVersion(self, bstrUrl=None):
+        params = [
+            bstrUrl if bstrUrl is not None else pythoncom.Missing,
+        ]
+        return self.application.SharePointVersion(*params)
 
     def Undo(self):
         self.application.Undo()
 
-    def Union(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.Union(*args, **arguments)
+    def Union(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.application.Union(*params)
 
-    def Volatile(self, *args, Volatile=None):
-        arguments = {"Volatile": Volatile}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.application.Volatile(*args, **arguments)
+    def Volatile(self, Volatile=None):
+        params = [
+            Volatile if Volatile is not None else pythoncom.Missing,
+        ]
+        self.application.Volatile(*params)
 
-    def Wait(self, *args, Time=None):
-        arguments = {"Time": Time}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.application.Wait(*args, **arguments)
+    def Wait(self, Time=None):
+        params = [
+            Time if Time is not None else pythoncom.Missing,
+        ]
+        return self.application.Wait(*params)
 
 
 class Areas:
@@ -1918,13 +2122,14 @@ class Areas:
     def Creator(self):
         return self.areas.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.areas.Item):
-            return self.areas.Item(*args, **arguments)
+            return self.areas.Item(*params)
         else:
-            return self.areas.GetItem(*args, **arguments)
+            return self.areas.GetItem(*params)
 
     @property
     def Parent(self):
@@ -2026,13 +2231,14 @@ class AutoCorrect:
     def Parent(self):
         return self.autocorrect.Parent
 
-    def ReplacementList(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def ReplacementList(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.autocorrect.ReplacementList):
-            return self.autocorrect.ReplacementList(*args, **arguments)
+            return self.autocorrect.ReplacementList(*params)
         else:
-            return self.autocorrect.GetReplacementList(*args, **arguments)
+            return self.autocorrect.GetReplacementList(*params)
 
     @property
     def ReplaceText(self):
@@ -2050,15 +2256,18 @@ class AutoCorrect:
     def TwoInitialCapitals(self, value):
         self.autocorrect.TwoInitialCapitals = value
 
-    def AddReplacement(self, *args, What=None, Replacement=None):
-        arguments = {"What": What, "Replacement": Replacement}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.autocorrect.AddReplacement(*args, **arguments)
+    def AddReplacement(self, What=None, Replacement=None):
+        params = [
+            What if What is not None else pythoncom.Missing,
+            Replacement if Replacement is not None else pythoncom.Missing,
+        ]
+        return self.autocorrect.AddReplacement(*params)
 
-    def DeleteReplacement(self, *args, What=None):
-        arguments = {"What": What}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.autocorrect.DeleteReplacement(*args, **arguments)
+    def DeleteReplacement(self, What=None):
+        params = [
+            What if What is not None else pythoncom.Missing,
+        ]
+        return self.autocorrect.DeleteReplacement(*params)
 
 
 class AutoFilter:
@@ -2167,10 +2376,12 @@ class Axes:
     def Parent(self):
         return self.axes.Parent
 
-    def Item(self, *args, Type=None, AxisGroup=None):
-        arguments = {"Type": Type, "AxisGroup": AxisGroup}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.axes.Item(*args, **arguments)
+    def Item(self, Type=None, AxisGroup=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            AxisGroup if AxisGroup is not None else pythoncom.Missing,
+        ]
+        return self.axes.Item(*params)
 
 
 class Axis:
@@ -2522,13 +2733,15 @@ class AxisTitle:
     def Caption(self, value):
         self.axistitle.Caption = value
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
         if callable(self.axistitle.Characters):
-            return Characters(self.axistitle.Characters(*args, **arguments))
+            return Characters(self.axistitle.Characters(*params))
         else:
-            return Characters(self.axistitle.GetCharacters(*args, **arguments))
+            return Characters(self.axistitle.GetCharacters(*params))
 
     @property
     def Creator(self):
@@ -2775,13 +2988,14 @@ class Borders:
     def Creator(self):
         return self.borders.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.borders.Item):
-            return Border(self.borders.Item(*args, **arguments))
+            return Border(self.borders.Item(*params))
         else:
-            return Border(self.borders.GetItem(*args, **arguments))
+            return Border(self.borders.GetItem(*params))
 
     @property
     def LineStyle(self):
@@ -2848,15 +3062,19 @@ class CalculatedFields:
     def Parent(self):
         return self.calculatedfields.Parent
 
-    def Add(self, *args, Name=None, Formula=None, UseStandardFormula=None):
-        arguments = {"Name": Name, "Formula": Formula, "UseStandardFormula": UseStandardFormula}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CalculatedField(self.calculatedfields.Add(*args, **arguments))
+    def Add(self, Name=None, Formula=None, UseStandardFormula=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Formula if Formula is not None else pythoncom.Missing,
+            UseStandardFormula if UseStandardFormula is not None else pythoncom.Missing,
+        ]
+        return CalculatedField(self.calculatedfields.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotField(self.calculatedfields.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotField(self.calculatedfields.Item(*params))
 
 
 class CalculatedItems:
@@ -2883,15 +3101,19 @@ class CalculatedItems:
     def Parent(self):
         return self.calculateditems.Parent
 
-    def Add(self, *args, Name=None, Formula=None, UseStandardFormula=None):
-        arguments = {"Name": Name, "Formula": Formula, "UseStandardFormula": UseStandardFormula}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CalculatedItem(self.calculateditems.Add(*args, **arguments))
+    def Add(self, Name=None, Formula=None, UseStandardFormula=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Formula if Formula is not None else pythoncom.Missing,
+            UseStandardFormula if UseStandardFormula is not None else pythoncom.Missing,
+        ]
+        return CalculatedItem(self.calculateditems.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.calculateditems.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotItem(self.calculateditems.Item(*params))
 
 
 class CalculatedMember:
@@ -2983,22 +3205,30 @@ class CalculatedMembers:
     def Creator(self):
         return self.calculatedmembers.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.calculatedmembers.Item):
-            return self.calculatedmembers.Item(*args, **arguments)
+            return self.calculatedmembers.Item(*params)
         else:
-            return self.calculatedmembers.GetItem(*args, **arguments)
+            return self.calculatedmembers.GetItem(*params)
 
     @property
     def Parent(self):
         return self.calculatedmembers.Parent
 
-    def Add(self, *args, Name=None, Formula=None, SolveOrder=None, Type=None, Dynamic=None, DisplayFolder=None, HierarchizeDistinct=None):
-        arguments = {"Name": Name, "Formula": Formula, "SolveOrder": SolveOrder, "Type": Type, "Dynamic": Dynamic, "DisplayFolder": DisplayFolder, "HierarchizeDistinct": HierarchizeDistinct}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CalculatedMember(self.calculatedmembers.Add(*args, **arguments))
+    def Add(self, Name=None, Formula=None, SolveOrder=None, Type=None, Dynamic=None, DisplayFolder=None, HierarchizeDistinct=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Formula if Formula is not None else pythoncom.Missing,
+            SolveOrder if SolveOrder is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+            Dynamic if Dynamic is not None else pythoncom.Missing,
+            DisplayFolder if DisplayFolder is not None else pythoncom.Missing,
+            HierarchizeDistinct if HierarchizeDistinct is not None else pythoncom.Missing,
+        ]
+        return CalculatedMember(self.calculatedmembers.Add(*params))
 
 
 class CalloutFormat:
@@ -3089,20 +3319,23 @@ class CalloutFormat:
     def AutomaticLength(self):
         self.calloutformat.AutomaticLength()
 
-    def CustomDrop(self, *args, Drop=None):
-        arguments = {"Drop": Drop}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.calloutformat.CustomDrop(*args, **arguments)
+    def CustomDrop(self, Drop=None):
+        params = [
+            Drop if Drop is not None else pythoncom.Missing,
+        ]
+        self.calloutformat.CustomDrop(*params)
 
-    def CustomLength(self, *args, Length=None):
-        arguments = {"Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.calloutformat.CustomLength(*args, **arguments)
+    def CustomLength(self, Length=None):
+        params = [
+            Length if Length is not None else pythoncom.Missing,
+        ]
+        self.calloutformat.CustomLength(*params)
 
-    def PresetDrop(self, *args, DropType=None):
-        arguments = {"DropType": DropType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.calloutformat.PresetDrop(*args, **arguments)
+    def PresetDrop(self, DropType=None):
+        params = [
+            DropType if DropType is not None else pythoncom.Missing,
+        ]
+        self.calloutformat.PresetDrop(*params)
 
 
 class CategoryCollection:
@@ -3126,10 +3359,11 @@ class CategoryCollection:
     def Parent(self):
         return self.categorycollection.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartCategory(self.categorycollection.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return ChartCategory(self.categorycollection.Item(*params))
 
 
 class CellFormat:
@@ -3313,10 +3547,11 @@ class Characters:
     def Delete(self):
         return self.characters.Delete()
 
-    def Insert(self, *args, String=None):
-        arguments = {"String": String}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.characters.Insert(*args, **arguments)
+    def Insert(self, String=None):
+        params = [
+            String if String is not None else pythoncom.Missing,
+        ]
+        return self.characters.Insert(*params)
 
 
 class Chart:
@@ -3663,164 +3898,259 @@ class Chart:
     def Activate(self):
         self.chart.Activate()
 
-    def ApplyChartTemplate(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.ApplyChartTemplate(*args, **arguments)
+    def ApplyChartTemplate(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.chart.ApplyChartTemplate(*params)
 
-    def ApplyDataLabels(self, *args, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
-        arguments = {"Type": Type, "LegendKey": LegendKey, "AutoText": AutoText, "HasLeaderLines": HasLeaderLines, "ShowSeriesName": ShowSeriesName, "ShowCategoryName": ShowCategoryName, "ShowValue": ShowValue, "ShowPercentage": ShowPercentage, "ShowBubbleSize": ShowBubbleSize, "Separator": Separator}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.ApplyDataLabels(*args, **arguments)
+    def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            LegendKey if LegendKey is not None else pythoncom.Missing,
+            AutoText if AutoText is not None else pythoncom.Missing,
+            HasLeaderLines if HasLeaderLines is not None else pythoncom.Missing,
+            ShowSeriesName if ShowSeriesName is not None else pythoncom.Missing,
+            ShowCategoryName if ShowCategoryName is not None else pythoncom.Missing,
+            ShowValue if ShowValue is not None else pythoncom.Missing,
+            ShowPercentage if ShowPercentage is not None else pythoncom.Missing,
+            ShowBubbleSize if ShowBubbleSize is not None else pythoncom.Missing,
+            Separator if Separator is not None else pythoncom.Missing,
+        ]
+        self.chart.ApplyDataLabels(*params)
 
-    def ApplyLayout(self, *args, Layout=None, ChartType=None):
-        arguments = {"Layout": Layout, "ChartType": ChartType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.ApplyLayout(*args, **arguments)
+    def ApplyLayout(self, Layout=None, ChartType=None):
+        params = [
+            Layout if Layout is not None else pythoncom.Missing,
+            ChartType if ChartType is not None else pythoncom.Missing,
+        ]
+        self.chart.ApplyLayout(*params)
 
-    def Axes(self, *args, Type=None, AxisGroup=None):
-        arguments = {"Type": Type, "AxisGroup": AxisGroup}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.Axes(*args, **arguments)
+    def Axes(self, Type=None, AxisGroup=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            AxisGroup if AxisGroup is not None else pythoncom.Missing,
+        ]
+        return self.chart.Axes(*params)
 
-    def ChartGroups(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.ChartGroups(*args, **arguments)
+    def ChartGroups(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.chart.ChartGroups(*params)
 
-    def ChartObjects(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.ChartObjects(*args, **arguments)
+    def ChartObjects(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.chart.ChartObjects(*params)
 
-    def ChartWizard(self, *args, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
-        arguments = {"Source": Source, "Gallery": Gallery, "Format": Format, "PlotBy": PlotBy, "CategoryLabels": CategoryLabels, "SeriesLabels": SeriesLabels, "HasLegend": HasLegend, "Title": Title, "CategoryTitle": CategoryTitle, "ValueTitle": ValueTitle, "ExtraTitle": ExtraTitle}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.ChartWizard(*args, **arguments)
+    def ChartWizard(self, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+            Gallery if Gallery is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+            PlotBy if PlotBy is not None else pythoncom.Missing,
+            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
+            SeriesLabels if SeriesLabels is not None else pythoncom.Missing,
+            HasLegend if HasLegend is not None else pythoncom.Missing,
+            Title if Title is not None else pythoncom.Missing,
+            CategoryTitle if CategoryTitle is not None else pythoncom.Missing,
+            ValueTitle if ValueTitle is not None else pythoncom.Missing,
+            ExtraTitle if ExtraTitle is not None else pythoncom.Missing,
+        ]
+        self.chart.ChartWizard(*params)
 
-    def CheckSpelling(self, *args, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
-        arguments = {"CustomDictionary": CustomDictionary, "IgnoreUppercase": IgnoreUppercase, "AlwaysSuggest": AlwaysSuggest, "SpellLang": SpellLang}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.CheckSpelling(*args, **arguments)
+    def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
+        params = [
+            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
+            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
+            AlwaysSuggest if AlwaysSuggest is not None else pythoncom.Missing,
+            SpellLang if SpellLang is not None else pythoncom.Missing,
+        ]
+        self.chart.CheckSpelling(*params)
 
     def ClearToMatchStyle(self):
         self.chart.ClearToMatchStyle()
 
-    def Copy(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.Copy(*args, **arguments)
+    def Copy(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.chart.Copy(*params)
 
-    def CopyPicture(self, *args, Appearance=None, Format=None, Size=None):
-        arguments = {"Appearance": Appearance, "Format": Format, "Size": Size}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None, Size=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+            Size if Size is not None else pythoncom.Missing,
+        ]
+        self.chart.CopyPicture(*params)
 
     def Delete(self):
         self.chart.Delete()
 
-    def Evaluate(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.Evaluate(*args, **arguments)
+    def Evaluate(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return self.chart.Evaluate(*params)
 
-    def Export(self, *args, FileName=None, FilterName=None, Interactive=None):
-        arguments = {"FileName": FileName, "FilterName": FilterName, "Interactive": Interactive}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.Export(*args, **arguments)
+    def Export(self, FileName=None, FilterName=None, Interactive=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            FilterName if FilterName is not None else pythoncom.Missing,
+            Interactive if Interactive is not None else pythoncom.Missing,
+        ]
+        return self.chart.Export(*params)
 
-    def ExportAsFixedFormat(self, *args, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
-        arguments = {"Type": Type, "FileName": FileName, "Quality": Quality, "IncludeDocProperties": IncludeDocProperties, "IgnorePrintAreas": IgnorePrintAreas, "From": From, "To": To, "OpenAfterPublish": OpenAfterPublish, "FixedFormatExtClassPtr": FixedFormatExtClassPtr}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.ExportAsFixedFormat(*args, **arguments)
+    def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Quality if Quality is not None else pythoncom.Missing,
+            IncludeDocProperties if IncludeDocProperties is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            OpenAfterPublish if OpenAfterPublish is not None else pythoncom.Missing,
+            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
+        ]
+        self.chart.ExportAsFixedFormat(*params)
 
-    def GetChartElement(self, *args, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
-        arguments = {"x": x, "y": y, "ElementID": ElementID, "Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.GetChartElement(*args, **arguments)
+    def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
+        params = [
+            x if x is not None else pythoncom.Missing,
+            y if y is not None else pythoncom.Missing,
+            ElementID if ElementID is not None else pythoncom.Missing,
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        self.chart.GetChartElement(*params)
 
-    def Location(self, *args, Where=None, Name=None):
-        arguments = {"Where": Where, "Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.Location(*args, **arguments)
+    def Location(self, Where=None, Name=None):
+        params = [
+            Where if Where is not None else pythoncom.Missing,
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return self.chart.Location(*params)
 
-    def Move(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.Move(*args, **arguments)
+    def Move(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.chart.Move(*params)
 
-    def OLEObjects(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.OLEObjects(*args, **arguments)
+    def OLEObjects(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.chart.OLEObjects(*params)
 
-    def Paste(self, *args, Type=None):
-        arguments = {"Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.Paste(*args, **arguments)
+    def Paste(self, Type=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.chart.Paste(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName, "IgnorePrintAreas": IgnorePrintAreas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+        ]
+        return self.chart.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        self.chart.PrintPreview(*params)
 
-    def Protect(self, *args, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None):
-        arguments = {"Password": Password, "DrawingObjects": DrawingObjects, "Contents": Contents, "Scenarios": Scenarios, "UserInterfaceOnly": UserInterfaceOnly}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.Protect(*args, **arguments)
+    def Protect(self, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+            DrawingObjects if DrawingObjects is not None else pythoncom.Missing,
+            Contents if Contents is not None else pythoncom.Missing,
+            Scenarios if Scenarios is not None else pythoncom.Missing,
+            UserInterfaceOnly if UserInterfaceOnly is not None else pythoncom.Missing,
+        ]
+        self.chart.Protect(*params)
 
     def Refresh(self):
         self.chart.Refresh()
 
-    def SaveAs(self, *args, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
-        arguments = {"FileName": FileName, "FileFormat": FileFormat, "Password": Password, "WriteResPassword": WriteResPassword, "ReadOnlyRecommended": ReadOnlyRecommended, "CreateBackup": CreateBackup, "AddToMru": AddToMru, "TextCodepage": TextCodepage, "TextVisualLayout": TextVisualLayout, "Local": Local}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.SaveAs(*args, **arguments)
+    def SaveAs(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            FileFormat if FileFormat is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            WriteResPassword if WriteResPassword is not None else pythoncom.Missing,
+            ReadOnlyRecommended if ReadOnlyRecommended is not None else pythoncom.Missing,
+            CreateBackup if CreateBackup is not None else pythoncom.Missing,
+            AddToMru if AddToMru is not None else pythoncom.Missing,
+            TextCodepage if TextCodepage is not None else pythoncom.Missing,
+            TextVisualLayout if TextVisualLayout is not None else pythoncom.Missing,
+            Local if Local is not None else pythoncom.Missing,
+        ]
+        self.chart.SaveAs(*params)
 
-    def SaveChartTemplate(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.SaveChartTemplate(*args, **arguments)
+    def SaveChartTemplate(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.chart.SaveChartTemplate(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        self.chart.Select(*params)
 
-    def SeriesCollection(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.SeriesCollection(*args, **arguments)
+    def SeriesCollection(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.chart.SeriesCollection(*params)
 
-    def SetBackgroundPicture(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.SetBackgroundPicture(*args, **arguments)
+    def SetBackgroundPicture(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.chart.SetBackgroundPicture(*params)
 
-    def SetDefaultChart(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.SetDefaultChart(*args, **arguments)
+    def SetDefaultChart(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        self.chart.SetDefaultChart(*params)
 
-    def SetElement(self, *args, Element=None):
-        arguments = {"Element": Element}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chart.SetElement(*args, **arguments)
+    def SetElement(self, Element=None):
+        params = [
+            Element if Element is not None else pythoncom.Missing,
+        ]
+        return self.chart.SetElement(*params)
 
-    def SetSourceData(self, *args, Source=None, PlotBy=None):
-        arguments = {"Source": Source, "PlotBy": PlotBy}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.SetSourceData(*args, **arguments)
+    def SetSourceData(self, Source=None, PlotBy=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+            PlotBy if PlotBy is not None else pythoncom.Missing,
+        ]
+        self.chart.SetSourceData(*params)
 
-    def Unprotect(self, *args, Password=None):
-        arguments = {"Password": Password}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.chart.Unprotect(*args, **arguments)
+    def Unprotect(self, Password=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+        ]
+        self.chart.Unprotect(*params)
 
 
 class ChartArea:
@@ -4159,10 +4489,11 @@ class ChartGroup:
     def VaryByCategories(self, value):
         self.chartgroup.VaryByCategories = value
 
-    def SeriesCollection(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chartgroup.SeriesCollection(*args, **arguments)
+    def SeriesCollection(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.chartgroup.SeriesCollection(*params)
 
 
 class ChartGroups:
@@ -4186,10 +4517,11 @@ class ChartGroups:
     def Parent(self):
         return self.chartgroups.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartGroup(self.chartgroups.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return ChartGroup(self.chartgroups.Item(*params))
 
 
 class ChartObject:
@@ -4334,10 +4666,12 @@ class ChartObject:
     def Copy(self):
         return self.chartobject.Copy()
 
-    def CopyPicture(self, *args, Appearance=None, Format=None):
-        arguments = {"Appearance": Appearance, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chartobject.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.chartobject.CopyPicture(*params)
 
     def Cut(self):
         return self.chartobject.Cut()
@@ -4348,10 +4682,11 @@ class ChartObject:
     def Duplicate(self):
         return self.chartobject.Duplicate()
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chartobject.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        return self.chartobject.Select(*params)
 
     def SendToBack(self):
         return self.chartobject.SendToBack()
@@ -4457,18 +4792,24 @@ class ChartObjects:
     def Width(self, value):
         self.chartobjects.Width = value
 
-    def Add(self, *args, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ChartObject(self.chartobjects.Add(*args, **arguments))
+    def Add(self, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return ChartObject(self.chartobjects.Add(*params))
 
     def Copy(self):
         return self.chartobjects.Copy()
 
-    def CopyPicture(self, *args, Appearance=None, Format=None):
-        arguments = {"Appearance": Appearance, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chartobjects.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.chartobjects.CopyPicture(*params)
 
     def Cut(self):
         return self.chartobjects.Cut()
@@ -4479,15 +4820,17 @@ class ChartObjects:
     def Duplicate(self):
         return self.chartobjects.Duplicate()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chartobjects.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.chartobjects.Item(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.chartobjects.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        return self.chartobjects.Select(*params)
 
 
 class Charts:
@@ -4514,13 +4857,14 @@ class Charts:
     def HPageBreaks(self):
         return HPageBreaks(self.charts.HPageBreaks)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.charts.Item):
-            return self.charts.Item(*args, **arguments)
+            return self.charts.Item(*params)
         else:
-            return self.charts.GetItem(*args, **arguments)
+            return self.charts.GetItem(*params)
 
     @property
     def Parent(self):
@@ -4538,33 +4882,48 @@ class Charts:
     def VPageBreaks(self):
         return VPageBreaks(self.charts.VPageBreaks)
 
-    def Copy(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.charts.Copy(*args, **arguments)
+    def Copy(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.charts.Copy(*params)
 
     def Delete(self):
         self.charts.Delete()
 
-    def Move(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.charts.Move(*args, **arguments)
+    def Move(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.charts.Move(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName, "IgnorePrintAreas": IgnorePrintAreas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.charts.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+        ]
+        return self.charts.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.charts.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        self.charts.PrintPreview(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.charts.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        self.charts.Select(*params)
 
 
 class ChartTitle:
@@ -4584,13 +4943,15 @@ class ChartTitle:
     def Caption(self, value):
         self.charttitle.Caption = value
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
         if callable(self.charttitle.Characters):
-            return Characters(self.charttitle.Characters(*args, **arguments))
+            return Characters(self.charttitle.Characters(*params))
         else:
-            return Characters(self.charttitle.GetCharacters(*args, **arguments))
+            return Characters(self.charttitle.GetCharacters(*params))
 
     @property
     def Creator(self):
@@ -4887,10 +5248,11 @@ class ColorScale:
     def Delete(self):
         self.colorscale.Delete()
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.colorscale.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.colorscale.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.colorscale.SetFirstPriority()
@@ -4911,13 +5273,14 @@ class ColorScaleCriteria:
     def Count(self):
         return self.colorscalecriteria.Count
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.colorscalecriteria.Item):
-            return ColorScaleCriterion(self.colorscalecriteria.Item(*args, **arguments))
+            return ColorScaleCriterion(self.colorscalecriteria.Item(*params))
         else:
-            return ColorScaleCriterion(self.colorscalecriteria.GetItem(*args, **arguments))
+            return ColorScaleCriterion(self.colorscalecriteria.GetItem(*params))
 
 
 class ColorScaleCriterion:
@@ -5027,18 +5390,20 @@ class ColorStops:
     def Parent(self):
         return self.colorstops.Parent
 
-    def Add(self, *args, Position=None):
-        arguments = {"Position": Position}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ColorStop(self.colorstops.Add(*args, **arguments))
+    def Add(self, Position=None):
+        params = [
+            Position if Position is not None else pythoncom.Missing,
+        ]
+        return ColorStop(self.colorstops.Add(*params))
 
     def Clear(self):
         return self.colorstops.Clear()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.colorstops.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.colorstops.Item(*params)
 
 
 class Comment:
@@ -5087,10 +5452,13 @@ class Comment:
     def Previous(self):
         return self.comment.Previous()
 
-    def Text(self, *args, Text=None, Start=None, Overwrite=None):
-        arguments = {"Text": Text, "Start": Start, "Overwrite": Overwrite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.comment.Text(*args, **arguments)
+    def Text(self, Text=None, Start=None, Overwrite=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            Start if Start is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+        ]
+        return self.comment.Text(*params)
 
 
 class Comments:
@@ -5117,10 +5485,11 @@ class Comments:
     def Parent(self):
         return self.comments.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Comment(self.comments.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Comment(self.comments.Item(*params))
 
 
 class CommentsThreaded:
@@ -5147,10 +5516,11 @@ class CommentsThreaded:
     def Parent(self):
         return self.commentsthreaded.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CommentThreaded(self.commentsthreaded.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return CommentThreaded(self.commentsthreaded.Item(*params))
 
 
 class CommentThreaded:
@@ -5174,10 +5544,11 @@ class CommentThreaded:
     def Replies(self):
         return self.commentthreaded.Replies
 
-    def AddReply(self, *args, Text=None):
-        arguments = {"Text": Text}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.commentthreaded.AddReply(*args, **arguments)
+    def AddReply(self, Text=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+        ]
+        return self.commentthreaded.AddReply(*params)
 
     def Delete(self):
         self.commentthreaded.Delete()
@@ -5188,10 +5559,13 @@ class CommentThreaded:
     def Previous(self):
         return self.commentthreaded.Previous()
 
-    def Text(self, *args, Text=None, Start=None, Overwrite=None):
-        arguments = {"Text": Text, "Start": Start, "Overwrite": Overwrite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.commentthreaded.Text(*args, **arguments)
+    def Text(self, Text=None, Start=None, Overwrite=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            Start if Start is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+        ]
+        return self.commentthreaded.Text(*params)
 
 
 class ConditionValue:
@@ -5223,10 +5597,12 @@ class ConditionValue:
     def Value(self, value):
         self.conditionvalue.Value = value
 
-    def Modify(self, *args, NewType=None, NewValue=None):
-        arguments = {"NewType": NewType, "NewValue": NewValue}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.conditionvalue.Modify(*args, **arguments)
+    def Modify(self, NewType=None, NewValue=None):
+        params = [
+            NewType if NewType is not None else pythoncom.Missing,
+            NewValue if NewValue is not None else pythoncom.Missing,
+        ]
+        self.conditionvalue.Modify(*params)
 
 
 class Connections:
@@ -5253,20 +5629,31 @@ class Connections:
     def Parent(self):
         return self.connections.Parent
 
-    def Add(self, *args, Name=None, Description=None, ConnectionString=None, CommandText=None, lCmdtype=None, CreateModelConnection=None, ImportRelationships=None):
-        arguments = {"Name": Name, "Description": Description, "ConnectionString": ConnectionString, "CommandText": CommandText, "lCmdtype": lCmdtype, "CreateModelConnection": CreateModelConnection, "ImportRelationships": ImportRelationships}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Connection(self.connections.Add(*args, **arguments))
+    def Add(self, Name=None, Description=None, ConnectionString=None, CommandText=None, lCmdtype=None, CreateModelConnection=None, ImportRelationships=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            ConnectionString if ConnectionString is not None else pythoncom.Missing,
+            CommandText if CommandText is not None else pythoncom.Missing,
+            lCmdtype if lCmdtype is not None else pythoncom.Missing,
+            CreateModelConnection if CreateModelConnection is not None else pythoncom.Missing,
+            ImportRelationships if ImportRelationships is not None else pythoncom.Missing,
+        ]
+        return Connection(self.connections.Add(*params))
 
-    def AddFromFile(self, *args, FileName=None, CreateModelConnection=None, ImportRelationships=None):
-        arguments = {"FileName": FileName, "CreateModelConnection": CreateModelConnection, "ImportRelationships": ImportRelationships}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.connections.AddFromFile(*args, **arguments)
+    def AddFromFile(self, FileName=None, CreateModelConnection=None, ImportRelationships=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            CreateModelConnection if CreateModelConnection is not None else pythoncom.Missing,
+            ImportRelationships if ImportRelationships is not None else pythoncom.Missing,
+        ]
+        return self.connections.AddFromFile(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.connections.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.connections.Item(*params)
 
 
 class ConnectorFormat:
@@ -5318,18 +5705,22 @@ class ConnectorFormat:
     def Type(self, value):
         self.connectorformat.Type = value
 
-    def BeginConnect(self, *args, ConnectedShape=None, ConnectionSite=None):
-        arguments = {"ConnectedShape": ConnectedShape, "ConnectionSite": ConnectionSite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.connectorformat.BeginConnect(*args, **arguments)
+    def BeginConnect(self, ConnectedShape=None, ConnectionSite=None):
+        params = [
+            ConnectedShape if ConnectedShape is not None else pythoncom.Missing,
+            ConnectionSite if ConnectionSite is not None else pythoncom.Missing,
+        ]
+        self.connectorformat.BeginConnect(*params)
 
     def BeginDisconnect(self):
         self.connectorformat.BeginDisconnect()
 
-    def EndConnect(self, *args, ConnectedShape=None, ConnectionSite=None):
-        arguments = {"ConnectedShape": ConnectedShape, "ConnectionSite": ConnectionSite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.connectorformat.EndConnect(*args, **arguments)
+    def EndConnect(self, ConnectedShape=None, ConnectionSite=None):
+        params = [
+            ConnectedShape if ConnectedShape is not None else pythoncom.Missing,
+            ConnectionSite if ConnectionSite is not None else pythoncom.Missing,
+        ]
+        self.connectorformat.EndConnect(*params)
 
     def EndDisconnect(self):
         self.connectorformat.EndDisconnect()
@@ -5629,23 +6020,28 @@ class ControlFormat:
     def Value(self, value):
         self.controlformat.Value = value
 
-    def AddItem(self, *args, Text=None, Index=None):
-        arguments = {"Text": Text, "Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.controlformat.AddItem(*args, **arguments)
+    def AddItem(self, Text=None, Index=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        self.controlformat.AddItem(*params)
 
-    def List(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.controlformat.List(*args, **arguments)
+    def List(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.controlformat.List(*params)
 
     def RemoveAllItems(self):
         self.controlformat.RemoveAllItems()
 
-    def RemoveItem(self, *args, Index=None, Count=None):
-        arguments = {"Index": Index, "Count": Count}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.controlformat.RemoveItem(*args, **arguments)
+    def RemoveItem(self, Index=None, Count=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+            Count if Count is not None else pythoncom.Missing,
+        ]
+        self.controlformat.RemoveItem(*params)
 
 
 class CubeField:
@@ -5825,10 +6221,13 @@ class CubeField:
     def Value(self):
         return self.cubefield.Value
 
-    def AddMemberPropertyField(self, *args, Property=None, PropertyOrder=None, PropertyDisplayedIn=None):
-        arguments = {"Property": Property, "PropertyOrder": PropertyOrder, "PropertyDisplayedIn": PropertyDisplayedIn}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.cubefield.AddMemberPropertyField(*args, **arguments)
+    def AddMemberPropertyField(self, Property=None, PropertyOrder=None, PropertyDisplayedIn=None):
+        params = [
+            Property if Property is not None else pythoncom.Missing,
+            PropertyOrder if PropertyOrder is not None else pythoncom.Missing,
+            PropertyDisplayedIn if PropertyDisplayedIn is not None else pythoncom.Missing,
+        ]
+        self.cubefield.AddMemberPropertyField(*params)
 
     def ClearManualFilter(self):
         self.cubefield.ClearManualFilter()
@@ -5860,22 +6259,25 @@ class CubeFields:
     def Creator(self):
         return self.cubefields.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.cubefields.Item):
-            return self.cubefields.Item(*args, **arguments)
+            return self.cubefields.Item(*params)
         else:
-            return self.cubefields.GetItem(*args, **arguments)
+            return self.cubefields.GetItem(*params)
 
     @property
     def Parent(self):
         return self.cubefields.Parent
 
-    def AddSet(self, *args, Name=None, Caption=None):
-        arguments = {"Name": Name, "Caption": Caption}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.cubefields.AddSet(*args, **arguments)
+    def AddSet(self, Name=None, Caption=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Caption if Caption is not None else pythoncom.Missing,
+        ]
+        return self.cubefields.AddSet(*params)
 
 
 class CustomProperties:
@@ -5898,22 +6300,25 @@ class CustomProperties:
     def Creator(self):
         return self.customproperties.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.customproperties.Item):
-            return self.customproperties.Item(*args, **arguments)
+            return self.customproperties.Item(*params)
         else:
-            return self.customproperties.GetItem(*args, **arguments)
+            return self.customproperties.GetItem(*params)
 
     @property
     def Parent(self):
         return self.customproperties.Parent
 
-    def Add(self, *args, Name=None, Value=None):
-        arguments = {"Name": Name, "Value": Value}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CustomProperty(self.customproperties.Add(*args, **arguments))
+    def Add(self, Name=None, Value=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Value if Value is not None else pythoncom.Missing,
+        ]
+        return CustomProperty(self.customproperties.Add(*params))
 
 
 class CustomProperty:
@@ -6009,15 +6414,19 @@ class CustomViews:
     def Parent(self):
         return self.customviews.Parent
 
-    def Add(self, *args, ViewName=None, PrintSettings=None, RowColSettings=None):
-        arguments = {"ViewName": ViewName, "PrintSettings": PrintSettings, "RowColSettings": RowColSettings}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CustomView(self.customviews.Add(*args, **arguments))
+    def Add(self, ViewName=None, PrintSettings=None, RowColSettings=None):
+        params = [
+            ViewName if ViewName is not None else pythoncom.Missing,
+            PrintSettings if PrintSettings is not None else pythoncom.Missing,
+            RowColSettings if RowColSettings is not None else pythoncom.Missing,
+        ]
+        return CustomView(self.customviews.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return CustomView(self.customviews.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return CustomView(self.customviews.Item(*params))
 
 
 class Databar:
@@ -6156,10 +6565,11 @@ class Databar:
     def Delete(self):
         self.databar.Delete()
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.databar.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.databar.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.databar.SetFirstPriority()
@@ -6223,13 +6633,15 @@ class DataLabel:
     def Caption(self, value):
         self.datalabel.Caption = value
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
         if callable(self.datalabel.Characters):
-            return Characters(self.datalabel.Characters(*args, **arguments))
+            return Characters(self.datalabel.Characters(*params))
         else:
-            return Characters(self.datalabel.GetCharacters(*args, **arguments))
+            return Characters(self.datalabel.GetCharacters(*params))
 
     @property
     def Creator(self):
@@ -6621,10 +7033,11 @@ class DataLabels:
     def Delete(self):
         return self.datalabels.Delete()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return DataLabel(self.datalabels.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return DataLabel(self.datalabels.Item(*params))
 
     def Select(self):
         return self.datalabels.Select()
@@ -6877,10 +7290,40 @@ class Dialog:
     def Parent(self):
         return self.dialog.Parent
 
-    def Show(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.dialog.Show(*args, **arguments)
+    def Show(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.dialog.Show(*params)
 
 
 class Dialogs:
@@ -6903,13 +7346,14 @@ class Dialogs:
     def Creator(self):
         return self.dialogs.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.dialogs.Item):
-            return self.dialogs.Item(*args, **arguments)
+            return self.dialogs.Item(*params)
         else:
-            return self.dialogs.GetItem(*args, **arguments)
+            return self.dialogs.GetItem(*params)
 
     @property
     def Parent(self):
@@ -6955,13 +7399,15 @@ class DisplayFormat:
     def Borders(self):
         return Borders(self.displayformat.Borders)
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
         if callable(self.displayformat.Characters):
-            return Characters(self.displayformat.Characters(*args, **arguments))
+            return Characters(self.displayformat.Characters(*params))
         else:
-            return Characters(self.displayformat.GetCharacters(*args, **arguments))
+            return Characters(self.displayformat.GetCharacters(*params))
 
     @property
     def Creator(self):
@@ -7049,13 +7495,15 @@ class DisplayUnitLabel:
     def Caption(self, value):
         self.displayunitlabel.Caption = value
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
         if callable(self.displayunitlabel.Characters):
-            return Characters(self.displayunitlabel.Characters(*args, **arguments))
+            return Characters(self.displayunitlabel.Characters(*params))
         else:
-            return Characters(self.displayunitlabel.GetCharacters(*args, **arguments))
+            return Characters(self.displayunitlabel.GetCharacters(*params))
 
     @property
     def Creator(self):
@@ -7456,13 +7904,14 @@ class Errors:
     def Creator(self):
         return self.errors.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.errors.Item):
-            return Error(self.errors.Item(*args, **arguments))
+            return Error(self.errors.Item(*params))
         else:
-            return Error(self.errors.GetItem(*args, **arguments))
+            return Error(self.errors.GetItem(*params))
 
     @property
     def Parent(self):
@@ -7519,13 +7968,14 @@ class FileExportConverters:
     def Creator(self):
         return self.fileexportconverters.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.fileexportconverters.Item):
-            return FileExportConverter(self.fileexportconverters.Item(*args, **arguments))
+            return FileExportConverter(self.fileexportconverters.Item(*params))
         else:
-            return FileExportConverter(self.fileexportconverters.GetItem(*args, **arguments))
+            return FileExportConverter(self.fileexportconverters.GetItem(*params))
 
     @property
     def Parent(self):
@@ -7697,43 +8147,55 @@ class FillFormat:
     def Visible(self, value):
         self.fillformat.Visible = value
 
-    def OneColorGradient(self, *args, Style=None, Variant=None, Degree=None):
-        arguments = {"Style": Style, "Variant": Variant, "Degree": Degree}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.OneColorGradient(*args, **arguments)
+    def OneColorGradient(self, Style=None, Variant=None, Degree=None):
+        params = [
+            Style if Style is not None else pythoncom.Missing,
+            Variant if Variant is not None else pythoncom.Missing,
+            Degree if Degree is not None else pythoncom.Missing,
+        ]
+        self.fillformat.OneColorGradient(*params)
 
-    def Patterned(self, *args, Pattern=None):
-        arguments = {"Pattern": Pattern}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.Patterned(*args, **arguments)
+    def Patterned(self, Pattern=None):
+        params = [
+            Pattern if Pattern is not None else pythoncom.Missing,
+        ]
+        self.fillformat.Patterned(*params)
 
-    def PresetGradient(self, *args, Style=None, Variant=None, PresetGradientType=None):
-        arguments = {"Style": Style, "Variant": Variant, "PresetGradientType": PresetGradientType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.PresetGradient(*args, **arguments)
+    def PresetGradient(self, Style=None, Variant=None, PresetGradientType=None):
+        params = [
+            Style if Style is not None else pythoncom.Missing,
+            Variant if Variant is not None else pythoncom.Missing,
+            PresetGradientType if PresetGradientType is not None else pythoncom.Missing,
+        ]
+        self.fillformat.PresetGradient(*params)
 
-    def PresetTextured(self, *args, PresetTexture=None):
-        arguments = {"PresetTexture": PresetTexture}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.PresetTextured(*args, **arguments)
+    def PresetTextured(self, PresetTexture=None):
+        params = [
+            PresetTexture if PresetTexture is not None else pythoncom.Missing,
+        ]
+        self.fillformat.PresetTextured(*params)
 
     def Solid(self):
         self.fillformat.Solid()
 
-    def TwoColorGradient(self, *args, Style=None, Variant=None):
-        arguments = {"Style": Style, "Variant": Variant}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.TwoColorGradient(*args, **arguments)
+    def TwoColorGradient(self, Style=None, Variant=None):
+        params = [
+            Style if Style is not None else pythoncom.Missing,
+            Variant if Variant is not None else pythoncom.Missing,
+        ]
+        self.fillformat.TwoColorGradient(*params)
 
-    def UserPicture(self, *args, PictureFile=None):
-        arguments = {"PictureFile": PictureFile}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.UserPicture(*args, **arguments)
+    def UserPicture(self, PictureFile=None):
+        params = [
+            PictureFile if PictureFile is not None else pythoncom.Missing,
+        ]
+        self.fillformat.UserPicture(*params)
 
-    def UserTextured(self, *args, TextureFile=None):
-        arguments = {"TextureFile": TextureFile}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.fillformat.UserTextured(*args, **arguments)
+    def UserTextured(self, TextureFile=None):
+        params = [
+            TextureFile if TextureFile is not None else pythoncom.Missing,
+        ]
+        self.fillformat.UserTextured(*params)
 
 
 class Filter:
@@ -7794,13 +8256,14 @@ class Filters:
     def Creator(self):
         return self.filters.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.filters.Item):
-            return self.filters.Item(*args, **arguments)
+            return self.filters.Item(*params)
         else:
-            return self.filters.GetItem(*args, **arguments)
+            return self.filters.GetItem(*params)
 
     @property
     def Parent(self):
@@ -8158,15 +8621,20 @@ class FormatCondition:
     def Delete(self):
         self.formatcondition.Delete()
 
-    def Modify(self, *args, Type=None, Operator=None, Formula1=None, Formula2=None):
-        arguments = {"Type": Type, "Operator": Operator, "Formula1": Formula1, "Formula2": Formula2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.formatcondition.Modify(*args, **arguments)
+    def Modify(self, Type=None, Operator=None, Formula1=None, Formula2=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Operator if Operator is not None else pythoncom.Missing,
+            Formula1 if Formula1 is not None else pythoncom.Missing,
+            Formula2 if Formula2 is not None else pythoncom.Missing,
+        ]
+        self.formatcondition.Modify(*params)
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.formatcondition.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.formatcondition.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.formatcondition.SetFirstPriority()
@@ -8196,18 +8664,23 @@ class FormatConditions:
     def Parent(self):
         return self.formatconditions.Parent
 
-    def Add(self, *args, Type=None, Operator=None, Formula1=None, Formula2=None):
-        arguments = {"Type": Type, "Operator": Operator, "Formula1": Formula1, "Formula2": Formula2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return FormatCondition(self.formatconditions.Add(*args, **arguments))
+    def Add(self, Type=None, Operator=None, Formula1=None, Formula2=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Operator if Operator is not None else pythoncom.Missing,
+            Formula1 if Formula1 is not None else pythoncom.Missing,
+            Formula2 if Formula2 is not None else pythoncom.Missing,
+        ]
+        return FormatCondition(self.formatconditions.Add(*params))
 
     def AddAboveAverage(self):
         return self.formatconditions.AddAboveAverage()
 
-    def AddColorScale(self, *args, ColorScaleType=None):
-        arguments = {"ColorScaleType": ColorScaleType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.formatconditions.AddColorScale(*args, **arguments)
+    def AddColorScale(self, ColorScaleType=None):
+        params = [
+            ColorScaleType if ColorScaleType is not None else pythoncom.Missing,
+        ]
+        return self.formatconditions.AddColorScale(*params)
 
     def AddDatabar(self):
         return self.formatconditions.AddDatabar()
@@ -8224,10 +8697,11 @@ class FormatConditions:
     def Delete(self):
         self.formatconditions.Delete()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.formatconditions.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.formatconditions.Item(*params)
 
 
 class FreeformBuilder:
@@ -8247,10 +8721,18 @@ class FreeformBuilder:
     def Parent(self):
         return self.freeformbuilder.Parent
 
-    def AddNodes(self, *args, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
-        arguments = {"SegmentType": SegmentType, "EditingType": EditingType, "X1": X1, "Y1": Y1, "X2": X2, "Y2": Y2, "X3": X3, "Y3": Y3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.freeformbuilder.AddNodes(*args, **arguments)
+    def AddNodes(self, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
+        params = [
+            SegmentType if SegmentType is not None else pythoncom.Missing,
+            EditingType if EditingType is not None else pythoncom.Missing,
+            X1 if X1 is not None else pythoncom.Missing,
+            Y1 if Y1 is not None else pythoncom.Missing,
+            X2 if X2 is not None else pythoncom.Missing,
+            Y2 if Y2 is not None else pythoncom.Missing,
+            X3 if X3 is not None else pythoncom.Missing,
+            Y3 if Y3 is not None else pythoncom.Missing,
+        ]
+        self.freeformbuilder.AddNodes(*params)
 
     def ConvertToShape(self):
         return self.freeformbuilder.ConvertToShape()
@@ -8419,18 +8901,20 @@ class GroupShapes:
     def Parent(self):
         return self.groupshapes.Parent
 
-    def Range(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Range(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.groupshapes.Range):
-            return ShapeRange(self.groupshapes.Range(*args, **arguments))
+            return ShapeRange(self.groupshapes.Range(*params))
         else:
-            return ShapeRange(self.groupshapes.GetRange(*args, **arguments))
+            return ShapeRange(self.groupshapes.GetRange(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Shape(self.groupshapes.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Shape(self.groupshapes.Item(*params))
 
 
 class HeaderFooter:
@@ -8527,10 +9011,12 @@ class HPageBreak:
     def Delete(self):
         self.hpagebreak.Delete()
 
-    def DragOff(self, *args, Direction=None, RegionIndex=None):
-        arguments = {"Direction": Direction, "RegionIndex": RegionIndex}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.hpagebreak.DragOff(*args, **arguments)
+    def DragOff(self, Direction=None, RegionIndex=None):
+        params = [
+            Direction if Direction is not None else pythoncom.Missing,
+            RegionIndex if RegionIndex is not None else pythoncom.Missing,
+        ]
+        self.hpagebreak.DragOff(*params)
 
 
 class HPageBreaks:
@@ -8550,22 +9036,24 @@ class HPageBreaks:
     def Creator(self):
         return self.hpagebreaks.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.hpagebreaks.Item):
-            return self.hpagebreaks.Item(*args, **arguments)
+            return self.hpagebreaks.Item(*params)
         else:
-            return self.hpagebreaks.GetItem(*args, **arguments)
+            return self.hpagebreaks.GetItem(*params)
 
     @property
     def Parent(self):
         return self.hpagebreaks.Parent
 
-    def Add(self, *args, Before=None):
-        arguments = {"Before": Before}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return HPageBreak(self.hpagebreaks.Add(*args, **arguments))
+    def Add(self, Before=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+        ]
+        return HPageBreak(self.hpagebreaks.Add(*params))
 
 
 class Hyperlink:
@@ -8644,18 +9132,26 @@ class Hyperlink:
     def AddToFavorites(self):
         self.hyperlink.AddToFavorites()
 
-    def CreateNewDocument(self, *args, FileName=None, EditNow=None, Overwrite=None):
-        arguments = {"FileName": FileName, "EditNow": EditNow, "Overwrite": Overwrite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.hyperlink.CreateNewDocument(*args, **arguments)
+    def CreateNewDocument(self, FileName=None, EditNow=None, Overwrite=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            EditNow if EditNow is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+        ]
+        self.hyperlink.CreateNewDocument(*params)
 
     def Delete(self):
         self.hyperlink.Delete()
 
-    def Follow(self, *args, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
-        arguments = {"NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.hyperlink.Follow(*args, **arguments)
+    def Follow(self, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        params = [
+            NewWindow if NewWindow is not None else pythoncom.Missing,
+            AddHistory if AddHistory is not None else pythoncom.Missing,
+            ExtraInfo if ExtraInfo is not None else pythoncom.Missing,
+            Method if Method is not None else pythoncom.Missing,
+            HeaderInfo if HeaderInfo is not None else pythoncom.Missing,
+        ]
+        self.hyperlink.Follow(*params)
 
 
 class Hyperlinks:
@@ -8675,22 +9171,28 @@ class Hyperlinks:
     def Creator(self):
         return self.hyperlinks.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.hyperlinks.Item):
-            return self.hyperlinks.Item(*args, **arguments)
+            return self.hyperlinks.Item(*params)
         else:
-            return self.hyperlinks.GetItem(*args, **arguments)
+            return self.hyperlinks.GetItem(*params)
 
     @property
     def Parent(self):
         return self.hyperlinks.Parent
 
-    def Add(self, *args, Anchor=None, Address=None, SubAddress=None, ScreenTip=None, TextToDisplay=None):
-        arguments = {"Anchor": Anchor, "Address": Address, "SubAddress": SubAddress, "ScreenTip": ScreenTip, "TextToDisplay": TextToDisplay}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Hyperlink(self.hyperlinks.Add(*args, **arguments))
+    def Add(self, Anchor=None, Address=None, SubAddress=None, ScreenTip=None, TextToDisplay=None):
+        params = [
+            Anchor if Anchor is not None else pythoncom.Missing,
+            Address if Address is not None else pythoncom.Missing,
+            SubAddress if SubAddress is not None else pythoncom.Missing,
+            ScreenTip if ScreenTip is not None else pythoncom.Missing,
+            TextToDisplay if TextToDisplay is not None else pythoncom.Missing,
+        ]
+        return Hyperlink(self.hyperlinks.Add(*params))
 
     def Delete(self):
         self.hyperlinks.Delete()
@@ -8727,13 +9229,14 @@ class IconCriteria:
     def Count(self):
         return self.iconcriteria.Count
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.iconcriteria.Item):
-            return IconCriterion(self.iconcriteria.Item(*args, **arguments))
+            return IconCriterion(self.iconcriteria.Item(*params))
         else:
-            return IconCriterion(self.iconcriteria.GetItem(*args, **arguments))
+            return IconCriterion(self.iconcriteria.GetItem(*params))
 
 
 class IconCriterion:
@@ -8795,13 +9298,14 @@ class IconSet:
     def ID(self):
         return XlIconSet(self.iconset.ID)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.iconset.Item):
-            return Icon(self.iconset.Item(*args, **arguments))
+            return Icon(self.iconset.Item(*params))
         else:
-            return Icon(self.iconset.GetItem(*args, **arguments))
+            return Icon(self.iconset.GetItem(*params))
 
     @property
     def Parent(self):
@@ -8908,10 +9412,11 @@ class IconSetCondition:
     def Delete(self):
         self.iconsetcondition.Delete()
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.iconsetcondition.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.iconsetcondition.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.iconsetcondition.SetFirstPriority()
@@ -8937,13 +9442,14 @@ class IconSets:
     def Creator(self):
         return self.iconsets.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.iconsets.Item):
-            return IconSet(self.iconsets.Item(*args, **arguments))
+            return IconSet(self.iconsets.Item(*params))
         else:
-            return IconSet(self.iconsets.GetItem(*args, **arguments))
+            return IconSet(self.iconsets.GetItem(*params))
 
     @property
     def Parent(self):
@@ -9061,28 +9567,34 @@ class IRtdServer:
     def __init__(self, irtdserver=None):
         self.irtdserver = irtdserver
 
-    def ConnectData(self, *args, TopicID=None, Strings=None, GetNewValues=None):
-        arguments = {"TopicID": TopicID, "Strings": Strings, "GetNewValues": GetNewValues}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.irtdserver.ConnectData(*args, **arguments)
+    def ConnectData(self, TopicID=None, Strings=None, GetNewValues=None):
+        params = [
+            TopicID if TopicID is not None else pythoncom.Missing,
+            Strings if Strings is not None else pythoncom.Missing,
+            GetNewValues if GetNewValues is not None else pythoncom.Missing,
+        ]
+        return self.irtdserver.ConnectData(*params)
 
-    def DisconnectData(self, *args, TopicID=None):
-        arguments = {"TopicID": TopicID}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.irtdserver.DisconnectData(*args, **arguments)
+    def DisconnectData(self, TopicID=None):
+        params = [
+            TopicID if TopicID is not None else pythoncom.Missing,
+        ]
+        self.irtdserver.DisconnectData(*params)
 
     def Heartbeat(self):
         return self.irtdserver.Heartbeat()
 
-    def RefreshData(self, *args, TopicCount=None):
-        arguments = {"TopicCount": TopicCount}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.irtdserver.RefreshData(*args, **arguments)
+    def RefreshData(self, TopicCount=None):
+        params = [
+            TopicCount if TopicCount is not None else pythoncom.Missing,
+        ]
+        return self.irtdserver.RefreshData(*params)
 
-    def ServerStart(self, *args, CallbackObject=None):
-        arguments = {"CallbackObject": CallbackObject}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.irtdserver.ServerStart(*args, **arguments)
+    def ServerStart(self, CallbackObject=None):
+        params = [
+            CallbackObject if CallbackObject is not None else pythoncom.Missing,
+        ]
+        return self.irtdserver.ServerStart(*params)
 
     def ServerTerminate(self):
         self.irtdserver.ServerTerminate()
@@ -9227,10 +9739,11 @@ class Legend:
     def Delete(self):
         return self.legend.Delete()
 
-    def LegendEntries(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.legend.LegendEntries(*args, **arguments)
+    def LegendEntries(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.legend.LegendEntries(*params)
 
     def Select(self):
         return self.legend.Select()
@@ -9260,10 +9773,11 @@ class LegendEntries:
     def Parent(self):
         return self.legendentries.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return LegendEntry(self.legendentries.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return LegendEntry(self.legendentries.Item(*params))
 
 
 class LegendEntry:
@@ -9732,22 +10246,24 @@ class ListColumns:
     def Creator(self):
         return self.listcolumns.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.listcolumns.Item):
-            return self.listcolumns.Item(*args, **arguments)
+            return self.listcolumns.Item(*params)
         else:
-            return self.listcolumns.GetItem(*args, **arguments)
+            return self.listcolumns.GetItem(*params)
 
     @property
     def Parent(self):
         return self.listcolumns.Parent
 
-    def Add(self, *args, Position=None):
-        arguments = {"Position": Position}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ListColumn(self.listcolumns.Add(*args, **arguments))
+    def Add(self, Position=None):
+        params = [
+            Position if Position is not None else pythoncom.Missing,
+        ]
+        return ListColumn(self.listcolumns.Add(*params))
 
 
 class ListDataFormat:
@@ -10003,18 +10519,21 @@ class ListObject:
     def ExportToVisio(self):
         self.listobject.ExportToVisio()
 
-    def Publish(self, *args, Target=None, LinkSource=None):
-        arguments = {"Target": Target, "LinkSource": LinkSource}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.listobject.Publish(*args, **arguments)
+    def Publish(self, Target=None, LinkSource=None):
+        params = [
+            Target if Target is not None else pythoncom.Missing,
+            LinkSource if LinkSource is not None else pythoncom.Missing,
+        ]
+        return self.listobject.Publish(*params)
 
     def Refresh(self):
         self.listobject.Refresh()
 
-    def Resize(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.listobject.Resize(*args, **arguments)
+    def Resize(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.listobject.Resize(*params)
 
     def Unlink(self):
         self.listobject.Unlink()
@@ -10043,22 +10562,29 @@ class ListObjects:
     def Creator(self):
         return self.listobjects.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.listobjects.Item):
-            return self.listobjects.Item(*args, **arguments)
+            return self.listobjects.Item(*params)
         else:
-            return self.listobjects.GetItem(*args, **arguments)
+            return self.listobjects.GetItem(*params)
 
     @property
     def Parent(self):
         return self.listobjects.Parent
 
-    def Add(self, *args, SourceType=None, Source=None, LinkSource=None, XlListObjectHasHeaders=None, Destination=None, TableStyleName=None):
-        arguments = {"SourceType": SourceType, "Source": Source, "LinkSource": LinkSource, "XlListObjectHasHeaders": XlListObjectHasHeaders, "Destination": Destination, "TableStyleName": TableStyleName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ListObject(self.listobjects.Add(*args, **arguments))
+    def Add(self, SourceType=None, Source=None, LinkSource=None, XlListObjectHasHeaders=None, Destination=None, TableStyleName=None):
+        params = [
+            SourceType if SourceType is not None else pythoncom.Missing,
+            Source if Source is not None else pythoncom.Missing,
+            LinkSource if LinkSource is not None else pythoncom.Missing,
+            XlListObjectHasHeaders if XlListObjectHasHeaders is not None else pythoncom.Missing,
+            Destination if Destination is not None else pythoncom.Missing,
+            TableStyleName if TableStyleName is not None else pythoncom.Missing,
+        ]
+        return ListObject(self.listobjects.Add(*params))
 
 
 class ListRow:
@@ -10110,22 +10636,25 @@ class ListRows:
     def Creator(self):
         return self.listrows.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.listrows.Item):
-            return self.listrows.Item(*args, **arguments)
+            return self.listrows.Item(*params)
         else:
-            return self.listrows.GetItem(*args, **arguments)
+            return self.listrows.GetItem(*params)
 
     @property
     def Parent(self):
         return self.listrows.Parent
 
-    def Add(self, *args, Position=None, AlwaysInsert=None):
-        arguments = {"Position": Position, "AlwaysInsert": AlwaysInsert}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ListRow(self.listrows.Add(*args, **arguments))
+    def Add(self, Position=None, AlwaysInsert=None):
+        params = [
+            Position if Position is not None else pythoncom.Missing,
+            AlwaysInsert if AlwaysInsert is not None else pythoncom.Missing,
+        ]
+        return ListRow(self.listrows.Add(*params))
 
 
 class Mailer:
@@ -10291,25 +10820,29 @@ class Model3DFormat:
     def RotationZ(self, value):
         self.model3dformat.RotationZ = value
 
-    def IncrementRotationX(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.model3dformat.IncrementRotationX(*args, **arguments)
+    def IncrementRotationX(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.model3dformat.IncrementRotationX(*params)
 
-    def IncrementRotationY(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.model3dformat.IncrementRotationY(*args, **arguments)
+    def IncrementRotationY(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.model3dformat.IncrementRotationY(*params)
 
-    def IncrementRotationZ(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.model3dformat.IncrementRotationZ(*args, **arguments)
+    def IncrementRotationZ(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.model3dformat.IncrementRotationZ(*params)
 
-    def ResetModel(self, *args, ResetSize=None):
-        arguments = {"ResetSize": ResetSize}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.model3dformat.ResetModel(*args, **arguments)
+    def ResetModel(self, ResetSize=None):
+        params = [
+            ResetSize if ResetSize is not None else pythoncom.Missing,
+        ]
+        self.model3dformat.ResetModel(*params)
 
 
 class ModuleView:
@@ -10396,15 +10929,29 @@ class Names:
     def Parent(self):
         return self.names.Parent
 
-    def Add(self, *args, Name=None, RefersTo=None, Visible=None, MacroType=None, ShortcutKey=None, Category=None, NameLocal=None, RefersToLocal=None, CategoryLocal=None, RefersToR1C1=None, RefersToR1C1Local=None):
-        arguments = {"Name": Name, "RefersTo": RefersTo, "Visible": Visible, "MacroType": MacroType, "ShortcutKey": ShortcutKey, "Category": Category, "NameLocal": NameLocal, "RefersToLocal": RefersToLocal, "CategoryLocal": CategoryLocal, "RefersToR1C1": RefersToR1C1, "RefersToR1C1Local": RefersToR1C1Local}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Name(self.names.Add(*args, **arguments))
+    def Add(self, Name=None, RefersTo=None, Visible=None, MacroType=None, ShortcutKey=None, Category=None, NameLocal=None, RefersToLocal=None, CategoryLocal=None, RefersToR1C1=None, RefersToR1C1Local=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            RefersTo if RefersTo is not None else pythoncom.Missing,
+            Visible if Visible is not None else pythoncom.Missing,
+            MacroType if MacroType is not None else pythoncom.Missing,
+            ShortcutKey if ShortcutKey is not None else pythoncom.Missing,
+            Category if Category is not None else pythoncom.Missing,
+            NameLocal if NameLocal is not None else pythoncom.Missing,
+            RefersToLocal if RefersToLocal is not None else pythoncom.Missing,
+            CategoryLocal if CategoryLocal is not None else pythoncom.Missing,
+            RefersToR1C1 if RefersToR1C1 is not None else pythoncom.Missing,
+            RefersToR1C1Local if RefersToR1C1Local is not None else pythoncom.Missing,
+        ]
+        return Name(self.names.Add(*params))
 
-    def Item(self, *args, Index=None, IndexLocal=None, RefersTo=None):
-        arguments = {"Index": Index, "IndexLocal": IndexLocal, "RefersTo": RefersTo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.names.Item(*args, **arguments)
+    def Item(self, Index=None, IndexLocal=None, RefersTo=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+            IndexLocal if IndexLocal is not None else pythoncom.Missing,
+            RefersTo if RefersTo is not None else pythoncom.Missing,
+        ]
+        return self.names.Item(*params)
 
 
 class NegativeBarFormat:
@@ -10604,10 +11151,13 @@ class ODBCConnection:
     def Refresh(self):
         self.odbcconnection.Refresh()
 
-    def SaveAsODC(self, *args, ODCFileName=None, Description=None, Keywords=None):
-        arguments = {"ODCFileName": ODCFileName, "Description": Description, "Keywords": Keywords}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.odbcconnection.SaveAsODC(*args, **arguments)
+    def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
+        params = [
+            ODCFileName if ODCFileName is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            Keywords if Keywords is not None else pythoncom.Missing,
+        ]
+        return self.odbcconnection.SaveAsODC(*params)
 
 
 class ODBCError:
@@ -10660,10 +11210,11 @@ class ODBCErrors:
     def Parent(self):
         return self.odbcerrors.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ODBCError(self.odbcerrors.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return ODBCError(self.odbcerrors.Item(*params))
 
 
 class OLEDBConnection:
@@ -10915,10 +11466,13 @@ class OLEDBConnection:
     def Refresh(self):
         self.oledbconnection.Refresh()
 
-    def SaveAsODC(self, *args, ODCFileName=None, Description=None, Keywords=None):
-        arguments = {"ODCFileName": ODCFileName, "Description": Description, "Keywords": Keywords}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.oledbconnection.SaveAsODC(*args, **arguments)
+    def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
+        params = [
+            ODCFileName if ODCFileName is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            Keywords if Keywords is not None else pythoncom.Missing,
+        ]
+        self.oledbconnection.SaveAsODC(*params)
 
 
 class OLEDBError:
@@ -10983,10 +11537,11 @@ class OLEDBErrors:
     def Parent(self):
         return self.oledberrors.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return OLEDBError(self.oledberrors.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return OLEDBError(self.oledberrors.Item(*params))
 
 
 class OLEFormat:
@@ -11017,10 +11572,11 @@ class OLEFormat:
     def Activate(self):
         self.oleformat.Activate()
 
-    def Verb(self, *args, Verb=None):
-        arguments = {"Verb": Verb}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.oleformat.Verb(*args, **arguments)
+    def Verb(self, Verb=None):
+        params = [
+            Verb if Verb is not None else pythoncom.Missing,
+        ]
+        self.oleformat.Verb(*params)
 
 
 class OLEObject:
@@ -11213,10 +11769,12 @@ class OLEObject:
     def Copy(self):
         return self.oleobject.Copy()
 
-    def CopyPicture(self, *args, Appearance=None, Format=None):
-        arguments = {"Appearance": Appearance, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.oleobject.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.oleobject.CopyPicture(*params)
 
     def Cut(self):
         return self.oleobject.Cut()
@@ -11227,10 +11785,11 @@ class OLEObject:
     def Duplicate(self):
         return self.oleobject.Duplicate()
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.oleobject.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        return self.oleobject.Select(*params)
 
     def SendToBack(self):
         return self.oleobject.SendToBack()
@@ -11238,10 +11797,11 @@ class OLEObject:
     def Update(self):
         return self.oleobject.Update()
 
-    def Verb(self, *args, Verb=None):
-        arguments = {"Verb": Verb}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.oleobject.Verb(*args, **arguments)
+    def Verb(self, Verb=None):
+        params = [
+            Verb if Verb is not None else pythoncom.Missing,
+        ]
+        return self.oleobject.Verb(*params)
 
 
 class OLEObjects:
@@ -11380,10 +11940,21 @@ class OLEObjects:
     def ZOrder(self):
         return self.oleobjects.ZOrder
 
-    def Add(self, *args, ClassType=None, FileName=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"ClassType": ClassType, "FileName": FileName, "Link": Link, "DisplayAsIcon": DisplayAsIcon, "IconFileName": IconFileName, "IconIndex": IconIndex, "IconLabel": IconLabel, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return OLEObject(self.oleobjects.Add(*args, **arguments))
+    def Add(self, ClassType=None, FileName=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            ClassType if ClassType is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Link if Link is not None else pythoncom.Missing,
+            DisplayAsIcon if DisplayAsIcon is not None else pythoncom.Missing,
+            IconFileName if IconFileName is not None else pythoncom.Missing,
+            IconIndex if IconIndex is not None else pythoncom.Missing,
+            IconLabel if IconLabel is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return OLEObject(self.oleobjects.Add(*params))
 
     def BringToFront(self):
         return self.oleobjects.BringToFront()
@@ -11391,10 +11962,12 @@ class OLEObjects:
     def Copy(self):
         return self.oleobjects.Copy()
 
-    def CopyPicture(self, *args, Appearance=None, Format=None):
-        arguments = {"Appearance": Appearance, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.oleobjects.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.oleobjects.CopyPicture(*params)
 
     def Cut(self):
         return self.oleobjects.Cut()
@@ -11405,15 +11978,17 @@ class OLEObjects:
     def Duplicate(self):
         return self.oleobjects.Duplicate()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.oleobjects.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.oleobjects.Item(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.oleobjects.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        return self.oleobjects.Select(*params)
 
     def SendToBack(self):
         return self.oleobjects.SendToBack()
@@ -11460,10 +12035,12 @@ class Outline:
     def SummaryRow(self, value):
         self.outline.SummaryRow = value
 
-    def ShowLevels(self, *args, RowLevels=None, ColumnLevels=None):
-        arguments = {"RowLevels": RowLevels, "ColumnLevels": ColumnLevels}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.outline.ShowLevels(*args, **arguments)
+    def ShowLevels(self, RowLevels=None, ColumnLevels=None):
+        params = [
+            RowLevels if RowLevels is not None else pythoncom.Missing,
+            ColumnLevels if ColumnLevels is not None else pythoncom.Missing,
+        ]
+        return self.outline.ShowLevels(*params)
 
 
 class Page:
@@ -11508,13 +12085,14 @@ class Pages:
     def Count(self):
         return self.pages.Count
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pages.Item):
-            return Page(self.pages.Item(*args, **arguments))
+            return Page(self.pages.Item(*params))
         else:
-            return Page(self.pages.GetItem(*args, **arguments))
+            return Page(self.pages.GetItem(*params))
 
 
 class PageSetup:
@@ -11915,30 +12493,45 @@ class Pane:
     def Activate(self):
         return self.pane.Activate()
 
-    def LargeScroll(self, *args, Down=None, Up=None, ToRight=None, ToLeft=None):
-        arguments = {"Down": Down, "Up": Up, "ToRight": ToRight, "ToLeft": ToLeft}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pane.LargeScroll(*args, **arguments)
+    def LargeScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
+        params = [
+            Down if Down is not None else pythoncom.Missing,
+            Up if Up is not None else pythoncom.Missing,
+            ToRight if ToRight is not None else pythoncom.Missing,
+            ToLeft if ToLeft is not None else pythoncom.Missing,
+        ]
+        return self.pane.LargeScroll(*params)
 
-    def PointsToScreenPixelsX(self, *args, Points=None):
-        arguments = {"Points": Points}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pane.PointsToScreenPixelsX(*args, **arguments)
+    def PointsToScreenPixelsX(self, Points=None):
+        params = [
+            Points if Points is not None else pythoncom.Missing,
+        ]
+        return self.pane.PointsToScreenPixelsX(*params)
 
-    def PointsToScreenPixelsY(self, *args, Points=None):
-        arguments = {"Points": Points}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pane.PointsToScreenPixelsY(*args, **arguments)
+    def PointsToScreenPixelsY(self, Points=None):
+        params = [
+            Points if Points is not None else pythoncom.Missing,
+        ]
+        return self.pane.PointsToScreenPixelsY(*params)
 
-    def ScrollIntoView(self, *args, Left=None, Top=None, Width=None, Height=None, Start=None):
-        arguments = {"Left": Left, "Top": Top, "Width": Width, "Height": Height, "Start": Start}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pane.ScrollIntoView(*args, **arguments)
+    def ScrollIntoView(self, Left=None, Top=None, Width=None, Height=None, Start=None):
+        params = [
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+            Start if Start is not None else pythoncom.Missing,
+        ]
+        self.pane.ScrollIntoView(*params)
 
-    def SmallScroll(self, *args, Down=None, Up=None, ToRight=None, ToLeft=None):
-        arguments = {"Down": Down, "Up": Up, "ToRight": ToRight, "ToLeft": ToLeft}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pane.SmallScroll(*args, **arguments)
+    def SmallScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
+        params = [
+            Down if Down is not None else pythoncom.Missing,
+            Up if Up is not None else pythoncom.Missing,
+            ToRight if ToRight is not None else pythoncom.Missing,
+            ToLeft if ToLeft is not None else pythoncom.Missing,
+        ]
+        return self.pane.SmallScroll(*params)
 
 
 class Panes:
@@ -11961,13 +12554,14 @@ class Panes:
     def Creator(self):
         return self.panes.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.panes.Item):
-            return self.panes.Item(*args, **arguments)
+            return self.panes.Item(*params)
         else:
-            return self.panes.GetItem(*args, **arguments)
+            return self.panes.GetItem(*params)
 
     @property
     def Parent(self):
@@ -12031,10 +12625,12 @@ class Parameter:
     def Value(self):
         return self.parameter.Value
 
-    def SetParam(self, *args, Type=None, Value=None):
-        arguments = {"Type": Type, "Value": Value}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.parameter.SetParam(*args, **arguments)
+    def SetParam(self, Type=None, Value=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Value if Value is not None else pythoncom.Missing,
+        ]
+        self.parameter.SetParam(*params)
 
 
 class Parameters:
@@ -12061,18 +12657,21 @@ class Parameters:
     def Parent(self):
         return self.parameters.Parent
 
-    def Add(self, *args, Name=None, iDataType=None):
-        arguments = {"Name": Name, "iDataType": iDataType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Parameter(self.parameters.Add(*args, **arguments))
+    def Add(self, Name=None, iDataType=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            iDataType if iDataType is not None else pythoncom.Missing,
+        ]
+        return Parameter(self.parameters.Add(*params))
 
     def Delete(self):
         self.parameters.Delete()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Parameter(self.parameters.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Parameter(self.parameters.Item(*params))
 
 
 class Phonetic:
@@ -12169,13 +12768,14 @@ class Phonetics:
     def Font(self):
         return Font(self.phonetics.Font)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.phonetics.Item):
-            return self.phonetics.Item(*args, **arguments)
+            return self.phonetics.Item(*params)
         else:
-            return self.phonetics.GetItem(*args, **arguments)
+            return self.phonetics.GetItem(*params)
 
     @property
     def Length(self):
@@ -12205,10 +12805,13 @@ class Phonetics:
     def Visible(self, value):
         self.phonetics.Visible = value
 
-    def Add(self, *args, Start=None, Length=None, Text=None):
-        arguments = {"Start": Start, "Length": Length, "Text": Text}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.phonetics.Add(*args, **arguments)
+    def Add(self, Start=None, Length=None, Text=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+            Text if Text is not None else pythoncom.Missing,
+        ]
+        self.phonetics.Add(*params)
 
     def Delete(self):
         self.phonetics.Delete()
@@ -12307,15 +12910,17 @@ class PictureFormat:
     def TransparentBackground(self, value):
         self.pictureformat.TransparentBackground = value
 
-    def IncrementBrightness(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pictureformat.IncrementBrightness(*args, **arguments)
+    def IncrementBrightness(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.pictureformat.IncrementBrightness(*params)
 
-    def IncrementContrast(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pictureformat.IncrementContrast(*args, **arguments)
+    def IncrementContrast(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.pictureformat.IncrementContrast(*params)
 
 
 class PivotAxis:
@@ -12553,10 +13158,14 @@ class PivotCache:
     def WorkbookConnection(self):
         return self.pivotcache.WorkbookConnection
 
-    def CreatePivotTable(self, *args, TableDestination=None, TableName=None, ReadData=None, DefaultVersion=None):
-        arguments = {"TableDestination": TableDestination, "TableName": TableName, "ReadData": ReadData, "DefaultVersion": DefaultVersion}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivotcache.CreatePivotTable(*args, **arguments)
+    def CreatePivotTable(self, TableDestination=None, TableName=None, ReadData=None, DefaultVersion=None):
+        params = [
+            TableDestination if TableDestination is not None else pythoncom.Missing,
+            TableName if TableName is not None else pythoncom.Missing,
+            ReadData if ReadData is not None else pythoncom.Missing,
+            DefaultVersion if DefaultVersion is not None else pythoncom.Missing,
+        ]
+        return self.pivotcache.CreatePivotTable(*params)
 
     def MakeConnection(self):
         self.pivotcache.MakeConnection()
@@ -12567,10 +13176,13 @@ class PivotCache:
     def ResetTimer(self):
         self.pivotcache.ResetTimer()
 
-    def SaveAsODC(self, *args, ODCFileName=None, Description=None, Keywords=None):
-        arguments = {"ODCFileName": ODCFileName, "Description": Description, "Keywords": Keywords}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotcache.SaveAsODC(*args, **arguments)
+    def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
+        params = [
+            ODCFileName if ODCFileName is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            Keywords if Keywords is not None else pythoncom.Missing,
+        ]
+        self.pivotcache.SaveAsODC(*params)
 
 
 class PivotCaches:
@@ -12594,15 +13206,19 @@ class PivotCaches:
     def Parent(self):
         return self.pivotcaches.Parent
 
-    def Create(self, *args, SourceType=None, SourceData=None, Version=None):
-        arguments = {"SourceType": SourceType, "SourceData": SourceData, "Version": Version}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivotcaches.Create(*args, **arguments)
+    def Create(self, SourceType=None, SourceData=None, Version=None):
+        params = [
+            SourceType if SourceType is not None else pythoncom.Missing,
+            SourceData if SourceData is not None else pythoncom.Missing,
+            Version if Version is not None else pythoncom.Missing,
+        ]
+        return self.pivotcaches.Create(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotCache(self.pivotcaches.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotCache(self.pivotcaches.Item(*params))
 
 
 class PivotCell:
@@ -12762,13 +13378,14 @@ class PivotField:
     def ChildField(self):
         return PivotField(self.pivotfield.ChildField)
 
-    def ChildItems(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def ChildItems(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotfield.ChildItems):
-            return PivotItem(self.pivotfield.ChildItems(*args, **arguments))
+            return PivotItem(self.pivotfield.ChildItems(*params))
         else:
-            return PivotItem(self.pivotfield.GetChildItems(*args, **arguments))
+            return PivotItem(self.pivotfield.GetChildItems(*params))
 
     @property
     def Creator(self):
@@ -12930,13 +13547,14 @@ class PivotField:
     def Hidden(self, value):
         self.pivotfield.Hidden = value
 
-    def HiddenItems(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def HiddenItems(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotfield.HiddenItems):
-            return PivotItem(self.pivotfield.HiddenItems(*args, **arguments))
+            return PivotItem(self.pivotfield.HiddenItems(*params))
         else:
-            return PivotItem(self.pivotfield.GetHiddenItems(*args, **arguments))
+            return PivotItem(self.pivotfield.GetHiddenItems(*params))
 
     @property
     def HiddenItemsList(self):
@@ -13050,13 +13668,14 @@ class PivotField:
     def ParentField(self):
         return PivotField(self.pivotfield.ParentField)
 
-    def ParentItems(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def ParentItems(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotfield.ParentItems):
-            return PivotItem(self.pivotfield.ParentItems(*args, **arguments))
+            return PivotItem(self.pivotfield.ParentItems(*params))
         else:
-            return PivotItem(self.pivotfield.GetParentItems(*args, **arguments))
+            return PivotItem(self.pivotfield.GetParentItems(*params))
 
     @property
     def PivotFilters(self):
@@ -13174,13 +13793,14 @@ class PivotField:
     def Value(self, value):
         self.pivotfield.Value = value
 
-    def VisibleItems(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def VisibleItems(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotfield.VisibleItems):
-            return PivotItem(self.pivotfield.VisibleItems(*args, **arguments))
+            return PivotItem(self.pivotfield.VisibleItems(*params))
         else:
-            return PivotItem(self.pivotfield.GetVisibleItems(*args, **arguments))
+            return PivotItem(self.pivotfield.GetVisibleItems(*params))
 
     @property
     def VisibleItemsList(self):
@@ -13190,20 +13810,30 @@ class PivotField:
     def VisibleItemsList(self, value):
         self.pivotfield.VisibleItemsList = value
 
-    def AddPageItem(self, *args, Item=None, ClearList=None):
-        arguments = {"Item": Item, "ClearList": ClearList}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotfield.AddPageItem(*args, **arguments)
+    def AddPageItem(self, Item=None, ClearList=None):
+        params = [
+            Item if Item is not None else pythoncom.Missing,
+            ClearList if ClearList is not None else pythoncom.Missing,
+        ]
+        self.pivotfield.AddPageItem(*params)
 
-    def AutoShow(self, *args, Type=None, Range=None, Count=None, Field=None):
-        arguments = {"Type": Type, "Range": Range, "Count": Count, "Field": Field}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotfield.AutoShow(*args, **arguments)
+    def AutoShow(self, Type=None, Range=None, Count=None, Field=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Range if Range is not None else pythoncom.Missing,
+            Count if Count is not None else pythoncom.Missing,
+            Field if Field is not None else pythoncom.Missing,
+        ]
+        self.pivotfield.AutoShow(*params)
 
-    def AutoSort(self, *args, Order=None, Field=None, PivotLine=None, CustomSubtotal=None):
-        arguments = {"Order": Order, "Field": Field, "PivotLine": PivotLine, "CustomSubtotal": CustomSubtotal}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotfield.AutoSort(*args, **arguments)
+    def AutoSort(self, Order=None, Field=None, PivotLine=None, CustomSubtotal=None):
+        params = [
+            Order if Order is not None else pythoncom.Missing,
+            Field if Field is not None else pythoncom.Missing,
+            PivotLine if PivotLine is not None else pythoncom.Missing,
+            CustomSubtotal if CustomSubtotal is not None else pythoncom.Missing,
+        ]
+        self.pivotfield.AutoSort(*params)
 
     def CalculatedItems(self):
         return self.pivotfield.CalculatedItems()
@@ -13223,15 +13853,17 @@ class PivotField:
     def Delete(self):
         self.pivotfield.Delete()
 
-    def DrillTo(self, *args, PivotFieldName=None):
-        arguments = {"PivotFieldName": PivotFieldName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotfield.DrillTo(*args, **arguments)
+    def DrillTo(self, PivotFieldName=None):
+        params = [
+            PivotFieldName if PivotFieldName is not None else pythoncom.Missing,
+        ]
+        self.pivotfield.DrillTo(*params)
 
-    def PivotItems(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivotfield.PivotItems(*args, **arguments)
+    def PivotItems(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.pivotfield.PivotItems(*params)
 
 
 class PivotFields:
@@ -13258,10 +13890,11 @@ class PivotFields:
     def Parent(self):
         return self.pivotfields.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivotfields.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.pivotfields.Item(*params)
 
 
 class PivotFilter:
@@ -13374,22 +14007,32 @@ class PivotFilters:
     def Creator(self):
         return self.pivotfilters.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotfilters.Item):
-            return PivotFilters(self.pivotfilters.Item(*args, **arguments))
+            return PivotFilters(self.pivotfilters.Item(*params))
         else:
-            return PivotFilters(self.pivotfilters.GetItem(*args, **arguments))
+            return PivotFilters(self.pivotfilters.GetItem(*params))
 
     @property
     def Parent(self):
         return PivotFilters(self.pivotfilters.Parent)
 
-    def Add(self, *args, Type=None, DataField=None, Value1=None, Value2=None, Order=None, Name=None, Description=None, MemberPropertyField=None, WholeDayFilter=None):
-        arguments = {"Type": Type, "DataField": DataField, "Value1": Value1, "Value2": Value2, "Order": Order, "Name": Name, "Description": Description, "MemberPropertyField": MemberPropertyField, "WholeDayFilter": WholeDayFilter}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivotfilters.Add(*args, **arguments)
+    def Add(self, Type=None, DataField=None, Value1=None, Value2=None, Order=None, Name=None, Description=None, MemberPropertyField=None, WholeDayFilter=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            DataField if DataField is not None else pythoncom.Missing,
+            Value1 if Value1 is not None else pythoncom.Missing,
+            Value2 if Value2 is not None else pythoncom.Missing,
+            Order if Order is not None else pythoncom.Missing,
+            Name if Name is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            MemberPropertyField if MemberPropertyField is not None else pythoncom.Missing,
+            WholeDayFilter if WholeDayFilter is not None else pythoncom.Missing,
+        ]
+        return self.pivotfilters.Add(*params)
 
 
 class PivotFormula:
@@ -13466,15 +14109,18 @@ class PivotFormulas:
     def Parent(self):
         return self.pivotformulas.Parent
 
-    def Add(self, *args, Formula=None, UseStandardFormula=None):
-        arguments = {"Formula": Formula, "UseStandardFormula": UseStandardFormula}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotFormula(self.pivotformulas.Add(*args, **arguments))
+    def Add(self, Formula=None, UseStandardFormula=None):
+        params = [
+            Formula if Formula is not None else pythoncom.Missing,
+            UseStandardFormula if UseStandardFormula is not None else pythoncom.Missing,
+        ]
+        return PivotFormula(self.pivotformulas.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotFormula(self.pivotformulas.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotFormula(self.pivotformulas.Item(*params))
 
 
 class PivotItem:
@@ -13490,13 +14136,14 @@ class PivotItem:
     def Caption(self):
         return self.pivotitem.Caption
 
-    def ChildItems(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def ChildItems(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotitem.ChildItems):
-            return PivotItem(self.pivotitem.ChildItems(*args, **arguments))
+            return PivotItem(self.pivotitem.ChildItems(*params))
         else:
-            return PivotItem(self.pivotitem.GetChildItems(*args, **arguments))
+            return PivotItem(self.pivotitem.GetChildItems(*params))
 
     @property
     def Creator(self):
@@ -13605,10 +14252,11 @@ class PivotItem:
     def Delete(self):
         self.pivotitem.Delete()
 
-    def DrillTo(self, *args, PivotItemName=None):
-        arguments = {"PivotItemName": PivotItemName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotitem.DrillTo(*args, **arguments)
+    def DrillTo(self, PivotItemName=None):
+        params = [
+            PivotItemName if PivotItemName is not None else pythoncom.Missing,
+        ]
+        self.pivotitem.DrillTo(*params)
 
 
 class PivotItemList:
@@ -13635,10 +14283,11 @@ class PivotItemList:
     def Parent(self):
         return self.pivotitemlist.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotItem(self.pivotitemlist.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotItem(self.pivotitemlist.Item(*params))
 
 
 class PivotItems:
@@ -13665,15 +14314,17 @@ class PivotItems:
     def Parent(self):
         return self.pivotitems.Parent
 
-    def Add(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivotitems.Add(*args, **arguments)
+    def Add(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        self.pivotitems.Add(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivotitems.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.pivotitems.Item(*params)
 
 
 class PivotLayout:
@@ -13749,13 +14400,14 @@ class PivotLineCells:
     def Creator(self):
         return self.pivotlinecells.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotlinecells.Item):
-            return PivotLineCells(self.pivotlinecells.Item(*args, **arguments))
+            return PivotLineCells(self.pivotlinecells.Item(*params))
         else:
-            return PivotLineCells(self.pivotlinecells.GetItem(*args, **arguments))
+            return PivotLineCells(self.pivotlinecells.GetItem(*params))
 
     @property
     def Parent(self):
@@ -13779,13 +14431,14 @@ class PivotLines:
     def Creator(self):
         return self.pivotlines.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivotlines.Item):
-            return PivotLines(self.pivotlines.Item(*args, **arguments))
+            return PivotLines(self.pivotlines.Item(*params))
         else:
-            return PivotLines(self.pivotlines.GetItem(*args, **arguments))
+            return PivotLines(self.pivotlines.GetItem(*params))
 
     @property
     def Parent(self):
@@ -13877,13 +14530,14 @@ class PivotTable:
     def ChangeList(self):
         return PivotTableChangeList(self.pivottable.ChangeList)
 
-    def ColumnFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def ColumnFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottable.ColumnFields):
-            return PivotField(self.pivottable.ColumnFields(*args, **arguments))
+            return PivotField(self.pivottable.ColumnFields(*params))
         else:
-            return PivotField(self.pivottable.GetColumnFields(*args, **arguments))
+            return PivotField(self.pivottable.GetColumnFields(*params))
 
     @property
     def ColumnGrand(self):
@@ -13933,13 +14587,14 @@ class PivotTable:
     def DataBodyRange(self):
         return Range(self.pivottable.DataBodyRange)
 
-    def DataFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def DataFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottable.DataFields):
-            return PivotField(self.pivottable.DataFields(*args, **arguments))
+            return PivotField(self.pivottable.DataFields(*params))
         else:
-            return PivotField(self.pivottable.GetDataFields(*args, **arguments))
+            return PivotField(self.pivottable.GetDataFields(*params))
 
     @property
     def DataLabelRange(self):
@@ -14085,13 +14740,14 @@ class PivotTable:
     def GrandTotalName(self, value):
         self.pivottable.GrandTotalName = value
 
-    def HiddenFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def HiddenFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottable.HiddenFields):
-            return PivotField(self.pivottable.HiddenFields(*args, **arguments))
+            return PivotField(self.pivottable.HiddenFields(*params))
         else:
-            return PivotField(self.pivottable.GetHiddenFields(*args, **arguments))
+            return PivotField(self.pivottable.GetHiddenFields(*params))
 
     @property
     def InGridDropZones(self):
@@ -14169,13 +14825,14 @@ class PivotTable:
     def PageFieldOrder(self, value):
         self.pivottable.PageFieldOrder = value
 
-    def PageFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def PageFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottable.PageFields):
-            return PivotField(self.pivottable.PageFields(*args, **arguments))
+            return PivotField(self.pivottable.PageFields(*params))
         else:
-            return PivotField(self.pivottable.GetPageFields(*args, **arguments))
+            return PivotField(self.pivottable.GetPageFields(*params))
 
     @property
     def PageFieldStyle(self):
@@ -14269,13 +14926,14 @@ class PivotTable:
     def RepeatItemsOnEachPrintedPage(self, value):
         self.pivottable.RepeatItemsOnEachPrintedPage = value
 
-    def RowFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def RowFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottable.RowFields):
-            return PivotField(self.pivottable.RowFields(*args, **arguments))
+            return PivotField(self.pivottable.RowFields(*params))
         else:
-            return PivotField(self.pivottable.GetRowFields(*args, **arguments))
+            return PivotField(self.pivottable.GetRowFields(*params))
 
     @property
     def RowGrand(self):
@@ -14465,13 +15123,14 @@ class PivotTable:
     def ViewCalculatedMembers(self, value):
         self.pivottable.ViewCalculatedMembers = value
 
-    def VisibleFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def VisibleFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottable.VisibleFields):
-            return PivotField(self.pivottable.VisibleFields(*args, **arguments))
+            return PivotField(self.pivottable.VisibleFields(*params))
         else:
-            return PivotField(self.pivottable.GetVisibleFields(*args, **arguments))
+            return PivotField(self.pivottable.GetVisibleFields(*params))
 
     @property
     def VisualTotals(self):
@@ -14489,15 +15148,22 @@ class PivotTable:
     def VisualTotalsForSets(self, value):
         self.pivottable.VisualTotalsForSets = value
 
-    def AddDataField(self, *args, Field=None, Caption=None, Function=None):
-        arguments = {"Field": Field, "Caption": Caption, "Function": Function}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.AddDataField(*args, **arguments)
+    def AddDataField(self, Field=None, Caption=None, Function=None):
+        params = [
+            Field if Field is not None else pythoncom.Missing,
+            Caption if Caption is not None else pythoncom.Missing,
+            Function if Function is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.AddDataField(*params)
 
-    def AddFields(self, *args, RowFields=None, ColumnFields=None, PageFields=None, AddToTable=None):
-        arguments = {"RowFields": RowFields, "ColumnFields": ColumnFields, "PageFields": PageFields, "AddToTable": AddToTable}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.AddFields(*args, **arguments)
+    def AddFields(self, RowFields=None, ColumnFields=None, PageFields=None, AddToTable=None):
+        params = [
+            RowFields if RowFields is not None else pythoncom.Missing,
+            ColumnFields if ColumnFields is not None else pythoncom.Missing,
+            PageFields if PageFields is not None else pythoncom.Missing,
+            AddToTable if AddToTable is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.AddFields(*params)
 
     def AllocateChanges(self):
         return self.pivottable.AllocateChanges()
@@ -14505,15 +15171,17 @@ class PivotTable:
     def CalculatedFields(self):
         return self.pivottable.CalculatedFields()
 
-    def ChangeConnection(self, *args, conn=None):
-        arguments = {"conn": conn}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.ChangeConnection(*args, **arguments)
+    def ChangeConnection(self, conn=None):
+        params = [
+            conn if conn is not None else pythoncom.Missing,
+        ]
+        self.pivottable.ChangeConnection(*params)
 
-    def ChangePivotCache(self, *args, bstr=None):
-        arguments = {"bstr": bstr}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.ChangePivotCache(*args, **arguments)
+    def ChangePivotCache(self, bstr=None):
+        params = [
+            bstr if bstr is not None else pythoncom.Missing,
+        ]
+        self.pivottable.ChangePivotCache(*params)
 
     def ClearAllFilters(self):
         self.pivottable.ClearAllFilters()
@@ -14524,28 +15192,64 @@ class PivotTable:
     def CommitChanges(self):
         return self.pivottable.CommitChanges()
 
-    def ConvertToFormulas(self, *args, ConvertFilters=None):
-        arguments = {"ConvertFilters": ConvertFilters}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.ConvertToFormulas(*args, **arguments)
+    def ConvertToFormulas(self, ConvertFilters=None):
+        params = [
+            ConvertFilters if ConvertFilters is not None else pythoncom.Missing,
+        ]
+        self.pivottable.ConvertToFormulas(*params)
 
-    def CreateCubeFile(self, *args, File=None, Measures=None, Levels=None, Members=None, Properties=None):
-        arguments = {"File": File, "Measures": Measures, "Levels": Levels, "Members": Members, "Properties": Properties}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.CreateCubeFile(*args, **arguments)
+    def CreateCubeFile(self, File=None, Measures=None, Levels=None, Members=None, Properties=None):
+        params = [
+            File if File is not None else pythoncom.Missing,
+            Measures if Measures is not None else pythoncom.Missing,
+            Levels if Levels is not None else pythoncom.Missing,
+            Members if Members is not None else pythoncom.Missing,
+            Properties if Properties is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.CreateCubeFile(*params)
 
     def DiscardChanges(self):
         return self.pivottable.DiscardChanges()
 
-    def GetData(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.GetData(*args, **arguments)
+    def GetData(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.GetData(*params)
 
-    def GetPivotData(self, *args, DataField=None, Field1=None, Item1=None, Field2=None, Item2=None, Field3=None, Item3=None, Field4=None, Item4=None, Field5=None, Item5=None, Field6=None, Item6=None, Field7=None, Item7=None, Field8=None, Item8=None, Field9=None, Item9=None, Field10=None, Item10=None, Field11=None, Item11=None, Field12=None, Item12=None, Field13=None, Item13=None, Field14=None, Item14=None):
-        arguments = {"DataField": DataField, "Field1": Field1, "Item1": Item1, "Field2": Field2, "Item2": Item2, "Field3": Field3, "Item3": Item3, "Field4": Field4, "Item4": Item4, "Field5": Field5, "Item5": Item5, "Field6": Field6, "Item6": Item6, "Field7": Field7, "Item7": Item7, "Field8": Field8, "Item8": Item8, "Field9": Field9, "Item9": Item9, "Field10": Field10, "Item10": Item10, "Field11": Field11, "Item11": Item11, "Field12": Field12, "Item12": Item12, "Field13": Field13, "Item13": Item13, "Field14": Field14, "Item14": Item14}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.GetPivotData(*args, **arguments)
+    def GetPivotData(self, DataField=None, Field1=None, Item1=None, Field2=None, Item2=None, Field3=None, Item3=None, Field4=None, Item4=None, Field5=None, Item5=None, Field6=None, Item6=None, Field7=None, Item7=None, Field8=None, Item8=None, Field9=None, Item9=None, Field10=None, Item10=None, Field11=None, Item11=None, Field12=None, Item12=None, Field13=None, Item13=None, Field14=None, Item14=None):
+        params = [
+            DataField if DataField is not None else pythoncom.Missing,
+            Field1 if Field1 is not None else pythoncom.Missing,
+            Item1 if Item1 is not None else pythoncom.Missing,
+            Field2 if Field2 is not None else pythoncom.Missing,
+            Item2 if Item2 is not None else pythoncom.Missing,
+            Field3 if Field3 is not None else pythoncom.Missing,
+            Item3 if Item3 is not None else pythoncom.Missing,
+            Field4 if Field4 is not None else pythoncom.Missing,
+            Item4 if Item4 is not None else pythoncom.Missing,
+            Field5 if Field5 is not None else pythoncom.Missing,
+            Item5 if Item5 is not None else pythoncom.Missing,
+            Field6 if Field6 is not None else pythoncom.Missing,
+            Item6 if Item6 is not None else pythoncom.Missing,
+            Field7 if Field7 is not None else pythoncom.Missing,
+            Item7 if Item7 is not None else pythoncom.Missing,
+            Field8 if Field8 is not None else pythoncom.Missing,
+            Item8 if Item8 is not None else pythoncom.Missing,
+            Field9 if Field9 is not None else pythoncom.Missing,
+            Item9 if Item9 is not None else pythoncom.Missing,
+            Field10 if Field10 is not None else pythoncom.Missing,
+            Item10 if Item10 is not None else pythoncom.Missing,
+            Field11 if Field11 is not None else pythoncom.Missing,
+            Item11 if Item11 is not None else pythoncom.Missing,
+            Field12 if Field12 is not None else pythoncom.Missing,
+            Item12 if Item12 is not None else pythoncom.Missing,
+            Field13 if Field13 is not None else pythoncom.Missing,
+            Item13 if Item13 is not None else pythoncom.Missing,
+            Field14 if Field14 is not None else pythoncom.Missing,
+            Item14 if Item14 is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.GetPivotData(*params)
 
     def ListFormulas(self):
         self.pivottable.ListFormulas()
@@ -14553,20 +15257,40 @@ class PivotTable:
     def PivotCache(self):
         return self.pivottable.PivotCache()
 
-    def PivotFields(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.PivotFields(*args, **arguments)
+    def PivotFields(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.PivotFields(*params)
 
-    def PivotSelect(self, *args, Name=None, Mode=None, UseStandardName=None):
-        arguments = {"Name": Name, "Mode": Mode, "UseStandardName": UseStandardName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.PivotSelect(*args, **arguments)
+    def PivotSelect(self, Name=None, Mode=None, UseStandardName=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Mode if Mode is not None else pythoncom.Missing,
+            UseStandardName if UseStandardName is not None else pythoncom.Missing,
+        ]
+        self.pivottable.PivotSelect(*params)
 
-    def PivotTableWizard(self, *args, SourceType=None, SourceData=None, TableDestination=None, TableName=None, RowGrand=None, ColumnGrand=None, SaveData=None, HasAutoFormat=None, AutoPage=None, Reserved=None, BackgroundQuery=None, OptimizeCache=None, PageFieldOrder=None, PageFieldWrapCount=None, ReadData=None, Connection=None):
-        arguments = {"SourceType": SourceType, "SourceData": SourceData, "TableDestination": TableDestination, "TableName": TableName, "RowGrand": RowGrand, "ColumnGrand": ColumnGrand, "SaveData": SaveData, "HasAutoFormat": HasAutoFormat, "AutoPage": AutoPage, "Reserved": Reserved, "BackgroundQuery": BackgroundQuery, "OptimizeCache": OptimizeCache, "PageFieldOrder": PageFieldOrder, "PageFieldWrapCount": PageFieldWrapCount, "ReadData": ReadData, "Connection": Connection}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.PivotTableWizard(*args, **arguments)
+    def PivotTableWizard(self, SourceType=None, SourceData=None, TableDestination=None, TableName=None, RowGrand=None, ColumnGrand=None, SaveData=None, HasAutoFormat=None, AutoPage=None, Reserved=None, BackgroundQuery=None, OptimizeCache=None, PageFieldOrder=None, PageFieldWrapCount=None, ReadData=None, Connection=None):
+        params = [
+            SourceType if SourceType is not None else pythoncom.Missing,
+            SourceData if SourceData is not None else pythoncom.Missing,
+            TableDestination if TableDestination is not None else pythoncom.Missing,
+            TableName if TableName is not None else pythoncom.Missing,
+            RowGrand if RowGrand is not None else pythoncom.Missing,
+            ColumnGrand if ColumnGrand is not None else pythoncom.Missing,
+            SaveData if SaveData is not None else pythoncom.Missing,
+            HasAutoFormat if HasAutoFormat is not None else pythoncom.Missing,
+            AutoPage if AutoPage is not None else pythoncom.Missing,
+            Reserved if Reserved is not None else pythoncom.Missing,
+            BackgroundQuery if BackgroundQuery is not None else pythoncom.Missing,
+            OptimizeCache if OptimizeCache is not None else pythoncom.Missing,
+            PageFieldOrder if PageFieldOrder is not None else pythoncom.Missing,
+            PageFieldWrapCount if PageFieldWrapCount is not None else pythoncom.Missing,
+            ReadData if ReadData is not None else pythoncom.Missing,
+            Connection if Connection is not None else pythoncom.Missing,
+        ]
+        self.pivottable.PivotTableWizard(*params)
 
     def RefreshDataSourceValues(self):
         return self.pivottable.RefreshDataSourceValues()
@@ -14574,25 +15298,29 @@ class PivotTable:
     def RefreshTable(self):
         return self.pivottable.RefreshTable()
 
-    def RepeatAllLabels(self, *args, Repeat=None):
-        arguments = {"Repeat": Repeat}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.RepeatAllLabels(*args, **arguments)
+    def RepeatAllLabels(self, Repeat=None):
+        params = [
+            Repeat if Repeat is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.RepeatAllLabels(*params)
 
-    def RowAxisLayout(self, *args, RowLayout=None):
-        arguments = {"RowLayout": RowLayout}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.RowAxisLayout(*args, **arguments)
+    def RowAxisLayout(self, RowLayout=None):
+        params = [
+            RowLayout if RowLayout is not None else pythoncom.Missing,
+        ]
+        self.pivottable.RowAxisLayout(*params)
 
-    def ShowPages(self, *args, PageField=None):
-        arguments = {"PageField": PageField}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottable.ShowPages(*args, **arguments)
+    def ShowPages(self, PageField=None):
+        params = [
+            PageField if PageField is not None else pythoncom.Missing,
+        ]
+        return self.pivottable.ShowPages(*params)
 
-    def SubtotalLocation(self, *args, Location=None):
-        arguments = {"Location": Location}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.pivottable.SubtotalLocation(*args, **arguments)
+    def SubtotalLocation(self, Location=None):
+        params = [
+            Location if Location is not None else pythoncom.Missing,
+        ]
+        self.pivottable.SubtotalLocation(*params)
 
     def Update(self):
         self.pivottable.Update()
@@ -14615,22 +15343,28 @@ class PivotTableChangeList:
     def Creator(self):
         return self.pivottablechangelist.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.pivottablechangelist.Item):
-            return ValueChange(self.pivottablechangelist.Item(*args, **arguments))
+            return ValueChange(self.pivottablechangelist.Item(*params))
         else:
-            return ValueChange(self.pivottablechangelist.GetItem(*args, **arguments))
+            return ValueChange(self.pivottablechangelist.GetItem(*params))
 
     @property
     def Parent(self):
         return PivotTable(self.pivottablechangelist.Parent)
 
-    def Add(self, *args, Tuple=None, Value=None, AllocationValue=None, AllocationMethod=None, AllocationWeightExpression=None):
-        arguments = {"Tuple": Tuple, "Value": Value, "AllocationValue": AllocationValue, "AllocationMethod": AllocationMethod, "AllocationWeightExpression": AllocationWeightExpression}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.pivottablechangelist.Add(*args, **arguments)
+    def Add(self, Tuple=None, Value=None, AllocationValue=None, AllocationMethod=None, AllocationWeightExpression=None):
+        params = [
+            Tuple if Tuple is not None else pythoncom.Missing,
+            Value if Value is not None else pythoncom.Missing,
+            AllocationValue if AllocationValue is not None else pythoncom.Missing,
+            AllocationMethod if AllocationMethod is not None else pythoncom.Missing,
+            AllocationWeightExpression if AllocationWeightExpression is not None else pythoncom.Missing,
+        ]
+        return self.pivottablechangelist.Add(*params)
 
 
 class PivotTables:
@@ -14657,15 +15391,21 @@ class PivotTables:
     def Parent(self):
         return self.pivottables.Parent
 
-    def Add(self, *args, PivotCache=None, TableDestination=None, TableName=None, ReadData=None, DefaultVersion=None):
-        arguments = {"PivotCache": PivotCache, "TableDestination": TableDestination, "TableName": TableName, "ReadData": ReadData, "DefaultVersion": DefaultVersion}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotTable(self.pivottables.Add(*args, **arguments))
+    def Add(self, PivotCache=None, TableDestination=None, TableName=None, ReadData=None, DefaultVersion=None):
+        params = [
+            PivotCache if PivotCache is not None else pythoncom.Missing,
+            TableDestination if TableDestination is not None else pythoncom.Missing,
+            TableName if TableName is not None else pythoncom.Missing,
+            ReadData if ReadData is not None else pythoncom.Missing,
+            DefaultVersion if DefaultVersion is not None else pythoncom.Missing,
+        ]
+        return PivotTable(self.pivottables.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotTable(self.pivottables.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotTable(self.pivottables.Item(*params))
 
 
 class PlotArea:
@@ -14953,10 +15693,20 @@ class Point:
     def Width(self):
         return self.point.Width
 
-    def ApplyDataLabels(self, *args, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
-        arguments = {"Type": Type, "LegendKey": LegendKey, "AutoText": AutoText, "HasLeaderLines": HasLeaderLines, "ShowSeriesName": ShowSeriesName, "ShowCategoryName": ShowCategoryName, "ShowValue": ShowValue, "ShowPercentage": ShowPercentage, "ShowBubbleSize": ShowBubbleSize, "Separator": Separator}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.point.ApplyDataLabels(*args, **arguments)
+    def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            LegendKey if LegendKey is not None else pythoncom.Missing,
+            AutoText if AutoText is not None else pythoncom.Missing,
+            HasLeaderLines if HasLeaderLines is not None else pythoncom.Missing,
+            ShowSeriesName if ShowSeriesName is not None else pythoncom.Missing,
+            ShowCategoryName if ShowCategoryName is not None else pythoncom.Missing,
+            ShowValue if ShowValue is not None else pythoncom.Missing,
+            ShowPercentage if ShowPercentage is not None else pythoncom.Missing,
+            ShowBubbleSize if ShowBubbleSize is not None else pythoncom.Missing,
+            Separator if Separator is not None else pythoncom.Missing,
+        ]
+        self.point.ApplyDataLabels(*params)
 
     def ClearFormats(self):
         return self.point.ClearFormats()
@@ -14970,10 +15720,12 @@ class Point:
     def Paste(self):
         return self.point.Paste()
 
-    def PieSliceLocation(self, *args, loc=None, Index=None):
-        arguments = {"loc": loc, "Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.point.PieSliceLocation(*args, **arguments)
+    def PieSliceLocation(self, loc=None, Index=None):
+        params = [
+            loc if loc is not None else pythoncom.Missing,
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.point.PieSliceLocation(*params)
 
     def Select(self):
         return self.point.Select()
@@ -15003,10 +15755,11 @@ class Points:
     def Parent(self):
         return self.points.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Point(self.points.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Point(self.points.Item(*params))
 
 
 class ProtectedViewWindow:
@@ -15096,10 +15849,12 @@ class ProtectedViewWindow:
     def Close(self):
         return self.protectedviewwindow.Close()
 
-    def Edit(self, *args, WriteResPassword=None, UpdateLinks=None):
-        arguments = {"WriteResPassword": WriteResPassword, "UpdateLinks": UpdateLinks}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Workbook(self.protectedviewwindow.Edit(*args, **arguments))
+    def Edit(self, WriteResPassword=None, UpdateLinks=None):
+        params = [
+            WriteResPassword if WriteResPassword is not None else pythoncom.Missing,
+            UpdateLinks if UpdateLinks is not None else pythoncom.Missing,
+        ]
+        return Workbook(self.protectedviewwindow.Edit(*params))
 
 
 class ProtectedViewWindows:
@@ -15122,22 +15877,27 @@ class ProtectedViewWindows:
     def Creator(self):
         return self.protectedviewwindows.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.protectedviewwindows.Item):
-            return self.protectedviewwindows.Item(*args, **arguments)
+            return self.protectedviewwindows.Item(*params)
         else:
-            return self.protectedviewwindows.GetItem(*args, **arguments)
+            return self.protectedviewwindows.GetItem(*params)
 
     @property
     def Parent(self):
         return self.protectedviewwindows.Parent
 
-    def Open(self, *args, FileName=None, Password=None, AddToMru=None, RepairMode=None):
-        arguments = {"FileName": FileName, "Password": Password, "AddToMru": AddToMru, "RepairMode": RepairMode}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ProtectedViewWindow(self.protectedviewwindows.Open(*args, **arguments))
+    def Open(self, FileName=None, Password=None, AddToMru=None, RepairMode=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            AddToMru if AddToMru is not None else pythoncom.Missing,
+            RepairMode if RepairMode is not None else pythoncom.Missing,
+        ]
+        return ProtectedViewWindow(self.protectedviewwindows.Open(*params))
 
 
 class Protection:
@@ -15262,10 +16022,11 @@ class PublishObject:
     def Delete(self):
         self.publishobject.Delete()
 
-    def Publish(self, *args, Create=None):
-        arguments = {"Create": Create}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.publishobject.Publish(*args, **arguments)
+    def Publish(self, Create=None):
+        params = [
+            Create if Create is not None else pythoncom.Missing,
+        ]
+        self.publishobject.Publish(*params)
 
 
 class PublishObjects:
@@ -15288,22 +16049,30 @@ class PublishObjects:
     def Creator(self):
         return self.publishobjects.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.publishobjects.Item):
-            return self.publishobjects.Item(*args, **arguments)
+            return self.publishobjects.Item(*params)
         else:
-            return self.publishobjects.GetItem(*args, **arguments)
+            return self.publishobjects.GetItem(*params)
 
     @property
     def Parent(self):
         return self.publishobjects.Parent
 
-    def Add(self, *args, SourceType=None, FileName=None, Sheet=None, Source=None, HtmlType=None, DivID=None, Title=None):
-        arguments = {"SourceType": SourceType, "FileName": FileName, "Sheet": Sheet, "Source": Source, "HtmlType": HtmlType, "DivID": DivID, "Title": Title}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PublishObject(self.publishobjects.Add(*args, **arguments))
+    def Add(self, SourceType=None, FileName=None, Sheet=None, Source=None, HtmlType=None, DivID=None, Title=None):
+        params = [
+            SourceType if SourceType is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Sheet if Sheet is not None else pythoncom.Missing,
+            Source if Source is not None else pythoncom.Missing,
+            HtmlType if HtmlType is not None else pythoncom.Missing,
+            DivID if DivID is not None else pythoncom.Missing,
+            Title if Title is not None else pythoncom.Missing,
+        ]
+        return PublishObject(self.publishobjects.Add(*params))
 
     def Delete(self):
         self.publishobjects.Delete()
@@ -15767,18 +16536,22 @@ class QueryTable:
     def Delete(self):
         self.querytable.Delete()
 
-    def Refresh(self, *args, BackgroundQuery=None):
-        arguments = {"BackgroundQuery": BackgroundQuery}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.querytable.Refresh(*args, **arguments)
+    def Refresh(self, BackgroundQuery=None):
+        params = [
+            BackgroundQuery if BackgroundQuery is not None else pythoncom.Missing,
+        ]
+        return self.querytable.Refresh(*params)
 
     def ResetTimer(self):
         self.querytable.ResetTimer()
 
-    def SaveAsODC(self, *args, ODCFileName=None, Description=None, Keywords=None):
-        arguments = {"ODCFileName": ODCFileName, "Description": Description, "Keywords": Keywords}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.querytable.SaveAsODC(*args, **arguments)
+    def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
+        params = [
+            ODCFileName if ODCFileName is not None else pythoncom.Missing,
+            Description if Description is not None else pythoncom.Missing,
+            Keywords if Keywords is not None else pythoncom.Missing,
+        ]
+        self.querytable.SaveAsODC(*params)
 
 
 class QueryTables:
@@ -15805,15 +16578,19 @@ class QueryTables:
     def Parent(self):
         return self.querytables.Parent
 
-    def Add(self, *args, Connection=None, Destination=None, Sql=None):
-        arguments = {"Connection": Connection, "Destination": Destination, "Sql": Sql}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return QueryTable(self.querytables.Add(*args, **arguments))
+    def Add(self, Connection=None, Destination=None, Sql=None):
+        params = [
+            Connection if Connection is not None else pythoncom.Missing,
+            Destination if Destination is not None else pythoncom.Missing,
+            Sql if Sql is not None else pythoncom.Missing,
+        ]
+        return QueryTable(self.querytables.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return QueryTable(self.querytables.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return QueryTable(self.querytables.Item(*params))
 
 
 class Range:
@@ -15829,21 +16606,31 @@ class Range:
     def AddIndent(self, value):
         self.range.AddIndent = value
 
-    def Address(self, *args, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
-        arguments = {"RowAbsolute": RowAbsolute, "ColumnAbsolute": ColumnAbsolute, "ReferenceStyle": ReferenceStyle, "External": External, "RelativeTo": RelativeTo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Address(self, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
+        params = [
+            RowAbsolute if RowAbsolute is not None else pythoncom.Missing,
+            ColumnAbsolute if ColumnAbsolute is not None else pythoncom.Missing,
+            ReferenceStyle if ReferenceStyle is not None else pythoncom.Missing,
+            External if External is not None else pythoncom.Missing,
+            RelativeTo if RelativeTo is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Address):
-            return self.range.Address(*args, **arguments)
+            return self.range.Address(*params)
         else:
-            return self.range.GetAddress(*args, **arguments)
+            return self.range.GetAddress(*params)
 
-    def AddressLocal(self, *args, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
-        arguments = {"RowAbsolute": RowAbsolute, "ColumnAbsolute": ColumnAbsolute, "ReferenceStyle": ReferenceStyle, "External": External, "RelativeTo": RelativeTo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def AddressLocal(self, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
+        params = [
+            RowAbsolute if RowAbsolute is not None else pythoncom.Missing,
+            ColumnAbsolute if ColumnAbsolute is not None else pythoncom.Missing,
+            ReferenceStyle if ReferenceStyle is not None else pythoncom.Missing,
+            External if External is not None else pythoncom.Missing,
+            RelativeTo if RelativeTo is not None else pythoncom.Missing,
+        ]
         if callable(self.range.AddressLocal):
-            return self.range.AddressLocal(*args, **arguments)
+            return self.range.AddressLocal(*params)
         else:
-            return self.range.GetAddressLocal(*args, **arguments)
+            return self.range.GetAddressLocal(*params)
 
     @property
     def AllowEdit(self):
@@ -15861,21 +16648,25 @@ class Range:
     def Borders(self):
         return Borders(self.range.Borders)
 
-    def Cells(self, *args, RowIndex=None, ColumnIndex=None):
-        arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Cells(self, RowIndex=None, ColumnIndex=None):
+        params = [
+            RowIndex if RowIndex is not None else pythoncom.Missing,
+            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Cells):
-            return Range(self.range.Cells(*args, **arguments))
+            return Range(self.range.Cells(*params))
         else:
-            return Range(self.range.GetCells(*args, **arguments))
+            return Range(self.range.GetCells(*params))
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Characters):
-            return Characters(self.range.Characters(*args, **arguments))
+            return Characters(self.range.Characters(*params))
         else:
-            return Characters(self.range.GetCharacters(*args, **arguments))
+            return Characters(self.range.GetCharacters(*params))
 
     @property
     def Column(self):
@@ -15937,13 +16728,14 @@ class Range:
     def DisplayFormat(self):
         return DisplayFormat(self.range.DisplayFormat)
 
-    def End(self, *args, Direction=None):
-        arguments = {"Direction": Direction}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def End(self, Direction=None):
+        params = [
+            Direction if Direction is not None else pythoncom.Missing,
+        ]
         if callable(self.range.End):
-            return Range(self.range.End(*args, **arguments))
+            return Range(self.range.End(*params))
         else:
-            return Range(self.range.GetEnd(*args, **arguments))
+            return Range(self.range.GetEnd(*params))
 
     @property
     def EntireColumn(self):
@@ -16093,13 +16885,15 @@ class Range:
     def Interior(self):
         return Interior(self.range.Interior)
 
-    def Item(self, *args, RowIndex=None, ColumnIndex=None):
-        arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, RowIndex=None, ColumnIndex=None):
+        params = [
+            RowIndex if RowIndex is not None else pythoncom.Missing,
+            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Item):
-            return Range(self.range.Item(*args, **arguments))
+            return Range(self.range.Item(*params))
         else:
-            return Range(self.range.GetItem(*args, **arguments))
+            return Range(self.range.GetItem(*params))
 
     @property
     def Left(self):
@@ -16173,13 +16967,15 @@ class Range:
     def NumberFormatLocal(self, value):
         self.range.NumberFormatLocal = value
 
-    def Offset(self, *args, RowOffset=None, ColumnOffset=None):
-        arguments = {"RowOffset": RowOffset, "ColumnOffset": ColumnOffset}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Offset(self, RowOffset=None, ColumnOffset=None):
+        params = [
+            RowOffset if RowOffset is not None else pythoncom.Missing,
+            ColumnOffset if ColumnOffset is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Offset):
-            return Range(self.range.Offset(*args, **arguments))
+            return Range(self.range.Offset(*params))
         else:
-            return Range(self.range.GetOffset(*args, **arguments))
+            return Range(self.range.GetOffset(*params))
 
     @property
     def Orientation(self):
@@ -16249,13 +17045,15 @@ class Range:
     def QueryTable(self):
         return QueryTable(self.range.QueryTable)
 
-    def Range(self, *args, Cell1=None, Cell2=None):
-        arguments = {"Cell1": Cell1, "Cell2": Cell2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Range(self, Cell1=None, Cell2=None):
+        params = [
+            Cell1 if Cell1 is not None else pythoncom.Missing,
+            Cell2 if Cell2 is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Range):
-            return Range(self.range.Range(*args, **arguments))
+            return Range(self.range.Range(*params))
         else:
-            return Range(self.range.GetRange(*args, **arguments))
+            return Range(self.range.GetRange(*params))
 
     @property
     def ReadingOrder(self):
@@ -16265,13 +17063,15 @@ class Range:
     def ReadingOrder(self, value):
         self.range.ReadingOrder = value
 
-    def Resize(self, *args, RowSize=None, ColumnSize=None):
-        arguments = {"RowSize": RowSize, "ColumnSize": ColumnSize}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Resize(self, RowSize=None, ColumnSize=None):
+        params = [
+            RowSize if RowSize is not None else pythoncom.Missing,
+            ColumnSize if ColumnSize is not None else pythoncom.Missing,
+        ]
         if callable(self.range.Resize):
-            return Range(self.range.Resize(*args, **arguments))
+            return Range(self.range.Resize(*params))
         else:
-            return Range(self.range.GetResize(*args, **arguments))
+            return Range(self.range.GetResize(*params))
 
     @property
     def Row(self):
@@ -16412,46 +17212,68 @@ class Range:
     def Activate(self):
         return self.range.Activate()
 
-    def AddComment(self, *args, Text=None):
-        arguments = {"Text": Text}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AddComment(*args, **arguments)
+    def AddComment(self, Text=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+        ]
+        return self.range.AddComment(*params)
 
-    def AddCommentThreaded(self, *args, Text=None):
-        arguments = {"Text": Text}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AddCommentThreaded(*args, **arguments)
+    def AddCommentThreaded(self, Text=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+        ]
+        return self.range.AddCommentThreaded(*params)
 
-    def AdvancedFilter(self, *args, Action=None, CriteriaRange=None, CopyToRange=None, Unique=None):
-        arguments = {"Action": Action, "CriteriaRange": CriteriaRange, "CopyToRange": CopyToRange, "Unique": Unique}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AdvancedFilter(*args, **arguments)
+    def AdvancedFilter(self, Action=None, CriteriaRange=None, CopyToRange=None, Unique=None):
+        params = [
+            Action if Action is not None else pythoncom.Missing,
+            CriteriaRange if CriteriaRange is not None else pythoncom.Missing,
+            CopyToRange if CopyToRange is not None else pythoncom.Missing,
+            Unique if Unique is not None else pythoncom.Missing,
+        ]
+        return self.range.AdvancedFilter(*params)
 
     def AllocateChanges(self):
         self.range.AllocateChanges()
 
-    def ApplyNames(self, *args, Names=None, IgnoreRelativeAbsolute=None, UseRowColumnNames=None, OmitColumn=None, OmitRow=None, Order=None, AppendLast=None):
-        arguments = {"Names": Names, "IgnoreRelativeAbsolute": IgnoreRelativeAbsolute, "UseRowColumnNames": UseRowColumnNames, "OmitColumn": OmitColumn, "OmitRow": OmitRow, "Order": Order, "AppendLast": AppendLast}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.ApplyNames(*args, **arguments)
+    def ApplyNames(self, Names=None, IgnoreRelativeAbsolute=None, UseRowColumnNames=None, OmitColumn=None, OmitRow=None, Order=None, AppendLast=None):
+        params = [
+            Names if Names is not None else pythoncom.Missing,
+            IgnoreRelativeAbsolute if IgnoreRelativeAbsolute is not None else pythoncom.Missing,
+            UseRowColumnNames if UseRowColumnNames is not None else pythoncom.Missing,
+            OmitColumn if OmitColumn is not None else pythoncom.Missing,
+            OmitRow if OmitRow is not None else pythoncom.Missing,
+            Order if Order is not None else pythoncom.Missing,
+            AppendLast if AppendLast is not None else pythoncom.Missing,
+        ]
+        return self.range.ApplyNames(*params)
 
     def ApplyOutlineStyles(self):
         return self.range.ApplyOutlineStyles()
 
-    def AutoComplete(self, *args, String=None):
-        arguments = {"String": String}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AutoComplete(*args, **arguments)
+    def AutoComplete(self, String=None):
+        params = [
+            String if String is not None else pythoncom.Missing,
+        ]
+        return self.range.AutoComplete(*params)
 
-    def AutoFill(self, *args, Destination=None, Type=None):
-        arguments = {"Destination": Destination, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AutoFill(*args, **arguments)
+    def AutoFill(self, Destination=None, Type=None):
+        params = [
+            Destination if Destination is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        return self.range.AutoFill(*params)
 
-    def AutoFilter(self, *args, Field=None, Criteria1=None, Operator=None, Criteria2=None, SubField=None, VisibleDropDown=None):
-        arguments = {"Field": Field, "Criteria1": Criteria1, "Operator": Operator, "Criteria2": Criteria2, "SubField": SubField, "VisibleDropDown": VisibleDropDown}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.AutoFilter(*args, **arguments)
+    def AutoFilter(self, Field=None, Criteria1=None, Operator=None, Criteria2=None, SubField=None, VisibleDropDown=None):
+        params = [
+            Field if Field is not None else pythoncom.Missing,
+            Criteria1 if Criteria1 is not None else pythoncom.Missing,
+            Operator if Operator is not None else pythoncom.Missing,
+            Criteria2 if Criteria2 is not None else pythoncom.Missing,
+            SubField if SubField is not None else pythoncom.Missing,
+            VisibleDropDown if VisibleDropDown is not None else pythoncom.Missing,
+        ]
+        return self.range.AutoFilter(*params)
 
     def AutoFit(self):
         return self.range.AutoFit()
@@ -16459,10 +17281,15 @@ class Range:
     def AutoOutline(self):
         return self.range.AutoOutline()
 
-    def BorderAround(self, *args, LineStyle=None, Weight=None, ColorIndex=None, Color=None, ThemeColor=None):
-        arguments = {"LineStyle": LineStyle, "Weight": Weight, "ColorIndex": ColorIndex, "Color": Color, "ThemeColor": ThemeColor}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.BorderAround(*args, **arguments)
+    def BorderAround(self, LineStyle=None, Weight=None, ColorIndex=None, Color=None, ThemeColor=None):
+        params = [
+            LineStyle if LineStyle is not None else pythoncom.Missing,
+            Weight if Weight is not None else pythoncom.Missing,
+            ColorIndex if ColorIndex is not None else pythoncom.Missing,
+            Color if Color is not None else pythoncom.Missing,
+            ThemeColor if ThemeColor is not None else pythoncom.Missing,
+        ]
+        return self.range.BorderAround(*params)
 
     def Calculate(self):
         return self.range.Calculate()
@@ -16470,10 +17297,14 @@ class Range:
     def CalculateRowMajorOrder(self):
         return self.range.CalculateRowMajorOrder()
 
-    def CheckSpelling(self, *args, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
-        arguments = {"CustomDictionary": CustomDictionary, "IgnoreUppercase": IgnoreUppercase, "AlwaysSuggest": AlwaysSuggest, "SpellLang": SpellLang}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.CheckSpelling(*args, **arguments)
+    def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
+        params = [
+            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
+            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
+            AlwaysSuggest if AlwaysSuggest is not None else pythoncom.Missing,
+            SpellLang if SpellLang is not None else pythoncom.Missing,
+        ]
+        return self.range.CheckSpelling(*params)
 
     def Clear(self):
         return self.range.Clear()
@@ -16496,58 +17327,84 @@ class Range:
     def ClearOutline(self):
         return self.range.ClearOutline()
 
-    def ColumnDifferences(self, *args, Comparison=None):
-        arguments = {"Comparison": Comparison}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.ColumnDifferences(*args, **arguments)
+    def ColumnDifferences(self, Comparison=None):
+        params = [
+            Comparison if Comparison is not None else pythoncom.Missing,
+        ]
+        return self.range.ColumnDifferences(*params)
 
-    def Consolidate(self, *args, Sources=None, Function=None, TopRow=None, LeftColumn=None, CreateLinks=None):
-        arguments = {"Sources": Sources, "Function": Function, "TopRow": TopRow, "LeftColumn": LeftColumn, "CreateLinks": CreateLinks}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Consolidate(*args, **arguments)
+    def Consolidate(self, Sources=None, Function=None, TopRow=None, LeftColumn=None, CreateLinks=None):
+        params = [
+            Sources if Sources is not None else pythoncom.Missing,
+            Function if Function is not None else pythoncom.Missing,
+            TopRow if TopRow is not None else pythoncom.Missing,
+            LeftColumn if LeftColumn is not None else pythoncom.Missing,
+            CreateLinks if CreateLinks is not None else pythoncom.Missing,
+        ]
+        return self.range.Consolidate(*params)
 
-    def ConvertToLinkedDataType(self, *args, ServiceID=None, LanguageCulture=None):
-        arguments = {"ServiceID": ServiceID, "LanguageCulture": LanguageCulture}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.ConvertToLinkedDataType(*args, **arguments)
+    def ConvertToLinkedDataType(self, ServiceID=None, LanguageCulture=None):
+        params = [
+            ServiceID if ServiceID is not None else pythoncom.Missing,
+            LanguageCulture if LanguageCulture is not None else pythoncom.Missing,
+        ]
+        self.range.ConvertToLinkedDataType(*params)
 
-    def Copy(self, *args, Destination=None):
-        arguments = {"Destination": Destination}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Copy(*args, **arguments)
+    def Copy(self, Destination=None):
+        params = [
+            Destination if Destination is not None else pythoncom.Missing,
+        ]
+        return self.range.Copy(*params)
 
-    def CopyFromRecordset(self, *args, Data=None, MaxRows=None, MaxColumns=None):
-        arguments = {"Data": Data, "MaxRows": MaxRows, "MaxColumns": MaxColumns}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.CopyFromRecordset(*args, **arguments)
+    def CopyFromRecordset(self, Data=None, MaxRows=None, MaxColumns=None):
+        params = [
+            Data if Data is not None else pythoncom.Missing,
+            MaxRows if MaxRows is not None else pythoncom.Missing,
+            MaxColumns if MaxColumns is not None else pythoncom.Missing,
+        ]
+        return self.range.CopyFromRecordset(*params)
 
-    def CopyPicture(self, *args, Appearance=None, Format=None):
-        arguments = {"Appearance": Appearance, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.range.CopyPicture(*params)
 
-    def CreateNames(self, *args, Top=None, Left=None, Bottom=None, Right=None):
-        arguments = {"Top": Top, "Left": Left, "Bottom": Bottom, "Right": Right}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.CreateNames(*args, **arguments)
+    def CreateNames(self, Top=None, Left=None, Bottom=None, Right=None):
+        params = [
+            Top if Top is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Bottom if Bottom is not None else pythoncom.Missing,
+            Right if Right is not None else pythoncom.Missing,
+        ]
+        return self.range.CreateNames(*params)
 
-    def Cut(self, *args, Destination=None):
-        arguments = {"Destination": Destination}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Cut(*args, **arguments)
+    def Cut(self, Destination=None):
+        params = [
+            Destination if Destination is not None else pythoncom.Missing,
+        ]
+        return self.range.Cut(*params)
 
-    def DataSeries(self, *args, Rowcol=None, Type=None, Date=None, Step=None, Stop=None, Trend=None):
-        arguments = {"Rowcol": Rowcol, "Type": Type, "Date": Date, "Step": Step, "Stop": Stop, "Trend": Trend}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.DataSeries(*args, **arguments)
+    def DataSeries(self, Rowcol=None, Type=None, Date=None, Step=None, Stop=None, Trend=None):
+        params = [
+            Rowcol if Rowcol is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+            Date if Date is not None else pythoncom.Missing,
+            Step if Step is not None else pythoncom.Missing,
+            Stop if Stop is not None else pythoncom.Missing,
+            Trend if Trend is not None else pythoncom.Missing,
+        ]
+        return self.range.DataSeries(*params)
 
     def DataTypeToText(self):
         self.range.DataTypeToText()
 
-    def Delete(self, *args, Shift=None):
-        arguments = {"Shift": Shift}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Delete(*args, **arguments)
+    def Delete(self, Shift=None):
+        params = [
+            Shift if Shift is not None else pythoncom.Missing,
+        ]
+        return self.range.Delete(*params)
 
     def DialogBox(self):
         return self.range.DialogBox()
@@ -16558,15 +17415,31 @@ class Range:
     def DiscardChanges(self):
         self.range.DiscardChanges()
 
-    def EditionOptions(self, *args, Type=None, Option=None, Name=None, Reference=None, Appearance=None, ChartSize=None, Format=None):
-        arguments = {"Type": Type, "Option": Option, "Name": Name, "Reference": Reference, "Appearance": Appearance, "ChartSize": ChartSize, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.EditionOptions(*args, **arguments)
+    def EditionOptions(self, Type=None, Option=None, Name=None, Reference=None, Appearance=None, ChartSize=None, Format=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Option if Option is not None else pythoncom.Missing,
+            Name if Name is not None else pythoncom.Missing,
+            Reference if Reference is not None else pythoncom.Missing,
+            Appearance if Appearance is not None else pythoncom.Missing,
+            ChartSize if ChartSize is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.range.EditionOptions(*params)
 
-    def ExportAsFixedFormat(self, *args, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
-        arguments = {"Type": Type, "FileName": FileName, "Quality": Quality, "IncludeDocProperties": IncludeDocProperties, "IgnorePrintAreas": IgnorePrintAreas, "From": From, "To": To, "OpenAfterPublish": OpenAfterPublish, "FixedFormatExtClassPtr": FixedFormatExtClassPtr}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.ExportAsFixedFormat(*args, **arguments)
+    def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Quality if Quality is not None else pythoncom.Missing,
+            IncludeDocProperties if IncludeDocProperties is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            OpenAfterPublish if OpenAfterPublish is not None else pythoncom.Missing,
+            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
+        ]
+        self.range.ExportAsFixedFormat(*params)
 
     def FillDown(self):
         return self.range.FillDown()
@@ -16580,38 +17453,56 @@ class Range:
     def FillUp(self):
         return self.range.FillUp()
 
-    def Find(self, *args, What=None, After=None, LookIn=None, LookAt=None, SearchOrder=None, SearchDirection=None, MatchCase=None, MatchByte=None, SearchFormat=None):
-        arguments = {"What": What, "After": After, "LookIn": LookIn, "LookAt": LookAt, "SearchOrder": SearchOrder, "SearchDirection": SearchDirection, "MatchCase": MatchCase, "MatchByte": MatchByte, "SearchFormat": SearchFormat}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Find(*args, **arguments)
+    def Find(self, What=None, After=None, LookIn=None, LookAt=None, SearchOrder=None, SearchDirection=None, MatchCase=None, MatchByte=None, SearchFormat=None):
+        params = [
+            What if What is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+            LookIn if LookIn is not None else pythoncom.Missing,
+            LookAt if LookAt is not None else pythoncom.Missing,
+            SearchOrder if SearchOrder is not None else pythoncom.Missing,
+            SearchDirection if SearchDirection is not None else pythoncom.Missing,
+            MatchCase if MatchCase is not None else pythoncom.Missing,
+            MatchByte if MatchByte is not None else pythoncom.Missing,
+            SearchFormat if SearchFormat is not None else pythoncom.Missing,
+        ]
+        return self.range.Find(*params)
 
-    def FindNext(self, *args, After=None):
-        arguments = {"After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.FindNext(*args, **arguments)
+    def FindNext(self, After=None):
+        params = [
+            After if After is not None else pythoncom.Missing,
+        ]
+        return self.range.FindNext(*params)
 
-    def FindPrevious(self, *args, Before=None):
-        arguments = {"Before": Before}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.FindPrevious(*args, **arguments)
+    def FindPrevious(self, Before=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+        ]
+        return self.range.FindPrevious(*params)
 
     def FunctionWizard(self):
         return self.range.FunctionWizard()
 
-    def Group(self, *args, Start=None, End=None, By=None, Periods=None):
-        arguments = {"Start": Start, "End": End, "By": By, "Periods": Periods}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Group(*args, **arguments)
+    def Group(self, Start=None, End=None, By=None, Periods=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            End if End is not None else pythoncom.Missing,
+            By if By is not None else pythoncom.Missing,
+            Periods if Periods is not None else pythoncom.Missing,
+        ]
+        return self.range.Group(*params)
 
-    def Insert(self, *args, Shift=None, CopyOrigin=None):
-        arguments = {"Shift": Shift, "CopyOrigin": CopyOrigin}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Insert(*args, **arguments)
+    def Insert(self, Shift=None, CopyOrigin=None):
+        params = [
+            Shift if Shift is not None else pythoncom.Missing,
+            CopyOrigin if CopyOrigin is not None else pythoncom.Missing,
+        ]
+        return self.range.Insert(*params)
 
-    def InsertIndent(self, *args, InsertAmount=None):
-        arguments = {"InsertAmount": InsertAmount}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.InsertIndent(*args, **arguments)
+    def InsertIndent(self, InsertAmount=None):
+        params = [
+            InsertAmount if InsertAmount is not None else pythoncom.Missing,
+        ]
+        self.range.InsertIndent(*params)
 
     def Justify(self):
         return self.range.Justify()
@@ -16619,74 +17510,140 @@ class Range:
     def ListNames(self):
         return self.range.ListNames()
 
-    def Merge(self, *args, Across=None):
-        arguments = {"Across": Across}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.Merge(*args, **arguments)
+    def Merge(self, Across=None):
+        params = [
+            Across if Across is not None else pythoncom.Missing,
+        ]
+        self.range.Merge(*params)
 
-    def NavigateArrow(self, *args, TowardPrecedent=None, ArrowNumber=None, LinkNumber=None):
-        arguments = {"TowardPrecedent": TowardPrecedent, "ArrowNumber": ArrowNumber, "LinkNumber": LinkNumber}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.NavigateArrow(*args, **arguments)
+    def NavigateArrow(self, TowardPrecedent=None, ArrowNumber=None, LinkNumber=None):
+        params = [
+            TowardPrecedent if TowardPrecedent is not None else pythoncom.Missing,
+            ArrowNumber if ArrowNumber is not None else pythoncom.Missing,
+            LinkNumber if LinkNumber is not None else pythoncom.Missing,
+        ]
+        return self.range.NavigateArrow(*params)
 
-    def NoteText(self, *args, Text=None, Start=None, Length=None):
-        arguments = {"Text": Text, "Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.NoteText(*args, **arguments)
+    def NoteText(self, Text=None, Start=None, Length=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
+        return self.range.NoteText(*params)
 
-    def Parse(self, *args, ParseLine=None, Destination=None):
-        arguments = {"ParseLine": ParseLine, "Destination": Destination}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Parse(*args, **arguments)
+    def Parse(self, ParseLine=None, Destination=None):
+        params = [
+            ParseLine if ParseLine is not None else pythoncom.Missing,
+            Destination if Destination is not None else pythoncom.Missing,
+        ]
+        return self.range.Parse(*params)
 
-    def PasteSpecial(self, *args, Paste=None, Operation=None, SkipBlanks=None, Transpose=None):
-        arguments = {"Paste": Paste, "Operation": Operation, "SkipBlanks": SkipBlanks, "Transpose": Transpose}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.PasteSpecial(*args, **arguments)
+    def PasteSpecial(self, Paste=None, Operation=None, SkipBlanks=None, Transpose=None):
+        params = [
+            Paste if Paste is not None else pythoncom.Missing,
+            Operation if Operation is not None else pythoncom.Missing,
+            SkipBlanks if SkipBlanks is not None else pythoncom.Missing,
+            Transpose if Transpose is not None else pythoncom.Missing,
+        ]
+        return self.range.PasteSpecial(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+        ]
+        return self.range.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        return self.range.PrintPreview(*params)
 
-    def RemoveDuplicates(self, *args, Columns=None, Header=None):
-        arguments = {"Columns": Columns, "Header": Header}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.RemoveDuplicates(*args, **arguments)
+    def RemoveDuplicates(self, Columns=None, Header=None):
+        params = [
+            Columns if Columns is not None else pythoncom.Missing,
+            Header if Header is not None else pythoncom.Missing,
+        ]
+        self.range.RemoveDuplicates(*params)
 
     def RemoveSubtotal(self):
         return self.range.RemoveSubtotal()
 
-    def Replace(self, *args, What=None, Replacement=None, LookAt=None, SearchOrder=None, MatchCase=None, MatchByte=None, SearchFormat=None, ReplaceFormat=None, FormulaVersion=None):
-        arguments = {"What": What, "Replacement": Replacement, "LookAt": LookAt, "SearchOrder": SearchOrder, "MatchCase": MatchCase, "MatchByte": MatchByte, "SearchFormat": SearchFormat, "ReplaceFormat": ReplaceFormat, "FormulaVersion": FormulaVersion}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Replace(*args, **arguments)
+    def Replace(self, What=None, Replacement=None, LookAt=None, SearchOrder=None, MatchCase=None, MatchByte=None, SearchFormat=None, ReplaceFormat=None, FormulaVersion=None):
+        params = [
+            What if What is not None else pythoncom.Missing,
+            Replacement if Replacement is not None else pythoncom.Missing,
+            LookAt if LookAt is not None else pythoncom.Missing,
+            SearchOrder if SearchOrder is not None else pythoncom.Missing,
+            MatchCase if MatchCase is not None else pythoncom.Missing,
+            MatchByte if MatchByte is not None else pythoncom.Missing,
+            SearchFormat if SearchFormat is not None else pythoncom.Missing,
+            ReplaceFormat if ReplaceFormat is not None else pythoncom.Missing,
+            FormulaVersion if FormulaVersion is not None else pythoncom.Missing,
+        ]
+        return self.range.Replace(*params)
 
     def ResetContents(self):
         self.range.ResetContents()
 
-    def RowDifferences(self, *args, Comparison=None):
-        arguments = {"Comparison": Comparison}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.RowDifferences(*args, **arguments)
+    def RowDifferences(self, Comparison=None):
+        params = [
+            Comparison if Comparison is not None else pythoncom.Missing,
+        ]
+        return self.range.RowDifferences(*params)
 
-    def Run(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Run(*args, **arguments)
+    def Run(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.range.Run(*params)
 
     def Select(self):
         return self.range.Select()
 
-    def SetCellDataTypeFromCell(self, *args, Range=None, LanguageCulture=None):
-        arguments = {"Range": Range, "LanguageCulture": LanguageCulture}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.SetCellDataTypeFromCell(*args, **arguments)
+    def SetCellDataTypeFromCell(self, Range=None, LanguageCulture=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+            LanguageCulture if LanguageCulture is not None else pythoncom.Missing,
+        ]
+        self.range.SetCellDataTypeFromCell(*params)
 
     def SetPhonetic(self):
         self.range.SetPhonetic()
@@ -16697,58 +17654,118 @@ class Range:
     def ShowCard(self):
         self.range.ShowCard()
 
-    def ShowDependents(self, *args, Remove=None):
-        arguments = {"Remove": Remove}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.ShowDependents(*args, **arguments)
+    def ShowDependents(self, Remove=None):
+        params = [
+            Remove if Remove is not None else pythoncom.Missing,
+        ]
+        return self.range.ShowDependents(*params)
 
     def ShowErrors(self):
         return self.range.ShowErrors()
 
-    def ShowPrecedents(self, *args, Remove=None):
-        arguments = {"Remove": Remove}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.ShowPrecedents(*args, **arguments)
+    def ShowPrecedents(self, Remove=None):
+        params = [
+            Remove if Remove is not None else pythoncom.Missing,
+        ]
+        return self.range.ShowPrecedents(*params)
 
-    def Sort(self, *args, Key1=None, Order1=None, Key2=None, Type=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, SortMethod=None, DataOption1=None, DataOption2=None, DataOption3=None):
-        arguments = {"Key1": Key1, "Order1": Order1, "Key2": Key2, "Type": Type, "Order2": Order2, "Key3": Key3, "Order3": Order3, "Header": Header, "OrderCustom": OrderCustom, "MatchCase": MatchCase, "Orientation": Orientation, "SortMethod": SortMethod, "DataOption1": DataOption1, "DataOption2": DataOption2, "DataOption3": DataOption3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Sort(*args, **arguments)
+    def Sort(self, Key1=None, Order1=None, Key2=None, Type=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, SortMethod=None, DataOption1=None, DataOption2=None, DataOption3=None):
+        params = [
+            Key1 if Key1 is not None else pythoncom.Missing,
+            Order1 if Order1 is not None else pythoncom.Missing,
+            Key2 if Key2 is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+            Order2 if Order2 is not None else pythoncom.Missing,
+            Key3 if Key3 is not None else pythoncom.Missing,
+            Order3 if Order3 is not None else pythoncom.Missing,
+            Header if Header is not None else pythoncom.Missing,
+            OrderCustom if OrderCustom is not None else pythoncom.Missing,
+            MatchCase if MatchCase is not None else pythoncom.Missing,
+            Orientation if Orientation is not None else pythoncom.Missing,
+            SortMethod if SortMethod is not None else pythoncom.Missing,
+            DataOption1 if DataOption1 is not None else pythoncom.Missing,
+            DataOption2 if DataOption2 is not None else pythoncom.Missing,
+            DataOption3 if DataOption3 is not None else pythoncom.Missing,
+        ]
+        return self.range.Sort(*params)
 
-    def SortSpecial(self, *args, SortMethod=None, Key1=None, Order1=None, Type=None, Key2=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, DataOption1=None, DataOption2=None, DataOption3=None):
-        arguments = {"SortMethod": SortMethod, "Key1": Key1, "Order1": Order1, "Type": Type, "Key2": Key2, "Order2": Order2, "Key3": Key3, "Order3": Order3, "Header": Header, "OrderCustom": OrderCustom, "MatchCase": MatchCase, "Orientation": Orientation, "DataOption1": DataOption1, "DataOption2": DataOption2, "DataOption3": DataOption3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.SortSpecial(*args, **arguments)
+    def SortSpecial(self, SortMethod=None, Key1=None, Order1=None, Type=None, Key2=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, DataOption1=None, DataOption2=None, DataOption3=None):
+        params = [
+            SortMethod if SortMethod is not None else pythoncom.Missing,
+            Key1 if Key1 is not None else pythoncom.Missing,
+            Order1 if Order1 is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+            Key2 if Key2 is not None else pythoncom.Missing,
+            Order2 if Order2 is not None else pythoncom.Missing,
+            Key3 if Key3 is not None else pythoncom.Missing,
+            Order3 if Order3 is not None else pythoncom.Missing,
+            Header if Header is not None else pythoncom.Missing,
+            OrderCustom if OrderCustom is not None else pythoncom.Missing,
+            MatchCase if MatchCase is not None else pythoncom.Missing,
+            Orientation if Orientation is not None else pythoncom.Missing,
+            DataOption1 if DataOption1 is not None else pythoncom.Missing,
+            DataOption2 if DataOption2 is not None else pythoncom.Missing,
+            DataOption3 if DataOption3 is not None else pythoncom.Missing,
+        ]
+        return self.range.SortSpecial(*params)
 
-    def Speak(self, *args, SpeakDirection=None, SpeakFormulas=None):
-        arguments = {"SpeakDirection": SpeakDirection, "SpeakFormulas": SpeakFormulas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.range.Speak(*args, **arguments)
+    def Speak(self, SpeakDirection=None, SpeakFormulas=None):
+        params = [
+            SpeakDirection if SpeakDirection is not None else pythoncom.Missing,
+            SpeakFormulas if SpeakFormulas is not None else pythoncom.Missing,
+        ]
+        self.range.Speak(*params)
 
-    def SpecialCells(self, *args, Type=None, Value=None):
-        arguments = {"Type": Type, "Value": Value}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.SpecialCells(*args, **arguments)
+    def SpecialCells(self, Type=None, Value=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Value if Value is not None else pythoncom.Missing,
+        ]
+        return self.range.SpecialCells(*params)
 
-    def SubscribeTo(self, *args, Edition=None, Format=None):
-        arguments = {"Edition": Edition, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.SubscribeTo(*args, **arguments)
+    def SubscribeTo(self, Edition=None, Format=None):
+        params = [
+            Edition if Edition is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        return self.range.SubscribeTo(*params)
 
-    def Subtotal(self, *args, GroupBy=None, Function=None, TotalList=None, Replace=None, PageBreaks=None, SummaryBelowData=None):
-        arguments = {"GroupBy": GroupBy, "Function": Function, "TotalList": TotalList, "Replace": Replace, "PageBreaks": PageBreaks, "SummaryBelowData": SummaryBelowData}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Subtotal(*args, **arguments)
+    def Subtotal(self, GroupBy=None, Function=None, TotalList=None, Replace=None, PageBreaks=None, SummaryBelowData=None):
+        params = [
+            GroupBy if GroupBy is not None else pythoncom.Missing,
+            Function if Function is not None else pythoncom.Missing,
+            TotalList if TotalList is not None else pythoncom.Missing,
+            Replace if Replace is not None else pythoncom.Missing,
+            PageBreaks if PageBreaks is not None else pythoncom.Missing,
+            SummaryBelowData if SummaryBelowData is not None else pythoncom.Missing,
+        ]
+        return self.range.Subtotal(*params)
 
-    def Table(self, *args, RowInput=None, ColumnInput=None):
-        arguments = {"RowInput": RowInput, "ColumnInput": ColumnInput}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.Table(*args, **arguments)
+    def Table(self, RowInput=None, ColumnInput=None):
+        params = [
+            RowInput if RowInput is not None else pythoncom.Missing,
+            ColumnInput if ColumnInput is not None else pythoncom.Missing,
+        ]
+        return self.range.Table(*params)
 
-    def TextToColumns(self, *args, Destination=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None):
-        arguments = {"Destination": Destination, "DataType": DataType, "TextQualifier": TextQualifier, "ConsecutiveDelimiter": ConsecutiveDelimiter, "Tab": Tab, "Semicolon": Semicolon, "Comma": Comma, "Space": Space, "Other": Other, "OtherChar": OtherChar, "FieldInfo": FieldInfo, "DecimalSeparator": DecimalSeparator, "ThousandsSeparator": ThousandsSeparator, "TrailingMinusNumbers": TrailingMinusNumbers}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.range.TextToColumns(*args, **arguments)
+    def TextToColumns(self, Destination=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None):
+        params = [
+            Destination if Destination is not None else pythoncom.Missing,
+            DataType if DataType is not None else pythoncom.Missing,
+            TextQualifier if TextQualifier is not None else pythoncom.Missing,
+            ConsecutiveDelimiter if ConsecutiveDelimiter is not None else pythoncom.Missing,
+            Tab if Tab is not None else pythoncom.Missing,
+            Semicolon if Semicolon is not None else pythoncom.Missing,
+            Comma if Comma is not None else pythoncom.Missing,
+            Space if Space is not None else pythoncom.Missing,
+            Other if Other is not None else pythoncom.Missing,
+            OtherChar if OtherChar is not None else pythoncom.Missing,
+            FieldInfo if FieldInfo is not None else pythoncom.Missing,
+            DecimalSeparator if DecimalSeparator is not None else pythoncom.Missing,
+            ThousandsSeparator if ThousandsSeparator is not None else pythoncom.Missing,
+            TrailingMinusNumbers if TrailingMinusNumbers is not None else pythoncom.Missing,
+        ]
+        return self.range.TextToColumns(*params)
 
     def Ungroup(self):
         return self.range.Ungroup()
@@ -16783,13 +17800,14 @@ class Ranges:
     def Creator(self):
         return self.ranges.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.ranges.Item):
-            return Range(self.ranges.Item(*args, **arguments))
+            return Range(self.ranges.Item(*params))
         else:
-            return Range(self.ranges.GetItem(*args, **arguments))
+            return Range(self.ranges.GetItem(*params))
 
     @property
     def Parent(self):
@@ -16849,13 +17867,14 @@ class RecentFiles:
     def Creator(self):
         return self.recentfiles.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.recentfiles.Item):
-            return self.recentfiles.Item(*args, **arguments)
+            return self.recentfiles.Item(*params)
         else:
-            return self.recentfiles.GetItem(*args, **arguments)
+            return self.recentfiles.GetItem(*params)
 
     @property
     def Maximum(self):
@@ -16869,10 +17888,11 @@ class RecentFiles:
     def Parent(self):
         return self.recentfiles.Parent
 
-    def Add(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return RecentFile(self.recentfiles.Add(*args, **arguments))
+    def Add(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return RecentFile(self.recentfiles.Add(*params))
 
 
 class RectangularGradient:
@@ -16946,20 +17966,30 @@ class Research:
     def Parent(self):
         return self.research.Parent
 
-    def IsResearchService(self, *args, ServiceID=None):
-        arguments = {"ServiceID": ServiceID}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.research.IsResearchService(*args, **arguments)
+    def IsResearchService(self, ServiceID=None):
+        params = [
+            ServiceID if ServiceID is not None else pythoncom.Missing,
+        ]
+        return self.research.IsResearchService(*params)
 
-    def Query(self, *args, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
-        arguments = {"ServiceID": ServiceID, "QueryString": QueryString, "QueryLanguage": QueryLanguage, "UseSelection": UseSelection, "RequeryContextXML": RequeryContextXML, "NewQueryContextXML": NewQueryContextXML, "LaunchQuery": LaunchQuery}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.research.Query(*args, **arguments)
+    def Query(self, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
+        params = [
+            ServiceID if ServiceID is not None else pythoncom.Missing,
+            QueryString if QueryString is not None else pythoncom.Missing,
+            QueryLanguage if QueryLanguage is not None else pythoncom.Missing,
+            UseSelection if UseSelection is not None else pythoncom.Missing,
+            RequeryContextXML if RequeryContextXML is not None else pythoncom.Missing,
+            NewQueryContextXML if NewQueryContextXML is not None else pythoncom.Missing,
+            LaunchQuery if LaunchQuery is not None else pythoncom.Missing,
+        ]
+        return self.research.Query(*params)
 
-    def SetLanguagePair(self, *args, LanguageFrom=None, LanguageTo=None):
-        arguments = {"LanguageFrom": LanguageFrom, "LanguageTo": LanguageTo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.research.SetLanguagePair(*args, **arguments)
+    def SetLanguagePair(self, LanguageFrom=None, LanguageTo=None):
+        params = [
+            LanguageFrom if LanguageFrom is not None else pythoncom.Missing,
+            LanguageTo if LanguageTo is not None else pythoncom.Missing,
+        ]
+        return self.research.SetLanguagePair(*params)
 
 
 class RoutingSlip:
@@ -17088,18 +18118,21 @@ class Scenario:
     def Parent(self):
         return self.scenario.Parent
 
-    def Values(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Values(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.scenario.Values):
-            return self.scenario.Values(*args, **arguments)
+            return self.scenario.Values(*params)
         else:
-            return self.scenario.GetValues(*args, **arguments)
+            return self.scenario.GetValues(*params)
 
-    def ChangeScenario(self, *args, ChangingCells=None, Values=None):
-        arguments = {"ChangingCells": ChangingCells, "Values": Values}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.scenario.ChangeScenario(*args, **arguments)
+    def ChangeScenario(self, ChangingCells=None, Values=None):
+        params = [
+            ChangingCells if ChangingCells is not None else pythoncom.Missing,
+            Values if Values is not None else pythoncom.Missing,
+        ]
+        return self.scenario.ChangeScenario(*params)
 
     def Delete(self):
         return self.scenario.Delete()
@@ -17132,25 +18165,35 @@ class Scenarios:
     def Parent(self):
         return self.scenarios.Parent
 
-    def Add(self, *args, Name=None, ChangingCells=None, Values=None, Comment=None, Locked=None, Hidden=None):
-        arguments = {"Name": Name, "ChangingCells": ChangingCells, "Values": Values, "Comment": Comment, "Locked": Locked, "Hidden": Hidden}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Scenario(self.scenarios.Add(*args, **arguments))
+    def Add(self, Name=None, ChangingCells=None, Values=None, Comment=None, Locked=None, Hidden=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            ChangingCells if ChangingCells is not None else pythoncom.Missing,
+            Values if Values is not None else pythoncom.Missing,
+            Comment if Comment is not None else pythoncom.Missing,
+            Locked if Locked is not None else pythoncom.Missing,
+            Hidden if Hidden is not None else pythoncom.Missing,
+        ]
+        return Scenario(self.scenarios.Add(*params))
 
-    def CreateSummary(self, *args, ReportType=None, ResultCells=None):
-        arguments = {"ReportType": ReportType, "ResultCells": ResultCells}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.scenarios.CreateSummary(*args, **arguments)
+    def CreateSummary(self, ReportType=None, ResultCells=None):
+        params = [
+            ReportType if ReportType is not None else pythoncom.Missing,
+            ResultCells if ResultCells is not None else pythoncom.Missing,
+        ]
+        return self.scenarios.CreateSummary(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Scenario(self.scenarios.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Scenario(self.scenarios.Item(*params))
 
-    def Merge(self, *args, Source=None):
-        arguments = {"Source": Source}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.scenarios.Merge(*args, **arguments)
+    def Merge(self, Source=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+        ]
+        return self.scenarios.Merge(*params)
 
 
 class Series:
@@ -17458,10 +18501,20 @@ class Series:
     def XValues(self, value):
         self.series.XValues = value
 
-    def ApplyDataLabels(self, *args, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
-        arguments = {"Type": Type, "LegendKey": LegendKey, "AutoText": AutoText, "HasLeaderLines": HasLeaderLines, "ShowSeriesName": ShowSeriesName, "ShowCategoryName": ShowCategoryName, "ShowValue": ShowValue, "ShowPercentage": ShowPercentage, "ShowBubbleSize": ShowBubbleSize, "Separator": Separator}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.series.ApplyDataLabels(*args, **arguments)
+    def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            LegendKey if LegendKey is not None else pythoncom.Missing,
+            AutoText if AutoText is not None else pythoncom.Missing,
+            HasLeaderLines if HasLeaderLines is not None else pythoncom.Missing,
+            ShowSeriesName if ShowSeriesName is not None else pythoncom.Missing,
+            ShowCategoryName if ShowCategoryName is not None else pythoncom.Missing,
+            ShowValue if ShowValue is not None else pythoncom.Missing,
+            ShowPercentage if ShowPercentage is not None else pythoncom.Missing,
+            ShowBubbleSize if ShowBubbleSize is not None else pythoncom.Missing,
+            Separator if Separator is not None else pythoncom.Missing,
+        ]
+        self.series.ApplyDataLabels(*params)
 
     def ClearFormats(self):
         return self.series.ClearFormats()
@@ -17469,18 +18522,24 @@ class Series:
     def Copy(self):
         return self.series.Copy()
 
-    def DataLabels(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.series.DataLabels(*args, **arguments)
+    def DataLabels(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.series.DataLabels(*params)
 
     def Delete(self):
         return self.series.Delete()
 
-    def ErrorBar(self, *args, Direction=None, Include=None, Type=None, Amount=None, MinusValues=None):
-        arguments = {"Direction": Direction, "Include": Include, "Type": Type, "Amount": Amount, "MinusValues": MinusValues}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.series.ErrorBar(*args, **arguments)
+    def ErrorBar(self, Direction=None, Include=None, Type=None, Amount=None, MinusValues=None):
+        params = [
+            Direction if Direction is not None else pythoncom.Missing,
+            Include if Include is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+            Amount if Amount is not None else pythoncom.Missing,
+            MinusValues if MinusValues is not None else pythoncom.Missing,
+        ]
+        return self.series.ErrorBar(*params)
 
     def GeoMappingLevel(self):
         self.series.GeoMappingLevel()
@@ -17491,10 +18550,11 @@ class Series:
     def Paste(self):
         return self.series.Paste()
 
-    def Points(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.series.Points(*args, **arguments)
+    def Points(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.series.Points(*params)
 
     def RegionLabelOptions(self):
         self.series.RegionLabelOptions()
@@ -17502,10 +18562,11 @@ class Series:
     def Select(self):
         return self.series.Select()
 
-    def Trendlines(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.series.Trendlines(*args, **arguments)
+    def Trendlines(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.series.Trendlines(*params)
 
 
 class SeriesCollection:
@@ -17532,28 +18593,42 @@ class SeriesCollection:
     def Parent(self):
         return self.seriescollection.Parent
 
-    def Add(self, *args, Source=None, Rowcol=None, SeriesLabels=None, CategoryLabels=None, Replace=None):
-        arguments = {"Source": Source, "Rowcol": Rowcol, "SeriesLabels": SeriesLabels, "CategoryLabels": CategoryLabels, "Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Series(self.seriescollection.Add(*args, **arguments))
+    def Add(self, Source=None, Rowcol=None, SeriesLabels=None, CategoryLabels=None, Replace=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+            Rowcol if Rowcol is not None else pythoncom.Missing,
+            SeriesLabels if SeriesLabels is not None else pythoncom.Missing,
+            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        return Series(self.seriescollection.Add(*params))
 
-    def Extend(self, *args, Source=None, RowCol=None, CategoryLabels=None):
-        arguments = {"Source": Source, "RowCol": RowCol, "CategoryLabels": CategoryLabels}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.seriescollection.Extend(*args, **arguments)
+    def Extend(self, Source=None, RowCol=None, CategoryLabels=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+            RowCol if RowCol is not None else pythoncom.Missing,
+            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
+        ]
+        return self.seriescollection.Extend(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Series(self.seriescollection.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Series(self.seriescollection.Item(*params))
 
     def NewSeries(self):
         return self.seriescollection.NewSeries()
 
-    def Paste(self, *args, RowCol=None, SeriesLabels=None, CategoryLabels=None, Replace=None, NewSeries=None):
-        arguments = {"RowCol": RowCol, "SeriesLabels": SeriesLabels, "CategoryLabels": CategoryLabels, "Replace": Replace, "NewSeries": NewSeries}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.seriescollection.Paste(*args, **arguments)
+    def Paste(self, RowCol=None, SeriesLabels=None, CategoryLabels=None, Replace=None, NewSeries=None):
+        params = [
+            RowCol if RowCol is not None else pythoncom.Missing,
+            SeriesLabels if SeriesLabels is not None else pythoncom.Missing,
+            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
+            Replace if Replace is not None else pythoncom.Missing,
+            NewSeries if NewSeries is not None else pythoncom.Missing,
+        ]
+        return self.seriescollection.Paste(*params)
 
 
 class SeriesLines:
@@ -17616,23 +18691,26 @@ class ServerViewableItems:
     def Parent(self):
         return self.serverviewableitems.Parent
 
-    def Add(self, *args, Obj=None):
-        arguments = {"Obj": Obj}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ServerViewableItem(self.serverviewableitems.Add(*args, **arguments))
+    def Add(self, Obj=None):
+        params = [
+            Obj if Obj is not None else pythoncom.Missing,
+        ]
+        return ServerViewableItem(self.serverviewableitems.Add(*params))
 
-    def Delete(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.serverviewableitems.Delete(*args, **arguments)
+    def Delete(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        self.serverviewableitems.Delete(*params)
 
     def DeleteAll(self):
         self.serverviewableitems.DeleteAll()
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.serverviewableitems.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.serverviewableitems.Item(*params)
 
 
 class ShadowFormat:
@@ -17736,15 +18814,17 @@ class ShadowFormat:
     def Visible(self, value):
         self.shadowformat.Visible = value
 
-    def IncrementOffsetX(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shadowformat.IncrementOffsetX(*args, **arguments)
+    def IncrementOffsetX(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.shadowformat.IncrementOffsetX(*params)
 
-    def IncrementOffsetY(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shadowformat.IncrementOffsetY(*args, **arguments)
+    def IncrementOffsetY(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.shadowformat.IncrementOffsetY(*params)
 
 
 class Shape:
@@ -18078,10 +19158,12 @@ class Shape:
     def Copy(self):
         self.shape.Copy()
 
-    def CopyPicture(self, *args, Appearance=None, Format=None):
-        arguments = {"Appearance": Appearance, "Format": Format}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.CopyPicture(*args, **arguments)
+    def CopyPicture(self, Appearance=None, Format=None):
+        params = [
+            Appearance if Appearance is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+        ]
+        self.shape.CopyPicture(*params)
 
     def Cut(self):
         return self.shape.Cut()
@@ -18092,25 +19174,29 @@ class Shape:
     def Duplicate(self):
         return self.shape.Duplicate()
 
-    def Flip(self, *args, FlipCmd=None):
-        arguments = {"FlipCmd": FlipCmd}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.Flip(*args, **arguments)
+    def Flip(self, FlipCmd=None):
+        params = [
+            FlipCmd if FlipCmd is not None else pythoncom.Missing,
+        ]
+        self.shape.Flip(*params)
 
-    def IncrementLeft(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.IncrementLeft(*args, **arguments)
+    def IncrementLeft(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.shape.IncrementLeft(*params)
 
-    def IncrementRotation(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.IncrementRotation(*args, **arguments)
+    def IncrementRotation(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.shape.IncrementRotation(*params)
 
-    def IncrementTop(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.IncrementTop(*args, **arguments)
+    def IncrementTop(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.shape.IncrementTop(*params)
 
     def PickUp(self):
         self.shape.PickUp()
@@ -18118,20 +19204,27 @@ class Shape:
     def RerouteConnections(self):
         self.shape.RerouteConnections()
 
-    def ScaleHeight(self, *args, Factor=None, RelativeToOriginalSize=None, Scale=None):
-        arguments = {"Factor": Factor, "RelativeToOriginalSize": RelativeToOriginalSize, "Scale": Scale}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.ScaleHeight(*args, **arguments)
+    def ScaleHeight(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
+        params = [
+            Factor if Factor is not None else pythoncom.Missing,
+            RelativeToOriginalSize if RelativeToOriginalSize is not None else pythoncom.Missing,
+            Scale if Scale is not None else pythoncom.Missing,
+        ]
+        self.shape.ScaleHeight(*params)
 
-    def ScaleWidth(self, *args, Factor=None, RelativeToOriginalSize=None, Scale=None):
-        arguments = {"Factor": Factor, "RelativeToOriginalSize": RelativeToOriginalSize, "Scale": Scale}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.ScaleWidth(*args, **arguments)
+    def ScaleWidth(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
+        params = [
+            Factor if Factor is not None else pythoncom.Missing,
+            RelativeToOriginalSize if RelativeToOriginalSize is not None else pythoncom.Missing,
+            Scale if Scale is not None else pythoncom.Missing,
+        ]
+        self.shape.ScaleWidth(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        self.shape.Select(*params)
 
     def SetShapesDefaultProperties(self):
         self.shape.SetShapesDefaultProperties()
@@ -18139,10 +19232,11 @@ class Shape:
     def Ungroup(self):
         return ShapeRange(self.shape.Ungroup())
 
-    def ZOrder(self, *args, ZOrderCmd=None):
-        arguments = {"ZOrderCmd": ZOrderCmd}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shape.ZOrder(*args, **arguments)
+    def ZOrder(self, ZOrderCmd=None):
+        params = [
+            ZOrderCmd if ZOrderCmd is not None else pythoncom.Missing,
+        ]
+        self.shape.ZOrder(*params)
 
 
 class ShapeNode:
@@ -18199,35 +19293,53 @@ class ShapeNodes:
     def Parent(self):
         return self.shapenodes.Parent
 
-    def Delete(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shapenodes.Delete(*args, **arguments)
+    def Delete(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        self.shapenodes.Delete(*params)
 
-    def Insert(self, *args, Index=None, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
-        arguments = {"Index": Index, "SegmentType": SegmentType, "EditingType": EditingType, "X1": X1, "Y1": Y1, "X2": X2, "Y2": Y2, "X3": X3, "Y3": Y3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shapenodes.Insert(*args, **arguments)
+    def Insert(self, Index=None, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+            SegmentType if SegmentType is not None else pythoncom.Missing,
+            EditingType if EditingType is not None else pythoncom.Missing,
+            X1 if X1 is not None else pythoncom.Missing,
+            Y1 if Y1 is not None else pythoncom.Missing,
+            X2 if X2 is not None else pythoncom.Missing,
+            Y2 if Y2 is not None else pythoncom.Missing,
+            X3 if X3 is not None else pythoncom.Missing,
+            Y3 if Y3 is not None else pythoncom.Missing,
+        ]
+        self.shapenodes.Insert(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return ShapeNode(self.shapenodes.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return ShapeNode(self.shapenodes.Item(*params))
 
-    def SetEditingType(self, *args, Index=None, EditingType=None):
-        arguments = {"Index": Index, "EditingType": EditingType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shapenodes.SetEditingType(*args, **arguments)
+    def SetEditingType(self, Index=None, EditingType=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+            EditingType if EditingType is not None else pythoncom.Missing,
+        ]
+        self.shapenodes.SetEditingType(*params)
 
-    def SetPosition(self, *args, Index=None, X1=None, Y1=None):
-        arguments = {"Index": Index, "X1": X1, "Y1": Y1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shapenodes.SetPosition(*args, **arguments)
+    def SetPosition(self, Index=None, X1=None, Y1=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+            X1 if X1 is not None else pythoncom.Missing,
+            Y1 if Y1 is not None else pythoncom.Missing,
+        ]
+        self.shapenodes.SetPosition(*params)
 
-    def SetSegmentType(self, *args, Index=None, SegmentType=None):
-        arguments = {"Index": Index, "SegmentType": SegmentType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.shapenodes.SetSegmentType(*args, **arguments)
+    def SetSegmentType(self, Index=None, SegmentType=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+            SegmentType if SegmentType is not None else pythoncom.Missing,
+        ]
+        self.shapenodes.SetSegmentType(*params)
 
 
 class Shapes:
@@ -18254,93 +19366,172 @@ class Shapes:
     def Parent(self):
         return self.shapes.Parent
 
-    def Range(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Range(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.shapes.Range):
-            return ShapeRange(self.shapes.Range(*args, **arguments))
+            return ShapeRange(self.shapes.Range(*params))
         else:
-            return ShapeRange(self.shapes.GetRange(*args, **arguments))
+            return ShapeRange(self.shapes.GetRange(*params))
 
-    def Add3DModel(self, *args, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"FileName": FileName, "LinkToFile": LinkToFile, "SaveWithDocument": SaveWithDocument, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.Add3DModel(*args, **arguments)
+    def Add3DModel(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            LinkToFile if LinkToFile is not None else pythoncom.Missing,
+            SaveWithDocument if SaveWithDocument is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.Add3DModel(*params)
 
-    def AddCallout(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddCallout(*args, **arguments)
+    def AddCallout(self, Type=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddCallout(*params)
 
-    def AddConnector(self, *args, Type=None, BeginX=None, BeginY=None, EndX=None, EndY=None):
-        arguments = {"Type": Type, "BeginX": BeginX, "BeginY": BeginY, "EndX": EndX, "EndY": EndY}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddConnector(*args, **arguments)
+    def AddConnector(self, Type=None, BeginX=None, BeginY=None, EndX=None, EndY=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            BeginX if BeginX is not None else pythoncom.Missing,
+            BeginY if BeginY is not None else pythoncom.Missing,
+            EndX if EndX is not None else pythoncom.Missing,
+            EndY if EndY is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddConnector(*params)
 
-    def AddCurve(self, *args, SafeArrayOfPoints=None):
-        arguments = {"SafeArrayOfPoints": SafeArrayOfPoints}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddCurve(*args, **arguments)
+    def AddCurve(self, SafeArrayOfPoints=None):
+        params = [
+            SafeArrayOfPoints if SafeArrayOfPoints is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddCurve(*params)
 
-    def AddFormControl(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddFormControl(*args, **arguments)
+    def AddFormControl(self, Type=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddFormControl(*params)
 
-    def AddLabel(self, *args, Orientation=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Orientation": Orientation, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddLabel(*args, **arguments)
+    def AddLabel(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Orientation if Orientation is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddLabel(*params)
 
-    def AddLine(self, *args, BeginX=None, BeginY=None, EndX=None, EndY=None):
-        arguments = {"BeginX": BeginX, "BeginY": BeginY, "EndX": EndX, "EndY": EndY}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddLine(*args, **arguments)
+    def AddLine(self, BeginX=None, BeginY=None, EndX=None, EndY=None):
+        params = [
+            BeginX if BeginX is not None else pythoncom.Missing,
+            BeginY if BeginY is not None else pythoncom.Missing,
+            EndX if EndX is not None else pythoncom.Missing,
+            EndY if EndY is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddLine(*params)
 
-    def AddOLEObject(self, *args, ClassType=None, FileName=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"ClassType": ClassType, "FileName": FileName, "Link": Link, "DisplayAsIcon": DisplayAsIcon, "IconFileName": IconFileName, "IconIndex": IconIndex, "IconLabel": IconLabel, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddOLEObject(*args, **arguments)
+    def AddOLEObject(self, ClassType=None, FileName=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            ClassType if ClassType is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Link if Link is not None else pythoncom.Missing,
+            DisplayAsIcon if DisplayAsIcon is not None else pythoncom.Missing,
+            IconFileName if IconFileName is not None else pythoncom.Missing,
+            IconIndex if IconIndex is not None else pythoncom.Missing,
+            IconLabel if IconLabel is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddOLEObject(*params)
 
-    def AddPicture(self, *args, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"FileName": FileName, "LinkToFile": LinkToFile, "SaveWithDocument": SaveWithDocument, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddPicture(*args, **arguments)
+    def AddPicture(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            LinkToFile if LinkToFile is not None else pythoncom.Missing,
+            SaveWithDocument if SaveWithDocument is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddPicture(*params)
 
-    def AddPolyline(self, *args, SafeArrayOfPoints=None):
-        arguments = {"SafeArrayOfPoints": SafeArrayOfPoints}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddPolyline(*args, **arguments)
+    def AddPolyline(self, SafeArrayOfPoints=None):
+        params = [
+            SafeArrayOfPoints if SafeArrayOfPoints is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddPolyline(*params)
 
-    def AddShape(self, *args, Type=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Type": Type, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddShape(*args, **arguments)
+    def AddShape(self, Type=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddShape(*params)
 
-    def AddSmartArt(self, *args, Layout=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Layout": Layout, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddSmartArt(*args, **arguments)
+    def AddSmartArt(self, Layout=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Layout if Layout is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddSmartArt(*params)
 
-    def AddTextbox(self, *args, Orientation=None, Left=None, Top=None, Width=None, Height=None):
-        arguments = {"Orientation": Orientation, "Left": Left, "Top": Top, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddTextbox(*args, **arguments)
+    def AddTextbox(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
+        params = [
+            Orientation if Orientation is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddTextbox(*params)
 
-    def AddTextEffect(self, *args, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
-        arguments = {"PresetTextEffect": PresetTextEffect, "Text": Text, "FontName": FontName, "FontSize": FontSize, "FontBold": FontBold, "FontItalic": FontItalic, "Left": Left, "Top": Top}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.AddTextEffect(*args, **arguments)
+    def AddTextEffect(self, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
+        params = [
+            PresetTextEffect if PresetTextEffect is not None else pythoncom.Missing,
+            Text if Text is not None else pythoncom.Missing,
+            FontName if FontName is not None else pythoncom.Missing,
+            FontSize if FontSize is not None else pythoncom.Missing,
+            FontBold if FontBold is not None else pythoncom.Missing,
+            FontItalic if FontItalic is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+        ]
+        return self.shapes.AddTextEffect(*params)
 
-    def BuildFreeform(self, *args, EditingType=None, X1=None, Y1=None):
-        arguments = {"EditingType": EditingType, "X1": X1, "Y1": Y1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.shapes.BuildFreeform(*args, **arguments)
+    def BuildFreeform(self, EditingType=None, X1=None, Y1=None):
+        params = [
+            EditingType if EditingType is not None else pythoncom.Missing,
+            X1 if X1 is not None else pythoncom.Missing,
+            Y1 if Y1 is not None else pythoncom.Missing,
+        ]
+        return self.shapes.BuildFreeform(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Shape(self.shapes.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Shape(self.shapes.Item(*params))
 
     def SelectAll(self):
         self.shapes.SelectAll()
@@ -18370,13 +19561,14 @@ class Sheets:
     def HPageBreaks(self):
         return HPageBreaks(self.sheets.HPageBreaks)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.sheets.Item):
-            return self.sheets.Item(*args, **arguments)
+            return self.sheets.Item(*params)
         else:
-            return self.sheets.GetItem(*args, **arguments)
+            return self.sheets.GetItem(*params)
 
     @property
     def Parent(self):
@@ -18394,43 +19586,64 @@ class Sheets:
     def VPageBreaks(self):
         return VPageBreaks(self.sheets.VPageBreaks)
 
-    def Add(self, *args, Before=None, After=None, Count=None, Type=None):
-        arguments = {"Before": Before, "After": After, "Count": Count, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Sheet(self.sheets.Add(*args, **arguments))
+    def Add(self, Before=None, After=None, Count=None, Type=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+            Count if Count is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        return Sheet(self.sheets.Add(*params))
 
-    def Copy(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sheets.Copy(*args, **arguments)
+    def Copy(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.sheets.Copy(*params)
 
     def Delete(self):
         self.sheets.Delete()
 
-    def FillAcrossSheets(self, *args, Range=None, Type=None):
-        arguments = {"Range": Range, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sheets.FillAcrossSheets(*args, **arguments)
+    def FillAcrossSheets(self, Range=None, Type=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.sheets.FillAcrossSheets(*params)
 
-    def Move(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sheets.Move(*args, **arguments)
+    def Move(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.sheets.Move(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName, "IgnorePrintAreas": IgnorePrintAreas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sheets.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+        ]
+        return self.sheets.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sheets.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        self.sheets.PrintPreview(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sheets.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        self.sheets.Select(*params)
 
 
 class SheetViews:
@@ -18453,13 +19666,14 @@ class SheetViews:
     def Creator(self):
         return self.sheetviews.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.sheetviews.Item):
-            return self.sheetviews.Item(*args, **arguments)
+            return self.sheetviews.Item(*params)
         else:
-            return self.sheetviews.GetItem(*args, **arguments)
+            return self.sheetviews.GetItem(*params)
 
     @property
     def Parent(self):
@@ -18797,13 +20011,14 @@ class SlicerCacheLevels:
     def Creator(self):
         return self.slicercachelevels.Creator
 
-    def Item(self, *args, Level=None):
-        arguments = {"Level": Level}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Level=None):
+        params = [
+            Level if Level is not None else pythoncom.Missing,
+        ]
         if callable(self.slicercachelevels.Item):
-            return SlicerCacheLevel(self.slicercachelevels.Item(*args, **arguments))
+            return SlicerCacheLevel(self.slicercachelevels.Item(*params))
         else:
-            return SlicerCacheLevel(self.slicercachelevels.GetItem(*args, **arguments))
+            return SlicerCacheLevel(self.slicercachelevels.GetItem(*params))
 
     @property
     def Parent(self):
@@ -18827,22 +20042,27 @@ class SlicerCaches:
     def Creator(self):
         return self.slicercaches.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.slicercaches.Item):
-            return SlicerCache(self.slicercaches.Item(*args, **arguments))
+            return SlicerCache(self.slicercaches.Item(*params))
         else:
-            return SlicerCache(self.slicercaches.GetItem(*args, **arguments))
+            return SlicerCache(self.slicercaches.GetItem(*params))
 
     @property
     def Parent(self):
         return Workbook(self.slicercaches.Parent)
 
-    def Add(self, *args, Source=None, SourceField=None, Name=None, SlicerCacheType=None):
-        arguments = {"Source": Source, "SourceField": SourceField, "Name": Name, "SlicerCacheType": SlicerCacheType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.slicercaches.Add(*args, **arguments)
+    def Add(self, Source=None, SourceField=None, Name=None, SlicerCacheType=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+            SourceField if SourceField is not None else pythoncom.Missing,
+            Name if Name is not None else pythoncom.Missing,
+            SlicerCacheType if SlicerCacheType is not None else pythoncom.Missing,
+        ]
+        return self.slicercaches.Add(*params)
 
 
 class SlicerItem:
@@ -18912,13 +20132,14 @@ class SlicerItems:
     def Creator(self):
         return self.sliceritems.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.sliceritems.Item):
-            return SlicerItem(self.sliceritems.Item(*args, **arguments))
+            return SlicerItem(self.sliceritems.Item(*params))
         else:
-            return SlicerItem(self.sliceritems.GetItem(*args, **arguments))
+            return SlicerItem(self.sliceritems.GetItem(*params))
 
     @property
     def Parent(self):
@@ -18942,27 +20163,30 @@ class SlicerPivotTables:
     def Creator(self):
         return self.slicerpivottables.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.slicerpivottables.Item):
-            return PivotTable(self.slicerpivottables.Item(*args, **arguments))
+            return PivotTable(self.slicerpivottables.Item(*params))
         else:
-            return PivotTable(self.slicerpivottables.GetItem(*args, **arguments))
+            return PivotTable(self.slicerpivottables.GetItem(*params))
 
     @property
     def Parent(self):
         return SlicerCache(self.slicerpivottables.Parent)
 
-    def AddPivotTable(self, *args, PivotTable=None):
-        arguments = {"PivotTable": PivotTable}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.slicerpivottables.AddPivotTable(*args, **arguments)
+    def AddPivotTable(self, PivotTable=None):
+        params = [
+            PivotTable if PivotTable is not None else pythoncom.Missing,
+        ]
+        return self.slicerpivottables.AddPivotTable(*params)
 
-    def RemovePivotTable(self, *args, PivotTable=None):
-        arguments = {"PivotTable": PivotTable}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.slicerpivottables.RemovePivotTable(*args, **arguments)
+    def RemovePivotTable(self, PivotTable=None):
+        params = [
+            PivotTable if PivotTable is not None else pythoncom.Missing,
+        ]
+        return self.slicerpivottables.RemovePivotTable(*params)
 
 
 class Slicers:
@@ -18985,22 +20209,31 @@ class Slicers:
     def Creator(self):
         return self.slicers.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.slicers.Item):
-            return Slicer(self.slicers.Item(*args, **arguments))
+            return Slicer(self.slicers.Item(*params))
         else:
-            return Slicer(self.slicers.GetItem(*args, **arguments))
+            return Slicer(self.slicers.GetItem(*params))
 
     @property
     def Parent(self):
         return SlicerCache(self.slicers.Parent)
 
-    def Add(self, *args, SlicerDestination=None, Level=None, Name=None, Caption=None, Top=None, Left=None, Width=None, Height=None):
-        arguments = {"SlicerDestination": SlicerDestination, "Level": Level, "Name": Name, "Caption": Caption, "Top": Top, "Left": Left, "Width": Width, "Height": Height}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Slicer(self.slicers.Add(*args, **arguments))
+    def Add(self, SlicerDestination=None, Level=None, Name=None, Caption=None, Top=None, Left=None, Width=None, Height=None):
+        params = [
+            SlicerDestination if SlicerDestination is not None else pythoncom.Missing,
+            Level if Level is not None else pythoncom.Missing,
+            Name if Name is not None else pythoncom.Missing,
+            Caption if Caption is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Left if Left is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+        ]
+        return Slicer(self.slicers.Add(*params))
 
 
 class Sort:
@@ -19063,10 +20296,11 @@ class Sort:
     def Apply(self):
         self.sort.Apply()
 
-    def SetRange(self, *args, Rng=None):
-        arguments = {"Rng": Rng}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sort.SetRange(*args, **arguments)
+    def SetRange(self, Rng=None):
+        params = [
+            Rng if Rng is not None else pythoncom.Missing,
+        ]
+        self.sort.SetRange(*params)
 
 
 class SortField:
@@ -19137,15 +20371,17 @@ class SortField:
     def Delete(self):
         self.sortfield.Delete()
 
-    def ModifyKey(self, *args, Key=None):
-        arguments = {"Key": Key}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sortfield.ModifyKey(*args, **arguments)
+    def ModifyKey(self, Key=None):
+        params = [
+            Key if Key is not None else pythoncom.Missing,
+        ]
+        self.sortfield.ModifyKey(*params)
 
-    def SetIcon(self, *args, Icon=None):
-        arguments = {"Icon": Icon}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.sortfield.SetIcon(*args, **arguments)
+    def SetIcon(self, Icon=None):
+        params = [
+            Icon if Icon is not None else pythoncom.Missing,
+        ]
+        self.sortfield.SetIcon(*params)
 
 
 class SortFields:
@@ -19165,27 +20401,39 @@ class SortFields:
     def Creator(self):
         return self.sortfields.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.sortfields.Item):
-            return SortField(self.sortfields.Item(*args, **arguments))
+            return SortField(self.sortfields.Item(*params))
         else:
-            return SortField(self.sortfields.GetItem(*args, **arguments))
+            return SortField(self.sortfields.GetItem(*params))
 
     @property
     def Parent(self):
         return self.sortfields.Parent
 
-    def Add(self, *args, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None):
-        arguments = {"Key": Key, "SortOn": SortOn, "Order": Order, "CustomOrder": CustomOrder, "DataOption": DataOption}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sortfields.Add(*args, **arguments)
+    def Add(self, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None):
+        params = [
+            Key if Key is not None else pythoncom.Missing,
+            SortOn if SortOn is not None else pythoncom.Missing,
+            Order if Order is not None else pythoncom.Missing,
+            CustomOrder if CustomOrder is not None else pythoncom.Missing,
+            DataOption if DataOption is not None else pythoncom.Missing,
+        ]
+        return self.sortfields.Add(*params)
 
-    def Add2(self, *args, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None, SubField=None):
-        arguments = {"Key": Key, "SortOn": SortOn, "Order": Order, "CustomOrder": CustomOrder, "DataOption": DataOption, "SubField": SubField}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sortfields.Add2(*args, **arguments)
+    def Add2(self, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None, SubField=None):
+        params = [
+            Key if Key is not None else pythoncom.Missing,
+            SortOn if SortOn is not None else pythoncom.Missing,
+            Order if Order is not None else pythoncom.Missing,
+            CustomOrder if CustomOrder is not None else pythoncom.Missing,
+            DataOption if DataOption is not None else pythoncom.Missing,
+            SubField if SubField is not None else pythoncom.Missing,
+        ]
+        return self.sortfields.Add2(*params)
 
     def Clear(self):
         self.sortfields.Clear()
@@ -19314,15 +20562,17 @@ class Sparkline:
     def SourceData(self, value):
         self.sparkline.SourceData = value
 
-    def ModifyLocation(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparkline.ModifyLocation(*args, **arguments)
+    def ModifyLocation(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        return self.sparkline.ModifyLocation(*params)
 
-    def ModifySourceData(self, *args, Formula=None):
-        arguments = {"Formula": Formula}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparkline.ModifySourceData(*args, **arguments)
+    def ModifySourceData(self, Formula=None):
+        params = [
+            Formula if Formula is not None else pythoncom.Missing,
+        ]
+        return self.sparkline.ModifySourceData(*params)
 
 
 class SparklineGroup:
@@ -19362,13 +20612,14 @@ class SparklineGroup:
     def DisplayHidden(self, value):
         self.sparklinegroup.DisplayHidden = value
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.sparklinegroup.Item):
-            return Sparkline(self.sparklinegroup.Item(*args, **arguments))
+            return Sparkline(self.sparklinegroup.Item(*params))
         else:
-            return Sparkline(self.sparklinegroup.GetItem(*args, **arguments))
+            return Sparkline(self.sparklinegroup.GetItem(*params))
 
     @property
     def LineWeight(self):
@@ -19413,25 +20664,30 @@ class SparklineGroup:
     def Delete(self):
         return self.sparklinegroup.Delete()
 
-    def Modify(self, *args, Location=None, SourceData=None):
-        arguments = {"Location": Location, "SourceData": SourceData}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparklinegroup.Modify(*args, **arguments)
+    def Modify(self, Location=None, SourceData=None):
+        params = [
+            Location if Location is not None else pythoncom.Missing,
+            SourceData if SourceData is not None else pythoncom.Missing,
+        ]
+        return self.sparklinegroup.Modify(*params)
 
-    def ModifyDateRange(self, *args, DateRange=None):
-        arguments = {"DateRange": DateRange}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparklinegroup.ModifyDateRange(*args, **arguments)
+    def ModifyDateRange(self, DateRange=None):
+        params = [
+            DateRange if DateRange is not None else pythoncom.Missing,
+        ]
+        return self.sparklinegroup.ModifyDateRange(*params)
 
-    def ModifyLocation(self, *args, Location=None):
-        arguments = {"Location": Location}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparklinegroup.ModifyLocation(*args, **arguments)
+    def ModifyLocation(self, Location=None):
+        params = [
+            Location if Location is not None else pythoncom.Missing,
+        ]
+        return self.sparklinegroup.ModifyLocation(*params)
 
-    def ModifySourceData(self, *args, SourceData=None):
-        arguments = {"SourceData": SourceData}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparklinegroup.ModifySourceData(*args, **arguments)
+    def ModifySourceData(self, SourceData=None):
+        params = [
+            SourceData if SourceData is not None else pythoncom.Missing,
+        ]
+        return self.sparklinegroup.ModifySourceData(*params)
 
 
 class SparklineGroups:
@@ -19451,22 +20707,25 @@ class SparklineGroups:
     def Creator(self):
         return self.sparklinegroups.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.sparklinegroups.Item):
-            return SparklineGroup(self.sparklinegroups.Item(*args, **arguments))
+            return SparklineGroup(self.sparklinegroups.Item(*params))
         else:
-            return SparklineGroup(self.sparklinegroups.GetItem(*args, **arguments))
+            return SparklineGroup(self.sparklinegroups.GetItem(*params))
 
     @property
     def Parent(self):
         return Range(self.sparklinegroups.Parent)
 
-    def Add(self, *args, Type=None, SourceData=None):
-        arguments = {"Type": Type, "SourceData": SourceData}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparklinegroups.Add(*args, **arguments)
+    def Add(self, Type=None, SourceData=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            SourceData if SourceData is not None else pythoncom.Missing,
+        ]
+        return self.sparklinegroups.Add(*params)
 
     def Clear(self):
         return self.sparklinegroups.Clear()
@@ -19474,10 +20733,11 @@ class SparklineGroups:
     def ClearGroups(self):
         return self.sparklinegroups.ClearGroups()
 
-    def Group(self, *args, Location=None):
-        arguments = {"Location": Location}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.sparklinegroups.Group(*args, **arguments)
+    def Group(self, Location=None):
+        params = [
+            Location if Location is not None else pythoncom.Missing,
+        ]
+        return self.sparklinegroups.Group(*params)
 
     def Ungroup(self):
         return self.sparklinegroups.Ungroup()
@@ -19596,10 +20856,14 @@ class Speech:
     def SpeakCellOnEnter(self, value):
         self.speech.SpeakCellOnEnter = value
 
-    def Speak(self, *args, Text=None, SpeakAsync=None, SpeakXML=None, Purge=None):
-        arguments = {"Text": Text, "SpeakAsync": SpeakAsync, "SpeakXML": SpeakXML, "Purge": Purge}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.speech.Speak(*args, **arguments)
+    def Speak(self, Text=None, SpeakAsync=None, SpeakXML=None, Purge=None):
+        params = [
+            Text if Text is not None else pythoncom.Missing,
+            SpeakAsync if SpeakAsync is not None else pythoncom.Missing,
+            SpeakXML if SpeakXML is not None else pythoncom.Missing,
+            Purge if Purge is not None else pythoncom.Missing,
+        ]
+        self.speech.Speak(*params)
 
 
 class SpellingOptions:
@@ -19985,27 +21249,30 @@ class Styles:
     def Creator(self):
         return self.styles.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.styles.Item):
-            return self.styles.Item(*args, **arguments)
+            return self.styles.Item(*params)
         else:
-            return self.styles.GetItem(*args, **arguments)
+            return self.styles.GetItem(*params)
 
     @property
     def Parent(self):
         return self.styles.Parent
 
-    def Add(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Style(self.styles.Add(*args, **arguments))
+    def Add(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return Style(self.styles.Add(*params))
 
-    def Merge(self, *args, Workbook=None):
-        arguments = {"Workbook": Workbook}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.styles.Merge(*args, **arguments)
+    def Merge(self, Workbook=None):
+        params = [
+            Workbook if Workbook is not None else pythoncom.Missing,
+        ]
+        return self.styles.Merge(*params)
 
 
 class Tab:
@@ -20122,10 +21389,11 @@ class TableStyle:
     def Delete(self):
         return self.tablestyle.Delete()
 
-    def Duplicate(self, *args, NewTableStyleName=None):
-        arguments = {"NewTableStyleName": NewTableStyleName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.tablestyle.Duplicate(*args, **arguments)
+    def Duplicate(self, NewTableStyleName=None):
+        params = [
+            NewTableStyleName if NewTableStyleName is not None else pythoncom.Missing,
+        ]
+        return self.tablestyle.Duplicate(*params)
 
 
 class TableStyleElement:
@@ -20194,10 +21462,11 @@ class TableStyleElements:
     def Parent(self):
         return self.tablestyleelements.Parent
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return TableStyleElement(self.tablestyleelements.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return TableStyleElement(self.tablestyleelements.Item(*params))
 
 
 class TableStyles:
@@ -20221,15 +21490,17 @@ class TableStyles:
     def Parent(self):
         return self.tablestyles.Parent
 
-    def Add(self, *args, TableStyleName=None):
-        arguments = {"TableStyleName": TableStyleName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.tablestyles.Add(*args, **arguments)
+    def Add(self, TableStyleName=None):
+        params = [
+            TableStyleName if TableStyleName is not None else pythoncom.Missing,
+        ]
+        return self.tablestyles.Add(*params)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.tablestyles.Item(*args, **arguments)
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.tablestyles.Item(*params)
 
 
 class TextEffectFormat:
@@ -20462,10 +21733,12 @@ class TextFrame:
     def VerticalOverflow(self, value):
         self.textframe.VerticalOverflow = value
 
-    def Characters(self, *args, Start=None, Length=None):
-        arguments = {"Start": Start, "Length": Length}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.textframe.Characters(*args, **arguments)
+    def Characters(self, Start=None, Length=None):
+        params = [
+            Start if Start is not None else pythoncom.Missing,
+            Length if Length is not None else pythoncom.Missing,
+        ]
+        return self.textframe.Characters(*params)
 
 
 class TextFrame2:
@@ -20830,48 +22103,56 @@ class ThreeDFormat:
     def Z(self, value):
         self.threedformat.Z = value
 
-    def IncrementRotationHorizontal(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.IncrementRotationHorizontal(*args, **arguments)
+    def IncrementRotationHorizontal(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.threedformat.IncrementRotationHorizontal(*params)
 
-    def IncrementRotationVertical(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.IncrementRotationVertical(*args, **arguments)
+    def IncrementRotationVertical(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.threedformat.IncrementRotationVertical(*params)
 
-    def IncrementRotationX(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.IncrementRotationX(*args, **arguments)
+    def IncrementRotationX(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.threedformat.IncrementRotationX(*params)
 
-    def IncrementRotationY(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.IncrementRotationY(*args, **arguments)
+    def IncrementRotationY(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.threedformat.IncrementRotationY(*params)
 
-    def IncrementRotationZ(self, *args, Increment=None):
-        arguments = {"Increment": Increment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.IncrementRotationZ(*args, **arguments)
+    def IncrementRotationZ(self, Increment=None):
+        params = [
+            Increment if Increment is not None else pythoncom.Missing,
+        ]
+        self.threedformat.IncrementRotationZ(*params)
 
     def ResetRotation(self):
         self.threedformat.ResetRotation()
 
-    def SetExtrusionDirection(self, *args, PresetExtrusionDirection=None):
-        arguments = {"PresetExtrusionDirection": PresetExtrusionDirection}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.SetExtrusionDirection(*args, **arguments)
+    def SetExtrusionDirection(self, PresetExtrusionDirection=None):
+        params = [
+            PresetExtrusionDirection if PresetExtrusionDirection is not None else pythoncom.Missing,
+        ]
+        self.threedformat.SetExtrusionDirection(*params)
 
-    def SetPresetCamera(self, *args, PresetCamera=None):
-        arguments = {"PresetCamera": PresetCamera}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.SetPresetCamera(*args, **arguments)
+    def SetPresetCamera(self, PresetCamera=None):
+        params = [
+            PresetCamera if PresetCamera is not None else pythoncom.Missing,
+        ]
+        self.threedformat.SetPresetCamera(*params)
 
-    def SetThreeDFormat(self, *args, PresetThreeDFormat=None):
-        arguments = {"PresetThreeDFormat": PresetThreeDFormat}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.threedformat.SetThreeDFormat(*args, **arguments)
+    def SetThreeDFormat(self, PresetThreeDFormat=None):
+        params = [
+            PresetThreeDFormat if PresetThreeDFormat is not None else pythoncom.Missing,
+        ]
+        self.threedformat.SetThreeDFormat(*params)
 
 
 class TickLabels:
@@ -21086,10 +22367,11 @@ class Top10:
     def Delete(self):
         self.top10.Delete()
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.top10.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.top10.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.top10.SetFirstPriority()
@@ -21287,15 +22569,25 @@ class Trendlines:
     def Parent(self):
         return self.trendlines.Parent
 
-    def Add(self, *args, Type=None, Order=None, Period=None, Forward=None, Backward=None, Intercept=None, DisplayEquation=None, DisplayRSquared=None, Name=None):
-        arguments = {"Type": Type, "Order": Order, "Period": Period, "Forward": Forward, "Backward": Backward, "Intercept": Intercept, "DisplayEquation": DisplayEquation, "DisplayRSquared": DisplayRSquared, "Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Trendline(self.trendlines.Add(*args, **arguments))
+    def Add(self, Type=None, Order=None, Period=None, Forward=None, Backward=None, Intercept=None, DisplayEquation=None, DisplayRSquared=None, Name=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            Order if Order is not None else pythoncom.Missing,
+            Period if Period is not None else pythoncom.Missing,
+            Forward if Forward is not None else pythoncom.Missing,
+            Backward if Backward is not None else pythoncom.Missing,
+            Intercept if Intercept is not None else pythoncom.Missing,
+            DisplayEquation if DisplayEquation is not None else pythoncom.Missing,
+            DisplayRSquared if DisplayRSquared is not None else pythoncom.Missing,
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return Trendline(self.trendlines.Add(*params))
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Trendline(self.trendlines.Item(*args, **arguments))
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return Trendline(self.trendlines.Item(*params))
 
 
 class UniqueValues:
@@ -21382,10 +22674,11 @@ class UniqueValues:
     def Delete(self):
         self.uniquevalues.Delete()
 
-    def ModifyAppliesToRange(self, *args, Range=None):
-        arguments = {"Range": Range}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.uniquevalues.ModifyAppliesToRange(*args, **arguments)
+    def ModifyAppliesToRange(self, Range=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+        ]
+        self.uniquevalues.ModifyAppliesToRange(*params)
 
     def SetFirstPriority(self):
         self.uniquevalues.SetFirstPriority()
@@ -21443,13 +22736,14 @@ class UsedObjects:
     def Creator(self):
         return self.usedobjects.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.usedobjects.Item):
-            return self.usedobjects.Item(*args, **arguments)
+            return self.usedobjects.Item(*params)
         else:
-            return self.usedobjects.GetItem(*args, **arguments)
+            return self.usedobjects.GetItem(*params)
 
     @property
     def Parent(self):
@@ -21493,18 +22787,21 @@ class UserAccessList:
     def Count(self):
         return self.useraccesslist.Count
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.useraccesslist.Item):
-            return self.useraccesslist.Item(*args, **arguments)
+            return self.useraccesslist.Item(*params)
         else:
-            return self.useraccesslist.GetItem(*args, **arguments)
+            return self.useraccesslist.GetItem(*params)
 
-    def Add(self, *args, Name=None, AllowEdit=None):
-        arguments = {"Name": Name, "AllowEdit": AllowEdit}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return UserAccess(self.useraccesslist.Add(*args, **arguments))
+    def Add(self, Name=None, AllowEdit=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            AllowEdit if AllowEdit is not None else pythoncom.Missing,
+        ]
+        return UserAccess(self.useraccesslist.Add(*params))
 
     def DeleteAll(self):
         self.useraccesslist.DeleteAll()
@@ -21623,18 +22920,28 @@ class Validation:
     def Value(self):
         return self.validation.Value
 
-    def Add(self, *args, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
-        arguments = {"Type": Type, "AlertStyle": AlertStyle, "Operator": Operator, "Formula1": Formula1, "Formula2": Formula2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.validation.Add(*args, **arguments)
+    def Add(self, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            AlertStyle if AlertStyle is not None else pythoncom.Missing,
+            Operator if Operator is not None else pythoncom.Missing,
+            Formula1 if Formula1 is not None else pythoncom.Missing,
+            Formula2 if Formula2 is not None else pythoncom.Missing,
+        ]
+        self.validation.Add(*params)
 
     def Delete(self):
         self.validation.Delete()
 
-    def Modify(self, *args, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
-        arguments = {"Type": Type, "AlertStyle": AlertStyle, "Operator": Operator, "Formula1": Formula1, "Formula2": Formula2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.validation.Modify(*args, **arguments)
+    def Modify(self, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            AlertStyle if AlertStyle is not None else pythoncom.Missing,
+            Operator if Operator is not None else pythoncom.Missing,
+            Formula1 if Formula1 is not None else pythoncom.Missing,
+            Formula2 if Formula2 is not None else pythoncom.Missing,
+        ]
+        self.validation.Modify(*params)
 
 
 class ValueChange:
@@ -21726,10 +23033,12 @@ class VPageBreak:
     def Delete(self):
         self.vpagebreak.Delete()
 
-    def DragOff(self, *args, Direction=None, RegionIndex=None):
-        arguments = {"Direction": Direction, "RegionIndex": RegionIndex}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.vpagebreak.DragOff(*args, **arguments)
+    def DragOff(self, Direction=None, RegionIndex=None):
+        params = [
+            Direction if Direction is not None else pythoncom.Missing,
+            RegionIndex if RegionIndex is not None else pythoncom.Missing,
+        ]
+        self.vpagebreak.DragOff(*params)
 
 
 class VPageBreaks:
@@ -21752,22 +23061,24 @@ class VPageBreaks:
     def Creator(self):
         return self.vpagebreaks.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.vpagebreaks.Item):
-            return self.vpagebreaks.Item(*args, **arguments)
+            return self.vpagebreaks.Item(*params)
         else:
-            return self.vpagebreaks.GetItem(*args, **arguments)
+            return self.vpagebreaks.GetItem(*params)
 
     @property
     def Parent(self):
         return self.vpagebreaks.Parent
 
-    def Add(self, *args, Before=None):
-        arguments = {"Before": Before}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return VPageBreak(self.vpagebreaks.Add(*args, **arguments))
+    def Add(self, Before=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+        ]
+        return VPageBreak(self.vpagebreaks.Add(*params))
 
 
 class Walls:
@@ -21874,22 +23185,24 @@ class Watches:
     def Creator(self):
         return self.watches.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.watches.Item):
-            return self.watches.Item(*args, **arguments)
+            return self.watches.Item(*params)
         else:
-            return self.watches.GetItem(*args, **arguments)
+            return self.watches.GetItem(*params)
 
     @property
     def Parent(self):
         return self.watches.Parent
 
-    def Add(self, *args, Source=None):
-        arguments = {"Source": Source}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Watch(self.watches.Add(*args, **arguments))
+    def Add(self, Source=None):
+        params = [
+            Source if Source is not None else pythoncom.Missing,
+        ]
+        return Watch(self.watches.Add(*params))
 
     def Delete(self):
         self.watches.Delete()
@@ -22370,58 +23683,89 @@ class Window:
     def ActivatePrevious(self):
         return self.window.ActivatePrevious()
 
-    def Close(self, *args, SaveChanges=None, FileName=None, RouteWorkbook=None):
-        arguments = {"SaveChanges": SaveChanges, "FileName": FileName, "RouteWorkbook": RouteWorkbook}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.Close(*args, **arguments)
+    def Close(self, SaveChanges=None, FileName=None, RouteWorkbook=None):
+        params = [
+            SaveChanges if SaveChanges is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            RouteWorkbook if RouteWorkbook is not None else pythoncom.Missing,
+        ]
+        return self.window.Close(*params)
 
-    def LargeScroll(self, *args, Down=None, Up=None, ToRight=None, ToLeft=None):
-        arguments = {"Down": Down, "Up": Up, "ToRight": ToRight, "ToLeft": ToLeft}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.LargeScroll(*args, **arguments)
+    def LargeScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
+        params = [
+            Down if Down is not None else pythoncom.Missing,
+            Up if Up is not None else pythoncom.Missing,
+            ToRight if ToRight is not None else pythoncom.Missing,
+            ToLeft if ToLeft is not None else pythoncom.Missing,
+        ]
+        return self.window.LargeScroll(*params)
 
     def NewWindow(self):
         return self.window.NewWindow()
 
-    def PointsToScreenPixelsX(self, *args, Points=None):
-        arguments = {"Points": Points}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.PointsToScreenPixelsX(*args, **arguments)
+    def PointsToScreenPixelsX(self, Points=None):
+        params = [
+            Points if Points is not None else pythoncom.Missing,
+        ]
+        return self.window.PointsToScreenPixelsX(*params)
 
-    def PointsToScreenPixelsY(self, *args, Points=None):
-        arguments = {"Points": Points}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.PointsToScreenPixelsY(*args, **arguments)
+    def PointsToScreenPixelsY(self, Points=None):
+        params = [
+            Points if Points is not None else pythoncom.Missing,
+        ]
+        return self.window.PointsToScreenPixelsY(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+        ]
+        return self.window.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        return self.window.PrintPreview(*params)
 
-    def RangeFromPoint(self, *args, x=None, y=None):
-        arguments = {"x": x, "y": y}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.RangeFromPoint(*args, **arguments)
+    def RangeFromPoint(self, x=None, y=None):
+        params = [
+            x if x is not None else pythoncom.Missing,
+            y if y is not None else pythoncom.Missing,
+        ]
+        return self.window.RangeFromPoint(*params)
 
-    def ScrollIntoView(self, *args, Left=None, Top=None, Width=None, Height=None, Start=None):
-        arguments = {"Left": Left, "Top": Top, "Width": Width, "Height": Height, "Start": Start}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.window.ScrollIntoView(*args, **arguments)
+    def ScrollIntoView(self, Left=None, Top=None, Width=None, Height=None, Start=None):
+        params = [
+            Left if Left is not None else pythoncom.Missing,
+            Top if Top is not None else pythoncom.Missing,
+            Width if Width is not None else pythoncom.Missing,
+            Height if Height is not None else pythoncom.Missing,
+            Start if Start is not None else pythoncom.Missing,
+        ]
+        self.window.ScrollIntoView(*params)
 
-    def ScrollWorkbookTabs(self, *args, Sheets=None, Position=None):
-        arguments = {"Sheets": Sheets, "Position": Position}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.ScrollWorkbookTabs(*args, **arguments)
+    def ScrollWorkbookTabs(self, Sheets=None, Position=None):
+        params = [
+            Sheets if Sheets is not None else pythoncom.Missing,
+            Position if Position is not None else pythoncom.Missing,
+        ]
+        return self.window.ScrollWorkbookTabs(*params)
 
-    def SmallScroll(self, *args, Down=None, Up=None, ToRight=None, ToLeft=None):
-        arguments = {"Down": Down, "Up": Up, "ToRight": ToRight, "ToLeft": ToLeft}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.window.SmallScroll(*args, **arguments)
+    def SmallScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
+        params = [
+            Down if Down is not None else pythoncom.Missing,
+            Up if Up is not None else pythoncom.Missing,
+            ToRight if ToRight is not None else pythoncom.Missing,
+            ToLeft if ToLeft is not None else pythoncom.Missing,
+        ]
+        return self.window.SmallScroll(*params)
 
 
 class Windows:
@@ -22444,13 +23788,14 @@ class Windows:
     def Creator(self):
         return self.windows.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.windows.Item):
-            return self.windows.Item(*args, **arguments)
+            return self.windows.Item(*params)
         else:
-            return self.windows.GetItem(*args, **arguments)
+            return self.windows.GetItem(*params)
 
     @property
     def Parent(self):
@@ -22460,18 +23805,23 @@ class Windows:
     def SyncScrollingSideBySide(self):
         return self.windows.SyncScrollingSideBySide
 
-    def Arrange(self, *args, ArrangeStyle=None, ActiveWorkbook=None, SyncHorizontal=None, SyncVertical=None):
-        arguments = {"ArrangeStyle": ArrangeStyle, "ActiveWorkbook": ActiveWorkbook, "SyncHorizontal": SyncHorizontal, "SyncVertical": SyncVertical}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.windows.Arrange(*args, **arguments)
+    def Arrange(self, ArrangeStyle=None, ActiveWorkbook=None, SyncHorizontal=None, SyncVertical=None):
+        params = [
+            ArrangeStyle if ArrangeStyle is not None else pythoncom.Missing,
+            ActiveWorkbook if ActiveWorkbook is not None else pythoncom.Missing,
+            SyncHorizontal if SyncHorizontal is not None else pythoncom.Missing,
+            SyncVertical if SyncVertical is not None else pythoncom.Missing,
+        ]
+        return self.windows.Arrange(*params)
 
     def BreakSideBySide(self):
         return self.windows.BreakSideBySide()
 
-    def CompareSideBySideWith(self, *args, WindowName=None):
-        arguments = {"WindowName": WindowName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.windows.CompareSideBySideWith(*args, **arguments)
+    def CompareSideBySideWith(self, WindowName=None):
+        params = [
+            WindowName if WindowName is not None else pythoncom.Missing,
+        ]
+        return self.windows.CompareSideBySideWith(*params)
 
     def ResetPositionsSideBySide(self):
         self.windows.ResetPositionsSideBySide()
@@ -23078,10 +24428,13 @@ class Workbook:
     def XmlNamespaces(self):
         return XmlNamespaces(self.workbook.XmlNamespaces)
 
-    def AcceptAllChanges(self, *args, When=None, Who=None, Where=None):
-        arguments = {"When": When, "Who": Who, "Where": Where}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.AcceptAllChanges(*args, **arguments)
+    def AcceptAllChanges(self, When=None, Who=None, Where=None):
+        params = [
+            When if When is not None else pythoncom.Missing,
+            Who if Who is not None else pythoncom.Missing,
+            Where if Where is not None else pythoncom.Missing,
+        ]
+        self.workbook.AcceptAllChanges(*params)
 
     def Activate(self):
         self.workbook.Activate()
@@ -23089,51 +24442,71 @@ class Workbook:
     def AddToFavorites(self):
         self.workbook.AddToFavorites()
 
-    def ApplyTheme(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ApplyTheme(*args, **arguments)
+    def ApplyTheme(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.workbook.ApplyTheme(*params)
 
-    def BreakLink(self, *args, Name=None, Type=None):
-        arguments = {"Name": Name, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.BreakLink(*args, **arguments)
+    def BreakLink(self, Name=None, Type=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.workbook.BreakLink(*params)
 
     def CanCheckIn(self):
         return self.workbook.CanCheckIn()
 
-    def ChangeFileAccess(self, *args, Mode=None, WritePassword=None, Notify=None):
-        arguments = {"Mode": Mode, "WritePassword": WritePassword, "Notify": Notify}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ChangeFileAccess(*args, **arguments)
+    def ChangeFileAccess(self, Mode=None, WritePassword=None, Notify=None):
+        params = [
+            Mode if Mode is not None else pythoncom.Missing,
+            WritePassword if WritePassword is not None else pythoncom.Missing,
+            Notify if Notify is not None else pythoncom.Missing,
+        ]
+        self.workbook.ChangeFileAccess(*params)
 
-    def ChangeLink(self, *args, Name=None, NewName=None, Type=None):
-        arguments = {"Name": Name, "NewName": NewName, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ChangeLink(*args, **arguments)
+    def ChangeLink(self, Name=None, NewName=None, Type=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            NewName if NewName is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.workbook.ChangeLink(*params)
 
-    def CheckIn(self, *args, SaveChanges=None, Comments=None, MakePublic=None):
-        arguments = {"SaveChanges": SaveChanges, "Comments": Comments, "MakePublic": MakePublic}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.CheckIn(*args, **arguments)
+    def CheckIn(self, SaveChanges=None, Comments=None, MakePublic=None):
+        params = [
+            SaveChanges if SaveChanges is not None else pythoncom.Missing,
+            Comments if Comments is not None else pythoncom.Missing,
+            MakePublic if MakePublic is not None else pythoncom.Missing,
+        ]
+        self.workbook.CheckIn(*params)
 
-    def CheckInWithVersion(self, *args, SaveChanges=None, Comments=None, MakePublic=None, VersionType=None):
-        arguments = {"SaveChanges": SaveChanges, "Comments": Comments, "MakePublic": MakePublic, "VersionType": VersionType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.workbook.CheckInWithVersion(*args, **arguments)
+    def CheckInWithVersion(self, SaveChanges=None, Comments=None, MakePublic=None, VersionType=None):
+        params = [
+            SaveChanges if SaveChanges is not None else pythoncom.Missing,
+            Comments if Comments is not None else pythoncom.Missing,
+            MakePublic if MakePublic is not None else pythoncom.Missing,
+            VersionType if VersionType is not None else pythoncom.Missing,
+        ]
+        return self.workbook.CheckInWithVersion(*params)
 
-    def Close(self, *args, SaveChanges=None, FileName=None, RouteWorkbook=None):
-        arguments = {"SaveChanges": SaveChanges, "FileName": FileName, "RouteWorkbook": RouteWorkbook}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.Close(*args, **arguments)
+    def Close(self, SaveChanges=None, FileName=None, RouteWorkbook=None):
+        params = [
+            SaveChanges if SaveChanges is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            RouteWorkbook if RouteWorkbook is not None else pythoncom.Missing,
+        ]
+        self.workbook.Close(*params)
 
     def ConvertComments(self):
         self.workbook.ConvertComments()
 
-    def DeleteNumberFormat(self, *args, NumberFormat=None):
-        arguments = {"NumberFormat": NumberFormat}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.DeleteNumberFormat(*args, **arguments)
+    def DeleteNumberFormat(self, NumberFormat=None):
+        params = [
+            NumberFormat if NumberFormat is not None else pythoncom.Missing,
+        ]
+        self.workbook.DeleteNumberFormat(*params)
 
     def EnableConnections(self):
         self.workbook.EnableConnections()
@@ -23144,15 +24517,31 @@ class Workbook:
     def ExclusiveAccess(self):
         return self.workbook.ExclusiveAccess()
 
-    def ExportAsFixedFormat(self, *args, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
-        arguments = {"Type": Type, "FileName": FileName, "Quality": Quality, "IncludeDocProperties": IncludeDocProperties, "IgnorePrintAreas": IgnorePrintAreas, "From": From, "To": To, "OpenAfterPublish": OpenAfterPublish, "FixedFormatExtClassPtr": FixedFormatExtClassPtr}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ExportAsFixedFormat(*args, **arguments)
+    def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Quality if Quality is not None else pythoncom.Missing,
+            IncludeDocProperties if IncludeDocProperties is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            OpenAfterPublish if OpenAfterPublish is not None else pythoncom.Missing,
+            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
+        ]
+        self.workbook.ExportAsFixedFormat(*params)
 
-    def FollowHyperlink(self, *args, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
-        arguments = {"Address": Address, "SubAddress": SubAddress, "NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.FollowHyperlink(*args, **arguments)
+    def FollowHyperlink(self, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        params = [
+            Address if Address is not None else pythoncom.Missing,
+            SubAddress if SubAddress is not None else pythoncom.Missing,
+            NewWindow if NewWindow is not None else pythoncom.Missing,
+            AddHistory if AddHistory is not None else pythoncom.Missing,
+            ExtraInfo if ExtraInfo is not None else pythoncom.Missing,
+            Method if Method is not None else pythoncom.Missing,
+            HeaderInfo if HeaderInfo is not None else pythoncom.Missing,
+        ]
+        self.workbook.FollowHyperlink(*params)
 
     def ForwardMailer(self):
         self.workbook.ForwardMailer()
@@ -23163,92 +24552,133 @@ class Workbook:
     def GetWorkflowTemplates(self):
         return self.workbook.GetWorkflowTemplates()
 
-    def HighlightChangesOptions(self, *args, When=None, Who=None, Where=None):
-        arguments = {"When": When, "Who": Who, "Where": Where}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.HighlightChangesOptions(*args, **arguments)
+    def HighlightChangesOptions(self, When=None, Who=None, Where=None):
+        params = [
+            When if When is not None else pythoncom.Missing,
+            Who if Who is not None else pythoncom.Missing,
+            Where if Where is not None else pythoncom.Missing,
+        ]
+        self.workbook.HighlightChangesOptions(*params)
 
-    def LinkInfo(self, *args, Name=None, LinkInfo=None, Type=None, EditionRef=None):
-        arguments = {"Name": Name, "LinkInfo": LinkInfo, "Type": Type, "EditionRef": EditionRef}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.workbook.LinkInfo(*args, **arguments)
+    def LinkInfo(self, Name=None, LinkInfo=None, Type=None, EditionRef=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            LinkInfo if LinkInfo is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+            EditionRef if EditionRef is not None else pythoncom.Missing,
+        ]
+        return self.workbook.LinkInfo(*params)
 
-    def LinkSources(self, *args, Type=None):
-        arguments = {"Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.workbook.LinkSources(*args, **arguments)
+    def LinkSources(self, Type=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        return self.workbook.LinkSources(*params)
 
     def LockServerFile(self):
         self.workbook.LockServerFile()
 
-    def MergeWorkbook(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.MergeWorkbook(*args, **arguments)
+    def MergeWorkbook(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.workbook.MergeWorkbook(*params)
 
     def NewWindow(self):
         return self.workbook.NewWindow()
 
-    def OpenLinks(self, *args, Name=None, ReadOnly=None, Type=None):
-        arguments = {"Name": Name, "ReadOnly": ReadOnly, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.OpenLinks(*args, **arguments)
+    def OpenLinks(self, Name=None, ReadOnly=None, Type=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            ReadOnly if ReadOnly is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.workbook.OpenLinks(*params)
 
     def PivotCaches(self):
         return self.workbook.PivotCaches()
 
-    def Post(self, *args, DestName=None):
-        arguments = {"DestName": DestName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.Post(*args, **arguments)
+    def Post(self, DestName=None):
+        params = [
+            DestName if DestName is not None else pythoncom.Missing,
+        ]
+        self.workbook.Post(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName, "IgnorePrintAreas": IgnorePrintAreas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.workbook.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+        ]
+        return self.workbook.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        self.workbook.PrintPreview(*params)
 
-    def Protect(self, *args, Password=None, Structure=None, Windows=None):
-        arguments = {"Password": Password, "Structure": Structure, "Windows": Windows}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.Protect(*args, **arguments)
+    def Protect(self, Password=None, Structure=None, Windows=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+            Structure if Structure is not None else pythoncom.Missing,
+            Windows if Windows is not None else pythoncom.Missing,
+        ]
+        self.workbook.Protect(*params)
 
-    def ProtectSharing(self, *args, FileName=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, SharingPassword=None, FileFormat=None):
-        arguments = {"FileName": FileName, "Password": Password, "WriteResPassword": WriteResPassword, "ReadOnlyRecommended": ReadOnlyRecommended, "CreateBackup": CreateBackup, "SharingPassword": SharingPassword, "FileFormat": FileFormat}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ProtectSharing(*args, **arguments)
+    def ProtectSharing(self, FileName=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, SharingPassword=None, FileFormat=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            WriteResPassword if WriteResPassword is not None else pythoncom.Missing,
+            ReadOnlyRecommended if ReadOnlyRecommended is not None else pythoncom.Missing,
+            CreateBackup if CreateBackup is not None else pythoncom.Missing,
+            SharingPassword if SharingPassword is not None else pythoncom.Missing,
+            FileFormat if FileFormat is not None else pythoncom.Missing,
+        ]
+        self.workbook.ProtectSharing(*params)
 
-    def PurgeChangeHistoryNow(self, *args, Days=None, SharingPassword=None):
-        arguments = {"Days": Days, "SharingPassword": SharingPassword}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.PurgeChangeHistoryNow(*args, **arguments)
+    def PurgeChangeHistoryNow(self, Days=None, SharingPassword=None):
+        params = [
+            Days if Days is not None else pythoncom.Missing,
+            SharingPassword if SharingPassword is not None else pythoncom.Missing,
+        ]
+        self.workbook.PurgeChangeHistoryNow(*params)
 
     def RefreshAll(self):
         self.workbook.RefreshAll()
 
-    def RejectAllChanges(self, *args, When=None, Who=None, Where=None):
-        arguments = {"When": When, "Who": Who, "Where": Where}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.RejectAllChanges(*args, **arguments)
+    def RejectAllChanges(self, When=None, Who=None, Where=None):
+        params = [
+            When if When is not None else pythoncom.Missing,
+            Who if Who is not None else pythoncom.Missing,
+            Where if Where is not None else pythoncom.Missing,
+        ]
+        self.workbook.RejectAllChanges(*params)
 
-    def ReloadAs(self, *args, Encoding=None):
-        arguments = {"Encoding": Encoding}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ReloadAs(*args, **arguments)
+    def ReloadAs(self, Encoding=None):
+        params = [
+            Encoding if Encoding is not None else pythoncom.Missing,
+        ]
+        self.workbook.ReloadAs(*params)
 
-    def RemoveDocumentInformation(self, *args, RemoveDocInfoType=None):
-        arguments = {"RemoveDocInfoType": RemoveDocInfoType}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.RemoveDocumentInformation(*args, **arguments)
+    def RemoveDocumentInformation(self, RemoveDocInfoType=None):
+        params = [
+            RemoveDocInfoType if RemoveDocInfoType is not None else pythoncom.Missing,
+        ]
+        self.workbook.RemoveDocumentInformation(*params)
 
-    def RemoveUser(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.RemoveUser(*args, **arguments)
+    def RemoveUser(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        self.workbook.RemoveUser(*params)
 
     def Reply(self):
         self.workbook.Reply()
@@ -23256,100 +24686,147 @@ class Workbook:
     def ReplyAll(self):
         self.workbook.ReplyAll()
 
-    def ReplyWithChanges(self, *args, ShowMessage=None):
-        arguments = {"ShowMessage": ShowMessage}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.ReplyWithChanges(*args, **arguments)
+    def ReplyWithChanges(self, ShowMessage=None):
+        params = [
+            ShowMessage if ShowMessage is not None else pythoncom.Missing,
+        ]
+        self.workbook.ReplyWithChanges(*params)
 
     def ResetColors(self):
         self.workbook.ResetColors()
 
-    def RunAutoMacros(self, *args, Which=None):
-        arguments = {"Which": Which}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.RunAutoMacros(*args, **arguments)
+    def RunAutoMacros(self, Which=None):
+        params = [
+            Which if Which is not None else pythoncom.Missing,
+        ]
+        self.workbook.RunAutoMacros(*params)
 
     def Save(self):
         self.workbook.Save()
 
-    def SaveAs(self, *args, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AccessMode=None, ConflictResolution=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
-        arguments = {"FileName": FileName, "FileFormat": FileFormat, "Password": Password, "WriteResPassword": WriteResPassword, "ReadOnlyRecommended": ReadOnlyRecommended, "CreateBackup": CreateBackup, "AccessMode": AccessMode, "ConflictResolution": ConflictResolution, "AddToMru": AddToMru, "TextCodepage": TextCodepage, "TextVisualLayout": TextVisualLayout, "Local": Local}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SaveAs(*args, **arguments)
+    def SaveAs(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AccessMode=None, ConflictResolution=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            FileFormat if FileFormat is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            WriteResPassword if WriteResPassword is not None else pythoncom.Missing,
+            ReadOnlyRecommended if ReadOnlyRecommended is not None else pythoncom.Missing,
+            CreateBackup if CreateBackup is not None else pythoncom.Missing,
+            AccessMode if AccessMode is not None else pythoncom.Missing,
+            ConflictResolution if ConflictResolution is not None else pythoncom.Missing,
+            AddToMru if AddToMru is not None else pythoncom.Missing,
+            TextCodepage if TextCodepage is not None else pythoncom.Missing,
+            TextVisualLayout if TextVisualLayout is not None else pythoncom.Missing,
+            Local if Local is not None else pythoncom.Missing,
+        ]
+        self.workbook.SaveAs(*params)
 
-    def SaveAsXMLData(self, *args, FileName=None, Map=None):
-        arguments = {"FileName": FileName, "Map": Map}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SaveAsXMLData(*args, **arguments)
+    def SaveAsXMLData(self, FileName=None, Map=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            Map if Map is not None else pythoncom.Missing,
+        ]
+        self.workbook.SaveAsXMLData(*params)
 
-    def SaveCopyAs(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SaveCopyAs(*args, **arguments)
+    def SaveCopyAs(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.workbook.SaveCopyAs(*params)
 
-    def SendFaxOverInternet(self, *args, Recipients=None, Subject=None, ShowMessage=None):
-        arguments = {"Recipients": Recipients, "Subject": Subject, "ShowMessage": ShowMessage}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SendFaxOverInternet(*args, **arguments)
+    def SendFaxOverInternet(self, Recipients=None, Subject=None, ShowMessage=None):
+        params = [
+            Recipients if Recipients is not None else pythoncom.Missing,
+            Subject if Subject is not None else pythoncom.Missing,
+            ShowMessage if ShowMessage is not None else pythoncom.Missing,
+        ]
+        self.workbook.SendFaxOverInternet(*params)
 
-    def SendForReview(self, *args, Recipients=None, Subject=None, ShowMessage=None, IncludeAttachment=None):
-        arguments = {"Recipients": Recipients, "Subject": Subject, "ShowMessage": ShowMessage, "IncludeAttachment": IncludeAttachment}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SendForReview(*args, **arguments)
+    def SendForReview(self, Recipients=None, Subject=None, ShowMessage=None, IncludeAttachment=None):
+        params = [
+            Recipients if Recipients is not None else pythoncom.Missing,
+            Subject if Subject is not None else pythoncom.Missing,
+            ShowMessage if ShowMessage is not None else pythoncom.Missing,
+            IncludeAttachment if IncludeAttachment is not None else pythoncom.Missing,
+        ]
+        self.workbook.SendForReview(*params)
 
-    def SendMail(self, *args, Recipients=None, Subject=None, ReturnReceipt=None):
-        arguments = {"Recipients": Recipients, "Subject": Subject, "ReturnReceipt": ReturnReceipt}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SendMail(*args, **arguments)
+    def SendMail(self, Recipients=None, Subject=None, ReturnReceipt=None):
+        params = [
+            Recipients if Recipients is not None else pythoncom.Missing,
+            Subject if Subject is not None else pythoncom.Missing,
+            ReturnReceipt if ReturnReceipt is not None else pythoncom.Missing,
+        ]
+        self.workbook.SendMail(*params)
 
-    def SendMailer(self, *args, FileFormat=None, Priority=None):
-        arguments = {"FileFormat": FileFormat, "Priority": Priority}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SendMailer(*args, **arguments)
+    def SendMailer(self, FileFormat=None, Priority=None):
+        params = [
+            FileFormat if FileFormat is not None else pythoncom.Missing,
+            Priority if Priority is not None else pythoncom.Missing,
+        ]
+        self.workbook.SendMailer(*params)
 
-    def SetLinkOnData(self, *args, Name=None, Procedure=None):
-        arguments = {"Name": Name, "Procedure": Procedure}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SetLinkOnData(*args, **arguments)
+    def SetLinkOnData(self, Name=None, Procedure=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Procedure if Procedure is not None else pythoncom.Missing,
+        ]
+        self.workbook.SetLinkOnData(*params)
 
-    def SetPasswordEncryptionOptions(self, *args, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
-        arguments = {"PasswordEncryptionProvider": PasswordEncryptionProvider, "PasswordEncryptionAlgorithm": PasswordEncryptionAlgorithm, "PasswordEncryptionKeyLength": PasswordEncryptionKeyLength, "PasswordEncryptionFileProperties": PasswordEncryptionFileProperties}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.SetPasswordEncryptionOptions(*args, **arguments)
+    def SetPasswordEncryptionOptions(self, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
+        params = [
+            PasswordEncryptionProvider if PasswordEncryptionProvider is not None else pythoncom.Missing,
+            PasswordEncryptionAlgorithm if PasswordEncryptionAlgorithm is not None else pythoncom.Missing,
+            PasswordEncryptionKeyLength if PasswordEncryptionKeyLength is not None else pythoncom.Missing,
+            PasswordEncryptionFileProperties if PasswordEncryptionFileProperties is not None else pythoncom.Missing,
+        ]
+        self.workbook.SetPasswordEncryptionOptions(*params)
 
     def ToggleFormsDesign(self):
         self.workbook.ToggleFormsDesign()
 
-    def Unprotect(self, *args, Password=None):
-        arguments = {"Password": Password}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.Unprotect(*args, **arguments)
+    def Unprotect(self, Password=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+        ]
+        self.workbook.Unprotect(*params)
 
-    def UnprotectSharing(self, *args, SharingPassword=None):
-        arguments = {"SharingPassword": SharingPassword}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.UnprotectSharing(*args, **arguments)
+    def UnprotectSharing(self, SharingPassword=None):
+        params = [
+            SharingPassword if SharingPassword is not None else pythoncom.Missing,
+        ]
+        self.workbook.UnprotectSharing(*params)
 
     def UpdateFromFile(self):
         self.workbook.UpdateFromFile()
 
-    def UpdateLink(self, *args, Name=None, Type=None):
-        arguments = {"Name": Name, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbook.UpdateLink(*args, **arguments)
+    def UpdateLink(self, Name=None, Type=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.workbook.UpdateLink(*params)
 
     def WebPagePreview(self):
         self.workbook.WebPagePreview()
 
-    def XmlImport(self, *args, Url=None, ImportMap=None, Overwrite=None, Destination=None):
-        arguments = {"Url": Url, "ImportMap": ImportMap, "Overwrite": Overwrite, "Destination": Destination}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XlXmlImportResult(self.workbook.XmlImport(*args, **arguments))
+    def XmlImport(self, Url=None, ImportMap=None, Overwrite=None, Destination=None):
+        params = [
+            Url if Url is not None else pythoncom.Missing,
+            ImportMap if ImportMap is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+            Destination if Destination is not None else pythoncom.Missing,
+        ]
+        return XlXmlImportResult(self.workbook.XmlImport(*params))
 
-    def XmlImportXml(self, *args, Data=None, ImportMap=None, Overwrite=None, Destination=None):
-        arguments = {"Data": Data, "ImportMap": ImportMap, "Overwrite": Overwrite, "Destination": Destination}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XlXmlImportResult(self.workbook.XmlImportXml(*args, **arguments))
+    def XmlImportXml(self, Data=None, ImportMap=None, Overwrite=None, Destination=None):
+        params = [
+            Data if Data is not None else pythoncom.Missing,
+            ImportMap if ImportMap is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+            Destination if Destination is not None else pythoncom.Missing,
+        ]
+        return XlXmlImportResult(self.workbook.XmlImportXml(*params))
 
 
 class Workbooks:
@@ -23372,55 +24849,100 @@ class Workbooks:
     def Creator(self):
         return self.workbooks.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.workbooks.Item):
-            return self.workbooks.Item(*args, **arguments)
+            return self.workbooks.Item(*params)
         else:
-            return self.workbooks.GetItem(*args, **arguments)
+            return self.workbooks.GetItem(*params)
 
     @property
     def Parent(self):
         return self.workbooks.Parent
 
-    def Add(self, *args, Template=None):
-        arguments = {"Template": Template}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Workbook(self.workbooks.Add(*args, **arguments))
+    def Add(self, Template=None):
+        params = [
+            Template if Template is not None else pythoncom.Missing,
+        ]
+        return Workbook(self.workbooks.Add(*params))
 
-    def CanCheckOut(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.workbooks.CanCheckOut(*args, **arguments)
+    def CanCheckOut(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        return self.workbooks.CanCheckOut(*params)
 
-    def CheckOut(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbooks.CheckOut(*args, **arguments)
+    def CheckOut(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.workbooks.CheckOut(*params)
 
     def Close(self):
         self.workbooks.Close()
 
-    def Open(self, *args, FileName=None, UpdateLinks=None, ReadOnly=None, Format=None, Password=None, WriteResPassword=None, IgnoreReadOnlyRecommended=None, Origin=None, Delimiter=None, Editable=None, Notify=None, Converter=None, AddToMru=None, Local=None, CorruptLoad=None):
-        arguments = {"FileName": FileName, "UpdateLinks": UpdateLinks, "ReadOnly": ReadOnly, "Format": Format, "Password": Password, "WriteResPassword": WriteResPassword, "IgnoreReadOnlyRecommended": IgnoreReadOnlyRecommended, "Origin": Origin, "Delimiter": Delimiter, "Editable": Editable, "Notify": Notify, "Converter": Converter, "AddToMru": AddToMru, "Local": Local, "CorruptLoad": CorruptLoad}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Workbook(self.workbooks.Open(*args, **arguments))
+    def Open(self, FileName=None, UpdateLinks=None, ReadOnly=None, Format=None, Password=None, WriteResPassword=None, IgnoreReadOnlyRecommended=None, Origin=None, Delimiter=None, Editable=None, Notify=None, Converter=None, AddToMru=None, Local=None, CorruptLoad=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            UpdateLinks if UpdateLinks is not None else pythoncom.Missing,
+            ReadOnly if ReadOnly is not None else pythoncom.Missing,
+            Format if Format is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            WriteResPassword if WriteResPassword is not None else pythoncom.Missing,
+            IgnoreReadOnlyRecommended if IgnoreReadOnlyRecommended is not None else pythoncom.Missing,
+            Origin if Origin is not None else pythoncom.Missing,
+            Delimiter if Delimiter is not None else pythoncom.Missing,
+            Editable if Editable is not None else pythoncom.Missing,
+            Notify if Notify is not None else pythoncom.Missing,
+            Converter if Converter is not None else pythoncom.Missing,
+            AddToMru if AddToMru is not None else pythoncom.Missing,
+            Local if Local is not None else pythoncom.Missing,
+            CorruptLoad if CorruptLoad is not None else pythoncom.Missing,
+        ]
+        return Workbook(self.workbooks.Open(*params))
 
-    def OpenDatabase(self, *args, FileName=None, CommandText=None, CommandType=None, BackgroundQuery=None, ImportDataAs=None):
-        arguments = {"FileName": FileName, "CommandText": CommandText, "CommandType": CommandType, "BackgroundQuery": BackgroundQuery, "ImportDataAs": ImportDataAs}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Workbook(self.workbooks.OpenDatabase(*args, **arguments))
+    def OpenDatabase(self, FileName=None, CommandText=None, CommandType=None, BackgroundQuery=None, ImportDataAs=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            CommandText if CommandText is not None else pythoncom.Missing,
+            CommandType if CommandType is not None else pythoncom.Missing,
+            BackgroundQuery if BackgroundQuery is not None else pythoncom.Missing,
+            ImportDataAs if ImportDataAs is not None else pythoncom.Missing,
+        ]
+        return Workbook(self.workbooks.OpenDatabase(*params))
 
-    def OpenText(self, *args, FileName=None, Origin=None, StartRow=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, TextVisualLayout=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None, Local=None):
-        arguments = {"FileName": FileName, "Origin": Origin, "StartRow": StartRow, "DataType": DataType, "TextQualifier": TextQualifier, "ConsecutiveDelimiter": ConsecutiveDelimiter, "Tab": Tab, "Semicolon": Semicolon, "Comma": Comma, "Space": Space, "Other": Other, "OtherChar": OtherChar, "FieldInfo": FieldInfo, "TextVisualLayout": TextVisualLayout, "DecimalSeparator": DecimalSeparator, "ThousandsSeparator": ThousandsSeparator, "TrailingMinusNumbers": TrailingMinusNumbers, "Local": Local}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.workbooks.OpenText(*args, **arguments)
+    def OpenText(self, FileName=None, Origin=None, StartRow=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, TextVisualLayout=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None, Local=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            Origin if Origin is not None else pythoncom.Missing,
+            StartRow if StartRow is not None else pythoncom.Missing,
+            DataType if DataType is not None else pythoncom.Missing,
+            TextQualifier if TextQualifier is not None else pythoncom.Missing,
+            ConsecutiveDelimiter if ConsecutiveDelimiter is not None else pythoncom.Missing,
+            Tab if Tab is not None else pythoncom.Missing,
+            Semicolon if Semicolon is not None else pythoncom.Missing,
+            Comma if Comma is not None else pythoncom.Missing,
+            Space if Space is not None else pythoncom.Missing,
+            Other if Other is not None else pythoncom.Missing,
+            OtherChar if OtherChar is not None else pythoncom.Missing,
+            FieldInfo if FieldInfo is not None else pythoncom.Missing,
+            TextVisualLayout if TextVisualLayout is not None else pythoncom.Missing,
+            DecimalSeparator if DecimalSeparator is not None else pythoncom.Missing,
+            ThousandsSeparator if ThousandsSeparator is not None else pythoncom.Missing,
+            TrailingMinusNumbers if TrailingMinusNumbers is not None else pythoncom.Missing,
+            Local if Local is not None else pythoncom.Missing,
+        ]
+        self.workbooks.OpenText(*params)
 
-    def OpenXML(self, *args, FileName=None, Stylesheets=None, LoadOption=None):
-        arguments = {"FileName": FileName, "Stylesheets": Stylesheets, "LoadOption": LoadOption}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Workbook(self.workbooks.OpenXML(*args, **arguments))
+    def OpenXML(self, FileName=None, Stylesheets=None, LoadOption=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            Stylesheets if Stylesheets is not None else pythoncom.Missing,
+            LoadOption if LoadOption is not None else pythoncom.Missing,
+        ]
+        return Workbook(self.workbooks.OpenXML(*params))
 
 
 class Worksheet:
@@ -23444,13 +24966,15 @@ class Worksheet:
     def AutoFilterMode(self, value):
         self.worksheet.AutoFilterMode = value
 
-    def Cells(self, *args, RowIndex=None, ColumnIndex=None):
-        arguments = {"RowIndex": RowIndex, "ColumnIndex": ColumnIndex}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Cells(self, RowIndex=None, ColumnIndex=None):
+        params = [
+            RowIndex if RowIndex is not None else pythoncom.Missing,
+            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
+        ]
         if callable(self.worksheet.Cells):
-            return Range(self.worksheet.Cells(*args, **arguments))
+            return Range(self.worksheet.Cells(*params))
         else:
-            return Range(self.worksheet.GetCells(*args, **arguments))
+            return Range(self.worksheet.GetCells(*params))
 
     @property
     def CircularReference(self):
@@ -23636,13 +25160,15 @@ class Worksheet:
     def QueryTables(self):
         return QueryTables(self.worksheet.QueryTables)
 
-    def Range(self, *args, Cell1=None, Cell2=None):
-        arguments = {"Cell1": Cell1, "Cell2": Cell2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Range(self, Cell1=None, Cell2=None):
+        params = [
+            Cell1 if Cell1 is not None else pythoncom.Missing,
+            Cell2 if Cell2 is not None else pythoncom.Missing,
+        ]
         if callable(self.worksheet.Range):
-            return Range(self.worksheet.Range(*args, **arguments))
+            return Range(self.worksheet.Range(*params))
         else:
-            return Range(self.worksheet.GetRange(*args, **arguments))
+            return Range(self.worksheet.GetRange(*params))
 
     @property
     def Rows(self):
@@ -23722,15 +25248,20 @@ class Worksheet:
     def Calculate(self):
         self.worksheet.Calculate()
 
-    def ChartObjects(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.ChartObjects(*args, **arguments)
+    def ChartObjects(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.ChartObjects(*params)
 
-    def CheckSpelling(self, *args, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
-        arguments = {"CustomDictionary": CustomDictionary, "IgnoreUppercase": IgnoreUppercase, "AlwaysSuggest": AlwaysSuggest, "SpellLang": SpellLang}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.CheckSpelling(*args, **arguments)
+    def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
+        params = [
+            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
+            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
+            AlwaysSuggest if AlwaysSuggest is not None else pythoncom.Missing,
+            SpellLang if SpellLang is not None else pythoncom.Missing,
+        ]
+        self.worksheet.CheckSpelling(*params)
 
     def CircleInvalid(self):
         self.worksheet.CircleInvalid()
@@ -23741,91 +25272,171 @@ class Worksheet:
     def ClearCircles(self):
         self.worksheet.ClearCircles()
 
-    def Copy(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.Copy(*args, **arguments)
+    def Copy(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.worksheet.Copy(*params)
 
     def Delete(self):
         return self.worksheet.Delete()
 
-    def Evaluate(self, *args, Name=None):
-        arguments = {"Name": Name}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.Evaluate(*args, **arguments)
+    def Evaluate(self, Name=None):
+        params = [
+            Name if Name is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.Evaluate(*params)
 
-    def ExportAsFixedFormat(self, *args, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
-        arguments = {"Type": Type, "FileName": FileName, "Quality": Quality, "IncludeDocProperties": IncludeDocProperties, "IgnorePrintAreas": IgnorePrintAreas, "From": From, "To": To, "OpenAfterPublish": OpenAfterPublish, "FixedFormatExtClassPtr": FixedFormatExtClassPtr}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.ExportAsFixedFormat(*args, **arguments)
+    def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
+        params = [
+            Type if Type is not None else pythoncom.Missing,
+            FileName if FileName is not None else pythoncom.Missing,
+            Quality if Quality is not None else pythoncom.Missing,
+            IncludeDocProperties if IncludeDocProperties is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            OpenAfterPublish if OpenAfterPublish is not None else pythoncom.Missing,
+            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
+        ]
+        self.worksheet.ExportAsFixedFormat(*params)
 
-    def Move(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.Move(*args, **arguments)
+    def Move(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.worksheet.Move(*params)
 
-    def OLEObjects(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.OLEObjects(*args, **arguments)
+    def OLEObjects(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.OLEObjects(*params)
 
-    def Paste(self, *args, Destination=None, Link=None):
-        arguments = {"Destination": Destination, "Link": Link}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.Paste(*args, **arguments)
+    def Paste(self, Destination=None, Link=None):
+        params = [
+            Destination if Destination is not None else pythoncom.Missing,
+            Link if Link is not None else pythoncom.Missing,
+        ]
+        self.worksheet.Paste(*params)
 
-    def PasteSpecial(self, *args, Format=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, NoHTMLFormatting=None):
-        arguments = {"Format": Format, "Link": Link, "DisplayAsIcon": DisplayAsIcon, "IconFileName": IconFileName, "IconIndex": IconIndex, "IconLabel": IconLabel, "NoHTMLFormatting": NoHTMLFormatting}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.PasteSpecial(*args, **arguments)
+    def PasteSpecial(self, Format=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, NoHTMLFormatting=None):
+        params = [
+            Format if Format is not None else pythoncom.Missing,
+            Link if Link is not None else pythoncom.Missing,
+            DisplayAsIcon if DisplayAsIcon is not None else pythoncom.Missing,
+            IconFileName if IconFileName is not None else pythoncom.Missing,
+            IconIndex if IconIndex is not None else pythoncom.Missing,
+            IconLabel if IconLabel is not None else pythoncom.Missing,
+            NoHTMLFormatting if NoHTMLFormatting is not None else pythoncom.Missing,
+        ]
+        self.worksheet.PasteSpecial(*params)
 
-    def PivotTables(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotTable(self.worksheet.PivotTables(*args, **arguments))
+    def PivotTables(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return PivotTable(self.worksheet.PivotTables(*params))
 
-    def PivotTableWizard(self, *args, SourceType=None, SourceData=None, TableDestination=None, TableName=None, RowGrand=None, ColumnGrand=None, SaveData=None, HasAutoFormat=None, AutoPage=None, Reserved=None, BackgroundQuery=None, OptimizeCache=None, PageFieldOrder=None, PageFieldWrapCount=None, ReadData=None, Connection=None):
-        arguments = {"SourceType": SourceType, "SourceData": SourceData, "TableDestination": TableDestination, "TableName": TableName, "RowGrand": RowGrand, "ColumnGrand": ColumnGrand, "SaveData": SaveData, "HasAutoFormat": HasAutoFormat, "AutoPage": AutoPage, "Reserved": Reserved, "BackgroundQuery": BackgroundQuery, "OptimizeCache": OptimizeCache, "PageFieldOrder": PageFieldOrder, "PageFieldWrapCount": PageFieldWrapCount, "ReadData": ReadData, "Connection": Connection}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return PivotTable(self.worksheet.PivotTableWizard(*args, **arguments))
+    def PivotTableWizard(self, SourceType=None, SourceData=None, TableDestination=None, TableName=None, RowGrand=None, ColumnGrand=None, SaveData=None, HasAutoFormat=None, AutoPage=None, Reserved=None, BackgroundQuery=None, OptimizeCache=None, PageFieldOrder=None, PageFieldWrapCount=None, ReadData=None, Connection=None):
+        params = [
+            SourceType if SourceType is not None else pythoncom.Missing,
+            SourceData if SourceData is not None else pythoncom.Missing,
+            TableDestination if TableDestination is not None else pythoncom.Missing,
+            TableName if TableName is not None else pythoncom.Missing,
+            RowGrand if RowGrand is not None else pythoncom.Missing,
+            ColumnGrand if ColumnGrand is not None else pythoncom.Missing,
+            SaveData if SaveData is not None else pythoncom.Missing,
+            HasAutoFormat if HasAutoFormat is not None else pythoncom.Missing,
+            AutoPage if AutoPage is not None else pythoncom.Missing,
+            Reserved if Reserved is not None else pythoncom.Missing,
+            BackgroundQuery if BackgroundQuery is not None else pythoncom.Missing,
+            OptimizeCache if OptimizeCache is not None else pythoncom.Missing,
+            PageFieldOrder if PageFieldOrder is not None else pythoncom.Missing,
+            PageFieldWrapCount if PageFieldWrapCount is not None else pythoncom.Missing,
+            ReadData if ReadData is not None else pythoncom.Missing,
+            Connection if Connection is not None else pythoncom.Missing,
+        ]
+        return PivotTable(self.worksheet.PivotTableWizard(*params))
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName, "IgnorePrintAreas": IgnorePrintAreas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        self.worksheet.PrintPreview(*params)
 
-    def Protect(self, *args, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None, AllowFormattingCells=None, AllowFormattingColumns=None, AllowFormattingRows=None, AllowInsertingColumns=None, AllowInsertingRows=None, AllowInsertingHyperlinks=None, AllowDeletingColumns=None, AllowDeletingRows=None, AllowSorting=None, AllowFiltering=None, AllowUsingPivotTables=None):
-        arguments = {"Password": Password, "DrawingObjects": DrawingObjects, "Contents": Contents, "Scenarios": Scenarios, "UserInterfaceOnly": UserInterfaceOnly, "AllowFormattingCells": AllowFormattingCells, "AllowFormattingColumns": AllowFormattingColumns, "AllowFormattingRows": AllowFormattingRows, "AllowInsertingColumns": AllowInsertingColumns, "AllowInsertingRows": AllowInsertingRows, "AllowInsertingHyperlinks": AllowInsertingHyperlinks, "AllowDeletingColumns": AllowDeletingColumns, "AllowDeletingRows": AllowDeletingRows, "AllowSorting": AllowSorting, "AllowFiltering": AllowFiltering, "AllowUsingPivotTables": AllowUsingPivotTables}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.Protect(*args, **arguments)
+    def Protect(self, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None, AllowFormattingCells=None, AllowFormattingColumns=None, AllowFormattingRows=None, AllowInsertingColumns=None, AllowInsertingRows=None, AllowInsertingHyperlinks=None, AllowDeletingColumns=None, AllowDeletingRows=None, AllowSorting=None, AllowFiltering=None, AllowUsingPivotTables=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+            DrawingObjects if DrawingObjects is not None else pythoncom.Missing,
+            Contents if Contents is not None else pythoncom.Missing,
+            Scenarios if Scenarios is not None else pythoncom.Missing,
+            UserInterfaceOnly if UserInterfaceOnly is not None else pythoncom.Missing,
+            AllowFormattingCells if AllowFormattingCells is not None else pythoncom.Missing,
+            AllowFormattingColumns if AllowFormattingColumns is not None else pythoncom.Missing,
+            AllowFormattingRows if AllowFormattingRows is not None else pythoncom.Missing,
+            AllowInsertingColumns if AllowInsertingColumns is not None else pythoncom.Missing,
+            AllowInsertingRows if AllowInsertingRows is not None else pythoncom.Missing,
+            AllowInsertingHyperlinks if AllowInsertingHyperlinks is not None else pythoncom.Missing,
+            AllowDeletingColumns if AllowDeletingColumns is not None else pythoncom.Missing,
+            AllowDeletingRows if AllowDeletingRows is not None else pythoncom.Missing,
+            AllowSorting if AllowSorting is not None else pythoncom.Missing,
+            AllowFiltering if AllowFiltering is not None else pythoncom.Missing,
+            AllowUsingPivotTables if AllowUsingPivotTables is not None else pythoncom.Missing,
+        ]
+        self.worksheet.Protect(*params)
 
     def ResetAllPageBreaks(self):
         self.worksheet.ResetAllPageBreaks()
 
-    def SaveAs(self, *args, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
-        arguments = {"FileName": FileName, "FileFormat": FileFormat, "Password": Password, "WriteResPassword": WriteResPassword, "ReadOnlyRecommended": ReadOnlyRecommended, "CreateBackup": CreateBackup, "AddToMru": AddToMru, "TextCodepage": TextCodepage, "TextVisualLayout": TextVisualLayout, "Local": Local}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.SaveAs(*args, **arguments)
+    def SaveAs(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+            FileFormat if FileFormat is not None else pythoncom.Missing,
+            Password if Password is not None else pythoncom.Missing,
+            WriteResPassword if WriteResPassword is not None else pythoncom.Missing,
+            ReadOnlyRecommended if ReadOnlyRecommended is not None else pythoncom.Missing,
+            CreateBackup if CreateBackup is not None else pythoncom.Missing,
+            AddToMru if AddToMru is not None else pythoncom.Missing,
+            TextCodepage if TextCodepage is not None else pythoncom.Missing,
+            TextVisualLayout if TextVisualLayout is not None else pythoncom.Missing,
+            Local if Local is not None else pythoncom.Missing,
+        ]
+        self.worksheet.SaveAs(*params)
 
-    def Scenarios(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.Scenarios(*args, **arguments)
+    def Scenarios(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.Scenarios(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        self.worksheet.Select(*params)
 
-    def SetBackgroundPicture(self, *args, FileName=None):
-        arguments = {"FileName": FileName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.SetBackgroundPicture(*args, **arguments)
+    def SetBackgroundPicture(self, FileName=None):
+        params = [
+            FileName if FileName is not None else pythoncom.Missing,
+        ]
+        self.worksheet.SetBackgroundPicture(*params)
 
     def ShowAllData(self):
         self.worksheet.ShowAllData()
@@ -23833,20 +25444,27 @@ class Worksheet:
     def ShowDataForm(self):
         self.worksheet.ShowDataForm()
 
-    def Unprotect(self, *args, Password=None):
-        arguments = {"Password": Password}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheet.Unprotect(*args, **arguments)
+    def Unprotect(self, Password=None):
+        params = [
+            Password if Password is not None else pythoncom.Missing,
+        ]
+        self.worksheet.Unprotect(*params)
 
-    def XmlDataQuery(self, *args, XPath=None, SelectionNamespaces=None, Map=None):
-        arguments = {"XPath": XPath, "SelectionNamespaces": SelectionNamespaces, "Map": Map}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.XmlDataQuery(*args, **arguments)
+    def XmlDataQuery(self, XPath=None, SelectionNamespaces=None, Map=None):
+        params = [
+            XPath if XPath is not None else pythoncom.Missing,
+            SelectionNamespaces if SelectionNamespaces is not None else pythoncom.Missing,
+            Map if Map is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.XmlDataQuery(*params)
 
-    def XmlMapQuery(self, *args, XPath=None, SelectionNamespaces=None, Map=None):
-        arguments = {"XPath": XPath, "SelectionNamespaces": SelectionNamespaces, "Map": Map}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheet.XmlMapQuery(*args, **arguments)
+    def XmlMapQuery(self, XPath=None, SelectionNamespaces=None, Map=None):
+        params = [
+            XPath if XPath is not None else pythoncom.Missing,
+            SelectionNamespaces if SelectionNamespaces is not None else pythoncom.Missing,
+            Map if Map is not None else pythoncom.Missing,
+        ]
+        return self.worksheet.XmlMapQuery(*params)
 
 
 class WorksheetFunction:
@@ -23866,1668 +25484,3722 @@ class WorksheetFunction:
     def Parent(self):
         return self.worksheetfunction.Parent
 
-    def AccrInt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AccrInt(*args, **arguments)
-
-    def AccrIntM(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AccrIntM(*args, **arguments)
-
-    def Acos(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Acos(*args, **arguments)
-
-    def Acosh(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Acosh(*args, **arguments)
-
-    def Aggregate(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Aggregate(*args, **arguments)
-
-    def AmorDegrc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AmorDegrc(*args, **arguments)
-
-    def AmorLinc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AmorLinc(*args, **arguments)
-
-    def And(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.And(*args, **arguments)
-
-    def Asc(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Asc(*args, **arguments)
-
-    def Asin(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Asin(*args, **arguments)
-
-    def Asinh(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Asinh(*args, **arguments)
-
-    def Atan2(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Atan2(*args, **arguments)
-
-    def Atanh(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Atanh(*args, **arguments)
-
-    def AveDev(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AveDev(*args, **arguments)
-
-    def Average(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Average(*args, **arguments)
-
-    def AverageIf(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AverageIf(*args, **arguments)
-
-    def AverageIfs(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.AverageIfs(*args, **arguments)
-
-    def BahtText(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BahtText(*args, **arguments)
-
-    def BesselI(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BesselI(*args, **arguments)
-
-    def BesselJ(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BesselJ(*args, **arguments)
-
-    def BesselK(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BesselK(*args, **arguments)
-
-    def BesselY(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BesselY(*args, **arguments)
-
-    def BetaDist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BetaDist(*args, **arguments)
-
-    def BetaInv(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BetaInv(*args, **arguments)
-
-    def Beta_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Beta_Dist(*args, **arguments)
-
-    def Beta_Inv(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Beta_Inv(*args, **arguments)
-
-    def Bin2Dec(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Bin2Dec(*args, **arguments)
-
-    def Bin2Hex(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Bin2Hex(*args, **arguments)
-
-    def Bin2Oct(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Bin2Oct(*args, **arguments)
-
-    def BinomDist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.BinomDist(*args, **arguments)
-
-    def Binom_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Binom_Dist(*args, **arguments)
-
-    def Binom_Inv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Binom_Inv(*args, **arguments)
-
-    def Ceiling(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ceiling(*args, **arguments)
-
-    def Ceiling_Precise(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ceiling_Precise(*args, **arguments)
-
-    def ChiDist(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiDist(*args, **arguments)
-
-    def ChiInv(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiInv(*args, **arguments)
-
-    def ChiSq_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiSq_Dist(*args, **arguments)
-
-    def ChiSq_Dist_RT(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiSq_Dist_RT(*args, **arguments)
-
-    def ChiSq_Inv(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiSq_Inv(*args, **arguments)
-
-    def ChiSq_Inv_RT(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiSq_Inv_RT(*args, **arguments)
-
-    def ChiSq_Test(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiSq_Test(*args, **arguments)
-
-    def ChiTest(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ChiTest(*args, **arguments)
-
-    def Choose(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Choose(*args, **arguments)
-
-    def Clean(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Clean(*args, **arguments)
-
-    def Combin(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Combin(*args, **arguments)
-
-    def Complex(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Complex(*args, **arguments)
-
-    def Confidence(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Confidence(*args, **arguments)
-
-    def Confidence_Norm(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Confidence_Norm(*args, **arguments)
-
-    def Confidence_T(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Confidence_T(*args, **arguments)
-
-    def Convert(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Convert(*args, **arguments)
-
-    def Correl(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Correl(*args, **arguments)
-
-    def Cosh(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Cosh(*args, **arguments)
-
-    def Count(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Count(*args, **arguments)
-
-    def CountA(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CountA(*args, **arguments)
-
-    def CountBlank(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CountBlank(*args, **arguments)
-
-    def CountIf(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CountIf(*args, **arguments)
-
-    def CountIfs(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CountIfs(*args, **arguments)
-
-    def CoupDayBs(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CoupDayBs(*args, **arguments)
-
-    def CoupDays(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CoupDays(*args, **arguments)
-
-    def CoupDaysNc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CoupDaysNc(*args, **arguments)
-
-    def CoupNcd(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CoupNcd(*args, **arguments)
-
-    def CoupNum(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CoupNum(*args, **arguments)
-
-    def Covar(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Covar(*args, **arguments)
-
-    def Covariance_P(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Covariance_P(*args, **arguments)
-
-    def Covariance_S(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Covariance_S(*args, **arguments)
-
-    def CritBinom(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CritBinom(*args, **arguments)
-
-    def CumIPmt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CumIPmt(*args, **arguments)
-
-    def CumPrinc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.CumPrinc(*args, **arguments)
-
-    def DAverage(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DAverage(*args, **arguments)
-
-    def Days360(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Days360(*args, **arguments)
-
-    def Db(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Db(*args, **arguments)
-
-    def Dbcs(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Dbcs(*args, **arguments)
-
-    def DCount(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DCount(*args, **arguments)
-
-    def DCountA(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DCountA(*args, **arguments)
-
-    def Ddb(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ddb(*args, **arguments)
-
-    def Dec2Bin(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Dec2Bin(*args, **arguments)
-
-    def Dec2Hex(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Dec2Hex(*args, **arguments)
-
-    def Dec2Oct(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Dec2Oct(*args, **arguments)
-
-    def Degrees(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Degrees(*args, **arguments)
-
-    def Delta(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Delta(*args, **arguments)
-
-    def DevSq(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DevSq(*args, **arguments)
-
-    def DGet(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DGet(*args, **arguments)
-
-    def Disc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Disc(*args, **arguments)
-
-    def DMax(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DMax(*args, **arguments)
-
-    def DMin(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DMin(*args, **arguments)
-
-    def Dollar(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Dollar(*args, **arguments)
-
-    def DollarDe(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DollarDe(*args, **arguments)
-
-    def DollarFr(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DollarFr(*args, **arguments)
-
-    def DProduct(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DProduct(*args, **arguments)
-
-    def DStDev(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DStDev(*args, **arguments)
-
-    def DStDevP(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DStDevP(*args, **arguments)
-
-    def DSum(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DSum(*args, **arguments)
-
-    def Duration(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Duration(*args, **arguments)
-
-    def DVar(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DVar(*args, **arguments)
-
-    def DVarP(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.DVarP(*args, **arguments)
-
-    def EDate(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.EDate(*args, **arguments)
-
-    def Effect(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Effect(*args, **arguments)
-
-    def EoMonth(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.EoMonth(*args, **arguments)
-
-    def Erf(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Erf(*args, **arguments)
-
-    def ErfC(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ErfC(*args, **arguments)
-
-    def ErfC_Precise(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ErfC_Precise(*args, **arguments)
-
-    def Erf_Precise(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Erf_Precise(*args, **arguments)
-
-    def Even(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Even(*args, **arguments)
-
-    def ExponDist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ExponDist(*args, **arguments)
-
-    def Expon_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Expon_Dist(*args, **arguments)
-
-    def Fact(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Fact(*args, **arguments)
-
-    def FactDouble(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FactDouble(*args, **arguments)
-
-    def FDist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FDist(*args, **arguments)
-
-    def Find(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Find(*args, **arguments)
-
-    def FindB(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FindB(*args, **arguments)
-
-    def FInv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FInv(*args, **arguments)
-
-    def Fisher(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Fisher(*args, **arguments)
-
-    def FisherInv(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FisherInv(*args, **arguments)
-
-    def Fixed(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Fixed(*args, **arguments)
-
-    def Floor(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Floor(*args, **arguments)
-
-    def Floor_Precise(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Floor_Precise(*args, **arguments)
-
-    def Forecast(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Forecast(*args, **arguments)
-
-    def Frequency(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Frequency(*args, **arguments)
-
-    def FTest(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FTest(*args, **arguments)
-
-    def Fv(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Fv(*args, **arguments)
-
-    def FVSchedule(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.FVSchedule(*args, **arguments)
-
-    def F_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.F_Dist(*args, **arguments)
-
-    def F_Dist_RT(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.F_Dist_RT(*args, **arguments)
-
-    def F_Inv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.F_Inv(*args, **arguments)
-
-    def F_Inv_RT(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.F_Inv_RT(*args, **arguments)
-
-    def F_Test(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.F_Test(*args, **arguments)
-
-    def GammaDist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.GammaDist(*args, **arguments)
-
-    def GammaInv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.GammaInv(*args, **arguments)
-
-    def GammaLn(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.GammaLn(*args, **arguments)
-
-    def GammaLn_Precise(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.GammaLn_Precise(*args, **arguments)
-
-    def Gamma_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Gamma_Dist(*args, **arguments)
-
-    def Gamma_Inv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Gamma_Inv(*args, **arguments)
-
-    def Gcd(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Gcd(*args, **arguments)
-
-    def GeoMean(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.GeoMean(*args, **arguments)
-
-    def GeStep(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.GeStep(*args, **arguments)
-
-    def Growth(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Growth(*args, **arguments)
-
-    def HarMean(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.HarMean(*args, **arguments)
-
-    def Hex2Bin(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Hex2Bin(*args, **arguments)
-
-    def Hex2Dec(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Hex2Dec(*args, **arguments)
-
-    def Hex2Oct(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Hex2Oct(*args, **arguments)
-
-    def HLookup(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.HLookup(*args, **arguments)
-
-    def HypGeomDist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.HypGeomDist(*args, **arguments)
-
-    def HypGeom_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.HypGeom_Dist(*args, **arguments)
-
-    def IfError(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IfError(*args, **arguments)
-
-    def ImAbs(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImAbs(*args, **arguments)
-
-    def Imaginary(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Imaginary(*args, **arguments)
-
-    def ImArgument(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImArgument(*args, **arguments)
-
-    def ImConjugate(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImConjugate(*args, **arguments)
-
-    def ImCos(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImCos(*args, **arguments)
-
-    def ImDiv(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImDiv(*args, **arguments)
-
-    def ImExp(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImExp(*args, **arguments)
-
-    def ImLn(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImLn(*args, **arguments)
-
-    def ImLog10(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImLog10(*args, **arguments)
-
-    def ImLog2(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImLog2(*args, **arguments)
-
-    def ImPower(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImPower(*args, **arguments)
-
-    def ImProduct(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImProduct(*args, **arguments)
-
-    def ImReal(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImReal(*args, **arguments)
-
-    def ImSin(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImSin(*args, **arguments)
-
-    def ImSqrt(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImSqrt(*args, **arguments)
-
-    def ImSub(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImSub(*args, **arguments)
-
-    def ImSum(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ImSum(*args, **arguments)
-
-    def Intercept(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Intercept(*args, **arguments)
-
-    def IntRate(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IntRate(*args, **arguments)
-
-    def Ipmt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ipmt(*args, **arguments)
-
-    def Irr(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Irr(*args, **arguments)
-
-    def IsErr(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsErr(*args, **arguments)
-
-    def IsError(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsError(*args, **arguments)
-
-    def IsEven(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsEven(*args, **arguments)
-
-    def IsLogical(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsLogical(*args, **arguments)
-
-    def IsNA(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsNA(*args, **arguments)
-
-    def IsNonText(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsNonText(*args, **arguments)
-
-    def IsNumber(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsNumber(*args, **arguments)
-
-    def IsOdd(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsOdd(*args, **arguments)
-
-    def ISO_Ceiling(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ISO_Ceiling(*args, **arguments)
-
-    def Ispmt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ispmt(*args, **arguments)
-
-    def IsText(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.IsText(*args, **arguments)
-
-    def Kurt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Kurt(*args, **arguments)
-
-    def Large(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Large(*args, **arguments)
-
-    def Lcm(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Lcm(*args, **arguments)
-
-    def LinEst(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.LinEst(*args, **arguments)
-
-    def Ln(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ln(*args, **arguments)
-
-    def Log(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Log(*args, **arguments)
-
-    def Log10(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Log10(*args, **arguments)
-
-    def LogEst(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.LogEst(*args, **arguments)
-
-    def LogInv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.LogInv(*args, **arguments)
-
-    def LogNormDist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.LogNormDist(*args, **arguments)
-
-    def LogNorm_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.LogNorm_Dist(*args, **arguments)
-
-    def LogNorm_Inv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.LogNorm_Inv(*args, **arguments)
-
-    def Lookup(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Lookup(*args, **arguments)
-
-    def Match(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Match(*args, **arguments)
-
-    def Max(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Max(*args, **arguments)
-
-    def MDeterm(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MDeterm(*args, **arguments)
-
-    def MDuration(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MDuration(*args, **arguments)
-
-    def Median(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Median(*args, **arguments)
-
-    def Min(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Min(*args, **arguments)
-
-    def MInverse(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MInverse(*args, **arguments)
-
-    def MIrr(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MIrr(*args, **arguments)
-
-    def MMult(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MMult(*args, **arguments)
-
-    def Mode(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Mode(*args, **arguments)
-
-    def Mode_Mult(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Mode_Mult(*args, **arguments)
-
-    def Mode_Sngl(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Mode_Sngl(*args, **arguments)
-
-    def MRound(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MRound(*args, **arguments)
-
-    def MultiNomial(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.MultiNomial(*args, **arguments)
-
-    def NegBinomDist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NegBinomDist(*args, **arguments)
-
-    def NegBinom_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NegBinom_Dist(*args, **arguments)
-
-    def NetworkDays(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NetworkDays(*args, **arguments)
-
-    def NetworkDays_Intl(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NetworkDays_Intl(*args, **arguments)
-
-    def Nominal(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Nominal(*args, **arguments)
-
-    def NormDist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NormDist(*args, **arguments)
-
-    def NormInv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NormInv(*args, **arguments)
-
-    def NormSDist(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NormSDist(*args, **arguments)
-
-    def NormSInv(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NormSInv(*args, **arguments)
-
-    def Norm_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Norm_Dist(*args, **arguments)
-
-    def Norm_Inv(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Norm_Inv(*args, **arguments)
-
-    def Norm_S_Dist(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Norm_S_Dist(*args, **arguments)
-
-    def Norm_S_Inv(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Norm_S_Inv(*args, **arguments)
-
-    def NPer(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.NPer(*args, **arguments)
-
-    def Npv(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Npv(*args, **arguments)
-
-    def Oct2Bin(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Oct2Bin(*args, **arguments)
-
-    def Oct2Dec(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Oct2Dec(*args, **arguments)
-
-    def Oct2Hex(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Oct2Hex(*args, **arguments)
-
-    def Odd(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Odd(*args, **arguments)
-
-    def OddFPrice(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.OddFPrice(*args, **arguments)
-
-    def OddFYield(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.OddFYield(*args, **arguments)
-
-    def OddLPrice(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.OddLPrice(*args, **arguments)
-
-    def OddLYield(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.OddLYield(*args, **arguments)
-
-    def Or(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Or(*args, **arguments)
-
-    def Pearson(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Pearson(*args, **arguments)
-
-    def Percentile(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Percentile(*args, **arguments)
-
-    def Percentile_Exc(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Percentile_Exc(*args, **arguments)
-
-    def Percentile_Inc(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Percentile_Inc(*args, **arguments)
-
-    def PercentRank(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.PercentRank(*args, **arguments)
-
-    def PercentRank_Exc(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.PercentRank_Exc(*args, **arguments)
-
-    def PercentRank_Inc(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.PercentRank_Inc(*args, **arguments)
-
-    def Permut(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Permut(*args, **arguments)
-
-    def Phonetic(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Phonetic(*args, **arguments)
+    def AccrInt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AccrInt(*params)
+
+    def AccrIntM(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AccrIntM(*params)
+
+    def Acos(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Acos(*params)
+
+    def Acosh(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Acosh(*params)
+
+    def Aggregate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Aggregate(*params)
+
+    def AmorDegrc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AmorDegrc(*params)
+
+    def AmorLinc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AmorLinc(*params)
+
+    def And(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.And(*params)
+
+    def Asc(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Asc(*params)
+
+    def Asin(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Asin(*params)
+
+    def Asinh(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Asinh(*params)
+
+    def Atan2(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Atan2(*params)
+
+    def Atanh(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Atanh(*params)
+
+    def AveDev(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AveDev(*params)
+
+    def Average(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Average(*params)
+
+    def AverageIf(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AverageIf(*params)
+
+    def AverageIfs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.AverageIfs(*params)
+
+    def BahtText(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BahtText(*params)
+
+    def BesselI(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BesselI(*params)
+
+    def BesselJ(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BesselJ(*params)
+
+    def BesselK(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BesselK(*params)
+
+    def BesselY(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BesselY(*params)
+
+    def BetaDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BetaDist(*params)
+
+    def BetaInv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BetaInv(*params)
+
+    def Beta_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Beta_Dist(*params)
+
+    def Beta_Inv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Beta_Inv(*params)
+
+    def Bin2Dec(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Bin2Dec(*params)
+
+    def Bin2Hex(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Bin2Hex(*params)
+
+    def Bin2Oct(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Bin2Oct(*params)
+
+    def BinomDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.BinomDist(*params)
+
+    def Binom_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Binom_Dist(*params)
+
+    def Binom_Inv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Binom_Inv(*params)
+
+    def Ceiling(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ceiling(*params)
+
+    def Ceiling_Precise(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ceiling_Precise(*params)
+
+    def ChiDist(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiDist(*params)
+
+    def ChiInv(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiInv(*params)
+
+    def ChiSq_Dist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiSq_Dist(*params)
+
+    def ChiSq_Dist_RT(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiSq_Dist_RT(*params)
+
+    def ChiSq_Inv(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiSq_Inv(*params)
+
+    def ChiSq_Inv_RT(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiSq_Inv_RT(*params)
+
+    def ChiSq_Test(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiSq_Test(*params)
+
+    def ChiTest(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ChiTest(*params)
+
+    def Choose(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Choose(*params)
+
+    def Clean(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Clean(*params)
+
+    def Combin(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Combin(*params)
+
+    def Complex(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Complex(*params)
+
+    def Confidence(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Confidence(*params)
+
+    def Confidence_Norm(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Confidence_Norm(*params)
+
+    def Confidence_T(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Confidence_T(*params)
+
+    def Convert(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Convert(*params)
+
+    def Correl(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Correl(*params)
+
+    def Cosh(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Cosh(*params)
+
+    def Count(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Count(*params)
+
+    def CountA(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CountA(*params)
+
+    def CountBlank(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CountBlank(*params)
+
+    def CountIf(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CountIf(*params)
+
+    def CountIfs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CountIfs(*params)
+
+    def CoupDayBs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CoupDayBs(*params)
+
+    def CoupDays(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CoupDays(*params)
+
+    def CoupDaysNc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CoupDaysNc(*params)
+
+    def CoupNcd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CoupNcd(*params)
+
+    def CoupNum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CoupNum(*params)
+
+    def Covar(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Covar(*params)
+
+    def Covariance_P(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Covariance_P(*params)
+
+    def Covariance_S(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Covariance_S(*params)
+
+    def CritBinom(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CritBinom(*params)
+
+    def CumIPmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CumIPmt(*params)
+
+    def CumPrinc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.CumPrinc(*params)
+
+    def DAverage(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DAverage(*params)
+
+    def Days360(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Days360(*params)
+
+    def Db(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Db(*params)
+
+    def Dbcs(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Dbcs(*params)
+
+    def DCount(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DCount(*params)
+
+    def DCountA(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DCountA(*params)
+
+    def Ddb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ddb(*params)
+
+    def Dec2Bin(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Dec2Bin(*params)
+
+    def Dec2Hex(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Dec2Hex(*params)
+
+    def Dec2Oct(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Dec2Oct(*params)
+
+    def Degrees(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Degrees(*params)
+
+    def Delta(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Delta(*params)
+
+    def DevSq(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DevSq(*params)
+
+    def DGet(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DGet(*params)
+
+    def Disc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Disc(*params)
+
+    def DMax(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DMax(*params)
+
+    def DMin(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DMin(*params)
+
+    def Dollar(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Dollar(*params)
+
+    def DollarDe(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DollarDe(*params)
+
+    def DollarFr(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DollarFr(*params)
+
+    def DProduct(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DProduct(*params)
+
+    def DStDev(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DStDev(*params)
+
+    def DStDevP(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DStDevP(*params)
+
+    def DSum(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DSum(*params)
+
+    def Duration(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Duration(*params)
+
+    def DVar(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DVar(*params)
+
+    def DVarP(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.DVarP(*params)
+
+    def EDate(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.EDate(*params)
+
+    def Effect(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Effect(*params)
+
+    def EoMonth(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.EoMonth(*params)
+
+    def Erf(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Erf(*params)
+
+    def ErfC(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ErfC(*params)
+
+    def ErfC_Precise(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ErfC_Precise(*params)
+
+    def Erf_Precise(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Erf_Precise(*params)
+
+    def Even(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Even(*params)
+
+    def ExponDist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ExponDist(*params)
+
+    def Expon_Dist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Expon_Dist(*params)
+
+    def Fact(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Fact(*params)
+
+    def FactDouble(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FactDouble(*params)
+
+    def FDist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FDist(*params)
+
+    def Find(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Find(*params)
+
+    def FindB(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FindB(*params)
+
+    def FInv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FInv(*params)
+
+    def Fisher(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Fisher(*params)
+
+    def FisherInv(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FisherInv(*params)
+
+    def Fixed(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Fixed(*params)
+
+    def Floor(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Floor(*params)
+
+    def Floor_Precise(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Floor_Precise(*params)
+
+    def Forecast(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Forecast(*params)
+
+    def Frequency(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Frequency(*params)
+
+    def FTest(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FTest(*params)
+
+    def Fv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Fv(*params)
+
+    def FVSchedule(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.FVSchedule(*params)
+
+    def F_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.F_Dist(*params)
+
+    def F_Dist_RT(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.F_Dist_RT(*params)
+
+    def F_Inv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.F_Inv(*params)
+
+    def F_Inv_RT(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.F_Inv_RT(*params)
+
+    def F_Test(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.F_Test(*params)
+
+    def GammaDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.GammaDist(*params)
+
+    def GammaInv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.GammaInv(*params)
+
+    def GammaLn(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.GammaLn(*params)
+
+    def GammaLn_Precise(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.GammaLn_Precise(*params)
+
+    def Gamma_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Gamma_Dist(*params)
+
+    def Gamma_Inv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Gamma_Inv(*params)
+
+    def Gcd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Gcd(*params)
+
+    def GeoMean(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.GeoMean(*params)
+
+    def GeStep(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.GeStep(*params)
+
+    def Growth(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Growth(*params)
+
+    def HarMean(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.HarMean(*params)
+
+    def Hex2Bin(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Hex2Bin(*params)
+
+    def Hex2Dec(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Hex2Dec(*params)
+
+    def Hex2Oct(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Hex2Oct(*params)
+
+    def HLookup(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.HLookup(*params)
+
+    def HypGeomDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.HypGeomDist(*params)
+
+    def HypGeom_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.HypGeom_Dist(*params)
+
+    def IfError(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IfError(*params)
+
+    def ImAbs(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImAbs(*params)
+
+    def Imaginary(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Imaginary(*params)
+
+    def ImArgument(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImArgument(*params)
+
+    def ImConjugate(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImConjugate(*params)
+
+    def ImCos(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImCos(*params)
+
+    def ImDiv(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImDiv(*params)
+
+    def ImExp(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImExp(*params)
+
+    def ImLn(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImLn(*params)
+
+    def ImLog10(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImLog10(*params)
+
+    def ImLog2(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImLog2(*params)
+
+    def ImPower(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImPower(*params)
+
+    def ImProduct(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImProduct(*params)
+
+    def ImReal(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImReal(*params)
+
+    def ImSin(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImSin(*params)
+
+    def ImSqrt(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImSqrt(*params)
+
+    def ImSub(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImSub(*params)
+
+    def ImSum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ImSum(*params)
+
+    def Intercept(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Intercept(*params)
+
+    def IntRate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IntRate(*params)
+
+    def Ipmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ipmt(*params)
+
+    def Irr(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Irr(*params)
+
+    def IsErr(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsErr(*params)
+
+    def IsError(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsError(*params)
+
+    def IsEven(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsEven(*params)
+
+    def IsLogical(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsLogical(*params)
+
+    def IsNA(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsNA(*params)
+
+    def IsNonText(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsNonText(*params)
+
+    def IsNumber(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsNumber(*params)
+
+    def IsOdd(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsOdd(*params)
+
+    def ISO_Ceiling(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ISO_Ceiling(*params)
+
+    def Ispmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ispmt(*params)
+
+    def IsText(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.IsText(*params)
+
+    def Kurt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Kurt(*params)
+
+    def Large(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Large(*params)
+
+    def Lcm(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Lcm(*params)
+
+    def LinEst(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.LinEst(*params)
+
+    def Ln(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ln(*params)
+
+    def Log(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Log(*params)
+
+    def Log10(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Log10(*params)
+
+    def LogEst(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.LogEst(*params)
+
+    def LogInv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.LogInv(*params)
+
+    def LogNormDist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.LogNormDist(*params)
+
+    def LogNorm_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.LogNorm_Dist(*params)
+
+    def LogNorm_Inv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.LogNorm_Inv(*params)
+
+    def Lookup(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Lookup(*params)
+
+    def Match(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Match(*params)
+
+    def Max(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Max(*params)
+
+    def MDeterm(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MDeterm(*params)
+
+    def MDuration(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MDuration(*params)
+
+    def Median(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Median(*params)
+
+    def Min(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Min(*params)
+
+    def MInverse(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MInverse(*params)
+
+    def MIrr(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MIrr(*params)
+
+    def MMult(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MMult(*params)
+
+    def Mode(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Mode(*params)
+
+    def Mode_Mult(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Mode_Mult(*params)
+
+    def Mode_Sngl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Mode_Sngl(*params)
+
+    def MRound(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MRound(*params)
+
+    def MultiNomial(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.MultiNomial(*params)
+
+    def NegBinomDist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NegBinomDist(*params)
+
+    def NegBinom_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NegBinom_Dist(*params)
+
+    def NetworkDays(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NetworkDays(*params)
+
+    def NetworkDays_Intl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NetworkDays_Intl(*params)
+
+    def Nominal(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Nominal(*params)
+
+    def NormDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NormDist(*params)
+
+    def NormInv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NormInv(*params)
+
+    def NormSDist(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NormSDist(*params)
+
+    def NormSInv(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NormSInv(*params)
+
+    def Norm_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Norm_Dist(*params)
+
+    def Norm_Inv(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Norm_Inv(*params)
+
+    def Norm_S_Dist(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Norm_S_Dist(*params)
+
+    def Norm_S_Inv(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Norm_S_Inv(*params)
+
+    def NPer(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.NPer(*params)
+
+    def Npv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Npv(*params)
+
+    def Oct2Bin(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Oct2Bin(*params)
+
+    def Oct2Dec(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Oct2Dec(*params)
+
+    def Oct2Hex(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Oct2Hex(*params)
+
+    def Odd(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Odd(*params)
+
+    def OddFPrice(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.OddFPrice(*params)
+
+    def OddFYield(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.OddFYield(*params)
+
+    def OddLPrice(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.OddLPrice(*params)
+
+    def OddLYield(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.OddLYield(*params)
+
+    def Or(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Or(*params)
+
+    def Pearson(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Pearson(*params)
+
+    def Percentile(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Percentile(*params)
+
+    def Percentile_Exc(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Percentile_Exc(*params)
+
+    def Percentile_Inc(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Percentile_Inc(*params)
+
+    def PercentRank(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.PercentRank(*params)
+
+    def PercentRank_Exc(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.PercentRank_Exc(*params)
+
+    def PercentRank_Inc(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.PercentRank_Inc(*params)
+
+    def Permut(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Permut(*params)
+
+    def Phonetic(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Phonetic(*params)
 
     def Pi(self):
         return self.worksheetfunction.Pi()
 
-    def Pmt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Pmt(*args, **arguments)
-
-    def Poisson(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Poisson(*args, **arguments)
-
-    def Poisson_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Poisson_Dist(*args, **arguments)
-
-    def Power(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Power(*args, **arguments)
-
-    def Ppmt(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Ppmt(*args, **arguments)
-
-    def Price(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Price(*args, **arguments)
-
-    def PriceDisc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.PriceDisc(*args, **arguments)
-
-    def PriceMat(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.PriceMat(*args, **arguments)
-
-    def Prob(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Prob(*args, **arguments)
-
-    def Product(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Product(*args, **arguments)
-
-    def Proper(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Proper(*args, **arguments)
-
-    def Pv(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Pv(*args, **arguments)
-
-    def Quartile(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Quartile(*args, **arguments)
-
-    def Quartile_Exc(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Quartile_Exc(*args, **arguments)
-
-    def Quartile_Inc(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Quartile_Inc(*args, **arguments)
-
-    def Quotient(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Quotient(*args, **arguments)
-
-    def Radians(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Radians(*args, **arguments)
-
-    def RandBetween(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.RandBetween(*args, **arguments)
-
-    def Rank(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Rank(*args, **arguments)
-
-    def Rank_Avg(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Rank_Avg(*args, **arguments)
-
-    def Rank_Eq(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Rank_Eq(*args, **arguments)
-
-    def Rate(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Rate(*args, **arguments)
-
-    def Received(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Received(*args, **arguments)
-
-    def Replace(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Replace(*args, **arguments)
-
-    def ReplaceB(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ReplaceB(*args, **arguments)
-
-    def Rept(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Rept(*args, **arguments)
-
-    def Roman(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Roman(*args, **arguments)
-
-    def Round(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Round(*args, **arguments)
-
-    def RoundDown(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.RoundDown(*args, **arguments)
-
-    def RoundUp(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.RoundUp(*args, **arguments)
-
-    def RSq(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.RSq(*args, **arguments)
-
-    def RTD(self, *args, progID=None, server=None, topic1=None, topic2=None, topic3=None, topic4=None, topic5=None, topic6=None, topic7=None, topic8=None, topic9=None, topic10=None, topic11=None, topic12=None, topic13=None, topic14=None, topic15=None, topic16=None, topic17=None, topic18=None, topic19=None, topic20=None, topic21=None, topic22=None, topic23=None, topic24=None, topic25=None, topic26=None, topic27=None, topic28=None):
-        arguments = {"progID": progID, "server": server, "topic1": topic1, "topic2": topic2, "topic3": topic3, "topic4": topic4, "topic5": topic5, "topic6": topic6, "topic7": topic7, "topic8": topic8, "topic9": topic9, "topic10": topic10, "topic11": topic11, "topic12": topic12, "topic13": topic13, "topic14": topic14, "topic15": topic15, "topic16": topic16, "topic17": topic17, "topic18": topic18, "topic19": topic19, "topic20": topic20, "topic21": topic21, "topic22": topic22, "topic23": topic23, "topic24": topic24, "topic25": topic25, "topic26": topic26, "topic27": topic27, "topic28": topic28}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.RTD(*args, **arguments)
-
-    def Search(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Search(*args, **arguments)
-
-    def SearchB(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SearchB(*args, **arguments)
-
-    def SeriesSum(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SeriesSum(*args, **arguments)
-
-    def Sinh(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Sinh(*args, **arguments)
-
-    def Skew(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Skew(*args, **arguments)
-
-    def Sln(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Sln(*args, **arguments)
-
-    def Slope(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Slope(*args, **arguments)
-
-    def Small(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Small(*args, **arguments)
-
-    def SqrtPi(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SqrtPi(*args, **arguments)
-
-    def Standardize(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Standardize(*args, **arguments)
-
-    def StDev(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.StDev(*args, **arguments)
-
-    def StDevP(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.StDevP(*args, **arguments)
-
-    def StDev_P(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.StDev_P(*args, **arguments)
-
-    def StDev_S(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.StDev_S(*args, **arguments)
-
-    def StEyx(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.StEyx(*args, **arguments)
-
-    def Substitute(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Substitute(*args, **arguments)
-
-    def Subtotal(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Subtotal(*args, **arguments)
-
-    def Sum(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Sum(*args, **arguments)
-
-    def SumIf(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumIf(*args, **arguments)
-
-    def SumIfs(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumIfs(*args, **arguments)
-
-    def SumProduct(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumProduct(*args, **arguments)
-
-    def SumSq(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumSq(*args, **arguments)
-
-    def SumX2MY2(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumX2MY2(*args, **arguments)
-
-    def SumX2PY2(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumX2PY2(*args, **arguments)
-
-    def SumXMY2(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.SumXMY2(*args, **arguments)
-
-    def Syd(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Syd(*args, **arguments)
-
-    def Tanh(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Tanh(*args, **arguments)
-
-    def TBillEq(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TBillEq(*args, **arguments)
-
-    def TBillPrice(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TBillPrice(*args, **arguments)
-
-    def TBillYield(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TBillYield(*args, **arguments)
-
-    def TDist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TDist(*args, **arguments)
-
-    def Text(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Text(*args, **arguments)
-
-    def TInv(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TInv(*args, **arguments)
-
-    def Transpose(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Transpose(*args, **arguments)
-
-    def Trend(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Trend(*args, **arguments)
-
-    def Trim(self, *args, Arg1=None):
-        arguments = {"Arg1": Arg1}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Trim(*args, **arguments)
-
-    def TrimMean(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TrimMean(*args, **arguments)
-
-    def TTest(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.TTest(*args, **arguments)
-
-    def T_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.T_Dist(*args, **arguments)
-
-    def T_Dist_2T(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.T_Dist_2T(*args, **arguments)
-
-    def T_Dist_RT(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.T_Dist_RT(*args, **arguments)
-
-    def T_Inv(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.T_Inv(*args, **arguments)
-
-    def T_Inv_2T(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.T_Inv_2T(*args, **arguments)
-
-    def T_Test(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.T_Test(*args, **arguments)
-
-    def USDollar(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.USDollar(*args, **arguments)
-
-    def Var(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Var(*args, **arguments)
-
-    def VarP(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.VarP(*args, **arguments)
-
-    def Var_P(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Var_P(*args, **arguments)
-
-    def Var_S(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Var_S(*args, **arguments)
-
-    def Vdb(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Vdb(*args, **arguments)
-
-    def VLookup(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.VLookup(*args, **arguments)
-
-    def Weekday(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Weekday(*args, **arguments)
-
-    def WeekNum(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.WeekNum(*args, **arguments)
-
-    def Weibull(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Weibull(*args, **arguments)
-
-    def Weibull_Dist(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Weibull_Dist(*args, **arguments)
-
-    def WorkDay(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.WorkDay(*args, **arguments)
-
-    def WorkDay_Intl(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.WorkDay_Intl(*args, **arguments)
-
-    def Xirr(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Xirr(*args, **arguments)
-
-    def Xnpv(self, *args, Arg1=None, Arg2=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Xnpv(*args, **arguments)
-
-    def YearFrac(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.YearFrac(*args, **arguments)
-
-    def YieldDisc(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.YieldDisc(*args, **arguments)
-
-    def YieldMat(self, *args, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.YieldMat(*args, **arguments)
-
-    def ZTest(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.ZTest(*args, **arguments)
-
-    def Z_Test(self, *args, Arg1=None, Arg2=None, Arg3=None):
-        arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheetfunction.Z_Test(*args, **arguments)
+    def Pmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Pmt(*params)
+
+    def Poisson(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Poisson(*params)
+
+    def Poisson_Dist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Poisson_Dist(*params)
+
+    def Power(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Power(*params)
+
+    def Ppmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Ppmt(*params)
+
+    def Price(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Price(*params)
+
+    def PriceDisc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.PriceDisc(*params)
+
+    def PriceMat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.PriceMat(*params)
+
+    def Prob(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Prob(*params)
+
+    def Product(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Product(*params)
+
+    def Proper(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Proper(*params)
+
+    def Pv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Pv(*params)
+
+    def Quartile(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Quartile(*params)
+
+    def Quartile_Exc(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Quartile_Exc(*params)
+
+    def Quartile_Inc(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Quartile_Inc(*params)
+
+    def Quotient(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Quotient(*params)
+
+    def Radians(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Radians(*params)
+
+    def RandBetween(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.RandBetween(*params)
+
+    def Rank(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Rank(*params)
+
+    def Rank_Avg(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Rank_Avg(*params)
+
+    def Rank_Eq(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Rank_Eq(*params)
+
+    def Rate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Rate(*params)
+
+    def Received(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Received(*params)
+
+    def Replace(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Replace(*params)
+
+    def ReplaceB(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ReplaceB(*params)
+
+    def Rept(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Rept(*params)
+
+    def Roman(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Roman(*params)
+
+    def Round(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Round(*params)
+
+    def RoundDown(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.RoundDown(*params)
+
+    def RoundUp(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.RoundUp(*params)
+
+    def RSq(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.RSq(*params)
+
+    def RTD(self, progID=None, server=None, topic1=None, topic2=None, topic3=None, topic4=None, topic5=None, topic6=None, topic7=None, topic8=None, topic9=None, topic10=None, topic11=None, topic12=None, topic13=None, topic14=None, topic15=None, topic16=None, topic17=None, topic18=None, topic19=None, topic20=None, topic21=None, topic22=None, topic23=None, topic24=None, topic25=None, topic26=None, topic27=None, topic28=None):
+        params = [
+            progID if progID is not None else pythoncom.Missing,
+            server if server is not None else pythoncom.Missing,
+            topic1 if topic1 is not None else pythoncom.Missing,
+            topic2 if topic2 is not None else pythoncom.Missing,
+            topic3 if topic3 is not None else pythoncom.Missing,
+            topic4 if topic4 is not None else pythoncom.Missing,
+            topic5 if topic5 is not None else pythoncom.Missing,
+            topic6 if topic6 is not None else pythoncom.Missing,
+            topic7 if topic7 is not None else pythoncom.Missing,
+            topic8 if topic8 is not None else pythoncom.Missing,
+            topic9 if topic9 is not None else pythoncom.Missing,
+            topic10 if topic10 is not None else pythoncom.Missing,
+            topic11 if topic11 is not None else pythoncom.Missing,
+            topic12 if topic12 is not None else pythoncom.Missing,
+            topic13 if topic13 is not None else pythoncom.Missing,
+            topic14 if topic14 is not None else pythoncom.Missing,
+            topic15 if topic15 is not None else pythoncom.Missing,
+            topic16 if topic16 is not None else pythoncom.Missing,
+            topic17 if topic17 is not None else pythoncom.Missing,
+            topic18 if topic18 is not None else pythoncom.Missing,
+            topic19 if topic19 is not None else pythoncom.Missing,
+            topic20 if topic20 is not None else pythoncom.Missing,
+            topic21 if topic21 is not None else pythoncom.Missing,
+            topic22 if topic22 is not None else pythoncom.Missing,
+            topic23 if topic23 is not None else pythoncom.Missing,
+            topic24 if topic24 is not None else pythoncom.Missing,
+            topic25 if topic25 is not None else pythoncom.Missing,
+            topic26 if topic26 is not None else pythoncom.Missing,
+            topic27 if topic27 is not None else pythoncom.Missing,
+            topic28 if topic28 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.RTD(*params)
+
+    def Search(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Search(*params)
+
+    def SearchB(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SearchB(*params)
+
+    def SeriesSum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SeriesSum(*params)
+
+    def Sinh(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Sinh(*params)
+
+    def Skew(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Skew(*params)
+
+    def Sln(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Sln(*params)
+
+    def Slope(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Slope(*params)
+
+    def Small(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Small(*params)
+
+    def SqrtPi(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SqrtPi(*params)
+
+    def Standardize(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Standardize(*params)
+
+    def StDev(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.StDev(*params)
+
+    def StDevP(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.StDevP(*params)
+
+    def StDev_P(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.StDev_P(*params)
+
+    def StDev_S(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.StDev_S(*params)
+
+    def StEyx(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.StEyx(*params)
+
+    def Substitute(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Substitute(*params)
+
+    def Subtotal(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Subtotal(*params)
+
+    def Sum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Sum(*params)
+
+    def SumIf(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumIf(*params)
+
+    def SumIfs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumIfs(*params)
+
+    def SumProduct(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumProduct(*params)
+
+    def SumSq(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumSq(*params)
+
+    def SumX2MY2(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumX2MY2(*params)
+
+    def SumX2PY2(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumX2PY2(*params)
+
+    def SumXMY2(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.SumXMY2(*params)
+
+    def Syd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Syd(*params)
+
+    def Tanh(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Tanh(*params)
+
+    def TBillEq(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TBillEq(*params)
+
+    def TBillPrice(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TBillPrice(*params)
+
+    def TBillYield(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TBillYield(*params)
+
+    def TDist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TDist(*params)
+
+    def Text(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Text(*params)
+
+    def TInv(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TInv(*params)
+
+    def Transpose(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Transpose(*params)
+
+    def Trend(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Trend(*params)
+
+    def Trim(self, Arg1=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Trim(*params)
+
+    def TrimMean(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TrimMean(*params)
+
+    def TTest(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.TTest(*params)
+
+    def T_Dist(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.T_Dist(*params)
+
+    def T_Dist_2T(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.T_Dist_2T(*params)
+
+    def T_Dist_RT(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.T_Dist_RT(*params)
+
+    def T_Inv(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.T_Inv(*params)
+
+    def T_Inv_2T(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.T_Inv_2T(*params)
+
+    def T_Test(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.T_Test(*params)
+
+    def USDollar(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.USDollar(*params)
+
+    def Var(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Var(*params)
+
+    def VarP(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.VarP(*params)
+
+    def Var_P(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Var_P(*params)
+
+    def Var_S(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+            Arg8 if Arg8 is not None else pythoncom.Missing,
+            Arg9 if Arg9 is not None else pythoncom.Missing,
+            Arg10 if Arg10 is not None else pythoncom.Missing,
+            Arg11 if Arg11 is not None else pythoncom.Missing,
+            Arg12 if Arg12 is not None else pythoncom.Missing,
+            Arg13 if Arg13 is not None else pythoncom.Missing,
+            Arg14 if Arg14 is not None else pythoncom.Missing,
+            Arg15 if Arg15 is not None else pythoncom.Missing,
+            Arg16 if Arg16 is not None else pythoncom.Missing,
+            Arg17 if Arg17 is not None else pythoncom.Missing,
+            Arg18 if Arg18 is not None else pythoncom.Missing,
+            Arg19 if Arg19 is not None else pythoncom.Missing,
+            Arg20 if Arg20 is not None else pythoncom.Missing,
+            Arg21 if Arg21 is not None else pythoncom.Missing,
+            Arg22 if Arg22 is not None else pythoncom.Missing,
+            Arg23 if Arg23 is not None else pythoncom.Missing,
+            Arg24 if Arg24 is not None else pythoncom.Missing,
+            Arg25 if Arg25 is not None else pythoncom.Missing,
+            Arg26 if Arg26 is not None else pythoncom.Missing,
+            Arg27 if Arg27 is not None else pythoncom.Missing,
+            Arg28 if Arg28 is not None else pythoncom.Missing,
+            Arg29 if Arg29 is not None else pythoncom.Missing,
+            Arg30 if Arg30 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Var_S(*params)
+
+    def Vdb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+            Arg7 if Arg7 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Vdb(*params)
+
+    def VLookup(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.VLookup(*params)
+
+    def Weekday(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Weekday(*params)
+
+    def WeekNum(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.WeekNum(*params)
+
+    def Weibull(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Weibull(*params)
+
+    def Weibull_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Weibull_Dist(*params)
+
+    def WorkDay(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.WorkDay(*params)
+
+    def WorkDay_Intl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.WorkDay_Intl(*params)
+
+    def Xirr(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Xirr(*params)
+
+    def Xnpv(self, Arg1=None, Arg2=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Xnpv(*params)
+
+    def YearFrac(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.YearFrac(*params)
+
+    def YieldDisc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.YieldDisc(*params)
+
+    def YieldMat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+            Arg4 if Arg4 is not None else pythoncom.Missing,
+            Arg5 if Arg5 is not None else pythoncom.Missing,
+            Arg6 if Arg6 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.YieldMat(*params)
+
+    def ZTest(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.ZTest(*params)
+
+    def Z_Test(self, Arg1=None, Arg2=None, Arg3=None):
+        params = [
+            Arg1 if Arg1 is not None else pythoncom.Missing,
+            Arg2 if Arg2 is not None else pythoncom.Missing,
+            Arg3 if Arg3 is not None else pythoncom.Missing,
+        ]
+        return self.worksheetfunction.Z_Test(*params)
 
 
 class Worksheets:
@@ -25554,13 +29226,14 @@ class Worksheets:
     def HPageBreaks(self):
         return HPageBreaks(self.worksheets.HPageBreaks)
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.worksheets.Item):
-            return self.worksheets.Item(*args, **arguments)
+            return self.worksheets.Item(*params)
         else:
-            return self.worksheets.GetItem(*args, **arguments)
+            return self.worksheets.GetItem(*params)
 
     @property
     def Parent(self):
@@ -25578,43 +29251,64 @@ class Worksheets:
     def VPageBreaks(self):
         return VPageBreaks(self.worksheets.VPageBreaks)
 
-    def Add(self, *args, Before=None, After=None, Count=None, Type=None):
-        arguments = {"Before": Before, "After": After, "Count": Count, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return Worksheet(self.worksheets.Add(*args, **arguments))
+    def Add(self, Before=None, After=None, Count=None, Type=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+            Count if Count is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        return Worksheet(self.worksheets.Add(*params))
 
-    def Copy(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheets.Copy(*args, **arguments)
+    def Copy(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.worksheets.Copy(*params)
 
     def Delete(self):
         self.worksheets.Delete()
 
-    def FillAcrossSheets(self, *args, Range=None, Type=None):
-        arguments = {"Range": Range, "Type": Type}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheets.FillAcrossSheets(*args, **arguments)
+    def FillAcrossSheets(self, Range=None, Type=None):
+        params = [
+            Range if Range is not None else pythoncom.Missing,
+            Type if Type is not None else pythoncom.Missing,
+        ]
+        self.worksheets.FillAcrossSheets(*params)
 
-    def Move(self, *args, Before=None, After=None):
-        arguments = {"Before": Before, "After": After}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheets.Move(*args, **arguments)
+    def Move(self, Before=None, After=None):
+        params = [
+            Before if Before is not None else pythoncom.Missing,
+            After if After is not None else pythoncom.Missing,
+        ]
+        self.worksheets.Move(*params)
 
-    def PrintOut(self, *args, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
-        arguments = {"From": From, "To": To, "Copies": Copies, "Preview": Preview, "ActivePrinter": ActivePrinter, "PrintToFile": PrintToFile, "Collate": Collate, "PrToFileName": PrToFileName, "IgnorePrintAreas": IgnorePrintAreas}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return self.worksheets.PrintOut(*args, **arguments)
+    def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
+        params = [
+            From if From is not None else pythoncom.Missing,
+            To if To is not None else pythoncom.Missing,
+            Copies if Copies is not None else pythoncom.Missing,
+            Preview if Preview is not None else pythoncom.Missing,
+            ActivePrinter if ActivePrinter is not None else pythoncom.Missing,
+            PrintToFile if PrintToFile is not None else pythoncom.Missing,
+            Collate if Collate is not None else pythoncom.Missing,
+            PrToFileName if PrToFileName is not None else pythoncom.Missing,
+            IgnorePrintAreas if IgnorePrintAreas is not None else pythoncom.Missing,
+        ]
+        return self.worksheets.PrintOut(*params)
 
-    def PrintPreview(self, *args, EnableChanges=None):
-        arguments = {"EnableChanges": EnableChanges}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheets.PrintPreview(*args, **arguments)
+    def PrintPreview(self, EnableChanges=None):
+        params = [
+            EnableChanges if EnableChanges is not None else pythoncom.Missing,
+        ]
+        self.worksheets.PrintPreview(*params)
 
-    def Select(self, *args, Replace=None):
-        arguments = {"Replace": Replace}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.worksheets.Select(*args, **arguments)
+    def Select(self, Replace=None):
+        params = [
+            Replace if Replace is not None else pythoncom.Missing,
+        ]
+        self.worksheets.Select(*params)
 
 
 class WorksheetView:
@@ -28244,10 +31938,11 @@ class XmlDataBinding:
     def ClearSettings(self):
         self.xmldatabinding.ClearSettings()
 
-    def LoadSettings(self, *args, Url=None):
-        arguments = {"Url": Url}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.xmldatabinding.LoadSettings(*args, **arguments)
+    def LoadSettings(self, Url=None):
+        params = [
+            Url if Url is not None else pythoncom.Missing,
+        ]
+        self.xmldatabinding.LoadSettings(*params)
 
     def Refresh(self):
         return XlXmlImportResult(self.xmldatabinding.Refresh())
@@ -28345,25 +32040,32 @@ class XmlMap:
     def Delete(self):
         self.xmlmap.Delete()
 
-    def Export(self, *args, Url=None, Overwrite=None):
-        arguments = {"Url": Url, "Overwrite": Overwrite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XlXmlExportResult(self.xmlmap.Export(*args, **arguments))
+    def Export(self, Url=None, Overwrite=None):
+        params = [
+            Url if Url is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+        ]
+        return XlXmlExportResult(self.xmlmap.Export(*params))
 
-    def ExportXml(self, *args, Data=None):
-        arguments = {"Data": Data}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XlXmlExportResult(self.xmlmap.ExportXml(*args, **arguments))
+    def ExportXml(self, Data=None):
+        params = [
+            Data if Data is not None else pythoncom.Missing,
+        ]
+        return XlXmlExportResult(self.xmlmap.ExportXml(*params))
 
-    def Import(self, *args, Url=None, Overwrite=None):
-        arguments = {"Url": Url, "Overwrite": Overwrite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XlXmlImportResult(self.xmlmap.Import(*args, **arguments))
+    def Import(self, Url=None, Overwrite=None):
+        params = [
+            Url if Url is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+        ]
+        return XlXmlImportResult(self.xmlmap.Import(*params))
 
-    def ImportXml(self, *args, XmlData=None, Overwrite=None):
-        arguments = {"XmlData": XmlData, "Overwrite": Overwrite}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XlXmlImportResult(self.xmlmap.ImportXml(*args, **arguments))
+    def ImportXml(self, XmlData=None, Overwrite=None):
+        params = [
+            XmlData if XmlData is not None else pythoncom.Missing,
+            Overwrite if Overwrite is not None else pythoncom.Missing,
+        ]
+        return XlXmlImportResult(self.xmlmap.ImportXml(*params))
 
 
 class XmlMaps:
@@ -28383,22 +32085,25 @@ class XmlMaps:
     def Creator(self):
         return self.xmlmaps.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.xmlmaps.Item):
-            return self.xmlmaps.Item(*args, **arguments)
+            return self.xmlmaps.Item(*params)
         else:
-            return self.xmlmaps.GetItem(*args, **arguments)
+            return self.xmlmaps.GetItem(*params)
 
     @property
     def Parent(self):
         return self.xmlmaps.Parent
 
-    def Add(self, *args, Schema=None, RootElementName=None):
-        arguments = {"Schema": Schema, "RootElementName": RootElementName}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        return XmlMap(self.xmlmaps.Add(*args, **arguments))
+    def Add(self, Schema=None, RootElementName=None):
+        params = [
+            Schema if Schema is not None else pythoncom.Missing,
+            RootElementName if RootElementName is not None else pythoncom.Missing,
+        ]
+        return XmlMap(self.xmlmaps.Add(*params))
 
 
 class XmlNamespace:
@@ -28444,13 +32149,14 @@ class XmlNamespaces:
     def Creator(self):
         return self.xmlnamespaces.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.xmlnamespaces.Item):
-            return self.xmlnamespaces.Item(*args, **arguments)
+            return self.xmlnamespaces.Item(*params)
         else:
-            return self.xmlnamespaces.GetItem(*args, **arguments)
+            return self.xmlnamespaces.GetItem(*params)
 
     @property
     def Parent(self):
@@ -28460,10 +32166,12 @@ class XmlNamespaces:
     def Value(self):
         return self.xmlnamespaces.Value
 
-    def InstallManifest(self, *args, Path=None, InstallForAllUsers=None):
-        arguments = {"Path": Path, "InstallForAllUsers": InstallForAllUsers}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.xmlnamespaces.InstallManifest(*args, **arguments)
+    def InstallManifest(self, Path=None, InstallForAllUsers=None):
+        params = [
+            Path if Path is not None else pythoncom.Missing,
+            InstallForAllUsers if InstallForAllUsers is not None else pythoncom.Missing,
+        ]
+        self.xmlnamespaces.InstallManifest(*params)
 
 
 class XmlSchema:
@@ -28513,13 +32221,14 @@ class XmlSchemas:
     def Creator(self):
         return self.xmlschemas.Creator
 
-    def Item(self, *args, Index=None):
-        arguments = {"Index": Index}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+    def Item(self, Index=None):
+        params = [
+            Index if Index is not None else pythoncom.Missing,
+        ]
         if callable(self.xmlschemas.Item):
-            return self.xmlschemas.Item(*args, **arguments)
+            return self.xmlschemas.Item(*params)
         else:
-            return self.xmlschemas.GetItem(*args, **arguments)
+            return self.xmlschemas.GetItem(*params)
 
     @property
     def Parent(self):
@@ -28558,8 +32267,12 @@ class XPath:
     def Clear(self):
         self.xpath.Clear()
 
-    def SetValue(self, *args, Map=None, XPath=None, SelectionNamespace=None, Repeating=None):
-        arguments = {"Map": Map, "XPath": XPath, "SelectionNamespace": SelectionNamespace, "Repeating": Repeating}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
-        self.xpath.SetValue(*args, **arguments)
+    def SetValue(self, Map=None, XPath=None, SelectionNamespace=None, Repeating=None):
+        params = [
+            Map if Map is not None else pythoncom.Missing,
+            XPath if XPath is not None else pythoncom.Missing,
+            SelectionNamespace if SelectionNamespace is not None else pythoncom.Missing,
+            Repeating if Repeating is not None else pythoncom.Missing,
+        ]
+        self.xpath.SetValue(*params)
 

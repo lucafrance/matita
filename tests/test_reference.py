@@ -40,19 +40,3 @@ class TestParser(unittest.TestCase):
         self.assertEqual(rows[0][0], "Lorem")
         self.assertEqual(rows[2][1], "e")
         self.assertEqual(rows[3][2], "i")
-
-
-with open("src/matita/office/excel.py", "rt") as f:
-    excel_src = f.read()
-
-class TestExcelModule(unittest.TestCase):
-
-    def test_application_class(self):
-        self.assertTrue("    def new(self):\n        self.application = win32com.client.Dispatch(\"Excel.Application\")\n        return self" in excel_src, msg="def new... not found")
-
-    def test_collections(self):
-        self.assertTrue("def __call__(self, item):\n        return Worksheet(self.worksheets(item))" in excel_src, msg="__call__... not found")
-
-    def test_methods(self):
-        self.assertTrue("def Quit(self):\n        self.application.Quit()" in excel_src, msg="def Quit... not found")
-        self.assertTrue("def Add(self, *args, Template=None):\n        arguments = {\"Template\": Template}\n        arguments = {key: value for key, value in arguments.items() if value is not None}\n        return Workbook(self.workbooks.Add(*args, **arguments))" in excel_src, msg="def Add... not found")

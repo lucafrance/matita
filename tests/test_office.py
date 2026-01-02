@@ -39,7 +39,7 @@ class TestApplicationOpenClose(unittest.TestCase):
         used_range = wks.UsedRange
         self.assertIs(type(used_range), excel.Range)
         self.assertEqual(used_range.Address(), "$A$1:$A$2")
-        self.assertEqual(used_range.Address(None, None, ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
+        self.assertEqual(used_range.Address(ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
         # Test Range.Cells
         cell3 = used_range.Cells(2,1)
         self.assertEqual(cell3.Value2, 12345.678)

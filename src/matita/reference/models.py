@@ -279,16 +279,21 @@ class DocPage:
         """Return code for non-None arguments extraction to an 'arguments' dictionary
 
         Example output
-        -------------------------------------------
-        arguments = {"SaveChanges": SaveChanges, "FileName": FileName, "RouteWorkbook": RouteWorkbook}
-        arguments = {key: value for key, value in arguments.items() if value is not None}
+        -------------------------------------------        
+        params = [
+            RowAbsolute if RowAbsolute is not None else pythoncom.Missing,
+            ColumnAbsolute if ColumnAbsolute is not None else pythoncom.Missing,
+            ReferenceStyle if ReferenceStyle is not None else pythoncom.Missing,
+            External if External is not None else pythoncom.Missing,
+            RelativeTo if RelativeTo is not None else pythoncom.Missing,
+        ]
         -------------------------------------------
         """
         code = []
-        code_line = [f"\"{arg}\": {arg}" for arg in self.parameters]
-        code_line = "arguments = {" + ", ".join(code_line) + "}"
-        code.append(" "*8 + code_line)
-        code.append("        arguments = {key: value for key, value in arguments.items() if value is not None}")
+        code.append("        params = [")
+        for arg in self.parameters:
+            code.append(f"            {arg} if {arg} is not None else pythoncom.Missing,")
+        code.append("        ]")
         return code
 
     def to_python_properties(self):
@@ -312,19 +317,19 @@ class DocPage:
                     code.append(f"        return self.{self.object_name.lower()}.{p.property_name}")
                     code.append(f"")
             else:
-                code.append(f"    def {p.property_name}(self, *args, {p.parameters_code()}):")
+                code.append(f"    def {p.property_name}(self, {p.parameters_code()}):")
                 code += p.to_python_arguments_expansion()
                 if p.property_class is not None:
                     code.append(f"        if callable(self.{self.object_name.lower()}.{p.property_name}):")
-                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.{p.property_name}(*args, **arguments))")
+                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.{p.property_name}(*params))")
                     code.append(f"        else:")
-                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments))")
+                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.Get{p.property_name}(*params))")
                     code.append(f"")
                 else:
                     code.append(f"        if callable(self.{self.object_name.lower()}.{p.property_name}):")
-                    code.append(f"            return self.{self.object_name.lower()}.{p.property_name}(*args, **arguments)")
+                    code.append(f"            return self.{self.object_name.lower()}.{p.property_name}(*params)")
                     code.append(f"        else:")
-                    code.append(f"            return self.{self.object_name.lower()}.Get{p.property_name}(*args, **arguments)")
+                    code.append(f"            return self.{self.object_name.lower()}.Get{p.property_name}(*params)")
                     code.append(f"")
 
             # Setter method
@@ -346,10 +351,10 @@ class DocPage:
                 code.append(f"    def {m.method_name}(self):")
                 code_line = f"self.{self.object_name.lower()}.{m.method_name}()"
             else:
-                code.append(f"    def {m.method_name}(self, *args, {m.parameters_code()}):")
+                code.append(f"    def {m.method_name}(self, {m.parameters_code()}):")
                 code += m.to_python_arguments_expansion()
                 # Actual method invocation
-                code_line = f"self.{self.object_name.lower()}.{m.method_name}(*args, **arguments)"
+                code_line = f"self.{self.object_name.lower()}.{m.method_name}(*params)"
             if m.has_return_value:
                 if m.return_value_class is not None:
                     code_line = f"{m.return_value_class}({code_line})"
@@ -437,7 +442,10 @@ class VbaDocs:
                 p.parameters = ["RowIndex", "ColumnIndex"]
 
     def to_python(self, application):
-        code = ["import win32com.client", ""]
+        code = [
+            "import win32com.client",
+             "import pythoncom",
+             "",]
         for page_key, page in self.pages.items():
             if page.module_name is None:
                 continue
