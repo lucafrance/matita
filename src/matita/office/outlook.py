@@ -1,18 +1,5 @@
 import win32com.client
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Account:
 
     def __init__(self, account=None):
@@ -89,15 +76,6 @@ class Account:
         return self.account.GetRecipientFromID(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
 class AccountRuleCondition:
 
     def __init__(self, accountrulecondition=None):
@@ -140,13 +118,6 @@ class AccountRuleCondition:
         return NameSpace(self.accountrulecondition.Session)
 
 
-
-
-
-
-
-
-
 class Accounts:
 
     def __init__(self, accounts=None):
@@ -178,10 +149,6 @@ class Accounts:
         return self.accounts.Item(*args, **arguments)
 
 
-
-
-
-
 class AccountSelector:
 
     def __init__(self, accountselector=None):
@@ -206,16 +173,6 @@ class AccountSelector:
     @property
     def Session(self):
         return NameSpace(self.accountselector.Session)
-
-
-
-
-
-
-
-
-
-
 
 
 class Action:
@@ -310,19 +267,6 @@ class Action:
         return self.action.Execute()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Actions:
 
     def __init__(self, actions=None):
@@ -360,18 +304,6 @@ class Actions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.actions.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class AddressEntries:
@@ -425,21 +357,6 @@ class AddressEntries:
         arguments = {"Property": Property, "Order": Order}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.addressentries.Sort(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class AddressEntry:
@@ -531,21 +448,6 @@ class AddressEntry:
         self.addressentry.Update(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class AddressList:
 
     def __init__(self, addresslist=None):
@@ -607,15 +509,6 @@ class AddressList:
         return self.addresslist.GetContactsFolder()
 
 
-
-
-
-
-
-
-
-
-
 class AddressLists:
 
     def __init__(self, addresslists=None):
@@ -645,13 +538,6 @@ class AddressLists:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.addresslists.Item(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class AddressRuleCondition:
@@ -694,34 +580,6 @@ class AddressRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.addressrulecondition.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Application:
@@ -861,82 +719,6 @@ class Application:
         arguments = {"RegionName": RegionName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.RefreshFormRegionDefinition(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class AppointmentItem:
@@ -1448,61 +1230,6 @@ class AppointmentItem:
         self.appointmentitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class AssignToCategoryRuleAction:
 
     def __init__(self, assigntocategoryruleaction=None):
@@ -1543,16 +1270,6 @@ class AssignToCategoryRuleAction:
     @property
     def Session(self):
         return NameSpace(self.assigntocategoryruleaction.Session)
-
-
-
-
-
-
-
-
-
-
 
 
 class Attachment:
@@ -1632,19 +1349,6 @@ class Attachment:
         self.attachment.SaveAsFile(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Attachments:
 
     def __init__(self, attachments=None):
@@ -1686,15 +1390,6 @@ class Attachments:
         self.attachments.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
 class AttachmentSelection:
 
     def __init__(self, attachmentselection=None):
@@ -1733,13 +1428,6 @@ class AttachmentSelection:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.attachmentselection.Item(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class AutoFormatRule:
@@ -1796,16 +1484,6 @@ class AutoFormatRule:
         return AutoFormatRule(self.autoformatrule.Standard)
 
 
-
-
-
-
-
-
-
-
-
-
 class AutoFormatRules:
 
     def __init__(self, autoformatrules=None):
@@ -1856,22 +1534,6 @@ class AutoFormatRules:
 
     def Save(self):
         self.autoformatrules.Save()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class BusinessCardView:
@@ -1986,18 +1648,6 @@ class BusinessCardView:
         self.businesscardview.Save()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class CalendarModule:
 
     def __init__(self, calendarmodule=None):
@@ -2046,22 +1696,6 @@ class CalendarModule:
     @Visible.setter
     def Visible(self, value):
         self.calendarmodule.Visible = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CalendarSharing:
@@ -2154,28 +1788,6 @@ class CalendarSharing:
         arguments = {"Path": Path}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.calendarsharing.SaveAsICal(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CalendarView:
@@ -2354,32 +1966,6 @@ class CalendarView:
         self.calendarview.Save()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CardView:
 
     def __init__(self, cardview=None):
@@ -2528,25 +2114,6 @@ class CardView:
         self.cardview.Save()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Categories:
 
     def __init__(self, categories=None):
@@ -2586,16 +2153,6 @@ class Categories:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.categories.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
 
 
 class Category:
@@ -2660,15 +2217,6 @@ class Category:
         self.category.ShortcutKey = value
 
 
-
-
-
-
-
-
-
-
-
 class CategoryRuleCondition:
 
     def __init__(self, categoryrulecondition=None):
@@ -2711,10 +2259,6 @@ class CategoryRuleCondition:
         return NameSpace(self.categoryrulecondition.Session)
 
 
-
-
-
-
 class Column:
 
     def __init__(self, column=None):
@@ -2739,15 +2283,6 @@ class Column:
     @property
     def Session(self):
         return NameSpace(self.column.Session)
-
-
-
-
-
-
-
-
-
 
 
 class ColumnFormat:
@@ -2808,14 +2343,6 @@ class ColumnFormat:
         self.columnformat.Width = value
 
 
-
-
-
-
-
-
-
-
 class Columns:
 
     def __init__(self, columns=None):
@@ -2860,13 +2387,6 @@ class Columns:
         self.columns.RemoveAll()
 
 
-
-
-
-
-
-
-
 class Conflict:
 
     def __init__(self, conflict=None):
@@ -2899,18 +2419,6 @@ class Conflict:
     @property
     def Type(self):
         return OlObjectClass(self.conflict.Type)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Conflicts:
@@ -2954,142 +2462,6 @@ class Conflicts:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.conflicts.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ContactItem:
@@ -4355,87 +3727,6 @@ class ContactItem:
         self.contactitem.ShowCheckPhoneDialog(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ContactsModule:
 
     def __init__(self, contactsmodule=None):
@@ -4484,26 +3775,6 @@ class ContactsModule:
     @Visible.setter
     def Visible(self, value):
         self.contactsmodule.Visible = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Conversation:
@@ -4599,19 +3870,6 @@ class Conversation:
         self.conversation.StopAlwaysMoveToFolder(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ConversationHeader:
 
     def __init__(self, conversationheader=None):
@@ -4646,59 +3904,6 @@ class ConversationHeader:
 
     def GetItems(self):
         return self.conversationheader.GetItems()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class DistListItem:
@@ -5078,89 +4283,6 @@ class DistListItem:
         self.distlistitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DocumentItem:
 
     def __init__(self, documentitem=None):
@@ -5386,37 +4508,6 @@ class DocumentItem:
         self.documentitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Exception:
 
     def __init__(self, exception=None):
@@ -5451,13 +4542,6 @@ class Exception:
         return NameSpace(self.exception.Session)
 
 
-
-
-
-
-
-
-
 class Exceptions:
 
     def __init__(self, exceptions=None):
@@ -5487,25 +4571,6 @@ class Exceptions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.exceptions.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ExchangeDistributionList:
@@ -5620,39 +4685,6 @@ class ExchangeDistributionList:
         arguments = {"MakePermanent": MakePermanent, "Refresh": Refresh}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.exchangedistributionlist.Update(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ExchangeUser:
@@ -5916,53 +4948,6 @@ class ExchangeUser:
         self.exchangeuser.Update(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Explorer:
 
     def __init__(self, explorer=None):
@@ -6117,25 +5102,6 @@ class Explorer:
         self.explorer.ShowPane(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Explorers:
 
     def __init__(self, explorers=None):
@@ -6170,35 +5136,6 @@ class Explorers:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.explorers.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Folder:
@@ -6399,33 +5336,6 @@ class Folder:
         self.folder.SetCustomIcon(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Folders:
 
     def __init__(self, folders=None):
@@ -6477,19 +5387,6 @@ class Folders:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.folders.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class FormDescription:
@@ -6647,23 +5544,6 @@ class FormDescription:
         self.formdescription.PublishForm(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class FormNameRuleCondition:
 
     def __init__(self, formnamerulecondition=None):
@@ -6704,22 +5584,6 @@ class FormNameRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.formnamerulecondition.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class FormRegion:
@@ -6819,22 +5683,6 @@ class FormRegion:
         self.formregion.SetControlItemProperty(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class FromRssFeedRuleCondition:
 
     def __init__(self, fromrssfeedrulecondition=None):
@@ -6875,19 +5723,6 @@ class FromRssFeedRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.fromrssfeedrulecondition.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class IconView:
@@ -7006,21 +5841,6 @@ class IconView:
         self.iconview.Save()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ImportanceRuleCondition:
 
     def __init__(self, importancerulecondition=None):
@@ -7061,27 +5881,6 @@ class ImportanceRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.importancerulecondition.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Inspector:
@@ -7224,26 +6023,6 @@ class Inspector:
         self.inspector.ShowFormPage(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Inspectors:
 
     def __init__(self, inspectors=None):
@@ -7276,14 +6055,6 @@ class Inspectors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.inspectors.Item(*args, **arguments)
-
-
-
-
-
-
-
-
 
 
 class ItemProperties:
@@ -7330,12 +6101,6 @@ class ItemProperties:
         self.itemproperties.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
 class ItemProperty:
 
     def __init__(self, itemproperty=None):
@@ -7380,26 +6145,6 @@ class ItemProperty:
     @Value.setter
     def Value(self, value):
         self.itemproperty.Value = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Items:
@@ -7485,64 +6230,6 @@ class Items:
         arguments = {"Property": Property, "Descending": Descending}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.items.Sort(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class JournalItem:
@@ -7876,40 +6563,6 @@ class JournalItem:
         self.journalitem.StopTimer()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class JournalModule:
 
     def __init__(self, journalmodule=None):
@@ -7958,73 +6611,6 @@ class JournalModule:
     @Visible.setter
     def Visible(self, value):
         self.journalmodule.Visible = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class MailItem:
@@ -8647,76 +7233,6 @@ class MailItem:
         self.mailitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class MailModule:
 
     def __init__(self, mailmodule=None):
@@ -8767,19 +7283,6 @@ class MailModule:
         self.mailmodule.Visible = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class MarkAsTaskRuleAction:
 
     def __init__(self, markastaskruleaction=None):
@@ -8828,58 +7331,6 @@ class MarkAsTaskRuleAction:
     @property
     def Session(self):
         return NameSpace(self.markastaskruleaction.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class MeetingItem:
@@ -9271,56 +7722,6 @@ class MeetingItem:
         self.meetingitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class MoveOrCopyRuleAction:
 
     def __init__(self, moveorcopyruleaction=None):
@@ -9361,41 +7762,6 @@ class MoveOrCopyRuleAction:
     @property
     def Session(self):
         return NameSpace(self.moveorcopyruleaction.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class NameSpace:
@@ -9595,25 +7961,6 @@ class NameSpace:
         self.namespace.SendAndReceive(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class NavigationFolder:
 
     def __init__(self, navigationfolder=None):
@@ -9672,14 +8019,6 @@ class NavigationFolder:
         return NameSpace(self.navigationfolder.Session)
 
 
-
-
-
-
-
-
-
-
 class NavigationFolders:
 
     def __init__(self, navigationfolders=None):
@@ -9719,12 +8058,6 @@ class NavigationFolders:
         arguments = {"RemovableFolder": RemovableFolder}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.navigationfolders.Remove(*args, **arguments)
-
-
-
-
-
-
 
 
 class NavigationGroup:
@@ -9773,18 +8106,6 @@ class NavigationGroup:
         return NameSpace(self.navigationgroup.Session)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class NavigationGroups:
 
     def __init__(self, navigationgroups=None):
@@ -9829,13 +8150,6 @@ class NavigationGroups:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.navigationgroups.Item(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class NavigationModule:
@@ -9884,17 +8198,6 @@ class NavigationModule:
         self.navigationmodule.Visible = value
 
 
-
-
-
-
-
-
-
-
-
-
-
 class NavigationModules:
 
     def __init__(self, navigationmodules=None):
@@ -9929,13 +8232,6 @@ class NavigationModules:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.navigationmodules.Item(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class NavigationPane:
@@ -9988,14 +8284,6 @@ class NavigationPane:
         return NameSpace(self.navigationpane.Session)
 
 
-
-
-
-
-
-
-
-
 class NewItemAlertRuleAction:
 
     def __init__(self, newitemalertruleaction=None):
@@ -10036,29 +8324,6 @@ class NewItemAlertRuleAction:
     @Text.setter
     def Text(self, value):
         self.newitemalertruleaction.Text = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class NoteItem:
@@ -10235,21 +8500,6 @@ class NoteItem:
         self.noteitem.SaveAs(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class NotesModule:
 
     def __init__(self, notesmodule=None):
@@ -10298,13 +8548,6 @@ class NotesModule:
     @Visible.setter
     def Visible(self, value):
         self.notesmodule.Visible = value
-
-
-
-
-
-
-
 
 
 # OlAccountType enumeration
@@ -10798,8 +9041,6 @@ olTaskItem = 3
 # OlJournalRecipientType enumeration
 olAssociatedContact = 1
 
-
-
 class OlkBusinessCardControl:
 
     def __init__(self, olkbusinesscardcontrol=None):
@@ -10820,24 +9061,6 @@ class OlkBusinessCardControl:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkbusinesscardcontrol.MousePointer = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkCategory:
@@ -10900,29 +9123,6 @@ class OlkCategory:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcategory.MousePointer = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkCheckBox:
@@ -11029,46 +9229,6 @@ class OlkCheckBox:
     @WordWrap.setter
     def WordWrap(self, value):
         self.olkcheckbox.WordWrap = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkComboBox:
@@ -11308,38 +9468,6 @@ class OlkComboBox:
         self.olkcombobox.SetItem(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OlkCommandButton:
 
     def __init__(self, olkcommandbutton=None):
@@ -11438,24 +9566,6 @@ class OlkCommandButton:
         self.olkcommandbutton.WordWrap = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OlkContactPhoto:
 
     def __init__(self, olkcontactphoto=None):
@@ -11484,43 +9594,6 @@ class OlkContactPhoto:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcontactphoto.MousePointer = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkDateControl:
@@ -11664,20 +9737,6 @@ class OlkDateControl:
         self.olkdatecontrol.DropDown()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OlkFrameHeader:
 
     def __init__(self, olkframeheader=None):
@@ -11736,10 +9795,6 @@ class OlkFrameHeader:
         self.olkframeheader.MousePointer = value
 
 
-
-
-
-
 class OlkInfoBar:
 
     def __init__(self, olkinfobar=None):
@@ -11760,22 +9815,6 @@ class OlkInfoBar:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkinfobar.MousePointer = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkLabel:
@@ -11890,38 +9929,6 @@ class OlkLabel:
     @WordWrap.setter
     def WordWrap(self, value):
         self.olklabel.WordWrap = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkListBox:
@@ -12086,38 +10093,6 @@ class OlkListBox:
         self.olklistbox.SetSelected(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OlkOptionButton:
 
     def __init__(self, olkoptionbutton=None):
@@ -12224,13 +10199,6 @@ class OlkOptionButton:
         self.olkoptionbutton.WordWrap = value
 
 
-
-
-
-
-
-
-
 class OlkPageControl:
 
     def __init__(self, olkpagecontrol=None):
@@ -12243,11 +10211,6 @@ class OlkPageControl:
     @Page.setter
     def Page(self, value):
         self.olkpagecontrol.Page = value
-
-
-
-
-
 
 
 class OlkSenderPhoto:
@@ -12286,41 +10249,6 @@ class OlkSenderPhoto:
     @property
     def PreferredWidth(self):
         return self.olksenderphoto.PreferredWidth
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OlkTextBox:
@@ -12565,47 +10493,6 @@ class OlkTextBox:
         self.olktextbox.Paste()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OlkTimeControl:
 
     def __init__(self, olktimecontrol=None):
@@ -12763,33 +10650,6 @@ class OlkTimeControl:
         self.olktimecontrol.DropDown()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OlkTimeZoneControl:
 
     def __init__(self, olktimezonecontrol=None):
@@ -12861,13 +10721,6 @@ class OlkTimeZoneControl:
 
     def DropDown(self):
         self.olktimezonecontrol.DropDown()
-
-
-
-
-
-
-
 
 
 # OlMailingAddress enumeration
@@ -13445,9 +11298,6 @@ olMaximized = 0
 olMinimized = 1
 olNormalWindow = 2
 
-
-
-
 class OrderField:
 
     def __init__(self, orderfield=None):
@@ -13480,15 +11330,6 @@ class OrderField:
     @property
     def ViewXMLSchemaName(self):
         return OrderField(self.orderfield.ViewXMLSchemaName)
-
-
-
-
-
-
-
-
-
 
 
 class OrderFields:
@@ -13540,12 +11381,6 @@ class OrderFields:
         self.orderfields.RemoveAll()
 
 
-
-
-
-
-
-
 class OutlookBarGroup:
 
     def __init__(self, outlookbargroup=None):
@@ -13586,19 +11421,6 @@ class OutlookBarGroup:
     @ViewType.setter
     def ViewType(self, value):
         self.outlookbargroup.ViewType = value
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OutlookBarGroups:
@@ -13642,13 +11464,6 @@ class OutlookBarGroups:
         self.outlookbargroups.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
-
 class OutlookBarPane:
 
     def __init__(self, outlookbarpane=None):
@@ -13685,12 +11500,6 @@ class OutlookBarPane:
     @Visible.setter
     def Visible(self, value):
         self.outlookbarpane.Visible = value
-
-
-
-
-
-
 
 
 class OutlookBarShortcut:
@@ -13730,18 +11539,6 @@ class OutlookBarShortcut:
         arguments = {"Icon": Icon}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.outlookbarshortcut.SetIcon(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OutlookBarShortcuts:
@@ -13785,13 +11582,6 @@ class OutlookBarShortcuts:
         self.outlookbarshortcuts.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
-
 class OutlookBarStorage:
 
     def __init__(self, outlookbarstorage=None):
@@ -13816,8 +11606,6 @@ class OutlookBarStorage:
     @property
     def Session(self):
         return NameSpace(self.outlookbarstorage.Session)
-
-
 
 
 class Pages:
@@ -13859,18 +11647,6 @@ class Pages:
         self.pages.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Panes:
 
     def __init__(self, panes=None):
@@ -13900,13 +11676,6 @@ class Panes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.panes.Item(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class PlaySoundRuleAction:
@@ -13949,60 +11718,6 @@ class PlaySoundRuleAction:
     @property
     def Session(self):
         return NameSpace(self.playsoundruleaction.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class PostItem:
@@ -14409,58 +12124,6 @@ class PostItem:
         self.postitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class PropertyAccessor:
 
     def __init__(self, propertyaccessor=None):
@@ -14533,15 +12196,6 @@ class PropertyAccessor:
         return self.propertyaccessor.UTCToLocalTime(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
 class PropertyPage:
 
     def __init__(self, propertypage=None):
@@ -14562,11 +12216,6 @@ class PropertyPage:
         arguments = {"HelpFile": HelpFile, "HelpContext": HelpContext}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.propertypage.GetPageInfo(*args, **arguments)
-
-
-
-
-
 
 
 class PropertyPages:
@@ -14610,11 +12259,6 @@ class PropertyPages:
         self.propertypages.Remove(*args, **arguments)
 
 
-
-
-
-
-
 class PropertyPageSite:
 
     def __init__(self, propertypagesite=None):
@@ -14638,19 +12282,6 @@ class PropertyPageSite:
 
     def OnStatusChange(self):
         self.propertypagesite.OnStatusChange()
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Recipient:
@@ -14766,22 +12397,6 @@ class Recipient:
         return self.recipient.Resolve()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Recipients:
 
     def __init__(self, recipients=None):
@@ -14824,20 +12439,6 @@ class Recipients:
 
     def ResolveAll(self):
         return self.recipients.ResolveAll()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class RecurrencePattern:
@@ -14983,22 +12584,6 @@ class RecurrencePattern:
         return self.recurrencepattern.GetOccurrence(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Reminder:
 
     def __init__(self, reminder=None):
@@ -15049,16 +12634,6 @@ class Reminder:
         self.reminder.Snooze(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
 class Reminders:
 
     def __init__(self, reminders=None):
@@ -15093,59 +12668,6 @@ class Reminders:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.reminders.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class RemoteItem:
@@ -15404,80 +12926,6 @@ class RemoteItem:
         self.remoteitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ReportItem:
 
     def __init__(self, reportitem=None):
@@ -15726,47 +13174,6 @@ class ReportItem:
         self.reportitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Results:
 
     def __init__(self, results=None):
@@ -15831,17 +13238,6 @@ class Results:
         self.results.Sort(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
 class Row:
 
     def __init__(self, row=None):
@@ -15885,18 +13281,6 @@ class Row:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.row.UTCToLocalTime(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Rule:
@@ -15970,14 +13354,6 @@ class Rule:
         self.rule.Execute(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
 class RuleAction:
 
     def __init__(self, ruleaction=None):
@@ -16010,22 +13386,6 @@ class RuleAction:
     @property
     def Session(self):
         return NameSpace(self.ruleaction.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class RuleActions:
@@ -16127,19 +13487,6 @@ class RuleActions:
         return self.ruleactions.Item(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class RuleCondition:
 
     def __init__(self, rulecondition=None):
@@ -16172,24 +13519,6 @@ class RuleCondition:
     @property
     def Session(self):
         return NameSpace(self.rulecondition.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class RuleConditions:
@@ -16323,27 +13652,6 @@ class RuleConditions:
         return self.ruleconditions.Item(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Rules:
 
     def __init__(self, rules=None):
@@ -16396,15 +13704,6 @@ class Rules:
         arguments = {"ShowProgress": ShowProgress}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.rules.Save(*args, **arguments)
-
-
-
-
-
-
-
-
-
 
 
 class Search:
@@ -16464,20 +13763,6 @@ class Search:
         self.search.Stop()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Selection:
 
     def __init__(self, selection=None):
@@ -16516,17 +13801,6 @@ class Selection:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
 
 
 class SelectNamesDialog:
@@ -16639,18 +13913,6 @@ class SelectNamesDialog:
         self.selectnamesdialog.SetDefaultDisplayMode(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class SenderInAddressListRuleCondition:
 
     def __init__(self, senderinaddresslistrulecondition=None):
@@ -16693,12 +13955,6 @@ class SenderInAddressListRuleCondition:
         return NameSpace(self.senderinaddresslistrulecondition.Session)
 
 
-
-
-
-
-
-
 class SendRuleAction:
 
     def __init__(self, sendruleaction=None):
@@ -16735,71 +13991,6 @@ class SendRuleAction:
     @property
     def Session(self):
         return NameSpace(self.sendruleaction.Session)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class SharingItem:
@@ -17443,83 +14634,6 @@ class SharingItem:
         self.sharingitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SimpleItems:
 
     def __init__(self, simpleitems=None):
@@ -17549,11 +14663,6 @@ class SimpleItems:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.simpleitems.Item(*args, **arguments)
-
-
-
-
-
 
 
 class SolutionsModule:
@@ -17605,21 +14714,6 @@ class SolutionsModule:
         arguments = {"Solution": Solution, "Scope": Scope}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.solutionsmodule.AddSolution(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class StorageItem:
@@ -17700,29 +14794,6 @@ class StorageItem:
 
     def Save(self):
         self.storageitem.Save()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Store:
@@ -17813,16 +14884,6 @@ class Store:
         self.store.RefreshQuotaDisplay()
 
 
-
-
-
-
-
-
-
-
-
-
 class Stores:
 
     def __init__(self, stores=None):
@@ -17852,11 +14913,6 @@ class Stores:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Stores(self.stores.Item(*args, **arguments))
-
-
-
-
-
 
 
 class SyncObject:
@@ -17889,20 +14945,6 @@ class SyncObject:
 
     def Stop(self):
         self.syncobject.Stop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class SyncObjects:
@@ -17938,17 +14980,6 @@ class SyncObjects:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.syncobjects.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Table:
@@ -18011,34 +15042,6 @@ class Table:
         arguments = {"SortProperty": SortProperty, "Descending": Descending}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.Sort(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TableView:
@@ -18302,85 +15305,6 @@ class TableView:
 
     def Save(self):
         self.tableview.Save()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TaskItem:
@@ -18884,103 +15808,6 @@ class TaskItem:
         return self.taskitem.StatusReport()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TaskRequestAcceptItem:
 
     def __init__(self, taskrequestacceptitem=None):
@@ -19232,79 +16059,6 @@ class TaskRequestAcceptItem:
 
     def ShowCategoriesDialog(self):
         self.taskrequestacceptitem.ShowCategoriesDialog()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TaskRequestDeclineItem:
@@ -19560,79 +16314,6 @@ class TaskRequestDeclineItem:
         self.taskrequestdeclineitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TaskRequestItem:
 
     def __init__(self, taskrequestitem=None):
@@ -19884,79 +16565,6 @@ class TaskRequestItem:
 
     def ShowCategoriesDialog(self):
         self.taskrequestitem.ShowCategoriesDialog()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TaskRequestUpdateItem:
@@ -20212,36 +16820,6 @@ class TaskRequestUpdateItem:
         self.taskrequestupdateitem.ShowCategoriesDialog()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TasksModule:
 
     def __init__(self, tasksmodule=None):
@@ -20292,17 +16870,6 @@ class TasksModule:
         self.tasksmodule.Visible = value
 
 
-
-
-
-
-
-
-
-
-
-
-
 class TextRuleCondition:
 
     def __init__(self, textrulecondition=None):
@@ -20343,24 +16910,6 @@ class TextRuleCondition:
     @Text.setter
     def Text(self, value):
         self.textrulecondition.Text = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TimelineView:
@@ -20531,27 +17080,6 @@ class TimelineView:
         self.timelineview.Save()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TimeZone:
 
     def __init__(self, timezone=None):
@@ -20610,18 +17138,6 @@ class TimeZone:
         return self.timezone.StandardDesignation
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class TimeZones:
 
     def __init__(self, timezones=None):
@@ -20665,12 +17181,6 @@ class TimeZones:
         return self.timezones.Item(*args, **arguments)
 
 
-
-
-
-
-
-
 class ToOrFromRuleCondition:
 
     def __init__(self, toorfromrulecondition=None):
@@ -20707,15 +17217,6 @@ class ToOrFromRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.toorfromrulecondition.Session)
-
-
-
-
-
-
-
-
-
 
 
 class UserDefinedProperties:
@@ -20767,15 +17268,6 @@ class UserDefinedProperties:
         self.userdefinedproperties.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
 class UserDefinedProperty:
 
     def __init__(self, userdefinedproperty=None):
@@ -20815,16 +17307,6 @@ class UserDefinedProperty:
 
     def Delete(self):
         self.userdefinedproperty.Delete()
-
-
-
-
-
-
-
-
-
-
 
 
 class UserProperties:
@@ -20871,13 +17353,6 @@ class UserProperties:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.userproperties.Remove(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class UserProperty:
@@ -20943,22 +17418,6 @@ class UserProperty:
 
     def Delete(self):
         self.userproperty.Delete()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class View:
@@ -21057,18 +17516,6 @@ class View:
         self.view.Save()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class ViewField:
 
     def __init__(self, viewfield=None):
@@ -21097,15 +17544,6 @@ class ViewField:
     @property
     def ViewXMLSchemaName(self):
         return ViewField(self.viewfield.ViewXMLSchemaName)
-
-
-
-
-
-
-
-
-
 
 
 class ViewFields:
@@ -21152,15 +17590,6 @@ class ViewFields:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.viewfields.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
 
 
 class ViewFont:
@@ -21249,18 +17678,6 @@ class ViewFont:
         self.viewfont.Underline = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Views:
 
     def __init__(self, views=None):
@@ -21300,8 +17717,4 @@ class Views:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.views.Remove(*args, **arguments)
-
-
-
-
 

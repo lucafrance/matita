@@ -28,14 +28,6 @@ acAxisUnitsTenThousands = 4
 acAxisUnitsThousands = 3
 acAxisUnitsTrillions = 12
 
-
-
-
-
-
-
-
-
 class AccessObject:
 
     def __init__(self, accessobject=None):
@@ -94,14 +86,6 @@ class AccessObject:
         return self.accessobject.IsDependentUpon(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
 class AccessObjectProperties:
 
     def __init__(self, accessobjectproperties=None):
@@ -138,8 +122,6 @@ class AccessObjectProperties:
         self.accessobjectproperties.Remove(*args, **arguments)
 
 
-
-
 class AccessObjectProperty:
 
     def __init__(self, accessobjectproperty=None):
@@ -156,8 +138,6 @@ class AccessObjectProperty:
     @Value.setter
     def Value(self, value):
         self.accessobjectproperty.Value = value
-
-
 
 
 # AcChartType enumeration
@@ -1503,9 +1483,6 @@ acWordCloudHorizontalVertical = 0
 acWordCloudHorizontal = 1
 acWordCloudVertical = 2
 
-
-
-
 class AdditionalData:
 
     def __init__(self, additionaldata=None):
@@ -1537,10 +1514,6 @@ class AdditionalData:
         return self.additionaldata.Add(*args, **arguments)
 
 
-
-
-
-
 class AllDatabaseDiagrams:
 
     def __init__(self, alldatabasediagrams=None):
@@ -1565,10 +1538,6 @@ class AllDatabaseDiagrams:
     @property
     def Parent(self):
         return self.alldatabasediagrams.Parent
-
-
-
-
 
 
 class AllForms:
@@ -1597,10 +1566,6 @@ class AllForms:
         return self.allforms.Parent
 
 
-
-
-
-
 class AllFunctions:
 
     def __init__(self, allfunctions=None):
@@ -1625,14 +1590,6 @@ class AllFunctions:
     @property
     def Parent(self):
         return self.allfunctions.Parent
-
-
-
-
-
-
-
-
 
 
 class AllModules:
@@ -1661,10 +1618,6 @@ class AllModules:
         return self.allmodules.Parent
 
 
-
-
-
-
 class AllQueries:
 
     def __init__(self, allqueries=None):
@@ -1689,10 +1642,6 @@ class AllQueries:
     @property
     def Parent(self):
         return self.allqueries.Parent
-
-
-
-
 
 
 class AllReports:
@@ -1721,10 +1670,6 @@ class AllReports:
         return self.allreports.Parent
 
 
-
-
-
-
 class AllStoredProcedures:
 
     def __init__(self, allstoredprocedures=None):
@@ -1749,10 +1694,6 @@ class AllStoredProcedures:
     @property
     def Parent(self):
         return self.allstoredprocedures.Parent
-
-
-
-
 
 
 class AllTables:
@@ -1781,10 +1722,6 @@ class AllTables:
         return self.alltables.Parent
 
 
-
-
-
-
 class AllViews:
 
     def __init__(self, allviews=None):
@@ -1809,90 +1746,6 @@ class AllViews:
     @property
     def Parent(self):
         return self.allviews.Parent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Application:
@@ -2470,115 +2323,6 @@ class Application:
         arguments = {"DataSource": DataSource, "TransformSource": TransformSource, "OutputTarget": OutputTarget, "WellFormedXMLOutput": WellFormedXMLOutput, "ScriptOption": ScriptOption}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.TransformXML(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Attachment:
@@ -3327,50 +3071,6 @@ class Attachment:
         self.attachment.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class AutoCorrect:
 
     def __init__(self, autocorrect=None):
@@ -3383,69 +3083,6 @@ class AutoCorrect:
     @DisplayAutoCorrectOptions.setter
     def DisplayAutoCorrectOptions(self, value):
         self.autocorrect.DisplayAutoCorrectOptions = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class BoundObjectFrame:
@@ -4216,83 +3853,6 @@ class BoundObjectFrame:
         self.boundobjectframe.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Chart:
 
     def __init__(self, chart=None):
@@ -4619,25 +4179,6 @@ class Chart:
         return self.chart.TransformedRowSource
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ChartAxis:
 
     def __init__(self, chartaxis=None):
@@ -4656,7 +4197,6 @@ class ChartAxis:
         return ChartAxis(self.chartaxis.Name)
 
 
-
 class ChartAxisCollection:
 
     def __init__(self, chartaxiscollection=None):
@@ -4664,20 +4204,6 @@ class ChartAxisCollection:
 
     def __call__(self, item):
         return ChartAxisCollectio(self.chartaxiscollection(item))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ChartSeries:
@@ -4898,19 +4424,6 @@ class ChartSeries:
         self.chartseries.WordCloudWordOrientation = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ChartSeriesCollection:
 
     def __init__(self, chartseriescollection=None):
@@ -4918,7 +4431,6 @@ class ChartSeriesCollection:
 
     def __call__(self, item):
         return ChartSeriesCollectio(self.chartseriescollection(item))
-
 
 
 class ChartValues:
@@ -4939,7 +4451,6 @@ class ChartValues:
         return ChartValues(self.chartvalues.Name)
 
 
-
 class ChartValuesCollection:
 
     def __init__(self, chartvaluescollection=None):
@@ -4947,62 +4458,6 @@ class ChartValuesCollection:
 
     def __call__(self, item):
         return ChartValuesCollectio(self.chartvaluescollection(item))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CheckBox:
@@ -5660,56 +5115,6 @@ class CheckBox:
         self.checkbox.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CodeData:
 
     def __init__(self, codedata=None):
@@ -5738,22 +5143,6 @@ class CodeData:
     @property
     def AllViews(self):
         return self.codedata.AllViews
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CodeProject:
@@ -5870,123 +5259,10 @@ class CodeProject:
         return self.codeproject.UpdateDependencyInfo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ComboBox:
 
     def __init__(self, combobox=None):
         self.combobox = combobox
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ComboBox:
@@ -7109,154 +6385,6 @@ class ComboBox:
         self.combobox.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CommandButton:
 
     def __init__(self, commandbutton=None):
@@ -8225,85 +7353,6 @@ class CommandButton:
         self.commandbutton.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Control:
 
     def __init__(self, control=None):
@@ -8542,27 +7591,6 @@ class Control:
         self.control.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Controls:
 
     def __init__(self, controls=None):
@@ -8587,13 +7615,6 @@ class Controls:
     @property
     def Parent(self):
         return self.controls.Parent
-
-
-
-
-
-
-
 
 
 class CurrentData:
@@ -8624,22 +7645,6 @@ class CurrentData:
     @property
     def AllViews(self):
         return self.currentdata.AllViews
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CurrentProject:
@@ -8754,59 +7759,6 @@ class CurrentProject:
 
     def UpdateDependencyInfo(self):
         self.currentproject.UpdateDependencyInfo()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CustomControl:
@@ -9329,43 +8281,6 @@ class CustomControl:
         self.customcontrol.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DependencyInfo:
 
     def __init__(self, dependencyinfo=None):
@@ -9396,12 +8311,6 @@ class DependencyInfo:
         return DependencyObjects(self.dependencyinfo.UnsupportedObjects)
 
 
-
-
-
-
-
-
 class DependencyObjects:
 
     def __init__(self, dependencyobjects=None):
@@ -9426,28 +8335,6 @@ class DependencyObjects:
     @property
     def Parent(self):
         return self.dependencyobjects.Parent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class DoCmd:
@@ -9764,54 +8651,6 @@ class DoCmd:
         self.docmd.TransferText(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class EdgeBrowserControl:
 
     def __init__(self, edgebrowsercontrol=None):
@@ -9842,42 +8681,6 @@ class EdgeBrowserControl:
         arguments = {"expression": expression}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.edgebrowsercontrol.RetrieveJavascriptValue(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class EmptyCell:
@@ -10234,24 +9037,6 @@ class EmptyCell:
         self.emptycell.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Entities:
 
     def __init__(self, entities=None):
@@ -10274,7 +9059,6 @@ class Entities:
         return self.entities.Parent
 
 
-
 class Entity:
 
     def __init__(self, entity=None):
@@ -10295,107 +9079,6 @@ class Entity:
     @property
     def Parent(self):
         return self.entity.Parent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Form:
@@ -11872,138 +10555,6 @@ class Form:
         self.form.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class FormatCondition:
 
     def __init__(self, formatcondition=None):
@@ -12110,17 +10661,6 @@ class FormatCondition:
         return self.formatcondition.Modify(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
 class FormatConditions:
 
     def __init__(self, formatconditions=None):
@@ -12155,10 +10695,6 @@ class FormatConditions:
         self.formatconditions.Delete()
 
 
-
-
-
-
 class Forms:
 
     def __init__(self, forms=None):
@@ -12183,14 +10719,6 @@ class Forms:
     @property
     def Parent(self):
         return self.forms.Parent
-
-
-
-
-
-
-
-
 
 
 class GroupLevel:
@@ -12267,14 +10795,6 @@ class GroupLevel:
         self.grouplevel.SortOrder = value
 
 
-
-
-
-
-
-
-
-
 class Hyperlink:
 
     def __init__(self, hyperlink=None):
@@ -12332,55 +10852,6 @@ class Hyperlink:
         arguments = {"NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.hyperlink.Follow(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Image:
@@ -12935,44 +11406,6 @@ class Image:
         self.image.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ImportExportSpecification:
 
     def __init__(self, importexportspecification=None):
@@ -13019,13 +11452,6 @@ class ImportExportSpecification:
         self.importexportspecification.Execute(*args, **arguments)
 
 
-
-
-
-
-
-
-
 class ImportExportSpecifications:
 
     def __init__(self, importexportspecifications=None):
@@ -13055,64 +11481,6 @@ class ImportExportSpecifications:
         arguments = {"Name": Name, "SpecificationDefinition": SpecificationDefinition}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.importexportspecifications.Add(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Label:
@@ -13729,53 +12097,6 @@ class Label:
         self.label.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Line:
 
     def __init__(self, line=None):
@@ -13992,104 +12313,6 @@ class Line:
 
     def SizeToFit(self):
         self.line.SizeToFit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ListBox:
@@ -15009,63 +13232,6 @@ class ListBox:
         self.listbox.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class MacroError:
 
     def __init__(self, macroerror=None):
@@ -15090,18 +13256,6 @@ class MacroError:
     @property
     def Number(self):
         return self.macroerror.Number
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Module:
@@ -15218,17 +13372,6 @@ class Module:
         return self.module.ReplaceLine(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
 class Modules:
 
     def __init__(self, modules=None):
@@ -15253,89 +13396,6 @@ class Modules:
     @property
     def Parent(self):
         return self.modules.Parent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class NavigationButton:
@@ -16302,123 +14362,6 @@ class NavigationButton:
         self.navigationbutton.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class NavigationControl:
 
     def __init__(self, navigationcontrol=None):
@@ -17040,106 +14983,6 @@ class NavigationControl:
 
     def Undo(self):
         self.navigationcontrol.Undo()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ObjectFrame:
@@ -17874,61 +15717,6 @@ class ObjectFrame:
         self.objectframe.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Operation:
 
     def __init__(self, operation=None):
@@ -17956,11 +15744,6 @@ class Operation:
         return self.operation.Execute(*args, **arguments)
 
 
-
-
-
-
-
 class Operations:
 
     def __init__(self, operations=None):
@@ -17981,63 +15764,6 @@ class Operations:
     @property
     def Parent(self):
         return self.operations.Parent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class OptionButton:
@@ -18696,89 +16422,6 @@ class OptionButton:
         self.optionbutton.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class OptionGroup:
 
     def __init__(self, optiongroup=None):
@@ -19278,54 +16921,6 @@ class OptionGroup:
         self.optiongroup.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Page:
 
     def __init__(self, page=None):
@@ -19581,39 +17176,6 @@ class Page:
         self.page.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class PageBreak:
 
     def __init__(self, pagebreak=None):
@@ -19720,18 +17282,6 @@ class PageBreak:
         self.pagebreak.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Pages:
 
     def __init__(self, pages=None):
@@ -19758,21 +17308,6 @@ class Pages:
         arguments = {"Item": Item}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pages.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Printer:
@@ -19945,17 +17480,6 @@ class Printer:
         self.printer.TopMargin = value
 
 
-
-
-
-
-
-
-
-
-
-
-
 class Printers:
 
     def __init__(self, printers=None):
@@ -19982,10 +17506,6 @@ class Printers:
         return self.printers.Parent
 
 
-
-
-
-
 class Properties:
 
     def __init__(self, properties=None):
@@ -20010,29 +17530,6 @@ class Properties:
     @property
     def Parent(self):
         return self.properties.Parent
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Rectangle:
@@ -20325,34 +17822,6 @@ class Rectangle:
         self.rectangle.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Reference:
 
     def __init__(self, reference=None):
@@ -20395,14 +17864,6 @@ class Reference:
         return self.reference.Name
 
 
-
-
-
-
-
-
-
-
 class References:
 
     def __init__(self, references=None):
@@ -20435,74 +17896,6 @@ class References:
         arguments = {"Reference": Reference}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.references.Remove(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Report:
@@ -21600,113 +18993,6 @@ class Report:
         return self.report.TextWidth(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Reports:
 
     def __init__(self, reports=None):
@@ -21733,7 +19019,6 @@ class Reports:
         return self.reports.Parent
 
 
-
 class ReturnVar:
 
     def __init__(self, returnvar=None):
@@ -21746,11 +19031,6 @@ class ReturnVar:
     @property
     def Value(self):
         return self.returnvar.Value
-
-
-
-
-
 
 
 class ReturnVars:
@@ -21777,12 +19057,6 @@ class ReturnVars:
     @property
     def Parent(self):
         return self.returnvars.Parent
-
-
-
-
-
-
 
 
 class Screen:
@@ -21825,31 +19099,6 @@ class Screen:
     @property
     def PreviousControl(self):
         return self.screen.PreviousControl
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Section:
@@ -22149,30 +19398,6 @@ class Section:
         self.section.SetTabOrder()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SharedResource:
 
     def __init__(self, sharedresource=None):
@@ -22196,12 +19421,6 @@ class SharedResource:
 
     def Delete(self):
         self.sharedresource.Delete()
-
-
-
-
-
-
 
 
 class SharedResources:
@@ -22228,10 +19447,6 @@ class SharedResources:
     @property
     def Parent(self):
         return self.sharedresources.Parent
-
-
-
-
 
 
 class SmartTag:
@@ -22271,13 +19486,6 @@ class SmartTag:
         return self.smarttag.Delete()
 
 
-
-
-
-
-
-
-
 class SmartTagAction:
 
     def __init__(self, smarttagaction=None):
@@ -22297,11 +19505,6 @@ class SmartTagAction:
 
     def Execute(self):
         self.smarttagaction.Execute()
-
-
-
-
-
 
 
 class SmartTagActions:
@@ -22328,11 +19531,6 @@ class SmartTagActions:
     @property
     def Parent(self):
         return self.smarttagactions.Parent
-
-
-
-
-
 
 
 class SmartTagProperties:
@@ -22369,8 +19567,6 @@ class SmartTagProperties:
         return SmartTagPropertie(self.smarttagproperties.Add(*args, **arguments))
 
 
-
-
 class SmartTagProperty:
 
     def __init__(self, smarttagproperty=None):
@@ -22394,12 +19590,6 @@ class SmartTagProperty:
 
     def Delete(self):
         return self.smarttagproperty.Delete()
-
-
-
-
-
-
 
 
 class SmartTags:
@@ -22431,54 +19621,6 @@ class SmartTags:
         arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.smarttags.Add(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class SubForm:
@@ -22987,92 +20129,6 @@ class SubForm:
 
     def SizeToFit(self):
         self.subform.SizeToFit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TabControl:
@@ -23825,53 +20881,6 @@ class TabControl:
         self.tabcontrol.SizeToFit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TempVar:
 
     def __init__(self, tempvar=None):
@@ -23888,12 +20897,6 @@ class TempVar:
     @Value.setter
     def Value(self, value):
         self.tempvar.Value = value
-
-
-
-
-
-
 
 
 class TempVars:
@@ -23933,100 +20936,6 @@ class TempVars:
 
     def RemoveAll(self):
         self.tempvars.RemoveAll()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TextBox:
@@ -25056,149 +21965,6 @@ class TextBox:
         self.textbox.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ToggleButton:
 
     def __init__(self, togglebutton=None):
@@ -26174,118 +22940,6 @@ class ToggleButton:
         self.togglebutton.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class WebBrowserControl:
 
     def __init__(self, webbrowsercontrol=None):
@@ -26837,53 +23491,6 @@ class WebBrowserControl:
         self.webbrowsercontrol.Undo()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class WebService:
 
     def __init__(self, webservice=None):
@@ -26904,11 +23511,6 @@ class WebService:
     @property
     def Parent(self):
         return self.webservice.Parent
-
-
-
-
-
 
 
 class WebServices:
@@ -26937,7 +23539,6 @@ class WebServices:
         return self.webservices.Parent
 
 
-
 class WSParameter:
 
     def __init__(self, wsparameter=None):
@@ -26960,11 +23561,6 @@ class WSParameter:
         return self.wsparameter.Type
 
 
-
-
-
-
-
 class WSParameters:
 
     def __init__(self, wsparameters=None):
@@ -26985,5 +23581,4 @@ class WSParameters:
     @property
     def Parent(self):
         return self.wsparameters.Parent
-
 

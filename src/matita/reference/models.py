@@ -244,7 +244,7 @@ class DocPage:
             return "\n".join(code)
 
         if not self.is_object:
-            return ""
+            return None
 
         code = []
         code.append("class " + self.object_name + ":")

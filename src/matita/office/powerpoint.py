@@ -1,10 +1,5 @@
 import win32com.client
 
-
-
-
-
-
 class ActionSetting:
 
     def __init__(self, actionsetting=None):
@@ -75,14 +70,6 @@ class ActionSetting:
         return SoundEffect(self.actionsetting.SoundEffect)
 
 
-
-
-
-
-
-
-
-
 class ActionSettings:
 
     def __init__(self, actionsettings=None):
@@ -107,11 +94,6 @@ class ActionSettings:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.actionsettings.Item(*args, **arguments)
-
-
-
-
-
 
 
 class AddIn:
@@ -164,14 +146,6 @@ class AddIn:
         self.addin.Registered = value
 
 
-
-
-
-
-
-
-
-
 class AddIns:
 
     def __init__(self, addins=None):
@@ -208,12 +182,6 @@ class AddIns:
         self.addins.Remove(*args, **arguments)
 
 
-
-
-
-
-
-
 class Adjustments:
 
     def __init__(self, adjustments=None):
@@ -242,14 +210,6 @@ class Adjustments:
     @property
     def Parent(self):
         return self.adjustments.Parent
-
-
-
-
-
-
-
-
 
 
 class AnimationBehavior:
@@ -329,18 +289,6 @@ class AnimationBehavior:
         self.animationbehavior.Delete()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class AnimationBehaviors:
 
     def __init__(self, animationbehaviors=None):
@@ -367,10 +315,6 @@ class AnimationBehaviors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.animationbehaviors.Item(*args, **arguments)
-
-
-
-
 
 
 class AnimationPoint:
@@ -414,13 +358,6 @@ class AnimationPoint:
         self.animationpoint.Delete()
 
 
-
-
-
-
-
-
-
 class AnimationPoints:
 
     def __init__(self, animationpoints=None):
@@ -455,19 +392,6 @@ class AnimationPoints:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.animationpoints.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class AnimationSettings:
@@ -586,42 +510,6 @@ class AnimationSettings:
     @TextUnitEffect.setter
     def TextUnitEffect(self, value):
         self.animationsettings.TextUnitEffect = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Application:
@@ -913,60 +801,6 @@ class Application:
         self.application.StartNewUndoEntry()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class AutoCorrect:
 
     def __init__(self, autocorrect=None):
@@ -987,10 +821,6 @@ class AutoCorrect:
     @DisplayAutoLayoutOptions.setter
     def DisplayAutoLayoutOptions(self, value):
         self.autocorrect.DisplayAutoLayoutOptions = value
-
-
-
-
 
 
 class Axes:
@@ -1018,38 +848,6 @@ class Axes:
         arguments = {"Type": Type, "AxisGroup": AxisGroup}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.axes.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Axis:
@@ -1384,39 +1182,6 @@ class Axis:
         self.axis.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class AxisTitle:
 
     def __init__(self, axistitle=None):
@@ -1585,20 +1350,6 @@ class AxisTitle:
         self.axistitle.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Borders:
 
     def __init__(self, borders=None):
@@ -1623,11 +1374,6 @@ class Borders:
         arguments = {"BorderType": BorderType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.borders.Item(*args, **arguments)
-
-
-
-
-
 
 
 class Broadcast:
@@ -1658,11 +1404,6 @@ class Broadcast:
         arguments = {"serverUrl": serverUrl}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.broadcast.Start(*args, **arguments)
-
-
-
-
-
 
 
 class BulletFormat:
@@ -1744,29 +1485,6 @@ class BulletFormat:
 
     def Picture(self):
         self.bulletformat.Picture()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CalloutFormat:
@@ -1869,11 +1587,6 @@ class CalloutFormat:
         self.calloutformat.PresetDrop(*args, **arguments)
 
 
-
-
-
-
-
 class Cell:
 
     def __init__(self, cell=None):
@@ -1913,16 +1626,6 @@ class Cell:
         self.cell.Split(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
 class CellRange:
 
     def __init__(self, cellrange=None):
@@ -1951,43 +1654,6 @@ class CellRange:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.cellrange.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Chart:
@@ -2371,42 +2037,6 @@ class Chart:
         self.chart.SetSourceData(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ChartArea:
 
     def __init__(self, chartarea=None):
@@ -2488,17 +2118,6 @@ class ChartArea:
         self.chartarea.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
 class ChartBorder:
 
     def __init__(self, chartborder=None):
@@ -2547,15 +2166,6 @@ class ChartBorder:
     @Weight.setter
     def Weight(self, value):
         self.chartborder.Weight = value
-
-
-
-
-
-
-
-
-
 
 
 class ChartCharacters:
@@ -2612,12 +2222,6 @@ class ChartCharacters:
         self.chartcharacters.Insert(*args, **arguments)
 
 
-
-
-
-
-
-
 class ChartData:
 
     def __init__(self, chartdata=None):
@@ -2636,15 +2240,6 @@ class ChartData:
 
     def BreakLink(self):
         self.chartdata.BreakLink()
-
-
-
-
-
-
-
-
-
 
 
 class ChartFont:
@@ -2753,17 +2348,6 @@ class ChartFont:
         self.chartfont.Underline = value
 
 
-
-
-
-
-
-
-
-
-
-
-
 class ChartFormat:
 
     def __init__(self, chartformat=None):
@@ -2812,29 +2396,6 @@ class ChartFormat:
     @property
     def ThreeD(self):
         return ThreeDFormat(self.chartformat.ThreeD)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ChartGroup:
@@ -3032,22 +2593,6 @@ class ChartGroup:
         return SeriesCollection(self.chartgroup.SeriesCollection(*args, **arguments))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ChartGroups:
 
     def __init__(self, chartgroups=None):
@@ -3073,21 +2618,6 @@ class ChartGroups:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartGroup(self.chartgroups.Item(*args, **arguments))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ChartTitle:
@@ -3266,20 +2796,6 @@ class ChartTitle:
         self.charttitle.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Coauthoring:
 
     def __init__(self, coauthoring=None):
@@ -3313,12 +2829,6 @@ class Coauthoring:
         self.coauthoring.EndReview()
 
 
-
-
-
-
-
-
 class ColorEffect:
 
     def __init__(self, coloreffect=None):
@@ -3347,11 +2857,6 @@ class ColorEffect:
     @To.setter
     def To(self, value):
         self.coloreffect.To = value
-
-
-
-
-
 
 
 class ColorFormat:
@@ -3416,16 +2921,6 @@ class ColorFormat:
         return self.colorformat.Type
 
 
-
-
-
-
-
-
-
-
-
-
 class ColorScheme:
 
     def __init__(self, colorscheme=None):
@@ -3450,11 +2945,6 @@ class ColorScheme:
 
     def Delete(self):
         self.colorscheme.Delete()
-
-
-
-
-
 
 
 class ColorSchemes:
@@ -3486,10 +2976,6 @@ class ColorSchemes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.colorschemes.Item(*args, **arguments)
-
-
-
-
 
 
 class Column:
@@ -3528,13 +3014,6 @@ class Column:
         self.column.Select()
 
 
-
-
-
-
-
-
-
 class Columns:
 
     def __init__(self, columns=None):
@@ -3564,10 +3043,6 @@ class Columns:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.columns.Item(*args, **arguments)
-
-
-
-
 
 
 class CommandEffect:
@@ -3606,15 +3081,6 @@ class CommandEffect:
     @Type.setter
     def Type(self, value):
         self.commandeffect.Type = value
-
-
-
-
-
-
-
-
-
 
 
 class Comment:
@@ -3662,13 +3128,6 @@ class Comment:
         self.comment.Delete()
 
 
-
-
-
-
-
-
-
 class Comments:
 
     def __init__(self, comments=None):
@@ -3695,19 +3154,6 @@ class Comments:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.comments.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ConnectorFormat:
@@ -3780,13 +3226,6 @@ class ConnectorFormat:
         self.connectorformat.EndDisconnect()
 
 
-
-
-
-
-
-
-
 class CustomerData:
 
     def __init__(self, customerdata=None):
@@ -3816,22 +3255,6 @@ class CustomerData:
         arguments = {"Id": Id}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.customerdata.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class CustomLayout:
@@ -3956,20 +3379,6 @@ class CustomLayout:
         self.customlayout.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class CustomLayouts:
 
     def __init__(self, customlayouts=None):
@@ -4001,22 +3410,6 @@ class CustomLayouts:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.customlayouts.Paste(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class DataLabel:
@@ -4267,35 +3660,6 @@ class DataLabel:
         self.datalabel.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DataLabels:
 
     def __init__(self, datalabels=None):
@@ -4468,32 +3832,6 @@ class DataLabels:
         self.datalabels.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DataTable:
 
     def __init__(self, datatable=None):
@@ -4562,12 +3900,6 @@ class DataTable:
         self.datatable.Select()
 
 
-
-
-
-
-
-
 class Design:
 
     def __init__(self, design=None):
@@ -4614,17 +3946,6 @@ class Design:
         self.design.MoveTo(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
 class Designs:
 
     def __init__(self, designs=None):
@@ -4661,20 +3982,6 @@ class Designs:
         arguments = {"TemplateName": TemplateName, "Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.designs.Load(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class DisplayUnitLabel:
@@ -4835,30 +4142,6 @@ class DisplayUnitLabel:
 
     def Select(self):
         self.displayunitlabel.Select()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class DocumentWindow:
@@ -5027,27 +4310,6 @@ class DocumentWindow:
         self.documentwindow.SmallScroll(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class DocumentWindows:
 
     def __init__(self, documentwindows=None):
@@ -5077,11 +4339,6 @@ class DocumentWindows:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.documentwindows.Item(*args, **arguments)
-
-
-
-
-
 
 
 class DownBars:
@@ -5114,14 +4371,6 @@ class DownBars:
 
     def Select(self):
         self.downbars.Select()
-
-
-
-
-
-
-
-
 
 
 class DropLines:
@@ -5158,18 +4407,6 @@ class DropLines:
 
     def Select(self):
         self.droplines.Select()
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Effect:
@@ -5272,21 +4509,6 @@ class Effect:
         self.effect.MoveTo(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class EffectInformation:
 
     def __init__(self, effectinformation=None):
@@ -5335,15 +4557,6 @@ class EffectInformation:
     @property
     def TextUnitEffect(self):
         return self.effectinformation.TextUnitEffect
-
-
-
-
-
-
-
-
-
 
 
 class EffectParameters:
@@ -5404,16 +4617,6 @@ class EffectParameters:
         self.effectparameters.Size = value
 
 
-
-
-
-
-
-
-
-
-
-
 class ErrorBars:
 
     def __init__(self, errorbars=None):
@@ -5461,14 +4664,6 @@ class ErrorBars:
         self.errorbars.Select()
 
 
-
-
-
-
-
-
-
-
 class ExtraColors:
 
     def __init__(self, extracolors=None):
@@ -5498,14 +4693,6 @@ class ExtraColors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return MsoThemeColorSchemeIndex(self.extracolors.Item(*args, **arguments))
-
-
-
-
-
-
-
-
 
 
 class FileConverter:
@@ -5562,13 +4749,6 @@ class FileConverter:
         return self.fileconverter.SaveFormat
 
 
-
-
-
-
-
-
-
 class FileConverters:
 
     def __init__(self, fileconverters=None):
@@ -5585,17 +4765,6 @@ class FileConverters:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.fileconverters.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
 
 
 class FillFormat:
@@ -5801,32 +4970,6 @@ class FillFormat:
         self.fillformat.UserTextured(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class FilterEffect:
 
     def __init__(self, filtereffect=None):
@@ -5863,14 +5006,6 @@ class FilterEffect:
     @Type.setter
     def Type(self, value):
         self.filtereffect.Type = value
-
-
-
-
-
-
-
-
 
 
 class Floor:
@@ -5922,20 +5057,6 @@ class Floor:
 
     def Select(self):
         self.floor.Select()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Font:
@@ -6080,20 +5201,6 @@ class Font:
         self.font.Underline = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Fonts:
 
     def __init__(self, fonts=None):
@@ -6125,12 +5232,6 @@ class Fonts:
         self.fonts.Replace(*args, **arguments)
 
 
-
-
-
-
-
-
 class FreeformBuilder:
 
     def __init__(self, freeformbuilder=None):
@@ -6155,11 +5256,6 @@ class FreeformBuilder:
 
     def ConvertToShape(self):
         return self.freeformbuilder.ConvertToShape()
-
-
-
-
-
 
 
 class GridLines:
@@ -6194,13 +5290,6 @@ class GridLines:
         self.gridlines.Select()
 
 
-
-
-
-
-
-
-
 class GroupShapes:
 
     def __init__(self, groupshapes=None):
@@ -6231,10 +5320,6 @@ class GroupShapes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.groupshapes.Range(*args, **arguments)
-
-
-
-
 
 
 class HeaderFooter:
@@ -6283,16 +5368,6 @@ class HeaderFooter:
         self.headerfooter.Visible = value
 
 
-
-
-
-
-
-
-
-
-
-
 class HeadersFooters:
 
     def __init__(self, headersfooters=None):
@@ -6334,13 +5409,6 @@ class HeadersFooters:
         self.headersfooters.Clear()
 
 
-
-
-
-
-
-
-
 class HiLoLines:
 
     def __init__(self, hilolines=None):
@@ -6375,16 +5443,6 @@ class HiLoLines:
 
     def Select(self):
         self.hilolines.Select()
-
-
-
-
-
-
-
-
-
-
 
 
 class Hyperlink:
@@ -6467,15 +5525,6 @@ class Hyperlink:
         self.hyperlink.Follow()
 
 
-
-
-
-
-
-
-
-
-
 class Hyperlinks:
 
     def __init__(self, hyperlinks=None):
@@ -6500,12 +5549,6 @@ class Hyperlinks:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.hyperlinks.Item(*args, **arguments)
-
-
-
-
-
-
 
 
 class Interior:
@@ -6574,15 +5617,6 @@ class Interior:
         self.interior.PatternColorIndex = value
 
 
-
-
-
-
-
-
-
-
-
 class LeaderLines:
 
     def __init__(self, leaderlines=None):
@@ -6613,17 +5647,6 @@ class LeaderLines:
 
     def Select(self):
         self.leaderlines.Select()
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Legend:
@@ -6716,17 +5739,6 @@ class Legend:
         self.legend.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
 class LegendEntries:
 
     def __init__(self, legendentries=None):
@@ -6755,16 +5767,6 @@ class LegendEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return LegendEntry(self.legendentries.Item(*args, **arguments))
-
-
-
-
-
-
-
-
-
-
 
 
 class LegendEntry:
@@ -6821,24 +5823,6 @@ class LegendEntry:
 
     def Select(self):
         self.legendentry.Select()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class LegendKey:
@@ -6971,25 +5955,6 @@ class LegendKey:
 
     def Delete(self):
         self.legendkey.Delete()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class LineFormat:
@@ -7130,15 +6095,6 @@ class LineFormat:
         self.lineformat.Weight = value
 
 
-
-
-
-
-
-
-
-
-
 class LinkFormat:
 
     def __init__(self, linkformat=None):
@@ -7173,21 +6129,6 @@ class LinkFormat:
 
     def Update(self):
         self.linkformat.Update()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Master:
@@ -7292,16 +6233,6 @@ class Master:
         self.master.Delete()
 
 
-
-
-
-
-
-
-
-
-
-
 class MediaBookmark:
 
     def __init__(self, mediabookmark=None):
@@ -7321,11 +6252,6 @@ class MediaBookmark:
 
     def Delete(self):
         return self.mediabookmark.Delete()
-
-
-
-
-
 
 
 class MediaBookmarks:
@@ -7349,15 +6275,6 @@ class MediaBookmarks:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediabookmarks.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
 
 
 class MediaFormat:
@@ -7486,33 +6403,6 @@ class MediaFormat:
         return self.mediaformat.SetDisplayPictureFromFile(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Model3DFormat:
 
     def __init__(self, model3dformat=None):
@@ -7639,16 +6529,6 @@ class Model3DFormat:
         self.model3dformat.ResetModel(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
 class MotionEffect:
 
     def __init__(self, motioneffect=None):
@@ -7717,10 +6597,6 @@ class MotionEffect:
     @ToY.setter
     def ToY(self, value):
         self.motioneffect.ToY = value
-
-
-
-
 
 
 # MsoAnimAccumulate enumeration
@@ -8109,9 +6985,6 @@ msoAnimTypeSet = 8
 msoClickStateAfterAllAnimations = -2
 msoClickStateBeforeAutomaticAnimations = -1
 
-
-
-
 class NamedSlideShow:
 
     def __init__(self, namedslideshow=None):
@@ -8139,13 +7012,6 @@ class NamedSlideShow:
 
     def Delete(self):
         self.namedslideshow.Delete()
-
-
-
-
-
-
-
 
 
 class NamedSlideShows:
@@ -8179,10 +7045,6 @@ class NamedSlideShows:
         return self.namedslideshows.Item(*args, **arguments)
 
 
-
-
-
-
 class ObjectVerbs:
 
     def __init__(self, objectverbs=None):
@@ -8204,11 +7066,6 @@ class ObjectVerbs:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.objectverbs.Item(*args, **arguments)
-
-
-
-
-
 
 
 class OLEFormat:
@@ -8253,11 +7110,6 @@ class OLEFormat:
         self.oleformat.DoVerb(*args, **arguments)
 
 
-
-
-
-
-
 class Options:
 
     def __init__(self, options=None):
@@ -8274,9 +7126,6 @@ class Options:
     @property
     def ShowCoauthoringMergeChanges(self):
         return self.options.ShowCoauthoringMergeChanges
-
-
-
 
 
 class PageSetup:
@@ -8341,15 +7190,6 @@ class PageSetup:
         self.pagesetup.SlideWidth = value
 
 
-
-
-
-
-
-
-
-
-
 class Pane:
 
     def __init__(self, pane=None):
@@ -8373,11 +7213,6 @@ class Pane:
 
     def Activate(self):
         self.pane.Activate()
-
-
-
-
-
 
 
 class Panes:
@@ -8404,16 +7239,6 @@ class Panes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.panes.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
 
 
 class ParagraphFormat:
@@ -8530,24 +7355,6 @@ class ParagraphFormat:
         self.paragraphformat.WordWrap = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class PictureFormat:
 
     def __init__(self, pictureformat=None):
@@ -8656,11 +7463,6 @@ class PictureFormat:
         self.pictureformat.IncrementContrast(*args, **arguments)
 
 
-
-
-
-
-
 class PlaceholderFormat:
 
     def __init__(self, placeholderformat=None):
@@ -8689,13 +7491,6 @@ class PlaceholderFormat:
     @property
     def Type(self):
         return self.placeholderformat.Type
-
-
-
-
-
-
-
 
 
 class Placeholders:
@@ -8727,11 +7522,6 @@ class Placeholders:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.placeholders.Item(*args, **arguments)
-
-
-
-
-
 
 
 class Player:
@@ -8770,14 +7560,6 @@ class Player:
 
     def Stop(self):
         self.player.Stop()
-
-
-
-
-
-
-
-
 
 
 class PlaySettings:
@@ -8848,21 +7630,6 @@ class PlaySettings:
     @StopAfterSlides.setter
     def StopAfterSlides(self, value):
         self.playsettings.StopAfterSlides = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class PlotArea:
@@ -8967,35 +7734,6 @@ class PlotArea:
 
     def Select(self):
         self.plotarea.Select()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Point:
@@ -9205,21 +7943,6 @@ class Point:
         self.point.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Points:
 
     def __init__(self, points=None):
@@ -9248,7 +7971,6 @@ class Points:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Point(self.points.Item(*args, **arguments))
-
 
 
 # PpActionType enumeration
@@ -9898,61 +8620,6 @@ ppWindowMaximized = 3
 ppWindowMinimized = 2
 ppWindowNormal = 1
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Presentation:
 
     def __init__(self, presentation=None):
@@ -10447,61 +9114,6 @@ class Presentation:
         self.presentation.UpdateLinks()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Presentations:
 
     def __init__(self, presentations=None):
@@ -10551,16 +9163,6 @@ class Presentations:
         arguments = {"FileName": FileName, "ReadOnly": ReadOnly, "Untitled": Untitled, "WithWindow": WithWindow, "OpenAndRepair": OpenAndRepair}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Presentation(self.presentations.Open2007(*args, **arguments))
-
-
-
-
-
-
-
-
-
-
 
 
 class PrintOptions:
@@ -10705,21 +9307,6 @@ class PrintOptions:
         self.printoptions.SlideShowName = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class PrintRange:
 
     def __init__(self, printrange=None):
@@ -10743,13 +9330,6 @@ class PrintRange:
 
     def Delete(self):
         self.printrange.Delete()
-
-
-
-
-
-
-
 
 
 class PrintRanges:
@@ -10784,9 +9364,6 @@ class PrintRanges:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.printranges.Item(*args, **arguments)
-
-
-
 
 
 class PropertyEffect:
@@ -10829,18 +9406,6 @@ class PropertyEffect:
     @To.setter
     def To(self, value):
         self.propertyeffect.To = value
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ProtectedViewWindow:
@@ -10928,16 +9493,6 @@ class ProtectedViewWindow:
         return self.protectedviewwindow.Edit(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
 class ProtectedViewWindows:
 
     def __init__(self, protectedviewwindows=None):
@@ -10964,11 +9519,6 @@ class ProtectedViewWindows:
         arguments = {"FileName": FileName, "ReadPassword": ReadPassword, "OpenAndRepair": OpenAndRepair}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.protectedviewwindows.Open(*args, **arguments)
-
-
-
-
-
 
 
 class PublishObject:
@@ -11044,16 +9594,6 @@ class PublishObject:
         self.publishobject.Publish()
 
 
-
-
-
-
-
-
-
-
-
-
 class PublishObjects:
 
     def __init__(self, publishobjects=None):
@@ -11078,21 +9618,6 @@ class PublishObjects:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.publishobjects.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ResampleMediaTasks:
@@ -11126,11 +9651,6 @@ class ResampleMediaTasks:
         return self.resamplemediatasks.Resume()
 
 
-
-
-
-
-
 class Research:
 
     def __init__(self, research=None):
@@ -11160,10 +9680,6 @@ class Research:
         self.research.SetLanguagePair(*args, **arguments)
 
 
-
-
-
-
 class RGBColor:
 
     def __init__(self, rgbcolor=None):
@@ -11184,11 +9700,6 @@ class RGBColor:
     @RGB.setter
     def RGB(self, value):
         self.rgbcolor.RGB = value
-
-
-
-
-
 
 
 class RotationEffect:
@@ -11229,12 +9740,6 @@ class RotationEffect:
         self.rotationeffect.To = value
 
 
-
-
-
-
-
-
 class Row:
 
     def __init__(self, row=None):
@@ -11271,12 +9776,6 @@ class Row:
         self.row.Select()
 
 
-
-
-
-
-
-
 class Rows:
 
     def __init__(self, rows=None):
@@ -11308,9 +9807,6 @@ class Rows:
         return self.rows.Item(*args, **arguments)
 
 
-
-
-
 class Ruler:
 
     def __init__(self, ruler=None):
@@ -11331,11 +9827,6 @@ class Ruler:
     @property
     def TabStops(self):
         return TabStops(self.ruler.TabStops)
-
-
-
-
-
 
 
 class RulerLevel:
@@ -11368,10 +9859,6 @@ class RulerLevel:
         return self.rulerlevel.Parent
 
 
-
-
-
-
 class RulerLevels:
 
     def __init__(self, rulerlevels=None):
@@ -11396,12 +9883,6 @@ class RulerLevels:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.rulerlevels.Item(*args, **arguments)
-
-
-
-
-
-
 
 
 class ScaleEffect:
@@ -11464,15 +9945,6 @@ class ScaleEffect:
     @ToY.setter
     def ToY(self, value):
         self.scaleeffect.ToY = value
-
-
-
-
-
-
-
-
-
 
 
 class SectionProperties:
@@ -11538,18 +10010,6 @@ class SectionProperties:
         return self.sectionproperties.SlidesCount(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Selection:
 
     def __init__(self, selection=None):
@@ -11602,26 +10062,6 @@ class Selection:
 
     def Unselect(self):
         self.selection.Unselect()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Sequence:
@@ -11697,11 +10137,6 @@ class Sequence:
         return self.sequence.Item(*args, **arguments)
 
 
-
-
-
-
-
 class Sequences:
 
     def __init__(self, sequences=None):
@@ -11728,43 +10163,6 @@ class Sequences:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequences.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Series:
@@ -12113,27 +10511,6 @@ class Series:
         return Trendlines(self.series.Trendlines(*args, **arguments))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SeriesCollection:
 
     def __init__(self, seriescollection=None):
@@ -12174,13 +10551,6 @@ class SeriesCollection:
         return Series(self.seriescollection.NewSeries())
 
 
-
-
-
-
-
-
-
 class SeriesLines:
 
     def __init__(self, serieslines=None):
@@ -12217,10 +10587,6 @@ class SeriesLines:
         self.serieslines.Select()
 
 
-
-
-
-
 class SetEffect:
 
     def __init__(self, seteffect=None):
@@ -12249,15 +10615,6 @@ class SetEffect:
     @To.setter
     def To(self, value):
         self.seteffect.To = value
-
-
-
-
-
-
-
-
-
 
 
 class ShadowFormat:
@@ -12374,59 +10731,6 @@ class ShadowFormat:
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shadowformat.IncrementOffsetY(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Shape:
@@ -12824,49 +11128,6 @@ class Shape:
         self.shape.ZOrder(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class ShapeNode:
 
     def __init__(self, shapenode=None):
@@ -12895,15 +11156,6 @@ class ShapeNode:
     @property
     def SegmentType(self):
         return self.shapenode.SegmentType
-
-
-
-
-
-
-
-
-
 
 
 class ShapeNodes:
@@ -12959,58 +11211,6 @@ class ShapeNodes:
         arguments = {"Index": Index, "SegmentType": SegmentType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shapenodes.SetSegmentType(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ShapeRange:
@@ -13429,72 +11629,6 @@ class ShapeRange:
         self.shaperange.ZOrder(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Shapes:
 
     def __init__(self, shapes=None):
@@ -13649,36 +11783,6 @@ class Shapes:
 
     def SelectAll(self):
         self.shapes.SelectAll()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Slide:
@@ -13867,48 +11971,6 @@ class Slide:
 
     def Select(self):
         self.slide.Select()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class SlideRange:
@@ -14115,29 +12177,6 @@ class SlideRange:
         self.sliderange.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Slides:
 
     def __init__(self, slides=None):
@@ -14187,13 +12226,6 @@ class Slides:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slides.Range(*args, **arguments)
-
-
-
-
-
-
-
 
 
 class SlideShowSettings:
@@ -14317,27 +12349,6 @@ class SlideShowSettings:
         return self.slideshowsettings.Run()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SlideShowTransition:
 
     def __init__(self, slideshowtransition=None):
@@ -14418,27 +12429,6 @@ class SlideShowTransition:
     @Speed.setter
     def Speed(self, value):
         self.slideshowtransition.Speed = value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class SlideShowView:
@@ -14601,30 +12591,6 @@ class SlideShowView:
         self.slideshowview.ResetSlideTime()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SlideShowWindow:
 
     def __init__(self, slideshowwindow=None):
@@ -14690,14 +12656,6 @@ class SlideShowWindow:
         self.slideshowwindow.Activate()
 
 
-
-
-
-
-
-
-
-
 class SlideShowWindows:
 
     def __init__(self, slideshowwindows=None):
@@ -14722,9 +12680,6 @@ class SlideShowWindows:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slideshowwindows.Item(*args, **arguments)
-
-
-
 
 
 class SoundEffect:
@@ -14763,21 +12718,6 @@ class SoundEffect:
 
     def Play(self):
         self.soundeffect.Play()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class Table:
@@ -14897,14 +12837,6 @@ class Table:
         self.table.ScaleProportionally(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
 class TableBackground:
 
     def __init__(self, tablebackground=None):
@@ -14927,10 +12859,6 @@ class TableBackground:
         return ShadowFormat(self.tablebackground.Shadow)
 
 
-
-
-
-
 class TableStyle:
 
     def __init__(self, tablestyle=None):
@@ -14943,9 +12871,6 @@ class TableStyle:
     @property
     def Name(self):
         return self.tablestyle.Name
-
-
-
 
 
 class TabStop:
@@ -14979,14 +12904,6 @@ class TabStop:
 
     def Clear(self):
         self.tabstop.Clear()
-
-
-
-
-
-
-
-
 
 
 class TabStops:
@@ -15026,12 +12943,6 @@ class TabStops:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.tabstops.Item(*args, **arguments)
-
-
-
-
-
-
 
 
 class Tags:
@@ -15075,17 +12986,6 @@ class Tags:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.tags.Value(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TextEffectFormat:
@@ -15205,24 +13105,6 @@ class TextEffectFormat:
         self.texteffectformat.ToggleVerticalText()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TextFrame:
 
     def __init__(self, textframe=None):
@@ -15326,23 +13208,6 @@ class TextFrame:
 
     def DeleteText(self):
         self.textframe.DeleteText()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TextFrame2:
@@ -15488,42 +13353,6 @@ class TextFrame2:
 
     def DeleteText(self):
         return self.textframe2.DeleteText()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class TextRange:
@@ -15712,24 +13541,6 @@ class TextRange:
         return self.textrange.Words(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TextStyle:
 
     def __init__(self, textstyle=None):
@@ -15756,11 +13567,6 @@ class TextStyle:
         return TextFrame(self.textstyle.TextFrame)
 
 
-
-
-
-
-
 class TextStyleLevel:
 
     def __init__(self, textstylelevel=None):
@@ -15781,11 +13587,6 @@ class TextStyleLevel:
     @property
     def Parent(self):
         return self.textstylelevel.Parent
-
-
-
-
-
 
 
 class TextStyleLevels:
@@ -15814,10 +13615,6 @@ class TextStyleLevels:
         return self.textstylelevels.Item(*args, **arguments)
 
 
-
-
-
-
 class TextStyles:
 
     def __init__(self, textstyles=None):
@@ -15842,27 +13639,6 @@ class TextStyles:
         arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textstyles.Item(*args, **arguments)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 class ThreeDFormat:
@@ -16122,32 +13898,6 @@ class ThreeDFormat:
         self.threedformat.SetThreeDFormat(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TickLabels:
 
     def __init__(self, ticklabels=None):
@@ -16252,19 +14002,6 @@ class TickLabels:
         self.ticklabels.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 class TimeLine:
 
     def __init__(self, timeline=None):
@@ -16285,13 +14022,6 @@ class TimeLine:
     @property
     def Parent(self):
         return self.timeline.Parent
-
-
-
-
-
-
-
 
 
 class Timing:
@@ -16436,32 +14166,6 @@ class Timing:
         self.timing.TriggerType = value
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Trendline:
 
     def __init__(self, trendline=None):
@@ -16593,18 +14297,6 @@ class Trendline:
         self.trendline.Select()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Trendlines:
 
     def __init__(self, trendlines=None):
@@ -16635,12 +14327,6 @@ class Trendlines:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Trendline(self.trendlines.Item(*args, **arguments))
-
-
-
-
-
-
 
 
 class UpBars:
@@ -16677,12 +14363,6 @@ class UpBars:
 
     def Select(self):
         self.upbars.Select()
-
-
-
-
-
-
 
 
 class View:
@@ -16782,25 +14462,6 @@ class View:
         self.view.PrintOut(*args, **arguments)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Walls:
 
     def __init__(self, walls=None):
@@ -16858,13 +14519,6 @@ class Walls:
 
     def Select(self):
         self.walls.Select()
-
-
-
-
-
-
-
 
 
 # XlAxisCrosses enumeration
