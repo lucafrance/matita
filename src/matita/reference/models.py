@@ -48,6 +48,7 @@ class DocPage:
         self.is_collection = None
         self.is_property = None
         self.is_method = None
+        self.is_enumeration = None
 
         self.is_read_only_property = None
         self.has_return_value = None
@@ -133,11 +134,13 @@ class DocPage:
             self.is_object = None
             self.is_property = None
             self.is_method = None
+            self.is_enumeration = None
             return
         else:
             self.is_object = False
             self.is_property = False
             self.is_method = False
+            self.is_enumeration = False
 
         if "object" in self.title:
             self.is_object = True
@@ -145,6 +148,8 @@ class DocPage:
             self.is_property = True
         elif "method" in self.title:
             self.is_method = True
+        elif "enumeration" in self.title:
+            self.is_enumeration = True
     
     def process_api_name(self):
         if self.api_name is None:
@@ -175,6 +180,7 @@ class DocPage:
             "is_collection": self.is_collection,
             "is_method": self.is_method,
             "is_property": self.is_property,
+            "is_enumeration": self.is_enumeration,
             "api_name": self.api_name,
             "is_collection": self.is_collection,
             "is_read_only_property": self.is_read_only_property,
