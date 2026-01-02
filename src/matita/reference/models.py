@@ -43,6 +43,11 @@ class DocPage:
         self.object_name = None
         self.property_name = None
         self.method_name = None
+        
+        self.is_object = None
+        self.is_collection = None
+        self.is_property = None
+        self.is_method = None
 
         self.is_read_only_property = None
         self.has_return_value = None
@@ -52,11 +57,6 @@ class DocPage:
         self.properties = []
         self.parameters = []
         self.methods = []
-        
-        self.is_object = None
-        self.is_collection = None
-        self.is_property = None
-        self.is_method = None
     
     def process_page(self):
         try:
@@ -171,6 +171,10 @@ class DocPage:
             "object_name": self.object_name,
             "property_name": self.property_name,
             "method_name": self.method_name,
+            "is_object": self.is_object,
+            "is_collection": self.is_collection,
+            "is_method": self.is_method,
+            "is_property": self.is_property,
             "api_name": self.api_name,
             "is_collection": self.is_collection,
             "is_read_only_property": self.is_read_only_property,
