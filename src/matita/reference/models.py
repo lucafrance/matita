@@ -36,6 +36,7 @@ class DocPage:
 
     def __init__(self, markdown_src):
         self.md = markdown_src
+        self.md_tree = None
         self.title = None
         self.api_name = None
 
@@ -55,20 +56,27 @@ class DocPage:
         self.property_class = None
         self.return_value_class = None
 
+        self.enumeration_values = None
+
         self.properties = []
         self.parameters = []
         self.methods = []
     
     def process_page(self):
         try:
-            t = MarkdownTree(self.md)
+            self.md_tree  = MarkdownTree(self.md)
         except Exception as e:
             logging.warning("Failed building MarkdownTree, raising an exception.")
             raise(e)
         
-        self.title = t.front_matter.variables["title"]
-        if "api_name" in t.front_matter.variables:
-            self.api_name = t.front_matter.variables["api_name"]
+        self.title = self.md_tree .front_matter.variables["title"]
+        if "api_name" in self.md_tree.front_matter.variables:
+            self.api_name = self.md_tree.front_matter.variables["api_name"]
+        self.process_title()
+        self.process_api_name()
+
+        if self.is_enumeration:
+            self.process_enumeration()
 
         # Retrieve information from the opening paragraph
         # Examples
@@ -78,9 +86,10 @@ class DocPage:
         # Returns a **[Range](Excel.Range(object).md)** object that represents all the cells on the worksheet (not just the cells that are currently in use).
         # Returns a **Range** object that represents the columns in the specified range.
         # -------------------------------------------
-        p = t.sections_by_level(1)[0].paragraphs[0].txt
+        p = self.md_tree.sections_by_level(1)[0].paragraphs[0].txt
         # Check whether the object is a collection
         self.is_collection = p.startswith("A collection")
+
         # Get the return type of the property (if any)
         if "Returns" in p:
             property_class = None
@@ -102,7 +111,7 @@ class DocPage:
         # ## Syntax
         # _expression_.**Range** (_Cell1_, _Cell2_)
         # -------------------------------------------
-        sections = t.sections_by_title("Syntax")
+        sections = self.md_tree.sections_by_title("Syntax")
         if len(sections) > 0:
             line = sections[0].paragraphs[0].txt.replace("()", "")
             if "(" in line:
@@ -118,16 +127,13 @@ class DocPage:
         # A **[Workbook](Excel.Workbook.md)** object that represents the new workbook.
         # -------------------------------------------
         self.has_return_value = False
-        sections = t.sections_by_title("Return value")
+        sections = self.md_tree.sections_by_title("Return value")
         if len(sections) > 0:
             self.has_return_value = True
             s = sections[0]
             line = s.paragraphs[0].txt.splitlines()[0]
             if "**[" in line:
                 self.return_value_class = line.split("**[", 1)[1].split("](")[0]
-
-        self.process_title()
-        self.process_api_name()
 
     def process_title(self):
         if self.title is None:
@@ -164,6 +170,32 @@ class DocPage:
             elif self.is_method:
                 self.method_name = suffix
     
+    def process_enumeration(self):
+        """Parse enumeration information. Assumes that the page refers to an enumeration.
+
+        Example: [XlReferenceType enumeration (Excel)](https://learn.microsoft.com/en-gb/office/vba/api/excel.xlreferencetype)
+        """
+
+        # Find table paragraph in the first section
+        table = None
+        for p in self.md_tree.sections_by_level(1)[0].paragraphs:
+            if p.is_table:
+                try:
+                    table = p.table
+                except Exception as e:
+                    logging.WARNING(f"Failed parsing values table for enumeration {self.api_name}. {e}")
+                break
+        
+        if "Name" not in table.rows[0] or "Value" not in table.rows[0]:
+            logging.WARNING(f"Unexpected header for values table for enumeration {self.api_name}.")
+            return
+        
+        self.enumeration_values = {}
+        for r in table.rows[1:]:
+            key = r[0].strip("*")
+            value = r[1]
+            self.enumeration_values[key] = value
+    
     def parent_object_key(self):
         if (self.module_name and self.object_name) is None:
             return None
@@ -187,6 +219,7 @@ class DocPage:
             "parent object key": self.parent_object_key(),
             "property_class": self.property_class,
             "return_value_class": self.return_value_class,
+            "enumeration_values": self.enumeration_values,
             "properties": [page.title for page in self.properties],
             "parameters": self.parameters,
             "methods": [page.title for page in self.methods],
@@ -349,7 +382,7 @@ class VbaDocs:
                     log_ignored_page(page_key, page)
                     pages_to_remove.append(page_key)
             except Exception as e:
-                logging.error("Failed processing page: '{}'. {}".format(page_key, e))
+                logging.error(f"Failed processing page: '{page_key}'. {e}")
         for key in pages_to_remove:
             del self.pages[key]
         # Populate properties and methods of objects

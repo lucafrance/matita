@@ -57,7 +57,10 @@ class Paragraph:
 
     @property
     def is_table(self):
-        """If each line of a paragraph starts with '|', it is a table."""
+        # A single line can't be a table
+        if "\n" not in self.txt:
+            return False
+        #If each line of a paragraph starts with '|', it is a table.
         for line in self.txt.splitlines():
             if not line.startswith("|"):
                 return False
@@ -82,6 +85,9 @@ class Table:
         rows = [row.split("|")[1:-1] for row in rows]
         rows = [[cell.strip() for cell in row] for row in rows]
         self.rows = rows
+    
+    def __str__(self):
+        return self.txt
 
 def parse_body(txt, level=0):
     """Return a list of sections"""
