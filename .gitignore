@@ -1,5 +1,6 @@
 .ipynb_checkpoints/
 dist/
+notebooks/
 __pycache__
 
 *.log
