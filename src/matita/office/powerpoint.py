@@ -1,5 +1,10 @@
 import win32com.client
 
+
+
+
+
+
 class ActionSetting:
 
     def __init__(self, actionsetting=None):
@@ -69,6 +74,15 @@ class ActionSetting:
     def SoundEffect(self):
         return SoundEffect(self.actionsetting.SoundEffect)
 
+
+
+
+
+
+
+
+
+
 class ActionSettings:
 
     def __init__(self, actionsettings=None):
@@ -93,6 +107,12 @@ class ActionSettings:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.actionsettings.Item(*args, **arguments)
+
+
+
+
+
+
 
 class AddIn:
 
@@ -143,6 +163,15 @@ class AddIn:
     def Registered(self, value):
         self.addin.Registered = value
 
+
+
+
+
+
+
+
+
+
 class AddIns:
 
     def __init__(self, addins=None):
@@ -178,6 +207,13 @@ class AddIns:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.addins.Remove(*args, **arguments)
 
+
+
+
+
+
+
+
 class Adjustments:
 
     def __init__(self, adjustments=None):
@@ -206,6 +242,15 @@ class Adjustments:
     @property
     def Parent(self):
         return self.adjustments.Parent
+
+
+
+
+
+
+
+
+
 
 class AnimationBehavior:
 
@@ -283,6 +328,19 @@ class AnimationBehavior:
     def Delete(self):
         self.animationbehavior.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AnimationBehaviors:
 
     def __init__(self, animationbehaviors=None):
@@ -309,6 +367,11 @@ class AnimationBehaviors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.animationbehaviors.Item(*args, **arguments)
+
+
+
+
+
 
 class AnimationPoint:
 
@@ -350,6 +413,14 @@ class AnimationPoint:
     def Delete(self):
         self.animationpoint.Delete()
 
+
+
+
+
+
+
+
+
 class AnimationPoints:
 
     def __init__(self, animationpoints=None):
@@ -384,6 +455,20 @@ class AnimationPoints:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.animationpoints.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class AnimationSettings:
 
@@ -501,6 +586,43 @@ class AnimationSettings:
     @TextUnitEffect.setter
     def TextUnitEffect(self, value):
         self.animationsettings.TextUnitEffect = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Application:
 
@@ -790,6 +912,61 @@ class Application:
     def StartNewUndoEntry(self):
         self.application.StartNewUndoEntry()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AutoCorrect:
 
     def __init__(self, autocorrect=None):
@@ -810,6 +987,11 @@ class AutoCorrect:
     @DisplayAutoLayoutOptions.setter
     def DisplayAutoLayoutOptions(self, value):
         self.autocorrect.DisplayAutoLayoutOptions = value
+
+
+
+
+
 
 class Axes:
 
@@ -836,6 +1018,39 @@ class Axes:
         arguments = {"Type": Type, "AxisGroup": AxisGroup}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.axes.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Axis:
 
@@ -1168,6 +1383,40 @@ class Axis:
     def Select(self):
         self.axis.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AxisTitle:
 
     def __init__(self, axistitle=None):
@@ -1335,6 +1584,21 @@ class AxisTitle:
     def Select(self):
         self.axistitle.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Borders:
 
     def __init__(self, borders=None):
@@ -1359,6 +1623,12 @@ class Borders:
         arguments = {"BorderType": BorderType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.borders.Item(*args, **arguments)
+
+
+
+
+
+
 
 class Broadcast:
 
@@ -1388,6 +1658,12 @@ class Broadcast:
         arguments = {"serverUrl": serverUrl}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.broadcast.Start(*args, **arguments)
+
+
+
+
+
+
 
 class BulletFormat:
 
@@ -1468,6 +1744,30 @@ class BulletFormat:
 
     def Picture(self):
         self.bulletformat.Picture()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CalloutFormat:
 
@@ -1568,6 +1868,12 @@ class CalloutFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.calloutformat.PresetDrop(*args, **arguments)
 
+
+
+
+
+
+
 class Cell:
 
     def __init__(self, cell=None):
@@ -1606,6 +1912,17 @@ class Cell:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.cell.Split(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class CellRange:
 
     def __init__(self, cellrange=None):
@@ -1634,6 +1951,44 @@ class CellRange:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.cellrange.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Chart:
 
@@ -2015,6 +2370,43 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.SetSourceData(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartArea:
 
     def __init__(self, chartarea=None):
@@ -2095,6 +2487,18 @@ class ChartArea:
     def Select(self):
         self.chartarea.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartBorder:
 
     def __init__(self, chartborder=None):
@@ -2143,6 +2547,16 @@ class ChartBorder:
     @Weight.setter
     def Weight(self, value):
         self.chartborder.Weight = value
+
+
+
+
+
+
+
+
+
+
 
 class ChartCharacters:
 
@@ -2197,6 +2611,13 @@ class ChartCharacters:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chartcharacters.Insert(*args, **arguments)
 
+
+
+
+
+
+
+
 class ChartData:
 
     def __init__(self, chartdata=None):
@@ -2215,6 +2636,16 @@ class ChartData:
 
     def BreakLink(self):
         self.chartdata.BreakLink()
+
+
+
+
+
+
+
+
+
+
 
 class ChartFont:
 
@@ -2321,6 +2752,18 @@ class ChartFont:
     def Underline(self, value):
         self.chartfont.Underline = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartFormat:
 
     def __init__(self, chartformat=None):
@@ -2369,6 +2812,30 @@ class ChartFormat:
     @property
     def ThreeD(self):
         return ThreeDFormat(self.chartformat.ThreeD)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ChartGroup:
 
@@ -2564,6 +3031,23 @@ class ChartGroup:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return SeriesCollection(self.chartgroup.SeriesCollection(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartGroups:
 
     def __init__(self, chartgroups=None):
@@ -2589,6 +3073,22 @@ class ChartGroups:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartGroup(self.chartgroups.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ChartTitle:
 
@@ -2765,6 +3265,21 @@ class ChartTitle:
     def Select(self):
         self.charttitle.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Coauthoring:
 
     def __init__(self, coauthoring=None):
@@ -2797,6 +3312,13 @@ class Coauthoring:
     def EndReview(self):
         self.coauthoring.EndReview()
 
+
+
+
+
+
+
+
 class ColorEffect:
 
     def __init__(self, coloreffect=None):
@@ -2825,6 +3347,12 @@ class ColorEffect:
     @To.setter
     def To(self, value):
         self.coloreffect.To = value
+
+
+
+
+
+
 
 class ColorFormat:
 
@@ -2887,6 +3415,17 @@ class ColorFormat:
     def Type(self):
         return self.colorformat.Type
 
+
+
+
+
+
+
+
+
+
+
+
 class ColorScheme:
 
     def __init__(self, colorscheme=None):
@@ -2911,6 +3450,12 @@ class ColorScheme:
 
     def Delete(self):
         self.colorscheme.Delete()
+
+
+
+
+
+
 
 class ColorSchemes:
 
@@ -2941,6 +3486,11 @@ class ColorSchemes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.colorschemes.Item(*args, **arguments)
+
+
+
+
+
 
 class Column:
 
@@ -2977,6 +3527,14 @@ class Column:
     def Select(self):
         self.column.Select()
 
+
+
+
+
+
+
+
+
 class Columns:
 
     def __init__(self, columns=None):
@@ -3006,6 +3564,11 @@ class Columns:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.columns.Item(*args, **arguments)
+
+
+
+
+
 
 class CommandEffect:
 
@@ -3043,6 +3606,16 @@ class CommandEffect:
     @Type.setter
     def Type(self, value):
         self.commandeffect.Type = value
+
+
+
+
+
+
+
+
+
+
 
 class Comment:
 
@@ -3088,6 +3661,14 @@ class Comment:
     def Delete(self):
         self.comment.Delete()
 
+
+
+
+
+
+
+
+
 class Comments:
 
     def __init__(self, comments=None):
@@ -3114,6 +3695,20 @@ class Comments:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.comments.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ConnectorFormat:
 
@@ -3184,6 +3779,14 @@ class ConnectorFormat:
     def EndDisconnect(self):
         self.connectorformat.EndDisconnect()
 
+
+
+
+
+
+
+
+
 class CustomerData:
 
     def __init__(self, customerdata=None):
@@ -3213,6 +3816,23 @@ class CustomerData:
         arguments = {"Id": Id}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.customerdata.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CustomLayout:
 
@@ -3335,6 +3955,21 @@ class CustomLayout:
     def Select(self):
         self.customlayout.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CustomLayouts:
 
     def __init__(self, customlayouts=None):
@@ -3366,6 +4001,23 @@ class CustomLayouts:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.customlayouts.Paste(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DataLabel:
 
@@ -3614,6 +4266,36 @@ class DataLabel:
     def Select(self):
         self.datalabel.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataLabels:
 
     def __init__(self, datalabels=None):
@@ -3785,6 +4467,33 @@ class DataLabels:
     def Select(self):
         self.datalabels.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataTable:
 
     def __init__(self, datatable=None):
@@ -3852,6 +4561,13 @@ class DataTable:
     def Select(self):
         self.datatable.Select()
 
+
+
+
+
+
+
+
 class Design:
 
     def __init__(self, design=None):
@@ -3897,6 +4613,18 @@ class Design:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.design.MoveTo(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class Designs:
 
     def __init__(self, designs=None):
@@ -3933,6 +4661,21 @@ class Designs:
         arguments = {"TemplateName": TemplateName, "Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.designs.Load(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DisplayUnitLabel:
 
@@ -4092,6 +4835,31 @@ class DisplayUnitLabel:
 
     def Select(self):
         self.displayunitlabel.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DocumentWindow:
 
@@ -4258,6 +5026,28 @@ class DocumentWindow:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.documentwindow.SmallScroll(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DocumentWindows:
 
     def __init__(self, documentwindows=None):
@@ -4287,6 +5077,12 @@ class DocumentWindows:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.documentwindows.Item(*args, **arguments)
+
+
+
+
+
+
 
 class DownBars:
 
@@ -4318,6 +5114,15 @@ class DownBars:
 
     def Select(self):
         self.downbars.Select()
+
+
+
+
+
+
+
+
+
 
 class DropLines:
 
@@ -4353,6 +5158,19 @@ class DropLines:
 
     def Select(self):
         self.droplines.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Effect:
 
@@ -4453,6 +5271,22 @@ class Effect:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.effect.MoveTo(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class EffectInformation:
 
     def __init__(self, effectinformation=None):
@@ -4501,6 +5335,16 @@ class EffectInformation:
     @property
     def TextUnitEffect(self):
         return self.effectinformation.TextUnitEffect
+
+
+
+
+
+
+
+
+
+
 
 class EffectParameters:
 
@@ -4559,6 +5403,17 @@ class EffectParameters:
     def Size(self, value):
         self.effectparameters.Size = value
 
+
+
+
+
+
+
+
+
+
+
+
 class ErrorBars:
 
     def __init__(self, errorbars=None):
@@ -4605,6 +5460,15 @@ class ErrorBars:
     def Select(self):
         self.errorbars.Select()
 
+
+
+
+
+
+
+
+
+
 class ExtraColors:
 
     def __init__(self, extracolors=None):
@@ -4634,6 +5498,15 @@ class ExtraColors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return MsoThemeColorSchemeIndex(self.extracolors.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
 
 class FileConverter:
 
@@ -4688,6 +5561,14 @@ class FileConverter:
     def SaveFormat(self):
         return self.fileconverter.SaveFormat
 
+
+
+
+
+
+
+
+
 class FileConverters:
 
     def __init__(self, fileconverters=None):
@@ -4704,6 +5585,18 @@ class FileConverters:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.fileconverters.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FillFormat:
 
@@ -4907,6 +5800,33 @@ class FillFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.fillformat.UserTextured(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FilterEffect:
 
     def __init__(self, filtereffect=None):
@@ -4943,6 +5863,15 @@ class FilterEffect:
     @Type.setter
     def Type(self, value):
         self.filtereffect.Type = value
+
+
+
+
+
+
+
+
+
 
 class Floor:
 
@@ -4993,6 +5922,21 @@ class Floor:
 
     def Select(self):
         self.floor.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Font:
 
@@ -5135,6 +6079,21 @@ class Font:
     def Underline(self, value):
         self.font.Underline = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Fonts:
 
     def __init__(self, fonts=None):
@@ -5165,6 +6124,13 @@ class Fonts:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.fonts.Replace(*args, **arguments)
 
+
+
+
+
+
+
+
 class FreeformBuilder:
 
     def __init__(self, freeformbuilder=None):
@@ -5189,6 +6155,12 @@ class FreeformBuilder:
 
     def ConvertToShape(self):
         return self.freeformbuilder.ConvertToShape()
+
+
+
+
+
+
 
 class GridLines:
 
@@ -5221,6 +6193,14 @@ class GridLines:
     def Select(self):
         self.gridlines.Select()
 
+
+
+
+
+
+
+
+
 class GroupShapes:
 
     def __init__(self, groupshapes=None):
@@ -5251,6 +6231,11 @@ class GroupShapes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.groupshapes.Range(*args, **arguments)
+
+
+
+
+
 
 class HeaderFooter:
 
@@ -5297,6 +6282,17 @@ class HeaderFooter:
     def Visible(self, value):
         self.headerfooter.Visible = value
 
+
+
+
+
+
+
+
+
+
+
+
 class HeadersFooters:
 
     def __init__(self, headersfooters=None):
@@ -5337,6 +6333,14 @@ class HeadersFooters:
     def Clear(self):
         self.headersfooters.Clear()
 
+
+
+
+
+
+
+
+
 class HiLoLines:
 
     def __init__(self, hilolines=None):
@@ -5371,6 +6375,17 @@ class HiLoLines:
 
     def Select(self):
         self.hilolines.Select()
+
+
+
+
+
+
+
+
+
+
+
 
 class Hyperlink:
 
@@ -5451,6 +6466,16 @@ class Hyperlink:
     def Follow(self):
         self.hyperlink.Follow()
 
+
+
+
+
+
+
+
+
+
+
 class Hyperlinks:
 
     def __init__(self, hyperlinks=None):
@@ -5475,6 +6500,13 @@ class Hyperlinks:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.hyperlinks.Item(*args, **arguments)
+
+
+
+
+
+
+
 
 class Interior:
 
@@ -5541,6 +6573,16 @@ class Interior:
     def PatternColorIndex(self, value):
         self.interior.PatternColorIndex = value
 
+
+
+
+
+
+
+
+
+
+
 class LeaderLines:
 
     def __init__(self, leaderlines=None):
@@ -5571,6 +6613,18 @@ class LeaderLines:
 
     def Select(self):
         self.leaderlines.Select()
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Legend:
 
@@ -5661,6 +6715,18 @@ class Legend:
     def Select(self):
         self.legend.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class LegendEntries:
 
     def __init__(self, legendentries=None):
@@ -5689,6 +6755,17 @@ class LegendEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return LegendEntry(self.legendentries.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
 
 class LegendEntry:
 
@@ -5744,6 +6821,25 @@ class LegendEntry:
 
     def Select(self):
         self.legendentry.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LegendKey:
 
@@ -5875,6 +6971,26 @@ class LegendKey:
 
     def Delete(self):
         self.legendkey.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LineFormat:
 
@@ -6013,6 +7129,16 @@ class LineFormat:
     def Weight(self, value):
         self.lineformat.Weight = value
 
+
+
+
+
+
+
+
+
+
+
 class LinkFormat:
 
     def __init__(self, linkformat=None):
@@ -6047,6 +7173,22 @@ class LinkFormat:
 
     def Update(self):
         self.linkformat.Update()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Master:
 
@@ -6149,6 +7291,17 @@ class Master:
     def Delete(self):
         self.master.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
 class MediaBookmark:
 
     def __init__(self, mediabookmark=None):
@@ -6168,6 +7321,12 @@ class MediaBookmark:
 
     def Delete(self):
         return self.mediabookmark.Delete()
+
+
+
+
+
+
 
 class MediaBookmarks:
 
@@ -6190,6 +7349,16 @@ class MediaBookmarks:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediabookmarks.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
 
 class MediaFormat:
 
@@ -6316,6 +7485,34 @@ class MediaFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mediaformat.SetDisplayPictureFromFile(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Model3DFormat:
 
     def __init__(self, model3dformat=None):
@@ -6441,6 +7638,17 @@ class Model3DFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.model3dformat.ResetModel(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class MotionEffect:
 
     def __init__(self, motioneffect=None):
@@ -6510,6 +7718,400 @@ class MotionEffect:
     def ToY(self, value):
         self.motioneffect.ToY = value
 
+
+
+
+
+
+# MsoAnimAccumulate enumeration
+msoAnimAccumulateAlways = 2
+msoAnimAccumulateNone = 1
+
+# MsoAnimAdditive enumeration
+msoAnimAdditiveAddBase = 1
+msoAnimAdditiveAddSum = 2
+
+# MsoAnimAfterEffect enumeration
+msoAnimAfterEffectDim = 1
+msoAnimAfterEffectHide = 2
+msoAnimAfterEffectHideOnNextClick = 3
+msoAnimAfterEffectMixed = -1
+msoAnimAfterEffectNone = 0
+
+# MsoAnimateByLevel enumeration
+msoAnimateChartAllAtOnce = 7
+msoAnimateChartByCategory = 8
+msoAnimateChartByCategoryElements = 9
+msoAnimateChartBySeries = 10
+msoAnimateChartBySeriesElements = 11
+msoAnimateDiagramAllAtOnce = 12
+msoAnimateDiagramBreadthByLevel = 16
+msoAnimateDiagramBreadthByNode = 15
+msoAnimateDiagramClockwise = 17
+msoAnimateDiagramClockwiseIn = 18
+msoAnimateDiagramClockwiseOut = 19
+msoAnimateDiagramCounterClockwise = 20
+msoAnimateDiagramCounterClockwiseIn = 21
+msoAnimateDiagramCounterClockwiseOut = 22
+msoAnimateDiagramDepthByBranch = 14
+msoAnimateDiagramDepthByNode = 13
+msoAnimateDiagramDown = 26
+msoAnimateDiagramInByRing = 23
+msoAnimateDiagramOutByRing = 24
+msoAnimateDiagramUp = 25
+msoAnimateLevelMixed = -1
+msoAnimateLevelNone = 0
+msoAnimateTextByAllLevels = 1
+msoAnimateTextByFifthLevel = 6
+msoAnimateTextByFirstLevel = 2
+msoAnimateTextByFourthLevel = 5
+msoAnimateTextBySecondLevel = 3
+msoAnimateTextByThirdLevel = 4
+
+# MsoAnimCommandType enumeration
+msoAnimCommandTypeCall = 1
+msoAnimCommandTypeEvent = 0
+msoAnimCommandTypeVerb = 2
+
+# MsoAnimDirection enumeration
+msoAnimDirectionAcross = 18
+msoAnimDirectionBottom = 11
+msoAnimDirectionBottomLeft = 15
+msoAnimDirectionBottomRight = 14
+msoAnimDirectionCenter = 28
+msoAnimDirectionClockwise = 21
+msoAnimDirectionCounterclockwise = 22
+msoAnimDirectionCycleClockwise = 43
+msoAnimDirectionCycleCounterclockwise = 44
+msoAnimDirectionDown = 3
+msoAnimDirectionDownLeft = 9
+msoAnimDirectionDownRight = 8
+msoAnimDirectionFontAllCaps = 40
+msoAnimDirectionFontBold = 35
+msoAnimDirectionFontItalic = 36
+msoAnimDirectionFontShadow = 39
+msoAnimDirectionFontStrikethrough = 38
+msoAnimDirectionFontUnderline = 37
+msoAnimDirectionGradual = 42
+msoAnimDirectionHorizontal = 16
+msoAnimDirectionHorizontalIn = 23
+msoAnimDirectionHorizontalOut = 24
+msoAnimDirectionIn = 19
+msoAnimDirectionInBottom = 31
+msoAnimDirectionInCenter = 30
+msoAnimDirectionInSlightly = 29
+msoAnimDirectionInstant = 41
+msoAnimDirectionLeft = 4
+msoAnimDirectionNone = 0
+msoAnimDirectionOrdinalMask = 5
+msoAnimDirectionOut = 20
+msoAnimDirectionOutBottom = 34
+msoAnimDirectionOutCenter = 33
+msoAnimDirectionOutSlightly = 32
+msoAnimDirectionRight = 2
+msoAnimDirectionSlightly = 27
+msoAnimDirectionTop = 10
+msoAnimDirectionTopLeft = 12
+msoAnimDirectionTopRight = 13
+msoAnimDirectionUp = 1
+msoAnimDirectionUpLeft = 6
+msoAnimDirectionUpRight = 7
+msoAnimDirectionVertical = 17
+msoAnimDirectionVerticalIn = 25
+msoAnimDirectionVerticalOut = 26
+
+# MsoAnimEffect enumeration
+msoAnimEffectAppear = 1
+msoAnimEffectArcUp = 47
+msoAnimEffectAscend = 39
+msoAnimEffectBlast = 64
+msoAnimEffectBlinds = 3
+msoAnimEffectBoldFlash = 63
+msoAnimEffectBoldReveal = 65
+msoAnimEffectBoomerang = 25
+msoAnimEffectBounce = 26
+msoAnimEffectBox = 4
+msoAnimEffectBrushOnColor = 66
+msoAnimEffectBrushOnUnderline = 67
+msoAnimEffectCenterRevolve = 40
+msoAnimEffectChangeFillColor = 54
+msoAnimEffectChangeFont = 55
+msoAnimEffectChangeFontColor = 56
+msoAnimEffectChangeFontSize = 57
+msoAnimEffectChangeFontStyle = 58
+msoAnimEffectChangeLineColor = 60
+msoAnimEffectCheckerboard = 5
+msoAnimEffectCircle = 6
+msoAnimEffectColorBlend = 68
+msoAnimEffectColorReveal = 27
+msoAnimEffectColorWave = 69
+msoAnimEffectComplementaryColor = 70
+msoAnimEffectComplementaryColor2 = 71
+msoAnimEffectContrastingColor = 72
+msoAnimEffectCrawl = 7
+msoAnimEffectCredits = 28
+msoAnimEffectCustom = 0
+msoAnimEffectDarken = 73
+msoAnimEffectDesaturate = 74
+msoAnimEffectDescend = 42
+msoAnimEffectDiamond = 8
+msoAnimEffectDissolve = 9
+msoAnimEffectEaseIn = 29
+msoAnimEffectExpand = 50
+msoAnimEffectFade = 10
+msoAnimEffectFadedSwivel = 41
+msoAnimEffectFadedZoom = 48
+msoAnimEffectFlashBulb = 75
+msoAnimEffectFlashOnce = 11
+msoAnimEffectFlicker = 76
+msoAnimEffectFlip = 51
+msoAnimEffectFloat = 30
+msoAnimEffectFly = 2
+msoAnimEffectFold = 53
+msoAnimEffectGlide = 49
+msoAnimEffectGrowAndTurn = 31
+msoAnimEffectGrowShrink = 59
+msoAnimEffectGrowWithColor = 77
+msoAnimEffectLighten = 78
+msoAnimEffectLightSpeed = 32
+msoAnimEffectMediaPause = 84
+msoAnimEffectMediaPlay = 83
+msoAnimEffectMediaStop = 85
+msoAnimEffectPath4PointStar = 101
+msoAnimEffectPath5PointStar = 90
+msoAnimEffectPath6PointStar = 96
+msoAnimEffectPath8PointStar = 102
+msoAnimEffectPathArcDown = 122
+msoAnimEffectPathArcLeft = 136
+msoAnimEffectPathArcRight = 143
+msoAnimEffectPathArcUp = 129
+msoAnimEffectPathBean = 116
+msoAnimEffectPathBounceLeft = 126
+msoAnimEffectPathBounceRight = 139
+msoAnimEffectPathBuzzsaw = 110
+msoAnimEffectPathCircle = 86
+msoAnimEffectPathCrescentMoon = 91
+msoAnimEffectPathCurvedSquare = 105
+msoAnimEffectPathCurvedX = 106
+msoAnimEffectPathCurvyLeft = 133
+msoAnimEffectPathCurvyRight = 146
+msoAnimEffectPathCurvyStar = 108
+msoAnimEffectPathDecayingWave = 145
+msoAnimEffectPathDiagonalDownRight = 134
+msoAnimEffectPathDiagonalUpRight = 141
+msoAnimEffectPathDiamond = 88
+msoAnimEffectPathDown = 127
+msoAnimEffectPathEqualTriangle = 98
+msoAnimEffectPathFigure8Four = 113
+msoAnimEffectPathFootball = 97
+msoAnimEffectPathFunnel = 137
+msoAnimEffectPathHeart = 94
+msoAnimEffectPathHeartbeat = 130
+msoAnimEffectPathHexagon = 89
+msoAnimEffectPathHorizontalFigure8 = 111
+msoAnimEffectPathInvertedSquare = 119
+msoAnimEffectPathInvertedTriangle = 118
+msoAnimEffectPathLeft = 120
+msoAnimEffectPathLoopdeLoop = 109
+msoAnimEffectPathNeutron = 114
+msoAnimEffectPathOctagon = 95
+msoAnimEffectPathParallelogram = 99
+msoAnimEffectPathPeanut = 112
+msoAnimEffectPathPentagon = 100
+msoAnimEffectPathPlus = 117
+msoAnimEffectPathPointyStar = 104
+msoAnimEffectPathRight = 149
+msoAnimEffectPathRightTriangle = 87
+msoAnimEffectPathSCurve1 = 144
+msoAnimEffectPathSCurve2 = 124
+msoAnimEffectPathSineWave = 125
+msoAnimEffectPathSpiralLeft = 140
+msoAnimEffectPathSpiralRight = 131
+msoAnimEffectPathSpring = 138
+msoAnimEffectPathSquare = 92
+msoAnimEffectPathStairsDown = 147
+msoAnimEffectPathSwoosh = 115
+msoAnimEffectPathTeardrop = 103
+msoAnimEffectPathTrapezoid = 93
+msoAnimEffectPathTurnDown = 135
+msoAnimEffectPathTurnRight = 121
+msoAnimEffectPathTurnUp = 128
+msoAnimEffectPathTurnUpRight = 142
+msoAnimEffectPathUp = 148
+msoAnimEffectPathVerticalFigure8 = 107
+msoAnimEffectPathWave = 132
+msoAnimEffectPathZigzag = 123
+msoAnimEffectPeek = 12
+msoAnimEffectPinwheel = 33
+msoAnimEffectPlus = 13
+msoAnimEffectRandomBars = 14
+msoAnimEffectRandomEffects = 24
+msoAnimEffectRiseUp = 34
+msoAnimEffectShimmer = 52
+msoAnimEffectSling = 43
+msoAnimEffectSpin = 61
+msoAnimEffectSpinner = 44
+msoAnimEffectSpiral = 15
+msoAnimEffectSplit = 16
+msoAnimEffectStretch = 17
+msoAnimEffectStretchy = 45
+msoAnimEffectStrips = 18
+msoAnimEffectStyleEmphasis = 79
+msoAnimEffectSwish = 35
+msoAnimEffectSwivel = 19
+msoAnimEffectTeeter = 80
+msoAnimEffectThinLine = 36
+msoAnimEffectTransparency = 62
+msoAnimEffectUnfold = 37
+msoAnimEffectVerticalGrow = 81
+msoAnimEffectWave = 82
+msoAnimEffectWedge = 20
+msoAnimEffectWheel = 21
+msoAnimEffectWhip = 38
+msoAnimEffectWipe = 22
+msoAnimEffectZip = 46
+msoAnimEffectZoom = 23
+
+# MsoAnimEffectAfter enumeration
+msoAnimEffectAfterFreeze = 1
+msoAnimEffectAfterHold = 3
+msoAnimEffectAfterRemove = 2
+msoAnimEffectAfterTransition = 4
+
+# MsoAnimEffectRestart enumeration
+msoAnimEffectRestartAlways = 1
+msoAnimEffectRestartNever = 3
+msoAnimEffectRestartWhenOff = 2
+
+# MsoAnimFilterEffectSubtype enumeration
+msoAnimFilterEffectSubtypeAcross = 9
+msoAnimFilterEffectSubtypeDown = 25
+msoAnimFilterEffectSubtypeDownLeft = 14
+msoAnimFilterEffectSubtypeDownRight = 16
+msoAnimFilterEffectSubtypeFromBottom = 13
+msoAnimFilterEffectSubtypeFromLeft = 10
+msoAnimFilterEffectSubtypeFromRight = 11
+msoAnimFilterEffectSubtypeFromTop = 12
+msoAnimFilterEffectSubtypeHorizontal = 5
+msoAnimFilterEffectSubtypeIn = 7
+msoAnimFilterEffectSubtypeInHorizontal = 3
+msoAnimFilterEffectSubtypeInVertical = 1
+msoAnimFilterEffectSubtypeLeft = 23
+msoAnimFilterEffectSubtypeNone = 0
+msoAnimFilterEffectSubtypeOut = 8
+msoAnimFilterEffectSubtypeOutHorizontal = 4
+msoAnimFilterEffectSubtypeOutVertical = 2
+msoAnimFilterEffectSubtypeRight = 24
+msoAnimFilterEffectSubtypeSpokes1 = 18
+msoAnimFilterEffectSubtypeSpokes2 = 19
+msoAnimFilterEffectSubtypeSpokes3 = 20
+msoAnimFilterEffectSubtypeSpokes4 = 21
+msoAnimFilterEffectSubtypeSpokes8 = 22
+msoAnimFilterEffectSubtypeUp = 26
+msoAnimFilterEffectSubtypeUpLeft = 15
+msoAnimFilterEffectSubtypeUpRight = 17
+msoAnimFilterEffectSubtypeVertical = 6
+
+# MsoAnimFilterEffectType enumeration
+msoAnimFilterEffectTypeBarn = 1
+msoAnimFilterEffectTypeBlinds = 2
+msoAnimFilterEffectTypeBox = 3
+msoAnimFilterEffectTypeCheckerboard = 4
+msoAnimFilterEffectTypeCircle = 5
+msoAnimFilterEffectTypeDiamond = 6
+msoAnimFilterEffectTypeDissolve = 7
+msoAnimFilterEffectTypeFade = 8
+msoAnimFilterEffectTypeImage = 9
+msoAnimFilterEffectTypeNone = 0
+msoAnimFilterEffectTypePixelate = 10
+msoAnimFilterEffectTypePlus = 11
+msoAnimFilterEffectTypeRandomBar = 12
+msoAnimFilterEffectTypeSlide = 13
+msoAnimFilterEffectTypeStretch = 14
+msoAnimFilterEffectTypeStrips = 15
+msoAnimFilterEffectTypeWedge = 16
+msoAnimFilterEffectTypeWheel = 17
+msoAnimFilterEffectTypeWipe = 18
+
+# MsoAnimProperty enumeration
+msoAnimColor = 7
+msoAnimHeight = 4
+msoAnimNone = 0
+msoAnimOpacity = 5
+msoAnimRotation = 6
+msoAnimShapeFillBackColor = 1007
+msoAnimShapeFillColor = 1005
+msoAnimShapeFillOn = 1004
+msoAnimShapeFillOpacity = 1006
+msoAnimShapeLineColor = 1009
+msoAnimShapeLineOn = 1008
+msoAnimShapePictureBrightness = 1001
+msoAnimShapePictureContrast = 1000
+msoAnimShapePictureGamma = 1002
+msoAnimShapePictureGrayscale = 1003
+msoAnimShapeShadowColor = 1012
+msoAnimShapeShadowOffsetX = 1014
+msoAnimShapeShadowOffsetY = 1015
+msoAnimShapeShadowOn = 1010
+msoAnimShapeShadowOpacity = 1013
+msoAnimShapeShadowType = 1011
+msoAnimTextBulletCharacter = 111
+msoAnimTextBulletColor = 114
+msoAnimTextBulletFontName = 112
+msoAnimTextBulletNumber = 113
+msoAnimTextBulletRelativeSize = 115
+msoAnimTextBulletStyle = 116
+msoAnimTextBulletType = 117
+msoAnimTextFontBold = 100
+msoAnimTextFontColor = 101
+msoAnimTextFontEmboss = 102
+msoAnimTextFontItalic = 103
+msoAnimTextFontName = 104
+msoAnimTextFontShadow = 105
+msoAnimTextFontSize = 106
+msoAnimTextFontStrikeThrough = 110
+msoAnimTextFontSubscript = 107
+msoAnimTextFontSuperscript = 108
+msoAnimTextFontUnderline = 109
+msoAnimVisibility = 8
+msoAnimWidth = 3
+msoAnimX = 1
+msoAnimY = 2
+
+# MsoAnimTextUnitEffect enumeration
+msoAnimTextUnitEffectByCharacter = 1
+msoAnimTextUnitEffectByParagraph = 0
+msoAnimTextUnitEffectByWord = 2
+msoAnimTextUnitEffectMixed = -1
+
+# MsoAnimTriggerType enumeration
+msoAnimTriggerAfterPrevious = 3
+msoAnimTriggerMixed = -1
+msoAnimTriggerNone = 0
+msoAnimTriggerOnPageClick = 1
+msoAnimTriggerOnShapeClick = 4
+msoAnimTriggerWithPrevious = 2
+msoAnimTriggerOnMediaBookmark = 5
+
+# MsoAnimType enumeration
+msoAnimTypeColor = 2
+msoAnimTypeCommand = 6
+msoAnimTypeFilter = 7
+msoAnimTypeMixed = -2
+msoAnimTypeMotion = 1
+msoAnimTypeNone = 0
+msoAnimTypeProperty = 5
+msoAnimTypeRotation = 4
+msoAnimTypeScale = 3
+msoAnimTypeSet = 8
+
+# MsoClickState enumeration
+msoClickStateAfterAllAnimations = -2
+msoClickStateBeforeAutomaticAnimations = -1
+
+
+
+
 class NamedSlideShow:
 
     def __init__(self, namedslideshow=None):
@@ -6537,6 +8139,14 @@ class NamedSlideShow:
 
     def Delete(self):
         self.namedslideshow.Delete()
+
+
+
+
+
+
+
+
 
 class NamedSlideShows:
 
@@ -6568,6 +8178,11 @@ class NamedSlideShows:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.namedslideshows.Item(*args, **arguments)
 
+
+
+
+
+
 class ObjectVerbs:
 
     def __init__(self, objectverbs=None):
@@ -6589,6 +8204,12 @@ class ObjectVerbs:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.objectverbs.Item(*args, **arguments)
+
+
+
+
+
+
 
 class OLEFormat:
 
@@ -6631,6 +8252,12 @@ class OLEFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.oleformat.DoVerb(*args, **arguments)
 
+
+
+
+
+
+
 class Options:
 
     def __init__(self, options=None):
@@ -6647,6 +8274,10 @@ class Options:
     @property
     def ShowCoauthoringMergeChanges(self):
         return self.options.ShowCoauthoringMergeChanges
+
+
+
+
 
 class PageSetup:
 
@@ -6709,6 +8340,16 @@ class PageSetup:
     def SlideWidth(self, value):
         self.pagesetup.SlideWidth = value
 
+
+
+
+
+
+
+
+
+
+
 class Pane:
 
     def __init__(self, pane=None):
@@ -6732,6 +8373,12 @@ class Pane:
 
     def Activate(self):
         self.pane.Activate()
+
+
+
+
+
+
 
 class Panes:
 
@@ -6757,6 +8404,17 @@ class Panes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.panes.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class ParagraphFormat:
 
@@ -6871,6 +8529,25 @@ class ParagraphFormat:
     def WordWrap(self, value):
         self.paragraphformat.WordWrap = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PictureFormat:
 
     def __init__(self, pictureformat=None):
@@ -6978,6 +8655,12 @@ class PictureFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pictureformat.IncrementContrast(*args, **arguments)
 
+
+
+
+
+
+
 class PlaceholderFormat:
 
     def __init__(self, placeholderformat=None):
@@ -7006,6 +8689,14 @@ class PlaceholderFormat:
     @property
     def Type(self):
         return self.placeholderformat.Type
+
+
+
+
+
+
+
+
 
 class Placeholders:
 
@@ -7036,6 +8727,12 @@ class Placeholders:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.placeholders.Item(*args, **arguments)
+
+
+
+
+
+
 
 class Player:
 
@@ -7073,6 +8770,15 @@ class Player:
 
     def Stop(self):
         self.player.Stop()
+
+
+
+
+
+
+
+
+
 
 class PlaySettings:
 
@@ -7142,6 +8848,22 @@ class PlaySettings:
     @StopAfterSlides.setter
     def StopAfterSlides(self, value):
         self.playsettings.StopAfterSlides = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PlotArea:
 
@@ -7245,6 +8967,36 @@ class PlotArea:
 
     def Select(self):
         self.plotarea.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Point:
 
@@ -7452,6 +9204,22 @@ class Point:
     def Select(self):
         self.point.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Points:
 
     def __init__(self, points=None):
@@ -7480,6 +9248,710 @@ class Points:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Point(self.points.Item(*args, **arguments))
+
+
+
+# PpActionType enumeration
+ppActionEndShow = 6
+ppActionFirstSlide = 3
+ppActionHyperlink = 7
+ppActionLastSlide = 4
+ppActionLastSlideViewed = 5
+ppActionMixed = -2
+ppActionNamedSlideShow = 10
+ppActionNextSlide = 1
+ppActionNone = 0
+ppActionOLEVerb = 11
+ppActionPlay = 12
+ppActionPreviousSlide = 2
+ppActionRunMacro = 8
+ppActionRunProgram = 9
+
+# PpAdvanceMode enumeration
+ppAdvanceModeMixed = -2
+ppAdvanceOnClick = 1
+ppAdvanceOnTime = 2
+
+# PpAfterEffect enumeration
+ppAfterEffectDim = 2
+ppAfterEffectHide = 1
+ppAfterEffectHideOnClick = 3
+ppAfterEffectMixed = -2
+ppAfterEffectNothing = 0
+
+# PpAlertLevel enumeration
+ppAlertsAll = 2
+ppAlertsNone = 1
+
+# PpArrangeStyle enumeration
+ppArrangeCascade = 2
+ppArrangeTiled = 1
+
+# PpAutoSize enumeration
+ppAutoSizeMixed = -2
+ppAutoSizeNone = 0
+ppAutoSizeShapeToFitText = 1
+
+# PpBaselineAlignment enumeration
+ppBaselineAlignBaseline = 1
+ppBaselineAlignCenter = 3
+ppBaselineAlignFarEast50 = 4
+ppBaselineAlignMixed = -2
+ppBaselineAlignTop = 2
+
+# PpBorderType enumeration
+ppBorderBottom = 3
+ppBorderDiagonalDown = 5
+ppBorderDiagonalUp = 6
+ppBorderLeft = 2
+ppBorderRight = 4
+ppBorderTop = 1
+
+# PpBulletType enumeration
+ppBulletMixed = -2
+ppBulletNone = 0
+ppBulletNumbered = 2
+ppBulletPicture = 3
+ppBulletUnnumbered = 1
+
+# PpChangeCase enumeration
+ppCaseLower = 2
+ppCaseSentence = 1
+ppCaseTitle = 4
+ppCaseToggle = 5
+ppCaseUpper = 3
+
+# PpChartUnitEffect enumeration
+ppAnimateByCategory = 2
+ppAnimateByCategoryElements = 4
+ppAnimateBySeries = 1
+ppAnimateBySeriesElements = 3
+ppAnimateChartAllAtOnce = 5
+ppAnimateChartMixed = -2
+
+# PpCheckInVersionType enumeration
+ppCheckInMajorVersion = 1
+ppCheckInMinorVersion = 0
+ppCheckInOverwriteVersion = 2
+
+# PpColorSchemeIndex enumeration
+ppAccent1 = 6
+ppAccent2 = 7
+ppAccent3 = 8
+ppBackground = 1
+ppFill = 5
+ppForeground = 2
+ppNotSchemeColor = 0
+ppSchemeColorMixed = -2
+ppShadow = 3
+ppTitle = 4
+
+# PpDateTimeFormat enumeration
+ppDateTimeddddMMMMddyyyy = 2
+ppDateTimedMMMMyyyy = 3
+ppDateTimedMMMyy = 5
+ppDateTimeFigureOut = 14
+ppDateTimeFormatMixed = -2
+ppDateTimeHmm = 10
+ppDateTimehmmAMPM = 12
+ppDateTimeHmmss = 11
+ppDateTimehmmssAMPM = 13
+ppDateTimeMdyy = 1
+ppDateTimeMMddyyHmm = 8
+ppDateTimeMMddyyhmmAMPM = 9
+ppDateTimeMMMMdyyyy = 4
+ppDateTimeMMMMyy = 6
+ppDateTimeMMyy = 7
+ppDateTimeUAQ1 = 15
+ppDateTimeUAQ2 = 16
+ppDateTimeUAQ3 = 17
+ppDateTimeUAQ4 = 18
+ppDateTimeUAQ5 = 19
+ppDateTimeUAQ6 = 20
+ppDateTimeUAQ7 = 21
+
+# PpDirection enumeration
+ppDirectionLeftToRight = 1
+ppDirectionMixed = -2
+ppDirectionRightToLeft = 2
+
+# PpEntryEffect enumeration
+ppEffectAppear = 3844
+ppEffectBlindsHorizontal = 769
+ppEffectBlindsVertical = 770
+ppEffectBoxDown = 3925
+ppEffectBoxIn = 3074
+ppEffectBoxLeft = 3922
+ppEffectBoxOut = 3073
+ppEffectBoxRight = 3924
+ppEffectBoxUp = 3923
+ppEffectCheckerboardAcross = 1025
+ppEffectCheckerboardDown = 1026
+ppEffectCircleOut = 3845
+ppEffectCombHorizontal = 3847
+ppEffectCombVertical = 3848
+ppEffectConveyorLeft = 3882
+ppEffectConveyorRight = 3883
+ppEffectCoverDown = 1284
+ppEffectCoverLeft = 1281
+ppEffectCoverLeftDown = 1287
+ppEffectCoverLeftUp = 1285
+ppEffectCoverRight = 1283
+ppEffectCoverRightDown = 1288
+ppEffectCoverRightUp = 1286
+ppEffectCoverUp = 1282
+ppEffectCrawlFromDown = 3344
+ppEffectCrawlFromLeft = 3341
+ppEffectCrawlFromRight = 3343
+ppEffectCrawlFromUp = 3342
+ppEffectCubeDown = 3917
+ppEffectCubeLeft = 3914
+ppEffectCubeRight = 3916
+ppEffectCubeUp = 3915
+ppEffectCut = 257
+ppEffectCutThroughBlack = 258
+ppEffectDiamondOut = 3846
+ppEffectDissolve = 1537
+ppEffectDoorsHorizontal = 3885
+ppEffectDoorsVertical = 3884
+ppEffectFade = 1793
+ppEffectFadeSmoothly = 3849
+ppEffectFerrisWheelLeft = 3899
+ppEffectFerrisWheelRight = 3900
+ppEffectFlashbulb = 3909
+ppEffectFlashOnceFast = 3841
+ppEffectFlashOnceMedium = 3842
+ppEffectFlashOnceSlow = 3843
+ppEffectFlipDown = 3908
+ppEffectFlipLeft = 3905
+ppEffectFlipRight = 3907
+ppEffectFlipUp = 3906
+ppEffectFlyFromBottom = 3332
+ppEffectFlyFromBottomLeft = 3335
+ppEffectFlyFromBottomRight = 3336
+ppEffectFlyFromLeft = 3329
+ppEffectFlyFromRight = 3331
+ppEffectFlyFromTop = 3330
+ppEffectFlyFromTopLeft = 3333
+ppEffectFlyFromTopRight = 3334
+ppEffectFlyThroughIn = 3890
+ppEffectFlyThroughInBounce = 3892
+ppEffectFlyThroughOut = 3891
+ppEffectFlyThroughOutBounce = 3893
+ppEffectGalleryLeft = 3880
+ppEffectGalleryRight = 3881
+ppEffectGlitterDiamondDown = 3875
+ppEffectGlitterDiamondLeft = 3872
+ppEffectGlitterDiamondRight = 3874
+ppEffectGlitterDiamondUp = 3873
+ppEffectGlitterHexagonDown = 3879
+ppEffectGlitterHexagonLeft = 3876
+ppEffectGlitterHexagonRight = 3878
+ppEffectGlitterHexagonUp = 3877
+ppEffectHoneycomb = 3898
+ppEffectMixed = -2
+ppEffectNewsflash = 3850
+ppEffectNone = 0
+ppEffectOrbitDown = 3929
+ppEffectOrbitLeft = 3926
+ppEffectOrbitRight = 3928
+ppEffectOrbitUp = 3927
+ppEffectPanDown = 3933
+ppEffectPanLeft = 3930
+ppEffectPanRight = 3932
+ppEffectPanUp = 3931
+ppEffectPeekFromDown = 3338
+ppEffectPeekFromLeft = 3337
+ppEffectPeekFromRight = 3339
+ppEffectPeekFromUp = 3340
+ppEffectPlusOut = 3851
+ppEffectPushDown = 3852
+ppEffectPushLeft = 3853
+ppEffectPushRight = 3854
+ppEffectPushUp = 3855
+ppEffectRandom = 513
+ppEffectRandomBarsHorizontal = 2305
+ppEffectRandomBarsVertical = 2306
+ppEffectRevealBlackLeft = 3896
+ppEffectRevealBlackRight = 3897
+ppEffectRevealSmoothLeft = 3894
+ppEffectRevealSmoothRight = 3895
+ppEffectRippleCenter = 3867
+ppEffectRippleLeftDown = 3870
+ppEffectRippleLeftUp = 3869
+ppEffectRippleRightDown = 3871
+ppEffectRippleRightUp = 3868
+ppEffectRotateDown = 3921
+ppEffectRotateLeft = 3918
+ppEffectRotateRight = 3920
+ppEffectRotateUp = 3919
+ppEffectShredRectangleIn = 3912
+ppEffectShredRectangleOut = 3913
+ppEffectShredStripsIn = 3910
+ppEffectShredStripsOut = 3911
+ppEffectSpiral = 3357
+ppEffectSplitHorizontalIn = 3586
+ppEffectSplitHorizontalOut = 3585
+ppEffectSplitVerticalIn = 3588
+ppEffectSplitVerticalOut = 3587
+ppEffectStretchAcross = 3351
+ppEffectStretchDown = 3355
+ppEffectStretchLeft = 3352
+ppEffectStretchRight = 3354
+ppEffectStretchUp = 3353
+ppEffectStripsDownLeft = 2563
+ppEffectStripsDownRight = 2564
+ppEffectStripsLeftDown = 2567
+ppEffectStripsLeftUp = 2565
+ppEffectStripsRightDown = 2568
+ppEffectStripsRightUp = 2566
+ppEffectStripsUpLeft = 2561
+ppEffectStripsUpRight = 2562
+ppEffectSwitchDown = 3904
+ppEffectSwitchLeft = 3901
+ppEffectSwitchRight = 3903
+ppEffectSwitchUp = 3902
+ppEffectSwivel = 3356
+ppEffectUncoverDown = 2052
+ppEffectUncoverLeft = 2049
+ppEffectUncoverLeftDown = 2055
+ppEffectUncoverLeftUp = 2053
+ppEffectUncoverRight = 2051
+ppEffectUncoverRightDown = 2056
+ppEffectUncoverRightUp = 2054
+ppEffectUncoverUp = 2050
+ppEffectVortexDown = 3866
+ppEffectVortexLeft = 3863
+ppEffectVortexRight = 3865
+ppEffectVortexUp = 3864
+ppEffectWarpIn = 3888
+ppEffectWarpOut = 3889
+ppEffectWedge = 3856
+ppEffectWheel1Spoke = 3857
+ppEffectWheel2Spokes = 3858
+ppEffectWheel3Spokes = 3859
+ppEffectWheel4Spokes = 3860
+ppEffectWheel8Spokes = 3861
+ppEffectWheelReverse1Spoke = 3862
+ppEffectWindowHorizontal = 3887
+ppEffectWindowVertical = 3886
+ppEffectWipeDown = 2820
+ppEffectWipeLeft = 2817
+ppEffectWipeRight = 2819
+ppEffectWipeUp = 2818
+ppEffectZoomBottom = 3350
+ppEffectZoomCenter = 3349
+ppEffectZoomIn = 3345
+ppEffectZoomInSlightly = 3346
+ppEffectZoomOut = 3347
+ppEffectZoomOutSlightly = 3348
+
+# PpFarEastLineBreakLevel enumeration
+ppFarEastLineBreakLevelCustom = 3
+ppFarEastLineBreakLevelNormal = 1
+ppFarEastLineBreakLevelStrict = 2
+
+# PpFixedFormatIntent enumeration
+ppFixedFormatIntentPrint = 2
+ppFixedFormatIntentScreen = 1
+
+# PpFixedFormatType enumeration
+ppFixedFormatTypePDF = 2
+ppFixedFormatTypeXPS = 1
+
+# PpFollowColors enumeration
+ppFollowColorsMixed = -2
+ppFollowColorsNone = 0
+ppFollowColorsScheme = 1
+ppFollowColorsTextAndBackground = 2
+
+# PpFrameColors enumeration
+ppFrameColorsBlackTextOnWhite = 5
+ppFrameColorsBrowserColors = 1
+ppFrameColorsPresentationSchemeAccentColor = 3
+ppFrameColorsPresentationSchemeTextColor = 2
+ppFrameColorsWhiteTextOnBlack = 4
+
+# PpHTMLVersion enumeration
+ppHTMLAutodetect = 4
+ppHTMLDual = 3
+ppHTMLv3 = 1
+ppHTMLv4 = 2
+
+# PpIndentControl enumeration
+ppIndentControlMixed = -2
+ppIndentKeepAttr = 2
+ppIndentReplaceAttr = 1
+
+# PpMediaType enumeration
+ppMediaTypeMixed = -2
+ppMediaTypeMovie = 3
+ppMediaTypeOther = 1
+ppMediaTypeSound = 2
+
+# PpMouseActivation enumeration
+ppMouseClick = 1
+ppMouseOver = 2
+
+# PpNumberedBulletStyle enumeration
+ppBulletAlphaLCParenBoth = 8
+ppBulletAlphaLCParenRight = 9
+ppBulletAlphaLCPeriod = 0
+ppBulletAlphaUCParenBoth = 10
+ppBulletAlphaUCParenRight = 11
+ppBulletAlphaUCPeriod = 1
+ppBulletArabicAbjadDash = 24
+ppBulletArabicAlphaDash = 23
+ppBulletArabicDBPeriod = 29
+ppBulletArabicDBPlain = 28
+ppBulletArabicParenBoth = 12
+ppBulletArabicParenRight = 2
+ppBulletArabicPeriod = 3
+ppBulletArabicPlain = 13
+ppBulletCircleNumDBPlain = 18
+ppBulletCircleNumWDBlackPlain = 20
+ppBulletCircleNumWDWhitePlain = 19
+ppBulletHebrewAlphaDash = 25
+ppBulletHindiAlpha1Period = 40
+ppBulletHindiAlphaPeriod = 36
+ppBulletHindiNumParenRight = 39
+ppBulletHindiNumPeriod = 37
+ppBulletKanjiKoreanPeriod = 27
+ppBulletKanjiKoreanPlain = 26
+ppBulletKanjiSimpChinDBPeriod = 38
+ppBulletRomanLCParenBoth = 4
+ppBulletRomanLCParenRight = 5
+ppBulletRomanLCPeriod = 6
+ppBulletRomanUCParenBoth = 14
+ppBulletRomanUCParenRight = 15
+ppBulletRomanUCPeriod = 7
+ppBulletSimpChinPeriod = 17
+ppBulletSimpChinPlain = 16
+ppBulletStyleMixed = -2
+ppBulletThaiAlphaParenBoth = 32
+ppBulletThaiAlphaParenRight = 31
+ppBulletThaiAlphaPeriod = 30
+ppBulletThaiNumParenBoth = 35
+ppBulletThaiNumParenRight = 34
+ppBulletThaiNumPeriod = 33
+ppBulletTradChinPeriod = 22
+ppBulletTradChinPlain = 21
+
+# PpParagraphAlignment enumeration
+ppAlignCenter = 2
+ppAlignDistribute = 5
+ppAlignJustify = 4
+ppAlignJustifyLow = 7
+ppAlignLeft = 1
+ppAlignmentMixed = -2
+ppAlignRight = 3
+ppAlignThaiDistribute = 6
+
+# PpPasteDataType enumeration
+ppPasteBitmap = 1
+ppPasteDefault = 0
+ppPasteEnhancedMetafile = 2
+ppPasteGIF = 4
+ppPasteHTML = 8
+ppPasteJPG = 5
+ppPasteMetafilePicture = 3
+ppPasteOLEObject = 10
+ppPastePNG = 6
+ppPasteRTF = 9
+ppPasteShape = 11
+ppPasteText = 7
+
+# PpPlaceholderType enumeration
+ppPlaceholderMixed = -2
+ppPlaceholderTitle = 1
+ppPlaceholderBody = 2
+ppPlaceholderCenterTitle = 3
+ppPlaceholderSubtitle = 4
+ppPlaceholderVerticalTitle = 5
+ppPlaceholderVerticalBody = 6
+ppPlaceholderObject = 7
+ppPlaceholderChart = 8
+ppPlaceholderBitmap = 9
+ppPlaceholderMediaClip = 10
+ppPlaceholderOrgChart = 11
+ppPlaceholderTable = 12
+ppPlaceholderSlideNumber = 13
+ppPlaceholderHeader = 14
+ppPlaceholderFooter = 15
+ppPlaceholderDate = 16
+ppPlaceholderVerticalObject = 17
+ppPlaceholderPicture = 18
+ppPlaceholderCameo = 19
+
+# PpPrintColorType enumeration
+ppPrintBlackAndWhite = 2
+ppPrintColor = 1
+ppPrintPureBlackAndWhite = 3
+
+# PpPrintHandoutOrder enumeration
+ppPrintHandoutHorizontalFirst = 2
+ppPrintHandoutVerticalFirst = 1
+
+# PpPrintOutputType enumeration
+ppPrintOutputBuildSlides = 7
+ppPrintOutputFourSlideHandouts = 8
+ppPrintOutputNineSlideHandouts = 9
+ppPrintOutputNotesPages = 5
+ppPrintOutputOneSlideHandouts = 10
+ppPrintOutputOutline = 6
+ppPrintOutputSixSlideHandouts = 4
+ppPrintOutputSlides = 1
+ppPrintOutputThreeSlideHandouts = 3
+ppPrintOutputTwoSlideHandouts = 2
+
+# PpPrintRangeType enumeration
+ppPrintAll = 1
+ppPrintCurrent = 3
+ppPrintNamedSlideShow = 5
+ppPrintSelection = 2
+ppPrintSlideRange = 4
+
+# PpPublishSourceType enumeration
+ppPublishAll = 1
+ppPublishNamedSlideShow = 3
+ppPublishSlideRange = 2
+
+# PpRemoveDocInfoType enumeration
+ppRDIAll = 99
+ppRDIAtMentions = 18
+ppRDIComments = 1
+ppRDIContentType = 16
+ppRDIDocumentManagementPolicy = 15
+ppRDIDocumentProperties = 8
+ppRDIDocumentServerProperties = 14
+ppRDIDocumentWorkspace = 10
+ppRDIInkAnnotations = 11
+ppRDIPublishPath = 13
+ppRDIRemovePersonalInformation = 4
+ppRDISlideUpdateInformation = 17
+
+# PpRevisionInfo enumeration
+ppRevisionInfoBaseline = 1
+ppRevisionInfoMerged = 2
+ppRevisionInfoNone = 0
+
+# PpSelectionType enumeration
+ppSelectionNone = 0
+ppSelectionShapes = 2
+ppSelectionSlides = 1
+ppSelectionText = 3
+
+# PpSlideLayout enumeration
+ppLayoutBlank = 12
+ppLayoutChart = 8
+ppLayoutChartAndText = 6
+ppLayoutClipArtAndText = 10
+ppLayoutClipArtAndVerticalText = 26
+ppLayoutComparison = 34
+ppLayoutContentWithCaption = 35
+ppLayoutCustom = 32
+ppLayoutFourObjects = 24
+ppLayoutLargeObject = 15
+ppLayoutMediaClipAndText = 18
+ppLayoutMixed = -2
+ppLayoutObject = 16
+ppLayoutObjectAndText = 14
+ppLayoutObjectAndTwoObjects = 30
+ppLayoutObjectOverText = 19
+ppLayoutOrgchart = 7
+ppLayoutPictureWithCaption = 36
+ppLayoutSectionHeader = 33
+ppLayoutTable = 4
+ppLayoutText = 2
+ppLayoutTextAndChart = 5
+ppLayoutTextAndClipArt = 9
+ppLayoutTextAndMediaClip = 17
+ppLayoutTextAndObject = 13
+ppLayoutTextAndTwoObjects = 21
+ppLayoutTextOverObject = 20
+ppLayoutTitle = 1
+ppLayoutTitleOnly = 11
+ppLayoutTwoColumnText = 3
+ppLayoutTwoObjects = 29
+ppLayoutTwoObjectsAndObject = 31
+ppLayoutTwoObjectsAndText = 22
+ppLayoutTwoObjectsOverText = 23
+ppLayoutVerticalText = 25
+ppLayoutVerticalTitleAndText = 27
+ppLayoutVerticalTitleAndTextOverChart = 28
+
+# PpSlideShowAdvanceMode enumeration
+ppSlideShowManualAdvance = 1
+ppSlideShowRehearseNewTimings = 3
+ppSlideShowUseSlideTimings = 2
+
+# PpSlideShowPointerType enumeration
+ppSlideShowPointerAlwaysHidden = 3
+ppSlideShowPointerArrow = 1
+ppSlideShowPointerAutoArrow = 4
+ppSlideShowPointerEraser = 5
+ppSlideShowPointerNone = 0
+ppSlideShowPointerPen = 2
+
+# PpSlideShowRangeType enumeration
+ppShowAll = 1
+ppShowNamedSlideShow = 3
+ppShowSlideRange = 2
+
+# PpSlideShowState enumeration
+ppSlideShowBlackScreen = 3
+ppSlideShowDone = 5
+ppSlideShowPaused = 2
+ppSlideShowRunning = 1
+ppSlideShowWhiteScreen = 4
+
+# PpSlideShowType enumeration
+ppShowTypeKiosk = 3
+ppShowTypeSpeaker = 1
+ppShowTypeWindow = 2
+ppShowTypeWindow2 = 4
+
+# PpSlideSizeType enumeration
+ppSlideSize35MM = 4
+ppSlideSizeA3Paper = 9
+ppSlideSizeA4Paper = 3
+ppSlideSizeB4ISOPaper = 10
+ppSlideSizeB4JISPaper = 12
+ppSlideSizeB5ISOPaper = 11
+ppSlideSizeB5JISPaper = 13
+ppSlideSizeBanner = 6
+ppSlideSizeCustom = 7
+ppSlideSizeHagakiCard = 14
+ppSlideSizeLedgerPaper = 8
+ppSlideSizeLetterPaper = 2
+ppSlideSizeOnScreen = 1
+ppSlideSizeOverhead = 5
+
+# PpSoundEffectType enumeration
+ppSoundEffectsMixed = -2
+ppSoundFile = 2
+ppSoundNone = 0
+ppSoundStopPrevious = 1
+
+# PpSoundFormatType enumeration
+ppSoundFormatCDAudio = 3
+ppSoundFormatMIDI = 2
+ppSoundFormatMixed = -2
+ppSoundFormatNone = 0
+ppSoundFormatWAV = 1
+
+# PpTabStopType enumeration
+ppTabStopCenter = 2
+ppTabStopDecimal = 4
+ppTabStopLeft = 1
+ppTabStopMixed = -2
+ppTabStopRight = 3
+
+# PpTextLevelEffect enumeration
+ppAnimateByAllLevels = 16
+ppAnimateByFifthLevel = 5
+ppAnimateByFirstLevel = 1
+ppAnimateByFourthLevel = 4
+ppAnimateBySecondLevel = 2
+ppAnimateByThirdLevel = 3
+ppAnimateLevelMixed = -2
+ppAnimateLevelNone = 0
+
+# PpTextStyleType enumeration
+ppBodyStyle = 3
+ppDefaultStyle = 1
+ppTitleStyle = 2
+
+# PpTextUnitEffect enumeration
+ppAnimateByCharacter = 2
+ppAnimateByParagraph = 0
+ppAnimateByWord = 1
+ppAnimateUnitMixed = -2
+
+# PpTransitionSpeed enumeration
+ppTransitionSpeedFast = 3
+ppTransitionSpeedMedium = 2
+ppTransitionSpeedMixed = -2
+ppTransitionSpeedSlow = 1
+
+# PpUpdateOption enumeration
+ppUpdateOptionAutomatic = 2
+ppUpdateOptionManual = 1
+ppUpdateOptionMixed = -2
+
+# PpViewType enumeration
+ppViewHandoutMaster = 4
+ppViewMasterThumbnails = 12
+ppViewNormal = 9
+ppViewNotesMaster = 5
+ppViewNotesPage = 3
+ppViewOutline = 6
+ppViewPrintPreview = 10
+ppViewSlide = 1
+ppViewSlideMaster = 2
+ppViewSlideSorter = 7
+ppViewThumbnails = 11
+ppViewTitleMaster = 8
+
+# PpWindowState enumeration
+ppWindowMaximized = 3
+ppWindowMinimized = 2
+ppWindowNormal = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Presentation:
 
@@ -7974,6 +10446,62 @@ class Presentation:
     def UpdateLinks(self):
         self.presentation.UpdateLinks()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Presentations:
 
     def __init__(self, presentations=None):
@@ -8023,6 +10551,17 @@ class Presentations:
         arguments = {"FileName": FileName, "ReadOnly": ReadOnly, "Untitled": Untitled, "WithWindow": WithWindow, "OpenAndRepair": OpenAndRepair}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Presentation(self.presentations.Open2007(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
 
 class PrintOptions:
 
@@ -8165,6 +10704,22 @@ class PrintOptions:
     def SlideShowName(self, value):
         self.printoptions.SlideShowName = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PrintRange:
 
     def __init__(self, printrange=None):
@@ -8188,6 +10743,14 @@ class PrintRange:
 
     def Delete(self):
         self.printrange.Delete()
+
+
+
+
+
+
+
+
 
 class PrintRanges:
 
@@ -8221,6 +10784,10 @@ class PrintRanges:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.printranges.Item(*args, **arguments)
+
+
+
+
 
 class PropertyEffect:
 
@@ -8262,6 +10829,19 @@ class PropertyEffect:
     @To.setter
     def To(self, value):
         self.propertyeffect.To = value
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ProtectedViewWindow:
 
@@ -8347,6 +10927,17 @@ class ProtectedViewWindow:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.protectedviewwindow.Edit(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class ProtectedViewWindows:
 
     def __init__(self, protectedviewwindows=None):
@@ -8373,6 +10964,12 @@ class ProtectedViewWindows:
         arguments = {"FileName": FileName, "ReadPassword": ReadPassword, "OpenAndRepair": OpenAndRepair}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.protectedviewwindows.Open(*args, **arguments)
+
+
+
+
+
+
 
 class PublishObject:
 
@@ -8446,6 +11043,17 @@ class PublishObject:
     def Publish(self):
         self.publishobject.Publish()
 
+
+
+
+
+
+
+
+
+
+
+
 class PublishObjects:
 
     def __init__(self, publishobjects=None):
@@ -8470,6 +11078,22 @@ class PublishObjects:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.publishobjects.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ResampleMediaTasks:
 
@@ -8501,6 +11125,12 @@ class ResampleMediaTasks:
     def Resume(self):
         return self.resamplemediatasks.Resume()
 
+
+
+
+
+
+
 class Research:
 
     def __init__(self, research=None):
@@ -8529,6 +11159,11 @@ class Research:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.research.SetLanguagePair(*args, **arguments)
 
+
+
+
+
+
 class RGBColor:
 
     def __init__(self, rgbcolor=None):
@@ -8549,6 +11184,12 @@ class RGBColor:
     @RGB.setter
     def RGB(self, value):
         self.rgbcolor.RGB = value
+
+
+
+
+
+
 
 class RotationEffect:
 
@@ -8587,6 +11228,13 @@ class RotationEffect:
     def To(self, value):
         self.rotationeffect.To = value
 
+
+
+
+
+
+
+
 class Row:
 
     def __init__(self, row=None):
@@ -8622,6 +11270,13 @@ class Row:
     def Select(self):
         self.row.Select()
 
+
+
+
+
+
+
+
 class Rows:
 
     def __init__(self, rows=None):
@@ -8652,6 +11307,10 @@ class Rows:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.rows.Item(*args, **arguments)
 
+
+
+
+
 class Ruler:
 
     def __init__(self, ruler=None):
@@ -8672,6 +11331,12 @@ class Ruler:
     @property
     def TabStops(self):
         return TabStops(self.ruler.TabStops)
+
+
+
+
+
+
 
 class RulerLevel:
 
@@ -8702,6 +11367,11 @@ class RulerLevel:
     def Parent(self):
         return self.rulerlevel.Parent
 
+
+
+
+
+
 class RulerLevels:
 
     def __init__(self, rulerlevels=None):
@@ -8726,6 +11396,13 @@ class RulerLevels:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.rulerlevels.Item(*args, **arguments)
+
+
+
+
+
+
+
 
 class ScaleEffect:
 
@@ -8787,6 +11464,16 @@ class ScaleEffect:
     @ToY.setter
     def ToY(self, value):
         self.scaleeffect.ToY = value
+
+
+
+
+
+
+
+
+
+
 
 class SectionProperties:
 
@@ -8850,6 +11537,19 @@ class SectionProperties:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sectionproperties.SlidesCount(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Selection:
 
     def __init__(self, selection=None):
@@ -8902,6 +11602,27 @@ class Selection:
 
     def Unselect(self):
         self.selection.Unselect()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Sequence:
 
@@ -8975,6 +11696,12 @@ class Sequence:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequence.Item(*args, **arguments)
 
+
+
+
+
+
+
 class Sequences:
 
     def __init__(self, sequences=None):
@@ -9001,6 +11728,44 @@ class Sequences:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sequences.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Series:
 
@@ -9347,6 +12112,28 @@ class Series:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Trendlines(self.series.Trendlines(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SeriesCollection:
 
     def __init__(self, seriescollection=None):
@@ -9386,6 +12173,14 @@ class SeriesCollection:
     def NewSeries(self):
         return Series(self.seriescollection.NewSeries())
 
+
+
+
+
+
+
+
+
 class SeriesLines:
 
     def __init__(self, serieslines=None):
@@ -9421,6 +12216,11 @@ class SeriesLines:
     def Select(self):
         self.serieslines.Select()
 
+
+
+
+
+
 class SetEffect:
 
     def __init__(self, seteffect=None):
@@ -9449,6 +12249,16 @@ class SetEffect:
     @To.setter
     def To(self, value):
         self.seteffect.To = value
+
+
+
+
+
+
+
+
+
+
 
 class ShadowFormat:
 
@@ -9564,6 +12374,60 @@ class ShadowFormat:
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shadowformat.IncrementOffsetY(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Shape:
 
@@ -9959,6 +12823,50 @@ class Shape:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.ZOrder(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ShapeNode:
 
     def __init__(self, shapenode=None):
@@ -9987,6 +12895,16 @@ class ShapeNode:
     @property
     def SegmentType(self):
         return self.shapenode.SegmentType
+
+
+
+
+
+
+
+
+
+
 
 class ShapeNodes:
 
@@ -10041,6 +12959,59 @@ class ShapeNodes:
         arguments = {"Index": Index, "SegmentType": SegmentType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shapenodes.SetSegmentType(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ShapeRange:
 
@@ -10457,6 +13428,73 @@ class ShapeRange:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shaperange.ZOrder(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Shapes:
 
     def __init__(self, shapes=None):
@@ -10611,6 +13649,37 @@ class Shapes:
 
     def SelectAll(self):
         self.shapes.SelectAll()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Slide:
 
@@ -10798,6 +13867,49 @@ class Slide:
 
     def Select(self):
         self.slide.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SlideRange:
 
@@ -11002,6 +14114,30 @@ class SlideRange:
     def Select(self):
         self.sliderange.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Slides:
 
     def __init__(self, slides=None):
@@ -11051,6 +14187,14 @@ class Slides:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slides.Range(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class SlideShowSettings:
 
@@ -11172,6 +14316,28 @@ class SlideShowSettings:
     def Run(self):
         return self.slideshowsettings.Run()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SlideShowTransition:
 
     def __init__(self, slideshowtransition=None):
@@ -11252,6 +14418,28 @@ class SlideShowTransition:
     @Speed.setter
     def Speed(self, value):
         self.slideshowtransition.Speed = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SlideShowView:
 
@@ -11412,6 +14600,31 @@ class SlideShowView:
     def ResetSlideTime(self):
         self.slideshowview.ResetSlideTime()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SlideShowWindow:
 
     def __init__(self, slideshowwindow=None):
@@ -11476,6 +14689,15 @@ class SlideShowWindow:
     def Activate(self):
         self.slideshowwindow.Activate()
 
+
+
+
+
+
+
+
+
+
 class SlideShowWindows:
 
     def __init__(self, slideshowwindows=None):
@@ -11500,6 +14722,10 @@ class SlideShowWindows:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slideshowwindows.Item(*args, **arguments)
+
+
+
+
 
 class SoundEffect:
 
@@ -11537,6 +14763,22 @@ class SoundEffect:
 
     def Play(self):
         self.soundeffect.Play()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Table:
 
@@ -11654,6 +14896,15 @@ class Table:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.ScaleProportionally(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
 class TableBackground:
 
     def __init__(self, tablebackground=None):
@@ -11675,6 +14926,11 @@ class TableBackground:
     def Shadow(self):
         return ShadowFormat(self.tablebackground.Shadow)
 
+
+
+
+
+
 class TableStyle:
 
     def __init__(self, tablestyle=None):
@@ -11687,6 +14943,10 @@ class TableStyle:
     @property
     def Name(self):
         return self.tablestyle.Name
+
+
+
+
 
 class TabStop:
 
@@ -11719,6 +14979,15 @@ class TabStop:
 
     def Clear(self):
         self.tabstop.Clear()
+
+
+
+
+
+
+
+
+
 
 class TabStops:
 
@@ -11757,6 +15026,13 @@ class TabStops:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.tabstops.Item(*args, **arguments)
+
+
+
+
+
+
+
 
 class Tags:
 
@@ -11799,6 +15075,18 @@ class Tags:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.tags.Value(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextEffectFormat:
 
@@ -11916,6 +15204,25 @@ class TextEffectFormat:
     def ToggleVerticalText(self):
         self.texteffectformat.ToggleVerticalText()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TextFrame:
 
     def __init__(self, textframe=None):
@@ -12019,6 +15326,24 @@ class TextFrame:
 
     def DeleteText(self):
         self.textframe.DeleteText()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextFrame2:
 
@@ -12163,6 +15488,43 @@ class TextFrame2:
 
     def DeleteText(self):
         return self.textframe2.DeleteText()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextRange:
 
@@ -12349,6 +15711,25 @@ class TextRange:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textrange.Words(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TextStyle:
 
     def __init__(self, textstyle=None):
@@ -12374,6 +15755,12 @@ class TextStyle:
     def TextFrame(self):
         return TextFrame(self.textstyle.TextFrame)
 
+
+
+
+
+
+
 class TextStyleLevel:
 
     def __init__(self, textstylelevel=None):
@@ -12394,6 +15781,12 @@ class TextStyleLevel:
     @property
     def Parent(self):
         return self.textstylelevel.Parent
+
+
+
+
+
+
 
 class TextStyleLevels:
 
@@ -12420,6 +15813,11 @@ class TextStyleLevels:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textstylelevels.Item(*args, **arguments)
 
+
+
+
+
+
 class TextStyles:
 
     def __init__(self, textstyles=None):
@@ -12444,6 +15842,28 @@ class TextStyles:
         arguments = {"Type": Type}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textstyles.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ThreeDFormat:
 
@@ -12701,6 +16121,33 @@ class ThreeDFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetThreeDFormat(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TickLabels:
 
     def __init__(self, ticklabels=None):
@@ -12804,6 +16251,20 @@ class TickLabels:
     def Select(self):
         self.ticklabels.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TimeLine:
 
     def __init__(self, timeline=None):
@@ -12824,6 +16285,14 @@ class TimeLine:
     @property
     def Parent(self):
         return self.timeline.Parent
+
+
+
+
+
+
+
+
 
 class Timing:
 
@@ -12966,6 +16435,33 @@ class Timing:
     def TriggerType(self, value):
         self.timing.TriggerType = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Trendline:
 
     def __init__(self, trendline=None):
@@ -13096,6 +16592,19 @@ class Trendline:
     def Select(self):
         self.trendline.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Trendlines:
 
     def __init__(self, trendlines=None):
@@ -13126,6 +16635,13 @@ class Trendlines:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Trendline(self.trendlines.Item(*args, **arguments))
+
+
+
+
+
+
+
 
 class UpBars:
 
@@ -13161,6 +16677,13 @@ class UpBars:
 
     def Select(self):
         self.upbars.Select()
+
+
+
+
+
+
+
 
 class View:
 
@@ -13258,6 +16781,26 @@ class View:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.view.PrintOut(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Walls:
 
     def __init__(self, walls=None):
@@ -13315,3 +16858,539 @@ class Walls:
 
     def Select(self):
         self.walls.Select()
+
+
+
+
+
+
+
+
+
+# XlAxisCrosses enumeration
+xlAxisCrossesAutomatic = -4105
+xlAxisCrossesCustom = -4114
+xlAxisCrossesMaximum = 2
+xlAxisCrossesMinimum = 4
+
+# XlAxisGroup enumeration
+xlPrimary = 1
+xlSecondary = 2
+
+# XlAxisType enumeration
+xlCategory = 1
+xlSeriesAxis = 3
+xlValue = 2
+
+# XlBackground enumeration
+xlBackgroundAutomatic = -4105
+xlBackgroundOpaque = 3
+xlBackgroundTransparent = 2
+
+# XlBarShape enumeration
+xlBox = 0
+xlConeToMax = 5
+xlConeToPoint = 4
+xlCylinder = 3
+xlPyramidToMax = 2
+xlPyramidToPoint = 1
+
+# XlBorderWeight enumeration
+xlHairline = 1
+xlMedium = -4138
+xlThick = 4
+xlThin = 2
+
+# XlCategoryType enumeration
+xlAutomaticScale = -4105
+xlCategoryScale = 2
+xlTimeScale = 3
+
+# XlChartElementPosition enumeration
+xlChartElementPositionAutomatic = -4105
+xlChartElementPositionCustom = -4114
+
+# XlChartGallery enumeration
+xlAnyGallery = 23
+xlBuiltIn = 21
+xlUserDefined = 22
+
+# XlChartItem enumeration
+xlAxis = 21
+xlAxisTitle = 17
+xlChartArea = 2
+xlChartTitle = 4
+xlCorners = 6
+xlDataLabel = 0
+xlDataTable = 7
+xlDisplayUnitLabel = 30
+xlDownBars = 20
+xlDropLines = 26
+xlErrorBars = 9
+xlFloor = 23
+xlHiLoLines = 25
+xlLeaderLines = 29
+xlLegend = 24
+xlLegendEntry = 12
+xlLegendKey = 13
+xlMajorGridlines = 15
+xlMinorGridlines = 16
+xlNothing = 28
+xlPivotChartDropZone = 32
+xlPivotChartFieldButton = 31
+xlPlotArea = 19
+xlRadarAxisLabels = 27
+xlSeries = 3
+xlSeriesLines = 22
+xlShape = 14
+xlTrendline = 8
+xlUpBars = 18
+xlWalls = 5
+xlXErrorBars = 10
+xlYErrorBars = 11
+
+# XlChartPicturePlacement enumeration
+xlAllFaces = 7
+xlEnd = 2
+xlEndSides = 3
+xlFront = 4
+xlFrontEnd = 6
+xlFrontSides = 5
+xlSides = 1
+
+# XlChartPictureType enumeration
+xlStack = 2
+xlStackScale = 3
+xlStretch = 1
+
+# XlChartSplitType enumeration
+xlSplitByCustomSplit = 4
+xlSplitByPercentValue = 3
+xlSplitByPosition = 1
+xlSplitByValue = 2
+
+# XlColorIndex enumeration
+xlColorIndexAutomatic = -4105
+xlColorIndexNone = -4142
+
+# XlConstants enumeration
+xl3DBar = -4099
+xl3DSurface = -4103
+xlAbove = 0
+xlAutomatic = -4105
+xlBar = 2
+xlBelow = 1
+xlBoth = 1
+xlBottom = -4107
+xlCenter = -4108
+xlChecker = 9
+xlCircle = 8
+xlColumn = 3
+xlCombination = -4111
+xlCorner = 2
+xlCrissCross = 16
+xlCross = 4
+xlCustom = -4114
+xlDefaultAutoFormat = -1
+xlDiamond = 2
+xlDistributed = -4117
+xlFill = 5
+xlFixedValue = 1
+xlGeneral = 1
+xlGray16 = 17
+xlGray25 = -4124
+xlGray50 = -4125
+xlGray75 = -4126
+xlGray8 = 18
+xlGrid = 15
+xlHigh = -4127
+xlInside = 2
+xlJustify = -4130
+xlLeft = -4131
+xlLightDown = 13
+xlLightHorizontal = 11
+xlLightUp = 14
+xlLightVertical = 12
+xlLow = -4134
+xlMaximum = 2
+xlMinimum = 4
+xlMinusValues = 3
+xlNextToAxis = 4
+xlNone = -4142
+xlOpaque = 3
+xlOutside = 3
+xlPercent = 2
+xlPlus = 9
+xlPlusValues = 2
+xlRight = -4152
+xlScale = 3
+xlSemiGray75 = 10
+xlShowLabel = 4
+xlShowLabelAndPercent = 5
+xlShowPercent = 3
+xlShowValue = 2
+xlSingle = 2
+xlSolid = 1
+xlSquare = 1
+xlStar = 5
+xlStError = 4
+xlTop = -4160
+xlTransparent = 2
+xlTriangle = 3
+
+# XlCopyPictureFormat enumeration
+xlBitmap = 2
+xlPicture = -4147
+
+# XlDataLabelPosition enumeration
+xlLabelPositionAbove = 0
+xlLabelPositionBelow = 1
+xlLabelPositionBestFit = 5
+xlLabelPositionCenter = -4108
+xlLabelPositionCustom = 7
+xlLabelPositionInsideBase = 4
+xlLabelPositionInsideEnd = 3
+xlLabelPositionLeft = -4131
+xlLabelPositionMixed = 6
+xlLabelPositionOutsideEnd = 2
+xlLabelPositionRight = -4152
+
+# XlDataLabelSeparator enumeration
+xlDataLabelSeparatorDefault = 1
+
+# XlDataLabelsType enumeration
+xlDataLabelsShowBubbleSizes = 6
+xlDataLabelsShowLabel = 4
+xlDataLabelsShowLabelAndPercent = 5
+xlDataLabelsShowNone = -4142
+xlDataLabelsShowPercent = 3
+xlDataLabelsShowValue = 2
+
+# XlDisplayBlanksAs enumeration
+xlInterpolated = 3
+xlNotPlotted = 1
+xlZero = 2
+
+# XlDisplayUnit enumeration
+xlHundredMillions = -8
+xlHundreds = -2
+xlHundredThousands = -5
+xlMillionMillions = -10
+xlMillions = -6
+xlTenMillions = -7
+xlTenThousands = -4
+xlThousandMillions = -9
+xlThousands = -3
+
+# XlEndStyleCap enumeration
+xlCap = 1
+xlNoCap = 2
+
+# XlErrorBarDirection enumeration
+xlChartX = -4168
+xlChartY = 1
+
+# XlErrorBarInclude enumeration
+xlErrorBarIncludeBoth = 1
+xlErrorBarIncludeMinusValues = 3
+xlErrorBarIncludeNone = -4142
+xlErrorBarIncludePlusValues = 2
+
+# XlErrorBarType enumeration
+xlErrorBarTypeCustom = -4114
+xlErrorBarTypeFixedValue = 1
+xlErrorBarTypePercent = 2
+xlErrorBarTypeStDev = -4155
+xlErrorBarTypeStError = 4
+
+# XlHAlign enumeration
+xlHAlignCenter = -4108
+xlHAlignCenterAcrossSelection = 7
+xlHAlignDistributed = -4117
+xlHAlignFill = 5
+xlHAlignGeneral = 1
+xlHAlignJustify = -4130
+xlHAlignLeft = -4131
+xlHAlignRight = -4152
+
+# XlLegendPosition enumeration
+xlLegendPositionBottom = -4107
+xlLegendPositionCorner = 2
+xlLegendPositionCustom = -4161
+xlLegendPositionLeft = -4131
+xlLegendPositionRight = -4152
+xlLegendPositionTop = -4160
+
+# XlLineStyle enumeration
+xlContinuous = 1
+xlDash = -4115
+xlDashDot = 4
+xlDashDotDot = 5
+xlDot = -4118
+xlDouble = -4119
+xlLineStyleNone = -4142
+xlSlantDashDot = 13
+
+# XlMarkerStyle enumeration
+xlMarkerStyleAutomatic = -4105
+xlMarkerStyleCircle = 8
+xlMarkerStyleDash = -4115
+xlMarkerStyleDiamond = 2
+xlMarkerStyleDot = -4118
+xlMarkerStyleNone = -4142
+xlMarkerStylePicture = -4147
+xlMarkerStylePlus = 9
+xlMarkerStyleSquare = 1
+xlMarkerStyleStar = 5
+xlMarkerStyleTriangle = 3
+xlMarkerStyleX = -4168
+
+# XlOrientation enumeration
+xlDownward = -4170
+xlHorizontal = -4128
+xlUpward = -4171
+xlVertical = -4166
+
+# XlPattern enumeration
+xlPatternAutomatic = -4105
+xlPatternChecker = 9
+xlPatternCrissCross = 16
+xlPatternDown = -4121
+xlPatternGray16 = 17
+xlPatternGray25 = -4124
+xlPatternGray50 = -4125
+xlPatternGray75 = -4126
+xlPatternGray8 = 18
+xlPatternGrid = 15
+xlPatternHorizontal = -4128
+xlPatternLightDown = 13
+xlPatternLightHorizontal = 11
+xlPatternLightUp = 14
+xlPatternLightVertical = 12
+xlPatternLinearGradient = 4000
+xlPatternNone = -4142
+xlPatternRectangularGradient = 4001
+xlPatternSemiGray75 = 10
+xlPatternSolid = 1
+xlPatternUp = -4162
+xlPatternVertical = -4166
+
+# XlPictureAppearance enumeration
+xlPrinter = 2
+xlScreen = 1
+
+# XlPivotFieldOrientation enumeration
+xlColumnField = 2
+xlDataField = 4
+xlHidden = 0
+xlPageField = 3
+xlRowField = 1
+
+# XlReadingOrder enumeration
+xlContext = -5002
+xlLTR = -5003
+xlRTL = -5004
+
+# XlRgbColor enumeration
+xlAliceBlue = 16775408
+xlAntiqueWhite = 14150650
+xlAqua = 16776960
+xlAquamarine = 13959039
+xlAzure = 16777200
+xlBeige = 14480885
+xlBisque = 12903679
+xlBlack = 0
+xlBlanchedAlmond = 13495295
+xlBlue = 16711680
+xlBlueViolet = 14822282
+xlBrown = 2763429
+xlBurlyWood = 8894686
+xlCadetBlue = 10526303
+xlChartreuse = 65407
+xlCoral = 5275647
+xlCornflowerBlue = 15570276
+xlCornsilk = 14481663
+xlCrimson = 3937500
+xlDarkBlue = 9109504
+xlDarkCyan = 9145088
+xlDarkGoldenrod = 755384
+xlDarkGray = 11119017
+xlDarkGreen = 25600
+xlDarkGrey = 11119017
+xlDarkKhaki = 7059389
+xlDarkMagenta = 9109643
+xlDarkOliveGreen = 3107669
+xlDarkOrange = 36095
+xlDarkOrchid = 13382297
+xlDarkRed = 139
+xlDarkSalmon = 8034025
+xlDarkSeaGreen = 9419919
+xlDarkSlateBlue = 9125192
+xlDarkSlateGray = 5197615
+xlDarkSlateGrey = 5197615
+xlDarkTurquoise = 13749760
+xlDarkViolet = 13828244
+xlDeepPink = 9639167
+xlDeepSkyBlue = 16760576
+xlDimGray = 6908265
+xlDimGrey = 6908265
+xlDodgerBlue = 16748574
+xlFireBrick = 2237106
+xlFloralWhite = 15792895
+xlForestGreen = 2263842
+xlFuchsia = 16711935
+xlGainsboro = 14474460
+xlGhostWhite = 16775416
+xlGold = 55295
+xlGoldenrod = 2139610
+xlGray = 8421504
+xlGreen = 32768
+xlGreenYellow = 3145645
+xlGrey = 8421504
+xlHoneydew = 15794160
+xlHotPink = 11823615
+xlIndianRed = 6053069
+xlIndigo = 8519755
+xlIvory = 15794175
+xlKhaki = 9234160
+xlLavender = 16443110
+xlLavenderBlush = 16118015
+xlLawnGreen = 64636
+xlLemonChiffon = 13499135
+xlLightBlue = 15128749
+xlLightCoral = 8421616
+xlLightCyan = 9145088
+xlLightGoldenrodYellow = 13826810
+xlLightGray = 13882323
+xlLightGreen = 9498256
+xlLightGrey = 13882323
+xlLightPink = 12695295
+xlLightSalmon = 8036607
+xlLightSeaGreen = 11186720
+xlLightSkyBlue = 16436871
+xlLightSlateGray = 10061943
+xlLightSlateGrey = 10061943
+xlLightSteelBlue = 14599344
+xlLightYellow = 14745599
+xlLime = 65280
+xlLimeGreen = 3329330
+xlLinen = 15134970
+xlMaroon = 128
+xlMediumAquamarine = 11206502
+xlMediumBlue = 13434880
+xlMediumOrchid = 13850042
+xlMediumPurple = 14381203
+xlMediumSeaGreen = 7451452
+xlMediumSlateBlue = 15624315
+xlMediumSpringGreen = 10156544
+xlMediumTurquoise = 13422920
+xlMediumVioletRed = 8721863
+xlMidnightBlue = 7346457
+xlMintCream = 16449525
+xlMistyRose = 14804223
+xlMoccasin = 11920639
+xlNavajoWhite = 11394815
+xlNavy = 8388608
+xlNavyBlue = 8388608
+xlOldLace = 15136253
+xlOlive = 32896
+xlOliveDrab = 2330219
+xlOrange = 42495
+xlOrangeRed = 17919
+xlOrchid = 14053594
+xlPaleGoldenrod = 7071982
+xlPaleGreen = 10025880
+xlPaleTurquoise = 15658671
+xlPaleVioletRed = 9662683
+xlPapayaWhip = 14020607
+xlPeachPuff = 12180223
+xlPeru = 4163021
+xlPink = 13353215
+xlPlum = 14524637
+xlPowderBlue = 15130800
+xlPurple = 8388736
+xlRed = 255
+xlRosyBrown = 9408444
+xlRoyalBlue = 14772545
+xlSalmon = 7504122
+xlSandyBrown = 6333684
+xlSeaGreen = 5737262
+xlSeashell = 15660543
+xlSienna = 2970272
+xlSilver = 12632256
+xlSkyBlue = 15453831
+xlSlateBlue = 13458026
+xlSlateGray = 9470064
+xlSlateGrey = 9470064
+xlSnow = 16448255
+xlSpringGreen = 8388352
+xlSteelBlue = 11829830
+xlTan = 9221330
+xlTeal = 8421376
+xlThistle = 14204888
+xlTomato = 4678655
+xlTurquoise = 13688896
+xlViolet = 15631086
+xlWheat = 11788021
+xlWhite = 16777215
+xlWhiteSmoke = 16119285
+xlYellow = 65535
+xlYellowGreen = 3329434
+
+# XlRowCol enumeration
+xlColumns = 2
+xlRows = 1
+
+# XlScaleType enumeration
+xlScaleLinear = -4132
+xlScaleLogarithmic = -4133
+
+# XlSizeRepresents enumeration
+xlSizeIsArea = 1
+xlSizeIsWidth = 2
+
+# XlTickLabelOrientation enumeration
+xlTickLabelOrientationAutomatic = -4105
+xlTickLabelOrientationDownward = -4170
+xlTickLabelOrientationHorizontal = -4128
+xlTickLabelOrientationUpward = -4171
+xlTickLabelOrientationVertical = -4166
+
+# XlTickLabelPosition enumeration
+xlTickLabelPositionHigh = -4127
+xlTickLabelPositionLow = -4134
+xlTickLabelPositionNextToAxis = 4
+xlTickLabelPositionNone = -4142
+
+# XlTickMark enumeration
+xlTickMarkCross = 4
+xlTickMarkInside = 2
+xlTickMarkNone = -4142
+xlTickMarkOutside = 3
+
+# XlTimeUnit enumeration
+xlDays = 0
+xlMonths = 1
+xlYears = 2
+
+# XlTrendlineType enumeration
+xlExponential = 5
+xlLinear = -4132
+xlLogarithmic = -4133
+xlMovingAvg = 6
+xlPolynomial = 3
+xlPower = 4
+
+# XlUnderlineStyle enumeration
+xlUnderlineStyleDouble = -4119
+xlUnderlineStyleDoubleAccounting = 5
+xlUnderlineStyleNone = -4142
+xlUnderlineStyleSingle = 2
+xlUnderlineStyleSingleAccounting = 4
+
+# XlVAlign enumeration
+xlVAlignBottom = -4107
+xlVAlignCenter = -4108
+xlVAlignDistributed = -4117
+xlVAlignJustify = -4130
+xlVAlignTop = -4160

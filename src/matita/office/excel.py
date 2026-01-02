@@ -1,5 +1,14 @@
 import win32com.client
 
+
+
+
+
+
+
+
+
+
 class AboveAverage:
 
     def __init__(self, aboveaverage=None):
@@ -111,6 +120,24 @@ class AboveAverage:
     def SetLastPriority(self):
         self.aboveaverage.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Action:
 
     def __init__(self, action=None):
@@ -151,6 +178,14 @@ class Action:
     def Execute(self):
         self.action.Execute()
 
+
+
+
+
+
+
+
+
 class Actions:
 
     def __init__(self, actions=None):
@@ -182,6 +217,17 @@ class Actions:
     @property
     def Parent(self):
         return self.actions.Parent
+
+
+
+
+
+
+
+
+
+
+
 
 class AddIn:
 
@@ -232,6 +278,16 @@ class AddIn:
     def progID(self):
         return self.addin.progID
 
+
+
+
+
+
+
+
+
+
+
 class AddIns:
 
     def __init__(self, addins=None):
@@ -268,6 +324,13 @@ class AddIns:
         arguments = {"FileName": FileName, "CopyFile": CopyFile}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return AddIn(self.addins.Add(*args, **arguments))
+
+
+
+
+
+
+
 
 class AddIns2:
 
@@ -306,6 +369,13 @@ class AddIns2:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return AddIns(self.addins2.Add(*args, **arguments))
 
+
+
+
+
+
+
+
 class Adjustments:
 
     def __init__(self, adjustments=None):
@@ -334,6 +404,10 @@ class Adjustments:
     @property
     def Parent(self):
         return self.adjustments.Parent
+
+
+
+
 
 class AllowEditRange:
 
@@ -369,6 +443,14 @@ class AllowEditRange:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.alloweditrange.Unprotect(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class AllowEditRanges:
 
     def __init__(self, alloweditranges=None):
@@ -393,6 +475,7 @@ class AllowEditRanges:
         arguments = {"Title": Title, "Range": Range, "Password": Password}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return AllowEditRange(self.alloweditranges.Add(*args, **arguments))
+
 
 class Application:
 
@@ -1888,6 +1971,314 @@ class Application:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.Wait(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Areas:
 
     def __init__(self, areas=None):
@@ -1920,6 +2311,10 @@ class Areas:
     def Parent(self):
         return self.areas.Parent
 
+
+
+
+
 class Author:
 
     def __init__(self, author=None):
@@ -1948,6 +2343,11 @@ class Author:
     @property
     def UserID(self):
         return self.author.UserID
+
+
+
+
+
 
 class AutoCorrect:
 
@@ -2048,6 +2448,26 @@ class AutoCorrect:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.autocorrect.DeleteReplacement(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AutoFilter:
 
     def __init__(self, autofilter=None):
@@ -2086,6 +2506,15 @@ class AutoFilter:
 
     def ShowAllData(self):
         self.autofilter.ShowAllData()
+
+
+
+
+
+
+
+
+
 
 class AutoRecover:
 
@@ -2128,6 +2557,13 @@ class AutoRecover:
     def Time(self, value):
         self.autorecover.Time = value
 
+
+
+
+
+
+
+
 class Axes:
 
     def __init__(self, axes=None):
@@ -2156,6 +2592,12 @@ class Axes:
         arguments = {"Type": Type, "AxisGroup": AxisGroup}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.axes.Item(*args, **arguments)
+
+
+
+
+
+
 
 class Axis:
 
@@ -2488,6 +2930,59 @@ class Axis:
     def Select(self):
         return self.axis.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AxisTitle:
 
     def __init__(self, axistitle=None):
@@ -2655,6 +3150,40 @@ class AxisTitle:
     def Select(self):
         return self.axistitle.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Border:
 
     def __init__(self, border=None):
@@ -2719,6 +3248,23 @@ class Border:
     @Weight.setter
     def Weight(self, value):
         self.border.Weight = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Borders:
 
@@ -2804,6 +3350,18 @@ class Borders:
     def Weight(self, value):
         self.borders.Weight = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class CalculatedFields:
 
     def __init__(self, calculatedfields=None):
@@ -2838,6 +3396,13 @@ class CalculatedFields:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return PivotField(self.calculatedfields.Item(*args, **arguments))
 
+
+
+
+
+
+
+
 class CalculatedItems:
 
     def __init__(self, calculateditems=None):
@@ -2871,6 +3436,17 @@ class CalculatedItems:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return PivotItem(self.calculateditems.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
 
 class CalculatedMember:
 
@@ -2940,6 +3516,17 @@ class CalculatedMember:
     def Delete(self):
         self.calculatedmember.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
 class CalculatedMembers:
 
     def __init__(self, calculatedmembers=None):
@@ -2976,6 +3563,22 @@ class CalculatedMembers:
         arguments = {"Name": Name, "Formula": Formula, "SolveOrder": SolveOrder, "Type": Type, "Dynamic": Dynamic, "DisplayFolder": DisplayFolder, "HierarchizeDistinct": HierarchizeDistinct}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return CalculatedMember(self.calculatedmembers.Add(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CalloutFormat:
 
@@ -3080,6 +3683,15 @@ class CalloutFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.calloutformat.PresetDrop(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
 class CategoryCollection:
 
     def __init__(self, categorycollection=None):
@@ -3105,6 +3717,21 @@ class CategoryCollection:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartCategory(self.categorycollection.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CellFormat:
 
@@ -3238,6 +3865,23 @@ class CellFormat:
     def Clear(self):
         self.cellformat.Clear()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Characters:
 
     def __init__(self, characters=None):
@@ -3290,6 +3934,10 @@ class Characters:
         arguments = {"String": String}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.characters.Insert(*args, **arguments)
+
+
+
+
 
 class Chart:
 
@@ -3794,6 +4442,105 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.Unprotect(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartArea:
 
     def __init__(self, chartarea=None):
@@ -3878,15 +4625,39 @@ class ChartArea:
     def Select(self):
         return self.chartarea.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartColorFormat:
 
     def __init__(self, chartcolorformat=None):
         self.chartcolorformat = chartcolorformat
 
+
 class ChartFillFormat:
 
     def __init__(self, chartfillformat=None):
         self.chartfillformat = chartfillformat
+
+
+
+
+
+
 
 class ChartFormat:
 
@@ -3936,6 +4707,13 @@ class ChartFormat:
     @property
     def ThreeD(self):
         return ThreeDFormat(self.chartformat.ThreeD)
+
+
+
+
+
+
+
 
 class ChartGroup:
 
@@ -4131,6 +4909,36 @@ class ChartGroup:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.chartgroup.SeriesCollection(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartGroups:
 
     def __init__(self, chartgroups=None):
@@ -4156,6 +4964,27 @@ class ChartGroups:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartGroup(self.chartgroups.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ChartObject:
 
@@ -4321,6 +5150,35 @@ class ChartObject:
     def SendToBack(self):
         return self.chartobject.SendToBack()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartObjects:
 
     def __init__(self, chartobjects=None):
@@ -4453,6 +5311,23 @@ class ChartObjects:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.chartobjects.Select(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Charts:
 
     def __init__(self, charts=None):
@@ -4528,6 +5403,14 @@ class Charts:
         arguments = {"Replace": Replace}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.charts.Select(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class ChartTitle:
 
@@ -4696,6 +5579,35 @@ class ChartTitle:
     def Select(self):
         return self.charttitle.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartView:
 
     def __init__(self, chartview=None):
@@ -4716,6 +5628,16 @@ class ChartView:
     @property
     def Sheet(self):
         return ChartView(self.chartview.Sheet)
+
+
+
+
+
+
+
+
+
+
 
 class ColorFormat:
 
@@ -4777,6 +5699,21 @@ class ColorFormat:
     @property
     def Type(self):
         return self.colorformat.Type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ColorScale:
 
@@ -4857,6 +5794,18 @@ class ColorScale:
     def SetLastPriority(self):
         self.colorscale.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ColorScaleCriteria:
 
     def __init__(self, colorscalecriteria=None):
@@ -4876,6 +5825,9 @@ class ColorScaleCriteria:
             return ColorScaleCriterion(self.colorscalecriteria.Item(*args, **arguments))
         else:
             return ColorScaleCriterion(self.colorscalecriteria.GetItem(*args, **arguments))
+
+
+
 
 class ColorScaleCriterion:
 
@@ -4901,6 +5853,13 @@ class ColorScaleCriterion:
     @Value.setter
     def Value(self, value):
         self.colorscalecriterion.Value = value
+
+
+
+
+
+
+
 
 class ColorStop:
 
@@ -4954,6 +5913,17 @@ class ColorStop:
     def Delete(self):
         return self.colorstop.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
 class ColorStops:
 
     def __init__(self, colorstops=None):
@@ -4994,6 +5964,17 @@ class ColorStops:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.colorstops.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class Comment:
 
@@ -5046,6 +6027,17 @@ class Comment:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.comment.Text(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class Comments:
 
     def __init__(self, comments=None):
@@ -5075,6 +6067,12 @@ class Comments:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Comment(self.comments.Item(*args, **arguments))
 
+
+
+
+
+
+
 class CommentsThreaded:
 
     def __init__(self, commentsthreaded=None):
@@ -5103,6 +6101,14 @@ class CommentsThreaded:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return CommentThreaded(self.commentsthreaded.Item(*args, **arguments))
+
+
+
+
+
+
+
+
 
 class CommentThreaded:
 
@@ -5144,6 +6150,14 @@ class CommentThreaded:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.commentthreaded.Text(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class ConditionValue:
 
     def __init__(self, conditionvalue=None):
@@ -5177,6 +6191,17 @@ class ConditionValue:
         arguments = {"NewType": NewType, "NewValue": NewValue}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.conditionvalue.Modify(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class Connections:
 
@@ -5216,6 +6241,20 @@ class Connections:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.connections.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ConnectorFormat:
 
@@ -5281,6 +6320,191 @@ class ConnectorFormat:
 
     def EndDisconnect(self):
         self.connectorformat.EndDisconnect()
+
+
+
+
+# Constants enumeration
+xl3DBar = -4099
+xl3DEffects1 = 13
+xl3DEffects2 = 14
+xl3DSurface = -4103
+xlAbove = 0
+xlAccounting1 = 4
+xlAccounting2 = 5
+xlAccounting4 = 17
+xlAdd = 2
+xlAll = -4104
+xlAccounting3 = 6
+xlAllExceptBorders = 7
+xlAutomatic = -4105
+xlBar = 2
+xlBelow = 1
+xlBidi = -5000
+xlBidiCalendar = 3
+xlBoth = 1
+xlBottom = -4107
+xlCascade = 7
+xlCenter = -4108
+xlCenterAcrossSelection = 7
+xlChart4 = 2
+xlChartSeries = 17
+xlChartShort = 6
+xlChartTitles = 18
+xlChecker = 9
+xlCircle = 8
+xlClassic1 = 1
+xlClassic2 = 2
+xlClassic3 = 3
+xlClosed = 3
+xlColor1 = 7
+xlColor2 = 8
+xlColor3 = 9
+xlColumn = 3
+xlCombination = -4111
+xlComplete = 4
+xlConstants = 2
+xlContents = 2
+xlContext = -5002
+xlCorner = 2
+xlCrissCross = 16
+xlCross = 4
+xlCustom = -4114
+xlDebugCodePane = 13
+xlDefaultAutoFormat = -1
+xlDesktop = 9
+xlDiamond = 2
+xlDirect = 1
+xlDistributed = -4117
+xlDivide = 5
+xlDoubleAccounting = 5
+xlDoubleClosed = 5
+xlDoubleOpen = 4
+xlDoubleQuote = 1
+xlDrawingObject = 14
+xlEntireChart = 20
+xlExcelMenus = 1
+xlExtended = 3
+xlFill = 5
+xlFirst = 0
+xlFixedValue = 1
+xlFloating = 5
+xlFormats = -4122
+xlFormula = 5
+xlFullScript = 1
+xlGeneral = 1
+xlGray16 = 17
+xlGray25 = -4124
+xlGray50 = -4125
+xlGray75 = -4126
+xlGray8 = 18
+xlGregorian = 2
+xlGrid = 15
+xlGridline = 22
+xlHigh = -4127
+xlHindiNumerals = 3
+xlIcons = 1
+xlImmediatePane = 12
+xlInside = 2
+xlInteger = 2
+xlJustify = -4130
+xlLast = 1
+xlLastCell = 11
+xlLatin = -5001
+xlLeft = -4131
+xlLeftToRight = 2
+xlLightDown = 13
+xlLightHorizontal = 11
+xlLightUp = 14
+xlLightVertical = 12
+xlList1 = 10
+xlList2 = 11
+xlList3 = 12
+xlLocalFormat1 = 15
+xlLocalFormat2 = 16
+xlLogicalCursor = 1
+xlLong = 3
+xlLotusHelp = 2
+xlLow = -4134
+xlLTR = -5003
+xlMacrosheetCell = 7
+xlManual = -4135
+xlMaximum = 2
+xlMinimum = 4
+xlMinusValues = 3
+xlMixed = 2
+xlMixedAuthorizedScript = 4
+xlMixedScript = 3
+xlModule = -4141
+xlMultiply = 4
+xlNarrow = 1
+xlNextToAxis = 4
+xlNoDocuments = 3
+xlNone = -4142
+xlNotes = -4144
+xlOff = -4146
+xlOn = 1
+xlOpaque = 3
+xlOpen = 2
+xlOutside = 3
+xlPartial = 3
+xlPartialScript = 2
+xlPercent = 2
+xlPlus = 9
+xlPlusValues = 2
+xlReference = 4
+xlRight = -4152
+xlRTL = -5004
+xlScale = 3
+xlSemiautomatic = 2
+xlSemiGray75 = 10
+xlShort = 1
+xlShowLabel = 4
+xlShowLabelAndPercent = 5
+xlShowPercent = 3
+xlShowValue = 2
+xlSimple = -4154
+xlSingle = 2
+xlSingleAccounting = 4
+xlSingleQuote = 2
+xlSolid = 1
+xlSquare = 1
+xlStar = 5
+xlStError = 4
+xlStrict = 2
+xlSubtract = 3
+xlSystem = 1
+xlTextBox = 16
+xlTiled = 1
+xlTitleBar = 8
+xlToolbar = 1
+xlToolbarButton = 2
+xlTop = -4160
+xlTopToBottom = 1
+xlTransparent = 2
+xlTriangle = 3
+xlVeryHidden = 2
+xlVisible = 12
+xlVisualCursor = 2
+xlWatchPane = 11
+xlWide = 3
+xlWorkbookTab = 6
+xlWorksheet4 = 1
+xlWorksheetCell = 3
+xlWorksheetShort = 5
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ControlFormat:
 
@@ -5424,6 +6648,45 @@ class ControlFormat:
         arguments = {"Index": Index, "Count": Count}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.controlformat.RemoveItem(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CubeField:
 
@@ -5616,6 +6879,20 @@ class CubeField:
     def Delete(self):
         self.cubefield.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CubeFields:
 
     def __init__(self, cubefields=None):
@@ -5652,6 +6929,13 @@ class CubeFields:
         arguments = {"Name": Name, "Caption": Caption}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.cubefields.AddSet(*args, **arguments)
+
+
+
+
+
+
+
 
 class CustomProperties:
 
@@ -5690,6 +6974,11 @@ class CustomProperties:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return CustomProperty(self.customproperties.Add(*args, **arguments))
 
+
+
+
+
+
 class CustomProperty:
 
     def __init__(self, customproperty=None):
@@ -5721,6 +7010,13 @@ class CustomProperty:
 
     def Delete(self):
         self.customproperty.Delete()
+
+
+
+
+
+
+
 
 class CustomView:
 
@@ -5757,6 +7053,17 @@ class CustomView:
     def Show(self):
         self.customview.Show()
 
+
+
+
+
+
+
+
+
+
+
+
 class CustomViews:
 
     def __init__(self, customviews=None):
@@ -5790,6 +7097,21 @@ class CustomViews:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return CustomView(self.customviews.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Databar:
 
@@ -5938,6 +7260,24 @@ class Databar:
     def SetLastPriority(self):
         self.databar.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataBarBorder:
 
     def __init__(self, databarborder=None):
@@ -5966,6 +7306,9 @@ class DataBarBorder:
     @Type.setter
     def Type(self, value):
         self.databarborder.Type = value
+
+
+
 
 class DataLabel:
 
@@ -6218,6 +7561,42 @@ class DataLabel:
     def Select(self):
         return self.datalabel.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataLabels:
 
     def __init__(self, datalabels=None):
@@ -6397,6 +7776,33 @@ class DataLabels:
     def Select(self):
         return self.datalabels.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataTable:
 
     def __init__(self, datatable=None):
@@ -6463,6 +7869,30 @@ class DataTable:
 
     def Select(self):
         self.datatable.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DefaultWebOptions:
 
@@ -6625,6 +8055,24 @@ class DefaultWebOptions:
     def UseLongFileNames(self, value):
         self.defaultweboptions.UseLongFileNames = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Dialog:
 
     def __init__(self, dialog=None):
@@ -6646,6 +8094,13 @@ class Dialog:
         arguments = {"Arg1": Arg1, "Arg2": Arg2, "Arg3": Arg3, "Arg4": Arg4, "Arg5": Arg5, "Arg6": Arg6, "Arg7": Arg7, "Arg8": Arg8, "Arg9": Arg9, "Arg10": Arg10, "Arg11": Arg11, "Arg12": Arg12, "Arg13": Arg13, "Arg14": Arg14, "Arg15": Arg15, "Arg16": Arg16, "Arg17": Arg17, "Arg18": Arg18, "Arg19": Arg19, "Arg20": Arg20, "Arg21": Arg21, "Arg22": Arg22, "Arg23": Arg23, "Arg24": Arg24, "Arg25": Arg25, "Arg26": Arg26, "Arg27": Arg27, "Arg28": Arg28, "Arg29": Arg29, "Arg30": Arg30}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.dialog.Show(*args, **arguments)
+
+
+
+
+
+
+
 
 class Dialogs:
 
@@ -6679,6 +8134,10 @@ class Dialogs:
     def Parent(self):
         return self.dialogs.Parent
 
+
+
+
+
 class DialogSheetView:
 
     def __init__(self, dialogsheetview=None):
@@ -6699,6 +8158,24 @@ class DialogSheetView:
     @property
     def Sheet(self):
         return DialogSheetView(self.dialogsheetview.Sheet)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DisplayFormat:
 
@@ -6792,6 +8269,20 @@ class DisplayFormat:
     @property
     def WrapText(self):
         return Range(self.displayformat.WrapText)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DisplayUnitLabel:
 
@@ -6952,6 +8443,33 @@ class DisplayUnitLabel:
     def Select(self):
         return self.displayunitlabel.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DownBars:
 
     def __init__(self, downbars=None):
@@ -6982,6 +8500,14 @@ class DownBars:
 
     def Select(self):
         return self.downbars.Select()
+
+
+
+
+
+
+
+
 
 class DropLines:
 
@@ -7018,6 +8544,20 @@ class DropLines:
     def Select(self):
         return self.droplines.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Error:
 
     def __init__(self, error=None):
@@ -7046,6 +8586,10 @@ class Error:
     @property
     def Value(self):
         return self.error.Value
+
+
+
+
 
 class ErrorBars:
 
@@ -7092,6 +8636,26 @@ class ErrorBars:
 
     def Select(self):
         return self.errorbars.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ErrorCheckingOptions:
 
@@ -7198,6 +8762,15 @@ class ErrorCheckingOptions:
     def UnlockedFormulaCells(self, value):
         self.errorcheckingoptions.UnlockedFormulaCells = value
 
+
+
+
+
+
+
+
+
+
 class Errors:
 
     def __init__(self, errors=None):
@@ -7222,6 +8795,16 @@ class Errors:
     @property
     def Parent(self):
         return self.errors.Parent
+
+
+
+
+
+
+
+
+
+
 
 class FileExportConverter:
 
@@ -7251,6 +8834,12 @@ class FileExportConverter:
     @property
     def Parent(self):
         return self.fileexportconverter.Parent
+
+
+
+
+
+
 
 class FileExportConverters:
 
@@ -7283,6 +8872,20 @@ class FileExportConverters:
     @property
     def Parent(self):
         return self.fileexportconverters.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FillFormat:
 
@@ -7487,6 +9090,37 @@ class FillFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.fillformat.UserTextured(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Filter:
 
     def __init__(self, filter=None):
@@ -7524,6 +9158,14 @@ class Filter:
     def Parent(self):
         return self.filter.Parent
 
+
+
+
+
+
+
+
+
 class Filters:
 
     def __init__(self, filters=None):
@@ -7555,6 +9197,9 @@ class Filters:
     @property
     def Parent(self):
         return self.filters.Parent
+
+
+
 
 class Floor:
 
@@ -7605,6 +9250,17 @@ class Floor:
 
     def Select(self):
         return self.floor.Select()
+
+
+
+
+
+
+
+
+
+
+
 
 class Font:
 
@@ -7743,6 +9399,31 @@ class Font:
     def Underline(self, value):
         self.font.Underline = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FormatColor:
 
     def __init__(self, formatcolor=None):
@@ -7791,6 +9472,20 @@ class FormatColor:
     @TintAndShade.setter
     def TintAndShade(self, value):
         self.formatcolor.TintAndShade = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FormatCondition:
 
@@ -7920,6 +9615,33 @@ class FormatCondition:
     def SetLastPriority(self):
         self.formatcondition.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FormatConditions:
 
     def __init__(self, formatconditions=None):
@@ -7974,6 +9696,13 @@ class FormatConditions:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.formatconditions.Item(*args, **arguments)
 
+
+
+
+
+
+
+
 class FreeformBuilder:
 
     def __init__(self, freeformbuilder=None):
@@ -7998,6 +9727,26 @@ class FreeformBuilder:
 
     def ConvertToShape(self):
         return self.freeformbuilder.ConvertToShape()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Graphic:
 
@@ -8104,6 +9853,9 @@ class Graphic:
     def Width(self, value):
         self.graphic.Width = value
 
+
+
+
 class Gridlines:
 
     def __init__(self, gridlines=None):
@@ -8139,6 +9891,19 @@ class Gridlines:
     def Select(self):
         return self.gridlines.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class GroupShapes:
 
     def __init__(self, groupshapes=None):
@@ -8173,6 +9938,31 @@ class GroupShapes:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Shape(self.groupshapes.Item(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class HeaderFooter:
 
     def __init__(self, headerfooter=None):
@@ -8189,6 +9979,10 @@ class HeaderFooter:
     @Text.setter
     def Text(self, value):
         self.headerfooter.Text = value
+
+
+
+
 
 class HiLoLines:
 
@@ -8224,6 +10018,21 @@ class HiLoLines:
 
     def Select(self):
         return self.hilolines.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class HPageBreak:
 
@@ -8270,6 +10079,14 @@ class HPageBreak:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.hpagebreak.DragOff(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class HPageBreaks:
 
     def __init__(self, hpagebreaks=None):
@@ -8303,6 +10120,16 @@ class HPageBreaks:
         arguments = {"Before": Before}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return HPageBreak(self.hpagebreaks.Add(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
 
 class Hyperlink:
 
@@ -8393,6 +10220,21 @@ class Hyperlink:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.hyperlink.Follow(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Hyperlinks:
 
     def __init__(self, hyperlinks=None):
@@ -8430,6 +10272,11 @@ class Hyperlinks:
     def Delete(self):
         self.hyperlinks.Delete()
 
+
+
+
+
+
 class Icon:
 
     def __init__(self, icon=None):
@@ -8451,6 +10298,10 @@ class Icon:
     def Parent(self):
         return self.icon.Parent
 
+
+
+
+
 class IconCriteria:
 
     def __init__(self, iconcriteria=None):
@@ -8467,6 +10318,9 @@ class IconCriteria:
             return IconCriterion(self.iconcriteria.Item(*args, **arguments))
         else:
             return IconCriterion(self.iconcriteria.GetItem(*args, **arguments))
+
+
+
 
 class IconCriterion:
 
@@ -8505,6 +10359,15 @@ class IconCriterion:
     def Value(self, value):
         self.iconcriterion.Value = value
 
+
+
+
+
+
+
+
+
+
 class IconSet:
 
     def __init__(self, iconset=None):
@@ -8537,6 +10400,15 @@ class IconSet:
     @property
     def Parent(self):
         return self.iconset.Parent
+
+
+
+
+
+
+
+
+
 
 class IconSetCondition:
 
@@ -8649,6 +10521,23 @@ class IconSetCondition:
     def SetLastPriority(self):
         self.iconsetcondition.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class IconSets:
 
     def __init__(self, iconsets=None):
@@ -8677,6 +10566,17 @@ class IconSets:
     @property
     def Parent(self):
         return self.iconsets.Parent
+
+
+
+
+
+
+
+
+
+
+
 
 class Interior:
 
@@ -8783,6 +10683,25 @@ class Interior:
     def TintAndShade(self, value):
         self.interior.TintAndShade = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class IRtdServer:
 
     def __init__(self, irtdserver=None):
@@ -8814,6 +10733,12 @@ class IRtdServer:
     def ServerTerminate(self):
         self.irtdserver.ServerTerminate()
 
+
+
+
+
+
+
 class IRTDUpdateEvent:
 
     def __init__(self, irtdupdateevent=None):
@@ -8832,6 +10757,10 @@ class IRTDUpdateEvent:
 
     def UpdateNotify(self):
         self.irtdupdateevent.UpdateNotify()
+
+
+
+
 
 class LeaderLines:
 
@@ -8863,6 +10792,15 @@ class LeaderLines:
 
     def Select(self):
         self.leaderlines.Select()
+
+
+
+
+
+
+
+
+
 
 class Legend:
 
@@ -8959,6 +10897,23 @@ class Legend:
     def Select(self):
         return self.legend.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class LegendEntries:
 
     def __init__(self, legendentries=None):
@@ -8987,6 +10942,12 @@ class LegendEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return LegendEntry(self.legendentries.Item(*args, **arguments))
+
+
+
+
+
+
 
 class LegendEntry:
 
@@ -9042,6 +11003,20 @@ class LegendEntry:
 
     def Select(self):
         return self.legendentry.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LegendKey:
 
@@ -9174,6 +11149,33 @@ class LegendKey:
     def Delete(self):
         return self.legendkey.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class LinearGradient:
 
     def __init__(self, lineargradient=None):
@@ -9202,6 +11204,20 @@ class LinearGradient:
     @property
     def Parent(self):
         return self.lineargradient.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LineFormat:
 
@@ -9340,6 +11356,19 @@ class LineFormat:
     def Weight(self, value):
         self.lineformat.Weight = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class LinkFormat:
 
     def __init__(self, linkformat=None):
@@ -9371,6 +11400,14 @@ class LinkFormat:
 
     def Update(self):
         self.linkformat.Update()
+
+
+
+
+
+
+
+
 
 class ListColumn:
 
@@ -9428,6 +11465,18 @@ class ListColumn:
     def Delete(self):
         self.listcolumn.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ListColumns:
 
     def __init__(self, listcolumns=None):
@@ -9464,6 +11513,18 @@ class ListColumns:
         arguments = {"Position": Position}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ListColumn(self.listcolumns.Add(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ListDataFormat:
 
@@ -9529,6 +11590,27 @@ class ListDataFormat:
     @property
     def Type(self):
         return XlListDataType(self.listdataformat.Type)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ListObject:
 
@@ -9736,6 +11818,35 @@ class ListObject:
     def Unlist(self):
         self.listobject.Unlist()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ListObjects:
 
     def __init__(self, listobjects=None):
@@ -9773,6 +11884,12 @@ class ListObjects:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ListObject(self.listobjects.Add(*args, **arguments))
 
+
+
+
+
+
+
 class ListRow:
 
     def __init__(self, listrow=None):
@@ -9800,6 +11917,14 @@ class ListRow:
 
     def Delete(self):
         self.listrow.Delete()
+
+
+
+
+
+
+
+
 
 class ListRows:
 
@@ -9837,6 +11962,13 @@ class ListRows:
         arguments = {"Position": Position, "AlwaysInsert": AlwaysInsert}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ListRow(self.listrows.Add(*args, **arguments))
+
+
+
+
+
+
+
 
 class Mailer:
 
@@ -9894,6 +12026,47 @@ class Mailer:
     @property
     def WhichAddress(self):
         return self.mailer.WhichAddress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Model3DFormat:
 
@@ -10020,6 +12193,14 @@ class Model3DFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.model3dformat.ResetModel(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class ModuleView:
 
     def __init__(self, moduleview=None):
@@ -10040,6 +12221,13 @@ class ModuleView:
     @property
     def Sheet(self):
         return self.moduleview.Sheet
+
+
+
+
+
+
+
 
 class MultiThreadedCalculation:
 
@@ -10078,6 +12266,37 @@ class MultiThreadedCalculation:
     def ThreadMode(self, value):
         self.multithreadedcalculation.ThreadMode = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Names:
 
     def __init__(self, names=None):
@@ -10111,6 +12330,14 @@ class Names:
         arguments = {"Index": Index, "IndexLocal": IndexLocal, "RefersTo": RefersTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.names.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class NegativeBarFormat:
 
@@ -10152,6 +12379,19 @@ class NegativeBarFormat:
     @property
     def Parent(self):
         return self.negativebarformat.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ODBCConnection:
 
@@ -10313,6 +12553,24 @@ class ODBCConnection:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.odbcconnection.SaveAsODC(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ODBCError:
 
     def __init__(self, odbcerror=None):
@@ -10337,6 +12595,13 @@ class ODBCError:
     @property
     def SqlState(self):
         return self.odbcerror.SqlState
+
+
+
+
+
+
+
 
 class ODBCErrors:
 
@@ -10366,6 +12631,26 @@ class ODBCErrors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ODBCError(self.odbcerrors.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OLEDBConnection:
 
@@ -10621,6 +12906,31 @@ class OLEDBConnection:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.oledbconnection.SaveAsODC(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OLEDBError:
 
     def __init__(self, oledberror=None):
@@ -10658,6 +12968,16 @@ class OLEDBError:
     def Stage(self):
         return self.oledberror.Stage
 
+
+
+
+
+
+
+
+
+
+
 class OLEDBErrors:
 
     def __init__(self, oledberrors=None):
@@ -10686,6 +13006,11 @@ class OLEDBErrors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return OLEDBError(self.oledberrors.Item(*args, **arguments))
+
+
+
+
+
 
 class OLEFormat:
 
@@ -10719,6 +13044,34 @@ class OLEFormat:
         arguments = {"Verb": Verb}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.oleformat.Verb(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OLEObject:
 
@@ -10940,6 +13293,44 @@ class OLEObject:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.oleobject.Verb(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OLEObjects:
 
     def __init__(self, oleobjects=None):
@@ -11114,6 +13505,24 @@ class OLEObjects:
     def SendToBack(self):
         return self.oleobjects.SendToBack()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Outline:
 
     def __init__(self, outline=None):
@@ -11160,6 +13569,17 @@ class Outline:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.outline.ShowLevels(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class Page:
 
     def __init__(self, page=None):
@@ -11189,6 +13609,11 @@ class Page:
     def RightHeader(self):
         return self.page.RightHeader
 
+
+
+
+
+
 class Pages:
 
     def __init__(self, pages=None):
@@ -11208,6 +13633,32 @@ class Pages:
             return Page(self.pages.Item(*args, **arguments))
         else:
             return Page(self.pages.GetItem(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PageSetup:
 
@@ -11562,6 +14013,35 @@ class PageSetup:
     def Zoom(self, value):
         self.pagesetup.Zoom = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Pane:
 
     def __init__(self, pane=None):
@@ -11631,6 +14111,19 @@ class Pane:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.pane.SmallScroll(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Panes:
 
     def __init__(self, panes=None):
@@ -11662,6 +14155,11 @@ class Panes:
     @property
     def Parent(self):
         return self.panes.Parent
+
+
+
+
+
 
 class Parameter:
 
@@ -11725,6 +14223,21 @@ class Parameter:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.parameter.SetParam(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Parameters:
 
     def __init__(self, parameters=None):
@@ -11761,6 +14274,21 @@ class Parameters:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Parameter(self.parameters.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Phonetic:
 
@@ -11814,6 +14342,20 @@ class Phonetic:
     @Visible.setter
     def Visible(self, value):
         self.phonetic.Visible = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Phonetics:
 
@@ -11898,6 +14440,23 @@ class Phonetics:
 
     def Delete(self):
         self.phonetics.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PictureFormat:
 
@@ -12002,6 +14561,16 @@ class PictureFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pictureformat.IncrementContrast(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class PivotAxis:
 
     def __init__(self, pivotaxis=None):
@@ -12022,6 +14591,23 @@ class PivotAxis:
     @property
     def PivotLines(self):
         return PivotLines(self.pivotaxis.PivotLines)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PivotCache:
 
@@ -12255,6 +14841,37 @@ class PivotCache:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pivotcache.SaveAsODC(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PivotCaches:
 
     def __init__(self, pivotcaches=None):
@@ -12285,6 +14902,17 @@ class PivotCaches:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return PivotCache(self.pivotcaches.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
 
 class PivotCell:
 
@@ -12364,6 +14992,77 @@ class PivotCell:
 
     def DiscardChange(self):
         return self.pivotcell.DiscardChange()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PivotField:
 
@@ -12913,6 +15612,39 @@ class PivotField:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.pivotfield.PivotItems(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PivotFields:
 
     def __init__(self, pivotfields=None):
@@ -12941,6 +15673,17 @@ class PivotFields:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.pivotfields.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class PivotFilter:
 
@@ -13034,6 +15777,19 @@ class PivotFilter:
     def Delete(self):
         self.pivotfilter.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PivotFilters:
 
     def __init__(self, pivotfilters=None):
@@ -13067,6 +15823,13 @@ class PivotFilters:
         arguments = {"Type": Type, "DataField": DataField, "Value1": Value1, "Value2": Value2, "Order": Order, "Name": Name, "Description": Description, "MemberPropertyField": MemberPropertyField, "WholeDayFilter": WholeDayFilter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.pivotfilters.Add(*args, **arguments)
+
+
+
+
+
+
+
 
 class PivotFormula:
 
@@ -13120,6 +15883,15 @@ class PivotFormula:
     def Delete(self):
         self.pivotformula.Delete()
 
+
+
+
+
+
+
+
+
+
 class PivotFormulas:
 
     def __init__(self, pivotformulas=None):
@@ -13150,6 +15922,19 @@ class PivotFormulas:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return PivotFormula(self.pivotformulas.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PivotItem:
 
@@ -13284,6 +16069,23 @@ class PivotItem:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pivotitem.DrillTo(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PivotItemList:
 
     def __init__(self, pivotitemlist=None):
@@ -13312,6 +16114,13 @@ class PivotItemList:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return PivotItem(self.pivotitemlist.Item(*args, **arguments))
+
+
+
+
+
+
+
 
 class PivotItems:
 
@@ -13347,6 +16156,10 @@ class PivotItems:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.pivotitems.Item(*args, **arguments)
 
+
+
+
+
 class PivotLayout:
 
     def __init__(self, pivotlayout=None):
@@ -13367,6 +16180,12 @@ class PivotLayout:
     @property
     def PivotTable(self):
         return PivotTable(self.pivotlayout.PivotTable)
+
+
+
+
+
+
 
 class PivotLine:
 
@@ -13401,6 +16220,14 @@ class PivotLine:
     def Position(self, value):
         self.pivotline.Position = value
 
+
+
+
+
+
+
+
+
 class PivotLineCells:
 
     def __init__(self, pivotlinecells=None):
@@ -13430,6 +16257,12 @@ class PivotLineCells:
     def Parent(self):
         return PivotLineCells(self.pivotlinecells.Parent)
 
+
+
+
+
+
+
 class PivotLines:
 
     def __init__(self, pivotlines=None):
@@ -13458,6 +16291,70 @@ class PivotLines:
     @property
     def Parent(self):
         return PivotLines(self.pivotlines.Parent)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PivotTable:
 
@@ -14264,6 +17161,75 @@ class PivotTable:
     def Update(self):
         self.pivottable.Update()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PivotTableChangeList:
 
     def __init__(self, pivottablechangelist=None):
@@ -14298,6 +17264,13 @@ class PivotTableChangeList:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.pivottablechangelist.Add(*args, **arguments)
 
+
+
+
+
+
+
+
 class PivotTables:
 
     def __init__(self, pivottables=None):
@@ -14331,6 +17304,8 @@ class PivotTables:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return PivotTable(self.pivottables.Item(*args, **arguments))
+
+
 
 class PlotArea:
 
@@ -14434,6 +17409,25 @@ class PlotArea:
 
     def Select(self):
         return self.plotarea.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Point:
 
@@ -14641,6 +17635,41 @@ class Point:
     def Select(self):
         return self.point.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Points:
 
     def __init__(self, points=None):
@@ -14669,6 +17698,24 @@ class Points:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Point(self.points.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ProtectedViewWindow:
 
@@ -14762,6 +17809,18 @@ class ProtectedViewWindow:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Workbook(self.protectedviewwindow.Edit(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ProtectedViewWindows:
 
     def __init__(self, protectedviewwindows=None):
@@ -14798,6 +17857,21 @@ class ProtectedViewWindows:
         arguments = {"FileName": FileName, "Password": Password, "AddToMru": AddToMru, "RepairMode": RepairMode}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ProtectedViewWindow(self.protectedviewwindows.Open(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Protection:
 
@@ -14851,6 +17925,14 @@ class Protection:
     @property
     def AllowUsingPivotTables(self):
         return self.protection.AllowUsingPivotTables
+
+
+
+
+
+
+
+
 
 class PublishObject:
 
@@ -14925,6 +18007,19 @@ class PublishObject:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.publishobject.Publish(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PublishObjects:
 
     def __init__(self, publishobjects=None):
@@ -14967,6 +18062,29 @@ class PublishObjects:
 
     def Publish(self):
         self.publishobjects.Publish()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class QueryTable:
 
@@ -15436,6 +18554,61 @@ class QueryTable:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.querytable.SaveAsODC(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class QueryTables:
 
     def __init__(self, querytables=None):
@@ -15469,6 +18642,11 @@ class QueryTables:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return QueryTable(self.querytables.Item(*args, **arguments))
+
+
+
+
+
 
 class Range:
 
@@ -16410,10 +19588,205 @@ class Range:
     def UnMerge(self):
         self.range.UnMerge()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CellControl:
 
     def __init__(self, cellcontrol=None):
         self.cellcontrol = cellcontrol
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Ranges:
 
@@ -16446,6 +19819,13 @@ class Ranges:
     @property
     def Parent(self):
         return self.ranges.Parent
+
+
+
+
+
+
+
 
 class RecentFile:
 
@@ -16481,6 +19861,17 @@ class RecentFile:
 
     def Open(self):
         return Workbook(self.recentfile.Open())
+
+
+
+
+
+
+
+
+
+
+
 
 class RecentFiles:
 
@@ -16523,6 +19914,11 @@ class RecentFiles:
         arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return RecentFile(self.recentfiles.Add(*args, **arguments))
+
+
+
+
+
 
 class RectangularGradient:
 
@@ -16577,6 +19973,17 @@ class RectangularGradient:
     def RectangleTop(self, value):
         self.rectangulargradient.RectangleTop = value
 
+
+
+
+
+
+
+
+
+
+
+
 class Research:
 
     def __init__(self, research=None):
@@ -16608,6 +20015,17 @@ class Research:
         arguments = {"LanguageFrom": LanguageFrom, "LanguageTo": LanguageTo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.research.SetLanguagePair(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class RoutingSlip:
 
@@ -16657,6 +20075,15 @@ class RoutingSlip:
     def Reset(self):
         self.routingslip.Reset()
 
+
+
+
+
+
+
+
+
+
 class RTD:
 
     def __init__(self, rtd=None):
@@ -16675,6 +20102,22 @@ class RTD:
 
     def RestartServers(self):
         self.rtd.RestartServers()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Scenario:
 
@@ -16752,6 +20195,17 @@ class Scenario:
     def Show(self):
         return self.scenario.Show()
 
+
+
+
+
+
+
+
+
+
+
+
 class Scenarios:
 
     def __init__(self, scenarios=None):
@@ -16795,6 +20249,13 @@ class Scenarios:
         arguments = {"Source": Source}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.scenarios.Merge(*args, **arguments)
+
+
+
+
+
+
+
 
 class Series:
 
@@ -17150,6 +20611,61 @@ class Series:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.series.Trendlines(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SeriesCollection:
 
     def __init__(self, seriescollection=None):
@@ -17197,6 +20713,16 @@ class SeriesCollection:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.seriescollection.Paste(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class SeriesLines:
 
     def __init__(self, serieslines=None):
@@ -17231,6 +20757,22 @@ class SeriesLines:
 
     def Select(self):
         return self.serieslines.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ServerViewableItems:
 
@@ -17273,6 +20815,17 @@ class ServerViewableItems:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.serverviewableitems.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class ShadowFormat:
 
@@ -17384,6 +20937,59 @@ class ShadowFormat:
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shadowformat.IncrementOffsetY(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Shape:
 
@@ -17782,6 +21388,46 @@ class Shape:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shape.ZOrder(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ShapeNode:
 
     def __init__(self, shapenode=None):
@@ -17810,6 +21456,16 @@ class ShapeNode:
     @property
     def SegmentType(self):
         return self.shapenode.SegmentType
+
+
+
+
+
+
+
+
+
+
 
 class ShapeNodes:
 
@@ -17864,6 +21520,99 @@ class ShapeNodes:
         arguments = {"Index": Index, "SegmentType": SegmentType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shapenodes.SetSegmentType(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Shapes:
 
@@ -17980,6 +21729,19 @@ class Shapes:
     def SelectAll(self):
         self.shapes.SelectAll()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Sheets:
 
     def __init__(self, sheets=None):
@@ -18066,6 +21828,18 @@ class Sheets:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sheets.Select(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class SheetViews:
 
     def __init__(self, sheetviews=None):
@@ -18097,6 +21871,32 @@ class SheetViews:
     @property
     def Parent(self):
         return self.sheetviews.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Slicer:
 
@@ -18244,6 +22044,22 @@ class Slicer:
     def Delete(self):
         return self.slicer.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SlicerCache:
 
     def __init__(self, slicercache=None):
@@ -18356,6 +22172,26 @@ class SlicerCache:
     def Delete(self):
         self.slicercache.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SlicerCacheLevel:
 
     def __init__(self, slicercachelevel=None):
@@ -18409,6 +22245,17 @@ class SlicerCacheLevel:
     def VisibleSlicerItemsList(self):
         return self.slicercachelevel.VisibleSlicerItemsList
 
+
+
+
+
+
+
+
+
+
+
+
 class SlicerCacheLevels:
 
     def __init__(self, slicercachelevels=None):
@@ -18437,6 +22284,13 @@ class SlicerCacheLevels:
     @property
     def Parent(self):
         return SlicerCache(self.slicercachelevels.Parent)
+
+
+
+
+
+
+
 
 class SlicerCaches:
 
@@ -18471,6 +22325,12 @@ class SlicerCaches:
         arguments = {"Source": Source, "SourceField": SourceField, "Name": Name, "SlicerCacheType": SlicerCacheType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slicercaches.Add(*args, **arguments)
+
+
+
+
+
+
 
 class SlicerItem:
 
@@ -18521,6 +22381,17 @@ class SlicerItem:
     def Value(self):
         return self.sliceritem.Value
 
+
+
+
+
+
+
+
+
+
+
+
 class SlicerItems:
 
     def __init__(self, sliceritems=None):
@@ -18549,6 +22420,13 @@ class SlicerItems:
     @property
     def Parent(self):
         return SlicerCache(self.sliceritems.Parent)
+
+
+
+
+
+
+
 
 class SlicerPivotTables:
 
@@ -18589,6 +22467,14 @@ class SlicerPivotTables:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.slicerpivottables.RemovePivotTable(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class Slicers:
 
     def __init__(self, slicers=None):
@@ -18625,6 +22511,15 @@ class Slicers:
         arguments = {"SlicerDestination": SlicerDestination, "Level": Level, "Name": Name, "Caption": Caption, "Top": Top, "Left": Left, "Width": Width, "Height": Height}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Slicer(self.slicers.Add(*args, **arguments))
+
+
+
+
+
+
+
+
+
 
 class Sort:
 
@@ -18690,6 +22585,19 @@ class Sort:
         arguments = {"Rng": Rng}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sort.SetRange(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SortField:
 
@@ -18769,6 +22677,21 @@ class SortField:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.sortfield.SetIcon(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SortFields:
 
     def __init__(self, sortfields=None):
@@ -18811,6 +22734,11 @@ class SortFields:
     def Clear(self):
         self.sortfields.Clear()
 
+
+
+
+
+
 class SparkAxes:
 
     def __init__(self, sparkaxes=None):
@@ -18835,6 +22763,12 @@ class SparkAxes:
     @property
     def Vertical(self):
         return SparkVerticalAxis(self.sparkaxes.Vertical)
+
+
+
+
+
+
 
 class SparkColor:
 
@@ -18864,6 +22798,13 @@ class SparkColor:
     @Visible.setter
     def Visible(self, value):
         self.sparkcolor.Visible = value
+
+
+
+
+
+
+
 
 class SparkHorizontalAxis:
 
@@ -18897,6 +22838,12 @@ class SparkHorizontalAxis:
     @RightToLeftPlotOrder.setter
     def RightToLeftPlotOrder(self, value):
         self.sparkhorizontalaxis.RightToLeftPlotOrder = value
+
+
+
+
+
+
 
 class Sparkline:
 
@@ -18940,6 +22887,21 @@ class Sparkline:
         arguments = {"Formula": Formula}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sparkline.ModifySourceData(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SparklineGroup:
 
@@ -19049,6 +23011,23 @@ class SparklineGroup:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sparklinegroup.ModifySourceData(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SparklineGroups:
 
     def __init__(self, sparklinegroups=None):
@@ -19097,6 +23076,16 @@ class SparklineGroups:
     def Ungroup(self):
         return self.sparklinegroups.Ungroup()
 
+
+
+
+
+
+
+
+
+
+
 class SparkPoints:
 
     def __init__(self, sparkpoints=None):
@@ -19137,6 +23126,14 @@ class SparkPoints:
     @property
     def Parent(self):
         return SparklineGroup(self.sparkpoints.Parent)
+
+
+
+
+
+
+
+
 
 class SparkVerticalAxis:
 
@@ -19187,6 +23184,10 @@ class SparkVerticalAxis:
     def Parent(self):
         return SparklineGroup(self.sparkverticalaxis.Parent)
 
+
+
+
+
 class Speech:
 
     def __init__(self, speech=None):
@@ -19212,6 +23213,23 @@ class Speech:
         arguments = {"Text": Text, "SpeakAsync": SpeakAsync, "SpeakXML": SpeakXML, "Purge": Purge}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.speech.Speak(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SpellingOptions:
 
@@ -19369,6 +23387,33 @@ class SpellingOptions:
     @UserDict.setter
     def UserDict(self, value):
         self.spellingoptions.UserDict = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Style:
 
@@ -19574,6 +23619,24 @@ class Style:
     def Delete(self):
         return self.style.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Styles:
 
     def __init__(self, styles=None):
@@ -19615,6 +23678,16 @@ class Styles:
         arguments = {"Workbook": Workbook}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.styles.Merge(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
 
 class Tab:
 
@@ -19664,6 +23737,15 @@ class Tab:
     @TintAndShade.setter
     def TintAndShade(self, value):
         self.tab.TintAndShade = value
+
+
+
+
+
+
+
+
+
 
 class TableStyle:
 
@@ -19734,6 +23816,21 @@ class TableStyle:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.tablestyle.Duplicate(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TableStyleElement:
 
     def __init__(self, tablestyleelement=None):
@@ -19778,6 +23875,13 @@ class TableStyleElement:
     def Clear(self):
         self.tablestyleelement.Clear()
 
+
+
+
+
+
+
+
 class TableStyleElements:
 
     def __init__(self, tablestyleelements=None):
@@ -19803,6 +23907,13 @@ class TableStyleElements:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return TableStyleElement(self.tablestyleelements.Item(*args, **arguments))
+
+
+
+
+
+
+
 
 class TableStyles:
 
@@ -19834,6 +23945,17 @@ class TableStyles:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.tablestyles.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class TextEffectFormat:
 
@@ -19950,6 +24072,26 @@ class TextEffectFormat:
 
     def ToggleVerticalText(self):
         self.texteffectformat.ToggleVerticalText()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextFrame:
 
@@ -20068,6 +24210,23 @@ class TextFrame:
         arguments = {"Start": Start, "Length": Length}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textframe.Characters(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextFrame2:
 
@@ -20212,6 +24371,40 @@ class TextFrame2:
 
     def DeleteText(self):
         self.textframe2.DeleteText()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ThreeDFormat:
 
@@ -20473,6 +24666,27 @@ class ThreeDFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetThreeDFormat(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TickLabels:
 
     def __init__(self, ticklabels=None):
@@ -20575,6 +24789,35 @@ class TickLabels:
 
     def Select(self):
         return self.ticklabels.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Top10:
 
@@ -20695,6 +24938,24 @@ class Top10:
     def SetLastPriority(self):
         self.top10.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TreeviewControl:
 
     def __init__(self, treeviewcontrol=None):
@@ -20727,6 +24988,8 @@ class TreeviewControl:
     @property
     def Parent(self):
         return self.treeviewcontrol.Parent
+
+
 
 class Trendline:
 
@@ -20858,6 +25121,28 @@ class Trendline:
     def Select(self):
         return self.trendline.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Trendlines:
 
     def __init__(self, trendlines=None):
@@ -20891,6 +25176,25 @@ class Trendlines:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Trendline(self.trendlines.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class UniqueValues:
 
@@ -20987,6 +25291,17 @@ class UniqueValues:
     def SetLastPriority(self):
         self.uniquevalues.SetLastPriority()
 
+
+
+
+
+
+
+
+
+
+
+
 class UpBars:
 
     def __init__(self, upbars=None):
@@ -21018,6 +25333,19 @@ class UpBars:
     def Select(self):
         return self.upbars.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class UsedObjects:
 
     def __init__(self, usedobjects=None):
@@ -21047,6 +25375,10 @@ class UsedObjects:
     def Parent(self):
         return self.usedobjects.Parent
 
+
+
+
+
 class UserAccess:
 
     def __init__(self, useraccess=None):
@@ -21070,6 +25402,12 @@ class UserAccess:
 
     def Delete(self):
         self.useraccess.Delete()
+
+
+
+
+
+
 
 class UserAccessList:
 
@@ -21098,6 +25436,23 @@ class UserAccessList:
 
     def DeleteAll(self):
         self.useraccesslist.DeleteAll()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Validation:
 
@@ -21225,6 +25580,20 @@ class Validation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.validation.Modify(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ValueChange:
 
     def __init__(self, valuechange=None):
@@ -21277,6 +25646,21 @@ class ValueChange:
     def Delete(self):
         self.valuechange.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class VPageBreak:
 
     def __init__(self, vpagebreak=None):
@@ -21318,6 +25702,14 @@ class VPageBreak:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.vpagebreak.DragOff(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class VPageBreaks:
 
     def __init__(self, vpagebreaks=None):
@@ -21354,6 +25746,8 @@ class VPageBreaks:
         arguments = {"Before": Before}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return VPageBreak(self.vpagebreaks.Add(*args, **arguments))
+
+
 
 class Walls:
 
@@ -21413,6 +25807,22 @@ class Walls:
     def Select(self):
         return self.walls.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Watch:
 
     def __init__(self, watch=None):
@@ -21436,6 +25846,15 @@ class Watch:
 
     def Delete(self):
         self.watch.Delete()
+
+
+
+
+
+
+
+
+
 
 class Watches:
 
@@ -21476,6 +25895,15 @@ class Watches:
 
     def Delete(self):
         self.watches.Delete()
+
+
+
+
+
+
+
+
+
 
 class WebOptions:
 
@@ -21588,6 +26016,49 @@ class WebOptions:
 
     def UseDefaultFolderSuffix(self):
         self.weboptions.UseDefaultFolderSuffix()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Window:
 
@@ -22004,6 +26475,49 @@ class Window:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.window.SmallScroll(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Windows:
 
     def __init__(self, windows=None):
@@ -22055,6 +26569,105 @@ class Windows:
 
     def ResetPositionsSideBySide(self):
         self.windows.ResetPositionsSideBySide()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Workbook:
 
@@ -22930,6 +27543,138 @@ class Workbook:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return XlXmlImportResult(self.workbook.XmlImportXml(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Workbooks:
 
     def __init__(self, workbooks=None):
@@ -22999,6 +27744,56 @@ class Workbooks:
         arguments = {"FileName": FileName, "Stylesheets": Stylesheets, "LoadOption": LoadOption}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Workbook(self.workbooks.OpenXML(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Worksheet:
 
@@ -23424,6 +28219,254 @@ class Worksheet:
         arguments = {"XPath": XPath, "SelectionNamespaces": SelectionNamespaces, "Map": Map}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.worksheet.XmlMapQuery(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class WorksheetFunction:
 
@@ -25105,6 +30148,159 @@ class WorksheetFunction:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.worksheetfunction.Z_Test(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Worksheets:
 
     def __init__(self, worksheets=None):
@@ -25191,6 +30387,21 @@ class Worksheets:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.worksheets.Select(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class WorksheetView:
 
     def __init__(self, worksheetview=None):
@@ -25252,6 +30463,2554 @@ class WorksheetView:
     def Sheet(self):
         return WorksheetView(self.worksheetview.Sheet)
 
+
+
+
+# xlAboveBelow enumeration
+xlAboveAverage = 0
+xlAboveStdDev = 4
+xlBelowAverage = 1
+xlBelowStdDev = 5
+xlEqualAboveAverage = 2
+xlEqualBelowAverage = 3
+
+# xlActionType enumeration
+xlActionTypeDrillthrough = 256
+xlActionTypeReport = 128
+xlActionTypeRowset = 16
+xlActionTypeUrl = 1
+
+# xlAllocation enumeration
+xlAutomaticAllocation = 2
+xlManualAllocation = 1
+
+# xlAllocationMethod enumeration
+xlEqualAllocation = 1
+xlWeightedAllocation = 2
+
+# xlAllocationValue enumeration
+xlAllocateIncrement = 2
+xlAllocateValue = 1
+
+# xlApplicationInternational enumeration
+xl24HourClock = 33
+xl4DigitYears = 43
+xlAlternateArraySeparator = 16
+xlColumnSeparator = 14
+xlCountryCode = 1
+xlCountrySetting = 2
+xlCurrencyBefore = 37
+xlCurrencyCode = 25
+xlCurrencyDigits = 27
+xlCurrencyLeadingZeros = 40
+xlCurrencyMinusSign = 38
+xlCurrencyNegative = 28
+xlCurrencySpaceBefore = 36
+xlCurrencyTrailingZeros = 39
+xlDateOrder = 32
+xlDateSeparator = 17
+xlDayCode = 21
+xlDayLeadingZero = 42
+xlDecimalSeparator = 3
+xlGeneralFormatName = 26
+xlHourCode = 22
+xlLeftBrace = 12
+xlLeftBracket = 10
+xlListSeparator = 5
+xlLowerCaseColumnLetter = 9
+xlLowerCaseRowLetter = 8
+xlMDY = 44
+xlMetric = 35
+xlMinuteCode = 23
+xlMonthCode = 20
+xlMonthLeadingZero = 41
+xlMonthNameChars = 30
+xlNoncurrencyDigits = 29
+xlNonEnglishFunctions = 34
+xlRightBrace = 13
+xlRightBracket = 11
+xlRowSeparator = 15
+xlSecondCode = 24
+xlThousandsSeparator = 4
+xlTimeLeadingZero = 45
+xlTimeSeparator = 18
+xlUpperCaseColumnLetter = 7
+xlUpperCaseRowLetter = 6
+xlWeekdayNameChars = 31
+xlYearCode = 19
+
+# xlApplyNamesOrder enumeration
+xlColumnThenRow = 2
+xlRowThenColumn = 1
+
+# xlArabicModes enumeration
+xlArabicBothStrict = 3
+xlArabicNone = 0
+xlArabicStrictAlefHamza = 1
+xlArabicStrictFinalYaa = 2
+
+# xlArrangeStyle enumeration
+xlArrangeStyleCascade = 7
+xlArrangeStyleHorizontal = -4128
+xlArrangeStyleTiled = 1
+xlArrangeStyleVertical = -4166
+
+# xlArrowHeadLength enumeration
+xlArrowHeadLengthLong = 3
+xlArrowHeadLengthMedium = -4138
+xlArrowHeadLengthShort = 1
+
+# xlArrowHeadStyle enumeration
+xlArrowHeadStyleClosed = 3
+xlArrowHeadStyleDoubleClosed = 5
+xlArrowHeadStyleDoubleOpen = 4
+xlArrowHeadStyleNone = -4142
+xlArrowHeadStyleOpen = 2
+
+# xlArrowHeadWidth enumeration
+xlArrowHeadWidthMedium = -4138
+xlArrowHeadWidthNarrow = 1
+xlArrowHeadWidthWide = 3
+
+# xlAutoFillType enumeration
+xlFillCopy = 1
+xlFillDays = 5
+xlFillDefault = 0
+xlFillFormats = 3
+xlFillMonths = 7
+xlFillSeries = 2
+xlFillValues = 4
+xlFillWeekdays = 6
+xlFillYears = 8
+xlGrowthTrend = 10
+xlLinearTrend = 9
+xlFlashFill = 11
+
+# xlAutoFilterOperator enumeration
+xlAnd = 1
+xlBottom10Items = 4
+xlBottom10Percent = 6
+xlFilterCellColor = 8
+xlFilterDynamic = 11
+xlFilterFontColor = 9
+xlFilterIcon = 10
+xlFilterValues = 7
+xlOr = 2
+xlTop10Items = 3
+xlTop10Percent = 5
+
+# xlAxisCrosses enumeration
+xlAxisCrossesAutomatic = -4105
+xlAxisCrossesCustom = -4114
+xlAxisCrossesMaximum = 2
+xlAxisCrossesMinimum = 4
+
+# xlAxisGroup enumeration
+xlPrimary = 1
+xlSecondary = 2
+
+# xlAxisType enumeration
+xlCategory = 1
+xlSeriesAxis = 3
+xlValue = 2
+
+# xlBackground enumeration
+xlBackgroundAutomatic = -4105
+xlBackgroundOpaque = 3
+xlBackgroundTransparent = 2
+
+# xlBarShape enumeration
+xlBox = 0
+xlConeToMax = 5
+xlConeToPoint = 4
+xlCylinder = 3
+xlPyramidToMax = 2
+xlPyramidToPoint = 1
+
+# xlBordersIndex enumeration
+xlDiagonalDown = 5
+xlDiagonalUp = 6
+xlEdgeBottom = 9
+xlEdgeLeft = 7
+xlEdgeRight = 10
+xlEdgeTop = 8
+xlInsideHorizontal = 12
+xlInsideVertical = 11
+
+# xlBorderWeight enumeration
+xlHairline = 1
+xlMedium = -4138
+xlThick = 4
+xlThin = 2
+
+# xlBuiltInDialog enumeration
+xlDialogActivate = 103
+xlDialogActiveCellFont = 476
+xlDialogAddChartAutoformat = 390
+xlDialogAddinManager = 321
+xlDialogAlignment = 43
+xlDialogApplyNames = 133
+xlDialogApplyStyle = 212
+xlDialogAppMove = 170
+xlDialogAppSize = 171
+xlDialogArrangeAll = 12
+xlDialogAssignToObject = 213
+xlDialogAssignToTool = 293
+xlDialogAttachText = 80
+xlDialogAttachToolbars = 323
+xlDialogAutoCorrect = 485
+xlDialogAxes = 78
+xlDialogBorder = 45
+xlDialogCalculation = 32
+xlDialogCellProtection = 46
+xlDialogChangeLink = 166
+xlDialogChartAddData = 392
+xlDialogChartLocation = 527
+xlDialogChartOptionsDataLabelMultiple = 724
+xlDialogChartOptionsDataLabels = 505
+xlDialogChartOptionsDataTable = 506
+xlDialogChartSourceData = 540
+xlDialogChartTrend = 350
+xlDialogChartType = 526
+xlDialogChartWizard = 288
+xlDialogCheckboxProperties = 435
+xlDialogClear = 52
+xlDialogColorPalette = 161
+xlDialogColumnWidth = 47
+xlDialogCombination = 73
+xlDialogConditionalFormatting = 583
+xlDialogConsolidate = 191
+xlDialogCopyChart = 147
+xlDialogCopyPicture = 108
+xlDialogCreateList = 796
+xlDialogCreateNames = 62
+xlDialogCreatePublisher = 217
+xlDialogCreateRelationship = 1272
+xlDialogCustomizeToolbar = 276
+xlDialogCustomViews = 493
+xlDialogDataDelete = 36
+xlDialogDataLabel = 379
+xlDialogDataLabelMultiple = 723
+xlDialogDataSeries = 40
+xlDialogDataValidation = 525
+xlDialogDefineName = 61
+xlDialogDefineStyle = 229
+xlDialogDeleteFormat = 111
+xlDialogDeleteName = 110
+xlDialogDemote = 203
+xlDialogDisplay = 27
+xlDialogDocumentInspector = 862
+xlDialogEditboxProperties = 438
+xlDialogEditColor = 223
+xlDialogEditDelete = 54
+xlDialogEditionOptions = 251
+xlDialogEditSeries = 228
+xlDialogErrorbarX = 463
+xlDialogErrorbarY = 464
+xlDialogErrorChecking = 732
+xlDialogEvaluateFormula = 709
+xlDialogExternalDataProperties = 530
+xlDialogExtract = 35
+xlDialogFileDelete = 6
+xlDialogFileSharing = 481
+xlDialogFillGroup = 200
+xlDialogFillWorkgroup = 301
+xlDialogFilter = 447
+xlDialogFilterAdvanced = 370
+xlDialogFindFile = 475
+xlDialogFont = 26
+xlDialogFontProperties = 381
+xlDialogFormatAuto = 269
+xlDialogFormatChart = 465
+xlDialogFormatCharttype = 423
+xlDialogFormatFont = 150
+xlDialogFormatLegend = 88
+xlDialogFormatMain = 225
+xlDialogFormatMove = 128
+xlDialogFormatNumber = 42
+xlDialogFormatOverlay = 226
+xlDialogFormatSize = 129
+xlDialogFormatText = 89
+xlDialogFormulaFind = 64
+xlDialogFormulaGoto = 63
+xlDialogFormulaReplace = 130
+xlDialogFunctionWizard = 450
+xlDialogGallery3dArea = 193
+xlDialogGallery3dBar = 272
+xlDialogGallery3dColumn = 194
+xlDialogGallery3dLine = 195
+xlDialogGallery3dPie = 196
+xlDialogGallery3dSurface = 273
+xlDialogGalleryArea = 67
+xlDialogGalleryBar = 68
+xlDialogGalleryColumn = 69
+xlDialogGalleryCustom = 388
+xlDialogGalleryDoughnut = 344
+xlDialogGalleryLine = 70
+xlDialogGalleryPie = 71
+xlDialogGalleryRadar = 249
+xlDialogGalleryScatter = 72
+xlDialogGoalSeek = 198
+xlDialogGridlines = 76
+xlDialogImportTextFile = 666
+xlDialogInsert = 55
+xlDialogInsertHyperlink = 596
+xlDialogInsertObject = 259
+xlDialogInsertPicture = 342
+xlDialogInsertTitle = 380
+xlDialogLabelProperties = 436
+xlDialogListboxProperties = 437
+xlDialogMacroOptions = 382
+xlDialogMailEditMailer = 470
+xlDialogMailLogon = 339
+xlDialogMailNextLetter = 378
+xlDialogMainChart = 85
+xlDialogMainChartType = 185
+xlDialogManageRelationships = 1271
+xlDialogMenuEditor = 322
+xlDialogMove = 262
+xlDialogMyPermission = 834
+xlDialogNameManager = 977
+xlDialogNew = 119
+xlDialogNewName = 978
+xlDialogNewWebQuery = 667
+xlDialogNote = 154
+xlDialogObjectProperties = 207
+xlDialogObjectProtection = 214
+xlDialogOpen = 1
+xlDialogOpenLinks = 2
+xlDialogOpenMail = 188
+xlDialogOpenText = 441
+xlDialogOptionsCalculation = 318
+xlDialogOptionsChart = 325
+xlDialogOptionsEdit = 319
+xlDialogOptionsGeneral = 356
+xlDialogOptionsListsAdd = 458
+xlDialogOptionsME = 647
+xlDialogOptionsTransition = 355
+xlDialogOptionsView = 320
+xlDialogOutline = 142
+xlDialogOverlay = 86
+xlDialogOverlayChartType = 186
+xlDialogPageSetup = 7
+xlDialogParse = 91
+xlDialogPasteNames = 58
+xlDialogPasteSpecial = 53
+xlDialogPatterns = 84
+xlDialogPermission = 832
+xlDialogPhonetic = 656
+xlDialogPivotCalculatedField = 570
+xlDialogPivotCalculatedItem = 572
+xlDialogPivotClientServerSet = 689
+xlDialogPivotFieldGroup = 433
+xlDialogPivotFieldProperties = 313
+xlDialogPivotFieldUngroup = 434
+xlDialogPivotShowPages = 421
+xlDialogPivotSolveOrder = 568
+xlDialogPivotTableOptions = 567
+xlDialogPivotTableSlicerConnections = 1183
+xlDialogPivotTableWhatIfAnalysisSettings = 1153
+xlDialogPivotTableWizard = 312
+xlDialogPlacement = 300
+xlDialogPrint = 8
+xlDialogPrinterSetup = 9
+xlDialogPrintPreview = 222
+xlDialogPromote = 202
+xlDialogProperties = 474
+xlDialogPropertyFields = 754
+xlDialogProtectDocument = 28
+xlDialogProtectSharing = 620
+xlDialogPublishAsWebPage = 653
+xlDialogPushbuttonProperties = 445
+xlDialogRecommendedPivotTables = 1258
+xlDialogReplaceFont = 134
+xlDialogRoutingSlip = 336
+xlDialogRowHeight = 127
+xlDialogRun = 17
+xlDialogSaveAs = 5
+xlDialogSaveCopyAs = 456
+xlDialogSaveNewObject = 208
+xlDialogSaveWorkbook = 145
+xlDialogSaveWorkspace = 285
+xlDialogScale = 87
+xlDialogScenarioAdd = 307
+xlDialogScenarioCells = 305
+xlDialogScenarioEdit = 308
+xlDialogScenarioMerge = 473
+xlDialogScenarioSummary = 311
+xlDialogScrollbarProperties = 420
+xlDialogSearch = 731
+xlDialogSelectSpecial = 132
+xlDialogSendMail = 189
+xlDialogSeriesAxes = 460
+xlDialogSeriesOptions = 557
+xlDialogSeriesOrder = 466
+xlDialogSeriesShape = 504
+xlDialogSeriesX = 461
+xlDialogSeriesY = 462
+xlDialogSetBackgroundPicture = 509
+xlDialogSetManager = 1109
+xlDialogSetMDXEditor = 1208
+xlDialogSetPrintTitles = 23
+xlDialogSetTupleEditorOnColumns = 1108
+xlDialogSetTupleEditorOnRows = 1107
+xlDialogSetUpdateStatus = 159
+xlDialogShowDetail = 204
+xlDialogShowToolbar = 220
+xlDialogSize = 261
+xlDialogSlicerCreation = 1182
+xlDialogSlicerPivotTableConnections = 1184
+xlDialogSlicerSettings = 1179
+xlDialogSort = 39
+xlDialogSortSpecial = 192
+xlDialogSparklineInsertColumn = 1134
+xlDialogSparklineInsertLine = 1133
+xlDialogSparklineInsertWinLoss = 1135
+xlDialogSplit = 137
+xlDialogStandardFont = 190
+xlDialogStandardWidth = 472
+xlDialogStyle = 44
+xlDialogSubscribeTo = 218
+xlDialogSubtotalCreate = 398
+xlDialogSummaryInfo = 474
+xlDialogTable = 41
+xlDialogTabOrder = 394
+xlDialogTextToColumns = 422
+xlDialogUnhide = 94
+xlDialogUpdateLink = 201
+xlDialogVbaInsertFile = 328
+xlDialogVbaMakeAddin = 478
+xlDialogVbaProcedureDefinition = 330
+xlDialogView3d = 197
+xlDialogWebOptionsBrowsers = 773
+xlDialogWebOptionsEncoding = 686
+xlDialogWebOptionsFiles = 684
+xlDialogWebOptionsFonts = 687
+xlDialogWebOptionsGeneral = 683
+xlDialogWebOptionsPictures = 685
+xlDialogWindowMove = 14
+xlDialogWindowSize = 13
+xlDialogWorkbookAdd = 281
+xlDialogWorkbookCopy = 283
+xlDialogWorkbookInsert = 354
+xlDialogWorkbookMove = 282
+xlDialogWorkbookName = 386
+xlDialogWorkbookNew = 302
+xlDialogWorkbookOptions = 284
+xlDialogWorkbookProtect = 417
+xlDialogWorkbookTabSplit = 415
+xlDialogWorkbookUnhide = 384
+xlDialogWorkgroup = 199
+xlDialogWorkspace = 95
+xlDialogZoom = 256
+
+# xlCalcFor enumeration
+xlAllValues = 0
+xlColGroups = 2
+xlRowGroups = 1
+
+# xlCalculatedMemberType enumeration
+xlCalculatedMeasure = 2
+xlCalculatedMember = 0
+xlCalculatedSet = 1
+
+# xlCalculation enumeration
+xlCalculationAutomatic = -4105
+xlCalculationManual = -4135
+xlCalculationSemiautomatic = 2
+
+# xlCalculationInterruptKey enumeration
+xlAnyKey = 2
+xlEscKey = 1
+xlNoKey = 0
+
+# xlCalculationState enumeration
+xlCalculating = 1
+xlDone = 0
+xlPending = 2
+
+# xlCategoryType enumeration
+xlAutomaticScale = -4105
+xlCategoryScale = 2
+xlTimeScale = 3
+
+# xlCellChangedState enumeration
+xlCellChangeApplied = 3
+xlCellChanged = 2
+xlCellNotChanged = 1
+
+# xlCellInsertionMode enumeration
+xlInsertDeleteCells = 1
+xlInsertEntireRows = 2
+xlOverwriteCells = 0
+
+# xlCellType enumeration
+xlCellTypeAllFormatConditions = -4172
+xlCellTypeAllValidation = -4174
+xlCellTypeBlanks = 4
+xlCellTypeComments = -4144
+xlCellTypeConstants = 2
+xlCellTypeFormulas = -4123
+xlCellTypeLastCell = 11
+xlCellTypeSameFormatConditions = -4173
+xlCellTypeSameValidation = -4175
+xlCellTypeVisible = 12
+
+# xlChartElementPosition enumeration
+xlChartElementPositionAutomatic = -4105
+xlChartElementPositionCustom = -4114
+
+# xlChartGallery enumeration
+xlAnyGallery = 23
+xlBuiltIn = 21
+xlUserDefined = 22
+
+# xlChartItem enumeration
+xlAxis = 21
+xlAxisTitle = 17
+xlChartArea = 2
+xlChartTitle = 4
+xlCorners = 6
+xlDataLabel = 0
+xlDataTable = 7
+xlDisplayUnitLabel = 30
+xlDownBars = 20
+xlDropLines = 26
+xlErrorBars = 9
+xlFloor = 23
+xlHiLoLines = 25
+xlLeaderLines = 29
+xlLegend = 24
+xlLegendEntry = 12
+xlLegendKey = 13
+xlMajorGridlines = 15
+xlMinorGridlines = 16
+xlNothing = 28
+xlPivotChartDropZone = 32
+xlPivotChartFieldButton = 31
+xlPlotArea = 19
+xlRadarAxisLabels = 27
+xlSeries = 3
+xlSeriesLines = 22
+xlShape = 14
+xlTrendline = 8
+xlUpBars = 18
+xlWalls = 5
+xlXErrorBars = 10
+xlYErrorBars = 11
+
+# XlChartLocation enumeration
+xlLocationAsNewSheet = 1
+xlLocationAsObject = 2
+xlLocationAutomatic = 3
+
+# XlChartPicturePlacement enumeration
+xlAllFaces = 7
+xlEnd = 2
+xlEndSides = 3
+xlFront = 4
+xlFrontEnd = 6
+xlFrontSides = 5
+xlSides = 1
+
+# XlChartPictureType enumeration
+xlStack = 2
+xlStackScale = 3
+xlStretch = 1
+
+# XlChartSplitType enumeration
+xlSplitByCustomSplit = 4
+xlSplitByPercentValue = 3
+xlSplitByPosition = 1
+xlSplitByValue = 2
+
+# XlChartType enumeration
+xl3DArea = -4098
+xl3DAreaStacked = 78
+xl3DAreaStacked100 = 79
+xl3DBarClustered = 60
+xl3DBarStacked = 61
+xl3DBarStacked100 = 62
+xl3DColumn = -4100
+xl3DColumnClustered = 54
+xl3DColumnStacked = 55
+xl3DColumnStacked100 = 56
+xl3DLine = -4101
+xl3DPie = -4102
+xl3DPieExploded = 70
+xlArea = 1
+xlAreaEx = 135
+xlAreaStacked = 76
+xlAreaStacked100 = 77
+xlAreaStacked100Ex = 137
+xlAreaStackedEx = 136
+xlBarClustered = 57
+xlBarClusteredEx = 132
+xlBarOfPie = 71
+xlBarStacked = 58
+xlBarStacked100 = 59
+xlBarStacked100Ex = 134
+xlBarStackedEx = 133
+xlBoxwhisker = 121
+xlBubble = 15
+xlBubble3DEffect = 87
+xlBubbleEx = 139
+xlColumnClustered = 51
+xlColumnClusteredEx = 124
+xlColumnStacked = 52
+xlColumnStacked100 = 53
+xlColumnStacked100Ex = 126
+xlColumnStackedEx = 125
+xlCombo = -4152
+xlComboAreaStackedColumnClustered = 115
+xlComboColumnClusteredLine = 113
+xlComboColumnClusteredLineSecondaryAxis = 114
+xlConeBarClustered = 102
+xlConeBarStacked = 103
+xlConeBarStacked100 = 104
+xlConeCol = 105
+xlConeColClustered = 99
+xlConeColStacked = 100
+xlConeColStacked100 = 101
+xlCylinderBarClustered = 95
+xlCylinderBarStacked = 96
+xlCylinderBarStacked100 = 97
+xlCylinderCol = 98
+xlCylinderColClustered = 92
+xlCylinderColStacked = 93
+xlCylinderColStacked100 = 94
+xlDoughnut = -4120
+xlDoughnutEx = 131
+xlDoughnutExploded = 80
+xlFunnel = 123
+xlHistogram = 118
+xlLine = 4
+xlLineEx = 127
+xlLineMarkers = 65
+xlLineMarkersStacked = 66
+xlLineMarkersStacked100 = 67
+xlLineStacked = 63
+xlLineStacked100 = 64
+xlLineStacked100Ex = 129
+xlLineStackedEx = 128
+xlOtherCombinations = 116
+xlPareto = 122
+xlPie = 5
+xlPieEx = 130
+xlPieExploded = 69
+xlPieOfPie = 68
+xlPyramidBarClustered = 109
+xlPyramidBarStacked = 110
+xlPyramidBarStacked100 = 111
+xlPyramidCol = 112
+xlPyramidColClustered = 106
+xlPyramidColStacked = 107
+xlPyramidColStacked100 = 108
+xlRadar = -4151
+xlRadarFilled = 82
+xlRadarMarkers = 81
+xlRegionMap = 140
+xlStockHLC = 88
+xlStockOHLC = 89
+xlStockVHLC = 90
+xlStockVOHLC = 91
+xlSuggestedChart = -2
+xlSunburst = 120
+xlSurface = 83
+xlSurfaceTopView = 85
+xlSurfaceTopViewWireframe = 86
+xlSurfaceWireframe = 84
+xlTreemap = 117
+xlWaterfall = 119
+xlXYScatter = -4169
+xlXYScatterEx = 138
+xlXYScatterLines = 74
+xlXYScatterLinesNoMarkers = 75
+xlXYScatterSmooth = 72
+xlXYScatterSmoothNoMarkers = 73
+
+# XlCheckInVersionType enumeration
+xlCheckInMajorVersion = 1
+xlCheckInMinorVersion = 0
+xlCheckInOverwriteVersion = 2
+
+# XlClipboardFormat enumeration
+xlClipboardFormatBIFF = 8
+xlClipboardFormatBIFF12 = 63
+xlClipboardFormatBIFF2 = 18
+xlClipboardFormatBIFF3 = 20
+xlClipboardFormatBIFF4 = 30
+xlClipboardFormatBinary = 15
+xlClipboardFormatBitmap = 9
+xlClipboardFormatCGM = 13
+xlClipboardFormatCSV = 5
+xlClipboardFormatDIF = 4
+xlClipboardFormatDspText = 12
+xlClipboardFormatEmbeddedObject = 21
+xlClipboardFormatEmbedSource = 22
+xlClipboardFormatLink = 11
+xlClipboardFormatLinkSource = 23
+xlClipboardFormatLinkSourceDesc = 32
+xlClipboardFormatMovie = 24
+xlClipboardFormatNative = 14
+xlClipboardFormatObjectDesc = 31
+xlClipboardFormatObjectLink = 19
+xlClipboardFormatOwnerLink = 17
+xlClipboardFormatPICT = 2
+xlClipboardFormatPrintPICT = 3
+xlClipboardFormatRTF = 7
+xlClipboardFormatScreenPICT = 29
+xlClipboardFormatStandardFont = 28
+xlClipboardFormatStandardScale = 27
+xlClipboardFormatSYLK = 6
+xlClipboardFormatTable = 16
+xlClipboardFormatText = 0
+xlClipboardFormatToolFace = 25
+xlClipboardFormatToolFacePICT = 26
+xlClipboardFormatVALU = 1
+xlClipboardFormatWK1 = 10
+
+# XlCmdType enumeration
+xlCmdCube = 1
+xlCmdDAX = 8
+xlCmdDefault = 4
+xlCmdExcel = 7
+xlCmdList = 5
+xlCmdSql = 2
+xlCmdTable = 3
+xlCmdTableCollection = 6
+
+# XlColorIndex enumeration
+xlColorIndexAutomatic = -4105
+xlColorIndexNone = -4142
+
+# XlColumnDataType enumeration
+xlDMYFormat = 4
+xlDYMFormat = 7
+xlEMDFormat = 10
+xlGeneralFormat = 1
+xlMDYFormat = 3
+xlMYDFormat = 6
+xlSkipColumn = 9
+xlTextFormat = 2
+xlYDMFormat = 8
+xlYMDFormat = 5
+
+# XlCommandUnderlines enumeration
+xlCommandUnderlinesAutomatic = -4105
+xlCommandUnderlinesOff = -4146
+xlCommandUnderlinesOn = 1
+
+# XlCommentDisplayMode enumeration
+xlCommentAndIndicator = 1
+xlCommentIndicatorOnly = -1
+xlNoIndicator = 0
+
+# XlConditionValueTypes enumeration
+xlConditionValueAutomaticMax = 7
+xlConditionValueAutomaticMin = 6
+xlConditionValueFormula = 4
+xlConditionValueHighestValue = 2
+xlConditionValueLowestValue = 1
+xlConditionValueNone = -1
+xlConditionValueNumber = 0
+xlConditionValuePercent = 3
+xlConditionValuePercentile = 5
+
+# XlConnectionType enumeration
+xlConnectionTypeDATAFEED = 6
+xlConnectionTypeMODEL = 7
+xlConnectionTypeNOSOURCE = 9
+xlConnectionTypeODBC = 2
+xlConnectionTypeOLEDB = 1
+xlConnectionTypeTEXT = 4
+xlConnectionTypeWEB = 5
+xlConnectionTypeWORKSHEET = 8
+xlConnectionTypeXMLMAP = 3
+
+# XlConsolidationFunction enumeration
+xlAverage = -4106
+xlCount = -4112
+xlCountNums = -4113
+xlDistinctCount = 11
+xlMax = -4136
+xlMin = -4139
+xlProduct = -4149
+xlStDev = -4155
+xlStDevP = -4156
+xlSum = -4157
+xlUnknown = 1000
+xlVar = -4164
+xlVarP = -4165
+
+# XlContainsOperator enumeration
+xlBeginsWith = 2
+xlContains = 0
+xlDoesNotContain = 1
+xlEndsWith = 3
+
+# XlCopyPictureFormat enumeration
+xlBitmap = 2
+xlPicture = -4147
+
+# XlCorruptLoad enumeration
+xlExtractData = 2
+xlNormalLoad = 0
+xlRepairFile = 1
+
+# XlCreator enumeration
+xlCreatorCode = 1480803660
+
+# XlCredentialsMethod enumeration
+CredentialsMethodIntegrated = 0
+CredentialsMethodNone = 1
+CredentialsMethodStored = 2
+
+# XlCubeFieldSubType enumeration
+xlCubeAttribute = 4
+xlCubeCalculatedMeasure = 5
+xlCubeHierarchy = 1
+xlCubeImplicitMeasure = 11
+xlCubeKPIGoal = 7
+xlCubeKPIStatus = 8
+xlCubeKPITrend = 9
+xlCubeKPIValue = 6
+xlCubeKPIWeight = 10
+xlCubeMeasure = 2
+xlCubeSet = 3
+
+# XlCubeFieldType enumeration
+xlHierarchy = 1
+xlMeasure = 2
+xlSet = 3
+
+# XlCutCopyMode enumeration
+xlCopy = 1
+xlCut = 2
+
+# XlCVError enumeration
+xlErrDiv0 = 2007
+xlErrNA = 2042
+xlErrName = 2029
+xlErrNull = 2000
+xlErrNum = 2036
+xlErrRef = 2023
+xlErrValue = 2015
+xlErrSpill = 2045
+
+# XlDataBarAxisPosition enumeration
+xlDataBarAxisAutomatic = 0
+xlDataBarAxisMidpoint = 1
+xlDataBarAxisNone = 2
+
+# XlDataBarBorderType enumeration
+xlDataBarBorderNone = 0
+xlDataBarBorderSolid = 1
+
+# XlDataBarFillType enumeration
+xlDataBarFillGradient = 1
+xlDataBarFillSolid = 0
+
+# XlDataBarNegativeColorType enumeration
+xlDataBarColor = 0
+xlDataBarSameAsPositive = 1
+
+# XlDataLabelPosition enumeration
+xlLabelPositionAbove = 0
+xlLabelPositionBelow = 1
+xlLabelPositionBestFit = 5
+xlLabelPositionCenter = -4108
+xlLabelPositionCustom = 7
+xlLabelPositionInsideBase = 4
+xlLabelPositionInsideEnd = 3
+xlLabelPositionLeft = -4131
+xlLabelPositionMixed = 6
+xlLabelPositionOutsideEnd = 2
+xlLabelPositionRight = -4152
+
+# XlDataLabelSeparator enumeration
+xlDataLabelSeparatorDefault = 1
+
+# XlDataLabelsType enumeration
+xlDataLabelsShowBubbleSizes = 6
+xlDataLabelsShowLabel = 4
+xlDataLabelsShowLabelAndPercent = 5
+xlDataLabelsShowNone = -4142
+xlDataLabelsShowPercent = 3
+xlDataLabelsShowValue = 2
+
+# XlDataSeriesDate enumeration
+xlDay = 1
+xlMonth = 3
+xlWeekday = 2
+xlYear = 4
+
+# XlDataSeriesType enumeration
+xlAutoFill = 4
+xlChronological = 3
+xlDataSeriesLinear = -4132
+xlGrowth = 2
+
+# XlDeleteShiftDirection enumeration
+xlShiftToLeft = -4159
+xlShiftUp = -4162
+
+# XlDirection enumeration
+xlDown = -4121
+xlToLeft = -4159
+xlToRight = -4161
+xlUp = -4162
+
+# XlDisplayBlanksAs enumeration
+xlInterpolated = 3
+xlNotPlotted = 1
+xlZero = 2
+
+# XlDisplayDrawingObjects enumeration
+xlDisplayShapes = -4104
+xlHide = 3
+xlPlaceholders = 2
+
+# XlDisplayUnit enumeration
+xlHundredMillions = -8
+xlHundreds = -2
+xlHundredThousands = -5
+xlMillionMillions = -10
+xlMillions = -6
+xlTenMillions = -7
+xlTenThousands = -4
+xlThousandMillions = -9
+xlThousands = -3
+
+# XlDupeUnique enumeration
+xlDuplicate = 1
+xlUnique = 0
+
+# XlDVAlertStyle enumeration
+xlValidAlertInformation = 3
+xlValidAlertStop = 1
+xlValidAlertWarning = 2
+
+# XlDVType enumeration
+xlValidateCustom = 7
+xlValidateDate = 4
+xlValidateDecimal = 2
+xlValidateInputOnly = 0
+xlValidateList = 3
+xlValidateTextLength = 6
+xlValidateTime = 5
+xlValidateWholeNumber = 1
+
+# XlDynamicFilterCriteria enumeration
+xlFilterAboveAverage = 33
+xlFilterAllDatesInPeriodApril = 24
+xlFilterAllDatesInPeriodAugust = 28
+xlFilterAllDatesInPeriodDecember = 32
+xlFilterAllDatesInPeriodFebruary = 22
+xlFilterAllDatesInPeriodJanuary = 21
+xlFilterAllDatesInPeriodJuly = 27
+xlFilterAllDatesInPeriodJune = 26
+xlFilterAllDatesInPeriodMarch = 23
+xlFilterAllDatesInPeriodMay = 25
+xlFilterAllDatesInPeriodNovember = 31
+xlFilterAllDatesInPeriodOctober = 30
+xlFilterAllDatesInPeriodQuarter1 = 17
+xlFilterAllDatesInPeriodQuarter2 = 18
+xlFilterAllDatesInPeriodQuarter3 = 19
+xlFilterAllDatesInPeriodQuarter4 = 20
+xlFilterAllDatesInPeriodSeptember = 29
+xlFilterBelowAverage = 34
+xlFilterLastMonth = 8
+xlFilterLastQuarter = 11
+xlFilterLastWeek = 5
+xlFilterLastYear = 14
+xlFilterNextMonth = 9
+xlFilterNextQuarter = 12
+xlFilterNextWeek = 6
+xlFilterNextYear = 15
+xlFilterThisMonth = 7
+xlFilterThisQuarter = 10
+xlFilterThisWeek = 4
+xlFilterThisYear = 13
+xlFilterToday = 1
+xlFilterTomorrow = 3
+xlFilterYearToDate = 16
+xlFilterYesterday = 2
+
+# XlEditionFormat enumeration
+xlBIFF = 2
+xlPICT = 1
+xlRTF = 4
+xlVALU = 8
+
+# XlEditionOptionsOption enumeration
+xlAutomaticUpdate = 4
+xlCancel = 1
+xlChangeAttributes = 6
+xlManualUpdate = 5
+xlOpenSource = 3
+xlSelect = 3
+xlSendPublisher = 2
+xlUpdateSubscriber = 2
+
+# XlEditionType enumeration
+xlPublisher = 1
+xlSubscriber = 2
+
+# XlEnableCancelKey enumeration
+xlDisabled = 0
+xlErrorHandler = 2
+xlInterrupt = 1
+
+# XlEnableSelection enumeration
+xlNoRestrictions = 0
+xlNoSelection = -4142
+xlUnlockedCells = 1
+
+# XlEndStyleCap enumeration
+xlCap = 1
+xlNoCap = 2
+
+# XlErrorBarDirection enumeration
+xlX = -4168
+xlY = 1
+
+# XlErrorBarInclude enumeration
+xlErrorBarIncludeBoth = 1
+xlErrorBarIncludeMinusValues = 3
+xlErrorBarIncludeNone = -4142
+xlErrorBarIncludePlusValues = 2
+
+# XlErrorBarType enumeration
+xlErrorBarTypeCustom = -4114
+xlErrorBarTypeFixedValue = 1
+xlErrorBarTypePercent = 2
+xlErrorBarTypeStDev = -4155
+xlErrorBarTypeStError = 4
+
+# XlErrorChecks enumeration
+xlEmptyCellReferences = 7
+xlEvaluateToError = 1
+xlInconsistentFormula = 4
+xlInconsistentListFormula = 9
+xlListDataValidation = 8
+xlNumberAsText = 3
+xlOmittedCells = 5
+xlStaleValue = 12
+xlTextDate = 2
+xlUnlockedFormulaCells = 6
+
+# XlFileAccess enumeration
+xlReadOnly = 3
+xlReadWrite = 2
+
+# XlFileFormat enumeration
+xlAddIn = 18
+xlAddIn8 = 18
+xlCSV = 6
+xlCSVMac = 22
+xlCSVMSDOS = 24
+xlCSVUTF8 = 62
+xlCSVWindows = 23
+xlCurrentPlatformText = -4158
+xlDBF2 = 7
+xlDBF3 = 8
+xlDBF4 = 11
+xlDIF = 9
+xlExcel12 = 50
+xlExcel2 = 16
+xlExcel2FarEast = 27
+xlExcel3 = 29
+xlExcel4 = 33
+xlExcel4Workbook = 35
+xlExcel5 = 39
+xlExcel7 = 39
+xlExcel8 = 56
+xlExcel9795 = 43
+xlHtml = 44
+xlIntlAddIn = 26
+xlIntlMacro = 25
+xlOpenDocumentSpreadsheet = 60
+xlOpenXMLAddIn = 55
+xlOpenXMLStrictWorkbook = "61 (&H3D)"
+xlOpenXMLTemplate = 54
+xlOpenXMLTemplateMacroEnabled = 53
+xlOpenXMLWorkbook = 51
+xlOpenXMLWorkbookMacroEnabled = 52
+xlSYLK = 2
+xlTemplate = 17
+xlTemplate8 = 17
+xlTextMac = 19
+xlTextMSDOS = 21
+xlTextPrinter = 36
+xlTextWindows = 20
+xlUnicodeText = 42
+xlWebArchive = 45
+xlWJ2WD1 = 14
+xlWJ3 = 40
+xlWJ3FJ3 = 41
+xlWK1 = 5
+xlWK1ALL = 31
+xlWK1FMT = 30
+xlWK3 = 15
+xlWK3FM3 = 32
+xlWK4 = 38
+xlWKS = 4
+xlWorkbookDefault = 51
+xlWorkbookNormal = -4143
+xlWorks2FarEast = 28
+xlWQ1 = 34
+xlXMLSpreadsheet = 46
+
+# XlFileValidationPivotMode enumeration
+xlFileValidationPivotDefault = 0
+xlFileValidationPivotRun = 1
+xlFileValidationPivotSkip = 2
+
+# XlFillWith enumeration
+xlFillWithAll = -4104
+xlFillWithContents = 2
+xlFillWithFormats = -4122
+
+# XlFilterAction enumeration
+xlFilterCopy = 2
+xlFilterInPlace = 1
+
+# XlFilterAllDatesInPeriod enumeration
+xlFilterAllDatesInPeriodDay = 2
+xlFilterAllDatesInPeriodHour = 3
+xlFilterAllDatesInPeriodMinute = 4
+xlFilterAllDatesInPeriodMonth = 1
+xlFilterAllDatesInPeriodSecond = 5
+xlFilterAllDatesInPeriodYear = 0
+
+# XlFindLookIn enumeration
+xlComments = -4144
+xlCommentsThreaded = -4184
+xlFormulas = -4123
+xlValues = -4163
+
+# XlFixedFormatQuality enumeration
+xlQualityMinimum = 1
+xlQualityStandard = 0
+
+# XlFixedFormatType enumeration
+xlTypePDF = 0
+xlTypeXPS = 1
+
+# XlFormatConditionOperator enumeration
+xlBetween = 1
+xlEqual = 3
+xlGreater = 5
+xlGreaterEqual = 7
+xlLess = 6
+xlLessEqual = 8
+xlNotBetween = 2
+xlNotEqual = 4
+
+# XlFormatConditionType enumeration
+xlAboveAverageCondition = 12
+xlBlanksCondition = 10
+xlCellValue = 1
+xlColorScale = 3
+xlDataBar = 4
+xlErrorsCondition = 16
+xlExpression = 2
+xlIconSet = 6
+xlNoBlanksCondition = 13
+xlNoErrorsCondition = 17
+xlTextString = 9
+xlTimePeriod = 11
+xlTop10 = 5
+xlUniqueValues = 8
+
+# XlFormatFilterTypes enumeration
+FilterBottom = 0
+FilterBottomPercent = 2
+FilterTop = 1
+FilterTopPercent = 3
+
+# XlFormControl enumeration
+xlButtonControl = 0
+xlCheckBox = 1
+xlDropDown = 2
+xlEditBox = 3
+xlGroupBox = 4
+xlLabel = 5
+xlListBox = 6
+xlOptionButton = 7
+xlScrollBar = 8
+xlSpinner = 9
+
+# XlFormulaLabel enumeration
+xlColumnLabels = 2
+xlMixedLabels = 3
+xlNoLabels = -4142
+xlRowLabels = 1
+
+# XlGenerateTableRefs enumeration
+xlA1TableRefs = 0
+xlTableNames = 1
+
+# XlGradientFillType enumeration
+GradientFillLinear = 0
+GradientFillPath = 1
+
+# XlHAlign enumeration
+xlHAlignCenter = -4108
+xlHAlignCenterAcrossSelection = 7
+xlHAlignDistributed = -4117
+xlHAlignFill = 5
+xlHAlignGeneral = 1
+xlHAlignJustify = -4130
+xlHAlignLeft = -4131
+xlHAlignRight = -4152
+
+# XlHebrewModes enumeration
+xlHebrewFullScript = 0
+xlHebrewMixedAuthorizedScript = 3
+xlHebrewMixedScript = 2
+xlHebrewPartialScript = 1
+
+# XlHighlightChangesTime enumeration
+xlAllChanges = 2
+xlNotYetReviewed = 3
+xlSinceMyLastSave = 1
+
+# XlHtmlType enumeration
+xlHtmlCalc = 1
+xlHtmlChart = 3
+xlHtmlList = 2
+xlHtmlStatic = 0
+
+# XlIcon enumeration
+xlIcon0Bars = 37
+xlIcon0FilledBoxes = 52
+xlIcon1Bar = 38
+xlIcon1FilledBox = 51
+xlIcon2Bars = 39
+xlIcon2FilledBoxes = 50
+xlIcon3Bars = 40
+xlIcon3FilledBoxes = 49
+xlIcon4Bars = 41
+xlIcon4FilledBoxes = 48
+xlIconBlackCircle = 32
+xlIconBlackCircleWithBorder = 13
+xlIconCircleWithOneWhiteQuarter = 33
+xlIconCircleWithThreeWhiteQuarters = 35
+xlIconCircleWithTwoWhiteQuarters = 34
+xlIconGoldStar = 42
+xlIconGrayCircle = 31
+xlIconGrayDownArrow = 6
+xlIconGrayDownInclineArrow = 28
+xlIconGraySideArrow = 5
+xlIconGrayUpArrow = 4
+xlIconGrayUpInclineArrow = 27
+xlIconGreenCheck = 22
+xlIconGreenCheckSymbol = 19
+xlIconGreenCircle = 10
+xlIconGreenFlag = 7
+xlIconGreenTrafficLight = 14
+xlIconGreenUpArrow = 1
+xlIconGreenUpTriangle = 45
+xlIconHalfGoldStar = 43
+xlIconNoCellIcon = -1
+xlIconPinkCircle = 30
+xlIconRedCircle = 29
+xlIconRedCircleWithBorder = 12
+xlIconRedCross = 24
+xlIconRedCrossSymbol = 21
+xlIconRedDiamond = 18
+xlIconRedDownArrow = 3
+xlIconRedDownTriangle = 47
+xlIconRedFlag = 9
+xlIconRedTrafficLight = 16
+xlIconSilverStar = 44
+xlIconWhiteCircleAllWhiteQuarters = 36
+xlIconYellowCircle = 11
+xlIconYellowDash = 46
+xlIconYellowDownInclineArrow = 26
+xlIconYellowExclamation = 23
+xlIconYellowExclamationSymbol = 20
+xlIconYellowFlag = 8
+xlIconYellowSideArrow = 2
+xlIconYellowTrafficLight = 15
+xlIconYellowTriangle = 17
+xlIconYellowUpInclineArrow = 25
+
+# XlIconSet enumeration
+xl3Arrows = 1
+xl3ArrowsGray = 2
+xl3Flags = 3
+xl3Signs = 6
+xl3Symbols = 7
+xl3TrafficLights1 = 4
+xl3TrafficLights2 = 5
+xl4Arrows = 8
+xl4ArrowsGray = 9
+xl4CRV = 11
+xl4RedToBlack = 10
+xl4TrafficLights = 12
+xl5Arrows = 13
+xl5ArrowsGray = 14
+xl5CRV = 15
+xl5Quarters = 16
+
+# XlIMEMode enumeration
+xlIMEModeAlpha = 8
+xlIMEModeAlphaFull = 7
+xlIMEModeDisable = 3
+xlIMEModeHangul = 10
+xlIMEModeHangulFull = 9
+xlIMEModeHiragana = 4
+xlIMEModeKatakana = 5
+xlIMEModeKatakanaHalf = 6
+xlIMEModeNoControl = 0
+xlIMEModeOff = 2
+xlIMEModeOn = 1
+
+# XlImportDataAs enumeration
+xlPivotTableReport = 1
+xlQueryTable = 0
+
+# XlInsertFormatOrigin enumeration
+xlFormatFromLeftOrAbove = 0
+xlFormatFromRightOrBelow = 1
+
+# XlInsertShiftDirection enumeration
+xlShiftDown = -4121
+xlShiftToRight = -4161
+
+# XlLayoutFormType enumeration
+xlOutline = 1
+xlTabular = 0
+
+# XlLayoutRowType enumeration
+xlCompactRow = 0
+xlOutlineRow = 2
+xlTabularRow = 1
+
+# XlLegendPosition enumeration
+xlLegendPositionBottom = -4107
+xlLegendPositionCorner = 2
+xlLegendPositionCustom = -4161
+xlLegendPositionLeft = -4131
+xlLegendPositionRight = -4152
+xlLegendPositionTop = -4160
+
+# XlLineStyle enumeration
+xlContinuous = 1
+xlDash = -4115
+xlDashDot = 4
+xlDashDotDot = 5
+xlDot = -4118
+xlDouble = -4119
+xlLineStyleNone = -4142
+xlSlantDashDot = 13
+
+# XlLink enumeration
+xlExcelLinks = 1
+xlOLELinks = 2
+xlPublishers = 5
+xlSubscribers = 6
+
+# XlLinkedDataTypeState enumeration
+xlLinkedDataTypeStateNone = 0
+xlLinkedDataTypeStateValidLinkedData = 1
+xlLinkedDataTypeStateDisambiguationNeeded = 2
+xlLinkedDataTypeStateBrokenLinkedData = 3
+xlLinkedDataTypeStateFetchingData = 4
+
+# XlLinkInfo enumeration
+xlEditionDate = 2
+xlLinkInfoStatus = 3
+xlUpdateState = 1
+
+# XlLinkInfoType enumeration
+xlLinkInfoOLELinks = 2
+xlLinkInfoPublishers = 5
+xlLinkInfoSubscribers = 6
+
+# XlLinkStatus enumeration
+xlLinkStatusCopiedValues = 10
+xlLinkStatusIndeterminate = 5
+xlLinkStatusInvalidName = 7
+xlLinkStatusMissingFile = 1
+xlLinkStatusMissingSheet = 2
+xlLinkStatusNotStarted = 6
+xlLinkStatusOK = 0
+xlLinkStatusOld = 3
+xlLinkStatusSourceNotCalculated = 4
+xlLinkStatusSourceNotOpen = 8
+xlLinkStatusSourceOpen = 9
+
+# XlLinkType enumeration
+xlLinkTypeExcelLinks = 1
+xlLinkTypeOLELinks = 2
+
+# XlListConflict enumeration
+xlListConflictDialog = 0
+xlListConflictDiscardAllConflicts = 2
+xlListConflictError = 3
+xlListConflictRetryAllConflicts = 1
+
+# XlListDataType enumeration
+xlListDataTypeCheckbox = 9
+xlListDataTypeChoice = 6
+xlListDataTypeChoiceMulti = 7
+xlListDataTypeCounter = 11
+xlListDataTypeCurrency = 4
+xlListDataTypeDateTime = 5
+xlListDataTypeHyperLink = 10
+xlListDataTypeListLookup = 8
+xlListDataTypeMultiLineRichText = 12
+xlListDataTypeMultiLineText = 2
+xlListDataTypeNone = 0
+xlListDataTypeNumber = 3
+xlListDataTypeText = 1
+
+# XlListObjectSourceType enumeration
+xlSrcExternal = 0
+xlSrcModel = 4
+xlSrcQuery = 3
+xlSrcRange = 1
+xlSrcXml = 2
+
+# XlLocationInTable enumeration
+xlColumnHeader = -4110
+xlColumnItem = 5
+xlDataHeader = 3
+xlDataItem = 7
+xlPageHeader = 2
+xlPageItem = 6
+xlRowHeader = -4153
+xlRowItem = 4
+xlTableBody = 8
+
+# XlLookAt enumeration
+xlPart = 2
+xlWhole = 1
+
+# XlLookFor enumeration
+LookForBlanks = 0
+LookForErrors = 1
+LookForFormulas = 2
+
+# XlMailSystem enumeration
+xlMAPI = 1
+xlNoMailSystem = 0
+xlPowerTalk = 2
+
+# XlMarkerStyle enumeration
+xlMarkerStyleAutomatic = -4105
+xlMarkerStyleCircle = 8
+xlMarkerStyleDash = -4115
+xlMarkerStyleDiamond = 2
+xlMarkerStyleDot = -4118
+xlMarkerStyleNone = -4142
+xlMarkerStylePicture = -4147
+xlMarkerStylePlus = 9
+xlMarkerStyleSquare = 1
+xlMarkerStyleStar = 5
+xlMarkerStyleTriangle = 3
+xlMarkerStyleX = -4168
+
+# XlMeasurementUnits enumeration
+xlCentimeters = 1
+xlInches = 0
+xlMillimeters = 2
+
+# XlMouseButton enumeration
+xlNoButton = 0
+xlPrimaryButton = 1
+xlSecondaryButton = 2
+
+# XlMousePointer enumeration
+xlDefault = -4143
+xlIBeam = 3
+xlNorthwestArrow = 1
+xlWait = 2
+
+# XlMSApplication enumeration
+xlMicrosoftAccess = 4
+xlMicrosoftFoxPro = 5
+xlMicrosoftMail = 3
+xlMicrosoftPowerPoint = 2
+xlMicrosoftProject = 6
+xlMicrosoftSchedulePlus = 7
+xlMicrosoftWord = 1
+
+# XlOartHorizontalOverflow enumeration
+xlOartHorizontalOverflowClip = 1
+xlOartHorizontalOverflowOverflow = 0
+
+# XlOartVerticalOverflow enumeration
+xlOartVerticalOverflowClip = 1
+xlOartVerticalOverflowEllipsis = 2
+xlOartVerticalOverflowOverflow = 0
+
+# XlObjectSize enumeration
+xlFitToPage = 2
+xlFullPage = 3
+xlScreenSize = 1
+
+# XlOLEType enumeration
+xlOLEControl = 2
+xlOLEEmbed = 1
+xlOLELink = 0
+
+# XlOLEVerb enumeration
+xlVerbOpen = 2
+xlVerbPrimary = 1
+
+# XlOrder enumeration
+xlDownThenOver = 1
+xlOverThenDown = 2
+
+# XlOrientation enumeration
+xlDownward = -4170
+xlHorizontal = -4128
+xlUpward = -4171
+xlVertical = -4166
+
+# XlPageBreak enumeration
+xlPageBreakAutomatic = -4105
+xlPageBreakManual = -4135
+xlPageBreakNone = -4142
+
+# XlPageBreakExtent enumeration
+xlPageBreakFull = 1
+xlPageBreakPartial = 2
+
+# XlPageOrientation enumeration
+xlLandscape = 2
+xlPortrait = 1
+
+# XlPaperSize enumeration
+xlPaper10x14 = 16
+xlPaper11x17 = 17
+xlPaperA3 = 8
+xlPaperA4 = 9
+xlPaperA4Small = 10
+xlPaperA5 = 11
+xlPaperB4 = 12
+xlPaperB5 = 13
+xlPaperCsheet = 24
+xlPaperDsheet = 25
+xlPaperEnvelope10 = 20
+xlPaperEnvelope11 = 21
+xlPaperEnvelope12 = 22
+xlPaperEnvelope14 = 23
+xlPaperEnvelope9 = 19
+xlPaperEnvelopeB4 = 33
+xlPaperEnvelopeB5 = 34
+xlPaperEnvelopeB6 = 35
+xlPaperEnvelopeC3 = 29
+xlPaperEnvelopeC4 = 30
+xlPaperEnvelopeC5 = 28
+xlPaperEnvelopeC6 = 31
+xlPaperEnvelopeC65 = 32
+xlPaperEnvelopeDL = 27
+xlPaperEnvelopeItaly = 36
+xlPaperEnvelopeMonarch = 37
+xlPaperEnvelopePersonal = 38
+xlPaperEsheet = 26
+xlPaperExecutive = 7
+xlPaperFanfoldLegalGerman = 41
+xlPaperFanfoldStdGerman = 40
+xlPaperFanfoldUS = 39
+xlPaperFolio = 14
+xlPaperLedger = 4
+xlPaperLegal = 5
+xlPaperLetter = 1
+xlPaperLetterSmall = 2
+xlPaperNote = 18
+xlPaperQuarto = 15
+xlPaperStatement = 6
+xlPaperTabloid = 3
+xlPaperUser = 256
+
+# XlParameterDataType enumeration
+xlParamTypeBigInt = -5
+xlParamTypeBinary = -2
+xlParamTypeBit = -7
+xlParamTypeChar = 1
+xlParamTypeDate = 9
+xlParamTypeDecimal = 3
+xlParamTypeDouble = 8
+xlParamTypeFloat = 6
+xlParamTypeInteger = 4
+xlParamTypeLongVarBinary = -4
+xlParamTypeLongVarChar = -1
+xlParamTypeNumeric = 2
+xlParamTypeReal = 7
+xlParamTypeSmallInt = 5
+xlParamTypeTime = 10
+xlParamTypeTimestamp = 11
+xlParamTypeTinyInt = -6
+xlParamTypeUnknown = 0
+xlParamTypeVarBinary = -3
+xlParamTypeVarChar = 12
+xlParamTypeWChar = -8
+
+# XlParameterType enumeration
+xlConstant = 1
+xlPrompt = 0
+xlRange = 2
+
+# XlPasteSpecialOperation enumeration
+xlPasteSpecialOperationAdd = 2
+xlPasteSpecialOperationDivide = 5
+xlPasteSpecialOperationMultiply = 4
+xlPasteSpecialOperationNone = -4142
+xlPasteSpecialOperationSubtract = 3
+
+# XlPasteType enumeration
+xlPasteAll = -4104
+xlPasteAllExceptBorders = 7
+xlPasteAllMergingConditionalFormats = 14
+xlPasteAllUsingSourceTheme = 13
+xlPasteColumnWidths = 8
+xlPasteComments = -4144
+xlPasteFormats = -4122
+xlPasteFormulas = -4123
+xlPasteFormulasAndNumberFormats = 11
+xlPasteValidation = 6
+xlPasteValues = -4163
+xlPasteValuesAndNumberFormats = 12
+
+# XlPattern enumeration
+xlPatternAutomatic = -4105
+xlPatternChecker = 9
+xlPatternCrissCross = 16
+xlPatternDown = -4121
+xlPatternGray16 = 17
+xlPatternGray25 = -4124
+xlPatternGray50 = -4125
+xlPatternGray75 = -4126
+xlPatternGray8 = 18
+xlPatternGrid = 15
+xlPatternHorizontal = -4128
+xlPatternLightDown = 13
+xlPatternLightHorizontal = 11
+xlPatternLightUp = 14
+xlPatternLightVertical = 12
+xlPatternNone = -4142
+xlPatternSemiGray75 = 10
+xlPatternSolid = 1
+xlPatternUp = -4162
+xlPatternVertical = -4166
+
+# XlPhoneticAlignment enumeration
+xlPhoneticAlignCenter = 2
+xlPhoneticAlignDistributed = 3
+xlPhoneticAlignLeft = 1
+xlPhoneticAlignNoControl = 0
+
+# XlPhoneticCharacterType enumeration
+xlHiragana = 2
+xlKatakana = 1
+xlKatakanaHalf = 0
+xlNoConversion = 3
+
+# XlPictureAppearance enumeration
+xlPrinter = 2
+xlScreen = 1
+
+# XlPictureConvertorType enumeration
+xlBMP = 1
+xlCGM = 7
+xlDRW = 4
+xlDXF = 5
+xlEPS = 8
+xlHGL = 6
+xlPCT = 13
+xlPCX = 10
+xlPIC = 11
+xlPLT = 12
+xlTIF = 9
+xlWMF = 2
+xlWPG = 3
+
+# XlPieSliceIndex enumeration
+xlCenterPoint = 5
+xlInnerCenterPoint = 8
+xlInnerClockwisePoint = 7
+xlInnerCounterClockwisePoint = 9
+xlMidClockwiseRadiusPoint = 4
+xlMidCounterClockwiseRadiusPoint = 6
+xlOuterCenterPoint = 2
+xlOuterClockwisePoint = 3
+xlOuterCounterClockwisePoint = 1
+
+# XlPieSliceLocation enumeration
+xlHorizontalCoordinate = 1
+xlVerticalCoordinate = 2
+
+# XlPivotCellType enumeration
+xlPivotCellBlankCell = 9
+xlPivotCellCustomSubtotal = 7
+xlPivotCellDataField = 4
+xlPivotCellDataPivotField = 8
+xlPivotCellGrandTotal = 3
+xlPivotCellPageFieldItem = 6
+xlPivotCellPivotField = 5
+xlPivotCellPivotItem = 1
+xlPivotCellSubtotal = 2
+xlPivotCellValue = 0
+
+# XlPivotConditionScope enumeration
+xlDataFieldScope = 2
+xlFieldsScope = 1
+xlSelectionScope = 0
+
+# XlPivotFieldCalculation enumeration
+xlDifferenceFrom = 2
+xlIndex = 9
+xlNoAdditionalCalculation = -4143
+xlPercentDifferenceFrom = 4
+xlPercentOf = 3
+xlPercentOfColumn = 7
+xlPercentOfParent = 12
+xlPercentOfParentColumn = 11
+xlPercentOfParentRow = 10
+xlPercentOfRow = 6
+xlPercentOfTotal = 8
+xlPercentRunningTotal = 13
+xlRankAscending = 14
+xlRankDecending = 15
+xlRunningTotal = 5
+
+# XlPivotFieldDataType enumeration
+xlDate = 2
+xlNumber = -4145
+xlText = -4158
+
+# XlPivotFieldOrientation enumeration
+xlColumnField = 2
+xlDataField = 4
+xlHidden = 0
+xlPageField = 3
+xlRowField = 1
+
+# XlPivotFieldRepeatLabels enumeration
+xlDoNotRepeatLabels = 1
+xlRepeatLabels = 2
+
+# XlPivotFilterType enumeration
+xlBefore = 31
+xlBeforeOrEqualTo = 32
+xlAfter = 33
+xlAfterOrEqualTo = 34
+xlAllDatesInPeriodJanuary = 57
+xlAllDatesInPeriodFebruary = 58
+xlAllDatesInPeriodMarch = 59
+xlAllDatesInPeriodApril = 60
+xlAllDatesInPeriodMay = 61
+xlAllDatesInPeriodJune = 62
+xlAllDatesInPeriodJuly = 63
+xlAllDatesInPeriodAugust = 64
+xlAllDatesInPeriodSeptember = 65
+xlAllDatesInPeriodOctober = 66
+xlAllDatesInPeriodNovember = 67
+xlAllDatesInPeriodDecember = 68
+xlAllDatesInPeriodQuarter1 = 53
+xlAllDatesInPeriodQuarter2 = 54
+xlAllDatesInPeriodQuarter3 = 55
+xlAllDatesInPeriodQuarter4 = 56
+xlBottomCount = 2
+xlBottomPercent = 4
+xlBottomSum = 6
+xlCaptionBeginsWith = 17
+xlCaptionContains = 21
+xlCaptionDoesNotBeginWith = 18
+xlCaptionDoesNotContain = 22
+xlCaptionDoesNotEndWith = 20
+xlCaptionDoesNotEqual = 16
+xlCaptionEndsWith = 19
+xlCaptionEquals = 15
+xlCaptionIsBetween = 27
+xlCaptionIsGreaterThan = 23
+xlCaptionIsGreaterThanOrEqualTo = 24
+xlCaptionIsLessThan = 25
+xlCaptionIsLessThanOrEqualTo = 26
+xlCaptionIsNotBetween = 28
+xlDateBetween = 35
+xlDateLastMonth = 45
+xlDateLastQuarter = 48
+xlDateLastWeek = 42
+xlDateLastYear = 51
+xlDateNextMonth = 43
+xlDateNextQuarter = 46
+xlDateNextWeek = 40
+xlDateNextYear = 49
+xlDateThisMonth = 44
+xlDateThisQuarter = 47
+xlDateThisWeek = 41
+xlDateThisYear = 50
+xlDateToday = 38
+xlDateTomorrow = 37
+xlDateYesterday = 39
+xlNotSpecificDate = 30
+xlSpecificDate = 29
+xlTopCount = 1
+xlTopPercent = 3
+xlTopSum = 5
+xlValueDoesNotEqual = 8
+xlValueEquals = 7
+xlValueIsBetween = 13
+xlValueIsGreaterThan = 9
+xlValueIsGreaterThanOrEqualTo = 10
+xlValueIsLessThan = 11
+xlValueIsLessThanOrEqualTo = 12
+xlValueIsNotBetween = 14
+xlYearToDate = 52
+
+# XlPivotFormatType enumeration
+xlPTClassic = 20
+xlPTNone = 21
+xlReport1 = 0
+xlReport10 = 9
+xlReport2 = 1
+xlReport3 = 2
+xlReport4 = 3
+xlReport5 = 4
+xlReport6 = 5
+xlReport7 = 6
+xlReport8 = 7
+xlReport9 = 8
+xlTable1 = 10
+xlTable10 = 19
+xlTable2 = 11
+xlTable3 = 12
+xlTable4 = 13
+xlTable5 = 14
+xlTable6 = 15
+xlTable7 = 16
+xlTable8 = 17
+xlTable9 = 18
+
+# XlPivotLineType enumeration
+xlPivotLineBlank = 3
+xlPivotLineGrandTotal = 2
+xlPivotLineRegular = 0
+xlPivotLineSubtotal = 1
+
+# XlPivotTableMissingItems enumeration
+xlMissingItemsDefault = -1
+xlMissingItemsMax = 32500
+xlMissingItemsMax2 = 1048576
+xlMissingItemsNone = 0
+
+# XlPivotTableSourceType enumeration
+xlConsolidation = 3
+xlDatabase = 1
+xlExternal = 2
+xlPivotTable = -4148
+xlScenario = 4
+
+# XlPivotTableVersionList enumeration
+xlPivotTableVersion2000 = 0
+xlPivotTableVersion10 = 1
+xlPivotTableVersion11 = 2
+xlPivotTableVersion12 = 3
+xlPivotTableVersion14 = 4
+xlPivotTableVersion15 = 5
+xlPivotTableVersionCurrent = -1
+
+# XlPlacement enumeration
+xlFreeFloating = 3
+xlMove = 2
+xlMoveAndSize = 1
+
+# XlPlatform enumeration
+xlMacintosh = 1
+xlMSDOS = 3
+xlWindows = 2
+
+# XlPortugueseReform enumeration
+xlPortugueseBoth = 3
+xlPortuguesePostReform = 2
+xlPortuguesePreReform = 1
+
+# XlPrintErrors enumeration
+xlPrintErrorsBlank = 1
+xlPrintErrorsDash = 2
+xlPrintErrorsDisplayed = 0
+xlPrintErrorsNA = 3
+
+# XlPrintLocation enumeration
+xlPrintInPlace = 16
+xlPrintNoComments = -4142
+xlPrintSheetEnd = 1
+
+# XlPriority enumeration
+xlPriorityHigh = -4127
+xlPriorityLow = -4134
+xlPriorityNormal = -4143
+
+# XlPropertyDisplayedIn enumeration
+xlDisplayPropertyInPivotTable = 1
+xlDisplayPropertyInPivotTableAndTooltip = 3
+xlDisplayPropertyInTooltip = 2
+
+# XlProtectedViewCloseReason enumeration
+xlProtectedViewCloseEdit = 1
+xlProtectedViewCloseForced = 2
+xlProtectedViewCloseNormal = 0
+
+# XlProtectedViewWindowState enumeration
+xlProtectedViewWindowMaximized = 2
+xlProtectedViewWindowMinimized = 1
+xlProtectedViewWindowNormal = 0
+
+# XlPTSelectionMode enumeration
+xlBlanks = 4
+xlButton = 15
+xlDataAndLabel = 0
+xlDataOnly = 2
+xlFirstRow = 256
+xlLabelOnly = 1
+xlOrigin = 3
+
+# XlQueryType enumeration
+xlADORecordset = 7
+xlDAORecordset = 2
+xlODBCQuery = 1
+xlOLEDBQuery = 5
+xlTextImport = 6
+xlWebQuery = 4
+
+# XlRangeAutoFormat enumeration
+xlRangeAutoFormat3DEffects1 = 13
+xlRangeAutoFormat3DEffects2 = 14
+xlRangeAutoFormatAccounting1 = 4
+xlRangeAutoFormatAccounting2 = 5
+xlRangeAutoFormatAccounting3 = 6
+xlRangeAutoFormatAccounting4 = 17
+xlRangeAutoFormatClassic1 = 1
+xlRangeAutoFormatClassic2 = 2
+xlRangeAutoFormatClassic3 = 3
+xlRangeAutoFormatClassicPivotTable = 31
+xlRangeAutoFormatColor1 = 7
+xlRangeAutoFormatColor2 = 8
+xlRangeAutoFormatColor3 = 9
+xlRangeAutoFormatList1 = 10
+xlRangeAutoFormatList2 = 11
+xlRangeAutoFormatList3 = 12
+xlRangeAutoFormatLocalFormat1 = 15
+xlRangeAutoFormatLocalFormat2 = 16
+xlRangeAutoFormatLocalFormat3 = 19
+xlRangeAutoFormatLocalFormat4 = 20
+xlRangeAutoFormatNone = -4142
+xlRangeAutoFormatPTNone = 42
+xlRangeAutoFormatReport1 = 21
+xlRangeAutoFormatReport10 = 30
+xlRangeAutoFormatReport2 = 22
+xlRangeAutoFormatReport3 = 23
+xlRangeAutoFormatReport4 = 24
+xlRangeAutoFormatReport5 = 25
+xlRangeAutoFormatReport6 = 26
+xlRangeAutoFormatReport7 = 27
+xlRangeAutoFormatReport8 = 28
+xlRangeAutoFormatReport9 = 29
+xlRangeAutoFormatSimple = -4154
+xlRangeAutoFormatTable1 = 32
+xlRangeAutoFormatTable10 = 41
+xlRangeAutoFormatTable2 = 33
+xlRangeAutoFormatTable3 = 34
+xlRangeAutoFormatTable4 = 35
+xlRangeAutoFormatTable5 = 36
+xlRangeAutoFormatTable6 = 37
+xlRangeAutoFormatTable7 = 38
+xlRangeAutoFormatTable8 = 39
+xlRangeAutoFormatTable9 = 40
+
+# XlRangeValueDataType enumeration
+xlRangeValueDefault = 10
+xlRangeValueMSPersistXML = 12
+xlRangeValueXMLSpreadsheet = 11
+
+# XlReferenceStyle enumeration
+xlA1 = 1
+xlR1C1 = -4150
+
+# XlReferenceType enumeration
+xlAbsolute = 1
+xlAbsRowRelColumn = 2
+xlRelative = 4
+xlRelRowAbsColumn = 3
+
+# XlRemoveDocInfoType enumeration
+xlRDIAll = 99
+xlRDIComments = 1
+xlRDIContentType = 16
+xlRDIDefinedNameComments = 18
+xlRDIDocumentManagementPolicy = 15
+xlRDIDocumentProperties = 8
+xlRDIDocumentServerProperties = 14
+xlRDIDocumentWorkspace = 10
+xlRDIEmailHeader = 5
+xlRDIExcelDataModel = 23
+xlRDIInactiveDataConnections = 19
+xlRDIInkAnnotations = 11
+xlRDIInlineWebExtensions = 21
+xlRDIPrinterPath = 20
+xlRDIPublishInfo = 13
+xlRDIRemovePersonalInformation = 4
+xlRDIRoutingSlip = 6
+xlRDIScenarioComments = 12
+xlRDISendForReview = 7
+xlRDITaskpaneWebExtensions = 22
+
+# XlRgbColor enumeration
+rgbAliceBlue = 16775408
+rgbAntiqueWhite = 14150650
+rgbAqua = 16776960
+rgbAquamarine = 13959039
+rgbAzure = 16777200
+rgbBeige = 14480885
+rgbBisque = 12903679
+rgbBlack = 0
+rgbBlanchedAlmond = 13495295
+rgbBlue = 16711680
+rgbBlueViolet = 14822282
+rgbBrown = 2763429
+rgbBurlyWood = 8894686
+rgbCadetBlue = 10526303
+rgbChartreuse = 65407
+rgbCoral = 5275647
+rgbCornflowerBlue = 15570276
+rgbCornsilk = 14481663
+rgbCrimson = 3937500
+rgbDarkBlue = 9109504
+rgbDarkCyan = 9145088
+rgbDarkGoldenrod = 755384
+rgbDarkGray = 11119017
+rgbDarkGreen = 25600
+rgbDarkGrey = 11119017
+rgbDarkKhaki = 7059389
+rgbDarkMagenta = 9109643
+rgbDarkOliveGreen = 3107669
+rgbDarkOrange = 36095
+rgbDarkOrchid = 13382297
+rgbDarkRed = 139
+rgbDarkSalmon = 8034025
+rgbDarkSeaGreen = 9419919
+rgbDarkSlateBlue = 9125192
+rgbDarkSlateGray = 5197615
+rgbDarkSlateGrey = 5197615
+rgbDarkTurquoise = 13749760
+rgbDarkViolet = 13828244
+rgbDeepPink = 9639167
+rgbDeepSkyBlue = 16760576
+rgbDimGray = 6908265
+rgbDimGrey = 6908265
+rgbDodgerBlue = 16748574
+rgbFireBrick = 2237106
+rgbFloralWhite = 15792895
+rgbForestGreen = 2263842
+rgbFuchsia = 16711935
+rgbGainsboro = 14474460
+rgbGhostWhite = 16775416
+rgbGold = 55295
+rgbGoldenrod = 2139610
+rgbGray = 8421504
+rgbGreen = 32768
+rgbGreenYellow = 3145645
+rgbGrey = 8421504
+rgbHoneydew = 15794160
+rgbHotPink = 11823615
+rgbIndianRed = 6053069
+rgbIndigo = 8519755
+rgbIvory = 15794175
+rgbKhaki = 9234160
+rgbLavender = 16443110
+rgbLavenderBlush = 16118015
+rgbLawnGreen = 64636
+rgbLemonChiffon = 13499135
+rgbLightBlue = 15128749
+rgbLightCoral = 8421616
+rgbLightCyan = 9145088
+rgbLightGoldenrodYellow = 13826810
+rgbLightGray = 13882323
+rgbLightGreen = 9498256
+rgbLightGrey = 13882323
+rgbLightPink = 12695295
+rgbLightSalmon = 8036607
+rgbLightSeaGreen = 11186720
+rgbLightSkyBlue = 16436871
+rgbLightSlateGray = 10061943
+rgbLightSteelBlue = 14599344
+rgbLightYellow = 14745599
+rgbLime = 65280
+rgbLimeGreen = 3329330
+rgbLinen = 15134970
+rgbMaroon = 128
+rgbMediumAquamarine = 11206502
+rgbMediumBlue = 13434880
+rgbMediumOrchid = 13850042
+rgbMediumPurple = 14381203
+rgbMediumSeaGreen = 7451452
+rgbMediumSlateBlue = 15624315
+rgbMediumSpringGreen = 10156544
+rgbMediumTurquoise = 13422920
+rgbMediumVioletRed = 8721863
+rgbMidnightBlue = 7346457
+rgbMintCream = 16449525
+rgbMistyRose = 14804223
+rgbMoccasin = 11920639
+rgbNavajoWhite = 11394815
+rgbNavy = 8388608
+rgbNavyBlue = 8388608
+rgbOldLace = 15136253
+rgbOlive = 32896
+rgbOliveDrab = 2330219
+rgbOrange = 42495
+rgbOrangeRed = 17919
+rgbOrchid = 14053594
+rgbPaleGoldenrod = 7071982
+rgbPaleGreen = 10025880
+rgbPaleTurquoise = 15658671
+rgbPaleVioletRed = 9662683
+rgbPapayaWhip = 14020607
+rgbPeachPuff = 12180223
+rgbPeru = 4163021
+rgbPink = 13353215
+rgbPlum = 14524637
+rgbPowderBlue = 15130800
+rgbPurple = 8388736
+rgbRed = 255
+rgbRosyBrown = 9408444
+rgbRoyalBlue = 14772545
+rgbSalmon = 7504122
+rgbSandyBrown = 6333684
+rgbSeaGreen = 5737262
+rgbSeashell = 15660543
+rgbSienna = 2970272
+rgbSilver = 12632256
+rgbSkyBlue = 15453831
+rgbSlateBlue = 13458026
+rgbSlateGray = 9470064
+rgbSnow = 16448255
+rgbSpringGreen = 8388352
+rgbSteelBlue = 11829830
+rgbTan = 9221330
+rgbTeal = 8421376
+rgbThistle = 14204888
+rgbTomato = 4678655
+rgbTurquoise = 13688896
+rgbViolet = 15631086
+rgbWheat = 11788021
+rgbWhite = 16777215
+rgbWhiteSmoke = 16119285
+rgbYellow = 65535
+rgbYellowGreen = 3329434
+
+# XlRobustConnect enumeration
+xlAlways = 1
+xlAsRequired = 0
+xlNever = 2
+
+# XlRowCol enumeration
+xlColumns = 2
+xlRows = 1
+
+# XlRunAutoMacro enumeration
+xlAutoActivate = 3
+xlAutoClose = 2
+xlAutoDeactivate = 4
+xlAutoOpen = 1
+
+# XlSaveAction enumeration
+xlDoNotSaveChanges = 2
+xlSaveChanges = 1
+
+# XlSaveAsAccessMode enumeration
+xlExclusive = 3
+xlNoChange = 1
+xlShared = 2
+
+# XlSaveConflictResolution enumeration
+xlLocalSessionChanges = 2
+xlOtherSessionChanges = 3
+xlUserResolution = 1
+
+# XlScaleType enumeration
+xlScaleLinear = -4132
+xlScaleLogarithmic = -4133
+
+# XlSearchDirection enumeration
+xlNext = 1
+xlPrevious = 2
+
+# XlSearchOrder enumeration
+xlByColumns = 2
+xlByRows = 1
+
+# XlSearchWithin enumeration
+xlWithinSheet = 1
+xlWithinWorkbook = 2
+
+# XlSheetType enumeration
+xlChart = -4109
+xlDialogSheet = -4116
+xlExcel4IntlMacroSheet = 4
+xlExcel4MacroSheet = 3
+xlWorksheet = -4167
+
+# XlSheetVisibility enumeration
+xlSheetHidden = 0
+xlSheetVeryHidden = 2
+xlSheetVisible = -1
+
+# XlSizeRepresents enumeration
+xlSizeIsArea = 1
+xlSizeIsWidth = 2
+
+# XlSlicerCrossFilterType enumeration
+xlSlicerCrossFilterHideButtonsWithNoData = 4
+xlSlicerCrossFilterShowItemsWithDataAtTop = 2
+xlSlicerCrossFilterShowItemsWithNoData = 3
+xlSlicerNoCrossFilter = 1
+
+# XlSlicerSort enumeration
+xlSlicerSortAscending = 2
+xlSlicerSortDataSourceOrder = 1
+xlSlicerSortDescending = 3
+
+# XlSortDataOption enumeration
+xlSortNormal = 0
+xlSortTextAsNumbers = 1
+
+# XlSortMethod enumeration
+xlPinYin = 1
+xlStroke = 2
+
+# XlSortMethodOld enumeration
+xlCodePage = 2
+xlSyllabary = 1
+
+# XlSortOn enumeration
+xlSortOnCellColor = 1
+xlSortOnFontColor = 2
+xlSortOnIcon = 3
+xlSortOnValues = 0
+
+# XlSortOrder enumeration
+xlAscending = 1
+xlDescending = 2
+xlManual = -4135
+
+# XlSortOrientation enumeration
+xlSortColumns = 1
+xlSortRows = 2
+
+# XlSortType enumeration
+xlSortLabels = 2
+xlSortValues = 1
+
+# XlSourceType enumeration
+xlSourceAutoFilter = 3
+xlSourceChart = 5
+xlSourcePivotTable = 6
+xlSourcePrintArea = 2
+xlSourceQuery = 7
+xlSourceRange = 4
+xlSourceSheet = 1
+xlSourceWorkbook = 0
+
+# XlSpanishModes enumeration
+xlSpanishTuteoAndVoseo = 1
+xlSpanishTuteoOnly = 0
+xlSpanishVoseoOnly = 2
+
+# XlSparklineRowCol enumeration
+xlSparklineColumnsSquare = 2
+xlSparklineNonSquare = 0
+xlSparklineRowsSquare = 1
+
+# XlSparkScale enumeration
+xlSparkScaleCustom = 3
+xlSparkScaleGroup = 1
+xlSparkScaleSingle = 2
+
+# XlSparkType enumeration
+xlSparkColumn = 2
+xlSparkColumnStacked100 = 3
+xlSparkLine = 1
+
+# XlSpeakDirection enumeration
+xlSpeakByColumns = 1
+xlSpeakByRows = 0
+
+# XlSpecialCellsValue enumeration
+xlErrors = 16
+xlLogical = 4
+xlNumbers = 1
+xlTextValues = 2
+
+# XlStdColorScale enumeration
+ColorScaleBlackWhite = 3
+ColorScaleGYR = 2
+ColorScaleRYG = 1
+ColorScaleWhiteBlack = 4
+
+# XlSubscribeToFormat enumeration
+xlSubscribeToPicture = -4147
+xlSubscribeToText = -4158
+
+# XlSubtotalLocationType enumeration
+xlAtBottom = 2
+xlAtTop = 1
+
+# XlSummaryColumn enumeration
+xlSummaryOnLeft = -4131
+xlSummaryOnRight = -4152
+
+# XlSummaryReportType enumeration
+xlStandardSummary = 1
+xlSummaryPivotTable = -4148
+
+# XlSummaryRow enumeration
+xlSummaryAbove = 0
+xlSummaryBelow = 1
+
+# XlTableStyleElementType enumeration
+xlBlankRow = 19
+xlColumnStripe1 = 7
+xlColumnStripe2 = 8
+xlColumnSubheading1 = 20
+xlColumnSubheading2 = 21
+xlColumnSubheading3 = 22
+xlFirstColumn = 3
+xlFirstHeaderCell = 9
+xlFirstTotalCell = 11
+xlGrandTotalColumn = 4
+xlGrandTotalRow = 2
+xlHeaderRow = 1
+xlLastColumn = 4
+xlLastHeaderCell = 10
+xlLastTotalCell = 12
+xlPageFieldLabels = 26
+xlPageFieldValues = 27
+xlRowStripe1 = 5
+xlRowStripe2 = 6
+xlRowSubheading1 = 23
+xlRowSubheading2 = 24
+xlRowSubheading3 = 25
+xlSlicerHoveredSelectedItemWithData = 33
+xlSlicerHoveredSelectedItemWithNoData = 35
+xlSlicerHoveredUnselectedItemWithData = 32
+xlSlicerHoveredUnselectedItemWithNoData = 34
+xlSlicerSelectedItemWithData = 30
+xlSlicerSelectedItemWithNoData = 31
+xlSlicerUnselectedItemWithData = 28
+xlSlicerUnselectedItemWithNoData = 29
+xlSubtotalColumn1 = 13
+xlSubtotalColumn2 = 14
+xlSubtotalColumn3 = 15
+xlSubtotalRow1 = 16
+xlSubtotalRow2 = 17
+xlSubtotalRow3 = 18
+xlTimelinePeriodLabels1 = 38
+xlTimelinePeriodLabels2 = 39
+xlTimelineSelectedTimeBlock = 40
+xlTimelineSelectedTimeBlockSpace = 42
+xlTimelineSelectionLabel = 36
+xlTimelineTimeLevel = 37
+xlTimelineUnselectedTimeBlock = 41
+xlTotalRow = 2
+xlWholeTable = 0
+
+# XlTabPosition enumeration
+xlTabPositionFirst = 0
+xlTabPositionLast = 1
+
+# XlTextParsingType enumeration
+xlDelimited = 1
+xlFixedWidth = 2
+
+# XlTextQualifier enumeration
+xlTextQualifierDoubleQuote = 1
+xlTextQualifierNone = -4142
+xlTextQualifierSingleQuote = 2
+
+# XlTextVisualLayoutType enumeration
+xlTextVisualLTR = 1
+xlTextVisualRTL = 2
+
+# XlThemeColor enumeration
+xlThemeColorAccent1 = 5
+xlThemeColorAccent2 = 6
+xlThemeColorAccent3 = 7
+xlThemeColorAccent4 = 8
+xlThemeColorAccent5 = 9
+xlThemeColorAccent6 = 10
+xlThemeColorDark1 = 1
+xlThemeColorDark2 = 3
+xlThemeColorFollowedHyperlink = 12
+xlThemeColorHyperlink = 11
+xlThemeColorLight1 = 2
+xlThemeColorLight2 = 4
+
+# XlThemeFont enumeration
+xlThemeFontMajor = 2
+xlThemeFontMinor = 1
+xlThemeFontNone = 0
+
+# XlThreadMode enumeration
+xlThreadModeAutomatic = 0
+xlThreadModeManual = 1
+
+# XlTickLabelOrientation enumeration
+xlTickLabelOrientationAutomatic = -4105
+xlTickLabelOrientationDownward = -4170
+xlTickLabelOrientationHorizontal = -4128
+xlTickLabelOrientationUpward = -4171
+xlTickLabelOrientationVertical = -4166
+
+# XlTickLabelPosition enumeration
+xlTickLabelPositionHigh = -4127
+xlTickLabelPositionLow = -4134
+xlTickLabelPositionNextToAxis = 4
+xlTickLabelPositionNone = -4142
+
+# XlTickMark enumeration
+xlTickMarkCross = 4
+xlTickMarkInside = 2
+xlTickMarkNone = -4142
+xlTickMarkOutside = 3
+
+# XlTimePeriods enumeration
+xlLast7Days = 2
+xlLastMonth = 5
+xlLastWeek = 4
+xlNextMonth = 8
+xlNextWeek = 7
+xlThisMonth = 9
+xlThisWeek = 3
+xlToday = 0
+xlTomorrow = 6
+xlYesterday = 1
+
+# XlTimeUnit enumeration
+xlDays = 0
+xlMonths = 1
+xlYears = 2
+
+# XlToolbarProtection enumeration
+xlNoButtonChanges = 1
+xlNoChanges = 4
+xlNoDockingChanges = 3
+xlNoShapeChanges = 2
+xlToolbarProtectionNone = -4143
+
+# XlTopBottom enumeration
+xlTop10Bottom = 0
+xlTop10Top = 1
+
+# XlTotalsCalculation enumeration
+xlTotalsCalculationAverage = 2
+xlTotalsCalculationCount = 3
+xlTotalsCalculationCountNums = 4
+xlTotalsCalculationCustom = 9
+xlTotalsCalculationMax = 6
+xlTotalsCalculationMin = 5
+xlTotalsCalculationNone = 0
+xlTotalsCalculationStdDev = 7
+xlTotalsCalculationSum = 1
+xlTotalsCalculationVar = 8
+
+# XlTrendlineType enumeration
+xlExponential = 5
+xlLinear = -4132
+xlLogarithmic = -4133
+xlMovingAvg = 6
+xlPolynomial = 3
+xlPower = 4
+
+# XlUnderlineStyle enumeration
+xlUnderlineStyleDouble = -4119
+xlUnderlineStyleDoubleAccounting = 5
+xlUnderlineStyleNone = -4142
+xlUnderlineStyleSingle = 2
+xlUnderlineStyleSingleAccounting = 4
+
+# XlUpdateLinks enumeration
+xlUpdateLinksAlways = 3
+xlUpdateLinksNever = 2
+xlUpdateLinksUserSetting = 1
+
+# XlVAlign enumeration
+xlVAlignBottom = -4107
+xlVAlignCenter = -4108
+xlVAlignDistributed = -4117
+xlVAlignJustify = -4130
+xlVAlignTop = -4160
+
+# XlWBATemplate enumeration
+xlWBATChart = -4109
+xlWBATExcel4IntlMacroSheet = 4
+xlWBATExcel4MacroSheet = 3
+xlWBATWorksheet = -4167
+
+# XlWebFormatting enumeration
+xlWebFormattingAll = 1
+xlWebFormattingNone = 3
+xlWebFormattingRTF = 2
+
+# XlWebSelectionType enumeration
+xlAllTables = 2
+xlEntirePage = 1
+xlSpecifiedTables = 3
+
+# XlWindowState enumeration
+xlMaximized = -4137
+xlMinimized = -4140
+xlNormal = -4143
+
+# XlWindowType enumeration
+xlChartAsWindow = 5
+xlChartInPlace = 4
+xlClipboard = 3
+xlInfo = -4129
+xlWorkbook = 1
+
+# XlWindowView enumeration
+xlNormalView = 1
+xlPageBreakPreview = 2
+xlPageLayoutView = 3
+
+# XlXLMMacroType enumeration
+xlCommand = 2
+xlFunction = 1
+xlNotXLM = 3
+
+# XlXmlExportResult enumeration
+xlXmlExportSuccess = 0
+xlXmlExportValidationFailed = 1
+
+# XlXmlImportResult enumeration
+xlXmlImportElementsTruncated = 1
+xlXmlImportSuccess = 0
+xlXmlImportValidationFailed = 2
+
+# XlXmlLoadOption enumeration
+xlXmlLoadImportToList = 2
+xlXmlLoadMapXml = 3
+xlXmlLoadOpenXml = 1
+xlXmlLoadPromptUser = 0
+
+# XlYesNoGuess enumeration
+xlGuess = 0
+xlNo = 2
+xlYes = 1
+
+
+
+
+
 class XmlDataBinding:
 
     def __init__(self, xmldatabinding=None):
@@ -25283,6 +33042,21 @@ class XmlDataBinding:
 
     def Refresh(self):
         return XlXmlImportResult(self.xmldatabinding.Refresh())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class XmlMap:
 
@@ -25396,6 +33170,22 @@ class XmlMap:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return XlXmlImportResult(self.xmlmap.ImportXml(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class XmlMaps:
 
     def __init__(self, xmlmaps=None):
@@ -25430,6 +33220,10 @@ class XmlMaps:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return XmlMap(self.xmlmaps.Add(*args, **arguments))
 
+
+
+
+
 class XmlNamespace:
 
     def __init__(self, xmlnamespace=None):
@@ -25454,6 +33248,15 @@ class XmlNamespace:
     @property
     def Uri(self):
         return self.xmlnamespace.Uri
+
+
+
+
+
+
+
+
+
 
 class XmlNamespaces:
 
@@ -25493,6 +33296,11 @@ class XmlNamespaces:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.xmlnamespaces.InstallManifest(*args, **arguments)
 
+
+
+
+
+
 class XmlSchema:
 
     def __init__(self, xmlschema=None):
@@ -25522,6 +33330,15 @@ class XmlSchema:
     def XML(self):
         return self.xmlschema.XML
 
+
+
+
+
+
+
+
+
+
 class XmlSchemas:
 
     def __init__(self, xmlschemas=None):
@@ -25550,6 +33367,12 @@ class XmlSchemas:
     @property
     def Parent(self):
         return self.xmlschemas.Parent
+
+
+
+
+
+
 
 class XPath:
 
@@ -25587,3 +33410,9 @@ class XPath:
         arguments = {"Map": Map, "XPath": XPath, "SelectionNamespace": SelectionNamespace, "Repeating": Repeating}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.xpath.SetValue(*args, **arguments)
+
+
+
+
+
+

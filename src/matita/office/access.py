@@ -1,5 +1,41 @@
 import win32com.client
 
+# AcAggregateType enumeration
+acAggregateAverage = 2
+acAggregateCount = 6
+acAggregateDistinct = 5
+acAggregateMaximum = 4
+acAggregateMinimum = 3
+acAggregateNone = 0
+acAggregateSum = 1
+
+# AcAxisRange enumeration
+acAxisRangeAuto = 0
+acAxisRangedFixed = 1
+
+# AcAxisUnits enumeration
+acAxisUnitsBillions = 9
+acAxisUnitsHundredBillions = 11
+acAxisUnitsHundredMillions = 8
+acAxisUnitsHundreds = 2
+acAxisUnitsHundredThousands = 5
+acAxisUnitsMillions = 6
+acAxisUnitsNone = 0
+acAxisUnitsPercentage = 1
+acAxisUnitsTenBillions = 10
+acAxisUnitsTenMillions = 7
+acAxisUnitsTenThousands = 4
+acAxisUnitsThousands = 3
+acAxisUnitsTrillions = 12
+
+
+
+
+
+
+
+
+
 class AccessObject:
 
     def __init__(self, accessobject=None):
@@ -57,6 +93,15 @@ class AccessObject:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.accessobject.IsDependentUpon(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
 class AccessObjectProperties:
 
     def __init__(self, accessobjectproperties=None):
@@ -92,6 +137,9 @@ class AccessObjectProperties:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.accessobjectproperties.Remove(*args, **arguments)
 
+
+
+
 class AccessObjectProperty:
 
     def __init__(self, accessobjectproperty=None):
@@ -108,6 +156,1355 @@ class AccessObjectProperty:
     @Value.setter
     def Value(self, value):
         self.accessobjectproperty.Value = value
+
+
+
+
+# AcChartType enumeration
+acChartBarClustered = 3
+acChartBarStacked = 4
+acChartBarStacked100 = 5
+acChartColumnClustered = 0
+acChartColumnStacked = 1
+acChartColumnStacked100 = 2
+acChartCombo = 10
+acChartLine = 6
+acChartLineStacked = 7
+acChartLineStacked100 = 8
+acChartPie = 9
+acChartArea = 11
+acChartAreaStacked = 12
+acChartAreaStacked100 = 13
+acChartRadar = 14
+acChartRadarFilled = 15
+acChartBoxWhisker = 16
+acChartBubble = 17
+acChartDoughnut = 18
+acChartFunnel = 19
+acChartScatter = 20
+acChartWaterfall = 21
+acChartWordCloud = 22
+acChartArc = 23
+acChartPareto = 24
+
+# AcCloseSave enumeration
+acSaveNo = 2
+acSavePrompt = 0
+acSaveYes = 1
+
+# AcColorIndex enumeration
+acColorIndexAqua = 14
+acColorIndexBlack = 0
+acColorIndexBlue = 12
+acColorIndexBrightGreen = 10
+acColorIndexDarkBlue = 4
+acColorIndexFuchsia = 13
+acColorIndexGray = 7
+acColorIndexGreen = 2
+acColorIndexMaroon = 1
+acColorIndexOlive = 3
+acColorIndexRed = 9
+acColorIndexSilver = 8
+acColorIndexTeal = 6
+acColorIndexViolet = 5
+acColorIndexWhite = 15
+acColorIndexYellow = 11
+
+# AcCommand enumeration
+acCmdAboutMicrosoftAccess = 35
+acCmdAddDataMacroAfterDelete = 720
+acCmdAddDataMacroAfterInsert = 718
+acCmdAddDataMacroAfterUpdate = 719
+acCmdAddDataMacroValidateChange = 722
+acCmdAddDataMacroValidateDelete = 721
+acCmdAddFromOutlook = 583
+acCmdAddInManager = 526
+acCmdAddNamedDataMacro = 723
+acCmdAddToNewGroup = 494
+acCmdAddWatch = 201
+acCmdAdvancedFilterSort = 99
+acCmdAlignBottom = 46
+acCmdAlignCenter = 477
+acCmdAlignLeft = 43
+acCmdAlignmentAndSizing = 478
+acCmdAlignMiddle = 476
+acCmdAlignRight = 44
+acCmdAlignToGrid = 47
+acCmdAlignTop = 45
+acCmdAlignToShortest = 153
+acCmdAlignToTallest = 154
+acCmdAnalyzePerformance = 283
+acCmdAnalyzeTable = 284
+acCmdAnchorBottomLeft = 616
+acCmdAnchorBottomRight = 618
+acCmdAnchorBottomStretchAcross = 617
+acCmdAnchorStretchAcross = 611
+acCmdAnchorStretchDown = 613
+acCmdAnchorStretchDownAcross = 614
+acCmdAnchorStretchDownRight = 615
+acCmdAnchorTopLeft = 610
+acCmdAnchorTopRight = 612
+acCmdAnswerWizard = 235
+acCmdApplyAutoFormat1 = 648
+acCmdApplyAutoFormat10 = 657
+acCmdApplyAutoFormat11 = 658
+acCmdApplyAutoFormat12 = 659
+acCmdApplyAutoFormat13 = 660
+acCmdApplyAutoFormat14 = 661
+acCmdApplyAutoFormat15 = 662
+acCmdApplyAutoFormat16 = 663
+acCmdApplyAutoFormat17 = 664
+acCmdApplyAutoFormat18 = 665
+acCmdApplyAutoFormat19 = 666
+acCmdApplyAutoFormat2 = 649
+acCmdApplyAutoFormat20 = 667
+acCmdApplyAutoFormat21 = 668
+acCmdApplyAutoFormat22 = 669
+acCmdApplyAutoFormat23 = 670
+acCmdApplyAutoFormat24 = 671
+acCmdApplyAutoFormat25 = 672
+acCmdApplyAutoFormat3 = 650
+acCmdApplyAutoFormat4 = 651
+acCmdApplyAutoFormat5 = 652
+acCmdApplyAutoFormat6 = 653
+acCmdApplyAutoFormat7 = 654
+acCmdApplyAutoFormat8 = 655
+acCmdApplyAutoFormat9 = 656
+acCmdApplyDefault = 55
+acCmdApplyFilterSort = 93
+acCmdAppMaximize = 10
+acCmdAppMinimize = 11
+acCmdAppMove = 12
+acCmdAppRestore = 9
+acCmdAppSize = 13
+acCmdArrangeIconsAuto = 218
+acCmdArrangeIconsByCreated = 216
+acCmdArrangeIconsByModified = 217
+acCmdArrangeIconsByName = 214
+acCmdArrangeIconsByType = 215
+acCmdAutoCorrect = 261
+acCmdAutoDial = 192
+acCmdAutoFormat = 270
+acCmdBackgroundPicture = 474
+acCmdBackgroundSound = 475
+acCmdBackup = 513
+acCmdBookmarksClearAll = 310
+acCmdBookmarksNext = 308
+acCmdBookmarksPrevious = 309
+acCmdBookmarksToggle = 307
+acCmdBringToFront = 52
+acCmdBrowseSharePointList = 621
+acCmdCalculatedColumn = 698
+acCmdCallStack = 172
+acCmdChangeToCheckBox = 231
+acCmdChangeToComboBox = 230
+acCmdChangeToCommandButton = 501
+acCmdChangeToImage = 234
+acCmdChangeToLabel = 228
+acCmdChangeToListBox = 229
+acCmdChangeToOptionButton = 233
+acCmdChangeToTextBox = 227
+acCmdChangeToToggleButton = 232
+acCmdClearAll = 146
+acCmdClearAllBreakpoints = 132
+acCmdClearGrid = 71
+acCmdClearHyperlink = 343
+acCmdClearItemDefaults = 237
+acCmdClose = 58
+acCmdCloseAll = 646
+acCmdCloseDatabase = 538
+acCmdCloseWindow = 186
+acCmdCollectDataViaEmail = 608
+acCmdColumnWidth = 117
+acCmdCompactDatabase = 4
+acCmdCompatCheckCurrentObject = 696
+acCmdCompatCheckDatabase = 695
+acCmdCompileAllModules = 125
+acCmdCompileAndSaveAllModules = 126
+acCmdCompileLoadedModules = 290
+acCmdCompleteWord = 306
+acCmdConditionalFormatting = 500
+acCmdConnection = 383
+acCmdControlMarginsMedium = 630
+acCmdControlMarginsNarrow = 629
+acCmdControlMarginsNone = 628
+acCmdControlMarginsWide = 631
+acCmdControlPaddingMedium = 634
+acCmdControlPaddingNarrow = 633
+acCmdControlPaddingNone = 632
+acCmdControlPaddingWide = 635
+acCmdControlWizardsToggle = 197
+acCmdConvertDatabase = 171
+acCmdConvertLinkedTableToLocal = 700
+acCmdConvertMacrosToVisualBasic = 279
+acCmdCopy = 190
+acCmdCopyDatabaseFile = 516
+acCmdCopyHyperlink = 328
+acCmdCreateMenuFromMacro = 334
+acCmdCreateRelationship = 150
+acCmdCreateReplica = 263
+acCmdCreateShortcut = 219
+acCmdCreateShortcutMenuFromMacro = 336
+acCmdCreateToolbarFromMacro = 335
+acCmdCut = 189
+acCmdDatabaseProperties = 256
+acCmdDatabaseSplitter = 520
+acCmdDataEntry = 78
+acCmdDataOutline = 468
+acCmdDatasheetView = 282
+acCmdDateAndTime = 226
+acCmdDebugWindow = 123
+acCmdDelete = 337
+acCmdDeleteGroup = 493
+acCmdDeletePage = 332
+acCmdDeleteQueryColumn = 81
+acCmdDeleteRecord = 223
+acCmdDeleteRows = 188
+acCmdDeleteSharePointList = 627
+acCmdDeleteTab = 255
+acCmdDeleteTable = 489
+acCmdDeleteTableColumn = 271
+acCmdDeleteWatch = 267
+acCmdDesignObject = 697
+acCmdDesignView = 183
+acCmdDiagramAddRelatedTables = 373
+acCmdDiagramAutosizeSelectedTables = 378
+acCmdDiagramDeleteRelationship = 382
+acCmdDiagramLayoutDiagram = 380
+acCmdDiagramLayoutSelection = 379
+acCmdDiagramModifyUserDefinedView = 375
+acCmdDiagramNewLabel = 372
+acCmdDiagramNewTable = 381
+acCmdDiagramRecalculatePageBreaks = 377
+acCmdDiagramShowRelationshipLabels = 374
+acCmdDiagramViewPageBreaks = 376
+acCmdDiscardChanges = 639
+acCmdDiscardChangesAndRefresh = 640
+acCmdDocMaximize = 15
+acCmdDocMinimize = 60
+acCmdDocMove = 16
+acCmdDocRestore = 14
+acCmdDocSize = 17
+acCmdDocumenter = 285
+acCmdDropSQLDatabase = 517
+acCmdDuplicate = 34
+acCmdEditHyperlink = 325
+acCmdEditingAllowed = 70
+acCmdEditListItems = 607
+acCmdEditRelationship = 151
+acCmdEditTriggers = 384
+acCmdEditWatch = 202
+acCmdEncryptDecryptDatabase = 5
+acCmdEnd = 198
+acCmdExit = 3
+acCmdExportAccess = 559
+acCmdExportdBase = 565
+acCmdExportExcel = 556
+acCmdExportFixedFormat = 592
+acCmdExportHTML = 564
+acCmdExportODBC = 562
+acCmdExportRTF = 558
+acCmdExportSharePointList = 557
+acCmdExportSnapShot = 563
+acCmdExportText = 560
+acCmdExportXML = 561
+acCmdFavoritesAddTo = 299
+acCmdFavoritesOpen = 298
+acCmdFieldList = 42
+acCmdFilterByForm = 207
+acCmdFilterBySelection = 208
+acCmdFilterExcludingSelection = 277
+acCmdFilterMenu = 619
+acCmdFind = 30
+acCmdFindNext = 341
+acCmdFindNextWordUnderCursor = 313
+acCmdFindPrevious = 120
+acCmdFindPrevWordUnderCursor = 312
+acCmdFitToWindow = 245
+acCmdFont = 19
+acCmdFormatCells = 77
+acCmdFormHdrFtr = 36
+acCmdFormView = 281
+acCmdFreezeColumn = 105
+acCmdGoBack = 294
+acCmdGoContinue = 127
+acCmdGoForward = 295
+acCmdGroupByTable = 387
+acCmdGroupControls = 484
+acCmdHideColumns = 79
+acCmdHideMessageBar = 677
+acCmdHidePane = 365
+acCmdHideTable = 147
+acCmdHorizontalSpacingDecrease = 158
+acCmdHorizontalSpacingIncrease = 159
+acCmdHorizontalSpacingMakeEqual = 157
+acCmdHyperlinkDisplayText = 329
+acCmdImportAttachAccess = 544
+acCmdImportAttachdBase = 552
+acCmdImportAttachExcel = 545
+acCmdImportAttachHTML = 550
+acCmdImportAttachODBC = 549
+acCmdImportAttachOutlook = 551
+acCmdImportAttachSharePointList = 547
+acCmdImportAttachText = 546
+acCmdImportAttachXML = 548
+acCmdIndent = 205
+acCmdIndexes = 152
+acCmdInsertActiveXControl = 258
+acCmdInsertChart = 293
+acCmdInsertFile = 39
+acCmdInsertFileIntoModule = 118
+acCmdInsertHyperlink = 259
+acCmdInsertLogo = 585
+acCmdInsertLookupColumn = 273
+acCmdInsertLookupField = 291
+acCmdInsertMovieFromFile = 469
+acCmdInsertNavigationButton = 724
+acCmdInsertObject = 33
+acCmdInsertPage = 331
+acCmdInsertPicture = 222
+acCmdInsertPivotTable = 470
+acCmdInsertProcedure = 262
+acCmdInsertQueryColumn = 82
+acCmdInsertRows = 187
+acCmdInsertSpreadsheet = 471
+acCmdInsertSubdatasheet = 499
+acCmdInsertTableColumn = 272
+acCmdInsertTitle = 586
+acCmdInsertUnboundSection = 472
+acCmdInvokeBuilder = 178
+acCmdJoinProperties = 72
+acCmdLastPosition = 339
+acCmdLayoutGridlinesBoth = 574
+acCmdLayoutGridlinesBottom = 580
+acCmdLayoutGridlinesCrossHatch = 578
+acCmdLayoutGridlinesHorizontal = 576
+acCmdLayoutGridlinesNone = 577
+acCmdLayoutGridlinesOutline = 581
+acCmdLayoutGridlinesTop = 579
+acCmdLayoutGridlinesVertical = 575
+acCmdLayoutInsertColumnLeft = 680
+acCmdLayoutInsertColumnRight = 681
+acCmdLayoutInsertRowAbove = 678
+acCmdLayoutInsertRowBelow = 679
+acCmdLayoutMergeCells = 682
+acCmdLayoutPreview = 141
+acCmdLayoutSplitColumnCell = 683
+acCmdLayoutSplitRowCell = 684
+acCmdLayoutView = 593
+acCmdLineUpIcons = 213
+acCmdLinkedTableManager = 519
+acCmdLinkTables = 102
+acCmdListConstants = 303
+acCmdLoadFromQuery = 95
+acCmdMacroAllActions = 589
+acCmdMakeMDEFile = 7
+acCmdManageAttachments = 673
+acCmdManageReplies = 609
+acCmdManageTableEvents = 717
+acCmdMaximiumRecords = 508
+acCmdMicrosoftAccessHelpTopics = 100
+acCmdMicrosoftOnTheWeb = 236
+acCmdModifySharePointList = 622
+acCmdModifySharePointListAlerts = 623
+acCmdModifySharePointListPermissions = 625
+acCmdModifySharePointListWorkflow = 624
+acCmdMoreWindows = 8
+acCmdMoveColumnCellDown = 573
+acCmdMoveColumnCellUp = 572
+acCmdNewDatabase = 26
+acCmdNewGroup = 491
+acCmdNewObjectAutoForm = 193
+acCmdNewObjectAutoFormWeb = 705
+acCmdNewObjectAutoReport = 194
+acCmdNewObjectAutoReportWeb = 706
+acCmdNewObjectBlankForm = 600
+acCmdNewObjectBlankFormWeb = 703
+acCmdNewObjectBlankReport = 602
+acCmdNewObjectBlankReportWeb = 704
+acCmdNewObjectClassModule = 140
+acCmdNewObjectContinuousForm = 594
+acCmdNewObjectContinuousFormWeb = 701
+acCmdNewObjectDatasheetForm = 598
+acCmdNewObjectDatasheetFormWeb = 702
+acCmdNewObjectDesignForm = 604
+acCmdNewObjectDesignQuery = 603
+acCmdNewObjectDesignReport = 605
+acCmdNewObjectDesignTable = 606
+acCmdNewObjectDiagram = 352
+acCmdNewObjectForm = 136
+acCmdNewObjectFunction = 394
+acCmdNewObjectLabelsReport = 601
+acCmdNewObjectMacro = 138
+acCmdNewObjectMacroWeb = 708
+acCmdNewObjectModalForm = 599
+acCmdNewObjectModule = 139
+acCmdNewObjectNavigationLeft = 690
+acCmdNewObjectNavigationLeftWeb = 710
+acCmdNewObjectNavigationRight = 691
+acCmdNewObjectNavigationRightWeb = 711
+acCmdNewObjectNavigationTop = 689
+acCmdNewObjectNavigationTopLeft = 693
+acCmdNewObjectNavigationTopLeftWeb = 713
+acCmdNewObjectNavigationTopRight = 694
+acCmdNewObjectNavigationTopRightWeb = 714
+acCmdNewObjectNavigationTopTop = 692
+acCmdNewObjectNavigationTopTopWeb = 712
+acCmdNewObjectNavigationTopWeb = 709
+acCmdNewObjectPivotChart = 596
+acCmdNewObjectPivotTable = 597
+acCmdNewObjectQuery = 135
+acCmdNewObjectQueryWeb = 707
+acCmdNewObjectReport = 137
+acCmdNewObjectSplitForm = 595
+acCmdNewObjectStoredProcedure = 351
+acCmdNewObjectTable = 134
+acCmdNewObjectView = 350
+acCmdObjBrwFindWholeWordOnly = 314
+acCmdObjBrwGroupMembers = 318
+acCmdObjBrwHelp = 316
+acCmdObjBrwShowHiddenMembers = 315
+acCmdObjBrwViewDefinition = 317
+acCmdObjectBrowser = 200
+acCmdOfficeClipboard = 488
+acCmdOLEDDELinks = 27
+acCmdOLEObjectConvert = 167
+acCmdOLEObjectDefaultVerb = 57
+acCmdOpenDatabase = 25
+acCmdOpenHyperlink = 326
+acCmdOpenNewHyperlink = 327
+acCmdOpenSearchPage = 253
+acCmdOpenStartPage = 252
+acCmdOpenTable = 221
+acCmdOpenURL = 251
+acCmdOptions = 49
+acCmdOutdent = 206
+acCmdOutputToExcel = 175
+acCmdOutputToRTF = 176
+acCmdOutputToText = 177
+acCmdPageHdrFtr = 182
+acCmdPageNumber = 225
+acCmdPageProperties = 467
+acCmdPageSetup = 32
+acCmdParameterInfo = 305
+acCmdPartialReplicaWizard = 524
+acCmdPaste = 191
+acCmdPasteAppend = 38
+acCmdPasteAsHyperlink = 490
+acCmdPasteFormatting = 587
+acCmdPasteSpecial = 64
+acCmdPivotAutoAverage = 416
+acCmdPivotAutoCount = 413
+acCmdPivotAutoFilter = 398
+acCmdPivotAutoMax = 415
+acCmdPivotAutoMin = 414
+acCmdPivotAutoStdDev = 417
+acCmdPivotAutoStdDevP = 419
+acCmdPivotAutoSum = 412
+acCmdPivotAutoVar = 418
+acCmdPivotAutoVarP = 420
+acCmdPivotChartByRowByColumn = 456
+acCmdPivotChartDrillInto = 457
+acCmdPivotChartDrillOut = 532
+acCmdPivotChartMultiplePlots = 458
+acCmdPivotChartMultiplePlotsUnifiedScale = 459
+acCmdPivotChartShowLegend = 455
+acCmdPivotChartSortAscByTotal = 534
+acCmdPivotChartSortDescByTotal = 535
+acCmdPivotChartType = 453
+acCmdPivotChartUndo = 460
+acCmdPivotChartView = 397
+acCmdPivotCollapse = 400
+acCmdPivotDelete = 454
+acCmdPivotDropAreas = 452
+acCmdPivotExpand = 401
+acCmdPivotRefresh = 404
+acCmdPivotShowAll = 461
+acCmdPivotShowBottom1 = 432
+acCmdPivotShowBottom10 = 435
+acCmdPivotShowBottom10Percent = 440
+acCmdPivotShowBottom1Percent = 437
+acCmdPivotShowBottom2 = 433
+acCmdPivotShowBottom25 = 436
+acCmdPivotShowBottom25Percent = 441
+acCmdPivotShowBottom2Percent = 438
+acCmdPivotShowBottom5 = 434
+acCmdPivotShowBottom5Percent = 439
+acCmdPivotShowBottomOther = 442
+acCmdPivotShowTop1 = 421
+acCmdPivotShowTop10 = 424
+acCmdPivotShowTop10Percent = 429
+acCmdPivotShowTop1Percent = 426
+acCmdPivotShowTop2 = 422
+acCmdPivotShowTop25 = 425
+acCmdPivotShowTop25Percent = 430
+acCmdPivotShowTop2Percent = 427
+acCmdPivotShowTop5 = 423
+acCmdPivotShowTop5Percent = 428
+acCmdPivotShowTopOther = 431
+acCmdPivotTableClearCustomOrdering = 527
+acCmdPivotTableCreateCalcField = 444
+acCmdPivotTableCreateCalcTotal = 443
+acCmdPivotTableDemote = 411
+acCmdPivotTableExpandIndicators = 451
+acCmdPivotTableExportToExcel = 405
+acCmdPivotTableFilterBySelection = 528
+acCmdPivotTableGroupItems = 530
+acCmdPivotTableHideDetails = 402
+acCmdPivotTableMoveToColumnArea = 407
+acCmdPivotTableMoveToDetailArea = 409
+acCmdPivotTableMoveToFilterArea = 408
+acCmdPivotTableMoveToRowArea = 406
+acCmdPivotTablePercentColumnTotal = 447
+acCmdPivotTablePercentGrandTotal = 450
+acCmdPivotTablePercentParentColumnItem = 449
+acCmdPivotTablePercentParentRowItem = 448
+acCmdPivotTablePercentRowTotal = 446
+acCmdPivotTablePromote = 410
+acCmdPivotTableRemove = 529
+acCmdPivotTableShowAsNormal = 445
+acCmdPivotTableShowDetails = 403
+acCmdPivotTableSubtotal = 399
+acCmdPivotTableUngroupItems = 531
+acCmdPivotTableView = 396
+acCmdPrepareDatabaseForWeb = 716
+acCmdPreviewEightPages = 249
+acCmdPreviewFourPages = 248
+acCmdPreviewOnePage = 246
+acCmdPreviewTwelvePages = 250
+acCmdPreviewTwoPages = 247
+acCmdPrimaryKey = 107
+acCmdPrint = 340
+acCmdPrintPreview = 54
+acCmdPrintRelationships = 483
+acCmdPrintSelection = 590
+acCmdProcedureDefinition = 122
+acCmdProperties = 287
+acCmdPublishDatabase = 537
+acCmdPublishDefaults = 324
+acCmdPublishFixedFormat = 591
+acCmdQueryAddToOutput = 362
+acCmdQueryGroupBy = 361
+acCmdQueryParameters = 76
+acCmdQueryTotals = 73
+acCmdQueryTypeAppend = 91
+acCmdQueryTypeCrosstab = 74
+acCmdQueryTypeDelete = 92
+acCmdQueryTypeMakeTable = 94
+acCmdQueryTypeSelect = 89
+acCmdQueryTypeSQLDataDefinition = 168
+acCmdQueryTypeSQLPassThrough = 169
+acCmdQueryTypeSQLUnion = 180
+acCmdQueryTypeUpdate = 90
+acCmdQuickInfo = 304
+acCmdQuickPrint = 278
+acCmdQuickWatch = 203
+acCmdRecordsGoToFirst = 67
+acCmdRecordsGoToLast = 68
+acCmdRecordsGoToNew = 28
+acCmdRecordsGoToNext = 65
+acCmdRecordsGoToPrevious = 66
+acCmdRecoverDesignMaster = 265
+acCmdRedo = 199
+acCmdReferences = 260
+acCmdRefresh = 18
+acCmdRefreshData = 541
+acCmdRefreshPage = 297
+acCmdRefreshSharePointList = 626
+acCmdRegisterActiveXControls = 254
+acCmdRelationships = 133
+acCmdRemove = 366
+acCmdRemoveAllFilters = 644
+acCmdRemoveAllSorts = 645
+acCmdRemoveFilterFromCurrentColumn = 643
+acCmdRemoveFilterSort = 144
+acCmdRemoveFromLayout = 582
+acCmdRemoveTable = 84
+acCmdRename = 143
+acCmdRenameColumn = 274
+acCmdRenameGroup = 492
+acCmdRepairDatabase = 6
+acCmdReplace = 29
+acCmdReportHdrFtr = 37
+acCmdReportView = 539
+acCmdReset = 124
+acCmdResolveConflicts = 266
+acCmdRestore = 514
+acCmdRowHeight = 116
+acCmdRun = 181
+acCmdRunMacro = 31
+acCmdRunOpenMacro = 338
+acCmdSave = 20
+acCmdSaveAllModules = 280
+acCmdSaveAs = 21
+acCmdSaveAsHTML = 321
+acCmdSaveAsOutlookContact = 584
+acCmdSaveAsQuery = 96
+acCmdSaveAsReport = 142
+acCmdSaveAsTemplate = 686
+acCmdSaveDatabaseAsNewTemplatePart = 687
+acCmdSavedExports = 555
+acCmdSavedImports = 543
+acCmdSaveLayout = 145
+acCmdSaveModuleAsText = 119
+acCmdSaveRecord = 97
+acCmdSaveSelectionAsNewDataType = 688
+acCmdSelectAll = 333
+acCmdSelectAllRecords = 109
+acCmdSelectEntireColumn = 571
+acCmdSelectEntireLayout = 715
+acCmdSelectEntireRow = 570
+acCmdSelectForm = 40
+acCmdSelectRecord = 50
+acCmdSelectReport = 319
+acCmdSend = 173
+acCmdSendToBack = 53
+acCmdServerFilterByForm = 507
+acCmdServerProperties = 496
+acCmdSetCaption = 637
+acCmdSetControlDefaults = 56
+acCmdSetDatabasePassword = 275
+acCmdSetNextStatement = 129
+acCmdShareOnSharePoint = 542
+acCmdSharePointSiteRecycleBin = 641
+acCmdShowAllRelationships = 149
+acCmdShowColumnHistory = 620
+acCmdShowDatePicker = 636
+acCmdShowDirectRelationships = 148
+acCmdShowEnvelope = 533
+acCmdShowLogicCatalog = 685
+acCmdShowMembers = 302
+acCmdShowMessageBar = 676
+acCmdShowNextStatement = 130
+acCmdShowTable = 185
+acCmdSingleStep = 88
+acCmdSizeToFit = 59
+acCmdSizeToFitForm = 69
+acCmdSizeToGrid = 48
+acCmdSizeToNarrowest = 155
+acCmdSizeToWidest = 156
+acCmdSnapToGrid = 62
+acCmdSortAscending = 163
+acCmdSortDescending = 164
+acCmdSortingAndGrouping = 51
+acCmdSpeech = 511
+acCmdSpelling = 269
+acCmdSQLView = 184
+acCmdStackedLayout = 568
+acCmdStartNewWorkflow = 675
+acCmdStartupProperties = 224
+acCmdStepInto = 342
+acCmdStepOut = 311
+acCmdStepOver = 128
+acCmdStepToCursor = 204
+acCmdSubdatasheetCollapseAll = 505
+acCmdSubdatasheetExpandAll = 504
+acCmdSubdatasheetRemove = 506
+acCmdSubformDatasheet = 108
+acCmdSubformDatasheetView = 463
+acCmdSubformFormView = 462
+acCmdSubformInNewWindow = 495
+acCmdSubformPivotChartView = 465
+acCmdSubformPivotTableView = 464
+acCmdSwitchboardManager = 521
+acCmdSynchronize = 638
+acCmdSynchronizeNow = 264
+acCmdSyncWebApplication = 699
+acCmdTabControlPageOrder = 330
+acCmdTableAddTable = 498
+acCmdTableCustomView = 497
+acCmdTableNames = 75
+acCmdTabOrder = 41
+acCmdTabularLayout = 569
+acCmdTestValidationRules = 196
+acCmdTileHorizontally = 286
+acCmdTileVertically = 23
+acCmdToggleBreakpoint = 131
+acCmdToggleCacheListData = 642
+acCmdToggleFilter = 220
+acCmdToggleOffline = 540
+acCmdToolbarControlProperties = 301
+acCmdToolbarsCustomize = 165
+acCmdTransferSQLDatabase = 515
+acCmdTransparentBackground = 288
+acCmdTransparentBorder = 289
+acCmdUndo = 292
+acCmdUnfreezeAllColumns = 106
+acCmdUngroupControls = 485
+acCmdUnhideColumns = 80
+acCmdUpsizingWizard = 522
+acCmdUserAndGroupAccounts = 104
+acCmdUserAndGroupPermissions = 103
+acCmdUserLevelSecurityWizard = 276
+acCmdVerticalSpacingDecrease = 161
+acCmdVerticalSpacingIncrease = 162
+acCmdVerticalSpacingMakeEqual = 160
+acCmdViewCode = 170
+acCmdViewDetails = 210
+acCmdViewDiagrams = 354
+acCmdViewFieldList = 353
+acCmdViewForms = 112
+acCmdViewFunctions = 395
+acCmdViewGrid = 63
+acCmdViewLargeIcons = 209
+acCmdViewList = 212
+acCmdViewMacros = 114
+acCmdViewModules = 115
+acCmdViewObjectDependencies = 536
+acCmdViewQueries = 111
+acCmdViewReports = 113
+acCmdViewRuler = 61
+acCmdViewShowPaneDiagram = 358
+acCmdViewShowPaneGrid = 359
+acCmdViewShowPaneSQL = 357
+acCmdViewSmallIcons = 211
+acCmdViewStoredProcedures = 355
+acCmdViewTableColumnNames = 363
+acCmdViewTableColumnProperties = 368
+acCmdViewTableKeys = 369
+acCmdViewTableNameOnly = 364
+acCmdViewTables = 110
+acCmdViewTableUserView = 370
+acCmdViewToolbox = 85
+acCmdViewVerifySQL = 360
+acCmdViewViews = 356
+acCmdVisualBasicEditor = 525
+acCmdWindowArrangeIcons = 24
+acCmdWindowCascade = 22
+acCmdWindowHide = 2
+acCmdWindowSplit = 121
+acCmdWindowUnhide = 1
+acCmdWordMailMerge = 195
+acCmdWorkflowTasks = 674
+acCmdWorkgroupAdministrator = 391
+acCmdZoom10 = 244
+acCmdZoom100 = 240
+acCmdZoom1000 = 482
+acCmdZoom150 = 239
+acCmdZoom200 = 238
+acCmdZoom25 = 243
+acCmdZoom50 = 242
+acCmdZoom500 = 481
+acCmdZoom75 = 241
+acCmdZoomBox = 179
+acCmdZoomSelection = 371
+
+# AcControlType enumeration
+acAttachment = 126
+acBoundObjectFrame = 108
+acChart = 133
+acCheckBox = 106
+acComboBox = 111
+acCommandButton = 104
+acCustomControl = 119
+acEdgeBrowser = 134
+acEmptyCell = 127
+acImage = 103
+acLabel = 100
+acLine = 102
+acListBox = 110
+acNavigationButton = 130
+acNavigationControl = 129
+acObjectFrame = 114
+acOptionButton = 105
+acOptionGroup = 107
+acPage = 124
+acPageBreak = 118
+acRectangle = 101
+acSubForm = 112
+acTabCtl = 123
+acTextBox = 109
+acToggleButton = 122
+acWebBrowser = 128
+
+# AcCurrentView enumeration
+acCurViewDatasheet = 2
+acCurViewDesign = 0
+acCurViewFormBrowse = 1
+acCurViewLayout = 7
+acCurViewPivotChart = 4
+acCurViewPivotTable = 3
+acCurViewPreview = 5
+acCurViewReportBrowse = 6
+
+# AcCursorOnHover enumeration
+acCursorOnHoverDefault = 0
+acCursorOnHoverHyperlinkHand = 1
+
+# AcDashType enumeration
+acDashTypeDash = 1
+acDashTypeDashDot = 3
+acDashTypeDot = 2
+acDashTypeSolid = 0
+
+# AcDataLabelDisplayFormat enumeration
+acDataLabelDisplayNone = 0
+acDataLabelDisplayNumber = 1
+acDataLabelDisplayPercentage = 2
+
+# AcDataLabelPosition enumeration
+acBestFit = 0
+acInsideCenter = 1
+acInsideEnd = 2
+acOutsideCircle = 3
+acOutsideEnd = 4
+
+# AcDataObjectType enumeration
+acActiveDataObject = -1
+acDataForm = 2
+acDataFunction = 10
+acDataQuery = 1
+acDataReport = 3
+acDataServerView = 7
+acDataStoredProcedure = 9
+acDataTable = 0
+
+# AcDataTransferType enumeration
+acExport = 1
+acImport = 0
+acLink = 2
+
+# AcDateGroupType enumeration
+acDateGroupDay = 4
+acDateGroupMonth = 3
+acDateGroupNone = 0
+acDateGroupQuarter = 2
+acDateGroupYear = 1
+
+# AcDefReportView enumeration
+acDefViewPreview = 0
+acDefViewReportBrowse = 1
+
+# AcDefView enumeration
+acDefViewContinuous = 1
+acDefViewDatasheet = 2
+acDefViewPivotChart = 4
+acDefViewPivotTable = 3
+acDefViewSingle = 0
+acDefViewSplitForm = 5
+
+# AcDisplayAs enumeration
+acDisplayAsIcon = 1
+acDisplayAsImageIcon = 0
+acDisplayAsPaperclip = 2
+
+# AcDisplayAsHyperlink enumeration
+acDisplayAsHyperlinkAlways = 1
+acDisplayAsHyperlinkIfHlink = 0
+acDisplayAsHyperlinkOnScreenOnly = 2
+
+# AcExportQuality enumeration
+acExportQualityPrint = 0
+acExportQualityScreen = 1
+
+# AcExportXMLEncoding enumeration
+acUTF16 = 1
+acUTF8 = 0
+
+# AcExportXMLObjectType enumeration
+acExportForm = 2
+acExportFunction = 10
+acExportQuery = 1
+acExportReport = 3
+acExportServerView = 7
+acExportStoredProcedure = 9
+acExportTable = 0
+
+# AcExportXMLOtherFlags enumeration
+acEmbedSchema = 1
+acExcludePrimaryKeyAndIndexes = 2
+acExportAllTableAndFieldProperties = 32
+acLiveReportSource = 8
+acPersistReportML = 16
+acRunFromServer = 4
+
+# AcExportXMLSchemaFormat enumeration
+acSchemaNone = 0
+acSchemaXSD = 1
+
+# AcFileFormat enumeration
+acFileFormatAccess2 = 2
+acFileFormatAccess95 = 7
+acFileFormatAccess97 = 8
+acFileFormatAccess2000 = 9
+acFileFormatAccess2002 = 10
+acFileFormatAccess2007 = 12
+
+# AcFilterType enumeration
+acFilterNormal = 0
+acServerFilter = 1
+
+# AcFindField enumeration
+acAll = 0
+acCurrent = -1
+
+# AcFindMatch enumeration
+acAnywhere = 0
+acEntire = 1
+acStart = 2
+
+# AcFormatBarLimits enumeration
+acAutomatic = 0
+acNumber = 1
+acPercent = 2
+
+# AcFormatConditionOperator enumeration
+acBetween = 0
+acEqual = 2
+acGreaterThan = 4
+acGreaterThanOrEqual = 6
+acLessThan = 5
+acLessThanOrEqual = 7
+acNotBetween = 1
+acNotEqual = 3
+
+# AcFormatConditionType enumeration
+acDataBar = 3
+acExpression = 1
+acFieldHasFocus = 2
+acFieldValue = 0
+
+# AcFormOpenDataMode enumeration
+acFormAdd = 0
+acFormEdit = 1
+acFormPropertySettings = -1
+acFormReadOnly = 2
+
+# AcFormView enumeration
+acDesign = 1
+acFormDS = 3
+acFormPivotChart = 5
+acFormPivotTable = 4
+acLayout = 6
+acNormal = 0
+acPreview = 2
+
+# AcGridlineType enumeration
+acGridlineTypeNone = 0
+acGridlineTypeMajor = 1
+acGridlineTypeMinor = 2
+acGridlineTypeMajorMinor = 3
+
+# AcHorizontalAnchor enumeration
+acHorizontalAnchorBoth = 2
+acHorizontalAnchorLeft = 0
+acHorizontalAnchorRight = 1
+
+# AcHyperlinkPart enumeration
+acAddress = 2
+acDisplayedValue = 0
+acDisplayText = 1
+acFullAddress = 5
+acScreenTip = 4
+acSubAddress = 3
+
+# AcImeMode enumeration
+acImeModeAlpha = 8
+acImeModeAlphaFull = 7
+acImeModeDisable = 3
+acImeModeHangul = 10
+acImeModeHangulFull = 9
+acImeModeHiragana = 4
+acImeModeKatakana = 5
+acImeModeKatakanaHalf = 6
+acImeModeNoControl = 0
+acImeModeOff = 2
+acImeModeOn = 1
+
+# AcImportXMLOption enumeration
+acAppendData = 2
+acStructureAndData = 1
+acStructureOnly = 0
+
+# AcLayoutType enumeration
+acLayoutNone = 0
+acLayoutStacked = 2
+acLayoutTabular = 1
+
+# AcLegendPosition enumeration
+acLegendPositionBottom = 3
+acLegendPositionLeft = 0
+acLegendPositionRight = 2
+acLegendPositionTop = 1
+
+# AcMarkerType enumeration
+acMarkerAsterisk = 4
+acMarkerCircle = 8
+acMarkerDiamond = 2
+acMarkerLongDash = 7
+acMarkerNone = 0
+acMarkerPlus = 9
+acMarkerShortDash = 6
+acMarkerSquare = 1
+acMarkerTriangle = 3
+acMarkerX = 4
+
+# AcMissingDataPolicy enumeration
+acDoNotPlot = 1
+acPlotAsInterpolated = 2
+acPlotAsZero = 0
+
+# AcModuleType enumeration
+acClassModule = 1
+acStandardModule = 0
+
+# AcNavigationSpan enumeration
+acHorizontal = 0
+acVertical = 1
+
+# AcNewDatabaseFormat enumeration
+acNewDatabaseFormatAccess12 = 12
+acNewDatabaseFormatAccess2000 = 9
+acNewDatabaseFormatAccess2002 = 10
+acNewDatabaseFormatUserDefault = 0
+
+# AcObjectType enumeration
+acDatabaseProperties = 11
+acDefault = -1
+acDiagram = 8
+acForm = 2
+acFunction = 10
+acMacro = 4
+acModule = 5
+acQuery = 1
+acReport = 3
+acServerView = 7
+acStoredProcedure = 9
+acTable = 0
+acTableDataMacro = 12
+
+# AcOpenDataMode enumeration
+acAdd = 0
+acEdit = 1
+acReadOnly = 2
+
+# AcOutputObjectType enumeration
+acOutputForm = 2
+acOutputFunction = 10
+acOutputModule = 5
+acOutputQuery = 1
+acOutputReport = 3
+acOutputServerView = 7
+acOutputStoredProcedure = 9
+acOutputTable = 0
+
+# AcPercentageDataLabelDecimalPlaces enumeration
+acDecimalPlaces0 = 0
+acDecimalPlaces1 = 1
+acDecimalPlaces2 = 2
+acDecimalPlaces3 = 3
+acDecimalPlaces4 = 4
+acDecimalPlaces5 = 5
+acDecimalPlaces6 = 6
+acDecimalPlaces7 = 7
+
+# AcPictureCaptionArrangement enumeration
+acBottom = 3
+acGeneral = 1
+acLeft = 4
+acNoPictureCaption = 0
+acRight = 5
+acTop = 2
+
+# AcPrintColor enumeration
+acPRCMColor = 2
+acPRCMMonochrome = 1
+
+# AcPrintDuplex enumeration
+acPRDPHorizontal = 2
+acPRDPSimplex = 1
+acPRDPVertical = 3
+
+# AcPrintItemLayout enumeration
+acPRHorizontalColumnLayout = 1953
+acPRVerticalColumnLayout = 1954
+
+# AcPrintObjQuality enumeration
+acPRPQDraft = -1
+acPRPQHigh = -4
+acPRPQLow = -2
+acPRPQMedium = -3
+
+# AcPrintOrientation enumeration
+acPRORLandscape = 2
+acPRORPortrait = 1
+
+# AcPrintPaperBin enumeration
+acPRBNAuto = 7
+acPRBNCassette = 14
+acPRBNEnvelope = 5
+acPRBNEnvManual = 6
+acPRBNFormSource = 15
+acPRBNLargeCapacity = 11
+acPRBNLargeFmt = 10
+acPRBNLower = 2
+acPRBNManual = 4
+acPRBNMiddle = 3
+acPRBNSmallFmt = 9
+acPRBNTractor = 8
+acPRBNUpper = 1
+
+# AcPrintPaperSize enumeration
+acPRPS10x14 = 16
+acPRPS11x17 = 17
+acPRPSA3 = 8
+acPRPSA4 = 9
+acPRPSA4Small = 10
+acPRPSA5 = 11
+acPRPSB4 = 12
+acPRPSB5 = 13
+acPRPSCSheet = 24
+acPRPSDSheet = 25
+acPRPSEnv10 = 20
+acPRPSEnv11 = 21
+acPRPSEnv12 = 22
+acPRPSEnv14 = 23
+acPRPSEnv9 = 19
+acPRPSEnvB4 = 33
+acPRPSEnvB5 = 34
+acPRPSEnvB6 = 35
+acPRPSEnvC3 = 29
+acPRPSEnvC4 = 30
+acPRPSEnvC5 = 28
+acPRPSEnvC6 = 31
+acPRPSEnvC65 = 32
+acPRPSEnvDL = 27
+acPRPSEnvItaly = 36
+acPRPSEnvMonarch = 37
+acPRPSEnvPersonal = 38
+acPRPSESheet = 26
+acPRPSExecutive = 7
+acPRPSFanfoldLglGerman = 41
+acPRPSFanfoldStdGerman = 40
+acPRPSFanfoldUS = 39
+acPRPSFolio = 14
+acPRPSLedger = 4
+acPRPSLegal = 5
+acPRPSLetter = 1
+acPRPSLetterSmall = 2
+acPRPSNote = 18
+acPRPSQuarto = 15
+acPRPSStatement = 6
+acPRPSTabloid = 3
+acPRPSUser = 256
+
+# AcPrintQuality enumeration
+acDraft = 3
+acHigh = 0
+acLow = 2
+acMedium = 1
+
+# AcPrintRange enumeration
+acPages = 2
+acPrintAll = 0
+acSelection = 1
+
+# AcProjectType enumeration
+acADP = 1
+acMDB = 2
+acNull = 0
+
+# AcProperty enumeration
+acPropertyBackColor = 8
+acPropertyCaption = 9
+acPropertyEnabled = 0
+acPropertyForeColor = 7
+acPropertyHeight = 6
+acPropertyLeft = 3
+acPropertyLocked = 2
+acPropertyTop = 4
+acPropertyValue = 10
+acPropertyVisible = 1
+acPropertyWidth = 5
+
+# AcQuitOption enumeration
+acQuitPrompt = 0
+acQuitSaveAll = 1
+acQuitSaveNone = 2
+
+# AcRecord enumeration
+acFirst = 2
+acGoTo = 4
+acLast = 3
+acNewRec = 5
+acNext = 1
+acPrevious = 0
+
+# AcResourceType enumeration
+acResourceImage = 1
+acResourceTheme = 0
+
+# AcSearchDirection enumeration
+acDown = 1
+acSearchAll = 2
+acUp = 0
+
+# AcSection enumeration
+acDetail = 0
+acFooter = 2
+acGroupLevel1Footer = 6
+acGroupLevel1Header = 5
+acGroupLevel2Footer = 8
+acGroupLevel2Header = 7
+acHeader = 1
+acPageFooter = 4
+acPageHeader = 3
+
+# AcSendObjectType enumeration
+acSendForm = 2
+acSendModule = 5
+acSendNoObject = -1
+acSendQuery = 1
+acSendReport = 3
+acSendTable = 0
+
+# AcSeparatorCharacters enumeration
+acSeparatorCharactersComma = 3
+acSeparatorCharactersNewLine = 1
+acSeparatorCharactersSemiColon = 2
+acSeparatorCharactersSystemSeparator = 0
+
+# AcSharePointListTransferType enumeration
+acImportSharePointList = 0
+acLinkSharePointList = 1
+
+# AcShowToolbar enumeration
+acToolbarNo = 2
+acToolbarWhereApprop = 1
+acToolbarYes = 0
+
+# AcSortOrderType enumeration
+acSortOrderTypeNone = 0
+acSortOrderTypeAscending = 1
+acSortOrderTypeDescending = 2
+
+# AcSplitFormDatasheet enumeration
+acDatasheetAllowEdits = 0
+acDatasheetReadOnly = 1
+
+# AcSplitFormOrientation enumeration
+acDatasheetOnBottom = 1
+acDatasheetOnLeft = 2
+acDatasheetOnRight = 3
+acDatasheetOnTop = 0
+
+# AcSplitFormPrinting enumeration
+acFormOnly = 0
+acGridOnly = 1
+
+# AcSpreadSheetType enumeration
+acSpreadsheetTypeExcel3 = 0
+acSpreadsheetTypeExcel4 = 6
+acSpreadsheetTypeExcel5 = 5
+acSpreadsheetTypeExcel7 = 5
+acSpreadsheetTypeExcel8 = 8
+acSpreadsheetTypeExcel9 = 8
+acSpreadsheetTypeExcel12 = 9
+acSpreadsheetTypeExcel12Xml = 10
+
+# AcSysCmdAction enumeration
+acSysCmdAccessDir = 9
+acSysCmdAccessVer = 7
+acSysCmdClearHelpTopic = 11
+acSysCmdClearStatus = 5
+acSysCmdGetObjectState = 10
+acSysCmdGetWorkgroupFile = 13
+acSysCmdIniFile = 8
+acSysCmdInitMeter = 1
+acSysCmdProfile = 12
+acSysCmdRemoveMeter = 3
+acSysCmdRuntime = 6
+acSysCmdSetStatus = 4
+acSysCmdUpdateMeter = 2
+
+# AcTextFormat enumeration
+acTextFormatHTMLRichText = 1
+acTextFormatPlain = 0
+
+# AcTextTransferType enumeration
+acExportDelim = 2
+acExportFixed = 3
+acExportHTML = 8
+acExportMerge = 4
+acImportDelim = 0
+acImportFixed = 1
+acImportHTML = 7
+acLinkDelim = 5
+acLinkFixed = 6
+acLinkHTML = 9
+
+# AcTransformXMLScriptOption enumeration
+acDisableScript = 2
+acEnableScript = 0
+acPromptScript = 1
+
+# AcTrendlineOptions enumeration
+acTrendlineExponential = 2
+acTrendlineLinear = 1
+acTrendlineLogarithmic = 3
+acTrendlineMovingAverage = 6
+acTrendlineNone = 0
+acTrendlinePolynomial = 4
+acTrendlinePower = 5
+
+# AcValueAxis enumeration
+acPrimaryAxis = 0
+acSecondaryAxis = 1
+
+# AcVerticalAnchor enumeration
+acVerticalAnchorBoth = 2
+acVerticalAnchorBottom = 1
+acVerticalAnchorTop = 0
+
+# AcView enumeration
+acViewDesign = 1
+acViewLayout = 6
+acViewNormal = 0
+acViewPivotChart = 4
+acViewPivotTable = 3
+acViewPreview = 2
+acViewReport = 5
+
+# AcWebBrowserScrollBars enumeration
+acScrollAuto = 0
+acScrollNo = 2
+acScrollYes = 1
+
+# AcWebBrowserState enumeration
+acComplete = 4
+acInteractive = 3
+acLoaded = 2
+acLoading = 1
+acUninitialized = 0
+
+# AcWebUserDisplay enumeration
+acWebUserEmail = 3
+acWebUserID = 0
+acWebUserLoginName = 2
+acWebUserName = 1
+
+# AcWebUserGroupsDisplay enumeration
+acWebUserGroupID = 0
+acWebUserGroupName = 1
+
+# AcWindowMode enumeration
+acDialog = 3
+acHidden = 1
+acIcon = 2
+acWindowNormal = 0
+
+# AcWordCloudShape enumeration
+acWordCloudRectangle = 0
+acWordCloudOval = 1
+acWordCloudHeart = 2
+
+# AcWordCloudWordOrientation enumeration
+acWordCloudHorizontalVertical = 0
+acWordCloudHorizontal = 1
+acWordCloudVertical = 2
+
+
+
 
 class AdditionalData:
 
@@ -139,6 +1536,11 @@ class AdditionalData:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.additionaldata.Add(*args, **arguments)
 
+
+
+
+
+
 class AllDatabaseDiagrams:
 
     def __init__(self, alldatabasediagrams=None):
@@ -163,6 +1565,11 @@ class AllDatabaseDiagrams:
     @property
     def Parent(self):
         return self.alldatabasediagrams.Parent
+
+
+
+
+
 
 class AllForms:
 
@@ -189,6 +1596,11 @@ class AllForms:
     def Parent(self):
         return self.allforms.Parent
 
+
+
+
+
+
 class AllFunctions:
 
     def __init__(self, allfunctions=None):
@@ -213,6 +1625,15 @@ class AllFunctions:
     @property
     def Parent(self):
         return self.allfunctions.Parent
+
+
+
+
+
+
+
+
+
 
 class AllModules:
 
@@ -239,6 +1660,11 @@ class AllModules:
     def Parent(self):
         return self.allmodules.Parent
 
+
+
+
+
+
 class AllQueries:
 
     def __init__(self, allqueries=None):
@@ -263,6 +1689,11 @@ class AllQueries:
     @property
     def Parent(self):
         return self.allqueries.Parent
+
+
+
+
+
 
 class AllReports:
 
@@ -289,6 +1720,11 @@ class AllReports:
     def Parent(self):
         return self.allreports.Parent
 
+
+
+
+
+
 class AllStoredProcedures:
 
     def __init__(self, allstoredprocedures=None):
@@ -313,6 +1749,11 @@ class AllStoredProcedures:
     @property
     def Parent(self):
         return self.allstoredprocedures.Parent
+
+
+
+
+
 
 class AllTables:
 
@@ -339,6 +1780,11 @@ class AllTables:
     def Parent(self):
         return self.alltables.Parent
 
+
+
+
+
+
 class AllViews:
 
     def __init__(self, allviews=None):
@@ -363,6 +1809,91 @@ class AllViews:
     @property
     def Parent(self):
         return self.allviews.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Application:
 
@@ -939,6 +2470,116 @@ class Application:
         arguments = {"DataSource": DataSource, "TransformSource": TransformSource, "OutputTarget": OutputTarget, "WellFormedXMLOutput": WellFormedXMLOutput, "ScriptOption": ScriptOption}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.application.TransformXML(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Attachment:
 
@@ -1685,6 +3326,51 @@ class Attachment:
     def SizeToFit(self):
         self.attachment.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AutoCorrect:
 
     def __init__(self, autocorrect=None):
@@ -1697,6 +3383,70 @@ class AutoCorrect:
     @DisplayAutoCorrectOptions.setter
     def DisplayAutoCorrectOptions(self, value):
         self.autocorrect.DisplayAutoCorrectOptions = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class BoundObjectFrame:
 
@@ -2465,6 +4215,84 @@ class BoundObjectFrame:
     def SizeToFit(self):
         self.boundobjectframe.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Chart:
 
     def __init__(self, chart=None):
@@ -2790,6 +4618,26 @@ class Chart:
     def TransformedRowSource(self):
         return self.chart.TransformedRowSource
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartAxis:
 
     def __init__(self, chartaxis=None):
@@ -2807,6 +4655,8 @@ class ChartAxis:
     def Name(self):
         return ChartAxis(self.chartaxis.Name)
 
+
+
 class ChartAxisCollection:
 
     def __init__(self, chartaxiscollection=None):
@@ -2814,6 +4664,21 @@ class ChartAxisCollection:
 
     def __call__(self, item):
         return ChartAxisCollectio(self.chartaxiscollection(item))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ChartSeries:
 
@@ -3032,6 +4897,20 @@ class ChartSeries:
     def WordCloudWordOrientation(self, value):
         self.chartseries.WordCloudWordOrientation = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartSeriesCollection:
 
     def __init__(self, chartseriescollection=None):
@@ -3039,6 +4918,8 @@ class ChartSeriesCollection:
 
     def __call__(self, item):
         return ChartSeriesCollectio(self.chartseriescollection(item))
+
+
 
 class ChartValues:
 
@@ -3057,6 +4938,8 @@ class ChartValues:
     def Name(self):
         return ChartValues(self.chartvalues.Name)
 
+
+
 class ChartValuesCollection:
 
     def __init__(self, chartvaluescollection=None):
@@ -3064,6 +4947,63 @@ class ChartValuesCollection:
 
     def __call__(self, item):
         return ChartValuesCollectio(self.chartvaluescollection(item))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CheckBox:
 
@@ -3719,6 +5659,57 @@ class CheckBox:
     def Undo(self):
         self.checkbox.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CodeData:
 
     def __init__(self, codedata=None):
@@ -3747,6 +5738,23 @@ class CodeData:
     @property
     def AllViews(self):
         return self.codedata.AllViews
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CodeProject:
 
@@ -3861,10 +5869,125 @@ class CodeProject:
     def UpdateDependencyInfo(self):
         return self.codeproject.UpdateDependencyInfo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ComboBox:
 
     def __init__(self, combobox=None):
         self.combobox = combobox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ComboBox:
 
@@ -4985,6 +7108,155 @@ class ComboBox:
     def Undo(self):
         self.combobox.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CommandButton:
 
     def __init__(self, commandbutton=None):
@@ -5952,6 +8224,86 @@ class CommandButton:
     def SizeToFit(self):
         self.commandbutton.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Control:
 
     def __init__(self, control=None):
@@ -6189,6 +8541,28 @@ class Control:
     def Undo(self):
         self.control.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Controls:
 
     def __init__(self, controls=None):
@@ -6213,6 +8587,14 @@ class Controls:
     @property
     def Parent(self):
         return self.controls.Parent
+
+
+
+
+
+
+
+
 
 class CurrentData:
 
@@ -6242,6 +8624,23 @@ class CurrentData:
     @property
     def AllViews(self):
         return self.currentdata.AllViews
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CurrentProject:
 
@@ -6355,6 +8754,60 @@ class CurrentProject:
 
     def UpdateDependencyInfo(self):
         self.currentproject.UpdateDependencyInfo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CustomControl:
 
@@ -6875,6 +9328,44 @@ class CustomControl:
     def SizeToFit(self):
         self.customcontrol.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DependencyInfo:
 
     def __init__(self, dependencyinfo=None):
@@ -6904,6 +9395,13 @@ class DependencyInfo:
     def UnsupportedObjects(self):
         return DependencyObjects(self.dependencyinfo.UnsupportedObjects)
 
+
+
+
+
+
+
+
 class DependencyObjects:
 
     def __init__(self, dependencyobjects=None):
@@ -6928,6 +9426,29 @@ class DependencyObjects:
     @property
     def Parent(self):
         return self.dependencyobjects.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DoCmd:
 
@@ -7242,6 +9763,55 @@ class DoCmd:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.docmd.TransferText(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class EdgeBrowserControl:
 
     def __init__(self, edgebrowsercontrol=None):
@@ -7272,6 +9842,43 @@ class EdgeBrowserControl:
         arguments = {"expression": expression}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.edgebrowsercontrol.RetrieveJavascriptValue(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class EmptyCell:
 
@@ -7626,6 +10233,25 @@ class EmptyCell:
     def SizeToFit(self):
         self.emptycell.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Entities:
 
     def __init__(self, entities=None):
@@ -7647,6 +10273,8 @@ class Entities:
     def Parent(self):
         return self.entities.Parent
 
+
+
 class Entity:
 
     def __init__(self, entity=None):
@@ -7667,6 +10295,108 @@ class Entity:
     @property
     def Parent(self):
         return self.entity.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Form:
 
@@ -9141,6 +11871,139 @@ class Form:
     def Undo(self):
         self.form.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FormatCondition:
 
     def __init__(self, formatcondition=None):
@@ -9246,6 +12109,18 @@ class FormatCondition:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.formatcondition.Modify(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class FormatConditions:
 
     def __init__(self, formatconditions=None):
@@ -9279,6 +12154,11 @@ class FormatConditions:
     def Delete(self):
         self.formatconditions.Delete()
 
+
+
+
+
+
 class Forms:
 
     def __init__(self, forms=None):
@@ -9303,6 +12183,15 @@ class Forms:
     @property
     def Parent(self):
         return self.forms.Parent
+
+
+
+
+
+
+
+
+
 
 class GroupLevel:
 
@@ -9377,6 +12266,15 @@ class GroupLevel:
     def SortOrder(self, value):
         self.grouplevel.SortOrder = value
 
+
+
+
+
+
+
+
+
+
 class Hyperlink:
 
     def __init__(self, hyperlink=None):
@@ -9434,6 +12332,56 @@ class Hyperlink:
         arguments = {"NewWindow": NewWindow, "AddHistory": AddHistory, "ExtraInfo": ExtraInfo, "Method": Method, "HeaderInfo": HeaderInfo}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.hyperlink.Follow(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Image:
 
@@ -9986,6 +12934,45 @@ class Image:
     def SizeToFit(self):
         self.image.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ImportExportSpecification:
 
     def __init__(self, importexportspecification=None):
@@ -10031,6 +13018,14 @@ class ImportExportSpecification:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.importexportspecification.Execute(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class ImportExportSpecifications:
 
     def __init__(self, importexportspecifications=None):
@@ -10060,6 +13055,65 @@ class ImportExportSpecifications:
         arguments = {"Name": Name, "SpecificationDefinition": SpecificationDefinition}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.importexportspecifications.Add(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Label:
 
@@ -10674,6 +13728,54 @@ class Label:
     def SizeToFit(self):
         self.label.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Line:
 
     def __init__(self, line=None):
@@ -10890,6 +13992,105 @@ class Line:
 
     def SizeToFit(self):
         self.line.SizeToFit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ListBox:
 
@@ -11807,6 +15008,64 @@ class ListBox:
     def Undo(self):
         self.listbox.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MacroError:
 
     def __init__(self, macroerror=None):
@@ -11831,6 +15090,19 @@ class MacroError:
     @property
     def Number(self):
         return self.macroerror.Number
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Module:
 
@@ -11945,6 +15217,18 @@ class Module:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.module.ReplaceLine(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class Modules:
 
     def __init__(self, modules=None):
@@ -11969,6 +15253,90 @@ class Modules:
     @property
     def Parent(self):
         return self.modules.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class NavigationButton:
 
@@ -12933,6 +16301,124 @@ class NavigationButton:
     def SizeToFit(self):
         self.navigationbutton.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class NavigationControl:
 
     def __init__(self, navigationcontrol=None):
@@ -13554,6 +17040,107 @@ class NavigationControl:
 
     def Undo(self):
         self.navigationcontrol.Undo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ObjectFrame:
 
@@ -14286,6 +17873,62 @@ class ObjectFrame:
     def SizeToFit(self):
         self.objectframe.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Operation:
 
     def __init__(self, operation=None):
@@ -14312,6 +17955,12 @@ class Operation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.operation.Execute(*args, **arguments)
 
+
+
+
+
+
+
 class Operations:
 
     def __init__(self, operations=None):
@@ -14332,6 +17981,64 @@ class Operations:
     @property
     def Parent(self):
         return self.operations.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OptionButton:
 
@@ -14988,6 +18695,90 @@ class OptionButton:
     def SizeToFit(self):
         self.optionbutton.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OptionGroup:
 
     def __init__(self, optiongroup=None):
@@ -15486,6 +19277,55 @@ class OptionGroup:
     def Undo(self):
         self.optiongroup.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Page:
 
     def __init__(self, page=None):
@@ -15740,6 +19580,40 @@ class Page:
     def SizeToFit(self):
         self.page.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PageBreak:
 
     def __init__(self, pagebreak=None):
@@ -15845,6 +19719,19 @@ class PageBreak:
     def SizeToFit(self):
         self.pagebreak.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Pages:
 
     def __init__(self, pages=None):
@@ -15871,6 +19758,22 @@ class Pages:
         arguments = {"Item": Item}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pages.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Printer:
 
@@ -16041,6 +19944,18 @@ class Printer:
     def TopMargin(self, value):
         self.printer.TopMargin = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class Printers:
 
     def __init__(self, printers=None):
@@ -16066,6 +19981,11 @@ class Printers:
     def Parent(self):
         return self.printers.Parent
 
+
+
+
+
+
 class Properties:
 
     def __init__(self, properties=None):
@@ -16090,6 +20010,30 @@ class Properties:
     @property
     def Parent(self):
         return self.properties.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Rectangle:
 
@@ -16380,6 +20324,35 @@ class Rectangle:
     def SizeToFit(self):
         self.rectangle.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Reference:
 
     def __init__(self, reference=None):
@@ -16421,6 +20394,15 @@ class Reference:
     def Name(self):
         return self.reference.Name
 
+
+
+
+
+
+
+
+
+
 class References:
 
     def __init__(self, references=None):
@@ -16453,6 +20435,75 @@ class References:
         arguments = {"Reference": Reference}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.references.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Report:
 
@@ -17548,6 +21599,114 @@ class Report:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.report.TextWidth(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Reports:
 
     def __init__(self, reports=None):
@@ -17573,6 +21732,8 @@ class Reports:
     def Parent(self):
         return self.reports.Parent
 
+
+
 class ReturnVar:
 
     def __init__(self, returnvar=None):
@@ -17585,6 +21746,12 @@ class ReturnVar:
     @property
     def Value(self):
         return self.returnvar.Value
+
+
+
+
+
+
 
 class ReturnVars:
 
@@ -17610,6 +21777,13 @@ class ReturnVars:
     @property
     def Parent(self):
         return self.returnvars.Parent
+
+
+
+
+
+
+
 
 class Screen:
 
@@ -17651,6 +21825,32 @@ class Screen:
     @property
     def PreviousControl(self):
         return self.screen.PreviousControl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Section:
 
@@ -17948,6 +22148,31 @@ class Section:
     def SetTabOrder(self):
         self.section.SetTabOrder()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SharedResource:
 
     def __init__(self, sharedresource=None):
@@ -17971,6 +22196,13 @@ class SharedResource:
 
     def Delete(self):
         self.sharedresource.Delete()
+
+
+
+
+
+
+
 
 class SharedResources:
 
@@ -17996,6 +22228,11 @@ class SharedResources:
     @property
     def Parent(self):
         return self.sharedresources.Parent
+
+
+
+
+
 
 class SmartTag:
 
@@ -18033,6 +22270,14 @@ class SmartTag:
     def Delete(self):
         return self.smarttag.Delete()
 
+
+
+
+
+
+
+
+
 class SmartTagAction:
 
     def __init__(self, smarttagaction=None):
@@ -18052,6 +22297,12 @@ class SmartTagAction:
 
     def Execute(self):
         self.smarttagaction.Execute()
+
+
+
+
+
+
 
 class SmartTagActions:
 
@@ -18077,6 +22328,12 @@ class SmartTagActions:
     @property
     def Parent(self):
         return self.smarttagactions.Parent
+
+
+
+
+
+
 
 class SmartTagProperties:
 
@@ -18111,6 +22368,9 @@ class SmartTagProperties:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return SmartTagPropertie(self.smarttagproperties.Add(*args, **arguments))
 
+
+
+
 class SmartTagProperty:
 
     def __init__(self, smarttagproperty=None):
@@ -18134,6 +22394,13 @@ class SmartTagProperty:
 
     def Delete(self):
         return self.smarttagproperty.Delete()
+
+
+
+
+
+
+
 
 class SmartTags:
 
@@ -18164,6 +22431,55 @@ class SmartTags:
         arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.smarttags.Add(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SubForm:
 
@@ -18671,6 +22987,93 @@ class SubForm:
 
     def SizeToFit(self):
         self.subform.SizeToFit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TabControl:
 
@@ -19421,6 +23824,54 @@ class TabControl:
     def SizeToFit(self):
         self.tabcontrol.SizeToFit()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TempVar:
 
     def __init__(self, tempvar=None):
@@ -19437,6 +23888,13 @@ class TempVar:
     @Value.setter
     def Value(self, value):
         self.tempvar.Value = value
+
+
+
+
+
+
+
 
 class TempVars:
 
@@ -19475,6 +23933,101 @@ class TempVars:
 
     def RemoveAll(self):
         self.tempvars.RemoveAll()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextBox:
 
@@ -20502,6 +25055,150 @@ class TextBox:
     def Undo(self):
         self.textbox.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ToggleButton:
 
     def __init__(self, togglebutton=None):
@@ -21476,6 +26173,119 @@ class ToggleButton:
     def Undo(self):
         self.togglebutton.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class WebBrowserControl:
 
     def __init__(self, webbrowsercontrol=None):
@@ -22026,6 +26836,54 @@ class WebBrowserControl:
     def Undo(self):
         self.webbrowsercontrol.Undo()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class WebService:
 
     def __init__(self, webservice=None):
@@ -22046,6 +26904,12 @@ class WebService:
     @property
     def Parent(self):
         return self.webservice.Parent
+
+
+
+
+
+
 
 class WebServices:
 
@@ -22072,6 +26936,8 @@ class WebServices:
     def Parent(self):
         return self.webservices.Parent
 
+
+
 class WSParameter:
 
     def __init__(self, wsparameter=None):
@@ -22093,6 +26959,12 @@ class WSParameter:
     def Type(self):
         return self.wsparameter.Type
 
+
+
+
+
+
+
 class WSParameters:
 
     def __init__(self, wsparameters=None):
@@ -22113,3 +26985,5 @@ class WSParameters:
     @property
     def Parent(self):
         return self.wsparameters.Parent
+
+

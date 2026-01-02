@@ -1,5 +1,18 @@
 import win32com.client
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Account:
 
     def __init__(self, account=None):
@@ -75,6 +88,16 @@ class Account:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.account.GetRecipientFromID(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class AccountRuleCondition:
 
     def __init__(self, accountrulecondition=None):
@@ -116,6 +139,14 @@ class AccountRuleCondition:
     def Session(self):
         return NameSpace(self.accountrulecondition.Session)
 
+
+
+
+
+
+
+
+
 class Accounts:
 
     def __init__(self, accounts=None):
@@ -146,6 +177,11 @@ class Accounts:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.accounts.Item(*args, **arguments)
 
+
+
+
+
+
 class AccountSelector:
 
     def __init__(self, accountselector=None):
@@ -170,6 +206,17 @@ class AccountSelector:
     @property
     def Session(self):
         return NameSpace(self.accountselector.Session)
+
+
+
+
+
+
+
+
+
+
+
 
 class Action:
 
@@ -262,6 +309,20 @@ class Action:
     def Execute(self):
         return self.action.Execute()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Actions:
 
     def __init__(self, actions=None):
@@ -299,6 +360,19 @@ class Actions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.actions.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class AddressEntries:
 
@@ -351,6 +425,22 @@ class AddressEntries:
         arguments = {"Property": Property, "Order": Order}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.addressentries.Sort(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class AddressEntry:
 
@@ -440,6 +530,22 @@ class AddressEntry:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.addressentry.Update(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AddressList:
 
     def __init__(self, addresslist=None):
@@ -500,6 +606,16 @@ class AddressList:
     def GetContactsFolder(self):
         return self.addresslist.GetContactsFolder()
 
+
+
+
+
+
+
+
+
+
+
 class AddressLists:
 
     def __init__(self, addresslists=None):
@@ -529,6 +645,14 @@ class AddressLists:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.addresslists.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class AddressRuleCondition:
 
@@ -570,6 +694,35 @@ class AddressRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.addressrulecondition.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Application:
 
@@ -708,6 +861,83 @@ class Application:
         arguments = {"RegionName": RegionName}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.application.RefreshFormRegionDefinition(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class AppointmentItem:
 
@@ -1217,6 +1447,62 @@ class AppointmentItem:
     def ShowCategoriesDialog(self):
         self.appointmentitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AssignToCategoryRuleAction:
 
     def __init__(self, assigntocategoryruleaction=None):
@@ -1257,6 +1543,17 @@ class AssignToCategoryRuleAction:
     @property
     def Session(self):
         return NameSpace(self.assigntocategoryruleaction.Session)
+
+
+
+
+
+
+
+
+
+
+
 
 class Attachment:
 
@@ -1334,6 +1631,20 @@ class Attachment:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.attachment.SaveAsFile(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Attachments:
 
     def __init__(self, attachments=None):
@@ -1374,6 +1685,16 @@ class Attachments:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.attachments.Remove(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class AttachmentSelection:
 
     def __init__(self, attachmentselection=None):
@@ -1412,6 +1733,14 @@ class AttachmentSelection:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.attachmentselection.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class AutoFormatRule:
 
@@ -1466,6 +1795,17 @@ class AutoFormatRule:
     def Standard(self):
         return AutoFormatRule(self.autoformatrule.Standard)
 
+
+
+
+
+
+
+
+
+
+
+
 class AutoFormatRules:
 
     def __init__(self, autoformatrules=None):
@@ -1516,6 +1856,23 @@ class AutoFormatRules:
 
     def Save(self):
         self.autoformatrules.Save()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class BusinessCardView:
 
@@ -1628,6 +1985,19 @@ class BusinessCardView:
     def Save(self):
         self.businesscardview.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CalendarModule:
 
     def __init__(self, calendarmodule=None):
@@ -1676,6 +2046,23 @@ class CalendarModule:
     @Visible.setter
     def Visible(self, value):
         self.calendarmodule.Visible = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CalendarSharing:
 
@@ -1767,6 +2154,29 @@ class CalendarSharing:
         arguments = {"Path": Path}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.calendarsharing.SaveAsICal(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CalendarView:
 
@@ -1943,6 +2353,33 @@ class CalendarView:
     def Save(self):
         self.calendarview.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CardView:
 
     def __init__(self, cardview=None):
@@ -2090,6 +2527,26 @@ class CardView:
     def Save(self):
         self.cardview.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Categories:
 
     def __init__(self, categories=None):
@@ -2129,6 +2586,17 @@ class Categories:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.categories.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class Category:
 
@@ -2191,6 +2659,16 @@ class Category:
     def ShortcutKey(self, value):
         self.category.ShortcutKey = value
 
+
+
+
+
+
+
+
+
+
+
 class CategoryRuleCondition:
 
     def __init__(self, categoryrulecondition=None):
@@ -2232,6 +2710,11 @@ class CategoryRuleCondition:
     def Session(self):
         return NameSpace(self.categoryrulecondition.Session)
 
+
+
+
+
+
 class Column:
 
     def __init__(self, column=None):
@@ -2256,6 +2739,16 @@ class Column:
     @property
     def Session(self):
         return NameSpace(self.column.Session)
+
+
+
+
+
+
+
+
+
+
 
 class ColumnFormat:
 
@@ -2314,6 +2807,15 @@ class ColumnFormat:
     def Width(self, value):
         self.columnformat.Width = value
 
+
+
+
+
+
+
+
+
+
 class Columns:
 
     def __init__(self, columns=None):
@@ -2357,6 +2859,14 @@ class Columns:
     def RemoveAll(self):
         self.columns.RemoveAll()
 
+
+
+
+
+
+
+
+
 class Conflict:
 
     def __init__(self, conflict=None):
@@ -2389,6 +2899,19 @@ class Conflict:
     @property
     def Type(self):
         return OlObjectClass(self.conflict.Type)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Conflicts:
 
@@ -2431,6 +2954,143 @@ class Conflicts:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.conflicts.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ContactItem:
 
@@ -3694,6 +4354,88 @@ class ContactItem:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.contactitem.ShowCheckPhoneDialog(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ContactsModule:
 
     def __init__(self, contactsmodule=None):
@@ -3742,6 +4484,27 @@ class ContactsModule:
     @Visible.setter
     def Visible(self, value):
         self.contactsmodule.Visible = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Conversation:
 
@@ -3835,6 +4598,20 @@ class Conversation:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.conversation.StopAlwaysMoveToFolder(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ConversationHeader:
 
     def __init__(self, conversationheader=None):
@@ -3869,6 +4646,60 @@ class ConversationHeader:
 
     def GetItems(self):
         return self.conversationheader.GetItems()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DistListItem:
 
@@ -4246,6 +5077,90 @@ class DistListItem:
     def ShowCategoriesDialog(self):
         self.distlistitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DocumentItem:
 
     def __init__(self, documentitem=None):
@@ -4470,6 +5385,38 @@ class DocumentItem:
     def ShowCategoriesDialog(self):
         self.documentitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Exception:
 
     def __init__(self, exception=None):
@@ -4503,6 +5450,14 @@ class Exception:
     def Session(self):
         return NameSpace(self.exception.Session)
 
+
+
+
+
+
+
+
+
 class Exceptions:
 
     def __init__(self, exceptions=None):
@@ -4532,6 +5487,26 @@ class Exceptions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.exceptions.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ExchangeDistributionList:
 
@@ -4645,6 +5620,40 @@ class ExchangeDistributionList:
         arguments = {"MakePermanent": MakePermanent, "Refresh": Refresh}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.exchangedistributionlist.Update(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ExchangeUser:
 
@@ -4906,6 +5915,54 @@ class ExchangeUser:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.exchangeuser.Update(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Explorer:
 
     def __init__(self, explorer=None):
@@ -5059,6 +6116,26 @@ class Explorer:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.explorer.ShowPane(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Explorers:
 
     def __init__(self, explorers=None):
@@ -5093,6 +6170,36 @@ class Explorers:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.explorers.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Folder:
 
@@ -5291,6 +6398,34 @@ class Folder:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.folder.SetCustomIcon(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Folders:
 
     def __init__(self, folders=None):
@@ -5342,6 +6477,20 @@ class Folders:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.folders.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FormDescription:
 
@@ -5497,6 +6646,24 @@ class FormDescription:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.formdescription.PublishForm(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FormNameRuleCondition:
 
     def __init__(self, formnamerulecondition=None):
@@ -5537,6 +6704,23 @@ class FormNameRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.formnamerulecondition.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FormRegion:
 
@@ -5634,6 +6818,23 @@ class FormRegion:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.formregion.SetControlItemProperty(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FromRssFeedRuleCondition:
 
     def __init__(self, fromrssfeedrulecondition=None):
@@ -5674,6 +6875,20 @@ class FromRssFeedRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.fromrssfeedrulecondition.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class IconView:
 
@@ -5790,6 +7005,22 @@ class IconView:
     def Save(self):
         self.iconview.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ImportanceRuleCondition:
 
     def __init__(self, importancerulecondition=None):
@@ -5830,6 +7061,28 @@ class ImportanceRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.importancerulecondition.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Inspector:
 
@@ -5970,6 +7223,27 @@ class Inspector:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.inspector.ShowFormPage(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Inspectors:
 
     def __init__(self, inspectors=None):
@@ -6002,6 +7276,15 @@ class Inspectors:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.inspectors.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
 
 class ItemProperties:
 
@@ -6045,6 +7328,13 @@ class ItemProperties:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.itemproperties.Remove(*args, **arguments)
+
+
+
+
+
+
+
 
 class ItemProperty:
 
@@ -6090,6 +7380,27 @@ class ItemProperty:
     @Value.setter
     def Value(self, value):
         self.itemproperty.Value = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Items:
 
@@ -6174,6 +7485,65 @@ class Items:
         arguments = {"Property": Property, "Descending": Descending}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.items.Sort(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class JournalItem:
 
@@ -6505,6 +7875,41 @@ class JournalItem:
     def StopTimer(self):
         self.journalitem.StopTimer()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class JournalModule:
 
     def __init__(self, journalmodule=None):
@@ -6553,6 +7958,74 @@ class JournalModule:
     @Visible.setter
     def Visible(self, value):
         self.journalmodule.Visible = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MailItem:
 
@@ -7173,6 +8646,77 @@ class MailItem:
     def ShowCategoriesDialog(self):
         self.mailitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MailModule:
 
     def __init__(self, mailmodule=None):
@@ -7222,6 +8766,20 @@ class MailModule:
     def Visible(self, value):
         self.mailmodule.Visible = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MarkAsTaskRuleAction:
 
     def __init__(self, markastaskruleaction=None):
@@ -7270,6 +8828,59 @@ class MarkAsTaskRuleAction:
     @property
     def Session(self):
         return NameSpace(self.markastaskruleaction.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MeetingItem:
 
@@ -7659,6 +9270,57 @@ class MeetingItem:
     def ShowCategoriesDialog(self):
         self.meetingitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MoveOrCopyRuleAction:
 
     def __init__(self, moveorcopyruleaction=None):
@@ -7699,6 +9361,42 @@ class MoveOrCopyRuleAction:
     @property
     def Session(self):
         return NameSpace(self.moveorcopyruleaction.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class NameSpace:
 
@@ -7896,6 +9594,26 @@ class NameSpace:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.namespace.SendAndReceive(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class NavigationFolder:
 
     def __init__(self, navigationfolder=None):
@@ -7953,6 +9671,15 @@ class NavigationFolder:
     def Session(self):
         return NameSpace(self.navigationfolder.Session)
 
+
+
+
+
+
+
+
+
+
 class NavigationFolders:
 
     def __init__(self, navigationfolders=None):
@@ -7992,6 +9719,13 @@ class NavigationFolders:
         arguments = {"RemovableFolder": RemovableFolder}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.navigationfolders.Remove(*args, **arguments)
+
+
+
+
+
+
+
 
 class NavigationGroup:
 
@@ -8038,6 +9772,19 @@ class NavigationGroup:
     def Session(self):
         return NameSpace(self.navigationgroup.Session)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class NavigationGroups:
 
     def __init__(self, navigationgroups=None):
@@ -8082,6 +9829,14 @@ class NavigationGroups:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.navigationgroups.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class NavigationModule:
 
@@ -8128,6 +9883,18 @@ class NavigationModule:
     def Visible(self, value):
         self.navigationmodule.Visible = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class NavigationModules:
 
     def __init__(self, navigationmodules=None):
@@ -8162,6 +9929,14 @@ class NavigationModules:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.navigationmodules.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class NavigationPane:
 
@@ -8212,6 +9987,15 @@ class NavigationPane:
     def Session(self):
         return NameSpace(self.navigationpane.Session)
 
+
+
+
+
+
+
+
+
+
 class NewItemAlertRuleAction:
 
     def __init__(self, newitemalertruleaction=None):
@@ -8252,6 +10036,30 @@ class NewItemAlertRuleAction:
     @Text.setter
     def Text(self, value):
         self.newitemalertruleaction.Text = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class NoteItem:
 
@@ -8426,6 +10234,22 @@ class NoteItem:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.noteitem.SaveAs(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class NotesModule:
 
     def __init__(self, notesmodule=None):
@@ -8475,6 +10299,507 @@ class NotesModule:
     def Visible(self, value):
         self.notesmodule.Visible = value
 
+
+
+
+
+
+
+
+
+# OlAccountType enumeration
+olEas = 4
+olExchange = 0
+olHttp = 3
+olImap = 1
+olOtherAccount = 5
+olPop3 = 2
+
+# OlActionCopyLike enumeration
+olForward = 2
+olReply = 0
+olReplyAll = 1
+olReplyFolder = 3
+olRespond = 4
+
+# OlActionReplyStyle enumeration
+olEmbedOriginalItem = 1
+olIncludeOriginalText = 2
+olIndentOriginalText = 3
+olLinkOriginalItem = 4
+olOmitOriginalText = 0
+olReplyTickOriginalText = 1000
+olUserPreference = 5
+
+# OlActionResponseStyle enumeration
+olOpen = 0
+olPrompt = 2
+olSend = 1
+
+# OlActionShowOn enumeration
+olDontShow = 0
+olMenu = 1
+olMenuAndToolbar = 2
+
+# OlAddressEntryUserType enumeration
+olExchangeAgentAddressEntry = 3
+olExchangeDistributionListAddressEntry = 1
+olExchangeOrganizationAddressEntry = 4
+olExchangePublicFolderAddressEntry = 2
+olExchangeRemoteUserAddressEntry = 5
+olExchangeUserAddressEntry = 0
+olLdapAddressEntry = 20
+olOtherAddressEntry = 40
+olOutlookContactAddressEntry = 10
+olOutlookDistributionListAddressEntry = 11
+olSmtpAddressEntry = 30
+
+# OlAddressListType enumeration
+olCustomAddressList = 4
+olExchangeContainer = 1
+olExchangeGlobalAddressList = 0
+olOutlookAddressList = 2
+olOutlookLdapAddressList = 3
+
+# OlAlign enumeration
+olAlignCenter = 1
+olAlignLeft = 0
+olAlignRight = 2
+
+# OlAlignment enumeration
+olAlignmentLeft = 0
+olAlignmentRight = 1
+
+# OlAlwaysDeleteConversation enumeration
+olAlwaysDelete = 1
+olAlwaysDeleteUnsupported = 2
+olDoNotDelete = 0
+
+# OlAppointmentCopyOptions enumeration
+olCopyAsAccept = 2
+olCreateAppointment = 1
+olPromptUser = 0
+
+# OlAppointmentTimeField enumeration
+olAppointmentTimeFieldEnd = 3
+olAppointmentTimeFieldNone = 1
+olAppointmentTimeFieldStart = 2
+
+# OlAttachmentBlockLevel enumeration
+olAttachmentBlockLevelNone = 0
+olAttachmentBlockLevelOpen = 1
+
+# OlAttachmentType enumeration
+olByReference = 4
+olByValue = 1
+olEmbeddeditem = 5
+olOLE = 6
+
+# OlAutoDiscoverConnectionMode enumeration
+olAutoDiscoverConnectionExternal = 1
+olAutoDiscoverConnectionInternal = 2
+olAutoDiscoverConnectionInternalDomain = 3
+olAutoDiscoverConnectionUnknown = 0
+
+# OlAutoPreview enumeration
+olAutoPreviewAll = 0
+olAutoPreviewNone = 2
+olAutoPreviewUnread = 1
+
+# OlBackStyle enumeration
+olBackStyleOpaque = 1
+olBackStyleTransparent = 0
+
+# OlBodyFormat enumeration
+olFormatHTML = 2
+olFormatPlain = 1
+olFormatRichText = 3
+olFormatUnspecified = 0
+
+# OlBorderStyle enumeration
+olBorderStyleNone = 0
+olBorderStyleSingle = 1
+
+# OlBusinessCardType enumeration
+olBusinessCardTypeInterConnect = 1
+olBusinessCardTypeOutlook = 0
+
+# OlBusyStatus enumeration
+olBusy = 2
+olFree = 0
+olOutOfOffice = 3
+olTentative = 1
+olWorkingElsewhere = 4
+
+# OlCalendarDetail enumeration
+olFreeBusyAndSubject = 1
+olFreeBusyOnly = 0
+olFullDetails = 2
+
+# OlCalendarMailFormat enumeration
+olCalendarMailFormatDailySchedule = 0
+olCalendarMailFormatEventList = 1
+
+# OlCalendarViewMode enumeration
+olCalendarView5DayWeek = 4
+olCalendarViewDay = 0
+olCalendarViewMonth = 2
+olCalendarViewMultiDay = 3
+olCalendarViewWeek = 1
+
+# OlCategoryColor enumeration
+olCategoryColorBlack = 15
+olCategoryColorBlue = 8
+olCategoryColorDarkBlue = 23
+olCategoryColorDarkGray = 14
+olCategoryColorDarkGreen = 20
+olCategoryColorDarkMaroon = 25
+olCategoryColorDarkOlive = 22
+olCategoryColorDarkOrange = 17
+olCategoryColorDarkPeach = 18
+olCategoryColorDarkPurple = 24
+olCategoryColorDarkRed = 16
+olCategoryColorDarkSteel = 12
+olCategoryColorDarkTeal = 21
+olCategoryColorDarkYellow = 19
+olCategoryColorGray = 13
+olCategoryColorGreen = 5
+olCategoryColorMaroon = 10
+olCategoryColorNone = 0
+olCategoryColorOlive = 7
+olCategoryColorOrange = 2
+olCategoryColorPeach = 3
+olCategoryColorPurple = 9
+olCategoryColorRed = 1
+olCategoryColorSteel = 11
+olCategoryColorTeal = 6
+olCategoryColorYellow = 4
+
+# OlCategoryShortcutKey enumeration
+olCategoryShortcutKeyCtrlF10 = 10
+olCategoryShortcutKeyCtrlF11 = 11
+olCategoryShortcutKeyCtrlF12 = 12
+olCategoryShortcutKeyCtrlF2 = 2
+olCategoryShortcutKeyCtrlF3 = 3
+olCategoryShortcutKeyCtrlF4 = 4
+olCategoryShortcutKeyCtrlF5 = 5
+olCategoryShortcutKeyCtrlF6 = 6
+olCategoryShortcutKeyCtrlF7 = 7
+olCategoryShortcutKeyCtrlF8 = 8
+olCategoryShortcutKeyCtrlF9 = 9
+olCategoryShortcutKeyNone = 0
+
+# OlColor enumeration
+olAutoColor = 0
+olColorAqua = 15
+olColorBlack = 1
+olColorBlue = 13
+olColorFuchsia = 14
+olColorGray = 8
+olColorGreen = 3
+olColorLime = 11
+olColorMaroon = 2
+olColorNavy = 5
+olColorOlive = 4
+olColorPurple = 6
+olColorRed = 10
+olColorSilver = 9
+olColorTeal = 7
+olColorWhite = 16
+olColorYellow = 12
+
+# OlComboBoxStyle enumeration
+olComboBoxStyleCombo = 0
+olComboBoxStyleList = 1
+
+# OlContactPhoneNumber enumeration
+olContactPhoneAssistant = 0
+olContactPhoneBusiness = 1
+olContactPhoneBusiness2 = 2
+olContactPhoneBusinessFax = 3
+olContactPhoneCallback = 4
+olContactPhoneCar = 5
+olContactPhoneCompany = 6
+olContactPhoneHome = 7
+olContactPhoneHome2 = 8
+olContactPhoneHomeFax = 9
+olContactPhoneISDN = 10
+olContactPhoneMobile = 11
+olContactPhoneOther = 12
+olContactPhoneOtherFax = 13
+olContactPhonePager = 14
+olContactPhonePrimary = 15
+olContactPhoneRadio = 16
+olContactPhoneTelex = 17
+olContactPhoneTTYTTD = 18
+
+# OlDaysOfWeek enumeration
+olSunday = 1
+olMonday = 2
+olTuesday = 4
+olWednesday = 8
+olThursday = 16
+olFriday = 32
+olSaturday = 64
+
+# OlDayWeekTimeScale enumeration
+olTimeScale10Minutes = 2
+olTimeScale15Minutes = 3
+olTimeScale30Minutes = 4
+olTimeScale5Minutes = 0
+olTimeScale60Minutes = 5
+olTimeScale6Minutes = 1
+
+# OlDefaultExpandCollapseSetting enumeration
+olAllCollapsed = 1
+olAllExpanded = 0
+olLastViewed = 2
+
+# OlDefaultFolders enumeration
+olFolderCalendar = 9
+olFolderConflicts = 19
+olFolderContacts = 10
+olFolderDeletedItems = 3
+olFolderDrafts = 16
+olFolderInbox = 6
+olFolderJournal = 11
+olFolderJunk = 23
+olFolderLocalFailures = 21
+olFolderManagedEmail = 29
+olFolderNotes = 12
+olFolderOutbox = 4
+olFolderSentMail = 5
+olFolderServerFailures = 22
+olFolderSuggestedContacts = 30
+olFolderSyncIssues = 20
+olFolderTasks = 13
+olFolderToDo = 28
+olPublicFoldersAllPublicFolders = 18
+olFolderRssFeeds = 25
+
+# OlDefaultSelectNamesDisplayMode enumeration
+olDefaultDelegates = 6
+olDefaultMail = 1
+olDefaultMeeting = 2
+olDefaultMembers = 5
+olDefaultPickRooms = 8
+olDefaultSharingRequest = 4
+olDefaultSingleName = 7
+olDefaultTask = 3
+
+# OlDisplayType enumeration
+olAgent = 3
+olDistList = 1
+olForum = 2
+olOrganization = 4
+olPrivateDistList = 5
+olRemoteUser = 6
+olUser = 0
+
+# OlDownloadState enumeration
+olFullItem = 1
+olHeaderOnly = 0
+
+# OlDragBehavior enumeration
+olDragBehaviorDisabled = 0
+olDragBehaviorEnabled = 1
+
+# OlEditorType enumeration
+olEditorHTML = 2
+olEditorRTF = 3
+olEditorText = 1
+olEditorWord = 4
+
+# OlEnterFieldBehavior enumeration
+olEnterFieldBehaviorRecallSelection = 1
+olEnterFieldBehaviorSelectAll = 0
+
+# OlExchangeConnectionMode enumeration
+olCachedConnectedDrizzle = 600
+olCachedConnectedFull = 700
+olCachedConnectedHeaders = 500
+olCachedDisconnected = 400
+olCachedOffline = 200
+olDisconnected = 300
+olNoExchange = 0
+olOffline = 100
+olOnline = 800
+
+# OlExchangeStoreType enumeration
+olExchangeMailbox = 1
+olExchangePublicFolder = 2
+olNotExchange = 3
+olPrimaryExchangeMailbox = 0
+olAdditionalExchangeMailbox = 4
+
+# OlFolderDisplayMode enumeration
+olFolderDisplayFolderOnly = 1
+olFolderDisplayNoNavigation = 2
+olFolderDisplayNormal = 0
+
+# OlFormatCurrency enumeration
+olFormatCurrencyDecimal = 1
+olFormatCurrencyNonDecimal = 2
+
+# OlFormatDateTime enumeration
+olFormatDateTimeBestFit = 17
+olFormatDateTimeLongDate = 6
+olFormatDateTimeLongDateReversed = 7
+OlFormatDateTimeLongDayDate = 5
+olFormatDateTimeLongDayDateTime = 1
+olFormatDateTimeLongTime = 15
+olFormatDateTimeShortDate = 8
+olFormatDateTimeShortDateNumOnly = 9
+olFormatDateTimeShortDateTime = 2
+olFormatDateTimeShortDayDate = 13
+olFormatDateTimeShortDayDateTime = 3
+olFormatDateTimeShortDayMonth = 10
+olFormatDateTimeShortDayMonthDateTime = 4
+olFormatDateTimeShortMonthYear = 11
+olFormatDateTimeShortMonthYearNumOnly = 12
+olFormatDateTimeShortTime = 16
+
+# OlFormatDuration enumeration
+olFormatDurationLong = 2
+olFormatDurationLongBusiness = 4
+olFormatDurationShort = 1
+olFormatDurationShortBusiness = 3
+
+# OlFormatEnumeration enumeration
+olFormatEnumBitmap = 1
+olFormatEnumText = 2
+
+# OlFormatInteger enumeration
+olFormatIntegerComputer1 = 2
+olFormatIntegerComputer2 = 3
+olFormatIntegerComputer3 = 4
+olFormatIntegerPlain = 1
+
+# OlFormatKeywords enumeration
+olFormatKeywordsText = 1
+
+# OlFormatNumber enumeration
+olFormatNumber1Decimal = 3
+olFormatNumber2Decimal = 4
+olFormatNumberAllDigits = 1
+olFormatNumberComputer1 = 6
+olFormatNumberComputer2 = 7
+olFormatNumberComputer3 = 8
+olFormatNumberRaw = 9
+olFormatNumberScientific = 5
+olFormatNumberTruncated = 2
+
+# OlFormatPercent enumeration
+olFormatPercent1Decimal = 2
+olFormatPercent2Decimal = 3
+olFormatPercentAllDigits = 4
+olFormatPercentRounded = 1
+
+# OlFormatSmartFrom enumeration
+olFormatSmartFromFromOnly = 2
+olFormatSmartFromFromTo = 1
+
+# OlFormatText enumeration
+olFormatTextText = 1
+
+# OlFormatYesNo enumeration
+olFormatYesNoIcon = 4
+olFormatYesNoOnOff = 2
+olFormatYesNoTrueFalse = 3
+olFormatYesNoYesNo = 1
+
+# OlFormRegionIcon enumeration
+olFormRegionIconDefault = 1
+olFormRegionIconEncrypted = 9
+olFormRegionIconForwarded = 5
+olFormRegionIconPage = 11
+olFormRegionIconRead = 3
+olFormRegionIconRecurring = 12
+olFormRegionIconReplied = 4
+olFormRegionIconSigned = 8
+olFormRegionIconSubmitted = 7
+olFormRegionIconUnread = 2
+olFormRegionIconUnsent = 6
+olFormRegionIconWindow = 10
+
+# OlFormRegionMode enumeration
+olFormRegionCompose = 1
+olFormRegionPreview = 2
+olFormRegionRead = 0
+
+# OlFormRegionSize enumeration
+olFormRegionTypeAdjoining = 1
+olFormRegionTypeSeparate = 0
+
+# OlFormRegistry enumeration
+olDefaultRegistry = 0
+olFolderRegistry = 3
+olOrganizationRegistry = 4
+olPersonalRegistry = 2
+
+# OlGender enumeration
+olFemale = 1
+olMale = 2
+olUnspecified = 0
+
+# OlGridLineStyle enumeration
+olGridLineDashes = 3
+olGridLineLargeDots = 2
+olGridLineNone = 0
+olGridLineSmallDots = 1
+olGridLineSolid = 4
+
+# OlGroupType enumeration
+olCustomFoldersGroup = 0
+olFavoriteFoldersGroup = 4
+olMyFoldersGroup = 1
+olOtherFoldersGroup = 3
+olPeopleFoldersGroup = 2
+olReadOnlyGroup = 6
+olRoomsGroup = 5
+
+# OlHorizontalLayout enumeration
+olHorizontalLayoutAlignCenter = 1
+olHorizontalLayoutGrow = 3
+olHorizontalLayoutAlignLeft = 0
+olHorizontalLayoutAlignRight = 2
+
+# OlIconViewPlacement enumeration
+olIconAutoArrange = 2
+olIconDoNotArrange = 0
+olIconLineUp = 1
+olIconSortAndAutoArrange = 3
+
+# OlIconViewType enumeration
+olIconViewLarge = 0
+olIconViewList = 2
+olIconViewSmall = 1
+
+# OlImportance enumeration
+olImportanceHigh = 2
+olImportanceLow = 0
+olImportanceNormal = 1
+
+# OlInspectorClose enumeration
+olDiscard = 1
+olPromptForSave = 2
+olSave = 0
+
+# OlItemType enumeration
+olAppointmentItem = 1
+olContactItem = 2
+olDistributionListItem = 7
+olJournalItem = 4
+olMailItem = 0
+olNoteItem = 5
+olPostItem = 6
+olTaskItem = 3
+
+# OlJournalRecipientType enumeration
+olAssociatedContact = 1
+
+
+
 class OlkBusinessCardControl:
 
     def __init__(self, olkbusinesscardcontrol=None):
@@ -8495,6 +10820,25 @@ class OlkBusinessCardControl:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkbusinesscardcontrol.MousePointer = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkCategory:
 
@@ -8556,6 +10900,30 @@ class OlkCategory:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcategory.MousePointer = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkCheckBox:
 
@@ -8661,6 +11029,47 @@ class OlkCheckBox:
     @WordWrap.setter
     def WordWrap(self, value):
         self.olkcheckbox.WordWrap = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkComboBox:
 
@@ -8898,6 +11307,39 @@ class OlkComboBox:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.olkcombobox.SetItem(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OlkCommandButton:
 
     def __init__(self, olkcommandbutton=None):
@@ -8995,6 +11437,25 @@ class OlkCommandButton:
     def WordWrap(self, value):
         self.olkcommandbutton.WordWrap = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OlkContactPhoto:
 
     def __init__(self, olkcontactphoto=None):
@@ -9023,6 +11484,44 @@ class OlkContactPhoto:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcontactphoto.MousePointer = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkDateControl:
 
@@ -9164,6 +11663,21 @@ class OlkDateControl:
     def DropDown(self):
         self.olkdatecontrol.DropDown()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OlkFrameHeader:
 
     def __init__(self, olkframeheader=None):
@@ -9221,6 +11735,11 @@ class OlkFrameHeader:
     def MousePointer(self, value):
         self.olkframeheader.MousePointer = value
 
+
+
+
+
+
 class OlkInfoBar:
 
     def __init__(self, olkinfobar=None):
@@ -9241,6 +11760,23 @@ class OlkInfoBar:
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkinfobar.MousePointer = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkLabel:
 
@@ -9354,6 +11890,39 @@ class OlkLabel:
     @WordWrap.setter
     def WordWrap(self, value):
         self.olklabel.WordWrap = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkListBox:
 
@@ -9516,6 +12085,39 @@ class OlkListBox:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.olklistbox.SetSelected(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OlkOptionButton:
 
     def __init__(self, olkoptionbutton=None):
@@ -9621,6 +12223,14 @@ class OlkOptionButton:
     def WordWrap(self, value):
         self.olkoptionbutton.WordWrap = value
 
+
+
+
+
+
+
+
+
 class OlkPageControl:
 
     def __init__(self, olkpagecontrol=None):
@@ -9633,6 +12243,12 @@ class OlkPageControl:
     @Page.setter
     def Page(self, value):
         self.olkpagecontrol.Page = value
+
+
+
+
+
+
 
 class OlkSenderPhoto:
 
@@ -9670,6 +12286,42 @@ class OlkSenderPhoto:
     @property
     def PreferredWidth(self):
         return self.olksenderphoto.PreferredWidth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OlkTextBox:
 
@@ -9912,6 +12564,48 @@ class OlkTextBox:
     def Paste(self):
         self.olktextbox.Paste()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OlkTimeControl:
 
     def __init__(self, olktimecontrol=None):
@@ -10068,6 +12762,34 @@ class OlkTimeControl:
     def DropDown(self):
         self.olktimecontrol.DropDown()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OlkTimeZoneControl:
 
     def __init__(self, olktimezonecontrol=None):
@@ -10140,6 +12862,592 @@ class OlkTimeZoneControl:
     def DropDown(self):
         self.olktimezonecontrol.DropDown()
 
+
+
+
+
+
+
+
+
+# OlMailingAddress enumeration
+olBusiness = 2
+olHome = 1
+olNone = 0
+olOther = 3
+
+# OlMailRecipientType enumeration
+olBCC = 3
+olCC = 2
+olOriginator = 0
+olTo = 1
+
+# OlMarkInterval enumeration
+olMarkComplete = 5
+olMarkNextWeek = 3
+olMarkNoDate = 4
+olMarkThisWeek = 2
+olMarkToday = 0
+olMarkTomorrow = 1
+
+# OlMatchEntry enumeration
+olMatchEntryComplete = 1
+olMatchEntryFirstLetter = 0
+olMatchEntryNone = 2
+
+# OlMeetingRecipientType enumeration
+olOptional = 2
+olOrganizer = 0
+olRequired = 1
+olResource = 3
+
+# OlMeetingResponse enumeration
+olMeetingAccepted = 3
+olMeetingDeclined = 4
+olMeetingTentative = 2
+
+# OlMeetingStatus enumeration
+olMeeting = 1
+olMeetingCanceled = 5
+olMeetingReceived = 3
+olMeetingReceivedAndCanceled = 7
+olNonMeeting = 0
+
+# OlMouseButton enumeration
+olMouseButtonLeft = 1
+olMouseButtonRight = 2
+olMouseButtonMiddle = 4
+
+# OlMousePointer enumeration
+olMousePointerAppStarting = 13
+olMousePointerArrow = 1
+olMousePointerCross = 2
+olMousePointerCustom = 99
+olMousePointerDefault = 0
+olMousePointerHelp = 14
+olMousePointerHourGlass = 11
+olMousePointerIBeam = 3
+olMousePointerNoDrop = 12
+olMousePointerSizeAll = 15
+olMousePointerSizeNESW = 6
+olMousePointerSizeNS = 7
+olMousePointerSizeNWSE = 8
+olMousePointerSizeWE = 9
+olMousePointerUpArrow = 10
+
+# OlMultiLine enumeration
+olAlwaysMultiLine = 2
+olAlwaysSingleLine = 1
+olWidthMultiLine = 0
+
+# OlMultiSelect enumeration
+olMultiSelectExtended = 2
+olMultiSelectMulti = 1
+olMultiSelectSingle = 0
+
+# OlNavigationModuleType enumeration
+olModuleCalendar = 1
+olModuleContacts = 2
+olModuleFolderList = 6
+olModuleJournal = 4
+olModuleMail = 0
+olModuleNotes = 5
+olModuleShortcuts = 7
+olModuleSolutions = 8
+olModuleTasks = 3
+
+# OlObjectClass enumeration
+olAccount = 105
+olAccountRuleCondition = 135
+olAccounts = 106
+olAction = 32
+olActions = 33
+olAddressEntries = 21
+olAddressEntry = 8
+olAddressList = 7
+olAddressLists = 20
+olAddressRuleCondition = 170
+olApplication = 0
+olAppointment = 26
+olAssignToCategoryRuleAction = 122
+olAttachment = 5
+olAttachments = 18
+olAttachmentSelection = 169
+olAutoFormatRule = 147
+olAutoFormatRules = 148
+olCalendarModule = 159
+olCalendarSharing = 151
+olCategories = 153
+olCategory = 152
+olCategoryRuleCondition = 130
+olClassBusinessCardView = 168
+olClassCalendarView = 139
+olClassCardView = 138
+olClassIconView = 137
+olClassNavigationPane = 155
+olClassPeopleView = 183
+olClassTableView = 136
+olClassTimeLineView = 140
+olClassTimeZone = 174
+olClassTimeZones = 175
+olColumn = 154
+olColumnFormat = 149
+olColumns = 150
+olConflict = 102
+olConflicts = 103
+olContact = 40
+olContactsModule = 160
+olConversation = 178
+olConversationHeader = 182
+olDistributionList = 69
+olDocument = 41
+olException = 30
+olExceptions = 29
+olExchangeDistributionList = 111
+olExchangeUser = 110
+olExplorer = 34
+olExplorers = 60
+olFolder = 2
+olFolders = 15
+olFolderUserProperties = 172
+olFolderUserProperty = 171
+olFormDescription = 37
+olFormNameRuleCondition = 131
+olFormRegion = 129
+olFromRssFeedRuleCondition = 173
+olFromRuleCondition = 132
+olImportanceRuleCondition = 128
+olInspector = 35
+olInspectors = 61
+olItemProperties = 98
+olItemProperty = 99
+olItems = 16
+olJournal = 42
+olJournalModule = 162
+olMail = 43
+olMailModule = 158
+olMarkAsTaskRuleAction = 124
+olMeetingCancellation = 54
+olMeetingForwardNotification = 181
+olMeetingRequest = 53
+olMeetingResponseNegative = 55
+olMeetingResponsePositive = 56
+olMeetingResponseTentative = 57
+olMoveOrCopyRuleAction = 118
+olNamespace = 1
+olNavigationFolder = 167
+olNavigationFolders = 166
+olNavigationGroup = 165
+olNavigationGroups = 164
+olNavigationModule = 157
+olNavigationModules = 156
+olNewItemAlertRuleAction = 125
+olNote = 44
+olNotesModule = 163
+olOrderField = 144
+olOrderFields = 145
+olOutlookBarGroup = 66
+olOutlookBarGroups = 65
+olOutlookBarPane = 63
+olOutlookBarShortcut = 68
+olOutlookBarShortcuts = 67
+olOutlookBarStorage = 64
+olOutspace = 180
+olPages = 36
+olPanes = 62
+olPlaySoundRuleAction = 123
+olPost = 45
+olPropertyAccessor = 112
+olPropertyPages = 71
+olPropertyPageSite = 70
+olRecipient = 4
+olRecipients = 17
+olRecurrencePattern = 28
+olReminder = 101
+olReminders = 100
+olRemote = 47
+olReport = 46
+olResults = 78
+olRow = 121
+olRule = 115
+olRuleAction = 117
+olRuleActions = 116
+olRuleCondition = 127
+olRuleConditions = 126
+olRules = 114
+olSearch = 77
+olSelection = 74
+olSelectNamesDialog = 109
+olSenderInAddressListRuleCondition = 133
+olSendRuleAction = 119
+olSharing = 104
+olSimpleItems = 179
+olSolutionsModule = 177
+olStorageItem = 113
+olStore = 107
+olStores = 108
+olSyncObject = 72
+olSyncObjects = 73
+olTable = 120
+olTask = 48
+olTaskRequest = 49
+olTaskRequestAccept = 51
+olTaskRequestDecline = 52
+olTaskRequestUpdate = 50
+olTasksModule = 161
+olTextRuleCondition = 134
+olUserDefinedProperties = 172
+olUserDefinedProperty = 171
+olUserProperties = 38
+olUserProperty = 39
+olView = 80
+olViewField = 142
+olViewFields = 141
+olViewFont = 146
+olViews = 79
+
+# OlOutlookBarViewType enumeration
+olLargeIcon = 0
+olSmallIcon = 1
+
+# OlPageType enumeration
+olPageTypePlanner = 0
+olPageTypeTracker = 1
+
+# OlPane enumeration
+olFolderList = 2
+olNavigationPane = 4
+olOutlookBar = 1
+olPreview = 3
+
+# OlPermission enumeration
+olDoNotForward = 1
+olPermissionTemplate = 2
+olUnrestricted = 0
+
+# OlPermissionService enumeration
+olPassport = 2
+olUnknown = 0
+olWindows = 1
+
+# OlPictureAlignment enumeration
+olPictureAlignmentLeft = 0
+olPictureAlignmentTop = 1
+
+# OlRecipientSelectors enumeration
+olShowNone = 0
+olShowTo = 1
+olShowToCc = 2
+olShowToCcBcc = 3
+
+# OlRecurrenceState enumeration
+olApptException = 3
+olApptMaster = 1
+olApptNotRecurring = 0
+olApptOccurrence = 2
+
+# OlRecurrenceType enumeration
+olRecursDaily = 0
+olRecursMonthly = 2
+olRecursMonthNth = 3
+olRecursWeekly = 1
+olRecursYearly = 5
+olRecursYearNth = 6
+
+# OlReferenceType enumeration
+olStrong = 1
+olWeak = 0
+
+# OlRemoteStatus enumeration
+olMarkedForCopy = 3
+olMarkedForDelete = 4
+olMarkedForDownload = 2
+olRemoteStatusNone = 0
+olUnMarked = 1
+
+# OlResponseStatus enumeration
+olResponseAccepted = 3
+olResponseDeclined = 4
+olResponseNone = 0
+olResponseNotResponded = 5
+olResponseOrganized = 1
+olResponseTentative = 2
+
+# OlRuleActionType enumeration
+olRuleActionAssignToCategory = 2
+olRuleActionCcMessage = 27
+olRuleActionClearCategories = 30
+olRuleActionCopyToFolder = 5
+olRuleActionCustomAction = 22
+olRuleActionDefer = 28
+olRuleActionDelete = 3
+olRuleActionDeletePermanently = 4
+olRuleActionDesktopAlert = 24
+olRuleActionFlagClear = 13
+olRuleActionFlagColor = 12
+olRuleActionFlagForActionInDays = 11
+olRuleActionForward = 6
+olRuleActionForwardAsAttachment = 7
+olRuleActionImportance = 14
+olRuleActionMarkAsTask = 41
+olRuleActionMarkRead = 19
+olRuleActionMoveToFolder = 1
+olRuleActionNewItemAlert = 23
+olRuleActionNotifyDelivery = 26
+olRuleActionNotifyRead = 25
+olRuleActionPlaySound = 17
+olRuleActionPrint = 16
+olRuleActionRedirect = 8
+olRuleActionRunScript = 20
+olRuleActionSensitivity = 15
+olRuleActionServerReply = 9
+olRuleActionStartApplication = 18
+olRuleActionStop = 21
+olRuleActionTemplate = 10
+olRuleActionUnknown = 0
+
+# OlRuleConditionType enumeration
+olConditionAccount = 3
+olConditionAnyCategory = 29
+olConditionBody = 13
+olConditionBodyOrSubject = 14
+olConditionCategory = 18
+olConditionCc = 9
+olConditionDateRange = 22
+olConditionFlaggedForAction = 8
+olConditionFormName = 23
+olConditionFrom = 1
+olConditionFromAnyRssFeed = 31
+olConditionFromRssFeed = 30
+olConditionHasAttachment = 20
+olConditionImportance = 6
+olConditionLocalMachineOnly = 27
+olConditionMeetingInviteOrUpdate = 26
+olConditionMessageHeader = 15
+olConditionNotTo = 11
+olConditionOnlyToMe = 4
+olConditionOOF = 19
+olConditionOtherMachine = 28
+olConditionProperty = 24
+olConditionRecipientAddress = 16
+olConditionSenderAddress = 17
+olConditionSenderInAddressBook = 25
+olConditionSensitivity = 7
+olConditionSentTo = 12
+olConditionSizeRange = 21
+olConditionSubject = 2
+olConditionTo = 5
+olConditionToOrCc = 10
+olConditionUnknown = 0
+
+# OlRuleExecuteOption enumeration
+olRuleExecuteAllMessages = 0
+olRuleExecuteReadMessages = 1
+olRuleExecuteUnreadMessages = 2
+
+# OlRuleType enumeration
+olRuleReceive = 0
+olRuleSend = 1
+
+# OlSaveAsType enumeration
+olDoc = 4
+olHTML = 5
+olICal = 8
+olMHTML = 10
+olMSG = 3
+olMSGUnicode = 9
+olRTF = 1
+olTemplate = 2
+olTXT = 0
+olVCal = 7
+olVCard = 6
+
+# OlScrollBars enumeration
+olScrollBarsBoth = 3
+olScrollBarsHorizontal = 1
+olScrollBarsNone = 0
+olScrollBarsVertical = 2
+
+# OlSearchScope enumeration
+olSearchScopeAllFolders = 1
+olSearchScopeAllOutlookItems = 2
+olSearchScopeCurrentFolder = 0
+olSearchScopeCurrentStore = 4
+olSearchScopeSubfolders = 3
+
+# OlSelectionContents enumeration
+olConversationHeaders = 1
+
+# OlSelectionLocation enumeration
+olAttachmentWell = 4
+olDailyTaskList = 3
+olToDoBarAppointmentList = 2
+olToDoBarTaskList = 1
+olViewList = 0
+
+# OlSensitivity enumeration
+olConfidential = 3
+olNormal = 0
+olPersonal = 1
+olPrivate = 2
+
+# OlSharingMsgType enumeration
+olSharingMsgTypeInvite = 2
+olSharingMsgTypeInviteAndRequest = 3
+olSharingMsgTypeRequest = 1
+olSharingMsgTypeResponseAllow = 4
+olSharingMsgTypeResponseDeny = 5
+olSharingMsgTypeUnknown = 0
+
+# OlSharingProvider enumeration
+olProviderExchange = 1
+olProviderFederate = 7
+olProviderICal = 4
+olProviderPubCal = 3
+olProviderRSS = 6
+olProviderSharePoint = 5
+olProviderUnknown = 0
+olProviderWebCal = 2
+
+# OlShiftState enumeration
+olShiftStateShiftMask = 1
+olShiftStateCtrlMask = 2
+olShiftStateAltMask = 4
+
+# OlShowItemCount enumeration
+olNoItemCount = 0
+olShowTotalItemCount = 2
+olShowUnreadItemCount = 1
+
+# OlSolutionScope enumeration
+olHideInDefaultModules = 0
+olShowInDefaultModules = 1
+
+# OlSortOrder enumeration
+olAscending = 1
+olDescending = 2
+olSortNone = 0
+
+# OlSpecialFolders enumeration
+olSpecialFolderAllTasks = 0
+olSpecialFolderReminders = 1
+
+# OlStorageIdentifierType enumeration
+olIdentifyByEntryID = 1
+olIdentifyByMessageClass = 2
+olIdentifyBySubject = 0
+
+# OlStoreType enumeration
+olStoreANSI = 3
+olStoreDefault = 1
+olStoreUnicode = 2
+
+# OlSyncState enumeration
+olSyncStarted = 1
+olSyncStopped = 0
+
+# OlTableContents enumeration
+olHiddenItems = 1
+olUserItems = 0
+
+# OlTaskDelegationState enumeration
+olTaskDelegationAccepted = 2
+olTaskDelegationDeclined = 3
+olTaskDelegationUnknown = 1
+olTaskNotDelegated = 0
+
+# OlTaskOwnership enumeration
+olDelegatedTask = 1
+olNewTask = 0
+olOwnTask = 2
+
+# OlTaskRecipientType enumeration
+olFinalStatus = 3
+olUpdate = 2
+
+# OlTaskResponse enumeration
+olTaskAccept = 2
+olTaskAssign = 1
+olTaskDecline = 3
+olTaskSimple = 0
+
+# OlTaskStatus enumeration
+olTaskComplete = 2
+olTaskDeferred = 4
+olTaskInProgress = 1
+olTaskNotStarted = 0
+olTaskWaiting = 3
+
+# OlTextAlign enumeration
+olTextAlignCenter = 2
+olTextAlignLeft = 1
+olTextAlignRight = 3
+
+# OlTimelineViewMode enumeration
+olTimelineViewDay = 0
+olTimelineViewMonth = 2
+olTimelineViewWeek = 1
+
+# OlTimeStyle enumeration
+olTimeStyleShortDuration = 4
+olTimeStyleTimeDuration = 1
+olTimeStyleTimeOnly = 0
+
+# OlTrackingStatus enumeration
+olTrackingDelivered = 1
+olTrackingNone = 0
+olTrackingNotDelivered = 2
+olTrackingNotRead = 3
+olTrackingRead = 6
+olTrackingRecallFailure = 4
+olTrackingRecallSuccess = 5
+olTrackingReplied = 7
+
+# OlUserPropertyType enumeration
+olCombination = 19
+olCurrency = 14
+olDateTime = 5
+olDuration = 7
+olEnumeration = 21
+olFormula = 18
+olInteger = 20
+olKeywords = 11
+olNumber = 3
+olOutlookInternal = 0
+olPercent = 12
+olSmartFrom = 22
+olText = 1
+olYesNo = 6
+
+# OlVerticalLayout enumeration
+olVerticalLayoutAlignBottom = 2
+olVerticalLayoutAlignGrow = 3
+olVerticalLayoutAlignMiddle = 1
+olVerticalLayoutAlignTop = 0
+
+# OlViewSaveOption enumeration
+olViewSaveOptionAllFoldersOfType = 2
+olViewSaveOptionThisFolderEveryone = 0
+olViewSaveOptionThisFolderOnlyMe = 1
+
+# OlViewType enumeration
+olTableView = 0
+olCardView = 1
+olCalendarView = 2
+olIconView = 3
+olTimelineView = 4
+olBusinessCardView = 5
+olDailyTaskListView = 6
+olPeopleView = 7
+
+# OlWindowState enumeration
+olMaximized = 0
+olMinimized = 1
+olNormalWindow = 2
+
+
+
+
 class OrderField:
 
     def __init__(self, orderfield=None):
@@ -10172,6 +13480,16 @@ class OrderField:
     @property
     def ViewXMLSchemaName(self):
         return OrderField(self.orderfield.ViewXMLSchemaName)
+
+
+
+
+
+
+
+
+
+
 
 class OrderFields:
 
@@ -10221,6 +13539,13 @@ class OrderFields:
     def RemoveAll(self):
         self.orderfields.RemoveAll()
 
+
+
+
+
+
+
+
 class OutlookBarGroup:
 
     def __init__(self, outlookbargroup=None):
@@ -10262,6 +13587,20 @@ class OutlookBarGroup:
     def ViewType(self, value):
         self.outlookbargroup.ViewType = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OutlookBarGroups:
 
     def __init__(self, outlookbargroups=None):
@@ -10302,6 +13641,14 @@ class OutlookBarGroups:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.outlookbargroups.Remove(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class OutlookBarPane:
 
     def __init__(self, outlookbarpane=None):
@@ -10338,6 +13685,13 @@ class OutlookBarPane:
     @Visible.setter
     def Visible(self, value):
         self.outlookbarpane.Visible = value
+
+
+
+
+
+
+
 
 class OutlookBarShortcut:
 
@@ -10376,6 +13730,19 @@ class OutlookBarShortcut:
         arguments = {"Icon": Icon}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.outlookbarshortcut.SetIcon(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OutlookBarShortcuts:
 
@@ -10417,6 +13784,14 @@ class OutlookBarShortcuts:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.outlookbarshortcuts.Remove(*args, **arguments)
 
+
+
+
+
+
+
+
+
 class OutlookBarStorage:
 
     def __init__(self, outlookbarstorage=None):
@@ -10441,6 +13816,9 @@ class OutlookBarStorage:
     @property
     def Session(self):
         return NameSpace(self.outlookbarstorage.Session)
+
+
+
 
 class Pages:
 
@@ -10480,6 +13858,19 @@ class Pages:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pages.Remove(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Panes:
 
     def __init__(self, panes=None):
@@ -10509,6 +13900,14 @@ class Panes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.panes.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class PlaySoundRuleAction:
 
@@ -10550,6 +13949,61 @@ class PlaySoundRuleAction:
     @property
     def Session(self):
         return NameSpace(self.playsoundruleaction.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PostItem:
 
@@ -10954,6 +14408,59 @@ class PostItem:
     def ShowCategoriesDialog(self):
         self.postitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PropertyAccessor:
 
     def __init__(self, propertyaccessor=None):
@@ -11025,6 +14532,16 @@ class PropertyAccessor:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.propertyaccessor.UTCToLocalTime(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class PropertyPage:
 
     def __init__(self, propertypage=None):
@@ -11045,6 +14562,12 @@ class PropertyPage:
         arguments = {"HelpFile": HelpFile, "HelpContext": HelpContext}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.propertypage.GetPageInfo(*args, **arguments)
+
+
+
+
+
+
 
 class PropertyPages:
 
@@ -11086,6 +14609,12 @@ class PropertyPages:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.propertypages.Remove(*args, **arguments)
 
+
+
+
+
+
+
 class PropertyPageSite:
 
     def __init__(self, propertypagesite=None):
@@ -11109,6 +14638,20 @@ class PropertyPageSite:
 
     def OnStatusChange(self):
         self.propertypagesite.OnStatusChange()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Recipient:
 
@@ -11222,6 +14765,23 @@ class Recipient:
     def Resolve(self):
         return self.recipient.Resolve()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Recipients:
 
     def __init__(self, recipients=None):
@@ -11264,6 +14824,21 @@ class Recipients:
 
     def ResolveAll(self):
         return self.recipients.ResolveAll()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class RecurrencePattern:
 
@@ -11407,6 +14982,23 @@ class RecurrencePattern:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.recurrencepattern.GetOccurrence(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Reminder:
 
     def __init__(self, reminder=None):
@@ -11456,6 +15048,17 @@ class Reminder:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.reminder.Snooze(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class Reminders:
 
     def __init__(self, reminders=None):
@@ -11490,6 +15093,60 @@ class Reminders:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.reminders.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class RemoteItem:
 
@@ -11746,6 +15403,81 @@ class RemoteItem:
     def ShowCategoriesDialog(self):
         self.remoteitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ReportItem:
 
     def __init__(self, reportitem=None):
@@ -11993,6 +15725,48 @@ class ReportItem:
     def ShowCategoriesDialog(self):
         self.reportitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Results:
 
     def __init__(self, results=None):
@@ -12056,6 +15830,18 @@ class Results:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.results.Sort(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class Row:
 
     def __init__(self, row=None):
@@ -12099,6 +15885,19 @@ class Row:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.row.UTCToLocalTime(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Rule:
 
@@ -12170,6 +15969,15 @@ class Rule:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.rule.Execute(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
 class RuleAction:
 
     def __init__(self, ruleaction=None):
@@ -12202,6 +16010,23 @@ class RuleAction:
     @property
     def Session(self):
         return NameSpace(self.ruleaction.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class RuleActions:
 
@@ -12301,6 +16126,20 @@ class RuleActions:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.ruleactions.Item(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class RuleCondition:
 
     def __init__(self, rulecondition=None):
@@ -12333,6 +16172,25 @@ class RuleCondition:
     @property
     def Session(self):
         return NameSpace(self.rulecondition.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class RuleConditions:
 
@@ -12464,6 +16322,28 @@ class RuleConditions:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.ruleconditions.Item(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Rules:
 
     def __init__(self, rules=None):
@@ -12516,6 +16396,16 @@ class Rules:
         arguments = {"ShowProgress": ShowProgress}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.rules.Save(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
 
 class Search:
 
@@ -12573,6 +16463,21 @@ class Search:
     def Stop(self):
         self.search.Stop()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Selection:
 
     def __init__(self, selection=None):
@@ -12611,6 +16516,18 @@ class Selection:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.selection.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SelectNamesDialog:
 
@@ -12721,6 +16638,19 @@ class SelectNamesDialog:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.selectnamesdialog.SetDefaultDisplayMode(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SenderInAddressListRuleCondition:
 
     def __init__(self, senderinaddresslistrulecondition=None):
@@ -12762,6 +16692,13 @@ class SenderInAddressListRuleCondition:
     def Session(self):
         return NameSpace(self.senderinaddresslistrulecondition.Session)
 
+
+
+
+
+
+
+
 class SendRuleAction:
 
     def __init__(self, sendruleaction=None):
@@ -12798,6 +16735,72 @@ class SendRuleAction:
     @property
     def Session(self):
         return NameSpace(self.sendruleaction.Session)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SharingItem:
 
@@ -13439,6 +17442,84 @@ class SharingItem:
     def ShowCategoriesDialog(self):
         self.sharingitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SimpleItems:
 
     def __init__(self, simpleitems=None):
@@ -13468,6 +17549,12 @@ class SimpleItems:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.simpleitems.Item(*args, **arguments)
+
+
+
+
+
+
 
 class SolutionsModule:
 
@@ -13518,6 +17605,22 @@ class SolutionsModule:
         arguments = {"Solution": Solution, "Scope": Scope}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.solutionsmodule.AddSolution(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class StorageItem:
 
@@ -13597,6 +17700,30 @@ class StorageItem:
 
     def Save(self):
         self.storageitem.Save()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Store:
 
@@ -13685,6 +17812,17 @@ class Store:
     def RefreshQuotaDisplay(self):
         self.store.RefreshQuotaDisplay()
 
+
+
+
+
+
+
+
+
+
+
+
 class Stores:
 
     def __init__(self, stores=None):
@@ -13714,6 +17852,12 @@ class Stores:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Stores(self.stores.Item(*args, **arguments))
+
+
+
+
+
+
 
 class SyncObject:
 
@@ -13745,6 +17889,21 @@ class SyncObject:
 
     def Stop(self):
         self.syncobject.Stop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SyncObjects:
 
@@ -13779,6 +17938,18 @@ class SyncObjects:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.syncobjects.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Table:
 
@@ -13840,6 +18011,35 @@ class Table:
         arguments = {"SortProperty": SortProperty, "Descending": Descending}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.table.Sort(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TableView:
 
@@ -14102,6 +18302,86 @@ class TableView:
 
     def Save(self):
         self.tableview.Save()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TaskItem:
 
@@ -14603,6 +18883,104 @@ class TaskItem:
     def StatusReport(self):
         return self.taskitem.StatusReport()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TaskRequestAcceptItem:
 
     def __init__(self, taskrequestacceptitem=None):
@@ -14854,6 +19232,80 @@ class TaskRequestAcceptItem:
 
     def ShowCategoriesDialog(self):
         self.taskrequestacceptitem.ShowCategoriesDialog()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TaskRequestDeclineItem:
 
@@ -15107,6 +19559,80 @@ class TaskRequestDeclineItem:
     def ShowCategoriesDialog(self):
         self.taskrequestdeclineitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TaskRequestItem:
 
     def __init__(self, taskrequestitem=None):
@@ -15358,6 +19884,80 @@ class TaskRequestItem:
 
     def ShowCategoriesDialog(self):
         self.taskrequestitem.ShowCategoriesDialog()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TaskRequestUpdateItem:
 
@@ -15611,6 +20211,37 @@ class TaskRequestUpdateItem:
     def ShowCategoriesDialog(self):
         self.taskrequestupdateitem.ShowCategoriesDialog()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TasksModule:
 
     def __init__(self, tasksmodule=None):
@@ -15660,6 +20291,18 @@ class TasksModule:
     def Visible(self, value):
         self.tasksmodule.Visible = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class TextRuleCondition:
 
     def __init__(self, textrulecondition=None):
@@ -15700,6 +20343,25 @@ class TextRuleCondition:
     @Text.setter
     def Text(self, value):
         self.textrulecondition.Text = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TimelineView:
 
@@ -15868,6 +20530,28 @@ class TimelineView:
     def Save(self):
         self.timelineview.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TimeZone:
 
     def __init__(self, timezone=None):
@@ -15925,6 +20609,19 @@ class TimeZone:
     def StandardDesignation(self):
         return self.timezone.StandardDesignation
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TimeZones:
 
     def __init__(self, timezones=None):
@@ -15967,6 +20664,13 @@ class TimeZones:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.timezones.Item(*args, **arguments)
 
+
+
+
+
+
+
+
 class ToOrFromRuleCondition:
 
     def __init__(self, toorfromrulecondition=None):
@@ -16003,6 +20707,16 @@ class ToOrFromRuleCondition:
     @property
     def Session(self):
         return NameSpace(self.toorfromrulecondition.Session)
+
+
+
+
+
+
+
+
+
+
 
 class UserDefinedProperties:
 
@@ -16052,6 +20766,16 @@ class UserDefinedProperties:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.userdefinedproperties.Remove(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class UserDefinedProperty:
 
     def __init__(self, userdefinedproperty=None):
@@ -16091,6 +20815,17 @@ class UserDefinedProperty:
 
     def Delete(self):
         self.userdefinedproperty.Delete()
+
+
+
+
+
+
+
+
+
+
+
 
 class UserProperties:
 
@@ -16136,6 +20871,14 @@ class UserProperties:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.userproperties.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class UserProperty:
 
@@ -16200,6 +20943,23 @@ class UserProperty:
 
     def Delete(self):
         self.userproperty.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class View:
 
@@ -16296,6 +21056,19 @@ class View:
     def Save(self):
         self.view.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ViewField:
 
     def __init__(self, viewfield=None):
@@ -16324,6 +21097,16 @@ class ViewField:
     @property
     def ViewXMLSchemaName(self):
         return ViewField(self.viewfield.ViewXMLSchemaName)
+
+
+
+
+
+
+
+
+
+
 
 class ViewFields:
 
@@ -16369,6 +21152,16 @@ class ViewFields:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.viewfields.Remove(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
 
 class ViewFont:
 
@@ -16455,6 +21248,19 @@ class ViewFont:
     def Underline(self, value):
         self.viewfont.Underline = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Views:
 
     def __init__(self, views=None):
@@ -16494,3 +21300,8 @@ class Views:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.views.Remove(*args, **arguments)
+
+
+
+
+

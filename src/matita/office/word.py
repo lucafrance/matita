@@ -1,5 +1,12 @@
 import win32com.client
 
+
+
+
+
+
+
+
 class AddIn:
 
     def __init__(self, addin=None):
@@ -48,6 +55,21 @@ class AddIn:
     def Delete(self):
         self.addin.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Adjustments:
 
     def __init__(self, adjustments=None):
@@ -76,6 +98,128 @@ class Adjustments:
     @property
     def Parent(self):
         return self.adjustments.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Application:
 
@@ -1013,6 +1157,106 @@ class Application:
     def ToggleKeyboard(self):
         self.application.ToggleKeyboard()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AutoCaption:
 
     def __init__(self, autocaption=None):
@@ -1057,6 +1301,30 @@ class AutoCaption:
     @property
     def Parent(self):
         return self.autocaption.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class AutoCorrect:
 
@@ -1207,6 +1475,26 @@ class AutoCorrect:
     def TwoInitialCapsExceptions(self):
         return self.autocorrect.TwoInitialCapsExceptions
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AutoCorrectEntry:
 
     def __init__(self, autocorrectentry=None):
@@ -1255,6 +1543,23 @@ class AutoCorrectEntry:
 
     def Delete(self):
         self.autocorrectentry.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class AutoTextEntry:
 
@@ -1305,6 +1610,15 @@ class AutoTextEntry:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.autotextentry.Insert(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
 class Axes:
 
     def __init__(self, axes=None):
@@ -1330,6 +1644,39 @@ class Axes:
         arguments = {"Type": Type, "AxisGroup": AxisGroup}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.axes.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Axis:
 
@@ -1662,6 +2009,40 @@ class Axis:
     def Select(self):
         self.axis.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class AxisTitle:
 
     def __init__(self, axistitle=None):
@@ -1829,6 +2210,22 @@ class AxisTitle:
     def Select(self):
         self.axistitle.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Bibliography:
 
     def __init__(self, bibliography=None):
@@ -1860,6 +2257,16 @@ class Bibliography:
 
     def GenerateUniqueTag(self):
         return self.bibliography.GenerateUniqueTag()
+
+
+
+
+
+
+
+
+
+
 
 class Bookmark:
 
@@ -1924,6 +2331,31 @@ class Bookmark:
 
     def Select(self):
         self.bookmark.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Border:
 
@@ -2002,6 +2434,47 @@ class Border:
     def Visible(self, value):
         self.border.Visible = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Breaks:
 
     def __init__(self, breaks=None):
@@ -2030,6 +2503,10 @@ class Breaks:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.breaks.Item(*args, **arguments)
+
+
+
+
 
 class Browser:
 
@@ -2061,6 +2538,20 @@ class Browser:
 
     def Previous(self):
         self.browser.Previous()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class BuildingBlock:
 
@@ -2135,6 +2626,16 @@ class BuildingBlock:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.buildingblock.Insert(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class BuildingBlockEntries:
 
     def __init__(self, buildingblockentries=None):
@@ -2165,6 +2666,13 @@ class BuildingBlockEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.buildingblockentries.Item(*args, **arguments)
+
+
+
+
+
+
+
 
 class BuildingBlocks:
 
@@ -2197,6 +2705,12 @@ class BuildingBlocks:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.buildingblocks.Item(*args, **arguments)
 
+
+
+
+
+
+
 class BuildingBlockType:
 
     def __init__(self, buildingblocktype=None):
@@ -2226,6 +2740,13 @@ class BuildingBlockType:
     def Parent(self):
         return self.buildingblocktype.Parent
 
+
+
+
+
+
+
+
 class BuildingBlockTypes:
 
     def __init__(self, buildingblocktypes=None):
@@ -2251,6 +2772,20 @@ class BuildingBlockTypes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.buildingblocktypes.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CalloutFormat:
 
@@ -2339,6 +2874,25 @@ class CalloutFormat:
         arguments = {"DropType": DropType}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.calloutformat.PresetDrop(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class CanvasShapes:
 
@@ -2429,6 +2983,17 @@ class CanvasShapes:
     def SelectAll(self):
         self.canvasshapes.SelectAll()
 
+
+
+
+
+
+
+
+
+
+
+
 class CaptionLabel:
 
     def __init__(self, captionlabel=None):
@@ -2501,6 +3066,22 @@ class CaptionLabel:
     def Delete(self):
         self.captionlabel.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Categories:
 
     def __init__(self, categories=None):
@@ -2526,6 +3107,12 @@ class Categories:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.categories.Item(*args, **arguments)
+
+
+
+
+
+
 
 class Category:
 
@@ -2559,6 +3146,24 @@ class Category:
     @property
     def Type(self):
         return BuildingBlockType(self.category.Type)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Cell:
 
@@ -2760,6 +3365,92 @@ class Cell:
         arguments = {"NumRows": NumRows, "NumColumns": NumColumns}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.cell.Split(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Chart:
 
@@ -3120,6 +3811,42 @@ class Chart:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chart.SetSourceData(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartArea:
 
     def __init__(self, chartarea=None):
@@ -3200,6 +3927,18 @@ class ChartArea:
     def Select(self):
         self.chartarea.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartBorder:
 
     def __init__(self, chartborder=None):
@@ -3248,6 +3987,16 @@ class ChartBorder:
     @Weight.setter
     def Weight(self, value):
         self.chartborder.Weight = value
+
+
+
+
+
+
+
+
+
+
 
 class ChartCharacters:
 
@@ -3302,6 +4051,12 @@ class ChartCharacters:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.chartcharacters.Insert(*args, **arguments)
 
+
+
+
+
+
+
 class ChartColorFormat:
 
     def __init__(self, chartcolorformat=None):
@@ -3335,6 +4090,14 @@ class ChartColorFormat:
     def Type(self):
         return self.chartcolorformat.Type
 
+
+
+
+
+
+
+
+
 class ChartData:
 
     def __init__(self, chartdata=None):
@@ -3353,6 +4116,16 @@ class ChartData:
 
     def BreakLink(self):
         self.chartdata.BreakLink()
+
+
+
+
+
+
+
+
+
+
 
 class ChartFont:
 
@@ -3467,6 +4240,19 @@ class ChartFont:
     def Underline(self, value):
         self.chartfont.Underline = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartFormat:
 
     def __init__(self, chartformat=None):
@@ -3515,6 +4301,30 @@ class ChartFormat:
     @property
     def ThreeD(self):
         return ThreeDFormat(self.chartformat.ThreeD)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ChartGroup:
 
@@ -3710,6 +4520,23 @@ class ChartGroup:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return SeriesCollection(self.chartgroup.SeriesCollection(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ChartGroups:
 
     def __init__(self, chartgroups=None):
@@ -3735,6 +4562,22 @@ class ChartGroups:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ChartGroup(self.chartgroups.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ChartTitle:
 
@@ -3903,6 +4746,22 @@ class ChartTitle:
     def Select(self):
         self.charttitle.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CheckBox:
 
     def __init__(self, checkbox=None):
@@ -3956,6 +4815,14 @@ class CheckBox:
     def Value(self, value):
         self.checkbox.Value = value
 
+
+
+
+
+
+
+
+
 class CoAuthLock:
 
     def __init__(self, coauthlock=None):
@@ -3987,6 +4854,16 @@ class CoAuthLock:
 
     def Unlock(self):
         return self.coauthlock.Unlock()
+
+
+
+
+
+
+
+
+
+
 
 class CoAuthLocks:
 
@@ -4025,6 +4902,15 @@ class CoAuthLocks:
     def RemoveEphemeralLocks(self):
         return self.coauthlocks.RemoveEphemeralLocks()
 
+
+
+
+
+
+
+
+
+
 class CoAuthor:
 
     def __init__(self, coauthor=None):
@@ -4061,6 +4947,16 @@ class CoAuthor:
     @property
     def Parent(self):
         return self.coauthor.Parent
+
+
+
+
+
+
+
+
+
+
 
 class CoAuthoring:
 
@@ -4111,6 +5007,15 @@ class CoAuthoring:
     def Updates(self):
         return self.coauthoring.Updates
 
+
+
+
+
+
+
+
+
+
 class CoAuthors:
 
     def __init__(self, coauthors=None):
@@ -4140,6 +5045,10 @@ class CoAuthors:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.coauthors.Item(*args, **arguments)
 
+
+
+
+
 class CoAuthUpdate:
 
     def __init__(self, coauthupdate=None):
@@ -4160,6 +5069,17 @@ class CoAuthUpdate:
     @property
     def Range(self):
         return self.coauthupdate.Range
+
+
+
+
+
+
+
+
+
+
+
 
 class ColorFormat:
 
@@ -4217,6 +5137,21 @@ class ColorFormat:
     @Type.setter
     def Type(self, value):
         self.colorformat.Type = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Column:
 
@@ -4318,6 +5253,43 @@ class Column:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.column.Sort(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Comment:
 
     def __init__(self, comment=None):
@@ -4361,6 +5333,24 @@ class Comment:
 
     def Edit(self):
         self.comment.Edit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ConditionalStyle:
 
@@ -4435,6 +5425,16 @@ class ConditionalStyle:
     def TopPadding(self, value):
         self.conditionalstyle.TopPadding = value
 
+
+
+
+
+
+
+
+
+
+
 class Conflict:
 
     def __init__(self, conflict=None):
@@ -4470,6 +5470,16 @@ class Conflict:
     def Reject(self):
         return self.conflict.Reject()
 
+
+
+
+
+
+
+
+
+
+
 class Conflicts:
 
     def __init__(self, conflicts=None):
@@ -4504,6 +5514,26 @@ class Conflicts:
 
     def RejectAll(self):
         return self.conflicts.RejectAll()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ContentControl:
 
@@ -4699,6 +5729,28 @@ class ContentControl:
     def Ungroup(self):
         self.contentcontrol.Ungroup()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ContentControlListEntries:
 
     def __init__(self, contentcontrollistentries=None):
@@ -4732,6 +5784,12 @@ class ContentControlListEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.contentcontrollistentries.Item(*args, **arguments)
+
+
+
+
+
+
 
 class ContentControlListEntry:
 
@@ -4786,6 +5844,18 @@ class ContentControlListEntry:
     def Select(self):
         self.contentcontrollistentry.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class ContentControls:
 
     def __init__(self, contentcontrols=None):
@@ -4819,6 +5889,15 @@ class ContentControls:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.contentcontrols.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
 
 class CustomLabel:
 
@@ -4932,6 +6011,28 @@ class CustomLabel:
     def Delete(self):
         self.customlabel.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class CustomProperties:
 
     def __init__(self, customproperties=None):
@@ -4966,6 +6067,11 @@ class CustomProperties:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.customproperties.Item(*args, **arguments)
 
+
+
+
+
+
 class CustomProperty:
 
     def __init__(self, customproperty=None):
@@ -4997,6 +6103,24 @@ class CustomProperty:
 
     def Delete(self):
         self.customproperty.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DataLabel:
 
@@ -5253,6 +6377,36 @@ class DataLabel:
     def Select(self):
         self.datalabel.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataLabels:
 
     def __init__(self, datalabels=None):
@@ -5432,6 +6586,34 @@ class DataLabels:
     def Select(self):
         self.datalabels.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DataTable:
 
     def __init__(self, datatable=None):
@@ -5498,6 +6680,20 @@ class DataTable:
 
     def Select(self):
         self.datatable.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DefaultWebOptions:
 
@@ -5652,6 +6848,25 @@ class DefaultWebOptions:
     def UseLongFileNames(self, value):
         self.defaultweboptions.UseLongFileNames = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Dialog:
 
     def __init__(self, dialog=None):
@@ -5705,6 +6920,30 @@ class Dialog:
     def Update(self):
         self.dialog.Update()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Dictionary:
 
     def __init__(self, dictionary=None):
@@ -5756,6 +6995,26 @@ class Dictionary:
 
     def Delete(self):
         self.dictionary.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class DisplayUnitLabel:
 
@@ -5923,6 +7182,164 @@ class DisplayUnitLabel:
 
     def Select(self):
         self.displayunitlabel.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Document:
 
@@ -7365,6 +8782,168 @@ class Document:
     def WebPagePreview(self):
         self.document.WebPagePreview()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class DownBars:
 
     def __init__(self, downbars=None):
@@ -7395,6 +8974,17 @@ class DownBars:
 
     def Select(self):
         self.downbars.Select()
+
+
+
+
+
+
+
+
+
+
+
 
 class DropCap:
 
@@ -7451,6 +9041,13 @@ class DropCap:
     def Enable(self):
         self.dropcap.Enable()
 
+
+
+
+
+
+
+
 class DropDown:
 
     def __init__(self, dropdown=None):
@@ -7492,6 +9089,15 @@ class DropDown:
     def Value(self, value):
         self.dropdown.Value = value
 
+
+
+
+
+
+
+
+
+
 class DropLines:
 
     def __init__(self, droplines=None):
@@ -7526,6 +9132,15 @@ class DropLines:
 
     def Select(self):
         self.droplines.Select()
+
+
+
+
+
+
+
+
+
 
 class Editor:
 
@@ -7577,6 +9192,17 @@ class Editor:
     def SelectAll(self):
         self.editor.SelectAll()
 
+
+
+
+
+
+
+
+
+
+
+
 class Editors:
 
     def __init__(self, editors=None):
@@ -7611,6 +9237,11 @@ class Editors:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.editors.Item(*args, **arguments)
 
+
+
+
+
+
 class Email:
 
     def __init__(self, email=None):
@@ -7632,6 +9263,10 @@ class Email:
     def Parent(self):
         return self.email.Parent
 
+
+
+
+
 class EmailAuthor:
 
     def __init__(self, emailauthor=None):
@@ -7652,6 +9287,38 @@ class EmailAuthor:
     @property
     def Style(self):
         return Style(self.emailauthor.Style)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class EmailOptions:
 
@@ -7934,6 +9601,19 @@ class EmailOptions:
     def UseThemeStyleOnReply(self, value):
         self.emailoptions.UseThemeStyleOnReply = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class EmailSignature:
 
     def __init__(self, emailsignature=None):
@@ -7971,6 +9651,15 @@ class EmailSignature:
     def ReplyMessageSignature(self, value):
         self.emailsignature.ReplyMessageSignature = value
 
+
+
+
+
+
+
+
+
+
 class EmailSignatureEntries:
 
     def __init__(self, emailsignatureentries=None):
@@ -8005,6 +9694,12 @@ class EmailSignatureEntries:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.emailsignatureentries.Item(*args, **arguments)
 
+
+
+
+
+
+
 class EmailSignatureEntry:
 
     def __init__(self, emailsignatureentry=None):
@@ -8037,6 +9732,13 @@ class EmailSignatureEntry:
     def Delete(self):
         self.emailsignatureentry.Delete()
 
+
+
+
+
+
+
+
 class Endnote:
 
     def __init__(self, endnote=None):
@@ -8068,6 +9770,13 @@ class Endnote:
 
     def Delete(self):
         self.endnote.Delete()
+
+
+
+
+
+
+
 
 class EndnoteOptions:
 
@@ -8117,6 +9826,44 @@ class EndnoteOptions:
     @StartingNumber.setter
     def StartingNumber(self, value):
         self.endnoteoptions.StartingNumber = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Envelope:
 
@@ -8335,6 +10082,31 @@ class Envelope:
     def UpdateDocument(self):
         self.envelope.UpdateDocument()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ErrorBars:
 
     def __init__(self, errorbars=None):
@@ -8380,6 +10152,23 @@ class ErrorBars:
 
     def Select(self):
         self.errorbars.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Field:
 
@@ -8494,6 +10283,36 @@ class Field:
     def UpdateSource(self):
         self.field.UpdateSource()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FileConverter:
 
     def __init__(self, fileconverter=None):
@@ -8546,6 +10365,28 @@ class FileConverter:
     @property
     def SaveFormat(self):
         return self.fileconverter.SaveFormat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FillFormat:
 
@@ -8749,6 +10590,67 @@ class FillFormat:
         arguments = {"TextureFile": TextureFile}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.fillformat.UserTextured(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Find:
 
@@ -9046,6 +10948,19 @@ class Find:
     def SetAllFuzzyOptions(self):
         self.find.SetAllFuzzyOptions()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FirstLetterException:
 
     def __init__(self, firstletterexception=None):
@@ -9073,6 +10988,19 @@ class FirstLetterException:
 
     def Delete(self):
         self.firstletterexception.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Floor:
 
@@ -9123,6 +11051,38 @@ class Floor:
 
     def Select(self):
         self.floor.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Font:
 
@@ -9497,6 +11457,41 @@ class Font:
     def Shrink(self):
         self.font.Shrink()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class FontNames:
 
     def __init__(self, fontnames=None):
@@ -9522,6 +11517,12 @@ class FontNames:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.fontnames.Item(*args, **arguments)
+
+
+
+
+
+
 
 class Footnote:
 
@@ -9554,6 +11555,13 @@ class Footnote:
 
     def Delete(self):
         self.footnote.Delete()
+
+
+
+
+
+
+
 
 class FootnoteOptions:
 
@@ -9603,6 +11611,41 @@ class FootnoteOptions:
     @StartingNumber.setter
     def StartingNumber(self, value):
         self.footnoteoptions.StartingNumber = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class FormField:
 
@@ -9741,6 +11784,37 @@ class FormField:
     def Select(self):
         self.formfield.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Frame:
 
     def __init__(self, frame=None):
@@ -9877,6 +11951,40 @@ class Frame:
 
     def Select(self):
         self.frame.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Frameset:
 
@@ -10019,6 +12127,16 @@ class Frameset:
     def Delete(self):
         self.frameset.Delete()
 
+
+
+
+
+
+
+
+
+
+
 class FreeformBuilder:
 
     def __init__(self, freeformbuilder=None):
@@ -10045,6 +12163,85 @@ class FreeformBuilder:
         arguments = {"Anchor": Anchor}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.freeformbuilder.ConvertToShape(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class GlowFormat:
 
@@ -10074,6 +12271,14 @@ class GlowFormat:
     @Radius.setter
     def Radius(self, value):
         self.glowformat.Radius = value
+
+
+
+
+
+
+
+
 
 class GridLines:
 
@@ -10110,6 +12315,20 @@ class GridLines:
     def Select(self):
         self.gridlines.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class HangulAndAlphabetException:
 
     def __init__(self, hangulandalphabetexception=None):
@@ -10137,6 +12356,30 @@ class HangulAndAlphabetException:
 
     def Delete(self):
         self.hangulandalphabetexception.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class HeaderFooter:
 
@@ -10191,6 +12434,20 @@ class HeaderFooter:
     def Shapes(self):
         return self.headerfooter.Shapes
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class HeadingStyle:
 
     def __init__(self, headingstyle=None):
@@ -10227,6 +12484,20 @@ class HeadingStyle:
     def Delete(self):
         self.headingstyle.Delete()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class HiLoLines:
 
     def __init__(self, hilolines=None):
@@ -10261,6 +12532,13 @@ class HiLoLines:
 
     def Select(self):
         self.hilolines.Select()
+
+
+
+
+
+
+
 
 class HorizontalLineFormat:
 
@@ -10310,6 +12588,18 @@ class HorizontalLineFormat:
     @WidthType.setter
     def WidthType(self, value):
         self.horizontallineformat.WidthType = value
+
+
+
+
+
+
+
+
+
+
+
+
 
 class HTMLDivision:
 
@@ -10380,6 +12670,17 @@ class HTMLDivision:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.htmldivision.HTMLDivisionParent(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
 class HTMLDivisions:
 
     def __init__(self, htmldivisions=None):
@@ -10417,6 +12718,18 @@ class HTMLDivisions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.htmldivisions.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Hyperlink:
 
@@ -10519,6 +12832,29 @@ class Hyperlink:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.hyperlink.Follow(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Index:
 
     def __init__(self, index=None):
@@ -10617,6 +12953,45 @@ class Index:
 
     def Update(self):
         self.index.Update()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class InlineShape:
 
@@ -10795,6 +13170,42 @@ class InlineShape:
     def Select(self):
         self.inlineshape.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Interior:
 
     def __init__(self, interior=None):
@@ -10860,6 +13271,23 @@ class Interior:
     def PatternColorIndex(self, value):
         self.interior.PatternColorIndex = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class KeyBinding:
 
     def __init__(self, keybinding=None):
@@ -10922,6 +13350,37 @@ class KeyBinding:
         arguments = {"KeyCategory": KeyCategory, "Command": Command, "CommandParameter": CommandParameter}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.keybinding.Rebind(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Language:
 
@@ -10988,6 +13447,22 @@ class Language:
     def WritingStyleList(self):
         return self.language.WritingStyleList
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class LeaderLines:
 
     def __init__(self, leaderlines=None):
@@ -11018,6 +13493,18 @@ class LeaderLines:
 
     def Select(self):
         self.leaderlines.Select()
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Legend:
 
@@ -11108,6 +13595,18 @@ class Legend:
     def Select(self):
         self.legend.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class LegendEntries:
 
     def __init__(self, legendentries=None):
@@ -11136,6 +13635,17 @@ class LegendEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return LegendEntry(self.legendentries.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
 
 class LegendEntry:
 
@@ -11191,6 +13701,25 @@ class LegendEntry:
 
     def Select(self):
         self.legendentry.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LegendKey:
 
@@ -11322,6 +13851,29 @@ class LegendKey:
 
     def Delete(self):
         self.legendkey.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LetterContent:
 
@@ -11588,6 +14140,32 @@ class LetterContent:
     def Subject(self, value):
         self.lettercontent.Subject = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Line:
 
     def __init__(self, line=None):
@@ -11636,6 +14214,24 @@ class Line:
     @property
     def Width(self):
         return self.line.Width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class LineFormat:
 
@@ -11774,6 +14370,18 @@ class LineFormat:
     def Weight(self, value):
         self.lineformat.Weight = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class LineNumbering:
 
     def __init__(self, linenumbering=None):
@@ -11831,6 +14439,14 @@ class LineNumbering:
     def StartingNumber(self, value):
         self.linenumbering.StartingNumber = value
 
+
+
+
+
+
+
+
+
 class Lines:
 
     def __init__(self, lines=None):
@@ -11859,6 +14475,13 @@ class Lines:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.lines.Item(*args, **arguments)
+
+
+
+
+
+
+
 
 class LinkFormat:
 
@@ -11927,6 +14550,22 @@ class LinkFormat:
     def Update(self):
         self.linkformat.Update()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class List:
 
     def __init__(self, list=None):
@@ -11986,6 +14625,23 @@ class List:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.list.RemoveNumbers(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ListEntry:
 
     def __init__(self, listentry=None):
@@ -12017,6 +14673,28 @@ class ListEntry:
 
     def Delete(self):
         self.listentry.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ListFormat:
 
@@ -12122,6 +14800,19 @@ class ListFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listformat.RemoveNumbers(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ListGallery:
 
     def __init__(self, listgallery=None):
@@ -12155,6 +14846,17 @@ class ListGallery:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listgallery.Reset(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
 
 class ListLevel:
 
@@ -12274,6 +14976,36 @@ class ListLevel:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listlevel.ApplyPictureBullet(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ListTemplate:
 
     def __init__(self, listtemplate=None):
@@ -12315,6 +15047,24 @@ class ListTemplate:
         arguments = {"Level": Level}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.listtemplate.Convert(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MailingLabel:
 
@@ -12383,6 +15133,29 @@ class MailingLabel:
         arguments = {"LabelID": LabelID, "Address": Address, "ExtractAddress": ExtractAddress, "LaserTray": LaserTray, "SingleLabel": SingleLabel, "Row": Row, "Column": Column, "PrintEPostageLabel": PrintEPostageLabel, "Vertical": Vertical}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailinglabel.PrintOutByID(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MailMerge:
 
@@ -12543,6 +15316,19 @@ class MailMerge:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmerge.ShowWizard(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MailMergeDataField:
 
     def __init__(self, mailmergedatafield=None):
@@ -12571,6 +15357,31 @@ class MailMergeDataField:
     @property
     def Value(self):
         return self.mailmergedatafield.Value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MailMergeDataSource:
 
@@ -12703,6 +15514,22 @@ class MailMergeDataSource:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.mailmergedatasource.SetAllIncludedFlags(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class MailMergeField:
 
     def __init__(self, mailmergefield=None):
@@ -12760,6 +15587,15 @@ class MailMergeField:
     def Select(self):
         self.mailmergefield.Select()
 
+
+
+
+
+
+
+
+
+
 class MailMergeFieldName:
 
     def __init__(self, mailmergefieldname=None):
@@ -12784,6 +15620,39 @@ class MailMergeFieldName:
     @property
     def Parent(self):
         return self.mailmergefieldname.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MailMessage:
 
@@ -12835,6 +15704,16 @@ class MailMessage:
     def ToggleHeader(self):
         self.mailmessage.ToggleHeader()
 
+
+
+
+
+
+
+
+
+
+
 class MappedDataField:
 
     def __init__(self, mappeddatafield=None):
@@ -12880,6 +15759,14 @@ class MappedDataField:
     def Value(self):
         return self.mappeddatafield.Value
 
+
+
+
+
+
+
+
+
 class MappedDataFields:
 
     def __init__(self, mappeddatafields=None):
@@ -12908,6 +15795,21 @@ class MappedDataFields:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.mappeddatafields.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Model3DFormat:
 
@@ -13034,6 +15936,26 @@ class Model3DFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.model3dformat.ResetModel(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OLEFormat:
 
     def __init__(self, oleformat=None):
@@ -13138,6 +16060,25 @@ class OLEFormat:
 
     def Open(self):
         self.oleformat.Open()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OMath:
 
@@ -13246,6 +16187,21 @@ class OMath:
     def Remove(self):
         self.omath.Remove()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OMathAcc:
 
     def __init__(self, omathacc=None):
@@ -13274,6 +16230,13 @@ class OMathAcc:
     @property
     def Parent(self):
         return self.omathacc.Parent
+
+
+
+
+
+
+
 
 class OMathArgs:
 
@@ -13305,6 +16268,12 @@ class OMathArgs:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathargs.Item(*args, **arguments)
+
+
+
+
+
+
 
 class OMathAutoCorrect:
 
@@ -13347,6 +16316,15 @@ class OMathAutoCorrect:
     def UseOutsideOMath(self, value):
         self.omathautocorrect.UseOutsideOMath = value
 
+
+
+
+
+
+
+
+
+
 class OMathAutoCorrectEntries:
 
     def __init__(self, omathautocorrectentries=None):
@@ -13377,6 +16355,12 @@ class OMathAutoCorrectEntries:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathautocorrectentries.Item(*args, **arguments)
+
+
+
+
+
+
 
 class OMathAutoCorrectEntry:
 
@@ -13418,6 +16402,14 @@ class OMathAutoCorrectEntry:
     def Delete(self):
         self.omathautocorrectentry.Delete()
 
+
+
+
+
+
+
+
+
 class OMathBar:
 
     def __init__(self, omathbar=None):
@@ -13446,6 +16438,15 @@ class OMathBar:
     @property
     def Parent(self):
         return self.omathbar.Parent
+
+
+
+
+
+
+
+
+
 
 class OMathBorderBox:
 
@@ -13532,6 +16533,16 @@ class OMathBorderBox:
     def StrikeV(self, value):
         self.omathborderbox.StrikeV = value
 
+
+
+
+
+
+
+
+
+
+
 class OMathBox:
 
     def __init__(self, omathbox=None):
@@ -13577,6 +16588,14 @@ class OMathBox:
     def Parent(self):
         return self.omathbox.Parent
 
+
+
+
+
+
+
+
+
 class OMathBreak:
 
     def __init__(self, omathbreak=None):
@@ -13609,6 +16628,14 @@ class OMathBreak:
     def Delete(self):
         self.omathbreak.Delete()
 
+
+
+
+
+
+
+
+
 class OMathBreaks:
 
     def __init__(self, omathbreaks=None):
@@ -13639,6 +16666,14 @@ class OMathBreaks:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathbreaks.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class OMathDelim:
 
@@ -13717,6 +16752,17 @@ class OMathDelim:
     def Shape(self, value):
         self.omathdelim.Shape = value
 
+
+
+
+
+
+
+
+
+
+
+
 class OMathEqArray:
 
     def __init__(self, omatheqarray=None):
@@ -13778,6 +16824,14 @@ class OMathEqArray:
     def RowSpacingRule(self, value):
         self.omatheqarray.RowSpacingRule = value
 
+
+
+
+
+
+
+
+
 class OMathFrac:
 
     def __init__(self, omathfrac=None):
@@ -13811,6 +16865,14 @@ class OMathFrac:
     def Type(self, value):
         self.omathfrac.Type = value
 
+
+
+
+
+
+
+
+
 class OMathFunc:
 
     def __init__(self, omathfunc=None):
@@ -13835,6 +16897,23 @@ class OMathFunc:
     @property
     def Parent(self):
         return self.omathfunc.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class OMathFunction:
 
@@ -13948,6 +17027,24 @@ class OMathFunction:
     def Remove(self):
         return self.omathfunction.Remove()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OMathFunctions:
 
     def __init__(self, omathfunctions=None):
@@ -13978,6 +17075,14 @@ class OMathFunctions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathfunctions.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class OMathGroupChar:
 
@@ -14024,6 +17129,12 @@ class OMathGroupChar:
     def Parent(self):
         return self.omathgroupchar.Parent
 
+
+
+
+
+
+
 class OMathLimLow:
 
     def __init__(self, omathlimlow=None):
@@ -14052,6 +17163,13 @@ class OMathLimLow:
     def ToLimUpp(self):
         return self.omathlimlow.ToLimUpp()
 
+
+
+
+
+
+
+
 class OMathLimUpp:
 
     def __init__(self, omathlimupp=None):
@@ -14079,6 +17197,17 @@ class OMathLimUpp:
 
     def ToLimLow(self):
         return self.omathlimupp.ToLimLow()
+
+
+
+
+
+
+
+
+
+
+
 
 class OMathMat:
 
@@ -14169,6 +17298,18 @@ class OMathMat:
     def RowSpacingRule(self, value):
         self.omathmat.RowSpacingRule = value
 
+
+
+
+
+
+
+
+
+
+
+
+
 class OMathMatCol:
 
     def __init__(self, omathmatcol=None):
@@ -14205,6 +17346,13 @@ class OMathMatCol:
     def Delete(self):
         self.omathmatcol.Delete()
 
+
+
+
+
+
+
+
 class OMathMatCols:
 
     def __init__(self, omathmatcols=None):
@@ -14235,6 +17383,12 @@ class OMathMatCols:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathmatcols.Item(*args, **arguments)
+
+
+
+
+
+
 
 class OMathMatRow:
 
@@ -14268,6 +17422,14 @@ class OMathMatRow:
     def Delete(self):
         self.omathmatrow.Delete()
 
+
+
+
+
+
+
+
+
 class OMathMatRows:
 
     def __init__(self, omathmatrows=None):
@@ -14298,6 +17460,15 @@ class OMathMatRows:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathmatrows.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
 
 class OMathNary:
 
@@ -14368,6 +17539,14 @@ class OMathNary:
     def Sup(self):
         return OMath(self.omathnary.Sup)
 
+
+
+
+
+
+
+
+
 class OMathPhantom:
 
     def __init__(self, omathphantom=None):
@@ -14437,6 +17616,19 @@ class OMathPhantom:
     def ZeroWid(self, value):
         self.omathphantom.ZeroWid = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OMathRad:
 
     def __init__(self, omathrad=None):
@@ -14470,6 +17662,12 @@ class OMathRad:
     def Parent(self):
         return self.omathrad.Parent
 
+
+
+
+
+
+
 class OMathRecognizedFunction:
 
     def __init__(self, omathrecognizedfunction=None):
@@ -14497,6 +17695,14 @@ class OMathRecognizedFunction:
 
     def Delete(self):
         self.omathrecognizedfunction.Delete()
+
+
+
+
+
+
+
+
 
 class OMathRecognizedFunctions:
 
@@ -14528,6 +17734,15 @@ class OMathRecognizedFunctions:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.omathrecognizedfunctions.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
 
 class OMaths:
 
@@ -14569,6 +17784,11 @@ class OMaths:
     def Linearize(self):
         return self.omaths.Linearize()
 
+
+
+
+
+
 class OMathScrPre:
 
     def __init__(self, omathscrpre=None):
@@ -14601,6 +17821,14 @@ class OMathScrPre:
     def ToScrSubSup(self):
         return self.omathscrpre.ToScrSubSup()
 
+
+
+
+
+
+
+
+
 class OMathScrSub:
 
     def __init__(self, omathscrsub=None):
@@ -14625,6 +17853,13 @@ class OMathScrSub:
     @property
     def Sub(self):
         return OMath(self.omathscrsub.Sub)
+
+
+
+
+
+
+
 
 class OMathScrSubSup:
 
@@ -14672,6 +17907,16 @@ class OMathScrSubSup:
     def ToScrPre(self):
         return self.omathscrsubsup.ToScrPre()
 
+
+
+
+
+
+
+
+
+
+
 class OMathScrSup:
 
     def __init__(self, omathscrsup=None):
@@ -14696,6 +17941,149 @@ class OMathScrSup:
     @property
     def Sup(self):
         return OMath(self.omathscrsup.Sup)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Options:
 
@@ -16530,6 +19918,103 @@ class Options:
     def WarnBeforeSavingPrintingSendingMarkup(self, value):
         self.options.WarnBeforeSavingPrintingSendingMarkup = value
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class OtherCorrectionsException:
 
     def __init__(self, othercorrectionsexception=None):
@@ -16557,6 +20042,22 @@ class OtherCorrectionsException:
 
     def Delete(self):
         self.othercorrectionsexception.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Page:
 
@@ -16603,6 +20104,18 @@ class Page:
     def Width(self):
         return self.page.Width
 
+
+
+
+
+
+
+
+
+
+
+
+
 class PageNumber:
 
     def __init__(self, pagenumber=None):
@@ -16643,6 +20156,46 @@ class PageNumber:
 
     def Select(self):
         self.pagenumber.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class PageSetup:
 
@@ -16911,6 +20464,38 @@ class PageSetup:
     def TogglePortrait(self):
         self.pagesetup.TogglePortrait()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Pane:
 
     def __init__(self, pane=None):
@@ -17039,6 +20624,61 @@ class Pane:
 
     def TOCInFrameset(self):
         self.pane.TOCInFrameset()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Paragraph:
 
@@ -17472,6 +21112,70 @@ class Paragraph:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraph.TabIndent(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ParagraphFormat:
 
     def __init__(self, paragraphformat=None):
@@ -17830,6 +21534,107 @@ class ParagraphFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.paragraphformat.TabIndent(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PictureFormat:
 
     def __init__(self, pictureformat=None):
@@ -17937,6 +21742,20 @@ class PictureFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.pictureformat.IncrementContrast(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class PlotArea:
 
     def __init__(self, plotarea=None):
@@ -18039,6 +21858,36 @@ class PlotArea:
 
     def Select(self):
         self.plotarea.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Point:
 
@@ -18246,6 +22095,22 @@ class Point:
     def Select(self):
         self.point.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Points:
 
     def __init__(self, points=None):
@@ -18274,6 +22139,24 @@ class Points:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Point(self.points.Item(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ProtectedViewWindow:
 
@@ -18377,6 +22260,19 @@ class ProtectedViewWindow:
     def ToggleRibbon(self):
         self.protectedviewwindow.ToggleRibbon()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ProtectedViewWindows:
 
     def __init__(self, protectedviewwindows=None):
@@ -18410,6 +22306,110 @@ class ProtectedViewWindows:
         arguments = {"FileName": FileName, "AddToRecentFiles": AddToRecentFiles, "PasswordDocument": PasswordDocument, "Visible": Visible, "OpenAndRepair": OpenAndRepair}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return ProtectedViewWindow(self.protectedviewwindows.Open(*args, **arguments))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Range:
 
@@ -19276,6 +23276,79 @@ class Range:
     def WholeStory(self):
         self.range.WholeStory()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ReadabilityStatistic:
 
     def __init__(self, readabilitystatistic=None):
@@ -19300,6 +23373,19 @@ class ReadabilityStatistic:
     @property
     def Value(self):
         return self.readabilitystatistic.Value
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class RecentFile:
 
@@ -19343,6 +23429,24 @@ class RecentFile:
 
     def Open(self):
         return self.recentfile.Open()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Rectangle:
 
@@ -19393,6 +23497,16 @@ class Rectangle:
     def Width(self, value):
         self.rectangle.Width = value
 
+
+
+
+
+
+
+
+
+
+
 class Rectangles:
 
     def __init__(self, rectangles=None):
@@ -19421,6 +23535,11 @@ class Rectangles:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.rectangles.Item(*args, **arguments)
+
+
+
+
+
 
 class ReflectionFormat:
 
@@ -19478,6 +23597,20 @@ class ReflectionFormat:
     @Type.setter
     def Type(self, value):
         self.reflectionformat.Type = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Replacement:
 
@@ -19567,6 +23700,16 @@ class Replacement:
     def ClearFormatting(self):
         self.replacement.ClearFormatting()
 
+
+
+
+
+
+
+
+
+
+
 class Research:
 
     def __init__(self, research=None):
@@ -19607,6 +23750,12 @@ class Research:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.research.SetLanguagePair(*args, **arguments)
 
+
+
+
+
+
+
 class Reviewer:
 
     def __init__(self, reviewer=None):
@@ -19631,6 +23780,13 @@ class Reviewer:
     @Visible.setter
     def Visible(self, value):
         self.reviewer.Visible = value
+
+
+
+
+
+
+
 
 class Reviewers:
 
@@ -19660,6 +23816,16 @@ class Reviewers:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.reviewers.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
 
 class Revision:
 
@@ -19723,6 +23889,35 @@ class Revision:
 
     def Reject(self):
         self.revision.Reject()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Row:
 
@@ -19870,6 +24065,59 @@ class Row:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.row.SetLeftIndent(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Section:
 
     def __init__(self, section=None):
@@ -19918,6 +24166,120 @@ class Section:
     @property
     def Range(self):
         return Range(self.section.Range)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Selection:
 
@@ -20728,6 +25090,132 @@ class Selection:
     def WholeStory(self):
         self.selection.WholeStory()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Series:
 
     def __init__(self, series=None):
@@ -21077,6 +25565,28 @@ class Series:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Trendlines(self.series.Trendlines(*args, **arguments))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SeriesCollection:
 
     def __init__(self, seriescollection=None):
@@ -21116,6 +25626,14 @@ class SeriesCollection:
     def NewSeries(self):
         return Series(self.seriescollection.NewSeries())
 
+
+
+
+
+
+
+
+
 class SeriesLines:
 
     def __init__(self, serieslines=None):
@@ -21150,6 +25668,17 @@ class SeriesLines:
 
     def Select(self):
         self.serieslines.Select()
+
+
+
+
+
+
+
+
+
+
+
 
 class Shading:
 
@@ -21207,6 +25736,15 @@ class Shading:
     @Texture.setter
     def Texture(self, value):
         self.shading.Texture = value
+
+
+
+
+
+
+
+
+
 
 class ShadowFormat:
 
@@ -21322,6 +25860,59 @@ class ShadowFormat:
         arguments = {"Increment": Increment}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.shadowformat.IncrementOffsetY(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Shape:
 
@@ -21759,6 +26350,50 @@ class Shape:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.shape.ZOrder(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class ShapeNode:
 
     def __init__(self, shapenode=None):
@@ -21787,6 +26422,124 @@ class ShapeNode:
     @property
     def SegmentType(self):
         return self.shapenode.SegmentType
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class SoftEdgeFormat:
 
@@ -21820,6 +26573,15 @@ class SoftEdgeFormat:
     @Type.setter
     def Type(self, value):
         self.softedgeformat.Type = value
+
+
+
+
+
+
+
+
+
 
 class Source:
 
@@ -21861,6 +26623,15 @@ class Source:
     def Delete(self):
         self.source.Delete()
 
+
+
+
+
+
+
+
+
+
 class Sources:
 
     def __init__(self, sources=None):
@@ -21892,6 +26663,10 @@ class Sources:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.sources.Item(*args, **arguments)
 
+
+
+
+
 class SpellingSuggestion:
 
     def __init__(self, spellingsuggestion=None):
@@ -21912,6 +26687,40 @@ class SpellingSuggestion:
     @property
     def Parent(self):
         return self.spellingsuggestion.Parent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Style:
 
@@ -22118,6 +26927,31 @@ class Style:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.style.LinkToListTemplate(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class StyleSheet:
 
     def __init__(self, stylesheet=None):
@@ -22175,6 +27009,18 @@ class StyleSheet:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.stylesheet.Move(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class StyleSheets:
 
     def __init__(self, stylesheets=None):
@@ -22208,6 +27054,14 @@ class StyleSheets:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.stylesheets.Item(*args, **arguments)
+
+
+
+
+
+
+
+
 
 class Subdocument:
 
@@ -22265,6 +27119,28 @@ class Subdocument:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.subdocument.Split(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class SynonymInfo:
 
     def __init__(self, synonyminfo=None):
@@ -22321,6 +27197,24 @@ class SynonymInfo:
     @property
     def Word(self):
         return self.synonyminfo.Word
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class System:
 
@@ -22414,6 +27308,39 @@ class System:
 
     def MSInfo(self):
         self.system.MSInfo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Table:
 
@@ -22670,6 +27597,37 @@ class Table:
     def UpdateAutoFormat(self):
         self.table.UpdateAutoFormat()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TableOfAuthorities:
 
     def __init__(self, tableofauthorities=None):
@@ -22785,6 +27743,18 @@ class TableOfAuthorities:
     def Update(self):
         self.tableofauthorities.Update()
 
+
+
+
+
+
+
+
+
+
+
+
+
 class TableOfAuthoritiesCategory:
 
     def __init__(self, tableofauthoritiescategory=None):
@@ -22809,6 +27779,16 @@ class TableOfAuthoritiesCategory:
     @property
     def Parent(self):
         return self.tableofauthoritiescategory.Parent
+
+
+
+
+
+
+
+
+
+
 
 class TableOfContents:
 
@@ -22923,6 +27903,27 @@ class TableOfContents:
 
     def UpdatePageNumbers(self):
         self.tableofcontents.UpdatePageNumbers()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TableOfFigures:
 
@@ -23054,6 +28055,67 @@ class TableOfFigures:
     def UpdatePageNumbers(self):
         self.tableoffigures.UpdatePageNumbers()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TableStyle:
 
     def __init__(self, tablestyle=None):
@@ -23180,6 +28242,20 @@ class TableStyle:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.tablestyle.Condition(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TabStop:
 
     def __init__(self, tabstop=None):
@@ -23235,6 +28311,26 @@ class TabStop:
 
     def Clear(self):
         self.tabstop.Clear()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Task:
 
@@ -23328,6 +28424,18 @@ class Task:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.task.SendWindowMessage(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
 class TaskPane:
 
     def __init__(self, taskpane=None):
@@ -23352,6 +28460,13 @@ class TaskPane:
     @Visible.setter
     def Visible(self, value):
         self.taskpane.Visible = value
+
+
+
+
+
+
+
 
 class TaskPanes:
 
@@ -23381,6 +28496,29 @@ class TaskPanes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.taskpanes.Item(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Template:
 
@@ -23525,6 +28663,26 @@ class Template:
     def Save(self):
         self.template.Save()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TextColumn:
 
     def __init__(self, textcolumn=None):
@@ -23557,6 +28715,30 @@ class TextColumn:
     @Width.setter
     def Width(self, value):
         self.textcolumn.Width = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextEffectFormat:
 
@@ -23673,6 +28855,28 @@ class TextEffectFormat:
 
     def ToggleVerticalText(self):
         self.texteffectformat.ToggleVerticalText()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class TextFrame:
 
@@ -23830,6 +29034,26 @@ class TextFrame:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.textframe.ValidLinkTarget(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TextInput:
 
     def __init__(self, textinput=None):
@@ -23883,6 +29107,16 @@ class TextInput:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.textinput.EditType(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
 class TextRetrievalMode:
 
     def __init__(self, textretrievalmode=None):
@@ -23927,6 +29161,29 @@ class TextRetrievalMode:
     @ViewType.setter
     def ViewType(self, value):
         self.textretrievalmode.ViewType = value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class ThreeDFormat:
 
@@ -24192,6 +29449,33 @@ class ThreeDFormat:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.threedformat.SetThreeDFormat(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class TickLabels:
 
     def __init__(self, ticklabels=None):
@@ -24294,6 +29578,32 @@ class TickLabels:
 
     def Select(self):
         self.ticklabels.Select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Trendline:
 
@@ -24425,6 +29735,19 @@ class Trendline:
     def Select(self):
         self.trendline.Select()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Trendlines:
 
     def __init__(self, trendlines=None):
@@ -24456,6 +29779,12 @@ class Trendlines:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return Trendline(self.trendlines.Item(*args, **arguments))
 
+
+
+
+
+
+
 class TwoInitialCapsException:
 
     def __init__(self, twoinitialcapsexception=None):
@@ -24483,6 +29812,21 @@ class TwoInitialCapsException:
 
     def Delete(self):
         self.twoinitialcapsexception.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class UndoRecord:
 
@@ -24520,6 +29864,16 @@ class UndoRecord:
         arguments = {"Name": Name}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.undorecord.StartCustomRecord(*args, **arguments)
+
+
+
+
+
+
+
+
+
+
 
 class UpBars:
 
@@ -24564,6 +29918,15 @@ class UpBars:
     def Select(self):
         self.upbars.Select()
 
+
+
+
+
+
+
+
+
+
 class Variable:
 
     def __init__(self, variable=None):
@@ -24599,6 +29962,21 @@ class Variable:
 
     def Delete(self):
         self.variable.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Version:
 
@@ -24638,6 +30016,23 @@ class Version:
 
     def Open(self):
         return self.version.Open()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class View:
 
@@ -25068,6 +30463,58 @@ class View:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         self.view.ShowHeading(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Walls:
 
     def __init__(self, walls=None):
@@ -25125,6 +30572,3705 @@ class Walls:
 
     def Select(self):
         self.walls.Select()
+
+
+
+
+
+
+
+
+
+# WdAlertLevel enumeration
+wdAlertsAll = -1
+wdAlertsMessageBox = -2
+wdAlertsNone = 0
+
+# WdAlignmentTabAlignment enumeration
+wdCenter = 1
+wdLeft = 0
+wdRight = 2
+
+# WdAlignmentTabRelative enumeration
+wdIndent = 1
+wdMargin = 0
+
+# WdApplyQuickStyleSets enumeration
+wdSessionStartSet = 1
+wdTemplateSet = 2
+
+# WdArabicNumeral enumeration
+wdNumeralArabic = 0
+wdNumeralContext = 2
+wdNumeralHindi = 1
+wdNumeralSystem = 3
+
+# WdAraSpeller enumeration
+wdBoth = 3
+wdFinalYaa = 2
+wdInitialAlef = 1
+wdNone = 0
+
+# WdArrangeStyle enumeration
+wdIcons = 1
+wdTiled = 0
+
+# WdAutoFitBehavior enumeration
+wdAutoFitContent = 1
+wdAutoFitFixed = 0
+wdAutoFitWindow = 2
+
+# WdAutoMacros enumeration
+wdAutoClose = 3
+wdAutoExec = 0
+wdAutoExit = 4
+wdAutoNew = 1
+wdAutoOpen = 2
+wdAutoSync = 5
+
+# WdAutoVersions enumeration
+wdAutoVersionOff = 0
+wdAutoVersionOnClose = 1
+
+# WdBaselineAlignment enumeration
+wdBaselineAlignAuto = 4
+wdBaselineAlignBaseline = 2
+wdBaselineAlignCenter = 1
+wdBaselineAlignFarEast50 = 3
+wdBaselineAlignTop = 0
+
+# WdBookmarkSortBy enumeration
+wdSortByLocation = 1
+wdSortByName = 0
+
+# WdBorderDistanceFrom enumeration
+wdBorderDistanceFromPageEdge = 1
+wdBorderDistanceFromText = 0
+
+# WdBorderType enumeration
+wdBorderBottom = -3
+wdBorderDiagonalDown = -7
+wdBorderDiagonalUp = -8
+wdBorderHorizontal = -5
+wdBorderLeft = -2
+wdBorderRight = -4
+wdBorderTop = -1
+wdBorderVertical = -6
+
+# WdBreakType enumeration
+wdColumnBreak = 8
+wdLineBreak = 6
+wdLineBreakClearLeft = 9
+wdLineBreakClearRight = 10
+wdPageBreak = 7
+wdSectionBreakContinuous = 3
+wdSectionBreakEvenPage = 4
+wdSectionBreakNextPage = 2
+wdSectionBreakOddPage = 5
+wdTextWrappingBreak = 11
+
+# WdBrowserLevel enumeration
+wdBrowserLevelMicrosoftInternetExplorer5 = 1
+wdBrowserLevelMicrosoftInternetExplorer6 = 2
+wdBrowserLevelV4 = 0
+
+# WdBrowseTarget enumeration
+wdBrowseComment = 3
+wdBrowseEdit = 10
+wdBrowseEndnote = 5
+wdBrowseField = 6
+wdBrowseFind = 11
+wdBrowseFootnote = 4
+wdBrowseGoTo = 12
+wdBrowseGraphic = 8
+wdBrowseHeading = 9
+wdBrowsePage = 1
+wdBrowseSection = 2
+wdBrowseTable = 7
+
+# WdBuildingBlockTypes enumeration
+wdTypeAutoText = 9
+wdTypeBibliography = 34
+wdTypeCoverPage = 2
+wdTypeCustom1 = 29
+wdTypeCustom2 = 30
+wdTypeCustom3 = 31
+wdTypeCustom4 = 32
+wdTypeCustom5 = 33
+wdTypeCustomAutoText = 23
+wdTypeCustomBibliography = 35
+wdTypeCustomCoverPage = 16
+wdTypeCustomEquations = 17
+wdTypeCustomFooters = 18
+wdTypeCustomHeaders = 19
+wdTypeCustomPageNumber = 20
+wdTypeCustomPageNumberBottom = 26
+wdTypeCustomPageNumberPage = 27
+wdTypeCustomPageNumberTop = 25
+wdTypeCustomQuickParts = 15
+wdTypeCustomTableOfContents = 28
+wdTypeCustomTables = 21
+wdTypeCustomTextBox = 24
+wdTypeCustomWatermarks = 22
+wdTypeEquations = 3
+wdTypeFooters = 4
+wdTypeHeaders = 5
+wdTypePageNumber = 6
+wdTypePageNumberBottom = 12
+wdTypePageNumberPage = 13
+wdTypePageNumberTop = 11
+wdTypeQuickParts = 1
+wdTypeTableOfContents = 14
+wdTypeTables = 7
+wdTypeTextBox = 10
+wdTypeWatermarks = 8
+
+# WdBuiltInProperty enumeration
+wdPropertyAppName = 9
+wdPropertyAuthor = 3
+wdPropertyBytes = 22
+wdPropertyCategory = 18
+wdPropertyCharacters = 16
+wdPropertyCharsWSpaces = 30
+wdPropertyComments = 5
+wdPropertyCompany = 21
+wdPropertyFormat = 19
+wdPropertyHiddenSlides = 27
+wdPropertyHyperlinkBase = 29
+wdPropertyKeywords = 4
+wdPropertyLastAuthor = 7
+wdPropertyLines = 23
+wdPropertyManager = 20
+wdPropertyMMClips = 28
+wdPropertyNotes = 26
+wdPropertyPages = 14
+wdPropertyParas = 24
+wdPropertyRevision = 8
+wdPropertySecurity = 17
+wdPropertySlides = 25
+wdPropertySubject = 2
+wdPropertyTemplate = 6
+wdPropertyTimeCreated = 11
+wdPropertyTimeLastPrinted = 10
+wdPropertyTimeLastSaved = 12
+wdPropertyTitle = 1
+wdPropertyVBATotalEdit = 13
+wdPropertyWords = 15
+
+# WdBuiltinStyle enumeration
+wdStyleBlockQuotation = -85
+wdStyleBodyText = -67
+wdStyleBodyText2 = -81
+wdStyleBodyText3 = -82
+wdStyleBodyTextFirstIndent = -78
+wdStyleBodyTextFirstIndent2 = -79
+wdStyleBodyTextIndent = -68
+wdStyleBodyTextIndent2 = -83
+wdStyleBodyTextIndent3 = -84
+wdStyleBookTitle = -265
+wdStyleCaption = -35
+wdStyleClosing = -64
+wdStyleCommentReference = -40
+wdStyleCommentText = -31
+wdStyleDate = -77
+wdStyleDefaultParagraphFont = -66
+wdStyleEmphasis = -89
+wdStyleEndnoteReference = -43
+wdStyleEndnoteText = -44
+wdStyleEnvelopeAddress = -37
+wdStyleEnvelopeReturn = -38
+wdStyleFooter = -33
+wdStyleFootnoteReference = -39
+wdStyleFootnoteText = -30
+wdStyleHeader = -32
+wdStyleHeading1 = -2
+wdStyleHeading2 = -3
+wdStyleHeading3 = -4
+wdStyleHeading4 = -5
+wdStyleHeading5 = -6
+wdStyleHeading6 = -7
+wdStyleHeading7 = -8
+wdStyleHeading8 = -9
+wdStyleHeading9 = -10
+wdStyleHtmlAcronym = -96
+wdStyleHtmlAddress = -97
+wdStyleHtmlCite = -98
+wdStyleHtmlCode = -99
+wdStyleHtmlDfn = -100
+wdStyleHtmlKbd = -101
+wdStyleHtmlNormal = -95
+wdStyleHtmlPre = -102
+wdStyleHtmlSamp = -103
+wdStyleHtmlTt = -104
+wdStyleHtmlVar = -105
+wdStyleHyperlink = -86
+wdStyleHyperlinkFollowed = -87
+wdStyleIndex1 = -11
+wdStyleIndex2 = -12
+wdStyleIndex3 = -13
+wdStyleIndex4 = -14
+wdStyleIndex5 = -15
+wdStyleIndex6 = -16
+wdStyleIndex7 = -17
+wdStyleIndex8 = -18
+wdStyleIndex9 = -19
+wdStyleIndexHeading = -34
+wdStyleIntenseEmphasis = -262
+wdStyleIntenseQuote = -182
+wdStyleIntenseReference = -264
+wdStyleLineNumber = -41
+wdStyleList = -48
+wdStyleList2 = -51
+wdStyleList3 = -52
+wdStyleList4 = -53
+wdStyleList5 = -54
+wdStyleListBullet = -49
+wdStyleListBullet2 = -55
+wdStyleListBullet3 = -56
+wdStyleListBullet4 = -57
+wdStyleListBullet5 = -58
+wdStyleListContinue = -69
+wdStyleListContinue2 = -70
+wdStyleListContinue3 = -71
+wdStyleListContinue4 = -72
+wdStyleListContinue5 = -73
+wdStyleListNumber = -50
+wdStyleListNumber2 = -59
+wdStyleListNumber3 = -60
+wdStyleListNumber4 = -61
+wdStyleListNumber5 = -62
+wdStyleListParagraph = -180
+wdStyleMacroText = -46
+wdStyleMessageHeader = -74
+wdStyleNavPane = -90
+wdStyleNormal = -1
+wdStyleNormalIndent = -29
+wdStyleNormalObject = -158
+wdStyleNormalTable = -106
+wdStyleNoteHeading = -80
+wdStylePageNumber = -42
+wdStylePlainText = -91
+wdStyleQuote = -181
+wdStyleSalutation = -76
+wdStyleSignature = -65
+wdStyleStrong = -88
+wdStyleSubtitle = -75
+wdStyleSubtleEmphasis = -261
+wdStyleSubtleReference = -263
+wdStyleTableColorfulGrid = -172
+wdStyleTableColorfulList = -171
+wdStyleTableColorfulShading = -170
+wdStyleTableDarkList = -169
+wdStyleTableLightGrid = -161
+wdStyleTableLightGridAccent1 = -175
+wdStyleTableLightList = -160
+wdStyleTableLightListAccent1 = -174
+wdStyleTableLightShading = -159
+wdStyleTableLightShadingAccent1 = -173
+wdStyleTableMediumGrid1 = -166
+wdStyleTableMediumGrid2 = -167
+wdStyleTableMediumGrid3 = -168
+wdStyleTableMediumList1 = -164
+wdStyleTableMediumList1Accent1 = -178
+wdStyleTableMediumList2 = -165
+wdStyleTableMediumShading1 = -162
+wdStyleTableMediumShading1Accent1 = -176
+wdStyleTableMediumShading2 = -163
+wdStyleTableMediumShading2Accent1 = -177
+wdStyleTableOfAuthorities = -45
+wdStyleTableOfFigures = -36
+wdStyleTitle = -63
+wdStyleTOAHeading = -47
+wdStyleTOC1 = -20
+wdStyleTOC2 = -21
+wdStyleTOC3 = -22
+wdStyleTOC4 = -23
+wdStyleTOC5 = -24
+wdStyleTOC6 = -25
+wdStyleTOC7 = -26
+wdStyleTOC8 = -27
+wdStyleTOC9 = -28
+
+# WdCalendarType enumeration
+wdCalendarArabic = 1
+wdCalendarHebrew = 2
+wdCalendarJapan = 4
+wdCalendarKorean = 6
+wdCalendarSakaEra = 7
+wdCalendarTaiwan = 3
+wdCalendarThai = 5
+wdCalendarTranslitEnglish = 8
+wdCalendarTranslitFrench = 9
+wdCalendarUmalqura = 13
+wdCalendarWestern = 0
+
+# WdCalendarTypeBi enumeration
+wdCalendarTypeBidi = 99
+wdCalendarTypeGregorian = 100
+
+# WdCaptionLabelID enumeration
+wdCaptionEquation = -3
+wdCaptionFigure = -1
+wdCaptionTable = -2
+
+# WdCaptionNumberStyle enumeration
+wdCaptionNumberStyleArabic = 0
+wdCaptionNumberStyleArabicFullWidth = 14
+wdCaptionNumberStyleArabicLetter1 = 46
+wdCaptionNumberStyleArabicLetter2 = 48
+wdCaptionNumberStyleChosung = 25
+wdCaptionNumberStyleGanada = 24
+wdCaptionNumberStyleHanjaRead = 41
+wdCaptionNumberStyleHanjaReadDigit = 42
+wdCaptionNumberStyleHebrewLetter1 = 45
+wdCaptionNumberStyleHebrewLetter2 = 47
+wdCaptionNumberStyleHindiArabic = 51
+wdCaptionNumberStyleHindiCardinalText = 52
+wdCaptionNumberStyleHindiLetter1 = 49
+wdCaptionNumberStyleHindiLetter2 = 50
+wdCaptionNumberStyleKanji = 10
+wdCaptionNumberStyleKanjiDigit = 11
+wdCaptionNumberStyleKanjiTraditional = 16
+wdCaptionNumberStyleLowercaseLetter = 4
+wdCaptionNumberStyleLowercaseRoman = 2
+wdCaptionNumberStyleNumberInCircle = 18
+wdCaptionNumberStyleSimpChinNum2 = 38
+wdCaptionNumberStyleSimpChinNum3 = 39
+wdCaptionNumberStyleThaiArabic = 54
+wdCaptionNumberStyleThaiCardinalText = 55
+wdCaptionNumberStyleThaiLetter = 53
+wdCaptionNumberStyleTradChinNum2 = 34
+wdCaptionNumberStyleTradChinNum3 = 35
+wdCaptionNumberStyleUppercaseLetter = 3
+wdCaptionNumberStyleUppercaseRoman = 1
+wdCaptionNumberStyleVietCardinalText = 56
+wdCaptionNumberStyleZodiac1 = 30
+wdCaptionNumberStyleZodiac2 = 31
+
+# WdCaptionPosition enumeration
+wdCaptionPositionAbove = 0
+wdCaptionPositionBelow = 1
+
+# WdCellColor enumeration
+wdCellColorByAuthor = -1
+wdCellColorLightBlue = 2
+wdCellColorLightGray = 7
+wdCellColorLightGreen = 6
+wdCellColorLightOrange = 5
+wdCellColorLightPurple = 4
+wdCellColorLightYellow = 3
+wdCellColorNoHighlight = 0
+wdCellColorPink = 1
+
+# WdCellVerticalAlignment enumeration
+wdCellAlignVerticalBottom = 3
+wdCellAlignVerticalCenter = 1
+wdCellAlignVerticalTop = 0
+
+# WdCharacterCase enumeration
+wdFullWidth = 7
+wdHalfWidth = 6
+wdHiragana = 9
+wdKatakana = 8
+wdLowerCase = 0
+wdNextCase = -1
+wdTitleSentence = 4
+wdTitleWord = 2
+wdToggleCase = 5
+wdUpperCase = 1
+
+# WdCharacterWidth enumeration
+wdWidthFullWidth = 7
+wdWidthHalfWidth = 6
+
+# WdCheckInVersionType enumeration
+wdCheckInMajorVersion = 1
+wdCheckInMinorVersion = 0
+wdCheckInOverwriteVersion = 2
+
+# WdChevronConvertRule enumeration
+wdAlwaysConvert = 1
+wdAskToConvert = 3
+wdAskToNotConvert = 2
+wdNeverConvert = 0
+
+# WdCollapseDirection enumeration
+wdCollapseEnd = 0
+wdCollapseStart = 1
+
+# WdColorIndex enumeration
+wdAuto = 0
+wdBlack = 1
+wdBlue = 2
+wdBrightGreen = 4
+wdByAuthor = -1
+wdDarkBlue = 9
+wdDarkRed = 13
+wdDarkYellow = 14
+wdGray25 = 16
+wdGray50 = 15
+wdGreen = 11
+wdNoHighlight = 0
+wdPink = 5
+wdRed = 6
+wdTeal = 10
+wdTurquoise = 3
+wdViolet = 12
+wdWhite = 8
+wdYellow = 7
+
+# WdCompareDestination enumeration
+wdCompareDestinationNew = 2
+wdCompareDestinationOriginal = 0
+wdCompareDestinationRevised = 1
+
+# WdCompareTarget enumeration
+wdCompareTargetCurrent = 1
+wdCompareTargetNew = 2
+wdCompareTargetSelected = 0
+
+# WdCompatibility enumeration
+wdAlignTablesRowByRow = 39
+wdApplyBreakingRules = 46
+wdAutospaceLikeWW7 = 38
+wdConvMailMergeEsc = 6
+wdDontAdjustLineHeightInTable = 36
+wdDontBalanceSingleByteDoubleByteWidth = 16
+wdDontBreakWrappedTables = 43
+wdDontSnapTextToGridInTableWithObjects = 44
+wdDontULTrailSpace = 15
+wdDontUseAsianBreakRulesInGrid = 48
+wdDontUseHTMLParagraphAutoSpacing = 35
+wdDontWrapTextWithPunctuation = 47
+wdExactOnTop = 28
+wdExpandShiftReturn = 14
+wdFootnoteLayoutLikeWW8 = 34
+wdForgetLastTabAlignment = 37
+wdGrowAutofit = 50
+wdLayoutRawTableWidth = 40
+wdLayoutTableRowsApart = 41
+wdLeaveBackslashAlone = 13
+wdLineWrapLikeWord6 = 32
+wdMWSmallCaps = 22
+wdNoColumnBalance = 5
+wdNoExtraLineSpacing = 23
+wdNoLeading = 20
+wdNoSpaceForUL = 21
+wdNoSpaceRaiseLower = 2
+wdNoTabHangIndent = 1
+wdOrigWordTableRules = 9
+wdPrintBodyTextBeforeHeader = 19
+wdPrintColBlack = 3
+wdSelectFieldWithFirstOrLastCharacter = 45
+wdShapeLayoutLikeWW8 = 33
+wdShowBreaksInFrames = 11
+wdSpacingInWholePoints = 18
+wdSubFontBySize = 25
+wdSuppressBottomSpacing = 29
+wdSuppressSpBfAfterPgBrk = 7
+wdSuppressTopSpacing = 8
+wdSuppressTopSpacingMac5 = 17
+wdSwapBordersFacingPages = 12
+wdTransparentMetafiles = 10
+wdTruncateFontHeight = 24
+wdUsePrinterMetrics = 26
+wdUseWord2002TableStyleRules = 49
+wdUseWord2010TableStyleRules = 69
+wdUseWord97LineBreakingRules = 42
+wdWPJustification = 31
+wdWPSpaceWidth = 30
+wdWrapTrailSpaces = 4
+wdWW6BorderRules = 27
+wdAllowSpaceOfSameStyleInTable = 54
+wdAutofitLikeWW11 = 57
+wdDontAutofitConstrainedTables = 56
+wdDontUseIndentAsNumberingTabStop = 52
+wdFELineBreak11 = 53
+wdHangulWidthLikeWW11 = 59
+wdSplitPgBreakAndParaMark = 60
+wdUnderlineTabInNumList = 58
+wdUseNormalStyleForList = 51
+wdWW11IndentRules = 55
+
+# WdCompatibilityMode enumeration
+wdCurrent = 65535
+wdWord2003 = 11
+wdWord2007 = 12
+wdWord2010 = 14
+wdWord2013 = 15
+
+# WdConditionCode enumeration
+wdEvenColumnBanding = 7
+wdEvenRowBanding = 3
+wdFirstColumn = 4
+wdFirstRow = 0
+wdLastColumn = 5
+wdLastRow = 1
+wdNECell = 8
+wdNWCell = 9
+wdOddColumnBanding = 6
+wdOddRowBanding = 2
+wdSECell = 10
+wdSWCell = 11
+
+# WdConstants enumeration
+wdAutoPosition = 0
+wdBackward = -1073741823
+wdCreatorCode = 1297307460
+wdFirst = 1
+wdForward = 1073741823
+wdToggle = 9999998
+wdUndefined = 9999999
+
+# WdContentControlDateStorageFormat enumeration
+wdContentControlDateStorageDate = 1
+wdContentControlDateStorageDateTime = 2
+wdContentControlDateStorageText = 0
+
+# WdContentControlType enumeration
+wdContentControlBuildingBlockGallery = 5
+wdContentControlCheckbox = 8
+wdContentControlComboBox = 3
+wdContentControlDate = 6
+wdContentControlGroup = 7
+wdContentControlDropdownList = 4
+wdContentControlPicture = 2
+wdContentControlRepeatingSection = 9
+wdContentControlRichText = 0
+wdContentControlText = 1
+
+# WdContinue enumeration
+wdContinueDisabled = 0
+wdContinueList = 2
+wdResetList = 1
+
+# WdCountry enumeration
+wdArgentina = 54
+wdBrazil = 55
+wdCanada = 2
+wdChile = 56
+wdChina = 86
+wdDenmark = 45
+wdFinland = 358
+wdFrance = 33
+wdGermany = 49
+wdIceland = 354
+wdItaly = 39
+wdJapan = 81
+wdKorea = 82
+wdLatinAmerica = 3
+wdMexico = 52
+wdNetherlands = 31
+wdNorway = 47
+wdPeru = 51
+wdSpain = 34
+wdSweden = 46
+wdTaiwan = 886
+wdUK = 44
+wdUS = 1
+wdVenezuela = 58
+
+# WdCursorMovement enumeration
+wdCursorMovementLogical = 0
+wdCursorMovementVisual = 1
+
+# WdCursorType enumeration
+wdCursorIBeam = 1
+wdCursorNormal = 2
+wdCursorNorthwestArrow = 3
+wdCursorWait = 0
+
+# WdCustomLabelPageSize enumeration
+wdCustomLabelA4 = 2
+wdCustomLabelA4LS = 3
+wdCustomLabelA5 = 4
+wdCustomLabelA5LS = 5
+wdCustomLabelB4JIS = 13
+wdCustomLabelB5 = 6
+wdCustomLabelFanfold = 8
+wdCustomLabelHigaki = 11
+wdCustomLabelHigakiLS = 12
+wdCustomLabelLetter = 0
+wdCustomLabelLetterLS = 1
+wdCustomLabelMini = 7
+wdCustomLabelVertHalfSheet = 9
+wdCustomLabelVertHalfSheetLS = 10
+
+# WdDateLanguage enumeration
+wdDateLanguageBidi = 10
+wdDateLanguageLatin = 1033
+
+# WdDefaultFilePath enumeration
+wdAutoRecoverPath = 5
+wdBorderArtPath = 19
+wdCurrentFolderPath = 14
+wdDocumentsPath = 0
+wdGraphicsFiltersPath = 10
+wdPicturesPath = 1
+wdProgramPath = 9
+wdProofingToolsPath = 12
+wdStartupPath = 8
+wdStyleGalleryPath = 15
+wdTempFilePath = 13
+wdTextConvertersPath = 11
+wdToolsPath = 6
+wdTutorialPath = 7
+wdUserOptionsPath = 4
+wdUserTemplatesPath = 2
+wdWorkgroupTemplatesPath = 3
+
+# WdDefaultListBehavior enumeration
+wdWord10ListBehavior = 2
+wdWord8ListBehavior = 0
+wdWord9ListBehavior = 1
+
+# WdDefaultTableBehavior enumeration
+wdWord8TableBehavior = 0
+wdWord9TableBehavior = 1
+
+# WdDeleteCells enumeration
+wdDeleteCellsEntireColumn = 3
+wdDeleteCellsEntireRow = 2
+wdDeleteCellsShiftLeft = 0
+wdDeleteCellsShiftUp = 1
+
+# WdDeletedTextMark enumeration
+wdDeletedTextMarkBold = 5
+wdDeletedTextMarkCaret = 2
+wdDeletedTextMarkColorOnly = 9
+wdDeletedTextMarkDoubleUnderline = 8
+wdDeletedTextMarkHidden = 0
+wdDeletedTextMarkItalic = 6
+wdDeletedTextMarkNone = 4
+wdDeletedTextMarkPound = 3
+wdDeletedTextMarkStrikeThrough = 1
+wdDeletedTextMarkUnderline = 7
+wdDeletedTextMarkDoubleStrikeThrough = 10
+
+# WdDiacriticColor enumeration
+wdDiacriticColorBidi = 0
+wdDiacriticColorLatin = 1
+
+# WdDictionaryType enumeration
+wdGrammar = 1
+wdHangulHanjaConversion = 8
+wdHangulHanjaConversionCustom = 9
+wdHyphenation = 3
+wdSpelling = 0
+wdSpellingComplete = 4
+wdSpellingCustom = 5
+wdSpellingLegal = 6
+wdSpellingMedical = 7
+wdThesaurus = 2
+
+# WdDisableFeaturesIntroducedAfter enumeration
+wd70 = 0
+wd70FE = 1
+wd80 = 2
+
+# WdDocPartInsertOptions enumeration
+wdInsertContent = 0
+wdInsertPage = 2
+wdInsertParagraph = 1
+
+# WdDocumentDirection enumeration
+wdLeftToRight = 0
+wdRightToLeft = 1
+
+# WdDocumentKind enumeration
+wdDocumentEmail = 2
+wdDocumentLetter = 1
+wdDocumentNotSpecified = 0
+
+# WdDocumentMedium enumeration
+wdDocument = 1
+wdEmailMessage = 0
+wdWebPage = 2
+
+# WdDocumentType enumeration
+wdTypeDocument = 0
+wdTypeFrameset = 2
+wdTypeTemplate = 1
+
+# WdDocumentViewDirection enumeration
+wdDocumentViewLtr = 1
+wdDocumentViewRtl = 0
+
+# WdDropPosition enumeration
+wdDropMargin = 2
+wdDropNone = 0
+wdDropNormal = 1
+
+# WdEditionOption enumeration
+wdAutomaticUpdate = 3
+wdCancelPublisher = 0
+wdChangeAttributes = 5
+wdManualUpdate = 4
+wdOpenSource = 7
+wdSelectPublisher = 2
+wdSendPublisher = 1
+wdUpdateSubscriber = 6
+
+# WdEditionType enumeration
+wdPublisher = 0
+wdSubscriber = 1
+
+# WdEditorType enumeration
+wdEditorCurrent = -6
+wdEditorEditors = -5
+wdEditorEveryone = -1
+wdEditorOwners = -4
+
+# WdEmailHTMLFidelity enumeration
+wdEmailHTMLFidelityHigh = 3
+wdEmailHTMLFidelityLow = 1
+wdEmailHTMLFidelityMedium = 2
+
+# WdEmphasisMark enumeration
+wdEmphasisMarkNone = 0
+wdEmphasisMarkOverComma = 2
+wdEmphasisMarkOverSolidCircle = 1
+wdEmphasisMarkOverWhiteCircle = 3
+wdEmphasisMarkUnderSolidCircle = 4
+
+# WdEnableCancelKey enumeration
+wdCancelDisabled = 0
+wdCancelInterrupt = 1
+
+# WdEncloseStyle enumeration
+wdEncloseStyleLarge = 2
+wdEncloseStyleNone = 0
+wdEncloseStyleSmall = 1
+
+# WdEnclosureType enumeration
+wdEnclosureCircle = 0
+wdEnclosureDiamond = 3
+wdEnclosureSquare = 1
+wdEnclosureTriangle = 2
+
+# WdEndnoteLocation enumeration
+wdEndOfDocument = 1
+wdEndOfSection = 0
+
+# WdEnvelopeOrientation enumeration
+wdCenterClockwise = 7
+wdCenterLandscape = 4
+wdCenterPortrait = 1
+wdLeftClockwise = 6
+wdLeftLandscape = 3
+wdLeftPortrait = 0
+wdRightClockwise = 8
+wdRightLandscape = 5
+wdRightPortrait = 2
+
+# WdExportCreateBookmarks enumeration
+wdExportCreateHeadingBookmarks = 1
+wdExportCreateNoBookmarks = 0
+wdExportCreateWordBookmarks = 2
+
+# WdExportFormat enumeration
+wdExportFormatPDF = 17
+wdExportFormatXPS = 18
+
+# WdExportItem enumeration
+wdExportDocumentContent = 0
+wdExportDocumentWithMarkup = 7
+
+# WdExportOptimizeFor enumeration
+wdExportOptimizeForOnScreen = 1
+wdExportOptimizeForPrint = 0
+
+# WdExportRange enumeration
+wdExportAllDocument = 0
+wdExportCurrentPage = 2
+wdExportFromTo = 3
+wdExportSelection = 1
+
+# WdFarEastLineBreakLanguageID enumeration
+wdLineBreakJapanese = 1041
+wdLineBreakKorean = 1042
+wdLineBreakSimplifiedChinese = 2052
+wdLineBreakTraditionalChinese = 1028
+
+# WdFarEastLineBreakLevel enumeration
+wdFarEastLineBreakLevelCustom = 2
+wdFarEastLineBreakLevelNormal = 0
+wdFarEastLineBreakLevelStrict = 1
+
+# WdFieldKind enumeration
+wdFieldKindCold = 3
+wdFieldKindHot = 1
+wdFieldKindNone = 0
+wdFieldKindWarm = 2
+
+# WdFieldShading enumeration
+wdFieldShadingAlways = 1
+wdFieldShadingNever = 0
+wdFieldShadingWhenSelected = 2
+
+# WdFieldType enumeration
+wdFieldAddin = 81
+wdFieldAddressBlock = 93
+wdFieldAdvance = 84
+wdFieldAsk = 38
+wdFieldAuthor = 17
+wdFieldAutoNum = 54
+wdFieldAutoNumLegal = 53
+wdFieldAutoNumOutline = 52
+wdFieldAutoText = 79
+wdFieldAutoTextList = 89
+wdFieldBarCode = 63
+wdFieldBidiOutline = 92
+wdFieldComments = 19
+wdFieldCompare = 80
+wdFieldCreateDate = 21
+wdFieldData = 40
+wdFieldDatabase = 78
+wdFieldDate = 31
+wdFieldDDE = 45
+wdFieldDDEAuto = 46
+wdFieldDisplayBarcode = 99
+wdFieldDocProperty = 85
+wdFieldDocVariable = 64
+wdFieldEditTime = 25
+wdFieldEmbed = 58
+wdFieldEmpty = -1
+wdFieldExpression = 34
+wdFieldFileName = 29
+wdFieldFileSize = 69
+wdFieldFillIn = 39
+wdFieldFootnoteRef = 5
+wdFieldFormCheckBox = 71
+wdFieldFormDropDown = 83
+wdFieldFormTextInput = 70
+wdFieldFormula = 49
+wdFieldGlossary = 47
+wdFieldGoToButton = 50
+wdFieldGreetingLine = 94
+wdFieldHTMLActiveX = 91
+wdFieldHyperlink = 88
+wdFieldIf = 7
+wdFieldImport = 55
+wdFieldInclude = 36
+wdFieldIncludePicture = 67
+wdFieldIncludeText = 68
+wdFieldIndex = 8
+wdFieldIndexEntry = 4
+wdFieldInfo = 14
+wdFieldKeyWord = 18
+wdFieldLastSavedBy = 20
+wdFieldLink = 56
+wdFieldListNum = 90
+wdFieldMacroButton = 51
+wdFieldMergeBarcode = 98
+wdFieldMergeField = 59
+wdFieldMergeRec = 44
+wdFieldMergeSeq = 75
+wdFieldNext = 41
+wdFieldNextIf = 42
+wdFieldNoteRef = 72
+wdFieldNumChars = 28
+wdFieldNumPages = 26
+wdFieldNumWords = 27
+wdFieldOCX = 87
+wdFieldPage = 33
+wdFieldPageRef = 37
+wdFieldPrint = 48
+wdFieldPrintDate = 23
+wdFieldPrivate = 77
+wdFieldQuote = 35
+wdFieldRef = 3
+wdFieldRefDoc = 11
+wdFieldRevisionNum = 24
+wdFieldSaveDate = 22
+wdFieldSection = 65
+wdFieldSectionPages = 66
+wdFieldSequence = 12
+wdFieldSet = 6
+wdFieldShape = 95
+wdFieldSkipIf = 43
+wdFieldStyleRef = 10
+wdFieldSubject = 16
+wdFieldSubscriber = 82
+wdFieldSymbol = 57
+wdFieldTemplate = 30
+wdFieldTime = 32
+wdFieldTitle = 15
+wdFieldTOA = 73
+wdFieldTOAEntry = 74
+wdFieldTOC = 13
+wdFieldTOCEntry = 9
+wdFieldUserAddress = 62
+wdFieldUserInitials = 61
+wdFieldUserName = 60
+wdFieldBibliography = 97
+wdFieldCitation = 96
+
+# WdFindMatch enumeration
+wdMatchAnyCharacter = 65599
+wdMatchAnyDigit = 65567
+wdMatchAnyLetter = 65583
+wdMatchCaretCharacter = 11
+wdMatchColumnBreak = 14
+wdMatchCommentMark = 5
+wdMatchEmDash = 8212
+wdMatchEnDash = 8211
+wdMatchEndnoteMark = 65555
+wdMatchField = 19
+wdMatchFootnoteMark = 65554
+wdMatchGraphic = 1
+wdMatchManualLineBreak = 65551
+wdMatchManualPageBreak = 65564
+wdMatchNonbreakingHyphen = 30
+wdMatchNonbreakingSpace = 160
+wdMatchOptionalHyphen = 31
+wdMatchParagraphMark = 65551
+wdMatchSectionBreak = 65580
+wdMatchTabCharacter = 9
+wdMatchWhiteSpace = 65655
+
+# WdFindWrap enumeration
+wdFindAsk = 2
+wdFindContinue = 1
+wdFindStop = 0
+
+# WdFlowDirection enumeration
+wdFlowLtr = 0
+wdFlowRtl = 1
+
+# WdFontBias enumeration
+wdFontBiasDefault = 0
+wdFontBiasDontCare = 255
+wdFontBiasFareast = 1
+
+# WdFootnoteLocation enumeration
+wdBeneathText = 1
+wdBottomOfPage = 0
+
+# WdFramePosition enumeration
+wdFrameBottom = -999997
+wdFrameCenter = -999995
+wdFrameInside = -999994
+wdFrameLeft = -999998
+wdFrameOutside = -999993
+wdFrameRight = -999996
+wdFrameTop = -999999
+
+# WdFramesetNewFrameLocation enumeration
+wdFramesetNewFrameAbove = 0
+wdFramesetNewFrameBelow = 1
+wdFramesetNewFrameLeft = 3
+wdFramesetNewFrameRight = 2
+
+# WdFramesetSizeType enumeration
+wdFramesetSizeTypeFixed = 1
+wdFramesetSizeTypePercent = 0
+wdFramesetSizeTypeRelative = 2
+
+# WdFramesetType enumeration
+wdFramesetTypeFrame = 1
+wdFramesetTypeFrameset = 0
+
+# WdFrameSizeRule enumeration
+wdFrameAtLeast = 1
+wdFrameAuto = 0
+wdFrameExact = 2
+
+# WdFrenchSpeller enumeration
+wdFrenchBoth = 0
+wdFrenchPostReform = 2
+wdFrenchPreReform = 1
+
+# WdGoToDirection enumeration
+wdGoToAbsolute = 1
+wdGoToFirst = 1
+wdGoToLast = -1
+wdGoToNext = 2
+wdGoToPrevious = 3
+wdGoToRelative = 2
+
+# WdGoToItem enumeration
+wdGoToBookmark = -1
+wdGoToComment = 6
+wdGoToEndnote = 5
+wdGoToEquation = 10
+wdGoToField = 7
+wdGoToFootnote = 4
+wdGoToGrammaticalError = 14
+wdGoToGraphic = 8
+wdGoToHeading = 11
+wdGoToLine = 3
+wdGoToObject = 9
+wdGoToPage = 1
+wdGoToPercent = 12
+wdGoToProofreadingError = 15
+wdGoToSection = 0
+wdGoToSpellingError = 13
+wdGoToTable = 2
+
+# WdGranularity enumeration
+wdGranularityCharLevel = 0
+wdGranularityWordLevel = 1
+
+# WdGutterStyle enumeration
+wdGutterPosLeft = 0
+wdGutterPosRight = 2
+wdGutterPosTop = 1
+
+# WdGutterStyleOld enumeration
+wdGutterStyleBidi = 2
+wdGutterStyleLatin = -10
+
+# WdHeaderFooterIndex enumeration
+wdHeaderFooterEvenPages = 3
+wdHeaderFooterFirstPage = 2
+wdHeaderFooterPrimary = 1
+
+# WdHeadingSeparator enumeration
+wdHeadingSeparatorBlankLine = 1
+wdHeadingSeparatorLetter = 2
+wdHeadingSeparatorLetterFull = 4
+wdHeadingSeparatorLetterLow = 3
+wdHeadingSeparatorNone = 0
+
+# WdHebSpellStart enumeration
+wdFullScript = 0
+wdMixedAuthorizedScript = 3
+wdMixedScript = 2
+wdPartialScript = 1
+
+# WdHelpType enumeration
+wdHelp = 0
+wdHelpAbout = 1
+wdHelpActiveWindow = 2
+wdHelpContents = 3
+wdHelpExamplesAndDemos = 4
+wdHelpHWP = 13
+wdHelpIchitaro = 11
+wdHelpIndex = 5
+wdHelpKeyboard = 6
+wdHelpPE2 = 12
+wdHelpPSSHelp = 7
+wdHelpQuickPreview = 8
+wdHelpSearch = 9
+wdHelpUsingHelp = 10
+
+# WdHighAnsiText enumeration
+wdAutoDetectHighAnsiFarEast = 2
+wdHighAnsiIsFarEast = 0
+wdHighAnsiIsHighAnsi = 1
+
+# WdHorizontalInVerticalType enumeration
+wdHorizontalInVerticalFitInLine = 1
+wdHorizontalInVerticalNone = 0
+wdHorizontalInVerticalResizeLine = 2
+
+# WdHorizontalLineAlignment enumeration
+wdHorizontalLineAlignCenter = 1
+wdHorizontalLineAlignLeft = 0
+wdHorizontalLineAlignRight = 2
+
+# WdHorizontalLineWidthType enumeration
+wdHorizontalLineFixedWidth = -2
+wdHorizontalLinePercentWidth = -1
+
+# WdIMEMode enumeration
+wdIMEModeAlpha = 8
+wdIMEModeAlphaFull = 7
+wdIMEModeHangul = 10
+wdIMEModeHangulFull = 9
+wdIMEModeHiragana = 4
+wdIMEModeKatakana = 5
+wdIMEModeKatakanaHalf = 6
+wdIMEModeNoControl = 0
+wdIMEModeOff = 2
+wdIMEModeOn = 1
+
+# WdIndexFilter enumeration
+wdIndexFilterAiueo = 1
+wdIndexFilterAkasatana = 2
+wdIndexFilterChosung = 3
+wdIndexFilterFull = 6
+wdIndexFilterLow = 4
+wdIndexFilterMedium = 5
+wdIndexFilterNone = 0
+
+# WdIndexFormat enumeration
+wdIndexBulleted = 4
+wdIndexClassic = 1
+wdIndexFancy = 2
+wdIndexFormal = 5
+wdIndexModern = 3
+wdIndexSimple = 6
+wdIndexTemplate = 0
+
+# WdIndexSortBy enumeration
+wdIndexSortByStroke = 0
+wdIndexSortBySyllable = 1
+
+# WdIndexType enumeration
+wdIndexIndent = 0
+wdIndexRunin = 1
+
+# WdInformation enumeration
+wdActiveEndAdjustedPageNumber = 1
+wdActiveEndPageNumber = 3
+wdActiveEndSectionNumber = 2
+wdAtEndOfRowMarker = 31
+wdCapsLock = 21
+wdEndOfRangeColumnNumber = 17
+wdEndOfRangeRowNumber = 14
+wdFirstCharacterColumnNumber = 9
+wdFirstCharacterLineNumber = 10
+wdFrameIsSelected = 11
+wdHeaderFooterType = 33
+wdHorizontalPositionRelativeToPage = 5
+wdHorizontalPositionRelativeToTextBoundary = 7
+wdInBibliography = 42
+wdInCitation = 43
+wdInClipboard = 38
+wdInCommentPane = 26
+wdInContentControl = 46
+wdInCoverPage = 41
+wdInEndnote = 36
+wdInFieldCode = 44
+wdInFieldResult = 45
+wdInFootnote = 35
+wdInFootnoteEndnotePane = 25
+wdInHeaderFooter = 28
+wdInMasterDocument = 34
+wdInWordMail = 37
+wdMaximumNumberOfColumns = 18
+wdMaximumNumberOfRows = 15
+wdNumberOfPagesInDocument = 4
+wdNumLock = 22
+wdOverType = 23
+wdReferenceOfType = 32
+wdRevisionMarking = 24
+wdSelectionMode = 20
+wdStartOfRangeColumnNumber = 16
+wdStartOfRangeRowNumber = 13
+wdVerticalPositionRelativeToPage = 6
+wdVerticalPositionRelativeToTextBoundary = 8
+wdWithInTable = 12
+wdZoomPercentage = 19
+
+# WdInlineShapeType enumeration
+wdInlineShape3DModel = 19
+wdInlineShapeChart = 12
+wdInlineShapeDiagram = 13
+wdInlineShapeEmbeddedOLEObject = 1
+wdInlineShapeHorizontalLine = 6
+wdInlineShapeLinked3DModel = 20
+wdInlineShapeLinkedOLEObject = 2
+wdInlineShapeLinkedPicture = 4
+wdInlineShapeLinkedPictureHorizontalLine = 8
+wdInlineShapeLockedCanvas = 14
+wdInlineShapeOLEControlObject = 5
+wdInlineShapeOWSAnchor = 11
+wdInlineShapePicture = 3
+wdInlineShapePictureBullet = 9
+wdInlineShapePictureHorizontalLine = 7
+wdInlineShapeScriptAnchor = 10
+wdInlineShapeSmartArt = 15
+wdInlineShapeWebVideo = 16
+
+# WdInsertCells enumeration
+wdInsertCellsEntireColumn = 3
+wdInsertCellsEntireRow = 2
+wdInsertCellsShiftDown = 1
+wdInsertCellsShiftRight = 0
+
+# WdInsertedTextMark enumeration
+wdInsertedTextMarkBold = 1
+wdInsertedTextMarkColorOnly = 5
+wdInsertedTextMarkDoubleUnderline = 4
+wdInsertedTextMarkItalic = 2
+wdInsertedTextMarkNone = 0
+wdInsertedTextMarkStrikeThrough = 6
+wdInsertedTextMarkUnderline = 3
+wdInsertedTextMarkDoubleStrikeThrough = 7
+
+# WdInternationalIndex enumeration
+wd24HourClock = 21
+wdCurrencyCode = 20
+wdDateSeparator = 25
+wdDecimalSeparator = 18
+wdInternationalAM = 22
+wdInternationalPM = 23
+wdListSeparator = 17
+wdProductLanguageID = 26
+wdThousandsSeparator = 19
+wdTimeSeparator = 24
+
+# WdJustificationMode enumeration
+wdJustificationModeCompress = 1
+wdJustificationModeCompressKana = 2
+wdJustificationModeExpand = 0
+
+# WdKana enumeration
+wdKanaHiragana = 9
+wdKanaKatakana = 8
+
+# WdKey enumeration
+wdKey0 = 48
+wdKey1 = 49
+wdKey2 = 50
+wdKey3 = 51
+wdKey4 = 52
+wdKey5 = 53
+wdKey6 = 54
+wdKey7 = 55
+wdKey8 = 56
+wdKey9 = 57
+wdKeyA = 65
+wdKeyAlt = 1024
+wdKeyB = 66
+wdKeyBackSingleQuote = 192
+wdKeyBackSlash = 220
+wdKeyBackspace = 8
+wdKeyC = 67
+wdKeyCloseSquareBrace = 221
+wdKeyComma = 188
+wdKeyCommand = 512
+wdKeyControl = 512
+wdKeyD = 68
+wdKeyDelete = 46
+wdKeyE = 69
+wdKeyEnd = 35
+wdKeyEquals = 187
+wdKeyEsc = 27
+wdKeyF = 70
+wdKeyF1 = 112
+wdKeyF10 = 121
+wdKeyF11 = 122
+wdKeyF12 = 123
+wdKeyF13 = 124
+wdKeyF14 = 125
+wdKeyF15 = 126
+wdKeyF16 = 127
+wdKeyF2 = 113
+wdKeyF3 = 114
+wdKeyF4 = 115
+wdKeyF5 = 116
+wdKeyF6 = 117
+wdKeyF7 = 118
+wdKeyF8 = 119
+wdKeyF9 = 120
+wdKeyG = 71
+wdKeyH = 72
+wdKeyHome = 36
+wdKeyHyphen = 189
+wdKeyI = 73
+wdKeyInsert = 45
+wdKeyJ = 74
+wdKeyK = 75
+wdKeyL = 76
+wdKeyM = 77
+wdKeyN = 78
+wdKeyNumeric0 = 96
+wdKeyNumeric1 = 97
+wdKeyNumeric2 = 98
+wdKeyNumeric3 = 99
+wdKeyNumeric4 = 100
+wdKeyNumeric5 = 101
+wdKeyNumeric5Special = 12
+wdKeyNumeric6 = 102
+wdKeyNumeric7 = 103
+wdKeyNumeric8 = 104
+wdKeyNumeric9 = 105
+wdKeyNumericAdd = 107
+wdKeyNumericDecimal = 110
+wdKeyNumericDivide = 111
+wdKeyNumericMultiply = 106
+wdKeyNumericSubtract = 109
+wdKeyO = 79
+wdKeyOpenSquareBrace = 219
+wdKeyOption = 1024
+wdKeyP = 80
+wdKeyPageDown = 34
+wdKeyPageUp = 33
+wdKeyPause = 19
+wdKeyPeriod = 190
+wdKeyQ = 81
+wdKeyR = 82
+wdKeyReturn = 13
+wdKeyS = 83
+wdKeyScrollLock = 145
+wdKeySemiColon = 186
+wdKeyShift = 256
+wdKeySingleQuote = 222
+wdKeySlash = 191
+wdKeySpacebar = 32
+wdKeyT = 84
+wdKeyTab = 9
+wdKeyU = 85
+wdKeyV = 86
+wdKeyW = 87
+wdKeyX = 88
+wdKeyY = 89
+wdKeyZ = 90
+wdNoKey = 255
+
+# WdKeyCategory enumeration
+wdKeyCategoryAutoText = 4
+wdKeyCategoryCommand = 1
+wdKeyCategoryDisable = 0
+wdKeyCategoryFont = 3
+wdKeyCategoryMacro = 2
+wdKeyCategoryNil = -1
+wdKeyCategoryPrefix = 7
+wdKeyCategoryStyle = 5
+wdKeyCategorySymbol = 6
+
+# WdLanguageID enumeration
+wdAfrikaans = 1078
+wdAlbanian = 1052
+wdAmharic = 1118
+wdArabic = 1025
+wdArabicAlgeria = 5121
+wdArabicBahrain = 15361
+wdArabicEgypt = 3073
+wdArabicIraq = 2049
+wdArabicJordan = 11265
+wdArabicKuwait = 13313
+wdArabicLebanon = 12289
+wdArabicLibya = 4097
+wdArabicMorocco = 6145
+wdArabicOman = 8193
+wdArabicQatar = 16385
+wdArabicSyria = 10241
+wdArabicTunisia = 7169
+wdArabicUAE = 14337
+wdArabicYemen = 9217
+wdArmenian = 1067
+wdAssamese = 1101
+wdAzeriCyrillic = 2092
+wdAzeriLatin = 1068
+wdBasque = 1069
+wdBelgianDutch = 2067
+wdBelgianFrench = 2060
+wdBengali = 1093
+wdBulgarian = 1026
+wdBurmese = 1109
+wdByelorussian = 1059
+wdCatalan = 1027
+wdCherokee = 1116
+wdChineseHongKongSAR = 3076
+wdChineseMacaoSAR = 5124
+wdChineseSingapore = 4100
+wdCroatian = 1050
+wdCzech = 1029
+wdDanish = 1030
+wdDivehi = 1125
+wdDutch = 1043
+wdEdo = 1126
+wdEnglishAUS = 3081
+wdEnglishBelize = 10249
+wdEnglishCanadian = 4105
+wdEnglishCaribbean = 9225
+wdEnglishIndonesia = 14345
+wdEnglishIreland = 6153
+wdEnglishJamaica = 8201
+wdEnglishNewZealand = 5129
+wdEnglishPhilippines = 13321
+wdEnglishSouthAfrica = 7177
+wdEnglishTrinidadTobago = 11273
+wdEnglishUK = 2057
+wdEnglishUS = 1033
+wdEnglishZimbabwe = 12297
+wdEstonian = 1061
+wdFaeroese = 1080
+wdFilipino = 1124
+wdFinnish = 1035
+wdFrench = 1036
+wdFrenchCameroon = 11276
+wdFrenchCanadian = 3084
+wdFrenchCongoDRC = 9228
+wdFrenchCotedIvoire = 12300
+wdFrenchHaiti = 15372
+wdFrenchLuxembourg = 5132
+wdFrenchMali = 13324
+wdFrenchMonaco = 6156
+wdFrenchMorocco = 14348
+wdFrenchReunion = 8204
+wdFrenchSenegal = 10252
+wdFrenchWestIndies = 7180
+wdFrisianNetherlands = 1122
+wdFulfulde = 1127
+wdGaelicIreland = 2108
+wdGaelicScotland = 1084
+wdGalician = 1110
+wdGeorgian = 1079
+wdGerman = 1031
+wdGermanAustria = 3079
+wdGermanLiechtenstein = 5127
+wdGermanLuxembourg = 4103
+wdGreek = 1032
+wdGuarani = 1140
+wdGujarati = 1095
+wdHausa = 1128
+wdHawaiian = 1141
+wdHebrew = 1037
+wdHindi = 1081
+wdHungarian = 1038
+wdIbibio = 1129
+wdIcelandic = 1039
+wdIgbo = 1136
+wdIndonesian = 1057
+wdInuktitut = 1117
+wdItalian = 1040
+wdJapanese = 1041
+wdKannada = 1099
+wdKanuri = 1137
+wdKashmiri = 1120
+wdKazakh = 1087
+wdKhmer = 1107
+wdKirghiz = 1088
+wdKonkani = 1111
+wdKorean = 1042
+wdKyrgyz = 1088
+wdLanguageNone = 0
+wdLao = 1108
+wdLatin = 1142
+wdLatvian = 1062
+wdLithuanian = 1063
+wdMacedonianFYROM = 1071
+wdMalayalam = 1100
+wdMalayBruneiDarussalam = 2110
+wdMalaysian = 1086
+wdMaltese = 1082
+wdManipuri = 1112
+wdMarathi = 1102
+wdMexicanSpanish = 2058
+wdMongolian = 1104
+wdNepali = 1121
+wdNoProofing = 1024
+wdNorwegianBokmol = 1044
+wdNorwegianNynorsk = 2068
+wdOriya = 1096
+wdOromo = 1138
+wdPashto = 1123
+wdPersian = 1065
+wdPolish = 1045
+wdPortuguese = 2070
+wdPortugueseBrazil = 1046
+wdPunjabi = 1094
+wdRhaetoRomanic = 1047
+wdRomanian = 1048
+wdRomanianMoldova = 2072
+wdRussian = 1049
+wdRussianMoldova = 2073
+wdSamiLappish = 1083
+wdSanskrit = 1103
+wdSerbianCyrillic = 3098
+wdSerbianLatin = 2074
+wdSesotho = 1072
+wdSimplifiedChinese = 2052
+wdSindhi = 1113
+wdSindhiPakistan = 2137
+wdSinhalese = 1115
+wdSlovak = 1051
+wdSlovenian = 1060
+wdSomali = 1143
+wdSorbian = 1070
+wdSpanish = 1034
+wdSpanishArgentina = 11274
+wdSpanishBolivia = 16394
+wdSpanishChile = 13322
+wdSpanishColombia = 9226
+wdSpanishCostaRica = 5130
+wdSpanishDominicanRepublic = 7178
+wdSpanishEcuador = 12298
+wdSpanishElSalvador = 17418
+wdSpanishGuatemala = 4106
+wdSpanishHonduras = 18442
+wdSpanishModernSort = 3082
+wdSpanishNicaragua = 19466
+wdSpanishPanama = 6154
+wdSpanishParaguay = 15370
+wdSpanishPeru = 10250
+wdSpanishPuertoRico = 20490
+wdSpanishUruguay = 14346
+wdSpanishVenezuela = 8202
+wdSutu = 1072
+wdSwahili = 1089
+wdSwedish = 1053
+wdSwedishFinland = 2077
+wdSwissFrench = 4108
+wdSwissGerman = 2055
+wdSwissItalian = 2064
+wdSyriac = 1114
+wdTajik = 1064
+wdTamazight = 1119
+wdTamazightLatin = 2143
+wdTamil = 1097
+wdTatar = 1092
+wdTelugu = 1098
+wdThai = 1054
+wdTibetan = 1105
+wdTigrignaEritrea = 2163
+wdTigrignaEthiopic = 1139
+wdTraditionalChinese = 1028
+wdTsonga = 1073
+wdTswana = 1074
+wdTurkish = 1055
+wdTurkmen = 1090
+wdUkrainian = 1058
+wdUrdu = 1056
+wdUzbekCyrillic = 2115
+wdUzbekLatin = 1091
+wdVenda = 1075
+wdVietnamese = 1066
+wdWelsh = 1106
+wdXhosa = 1076
+wdYi = 1144
+wdYiddish = 1085
+wdYoruba = 1130
+wdZulu = 1077
+
+# WdLayoutMode enumeration
+wdLayoutModeDefault = 0
+wdLayoutModeGenko = 3
+wdLayoutModeGrid = 1
+wdLayoutModeLineGrid = 2
+
+# WdLetterheadLocation enumeration
+wdLetterBottom = 1
+wdLetterLeft = 2
+wdLetterRight = 3
+wdLetterTop = 0
+
+# WdLetterStyle enumeration
+wdFullBlock = 0
+wdModifiedBlock = 1
+wdSemiBlock = 2
+
+# WdLigatures enumeration
+wdLigaturesAll = 15
+wdLigaturesContextual = 2
+wdLigaturesContextualDiscretional = 10
+wdLigaturesContextualHistorical = 6
+wdLigaturesContextualHistoricalDiscretional = 14
+wdLigaturesDiscretional = 8
+wdLigaturesHistorical = 4
+wdLigaturesHistoricalDiscretional = 12
+wdLigaturesNone = 0
+wdLigaturesStandard = 1
+wdLigaturesStandardContextual = 3
+wdLigaturesStandardContextualDiscretional = 11
+wdLigaturesStandardContextualHistorical = 7
+wdLigaturesStandardDiscretional = 9
+wdLigaturesStandardHistorical = 5
+wdLigaturesStandardHistoricalDiscretional = 13
+
+# WdLineEndingType enumeration
+wdCRLF = 0
+wdCROnly = 1
+wdLFCR = 3
+wdLFOnly = 2
+wdLSPS = 4
+
+# WdLineSpacing enumeration
+wdLineSpace1pt5 = 1
+wdLineSpaceAtLeast = 3
+wdLineSpaceDouble = 2
+wdLineSpaceExactly = 4
+wdLineSpaceMultiple = 5
+wdLineSpaceSingle = 0
+
+# WdLineStyle enumeration
+wdLineStyleDashDot = 5
+wdLineStyleDashDotDot = 6
+wdLineStyleDashDotStroked = 20
+wdLineStyleDashLargeGap = 4
+wdLineStyleDashSmallGap = 3
+wdLineStyleDot = 2
+wdLineStyleDouble = 7
+wdLineStyleDoubleWavy = 19
+wdLineStyleEmboss3D = 21
+wdLineStyleEngrave3D = 22
+wdLineStyleInset = 24
+wdLineStyleNone = 0
+wdLineStyleOutset = 23
+wdLineStyleSingle = 1
+wdLineStyleSingleWavy = 18
+wdLineStyleThickThinLargeGap = 16
+wdLineStyleThickThinMedGap = 13
+wdLineStyleThickThinSmallGap = 10
+wdLineStyleThinThickLargeGap = 15
+wdLineStyleThinThickMedGap = 12
+wdLineStyleThinThickSmallGap = 9
+wdLineStyleThinThickThinLargeGap = 17
+wdLineStyleThinThickThinMedGap = 14
+wdLineStyleThinThickThinSmallGap = 11
+wdLineStyleTriple = 8
+
+# WdLineType enumeration
+wdTableRow = 1
+wdTextLine = 0
+
+# WdLineWidth enumeration
+wdLineWidth025pt = 2
+wdLineWidth050pt = 4
+wdLineWidth075pt = 6
+wdLineWidth100pt = 8
+wdLineWidth150pt = 12
+wdLineWidth225pt = 18
+wdLineWidth300pt = 24
+wdLineWidth450pt = 36
+wdLineWidth600pt = 48
+
+# WdLinkType enumeration
+wdLinkTypeChart = 8
+wdLinkTypeDDE = 6
+wdLinkTypeDDEAuto = 7
+wdLinkTypeImport = 5
+wdLinkTypeInclude = 4
+wdLinkTypeOLE = 0
+wdLinkTypePicture = 1
+wdLinkTypeReference = 3
+wdLinkTypeText = 2
+
+# WdListApplyTo enumeration
+wdListApplyToSelection = 2
+wdListApplyToThisPointForward = 1
+wdListApplyToWholeList = 0
+
+# WdListGalleryType enumeration
+wdBulletGallery = 1
+wdNumberGallery = 2
+wdOutlineNumberGallery = 3
+
+# WdListLevelAlignment enumeration
+wdListLevelAlignCenter = 1
+wdListLevelAlignLeft = 0
+wdListLevelAlignRight = 2
+
+# WdListNumberStyle enumeration
+wdListNumberStyleAiueo = 20
+wdListNumberStyleAiueoHalfWidth = 12
+wdListNumberStyleArabic = 0
+wdListNumberStyleArabic1 = 46
+wdListNumberStyleArabic2 = 48
+wdListNumberStyleArabicFullWidth = 14
+wdListNumberStyleArabicLZ = 22
+wdListNumberStyleArabicLZ2 = 62
+wdListNumberStyleArabicLZ3 = 63
+wdListNumberStyleArabicLZ4 = 64
+wdListNumberStyleBullet = 23
+wdListNumberStyleCardinalText = 6
+wdListNumberStyleChosung = 25
+wdListNumberStyleGanada = 24
+wdListNumberStyleGBNum1 = 26
+wdListNumberStyleGBNum2 = 27
+wdListNumberStyleGBNum3 = 28
+wdListNumberStyleGBNum4 = 29
+wdListNumberStyleHangul = 43
+wdListNumberStyleHanja = 44
+wdListNumberStyleHanjaRead = 41
+wdListNumberStyleHanjaReadDigit = 42
+wdListNumberStyleHebrew1 = 45
+wdListNumberStyleHebrew2 = 47
+wdListNumberStyleHindiArabic = 51
+wdListNumberStyleHindiCardinalText = 52
+wdListNumberStyleHindiLetter1 = 49
+wdListNumberStyleHindiLetter2 = 50
+wdListNumberStyleIroha = 21
+wdListNumberStyleIrohaHalfWidth = 13
+wdListNumberStyleKanji = 10
+wdListNumberStyleKanjiDigit = 11
+wdListNumberStyleKanjiTraditional = 16
+wdListNumberStyleKanjiTraditional2 = 17
+wdListNumberStyleLegal = 253
+wdListNumberStyleLegalLZ = 254
+wdListNumberStyleLowercaseBulgarian = 67
+wdListNumberStyleLowercaseGreek = 60
+wdListNumberStyleLowercaseLetter = 4
+wdListNumberStyleLowercaseRoman = 2
+wdListNumberStyleLowercaseRussian = 58
+wdListNumberStyleLowercaseTurkish = 65
+wdListNumberStyleNone = 255
+wdListNumberStyleNumberInCircle = 18
+wdListNumberStyleOrdinal = 5
+wdListNumberStyleOrdinalText = 7
+wdListNumberStylePictureBullet = 249
+wdListNumberStyleSimpChinNum1 = 37
+wdListNumberStyleSimpChinNum2 = 38
+wdListNumberStyleSimpChinNum3 = 39
+wdListNumberStyleSimpChinNum4 = 40
+wdListNumberStyleThaiArabic = 54
+wdListNumberStyleThaiCardinalText = 55
+wdListNumberStyleThaiLetter = 53
+wdListNumberStyleTradChinNum1 = 33
+wdListNumberStyleTradChinNum2 = 34
+wdListNumberStyleTradChinNum3 = 35
+wdListNumberStyleTradChinNum4 = 36
+wdListNumberStyleUppercaseBulgarian = 68
+wdListNumberStyleUppercaseGreek = 61
+wdListNumberStyleUppercaseLetter = 3
+wdListNumberStyleUppercaseRoman = 1
+wdListNumberStyleUppercaseRussian = 59
+wdListNumberStyleUppercaseTurkish = 66
+wdListNumberStyleVietCardinalText = 56
+wdListNumberStyleZodiac1 = 30
+wdListNumberStyleZodiac2 = 31
+wdListNumberStyleZodiac3 = 32
+
+# WdListType enumeration
+wdListBullet = 2
+wdListListNumOnly = 1
+wdListMixedNumbering = 5
+wdListNoNumbering = 0
+wdListOutlineNumbering = 4
+wdListPictureBullet = 6
+wdListSimpleNumbering = 3
+
+# WdLockType enumeration
+wdLockChanged = 3
+wdLockEphemeral = 2
+wdLockNone = 0
+wdLockReservation = 1
+
+# WdMailerPriority enumeration
+wdPriorityHigh = 3
+wdPriorityLow = 2
+wdPriorityNormal = 1
+
+# WdMailMergeActiveRecord enumeration
+wdFirstDataSourceRecord = -6
+wdFirstRecord = -4
+wdLastDataSourceRecord = -7
+wdLastRecord = -5
+wdNextDataSourceRecord = -8
+wdNextRecord = -2
+wdNoActiveRecord = -1
+wdPreviousDataSourceRecord = -9
+wdPreviousRecord = -3
+
+# WdMailMergeComparison enumeration
+wdMergeIfEqual = 0
+wdMergeIfGreaterThan = 3
+wdMergeIfGreaterThanOrEqual = 5
+wdMergeIfIsBlank = 6
+wdMergeIfIsNotBlank = 7
+wdMergeIfLessThan = 2
+wdMergeIfLessThanOrEqual = 4
+wdMergeIfNotEqual = 1
+
+# WdMailMergeDataSource enumeration
+wdMergeInfoFromAccessDDE = 1
+wdMergeInfoFromExcelDDE = 2
+wdMergeInfoFromMSQueryDDE = 3
+wdMergeInfoFromODBC = 4
+wdMergeInfoFromODSO = 5
+wdMergeInfoFromWord = 0
+wdNoMergeInfo = -1
+
+# WdMailMergeDefaultRecord enumeration
+wdDefaultFirstRecord = 1
+wdDefaultLastRecord = -16
+
+# WdMailMergeDestination enumeration
+wdSendToEmail = 2
+wdSendToFax = 3
+wdSendToNewDocument = 0
+wdSendToPrinter = 1
+
+# WdMailMergeMailFormat enumeration
+wdMailFormatHTML = 1
+wdMailFormatPlainText = 0
+
+# WdMailMergeMainDocType enumeration
+wdCatalog = 3
+wdDirectory = 3
+wdEMail = 4
+wdEnvelopes = 2
+wdFax = 5
+wdFormLetters = 0
+wdMailingLabels = 1
+wdNotAMergeDocument = -1
+
+# WdMailMergeState enumeration
+wdDataSource = 5
+wdMainAndDataSource = 2
+wdMainAndHeader = 3
+wdMainAndSourceAndHeader = 4
+wdMainDocumentOnly = 1
+wdNormalDocument = 0
+
+# WdMailSystem enumeration
+wdMAPI = 1
+wdMAPIandPowerTalk = 3
+wdNoMailSystem = 0
+wdPowerTalk = 2
+
+# WdMappedDataFields enumeration
+wdAddress1 = 10
+wdAddress2 = 11
+wdAddress3 = 29
+wdBusinessFax = 17
+wdBusinessPhone = 16
+wdCity = 12
+wdCompany = 9
+wdCountryRegion = 15
+wdCourtesyTitle = 2
+wdDepartment = 30
+wdEmailAddress = 20
+wdFirstName = 3
+wdHomeFax = 19
+wdHomePhone = 18
+wdJobTitle = 8
+wdLastName = 5
+wdMiddleName = 4
+wdNickname = 7
+wdPostalCode = 14
+wdRubyFirstName = 27
+wdRubyLastName = 28
+wdSpouseCourtesyTitle = 22
+wdSpouseFirstName = 23
+wdSpouseLastName = 25
+wdSpouseMiddleName = 24
+wdSpouseNickname = 26
+wdState = 13
+wdSuffix = 6
+wdUniqueIdentifier = 1
+wdWebPageURL = 21
+
+# WdMeasurementUnits enumeration
+wdCentimeters = 1
+wdInches = 0
+wdMillimeters = 2
+wdPicas = 4
+wdPoints = 3
+
+# WdMergeFormatFrom enumeration
+wdMergeFormatFromOriginal = 0
+wdMergeFormatFromPrompt = 2
+wdMergeFormatFromRevised = 1
+
+# WdMergeSubType enumeration
+wdMergeSubTypeAccess = 1
+wdMergeSubTypeOAL = 2
+wdMergeSubTypeOLEDBText = 5
+wdMergeSubTypeOLEDBWord = 3
+wdMergeSubTypeOther = 0
+wdMergeSubTypeOutlook = 6
+wdMergeSubTypeWord = 7
+wdMergeSubTypeWord2000 = 8
+wdMergeSubTypeWorks = 4
+
+# WdMergeTarget enumeration
+wdMergeTargetCurrent = 1
+wdMergeTargetNew = 2
+wdMergeTargetSelected = 0
+
+# WdMonthNames enumeration
+wdMonthNamesArabic = 0
+wdMonthNamesEnglish = 1
+wdMonthNamesFrench = 2
+
+# WdMoveFromTextMark enumeration
+wdMoveFromTextMarkBold = 6
+wdMoveFromTextMarkCaret = 3
+wdMoveFromTextMarkColorOnly = 10
+wdMoveFromTextMarkDoubleStrikeThrough = 1
+wdMoveFromTextMarkDoubleUnderline = 9
+wdMoveFromTextMarkHidden = 0
+wdMoveFromTextMarkItalic = 7
+wdMoveFromTextMarkNone = 5
+wdMoveFromTextMarkPound = 4
+wdMoveFromTextMarkStrikeThrough = 2
+wdMoveFromTextMarkUnderline = 8
+
+# WdMovementType enumeration
+wdExtend = 1
+wdMove = 0
+
+# WdMoveToTextMark enumeration
+wdMoveToTextMarkBold = 1
+wdMoveToTextMarkColorOnly = 5
+wdMoveToTextMarkDoubleStrikeThrough = 7
+wdMoveToTextMarkDoubleUnderline = 4
+wdMoveToTextMarkItalic = 2
+wdMoveToTextMarkNone = 0
+wdMoveToTextMarkStrikeThrough = 6
+wdMoveToTextMarkUnderline = 3
+
+# WdMultipleWordConversionsMode enumeration
+wdHangulToHanja = 0
+wdHanjaToHangul = 1
+
+# WdNewDocumentType enumeration
+wdNewBlankDocument = 0
+wdNewEmailMessage = 2
+wdNewFrameset = 3
+wdNewWebPage = 1
+wdNewXMLDocument = 4
+
+# WdNoteNumberStyle enumeration
+wdNoteNumberStyleArabic = 0
+wdNoteNumberStyleArabicFullWidth = 14
+wdNoteNumberStyleArabicLetter1 = 46
+wdNoteNumberStyleArabicLetter2 = 48
+wdNoteNumberStyleHanjaRead = 41
+wdNoteNumberStyleHanjaReadDigit = 42
+wdNoteNumberStyleHebrewLetter1 = 45
+wdNoteNumberStyleHebrewLetter2 = 47
+wdNoteNumberStyleHindiArabic = 51
+wdNoteNumberStyleHindiCardinalText = 52
+wdNoteNumberStyleHindiLetter1 = 49
+wdNoteNumberStyleHindiLetter2 = 50
+wdNoteNumberStyleKanji = 10
+wdNoteNumberStyleKanjiDigit = 11
+wdNoteNumberStyleKanjiTraditional = 16
+wdNoteNumberStyleLowercaseLetter = 4
+wdNoteNumberStyleLowercaseRoman = 2
+wdNoteNumberStyleNumberInCircle = 18
+wdNoteNumberStyleSimpChinNum1 = 37
+wdNoteNumberStyleSimpChinNum2 = 38
+wdNoteNumberStyleSymbol = 9
+wdNoteNumberStyleThaiArabic = 54
+wdNoteNumberStyleThaiCardinalText = 55
+wdNoteNumberStyleThaiLetter = 53
+wdNoteNumberStyleTradChinNum1 = 33
+wdNoteNumberStyleTradChinNum2 = 34
+wdNoteNumberStyleUppercaseLetter = 3
+wdNoteNumberStyleUppercaseRoman = 1
+wdNoteNumberStyleVietCardinalText = 56
+
+# WdNumberForm enumeration
+wdNumberFormDefault = 0
+wdNumberFormLining = 1
+wdNumberFormOldstyle = 2
+
+# WdNumberingRule enumeration
+wdRestartContinuous = 0
+wdRestartPage = 2
+wdRestartSection = 1
+
+# WdNumberSpacing enumeration
+wdNumberSpacingDefault = 0
+wdNumberSpacingProportional = 1
+wdNumberSpacingTabular = 2
+
+# WdNumberStyleWordBasicBiDi enumeration
+wdCaptionNumberStyleBidiLetter1 = 49
+wdCaptionNumberStyleBidiLetter2 = 50
+wdListNumberStyleBidi1 = 49
+wdListNumberStyleBidi2 = 50
+wdNoteNumberStyleBidiLetter1 = 49
+wdNoteNumberStyleBidiLetter2 = 50
+wdPageNumberStyleBidiLetter1 = 49
+wdPageNumberStyleBidiLetter2 = 50
+
+# WdNumberType enumeration
+wdNumberAllNumbers = 3
+wdNumberListNum = 2
+wdNumberParagraph = 1
+
+# WdOLEPlacement enumeration
+wdFloatOverText = 1
+wdInLine = 0
+
+# WdOLEType enumeration
+wdOLEControl = 2
+wdOLEEmbed = 1
+wdOLELink = 0
+
+# WdOLEVerb enumeration
+wdOLEVerbDiscardUndoState = -6
+wdOLEVerbHide = -3
+wdOLEVerbInPlaceActivate = -5
+wdOLEVerbOpen = -2
+wdOLEVerbPrimary = 0
+wdOLEVerbShow = -1
+wdOLEVerbUIActivate = -4
+
+# WdOMathBreakBin enumeration
+wdOMathBreakBinAfter = 1
+wdOMathBreakBinBefore = 0
+wdOMathBreakBinRepeat = 2
+
+# WdOMathBreakSub enumeration
+wdOMathBreakSubMinusMinus = 0
+wdOMathBreakSubMinusPlus = 2
+wdOMathBreakSubPlusMinus = 1
+
+# WdOMathFracType enumeration
+wdOMathFracBar = 0
+wdOMathFracLin = 3
+wdOMathFracNoBar = 1
+wdOMathFracSkw = 2
+
+# WdOMathFunctionType enumeration
+wdOMathFunctionAcc = 1
+wdOMathFunctionBar = 2
+wdOMathFunctionBorderBox = 4
+wdOMathFunctionBox = 3
+wdOMathFunctionDelim = 5
+wdOMathFunctionEqArray = 6
+wdOMathFunctionFrac = 7
+wdOMathFunctionFunc = 8
+wdOMathFunctionGroupChar = 9
+wdOMathFunctionLimLow = 10
+wdOMathFunctionLimUpp = 11
+wdOMathFunctionMat = 12
+wdOMathFunctionNary = 13
+wdOMathFunctionNormalText = 21
+wdOMathFunctionPhantom = 14
+wdOMathFunctionRad = 16
+wdOMathFunctionScrPre = 15
+wdOMathFunctionScrSub = 17
+wdOMathFunctionScrSubSup = 18
+wdOMathFunctionScrSup = 19
+wdOMathFunctionText = 20
+
+# WdOMathHorizAlignType enumeration
+wdOMathHorizAlignCenter = 0
+wdOMathHorizAlignLeft = 1
+wdOMathHorizAlignRight = 2
+
+# WdOMathJc enumeration
+wdOMathJcCenter = 2
+wdOMathJcCenterGroup = 1
+wdOMathJcInline = 7
+wdOMathJcLeft = 3
+wdOMathJcRight = 4
+
+# WdOMathShapeType enumeration
+wdOMathShapeCentered = 0
+wdOMathShapeMatch = 1
+
+# WdOMathSpacingRule enumeration
+wdOMathSpacing1pt5 = 1
+wdOMathSpacingDouble = 2
+wdOMathSpacingExactly = 3
+wdOMathSpacingMultiple = 4
+wdOMathSpacingSingle = 0
+
+# WdOMathType enumeration
+wdOMathDisplay = 0
+wdOMathInline = 1
+
+# WdOMathVertAlignType enumeration
+wdOMathVertAlignBottom = 2
+wdOMathVertAlignCenter = 0
+wdOMathVertAlignTop = 1
+
+# WdOpenFormat enumeration
+wdOpenFormatAllWord = 6
+wdOpenFormatAuto = 0
+wdOpenFormatDocument = 1
+wdOpenFormatEncodedText = 5
+wdOpenFormatRTF = 3
+wdOpenFormatTemplate = 2
+wdOpenFormatText = 4
+wdOpenFormatOpenDocumentText = "18 (&H12)"
+wdOpenFormatUnicodeText = 5
+wdOpenFormatWebPages = 7
+wdOpenFormatXML = 8
+wdOpenFormatAllWordTemplates = 13
+wdOpenFormatDocument97 = 1
+wdOpenFormatTemplate97 = 2
+wdOpenFormatXMLDocument = 9
+wdOpenFormatXMLDocumentSerialized = 14
+wdOpenFormatXMLDocumentMacroEnabled = 10
+wdOpenFormatXMLDocumentMacroEnabledSerialized = 15
+wdOpenFormatXMLTemplate = 11
+wdOpenFormatXMLTemplateSerialized = "16 (&H10)"
+wdOpenFormatXMLTemplateMacroEnabled = 12
+wdOpenFormatXMLTemplateMacroEnabledSerialized = "17 (&H11)"
+
+# WdOrganizerObject enumeration
+wdOrganizerObjectAutoText = 1
+wdOrganizerObjectCommandBars = 2
+wdOrganizerObjectProjectItems = 3
+wdOrganizerObjectStyles = 0
+
+# WdOrientation enumeration
+wdOrientLandscape = 1
+wdOrientPortrait = 0
+
+# WdOriginalFormat enumeration
+wdOriginalDocumentFormat = 1
+wdPromptUser = 2
+wdWordDocument = 0
+
+# WdOutlineLevel enumeration
+wdOutlineLevel1 = 1
+wdOutlineLevel2 = 2
+wdOutlineLevel3 = 3
+wdOutlineLevel4 = 4
+wdOutlineLevel5 = 5
+wdOutlineLevel6 = 6
+wdOutlineLevel7 = 7
+wdOutlineLevel8 = 8
+wdOutlineLevel9 = 9
+wdOutlineLevelBodyText = 10
+
+# WdPageBorderArt enumeration
+wdArtApples = 1
+wdArtArchedScallops = 97
+wdArtBabyPacifier = 70
+wdArtBabyRattle = 71
+wdArtBalloons3Colors = 11
+wdArtBalloonsHotAir = 12
+wdArtBasicBlackDashes = 155
+wdArtBasicBlackDots = 156
+wdArtBasicBlackSquares = 154
+wdArtBasicThinLines = 151
+wdArtBasicWhiteDashes = 152
+wdArtBasicWhiteDots = 147
+wdArtBasicWhiteSquares = 153
+wdArtBasicWideInline = 150
+wdArtBasicWideMidline = 148
+wdArtBasicWideOutline = 149
+wdArtBats = 37
+wdArtBirds = 102
+wdArtBirdsFlight = 35
+wdArtCabins = 72
+wdArtCakeSlice = 3
+wdArtCandyCorn = 4
+wdArtCelticKnotwork = 99
+wdArtCertificateBanner = 158
+wdArtChainLink = 128
+wdArtChampagneBottle = 6
+wdArtCheckedBarBlack = 145
+wdArtCheckedBarColor = 61
+wdArtCheckered = 144
+wdArtChristmasTree = 8
+wdArtCirclesLines = 91
+wdArtCirclesRectangles = 140
+wdArtClassicalWave = 56
+wdArtClocks = 27
+wdArtCompass = 54
+wdArtConfetti = 31
+wdArtConfettiGrays = 115
+wdArtConfettiOutline = 116
+wdArtConfettiStreamers = 14
+wdArtConfettiWhite = 117
+wdArtCornerTriangles = 141
+wdArtCouponCutoutDashes = 163
+wdArtCouponCutoutDots = 164
+wdArtCrazyMaze = 100
+wdArtCreaturesButterfly = 32
+wdArtCreaturesFish = 34
+wdArtCreaturesInsects = 142
+wdArtCreaturesLadyBug = 33
+wdArtCrossStitch = 138
+wdArtCup = 67
+wdArtDecoArch = 89
+wdArtDecoArchColor = 50
+wdArtDecoBlocks = 90
+wdArtDiamondsGray = 88
+wdArtDoubleD = 55
+wdArtDoubleDiamonds = 127
+wdArtEarth1 = 22
+wdArtEarth2 = 21
+wdArtEclipsingSquares1 = 101
+wdArtEclipsingSquares2 = 86
+wdArtEggsBlack = 66
+wdArtFans = 51
+wdArtFilm = 52
+wdArtFirecrackers = 28
+wdArtFlowersBlockPrint = 49
+wdArtFlowersDaisies = 48
+wdArtFlowersModern1 = 45
+wdArtFlowersModern2 = 44
+wdArtFlowersPansy = 43
+wdArtFlowersRedRose = 39
+wdArtFlowersRoses = 38
+wdArtFlowersTeacup = 103
+wdArtFlowersTiny = 42
+wdArtGems = 139
+wdArtGingerbreadMan = 69
+wdArtGradient = 122
+wdArtHandmade1 = 159
+wdArtHandmade2 = 160
+wdArtHeartBalloon = 16
+wdArtHeartGray = 68
+wdArtHearts = 15
+wdArtHeebieJeebies = 120
+wdArtHolly = 41
+wdArtHouseFunky = 73
+wdArtHypnotic = 87
+wdArtIceCreamCones = 5
+wdArtLightBulb = 121
+wdArtLightning1 = 53
+wdArtLightning2 = 119
+wdArtMapleLeaf = 81
+wdArtMapleMuffins = 2
+wdArtMapPins = 30
+wdArtMarquee = 146
+wdArtMarqueeToothed = 131
+wdArtMoons = 125
+wdArtMosaic = 118
+wdArtMusicNotes = 79
+wdArtNorthwest = 104
+wdArtOvals = 126
+wdArtPackages = 26
+wdArtPalmsBlack = 80
+wdArtPalmsColor = 10
+wdArtPaperClips = 82
+wdArtPapyrus = 92
+wdArtPartyFavor = 13
+wdArtPartyGlass = 7
+wdArtPencils = 25
+wdArtPeople = 84
+wdArtPeopleHats = 23
+wdArtPeopleWaving = 85
+wdArtPoinsettias = 40
+wdArtPostageStamp = 135
+wdArtPumpkin1 = 65
+wdArtPushPinNote1 = 63
+wdArtPushPinNote2 = 64
+wdArtPyramids = 113
+wdArtPyramidsAbove = 114
+wdArtQuadrants = 60
+wdArtRings = 29
+wdArtSafari = 98
+wdArtSawtooth = 133
+wdArtSawtoothGray = 134
+wdArtScaredCat = 36
+wdArtSeattle = 78
+wdArtShadowedSquares = 57
+wdArtSharksTeeth = 132
+wdArtShorebirdTracks = 83
+wdArtSkyrocket = 77
+wdArtSnowflakeFancy = 76
+wdArtSnowflakes = 75
+wdArtSombrero = 24
+wdArtSouthwest = 105
+wdArtStars = 19
+wdArtStars3D = 17
+wdArtStarsBlack = 74
+wdArtStarsShadowed = 18
+wdArtStarsTop = 157
+wdArtSun = 20
+wdArtSwirligig = 62
+wdArtTornPaper = 161
+wdArtTornPaperBlack = 162
+wdArtTrees = 9
+wdArtTriangleParty = 123
+wdArtTriangles = 129
+wdArtTribal1 = 130
+wdArtTribal2 = 109
+wdArtTribal3 = 108
+wdArtTribal4 = 107
+wdArtTribal5 = 110
+wdArtTribal6 = 106
+wdArtTwistedLines1 = 58
+wdArtTwistedLines2 = 124
+wdArtVine = 47
+wdArtWaveline = 59
+wdArtWeavingAngles = 96
+wdArtWeavingBraid = 94
+wdArtWeavingRibbon = 95
+wdArtWeavingStrips = 136
+wdArtWhiteFlowers = 46
+wdArtWoodwork = 93
+wdArtXIllusions = 111
+wdArtZanyTriangles = 112
+wdArtZigZag = 137
+wdArtZigZagStitch = 143
+
+# WdPageFit enumeration
+wdPageFitBestFit = 2
+wdPageFitFullPage = 1
+wdPageFitNone = 0
+wdPageFitTextFit = 3
+
+# WdPageMovementType enumeration
+wdVertical = 1
+wdSideToSide = 2
+
+# WdPageNumberAlignment enumeration
+wdAlignPageNumberCenter = 1
+wdAlignPageNumberInside = 3
+wdAlignPageNumberLeft = 0
+wdAlignPageNumberOutside = 4
+wdAlignPageNumberRight = 2
+
+# WdPageNumberStyle enumeration
+wdPageNumberStyleArabic = 0
+wdPageNumberStyleArabicFullWidth = 14
+wdPageNumberStyleArabicLetter1 = 46
+wdPageNumberStyleArabicLetter2 = 48
+wdPageNumberStyleHanjaRead = 41
+wdPageNumberStyleHanjaReadDigit = 42
+wdPageNumberStyleHebrewLetter1 = 45
+wdPageNumberStyleHebrewLetter2 = 47
+wdPageNumberStyleHindiArabic = 51
+wdPageNumberStyleHindiCardinalText = 52
+wdPageNumberStyleHindiLetter1 = 49
+wdPageNumberStyleHindiLetter2 = 50
+wdPageNumberStyleKanji = 10
+wdPageNumberStyleKanjiDigit = 11
+wdPageNumberStyleKanjiTraditional = 16
+wdPageNumberStyleLowercaseLetter = 4
+wdPageNumberStyleLowercaseRoman = 2
+wdPageNumberStyleNumberInCircle = 18
+wdPageNumberStyleNumberInDash = 57
+wdPageNumberStyleSimpChinNum1 = 37
+wdPageNumberStyleSimpChinNum2 = 38
+wdPageNumberStyleThaiArabic = 54
+wdPageNumberStyleThaiCardinalText = 55
+wdPageNumberStyleThaiLetter = 53
+wdPageNumberStyleTradChinNum1 = 33
+wdPageNumberStyleTradChinNum2 = 34
+wdPageNumberStyleUppercaseLetter = 3
+wdPageNumberStyleUppercaseRoman = 1
+wdPageNumberStyleVietCardinalText = 56
+
+# WdPaperSize enumeration
+wdPaper10x14 = 0
+wdPaper11x17 = 1
+wdPaperA3 = 6
+wdPaperA4 = 7
+wdPaperA4Small = 8
+wdPaperA5 = 9
+wdPaperB4 = 10
+wdPaperB5 = 11
+wdPaperCSheet = 12
+wdPaperCustom = 41
+wdPaperDSheet = 13
+wdPaperEnvelope10 = 25
+wdPaperEnvelope11 = 26
+wdPaperEnvelope12 = 27
+wdPaperEnvelope14 = 28
+wdPaperEnvelope9 = 24
+wdPaperEnvelopeB4 = 29
+wdPaperEnvelopeB5 = 30
+wdPaperEnvelopeB6 = 31
+wdPaperEnvelopeC3 = 32
+wdPaperEnvelopeC4 = 33
+wdPaperEnvelopeC5 = 34
+wdPaperEnvelopeC6 = 35
+wdPaperEnvelopeC65 = 36
+wdPaperEnvelopeDL = 37
+wdPaperEnvelopeItaly = 38
+wdPaperEnvelopeMonarch = 39
+wdPaperEnvelopePersonal = 40
+wdPaperESheet = 14
+wdPaperExecutive = 5
+wdPaperFanfoldLegalGerman = 15
+wdPaperFanfoldStdGerman = 16
+wdPaperFanfoldUS = 17
+wdPaperFolio = 18
+wdPaperLedger = 19
+wdPaperLegal = 4
+wdPaperLetter = 2
+wdPaperLetterSmall = 3
+wdPaperNote = 20
+wdPaperQuarto = 21
+wdPaperStatement = 22
+wdPaperTabloid = 23
+
+# WdPaperTray enumeration
+wdPrinterAutomaticSheetFeed = 7
+wdPrinterDefaultBin = 0
+wdPrinterEnvelopeFeed = 5
+wdPrinterFormSource = 15
+wdPrinterLargeCapacityBin = 11
+wdPrinterLargeFormatBin = 10
+wdPrinterLowerBin = 2
+wdPrinterManualEnvelopeFeed = 6
+wdPrinterManualFeed = 4
+wdPrinterMiddleBin = 3
+wdPrinterOnlyBin = 1
+wdPrinterPaperCassette = 14
+wdPrinterSmallFormatBin = 9
+wdPrinterTractorFeed = 8
+wdPrinterUpperBin = 1
+
+# WdParagraphAlignment enumeration
+wdAlignParagraphCenter = 1
+wdAlignParagraphDistribute = 4
+wdAlignParagraphJustify = 3
+wdAlignParagraphJustifyHi = 7
+wdAlignParagraphJustifyLow = 8
+wdAlignParagraphJustifyMed = 5
+wdAlignParagraphLeft = 0
+wdAlignParagraphRight = 2
+wdAlignParagraphThaiJustify = 9
+
+# WdPartOfSpeech enumeration
+wdAdjective = 0
+wdAdverb = 2
+wdConjunction = 5
+wdIdiom = 8
+wdInterjection = 7
+wdNoun = 1
+wdOther = 9
+wdPreposition = 6
+wdPronoun = 4
+wdVerb = 3
+
+# WdPasteDataType enumeration
+wdPasteBitmap = 4
+wdPasteDeviceIndependentBitmap = 5
+wdPasteEnhancedMetafile = 9
+wdPasteHTML = 10
+wdPasteHyperlink = 7
+wdPasteMetafilePicture = 3
+wdPasteOLEObject = 0
+wdPasteRTF = 1
+wdPasteShape = 8
+wdPasteText = 2
+
+# WdPasteOptions enumeration
+wdKeepSourceFormatting = 0
+wdKeepTextOnly = 2
+wdMatchDestinationFormatting = 1
+wdUseDestinationStyles = 3
+
+# WdPhoneticGuideAlignmentType enumeration
+wdPhoneticGuideAlignmentCenter = 0
+wdPhoneticGuideAlignmentLeft = 3
+wdPhoneticGuideAlignmentOneTwoOne = 2
+wdPhoneticGuideAlignmentRight = 4
+wdPhoneticGuideAlignmentRightVertical = 5
+wdPhoneticGuideAlignmentZeroOneZero = 1
+
+# WdPictureLinkType enumeration
+wdLinkDataInDoc = 1
+wdLinkDataOnDisk = 2
+wdLinkNone = 0
+
+# WdPortugueseReform enumeration
+wdPortugueseBoth = 3
+wdPortuguesePostReform = 2
+wdPortuguesePreReform = 1
+
+# WdPreferredWidthType enumeration
+wdPreferredWidthAuto = 1
+wdPreferredWidthPercent = 2
+wdPreferredWidthPoints = 3
+
+# WdPrintOutItem enumeration
+wdPrintAutoTextEntries = 4
+wdPrintComments = 2
+wdPrintDocumentContent = 0
+wdPrintDocumentWithMarkup = 7
+wdPrintEnvelope = 6
+wdPrintKeyAssignments = 5
+wdPrintMarkup = 2
+wdPrintProperties = 1
+wdPrintStyles = 3
+
+# WdPrintOutPages enumeration
+wdPrintAllPages = 0
+wdPrintEvenPagesOnly = 2
+wdPrintOddPagesOnly = 1
+
+# WdPrintOutRange enumeration
+wdPrintAllDocument = 0
+wdPrintCurrentPage = 2
+wdPrintFromTo = 3
+wdPrintRangeOfPages = 4
+wdPrintSelection = 1
+
+# WdProofreadingErrorType enumeration
+wdGrammaticalError = 1
+wdSpellingError = 0
+
+# WdProtectedViewCloseReason enumeration
+wdProtectedViewCloseEdit = 1
+wdProtectedViewCloseForced = 2
+wdProtectedViewCloseNormal = 0
+
+# WdProtectionType enumeration
+wdAllowOnlyComments = 1
+wdAllowOnlyFormFields = 2
+wdAllowOnlyReading = 3
+wdAllowOnlyRevisions = 0
+wdNoProtection = -1
+
+# WdReadingLayoutMargin enumeration
+wdAutomaticMargin = 0
+wdFullMargin = 2
+wdSuppressMargin = 1
+
+# WdReadingOrder enumeration
+wdReadingOrderLtr = 1
+wdReadingOrderRtl = 0
+
+# WdRecoveryType enumeration
+wdChart = 14
+wdChartLinked = 15
+wdChartPicture = 13
+wdFormatOriginalFormatting = 16
+wdFormatPlainText = 22
+wdFormatSurroundingFormattingWithEmphasis = 20
+wdListCombineWithExistingList = 24
+wdListContinueNumbering = 7
+wdListDontMerge = 25
+wdListRestartNumbering = 8
+wdPasteDefault = 0
+wdSingleCellTable = 6
+wdSingleCellText = 5
+wdTableAppendTable = 10
+wdTableInsertAsRows = 11
+wdTableOriginalFormatting = 12
+wdTableOverwriteCells = 23
+wdUseDestinationStylesRecovery = 19
+
+# WdRectangleType enumeration
+wdLineBetweenColumnRectangle = 5
+wdMarkupRectangle = 2
+wdMarkupRectangleButton = 3
+wdPageBorderRectangle = 4
+wdSelection = 6
+wdShapeRectangle = 1
+wdSystem = 7
+wdTextRectangle = 0
+wdDocumentControlRectangle = 13
+wdMailNavArea = 12
+wdMarkupRectangleArea = 8
+wdMarkupRectangleMoveMatch = 10
+wdReadingModeNavigation = 9
+wdReadingModePanningArea = 11
+
+# WdReferenceKind enumeration
+wdContentText = -1
+wdEndnoteNumber = 6
+wdEndnoteNumberFormatted = 17
+wdEntireCaption = 2
+wdFootnoteNumber = 5
+wdFootnoteNumberFormatted = 16
+wdNumberFullContext = -4
+wdNumberNoContext = -3
+wdNumberRelativeContext = -2
+wdOnlyCaptionText = 4
+wdOnlyLabelAndNumber = 3
+wdPageNumber = 7
+wdPosition = 15
+
+# WdReferenceType enumeration
+wdRefTypeBookmark = 2
+wdRefTypeEndnote = 4
+wdRefTypeFootnote = 3
+wdRefTypeHeading = 1
+wdRefTypeNumberedItem = 0
+
+# WdRelativeHorizontalPosition enumeration
+wdRelativeHorizontalPositionCharacter = 3
+wdRelativeHorizontalPositionColumn = 2
+wdRelativeHorizontalPositionMargin = 0
+wdRelativeHorizontalPositionPage = 1
+wdRelativeHorizontalPositionInnerMarginArea = 6
+wdRelativeHorizontalPositionLeftMarginArea = 4
+wdRelativeHorizontalPositionOuterMarginArea = 7
+wdRelativeHorizontalPositionRightMarginArea = 5
+
+# WdRelativeHorizontalSize enumeration
+wdRelativeHorizontalSizeInnerMarginArea = 4
+wdRelativeHorizontalSizeLeftMarginArea = 2
+wdRelativeHorizontalSizeMargin = 0
+wdRelativeHorizontalSizeOuterMarginArea = 5
+wdRelativeHorizontalSizePage = 1
+wdRelativeHorizontalSizeRightMarginArea = 3
+
+# WdRelativeVerticalPosition enumeration
+wdRelativeVerticalPositionLine = 3
+wdRelativeVerticalPositionMargin = 0
+wdRelativeVerticalPositionPage = 1
+wdRelativeVerticalPositionParagraph = 2
+wdRelativeVerticalPositionBottomMarginArea = 5
+wdRelativeVerticalPositionInnerMarginArea = 6
+wdRelativeVerticalPositionOuterMarginArea = 7
+wdRelativeVerticalPositionTopMarginArea = 4
+
+# WdRelativeVerticalSize enumeration
+wdRelativeVerticalSizeBottomMarginArea = 3
+wdRelativeVerticalSizeInnerMarginArea = 4
+wdRelativeVerticalSizeMargin = 0
+wdRelativeVerticalSizeOuterMarginArea = 5
+wdRelativeVerticalSizePage = 1
+wdRelativeVerticalSizeTopMarginArea = 2
+
+# WdRelocate enumeration
+wdRelocateDown = 1
+wdRelocateUp = 0
+
+# WdRemoveDocInfoType enumeration
+wdRDIAll = 99
+wdRDIComments = 1
+wdRDIContentType = 16
+wdRDIDocumentManagementPolicy = 15
+wdRDIDocumentProperties = 8
+wdRDIDocumentServerProperties = 14
+wdRDIDocumentWorkspace = 10
+wdRDIEmailHeader = 5
+wdRDIInkAnnotations = 11
+wdRDIRemovePersonalInformation = 4
+wdRDIRevisions = 2
+wdRDIRoutingSlip = 6
+wdRDISendForReview = 7
+wdRDITemplate = 9
+wdRDITaskpaneWebExtensions = 17
+wdRDIVersions = 3
+
+# WdReplace enumeration
+wdReplaceAll = 2
+wdReplaceNone = 0
+wdReplaceOne = 1
+
+# WdRevisedLinesMark enumeration
+wdRevisedLinesMarkLeftBorder = 1
+wdRevisedLinesMarkNone = 0
+wdRevisedLinesMarkOutsideBorder = 3
+wdRevisedLinesMarkRightBorder = 2
+
+# WdRevisedPropertiesMark enumeration
+wdRevisedPropertiesMarkBold = 1
+wdRevisedPropertiesMarkColorOnly = 5
+wdRevisedPropertiesMarkDoubleStrikeThrough = 7
+wdRevisedPropertiesMarkDoubleUnderline = 4
+wdRevisedPropertiesMarkItalic = 2
+wdRevisedPropertiesMarkNone = 0
+wdRevisedPropertiesMarkStrikeThrough = 6
+wdRevisedPropertiesMarkUnderline = 3
+
+# WdRevisionsBalloonMargin enumeration
+wdLeftMargin = 0
+wdRightMargin = 1
+
+# WdRevisionsBalloonPrintOrientation enumeration
+wdBalloonPrintOrientationAuto = 0
+wdBalloonPrintOrientationForceLandscape = 2
+wdBalloonPrintOrientationPreserve = 1
+
+# WdRevisionsBalloonWidthType enumeration
+wdBalloonWidthPercent = 0
+wdBalloonWidthPoints = 1
+
+# WdRevisionsMode enumeration
+wdBalloonRevisions = 0
+wdInLineRevisions = 1
+wdMixedRevisions = 2
+
+# WdRevisionsView enumeration
+wdRevisionsViewFinal = 0
+wdRevisionsViewOriginal = 1
+
+# WdRevisionsWrap enumeration
+wdWrapAlways = 1
+wdWrapAsk = 2
+wdWrapNever = 0
+
+# WdRevisionType enumeration
+wdNoRevision = 0
+wdRevisionCellDeletion = 17
+wdRevisionCellInsertion = 16
+wdRevisionCellMerge = 18
+wdRevisionCellSplit = 19
+wdRevisionConflict = 7
+wdRevisionConflictDelete = 21
+wdRevisionConflictInsert = 20
+wdRevisionDelete = 2
+wdRevisionDisplayField = 5
+wdRevisionInsert = 1
+wdRevisionMovedFrom = 14
+wdRevisionMovedTo = 15
+wdRevisionParagraphNumber = 4
+wdRevisionParagraphProperty = 10
+wdRevisionProperty = 3
+wdRevisionReconcile = 6
+wdRevisionReplace = 9
+wdRevisionSectionProperty = 12
+wdRevisionStyle = 8
+wdRevisionStyleDefinition = 13
+wdRevisionTableProperty = 11
+
+# WdRowAlignment enumeration
+wdAlignRowCenter = 1
+wdAlignRowLeft = 0
+wdAlignRowRight = 2
+
+# WdRowHeightRule enumeration
+wdRowHeightAtLeast = 1
+wdRowHeightAuto = 0
+wdRowHeightExactly = 2
+
+# WdRulerStyle enumeration
+wdAdjustFirstColumn = 2
+wdAdjustNone = 0
+wdAdjustProportional = 1
+wdAdjustSameWidth = 3
+
+# WdSalutationGender enumeration
+wdGenderFemale = 0
+wdGenderMale = 1
+wdGenderNeutral = 2
+wdGenderUnknown = 3
+
+# WdSalutationType enumeration
+wdSalutationBusiness = 2
+wdSalutationFormal = 1
+wdSalutationInformal = 0
+wdSalutationOther = 3
+
+# WdSaveFormat enumeration
+wdFormatDocument = 0
+wdFormatDOSText = 4
+wdFormatDOSTextLineBreaks = 5
+wdFormatEncodedText = 7
+wdFormatFilteredHTML = 10
+wdFormatFlatXML = 19
+wdFormatFlatXMLMacroEnabled = 20
+wdFormatFlatXMLTemplate = 21
+wdFormatFlatXMLTemplateMacroEnabled = 22
+wdFormatOpenDocumentText = 23
+wdFormatHTML = 8
+wdFormatRTF = 6
+wdFormatStrictOpenXMLDocument = 24
+wdFormatTemplate = 1
+wdFormatText = 2
+wdFormatTextLineBreaks = 3
+wdFormatUnicodeText = 7
+wdFormatWebArchive = 9
+wdFormatXML = 11
+wdFormatDocument97 = 0
+wdFormatDocumentDefault = 16
+wdFormatPDF = 17
+wdFormatTemplate97 = 1
+wdFormatXMLDocument = 12
+wdFormatXMLDocumentMacroEnabled = 13
+wdFormatXMLTemplate = 14
+wdFormatXMLTemplateMacroEnabled = 15
+wdFormatXPS = 18
+
+# WdSaveOptions enumeration
+wdDoNotSaveChanges = 0
+wdPromptToSaveChanges = -2
+wdSaveChanges = -1
+
+# WdScrollbarType enumeration
+wdScrollbarTypeAuto = 0
+wdScrollbarTypeNo = 2
+wdScrollbarTypeYes = 1
+
+# WdSectionDirection enumeration
+wdSectionDirectionLtr = 1
+wdSectionDirectionRtl = 0
+
+# WdSectionStart enumeration
+wdSectionContinuous = 0
+wdSectionEvenPage = 3
+wdSectionNewColumn = 1
+wdSectionNewPage = 2
+wdSectionOddPage = 4
+
+# WdSeekView enumeration
+wdSeekCurrentPageFooter = 10
+wdSeekCurrentPageHeader = 9
+wdSeekEndnotes = 8
+wdSeekEvenPagesFooter = 6
+wdSeekEvenPagesHeader = 3
+wdSeekFirstPageFooter = 5
+wdSeekFirstPageHeader = 2
+wdSeekFootnotes = 7
+wdSeekMainDocument = 0
+wdSeekPrimaryFooter = 4
+wdSeekPrimaryHeader = 1
+
+# WdSelectionFlags enumeration
+wdSelActive = 8
+wdSelAtEOL = 2
+wdSelOvertype = 4
+wdSelReplace = 16
+wdSelStartActive = 1
+
+# WdSelectionType enumeration
+wdNoSelection = 0
+wdSelectionBlock = 6
+wdSelectionColumn = 4
+wdSelectionFrame = 3
+wdSelectionInlineShape = 7
+wdSelectionIP = 1
+wdSelectionNormal = 2
+wdSelectionRow = 5
+wdSelectionShape = 8
+
+# WdSeparatorType enumeration
+wdSeparatorColon = 2
+wdSeparatorEmDash = 3
+wdSeparatorEnDash = 4
+wdSeparatorHyphen = 0
+wdSeparatorPeriod = 1
+
+# WdShapePosition enumeration
+wdShapeBottom = -999997
+wdShapeCenter = -999995
+wdShapeInside = -999994
+wdShapeLeft = -999998
+wdShapeOutside = -999993
+wdShapeRight = -999996
+wdShapeTop = -999999
+
+# WdShapePositionRelative enumeration
+wdShapePositionRelativeNone = -999999
+
+# WdShapeSizeRelative enumeration
+wdShapeSizeRelativeNone = -999999
+
+# WdShowFilter enumeration
+wdShowFilterFormattingAvailable = 4
+wdShowFilterFormattingInUse = 3
+wdShowFilterStylesAll = 2
+wdShowFilterStylesAvailable = 0
+wdShowFilterStylesInUse = 1
+wdShowFilterFormattingRecommended = 5
+
+# WdShowSourceDocuments enumeration
+wdShowSourceDocumentsBoth = 3
+wdShowSourceDocumentsNone = 0
+wdShowSourceDocumentsOriginal = 1
+wdShowSourceDocumentsRevised = 2
+
+# WdSmartTagControlType enumeration
+wdControlActiveX = 13
+wdControlButton = 6
+wdControlCheckbox = 9
+wdControlCombo = 12
+wdControlDocumentFragment = 14
+wdControlDocumentFragmentURL = 15
+wdControlHelp = 3
+wdControlHelpURL = 4
+wdControlImage = 8
+wdControlLabel = 7
+wdControlLink = 2
+wdControlListbox = 11
+wdControlRadioGroup = 16
+wdControlSeparator = 5
+wdControlSmartTag = 1
+wdControlTextbox = 10
+
+# WdSortFieldType enumeration
+wdSortFieldAlphanumeric = 0
+wdSortFieldDate = 2
+wdSortFieldJapanJIS = 4
+wdSortFieldKoreaKS = 6
+wdSortFieldNumeric = 1
+wdSortFieldStroke = 5
+wdSortFieldSyllable = 3
+
+# WdSortOrder enumeration
+wdSortOrderAscending = 0
+wdSortOrderDescending = 1
+
+# WdSortSeparator enumeration
+wdSortSeparateByCommas = 1
+wdSortSeparateByDefaultTableSeparator = 2
+wdSortSeparateByTabs = 0
+
+# WdSpanishSpeller enumeration
+wdSpanishTuteoAndVoseo = 1
+wdSpanishTuteoOnly = 0
+wdSpanishVoseoOnly = 2
+
+# WdSpecialPane enumeration
+wdPaneComments = 15
+wdPaneCurrentPageFooter = 17
+wdPaneCurrentPageHeader = 16
+wdPaneEndnoteContinuationNotice = 12
+wdPaneEndnoteContinuationSeparator = 13
+wdPaneEndnotes = 8
+wdPaneEndnoteSeparator = 14
+wdPaneEvenPagesFooter = 6
+wdPaneEvenPagesHeader = 3
+wdPaneFirstPageFooter = 5
+wdPaneFirstPageHeader = 2
+wdPaneFootnoteContinuationNotice = 9
+wdPaneFootnoteContinuationSeparator = 10
+wdPaneFootnotes = 7
+wdPaneFootnoteSeparator = 11
+wdPaneNone = 0
+wdPanePrimaryFooter = 4
+wdPanePrimaryHeader = 1
+wdPaneRevisions = 18
+wdPaneRevisionsHoriz = 19
+wdPaneRevisionsVert = 20
+
+# WdSpellingErrorType enumeration
+wdSpellingCapitalization = 2
+wdSpellingCorrect = 0
+wdSpellingNotInDictionary = 1
+
+# WdSpellingWordType enumeration
+wdAnagram = 2
+wdSpellword = 0
+wdWildcard = 1
+
+# WdStatistic enumeration
+wdStatisticCharacters = 3
+wdStatisticCharactersWithSpaces = 5
+wdStatisticFarEastCharacters = 6
+wdStatisticLines = 1
+wdStatisticPages = 2
+wdStatisticParagraphs = 4
+wdStatisticWords = 0
+
+# WdStoryType enumeration
+wdCommentsStory = 4
+wdEndnoteContinuationNoticeStory = 17
+wdEndnoteContinuationSeparatorStory = 16
+wdEndnoteSeparatorStory = 15
+wdEndnotesStory = 3
+wdEvenPagesFooterStory = 8
+wdEvenPagesHeaderStory = 6
+wdFirstPageFooterStory = 11
+wdFirstPageHeaderStory = 10
+wdFootnoteContinuationNoticeStory = 14
+wdFootnoteContinuationSeparatorStory = 13
+wdFootnoteSeparatorStory = 12
+wdFootnotesStory = 2
+wdMainTextStory = 1
+wdPrimaryFooterStory = 9
+wdPrimaryHeaderStory = 7
+wdTextFrameStory = 5
+
+# WdStyleSheetLinkType enumeration
+wdStyleSheetLinkTypeImported = 1
+wdStyleSheetLinkTypeLinked = 0
+
+# WdStyleSheetPrecedence enumeration
+wdStyleSheetPrecedenceHigher = -1
+wdStyleSheetPrecedenceHighest = 1
+wdStyleSheetPrecedenceLower = -2
+wdStyleSheetPrecedenceLowest = 0
+
+# WdStyleSort enumeration
+wdStyleSortByBasedOn = 3
+wdStyleSortByFont = 2
+wdStyleSortByName = 0
+wdStyleSortByType = 4
+wdStyleSortRecommended = 1
+
+# WdStyleType enumeration
+wdStyleTypeCharacter = 2
+wdStyleTypeList = 4
+wdStyleTypeParagraph = 1
+wdStyleTypeTable = 3
+
+# WdStylisticSet enumeration
+wdStylisticSet01 = 1
+wdStylisticSet02 = 2
+wdStylisticSet03 = 4
+wdStylisticSet04 = 8
+wdStylisticSet05 = 16
+wdStylisticSet06 = 32
+wdStylisticSet07 = 64
+wdStylisticSet08 = 128
+wdStylisticSet09 = 256
+wdStylisticSet10 = 512
+wdStylisticSet11 = 1024
+wdStylisticSet12 = 2048
+wdStylisticSet13 = 4096
+wdStylisticSet14 = 8192
+wdStylisticSet15 = 16384
+wdStylisticSet16 = 32768
+wdStylisticSet17 = 65536
+wdStylisticSet18 = 131072
+wdStylisticSet19 = 262144
+wdStylisticSet20 = 524288
+wdStylisticSetDefault = 0
+
+# WdSubscriberFormats enumeration
+wdSubscriberBestFormat = 0
+wdSubscriberPict = 4
+wdSubscriberRTF = 1
+wdSubscriberText = 2
+
+# WdTabAlignment enumeration
+wdAlignTabBar = 4
+wdAlignTabCenter = 1
+wdAlignTabDecimal = 3
+wdAlignTabLeft = 0
+wdAlignTabList = 6
+wdAlignTabRight = 2
+
+# WdTabLeader enumeration
+wdTabLeaderDashes = 2
+wdTabLeaderDots = 1
+wdTabLeaderHeavy = 4
+wdTabLeaderLines = 3
+wdTabLeaderMiddleDot = 5
+wdTabLeaderSpaces = 0
+
+# WdTableDirection enumeration
+wdTableDirectionLtr = 1
+wdTableDirectionRtl = 0
+
+# WdTableFieldSeparator enumeration
+wdSeparateByCommas = 2
+wdSeparateByDefaultListSeparator = 3
+wdSeparateByParagraphs = 0
+wdSeparateByTabs = 1
+
+# WdTableFormat enumeration
+wdTableFormat3DEffects1 = 32
+wdTableFormat3DEffects2 = 33
+wdTableFormat3DEffects3 = 34
+wdTableFormatClassic1 = 4
+wdTableFormatClassic2 = 5
+wdTableFormatClassic3 = 6
+wdTableFormatClassic4 = 7
+wdTableFormatColorful1 = 8
+wdTableFormatColorful2 = 9
+wdTableFormatColorful3 = 10
+wdTableFormatColumns1 = 11
+wdTableFormatColumns2 = 12
+wdTableFormatColumns3 = 13
+wdTableFormatColumns4 = 14
+wdTableFormatColumns5 = 15
+wdTableFormatContemporary = 35
+wdTableFormatElegant = 36
+wdTableFormatGrid1 = 16
+wdTableFormatGrid2 = 17
+wdTableFormatGrid3 = 18
+wdTableFormatGrid4 = 19
+wdTableFormatGrid5 = 20
+wdTableFormatGrid6 = 21
+wdTableFormatGrid7 = 22
+wdTableFormatGrid8 = 23
+wdTableFormatList1 = 24
+wdTableFormatList2 = 25
+wdTableFormatList3 = 26
+wdTableFormatList4 = 27
+wdTableFormatList5 = 28
+wdTableFormatList6 = 29
+wdTableFormatList7 = 30
+wdTableFormatList8 = 31
+wdTableFormatNone = 0
+wdTableFormatProfessional = 37
+wdTableFormatSimple1 = 1
+wdTableFormatSimple2 = 2
+wdTableFormatSimple3 = 3
+wdTableFormatSubtle1 = 38
+wdTableFormatSubtle2 = 39
+wdTableFormatWeb1 = 40
+wdTableFormatWeb2 = 41
+wdTableFormatWeb3 = 42
+
+# WdTableFormatApply enumeration
+wdTableFormatApplyAutoFit = 16
+wdTableFormatApplyBorders = 1
+wdTableFormatApplyColor = 8
+wdTableFormatApplyFirstColumn = 128
+wdTableFormatApplyFont = 4
+wdTableFormatApplyHeadingRows = 32
+wdTableFormatApplyLastColumn = 256
+wdTableFormatApplyLastRow = 64
+wdTableFormatApplyShading = 2
+
+# WdTablePosition enumeration
+wdTableBottom = -999997
+wdTableCenter = -999995
+wdTableInside = -999994
+wdTableLeft = -999998
+wdTableOutside = -999993
+wdTableRight = -999996
+wdTableTop = -999999
+
+# WdTaskPanes enumeration
+wdTaskPaneApplyStyles = 17
+wdTaskPaneDocumentActions = 7
+wdTaskPaneDocumentProtection = 6
+wdTaskPaneFaxService = 11
+wdTaskPaneFormatting = 0
+wdTaskPaneHelp = 9
+wdTaskPaneMailMerge = 2
+wdTaskPaneProofing = 20
+wdTaskPaneResearch = 10
+wdTaskPaneRevealFormatting = 1
+wdTaskPaneRevPaneFlex = 22
+wdTaskPaneSearch = 4
+wdTaskPaneSignature = 14
+wdTaskPaneStyleInspector = 15
+wdTaskPaneThesaurus = 23
+wdTaskPaneTranslate = 3
+wdTaskPaneXMLDocument = 12
+wdTaskPaneXMLMapping = 21
+wdTaskPaneXMLStructure = 5
+
+# WdTCSCConverterDirection enumeration
+wdTCSCConverterDirectionAuto = 2
+wdTCSCConverterDirectionSCTC = 0
+wdTCSCConverterDirectionTCSC = 1
+
+# WdTemplateType enumeration
+wdAttachedTemplate = 2
+wdGlobalTemplate = 1
+wdNormalTemplate = 0
+
+# WdTextboxTightWrap enumeration
+wdTightAll = 1
+wdTightFirstAndLastLines = 2
+wdTightFirstLineOnly = 3
+wdTightLastLineOnly = 4
+wdTightNone = 0
+
+# WdTextFormFieldType enumeration
+wdCalculationText = 5
+wdCurrentDateText = 3
+wdCurrentTimeText = 4
+wdDateText = 2
+wdNumberText = 1
+wdRegularText = 0
+
+# WdTextOrientation enumeration
+wdTextOrientationDownward = 3
+wdTextOrientationHorizontal = 0
+wdTextOrientationHorizontalRotatedFarEast = 4
+wdTextOrientationUpward = 2
+wdTextOrientationVerticalFarEast = 1
+wdTextOrientationVertical = 5
+
+# WdTextureIndex enumeration
+wdTexture10Percent = 100
+wdTexture12Pt5Percent = 125
+wdTexture15Percent = 150
+wdTexture17Pt5Percent = 175
+wdTexture20Percent = 200
+wdTexture22Pt5Percent = 225
+wdTexture25Percent = 250
+wdTexture27Pt5Percent = 275
+wdTexture2Pt5Percent = 25
+wdTexture30Percent = 300
+wdTexture32Pt5Percent = 325
+wdTexture35Percent = 350
+wdTexture37Pt5Percent = 375
+wdTexture40Percent = 400
+wdTexture42Pt5Percent = 425
+wdTexture45Percent = 450
+wdTexture47Pt5Percent = 475
+wdTexture50Percent = 500
+wdTexture52Pt5Percent = 525
+wdTexture55Percent = 550
+wdTexture57Pt5Percent = 575
+wdTexture5Percent = 50
+wdTexture60Percent = 600
+wdTexture62Pt5Percent = 625
+wdTexture65Percent = 650
+wdTexture67Pt5Percent = 675
+wdTexture70Percent = 700
+wdTexture72Pt5Percent = 725
+wdTexture75Percent = 750
+wdTexture77Pt5Percent = 775
+wdTexture7Pt5Percent = 75
+wdTexture80Percent = 800
+wdTexture82Pt5Percent = 825
+wdTexture85Percent = 850
+wdTexture87Pt5Percent = 875
+wdTexture90Percent = 900
+wdTexture92Pt5Percent = 925
+wdTexture95Percent = 950
+wdTexture97Pt5Percent = 975
+wdTextureCross = -11
+wdTextureDarkCross = -5
+wdTextureDarkDiagonalCross = -6
+wdTextureDarkDiagonalDown = -3
+wdTextureDarkDiagonalUp = -4
+wdTextureDarkHorizontal = -1
+wdTextureDarkVertical = -2
+wdTextureDiagonalCross = -12
+wdTextureDiagonalDown = -9
+wdTextureDiagonalUp = -10
+wdTextureHorizontal = -7
+wdTextureNone = 0
+wdTextureSolid = 1000
+wdTextureVertical = -8
+
+# WdThemeColorIndex enumeration
+wdNotThemeColor = -1
+wdThemeColorAccent1 = 4
+wdThemeColorAccent2 = 5
+wdThemeColorAccent3 = 6
+wdThemeColorAccent4 = 7
+wdThemeColorAccent5 = 8
+wdThemeColorAccent6 = 9
+wdThemeColorBackground1 = 12
+wdThemeColorBackground2 = 14
+wdThemeColorHyperlink = 10
+wdThemeColorHyperlinkFollowed = 11
+wdThemeColorMainDark1 = 0
+wdThemeColorMainDark2 = 2
+wdThemeColorMainLight1 = 1
+wdThemeColorMainLight2 = 3
+wdThemeColorText1 = 13
+wdThemeColorText2 = 15
+
+# WdToaFormat enumeration
+wdTOAClassic = 1
+wdTOADistinctive = 2
+wdTOAFormal = 3
+wdTOASimple = 4
+wdTOATemplate = 0
+
+# WdTocFormat enumeration
+wdTOCClassic = 1
+wdTOCDistinctive = 2
+wdTOCFancy = 3
+wdTOCFormal = 5
+wdTOCModern = 4
+wdTOCSimple = 6
+wdTOCTemplate = 0
+
+# WdTofFormat enumeration
+wdTOFCentered = 3
+wdTOFClassic = 1
+wdTOFDistinctive = 2
+wdTOFFormal = 4
+wdTOFSimple = 5
+wdTOFTemplate = 0
+
+# WdTrailingCharacter enumeration
+wdTrailingNone = 2
+wdTrailingSpace = 1
+wdTrailingTab = 0
+
+# WdTwoLinesInOneType enumeration
+wdTwoLinesInOneAngleBrackets = 4
+wdTwoLinesInOneCurlyBrackets = 5
+wdTwoLinesInOneNoBrackets = 1
+wdTwoLinesInOneNone = 0
+wdTwoLinesInOneParentheses = 2
+wdTwoLinesInOneSquareBrackets = 3
+
+# WdUnderline enumeration
+wdUnderlineDash = 7
+wdUnderlineDashHeavy = 23
+wdUnderlineDashLong = 39
+wdUnderlineDashLongHeavy = 55
+wdUnderlineDotDash = 9
+wdUnderlineDotDashHeavy = 25
+wdUnderlineDotDotDash = 10
+wdUnderlineDotDotDashHeavy = 26
+wdUnderlineDotted = 4
+wdUnderlineDottedHeavy = 20
+wdUnderlineDouble = 3
+wdUnderlineNone = 0
+wdUnderlineSingle = 1
+wdUnderlineThick = 6
+wdUnderlineWavy = 11
+wdUnderlineWavyDouble = 43
+wdUnderlineWavyHeavy = 27
+wdUnderlineWords = 2
+
+# WdUnits enumeration
+wdCell = 12
+wdCharacter = 1
+wdCharacterFormatting = 13
+wdColumn = 9
+wdItem = 16
+wdLine = 5
+wdParagraph = 4
+wdParagraphFormatting = 14
+wdRow = 10
+wdScreen = 7
+wdSection = 8
+wdSentence = 3
+wdStory = 6
+wdTable = 15
+wdWindow = 11
+wdWord = 2
+
+# WdUpdateStyleListBehavior enumeration
+wdListBehaviorAddBulletsNumbering = 1
+wdListBehaviorKeepPreviousPattern = 0
+
+# WdUseFormattingFrom enumeration
+wdFormattingFromCurrent = 0
+wdFormattingFromPrompt = 2
+wdFormattingFromSelected = 1
+
+# WdVerticalAlignment enumeration
+wdAlignVerticalBottom = 3
+wdAlignVerticalCenter = 1
+wdAlignVerticalJustify = 2
+wdAlignVerticalTop = 0
+
+# WdViewType enumeration
+wdMasterView = 5
+wdNormalView = 1
+wdOutlineView = 2
+wdPrintPreview = 4
+wdPrintView = 3
+wdReadingView = 7
+wdWebView = 6
+
+# WdVisualSelection enumeration
+wdVisualSelectionBlock = 0
+wdVisualSelectionContinuous = 1
+
+# WdWindowState enumeration
+wdWindowStateMaximize = 1
+wdWindowStateMinimize = 2
+wdWindowStateNormal = 0
+
+# WdWindowType enumeration
+wdWindowDocument = 0
+wdWindowTemplate = 1
+
+# WdWordDialog enumeration
+wdDialogBuildingBlockOrganizer = 2067
+wdDialogConnect = 420
+wdDialogConsistencyChecker = 1121
+wdDialogContentControlProperties = 2394
+wdDialogControlRun = 235
+wdDialogConvertObject = 392
+wdDialogCopyFile = 300
+wdDialogCreateAutoText = 872
+wdDialogCreateSource = 1922
+wdDialogCSSLinks = 1261
+wdDialogDocumentInspector = 1482
+wdDialogDocumentStatistics = 78
+wdDialogDrawAlign = 634
+wdDialogDrawSnapToGrid = 633
+wdDialogEditAutoText = 985
+wdDialogEditCreatePublisher = 732
+wdDialogEditFind = 112
+wdDialogEditFrame = 458
+wdDialogEditGoTo = 896
+wdDialogEditGoToOld = 811
+wdDialogEditLinks = 124
+wdDialogEditObject = 125
+wdDialogEditPasteSpecial = 111
+wdDialogEditPublishOptions = 735
+wdDialogEditReplace = 117
+wdDialogEditStyle = 120
+wdDialogEditSubscribeOptions = 736
+wdDialogEditSubscribeTo = 733
+wdDialogEditTOACategory = 625
+wdDialogEmailOptions = 863
+wdDialogFileDocumentLayout = 178
+wdDialogFileFind = 99
+wdDialogFileMacCustomPageSetupGX = 737
+wdDialogFileMacPageSetup = 685
+wdDialogFileMacPageSetupGX = 444
+wdDialogFileNew = 79
+wdDialogFileOpen = 80
+wdDialogFilePageSetup = 178
+wdDialogFilePrint = 88
+wdDialogFilePrintOneCopy = 445
+wdDialogFilePrintSetup = 97
+wdDialogFileRoutingSlip = 624
+wdDialogFileSaveAs = 84
+wdDialogFileSaveVersion = 1007
+wdDialogFileSummaryInfo = 86
+wdDialogFileVersions = 945
+wdDialogFitText = 983
+wdDialogFontSubstitution = 581
+wdDialogFormatAddrFonts = 103
+wdDialogFormatBordersAndShading = 189
+wdDialogFormatBulletsAndNumbering = 824
+wdDialogFormatCallout = 610
+wdDialogFormatChangeCase = 322
+wdDialogFormatColumns = 177
+wdDialogFormatDefineStyleBorders = 185
+wdDialogFormatDefineStyleFont = 181
+wdDialogFormatDefineStyleFrame = 184
+wdDialogFormatDefineStyleLang = 186
+wdDialogFormatDefineStylePara = 182
+wdDialogFormatDefineStyleTabs = 183
+wdDialogFormatDrawingObject = 960
+wdDialogFormatDropCap = 488
+wdDialogFormatEncloseCharacters = 1162
+wdDialogFormatFont = 174
+wdDialogFormatFrame = 190
+wdDialogFormatPageNumber = 298
+wdDialogFormatParagraph = 175
+wdDialogFormatPicture = 187
+wdDialogFormatRetAddrFonts = 221
+wdDialogFormatSectionLayout = 176
+wdDialogFormatStyle = 180
+wdDialogFormatStyleGallery = 505
+wdDialogFormatStylesCustom = 1248
+wdDialogFormatTabs = 179
+wdDialogFormatTheme = 855
+wdDialogFormattingRestrictions = 1427
+wdDialogFormFieldHelp = 361
+wdDialogFormFieldOptions = 353
+wdDialogFrameSetProperties = 1074
+wdDialogHelpAbout = 9
+wdDialogHelpWordPerfectHelp = 10
+wdDialogHelpWordPerfectHelpOptions = 511
+wdDialogHorizontalInVertical = 1160
+wdDialogIMESetDefault = 1094
+wdDialogInsertAddCaption = 402
+wdDialogInsertAutoCaption = 359
+wdDialogInsertBookmark = 168
+wdDialogInsertBreak = 159
+wdDialogInsertCaption = 357
+wdDialogInsertCaptionNumbering = 358
+wdDialogInsertCrossReference = 367
+wdDialogInsertDatabase = 341
+wdDialogInsertDateTime = 165
+wdDialogInsertField = 166
+wdDialogInsertFile = 164
+wdDialogInsertFootnote = 370
+wdDialogInsertFormField = 483
+wdDialogInsertHyperlink = 925
+wdDialogInsertIndex = 170
+wdDialogInsertIndexAndTables = 473
+wdDialogInsertMergeField = 167
+wdDialogInsertNumber = 812
+wdDialogInsertObject = 172
+wdDialogInsertPageNumbers = 294
+wdDialogInsertPicture = 163
+wdDialogInsertPlaceholder = 2348
+wdDialogInsertSource = 2120
+wdDialogInsertSubdocument = 583
+wdDialogInsertSymbol = 162
+wdDialogInsertTableOfAuthorities = 471
+wdDialogInsertTableOfContents = 171
+wdDialogInsertTableOfFigures = 472
+wdDialogInsertWebComponent = 1324
+wdDialogLabelOptions = 1367
+wdDialogLetterWizard = 821
+wdDialogListCommands = 723
+wdDialogMailMerge = 676
+wdDialogMailMergeCheck = 677
+wdDialogMailMergeCreateDataSource = 642
+wdDialogMailMergeCreateHeaderSource = 643
+wdDialogMailMergeFieldMapping = 1304
+wdDialogMailMergeFindRecipient = 1326
+wdDialogMailMergeFindRecord = 569
+wdDialogMailMergeHelper = 680
+wdDialogMailMergeInsertAddressBlock = 1305
+wdDialogMailMergeInsertAsk = 4047
+wdDialogMailMergeInsertFields = 1307
+wdDialogMailMergeInsertFillIn = 4048
+wdDialogMailMergeInsertGreetingLine = 1306
+wdDialogMailMergeInsertIf = 4049
+wdDialogMailMergeInsertNextIf = 4053
+wdDialogMailMergeInsertSet = 4054
+wdDialogMailMergeInsertSkipIf = 4055
+wdDialogMailMergeOpenDataSource = 81
+wdDialogMailMergeOpenHeaderSource = 82
+wdDialogMailMergeQueryOptions = 681
+wdDialogMailMergeRecipients = 1308
+wdDialogMailMergeSetDocumentType = 1339
+wdDialogMailMergeUseAddressBook = 779
+wdDialogMarkCitation = 463
+wdDialogMarkIndexEntry = 169
+wdDialogMarkTableOfContentsEntry = 442
+wdDialogMyPermission = 1437
+wdDialogNewToolbar = 586
+wdDialogNoteOptions = 373
+wdDialogOMathRecognizedFunctions = 2165
+wdDialogOrganizer = 222
+wdDialogPermission = 1469
+wdDialogPhoneticGuide = 986
+wdDialogReviewAfmtRevisions = 570
+wdDialogSchemaLibrary = 1417
+wdDialogSearch = 1363
+wdDialogShowRepairs = 1381
+wdDialogSourceManager = 1920
+wdDialogStyleManagement = 1948
+wdDialogTableAutoFormat = 563
+wdDialogTableCellOptions = 1081
+wdDialogTableColumnWidth = 143
+wdDialogTableDeleteCells = 133
+wdDialogTableFormatCell = 612
+wdDialogTableFormula = 348
+wdDialogTableInsertCells = 130
+wdDialogTableInsertRow = 131
+wdDialogTableInsertTable = 129
+wdDialogTableOfCaptionsOptions = 551
+wdDialogTableOfContentsOptions = 470
+wdDialogTableProperties = 861
+wdDialogTableRowHeight = 142
+wdDialogTableSort = 199
+wdDialogTableSplitCells = 137
+wdDialogTableTableOptions = 1080
+wdDialogTableToText = 128
+wdDialogTableWrapping = 854
+wdDialogTCSCTranslator = 1156
+wdDialogTextToTable = 127
+wdDialogToolsAcceptRejectChanges = 506
+wdDialogToolsAdvancedSettings = 206
+wdDialogToolsAutoCorrect = 378
+wdDialogToolsAutoCorrectExceptions = 762
+wdDialogToolsAutoManager = 915
+wdDialogToolsAutoSummarize = 874
+wdDialogToolsBulletsNumbers = 196
+wdDialogToolsCompareDocuments = 198
+wdDialogToolsCreateDirectory = 833
+wdDialogToolsCreateEnvelope = 173
+wdDialogToolsCreateLabels = 489
+wdDialogToolsCustomize = 152
+wdDialogToolsCustomizeKeyboard = 432
+wdDialogToolsCustomizeMenuBar = 615
+wdDialogToolsCustomizeMenus = 433
+wdDialogToolsDictionary = 989
+wdDialogToolsEnvelopesAndLabels = 607
+wdDialogToolsGrammarSettings = 885
+wdDialogToolsHangulHanjaConversion = 784
+wdDialogToolsHighlightChanges = 197
+wdDialogToolsHyphenation = 195
+wdDialogToolsLanguage = 188
+wdDialogToolsMacro = 215
+wdDialogToolsMacroRecord = 214
+wdDialogToolsManageFields = 631
+wdDialogToolsMergeDocuments = 435
+wdDialogToolsOptions = 974
+wdDialogToolsOptionsAutoFormat = 959
+wdDialogToolsOptionsAutoFormatAsYouType = 778
+wdDialogToolsOptionsBidi = 1029
+wdDialogToolsOptionsCompatibility = 525
+wdDialogToolsOptionsEdit = 224
+wdDialogToolsOptionsEditCopyPaste = 1356
+wdDialogToolsOptionsFileLocations = 225
+wdDialogToolsOptionsFuzzy = 790
+wdDialogToolsOptionsGeneral = 203
+wdDialogToolsOptionsPrint = 208
+wdDialogToolsOptionsSave = 209
+wdDialogToolsOptionsSecurity = 1361
+wdDialogToolsOptionsSmartTag = 1395
+wdDialogToolsOptionsSpellingAndGrammar = 211
+wdDialogToolsOptionsTrackChanges = 386
+wdDialogToolsOptionsTypography = 739
+wdDialogToolsOptionsUserInfo = 213
+wdDialogToolsOptionsView = 204
+wdDialogToolsProtectDocument = 503
+wdDialogToolsProtectSection = 578
+wdDialogToolsRevisions = 197
+wdDialogToolsSpellingAndGrammar = 828
+wdDialogToolsTemplates = 87
+wdDialogToolsThesaurus = 194
+wdDialogToolsUnprotectDocument = 521
+wdDialogToolsWordCount = 228
+wdDialogTwoLinesInOne = 1161
+wdDialogUpdateTOC = 331
+wdDialogViewZoom = 577
+wdDialogWebOptions = 898
+wdDialogWindowActivate = 220
+wdDialogXMLElementAttributes = 1460
+wdDialogXMLOptions = 1425
+
+# WdWordDialogTab enumeration
+wdDialogEmailOptionsTabQuoting = 1900002
+wdDialogEmailOptionsTabSignature = 1900000
+wdDialogEmailOptionsTabStationary = 1900001
+wdDialogFilePageSetupTabCharsLines = 150004
+wdDialogFilePageSetupTabLayout = 150003
+wdDialogFilePageSetupTabMargins = 150000
+wdDialogFilePageSetupTabPaper = 150001
+wdDialogFormatBordersAndShadingTabBorders = 700000
+wdDialogFormatBordersAndShadingTabPageBorder = 700001
+wdDialogFormatBordersAndShadingTabShading = 700002
+wdDialogFormatBulletsAndNumberingTabBulleted = 1500000
+wdDialogFormatBulletsAndNumberingTabNumbered = 1500001
+wdDialogFormatBulletsAndNumberingTabOutlineNumbered = 1500002
+wdDialogFormatDrawingObjectTabColorsAndLines = 1200000
+wdDialogFormatDrawingObjectTabHR = 1200007
+wdDialogFormatDrawingObjectTabPicture = 1200004
+wdDialogFormatDrawingObjectTabPosition = 1200002
+wdDialogFormatDrawingObjectTabSize = 1200001
+wdDialogFormatDrawingObjectTabTextbox = 1200005
+wdDialogFormatDrawingObjectTabWeb = 1200006
+wdDialogFormatDrawingObjectTabWrapping = 1200003
+wdDialogFormatFontTabAnimation = 600002
+wdDialogFormatFontTabCharacterSpacing = 600001
+wdDialogFormatFontTabFont = 600000
+wdDialogFormatParagraphTabIndentsAndSpacing = 1000000
+wdDialogFormatParagraphTabTeisai = 1000002
+wdDialogFormatParagraphTabTextFlow = 1000001
+wdDialogInsertIndexAndTablesTabIndex = 400000
+wdDialogInsertIndexAndTablesTabTableOfAuthorities = 400003
+wdDialogInsertIndexAndTablesTabTableOfContents = 400001
+wdDialogInsertIndexAndTablesTabTableOfFigures = 400002
+wdDialogInsertSymbolTabSpecialCharacters = 200001
+wdDialogInsertSymbolTabSymbols = 200000
+wdDialogLetterWizardTabLetterFormat = 1600000
+wdDialogLetterWizardTabOtherElements = 1600002
+wdDialogLetterWizardTabRecipientInfo = 1600001
+wdDialogLetterWizardTabSenderInfo = 1600003
+wdDialogNoteOptionsTabAllEndnotes = 300001
+wdDialogNoteOptionsTabAllFootnotes = 300000
+wdDialogOrganizerTabAutoText = 500001
+wdDialogOrganizerTabCommandBars = 500002
+wdDialogOrganizerTabMacros = 500003
+wdDialogOrganizerTabStyles = 500000
+wdDialogTablePropertiesTabCell = 1800003
+wdDialogTablePropertiesTabColumn = 1800002
+wdDialogTablePropertiesTabRow = 1800001
+wdDialogTablePropertiesTabTable = 1800000
+wdDialogTemplates = 2100000
+wdDialogTemplatesLinkedCSS = 2100003
+wdDialogTemplatesXMLExpansionPacks = 2100002
+wdDialogTemplatesXMLSchema = 2100001
+wdDialogToolsAutoCorrectExceptionsTabFirstLetter = 1400000
+wdDialogToolsAutoCorrectExceptionsTabHangulAndAlphabet = 1400002
+wdDialogToolsAutoCorrectExceptionsTabIac = 1400003
+wdDialogToolsAutoCorrectExceptionsTabInitialCaps = 1400001
+wdDialogToolsAutoManagerTabAutoCorrect = 1700000
+wdDialogToolsAutoManagerTabAutoFormat = 1700003
+wdDialogToolsAutoManagerTabAutoFormatAsYouType = 1700001
+wdDialogToolsAutoManagerTabAutoText = 1700002
+wdDialogToolsAutoManagerTabSmartTags = 1700004
+wdDialogToolsEnvelopesAndLabelsTabEnvelopes = 800000
+wdDialogToolsEnvelopesAndLabelsTabLabels = 800001
+wdDialogToolsOptionsTabAcetate = 1266
+wdDialogToolsOptionsTabBidi = 1029
+wdDialogToolsOptionsTabCompatibility = 525
+wdDialogToolsOptionsTabEdit = 224
+wdDialogToolsOptionsTabFileLocations = 225
+wdDialogToolsOptionsTabFuzzy = 790
+wdDialogToolsOptionsTabGeneral = 203
+wdDialogToolsOptionsTabHangulHanjaConversion = 786
+wdDialogToolsOptionsTabPrint = 208
+wdDialogToolsOptionsTabProofread = 211
+wdDialogToolsOptionsTabSave = 209
+wdDialogToolsOptionsTabSecurity = 1361
+wdDialogToolsOptionsTabTrackChanges = 386
+wdDialogToolsOptionsTabTypography = 739
+wdDialogToolsOptionsTabUserInfo = 213
+wdDialogToolsOptionsTabView = 204
+wdDialogWebOptionsBrowsers = 2000000
+wdDialogWebOptionsEncoding = 2000003
+wdDialogWebOptionsFiles = 2000001
+wdDialogWebOptionsFonts = 2000004
+wdDialogWebOptionsGeneral = 2000000
+wdDialogWebOptionsPictures = 2000002
+wdDialogStyleManagementTabEdit = 2200000
+wdDialogStyleManagementTabRecommend = 2200001
+wdDialogStyleManagementTabRestrict = 2200002
+
+# WdWrapSideType enumeration
+wdWrapBoth = 0
+wdWrapLargest = 3
+wdWrapLeft = 1
+wdWrapRight = 2
+
+# WdWrapType enumeration
+wdWrapInline = 7
+wdWrapNone = 3
+wdWrapSquare = 0
+wdWrapThrough = 2
+wdWrapTight = 1
+wdWrapTopBottom = 4
+wdWrapBehind = 5
+wdWrapFront = 3
+
+# WdWrapTypeMerged enumeration
+wdWrapMergeBehind = 3
+wdWrapMergeFront = 4
+wdWrapMergeInline = 0
+wdWrapMergeSquare = 1
+wdWrapMergeThrough = 5
+wdWrapMergeTight = 2
+wdWrapMergeTopBottom = 6
+
+
+
+
+
+
 
 class WebOptions:
 
@@ -25237,6 +34383,41 @@ class WebOptions:
 
     def UseDefaultFolderSuffix(self):
         self.weboptions.UseDefaultFolderSuffix()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Window:
 
@@ -25543,6 +34724,59 @@ class Window:
     def ToggleRibbon(self):
         self.window.ToggleRibbon()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class WrapFormat:
 
     def __init__(self, wrapformat=None):
@@ -25616,6 +34850,87 @@ class WrapFormat:
     def Type(self, value):
         self.wrapformat.Type = value
 
+
+
+
+
+# XlConstants enumeration
+xl3DBar = -4099
+xl3DSurface = -4103
+xlAbove = 0
+xlAutomatic = -4105
+xlBar = 2
+xlBelow = 1
+xlBoth = 1
+xlBottom = -4107
+xlCenter = -4108
+xlChecker = 9
+xlCircle = 8
+xlColumn = 3
+xlCombination = -4111
+xlCorner = 2
+xlCrissCross = 16
+xlCross = 4
+xlCustom = -4114
+xlDefaultAutoFormat = -1
+xlDiamond = 2
+xlDistributed = -4117
+xlFill = 5
+xlFixedValue = 1
+xlGeneral = 1
+xlGray16 = 17
+xlGray25 = -4124
+xlGray50 = -4125
+xlGray75 = -4126
+xlGray8 = 18
+xlGrid = 15
+xlHigh = -4127
+xlInside = 2
+xlJustify = -4130
+xlLeft = -4131
+xlLightDown = 13
+xlLightHorizontal = 11
+xlLightUp = 14
+xlLightVertical = 12
+xlLow = -4134
+xlMaximum = 2
+xlMinimum = 4
+xlMinusValues = 3
+xlNextToAxis = 4
+xlNone = -4142
+xlOpaque = 3
+xlOutside = 3
+xlPercent = 2
+xlPlus = 9
+xlPlusValues = 2
+xlRight = -4152
+xlScale = 3
+xlSemiGray75 = 10
+xlShowLabel = 4
+xlShowLabelAndPercent = 5
+xlShowPercent = 3
+xlShowValue = 2
+xlSingle = 2
+xlSolid = 1
+xlSquare = 1
+xlStar = 5
+xlStError = 4
+xlTop = -4160
+xlTransparent = 2
+xlTriangle = 3
+
+# XlReadingOrder enumeration
+xlContext = -5002
+xlLTR = -5003
+xlRTL = -5004
+
+
+
+
+
+
+
+
 class XMLMapping:
 
     def __init__(self, xmlmapping=None):
@@ -25666,6 +34981,19 @@ class XMLMapping:
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlmapping.SetMappingByNode(*args, **arguments)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class XMLNamespace:
 
     def __init__(self, xmlnamespace=None):
@@ -25710,6 +35038,21 @@ class XMLNamespace:
 
     def Delete(self):
         self.xmlnamespace.Delete()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class XMLNode:
 
@@ -25852,6 +35195,30 @@ class XMLNode:
     def Validate(self):
         return self.xmlnode.Validate()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class XMLNodes:
 
     def __init__(self, xmlnodes=None):
@@ -25880,6 +35247,12 @@ class XMLNodes:
         arguments = {"Index": Index}
         arguments = {key: value for key, value in arguments.items() if value is not None}
         return self.xmlnodes.Item(*args, **arguments)
+
+
+
+
+
+
 
 class XMLSchemaReference:
 
@@ -25911,6 +35284,17 @@ class XMLSchemaReference:
 
     def Reload(self):
         return self.xmlschemareference.Reload()
+
+
+
+
+
+
+
+
+
+
+
 
 class XMLSchemaReferences:
 
@@ -25973,6 +35357,16 @@ class XMLSchemaReferences:
     def Validate(self):
         return self.xmlschemareferences.Validate()
 
+
+
+
+
+
+
+
+
+
+
 class XSLTransform:
 
     def __init__(self, xsltransform=None):
@@ -26008,6 +35402,10 @@ class XSLTransform:
 
     def Delete(self):
         self.xsltransform.Delete()
+
+
+
+
 
 class Zoom:
 
@@ -26057,3 +35455,13 @@ class Zoom:
     @Percentage.setter
     def Percentage(self, value):
         self.zoom.Percentage = value
+
+
+
+
+
+
+
+
+
+

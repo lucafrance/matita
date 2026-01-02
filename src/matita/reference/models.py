@@ -233,8 +233,18 @@ class DocPage:
     def to_python(self):
         """Return source code of a python class based on the page"""
 
+        if self.is_enumeration:
+            code = []
+            code.append(f"# {self.object_name} enumeration")
+            for key, value in self.enumeration_values.items():
+                if type(value) == str:
+                    value = f"\"{value}\""
+                code.append(f"{key} = {value}")
+            code.append("")
+            return "\n".join(code)
+
         if not self.is_object:
-            return "\n"
+            return ""
 
         code = []
         code.append("class " + self.object_name + ":")
@@ -258,6 +268,7 @@ class DocPage:
 
         code += self.to_python_properties()
         code += self.to_python_methods()
+        code.append("")
         return "\n".join(code)
 
     def parameters_code(self):
@@ -433,9 +444,7 @@ class VbaDocs:
             if page.module_name.lower() != application.lower():
                 continue
             try:
-                page_code = None
-                if page.is_object:
-                    page_code = page.to_python()
+                page_code = page.to_python()
             except Exception as e:
                 logging.warning(f"Can't export '{page_key}' to python code. {e}")
             else:
