@@ -194,6 +194,11 @@ class DocPage:
         for r in table.rows[1:]:
             key = r[0].strip("*")
             value = r[1]
+            if value.lstrip("-").isnumeric():
+                if int(value) == float(value):
+                    value = int(value)
+                else:
+                    value = float(value)
             self.enumeration_values[key] = value
     
     def parent_object_key(self):
