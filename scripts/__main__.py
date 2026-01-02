@@ -15,12 +15,15 @@ def main():
         handlers = [logging.FileHandler("logs/utils.log", mode="w")],
     )
 
+    print("Parsing Office VBA Reference...")
     docs = VbaDocs()
     docs.read_directory("office-vba-reference/api")
+    print("Analysing Office VBA Reference...")
     docs.process_pages()
     os.makedirs("data", exist_ok=True)
     json.dump(docs.to_dict(), open("data/office-vba-api.json", "wt"), indent=4)
     for app in ["Excel", "Word", "PowerPoint", "Outlook", "Access"]:
+        print(f"Generating matita.office{app} module...")
         with open(f"src/matita/office/{app.lower()}.py", "wt") as f:
             f.write(docs.to_python(application=app))
 

@@ -320,6 +320,7 @@ class VbaDocs:
         with os.scandir(path) as it:
             for entry in it:
                 if entry.is_file():
+                    print(f"Parsing {entry.name}...")
                     page_key = page_filename_to_key(entry.name).lower()
                     if page_key in ["word.break", "word.global"]:
                         logging.info("Ignoring page '{}', because it conflicts with a Python keyword.".format(entry.name))
