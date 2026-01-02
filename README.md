@@ -1,7 +1,7 @@
 # Matita ✏️
 
-*Matita* is Python wrapper for the [Office VBA Object library](https://learn.microsoft.com/en-us/office/vba/api/overview/).
-It is designed to  match the VBA syntax as much as possible.
+*Matita* is a Python wrapper for the [Office VBA Object library](https://learn.microsoft.com/en-us/office/vba/api/overview/).
+It is designed to match the VBA syntax as much as possible.
 There are modules for Microsoft Access, Excel, Outlook, PowerPoint, Word.
 It can be used for Microsoft Office automation.
 
@@ -13,7 +13,11 @@ xl_app.Visible = True
 
 wkb = xl_app.Workbooks.Add()
 wks = wkb.Worksheets(1)
-wks.Cells(1,1).Value = "Hello World"
+c = wks.Cells(1,1)
+
+c.Value = "Hello World"
+xlR1C1 = -4150
+print(c.Address(None, None, xlR1C1))
 ```
 
 ```vba
@@ -30,8 +34,13 @@ Sub example()
     Dim wks As Worksheet
     Set wks = wkb.Worksheets(1)
     
-    wks.Cells(1, 1).Value = "Hello World"
+    Dim c As Range
+    Set c = wks.Cells(1, 1)
+    
+    c.Value = "Hello World"
+    Debug.Print c.Address(ReferenceStyle:=xlR1C1)
 End Sub
+
 ```
 
 ## Installation
