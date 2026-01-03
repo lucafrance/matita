@@ -24,6 +24,8 @@ def page_filename_to_key(filename):
 
 class DocPage:
 
+    RESERVED_WORDS = ["and", "application", "class", "from", "import", "property", "or"]
+
     def __init__(self, markdown_src):
         self.md = markdown_src
         self.md_tree = None
@@ -329,7 +331,8 @@ class DocPage:
 
         # Don't create lower case alias for reserved words in Python
         # E.g. `Access.BoundObjectFrame.Class`
-        if self.property_name.lower() in ["application", "class", "from", "property"]:
+        if self.property_name.lower() in self.RESERVED_WORDS:
+            logging.info(f"Lower case alias for property '{self.property_name}' of '{self.object_name}' ignored, because it is a reserved word in Python.")
             return []
 
         code = []
@@ -394,6 +397,20 @@ class DocPage:
             code_line = "return " + code_line
         code_line = " "*8 + code_line
         code.append(code_line)
+        code.append("")
+
+        # Lower case alias
+        if self.method_name.lower() in self.RESERVED_WORDS:
+            logging.info(f"Lower case alias for method '{self.method_name}' of '{self.object_name}' ignored, because it is a reserved word in Python.")
+            return code
+        code.append(f"    # Lower case alias for {self.method_name}")
+        if len(self.parameters) == 0:
+            code.append(f"    def {self.method_name.lower()}(self):")
+            code.append(f"        self.{self.method_name}()")
+        else:
+            code.append(f"    def {self.method_name.lower()}(self, {self.parameters_code()}):")
+            code.append(f"        arguments = [{", ".join(self.parameters)}]")
+            code.append(f"        self.{self.method_name}(*arguments)")
         code.append("")
 
         return code

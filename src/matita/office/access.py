@@ -137,9 +137,18 @@ class AccessObject:
     def GetDependencyInfo(self):
         return self.accessobject.GetDependencyInfo()
 
+    # Lower case alias for GetDependencyInfo
+    def getdependencyinfo(self):
+        self.GetDependencyInfo()
+
     def IsDependentUpon(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
         return self.accessobject.IsDependentUpon(*arguments)
+
+    # Lower case alias for IsDependentUpon
+    def isdependentupon(self, ObjectType=None, ObjectName=None):
+        arguments = [ObjectType, ObjectName]
+        self.IsDependentUpon(*arguments)
 
 
 class AccessObjectProperties:
@@ -185,9 +194,19 @@ class AccessObjectProperties:
         arguments = com_arguments([PropertyName, Value])
         self.accessobjectproperties.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, PropertyName=None, Value=None):
+        arguments = [PropertyName, Value]
+        self.Add(*arguments)
+
     def Remove(self, Item=None):
         arguments = com_arguments([Item])
         self.accessobjectproperties.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Item=None):
+        arguments = [Item]
+        self.Remove(*arguments)
 
 
 class AccessObjectProperty:
@@ -1612,6 +1631,11 @@ class AdditionalData:
         arguments = com_arguments([var])
         return self.additionaldata.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, var=None):
+        arguments = [var]
+        self.Add(*arguments)
+
 
 class AllDatabaseDiagrams:
 
@@ -2427,298 +2451,672 @@ class Application:
         arguments = com_arguments([ErrorNumber])
         return self.application.AccessError(*arguments)
 
+    # Lower case alias for AccessError
+    def accesserror(self, ErrorNumber=None):
+        arguments = [ErrorNumber]
+        self.AccessError(*arguments)
+
     def AddToFavorites(self):
         self.application.AddToFavorites()
+
+    # Lower case alias for AddToFavorites
+    def addtofavorites(self):
+        self.AddToFavorites()
 
     def BuildCriteria(self, Field=None, FieldType=None, Expression=None):
         arguments = com_arguments([Field, FieldType, Expression])
         return self.application.BuildCriteria(*arguments)
 
+    # Lower case alias for BuildCriteria
+    def buildcriteria(self, Field=None, FieldType=None, Expression=None):
+        arguments = [Field, FieldType, Expression]
+        self.BuildCriteria(*arguments)
+
     def CloseCurrentDatabase(self):
         return self.application.CloseCurrentDatabase()
 
+    # Lower case alias for CloseCurrentDatabase
+    def closecurrentdatabase(self):
+        self.CloseCurrentDatabase()
+
     def CodeDb(self):
         return self.application.CodeDb()
+
+    # Lower case alias for CodeDb
+    def codedb(self):
+        self.CodeDb()
 
     def ColumnHistory(self, TableName=None, ColumnName=None, queryString=None):
         arguments = com_arguments([TableName, ColumnName, queryString])
         return self.application.ColumnHistory(*arguments)
 
+    # Lower case alias for ColumnHistory
+    def columnhistory(self, TableName=None, ColumnName=None, queryString=None):
+        arguments = [TableName, ColumnName, queryString]
+        self.ColumnHistory(*arguments)
+
     def ConvertAccessProject(self, SourceFilename=None, DestinationFilename=None, DestinationFileFormat=None):
         arguments = com_arguments([SourceFilename, DestinationFilename, DestinationFileFormat])
         return self.application.ConvertAccessProject(*arguments)
+
+    # Lower case alias for ConvertAccessProject
+    def convertaccessproject(self, SourceFilename=None, DestinationFilename=None, DestinationFileFormat=None):
+        arguments = [SourceFilename, DestinationFilename, DestinationFileFormat]
+        self.ConvertAccessProject(*arguments)
 
     def CreateAccessProject(self, filepath=None, Connect=None):
         arguments = com_arguments([filepath, Connect])
         return self.application.CreateAccessProject(*arguments)
 
+    # Lower case alias for CreateAccessProject
+    def createaccessproject(self, filepath=None, Connect=None):
+        arguments = [filepath, Connect]
+        self.CreateAccessProject(*arguments)
+
     def CreateAdditionalData(self):
         return self.application.CreateAdditionalData()
+
+    # Lower case alias for CreateAdditionalData
+    def createadditionaldata(self):
+        self.CreateAdditionalData()
 
     def CreateControl(self, FormName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([FormName, ControlType, Section, Parent, ColumnName, Left, Top, Width, Height])
         return self.application.CreateControl(*arguments)
 
+    # Lower case alias for CreateControl
+    def createcontrol(self, FormName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = [FormName, ControlType, Section, Parent, ColumnName, Left, Top, Width, Height]
+        self.CreateControl(*arguments)
+
     def CreateForm(self, Database=None, FormTemplate=None):
         arguments = com_arguments([Database, FormTemplate])
         return self.application.CreateForm(*arguments)
+
+    # Lower case alias for CreateForm
+    def createform(self, Database=None, FormTemplate=None):
+        arguments = [Database, FormTemplate]
+        self.CreateForm(*arguments)
 
     def CreateGroupLevel(self, ReportName=None, Expression=None, Header=None, Footer=None):
         arguments = com_arguments([ReportName, Expression, Header, Footer])
         return self.application.CreateGroupLevel(*arguments)
 
+    # Lower case alias for CreateGroupLevel
+    def creategrouplevel(self, ReportName=None, Expression=None, Header=None, Footer=None):
+        arguments = [ReportName, Expression, Header, Footer]
+        self.CreateGroupLevel(*arguments)
+
     def CreateReport(self, Database=None, ReportTemplate=None):
         arguments = com_arguments([Database, ReportTemplate])
         return self.application.CreateReport(*arguments)
+
+    # Lower case alias for CreateReport
+    def createreport(self, Database=None, ReportTemplate=None):
+        arguments = [Database, ReportTemplate]
+        self.CreateReport(*arguments)
 
     def CreateReportControl(self, ReportName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([ReportName, ControlType, Section, Parent, ColumnName, Left, Top, Width, Height])
         return self.application.CreateReportControl(*arguments)
 
+    # Lower case alias for CreateReportControl
+    def createreportcontrol(self, ReportName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
+        arguments = [ReportName, ControlType, Section, Parent, ColumnName, Left, Top, Width, Height]
+        self.CreateReportControl(*arguments)
+
     def CurrentDb(self):
         return self.application.CurrentDb()
 
+    # Lower case alias for CurrentDb
+    def currentdb(self):
+        self.CurrentDb()
+
     def CurrentUser(self):
         return self.application.CurrentUser()
+
+    # Lower case alias for CurrentUser
+    def currentuser(self):
+        self.CurrentUser()
 
     def CurrentWebUser(self, DisplayOption=None):
         arguments = com_arguments([DisplayOption])
         return self.application.CurrentWebUser(*arguments)
 
+    # Lower case alias for CurrentWebUser
+    def currentwebuser(self, DisplayOption=None):
+        arguments = [DisplayOption]
+        self.CurrentWebUser(*arguments)
+
     def CurrentWebUserGroups(self, DisplayOption=None):
         arguments = com_arguments([DisplayOption])
         return self.application.CurrentWebUserGroups(*arguments)
+
+    # Lower case alias for CurrentWebUserGroups
+    def currentwebusergroups(self, DisplayOption=None):
+        arguments = [DisplayOption]
+        self.CurrentWebUserGroups(*arguments)
 
     def DCount(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DCount(*arguments)
 
+    # Lower case alias for DCount
+    def dcount(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DCount(*arguments)
+
     def DDEExecute(self, ChanNum=None, Command=None):
         arguments = com_arguments([ChanNum, Command])
         self.application.DDEExecute(*arguments)
+
+    # Lower case alias for DDEExecute
+    def ddeexecute(self, ChanNum=None, Command=None):
+        arguments = [ChanNum, Command]
+        self.DDEExecute(*arguments)
 
     def DDEInitiate(self, Application=None, Topic=None):
         arguments = com_arguments([Application, Topic])
         return self.application.DDEInitiate(*arguments)
 
+    # Lower case alias for DDEInitiate
+    def ddeinitiate(self, Application=None, Topic=None):
+        arguments = [Application, Topic]
+        self.DDEInitiate(*arguments)
+
     def DDEPoke(self, ChanNum=None, Item=None, Data=None):
         arguments = com_arguments([ChanNum, Item, Data])
         self.application.DDEPoke(*arguments)
+
+    # Lower case alias for DDEPoke
+    def ddepoke(self, ChanNum=None, Item=None, Data=None):
+        arguments = [ChanNum, Item, Data]
+        self.DDEPoke(*arguments)
 
     def DDERequest(self, ChanNum=None, Item=None):
         arguments = com_arguments([ChanNum, Item])
         return self.application.DDERequest(*arguments)
 
+    # Lower case alias for DDERequest
+    def dderequest(self, ChanNum=None, Item=None):
+        arguments = [ChanNum, Item]
+        self.DDERequest(*arguments)
+
     def DDETerminate(self, ChanNum=None):
         arguments = com_arguments([ChanNum])
         return self.application.DDETerminate(*arguments)
 
+    # Lower case alias for DDETerminate
+    def ddeterminate(self, ChanNum=None):
+        arguments = [ChanNum]
+        self.DDETerminate(*arguments)
+
     def DDETerminateAll(self):
         return self.application.DDETerminateAll()
 
+    # Lower case alias for DDETerminateAll
+    def ddeterminateall(self):
+        self.DDETerminateAll()
+
     def DefaultWorkspaceClone(self):
         return self.application.DefaultWorkspaceClone()
+
+    # Lower case alias for DefaultWorkspaceClone
+    def defaultworkspaceclone(self):
+        self.DefaultWorkspaceClone()
 
     def DeleteControl(self, FormName=None, ControlName=None):
         arguments = com_arguments([FormName, ControlName])
         return self.application.DeleteControl(*arguments)
 
+    # Lower case alias for DeleteControl
+    def deletecontrol(self, FormName=None, ControlName=None):
+        arguments = [FormName, ControlName]
+        self.DeleteControl(*arguments)
+
     def DeleteReportControl(self, ReportName=None, ControlName=None):
         arguments = com_arguments([ReportName, ControlName])
         return self.application.DeleteReportControl(*arguments)
+
+    # Lower case alias for DeleteReportControl
+    def deletereportcontrol(self, ReportName=None, ControlName=None):
+        arguments = [ReportName, ControlName]
+        self.DeleteReportControl(*arguments)
 
     def DFirst(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DFirst(*arguments)
 
+    # Lower case alias for DFirst
+    def dfirst(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DFirst(*arguments)
+
     def DirtyObject(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
         self.application.DirtyObject(*arguments)
+
+    # Lower case alias for DirtyObject
+    def dirtyobject(self, ObjectType=None, ObjectName=None):
+        arguments = [ObjectType, ObjectName]
+        self.DirtyObject(*arguments)
 
     def DLast(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DLast(*arguments)
 
+    # Lower case alias for DLast
+    def dlast(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DLast(*arguments)
+
     def DLookup(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DLookup(*arguments)
+
+    # Lower case alias for DLookup
+    def dlookup(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DLookup(*arguments)
 
     def DMax(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DMax(*arguments)
 
+    # Lower case alias for DMax
+    def dmax(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DMax(*arguments)
+
     def DMin(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DMin(*arguments)
+
+    # Lower case alias for DMin
+    def dmin(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DMin(*arguments)
 
     def DStDev(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DStDev(*arguments)
 
+    # Lower case alias for DStDev
+    def dstdev(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DStDev(*arguments)
+
     def DStDevP(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DStDevP(*arguments)
+
+    # Lower case alias for DStDevP
+    def dstdevp(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DStDevP(*arguments)
 
     def DSum(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DSum(*arguments)
 
+    # Lower case alias for DSum
+    def dsum(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DSum(*arguments)
+
     def DVar(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DVar(*arguments)
+
+    # Lower case alias for DVar
+    def dvar(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DVar(*arguments)
 
     def DVarP(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
         return self.application.DVarP(*arguments)
 
+    # Lower case alias for DVarP
+    def dvarp(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        self.DVarP(*arguments)
+
     def Echo(self, EchoOn=None, bstrStatusBarText=None):
         arguments = com_arguments([EchoOn, bstrStatusBarText])
         self.application.Echo(*arguments)
+
+    # Lower case alias for Echo
+    def echo(self, EchoOn=None, bstrStatusBarText=None):
+        arguments = [EchoOn, bstrStatusBarText]
+        self.Echo(*arguments)
 
     def EuroConvert(self, Number=None, SourceCurrency=None, TargetCurrency=None, FullPrecision=None, TriangulationPrecision=None):
         arguments = com_arguments([Number, SourceCurrency, TargetCurrency, FullPrecision, TriangulationPrecision])
         return self.application.EuroConvert(*arguments)
 
+    # Lower case alias for EuroConvert
+    def euroconvert(self, Number=None, SourceCurrency=None, TargetCurrency=None, FullPrecision=None, TriangulationPrecision=None):
+        arguments = [Number, SourceCurrency, TargetCurrency, FullPrecision, TriangulationPrecision]
+        self.EuroConvert(*arguments)
+
     def Eval(self, StringExpr=None):
         arguments = com_arguments([StringExpr])
         return self.application.Eval(*arguments)
+
+    # Lower case alias for Eval
+    def eval(self, StringExpr=None):
+        arguments = [StringExpr]
+        self.Eval(*arguments)
 
     def ExportNavigationPane(self, Path=None):
         arguments = com_arguments([Path])
         self.application.ExportNavigationPane(*arguments)
 
+    # Lower case alias for ExportNavigationPane
+    def exportnavigationpane(self, Path=None):
+        arguments = [Path]
+        self.ExportNavigationPane(*arguments)
+
     def ExportXML(self, ObjectType=None, DataSource=None, DataTarget=None, SchemaTarget=None, PresentationTarget=None, ImageTarget=None, Encoding=None, OtherFlags=None, WhereCondition=None, AdditionalData=None):
         arguments = com_arguments([ObjectType, DataSource, DataTarget, SchemaTarget, PresentationTarget, ImageTarget, Encoding, OtherFlags, WhereCondition, AdditionalData])
         return self.application.ExportXML(*arguments)
+
+    # Lower case alias for ExportXML
+    def exportxml(self, ObjectType=None, DataSource=None, DataTarget=None, SchemaTarget=None, PresentationTarget=None, ImageTarget=None, Encoding=None, OtherFlags=None, WhereCondition=None, AdditionalData=None):
+        arguments = [ObjectType, DataSource, DataTarget, SchemaTarget, PresentationTarget, ImageTarget, Encoding, OtherFlags, WhereCondition, AdditionalData]
+        self.ExportXML(*arguments)
 
     def FollowHyperlink(self, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
         arguments = com_arguments([Address, SubAddress, NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo])
         self.application.FollowHyperlink(*arguments)
 
+    # Lower case alias for FollowHyperlink
+    def followhyperlink(self, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        arguments = [Address, SubAddress, NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo]
+        self.FollowHyperlink(*arguments)
+
     def GetHiddenAttribute(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
         return self.application.GetHiddenAttribute(*arguments)
+
+    # Lower case alias for GetHiddenAttribute
+    def gethiddenattribute(self, ObjectType=None, ObjectName=None):
+        arguments = [ObjectType, ObjectName]
+        self.GetHiddenAttribute(*arguments)
 
     def GetOption(self, OptionName=None):
         arguments = com_arguments([OptionName])
         return self.application.GetOption(*arguments)
 
+    # Lower case alias for GetOption
+    def getoption(self, OptionName=None):
+        arguments = [OptionName]
+        self.GetOption(*arguments)
+
     def GUIDFromString(self, String=None):
         arguments = com_arguments([String])
         return self.application.GUIDFromString(*arguments)
+
+    # Lower case alias for GUIDFromString
+    def guidfromstring(self, String=None):
+        arguments = [String]
+        self.GUIDFromString(*arguments)
 
     def HtmlEncode(self, PlainText=None, Length=None):
         arguments = com_arguments([PlainText, Length])
         return self.application.HtmlEncode(*arguments)
 
+    # Lower case alias for HtmlEncode
+    def htmlencode(self, PlainText=None, Length=None):
+        arguments = [PlainText, Length]
+        self.HtmlEncode(*arguments)
+
     def hWndAccessApp(self):
         return self.application.hWndAccessApp()
+
+    # Lower case alias for hWndAccessApp
+    def hwndaccessapp(self):
+        self.hWndAccessApp()
 
     def HyperlinkPart(self, Hyperlink=None, Part=None):
         arguments = com_arguments([Hyperlink, Part])
         return self.application.HyperlinkPart(*arguments)
 
+    # Lower case alias for HyperlinkPart
+    def hyperlinkpart(self, Hyperlink=None, Part=None):
+        arguments = [Hyperlink, Part]
+        self.HyperlinkPart(*arguments)
+
     def ImportNavigationPane(self, Path=None, fAppendOnly=None):
         arguments = com_arguments([Path, fAppendOnly])
         self.application.ImportNavigationPane(*arguments)
+
+    # Lower case alias for ImportNavigationPane
+    def importnavigationpane(self, Path=None, fAppendOnly=None):
+        arguments = [Path, fAppendOnly]
+        self.ImportNavigationPane(*arguments)
 
     def ImportXML(self, DataSource=None, ImportOptions=None):
         arguments = com_arguments([DataSource, ImportOptions])
         return self.application.ImportXML(*arguments)
 
+    # Lower case alias for ImportXML
+    def importxml(self, DataSource=None, ImportOptions=None):
+        arguments = [DataSource, ImportOptions]
+        self.ImportXML(*arguments)
+
     def InstantiateTemplate(self, Path=None):
         arguments = com_arguments([Path])
         self.application.InstantiateTemplate(*arguments)
+
+    # Lower case alias for InstantiateTemplate
+    def instantiatetemplate(self, Path=None):
+        arguments = [Path]
+        self.InstantiateTemplate(*arguments)
 
     def IsCurrentWebUserInGroup(self, GroupNameOrID=None):
         arguments = com_arguments([GroupNameOrID])
         return self.application.IsCurrentWebUserInGroup(*arguments)
 
+    # Lower case alias for IsCurrentWebUserInGroup
+    def iscurrentwebuseringroup(self, GroupNameOrID=None):
+        arguments = [GroupNameOrID]
+        self.IsCurrentWebUserInGroup(*arguments)
+
     def LoadCustomUI(self, CustomUIName=None, CustomUIXML=None):
         arguments = com_arguments([CustomUIName, CustomUIXML])
         self.application.LoadCustomUI(*arguments)
+
+    # Lower case alias for LoadCustomUI
+    def loadcustomui(self, CustomUIName=None, CustomUIXML=None):
+        arguments = [CustomUIName, CustomUIXML]
+        self.LoadCustomUI(*arguments)
 
     def LoadFromAXL(self, ObjectType=None, ObjectName=None, FileName=None):
         arguments = com_arguments([ObjectType, ObjectName, FileName])
         self.application.LoadFromAXL(*arguments)
 
+    # Lower case alias for LoadFromAXL
+    def loadfromaxl(self, ObjectType=None, ObjectName=None, FileName=None):
+        arguments = [ObjectType, ObjectName, FileName]
+        self.LoadFromAXL(*arguments)
+
     def LoadPicture(self, FileName=None):
         arguments = com_arguments([FileName])
         return self.application.LoadPicture(*arguments)
+
+    # Lower case alias for LoadPicture
+    def loadpicture(self, FileName=None):
+        arguments = [FileName]
+        self.LoadPicture(*arguments)
 
     def NewAccessProject(self, filepath=None, Connect=None):
         arguments = com_arguments([filepath, Connect])
         return self.application.NewAccessProject(*arguments)
 
+    # Lower case alias for NewAccessProject
+    def newaccessproject(self, filepath=None, Connect=None):
+        arguments = [filepath, Connect]
+        self.NewAccessProject(*arguments)
+
     def NewCurrentDatabase(self, filepath=None, FileFormat=None, Template=None, SiteAddress=None, ListID=None):
         arguments = com_arguments([filepath, FileFormat, Template, SiteAddress, ListID])
         self.application.NewCurrentDatabase(*arguments)
+
+    # Lower case alias for NewCurrentDatabase
+    def newcurrentdatabase(self, filepath=None, FileFormat=None, Template=None, SiteAddress=None, ListID=None):
+        arguments = [filepath, FileFormat, Template, SiteAddress, ListID]
+        self.NewCurrentDatabase(*arguments)
 
     def Nz(self, Value=None, ValueIfNull=None):
         arguments = com_arguments([Value, ValueIfNull])
         return self.application.Nz(*arguments)
 
+    # Lower case alias for Nz
+    def nz(self, Value=None, ValueIfNull=None):
+        arguments = [Value, ValueIfNull]
+        self.Nz(*arguments)
+
     def OpenAccessProject(self, filepath=None, Exclusive=None):
         arguments = com_arguments([filepath, Exclusive])
         return self.application.OpenAccessProject(*arguments)
+
+    # Lower case alias for OpenAccessProject
+    def openaccessproject(self, filepath=None, Exclusive=None):
+        arguments = [filepath, Exclusive]
+        self.OpenAccessProject(*arguments)
 
     def OpenCurrentDatabase(self, filepath=None, Exclusive=None, bstrPassword=None):
         arguments = com_arguments([filepath, Exclusive, bstrPassword])
         return self.application.OpenCurrentDatabase(*arguments)
 
+    # Lower case alias for OpenCurrentDatabase
+    def opencurrentdatabase(self, filepath=None, Exclusive=None, bstrPassword=None):
+        arguments = [filepath, Exclusive, bstrPassword]
+        self.OpenCurrentDatabase(*arguments)
+
     def PlainText(self, RichText=None, Length=None):
         arguments = com_arguments([RichText, Length])
         return self.application.PlainText(*arguments)
+
+    # Lower case alias for PlainText
+    def plaintext(self, RichText=None, Length=None):
+        arguments = [RichText, Length]
+        self.PlainText(*arguments)
 
     def Quit(self, Option=None):
         arguments = com_arguments([Option])
         self.application.Quit(*arguments)
 
+    # Lower case alias for Quit
+    def quit(self, Option=None):
+        arguments = [Option]
+        self.Quit(*arguments)
+
     def RefreshDatabaseWindow(self):
         return self.application.RefreshDatabaseWindow()
 
+    # Lower case alias for RefreshDatabaseWindow
+    def refreshdatabasewindow(self):
+        self.RefreshDatabaseWindow()
+
     def RefreshTitleBar(self):
         return self.application.RefreshTitleBar()
+
+    # Lower case alias for RefreshTitleBar
+    def refreshtitlebar(self):
+        self.RefreshTitleBar()
 
     def Run(self, Procedure=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Procedure, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
         return self.application.Run(*arguments)
 
+    # Lower case alias for Run
+    def run(self, Procedure=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
+        arguments = [Procedure, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30]
+        self.Run(*arguments)
+
     def RunCommand(self, Command=None):
         arguments = com_arguments([Command])
         self.application.RunCommand(*arguments)
+
+    # Lower case alias for RunCommand
+    def runcommand(self, Command=None):
+        arguments = [Command]
+        self.RunCommand(*arguments)
 
     def SaveAsAXL(self, ObjectType=None, ObjectName=None, FileName=None):
         arguments = com_arguments([ObjectType, ObjectName, FileName])
         self.application.SaveAsAXL(*arguments)
 
+    # Lower case alias for SaveAsAXL
+    def saveasaxl(self, ObjectType=None, ObjectName=None, FileName=None):
+        arguments = [ObjectType, ObjectName, FileName]
+        self.SaveAsAXL(*arguments)
+
     def SaveAsTemplate(self, Path=None, Title=None, IconPath=None, CoreTable=None, Category=None, PreviewPath=None, Description=None, InstantiationForm=None, ApplicationPart=None, IncludeData=None):
         arguments = com_arguments([Path, Title, IconPath, CoreTable, Category, PreviewPath, Description, InstantiationForm, ApplicationPart, IncludeData])
         self.application.SaveAsTemplate(*arguments)
+
+    # Lower case alias for SaveAsTemplate
+    def saveastemplate(self, Path=None, Title=None, IconPath=None, CoreTable=None, Category=None, PreviewPath=None, Description=None, InstantiationForm=None, ApplicationPart=None, IncludeData=None):
+        arguments = [Path, Title, IconPath, CoreTable, Category, PreviewPath, Description, InstantiationForm, ApplicationPart, IncludeData]
+        self.SaveAsTemplate(*arguments)
 
     def SetDefaultWorkgroupFile(self, Path=None):
         arguments = com_arguments([Path])
         return self.application.SetDefaultWorkgroupFile(*arguments)
 
+    # Lower case alias for SetDefaultWorkgroupFile
+    def setdefaultworkgroupfile(self, Path=None):
+        arguments = [Path]
+        self.SetDefaultWorkgroupFile(*arguments)
+
     def SetHiddenAttribute(self, ObjectType=None, ObjectName=None, fHidden=None):
         arguments = com_arguments([ObjectType, ObjectName, fHidden])
         return self.application.SetHiddenAttribute(*arguments)
+
+    # Lower case alias for SetHiddenAttribute
+    def sethiddenattribute(self, ObjectType=None, ObjectName=None, fHidden=None):
+        arguments = [ObjectType, ObjectName, fHidden]
+        self.SetHiddenAttribute(*arguments)
 
     def SetOption(self, OptionName=None, Setting=None):
         arguments = com_arguments([OptionName, Setting])
         self.application.SetOption(*arguments)
 
+    # Lower case alias for SetOption
+    def setoption(self, OptionName=None, Setting=None):
+        arguments = [OptionName, Setting]
+        self.SetOption(*arguments)
+
     def StringFromGUID(self, Guid=None):
         arguments = com_arguments([Guid])
         return self.application.StringFromGUID(*arguments)
+
+    # Lower case alias for StringFromGUID
+    def stringfromguid(self, Guid=None):
+        arguments = [Guid]
+        self.StringFromGUID(*arguments)
 
     def SysCmd(self, Action=None, Argument2=None, Argument3=None):
         arguments = com_arguments([Action, Argument2, Argument3])
         return self.application.SysCmd(*arguments)
 
+    # Lower case alias for SysCmd
+    def syscmd(self, Action=None, Argument2=None, Argument3=None):
+        arguments = [Action, Argument2, Argument3]
+        self.SysCmd(*arguments)
+
     def TransformXML(self, DataSource=None, TransformSource=None, OutputTarget=None, WellFormedXMLOutput=None, ScriptOption=None):
         arguments = com_arguments([DataSource, TransformSource, OutputTarget, WellFormedXMLOutput, ScriptOption])
         return self.application.TransformXML(*arguments)
+
+    # Lower case alias for TransformXML
+    def transformxml(self, DataSource=None, TransformSource=None, OutputTarget=None, WellFormedXMLOutput=None, ScriptOption=None):
+        arguments = [DataSource, TransformSource, OutputTarget, WellFormedXMLOutput, ScriptOption]
+        self.TransformXML(*arguments)
 
 
 class Attachment:
@@ -4243,21 +4641,46 @@ class Attachment:
     def Back(self):
         self.attachment.Back()
 
+    # Lower case alias for Back
+    def back(self):
+        self.Back()
+
     def Forward(self):
         self.attachment.Forward()
+
+    # Lower case alias for Forward
+    def forward(self):
+        self.Forward()
 
     def Move(self, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Left, Top, Width, Height])
         self.attachment.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.attachment.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         self.attachment.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.attachment.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class AutoCorrect:
@@ -5868,14 +6291,31 @@ class BoundObjectFrame:
         arguments = com_arguments([Left, Top, Width, Height])
         self.boundobjectframe.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.boundobjectframe.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.boundobjectframe.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.boundobjectframe.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Chart:
@@ -8465,17 +8905,38 @@ class CheckBox:
         arguments = com_arguments([Left, Top, Width, Height])
         self.checkbox.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.checkbox.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.checkbox.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.checkbox.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.checkbox.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class CodeData:
@@ -8748,15 +9209,33 @@ class CodeProject:
         arguments = com_arguments([SharedImageName, FileName])
         self.codeproject.AddSharedImage(*arguments)
 
+    # Lower case alias for AddSharedImage
+    def addsharedimage(self, SharedImageName=None, FileName=None):
+        arguments = [SharedImageName, FileName]
+        self.AddSharedImage(*arguments)
+
     def CloseConnection(self):
         return self.codeproject.CloseConnection()
+
+    # Lower case alias for CloseConnection
+    def closeconnection(self):
+        self.CloseConnection()
 
     def OpenConnection(self, BaseConnectionString=None, UserID=None, Password=None):
         arguments = com_arguments([BaseConnectionString, UserID, Password])
         self.codeproject.OpenConnection(*arguments)
 
+    # Lower case alias for OpenConnection
+    def openconnection(self, BaseConnectionString=None, UserID=None, Password=None):
+        arguments = [BaseConnectionString, UserID, Password]
+        self.OpenConnection(*arguments)
+
     def UpdateDependencyInfo(self):
         return self.codeproject.UpdateDependencyInfo()
+
+    # Lower case alias for UpdateDependencyInfo
+    def updatedependencyinfo(self):
+        self.UpdateDependencyInfo()
 
 
 class ComboBox:
@@ -11071,28 +11550,63 @@ class ComboBox:
         arguments = com_arguments([Item, Index])
         self.combobox.AddItem(*arguments)
 
+    # Lower case alias for AddItem
+    def additem(self, Item=None, Index=None):
+        arguments = [Item, Index]
+        self.AddItem(*arguments)
+
     def Dropdown(self):
         return self.combobox.Dropdown()
+
+    # Lower case alias for Dropdown
+    def dropdown(self):
+        self.Dropdown()
 
     def Move(self, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Left, Top, Width, Height])
         self.combobox.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def RemoveItem(self, Index=None):
         arguments = com_arguments([Index])
         self.combobox.RemoveItem(*arguments)
 
+    # Lower case alias for RemoveItem
+    def removeitem(self, Index=None):
+        arguments = [Index]
+        self.RemoveItem(*arguments)
+
     def Requery(self):
         self.combobox.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.combobox.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.combobox.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.combobox.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class CommandButton:
@@ -13120,14 +13634,31 @@ class CommandButton:
         arguments = com_arguments([Left, Top, Width, Height])
         self.commandbutton.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.commandbutton.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.commandbutton.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.commandbutton.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Control:
@@ -13576,21 +14107,46 @@ class Control:
     def Dropdown(self):
         return self.control.Dropdown()
 
+    # Lower case alias for Dropdown
+    def dropdown(self):
+        self.Dropdown()
+
     def Move(self, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Left, Top, Width, Height])
         self.control.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.control.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.control.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.control.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.control.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class Controls:
@@ -13903,15 +14459,33 @@ class CurrentProject:
         arguments = com_arguments([SharedImageName, FileName])
         self.currentproject.AddSharedImage(*arguments)
 
+    # Lower case alias for AddSharedImage
+    def addsharedimage(self, SharedImageName=None, FileName=None):
+        arguments = [SharedImageName, FileName]
+        self.AddSharedImage(*arguments)
+
     def CloseConnection(self):
         return self.currentproject.CloseConnection()
+
+    # Lower case alias for CloseConnection
+    def closeconnection(self):
+        self.CloseConnection()
 
     def OpenConnection(self, BaseConnectionString=None, UserID=None, Password=None):
         arguments = com_arguments([BaseConnectionString, UserID, Password])
         self.currentproject.OpenConnection(*arguments)
 
+    # Lower case alias for OpenConnection
+    def openconnection(self, BaseConnectionString=None, UserID=None, Password=None):
+        arguments = [BaseConnectionString, UserID, Password]
+        self.OpenConnection(*arguments)
+
     def UpdateDependencyInfo(self):
         self.currentproject.UpdateDependencyInfo()
+
+    # Lower case alias for UpdateDependencyInfo
+    def updatedependencyinfo(self):
+        self.UpdateDependencyInfo()
 
 
 class CustomControl:
@@ -14972,14 +15546,31 @@ class CustomControl:
         arguments = com_arguments([Left, Top, Width, Height])
         self.customcontrol.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.customcontrol.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.customcontrol.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.customcontrol.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class DependencyInfo:
@@ -15091,254 +15682,573 @@ class DoCmd:
         arguments = com_arguments([MenuName, MenuMacroName, StatusBarText])
         self.docmd.AddMenu(*arguments)
 
+    # Lower case alias for AddMenu
+    def addmenu(self, MenuName=None, MenuMacroName=None, StatusBarText=None):
+        arguments = [MenuName, MenuMacroName, StatusBarText]
+        self.AddMenu(*arguments)
+
     def ApplyFilter(self, FilterName=None, WhereCondition=None, ControlName=None):
         arguments = com_arguments([FilterName, WhereCondition, ControlName])
         self.docmd.ApplyFilter(*arguments)
 
+    # Lower case alias for ApplyFilter
+    def applyfilter(self, FilterName=None, WhereCondition=None, ControlName=None):
+        arguments = [FilterName, WhereCondition, ControlName]
+        self.ApplyFilter(*arguments)
+
     def Beep(self):
         self.docmd.Beep()
+
+    # Lower case alias for Beep
+    def beep(self):
+        self.Beep()
 
     def BrowseTo(self, ObjectType=None, ObjectName=None, PathtoSubformControl=None, WhereCondition=None, Page=None, DataMode=None):
         arguments = com_arguments([ObjectType, ObjectName, PathtoSubformControl, WhereCondition, Page, DataMode])
         self.docmd.BrowseTo(*arguments)
 
+    # Lower case alias for BrowseTo
+    def browseto(self, ObjectType=None, ObjectName=None, PathtoSubformControl=None, WhereCondition=None, Page=None, DataMode=None):
+        arguments = [ObjectType, ObjectName, PathtoSubformControl, WhereCondition, Page, DataMode]
+        self.BrowseTo(*arguments)
+
     def CancelEvent(self):
         self.docmd.CancelEvent()
 
+    # Lower case alias for CancelEvent
+    def cancelevent(self):
+        self.CancelEvent()
+
     def ClearMacroError(self):
         self.docmd.ClearMacroError()
+
+    # Lower case alias for ClearMacroError
+    def clearmacroerror(self):
+        self.ClearMacroError()
 
     def Close(self, ObjectType=None, ObjectName=None, Save=None):
         arguments = com_arguments([ObjectType, ObjectName, Save])
         self.docmd.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, ObjectType=None, ObjectName=None, Save=None):
+        arguments = [ObjectType, ObjectName, Save]
+        self.Close(*arguments)
+
     def CloseDatabase(self):
         self.docmd.CloseDatabase()
+
+    # Lower case alias for CloseDatabase
+    def closedatabase(self):
+        self.CloseDatabase()
 
     def CopyDatabaseFile(self, DatabaseFileName=None, OverwriteExistingFile=None, DisconnectAllUsers=None):
         arguments = com_arguments([DatabaseFileName, OverwriteExistingFile, DisconnectAllUsers])
         self.docmd.CopyDatabaseFile(*arguments)
 
+    # Lower case alias for CopyDatabaseFile
+    def copydatabasefile(self, DatabaseFileName=None, OverwriteExistingFile=None, DisconnectAllUsers=None):
+        arguments = [DatabaseFileName, OverwriteExistingFile, DisconnectAllUsers]
+        self.CopyDatabaseFile(*arguments)
+
     def CopyObject(self, DestinationDatabase=None, NewName=None, SourceObjectType=None, SourceObjectName=None):
         arguments = com_arguments([DestinationDatabase, NewName, SourceObjectType, SourceObjectName])
         self.docmd.CopyObject(*arguments)
+
+    # Lower case alias for CopyObject
+    def copyobject(self, DestinationDatabase=None, NewName=None, SourceObjectType=None, SourceObjectName=None):
+        arguments = [DestinationDatabase, NewName, SourceObjectType, SourceObjectName]
+        self.CopyObject(*arguments)
 
     def DeleteObject(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
         self.docmd.DeleteObject(*arguments)
 
+    # Lower case alias for DeleteObject
+    def deleteobject(self, ObjectType=None, ObjectName=None):
+        arguments = [ObjectType, ObjectName]
+        self.DeleteObject(*arguments)
+
     def DoMenuItem(self, MenuBar=None, MenuName=None, Command=None, Subcommand=None, Version=None):
         arguments = com_arguments([MenuBar, MenuName, Command, Subcommand, Version])
         self.docmd.DoMenuItem(*arguments)
+
+    # Lower case alias for DoMenuItem
+    def domenuitem(self, MenuBar=None, MenuName=None, Command=None, Subcommand=None, Version=None):
+        arguments = [MenuBar, MenuName, Command, Subcommand, Version]
+        self.DoMenuItem(*arguments)
 
     def Echo(self, EchoOn=None, StatusBarText=None):
         arguments = com_arguments([EchoOn, StatusBarText])
         self.docmd.Echo(*arguments)
 
+    # Lower case alias for Echo
+    def echo(self, EchoOn=None, StatusBarText=None):
+        arguments = [EchoOn, StatusBarText]
+        self.Echo(*arguments)
+
     def FindNext(self):
         self.docmd.FindNext()
+
+    # Lower case alias for FindNext
+    def findnext(self):
+        self.FindNext()
 
     def FindRecord(self, FindWhat=None, Match=None, MatchCase=None, Search=None, SearchAsFormatted=None, OnlyCurrentField=None, FindFirst=None):
         arguments = com_arguments([FindWhat, Match, MatchCase, Search, SearchAsFormatted, OnlyCurrentField, FindFirst])
         self.docmd.FindRecord(*arguments)
 
+    # Lower case alias for FindRecord
+    def findrecord(self, FindWhat=None, Match=None, MatchCase=None, Search=None, SearchAsFormatted=None, OnlyCurrentField=None, FindFirst=None):
+        arguments = [FindWhat, Match, MatchCase, Search, SearchAsFormatted, OnlyCurrentField, FindFirst]
+        self.FindRecord(*arguments)
+
     def GoToControl(self, ControlName=None):
         arguments = com_arguments([ControlName])
         self.docmd.GoToControl(*arguments)
+
+    # Lower case alias for GoToControl
+    def gotocontrol(self, ControlName=None):
+        arguments = [ControlName]
+        self.GoToControl(*arguments)
 
     def GoToPage(self, PageNumber=None, Right=None, Down=None):
         arguments = com_arguments([PageNumber, Right, Down])
         return self.docmd.GoToPage(*arguments)
 
+    # Lower case alias for GoToPage
+    def gotopage(self, PageNumber=None, Right=None, Down=None):
+        arguments = [PageNumber, Right, Down]
+        self.GoToPage(*arguments)
+
     def GoToRecord(self, ObjectType=None, ObjectName=None, Record=None, Offset=None):
         arguments = com_arguments([ObjectType, ObjectName, Record, Offset])
         self.docmd.GoToRecord(*arguments)
+
+    # Lower case alias for GoToRecord
+    def gotorecord(self, ObjectType=None, ObjectName=None, Record=None, Offset=None):
+        arguments = [ObjectType, ObjectName, Record, Offset]
+        self.GoToRecord(*arguments)
 
     def Hourglass(self, HourglassOn=None):
         arguments = com_arguments([HourglassOn])
         self.docmd.Hourglass(*arguments)
 
+    # Lower case alias for Hourglass
+    def hourglass(self, HourglassOn=None):
+        arguments = [HourglassOn]
+        self.Hourglass(*arguments)
+
     def LockNavigationPane(self, Lock=None):
         arguments = com_arguments([Lock])
         self.docmd.LockNavigationPane(*arguments)
 
+    # Lower case alias for LockNavigationPane
+    def locknavigationpane(self, Lock=None):
+        arguments = [Lock]
+        self.LockNavigationPane(*arguments)
+
     def Maximize(self):
         self.docmd.Maximize()
 
+    # Lower case alias for Maximize
+    def maximize(self):
+        self.Maximize()
+
     def Minimize(self):
         self.docmd.Minimize()
+
+    # Lower case alias for Minimize
+    def minimize(self):
+        self.Minimize()
 
     def MoveSize(self, Right=None, Down=None, Width=None, Height=None):
         arguments = com_arguments([Right, Down, Width, Height])
         self.docmd.MoveSize(*arguments)
 
+    # Lower case alias for MoveSize
+    def movesize(self, Right=None, Down=None, Width=None, Height=None):
+        arguments = [Right, Down, Width, Height]
+        self.MoveSize(*arguments)
+
     def NavigateTo(self, Category=None, Group=None):
         arguments = com_arguments([Category, Group])
         self.docmd.NavigateTo(*arguments)
+
+    # Lower case alias for NavigateTo
+    def navigateto(self, Category=None, Group=None):
+        arguments = [Category, Group]
+        self.NavigateTo(*arguments)
 
     def OpenDataAccessPage(self, DataAccessPageName=None, View=None):
         arguments = com_arguments([DataAccessPageName, View])
         self.docmd.OpenDataAccessPage(*arguments)
 
+    # Lower case alias for OpenDataAccessPage
+    def opendataaccesspage(self, DataAccessPageName=None, View=None):
+        arguments = [DataAccessPageName, View]
+        self.OpenDataAccessPage(*arguments)
+
     def OpenDiagram(self, DiagramName=None):
         arguments = com_arguments([DiagramName])
         self.docmd.OpenDiagram(*arguments)
+
+    # Lower case alias for OpenDiagram
+    def opendiagram(self, DiagramName=None):
+        arguments = [DiagramName]
+        self.OpenDiagram(*arguments)
 
     def OpenForm(self, FormName=None, View=None, FilterName=None, WhereCondition=None, DataMode=None, WindowMode=None, OpenArgs=None):
         arguments = com_arguments([FormName, View, FilterName, WhereCondition, DataMode, WindowMode, OpenArgs])
         self.docmd.OpenForm(*arguments)
 
+    # Lower case alias for OpenForm
+    def openform(self, FormName=None, View=None, FilterName=None, WhereCondition=None, DataMode=None, WindowMode=None, OpenArgs=None):
+        arguments = [FormName, View, FilterName, WhereCondition, DataMode, WindowMode, OpenArgs]
+        self.OpenForm(*arguments)
+
     def OpenFunction(self, FunctionName=None, View=None, DataMode=None):
         arguments = com_arguments([FunctionName, View, DataMode])
         self.docmd.OpenFunction(*arguments)
+
+    # Lower case alias for OpenFunction
+    def openfunction(self, FunctionName=None, View=None, DataMode=None):
+        arguments = [FunctionName, View, DataMode]
+        self.OpenFunction(*arguments)
 
     def OpenModule(self, ModuleName=None, ProcedureName=None):
         arguments = com_arguments([ModuleName, ProcedureName])
         self.docmd.OpenModule(*arguments)
 
+    # Lower case alias for OpenModule
+    def openmodule(self, ModuleName=None, ProcedureName=None):
+        arguments = [ModuleName, ProcedureName]
+        self.OpenModule(*arguments)
+
     def OpenQuery(self, QueryName=None, View=None, DataMode=None):
         arguments = com_arguments([QueryName, View, DataMode])
         self.docmd.OpenQuery(*arguments)
+
+    # Lower case alias for OpenQuery
+    def openquery(self, QueryName=None, View=None, DataMode=None):
+        arguments = [QueryName, View, DataMode]
+        self.OpenQuery(*arguments)
 
     def OpenReport(self, ReportName=None, View=None, FilterName=None, WhereCondition=None, WindowMode=None, OpenArgs=None):
         arguments = com_arguments([ReportName, View, FilterName, WhereCondition, WindowMode, OpenArgs])
         self.docmd.OpenReport(*arguments)
 
+    # Lower case alias for OpenReport
+    def openreport(self, ReportName=None, View=None, FilterName=None, WhereCondition=None, WindowMode=None, OpenArgs=None):
+        arguments = [ReportName, View, FilterName, WhereCondition, WindowMode, OpenArgs]
+        self.OpenReport(*arguments)
+
     def OpenStoredProcedure(self, ProcedureName=None, View=None, DataMode=None):
         arguments = com_arguments([ProcedureName, View, DataMode])
         self.docmd.OpenStoredProcedure(*arguments)
+
+    # Lower case alias for OpenStoredProcedure
+    def openstoredprocedure(self, ProcedureName=None, View=None, DataMode=None):
+        arguments = [ProcedureName, View, DataMode]
+        self.OpenStoredProcedure(*arguments)
 
     def OpenTable(self, TableName=None, View=None, DataMode=None):
         arguments = com_arguments([TableName, View, DataMode])
         self.docmd.OpenTable(*arguments)
 
+    # Lower case alias for OpenTable
+    def opentable(self, TableName=None, View=None, DataMode=None):
+        arguments = [TableName, View, DataMode]
+        self.OpenTable(*arguments)
+
     def OpenView(self, ViewName=None, View=None, DataMode=None):
         arguments = com_arguments([ViewName, View, DataMode])
         self.docmd.OpenView(*arguments)
+
+    # Lower case alias for OpenView
+    def openview(self, ViewName=None, View=None, DataMode=None):
+        arguments = [ViewName, View, DataMode]
+        self.OpenView(*arguments)
 
     def OutputTo(self, ObjectType=None, ObjectName=None, OutputFormat=None, OutputFile=None, AutoStart=None, TemplateFile=None, Encoding=None, OutputQuality=None):
         arguments = com_arguments([ObjectType, ObjectName, OutputFormat, OutputFile, AutoStart, TemplateFile, Encoding, OutputQuality])
         self.docmd.OutputTo(*arguments)
 
+    # Lower case alias for OutputTo
+    def outputto(self, ObjectType=None, ObjectName=None, OutputFormat=None, OutputFile=None, AutoStart=None, TemplateFile=None, Encoding=None, OutputQuality=None):
+        arguments = [ObjectType, ObjectName, OutputFormat, OutputFile, AutoStart, TemplateFile, Encoding, OutputQuality]
+        self.OutputTo(*arguments)
+
     def PrintOut(self, PrintRange=None, PageFrom=None, PageTo=None, PrintQuality=None, Copies=None, CollateCopies=None):
         arguments = com_arguments([PrintRange, PageFrom, PageTo, PrintQuality, Copies, CollateCopies])
         self.docmd.PrintOut(*arguments)
+
+    # Lower case alias for PrintOut
+    def printout(self, PrintRange=None, PageFrom=None, PageTo=None, PrintQuality=None, Copies=None, CollateCopies=None):
+        arguments = [PrintRange, PageFrom, PageTo, PrintQuality, Copies, CollateCopies]
+        self.PrintOut(*arguments)
 
     def Quit(self, Options=None):
         arguments = com_arguments([Options])
         self.docmd.Quit(*arguments)
 
+    # Lower case alias for Quit
+    def quit(self, Options=None):
+        arguments = [Options]
+        self.Quit(*arguments)
+
     def RefreshRecord(self):
         self.docmd.RefreshRecord()
+
+    # Lower case alias for RefreshRecord
+    def refreshrecord(self):
+        self.RefreshRecord()
 
     def Rename(self, NewName=None, ObjectType=None, OldName=None):
         arguments = com_arguments([NewName, ObjectType, OldName])
         self.docmd.Rename(*arguments)
 
+    # Lower case alias for Rename
+    def rename(self, NewName=None, ObjectType=None, OldName=None):
+        arguments = [NewName, ObjectType, OldName]
+        self.Rename(*arguments)
+
     def RepaintObject(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
         self.docmd.RepaintObject(*arguments)
+
+    # Lower case alias for RepaintObject
+    def repaintobject(self, ObjectType=None, ObjectName=None):
+        arguments = [ObjectType, ObjectName]
+        self.RepaintObject(*arguments)
 
     def Requery(self, ControlName=None):
         arguments = com_arguments([ControlName])
         self.docmd.Requery(*arguments)
 
+    # Lower case alias for Requery
+    def requery(self, ControlName=None):
+        arguments = [ControlName]
+        self.Requery(*arguments)
+
     def Restore(self):
         self.docmd.Restore()
+
+    # Lower case alias for Restore
+    def restore(self):
+        self.Restore()
 
     def RunCommand(self, Command=None):
         arguments = com_arguments([Command])
         self.docmd.RunCommand(*arguments)
 
+    # Lower case alias for RunCommand
+    def runcommand(self, Command=None):
+        arguments = [Command]
+        self.RunCommand(*arguments)
+
     def RunDataMacro(self, MacroName=None):
         arguments = com_arguments([MacroName])
         self.docmd.RunDataMacro(*arguments)
+
+    # Lower case alias for RunDataMacro
+    def rundatamacro(self, MacroName=None):
+        arguments = [MacroName]
+        self.RunDataMacro(*arguments)
 
     def RunMacro(self, MacroName=None, RepeatCount=None, RepeatExpression=None):
         arguments = com_arguments([MacroName, RepeatCount, RepeatExpression])
         self.docmd.RunMacro(*arguments)
 
+    # Lower case alias for RunMacro
+    def runmacro(self, MacroName=None, RepeatCount=None, RepeatExpression=None):
+        arguments = [MacroName, RepeatCount, RepeatExpression]
+        self.RunMacro(*arguments)
+
     def RunSavedImportExport(self, SavedImportExportName=None):
         arguments = com_arguments([SavedImportExportName])
         self.docmd.RunSavedImportExport(*arguments)
+
+    # Lower case alias for RunSavedImportExport
+    def runsavedimportexport(self, SavedImportExportName=None):
+        arguments = [SavedImportExportName]
+        self.RunSavedImportExport(*arguments)
 
     def RunSQL(self, SQLStatement=None, UseTransaction=None):
         arguments = com_arguments([SQLStatement, UseTransaction])
         self.docmd.RunSQL(*arguments)
 
+    # Lower case alias for RunSQL
+    def runsql(self, SQLStatement=None, UseTransaction=None):
+        arguments = [SQLStatement, UseTransaction]
+        self.RunSQL(*arguments)
+
     def Save(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
         self.docmd.Save(*arguments)
+
+    # Lower case alias for Save
+    def save(self, ObjectType=None, ObjectName=None):
+        arguments = [ObjectType, ObjectName]
+        self.Save(*arguments)
 
     def SearchForRecord(self, ObjectType=None, ObjectName=None, Record=None, WhereCondition=None):
         arguments = com_arguments([ObjectType, ObjectName, Record, WhereCondition])
         self.docmd.SearchForRecord(*arguments)
 
+    # Lower case alias for SearchForRecord
+    def searchforrecord(self, ObjectType=None, ObjectName=None, Record=None, WhereCondition=None):
+        arguments = [ObjectType, ObjectName, Record, WhereCondition]
+        self.SearchForRecord(*arguments)
+
     def SelectObject(self, ObjectType=None, ObjectName=None, InNavigationPane=None):
         arguments = com_arguments([ObjectType, ObjectName, InNavigationPane])
         self.docmd.SelectObject(*arguments)
+
+    # Lower case alias for SelectObject
+    def selectobject(self, ObjectType=None, ObjectName=None, InNavigationPane=None):
+        arguments = [ObjectType, ObjectName, InNavigationPane]
+        self.SelectObject(*arguments)
 
     def SendObject(self, ObjectType=None, ObjectName=None, OutputFormat=None, To=None, Cc=None, Bcc=None, Subject=None, MessageText=None, EditMessage=None, TemplateFile=None):
         arguments = com_arguments([ObjectType, ObjectName, OutputFormat, To, Cc, Bcc, Subject, MessageText, EditMessage, TemplateFile])
         self.docmd.SendObject(*arguments)
 
+    # Lower case alias for SendObject
+    def sendobject(self, ObjectType=None, ObjectName=None, OutputFormat=None, To=None, Cc=None, Bcc=None, Subject=None, MessageText=None, EditMessage=None, TemplateFile=None):
+        arguments = [ObjectType, ObjectName, OutputFormat, To, Cc, Bcc, Subject, MessageText, EditMessage, TemplateFile]
+        self.SendObject(*arguments)
+
     def SetDisplayedCategories(self, Show=None, Category=None):
         arguments = com_arguments([Show, Category])
         self.docmd.SetDisplayedCategories(*arguments)
+
+    # Lower case alias for SetDisplayedCategories
+    def setdisplayedcategories(self, Show=None, Category=None):
+        arguments = [Show, Category]
+        self.SetDisplayedCategories(*arguments)
 
     def SetFilter(self, FilterName=None, WhereCondition=None, ControlName=None):
         arguments = com_arguments([FilterName, WhereCondition, ControlName])
         self.docmd.SetFilter(*arguments)
 
+    # Lower case alias for SetFilter
+    def setfilter(self, FilterName=None, WhereCondition=None, ControlName=None):
+        arguments = [FilterName, WhereCondition, ControlName]
+        self.SetFilter(*arguments)
+
     def SetMenuItem(self, MenuIndex=None, CommandIndex=None, SubcommandIndex=None, Flag=None):
         arguments = com_arguments([MenuIndex, CommandIndex, SubcommandIndex, Flag])
         self.docmd.SetMenuItem(*arguments)
+
+    # Lower case alias for SetMenuItem
+    def setmenuitem(self, MenuIndex=None, CommandIndex=None, SubcommandIndex=None, Flag=None):
+        arguments = [MenuIndex, CommandIndex, SubcommandIndex, Flag]
+        self.SetMenuItem(*arguments)
 
     def SetOrderBy(self, OrderBy=None, ControlName=None):
         arguments = com_arguments([OrderBy, ControlName])
         self.docmd.SetOrderBy(*arguments)
 
+    # Lower case alias for SetOrderBy
+    def setorderby(self, OrderBy=None, ControlName=None):
+        arguments = [OrderBy, ControlName]
+        self.SetOrderBy(*arguments)
+
     def SetParameter(self, Name=None, Expression=None):
         arguments = com_arguments([Name, Expression])
         self.docmd.SetParameter(*arguments)
+
+    # Lower case alias for SetParameter
+    def setparameter(self, Name=None, Expression=None):
+        arguments = [Name, Expression]
+        self.SetParameter(*arguments)
 
     def SetProperty(self, ControlName=None, Property=None, Value=None):
         arguments = com_arguments([ControlName, Property, Value])
         self.docmd.SetProperty(*arguments)
 
+    # Lower case alias for SetProperty
+    def setproperty(self, ControlName=None, Property=None, Value=None):
+        arguments = [ControlName, Property, Value]
+        self.SetProperty(*arguments)
+
     def SetWarnings(self, WarningsOn=None):
         arguments = com_arguments([WarningsOn])
         self.docmd.SetWarnings(*arguments)
 
+    # Lower case alias for SetWarnings
+    def setwarnings(self, WarningsOn=None):
+        arguments = [WarningsOn]
+        self.SetWarnings(*arguments)
+
     def ShowAllRecords(self):
         self.docmd.ShowAllRecords()
+
+    # Lower case alias for ShowAllRecords
+    def showallrecords(self):
+        self.ShowAllRecords()
 
     def ShowToolbar(self, ToolbarName=None, Show=None):
         arguments = com_arguments([ToolbarName, Show])
         self.docmd.ShowToolbar(*arguments)
 
+    # Lower case alias for ShowToolbar
+    def showtoolbar(self, ToolbarName=None, Show=None):
+        arguments = [ToolbarName, Show]
+        self.ShowToolbar(*arguments)
+
     def SingleStep(self):
         self.docmd.SingleStep()
+
+    # Lower case alias for SingleStep
+    def singlestep(self):
+        self.SingleStep()
 
     def TransferDatabase(self, TransferType=None, DatabaseType=None, DatabaseName=None, ObjectType=None, Source=None, Destination=None, StructureOnly=None, StoreLogin=None):
         arguments = com_arguments([TransferType, DatabaseType, DatabaseName, ObjectType, Source, Destination, StructureOnly, StoreLogin])
         self.docmd.TransferDatabase(*arguments)
 
+    # Lower case alias for TransferDatabase
+    def transferdatabase(self, TransferType=None, DatabaseType=None, DatabaseName=None, ObjectType=None, Source=None, Destination=None, StructureOnly=None, StoreLogin=None):
+        arguments = [TransferType, DatabaseType, DatabaseName, ObjectType, Source, Destination, StructureOnly, StoreLogin]
+        self.TransferDatabase(*arguments)
+
     def TransferSharePointList(self, TransferType=None, SiteAddress=None, ListID=None, ViewID=None, TableName=None, GetLookupDisplayValues=None):
         arguments = com_arguments([TransferType, SiteAddress, ListID, ViewID, TableName, GetLookupDisplayValues])
         self.docmd.TransferSharePointList(*arguments)
+
+    # Lower case alias for TransferSharePointList
+    def transfersharepointlist(self, TransferType=None, SiteAddress=None, ListID=None, ViewID=None, TableName=None, GetLookupDisplayValues=None):
+        arguments = [TransferType, SiteAddress, ListID, ViewID, TableName, GetLookupDisplayValues]
+        self.TransferSharePointList(*arguments)
 
     def TransferSpreadsheet(self, TransferType=None, SpreadsheetType=None, TableName=None, FileName=None, HasFieldNames=None, Range=None, UseOA=None):
         arguments = com_arguments([TransferType, SpreadsheetType, TableName, FileName, HasFieldNames, Range, UseOA])
         self.docmd.TransferSpreadsheet(*arguments)
 
+    # Lower case alias for TransferSpreadsheet
+    def transferspreadsheet(self, TransferType=None, SpreadsheetType=None, TableName=None, FileName=None, HasFieldNames=None, Range=None, UseOA=None):
+        arguments = [TransferType, SpreadsheetType, TableName, FileName, HasFieldNames, Range, UseOA]
+        self.TransferSpreadsheet(*arguments)
+
     def TransferSQLDatabase(self, Server=None, Database=None, UseTrustedConnection=None, Login=None, Password=None, TransferCopyData=None):
         arguments = com_arguments([Server, Database, UseTrustedConnection, Login, Password, TransferCopyData])
         self.docmd.TransferSQLDatabase(*arguments)
 
+    # Lower case alias for TransferSQLDatabase
+    def transfersqldatabase(self, Server=None, Database=None, UseTrustedConnection=None, Login=None, Password=None, TransferCopyData=None):
+        arguments = [Server, Database, UseTrustedConnection, Login, Password, TransferCopyData]
+        self.TransferSQLDatabase(*arguments)
+
     def TransferText(self, TransferType=None, SpecificationName=None, TableName=None, FileName=None, HasFieldNames=None, HTMLTableName=None, CodePage=None):
         arguments = com_arguments([TransferType, SpecificationName, TableName, FileName, HasFieldNames, HTMLTableName, CodePage])
         self.docmd.TransferText(*arguments)
+
+    # Lower case alias for TransferText
+    def transfertext(self, TransferType=None, SpecificationName=None, TableName=None, FileName=None, HasFieldNames=None, HTMLTableName=None, CodePage=None):
+        arguments = [TransferType, SpecificationName, TableName, FileName, HasFieldNames, HTMLTableName, CodePage]
+        self.TransferText(*arguments)
 
 
 class EdgeBrowserControl:
@@ -15367,16 +16277,35 @@ class EdgeBrowserControl:
         arguments = com_arguments([script])
         self.edgebrowsercontrol.ExecuteJavascript(*arguments)
 
+    # Lower case alias for ExecuteJavascript
+    def executejavascript(self, script=None):
+        arguments = [script]
+        self.ExecuteJavascript(*arguments)
+
     def Navigate(self, url=None):
         arguments = com_arguments([url])
         self.edgebrowsercontrol.Navigate(*arguments)
 
+    # Lower case alias for Navigate
+    def navigate(self, url=None):
+        arguments = [url]
+        self.Navigate(*arguments)
+
     def Refresh(self):
         self.edgebrowsercontrol.Refresh()
+
+    # Lower case alias for Refresh
+    def refresh(self):
+        self.Refresh()
 
     def RetrieveJavascriptValue(self, expression=None):
         arguments = com_arguments([expression])
         self.edgebrowsercontrol.RetrieveJavascriptValue(*arguments)
+
+    # Lower case alias for RetrieveJavascriptValue
+    def retrievejavascriptvalue(self, expression=None):
+        arguments = [expression]
+        self.RetrieveJavascriptValue(*arguments)
 
 
 class EmptyCell:
@@ -16108,8 +17037,17 @@ class EmptyCell:
         arguments = com_arguments([Left, Top, Width, Height])
         self.emptycell.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def SizeToFit(self):
         self.emptycell.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Entities:
@@ -19252,27 +20190,61 @@ class Form:
         arguments = com_arguments([PageNumber, Right, Down])
         self.form.GoToPage(*arguments)
 
+    # Lower case alias for GoToPage
+    def gotopage(self, PageNumber=None, Right=None, Down=None):
+        arguments = [PageNumber, Right, Down]
+        self.GoToPage(*arguments)
+
     def Move(self, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Left, Top, Width, Height])
         self.form.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Recalc(self):
         return self.form.Recalc()
+
+    # Lower case alias for Recalc
+    def recalc(self):
+        self.Recalc()
 
     def Refresh(self):
         return self.form.Refresh()
 
+    # Lower case alias for Refresh
+    def refresh(self):
+        self.Refresh()
+
     def Repaint(self):
         return self.form.Repaint()
+
+    # Lower case alias for Repaint
+    def repaint(self):
+        self.Repaint()
 
     def Requery(self):
         self.form.Requery()
 
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
+
     def SetFocus(self):
         self.form.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def Undo(self):
         self.form.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class FormatCondition:
@@ -19482,9 +20454,18 @@ class FormatCondition:
     def Delete(self):
         return self.formatcondition.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Modify(self, Type=None, Operator=None, Expression1=None, Expression2=None):
         arguments = com_arguments([Type, Operator, Expression1, Expression2])
         return self.formatcondition.Modify(*arguments)
+
+    # Lower case alias for Modify
+    def modify(self, Type=None, Operator=None, Expression1=None, Expression2=None):
+        arguments = [Type, Operator, Expression1, Expression2]
+        self.Modify(*arguments)
 
 
 class FormatConditions:
@@ -19530,8 +20511,17 @@ class FormatConditions:
         arguments = com_arguments([Type, Operator, Expression1, Expression2])
         return self.formatconditions.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Type=None, Operator=None, Expression1=None, Expression2=None):
+        arguments = [Type, Operator, Expression1, Expression2]
+        self.Add(*arguments)
+
     def Delete(self):
         self.formatconditions.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
 
 class Forms:
@@ -19814,13 +20804,27 @@ class Hyperlink:
     def AddToFavorites(self):
         return self.hyperlink.AddToFavorites()
 
+    # Lower case alias for AddToFavorites
+    def addtofavorites(self):
+        self.AddToFavorites()
+
     def CreateNewDocument(self, FileName=None, EditNow=None, Overwrite=None):
         arguments = com_arguments([FileName, EditNow, Overwrite])
         return self.hyperlink.CreateNewDocument(*arguments)
 
+    # Lower case alias for CreateNewDocument
+    def createnewdocument(self, FileName=None, EditNow=None, Overwrite=None):
+        arguments = [FileName, EditNow, Overwrite]
+        self.CreateNewDocument(*arguments)
+
     def Follow(self, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
         arguments = com_arguments([NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo])
         self.hyperlink.Follow(*arguments)
+
+    # Lower case alias for Follow
+    def follow(self, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
+        arguments = [NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo]
+        self.Follow(*arguments)
 
 
 class Image:
@@ -20962,14 +21966,31 @@ class Image:
         arguments = com_arguments([Left, Top, Width, Height])
         self.image.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.image.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.image.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.image.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class ImportExportSpecification:
@@ -21044,9 +22065,18 @@ class ImportExportSpecification:
     def Delete(self):
         self.importexportspecification.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Execute(self, OverwritePrompt=None):
         arguments = com_arguments([OverwritePrompt])
         self.importexportspecification.Execute(*arguments)
+
+    # Lower case alias for Execute
+    def execute(self, OverwritePrompt=None):
+        arguments = [OverwritePrompt]
+        self.Execute(*arguments)
 
 
 class ImportExportSpecifications:
@@ -21091,6 +22121,11 @@ class ImportExportSpecifications:
     def Add(self, Name=None, SpecificationDefinition=None):
         arguments = com_arguments([Name, SpecificationDefinition])
         return self.importexportspecifications.Add(*arguments)
+
+    # Lower case alias for Add
+    def add(self, Name=None, SpecificationDefinition=None):
+        arguments = [Name, SpecificationDefinition]
+        self.Add(*arguments)
 
 
 class Label:
@@ -22378,8 +23413,17 @@ class Label:
         arguments = com_arguments([Left, Top, Width, Height])
         self.label.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def SizeToFit(self):
         self.label.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Line:
@@ -22821,8 +23865,17 @@ class Line:
         arguments = com_arguments([Left, Top, Width, Height])
         self.line.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def SizeToFit(self):
         self.line.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class ListBox:
@@ -24705,25 +25758,56 @@ class ListBox:
         arguments = com_arguments([Item, Index])
         self.listbox.AddItem(*arguments)
 
+    # Lower case alias for AddItem
+    def additem(self, Item=None, Index=None):
+        arguments = [Item, Index]
+        self.AddItem(*arguments)
+
     def Move(self, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Left, Top, Width, Height])
         self.listbox.Move(*arguments)
+
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
 
     def RemoveItem(self, Index=None):
         arguments = com_arguments([Index])
         self.listbox.RemoveItem(*arguments)
 
+    # Lower case alias for RemoveItem
+    def removeitem(self, Index=None):
+        arguments = [Index]
+        self.RemoveItem(*arguments)
+
     def Requery(self):
         self.listbox.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.listbox.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.listbox.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.listbox.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class MacroError:
@@ -24903,33 +25987,73 @@ class Module:
         arguments = com_arguments([FileName])
         self.module.AddFromFile(*arguments)
 
+    # Lower case alias for AddFromFile
+    def addfromfile(self, FileName=None):
+        arguments = [FileName]
+        self.AddFromFile(*arguments)
+
     def AddFromString(self, String=None):
         arguments = com_arguments([String])
         return self.module.AddFromString(*arguments)
+
+    # Lower case alias for AddFromString
+    def addfromstring(self, String=None):
+        arguments = [String]
+        self.AddFromString(*arguments)
 
     def CreateEventProc(self, EventName=None, ObjectName=None):
         arguments = com_arguments([EventName, ObjectName])
         return self.module.CreateEventProc(*arguments)
 
+    # Lower case alias for CreateEventProc
+    def createeventproc(self, EventName=None, ObjectName=None):
+        arguments = [EventName, ObjectName]
+        self.CreateEventProc(*arguments)
+
     def DeleteLines(self, StartLine=None, Count=None):
         arguments = com_arguments([StartLine, Count])
         return self.module.DeleteLines(*arguments)
+
+    # Lower case alias for DeleteLines
+    def deletelines(self, StartLine=None, Count=None):
+        arguments = [StartLine, Count]
+        self.DeleteLines(*arguments)
 
     def Find(self, Target=None, StartLine=None, StartColumn=None, EndLine=None, EndColumn=None, WholeWord=None, MatchCase=None, PatternSearch=None):
         arguments = com_arguments([Target, StartLine, StartColumn, EndLine, EndColumn, WholeWord, MatchCase, PatternSearch])
         return self.module.Find(*arguments)
 
+    # Lower case alias for Find
+    def find(self, Target=None, StartLine=None, StartColumn=None, EndLine=None, EndColumn=None, WholeWord=None, MatchCase=None, PatternSearch=None):
+        arguments = [Target, StartLine, StartColumn, EndLine, EndColumn, WholeWord, MatchCase, PatternSearch]
+        self.Find(*arguments)
+
     def InsertLines(self, Line=None, String=None):
         arguments = com_arguments([Line, String])
         return self.module.InsertLines(*arguments)
+
+    # Lower case alias for InsertLines
+    def insertlines(self, Line=None, String=None):
+        arguments = [Line, String]
+        self.InsertLines(*arguments)
 
     def InsertText(self, Text=None):
         arguments = com_arguments([Text])
         return self.module.InsertText(*arguments)
 
+    # Lower case alias for InsertText
+    def inserttext(self, Text=None):
+        arguments = [Text]
+        self.InsertText(*arguments)
+
     def ReplaceLine(self, Line=None, String=None):
         arguments = com_arguments([Line, String])
         return self.module.ReplaceLine(*arguments)
+
+    # Lower case alias for ReplaceLine
+    def replaceline(self, Line=None, String=None):
+        arguments = [Line, String]
+        self.ReplaceLine(*arguments)
 
 
 class Modules:
@@ -26989,14 +28113,31 @@ class NavigationButton:
         arguments = com_arguments([Left, Top, Width, Height])
         self.navigationbutton.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.navigationbutton.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         self.navigationbutton.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.navigationbutton.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class NavigationControl:
@@ -28284,17 +29425,38 @@ class NavigationControl:
         arguments = com_arguments([Left, Top, Width, Height])
         self.navigationcontrol.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.navigationcontrol.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         self.navigationcontrol.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.navigationcontrol.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.navigationcontrol.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class ObjectFrame:
@@ -29807,14 +30969,31 @@ class ObjectFrame:
         arguments = com_arguments([Left, Top, Width, Height])
         self.objectframe.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.objectframe.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.objectframe.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.objectframe.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Operation:
@@ -29860,6 +31039,11 @@ class Operation:
     def Execute(self, bstrParameters=None):
         arguments = com_arguments([bstrParameters])
         return self.operation.Execute(*arguments)
+
+    # Lower case alias for Execute
+    def execute(self, bstrParameters=None):
+        arguments = [bstrParameters]
+        self.Execute(*arguments)
 
 
 class Operations:
@@ -31257,14 +32441,31 @@ class OptionButton:
         arguments = com_arguments([Left, Top, Width, Height])
         self.optionbutton.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.optionbutton.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.optionbutton.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.optionbutton.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class OptionGroup:
@@ -32285,17 +33486,38 @@ class OptionGroup:
         arguments = com_arguments([Left, Top, Width, Height])
         self.optiongroup.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.optiongroup.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.optiongroup.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.optiongroup.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.optiongroup.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class Page:
@@ -32797,17 +34019,38 @@ class Page:
         arguments = com_arguments([Left, Top, Width, Height])
         self.page.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.page.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.page.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SetTabOrder(self):
         self.page.SetTabOrder()
 
+    # Lower case alias for SetTabOrder
+    def settaborder(self):
+        self.SetTabOrder()
+
     def SizeToFit(self):
         self.page.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class PageBreak:
@@ -33011,8 +34254,17 @@ class PageBreak:
         arguments = com_arguments([Left, Top, Width, Height])
         self.pagebreak.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def SizeToFit(self):
         self.pagebreak.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Pages:
@@ -33045,9 +34297,19 @@ class Pages:
         arguments = com_arguments([Before])
         return self.pages.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Before=None):
+        arguments = [Before]
+        self.Add(*arguments)
+
     def Remove(self, Item=None):
         arguments = com_arguments([Item])
         self.pages.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Item=None):
+        arguments = [Item]
+        self.Remove(*arguments)
 
 
 class Printer:
@@ -34078,8 +35340,17 @@ class Rectangle:
         arguments = com_arguments([Left, Top, Width, Height])
         self.rectangle.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def SizeToFit(self):
         self.rectangle.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class Reference:
@@ -34196,17 +35467,37 @@ class References:
         arguments = com_arguments([FileName])
         return self.references.AddFromFile(*arguments)
 
+    # Lower case alias for AddFromFile
+    def addfromfile(self, FileName=None):
+        arguments = [FileName]
+        self.AddFromFile(*arguments)
+
     def AddFromGuid(self, Guid=None, Major=None, Minor=None):
         arguments = com_arguments([Guid, Major, Minor])
         return self.references.AddFromGuid(*arguments)
+
+    # Lower case alias for AddFromGuid
+    def addfromguid(self, Guid=None, Major=None, Minor=None):
+        arguments = [Guid, Major, Minor]
+        self.AddFromGuid(*arguments)
 
     def Item(self, var=None):
         arguments = com_arguments([var])
         return self.references.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, var=None):
+        arguments = [var]
+        self.Item(*arguments)
+
     def Remove(self, Reference=None):
         arguments = com_arguments([Reference])
         self.references.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Reference=None):
+        arguments = [Reference]
+        self.Remove(*arguments)
 
 
 class Report:
@@ -36451,28 +37742,62 @@ class Report:
         arguments = com_arguments([Left, Top, Width, Height])
         self.report.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Print(self, Expr=None):
         arguments = com_arguments([Expr])
         return self.report.Print(*arguments)
+
+    # Lower case alias for Print
+    def print(self, Expr=None):
+        arguments = [Expr]
+        self.Print(*arguments)
 
     def PSet(self, Flags=None, x=None, y=None, Color=None):
         arguments = com_arguments([Flags, x, y, Color])
         return self.report.PSet(*arguments)
 
+    # Lower case alias for PSet
+    def pset(self, Flags=None, x=None, y=None, Color=None):
+        arguments = [Flags, x, y, Color]
+        self.PSet(*arguments)
+
     def Requery(self):
         self.report.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def Scale(self, Flags=None, x1=None, y1=None, x2=None, y2=None):
         arguments = com_arguments([Flags, x1, y1, x2, y2])
         return self.report.Scale(*arguments)
 
+    # Lower case alias for Scale
+    def scale(self, Flags=None, x1=None, y1=None, x2=None, y2=None):
+        arguments = [Flags, x1, y1, x2, y2]
+        self.Scale(*arguments)
+
     def TextHeight(self, Expr=None):
         arguments = com_arguments([Expr])
         return self.report.TextHeight(*arguments)
 
+    # Lower case alias for TextHeight
+    def textheight(self, Expr=None):
+        arguments = [Expr]
+        self.TextHeight(*arguments)
+
     def TextWidth(self, Expr=None):
         arguments = com_arguments([Expr])
         return self.report.TextWidth(*arguments)
+
+    # Lower case alias for TextWidth
+    def textwidth(self, Expr=None):
+        arguments = [Expr]
+        self.TextWidth(*arguments)
 
 
 class Reports:
@@ -37277,6 +38602,10 @@ class Section:
     def SetTabOrder(self):
         self.section.SetTabOrder()
 
+    # Lower case alias for SetTabOrder
+    def settaborder(self):
+        self.SetTabOrder()
+
 
 class SharedResource:
 
@@ -37320,6 +38649,10 @@ class SharedResource:
 
     def Delete(self):
         self.sharedresource.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
 
 class SharedResources:
@@ -37428,6 +38761,10 @@ class SmartTag:
     def Delete(self):
         return self.smarttag.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
 
 class SmartTagAction:
 
@@ -37458,6 +38795,10 @@ class SmartTagAction:
 
     def Execute(self):
         self.smarttagaction.Execute()
+
+    # Lower case alias for Execute
+    def execute(self):
+        self.Execute()
 
 
 class SmartTagActions:
@@ -37546,6 +38887,11 @@ class SmartTagProperties:
         arguments = com_arguments([Name, Value])
         return SmartTagPropertie(self.smarttagproperties.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Name=None, Value=None):
+        arguments = [Name, Value]
+        self.Add(*arguments)
+
 
 class SmartTagProperty:
 
@@ -37588,6 +38934,10 @@ class SmartTagProperty:
 
     def Delete(self):
         return self.smarttagproperty.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
 
 class SmartTags:
@@ -37632,6 +38982,11 @@ class SmartTags:
     def Add(self, Name=None):
         arguments = com_arguments([Name])
         return self.smarttags.Add(*arguments)
+
+    # Lower case alias for Add
+    def add(self, Name=None):
+        arguments = [Name]
+        self.Add(*arguments)
 
 
 class SubForm:
@@ -38679,14 +40034,31 @@ class SubForm:
         arguments = com_arguments([Left, Top, Width, Height])
         self.subform.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.subform.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.subform.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.subform.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class TabControl:
@@ -40263,8 +41635,17 @@ class TabControl:
         arguments = com_arguments([Left, Top, Width, Height])
         self.tabcontrol.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def SizeToFit(self):
         self.tabcontrol.SizeToFit()
+
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
 
 
 class TempVar:
@@ -40342,12 +41723,26 @@ class TempVars:
         arguments = com_arguments([Name, Value])
         self.tempvars.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Name=None, Value=None):
+        arguments = [Name, Value]
+        self.Add(*arguments)
+
     def Remove(self, var=None):
         arguments = com_arguments([var])
         self.tempvars.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, var=None):
+        arguments = [var]
+        self.Remove(*arguments)
+
     def RemoveAll(self):
         self.tempvars.RemoveAll()
+
+    # Lower case alias for RemoveAll
+    def removeall(self):
+        self.RemoveAll()
 
 
 class TextBox:
@@ -42495,17 +43890,38 @@ class TextBox:
         arguments = com_arguments([Left, Top, Width, Height])
         self.textbox.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.textbox.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.textbox.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.textbox.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.textbox.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class ToggleButton:
@@ -44541,17 +45957,38 @@ class ToggleButton:
         arguments = com_arguments([Left, Top, Width, Height])
         self.togglebutton.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.togglebutton.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         return self.togglebutton.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.togglebutton.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.togglebutton.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class WebBrowserControl:
@@ -45686,17 +47123,38 @@ class WebBrowserControl:
         arguments = com_arguments([Left, Top, Width, Height])
         self.webbrowsercontrol.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, Left=None, Top=None, Width=None, Height=None):
+        arguments = [Left, Top, Width, Height]
+        self.Move(*arguments)
+
     def Requery(self):
         self.webbrowsercontrol.Requery()
+
+    # Lower case alias for Requery
+    def requery(self):
+        self.Requery()
 
     def SetFocus(self):
         self.webbrowsercontrol.SetFocus()
 
+    # Lower case alias for SetFocus
+    def setfocus(self):
+        self.SetFocus()
+
     def SizeToFit(self):
         self.webbrowsercontrol.SizeToFit()
 
+    # Lower case alias for SizeToFit
+    def sizetofit(self):
+        self.SizeToFit()
+
     def Undo(self):
         self.webbrowsercontrol.Undo()
+
+    # Lower case alias for Undo
+    def undo(self):
+        self.Undo()
 
 
 class WebService:

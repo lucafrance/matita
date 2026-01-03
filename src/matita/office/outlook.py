@@ -137,9 +137,19 @@ class Account:
         arguments = com_arguments([ID])
         return ID(self.account.GetAddressEntryFromID(*arguments))
 
+    # Lower case alias for GetAddressEntryFromID
+    def getaddressentryfromid(self, ID=None):
+        arguments = [ID]
+        self.GetAddressEntryFromID(*arguments)
+
     def GetRecipientFromID(self, EntryID=None):
         arguments = com_arguments([EntryID])
         return self.account.GetRecipientFromID(*arguments)
+
+    # Lower case alias for GetRecipientFromID
+    def getrecipientfromid(self, EntryID=None):
+        arguments = [EntryID]
+        self.GetRecipientFromID(*arguments)
 
 
 class AccountRuleCondition:
@@ -260,6 +270,11 @@ class Accounts:
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.accounts.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class AccountSelector:
@@ -473,8 +488,16 @@ class Action:
     def Delete(self):
         self.action.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Execute(self):
         return self.action.Execute()
+
+    # Lower case alias for Execute
+    def execute(self):
+        self.Execute()
 
 
 class Actions:
@@ -520,13 +543,27 @@ class Actions:
     def Add(self):
         return Action(self.actions.Add())
 
+    # Lower case alias for Add
+    def add(self):
+        self.Add()
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.actions.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.actions.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class AddressEntries:
@@ -573,25 +610,56 @@ class AddressEntries:
         arguments = com_arguments([Type, Name, Address])
         return AddressEntry(self.addressentries.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Type=None, Name=None, Address=None):
+        arguments = [Type, Name, Address]
+        self.Add(*arguments)
+
     def GetFirst(self):
         return AddressEntry(self.addressentries.GetFirst())
+
+    # Lower case alias for GetFirst
+    def getfirst(self):
+        self.GetFirst()
 
     def GetLast(self):
         return AddressEntry(self.addressentries.GetLast())
 
+    # Lower case alias for GetLast
+    def getlast(self):
+        self.GetLast()
+
     def GetNext(self):
         return AddressEntry(self.addressentries.GetNext())
 
+    # Lower case alias for GetNext
+    def getnext(self):
+        self.GetNext()
+
     def GetPrevious(self):
         return AddressEntry(self.addressentries.GetPrevious())
+
+    # Lower case alias for GetPrevious
+    def getprevious(self):
+        self.GetPrevious()
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.addressentries.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Sort(self, Property=None, Order=None):
         arguments = com_arguments([Property, Order])
         self.addressentries.Sort(*arguments)
+
+    # Lower case alias for Sort
+    def sort(self, Property=None, Order=None):
+        arguments = [Property, Order]
+        self.Sort(*arguments)
 
 
 class AddressEntry:
@@ -715,26 +783,57 @@ class AddressEntry:
     def Delete(self):
         self.addressentry.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Details(self, HWnd=None):
         arguments = com_arguments([HWnd])
         self.addressentry.Details(*arguments)
 
+    # Lower case alias for Details
+    def details(self, HWnd=None):
+        arguments = [HWnd]
+        self.Details(*arguments)
+
     def GetContact(self):
         return self.addressentry.GetContact()
+
+    # Lower case alias for GetContact
+    def getcontact(self):
+        self.GetContact()
 
     def GetExchangeDistributionList(self):
         return self.addressentry.GetExchangeDistributionList()
 
+    # Lower case alias for GetExchangeDistributionList
+    def getexchangedistributionlist(self):
+        self.GetExchangeDistributionList()
+
     def GetExchangeUser(self):
         return self.addressentry.GetExchangeUser()
+
+    # Lower case alias for GetExchangeUser
+    def getexchangeuser(self):
+        self.GetExchangeUser()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
         arguments = com_arguments([Start, MinPerChar, CompleteFormat])
         return self.addressentry.GetFreeBusy(*arguments)
 
+    # Lower case alias for GetFreeBusy
+    def getfreebusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
+        arguments = [Start, MinPerChar, CompleteFormat]
+        self.GetFreeBusy(*arguments)
+
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([MakePermanent, Refresh])
         self.addressentry.Update(*arguments)
+
+    # Lower case alias for Update
+    def update(self, MakePermanent=None, Refresh=None):
+        arguments = [MakePermanent, Refresh]
+        self.Update(*arguments)
 
 
 class AddressList:
@@ -852,6 +951,10 @@ class AddressList:
     def GetContactsFolder(self):
         return self.addresslist.GetContactsFolder()
 
+    # Lower case alias for GetContactsFolder
+    def getcontactsfolder(self):
+        self.GetContactsFolder()
+
 
 class AddressLists:
 
@@ -896,6 +999,11 @@ class AddressLists:
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.addresslists.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class AddressRuleCondition:
@@ -1136,50 +1244,111 @@ class Application:
     def ActiveExplorer(self):
         return self.application.ActiveExplorer()
 
+    # Lower case alias for ActiveExplorer
+    def activeexplorer(self):
+        self.ActiveExplorer()
+
     def ActiveInspector(self):
         return self.application.ActiveInspector()
 
+    # Lower case alias for ActiveInspector
+    def activeinspector(self):
+        self.ActiveInspector()
+
     def ActiveWindow(self):
         return self.application.ActiveWindow()
+
+    # Lower case alias for ActiveWindow
+    def activewindow(self):
+        self.ActiveWindow()
 
     def AdvancedSearch(self, Scope=None, Filter=None, SearchSubFolders=None, Tag=None):
         arguments = com_arguments([Scope, Filter, SearchSubFolders, Tag])
         return Search(self.application.AdvancedSearch(*arguments))
 
+    # Lower case alias for AdvancedSearch
+    def advancedsearch(self, Scope=None, Filter=None, SearchSubFolders=None, Tag=None):
+        arguments = [Scope, Filter, SearchSubFolders, Tag]
+        self.AdvancedSearch(*arguments)
+
     def CopyFile(self, FilePath=None, DestFolderPath=None):
         arguments = com_arguments([FilePath, DestFolderPath])
         return self.application.CopyFile(*arguments)
+
+    # Lower case alias for CopyFile
+    def copyfile(self, FilePath=None, DestFolderPath=None):
+        arguments = [FilePath, DestFolderPath]
+        self.CopyFile(*arguments)
 
     def CreateItem(self, ItemType=None):
         arguments = com_arguments([ItemType])
         return self.application.CreateItem(*arguments)
 
+    # Lower case alias for CreateItem
+    def createitem(self, ItemType=None):
+        arguments = [ItemType]
+        self.CreateItem(*arguments)
+
     def CreateItemFromTemplate(self, TemplatePath=None, InFolder=None):
         arguments = com_arguments([TemplatePath, InFolder])
         return self.application.CreateItemFromTemplate(*arguments)
+
+    # Lower case alias for CreateItemFromTemplate
+    def createitemfromtemplate(self, TemplatePath=None, InFolder=None):
+        arguments = [TemplatePath, InFolder]
+        self.CreateItemFromTemplate(*arguments)
 
     def CreateObject(self, ObjectName=None):
         arguments = com_arguments([ObjectName])
         return self.application.CreateObject(*arguments)
 
+    # Lower case alias for CreateObject
+    def createobject(self, ObjectName=None):
+        arguments = [ObjectName]
+        self.CreateObject(*arguments)
+
     def GetNamespace(self, Type=None):
         arguments = com_arguments([Type])
         return self.application.GetNamespace(*arguments)
+
+    # Lower case alias for GetNamespace
+    def getnamespace(self, Type=None):
+        arguments = [Type]
+        self.GetNamespace(*arguments)
 
     def GetObjectReference(self, Item=None, ReferenceType=None):
         arguments = com_arguments([Item, ReferenceType])
         return self.application.GetObjectReference(*arguments)
 
+    # Lower case alias for GetObjectReference
+    def getobjectreference(self, Item=None, ReferenceType=None):
+        arguments = [Item, ReferenceType]
+        self.GetObjectReference(*arguments)
+
     def IsSearchSynchronous(self, LookInFolders=None):
         arguments = com_arguments([LookInFolders])
         return self.application.IsSearchSynchronous(*arguments)
 
+    # Lower case alias for IsSearchSynchronous
+    def issearchsynchronous(self, LookInFolders=None):
+        arguments = [LookInFolders]
+        self.IsSearchSynchronous(*arguments)
+
     def Quit(self):
         self.application.Quit()
+
+    # Lower case alias for Quit
+    def quit(self):
+        self.Quit()
 
     def RefreshFormRegionDefinition(self, RegionName=None):
         arguments = com_arguments([RegionName])
         self.application.RefreshFormRegionDefinition(*arguments)
+
+    # Lower case alias for RefreshFormRegionDefinition
+    def refreshformregiondefinition(self, RegionName=None):
+        arguments = [RegionName]
+        self.RefreshFormRegionDefinition(*arguments)
 
 
 class AppointmentItem:
@@ -2131,59 +2300,133 @@ class AppointmentItem:
     def ClearRecurrencePattern(self):
         self.appointmentitem.ClearRecurrencePattern()
 
+    # Lower case alias for ClearRecurrencePattern
+    def clearrecurrencepattern(self):
+        self.ClearRecurrencePattern()
+
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.appointmentitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.appointmentitem.Copy()
+
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
 
     def CopyTo(self, DestinationFolder=None, CopyOptions=None):
         arguments = com_arguments([DestinationFolder, CopyOptions])
         return self.appointmentitem.CopyTo(*arguments)
 
+    # Lower case alias for CopyTo
+    def copyto(self, DestinationFolder=None, CopyOptions=None):
+        arguments = [DestinationFolder, CopyOptions]
+        self.CopyTo(*arguments)
+
     def Delete(self):
         self.appointmentitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.appointmentitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def ForwardAsVcal(self):
         return MailItem(self.appointmentitem.ForwardAsVcal())
+
+    # Lower case alias for ForwardAsVcal
+    def forwardasvcal(self):
+        self.ForwardAsVcal()
 
     def GetConversation(self):
         return self.appointmentitem.GetConversation()
 
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
+
     def GetOrganizer(self):
         return self.appointmentitem.GetOrganizer()
 
+    # Lower case alias for GetOrganizer
+    def getorganizer(self):
+        self.GetOrganizer()
+
     def GetRecurrencePattern(self):
         return self.appointmentitem.GetRecurrencePattern()
+
+    # Lower case alias for GetRecurrencePattern
+    def getrecurrencepattern(self):
+        self.GetRecurrencePattern()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.appointmentitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.appointmentitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def Respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
         arguments = com_arguments([Response, fNoUI, fAdditionalTextDialog])
         return MeetingItem(self.appointmentitem.Respond(*arguments))
 
+    # Lower case alias for Respond
+    def respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
+        arguments = [Response, fNoUI, fAdditionalTextDialog]
+        self.Respond(*arguments)
+
     def Save(self):
         self.appointmentitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.appointmentitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def Send(self):
         self.appointmentitem.Send()
 
+    # Lower case alias for Send
+    def send(self):
+        self.Send()
+
     def ShowCategoriesDialog(self):
         self.appointmentitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class AssignToCategoryRuleAction:
@@ -2392,12 +2635,25 @@ class Attachment:
     def Delete(self):
         self.attachment.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def GetTemporaryFilePath(self):
         return self.attachment.GetTemporaryFilePath()
+
+    # Lower case alias for GetTemporaryFilePath
+    def gettemporaryfilepath(self):
+        self.GetTemporaryFilePath()
 
     def SaveAsFile(self, Path=None):
         arguments = com_arguments([Path])
         self.attachment.SaveAsFile(*arguments)
+
+    # Lower case alias for SaveAsFile
+    def saveasfile(self, Path=None):
+        arguments = [Path]
+        self.SaveAsFile(*arguments)
 
 
 class Attachments:
@@ -2444,13 +2700,28 @@ class Attachments:
         arguments = com_arguments([Source, Type, Position, DisplayName])
         return Attachment(self.attachments.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Source=None, Type=None, Position=None, DisplayName=None):
+        arguments = [Source, Type, Position, DisplayName]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.attachments.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.attachments.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class AttachmentSelection:
@@ -2506,9 +2777,19 @@ class AttachmentSelection:
         arguments = com_arguments([SelectionContents])
         return self.attachmentselection.GetSelection(*arguments)
 
+    # Lower case alias for GetSelection
+    def getselection(self, SelectionContents=None):
+        arguments = [SelectionContents]
+        self.GetSelection(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.attachmentselection.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class AutoFormatRule:
@@ -2656,23 +2937,51 @@ class AutoFormatRules:
         arguments = com_arguments([Name])
         return self.autoformatrules.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Name=None):
+        arguments = [Name]
+        self.Add(*arguments)
+
     def Insert(self, Name=None, Index=None):
         arguments = com_arguments([Name, Index])
         return self.autoformatrules.Insert(*arguments)
+
+    # Lower case alias for Insert
+    def insert(self, Name=None, Index=None):
+        arguments = [Name, Index]
+        self.Insert(*arguments)
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.autoformatrules.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.autoformatrules.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
+
     def RemoveAll(self):
         self.autoformatrules.RemoveAll()
 
+    # Lower case alias for RemoveAll
+    def removeall(self):
+        self.RemoveAll()
+
     def Save(self):
         self.autoformatrules.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class BusinessCardView:
@@ -2856,22 +3165,48 @@ class BusinessCardView:
     def Apply(self):
         self.businesscardview.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         return self.businesscardview.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.businesscardview.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.businesscardview.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.businesscardview.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.businesscardview.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class CalendarModule:
@@ -3130,9 +3465,19 @@ class CalendarSharing:
         arguments = com_arguments([MailFormat])
         return self.calendarsharing.ForwardAsICal(*arguments)
 
+    # Lower case alias for ForwardAsICal
+    def forwardasical(self, MailFormat=None):
+        arguments = [MailFormat]
+        self.ForwardAsICal(*arguments)
+
     def SaveAsICal(self, Path=None):
         arguments = com_arguments([Path])
         self.calendarsharing.SaveAsICal(*arguments)
+
+    # Lower case alias for SaveAsICal
+    def saveasical(self, Path=None):
+        arguments = [Path]
+        self.SaveAsICal(*arguments)
 
 
 class CalendarView:
@@ -3453,22 +3798,48 @@ class CalendarView:
     def Apply(self):
         self.calendarview.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         return self.calendarview.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.calendarview.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.calendarview.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.calendarview.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.calendarview.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class CardView:
@@ -3730,22 +4101,48 @@ class CardView:
     def Apply(self):
         self.cardview.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         return self.cardview.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.cardview.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.cardview.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.cardview.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.cardview.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class Categories:
@@ -3792,13 +4189,28 @@ class Categories:
         arguments = com_arguments([Name, Color, ShortcutKey])
         return self.categories.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Name=None, Color=None, ShortcutKey=None):
+        arguments = [Name, Color, ShortcutKey]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.categories.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.categories.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class Category:
@@ -4189,16 +4601,35 @@ class Columns:
         arguments = com_arguments([Name])
         return self.columns.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Name=None):
+        arguments = [Name]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return Table(self.columns.Item(*arguments))
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.columns.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
+
     def RemoveAll(self):
         self.columns.RemoveAll()
+
+    # Lower case alias for RemoveAll
+    def removeall(self):
+        self.RemoveAll()
 
 
 class Conflict:
@@ -4303,18 +4734,39 @@ class Conflicts:
     def GetFirst(self):
         return Conflict(self.conflicts.GetFirst())
 
+    # Lower case alias for GetFirst
+    def getfirst(self):
+        self.GetFirst()
+
     def GetLast(self):
         return Conflict(self.conflicts.GetLast())
+
+    # Lower case alias for GetLast
+    def getlast(self):
+        self.GetLast()
 
     def GetNext(self):
         return Conflict(self.conflicts.GetNext())
 
+    # Lower case alias for GetNext
+    def getnext(self):
+        self.GetNext()
+
     def GetPrevious(self):
         return Conflict(self.conflicts.GetPrevious())
+
+    # Lower case alias for GetPrevious
+    def getprevious(self):
+        self.GetPrevious()
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.conflicts.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class ContactItem:
@@ -6836,73 +7288,166 @@ class ContactItem:
         arguments = com_arguments([Path])
         self.contactitem.AddBusinessCardLogoPicture(*arguments)
 
+    # Lower case alias for AddBusinessCardLogoPicture
+    def addbusinesscardlogopicture(self, Path=None):
+        arguments = [Path]
+        self.AddBusinessCardLogoPicture(*arguments)
+
     def AddPicture(self, Path=None):
         arguments = com_arguments([Path])
         self.contactitem.AddPicture(*arguments)
 
+    # Lower case alias for AddPicture
+    def addpicture(self, Path=None):
+        arguments = [Path]
+        self.AddPicture(*arguments)
+
     def ClearTaskFlag(self):
         self.contactitem.ClearTaskFlag()
+
+    # Lower case alias for ClearTaskFlag
+    def cleartaskflag(self):
+        self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.contactitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.contactitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.contactitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.contactitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def ForwardAsBusinessCard(self):
         return self.contactitem.ForwardAsBusinessCard()
+
+    # Lower case alias for ForwardAsBusinessCard
+    def forwardasbusinesscard(self):
+        self.ForwardAsBusinessCard()
 
     def ForwardAsVcard(self):
         return self.contactitem.ForwardAsVcard()
 
+    # Lower case alias for ForwardAsVcard
+    def forwardasvcard(self):
+        self.ForwardAsVcard()
+
     def GetConversation(self):
         return self.contactitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([MarkInterval])
         self.contactitem.MarkAsTask(*arguments)
 
+    # Lower case alias for MarkAsTask
+    def markastask(self, MarkInterval=None):
+        arguments = [MarkInterval]
+        self.MarkAsTask(*arguments)
+
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.contactitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.contactitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def RemovePicture(self):
         self.contactitem.RemovePicture()
 
+    # Lower case alias for RemovePicture
+    def removepicture(self):
+        self.RemovePicture()
+
     def ResetBusinessCard(self):
         self.contactitem.ResetBusinessCard()
 
+    # Lower case alias for ResetBusinessCard
+    def resetbusinesscard(self):
+        self.ResetBusinessCard()
+
     def Save(self):
         self.contactitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.contactitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def SaveBusinessCardImage(self, Path=None):
         arguments = com_arguments([Path])
         self.contactitem.SaveBusinessCardImage(*arguments)
 
+    # Lower case alias for SaveBusinessCardImage
+    def savebusinesscardimage(self, Path=None):
+        arguments = [Path]
+        self.SaveBusinessCardImage(*arguments)
+
     def ShowBusinessCardEditor(self):
         self.contactitem.ShowBusinessCardEditor()
+
+    # Lower case alias for ShowBusinessCardEditor
+    def showbusinesscardeditor(self):
+        self.ShowBusinessCardEditor()
 
     def ShowCategoriesDialog(self):
         self.contactitem.ShowCategoriesDialog()
 
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
+
     def ShowCheckPhoneDialog(self, PhoneNumber=None):
         arguments = com_arguments([PhoneNumber])
         self.contactitem.ShowCheckPhoneDialog(*arguments)
+
+    # Lower case alias for ShowCheckPhoneDialog
+    def showcheckphonedialog(self, PhoneNumber=None):
+        arguments = [PhoneNumber]
+        self.ShowCheckPhoneDialog(*arguments)
 
 
 class ContactsModule:
@@ -7042,57 +7587,128 @@ class Conversation:
         arguments = com_arguments([Store])
         self.conversation.ClearAlwaysAssignCategories(*arguments)
 
+    # Lower case alias for ClearAlwaysAssignCategories
+    def clearalwaysassigncategories(self, Store=None):
+        arguments = [Store]
+        self.ClearAlwaysAssignCategories(*arguments)
+
     def GetAlwaysAssignCategories(self, Store=None):
         arguments = com_arguments([Store])
         return self.conversation.GetAlwaysAssignCategories(*arguments)
+
+    # Lower case alias for GetAlwaysAssignCategories
+    def getalwaysassigncategories(self, Store=None):
+        arguments = [Store]
+        self.GetAlwaysAssignCategories(*arguments)
 
     def GetAlwaysDelete(self, Store=None):
         arguments = com_arguments([Store])
         return self.conversation.GetAlwaysDelete(*arguments)
 
+    # Lower case alias for GetAlwaysDelete
+    def getalwaysdelete(self, Store=None):
+        arguments = [Store]
+        self.GetAlwaysDelete(*arguments)
+
     def GetAlwaysMoveToFolder(self, Store=None):
         arguments = com_arguments([Store])
         return self.conversation.GetAlwaysMoveToFolder(*arguments)
+
+    # Lower case alias for GetAlwaysMoveToFolder
+    def getalwaysmovetofolder(self, Store=None):
+        arguments = [Store]
+        self.GetAlwaysMoveToFolder(*arguments)
 
     def GetChildren(self, Item=None):
         arguments = com_arguments([Item])
         return self.conversation.GetChildren(*arguments)
 
+    # Lower case alias for GetChildren
+    def getchildren(self, Item=None):
+        arguments = [Item]
+        self.GetChildren(*arguments)
+
     def GetParent(self, Item=None):
         arguments = com_arguments([Item])
         return self.conversation.GetParent(*arguments)
 
+    # Lower case alias for GetParent
+    def getparent(self, Item=None):
+        arguments = [Item]
+        self.GetParent(*arguments)
+
     def GetRootItems(self):
         return self.conversation.GetRootItems()
+
+    # Lower case alias for GetRootItems
+    def getrootitems(self):
+        self.GetRootItems()
 
     def GetTable(self):
         return self.conversation.GetTable()
 
+    # Lower case alias for GetTable
+    def gettable(self):
+        self.GetTable()
+
     def MarkAsRead(self):
         self.conversation.MarkAsRead()
 
+    # Lower case alias for MarkAsRead
+    def markasread(self):
+        self.MarkAsRead()
+
     def MarkAsUnread(self):
         self.conversation.MarkAsUnread()
+
+    # Lower case alias for MarkAsUnread
+    def markasunread(self):
+        self.MarkAsUnread()
 
     def SetAlwaysAssignCategories(self, Categories=None, Store=None):
         arguments = com_arguments([Categories, Store])
         self.conversation.SetAlwaysAssignCategories(*arguments)
 
+    # Lower case alias for SetAlwaysAssignCategories
+    def setalwaysassigncategories(self, Categories=None, Store=None):
+        arguments = [Categories, Store]
+        self.SetAlwaysAssignCategories(*arguments)
+
     def SetAlwaysDelete(self, AlwaysDelete=None, Store=None):
         arguments = com_arguments([AlwaysDelete, Store])
         self.conversation.SetAlwaysDelete(*arguments)
+
+    # Lower case alias for SetAlwaysDelete
+    def setalwaysdelete(self, AlwaysDelete=None, Store=None):
+        arguments = [AlwaysDelete, Store]
+        self.SetAlwaysDelete(*arguments)
 
     def SetAlwaysMoveToFolder(self, MoveToFolder=None, Store=None):
         arguments = com_arguments([MoveToFolder, Store])
         self.conversation.SetAlwaysMoveToFolder(*arguments)
 
+    # Lower case alias for SetAlwaysMoveToFolder
+    def setalwaysmovetofolder(self, MoveToFolder=None, Store=None):
+        arguments = [MoveToFolder, Store]
+        self.SetAlwaysMoveToFolder(*arguments)
+
     def StopAlwaysDelete(self, Store=None):
         arguments = com_arguments([Store])
         self.conversation.StopAlwaysDelete(*arguments)
 
+    # Lower case alias for StopAlwaysDelete
+    def stopalwaysdelete(self, Store=None):
+        arguments = [Store]
+        self.StopAlwaysDelete(*arguments)
+
     def StopAlwaysMoveToFolder(self, Store=None):
         arguments = com_arguments([Store])
         self.conversation.StopAlwaysMoveToFolder(*arguments)
+
+    # Lower case alias for StopAlwaysMoveToFolder
+    def stopalwaysmovetofolder(self, Store=None):
+        arguments = [Store]
+        self.StopAlwaysMoveToFolder(*arguments)
 
 
 class ConversationHeader:
@@ -7147,8 +7763,16 @@ class ConversationHeader:
     def GetConversation(self):
         return self.conversationheader.GetConversation()
 
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
+
     def GetItems(self):
         return self.conversationheader.GetItems()
+
+    # Lower case alias for GetItems
+    def getitems(self):
+        self.GetItems()
 
 
 class DistListItem:
@@ -7801,62 +8425,140 @@ class DistListItem:
         arguments = com_arguments([Recipient])
         self.distlistitem.AddMember(*arguments)
 
+    # Lower case alias for AddMember
+    def addmember(self, Recipient=None):
+        arguments = [Recipient]
+        self.AddMember(*arguments)
+
     def AddMembers(self, Recipients=None):
         arguments = com_arguments([Recipients])
         self.distlistitem.AddMembers(*arguments)
 
+    # Lower case alias for AddMembers
+    def addmembers(self, Recipients=None):
+        arguments = [Recipients]
+        self.AddMembers(*arguments)
+
     def ClearTaskFlag(self):
         self.distlistitem.ClearTaskFlag()
+
+    # Lower case alias for ClearTaskFlag
+    def cleartaskflag(self):
+        self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.distlistitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.distlistitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.distlistitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.distlistitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetConversation(self):
         return self.distlistitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def GetMember(self, Index=None):
         arguments = com_arguments([Index])
         return self.distlistitem.GetMember(*arguments)
 
+    # Lower case alias for GetMember
+    def getmember(self, Index=None):
+        arguments = [Index]
+        self.GetMember(*arguments)
+
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([MarkInterval])
         self.distlistitem.MarkAsTask(*arguments)
+
+    # Lower case alias for MarkAsTask
+    def markastask(self, MarkInterval=None):
+        arguments = [MarkInterval]
+        self.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.distlistitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.distlistitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def RemoveMember(self, Recipient=None):
         arguments = com_arguments([Recipient])
         self.distlistitem.RemoveMember(*arguments)
 
+    # Lower case alias for RemoveMember
+    def removemember(self, Recipient=None):
+        arguments = [Recipient]
+        self.RemoveMember(*arguments)
+
     def RemoveMembers(self, Recipients=None):
         arguments = com_arguments([Recipients])
         self.distlistitem.RemoveMembers(*arguments)
 
+    # Lower case alias for RemoveMembers
+    def removemembers(self, Recipients=None):
+        arguments = [Recipients]
+        self.RemoveMembers(*arguments)
+
     def Save(self):
         self.distlistitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.distlistitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.distlistitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class DocumentItem:
@@ -8262,32 +8964,72 @@ class DocumentItem:
         arguments = com_arguments([SaveMode])
         self.documentitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.documentitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.documentitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.documentitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.documentitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.documentitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.documentitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.documentitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.documentitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class Exception:
@@ -8392,6 +9134,11 @@ class Exceptions:
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.exceptions.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class ExchangeDistributionList:
@@ -8550,35 +9297,78 @@ class ExchangeDistributionList:
     def Delete(self):
         self.exchangedistributionlist.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Details(self, HWnd=None):
         arguments = com_arguments([HWnd])
         self.exchangedistributionlist.Details(*arguments)
 
+    # Lower case alias for Details
+    def details(self, HWnd=None):
+        arguments = [HWnd]
+        self.Details(*arguments)
+
     def GetContact(self):
         return self.exchangedistributionlist.GetContact()
+
+    # Lower case alias for GetContact
+    def getcontact(self):
+        self.GetContact()
 
     def GetExchangeDistributionList(self):
         return self.exchangedistributionlist.GetExchangeDistributionList()
 
+    # Lower case alias for GetExchangeDistributionList
+    def getexchangedistributionlist(self):
+        self.GetExchangeDistributionList()
+
     def GetExchangeDistributionListMembers(self):
         return AddressEntry(self.exchangedistributionlist.GetExchangeDistributionListMembers())
 
+    # Lower case alias for GetExchangeDistributionListMembers
+    def getexchangedistributionlistmembers(self):
+        self.GetExchangeDistributionListMembers()
+
     def GetExchangeUser(self):
         return self.exchangedistributionlist.GetExchangeUser()
+
+    # Lower case alias for GetExchangeUser
+    def getexchangeuser(self):
+        self.GetExchangeUser()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
         arguments = com_arguments([Start, MinPerChar, CompleteFormat])
         self.exchangedistributionlist.GetFreeBusy(*arguments)
 
+    # Lower case alias for GetFreeBusy
+    def getfreebusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
+        arguments = [Start, MinPerChar, CompleteFormat]
+        self.GetFreeBusy(*arguments)
+
     def GetMemberOfList(self):
         return self.exchangedistributionlist.GetMemberOfList()
+
+    # Lower case alias for GetMemberOfList
+    def getmemberoflist(self):
+        self.GetMemberOfList()
 
     def GetOwners(self):
         return AddressEntry(self.exchangedistributionlist.GetOwners())
 
+    # Lower case alias for GetOwners
+    def getowners(self):
+        self.GetOwners()
+
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([MakePermanent, Refresh])
         self.exchangedistributionlist.Update(*arguments)
+
+    # Lower case alias for Update
+    def update(self, MakePermanent=None, Refresh=None):
+        arguments = [MakePermanent, Refresh]
+        self.Update(*arguments)
 
 
 class ExchangeUser:
@@ -9043,38 +9833,85 @@ class ExchangeUser:
     def Delete(self):
         self.exchangeuser.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Details(self, HWnd=None):
         arguments = com_arguments([HWnd])
         self.exchangeuser.Details(*arguments)
 
+    # Lower case alias for Details
+    def details(self, HWnd=None):
+        arguments = [HWnd]
+        self.Details(*arguments)
+
     def GetContact(self):
         return self.exchangeuser.GetContact()
+
+    # Lower case alias for GetContact
+    def getcontact(self):
+        self.GetContact()
 
     def GetDirectReports(self):
         return AddressEntry(self.exchangeuser.GetDirectReports())
 
+    # Lower case alias for GetDirectReports
+    def getdirectreports(self):
+        self.GetDirectReports()
+
     def GetExchangeDistributionList(self):
         return self.exchangeuser.GetExchangeDistributionList()
+
+    # Lower case alias for GetExchangeDistributionList
+    def getexchangedistributionlist(self):
+        self.GetExchangeDistributionList()
 
     def GetExchangeUser(self):
         return self.exchangeuser.GetExchangeUser()
 
+    # Lower case alias for GetExchangeUser
+    def getexchangeuser(self):
+        self.GetExchangeUser()
+
     def GetExchangeUserManager(self):
         return self.exchangeuser.GetExchangeUserManager()
+
+    # Lower case alias for GetExchangeUserManager
+    def getexchangeusermanager(self):
+        self.GetExchangeUserManager()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
         arguments = com_arguments([Start, MinPerChar, CompleteFormat])
         return self.exchangeuser.GetFreeBusy(*arguments)
 
+    # Lower case alias for GetFreeBusy
+    def getfreebusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
+        arguments = [Start, MinPerChar, CompleteFormat]
+        self.GetFreeBusy(*arguments)
+
     def GetMemberOfList(self):
         return ExchangeUser(self.exchangeuser.GetMemberOfList())
+
+    # Lower case alias for GetMemberOfList
+    def getmemberoflist(self):
+        self.GetMemberOfList()
 
     def GetPicture(self):
         return self.exchangeuser.GetPicture()
 
+    # Lower case alias for GetPicture
+    def getpicture(self):
+        self.GetPicture()
+
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([MakePermanent, Refresh])
         self.exchangeuser.Update(*arguments)
+
+    # Lower case alias for Update
+    def update(self, MakePermanent=None, Refresh=None):
+        arguments = [MakePermanent, Refresh]
+        self.Update(*arguments)
 
 
 class Explorer:
@@ -9293,44 +10130,98 @@ class Explorer:
     def Activate(self):
         self.explorer.Activate()
 
+    # Lower case alias for Activate
+    def activate(self):
+        self.Activate()
+
     def AddToSelection(self, Item=None):
         arguments = com_arguments([Item])
         self.explorer.AddToSelection(*arguments)
 
+    # Lower case alias for AddToSelection
+    def addtoselection(self, Item=None):
+        arguments = [Item]
+        self.AddToSelection(*arguments)
+
     def ClearSearch(self):
         self.explorer.ClearSearch()
+
+    # Lower case alias for ClearSearch
+    def clearsearch(self):
+        self.ClearSearch()
 
     def ClearSelection(self):
         self.explorer.ClearSelection()
 
+    # Lower case alias for ClearSelection
+    def clearselection(self):
+        self.ClearSelection()
+
     def Close(self):
         self.explorer.Close()
 
+    # Lower case alias for Close
+    def close(self):
+        self.Close()
+
     def Display(self):
         self.explorer.Display()
+
+    # Lower case alias for Display
+    def display(self):
+        self.Display()
 
     def IsItemSelectableInView(self, Item=None):
         arguments = com_arguments([Item])
         return self.explorer.IsItemSelectableInView(*arguments)
 
+    # Lower case alias for IsItemSelectableInView
+    def isitemselectableinview(self, Item=None):
+        arguments = [Item]
+        self.IsItemSelectableInView(*arguments)
+
     def IsPaneVisible(self, Pane=None):
         arguments = com_arguments([Pane])
         return self.explorer.IsPaneVisible(*arguments)
+
+    # Lower case alias for IsPaneVisible
+    def ispanevisible(self, Pane=None):
+        arguments = [Pane]
+        self.IsPaneVisible(*arguments)
 
     def RemoveFromSelection(self, Item=None):
         arguments = com_arguments([Item])
         self.explorer.RemoveFromSelection(*arguments)
 
+    # Lower case alias for RemoveFromSelection
+    def removefromselection(self, Item=None):
+        arguments = [Item]
+        self.RemoveFromSelection(*arguments)
+
     def Search(self, Query=None, SearchScope=None):
         arguments = com_arguments([Query, SearchScope])
         self.explorer.Search(*arguments)
 
+    # Lower case alias for Search
+    def search(self, Query=None, SearchScope=None):
+        arguments = [Query, SearchScope]
+        self.Search(*arguments)
+
     def SelectAllItems(self):
         self.explorer.SelectAllItems()
+
+    # Lower case alias for SelectAllItems
+    def selectallitems(self):
+        self.SelectAllItems()
 
     def ShowPane(self, Pane=None, Visible=None):
         arguments = com_arguments([Pane, Visible])
         self.explorer.ShowPane(*arguments)
+
+    # Lower case alias for ShowPane
+    def showpane(self, Pane=None, Visible=None):
+        arguments = [Pane, Visible]
+        self.ShowPane(*arguments)
 
 
 class Explorers:
@@ -9377,9 +10268,19 @@ class Explorers:
         arguments = com_arguments([Folder, DisplayMode])
         return Explorer(self.explorers.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Folder=None, DisplayMode=None):
+        arguments = [Folder, DisplayMode]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.explorers.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class Folder:
@@ -9695,44 +10596,98 @@ class Folder:
     def AddToPFFavorites(self):
         self.folder.AddToPFFavorites()
 
+    # Lower case alias for AddToPFFavorites
+    def addtopffavorites(self):
+        self.AddToPFFavorites()
+
     def CopyTo(self, DestinationFolder=None):
         arguments = com_arguments([DestinationFolder])
         return self.folder.CopyTo(*arguments)
 
+    # Lower case alias for CopyTo
+    def copyto(self, DestinationFolder=None):
+        arguments = [DestinationFolder]
+        self.CopyTo(*arguments)
+
     def Delete(self):
         self.folder.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self):
         self.folder.Display()
 
+    # Lower case alias for Display
+    def display(self):
+        self.Display()
+
     def GetCalendarExporter(self):
         return self.folder.GetCalendarExporter()
 
+    # Lower case alias for GetCalendarExporter
+    def getcalendarexporter(self):
+        self.GetCalendarExporter()
+
     def GetCustomIcon(self):
         return self.folder.GetCustomIcon()
+
+    # Lower case alias for GetCustomIcon
+    def getcustomicon(self):
+        self.GetCustomIcon()
 
     def GetExplorer(self, DisplayMode=None):
         arguments = com_arguments([DisplayMode])
         return self.folder.GetExplorer(*arguments)
 
+    # Lower case alias for GetExplorer
+    def getexplorer(self, DisplayMode=None):
+        arguments = [DisplayMode]
+        self.GetExplorer(*arguments)
+
     def GetOrganizer(self):
         return self.folder.GetOrganizer()
+
+    # Lower case alias for GetOrganizer
+    def getorganizer(self):
+        self.GetOrganizer()
 
     def GetStorage(self, StorageIdentifier=None, StorageIdentifierType=None):
         arguments = com_arguments([StorageIdentifier, StorageIdentifierType])
         return self.folder.GetStorage(*arguments)
 
+    # Lower case alias for GetStorage
+    def getstorage(self, StorageIdentifier=None, StorageIdentifierType=None):
+        arguments = [StorageIdentifier, StorageIdentifierType]
+        self.GetStorage(*arguments)
+
     def GetTable(self, Filter=None, TableContents=None):
         arguments = com_arguments([Filter, TableContents])
         return Folder(self.folder.GetTable(*arguments))
+
+    # Lower case alias for GetTable
+    def gettable(self, Filter=None, TableContents=None):
+        arguments = [Filter, TableContents]
+        self.GetTable(*arguments)
 
     def MoveTo(self, DestinationFolder=None):
         arguments = com_arguments([DestinationFolder])
         self.folder.MoveTo(*arguments)
 
+    # Lower case alias for MoveTo
+    def moveto(self, DestinationFolder=None):
+        arguments = [DestinationFolder]
+        self.MoveTo(*arguments)
+
     def SetCustomIcon(self, Picture=None):
         arguments = com_arguments([Picture])
         self.folder.SetCustomIcon(*arguments)
+
+    # Lower case alias for SetCustomIcon
+    def setcustomicon(self, Picture=None):
+        arguments = [Picture]
+        self.SetCustomIcon(*arguments)
 
 
 class Folders:
@@ -9779,25 +10734,56 @@ class Folders:
         arguments = com_arguments([Name, Type])
         return Folder(self.folders.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Name=None, Type=None):
+        arguments = [Name, Type]
+        self.Add(*arguments)
+
     def GetFirst(self):
         return Folder(self.folders.GetFirst())
+
+    # Lower case alias for GetFirst
+    def getfirst(self):
+        self.GetFirst()
 
     def GetLast(self):
         return Folder(self.folders.GetLast())
 
+    # Lower case alias for GetLast
+    def getlast(self):
+        self.GetLast()
+
     def GetNext(self):
         return Folder(self.folders.GetNext())
 
+    # Lower case alias for GetNext
+    def getnext(self):
+        self.GetNext()
+
     def GetPrevious(self):
         return Folder(self.folders.GetPrevious())
+
+    # Lower case alias for GetPrevious
+    def getprevious(self):
+        self.GetPrevious()
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.folders.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.folders.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class FormDescription:
@@ -10108,6 +11094,11 @@ class FormDescription:
         arguments = com_arguments([Registry, Folder])
         self.formdescription.PublishForm(*arguments)
 
+    # Lower case alias for PublishForm
+    def publishform(self, Registry=None, Folder=None):
+        arguments = [Registry, Folder]
+        self.PublishForm(*arguments)
+
 
 class FormNameRuleCondition:
 
@@ -10358,12 +11349,25 @@ class FormRegion:
     def Reflow(self):
         self.formregion.Reflow()
 
+    # Lower case alias for Reflow
+    def reflow(self):
+        self.Reflow()
+
     def Select(self):
         self.formregion.Select()
+
+    # Lower case alias for Select
+    def select(self):
+        self.Select()
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
         arguments = com_arguments([Control, PropertyName])
         self.formregion.SetControlItemProperty(*arguments)
+
+    # Lower case alias for SetControlItemProperty
+    def setcontrolitemproperty(self, Control=None, PropertyName=None):
+        arguments = [Control, PropertyName]
+        self.SetControlItemProperty(*arguments)
 
 
 class FromRssFeedRuleCondition:
@@ -10630,22 +11634,48 @@ class IconView:
     def Apply(self):
         self.iconview.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         return self.iconview.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.iconview.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.iconview.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.iconview.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.iconview.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class ImportanceRuleCondition:
@@ -10896,47 +11926,104 @@ class Inspector:
     def Activate(self):
         self.inspector.Activate()
 
+    # Lower case alias for Activate
+    def activate(self):
+        self.Activate()
+
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.inspector.Close(*arguments)
+
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.inspector.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def HideFormPage(self, PageName=None):
         arguments = com_arguments([PageName])
         self.inspector.HideFormPage(*arguments)
 
+    # Lower case alias for HideFormPage
+    def hideformpage(self, PageName=None):
+        arguments = [PageName]
+        self.HideFormPage(*arguments)
+
     def IsWordMail(self):
         return self.inspector.IsWordMail()
 
+    # Lower case alias for IsWordMail
+    def iswordmail(self):
+        self.IsWordMail()
+
     def NewFormRegion(self):
         return self.inspector.NewFormRegion()
+
+    # Lower case alias for NewFormRegion
+    def newformregion(self):
+        self.NewFormRegion()
 
     def OpenFormRegion(self, Path=None):
         arguments = com_arguments([Path])
         return self.inspector.OpenFormRegion(*arguments)
 
+    # Lower case alias for OpenFormRegion
+    def openformregion(self, Path=None):
+        arguments = [Path]
+        self.OpenFormRegion(*arguments)
+
     def SaveFormRegion(self, Page=None, FileName=None):
         arguments = com_arguments([Page, FileName])
         self.inspector.SaveFormRegion(*arguments)
+
+    # Lower case alias for SaveFormRegion
+    def saveformregion(self, Page=None, FileName=None):
+        arguments = [Page, FileName]
+        self.SaveFormRegion(*arguments)
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
         arguments = com_arguments([Control, PropertyName])
         self.inspector.SetControlItemProperty(*arguments)
 
+    # Lower case alias for SetControlItemProperty
+    def setcontrolitemproperty(self, Control=None, PropertyName=None):
+        arguments = [Control, PropertyName]
+        self.SetControlItemProperty(*arguments)
+
     def SetCurrentFormPage(self, PageName=None):
         arguments = com_arguments([PageName])
         self.inspector.SetCurrentFormPage(*arguments)
+
+    # Lower case alias for SetCurrentFormPage
+    def setcurrentformpage(self, PageName=None):
+        arguments = [PageName]
+        self.SetCurrentFormPage(*arguments)
 
     def SetSchedulingStartTime(self, Start=None):
         arguments = com_arguments([Start])
         self.inspector.SetSchedulingStartTime(*arguments)
 
+    # Lower case alias for SetSchedulingStartTime
+    def setschedulingstarttime(self, Start=None):
+        arguments = [Start]
+        self.SetSchedulingStartTime(*arguments)
+
     def ShowFormPage(self, PageName=None):
         arguments = com_arguments([PageName])
         self.inspector.ShowFormPage(*arguments)
+
+    # Lower case alias for ShowFormPage
+    def showformpage(self, PageName=None):
+        arguments = [PageName]
+        self.ShowFormPage(*arguments)
 
 
 class Inspectors:
@@ -10982,9 +12069,18 @@ class Inspectors:
     def Add(self):
         return Inspector(self.inspectors.Add())
 
+    # Lower case alias for Add
+    def add(self):
+        self.Add()
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.inspectors.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class ItemProperties:
@@ -11034,13 +12130,28 @@ class ItemProperties:
         arguments = com_arguments([Name, Type, AddToFolderFields, DisplayFormat])
         self.itemproperties.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
+        arguments = [Name, Type, AddToFolderFields, DisplayFormat]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.itemproperties.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.itemproperties.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class ItemProperty:
@@ -11187,47 +12298,105 @@ class Items:
     def Add(self):
         return self.items.Add()
 
+    # Lower case alias for Add
+    def add(self):
+        self.Add()
+
     def Find(self, Filter=None):
         arguments = com_arguments([Filter])
         return self.items.Find(*arguments)
 
+    # Lower case alias for Find
+    def find(self, Filter=None):
+        arguments = [Filter]
+        self.Find(*arguments)
+
     def FindNext(self):
         return self.items.FindNext()
+
+    # Lower case alias for FindNext
+    def findnext(self):
+        self.FindNext()
 
     def GetFirst(self):
         return self.items.GetFirst()
 
+    # Lower case alias for GetFirst
+    def getfirst(self):
+        self.GetFirst()
+
     def GetLast(self):
         return self.items.GetLast()
+
+    # Lower case alias for GetLast
+    def getlast(self):
+        self.GetLast()
 
     def GetNext(self):
         return self.items.GetNext()
 
+    # Lower case alias for GetNext
+    def getnext(self):
+        self.GetNext()
+
     def GetPrevious(self):
         return self.items.GetPrevious()
+
+    # Lower case alias for GetPrevious
+    def getprevious(self):
+        self.GetPrevious()
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.items.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.items.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
+
     def ResetColumns(self):
         self.items.ResetColumns()
+
+    # Lower case alias for ResetColumns
+    def resetcolumns(self):
+        self.ResetColumns()
 
     def Restrict(self, Filter=None):
         arguments = com_arguments([Filter])
         return self.items.Restrict(*arguments)
 
+    # Lower case alias for Restrict
+    def restrict(self, Filter=None):
+        arguments = [Filter]
+        self.Restrict(*arguments)
+
     def SetColumns(self, Columns=None):
         arguments = com_arguments([Columns])
         self.items.SetColumns(*arguments)
 
+    # Lower case alias for SetColumns
+    def setcolumns(self, Columns=None):
+        arguments = [Columns]
+        self.SetColumns(*arguments)
+
     def Sort(self, Property=None, Descending=None):
         arguments = com_arguments([Property, Descending])
         self.items.Sort(*arguments)
+
+    # Lower case alias for Sort
+    def sort(self, Property=None, Descending=None):
+        arguments = [Property, Descending]
+        self.Sort(*arguments)
 
 
 class JournalItem:
@@ -11820,50 +12989,114 @@ class JournalItem:
         arguments = com_arguments([SaveMode])
         self.journalitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.journalitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.journalitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.journalitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Forward(self):
         return self.journalitem.Forward()
 
+    # Lower case alias for Forward
+    def forward(self):
+        self.Forward()
+
     def GetConversation(self):
         return self.journalitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.journalitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.journalitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def Reply(self):
         return MailItem(self.journalitem.Reply())
 
+    # Lower case alias for Reply
+    def reply(self):
+        self.Reply()
+
     def ReplyAll(self):
         return MailItem(self.journalitem.ReplyAll())
 
+    # Lower case alias for ReplyAll
+    def replyall(self):
+        self.ReplyAll()
+
     def Save(self):
         self.journalitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.journalitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.journalitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
     def StartTimer(self):
         self.journalitem.StartTimer()
 
+    # Lower case alias for StartTimer
+    def starttimer(self):
+        self.StartTimer()
+
     def StopTimer(self):
         self.journalitem.StopTimer()
+
+    # Lower case alias for StopTimer
+    def stoptimer(self):
+        self.StopTimer()
 
 
 class JournalModule:
@@ -13144,61 +14377,139 @@ class MailItem:
         arguments = com_arguments([contact])
         self.mailitem.AddBusinessCard(*arguments)
 
+    # Lower case alias for AddBusinessCard
+    def addbusinesscard(self, contact=None):
+        arguments = [contact]
+        self.AddBusinessCard(*arguments)
+
     def ClearConversationIndex(self):
         self.mailitem.ClearConversationIndex()
 
+    # Lower case alias for ClearConversationIndex
+    def clearconversationindex(self):
+        self.ClearConversationIndex()
+
     def ClearTaskFlag(self):
         self.mailitem.ClearTaskFlag()
+
+    # Lower case alias for ClearTaskFlag
+    def cleartaskflag(self):
+        self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.mailitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.mailitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.mailitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.mailitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Forward(self):
         return self.mailitem.Forward()
 
+    # Lower case alias for Forward
+    def forward(self):
+        self.Forward()
+
     def GetConversation(self):
         return self.mailitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([MarkInterval])
         self.mailitem.MarkAsTask(*arguments)
 
+    # Lower case alias for MarkAsTask
+    def markastask(self, MarkInterval=None):
+        arguments = [MarkInterval]
+        self.MarkAsTask(*arguments)
+
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.mailitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.mailitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def Reply(self):
         return MailItem(self.mailitem.Reply())
 
+    # Lower case alias for Reply
+    def reply(self):
+        self.Reply()
+
     def ReplyAll(self):
         return MailItem(self.mailitem.ReplyAll())
 
+    # Lower case alias for ReplyAll
+    def replyall(self):
+        self.ReplyAll()
+
     def Save(self):
         self.mailitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.mailitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def Send(self):
         self.mailitem.Send()
 
+    # Lower case alias for Send
+    def send(self):
+        self.Send()
+
     def ShowCategoriesDialog(self):
         self.mailitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class MailModule:
@@ -14101,51 +15412,116 @@ class MeetingItem:
         arguments = com_arguments([SaveMode])
         self.meetingitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.meetingitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.meetingitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.meetingitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Forward(self):
         return self.meetingitem.Forward()
+
+    # Lower case alias for Forward
+    def forward(self):
+        self.Forward()
 
     def GetAssociatedAppointment(self, AddToCalendar=None):
         arguments = com_arguments([AddToCalendar])
         return self.meetingitem.GetAssociatedAppointment(*arguments)
 
+    # Lower case alias for GetAssociatedAppointment
+    def getassociatedappointment(self, AddToCalendar=None):
+        arguments = [AddToCalendar]
+        self.GetAssociatedAppointment(*arguments)
+
     def GetConversation(self):
         return self.meetingitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.meetingitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.meetingitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def Reply(self):
         return MailItem(self.meetingitem.Reply())
 
+    # Lower case alias for Reply
+    def reply(self):
+        self.Reply()
+
     def ReplyAll(self):
         return MailItem(self.meetingitem.ReplyAll())
 
+    # Lower case alias for ReplyAll
+    def replyall(self):
+        self.ReplyAll()
+
     def Save(self):
         self.meetingitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.meetingitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def Send(self):
         self.meetingitem.Send()
 
+    # Lower case alias for Send
+    def send(self):
+        self.Send()
+
     def ShowCategoriesDialog(self):
         self.meetingitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class MoveOrCopyRuleAction:
@@ -14410,89 +15786,200 @@ class NameSpace:
         arguments = com_arguments([Store])
         self.namespace.AddStore(*arguments)
 
+    # Lower case alias for AddStore
+    def addstore(self, Store=None):
+        arguments = [Store]
+        self.AddStore(*arguments)
+
     def AddStoreEx(self, Store=None, Type=None):
         arguments = com_arguments([Store, Type])
         self.namespace.AddStoreEx(*arguments)
+
+    # Lower case alias for AddStoreEx
+    def addstoreex(self, Store=None, Type=None):
+        arguments = [Store, Type]
+        self.AddStoreEx(*arguments)
 
     def CompareEntryIDs(self, FirstEntryID=None, SecondEntryID=None):
         arguments = com_arguments([FirstEntryID, SecondEntryID])
         return self.namespace.CompareEntryIDs(*arguments)
 
+    # Lower case alias for CompareEntryIDs
+    def compareentryids(self, FirstEntryID=None, SecondEntryID=None):
+        arguments = [FirstEntryID, SecondEntryID]
+        self.CompareEntryIDs(*arguments)
+
     def CreateContactCard(self, Address=None):
         arguments = com_arguments([Address])
         return self.namespace.CreateContactCard(*arguments)
+
+    # Lower case alias for CreateContactCard
+    def createcontactcard(self, Address=None):
+        arguments = [Address]
+        self.CreateContactCard(*arguments)
 
     def CreateRecipient(self, RecipientName=None):
         arguments = com_arguments([RecipientName])
         return self.namespace.CreateRecipient(*arguments)
 
+    # Lower case alias for CreateRecipient
+    def createrecipient(self, RecipientName=None):
+        arguments = [RecipientName]
+        self.CreateRecipient(*arguments)
+
     def CreateSharingItem(self, Context=None, Provider=None):
         arguments = com_arguments([Context, Provider])
         return self.namespace.CreateSharingItem(*arguments)
+
+    # Lower case alias for CreateSharingItem
+    def createsharingitem(self, Context=None, Provider=None):
+        arguments = [Context, Provider]
+        self.CreateSharingItem(*arguments)
 
     def Dial(self, ContactItem=None):
         arguments = com_arguments([ContactItem])
         self.namespace.Dial(*arguments)
 
+    # Lower case alias for Dial
+    def dial(self, ContactItem=None):
+        arguments = [ContactItem]
+        self.Dial(*arguments)
+
     def GetAddressEntryFromID(self, ID=None):
         arguments = com_arguments([ID])
         return ID(self.namespace.GetAddressEntryFromID(*arguments))
+
+    # Lower case alias for GetAddressEntryFromID
+    def getaddressentryfromid(self, ID=None):
+        arguments = [ID]
+        self.GetAddressEntryFromID(*arguments)
 
     def GetDefaultFolder(self, FolderType=None):
         arguments = com_arguments([FolderType])
         return self.namespace.GetDefaultFolder(*arguments)
 
+    # Lower case alias for GetDefaultFolder
+    def getdefaultfolder(self, FolderType=None):
+        arguments = [FolderType]
+        self.GetDefaultFolder(*arguments)
+
     def GetFolderFromID(self, EntryIDFolder=None, EntryIDStore=None):
         arguments = com_arguments([EntryIDFolder, EntryIDStore])
         return self.namespace.GetFolderFromID(*arguments)
 
+    # Lower case alias for GetFolderFromID
+    def getfolderfromid(self, EntryIDFolder=None, EntryIDStore=None):
+        arguments = [EntryIDFolder, EntryIDStore]
+        self.GetFolderFromID(*arguments)
+
     def GetGlobalAddressList(self):
         return self.namespace.GetGlobalAddressList()
+
+    # Lower case alias for GetGlobalAddressList
+    def getglobaladdresslist(self):
+        self.GetGlobalAddressList()
 
     def GetItemFromID(self, EntryIDItem=None, EntryIDStore=None):
         arguments = com_arguments([EntryIDItem, EntryIDStore])
         return self.namespace.GetItemFromID(*arguments)
 
+    # Lower case alias for GetItemFromID
+    def getitemfromid(self, EntryIDItem=None, EntryIDStore=None):
+        arguments = [EntryIDItem, EntryIDStore]
+        self.GetItemFromID(*arguments)
+
     def GetRecipientFromID(self, EntryID=None):
         arguments = com_arguments([EntryID])
         return self.namespace.GetRecipientFromID(*arguments)
 
+    # Lower case alias for GetRecipientFromID
+    def getrecipientfromid(self, EntryID=None):
+        arguments = [EntryID]
+        self.GetRecipientFromID(*arguments)
+
     def GetSelectNamesDialog(self):
         return self.namespace.GetSelectNamesDialog()
+
+    # Lower case alias for GetSelectNamesDialog
+    def getselectnamesdialog(self):
+        self.GetSelectNamesDialog()
 
     def GetSharedDefaultFolder(self, Recipient=None, FolderType=None):
         arguments = com_arguments([Recipient, FolderType])
         return self.namespace.GetSharedDefaultFolder(*arguments)
 
+    # Lower case alias for GetSharedDefaultFolder
+    def getshareddefaultfolder(self, Recipient=None, FolderType=None):
+        arguments = [Recipient, FolderType]
+        self.GetSharedDefaultFolder(*arguments)
+
     def GetStoreFromID(self, ID=None):
         arguments = com_arguments([ID])
         return StoreID(self.namespace.GetStoreFromID(*arguments))
 
+    # Lower case alias for GetStoreFromID
+    def getstorefromid(self, ID=None):
+        arguments = [ID]
+        self.GetStoreFromID(*arguments)
+
     def Logoff(self):
         self.namespace.Logoff()
+
+    # Lower case alias for Logoff
+    def logoff(self):
+        self.Logoff()
 
     def Logon(self, Profile=None, Password=None, ShowDialog=None, NewSession=None):
         arguments = com_arguments([Profile, Password, ShowDialog, NewSession])
         self.namespace.Logon(*arguments)
 
+    # Lower case alias for Logon
+    def logon(self, Profile=None, Password=None, ShowDialog=None, NewSession=None):
+        arguments = [Profile, Password, ShowDialog, NewSession]
+        self.Logon(*arguments)
+
     def OpenSharedFolder(self, Path=None, Name=None, DownloadAttachments=None, UseTTL=None):
         arguments = com_arguments([Path, Name, DownloadAttachments, UseTTL])
         return Folder(self.namespace.OpenSharedFolder(*arguments))
+
+    # Lower case alias for OpenSharedFolder
+    def opensharedfolder(self, Path=None, Name=None, DownloadAttachments=None, UseTTL=None):
+        arguments = [Path, Name, DownloadAttachments, UseTTL]
+        self.OpenSharedFolder(*arguments)
 
     def OpenSharedItem(self, Path=None):
         arguments = com_arguments([Path])
         return self.namespace.OpenSharedItem(*arguments)
 
+    # Lower case alias for OpenSharedItem
+    def openshareditem(self, Path=None):
+        arguments = [Path]
+        self.OpenSharedItem(*arguments)
+
     def PickFolder(self):
         return Folder(self.namespace.PickFolder())
+
+    # Lower case alias for PickFolder
+    def pickfolder(self):
+        self.PickFolder()
 
     def RemoveStore(self, Folder=None):
         arguments = com_arguments([Folder])
         self.namespace.RemoveStore(*arguments)
 
+    # Lower case alias for RemoveStore
+    def removestore(self, Folder=None):
+        arguments = [Folder]
+        self.RemoveStore(*arguments)
+
     def SendAndReceive(self, showProgressDialog=None):
         arguments = com_arguments([showProgressDialog])
         self.namespace.SendAndReceive(*arguments)
+
+    # Lower case alias for SendAndReceive
+    def sendandreceive(self, showProgressDialog=None):
+        arguments = [showProgressDialog]
+        self.SendAndReceive(*arguments)
 
 
 class NavigationFolder:
@@ -14649,13 +16136,28 @@ class NavigationFolders:
         arguments = com_arguments([Folder])
         return self.navigationfolders.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Folder=None):
+        arguments = [Folder]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.navigationfolders.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, RemovableFolder=None):
         arguments = com_arguments([RemovableFolder])
         self.navigationfolders.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, RemovableFolder=None):
+        arguments = [RemovableFolder]
+        self.Remove(*arguments)
 
 
 class NavigationGroup:
@@ -14786,17 +16288,37 @@ class NavigationGroups:
         arguments = com_arguments([GroupDisplayName])
         return self.navigationgroups.Create(*arguments)
 
+    # Lower case alias for Create
+    def create(self, GroupDisplayName=None):
+        arguments = [GroupDisplayName]
+        self.Create(*arguments)
+
     def Delete(self, Group=None):
         arguments = com_arguments([Group])
         self.navigationgroups.Delete(*arguments)
+
+    # Lower case alias for Delete
+    def delete(self, Group=None):
+        arguments = [Group]
+        self.Delete(*arguments)
 
     def GetDefaultNavigationGroup(self, DefaultFolderGroup=None):
         arguments = com_arguments([DefaultFolderGroup])
         return self.navigationgroups.GetDefaultNavigationGroup(*arguments)
 
+    # Lower case alias for GetDefaultNavigationGroup
+    def getdefaultnavigationgroup(self, DefaultFolderGroup=None):
+        arguments = [DefaultFolderGroup]
+        self.GetDefaultNavigationGroup(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.navigationgroups.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class NavigationModule:
@@ -14927,9 +16449,19 @@ class NavigationModules:
         arguments = com_arguments([ModuleType])
         return self.navigationmodules.GetNavigationModule(*arguments)
 
+    # Lower case alias for GetNavigationModule
+    def getnavigationmodule(self, ModuleType=None):
+        arguments = [ModuleType]
+        self.GetNavigationModule(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.navigationmodules.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class NavigationPane:
@@ -15395,29 +16927,65 @@ class NoteItem:
         arguments = com_arguments([SaveMode])
         self.noteitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         return NoteItem(self.noteitem.Copy())
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.noteitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.noteitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.noteitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.noteitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def Save(self):
         self.noteitem.Save()
 
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
+
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.noteitem.SaveAs(*arguments)
+
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
 
 
 class NotesModule:
@@ -16815,32 +18383,72 @@ class OlkComboBox:
         arguments = com_arguments([ItemText, Index])
         self.olkcombobox.AddItem(*arguments)
 
+    # Lower case alias for AddItem
+    def additem(self, ItemText=None, Index=None):
+        arguments = [ItemText, Index]
+        self.AddItem(*arguments)
+
     def Clear(self):
         self.olkcombobox.Clear()
+
+    # Lower case alias for Clear
+    def clear(self):
+        self.Clear()
 
     def Copy(self):
         self.olkcombobox.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Cut(self):
         self.olkcombobox.Cut()
 
+    # Lower case alias for Cut
+    def cut(self):
+        self.Cut()
+
     def DropDown(self):
         self.olkcombobox.DropDown()
+
+    # Lower case alias for DropDown
+    def dropdown(self):
+        self.DropDown()
 
     def GetItem(self, Index=None):
         arguments = com_arguments([Index])
         return self.olkcombobox.GetItem(*arguments)
 
+    # Lower case alias for GetItem
+    def getitem(self, Index=None):
+        arguments = [Index]
+        self.GetItem(*arguments)
+
     def Paste(self):
         self.olkcombobox.Paste()
+
+    # Lower case alias for Paste
+    def paste(self):
+        self.Paste()
 
     def RemoveItem(self, Index=None):
         arguments = com_arguments([Index])
         self.olkcombobox.RemoveItem(*arguments)
 
+    # Lower case alias for RemoveItem
+    def removeitem(self, Index=None):
+        arguments = [Index]
+        self.RemoveItem(*arguments)
+
     def SetItem(self, Index=None, Item=None):
         arguments = com_arguments([Index, Item])
         self.olkcombobox.SetItem(*arguments)
+
+    # Lower case alias for SetItem
+    def setitem(self, Index=None, Item=None):
+        arguments = [Index, Item]
+        self.SetItem(*arguments)
 
 
 class OlkCommandButton:
@@ -17390,6 +18998,10 @@ class OlkDateControl:
 
     def DropDown(self):
         self.olkdatecontrol.DropDown()
+
+    # Lower case alias for DropDown
+    def dropdown(self):
+        self.DropDown()
 
 
 class OlkFrameHeader:
@@ -18050,31 +19662,69 @@ class OlkListBox:
         arguments = com_arguments([ItemText, Index])
         self.olklistbox.AddItem(*arguments)
 
+    # Lower case alias for AddItem
+    def additem(self, ItemText=None, Index=None):
+        arguments = [ItemText, Index]
+        self.AddItem(*arguments)
+
     def Clear(self):
         self.olklistbox.Clear()
 
+    # Lower case alias for Clear
+    def clear(self):
+        self.Clear()
+
     def Copy(self):
         self.olklistbox.Copy()
+
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
 
     def GetItem(self, Index=None):
         arguments = com_arguments([Index])
         return self.olklistbox.GetItem(*arguments)
 
+    # Lower case alias for GetItem
+    def getitem(self, Index=None):
+        arguments = [Index]
+        self.GetItem(*arguments)
+
     def GetSelected(self, Index=None):
         arguments = com_arguments([Index])
         return self.olklistbox.GetSelected(*arguments)
+
+    # Lower case alias for GetSelected
+    def getselected(self, Index=None):
+        arguments = [Index]
+        self.GetSelected(*arguments)
 
     def RemoveItem(self, Index=None):
         arguments = com_arguments([Index])
         self.olklistbox.RemoveItem(*arguments)
 
+    # Lower case alias for RemoveItem
+    def removeitem(self, Index=None):
+        arguments = [Index]
+        self.RemoveItem(*arguments)
+
     def SetItem(self, Index=None, Item=None):
         arguments = com_arguments([Index, Item])
         self.olklistbox.SetItem(*arguments)
 
+    # Lower case alias for SetItem
+    def setitem(self, Index=None, Item=None):
+        arguments = [Index, Item]
+        self.SetItem(*arguments)
+
     def SetSelected(self, Index=None, Selected=None):
         arguments = com_arguments([Index, Selected])
         self.olklistbox.SetSelected(*arguments)
+
+    # Lower case alias for SetSelected
+    def setselected(self, Index=None, Selected=None):
+        arguments = [Index, Selected]
+        self.SetSelected(*arguments)
 
 
 class OlkOptionButton:
@@ -18879,14 +20529,30 @@ class OlkTextBox:
     def Clear(self):
         self.olktextbox.Clear()
 
+    # Lower case alias for Clear
+    def clear(self):
+        self.Clear()
+
     def Copy(self):
         self.olktextbox.Copy()
+
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
 
     def Cut(self):
         self.olktextbox.Cut()
 
+    # Lower case alias for Cut
+    def cut(self):
+        self.Cut()
+
     def Paste(self):
         self.olktextbox.Paste()
+
+    # Lower case alias for Paste
+    def paste(self):
+        self.Paste()
 
 
 class OlkTimeControl:
@@ -19212,6 +20878,10 @@ class OlkTimeControl:
     def DropDown(self):
         self.olktimecontrol.DropDown()
 
+    # Lower case alias for DropDown
+    def dropdown(self):
+        self.DropDown()
+
 
 class OlkTimeZoneControl:
 
@@ -19356,6 +21026,10 @@ class OlkTimeZoneControl:
 
     def DropDown(self):
         self.olktimezonecontrol.DropDown()
+
+    # Lower case alias for DropDown
+    def dropdown(self):
+        self.DropDown()
 
 
 # OlMailingAddress enumeration
@@ -20035,20 +21709,44 @@ class OrderFields:
         arguments = com_arguments([PropertyName, IsDescending])
         return self.orderfields.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, PropertyName=None, IsDescending=None):
+        arguments = [PropertyName, IsDescending]
+        self.Add(*arguments)
+
     def Insert(self, PropertyName=None, Index=None, IsDescending=None):
         arguments = com_arguments([PropertyName, Index, IsDescending])
         return self.orderfields.Insert(*arguments)
+
+    # Lower case alias for Insert
+    def insert(self, PropertyName=None, Index=None, IsDescending=None):
+        arguments = [PropertyName, Index, IsDescending]
+        self.Insert(*arguments)
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.orderfields.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.orderfields.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
+
     def RemoveAll(self):
         self.orderfields.RemoveAll()
+
+    # Lower case alias for RemoveAll
+    def removeall(self):
+        self.RemoveAll()
 
 
 class OutlookBarGroup:
@@ -20170,13 +21868,28 @@ class OutlookBarGroups:
         arguments = com_arguments([Name, Index])
         return OutlookBarGroup(self.outlookbargroups.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Name=None, Index=None):
+        arguments = [Name, Index]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.outlookbargroups.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.outlookbargroups.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class OutlookBarPane:
@@ -20307,6 +22020,11 @@ class OutlookBarShortcut:
         arguments = com_arguments([Icon])
         self.outlookbarshortcut.SetIcon(*arguments)
 
+    # Lower case alias for SetIcon
+    def seticon(self, Icon=None):
+        arguments = [Icon]
+        self.SetIcon(*arguments)
+
 
 class OutlookBarShortcuts:
 
@@ -20352,13 +22070,28 @@ class OutlookBarShortcuts:
         arguments = com_arguments([Target, Name, Index])
         return OutlookBarShortcut(self.outlookbarshortcuts.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Target=None, Name=None, Index=None):
+        arguments = [Target, Name, Index]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.outlookbarshortcuts.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.outlookbarshortcuts.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class OutlookBarStorage:
@@ -20445,13 +22178,27 @@ class Pages:
     def Add(self):
         return Page(self.pages.Add())
 
+    # Lower case alias for Add
+    def add(self):
+        self.Add()
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.pages.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.pages.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class Panes:
@@ -20497,6 +22244,11 @@ class Panes:
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.panes.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class PlaySoundRuleAction:
@@ -21310,55 +23062,124 @@ class PostItem:
     def ClearConversationIndex(self):
         self.postitem.ClearConversationIndex()
 
+    # Lower case alias for ClearConversationIndex
+    def clearconversationindex(self):
+        self.ClearConversationIndex()
+
     def ClearTaskFlag(self):
         self.postitem.ClearTaskFlag()
+
+    # Lower case alias for ClearTaskFlag
+    def cleartaskflag(self):
+        self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.postitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.postitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.postitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.postitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Forward(self):
         return self.postitem.Forward()
 
+    # Lower case alias for Forward
+    def forward(self):
+        self.Forward()
+
     def GetConversation(self):
         return self.postitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([MarkInterval])
         self.postitem.MarkAsTask(*arguments)
 
+    # Lower case alias for MarkAsTask
+    def markastask(self, MarkInterval=None):
+        arguments = [MarkInterval]
+        self.MarkAsTask(*arguments)
+
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.postitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def Post(self):
         self.postitem.Post()
+
+    # Lower case alias for Post
+    def post(self):
+        self.Post()
 
     def PrintOut(self):
         self.postitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Reply(self):
         return MailItem(self.postitem.Reply())
 
+    # Lower case alias for Reply
+    def reply(self):
+        self.Reply()
+
     def Save(self):
         self.postitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.postitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.postitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class PropertyAccessor:
@@ -21396,41 +23217,91 @@ class PropertyAccessor:
         arguments = com_arguments([Value])
         return self.propertyaccessor.BinaryToString(*arguments)
 
+    # Lower case alias for BinaryToString
+    def binarytostring(self, Value=None):
+        arguments = [Value]
+        self.BinaryToString(*arguments)
+
     def DeleteProperties(self, SchemaNames=None):
         arguments = com_arguments([SchemaNames])
         return Err(self.propertyaccessor.DeleteProperties(*arguments))
+
+    # Lower case alias for DeleteProperties
+    def deleteproperties(self, SchemaNames=None):
+        arguments = [SchemaNames]
+        self.DeleteProperties(*arguments)
 
     def DeleteProperty(self, SchemaName=None):
         arguments = com_arguments([SchemaName])
         self.propertyaccessor.DeleteProperty(*arguments)
 
+    # Lower case alias for DeleteProperty
+    def deleteproperty(self, SchemaName=None):
+        arguments = [SchemaName]
+        self.DeleteProperty(*arguments)
+
     def GetProperties(self, SchemaNames=None):
         arguments = com_arguments([SchemaNames])
         return self.propertyaccessor.GetProperties(*arguments)
+
+    # Lower case alias for GetProperties
+    def getproperties(self, SchemaNames=None):
+        arguments = [SchemaNames]
+        self.GetProperties(*arguments)
 
     def GetProperty(self, SchemaName=None):
         arguments = com_arguments([SchemaName])
         return self.propertyaccessor.GetProperty(*arguments)
 
+    # Lower case alias for GetProperty
+    def getproperty(self, SchemaName=None):
+        arguments = [SchemaName]
+        self.GetProperty(*arguments)
+
     def LocalTimeToUTC(self, Value=None):
         arguments = com_arguments([Value])
         return self.propertyaccessor.LocalTimeToUTC(*arguments)
+
+    # Lower case alias for LocalTimeToUTC
+    def localtimetoutc(self, Value=None):
+        arguments = [Value]
+        self.LocalTimeToUTC(*arguments)
 
     def SetProperties(self, SchemaNames=None, Values=None):
         arguments = com_arguments([SchemaNames, Values])
         return self.propertyaccessor.SetProperties(*arguments)
 
+    # Lower case alias for SetProperties
+    def setproperties(self, SchemaNames=None, Values=None):
+        arguments = [SchemaNames, Values]
+        self.SetProperties(*arguments)
+
     def SetProperty(self, SchemaName=None, Value=None):
         arguments = com_arguments([SchemaName, Value])
         self.propertyaccessor.SetProperty(*arguments)
+
+    # Lower case alias for SetProperty
+    def setproperty(self, SchemaName=None, Value=None):
+        arguments = [SchemaName, Value]
+        self.SetProperty(*arguments)
 
     def StringToBinary(self, Value=None):
         arguments = com_arguments([Value])
         return self.propertyaccessor.StringToBinary(*arguments)
 
+    # Lower case alias for StringToBinary
+    def stringtobinary(self, Value=None):
+        arguments = [Value]
+        self.StringToBinary(*arguments)
+
     def UTCToLocalTime(self, Value=None):
         arguments = com_arguments([Value])
         return self.propertyaccessor.UTCToLocalTime(*arguments)
+
+    # Lower case alias for UTCToLocalTime
+    def utctolocaltime(self, Value=None):
+        arguments = [Value]
+        self.UTCToLocalTime(*arguments)
 
 
 class PropertyPage:
@@ -21453,9 +23324,18 @@ class PropertyPage:
     def Apply(self):
         return self.propertypage.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def GetPageInfo(self, HelpFile=None, HelpContext=None):
         arguments = com_arguments([HelpFile, HelpContext])
         return self.propertypage.GetPageInfo(*arguments)
+
+    # Lower case alias for GetPageInfo
+    def getpageinfo(self, HelpFile=None, HelpContext=None):
+        arguments = [HelpFile, HelpContext]
+        self.GetPageInfo(*arguments)
 
 
 class PropertyPages:
@@ -21502,13 +23382,28 @@ class PropertyPages:
         arguments = com_arguments([Page, Title])
         self.propertypages.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Page=None, Title=None):
+        arguments = [Page, Title]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.propertypages.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.propertypages.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class PropertyPageSite:
@@ -21544,6 +23439,10 @@ class PropertyPageSite:
 
     def OnStatusChange(self):
         self.propertypagesite.OnStatusChange()
+
+    # Lower case alias for OnStatusChange
+    def onstatuschange(self):
+        self.OnStatusChange()
 
 
 class Recipient:
@@ -21754,12 +23653,25 @@ class Recipient:
     def Delete(self):
         self.recipient.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def FreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
         arguments = com_arguments([Start, MinPerChar, CompleteFormat])
         return self.recipient.FreeBusy(*arguments)
 
+    # Lower case alias for FreeBusy
+    def freebusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
+        arguments = [Start, MinPerChar, CompleteFormat]
+        self.FreeBusy(*arguments)
+
     def Resolve(self):
         return self.recipient.Resolve()
+
+    # Lower case alias for Resolve
+    def resolve(self):
+        self.Resolve()
 
 
 class Recipients:
@@ -21806,16 +23718,35 @@ class Recipients:
         arguments = com_arguments([Name])
         return Recipient(self.recipients.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Name=None):
+        arguments = [Name]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.recipients.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.recipients.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
+
     def ResolveAll(self):
         return self.recipients.ResolveAll()
+
+    # Lower case alias for ResolveAll
+    def resolveall(self):
+        self.ResolveAll()
 
 
 class RecurrencePattern:
@@ -22100,6 +24031,11 @@ class RecurrencePattern:
         arguments = com_arguments([StartDate])
         return self.recurrencepattern.GetOccurrence(*arguments)
 
+    # Lower case alias for GetOccurrence
+    def getoccurrence(self, StartDate=None):
+        arguments = [StartDate]
+        self.GetOccurrence(*arguments)
+
 
 class Reminder:
 
@@ -22180,9 +24116,18 @@ class Reminder:
     def Dismiss(self):
         self.reminder.Dismiss()
 
+    # Lower case alias for Dismiss
+    def dismiss(self):
+        self.Dismiss()
+
     def Snooze(self, SnoozeTime=None):
         arguments = com_arguments([SnoozeTime])
         self.reminder.Snooze(*arguments)
+
+    # Lower case alias for Snooze
+    def snooze(self, SnoozeTime=None):
+        arguments = [SnoozeTime]
+        self.Snooze(*arguments)
 
 
 class Reminders:
@@ -22229,9 +24174,19 @@ class Reminders:
         arguments = com_arguments([Index])
         return self.reminders.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.reminders.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class RemoteItem:
@@ -22698,35 +24653,79 @@ class RemoteItem:
         arguments = com_arguments([SaveMode])
         self.remoteitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.remoteitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.remoteitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.remoteitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetConversation(self):
         return self.remoteitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.remoteitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.remoteitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.remoteitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.remoteitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.remoteitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class ReportItem:
@@ -23175,35 +25174,79 @@ class ReportItem:
         arguments = com_arguments([SaveMode])
         self.reportitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.reportitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.reportitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.reportitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetConversation(self):
         return self.reportitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.reportitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.reportitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.reportitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.reportitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.reportitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class Results:
@@ -23266,29 +25309,64 @@ class Results:
     def GetFirst(self):
         return self.results.GetFirst()
 
+    # Lower case alias for GetFirst
+    def getfirst(self):
+        self.GetFirst()
+
     def GetLast(self):
         return self.results.GetLast()
+
+    # Lower case alias for GetLast
+    def getlast(self):
+        self.GetLast()
 
     def GetNext(self):
         return self.results.GetNext()
 
+    # Lower case alias for GetNext
+    def getnext(self):
+        self.GetNext()
+
     def GetPrevious(self):
         return self.results.GetPrevious()
+
+    # Lower case alias for GetPrevious
+    def getprevious(self):
+        self.GetPrevious()
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.results.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def ResetColumns(self):
         self.results.ResetColumns()
+
+    # Lower case alias for ResetColumns
+    def resetcolumns(self):
+        self.ResetColumns()
 
     def SetColumns(self, Columns=None):
         arguments = com_arguments([Columns])
         self.results.SetColumns(*arguments)
 
+    # Lower case alias for SetColumns
+    def setcolumns(self, Columns=None):
+        arguments = [Columns]
+        self.SetColumns(*arguments)
+
     def Sort(self, Property=None, Descending=None):
         arguments = com_arguments([Property, Descending])
         self.results.Sort(*arguments)
+
+    # Lower case alias for Sort
+    def sort(self, Property=None, Descending=None):
+        arguments = [Property, Descending]
+        self.Sort(*arguments)
 
 
 class Row:
@@ -23326,20 +25404,44 @@ class Row:
         arguments = com_arguments([Index])
         return self.row.BinaryToString(*arguments)
 
+    # Lower case alias for BinaryToString
+    def binarytostring(self, Index=None):
+        arguments = [Index]
+        self.BinaryToString(*arguments)
+
     def GetValues(self):
         return self.row.GetValues()
+
+    # Lower case alias for GetValues
+    def getvalues(self):
+        self.GetValues()
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.row.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def LocalTimeToUTC(self, Index=None):
         arguments = com_arguments([Index])
         return self.row.LocalTimeToUTC(*arguments)
 
+    # Lower case alias for LocalTimeToUTC
+    def localtimetoutc(self, Index=None):
+        arguments = [Index]
+        self.LocalTimeToUTC(*arguments)
+
     def UTCToLocalTime(self, Index=None):
         arguments = com_arguments([Index])
         return self.row.UTCToLocalTime(*arguments)
+
+    # Lower case alias for UTCToLocalTime
+    def utctolocaltime(self, Index=None):
+        arguments = [Index]
+        self.UTCToLocalTime(*arguments)
 
 
 class Rule:
@@ -23472,6 +25574,11 @@ class Rule:
     def Execute(self, ShowProgress=None, Folder=None, IncludeSubfolders=None, RuleExecuteOption=None):
         arguments = com_arguments([ShowProgress, Folder, IncludeSubfolders, RuleExecuteOption])
         self.rule.Execute(*arguments)
+
+    # Lower case alias for Execute
+    def execute(self, ShowProgress=None, Folder=None, IncludeSubfolders=None, RuleExecuteOption=None):
+        arguments = [ShowProgress, Folder, IncludeSubfolders, RuleExecuteOption]
+        self.Execute(*arguments)
 
 
 class RuleAction:
@@ -23728,6 +25835,11 @@ class RuleActions:
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.ruleactions.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class RuleCondition:
@@ -24052,6 +26164,11 @@ class RuleConditions:
         arguments = com_arguments([Index])
         return self.ruleconditions.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
 
 class Rules:
 
@@ -24114,17 +26231,37 @@ class Rules:
         arguments = com_arguments([Name, RuleType])
         return self.rules.Create(*arguments)
 
+    # Lower case alias for Create
+    def create(self, Name=None, RuleType=None):
+        arguments = [Name, RuleType]
+        self.Create(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.rules.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.rules.Remove(*arguments)
 
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
+
     def Save(self, ShowProgress=None):
         arguments = com_arguments([ShowProgress])
         self.rules.Save(*arguments)
+
+    # Lower case alias for Save
+    def save(self, ShowProgress=None):
+        arguments = [ShowProgress]
+        self.Save(*arguments)
 
 
 class Search:
@@ -24215,12 +26352,25 @@ class Search:
     def GetTable(self):
         return self.search.GetTable()
 
+    # Lower case alias for GetTable
+    def gettable(self):
+        self.GetTable()
+
     def Save(self, SchFldrName=None):
         arguments = com_arguments([SchFldrName])
         self.search.Save(*arguments)
 
+    # Lower case alias for Save
+    def save(self, SchFldrName=None):
+        arguments = [SchFldrName]
+        self.Save(*arguments)
+
     def Stop(self):
         self.search.Stop()
+
+    # Lower case alias for Stop
+    def stop(self):
+        self.Stop()
 
 
 class Selection:
@@ -24276,9 +26426,19 @@ class Selection:
         arguments = com_arguments([SelectionContents])
         return self.selection.GetSelection(*arguments)
 
+    # Lower case alias for GetSelection
+    def getselection(self, SelectionContents=None):
+        arguments = [SelectionContents]
+        self.GetSelection(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.selection.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class SelectNamesDialog:
@@ -24485,9 +26645,18 @@ class SelectNamesDialog:
     def Display(self):
         return self.selectnamesdialog.Display()
 
+    # Lower case alias for Display
+    def display(self):
+        self.Display()
+
     def SetDefaultDisplayMode(self, defaultMode=None):
         arguments = com_arguments([defaultMode])
         self.selectnamesdialog.SetDefaultDisplayMode(*arguments)
+
+    # Lower case alias for SetDefaultDisplayMode
+    def setdefaultdisplaymode(self, defaultMode=None):
+        arguments = [defaultMode]
+        self.SetDefaultDisplayMode(*arguments)
 
 
 class SenderInAddressListRuleCondition:
@@ -25845,70 +28014,160 @@ class SharingItem:
         arguments = com_arguments([contact])
         self.sharingitem.AddBusinessCard(*arguments)
 
+    # Lower case alias for AddBusinessCard
+    def addbusinesscard(self, contact=None):
+        arguments = [contact]
+        self.AddBusinessCard(*arguments)
+
     def Allow(self):
         self.sharingitem.Allow()
+
+    # Lower case alias for Allow
+    def allow(self):
+        self.Allow()
 
     def ClearConversationIndex(self):
         self.sharingitem.ClearConversationIndex()
 
+    # Lower case alias for ClearConversationIndex
+    def clearconversationindex(self):
+        self.ClearConversationIndex()
+
     def ClearTaskFlag(self):
         self.sharingitem.ClearTaskFlag()
+
+    # Lower case alias for ClearTaskFlag
+    def cleartaskflag(self):
+        self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.sharingitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.sharingitem.Copy()
+
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
 
     def Delete(self):
         self.sharingitem.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Deny(self):
         return self.sharingitem.Deny()
+
+    # Lower case alias for Deny
+    def deny(self):
+        self.Deny()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.sharingitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def Forward(self):
         return self.sharingitem.Forward()
 
+    # Lower case alias for Forward
+    def forward(self):
+        self.Forward()
+
     def GetConversation(self):
         return self.sharingitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([MarkInterval])
         self.sharingitem.MarkAsTask(*arguments)
 
+    # Lower case alias for MarkAsTask
+    def markastask(self, MarkInterval=None):
+        arguments = [MarkInterval]
+        self.MarkAsTask(*arguments)
+
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.sharingitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def OpenSharedFolder(self):
         return Folder(self.sharingitem.OpenSharedFolder())
+
+    # Lower case alias for OpenSharedFolder
+    def opensharedfolder(self):
+        self.OpenSharedFolder()
 
     def PrintOut(self):
         self.sharingitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Reply(self):
         return MailItem(self.sharingitem.Reply())
+
+    # Lower case alias for Reply
+    def reply(self):
+        self.Reply()
 
     def ReplyAll(self):
         return MailItem(self.sharingitem.ReplyAll())
 
+    # Lower case alias for ReplyAll
+    def replyall(self):
+        self.ReplyAll()
+
     def Save(self):
         self.sharingitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.sharingitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def Send(self):
         self.sharingitem.Send()
 
+    # Lower case alias for Send
+    def send(self):
+        self.Send()
+
     def ShowCategoriesDialog(self):
         self.sharingitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class SimpleItems:
@@ -25954,6 +28213,11 @@ class SimpleItems:
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.simpleitems.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class SolutionsModule:
@@ -26042,6 +28306,11 @@ class SolutionsModule:
     def AddSolution(self, Solution=None, Scope=None):
         arguments = com_arguments([Solution, Scope])
         self.solutionsmodule.AddSolution(*arguments)
+
+    # Lower case alias for AddSolution
+    def addsolution(self, Solution=None, Scope=None):
+        arguments = [Solution, Scope]
+        self.AddSolution(*arguments)
 
 
 class StorageItem:
@@ -26192,8 +28461,16 @@ class StorageItem:
     def Delete(self):
         self.storageitem.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def Save(self):
         self.storageitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class Store:
@@ -26330,21 +28607,47 @@ class Store:
         arguments = com_arguments([FolderType])
         return self.store.GetDefaultFolder(*arguments)
 
+    # Lower case alias for GetDefaultFolder
+    def getdefaultfolder(self, FolderType=None):
+        arguments = [FolderType]
+        self.GetDefaultFolder(*arguments)
+
     def GetRootFolder(self):
         return self.store.GetRootFolder()
+
+    # Lower case alias for GetRootFolder
+    def getrootfolder(self):
+        self.GetRootFolder()
 
     def GetRules(self):
         return self.store.GetRules()
 
+    # Lower case alias for GetRules
+    def getrules(self):
+        self.GetRules()
+
     def GetSearchFolders(self):
         return self.store.GetSearchFolders()
+
+    # Lower case alias for GetSearchFolders
+    def getsearchfolders(self):
+        self.GetSearchFolders()
 
     def GetSpecialFolder(self, FolderType=None):
         arguments = com_arguments([FolderType])
         return self.store.GetSpecialFolder(*arguments)
 
+    # Lower case alias for GetSpecialFolder
+    def getspecialfolder(self, FolderType=None):
+        arguments = [FolderType]
+        self.GetSpecialFolder(*arguments)
+
     def RefreshQuotaDisplay(self):
         self.store.RefreshQuotaDisplay()
+
+    # Lower case alias for RefreshQuotaDisplay
+    def refreshquotadisplay(self):
+        self.RefreshQuotaDisplay()
 
 
 class Stores:
@@ -26391,6 +28694,11 @@ class Stores:
         arguments = com_arguments([Index])
         return Stores(self.stores.Item(*arguments))
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
 
 class SyncObject:
 
@@ -26435,8 +28743,16 @@ class SyncObject:
     def Start(self):
         self.syncobject.Start()
 
+    # Lower case alias for Start
+    def start(self):
+        self.Start()
+
     def Stop(self):
         self.syncobject.Stop()
+
+    # Lower case alias for Stop
+    def stop(self):
+        self.Stop()
 
 
 class SyncObjects:
@@ -26492,6 +28808,11 @@ class SyncObjects:
         arguments = com_arguments([Index])
         return self.syncobjects.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
 
 class Table:
 
@@ -26545,30 +28866,66 @@ class Table:
     def FindNextRow(self):
         return Row(self.table.FindNextRow())
 
+    # Lower case alias for FindNextRow
+    def findnextrow(self):
+        self.FindNextRow()
+
     def FindRow(self, Filter=None):
         arguments = com_arguments([Filter])
         return Row(self.table.FindRow(*arguments))
+
+    # Lower case alias for FindRow
+    def findrow(self, Filter=None):
+        arguments = [Filter]
+        self.FindRow(*arguments)
 
     def GetArray(self, MaxRows=None):
         arguments = com_arguments([MaxRows])
         return self.table.GetArray(*arguments)
 
+    # Lower case alias for GetArray
+    def getarray(self, MaxRows=None):
+        arguments = [MaxRows]
+        self.GetArray(*arguments)
+
     def GetNextRow(self):
         return Row(self.table.GetNextRow())
+
+    # Lower case alias for GetNextRow
+    def getnextrow(self):
+        self.GetNextRow()
 
     def GetRowCount(self):
         return self.table.GetRowCount()
 
+    # Lower case alias for GetRowCount
+    def getrowcount(self):
+        self.GetRowCount()
+
     def MoveToStart(self):
         self.table.MoveToStart()
+
+    # Lower case alias for MoveToStart
+    def movetostart(self):
+        self.MoveToStart()
 
     def Restrict(self, Filter=None):
         arguments = com_arguments([Filter])
         return self.table.Restrict(*arguments)
 
+    # Lower case alias for Restrict
+    def restrict(self, Filter=None):
+        arguments = [Filter]
+        self.Restrict(*arguments)
+
     def Sort(self, SortProperty=None, Descending=None):
         arguments = com_arguments([SortProperty, Descending])
         self.table.Sort(*arguments)
+
+    # Lower case alias for Sort
+    def sort(self, SortProperty=None, Descending=None):
+        arguments = [SortProperty, Descending]
+        self.Sort(*arguments)
 
 
 class TableView:
@@ -27069,25 +29426,55 @@ class TableView:
     def Apply(self):
         self.tableview.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         return self.tableview.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.tableview.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
     def GetTable(self):
         return self.tableview.GetTable()
+
+    # Lower case alias for GetTable
+    def gettable(self):
+        self.GetTable()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.tableview.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.tableview.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.tableview.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class TaskItem:
@@ -28013,64 +30400,145 @@ class TaskItem:
     def Assign(self):
         return self.taskitem.Assign()
 
+    # Lower case alias for Assign
+    def assign(self):
+        self.Assign()
+
     def CancelResponseState(self):
         self.taskitem.CancelResponseState()
 
+    # Lower case alias for CancelResponseState
+    def cancelresponsestate(self):
+        self.CancelResponseState()
+
     def ClearRecurrencePattern(self):
         self.taskitem.ClearRecurrencePattern()
+
+    # Lower case alias for ClearRecurrencePattern
+    def clearrecurrencepattern(self):
+        self.ClearRecurrencePattern()
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([SaveMode])
         self.taskitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.taskitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.taskitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.taskitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetConversation(self):
         return self.taskitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def GetRecurrencePattern(self):
         return self.taskitem.GetRecurrencePattern()
 
+    # Lower case alias for GetRecurrencePattern
+    def getrecurrencepattern(self):
+        self.GetRecurrencePattern()
+
     def MarkComplete(self):
         self.taskitem.MarkComplete()
+
+    # Lower case alias for MarkComplete
+    def markcomplete(self):
+        self.MarkComplete()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.taskitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.taskitem.PrintOut()
+
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
 
     def Respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
         arguments = com_arguments([Response, fNoUI, fAdditionalTextDialog])
         return TaskItem(self.taskitem.Respond(*arguments))
 
+    # Lower case alias for Respond
+    def respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
+        arguments = [Response, fNoUI, fAdditionalTextDialog]
+        self.Respond(*arguments)
+
     def Save(self):
         self.taskitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.taskitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def Send(self):
         self.taskitem.Send()
+
+    # Lower case alias for Send
+    def send(self):
+        self.Send()
 
     def ShowCategoriesDialog(self):
         self.taskitem.ShowCategoriesDialog()
 
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
+
     def SkipRecurrence(self):
         return self.taskitem.SkipRecurrence()
 
+    # Lower case alias for SkipRecurrence
+    def skiprecurrence(self):
+        self.SkipRecurrence()
+
     def StatusReport(self):
         return self.taskitem.StatusReport()
+
+    # Lower case alias for StatusReport
+    def statusreport(self):
+        self.StatusReport()
 
 
 class TaskRequestAcceptItem:
@@ -28518,39 +30986,88 @@ class TaskRequestAcceptItem:
         arguments = com_arguments([SaveMode])
         self.taskrequestacceptitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.taskrequestacceptitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.taskrequestacceptitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.taskrequestacceptitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetAssociatedTask(self, AddToTaskList=None):
         arguments = com_arguments([AddToTaskList])
         return self.taskrequestacceptitem.GetAssociatedTask(*arguments)
 
+    # Lower case alias for GetAssociatedTask
+    def getassociatedtask(self, AddToTaskList=None):
+        arguments = [AddToTaskList]
+        self.GetAssociatedTask(*arguments)
+
     def GetConversation(self):
         return self.taskrequestacceptitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.taskrequestacceptitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.taskrequestacceptitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.taskrequestacceptitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.taskrequestacceptitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.taskrequestacceptitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class TaskRequestDeclineItem:
@@ -28998,39 +31515,88 @@ class TaskRequestDeclineItem:
         arguments = com_arguments([SaveMode])
         self.taskrequestdeclineitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.taskrequestdeclineitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.taskrequestdeclineitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.taskrequestdeclineitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetAssociatedTask(self, AddToTaskList=None):
         arguments = com_arguments([AddToTaskList])
         return self.taskrequestdeclineitem.GetAssociatedTask(*arguments)
 
+    # Lower case alias for GetAssociatedTask
+    def getassociatedtask(self, AddToTaskList=None):
+        arguments = [AddToTaskList]
+        self.GetAssociatedTask(*arguments)
+
     def GetConversation(self):
         return self.taskrequestdeclineitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.taskrequestdeclineitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.taskrequestdeclineitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.taskrequestdeclineitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.taskrequestdeclineitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.taskrequestdeclineitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class TaskRequestItem:
@@ -29478,39 +32044,88 @@ class TaskRequestItem:
         arguments = com_arguments([SaveMode])
         self.taskrequestitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.taskrequestitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.taskrequestitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.taskrequestitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetAssociatedTask(self, AddToTaskList=None):
         arguments = com_arguments([AddToTaskList])
         return self.taskrequestitem.GetAssociatedTask(*arguments)
 
+    # Lower case alias for GetAssociatedTask
+    def getassociatedtask(self, AddToTaskList=None):
+        arguments = [AddToTaskList]
+        self.GetAssociatedTask(*arguments)
+
     def GetConversation(self):
         return self.taskrequestitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.taskrequestitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.taskrequestitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.taskrequestitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.taskrequestitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.taskrequestitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class TaskRequestUpdateItem:
@@ -29958,39 +32573,88 @@ class TaskRequestUpdateItem:
         arguments = com_arguments([SaveMode])
         self.taskrequestupdateitem.Close(*arguments)
 
+    # Lower case alias for Close
+    def close(self, SaveMode=None):
+        arguments = [SaveMode]
+        self.Close(*arguments)
+
     def Copy(self):
         self.taskrequestupdateitem.Copy()
 
+    # Lower case alias for Copy
+    def copy(self):
+        self.Copy()
+
     def Delete(self):
         self.taskrequestupdateitem.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def Display(self, Modal=None):
         arguments = com_arguments([Modal])
         self.taskrequestupdateitem.Display(*arguments)
 
+    # Lower case alias for Display
+    def display(self, Modal=None):
+        arguments = [Modal]
+        self.Display(*arguments)
+
     def GetAssociatedTask(self, AddToTaskList=None):
         arguments = com_arguments([AddToTaskList])
         return self.taskrequestupdateitem.GetAssociatedTask(*arguments)
 
+    # Lower case alias for GetAssociatedTask
+    def getassociatedtask(self, AddToTaskList=None):
+        arguments = [AddToTaskList]
+        self.GetAssociatedTask(*arguments)
+
     def GetConversation(self):
         return self.taskrequestupdateitem.GetConversation()
+
+    # Lower case alias for GetConversation
+    def getconversation(self):
+        self.GetConversation()
 
     def Move(self, DestFldr=None):
         arguments = com_arguments([DestFldr])
         return self.taskrequestupdateitem.Move(*arguments)
 
+    # Lower case alias for Move
+    def move(self, DestFldr=None):
+        arguments = [DestFldr]
+        self.Move(*arguments)
+
     def PrintOut(self):
         self.taskrequestupdateitem.PrintOut()
 
+    # Lower case alias for PrintOut
+    def printout(self):
+        self.PrintOut()
+
     def Save(self):
         self.taskrequestupdateitem.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([Path, Type])
         self.taskrequestupdateitem.SaveAs(*arguments)
 
+    # Lower case alias for SaveAs
+    def saveas(self, Path=None, Type=None):
+        arguments = [Path, Type]
+        self.SaveAs(*arguments)
+
     def ShowCategoriesDialog(self):
         self.taskrequestupdateitem.ShowCategoriesDialog()
+
+    # Lower case alias for ShowCategoriesDialog
+    def showcategoriesdialog(self):
+        self.ShowCategoriesDialog()
 
 
 class TasksModule:
@@ -30462,22 +33126,48 @@ class TimelineView:
     def Apply(self):
         self.timelineview.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         return self.timelineview.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.timelineview.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.timelineview.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.timelineview.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.timelineview.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class TimeZone:
@@ -30649,9 +33339,19 @@ class TimeZones:
         arguments = com_arguments([SourceDateTime, SourceTimeZone, DestinationTimeZone])
         return self.timezones.ConvertTime(*arguments)
 
+    # Lower case alias for ConvertTime
+    def converttime(self, SourceDateTime=None, SourceTimeZone=None, DestinationTimeZone=None):
+        arguments = [SourceDateTime, SourceTimeZone, DestinationTimeZone]
+        self.ConvertTime(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.timezones.Item(*arguments)
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
 
 
 class ToOrFromRuleCondition:
@@ -30765,20 +33465,44 @@ class UserDefinedProperties:
         arguments = com_arguments([Name, Type, DisplayFormat, Formula])
         return self.userdefinedproperties.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, Name=None, Type=None, DisplayFormat=None, Formula=None):
+        arguments = [Name, Type, DisplayFormat, Formula]
+        self.Add(*arguments)
+
     def Find(self, Name=None):
         arguments = com_arguments([Name])
         return self.userdefinedproperties.Find(*arguments)
+
+    # Lower case alias for Find
+    def find(self, Name=None):
+        arguments = [Name]
+        self.Find(*arguments)
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return UserDefinedProperty(self.userdefinedproperties.Item(*arguments))
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Refresh(self):
         self.userdefinedproperties.Refresh()
+
+    # Lower case alias for Refresh
+    def refresh(self):
+        self.Refresh()
 
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.userdefinedproperties.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class UserDefinedProperty:
@@ -30851,6 +33575,10 @@ class UserDefinedProperty:
     def Delete(self):
         self.userdefinedproperty.Delete()
 
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
+
 
 class UserProperties:
 
@@ -30896,17 +33624,37 @@ class UserProperties:
         arguments = com_arguments([Name, Type, AddToFolderFields, DisplayFormat])
         return UserProperty(self.userproperties.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
+        arguments = [Name, Type, AddToFolderFields, DisplayFormat]
+        self.Add(*arguments)
+
     def Find(self, Name=None, Custom=None):
         arguments = com_arguments([Name, Custom])
         return self.userproperties.Find(*arguments)
+
+    # Lower case alias for Find
+    def find(self, Name=None, Custom=None):
+        arguments = [Name, Custom]
+        self.Find(*arguments)
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.userproperties.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.userproperties.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class UserProperty:
@@ -31028,6 +33776,10 @@ class UserProperty:
 
     def Delete(self):
         self.userproperty.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
 
 class View:
@@ -31176,22 +33928,48 @@ class View:
     def Apply(self):
         self.view.Apply()
 
+    # Lower case alias for Apply
+    def apply(self):
+        self.Apply()
+
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([Name, SaveOption])
         self.view.Copy(*arguments)
 
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        self.Copy(*arguments)
+
     def Delete(self):
         self.view.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        self.Delete()
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([Date])
         self.view.GoToDate(*arguments)
 
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        self.GoToDate(*arguments)
+
     def Reset(self):
         self.view.Reset()
 
+    # Lower case alias for Reset
+    def reset(self):
+        self.Reset()
+
     def Save(self):
         self.view.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        self.Save()
 
 
 class ViewField:
@@ -31288,17 +34066,37 @@ class ViewFields:
         arguments = com_arguments([PropertyName])
         return self.viewfields.Add(*arguments)
 
+    # Lower case alias for Add
+    def add(self, PropertyName=None):
+        arguments = [PropertyName]
+        self.Add(*arguments)
+
     def Insert(self, PropertyName=None, Index=None):
         arguments = com_arguments([PropertyName, Index])
         return self.viewfields.Insert(*arguments)
+
+    # Lower case alias for Insert
+    def insert(self, PropertyName=None, Index=None):
+        arguments = [PropertyName, Index]
+        self.Insert(*arguments)
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.viewfields.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.viewfields.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 
 
 class ViewFont:
@@ -31513,11 +34311,26 @@ class Views:
         arguments = com_arguments([Name, ViewType, SaveOption])
         return View(self.views.Add(*arguments))
 
+    # Lower case alias for Add
+    def add(self, Name=None, ViewType=None, SaveOption=None):
+        arguments = [Name, ViewType, SaveOption]
+        self.Add(*arguments)
+
     def Item(self, Index=None):
         arguments = com_arguments([Index])
         return self.views.Item(*arguments)
 
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        self.Item(*arguments)
+
     def Remove(self, Index=None):
         arguments = com_arguments([Index])
         self.views.Remove(*arguments)
+
+    # Lower case alias for Remove
+    def remove(self, Index=None):
+        arguments = [Index]
+        self.Remove(*arguments)
 

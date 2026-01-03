@@ -25,6 +25,14 @@ class TestOffice(unittest.TestCase):
         wks = wkb.Worksheets(1)
         self.assertIs(type(wks), excel.Worksheet)
 
+        # Check methods aliases
+        self.assertEqual(wks.activate(), None)
+        self.assertEqual(wks.Activate(), None)
+        self.assertEqual(wks.calculate(), None)
+        self.assertEqual(wks.Calculate(), None)
+        self.assertIs(type(xl_app.Workbooks.Add()), excel.Workbook)
+        self.assertIs(type(wkb.Worksheets.Add()), excel.Worksheet)
+
         # Write value to cell and read it back
         cell = wks.Range("A1")
         cell2 = wks.Cells(2,1)
