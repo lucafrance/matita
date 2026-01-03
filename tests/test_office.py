@@ -2,7 +2,7 @@ import unittest
 
 from matita.office import access, excel, outlook, powerpoint, word
 
-class TestApplicationOpenClose(unittest.TestCase):
+class TestOffice(unittest.TestCase):
     
     def test_access(self):
         acc_app = access.Application().new()
@@ -17,32 +17,38 @@ class TestApplicationOpenClose(unittest.TestCase):
         self.assertIs(type(xl_app), excel.Application)
         xl_app.Visible = True
         self.assertTrue(xl_app.Visible)
+
         # Add workbook
         wkb = xl_app.Workbooks.Add()
         self.assertIs(type(xl_app.Workbooks), excel.Workbooks)
         self.assertIs(type(wkb), excel.Workbook)
         wks = wkb.Worksheets(1)
         self.assertIs(type(wks), excel.Worksheet)
+
         # Write value to cell and read it back
         cell = wks.Range("A1")
         self.assertIs(type(cell), excel.Range)
         cell.Value = "Lorem Ipsum"
         self.assertEqual(cell.Value, "Lorem Ipsum")
         self.assertEqual(cell.Value2, "Lorem Ipsum")
+
         # Write value to another cell differently and read it back
         cell2 = wks.Cells(2,1)
         self.assertIs(type(cell2), excel.Range)
         cell2.Value = 12345.678
         self.assertEqual(cell2.Value, 12345.678)
         self.assertEqual(cell2.Value2, 12345.678)
-        # `Ranged.Address` should be a function, but behaves like a value
+        \
+        # Test that `Range.Address` behaves as expected
         used_range = wks.UsedRange
         self.assertIs(type(used_range), excel.Range)
         self.assertEqual(used_range.Address(), "$A$1:$A$2")
         self.assertEqual(used_range.Address(ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
+
         # Test Range.Cells
         cell3 = used_range.Cells(2,1)
         self.assertEqual(cell3.Value2, 12345.678)
+
         # Add worksheet, change name, and read it back
         wks_ciao = wkb.Worksheets.Add()
         self.assertIs(type(wks_ciao), excel.Worksheet)
@@ -51,6 +57,7 @@ class TestApplicationOpenClose(unittest.TestCase):
         wks_ciao = None
         wks_ciao = wkb.Worksheets("ciao")
         self.assertIs(type(wks_ciao), excel.Worksheet)
+        
         # Close workbook without saving
         wkb.Close(SaveChanges=False)
         xl_app.Quit()
