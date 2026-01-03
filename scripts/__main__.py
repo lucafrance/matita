@@ -12,7 +12,7 @@ def main():
     logging.basicConfig(
         level = logging.INFO,
         format = "%(asctime)s [%(levelname)s] %(message)s",
-        handlers = [logging.FileHandler("logs/utils.log", mode="w")],
+        handlers = [logging.FileHandler("logs/matita.log", mode="w")],
     )
 
     print("Parsing Office VBA Reference...")

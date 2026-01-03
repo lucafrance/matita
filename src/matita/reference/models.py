@@ -3,17 +3,6 @@ import os
 
 from .markdown import MarkdownTree
 
-def reset_ignored_pages():
-    f = open("logs/ignored_pages.log", "wt")
-    f.close()
-
-def log_ignored_page(page_key, page):
-    with open("logs/ignored_pages.log", "at") as f:
-        if page.title is not None:
-            f.write(page.title.lower())
-        else:
-            f.write(page_key.lower())
-        f.write("\n")
 
 def page_filename_to_key(filename):
     key = filename.removesuffix(".md")
@@ -443,7 +432,6 @@ class VbaDocs:
                         self.pages[page_key] = DocPage(open(entry, "rt", encoding="utf8").read())
     
     def process_pages(self):
-        reset_ignored_pages()
         pages_to_remove = []
         for page_key, page in self.pages.items():
             try:
@@ -451,7 +439,6 @@ class VbaDocs:
                 # Remove pages without `api_name`
                 if page.api_name is None:
                     logging.warning(f"Attribute `api_name` not found for {page_key}, ignoring.")
-                    log_ignored_page(page_key, page)
                     pages_to_remove.append(page_key)
             except Exception as e:
                 logging.error(f"Failed processing page: '{page_key}'. {e}")
