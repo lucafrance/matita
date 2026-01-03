@@ -8,4 +8,4 @@ wks = wkb.Worksheets(1)
 c = wks.Cells(1,1)
 
 c.Value = "Hello World"
-print(c.Address(excel.xlR1C1))
+print(c.Address(ReferenceStyle=excel.xlR1C1))

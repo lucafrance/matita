@@ -1,3 +1,5 @@
+from . import com_arguments
+
 import win32com.client
 import pythoncom
 
@@ -346,13 +348,11 @@ class Application:
         return self.application.FileConverters
 
     def FileDialog(self, FileDialogType=None):
-        params = [
-            FileDialogType if FileDialogType is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([FileDialogType])
         if callable(self.application.FileDialog):
-            return self.application.FileDialog(*params)
+            return self.application.FileDialog(*arguments)
         else:
-            return self.application.GetFileDialog(*params)
+            return self.application.GetFileDialog(*arguments)
 
     @property
     def FileValidation(self):
@@ -363,14 +363,11 @@ class Application:
         self.application.FileValidation = value
 
     def FindKey(self, KeyCode=None, KeyCode2=None):
-        params = [
-            KeyCode if KeyCode is not None else pythoncom.Missing,
-            KeyCode2 if KeyCode2 is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([KeyCode, KeyCode2])
         if callable(self.application.FindKey):
-            return KeyBinding(self.application.FindKey(*params))
+            return KeyBinding(self.application.FindKey(*arguments))
         else:
-            return KeyBinding(self.application.GetFindKey(*params))
+            return KeyBinding(self.application.GetFindKey(*arguments))
 
     @property
     def FocusInMailHeader(self):
@@ -393,22 +390,18 @@ class Application:
         self.application.Height = value
 
     def International(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Index])
         if callable(self.application.International):
-            return self.application.International(*params)
+            return self.application.International(*arguments)
         else:
-            return self.application.GetInternational(*params)
+            return self.application.GetInternational(*arguments)
 
     def IsObjectValid(self, Object=None):
-        params = [
-            Object if Object is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Object])
         if callable(self.application.IsObjectValid):
-            return self.application.IsObjectValid(*params)
+            return self.application.IsObjectValid(*arguments)
         else:
-            return self.application.GetIsObjectValid(*params)
+            return self.application.GetIsObjectValid(*arguments)
 
     @property
     def IsSandboxed(self):
@@ -419,15 +412,11 @@ class Application:
         return self.application.KeyBindings
 
     def KeysBoundTo(self, KeyCategory=None, Command=None, CommandParameter=None):
-        params = [
-            KeyCategory if KeyCategory is not None else pythoncom.Missing,
-            Command if Command is not None else pythoncom.Missing,
-            CommandParameter if CommandParameter is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([KeyCategory, Command, CommandParameter])
         if callable(self.application.KeysBoundTo):
-            return self.application.KeysBoundTo(*params)
+            return self.application.KeysBoundTo(*arguments)
         else:
-            return self.application.GetKeysBoundTo(*params)
+            return self.application.GetKeysBoundTo(*arguments)
 
     @property
     def LandscapeFontNames(self):
@@ -630,14 +619,11 @@ class Application:
         return self.application.StatusBar
 
     def SynonymInfo(self, Word=None, LanguageID=None):
-        params = [
-            Word if Word is not None else pythoncom.Missing,
-            LanguageID if LanguageID is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Word, LanguageID])
         if callable(self.application.SynonymInfo):
-            return SynonymInfo(self.application.SynonymInfo(*params))
+            return SynonymInfo(self.application.SynonymInfo(*arguments))
         else:
-            return SynonymInfo(self.application.GetSynonymInfo(*params))
+            return SynonymInfo(self.application.GetSynonymInfo(*arguments))
 
     @property
     def System(self):
@@ -751,11 +737,8 @@ class Application:
         self.application.Activate()
 
     def AddAddress(self, TagID=None, Value=None):
-        params = [
-            TagID if TagID is not None else pythoncom.Missing,
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        self.application.AddAddress(*params)
+        arguments = com_arguments([TagID, Value])
+        self.application.AddAddress(*arguments)
 
     def Application(self):
         self.application.Application()
@@ -764,104 +747,48 @@ class Application:
         self.application.AutomaticChange()
 
     def BuildKeyCode(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        params = [
-            Arg1 if Arg1 is not None else pythoncom.Missing,
-            Arg2 if Arg2 is not None else pythoncom.Missing,
-            Arg3 if Arg3 is not None else pythoncom.Missing,
-            Arg4 if Arg4 is not None else pythoncom.Missing,
-        ]
-        self.application.BuildKeyCode(*params)
+        arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
+        self.application.BuildKeyCode(*arguments)
 
     def CentimetersToPoints(self, Centimeters=None):
-        params = [
-            Centimeters if Centimeters is not None else pythoncom.Missing,
-        ]
-        self.application.CentimetersToPoints(*params)
+        arguments = com_arguments([Centimeters])
+        self.application.CentimetersToPoints(*arguments)
 
     def ChangeFileOpenDirectory(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        self.application.ChangeFileOpenDirectory(*params)
+        arguments = com_arguments([Path])
+        self.application.ChangeFileOpenDirectory(*arguments)
 
     def CheckGrammar(self, String=None):
-        params = [
-            String if String is not None else pythoncom.Missing,
-        ]
-        return self.application.CheckGrammar(*params)
+        arguments = com_arguments([String])
+        return self.application.CheckGrammar(*arguments)
 
     def CheckSpelling(self, Word=None, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
-        params = [
-            Word if Word is not None else pythoncom.Missing,
-            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
-            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
-            MainDictionary if MainDictionary is not None else pythoncom.Missing,
-            CustomDictionary2 if CustomDictionary2 is not None else pythoncom.Missing,
-            CustomDictionary3 if CustomDictionary3 is not None else pythoncom.Missing,
-            CustomDictionary4 if CustomDictionary4 is not None else pythoncom.Missing,
-            CustomDictionary5 if CustomDictionary5 is not None else pythoncom.Missing,
-            CustomDictionary6 if CustomDictionary6 is not None else pythoncom.Missing,
-            CustomDictionary7 if CustomDictionary7 is not None else pythoncom.Missing,
-            CustomDictionary8 if CustomDictionary8 is not None else pythoncom.Missing,
-            CustomDictionary9 if CustomDictionary9 is not None else pythoncom.Missing,
-            CustomDictionary10 if CustomDictionary10 is not None else pythoncom.Missing,
-        ]
-        return self.application.CheckSpelling(*params)
+        arguments = com_arguments([Word, CustomDictionary, IgnoreUppercase, MainDictionary, CustomDictionary2, CustomDictionary3, CustomDictionary4, CustomDictionary5, CustomDictionary6, CustomDictionary7, CustomDictionary8, CustomDictionary9, CustomDictionary10])
+        return self.application.CheckSpelling(*arguments)
 
     def CleanString(self, String=None):
-        params = [
-            String if String is not None else pythoncom.Missing,
-        ]
-        self.application.CleanString(*params)
+        arguments = com_arguments([String])
+        self.application.CleanString(*arguments)
 
     def CompareDocuments(self, OriginalDocument=None, RevisedDocument=None, Destination=None, Granularity=None, CompareFormatting=None, CompareCaseChanges=None, CompareWhitespace=None, CompareTables=None, CompareHeaders=None, CompareFootnotes=None, CompareTextboxes=None, CompareFields=None, CompareComments=None, CompareMoves=None, RevisedAuthor=None, IgnoreAllComparisonWarnings=None):
-        params = [
-            OriginalDocument if OriginalDocument is not None else pythoncom.Missing,
-            RevisedDocument if RevisedDocument is not None else pythoncom.Missing,
-            Destination if Destination is not None else pythoncom.Missing,
-            Granularity if Granularity is not None else pythoncom.Missing,
-            CompareFormatting if CompareFormatting is not None else pythoncom.Missing,
-            CompareCaseChanges if CompareCaseChanges is not None else pythoncom.Missing,
-            CompareWhitespace if CompareWhitespace is not None else pythoncom.Missing,
-            CompareTables if CompareTables is not None else pythoncom.Missing,
-            CompareHeaders if CompareHeaders is not None else pythoncom.Missing,
-            CompareFootnotes if CompareFootnotes is not None else pythoncom.Missing,
-            CompareTextboxes if CompareTextboxes is not None else pythoncom.Missing,
-            CompareFields if CompareFields is not None else pythoncom.Missing,
-            CompareComments if CompareComments is not None else pythoncom.Missing,
-            CompareMoves if CompareMoves is not None else pythoncom.Missing,
-            RevisedAuthor if RevisedAuthor is not None else pythoncom.Missing,
-            IgnoreAllComparisonWarnings if IgnoreAllComparisonWarnings is not None else pythoncom.Missing,
-        ]
-        return self.application.CompareDocuments(*params)
+        arguments = com_arguments([OriginalDocument, RevisedDocument, Destination, Granularity, CompareFormatting, CompareCaseChanges, CompareWhitespace, CompareTables, CompareHeaders, CompareFootnotes, CompareTextboxes, CompareFields, CompareComments, CompareMoves, RevisedAuthor, IgnoreAllComparisonWarnings])
+        return self.application.CompareDocuments(*arguments)
 
     def DDEInitiate(self, App=None, Topic=None):
-        params = [
-            App if App is not None else pythoncom.Missing,
-            Topic if Topic is not None else pythoncom.Missing,
-        ]
-        self.application.DDEInitiate(*params)
+        arguments = com_arguments([App, Topic])
+        self.application.DDEInitiate(*arguments)
 
     def DDEPoke(self, Channel=None, Item=None, Data=None):
-        params = [
-            Channel if Channel is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            Data if Data is not None else pythoncom.Missing,
-        ]
-        self.application.DDEPoke(*params)
+        arguments = com_arguments([Channel, Item, Data])
+        self.application.DDEPoke(*arguments)
 
     def DDERequest(self, Channel=None, Item=None):
-        params = [
-            Channel if Channel is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        self.application.DDERequest(*params)
+        arguments = com_arguments([Channel, Item])
+        self.application.DDERequest(*arguments)
 
     def DDETerminate(self, Channel=None):
-        params = [
-            Channel if Channel is not None else pythoncom.Missing,
-        ]
-        self.application.DDETerminate(*params)
+        arguments = com_arguments([Channel])
+        self.application.DDETerminate(*arguments)
 
     def DDETerminateAll(self):
         self.application.DDETerminateAll()
@@ -870,42 +797,16 @@ class Application:
         return self.application.DefaultWebOptions()
 
     def GetAddress(self, Name=None, AddressProperties=None, UseAutoText=None, DisplaySelectDialog=None, SelectDialog=None, CheckNamesDialog=None, RecentAddressesChoice=None, UpdateRecentAddresses=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            AddressProperties if AddressProperties is not None else pythoncom.Missing,
-            UseAutoText if UseAutoText is not None else pythoncom.Missing,
-            DisplaySelectDialog if DisplaySelectDialog is not None else pythoncom.Missing,
-            SelectDialog if SelectDialog is not None else pythoncom.Missing,
-            CheckNamesDialog if CheckNamesDialog is not None else pythoncom.Missing,
-            RecentAddressesChoice if RecentAddressesChoice is not None else pythoncom.Missing,
-            UpdateRecentAddresses if UpdateRecentAddresses is not None else pythoncom.Missing,
-        ]
-        return self.application.GetAddress(*params)
+        arguments = com_arguments([Name, AddressProperties, UseAutoText, DisplaySelectDialog, SelectDialog, CheckNamesDialog, RecentAddressesChoice, UpdateRecentAddresses])
+        return self.application.GetAddress(*arguments)
 
     def GetDefaultTheme(self, DocumentType=None):
-        params = [
-            DocumentType if DocumentType is not None else pythoncom.Missing,
-        ]
-        self.application.GetDefaultTheme(*params)
+        arguments = com_arguments([DocumentType])
+        self.application.GetDefaultTheme(*arguments)
 
     def GetSpellingSuggestions(self, Word=None, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, SuggestionMode=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
-        params = [
-            Word if Word is not None else pythoncom.Missing,
-            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
-            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
-            MainDictionary if MainDictionary is not None else pythoncom.Missing,
-            SuggestionMode if SuggestionMode is not None else pythoncom.Missing,
-            CustomDictionary2 if CustomDictionary2 is not None else pythoncom.Missing,
-            CustomDictionary3 if CustomDictionary3 is not None else pythoncom.Missing,
-            CustomDictionary4 if CustomDictionary4 is not None else pythoncom.Missing,
-            CustomDictionary5 if CustomDictionary5 is not None else pythoncom.Missing,
-            CustomDictionary6 if CustomDictionary6 is not None else pythoncom.Missing,
-            CustomDictionary7 if CustomDictionary7 is not None else pythoncom.Missing,
-            CustomDictionary8 if CustomDictionary8 is not None else pythoncom.Missing,
-            CustomDictionary9 if CustomDictionary9 is not None else pythoncom.Missing,
-            CustomDictionary10 if CustomDictionary10 is not None else pythoncom.Missing,
-        ]
-        self.application.GetSpellingSuggestions(*params)
+        arguments = com_arguments([Word, CustomDictionary, IgnoreUppercase, MainDictionary, SuggestionMode, CustomDictionary2, CustomDictionary3, CustomDictionary4, CustomDictionary5, CustomDictionary6, CustomDictionary7, CustomDictionary8, CustomDictionary9, CustomDictionary10])
+        self.application.GetSpellingSuggestions(*arguments)
 
     def GoBack(self):
         self.application.GoBack()
@@ -914,25 +815,19 @@ class Application:
         self.application.GoForward()
 
     def Help(self, HelpType=None):
-        params = [
-            HelpType if HelpType is not None else pythoncom.Missing,
-        ]
-        self.application.Help(*params)
+        arguments = com_arguments([HelpType])
+        self.application.Help(*arguments)
 
     def HelpTool(self):
         self.application.HelpTool()
 
     def InchesToPoints(self, Inches=None):
-        params = [
-            Inches if Inches is not None else pythoncom.Missing,
-        ]
-        self.application.InchesToPoints(*params)
+        arguments = com_arguments([Inches])
+        self.application.InchesToPoints(*arguments)
 
     def Keyboard(self, LangId=None):
-        params = [
-            LangId if LangId is not None else pythoncom.Missing,
-        ]
-        self.application.Keyboard(*params)
+        arguments = com_arguments([LangId])
+        self.application.Keyboard(*arguments)
 
     def KeyboardBidi(self):
         self.application.KeyboardBidi()
@@ -941,180 +836,91 @@ class Application:
         self.application.KeyboardLatin()
 
     def KeyString(self, KeyCode=None, KeyCode2=None):
-        params = [
-            KeyCode if KeyCode is not None else pythoncom.Missing,
-            KeyCode2 if KeyCode2 is not None else pythoncom.Missing,
-        ]
-        return self.application.KeyString(*params)
+        arguments = com_arguments([KeyCode, KeyCode2])
+        return self.application.KeyString(*arguments)
 
     def LinesToPoints(self, Lines=None):
-        params = [
-            Lines if Lines is not None else pythoncom.Missing,
-        ]
-        return self.application.LinesToPoints(*params)
+        arguments = com_arguments([Lines])
+        return self.application.LinesToPoints(*arguments)
 
     def ListCommands(self, ListAllCommands=None):
-        params = [
-            ListAllCommands if ListAllCommands is not None else pythoncom.Missing,
-        ]
-        self.application.ListCommands(*params)
+        arguments = com_arguments([ListAllCommands])
+        self.application.ListCommands(*arguments)
 
     def LoadMasterList(self, FileName=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.application.LoadMasterList(*params)
+        arguments = com_arguments([FileName])
+        self.application.LoadMasterList(*arguments)
 
     def LookupNameProperties(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.application.LookupNameProperties(*params)
+        arguments = com_arguments([Name])
+        self.application.LookupNameProperties(*arguments)
 
     def MergeDocuments(self, OriginalDocument=None, RevisedDocument=None, Destination=None, Granularity=None, CompareFormatting=None, CompareCaseChanges=None, CompareWhitespace=None, CompareTables=None, CompareHeaders=None, CompareFootnotes=None, CompareTextboxes=None, CompareFields=None, CompareComments=None, OriginalAuthor=None, RevisedAuthor=None, FormatFrom=None):
-        params = [
-            OriginalDocument if OriginalDocument is not None else pythoncom.Missing,
-            RevisedDocument if RevisedDocument is not None else pythoncom.Missing,
-            Destination if Destination is not None else pythoncom.Missing,
-            Granularity if Granularity is not None else pythoncom.Missing,
-            CompareFormatting if CompareFormatting is not None else pythoncom.Missing,
-            CompareCaseChanges if CompareCaseChanges is not None else pythoncom.Missing,
-            CompareWhitespace if CompareWhitespace is not None else pythoncom.Missing,
-            CompareTables if CompareTables is not None else pythoncom.Missing,
-            CompareHeaders if CompareHeaders is not None else pythoncom.Missing,
-            CompareFootnotes if CompareFootnotes is not None else pythoncom.Missing,
-            CompareTextboxes if CompareTextboxes is not None else pythoncom.Missing,
-            CompareFields if CompareFields is not None else pythoncom.Missing,
-            CompareComments if CompareComments is not None else pythoncom.Missing,
-            OriginalAuthor if OriginalAuthor is not None else pythoncom.Missing,
-            RevisedAuthor if RevisedAuthor is not None else pythoncom.Missing,
-            FormatFrom if FormatFrom is not None else pythoncom.Missing,
-        ]
-        return self.application.MergeDocuments(*params)
+        arguments = com_arguments([OriginalDocument, RevisedDocument, Destination, Granularity, CompareFormatting, CompareCaseChanges, CompareWhitespace, CompareTables, CompareHeaders, CompareFootnotes, CompareTextboxes, CompareFields, CompareComments, OriginalAuthor, RevisedAuthor, FormatFrom])
+        return self.application.MergeDocuments(*arguments)
 
     def MillimetersToPoints(self, Millimeters=None):
-        params = [
-            Millimeters if Millimeters is not None else pythoncom.Missing,
-        ]
-        return self.application.MillimetersToPoints(*params)
+        arguments = com_arguments([Millimeters])
+        return self.application.MillimetersToPoints(*arguments)
 
     def Move(self, Left=None, Top=None):
-        params = [
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-        ]
-        self.application.Move(*params)
+        arguments = com_arguments([Left, Top])
+        self.application.Move(*arguments)
 
     def NewWindow(self):
         return self.application.NewWindow()
 
     def OnTime(self, When=None, Name=None, Tolerance=None):
-        params = [
-            When if When is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            Tolerance if Tolerance is not None else pythoncom.Missing,
-        ]
-        self.application.OnTime(*params)
+        arguments = com_arguments([When, Name, Tolerance])
+        self.application.OnTime(*arguments)
 
     def OrganizerCopy(self, Source=None, Destination=None, Name=None, Object=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Destination if Destination is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            Object if Object is not None else pythoncom.Missing,
-        ]
-        self.application.OrganizerCopy(*params)
+        arguments = com_arguments([Source, Destination, Name, Object])
+        self.application.OrganizerCopy(*arguments)
 
     def OrganizerDelete(self, Source=None, Name=None, Object=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            Object if Object is not None else pythoncom.Missing,
-        ]
-        self.application.OrganizerDelete(*params)
+        arguments = com_arguments([Source, Name, Object])
+        self.application.OrganizerDelete(*arguments)
 
     def OrganizerRename(self, Source=None, Name=None, NewName=None, Object=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            NewName if NewName is not None else pythoncom.Missing,
-            Object if Object is not None else pythoncom.Missing,
-        ]
-        self.application.OrganizerRename(*params)
+        arguments = com_arguments([Source, Name, NewName, Object])
+        self.application.OrganizerRename(*arguments)
 
     def PicasToPoints(self, Picas=None):
-        params = [
-            Picas if Picas is not None else pythoncom.Missing,
-        ]
-        return self.application.PicasToPoints(*params)
+        arguments = com_arguments([Picas])
+        return self.application.PicasToPoints(*arguments)
 
     def PixelsToPoints(self, Pixels=None, fVertical=None):
-        params = [
-            Pixels if Pixels is not None else pythoncom.Missing,
-            fVertical if fVertical is not None else pythoncom.Missing,
-        ]
-        return self.application.PixelsToPoints(*params)
+        arguments = com_arguments([Pixels, fVertical])
+        return self.application.PixelsToPoints(*arguments)
 
     def PointsToCentimeters(self, Points=None):
-        params = [
-            Points if Points is not None else pythoncom.Missing,
-        ]
-        return self.application.PointsToCentimeters(*params)
+        arguments = com_arguments([Points])
+        return self.application.PointsToCentimeters(*arguments)
 
     def PointsToInches(self, Points=None):
-        params = [
-            Points if Points is not None else pythoncom.Missing,
-        ]
-        return self.application.PointsToInches(*params)
+        arguments = com_arguments([Points])
+        return self.application.PointsToInches(*arguments)
 
     def PointsToLines(self, Points=None):
-        params = [
-            Points if Points is not None else pythoncom.Missing,
-        ]
-        return self.application.PointsToLines(*params)
+        arguments = com_arguments([Points])
+        return self.application.PointsToLines(*arguments)
 
     def PointsToMillimeters(self, Points=None):
-        params = [
-            Points if Points is not None else pythoncom.Missing,
-        ]
-        return self.application.PointsToMillimeters(*params)
+        arguments = com_arguments([Points])
+        return self.application.PointsToMillimeters(*arguments)
 
     def PointsToPicas(self, Points=None):
-        params = [
-            Points if Points is not None else pythoncom.Missing,
-        ]
-        return self.application.PointsToPicas(*params)
+        arguments = com_arguments([Points])
+        return self.application.PointsToPicas(*arguments)
 
     def PointsToPixels(self, Points=None, fVertical=None):
-        params = [
-            Points if Points is not None else pythoncom.Missing,
-            fVertical if fVertical is not None else pythoncom.Missing,
-        ]
-        return self.application.PointsToPixels(*params)
+        arguments = com_arguments([Points, fVertical])
+        return self.application.PointsToPixels(*arguments)
 
     def PrintOut(self, Background=None, Append=None, Range=None, OutputFileName=None, From=None, To=None, Item=None, Copies=None, Pages=None, PageType=None, PrintToFile=None, Collate=None, FileName=None, ActivePrinterMacGX=None, ManualDuplexPrint=None, PrintZoomColumn=None, PrintZoomRow=None, PrintZoomPaperWidth=None, PrintZoomPaperHeight=None):
-        params = [
-            Background if Background is not None else pythoncom.Missing,
-            Append if Append is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            Copies if Copies is not None else pythoncom.Missing,
-            Pages if Pages is not None else pythoncom.Missing,
-            PageType if PageType is not None else pythoncom.Missing,
-            PrintToFile if PrintToFile is not None else pythoncom.Missing,
-            Collate if Collate is not None else pythoncom.Missing,
-            FileName if FileName is not None else pythoncom.Missing,
-            ActivePrinterMacGX if ActivePrinterMacGX is not None else pythoncom.Missing,
-            ManualDuplexPrint if ManualDuplexPrint is not None else pythoncom.Missing,
-            PrintZoomColumn if PrintZoomColumn is not None else pythoncom.Missing,
-            PrintZoomRow if PrintZoomRow is not None else pythoncom.Missing,
-            PrintZoomPaperWidth if PrintZoomPaperWidth is not None else pythoncom.Missing,
-            PrintZoomPaperHeight if PrintZoomPaperHeight is not None else pythoncom.Missing,
-        ]
-        self.application.PrintOut(*params)
+        arguments = com_arguments([Background, Append, Range, OutputFileName, From, To, Item, Copies, Pages, PageType, PrintToFile, Collate, FileName, ActivePrinterMacGX, ManualDuplexPrint, PrintZoomColumn, PrintZoomRow, PrintZoomPaperWidth, PrintZoomPaperHeight])
+        self.application.PrintOut(*arguments)
 
     def ProductCode(self):
         return self.application.ProductCode()
@@ -1123,74 +929,30 @@ class Application:
         self.application.PutFocusInMailHeader()
 
     def Quit(self, SaveChanges=None, OriginalFormat=None, RouteDocument=None):
-        params = [
-            SaveChanges if SaveChanges is not None else pythoncom.Missing,
-            OriginalFormat if OriginalFormat is not None else pythoncom.Missing,
-            RouteDocument if RouteDocument is not None else pythoncom.Missing,
-        ]
-        self.application.Quit(*params)
+        arguments = com_arguments([SaveChanges, OriginalFormat, RouteDocument])
+        self.application.Quit(*arguments)
 
     def Repeat(self, Times=None):
-        params = [
-            Times if Times is not None else pythoncom.Missing,
-        ]
-        return self.application.Repeat(*params)
+        arguments = com_arguments([Times])
+        return self.application.Repeat(*arguments)
 
     def ResetIgnoreAll(self):
         self.application.ResetIgnoreAll()
 
     def Resize(self, Width=None, Height=None):
-        params = [
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.application.Resize(*params)
+        arguments = com_arguments([Width, Height])
+        self.application.Resize(*arguments)
 
     def Run(self, MacroName=None, varg1=None, varg2=None, varg3=None, varg4=None, varg5=None, varg6=None, varg7=None, varg8=None, varg9=None, varg10=None, varg11=None, varg12=None, varg13=None, varg14=None, varg15=None, varg16=None, varg17=None, varg18=None, varg19=None, varg20=None, varg21=None, varg22=None, varg23=None, varg24=None, varg25=None, varg26=None, varg27=None, varg28=None, varg29=None, varg30=None):
-        params = [
-            MacroName if MacroName is not None else pythoncom.Missing,
-            varg1 if varg1 is not None else pythoncom.Missing,
-            varg2 if varg2 is not None else pythoncom.Missing,
-            varg3 if varg3 is not None else pythoncom.Missing,
-            varg4 if varg4 is not None else pythoncom.Missing,
-            varg5 if varg5 is not None else pythoncom.Missing,
-            varg6 if varg6 is not None else pythoncom.Missing,
-            varg7 if varg7 is not None else pythoncom.Missing,
-            varg8 if varg8 is not None else pythoncom.Missing,
-            varg9 if varg9 is not None else pythoncom.Missing,
-            varg10 if varg10 is not None else pythoncom.Missing,
-            varg11 if varg11 is not None else pythoncom.Missing,
-            varg12 if varg12 is not None else pythoncom.Missing,
-            varg13 if varg13 is not None else pythoncom.Missing,
-            varg14 if varg14 is not None else pythoncom.Missing,
-            varg15 if varg15 is not None else pythoncom.Missing,
-            varg16 if varg16 is not None else pythoncom.Missing,
-            varg17 if varg17 is not None else pythoncom.Missing,
-            varg18 if varg18 is not None else pythoncom.Missing,
-            varg19 if varg19 is not None else pythoncom.Missing,
-            varg20 if varg20 is not None else pythoncom.Missing,
-            varg21 if varg21 is not None else pythoncom.Missing,
-            varg22 if varg22 is not None else pythoncom.Missing,
-            varg23 if varg23 is not None else pythoncom.Missing,
-            varg24 if varg24 is not None else pythoncom.Missing,
-            varg25 if varg25 is not None else pythoncom.Missing,
-            varg26 if varg26 is not None else pythoncom.Missing,
-            varg27 if varg27 is not None else pythoncom.Missing,
-            varg28 if varg28 is not None else pythoncom.Missing,
-            varg29 if varg29 is not None else pythoncom.Missing,
-            varg30 if varg30 is not None else pythoncom.Missing,
-        ]
-        self.application.Run(*params)
+        arguments = com_arguments([MacroName, varg1, varg2, varg3, varg4, varg5, varg6, varg7, varg8, varg9, varg10, varg11, varg12, varg13, varg14, varg15, varg16, varg17, varg18, varg19, varg20, varg21, varg22, varg23, varg24, varg25, varg26, varg27, varg28, varg29, varg30])
+        self.application.Run(*arguments)
 
     def ScreenRefresh(self):
         self.application.ScreenRefresh()
 
     def SetDefaultTheme(self, Name=None, DocumentType=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            DocumentType if DocumentType is not None else pythoncom.Missing,
-        ]
-        self.application.SetDefaultTheme(*params)
+        arguments = com_arguments([Name, DocumentType])
+        self.application.SetDefaultTheme(*arguments)
 
     def ShowClipboard(self):
         self.application.ShowClipboard()
@@ -1199,11 +961,8 @@ class Application:
         self.application.ShowMe()
 
     def SubstituteFont(self, UnavailableFont=None, SubstituteFont=None):
-        params = [
-            UnavailableFont if UnavailableFont is not None else pythoncom.Missing,
-            SubstituteFont if SubstituteFont is not None else pythoncom.Missing,
-        ]
-        self.application.SubstituteFont(*params)
+        arguments = com_arguments([UnavailableFont, SubstituteFont])
+        self.application.SubstituteFont(*arguments)
 
     def ToggleKeyboard(self):
         self.application.ToggleKeyboard()
@@ -1447,10 +1206,8 @@ class AutoCorrectEntry:
         self.autocorrectentry.Value = value
 
     def Apply(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        self.autocorrectentry.Apply(*params)
+        arguments = com_arguments([Range])
+        self.autocorrectentry.Apply(*arguments)
 
     def Delete(self):
         self.autocorrectentry.Delete()
@@ -1501,11 +1258,8 @@ class AutoTextEntry:
         self.autotextentry.Delete()
 
     def Insert(self, Where=None, RichText=None):
-        params = [
-            Where if Where is not None else pythoncom.Missing,
-            RichText if RichText is not None else pythoncom.Missing,
-        ]
-        return self.autotextentry.Insert(*params)
+        arguments = com_arguments([Where, RichText])
+        return self.autotextentry.Insert(*arguments)
 
 
 class Axes:
@@ -1530,11 +1284,8 @@ class Axes:
         return self.axes.Parent
 
     def Item(self, Type=None, AxisGroup=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            AxisGroup if AxisGroup is not None else pythoncom.Missing,
-        ]
-        self.axes.Item(*params)
+        arguments = com_arguments([Type, AxisGroup])
+        self.axes.Item(*arguments)
 
 
 class Axis:
@@ -1887,14 +1638,11 @@ class AxisTitle:
         self.axistitle.Caption = value
 
     def Characters(self, Start=None, Length=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            Length if Length is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Start, Length])
         if callable(self.axistitle.Characters):
-            return ChartCharacters(self.axistitle.Characters(*params))
+            return ChartCharacters(self.axistitle.Characters(*arguments))
         else:
-            return ChartCharacters(self.axistitle.GetCharacters(*params))
+            return ChartCharacters(self.axistitle.GetCharacters(*arguments))
 
     @property
     def Creator(self):
@@ -2126,10 +1874,8 @@ class Bookmark:
         return WdStoryType(self.bookmark.StoryType)
 
     def Copy(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.bookmark.Copy(*params)
+        arguments = com_arguments([Name])
+        self.bookmark.Copy(*arguments)
 
     def Delete(self):
         self.bookmark.Delete()
@@ -2241,10 +1987,8 @@ class Breaks:
         return self.breaks.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.breaks.Item(*params)
+        arguments = com_arguments([Index])
+        return self.breaks.Item(*arguments)
 
 
 class Browser:
@@ -2348,11 +2092,8 @@ class BuildingBlock:
         self.buildingblock.Delete()
 
     def Insert(self, Where=None, RichText=None):
-        params = [
-            Where if Where is not None else pythoncom.Missing,
-            RichText if RichText is not None else pythoncom.Missing,
-        ]
-        return self.buildingblock.Insert(*params)
+        arguments = com_arguments([Where, RichText])
+        return self.buildingblock.Insert(*arguments)
 
 
 class BuildingBlockEntries:
@@ -2377,21 +2118,12 @@ class BuildingBlockEntries:
         return self.buildingblockentries.Parent
 
     def Add(self, Name=None, Type=None, Category=None, Range=None, Description=None, InsertOptions=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            Category if Category is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            Description if Description is not None else pythoncom.Missing,
-            InsertOptions if InsertOptions is not None else pythoncom.Missing,
-        ]
-        return self.buildingblockentries.Add(*params)
+        arguments = com_arguments([Name, Type, Category, Range, Description, InsertOptions])
+        return self.buildingblockentries.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.buildingblockentries.Item(*params)
+        arguments = com_arguments([Index])
+        return self.buildingblockentries.Item(*arguments)
 
 
 class BuildingBlocks:
@@ -2416,19 +2148,12 @@ class BuildingBlocks:
         return self.buildingblocks.Parent
 
     def Add(self, Name=None, Range=None, Description=None, InsertOptions=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            Description if Description is not None else pythoncom.Missing,
-            InsertOptions if InsertOptions is not None else pythoncom.Missing,
-        ]
-        return self.buildingblocks.Add(*params)
+        arguments = com_arguments([Name, Range, Description, InsertOptions])
+        return self.buildingblocks.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.buildingblocks.Item(*params)
+        arguments = com_arguments([Index])
+        return self.buildingblocks.Item(*arguments)
 
 
 class BuildingBlockType:
@@ -2483,10 +2208,8 @@ class BuildingBlockTypes:
         return self.buildingblocktypes.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.buildingblocktypes.Item(*params)
+        arguments = com_arguments([Index])
+        return self.buildingblocktypes.Item(*arguments)
 
 
 class CalloutFormat:
@@ -2563,22 +2286,16 @@ class CalloutFormat:
         self.calloutformat.Type = value
 
     def CustomDrop(self, Drop=None):
-        params = [
-            Drop if Drop is not None else pythoncom.Missing,
-        ]
-        self.calloutformat.CustomDrop(*params)
+        arguments = com_arguments([Drop])
+        self.calloutformat.CustomDrop(*arguments)
 
     def CustomLength(self, Length=None):
-        params = [
-            Length if Length is not None else pythoncom.Missing,
-        ]
-        self.calloutformat.CustomLength(*params)
+        arguments = com_arguments([Length])
+        self.calloutformat.CustomLength(*arguments)
 
     def PresetDrop(self, DropType=None):
-        params = [
-            DropType if DropType is not None else pythoncom.Missing,
-        ]
-        self.calloutformat.PresetDrop(*params)
+        arguments = com_arguments([DropType])
+        self.calloutformat.PresetDrop(*arguments)
 
 
 class CanvasShapes:
@@ -2603,120 +2320,56 @@ class CanvasShapes:
         return self.canvasshapes.Parent
 
     def AddCallout(self, Type=None, Left=None, Top=None, Width=None, Height=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddCallout(*params)
+        arguments = com_arguments([Type, Left, Top, Width, Height])
+        self.canvasshapes.AddCallout(*arguments)
 
     def AddConnector(self, Type=None, BeginX=None, BeginY=None, EndX=None, EndY=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            BeginX if BeginX is not None else pythoncom.Missing,
-            BeginY if BeginY is not None else pythoncom.Missing,
-            EndX if EndX is not None else pythoncom.Missing,
-            EndY if EndY is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddConnector(*params)
+        arguments = com_arguments([Type, BeginX, BeginY, EndX, EndY])
+        self.canvasshapes.AddConnector(*arguments)
 
     def AddCurve(self, SafeArrayOfPoints=None):
-        params = [
-            SafeArrayOfPoints if SafeArrayOfPoints is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddCurve(*params)
+        arguments = com_arguments([SafeArrayOfPoints])
+        self.canvasshapes.AddCurve(*arguments)
 
     def AddLabel(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
-        params = [
-            Orientation if Orientation is not None else pythoncom.Missing,
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddLabel(*params)
+        arguments = com_arguments([Orientation, Left, Top, Width, Height])
+        self.canvasshapes.AddLabel(*arguments)
 
     def AddLine(self, BeginX=None, BeginY=None, EndX=None, EndY=None):
-        params = [
-            BeginX if BeginX is not None else pythoncom.Missing,
-            BeginY if BeginY is not None else pythoncom.Missing,
-            EndX if EndX is not None else pythoncom.Missing,
-            EndY if EndY is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddLine(*params)
+        arguments = com_arguments([BeginX, BeginY, EndX, EndY])
+        self.canvasshapes.AddLine(*arguments)
 
     def AddPicture(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            LinkToFile if LinkToFile is not None else pythoncom.Missing,
-            SaveWithDocument if SaveWithDocument is not None else pythoncom.Missing,
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddPicture(*params)
+        arguments = com_arguments([FileName, LinkToFile, SaveWithDocument, Left, Top, Width, Height])
+        self.canvasshapes.AddPicture(*arguments)
 
     def AddPolyline(self, SafeArrayOfPoints=None):
-        params = [
-            SafeArrayOfPoints if SafeArrayOfPoints is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddPolyline(*params)
+        arguments = com_arguments([SafeArrayOfPoints])
+        self.canvasshapes.AddPolyline(*arguments)
 
     def AddShape(self, Type=None, Left=None, Top=None, Width=None, Height=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddShape(*params)
+        arguments = com_arguments([Type, Left, Top, Width, Height])
+        self.canvasshapes.AddShape(*arguments)
 
     def AddTextbox(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
-        params = [
-            Orientation if Orientation is not None else pythoncom.Missing,
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddTextbox(*params)
+        arguments = com_arguments([Orientation, Left, Top, Width, Height])
+        self.canvasshapes.AddTextbox(*arguments)
 
     def AddTextEffect(self, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
-        params = [
-            PresetTextEffect if PresetTextEffect is not None else pythoncom.Missing,
-            Text if Text is not None else pythoncom.Missing,
-            FontName if FontName is not None else pythoncom.Missing,
-            FontSize if FontSize is not None else pythoncom.Missing,
-            FontBold if FontBold is not None else pythoncom.Missing,
-            FontItalic if FontItalic is not None else pythoncom.Missing,
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.AddTextEffect(*params)
+        arguments = com_arguments([PresetTextEffect, Text, FontName, FontSize, FontBold, FontItalic, Left, Top])
+        self.canvasshapes.AddTextEffect(*arguments)
 
     def BuildFreeform(self, EditingType=None, X1=None, Y1=None):
-        params = [
-            EditingType if EditingType is not None else pythoncom.Missing,
-            X1 if X1 is not None else pythoncom.Missing,
-            Y1 if Y1 is not None else pythoncom.Missing,
-        ]
-        self.canvasshapes.BuildFreeform(*params)
+        arguments = com_arguments([EditingType, X1, Y1])
+        self.canvasshapes.BuildFreeform(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.canvasshapes.Item(*params)
+        arguments = com_arguments([Index])
+        return self.canvasshapes.Item(*arguments)
 
     def Range(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.canvasshapes.Range(*params)
+        arguments = com_arguments([Index])
+        return self.canvasshapes.Range(*arguments)
 
     def SelectAll(self):
         self.canvasshapes.SelectAll()
@@ -2817,10 +2470,8 @@ class Categories:
         return self.categories.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.categories.Item(*params)
+        arguments = com_arguments([Index])
+        return self.categories.Item(*arguments)
 
 
 class Category:
@@ -3026,47 +2677,31 @@ class Cell:
         self.cell.AutoSum()
 
     def Delete(self, ShiftCells=None):
-        params = [
-            ShiftCells if ShiftCells is not None else pythoncom.Missing,
-        ]
-        self.cell.Delete(*params)
+        arguments = com_arguments([ShiftCells])
+        self.cell.Delete(*arguments)
 
     def Formula(self, Formula=None, NumFormat=None):
-        params = [
-            Formula if Formula is not None else pythoncom.Missing,
-            NumFormat if NumFormat is not None else pythoncom.Missing,
-        ]
-        self.cell.Formula(*params)
+        arguments = com_arguments([Formula, NumFormat])
+        self.cell.Formula(*arguments)
 
     def Merge(self, MergeTo=None):
-        params = [
-            MergeTo if MergeTo is not None else pythoncom.Missing,
-        ]
-        self.cell.Merge(*params)
+        arguments = com_arguments([MergeTo])
+        self.cell.Merge(*arguments)
 
     def Select(self):
         self.cell.Select()
 
     def SetHeight(self, RowHeight=None, HeightRule=None):
-        params = [
-            RowHeight if RowHeight is not None else pythoncom.Missing,
-            HeightRule if HeightRule is not None else pythoncom.Missing,
-        ]
-        self.cell.SetHeight(*params)
+        arguments = com_arguments([RowHeight, HeightRule])
+        self.cell.SetHeight(*arguments)
 
     def SetWidth(self, ColumnWidth=None, RulerStyle=None):
-        params = [
-            ColumnWidth if ColumnWidth is not None else pythoncom.Missing,
-            RulerStyle if RulerStyle is not None else pythoncom.Missing,
-        ]
-        self.cell.SetWidth(*params)
+        arguments = com_arguments([ColumnWidth, RulerStyle])
+        self.cell.SetWidth(*arguments)
 
     def Split(self, NumRows=None, NumColumns=None):
-        params = [
-            NumRows if NumRows is not None else pythoncom.Missing,
-            NumColumns if NumColumns is not None else pythoncom.Missing,
-        ]
-        self.cell.Split(*params)
+        arguments = com_arguments([NumRows, NumColumns])
+        self.cell.Split(*arguments)
 
 
 class Chart:
@@ -3107,13 +2742,11 @@ class Chart:
         return ChartData(self.chart.ChartData)
 
     def ChartGroups(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Index])
         if callable(self.chart.ChartGroups):
-            return self.chart.ChartGroups(*params)
+            return self.chart.ChartGroups(*arguments)
         else:
-            return self.chart.GetChartGroups(*params)
+            return self.chart.GetChartGroups(*arguments)
 
     @property
     def ChartStyle(self):
@@ -3336,146 +2969,81 @@ class Chart:
         return Walls(self.chart.Walls)
 
     def ApplyChartTemplate(self, FileName=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.chart.ApplyChartTemplate(*params)
+        arguments = com_arguments([FileName])
+        self.chart.ApplyChartTemplate(*arguments)
 
     def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            LegendKey if LegendKey is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            HasLeaderLines if HasLeaderLines is not None else pythoncom.Missing,
-            ShowSeriesName if ShowSeriesName is not None else pythoncom.Missing,
-            ShowCategoryName if ShowCategoryName is not None else pythoncom.Missing,
-            ShowValue if ShowValue is not None else pythoncom.Missing,
-            ShowPercentage if ShowPercentage is not None else pythoncom.Missing,
-            ShowBubbleSize if ShowBubbleSize is not None else pythoncom.Missing,
-            Separator if Separator is not None else pythoncom.Missing,
-        ]
-        self.chart.ApplyDataLabels(*params)
+        arguments = com_arguments([Type, LegendKey, AutoText, HasLeaderLines, ShowSeriesName, ShowCategoryName, ShowValue, ShowPercentage, ShowBubbleSize, Separator])
+        self.chart.ApplyDataLabels(*arguments)
 
     def ApplyLayout(self, Layout=None, ChartType=None):
-        params = [
-            Layout if Layout is not None else pythoncom.Missing,
-            ChartType if ChartType is not None else pythoncom.Missing,
-        ]
-        self.chart.ApplyLayout(*params)
+        arguments = com_arguments([Layout, ChartType])
+        self.chart.ApplyLayout(*arguments)
 
     def Axes(self, Type=None, AxisGroup=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            AxisGroup if AxisGroup is not None else pythoncom.Missing,
-        ]
-        return self.chart.Axes(*params)
+        arguments = com_arguments([Type, AxisGroup])
+        return self.chart.Axes(*arguments)
 
     def ChartWizard(self, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Gallery if Gallery is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            PlotBy if PlotBy is not None else pythoncom.Missing,
-            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
-            SeriesLabels if SeriesLabels is not None else pythoncom.Missing,
-            HasLegend if HasLegend is not None else pythoncom.Missing,
-            Title if Title is not None else pythoncom.Missing,
-            CategoryTitle if CategoryTitle is not None else pythoncom.Missing,
-            ValueTitle if ValueTitle is not None else pythoncom.Missing,
-            ExtraTitle if ExtraTitle is not None else pythoncom.Missing,
-        ]
-        self.chart.ChartWizard(*params)
+        arguments = com_arguments([Source, Gallery, Format, PlotBy, CategoryLabels, SeriesLabels, HasLegend, Title, CategoryTitle, ValueTitle, ExtraTitle])
+        self.chart.ChartWizard(*arguments)
 
     def ClearToMatchStyle(self):
         self.chart.ClearToMatchStyle()
 
     def Copy(self, Before=None, After=None):
-        params = [
-            Before if Before is not None else pythoncom.Missing,
-            After if After is not None else pythoncom.Missing,
-        ]
-        self.chart.Copy(*params)
+        arguments = com_arguments([Before, After])
+        self.chart.Copy(*arguments)
 
     def CopyPicture(self, Appearance=None, Format=None, Size=None):
-        params = [
-            Appearance if Appearance is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            Size if Size is not None else pythoncom.Missing,
-        ]
-        self.chart.CopyPicture(*params)
+        arguments = com_arguments([Appearance, Format, Size])
+        self.chart.CopyPicture(*arguments)
 
     def Delete(self):
         self.chart.Delete()
 
     def Export(self, FileName=None, FilterName=None, Interactive=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            FilterName if FilterName is not None else pythoncom.Missing,
-            Interactive if Interactive is not None else pythoncom.Missing,
-        ]
-        return self.chart.Export(*params)
+        arguments = com_arguments([FileName, FilterName, Interactive])
+        return self.chart.Export(*arguments)
 
     def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
-        params = [
-            x if x is not None else pythoncom.Missing,
-            y if y is not None else pythoncom.Missing,
-            ElementID if ElementID is not None else pythoncom.Missing,
-            Arg1 if Arg1 is not None else pythoncom.Missing,
-            Arg2 if Arg2 is not None else pythoncom.Missing,
-        ]
-        self.chart.GetChartElement(*params)
+        arguments = com_arguments([x, y, ElementID, Arg1, Arg2])
+        self.chart.GetChartElement(*arguments)
 
     def Paste(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.chart.Paste(*params)
+        arguments = com_arguments([Type])
+        self.chart.Paste(*arguments)
 
     def Refresh(self):
         self.chart.Refresh()
 
     def SaveChartTemplate(self, FileName=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.chart.SaveChartTemplate(*params)
+        arguments = com_arguments([FileName])
+        self.chart.SaveChartTemplate(*arguments)
 
     def Select(self, Replace=None):
-        params = [
-            Replace if Replace is not None else pythoncom.Missing,
-        ]
-        self.chart.Select(*params)
+        arguments = com_arguments([Replace])
+        self.chart.Select(*arguments)
 
     def SeriesCollection(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return SeriesCollection(self.chart.SeriesCollection(*params))
+        arguments = com_arguments([Index])
+        return SeriesCollection(self.chart.SeriesCollection(*arguments))
 
     def SetBackgroundPicture(self, FileName=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.chart.SetBackgroundPicture(*params)
+        arguments = com_arguments([FileName])
+        self.chart.SetBackgroundPicture(*arguments)
 
     def SetDefaultChart(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.chart.SetDefaultChart(*params)
+        arguments = com_arguments([Name])
+        self.chart.SetDefaultChart(*arguments)
 
     def SetElement(self, Element=None):
-        params = [
-            Element if Element is not None else pythoncom.Missing,
-        ]
-        self.chart.SetElement(*params)
+        arguments = com_arguments([Element])
+        self.chart.SetElement(*arguments)
 
     def SetSourceData(self, Source=None, PlotBy=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            PlotBy if PlotBy is not None else pythoncom.Missing,
-        ]
-        self.chart.SetSourceData(*params)
+        arguments = com_arguments([Source, PlotBy])
+        self.chart.SetSourceData(*arguments)
 
 
 class ChartArea:
@@ -3658,10 +3226,8 @@ class ChartCharacters:
         self.chartcharacters.Delete()
 
     def Insert(self, String=None):
-        params = [
-            String if String is not None else pythoncom.Missing,
-        ]
-        self.chartcharacters.Insert(*params)
+        arguments = com_arguments([String])
+        self.chartcharacters.Insert(*arguments)
 
 
 class ChartColorFormat:
@@ -4072,10 +3638,8 @@ class ChartGroup:
         self.chartgroup.VaryByCategories = value
 
     def SeriesCollection(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return SeriesCollection(self.chartgroup.SeriesCollection(*params))
+        arguments = com_arguments([Index])
+        return SeriesCollection(self.chartgroup.SeriesCollection(*arguments))
 
 
 class ChartGroups:
@@ -4100,10 +3664,8 @@ class ChartGroups:
         return self.chartgroups.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return ChartGroup(self.chartgroups.Item(*params))
+        arguments = com_arguments([Index])
+        return ChartGroup(self.chartgroups.Item(*arguments))
 
 
 class ChartTitle:
@@ -4124,14 +3686,11 @@ class ChartTitle:
         self.charttitle.Caption = value
 
     def Characters(self, Start=None, Length=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            Length if Length is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Start, Length])
         if callable(self.charttitle.Characters):
-            return ChartCharacters(self.charttitle.Characters(*params))
+            return ChartCharacters(self.charttitle.Characters(*arguments))
         else:
-            return ChartCharacters(self.charttitle.GetCharacters(*params))
+            return ChartCharacters(self.charttitle.GetCharacters(*arguments))
 
     @property
     def Creator(self):
@@ -4388,17 +3947,12 @@ class CoAuthLocks:
         return CoAuthLocks(self.coauthlocks.Parent)
 
     def Add(self, Range=None, Type=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        return CoAuthLock(self.coauthlocks.Add(*params))
+        arguments = com_arguments([Range, Type])
+        return CoAuthLock(self.coauthlocks.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return CoAuthLock(self.coauthlocks.Item(*params))
+        arguments = com_arguments([Index])
+        return CoAuthLock(self.coauthlocks.Item(*arguments))
 
     def RemoveEphemeralLocks(self):
         return self.coauthlocks.RemoveEphemeralLocks()
@@ -4517,10 +4071,8 @@ class CoAuthors:
         return self.coauthors.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.coauthors.Item(*params)
+        arguments = com_arguments([Index])
+        return self.coauthors.Item(*arguments)
 
 
 class CoAuthUpdate:
@@ -4617,14 +4169,11 @@ class Column:
         return self.column.Borders
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
-        params = [
-            RowIndex if RowIndex is not None else pythoncom.Missing,
-            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([RowIndex, ColumnIndex])
         if callable(self.column.Cells):
-            return self.column.Cells(*params)
+            return self.column.Cells(*arguments)
         else:
-            return self.column.GetCells(*params)
+            return self.column.GetCells(*arguments)
 
     @property
     def Creator(self):
@@ -4696,26 +4245,12 @@ class Column:
         self.column.Select()
 
     def SetWidth(self, ColumnWidth=None, RulerStyle=None):
-        params = [
-            ColumnWidth if ColumnWidth is not None else pythoncom.Missing,
-            RulerStyle if RulerStyle is not None else pythoncom.Missing,
-        ]
-        self.column.SetWidth(*params)
+        arguments = com_arguments([ColumnWidth, RulerStyle])
+        self.column.SetWidth(*arguments)
 
     def Sort(self, ExcludeHeader=None, SortFieldType=None, SortOrder=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
-        params = [
-            ExcludeHeader if ExcludeHeader is not None else pythoncom.Missing,
-            SortFieldType if SortFieldType is not None else pythoncom.Missing,
-            SortOrder if SortOrder is not None else pythoncom.Missing,
-            CaseSensitive if CaseSensitive is not None else pythoncom.Missing,
-            BidiSort if BidiSort is not None else pythoncom.Missing,
-            IgnoreThe if IgnoreThe is not None else pythoncom.Missing,
-            IgnoreKashida if IgnoreKashida is not None else pythoncom.Missing,
-            IgnoreDiacritics if IgnoreDiacritics is not None else pythoncom.Missing,
-            IgnoreHe if IgnoreHe is not None else pythoncom.Missing,
-            LanguageID if LanguageID is not None else pythoncom.Missing,
-        ]
-        self.column.Sort(*params)
+        arguments = com_arguments([ExcludeHeader, SortFieldType, SortOrder, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID])
+        self.column.Sort(*arguments)
 
 
 class Comment:
@@ -4901,10 +4436,8 @@ class Conflicts:
         return self.conflicts.AcceptAll()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.conflicts.Item(*params)
+        arguments = com_arguments([Index])
+        return self.conflicts.Item(*arguments)
 
     def RejectAll(self):
         return self.conflicts.RejectAll()
@@ -5082,32 +4615,20 @@ class ContentControl:
         self.contentcontrol.Cut()
 
     def Delete(self, DeleteContents=None):
-        params = [
-            DeleteContents if DeleteContents is not None else pythoncom.Missing,
-        ]
-        self.contentcontrol.Delete(*params)
+        arguments = com_arguments([DeleteContents])
+        self.contentcontrol.Delete(*arguments)
 
     def SetCheckedSymbol(self, CharacterNumber=None, Font=None):
-        params = [
-            CharacterNumber if CharacterNumber is not None else pythoncom.Missing,
-            Font if Font is not None else pythoncom.Missing,
-        ]
-        self.contentcontrol.SetCheckedSymbol(*params)
+        arguments = com_arguments([CharacterNumber, Font])
+        self.contentcontrol.SetCheckedSymbol(*arguments)
 
     def SetPlaceholderText(self, BuildingBlock=None, Range=None, Text=None):
-        params = [
-            BuildingBlock if BuildingBlock is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            Text if Text is not None else pythoncom.Missing,
-        ]
-        self.contentcontrol.SetPlaceholderText(*params)
+        arguments = com_arguments([BuildingBlock, Range, Text])
+        self.contentcontrol.SetPlaceholderText(*arguments)
 
     def SetUncheckedSymbol(self, CharacterNumber=None, Font=None):
-        params = [
-            CharacterNumber if CharacterNumber is not None else pythoncom.Missing,
-            Font if Font is not None else pythoncom.Missing,
-        ]
-        self.contentcontrol.SetUncheckedSymbol(*params)
+        arguments = com_arguments([CharacterNumber, Font])
+        self.contentcontrol.SetUncheckedSymbol(*arguments)
 
     def Ungroup(self):
         self.contentcontrol.Ungroup()
@@ -5135,21 +4656,15 @@ class ContentControlListEntries:
         return self.contentcontrollistentries.Parent
 
     def Add(self, Text=None, Value=None, Index=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-            Value if Value is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.contentcontrollistentries.Add(*params)
+        arguments = com_arguments([Text, Value, Index])
+        return self.contentcontrollistentries.Add(*arguments)
 
     def Clear(self):
         self.contentcontrollistentries.Clear()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.contentcontrollistentries.Item(*params)
+        arguments = com_arguments([Index])
+        return self.contentcontrollistentries.Item(*arguments)
 
 
 class ContentControlListEntry:
@@ -5231,17 +4746,12 @@ class ContentControls:
         return self.contentcontrols.Parent
 
     def Add(self, Type=None, Range=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return ContentControl(self.contentcontrols.Add(*params))
+        arguments = com_arguments([Type, Range])
+        return ContentControl(self.contentcontrols.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.contentcontrols.Item(*params)
+        arguments = com_arguments([Index])
+        return self.contentcontrols.Item(*arguments)
 
 
 class CustomLabel:
@@ -5382,17 +4892,12 @@ class CustomProperties:
         return self.customproperties.Parent
 
     def Add(self, Name=None, Value=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        return CustomPropertie(self.customproperties.Add(*params))
+        arguments = com_arguments([Name, Value])
+        return CustomPropertie(self.customproperties.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.customproperties.Item(*params)
+        arguments = com_arguments([Index])
+        return self.customproperties.Item(*arguments)
 
 
 class CustomProperty:
@@ -5454,14 +4959,11 @@ class DataLabel:
         self.datalabel.Caption = value
 
     def Characters(self, Start=None, Length=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            Length if Length is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Start, Length])
         if callable(self.datalabel.Characters):
-            return ChartCharacters(self.datalabel.Characters(*params))
+            return ChartCharacters(self.datalabel.Characters(*arguments))
         else:
-            return ChartCharacters(self.datalabel.GetCharacters(*params))
+            return ChartCharacters(self.datalabel.GetCharacters(*arguments))
 
     @property
     def Creator(self):
@@ -5858,10 +5360,8 @@ class DataLabels:
         self.datalabels.Delete()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return DataLabel(self.datalabels.Item(*params))
+        arguments = com_arguments([Index])
+        return DataLabel(self.datalabels.Item(*arguments))
 
     def Select(self):
         self.datalabels.Select()
@@ -6127,19 +5627,15 @@ class Dialog:
         return WdWordDialog(self.dialog.Type)
 
     def Display(self, TimeOut=None):
-        params = [
-            TimeOut if TimeOut is not None else pythoncom.Missing,
-        ]
-        return self.dialog.Display(*params)
+        arguments = com_arguments([TimeOut])
+        return self.dialog.Display(*arguments)
 
     def Execute(self):
         self.dialog.Execute()
 
     def Show(self, TimeOut=None):
-        params = [
-            TimeOut if TimeOut is not None else pythoncom.Missing,
-        ]
-        return self.dialog.Show(*params)
+        arguments = com_arguments([TimeOut])
+        return self.dialog.Show(*arguments)
 
     def Update(self):
         self.dialog.Update()
@@ -6216,14 +5712,11 @@ class DisplayUnitLabel:
         self.displayunitlabel.Caption = value
 
     def Characters(self, Start=None, Length=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            Length if Length is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Start, Length])
         if callable(self.displayunitlabel.Characters):
-            return ChartCharacters(self.displayunitlabel.Characters(*params))
+            return ChartCharacters(self.displayunitlabel.Characters(*arguments))
         else:
-            return ChartCharacters(self.displayunitlabel.GetCharacters(*params))
+            return ChartCharacters(self.displayunitlabel.GetCharacters(*arguments))
 
     @property
     def Creator(self):
@@ -7454,16 +6947,12 @@ class Document:
         self.document.AddToFavorites()
 
     def ApplyQuickStyleSet2(self, Style=None):
-        params = [
-            Style if Style is not None else pythoncom.Missing,
-        ]
-        self.document.ApplyQuickStyleSet2(*params)
+        arguments = com_arguments([Style])
+        self.document.ApplyQuickStyleSet2(*arguments)
 
     def ApplyTheme(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.document.ApplyTheme(*params)
+        arguments = com_arguments([Name])
+        self.document.ApplyTheme(*arguments)
 
     def AutoFormat(self):
         self.document.AutoFormat()
@@ -7478,69 +6967,31 @@ class Document:
         self.document.CheckGrammar()
 
     def CheckIn(self, SaveChanges=None, Comments=None, MakePublic=None):
-        params = [
-            SaveChanges if SaveChanges is not None else pythoncom.Missing,
-            Comments if Comments is not None else pythoncom.Missing,
-            MakePublic if MakePublic is not None else pythoncom.Missing,
-        ]
-        self.document.CheckIn(*params)
+        arguments = com_arguments([SaveChanges, Comments, MakePublic])
+        self.document.CheckIn(*arguments)
 
     def CheckInWithVersion(self, SaveChanges=None, Comments=None, MakePublic=None, VersionType=None):
-        params = [
-            SaveChanges if SaveChanges is not None else pythoncom.Missing,
-            Comments if Comments is not None else pythoncom.Missing,
-            MakePublic if MakePublic is not None else pythoncom.Missing,
-            VersionType if VersionType is not None else pythoncom.Missing,
-        ]
-        self.document.CheckInWithVersion(*params)
+        arguments = com_arguments([SaveChanges, Comments, MakePublic, VersionType])
+        self.document.CheckInWithVersion(*arguments)
 
     def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
-        params = [
-            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
-            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
-            AlwaysSuggest if AlwaysSuggest is not None else pythoncom.Missing,
-            CustomDictionary2 if CustomDictionary2 is not None else pythoncom.Missing,
-            CustomDictionary3 if CustomDictionary3 is not None else pythoncom.Missing,
-            CustomDictionary4 if CustomDictionary4 is not None else pythoncom.Missing,
-            CustomDictionary5 if CustomDictionary5 is not None else pythoncom.Missing,
-            CustomDictionary6 if CustomDictionary6 is not None else pythoncom.Missing,
-            CustomDictionary7 if CustomDictionary7 is not None else pythoncom.Missing,
-            CustomDictionary8 if CustomDictionary8 is not None else pythoncom.Missing,
-            CustomDictionary9 if CustomDictionary9 is not None else pythoncom.Missing,
-            CustomDictionary10 if CustomDictionary10 is not None else pythoncom.Missing,
-        ]
-        self.document.CheckSpelling(*params)
+        arguments = com_arguments([CustomDictionary, IgnoreUppercase, AlwaysSuggest, CustomDictionary2, CustomDictionary3, CustomDictionary4, CustomDictionary5, CustomDictionary6, CustomDictionary7, CustomDictionary8, CustomDictionary9, CustomDictionary10])
+        self.document.CheckSpelling(*arguments)
 
     def Close(self, SaveChanges=None, OriginalFormat=None, RouteDocument=None):
-        params = [
-            SaveChanges if SaveChanges is not None else pythoncom.Missing,
-            OriginalFormat if OriginalFormat is not None else pythoncom.Missing,
-            RouteDocument if RouteDocument is not None else pythoncom.Missing,
-        ]
-        self.document.Close(*params)
+        arguments = com_arguments([SaveChanges, OriginalFormat, RouteDocument])
+        self.document.Close(*arguments)
 
     def ClosePrintPreview(self):
         self.document.ClosePrintPreview()
 
     def Compare(self, Name=None, AuthorName=None, CompareTarget=None, DetectFormatChanges=None, IgnoreAllComparisonWarnings=None, AddToRecentFiles=None, RemovePersonalInformation=None, RemoveDateAndTime=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            AuthorName if AuthorName is not None else pythoncom.Missing,
-            CompareTarget if CompareTarget is not None else pythoncom.Missing,
-            DetectFormatChanges if DetectFormatChanges is not None else pythoncom.Missing,
-            IgnoreAllComparisonWarnings if IgnoreAllComparisonWarnings is not None else pythoncom.Missing,
-            AddToRecentFiles if AddToRecentFiles is not None else pythoncom.Missing,
-            RemovePersonalInformation if RemovePersonalInformation is not None else pythoncom.Missing,
-            RemoveDateAndTime if RemoveDateAndTime is not None else pythoncom.Missing,
-        ]
-        self.document.Compare(*params)
+        arguments = com_arguments([Name, AuthorName, CompareTarget, DetectFormatChanges, IgnoreAllComparisonWarnings, AddToRecentFiles, RemovePersonalInformation, RemoveDateAndTime])
+        self.document.Compare(*arguments)
 
     def ComputeStatistics(self, Statistic=None, IncludeFootnotesAndEndnotes=None):
-        params = [
-            Statistic if Statistic is not None else pythoncom.Missing,
-            IncludeFootnotesAndEndnotes if IncludeFootnotesAndEndnotes is not None else pythoncom.Missing,
-        ]
-        self.document.ComputeStatistics(*params)
+        arguments = com_arguments([Statistic, IncludeFootnotesAndEndnotes])
+        self.document.ComputeStatistics(*arguments)
 
     def Convert(self):
         self.document.Convert()
@@ -7552,59 +7003,20 @@ class Document:
         self.document.ConvertNumbersToText()
 
     def ConvertVietDoc(self, CodePageOrigin=None):
-        params = [
-            CodePageOrigin if CodePageOrigin is not None else pythoncom.Missing,
-        ]
-        self.document.ConvertVietDoc(*params)
+        arguments = com_arguments([CodePageOrigin])
+        self.document.ConvertVietDoc(*arguments)
 
     def CopyStylesFromTemplate(self, Template=None):
-        params = [
-            Template if Template is not None else pythoncom.Missing,
-        ]
-        self.document.CopyStylesFromTemplate(*params)
+        arguments = com_arguments([Template])
+        self.document.CopyStylesFromTemplate(*arguments)
 
     def CountNumberedItems(self, NumberType=None, Level=None):
-        params = [
-            NumberType if NumberType is not None else pythoncom.Missing,
-            Level if Level is not None else pythoncom.Missing,
-        ]
-        self.document.CountNumberedItems(*params)
+        arguments = com_arguments([NumberType, Level])
+        self.document.CountNumberedItems(*arguments)
 
     def CreateLetterContent(self, DateFormat=None, IncludeHeaderFooter=None, PageDesign=None, LetterStyle=None, Letterhead=None, LetterheadLocation=None, LetterheadSize=None, RecipientName=None, RecipientAddress=None, Salutation=None, SalutationType=None, RecipientReference=None, MailingInstructions=None, AttentionLine=None, Subject=None, CCList=None, ReturnAddress=None, SenderName=None, Closing=None, SenderCompany=None, SenderJobTitle=None, SenderInitials=None, EnclosureNumber=None, InfoBlock=None, RecipientCode=None, RecipientGender=None, ReturnAddressShortForm=None, SenderCity=None, SenderCode=None, SenderGender=None, SenderReference=None):
-        params = [
-            DateFormat if DateFormat is not None else pythoncom.Missing,
-            IncludeHeaderFooter if IncludeHeaderFooter is not None else pythoncom.Missing,
-            PageDesign if PageDesign is not None else pythoncom.Missing,
-            LetterStyle if LetterStyle is not None else pythoncom.Missing,
-            Letterhead if Letterhead is not None else pythoncom.Missing,
-            LetterheadLocation if LetterheadLocation is not None else pythoncom.Missing,
-            LetterheadSize if LetterheadSize is not None else pythoncom.Missing,
-            RecipientName if RecipientName is not None else pythoncom.Missing,
-            RecipientAddress if RecipientAddress is not None else pythoncom.Missing,
-            Salutation if Salutation is not None else pythoncom.Missing,
-            SalutationType if SalutationType is not None else pythoncom.Missing,
-            RecipientReference if RecipientReference is not None else pythoncom.Missing,
-            MailingInstructions if MailingInstructions is not None else pythoncom.Missing,
-            AttentionLine if AttentionLine is not None else pythoncom.Missing,
-            Subject if Subject is not None else pythoncom.Missing,
-            CCList if CCList is not None else pythoncom.Missing,
-            ReturnAddress if ReturnAddress is not None else pythoncom.Missing,
-            SenderName if SenderName is not None else pythoncom.Missing,
-            Closing if Closing is not None else pythoncom.Missing,
-            SenderCompany if SenderCompany is not None else pythoncom.Missing,
-            SenderJobTitle if SenderJobTitle is not None else pythoncom.Missing,
-            SenderInitials if SenderInitials is not None else pythoncom.Missing,
-            EnclosureNumber if EnclosureNumber is not None else pythoncom.Missing,
-            InfoBlock if InfoBlock is not None else pythoncom.Missing,
-            RecipientCode if RecipientCode is not None else pythoncom.Missing,
-            RecipientGender if RecipientGender is not None else pythoncom.Missing,
-            ReturnAddressShortForm if ReturnAddressShortForm is not None else pythoncom.Missing,
-            SenderCity if SenderCity is not None else pythoncom.Missing,
-            SenderCode if SenderCode is not None else pythoncom.Missing,
-            SenderGender if SenderGender is not None else pythoncom.Missing,
-            SenderReference if SenderReference is not None else pythoncom.Missing,
-        ]
-        return self.document.CreateLetterContent(*params)
+        arguments = com_arguments([DateFormat, IncludeHeaderFooter, PageDesign, LetterStyle, Letterhead, LetterheadLocation, LetterheadSize, RecipientName, RecipientAddress, Salutation, SalutationType, RecipientReference, MailingInstructions, AttentionLine, Subject, CCList, ReturnAddress, SenderName, Closing, SenderCompany, SenderJobTitle, SenderInitials, EnclosureNumber, InfoBlock, RecipientCode, RecipientGender, ReturnAddressShortForm, SenderCity, SenderCode, SenderGender, SenderReference])
+        return self.document.CreateLetterContent(*arguments)
 
     def DataForm(self):
         self.document.DataForm()
@@ -7616,10 +7028,8 @@ class Document:
         self.document.DeleteAllCommentsShown()
 
     def DeleteAllEditableRanges(self, EditorID=None):
-        params = [
-            EditorID if EditorID is not None else pythoncom.Missing,
-        ]
-        self.document.DeleteAllEditableRanges(*params)
+        arguments = com_arguments([EditorID])
+        self.document.DeleteAllEditableRanges(*arguments)
 
     def DeleteAllInkAnnotations(self):
         self.document.DeleteAllInkAnnotations()
@@ -7634,91 +7044,30 @@ class Document:
         self.document.EndReview()
 
     def ExportAsFixedFormat(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, Range=None, From=None, To=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.document.ExportAsFixedFormat(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, Range, From, To, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, FixedFormatExtClassPtr])
+        self.document.ExportAsFixedFormat(*arguments)
 
     def ExportAsFixedFormat2(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, Range=None, From=None, To=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, OptimizeForImageQuality=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            OptimizeForImageQuality if OptimizeForImageQuality is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.document.ExportAsFixedFormat2(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, Range, From, To, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, OptimizeForImageQuality, FixedFormatExtClassPtr])
+        self.document.ExportAsFixedFormat2(*arguments)
 
     def ExportAsFixedFormat3(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, Range=None, From=None, To=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, OptimizeForImageQuality=None, ImproveExportTagging=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            OptimizeForImageQuality if OptimizeForImageQuality is not None else pythoncom.Missing,
-            ImproveExportTagging if ImproveExportTagging is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.document.ExportAsFixedFormat3(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, Range, From, To, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, OptimizeForImageQuality, ImproveExportTagging, FixedFormatExtClassPtr])
+        self.document.ExportAsFixedFormat3(*arguments)
 
     def FitToPages(self):
         self.document.FitToPages()
 
     def FollowHyperlink(self, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
-        params = [
-            Address if Address is not None else pythoncom.Missing,
-            SubAddress if SubAddress is not None else pythoncom.Missing,
-            NewWindow if NewWindow is not None else pythoncom.Missing,
-            AddHistory if AddHistory is not None else pythoncom.Missing,
-            ExtraInfo if ExtraInfo is not None else pythoncom.Missing,
-            Method if Method is not None else pythoncom.Missing,
-            HeaderInfo if HeaderInfo is not None else pythoncom.Missing,
-        ]
-        self.document.FollowHyperlink(*params)
+        arguments = com_arguments([Address, SubAddress, NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo])
+        self.document.FollowHyperlink(*arguments)
 
     def FreezeLayout(self):
         self.document.FreezeLayout()
 
     def GetCrossReferenceItems(self, ReferenceType=None):
-        params = [
-            ReferenceType if ReferenceType is not None else pythoncom.Missing,
-        ]
-        self.document.GetCrossReferenceItems(*params)
+        arguments = com_arguments([ReferenceType])
+        self.document.GetCrossReferenceItems(*arguments)
 
     def GetLetterContent(self):
         return self.document.GetLetterContent()
@@ -7730,13 +7079,8 @@ class Document:
         return self.document.GetWorkflowTemplates()
 
     def GoTo(self, What=None, Which=None, Count=None, Name=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-            Which if Which is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.document.GoTo(*params)
+        arguments = com_arguments([What, Which, Count, Name])
+        self.document.GoTo(*arguments)
 
     def LockServerFile(self):
         self.document.LockServerFile()
@@ -7748,14 +7092,8 @@ class Document:
         self.document.ManualHyphenation()
 
     def Merge(self, Name=None, MergeTarget=None, DetectFormatChanges=None, UseFormattingFrom=None, AddToRecentFiles=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            MergeTarget if MergeTarget is not None else pythoncom.Missing,
-            DetectFormatChanges if DetectFormatChanges is not None else pythoncom.Missing,
-            UseFormattingFrom if UseFormattingFrom is not None else pythoncom.Missing,
-            AddToRecentFiles if AddToRecentFiles is not None else pythoncom.Missing,
-        ]
-        self.document.Merge(*params)
+        arguments = com_arguments([Name, MergeTarget, DetectFormatChanges, UseFormattingFrom, AddToRecentFiles])
+        self.document.Merge(*arguments)
 
     def Post(self):
         self.document.Post()
@@ -7764,44 +7102,19 @@ class Document:
         self.document.PresentIt()
 
     def PrintOut(self, Background=None, Append=None, Range=None, OutputFileName=None, From=None, To=None, Item=None, Copies=None, Pages=None, PageType=None, PrintToFile=None, Collate=None, FileName=None, ActivePrinterMacGX=None, ManualDuplexPrint=None, PrintZoomColumn=None, PrintZoomRow=None, PrintZoomPaperWidth=None, PrintZoomPaperHeight=None):
-        params = [
-            Background if Background is not None else pythoncom.Missing,
-            Append if Append is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            Copies if Copies is not None else pythoncom.Missing,
-            Pages if Pages is not None else pythoncom.Missing,
-            PageType if PageType is not None else pythoncom.Missing,
-            PrintToFile if PrintToFile is not None else pythoncom.Missing,
-            Collate if Collate is not None else pythoncom.Missing,
-            FileName if FileName is not None else pythoncom.Missing,
-            ActivePrinterMacGX if ActivePrinterMacGX is not None else pythoncom.Missing,
-            ManualDuplexPrint if ManualDuplexPrint is not None else pythoncom.Missing,
-            PrintZoomColumn if PrintZoomColumn is not None else pythoncom.Missing,
-            PrintZoomRow if PrintZoomRow is not None else pythoncom.Missing,
-            PrintZoomPaperWidth if PrintZoomPaperWidth is not None else pythoncom.Missing,
-            PrintZoomPaperHeight if PrintZoomPaperHeight is not None else pythoncom.Missing,
-        ]
-        self.document.PrintOut(*params)
+        arguments = com_arguments([Background, Append, Range, OutputFileName, From, To, Item, Copies, Pages, PageType, PrintToFile, Collate, FileName, ActivePrinterMacGX, ManualDuplexPrint, PrintZoomColumn, PrintZoomRow, PrintZoomPaperWidth, PrintZoomPaperHeight])
+        self.document.PrintOut(*arguments)
 
     def PrintPreview(self):
         self.document.PrintPreview()
 
     def Range(self, Start=None, End=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            End if End is not None else pythoncom.Missing,
-        ]
-        return self.document.Range(*params)
+        arguments = com_arguments([Start, End])
+        return self.document.Range(*arguments)
 
     def Redo(self, Times=None):
-        params = [
-            Times if Times is not None else pythoncom.Missing,
-        ]
-        return self.document.Redo(*params)
+        arguments = com_arguments([Times])
+        return self.document.Redo(*arguments)
 
     def RejectAllRevisions(self):
         self.document.RejectAllRevisions()
@@ -7813,25 +7126,19 @@ class Document:
         self.document.Reload()
 
     def ReloadAs(self, Encoding=None):
-        params = [
-            Encoding if Encoding is not None else pythoncom.Missing,
-        ]
-        self.document.ReloadAs(*params)
+        arguments = com_arguments([Encoding])
+        self.document.ReloadAs(*arguments)
 
     def RemoveDocumentInformation(self, RemoveDocInfoType=None):
-        params = [
-            RemoveDocInfoType if RemoveDocInfoType is not None else pythoncom.Missing,
-        ]
-        self.document.RemoveDocumentInformation(*params)
+        arguments = com_arguments([RemoveDocInfoType])
+        self.document.RemoveDocumentInformation(*arguments)
 
     def RemoveLockedStyles(self):
         self.document.RemoveLockedStyles()
 
     def RemoveNumbers(self, NumberType=None):
-        params = [
-            NumberType if NumberType is not None else pythoncom.Missing,
-        ]
-        self.document.RemoveNumbers(*params)
+        arguments = com_arguments([NumberType])
+        self.document.RemoveNumbers(*arguments)
 
     def RemoveTheme(self):
         self.document.RemoveTheme()
@@ -7840,158 +7147,102 @@ class Document:
         self.document.Repaginate()
 
     def ReplyWithChanges(self, ShowMessage=None):
-        params = [
-            ShowMessage if ShowMessage is not None else pythoncom.Missing,
-        ]
-        self.document.ReplyWithChanges(*params)
+        arguments = com_arguments([ShowMessage])
+        self.document.ReplyWithChanges(*arguments)
 
     def ResetFormFields(self):
         self.document.ResetFormFields()
 
     def RunAutoMacro(self, Which=None):
-        params = [
-            Which if Which is not None else pythoncom.Missing,
-        ]
-        self.document.RunAutoMacro(*params)
+        arguments = com_arguments([Which])
+        self.document.RunAutoMacro(*arguments)
 
     def RunLetterWizard(self, LetterContent=None, WizardMode=None):
-        params = [
-            LetterContent if LetterContent is not None else pythoncom.Missing,
-            WizardMode if WizardMode is not None else pythoncom.Missing,
-        ]
-        self.document.RunLetterWizard(*params)
+        arguments = com_arguments([LetterContent, WizardMode])
+        self.document.RunLetterWizard(*arguments)
 
     def Save(self):
         self.document.Save()
 
     def SaveAsQuickStyleSet(self, FileName=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.document.SaveAsQuickStyleSet(*params)
+        arguments = com_arguments([FileName])
+        self.document.SaveAsQuickStyleSet(*arguments)
 
     def Select(self):
         self.document.Select()
 
     def SelectAllEditableRanges(self, EditorID=None):
-        params = [
-            EditorID if EditorID is not None else pythoncom.Missing,
-        ]
-        self.document.SelectAllEditableRanges(*params)
+        arguments = com_arguments([EditorID])
+        self.document.SelectAllEditableRanges(*arguments)
 
     def SelectContentControlsByTag(self, Tag=None):
-        params = [
-            Tag if Tag is not None else pythoncom.Missing,
-        ]
-        return self.document.SelectContentControlsByTag(*params)
+        arguments = com_arguments([Tag])
+        return self.document.SelectContentControlsByTag(*arguments)
 
     def SelectContentControlsByTitle(self, Title=None):
-        params = [
-            Title if Title is not None else pythoncom.Missing,
-        ]
-        return self.document.SelectContentControlsByTitle(*params)
+        arguments = com_arguments([Title])
+        return self.document.SelectContentControlsByTitle(*arguments)
 
     def SelectLinkedControls(self, Node=None):
-        params = [
-            Node if Node is not None else pythoncom.Missing,
-        ]
-        return self.document.SelectLinkedControls(*params)
+        arguments = com_arguments([Node])
+        return self.document.SelectLinkedControls(*arguments)
 
     def SelectNodes(self, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
-        params = [
-            XPath if XPath is not None else pythoncom.Missing,
-            PrefixMapping if PrefixMapping is not None else pythoncom.Missing,
-            FastSearchSkippingTextNodes if FastSearchSkippingTextNodes is not None else pythoncom.Missing,
-        ]
-        return self.document.SelectNodes(*params)
+        arguments = com_arguments([XPath, PrefixMapping, FastSearchSkippingTextNodes])
+        return self.document.SelectNodes(*arguments)
 
     def SelectSingleNode(self, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
-        params = [
-            XPath if XPath is not None else pythoncom.Missing,
-            PrefixMapping if PrefixMapping is not None else pythoncom.Missing,
-            FastSearchSkippingTextNodes if FastSearchSkippingTextNodes is not None else pythoncom.Missing,
-        ]
-        return self.document.SelectSingleNode(*params)
+        arguments = com_arguments([XPath, PrefixMapping, FastSearchSkippingTextNodes])
+        return self.document.SelectSingleNode(*arguments)
 
     def SelectUnlinkedControls(self, Stream=None):
-        params = [
-            Stream if Stream is not None else pythoncom.Missing,
-        ]
-        return self.document.SelectUnlinkedControls(*params)
+        arguments = com_arguments([Stream])
+        return self.document.SelectUnlinkedControls(*arguments)
 
     def SendFax(self, Address=None, Subject=None):
-        params = [
-            Address if Address is not None else pythoncom.Missing,
-            Subject if Subject is not None else pythoncom.Missing,
-        ]
-        self.document.SendFax(*params)
+        arguments = com_arguments([Address, Subject])
+        self.document.SendFax(*arguments)
 
     def SendFaxOverInternet(self, Recipients=None, Subject=None, ShowMessage=None):
-        params = [
-            Recipients if Recipients is not None else pythoncom.Missing,
-            Subject if Subject is not None else pythoncom.Missing,
-            ShowMessage if ShowMessage is not None else pythoncom.Missing,
-        ]
-        self.document.SendFaxOverInternet(*params)
+        arguments = com_arguments([Recipients, Subject, ShowMessage])
+        self.document.SendFaxOverInternet(*arguments)
 
     def SendForReview(self, Recipients=None, Subject=None, ShowMessage=None, IncludeAttachment=None):
-        params = [
-            Recipients if Recipients is not None else pythoncom.Missing,
-            Subject if Subject is not None else pythoncom.Missing,
-            ShowMessage if ShowMessage is not None else pythoncom.Missing,
-            IncludeAttachment if IncludeAttachment is not None else pythoncom.Missing,
-        ]
-        self.document.SendForReview(*params)
+        arguments = com_arguments([Recipients, Subject, ShowMessage, IncludeAttachment])
+        self.document.SendForReview(*arguments)
 
     def SendMail(self):
         self.document.SendMail()
 
     def SetDefaultTableStyle(self, Style=None, SetInTemplate=None):
-        params = [
-            Style if Style is not None else pythoncom.Missing,
-            SetInTemplate if SetInTemplate is not None else pythoncom.Missing,
-        ]
-        self.document.SetDefaultTableStyle(*params)
+        arguments = com_arguments([Style, SetInTemplate])
+        self.document.SetDefaultTableStyle(*arguments)
 
     def SetLetterContent(self, LetterContent=None):
-        params = [
-            LetterContent if LetterContent is not None else pythoncom.Missing,
-        ]
-        self.document.SetLetterContent(*params)
+        arguments = com_arguments([LetterContent])
+        self.document.SetLetterContent(*arguments)
 
     def SetPasswordEncryptionOptions(self, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
-        params = [
-            PasswordEncryptionProvider if PasswordEncryptionProvider is not None else pythoncom.Missing,
-            PasswordEncryptionAlgorithm if PasswordEncryptionAlgorithm is not None else pythoncom.Missing,
-            PasswordEncryptionKeyLength if PasswordEncryptionKeyLength is not None else pythoncom.Missing,
-            PasswordEncryptionFileProperties if PasswordEncryptionFileProperties is not None else pythoncom.Missing,
-        ]
-        self.document.SetPasswordEncryptionOptions(*params)
+        arguments = com_arguments([PasswordEncryptionProvider, PasswordEncryptionAlgorithm, PasswordEncryptionKeyLength, PasswordEncryptionFileProperties])
+        self.document.SetPasswordEncryptionOptions(*arguments)
 
     def ToggleFormsDesign(self):
         self.document.ToggleFormsDesign()
 
     def TransformDocument(self, Path=None, DataOnly=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            DataOnly if DataOnly is not None else pythoncom.Missing,
-        ]
-        self.document.TransformDocument(*params)
+        arguments = com_arguments([Path, DataOnly])
+        self.document.TransformDocument(*arguments)
 
     def Undo(self, Times=None):
-        params = [
-            Times if Times is not None else pythoncom.Missing,
-        ]
-        return self.document.Undo(*params)
+        arguments = com_arguments([Times])
+        return self.document.Undo(*arguments)
 
     def UndoClear(self):
         self.document.UndoClear()
 
     def Unprotect(self, Password=None):
-        params = [
-            Password if Password is not None else pythoncom.Missing,
-        ]
-        self.document.Unprotect(*params)
+        arguments = com_arguments([Password])
+        self.document.Unprotect(*arguments)
 
     def UpdateStyles(self):
         self.document.UpdateStyles()
@@ -8248,16 +7499,12 @@ class Editors:
         return self.editors.Parent
 
     def Add(self, EditorID=None):
-        params = [
-            EditorID if EditorID is not None else pythoncom.Missing,
-        ]
-        self.editors.Add(*params)
+        arguments = com_arguments([EditorID])
+        self.editors.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.editors.Item(*params)
+        arguments = com_arguments([Index])
+        return self.editors.Item(*arguments)
 
 
 class Email:
@@ -8649,17 +7896,12 @@ class EmailSignatureEntries:
         return self.emailsignatureentries.Parent
 
     def Add(self, Name=None, Range=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return EmailSignatureEntrie(self.emailsignatureentries.Add(*params))
+        arguments = com_arguments([Name, Range])
+        return EmailSignatureEntrie(self.emailsignatureentries.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.emailsignatureentries.Item(*params)
+        arguments = com_arguments([Index])
+        return self.emailsignatureentries.Item(*arguments)
 
 
 class EmailSignatureEntry:
@@ -8980,73 +8222,15 @@ class Envelope:
         self.envelope.Vertical = value
 
     def Insert(self, ExtractAddress=None, Address=None, AutoText=None, OmitReturnAddress=None, ReturnAddress=None, ReturnAutoText=None, PrintBarCode=None, PrintFIMA=None, Size=None, Height=None, Width=None, FeedSource=None, AddressFromLeft=None, AddressFromTop=None, ReturnAddressFromLeft=None, ReturnAddressFromTop=None, DefaultFaceUp=None, DefaultOrientation=None, PrintEPostage=None, Vertical=None, RecipientNamefromLeft=None, RecipientNamefromTop=None, RecipientPostalfromLeft=None, RecipientPostalfromTop=None, SenderNamefromLeft=None, SenderNamefromTop=None, SenderPostalfromLeft=None, SenderPostalfromTop=None):
-        params = [
-            ExtractAddress if ExtractAddress is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            OmitReturnAddress if OmitReturnAddress is not None else pythoncom.Missing,
-            ReturnAddress if ReturnAddress is not None else pythoncom.Missing,
-            ReturnAutoText if ReturnAutoText is not None else pythoncom.Missing,
-            PrintBarCode if PrintBarCode is not None else pythoncom.Missing,
-            PrintFIMA if PrintFIMA is not None else pythoncom.Missing,
-            Size if Size is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            FeedSource if FeedSource is not None else pythoncom.Missing,
-            AddressFromLeft if AddressFromLeft is not None else pythoncom.Missing,
-            AddressFromTop if AddressFromTop is not None else pythoncom.Missing,
-            ReturnAddressFromLeft if ReturnAddressFromLeft is not None else pythoncom.Missing,
-            ReturnAddressFromTop if ReturnAddressFromTop is not None else pythoncom.Missing,
-            DefaultFaceUp if DefaultFaceUp is not None else pythoncom.Missing,
-            DefaultOrientation if DefaultOrientation is not None else pythoncom.Missing,
-            PrintEPostage if PrintEPostage is not None else pythoncom.Missing,
-            Vertical if Vertical is not None else pythoncom.Missing,
-            RecipientNamefromLeft if RecipientNamefromLeft is not None else pythoncom.Missing,
-            RecipientNamefromTop if RecipientNamefromTop is not None else pythoncom.Missing,
-            RecipientPostalfromLeft if RecipientPostalfromLeft is not None else pythoncom.Missing,
-            RecipientPostalfromTop if RecipientPostalfromTop is not None else pythoncom.Missing,
-            SenderNamefromLeft if SenderNamefromLeft is not None else pythoncom.Missing,
-            SenderNamefromTop if SenderNamefromTop is not None else pythoncom.Missing,
-            SenderPostalfromLeft if SenderPostalfromLeft is not None else pythoncom.Missing,
-            SenderPostalfromTop if SenderPostalfromTop is not None else pythoncom.Missing,
-        ]
-        self.envelope.Insert(*params)
+        arguments = com_arguments([ExtractAddress, Address, AutoText, OmitReturnAddress, ReturnAddress, ReturnAutoText, PrintBarCode, PrintFIMA, Size, Height, Width, FeedSource, AddressFromLeft, AddressFromTop, ReturnAddressFromLeft, ReturnAddressFromTop, DefaultFaceUp, DefaultOrientation, PrintEPostage, Vertical, RecipientNamefromLeft, RecipientNamefromTop, RecipientPostalfromLeft, RecipientPostalfromTop, SenderNamefromLeft, SenderNamefromTop, SenderPostalfromLeft, SenderPostalfromTop])
+        self.envelope.Insert(*arguments)
 
     def Options(self):
         self.envelope.Options()
 
     def PrintOut(self, ExtractAddress=None, Address=None, AutoText=None, OmitReturnAddress=None, ReturnAddress=None, ReturnAutoText=None, PrintBarCode=None, PrintFIMA=None, Size=None, Height=None, Width=None, FeedSource=None, AddressFromLeft=None, AddressFromTop=None, ReturnAddressFromLeft=None, ReturnAddressFromTop=None, DefaultFaceUp=None, DefaultOrientation=None, PrintEPostage=None, Vertical=None, RecipientNamefromLeft=None, RecipientNamefromTop=None, RecipientPostalfromLeft=None, RecipientPostalfromTop=None, SenderNamefromLeft=None, SenderNamefromTop=None, SenderPostalfromLeft=None, SenderPostalfromTop=None):
-        params = [
-            ExtractAddress if ExtractAddress is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            OmitReturnAddress if OmitReturnAddress is not None else pythoncom.Missing,
-            ReturnAddress if ReturnAddress is not None else pythoncom.Missing,
-            ReturnAutoText if ReturnAutoText is not None else pythoncom.Missing,
-            PrintBarCode if PrintBarCode is not None else pythoncom.Missing,
-            PrintFIMA if PrintFIMA is not None else pythoncom.Missing,
-            Size if Size is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-            Width if Width is not None else pythoncom.Missing,
-            FeedSource if FeedSource is not None else pythoncom.Missing,
-            AddressFromLeft if AddressFromLeft is not None else pythoncom.Missing,
-            AddressFromTop if AddressFromTop is not None else pythoncom.Missing,
-            ReturnAddressFromLeft if ReturnAddressFromLeft is not None else pythoncom.Missing,
-            ReturnAddressFromTop if ReturnAddressFromTop is not None else pythoncom.Missing,
-            DefaultFaceUp if DefaultFaceUp is not None else pythoncom.Missing,
-            DefaultOrientation if DefaultOrientation is not None else pythoncom.Missing,
-            PrintEPostage if PrintEPostage is not None else pythoncom.Missing,
-            Vertical if Vertical is not None else pythoncom.Missing,
-            RecipientNamefromLeft if RecipientNamefromLeft is not None else pythoncom.Missing,
-            RecipientNamefromTop if RecipientNamefromTop is not None else pythoncom.Missing,
-            RecipientPostalfromLeft if RecipientPostalfromLeft is not None else pythoncom.Missing,
-            RecipientPostalfromTop if RecipientPostalfromTop is not None else pythoncom.Missing,
-            SenderNamefromLeft if SenderNamefromLeft is not None else pythoncom.Missing,
-            SenderNamefromTop if SenderNamefromTop is not None else pythoncom.Missing,
-            SenderPostalfromLeft if SenderPostalfromLeft is not None else pythoncom.Missing,
-            SenderPostalfromTop if SenderPostalfromTop is not None else pythoncom.Missing,
-        ]
-        self.envelope.PrintOut(*params)
+        arguments = com_arguments([ExtractAddress, Address, AutoText, OmitReturnAddress, ReturnAddress, ReturnAutoText, PrintBarCode, PrintFIMA, Size, Height, Width, FeedSource, AddressFromLeft, AddressFromTop, ReturnAddressFromLeft, ReturnAddressFromTop, DefaultFaceUp, DefaultOrientation, PrintEPostage, Vertical, RecipientNamefromLeft, RecipientNamefromTop, RecipientPostalfromLeft, RecipientPostalfromTop, SenderNamefromLeft, SenderNamefromTop, SenderPostalfromLeft, SenderPostalfromTop])
+        self.envelope.PrintOut(*arguments)
 
     def UpdateDocument(self):
         self.envelope.UpdateDocument()
@@ -9433,54 +8617,35 @@ class FillFormat:
         self.fillformat.Visible = value
 
     def OneColorGradient(self, Style=None, Variant=None, Degree=None):
-        params = [
-            Style if Style is not None else pythoncom.Missing,
-            Variant if Variant is not None else pythoncom.Missing,
-            Degree if Degree is not None else pythoncom.Missing,
-        ]
-        self.fillformat.OneColorGradient(*params)
+        arguments = com_arguments([Style, Variant, Degree])
+        self.fillformat.OneColorGradient(*arguments)
 
     def Patterned(self, Pattern=None):
-        params = [
-            Pattern if Pattern is not None else pythoncom.Missing,
-        ]
-        self.fillformat.Patterned(*params)
+        arguments = com_arguments([Pattern])
+        self.fillformat.Patterned(*arguments)
 
     def PresetGradient(self, Style=None, Variant=None, PresetGradientType=None):
-        params = [
-            Style if Style is not None else pythoncom.Missing,
-            Variant if Variant is not None else pythoncom.Missing,
-            PresetGradientType if PresetGradientType is not None else pythoncom.Missing,
-        ]
-        self.fillformat.PresetGradient(*params)
+        arguments = com_arguments([Style, Variant, PresetGradientType])
+        self.fillformat.PresetGradient(*arguments)
 
     def PresetTextured(self, PresetTexture=None):
-        params = [
-            PresetTexture if PresetTexture is not None else pythoncom.Missing,
-        ]
-        self.fillformat.PresetTextured(*params)
+        arguments = com_arguments([PresetTexture])
+        self.fillformat.PresetTextured(*arguments)
 
     def Solid(self):
         self.fillformat.Solid()
 
     def TwoColorGradient(self, Style=None, Variant=None):
-        params = [
-            Style if Style is not None else pythoncom.Missing,
-            Variant if Variant is not None else pythoncom.Missing,
-        ]
-        self.fillformat.TwoColorGradient(*params)
+        arguments = com_arguments([Style, Variant])
+        self.fillformat.TwoColorGradient(*arguments)
 
     def UserPicture(self, PictureFile=None):
-        params = [
-            PictureFile if PictureFile is not None else pythoncom.Missing,
-        ]
-        self.fillformat.UserPicture(*params)
+        arguments = com_arguments([PictureFile])
+        self.fillformat.UserPicture(*arguments)
 
     def UserTextured(self, TextureFile=None):
-        params = [
-            TextureFile if TextureFile is not None else pythoncom.Missing,
-        ]
-        self.fillformat.UserTextured(*params)
+        arguments = com_arguments([TextureFile])
+        self.fillformat.UserTextured(*arguments)
 
 
 class Find:
@@ -9762,74 +8927,16 @@ class Find:
         return self.find.ClearHitHighlight()
 
     def Execute(self, FindText=None, MatchCase=None, MatchWholeWord=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, Forward=None, Wrap=None, Format=None, ReplaceWith=None, Replace=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None):
-        params = [
-            FindText if FindText is not None else pythoncom.Missing,
-            MatchCase if MatchCase is not None else pythoncom.Missing,
-            MatchWholeWord if MatchWholeWord is not None else pythoncom.Missing,
-            MatchWildcards if MatchWildcards is not None else pythoncom.Missing,
-            MatchSoundsLike if MatchSoundsLike is not None else pythoncom.Missing,
-            MatchAllWordForms if MatchAllWordForms is not None else pythoncom.Missing,
-            Forward if Forward is not None else pythoncom.Missing,
-            Wrap if Wrap is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            ReplaceWith if ReplaceWith is not None else pythoncom.Missing,
-            Replace if Replace is not None else pythoncom.Missing,
-            MatchKashida if MatchKashida is not None else pythoncom.Missing,
-            MatchDiacritics if MatchDiacritics is not None else pythoncom.Missing,
-            MatchAlefHamza if MatchAlefHamza is not None else pythoncom.Missing,
-            MatchControl if MatchControl is not None else pythoncom.Missing,
-        ]
-        return self.find.Execute(*params)
+        arguments = com_arguments([FindText, MatchCase, MatchWholeWord, MatchWildcards, MatchSoundsLike, MatchAllWordForms, Forward, Wrap, Format, ReplaceWith, Replace, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl])
+        return self.find.Execute(*arguments)
 
     def Execute2007(self, FindText=None, MatchCase=None, MatchWholeWord=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, Forward=None, Wrap=None, Format=None, ReplaceWith=None, Replace=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, IgnoreSpace=None, IgnorePunct=None):
-        params = [
-            FindText if FindText is not None else pythoncom.Missing,
-            MatchCase if MatchCase is not None else pythoncom.Missing,
-            MatchWholeWord if MatchWholeWord is not None else pythoncom.Missing,
-            MatchWildcards if MatchWildcards is not None else pythoncom.Missing,
-            MatchSoundsLike if MatchSoundsLike is not None else pythoncom.Missing,
-            MatchAllWordForms if MatchAllWordForms is not None else pythoncom.Missing,
-            Forward if Forward is not None else pythoncom.Missing,
-            Wrap if Wrap is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            ReplaceWith if ReplaceWith is not None else pythoncom.Missing,
-            Replace if Replace is not None else pythoncom.Missing,
-            MatchKashida if MatchKashida is not None else pythoncom.Missing,
-            MatchDiacritics if MatchDiacritics is not None else pythoncom.Missing,
-            MatchAlefHamza if MatchAlefHamza is not None else pythoncom.Missing,
-            MatchControl if MatchControl is not None else pythoncom.Missing,
-            MatchPrefix if MatchPrefix is not None else pythoncom.Missing,
-            MatchSuffix if MatchSuffix is not None else pythoncom.Missing,
-            MatchPhrase if MatchPhrase is not None else pythoncom.Missing,
-            IgnoreSpace if IgnoreSpace is not None else pythoncom.Missing,
-            IgnorePunct if IgnorePunct is not None else pythoncom.Missing,
-        ]
-        return self.find.Execute2007(*params)
+        arguments = com_arguments([FindText, MatchCase, MatchWholeWord, MatchWildcards, MatchSoundsLike, MatchAllWordForms, Forward, Wrap, Format, ReplaceWith, Replace, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl, MatchPrefix, MatchSuffix, MatchPhrase, IgnoreSpace, IgnorePunct])
+        return self.find.Execute2007(*arguments)
 
     def HitHighlight(self, FindText=None, HighlightColor=None, TextColor=None, MatchCase=None, MatchWholeWord=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, MatchByte=None, MatchFuzzy=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, IgnoreSpace=None, IgnorePunct=None, HanjaPhoneticHangul=None):
-        params = [
-            FindText if FindText is not None else pythoncom.Missing,
-            HighlightColor if HighlightColor is not None else pythoncom.Missing,
-            TextColor if TextColor is not None else pythoncom.Missing,
-            MatchCase if MatchCase is not None else pythoncom.Missing,
-            MatchWholeWord if MatchWholeWord is not None else pythoncom.Missing,
-            MatchPrefix if MatchPrefix is not None else pythoncom.Missing,
-            MatchSuffix if MatchSuffix is not None else pythoncom.Missing,
-            MatchPhrase if MatchPhrase is not None else pythoncom.Missing,
-            MatchWildcards if MatchWildcards is not None else pythoncom.Missing,
-            MatchSoundsLike if MatchSoundsLike is not None else pythoncom.Missing,
-            MatchAllWordForms if MatchAllWordForms is not None else pythoncom.Missing,
-            MatchByte if MatchByte is not None else pythoncom.Missing,
-            MatchFuzzy if MatchFuzzy is not None else pythoncom.Missing,
-            MatchKashida if MatchKashida is not None else pythoncom.Missing,
-            MatchDiacritics if MatchDiacritics is not None else pythoncom.Missing,
-            MatchAlefHamza if MatchAlefHamza is not None else pythoncom.Missing,
-            MatchControl if MatchControl is not None else pythoncom.Missing,
-            IgnoreSpace if IgnoreSpace is not None else pythoncom.Missing,
-            IgnorePunct if IgnorePunct is not None else pythoncom.Missing,
-            HanjaPhoneticHangul if HanjaPhoneticHangul is not None else pythoncom.Missing,
-        ]
-        return self.find.HitHighlight(*params)
+        arguments = com_arguments([FindText, HighlightColor, TextColor, MatchCase, MatchWholeWord, MatchPrefix, MatchSuffix, MatchPhrase, MatchWildcards, MatchSoundsLike, MatchAllWordForms, MatchByte, MatchFuzzy, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl, IgnoreSpace, IgnorePunct, HanjaPhoneticHangul])
+        return self.find.HitHighlight(*arguments)
 
     def SetAllFuzzyOptions(self):
         self.find.SetAllFuzzyOptions()
@@ -10311,10 +9418,8 @@ class FontNames:
         return self.fontnames.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.fontnames.Item(*params)
+        arguments = com_arguments([Index])
+        return self.fontnames.Item(*arguments)
 
 
 class Footnote:
@@ -10690,13 +9795,11 @@ class Frameset:
         return Frameset(self.frameset.ChildFramesetCount)
 
     def ChildFramesetItem(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Index])
         if callable(self.frameset.ChildFramesetItem):
-            return Frameset(self.frameset.ChildFramesetItem(*params))
+            return Frameset(self.frameset.ChildFramesetItem(*arguments))
         else:
-            return Frameset(self.frameset.GetChildFramesetItem(*params))
+            return Frameset(self.frameset.GetChildFramesetItem(*arguments))
 
     @property
     def Creator(self):
@@ -10811,10 +9914,8 @@ class Frameset:
         self.frameset.WidthType = value
 
     def AddNewFrame(self, Where=None):
-        params = [
-            Where if Where is not None else pythoncom.Missing,
-        ]
-        self.frameset.AddNewFrame(*params)
+        arguments = com_arguments([Where])
+        self.frameset.AddNewFrame(*arguments)
 
     def Delete(self):
         self.frameset.Delete()
@@ -10838,23 +9939,12 @@ class FreeformBuilder:
         return self.freeformbuilder.Parent
 
     def AddNodes(self, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
-        params = [
-            SegmentType if SegmentType is not None else pythoncom.Missing,
-            EditingType if EditingType is not None else pythoncom.Missing,
-            X1 if X1 is not None else pythoncom.Missing,
-            Y1 if Y1 is not None else pythoncom.Missing,
-            X2 if X2 is not None else pythoncom.Missing,
-            Y2 if Y2 is not None else pythoncom.Missing,
-            X3 if X3 is not None else pythoncom.Missing,
-            Y3 if Y3 is not None else pythoncom.Missing,
-        ]
-        self.freeformbuilder.AddNodes(*params)
+        arguments = com_arguments([SegmentType, EditingType, X1, Y1, X2, Y2, X3, Y3])
+        self.freeformbuilder.AddNodes(*arguments)
 
     def ConvertToShape(self, Anchor=None):
-        params = [
-            Anchor if Anchor is not None else pythoncom.Missing,
-        ]
-        self.freeformbuilder.ConvertToShape(*params)
+        arguments = com_arguments([Anchor])
+        self.freeformbuilder.ConvertToShape(*arguments)
 
 
 class GlowFormat:
@@ -11194,10 +10284,8 @@ class HTMLDivision:
         self.htmldivision.Delete()
 
     def HTMLDivisionParent(self, LevelsUp=None):
-        params = [
-            LevelsUp if LevelsUp is not None else pythoncom.Missing,
-        ]
-        return self.htmldivision.HTMLDivisionParent(*params)
+        arguments = com_arguments([LevelsUp])
+        return self.htmldivision.HTMLDivisionParent(*arguments)
 
 
 class HTMLDivisions:
@@ -11229,16 +10317,12 @@ class HTMLDivisions:
         return self.htmldivisions.Parent
 
     def Add(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return HTMLDivision(self.htmldivisions.Add(*params))
+        arguments = com_arguments([Range])
+        return HTMLDivision(self.htmldivisions.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.htmldivisions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.htmldivisions.Item(*arguments)
 
 
 class Hyperlink:
@@ -11330,25 +10414,15 @@ class Hyperlink:
         self.hyperlink.AddToFavorites()
 
     def CreateNewDocument(self, FileName=None, EditNow=None, Overwrite=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            EditNow if EditNow is not None else pythoncom.Missing,
-            Overwrite if Overwrite is not None else pythoncom.Missing,
-        ]
-        self.hyperlink.CreateNewDocument(*params)
+        arguments = com_arguments([FileName, EditNow, Overwrite])
+        self.hyperlink.CreateNewDocument(*arguments)
 
     def Delete(self):
         self.hyperlink.Delete()
 
     def Follow(self, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
-        params = [
-            NewWindow if NewWindow is not None else pythoncom.Missing,
-            AddHistory if AddHistory is not None else pythoncom.Missing,
-            ExtraInfo if ExtraInfo is not None else pythoncom.Missing,
-            Method if Method is not None else pythoncom.Missing,
-            HeaderInfo if HeaderInfo is not None else pythoncom.Missing,
-        ]
-        self.hyperlink.Follow(*params)
+        arguments = com_arguments([NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo])
+        self.hyperlink.Follow(*arguments)
 
 
 class Index:
@@ -11754,12 +10828,8 @@ class KeyBinding:
         self.keybinding.Execute()
 
     def Rebind(self, KeyCategory=None, Command=None, CommandParameter=None):
-        params = [
-            KeyCategory if KeyCategory is not None else pythoncom.Missing,
-            Command if Command is not None else pythoncom.Missing,
-            CommandParameter if CommandParameter is not None else pythoncom.Missing,
-        ]
-        self.keybinding.Rebind(*params)
+        arguments = com_arguments([KeyCategory, Command, CommandParameter])
+        self.keybinding.Rebind(*arguments)
 
 
 class Language:
@@ -11975,10 +11045,8 @@ class LegendEntries:
         return self.legendentries.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return LegendEntry(self.legendentries.Item(*params))
+        arguments = com_arguments([Index])
+        return LegendEntry(self.legendentries.Item(*arguments))
 
 
 class LegendEntry:
@@ -12706,10 +11774,8 @@ class Lines:
         return self.lines.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.lines.Item(*params)
+        arguments = com_arguments([Index])
+        return self.lines.Item(*arguments)
 
 
 class LinkFormat:
@@ -12814,28 +11880,16 @@ class List:
         return self.list.StyleName
 
     def ApplyListTemplate(self, ListTemplate=None, ContinuePreviousList=None, ApplyTo=None, DefaultListBehavior=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-            ContinuePreviousList if ContinuePreviousList is not None else pythoncom.Missing,
-            ApplyTo if ApplyTo is not None else pythoncom.Missing,
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-        ]
-        self.list.ApplyListTemplate(*params)
+        arguments = com_arguments([ListTemplate, ContinuePreviousList, ApplyTo, DefaultListBehavior])
+        self.list.ApplyListTemplate(*arguments)
 
     def ApplyListTemplateWithLevel(self, ListTemplate=None, ContinuePreviousList=None, DefaultListBehavior=None, ApplyLevel=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-            ContinuePreviousList if ContinuePreviousList is not None else pythoncom.Missing,
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-            ApplyLevel if ApplyLevel is not None else pythoncom.Missing,
-        ]
-        self.list.ApplyListTemplateWithLevel(*params)
+        arguments = com_arguments([ListTemplate, ContinuePreviousList, DefaultListBehavior, ApplyLevel])
+        self.list.ApplyListTemplateWithLevel(*arguments)
 
     def CanContinuePreviousList(self, ListTemplate=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-        ]
-        self.list.CanContinuePreviousList(*params)
+        arguments = com_arguments([ListTemplate])
+        self.list.CanContinuePreviousList(*arguments)
 
     def ConvertNumbersToText(self):
         self.list.ConvertNumbersToText()
@@ -12844,10 +11898,8 @@ class List:
         self.list.CountNumberedItems()
 
     def RemoveNumbers(self, NumberType=None):
-        params = [
-            NumberType if NumberType is not None else pythoncom.Missing,
-        ]
-        self.list.RemoveNumbers(*params)
+        arguments = com_arguments([NumberType])
+        self.list.RemoveNumbers(*arguments)
 
 
 class ListEntry:
@@ -12941,47 +11993,28 @@ class ListFormat:
         return self.listformat.SingleListTemplate
 
     def ApplyBulletDefault(self, DefaultListBehavior=None):
-        params = [
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-        ]
-        self.listformat.ApplyBulletDefault(*params)
+        arguments = com_arguments([DefaultListBehavior])
+        self.listformat.ApplyBulletDefault(*arguments)
 
     def ApplyListTemplate(self, ListTemplate=None, ContinuePreviousList=None, ApplyTo=None, DefaultListBehavior=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-            ContinuePreviousList if ContinuePreviousList is not None else pythoncom.Missing,
-            ApplyTo if ApplyTo is not None else pythoncom.Missing,
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-        ]
-        self.listformat.ApplyListTemplate(*params)
+        arguments = com_arguments([ListTemplate, ContinuePreviousList, ApplyTo, DefaultListBehavior])
+        self.listformat.ApplyListTemplate(*arguments)
 
     def ApplyListTemplateWithLevel(self, ListTemplate=None, ContinuePreviousList=None, ApplyTo=None, DefaultListBehavior=None, ApplyLevel=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-            ContinuePreviousList if ContinuePreviousList is not None else pythoncom.Missing,
-            ApplyTo if ApplyTo is not None else pythoncom.Missing,
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-            ApplyLevel if ApplyLevel is not None else pythoncom.Missing,
-        ]
-        self.listformat.ApplyListTemplateWithLevel(*params)
+        arguments = com_arguments([ListTemplate, ContinuePreviousList, ApplyTo, DefaultListBehavior, ApplyLevel])
+        self.listformat.ApplyListTemplateWithLevel(*arguments)
 
     def ApplyNumberDefault(self, DefaultListBehavior=None):
-        params = [
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-        ]
-        self.listformat.ApplyNumberDefault(*params)
+        arguments = com_arguments([DefaultListBehavior])
+        self.listformat.ApplyNumberDefault(*arguments)
 
     def ApplyOutlineNumberDefault(self, DefaultListBehavior=None):
-        params = [
-            DefaultListBehavior if DefaultListBehavior is not None else pythoncom.Missing,
-        ]
-        self.listformat.ApplyOutlineNumberDefault(*params)
+        arguments = com_arguments([DefaultListBehavior])
+        self.listformat.ApplyOutlineNumberDefault(*arguments)
 
     def CanContinuePreviousList(self, ListTemplate=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-        ]
-        self.listformat.CanContinuePreviousList(*params)
+        arguments = com_arguments([ListTemplate])
+        self.listformat.CanContinuePreviousList(*arguments)
 
     def ConvertNumbersToText(self):
         self.listformat.ConvertNumbersToText()
@@ -12996,10 +12029,8 @@ class ListFormat:
         self.listformat.ListOutdent()
 
     def RemoveNumbers(self, NumberType=None):
-        params = [
-            NumberType if NumberType is not None else pythoncom.Missing,
-        ]
-        self.listformat.RemoveNumbers(*params)
+        arguments = com_arguments([NumberType])
+        self.listformat.RemoveNumbers(*arguments)
 
 
 class ListGallery:
@@ -13020,23 +12051,19 @@ class ListGallery:
         return self.listgallery.ListTemplates
 
     def Modified(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Index])
         if callable(self.listgallery.Modified):
-            return self.listgallery.Modified(*params)
+            return self.listgallery.Modified(*arguments)
         else:
-            return self.listgallery.GetModified(*params)
+            return self.listgallery.GetModified(*arguments)
 
     @property
     def Parent(self):
         return self.listgallery.Parent
 
     def Reset(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.listgallery.Reset(*params)
+        arguments = com_arguments([Index])
+        self.listgallery.Reset(*arguments)
 
 
 class ListLevel:
@@ -13153,10 +12180,8 @@ class ListLevel:
         self.listlevel.TrailingCharacter = value
 
     def ApplyPictureBullet(self, FileName=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.listlevel.ApplyPictureBullet(*params)
+        arguments = com_arguments([FileName])
+        self.listlevel.ApplyPictureBullet(*arguments)
 
 
 class ListTemplate:
@@ -13197,10 +12222,8 @@ class ListTemplate:
         return self.listtemplate.Parent
 
     def Convert(self, Level=None):
-        params = [
-            Level if Level is not None else pythoncom.Missing,
-        ]
-        self.listtemplate.Convert(*params)
+        arguments = com_arguments([Level])
+        self.listtemplate.Convert(*arguments)
 
 
 class MailingLabel:
@@ -13249,59 +12272,23 @@ class MailingLabel:
         self.mailinglabel.Vertical = value
 
     def CreateNewDocument(self, Name=None, Address=None, AutoText=None, ExtractAddress=None, LaserTray=None, PrintEPostageLabel=None, Vertical=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            ExtractAddress if ExtractAddress is not None else pythoncom.Missing,
-            LaserTray if LaserTray is not None else pythoncom.Missing,
-            PrintEPostageLabel if PrintEPostageLabel is not None else pythoncom.Missing,
-            Vertical if Vertical is not None else pythoncom.Missing,
-        ]
-        return self.mailinglabel.CreateNewDocument(*params)
+        arguments = com_arguments([Name, Address, AutoText, ExtractAddress, LaserTray, PrintEPostageLabel, Vertical])
+        return self.mailinglabel.CreateNewDocument(*arguments)
 
     def CreateNewDocumentByID(self, LabelID=None, Address=None, AutoText=None, ExtractAddress=None, LaserTray=None, PrintEPostageLabel=None, Vertical=None):
-        params = [
-            LabelID if LabelID is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            ExtractAddress if ExtractAddress is not None else pythoncom.Missing,
-            LaserTray if LaserTray is not None else pythoncom.Missing,
-            PrintEPostageLabel if PrintEPostageLabel is not None else pythoncom.Missing,
-            Vertical if Vertical is not None else pythoncom.Missing,
-        ]
-        return self.mailinglabel.CreateNewDocumentByID(*params)
+        arguments = com_arguments([LabelID, Address, AutoText, ExtractAddress, LaserTray, PrintEPostageLabel, Vertical])
+        return self.mailinglabel.CreateNewDocumentByID(*arguments)
 
     def LabelOptions(self):
         self.mailinglabel.LabelOptions()
 
     def PrintOut(self, Name=None, Address=None, ExtractAddress=None, LaserTray=None, SingleLabel=None, Row=None, Column=None, PrintEPostageLabel=None, Vertical=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-            ExtractAddress if ExtractAddress is not None else pythoncom.Missing,
-            LaserTray if LaserTray is not None else pythoncom.Missing,
-            SingleLabel if SingleLabel is not None else pythoncom.Missing,
-            Row if Row is not None else pythoncom.Missing,
-            Column if Column is not None else pythoncom.Missing,
-            PrintEPostageLabel if PrintEPostageLabel is not None else pythoncom.Missing,
-            Vertical if Vertical is not None else pythoncom.Missing,
-        ]
-        self.mailinglabel.PrintOut(*params)
+        arguments = com_arguments([Name, Address, ExtractAddress, LaserTray, SingleLabel, Row, Column, PrintEPostageLabel, Vertical])
+        self.mailinglabel.PrintOut(*arguments)
 
     def PrintOutByID(self, LabelID=None, Address=None, ExtractAddress=None, LaserTray=None, SingleLabel=None, Row=None, Column=None, PrintEPostageLabel=None, Vertical=None):
-        params = [
-            LabelID if LabelID is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-            ExtractAddress if ExtractAddress is not None else pythoncom.Missing,
-            LaserTray if LaserTray is not None else pythoncom.Missing,
-            SingleLabel if SingleLabel is not None else pythoncom.Missing,
-            Row if Row is not None else pythoncom.Missing,
-            Column if Column is not None else pythoncom.Missing,
-            PrintEPostageLabel if PrintEPostageLabel is not None else pythoncom.Missing,
-            Vertical if Vertical is not None else pythoncom.Missing,
-        ]
-        self.mailinglabel.PrintOutByID(*params)
+        arguments = com_arguments([LabelID, Address, ExtractAddress, LaserTray, SingleLabel, Row, Column, PrintEPostageLabel, Vertical])
+        self.mailinglabel.PrintOutByID(*arguments)
 
 
 class MailMerge:
@@ -13425,27 +12412,12 @@ class MailMerge:
         self.mailmerge.Check()
 
     def CreateDataSource(self, Name=None, PasswordDocument=None, WritePasswordDocument=None, HeaderRecord=None, MSQuery=None, SQLStatement=None, SQLStatement1=None, Connection=None, LinkToSource=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            PasswordDocument if PasswordDocument is not None else pythoncom.Missing,
-            WritePasswordDocument if WritePasswordDocument is not None else pythoncom.Missing,
-            HeaderRecord if HeaderRecord is not None else pythoncom.Missing,
-            MSQuery if MSQuery is not None else pythoncom.Missing,
-            SQLStatement if SQLStatement is not None else pythoncom.Missing,
-            SQLStatement1 if SQLStatement1 is not None else pythoncom.Missing,
-            Connection if Connection is not None else pythoncom.Missing,
-            LinkToSource if LinkToSource is not None else pythoncom.Missing,
-        ]
-        self.mailmerge.CreateDataSource(*params)
+        arguments = com_arguments([Name, PasswordDocument, WritePasswordDocument, HeaderRecord, MSQuery, SQLStatement, SQLStatement1, Connection, LinkToSource])
+        self.mailmerge.CreateDataSource(*arguments)
 
     def CreateHeaderSource(self, Name=None, PasswordDocument=None, WritePasswordDocument=None, HeaderRecord=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            PasswordDocument if PasswordDocument is not None else pythoncom.Missing,
-            WritePasswordDocument if WritePasswordDocument is not None else pythoncom.Missing,
-            HeaderRecord if HeaderRecord is not None else pythoncom.Missing,
-        ]
-        self.mailmerge.CreateHeaderSource(*params)
+        arguments = com_arguments([Name, PasswordDocument, WritePasswordDocument, HeaderRecord])
+        self.mailmerge.CreateHeaderSource(*arguments)
 
     def EditDataSource(self):
         self.mailmerge.EditDataSource()
@@ -13457,59 +12429,20 @@ class MailMerge:
         self.mailmerge.EditMainDocument()
 
     def Execute(self, Pause=None):
-        params = [
-            Pause if Pause is not None else pythoncom.Missing,
-        ]
-        self.mailmerge.Execute(*params)
+        arguments = com_arguments([Pause])
+        self.mailmerge.Execute(*arguments)
 
     def OpenDataSource(self, Name=None, Format=None, ConfirmConversions=None, ReadOnly=None, LinkToSource=None, AddToRecentFiles=None, PasswordDocument=None, PasswordTemplate=None, Revert=None, WritePasswordDocument=None, WritePasswordTemplate=None, Connection=None, SQLStatement=None, SQLStatement1=None, OpenExclusive=None, SubType=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            ConfirmConversions if ConfirmConversions is not None else pythoncom.Missing,
-            ReadOnly if ReadOnly is not None else pythoncom.Missing,
-            LinkToSource if LinkToSource is not None else pythoncom.Missing,
-            AddToRecentFiles if AddToRecentFiles is not None else pythoncom.Missing,
-            PasswordDocument if PasswordDocument is not None else pythoncom.Missing,
-            PasswordTemplate if PasswordTemplate is not None else pythoncom.Missing,
-            Revert if Revert is not None else pythoncom.Missing,
-            WritePasswordDocument if WritePasswordDocument is not None else pythoncom.Missing,
-            WritePasswordTemplate if WritePasswordTemplate is not None else pythoncom.Missing,
-            Connection if Connection is not None else pythoncom.Missing,
-            SQLStatement if SQLStatement is not None else pythoncom.Missing,
-            SQLStatement1 if SQLStatement1 is not None else pythoncom.Missing,
-            OpenExclusive if OpenExclusive is not None else pythoncom.Missing,
-            SubType if SubType is not None else pythoncom.Missing,
-        ]
-        self.mailmerge.OpenDataSource(*params)
+        arguments = com_arguments([Name, Format, ConfirmConversions, ReadOnly, LinkToSource, AddToRecentFiles, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate, Connection, SQLStatement, SQLStatement1, OpenExclusive, SubType])
+        self.mailmerge.OpenDataSource(*arguments)
 
     def OpenHeaderSource(self, Name=None, Format=None, ConfirmConversions=None, ReadOnly=None, AddToRecentFiles=None, PasswordDocument=None, PasswordTemplate=None, Revert=None, WritePasswordDocument=None, WritePasswordTemplate=None, OpenExclusive=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            ConfirmConversions if ConfirmConversions is not None else pythoncom.Missing,
-            ReadOnly if ReadOnly is not None else pythoncom.Missing,
-            AddToRecentFiles if AddToRecentFiles is not None else pythoncom.Missing,
-            PasswordDocument if PasswordDocument is not None else pythoncom.Missing,
-            PasswordTemplate if PasswordTemplate is not None else pythoncom.Missing,
-            Revert if Revert is not None else pythoncom.Missing,
-            WritePasswordDocument if WritePasswordDocument is not None else pythoncom.Missing,
-            WritePasswordTemplate if WritePasswordTemplate is not None else pythoncom.Missing,
-            OpenExclusive if OpenExclusive is not None else pythoncom.Missing,
-        ]
-        self.mailmerge.OpenHeaderSource(*params)
+        arguments = com_arguments([Name, Format, ConfirmConversions, ReadOnly, AddToRecentFiles, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate, OpenExclusive])
+        self.mailmerge.OpenHeaderSource(*arguments)
 
     def ShowWizard(self, InitialState=None, ShowDocumentStep=None, ShowTemplateStep=None, ShowDataStep=None, ShowWriteStep=None, ShowPreviewStep=None, ShowMergeStep=None):
-        params = [
-            InitialState if InitialState is not None else pythoncom.Missing,
-            ShowDocumentStep if ShowDocumentStep is not None else pythoncom.Missing,
-            ShowTemplateStep if ShowTemplateStep is not None else pythoncom.Missing,
-            ShowDataStep if ShowDataStep is not None else pythoncom.Missing,
-            ShowWriteStep if ShowWriteStep is not None else pythoncom.Missing,
-            ShowPreviewStep if ShowPreviewStep is not None else pythoncom.Missing,
-            ShowMergeStep if ShowMergeStep is not None else pythoncom.Missing,
-        ]
-        self.mailmerge.ShowWizard(*params)
+        arguments = com_arguments([InitialState, ShowDocumentStep, ShowTemplateStep, ShowDataStep, ShowWriteStep, ShowPreviewStep, ShowMergeStep])
+        self.mailmerge.ShowWizard(*arguments)
 
 
 class MailMergeDataField:
@@ -13659,24 +12592,16 @@ class MailMergeDataSource:
         self.mailmergedatasource.Close()
 
     def FindRecord(self, FindText=None, Field=None):
-        params = [
-            FindText if FindText is not None else pythoncom.Missing,
-            Field if Field is not None else pythoncom.Missing,
-        ]
-        return self.mailmergedatasource.FindRecord(*params)
+        arguments = com_arguments([FindText, Field])
+        return self.mailmergedatasource.FindRecord(*arguments)
 
     def SetAllErrorFlags(self, Invalid=None, InvalidComment=None):
-        params = [
-            Invalid if Invalid is not None else pythoncom.Missing,
-            InvalidComment if InvalidComment is not None else pythoncom.Missing,
-        ]
-        self.mailmergedatasource.SetAllErrorFlags(*params)
+        arguments = com_arguments([Invalid, InvalidComment])
+        self.mailmergedatasource.SetAllErrorFlags(*arguments)
 
     def SetAllIncludedFlags(self, Included=None):
-        params = [
-            Included if Included is not None else pythoncom.Missing,
-        ]
-        self.mailmergedatasource.SetAllIncludedFlags(*params)
+        arguments = com_arguments([Included])
+        self.mailmergedatasource.SetAllIncludedFlags(*arguments)
 
 
 class MailMergeField:
@@ -13885,10 +12810,8 @@ class MappedDataFields:
         return self.mappeddatafields.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.mappeddatafields.Item(*params)
+        arguments = com_arguments([Index])
+        return self.mappeddatafields.Item(*arguments)
 
 
 class Model3DFormat:
@@ -13997,28 +12920,20 @@ class Model3DFormat:
         self.model3dformat.RotationZ = value
 
     def IncrementRotationX(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.model3dformat.IncrementRotationX(*params)
+        arguments = com_arguments([Increment])
+        self.model3dformat.IncrementRotationX(*arguments)
 
     def IncrementRotationY(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.model3dformat.IncrementRotationY(*params)
+        arguments = com_arguments([Increment])
+        self.model3dformat.IncrementRotationY(*arguments)
 
     def IncrementRotationZ(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.model3dformat.IncrementRotationZ(*params)
+        arguments = com_arguments([Increment])
+        self.model3dformat.IncrementRotationZ(*arguments)
 
     def ResetModel(self, ResetSize=None):
-        params = [
-            ResetSize if ResetSize is not None else pythoncom.Missing,
-        ]
-        self.model3dformat.ResetModel(*params)
+        arguments = com_arguments([ResetSize])
+        self.model3dformat.ResetModel(*arguments)
 
 
 class OLEFormat:
@@ -14106,26 +13021,16 @@ class OLEFormat:
         self.oleformat.Activate()
 
     def ActivateAs(self, ClassType=None):
-        params = [
-            ClassType if ClassType is not None else pythoncom.Missing,
-        ]
-        self.oleformat.ActivateAs(*params)
+        arguments = com_arguments([ClassType])
+        self.oleformat.ActivateAs(*arguments)
 
     def ConvertTo(self, ClassType=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None):
-        params = [
-            ClassType if ClassType is not None else pythoncom.Missing,
-            DisplayAsIcon if DisplayAsIcon is not None else pythoncom.Missing,
-            IconFileName if IconFileName is not None else pythoncom.Missing,
-            IconIndex if IconIndex is not None else pythoncom.Missing,
-            IconLabel if IconLabel is not None else pythoncom.Missing,
-        ]
-        self.oleformat.ConvertTo(*params)
+        arguments = com_arguments([ClassType, DisplayAsIcon, IconFileName, IconIndex, IconLabel])
+        self.oleformat.ConvertTo(*arguments)
 
     def DoVerb(self, VerbIndex=None):
-        params = [
-            VerbIndex if VerbIndex is not None else pythoncom.Missing,
-        ]
-        self.oleformat.DoVerb(*params)
+        arguments = com_arguments([VerbIndex])
+        self.oleformat.DoVerb(*arguments)
 
     def Edit(self):
         self.oleformat.Edit()
@@ -14294,16 +13199,12 @@ class OMathArgs:
         return self.omathargs.Parent
 
     def Add(self, BeforeArg=None):
-        params = [
-            BeforeArg if BeforeArg is not None else pythoncom.Missing,
-        ]
-        return self.omathargs.Add(*params)
+        arguments = com_arguments([BeforeArg])
+        return self.omathargs.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathargs.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathargs.Item(*arguments)
 
 
 class OMathAutoCorrect:
@@ -14370,17 +13271,12 @@ class OMathAutoCorrectEntries:
         return self.omathautocorrectentries.Parent
 
     def Add(self, Name=None, Value=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        return self.omathautocorrectentries.Add(*params)
+        arguments = com_arguments([Name, Value])
+        return self.omathautocorrectentries.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathautocorrectentries.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathautocorrectentries.Item(*arguments)
 
 
 class OMathAutoCorrectEntry:
@@ -14641,16 +13537,12 @@ class OMathBreaks:
         return self.omathbreaks.Parent
 
     def Add(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.omathbreaks.Add(*params)
+        arguments = com_arguments([Range])
+        return self.omathbreaks.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathbreaks.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathbreaks.Item(*arguments)
 
 
 class OMathDelim:
@@ -14988,19 +13880,12 @@ class OMathFunctions:
         return self.omathfunctions.Parent
 
     def Add(self, Range=None, Type=None, NumArgs=None, NumCols=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            NumArgs if NumArgs is not None else pythoncom.Missing,
-            NumCols if NumCols is not None else pythoncom.Missing,
-        ]
-        return self.omathfunctions.Add(*params)
+        arguments = com_arguments([Range, Type, NumArgs, NumCols])
+        return self.omathfunctions.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathfunctions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathfunctions.Item(*arguments)
 
 
 class OMathGroupChar:
@@ -15125,14 +14010,11 @@ class OMathMat:
         return Application(self.omathmat.Application)
 
     def Cell(self, Row=None, Col=None):
-        params = [
-            Row if Row is not None else pythoncom.Missing,
-            Col if Col is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Row, Col])
         if callable(self.omathmat.Cell):
-            return OMath(self.omathmat.Cell(*params))
+            return OMath(self.omathmat.Cell(*arguments))
         else:
-            return OMath(self.omathmat.GetCell(*params))
+            return OMath(self.omathmat.GetCell(*arguments))
 
     @property
     def ColGap(self):
@@ -15258,16 +14140,12 @@ class OMathMatCols:
         return self.omathmatcols.Parent
 
     def Add(self, BeforeCol=None):
-        params = [
-            BeforeCol if BeforeCol is not None else pythoncom.Missing,
-        ]
-        return self.omathmatcols.Add(*params)
+        arguments = com_arguments([BeforeCol])
+        return self.omathmatcols.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathmatcols.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathmatcols.Item(*arguments)
 
 
 class OMathMatRow:
@@ -15325,16 +14203,12 @@ class OMathMatRows:
         return self.omathmatrows.Parent
 
     def Add(self, BeforeRow=None):
-        params = [
-            BeforeRow if BeforeRow is not None else pythoncom.Missing,
-        ]
-        return self.omathmatrows.Add(*params)
+        arguments = com_arguments([BeforeRow])
+        return self.omathmatrows.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathmatrows.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathmatrows.Item(*arguments)
 
 
 class OMathNary:
@@ -15562,16 +14436,12 @@ class OMathRecognizedFunctions:
         return self.omathrecognizedfunctions.Parent
 
     def Add(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return self.omathrecognizedfunctions.Add(*params)
+        arguments = com_arguments([Name])
+        return self.omathrecognizedfunctions.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omathrecognizedfunctions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omathrecognizedfunctions.Item(*arguments)
 
 
 class OMaths:
@@ -15599,19 +14469,15 @@ class OMaths:
         return self.omaths.Parent
 
     def Add(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return OMath(self.omaths.Add(*params))
+        arguments = com_arguments([Range])
+        return OMath(self.omaths.Add(*arguments))
 
     def BuildUp(self):
         return self.omaths.BuildUp()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.omaths.Item(*params)
+        arguments = com_arguments([Index])
+        return self.omaths.Item(*arguments)
 
     def Linearize(self):
         return self.omaths.Linearize()
@@ -18069,41 +16935,26 @@ class Pane:
         self.pane.Activate()
 
     def AutoScroll(self, Velocity=None):
-        params = [
-            Velocity if Velocity is not None else pythoncom.Missing,
-        ]
-        self.pane.AutoScroll(*params)
+        arguments = com_arguments([Velocity])
+        self.pane.AutoScroll(*arguments)
 
     def Close(self):
         self.pane.Close()
 
     def LargeScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
-        params = [
-            Down if Down is not None else pythoncom.Missing,
-            Up if Up is not None else pythoncom.Missing,
-            ToRight if ToRight is not None else pythoncom.Missing,
-            ToLeft if ToLeft is not None else pythoncom.Missing,
-        ]
-        self.pane.LargeScroll(*params)
+        arguments = com_arguments([Down, Up, ToRight, ToLeft])
+        self.pane.LargeScroll(*arguments)
 
     def NewFrameset(self):
         self.pane.NewFrameset()
 
     def PageScroll(self, Down=None, Up=None):
-        params = [
-            Down if Down is not None else pythoncom.Missing,
-            Up if Up is not None else pythoncom.Missing,
-        ]
-        self.pane.PageScroll(*params)
+        arguments = com_arguments([Down, Up])
+        self.pane.PageScroll(*arguments)
 
     def SmallScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
-        params = [
-            Down if Down is not None else pythoncom.Missing,
-            Up if Up is not None else pythoncom.Missing,
-            ToRight if ToRight is not None else pythoncom.Missing,
-            ToLeft if ToLeft is not None else pythoncom.Missing,
-        ]
-        self.pane.SmallScroll(*params)
+        arguments = com_arguments([Down, Up, ToRight, ToLeft])
+        self.pane.SmallScroll(*arguments)
 
     def TOCInFrameset(self):
         self.pane.TOCInFrameset()
@@ -18319,13 +17170,11 @@ class Paragraph:
         self.paragraph.LineUnitBefore = value
 
     def ListNumberOriginal(self, Level=None):
-        params = [
-            Level if Level is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Level])
         if callable(self.paragraph.ListNumberOriginal):
-            return self.paragraph.ListNumberOriginal(*params)
+            return self.paragraph.ListNumberOriginal(*arguments)
         else:
-            return self.paragraph.GetListNumberOriginal(*params)
+            return self.paragraph.GetListNumberOriginal(*arguments)
 
     @property
     def MirrorIndents(self):
@@ -18466,39 +17315,23 @@ class Paragraph:
         self.paragraph.Indent()
 
     def IndentCharWidth(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraph.IndentCharWidth(*params)
+        arguments = com_arguments([Count])
+        self.paragraph.IndentCharWidth(*arguments)
 
     def IndentFirstLineCharWidth(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraph.IndentFirstLineCharWidth(*params)
+        arguments = com_arguments([Count])
+        self.paragraph.IndentFirstLineCharWidth(*arguments)
 
     def JoinList(self):
         self.paragraph.JoinList()
 
     def ListAdvanceTo(self, Level1=None, Level2=None, Level3=None, Level4=None, Level5=None, Level6=None, Level7=None, Level8=None, Level9=None):
-        params = [
-            Level1 if Level1 is not None else pythoncom.Missing,
-            Level2 if Level2 is not None else pythoncom.Missing,
-            Level3 if Level3 is not None else pythoncom.Missing,
-            Level4 if Level4 is not None else pythoncom.Missing,
-            Level5 if Level5 is not None else pythoncom.Missing,
-            Level6 if Level6 is not None else pythoncom.Missing,
-            Level7 if Level7 is not None else pythoncom.Missing,
-            Level8 if Level8 is not None else pythoncom.Missing,
-            Level9 if Level9 is not None else pythoncom.Missing,
-        ]
-        self.paragraph.ListAdvanceTo(*params)
+        arguments = com_arguments([Level1, Level2, Level3, Level4, Level5, Level6, Level7, Level8, Level9])
+        self.paragraph.ListAdvanceTo(*arguments)
 
     def Next(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.paragraph.Next(*params)
+        arguments = com_arguments([Count])
+        return self.paragraph.Next(*arguments)
 
     def OpenOrCloseUp(self):
         self.paragraph.OpenOrCloseUp()
@@ -18519,10 +17352,8 @@ class Paragraph:
         self.paragraph.OutlinePromote()
 
     def Previous(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.paragraph.Previous(*params)
+        arguments = com_arguments([Count])
+        return self.paragraph.Previous(*arguments)
 
     def Reset(self):
         self.paragraph.Reset()
@@ -18546,16 +17377,12 @@ class Paragraph:
         self.paragraph.Space2()
 
     def TabHangingIndent(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraph.TabHangingIndent(*params)
+        arguments = com_arguments([Count])
+        self.paragraph.TabHangingIndent(*arguments)
 
     def TabIndent(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraph.TabIndent(*params)
+        arguments = com_arguments([Count])
+        self.paragraph.TabIndent(*arguments)
 
 
 class ParagraphFormat:
@@ -18879,16 +17706,12 @@ class ParagraphFormat:
         self.paragraphformat.CloseUp()
 
     def IndentCharWidth(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraphformat.IndentCharWidth(*params)
+        arguments = com_arguments([Count])
+        self.paragraphformat.IndentCharWidth(*arguments)
 
     def IndentFirstLineCharWidth(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraphformat.IndentFirstLineCharWidth(*params)
+        arguments = com_arguments([Count])
+        self.paragraphformat.IndentFirstLineCharWidth(*arguments)
 
     def OpenOrCloseUp(self):
         self.paragraphformat.OpenOrCloseUp()
@@ -18909,16 +17732,12 @@ class ParagraphFormat:
         self.paragraphformat.Space2()
 
     def TabHangingIndent(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraphformat.TabHangingIndent(*params)
+        arguments = com_arguments([Count])
+        self.paragraphformat.TabHangingIndent(*arguments)
 
     def TabIndent(self, Count=None):
-        params = [
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.paragraphformat.TabIndent(*params)
+        arguments = com_arguments([Count])
+        self.paragraphformat.TabIndent(*arguments)
 
 
 class PictureFormat:
@@ -19019,16 +17838,12 @@ class PictureFormat:
         self.pictureformat.TransparentBackground = value
 
     def IncrementBrightness(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.pictureformat.IncrementBrightness(*params)
+        arguments = com_arguments([Increment])
+        self.pictureformat.IncrementBrightness(*arguments)
 
     def IncrementContrast(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.pictureformat.IncrementContrast(*params)
+        arguments = com_arguments([Increment])
+        self.pictureformat.IncrementContrast(*arguments)
 
 
 class PlotArea:
@@ -19317,19 +18132,8 @@ class Point:
         return self.point.Width
 
     def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            LegendKey if LegendKey is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            HasLeaderLines if HasLeaderLines is not None else pythoncom.Missing,
-            ShowSeriesName if ShowSeriesName is not None else pythoncom.Missing,
-            ShowCategoryName if ShowCategoryName is not None else pythoncom.Missing,
-            ShowValue if ShowValue is not None else pythoncom.Missing,
-            ShowPercentage if ShowPercentage is not None else pythoncom.Missing,
-            ShowBubbleSize if ShowBubbleSize is not None else pythoncom.Missing,
-            Separator if Separator is not None else pythoncom.Missing,
-        ]
-        self.point.ApplyDataLabels(*params)
+        arguments = com_arguments([Type, LegendKey, AutoText, HasLeaderLines, ShowSeriesName, ShowCategoryName, ShowValue, ShowPercentage, ShowBubbleSize, Separator])
+        self.point.ApplyDataLabels(*arguments)
 
     def ClearFormats(self):
         self.point.ClearFormats()
@@ -19344,11 +18148,8 @@ class Point:
         self.point.Paste()
 
     def PieSliceLocation(self, loc=None, Index=None):
-        params = [
-            loc if loc is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.point.PieSliceLocation(*params)
+        arguments = com_arguments([loc, Index])
+        return self.point.PieSliceLocation(*arguments)
 
     def Select(self):
         self.point.Select()
@@ -19379,10 +18180,8 @@ class Points:
         return self.points.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Point(self.points.Item(*params))
+        arguments = com_arguments([Index])
+        return Point(self.points.Item(*arguments))
 
 
 class ProtectedViewWindow:
@@ -19513,20 +18312,12 @@ class ProtectedViewWindows:
         return self.protectedviewwindows.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.protectedviewwindows.Item(*params)
+        arguments = com_arguments([Index])
+        return self.protectedviewwindows.Item(*arguments)
 
     def Open(self, FileName=None, AddToRecentFiles=None, PasswordDocument=None, Visible=None, OpenAndRepair=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            AddToRecentFiles if AddToRecentFiles is not None else pythoncom.Missing,
-            PasswordDocument if PasswordDocument is not None else pythoncom.Missing,
-            Visible if Visible is not None else pythoncom.Missing,
-            OpenAndRepair if OpenAndRepair is not None else pythoncom.Missing,
-        ]
-        return ProtectedViewWindow(self.protectedviewwindows.Open(*params))
+        arguments = com_arguments([FileName, AddToRecentFiles, PasswordDocument, Visible, OpenAndRepair])
+        return ProtectedViewWindow(self.protectedviewwindows.Open(*arguments))
 
 
 class Range:
@@ -19575,14 +18366,11 @@ class Range:
         self.range.Case = value
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
-        params = [
-            RowIndex if RowIndex is not None else pythoncom.Missing,
-            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([RowIndex, ColumnIndex])
         if callable(self.range.Cells):
-            return self.range.Cells(*params)
+            return self.range.Cells(*arguments)
         else:
-            return self.range.GetCells(*params)
+            return self.range.GetCells(*arguments)
 
     @property
     def Characters(self):
@@ -19769,13 +18557,11 @@ class Range:
         self.range.ID = value
 
     def Information(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Type])
         if callable(self.range.Information):
-            return self.range.Information(*params)
+            return self.range.Information(*arguments)
         else:
-            return self.range.GetInformation(*params)
+            return self.range.GetInformation(*arguments)
 
     @property
     def InlineShapes(self):
@@ -20054,13 +18840,11 @@ class Range:
         return self.range.Words
 
     def XML(self, DataOnly=None):
-        params = [
-            DataOnly if DataOnly is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([DataOnly])
         if callable(self.range.XML):
-            return self.range.XML(*params)
+            return self.range.XML(*arguments)
         else:
-            return self.range.GetXML(*params)
+            return self.range.GetXML(*arguments)
 
     def AutoFormat(self):
         self.range.AutoFormat()
@@ -20072,67 +18856,27 @@ class Range:
         self.range.CheckGrammar()
 
     def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
-        params = [
-            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
-            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
-            AlwaysSuggest if AlwaysSuggest is not None else pythoncom.Missing,
-            CustomDictionary2 if CustomDictionary2 is not None else pythoncom.Missing,
-            CustomDictionary3 if CustomDictionary3 is not None else pythoncom.Missing,
-            CustomDictionary4 if CustomDictionary4 is not None else pythoncom.Missing,
-            CustomDictionary5 if CustomDictionary5 is not None else pythoncom.Missing,
-            CustomDictionary6 if CustomDictionary6 is not None else pythoncom.Missing,
-            CustomDictionary7 if CustomDictionary7 is not None else pythoncom.Missing,
-            CustomDictionary8 if CustomDictionary8 is not None else pythoncom.Missing,
-            CustomDictionary9 if CustomDictionary9 is not None else pythoncom.Missing,
-            CustomDictionary10 if CustomDictionary10 is not None else pythoncom.Missing,
-        ]
-        self.range.CheckSpelling(*params)
+        arguments = com_arguments([CustomDictionary, IgnoreUppercase, AlwaysSuggest, CustomDictionary2, CustomDictionary3, CustomDictionary4, CustomDictionary5, CustomDictionary6, CustomDictionary7, CustomDictionary8, CustomDictionary9, CustomDictionary10])
+        self.range.CheckSpelling(*arguments)
 
     def CheckSynonyms(self):
         self.range.CheckSynonyms()
 
     def Collapse(self, Direction=None):
-        params = [
-            Direction if Direction is not None else pythoncom.Missing,
-        ]
-        self.range.Collapse(*params)
+        arguments = com_arguments([Direction])
+        self.range.Collapse(*arguments)
 
     def ComputeStatistics(self, Statistic=None):
-        params = [
-            Statistic if Statistic is not None else pythoncom.Missing,
-        ]
-        self.range.ComputeStatistics(*params)
+        arguments = com_arguments([Statistic])
+        self.range.ComputeStatistics(*arguments)
 
     def ConvertHangulAndHanja(self, ConversionsMode=None, FastConversion=None, CheckHangulEnding=None, EnableRecentOrdering=None, CustomDictionary=None):
-        params = [
-            ConversionsMode if ConversionsMode is not None else pythoncom.Missing,
-            FastConversion if FastConversion is not None else pythoncom.Missing,
-            CheckHangulEnding if CheckHangulEnding is not None else pythoncom.Missing,
-            EnableRecentOrdering if EnableRecentOrdering is not None else pythoncom.Missing,
-            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
-        ]
-        self.range.ConvertHangulAndHanja(*params)
+        arguments = com_arguments([ConversionsMode, FastConversion, CheckHangulEnding, EnableRecentOrdering, CustomDictionary])
+        self.range.ConvertHangulAndHanja(*arguments)
 
     def ConvertToTable(self, Separator=None, NumRows=None, NumColumns=None, InitialColumnWidth=None, Format=None, ApplyBorders=None, ApplyShading=None, ApplyFont=None, ApplyColor=None, ApplyHeadingRows=None, ApplyLastRow=None, ApplyFirstColumn=None, ApplyLastColumn=None, AutoFit=None, AutoFitBehavior=None, DefaultTableBehavior=None):
-        params = [
-            Separator if Separator is not None else pythoncom.Missing,
-            NumRows if NumRows is not None else pythoncom.Missing,
-            NumColumns if NumColumns is not None else pythoncom.Missing,
-            InitialColumnWidth if InitialColumnWidth is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            ApplyBorders if ApplyBorders is not None else pythoncom.Missing,
-            ApplyShading if ApplyShading is not None else pythoncom.Missing,
-            ApplyFont if ApplyFont is not None else pythoncom.Missing,
-            ApplyColor if ApplyColor is not None else pythoncom.Missing,
-            ApplyHeadingRows if ApplyHeadingRows is not None else pythoncom.Missing,
-            ApplyLastRow if ApplyLastRow is not None else pythoncom.Missing,
-            ApplyFirstColumn if ApplyFirstColumn is not None else pythoncom.Missing,
-            ApplyLastColumn if ApplyLastColumn is not None else pythoncom.Missing,
-            AutoFit if AutoFit is not None else pythoncom.Missing,
-            AutoFitBehavior if AutoFitBehavior is not None else pythoncom.Missing,
-            DefaultTableBehavior if DefaultTableBehavior is not None else pythoncom.Missing,
-        ]
-        return self.range.ConvertToTable(*params)
+        arguments = com_arguments([Separator, NumRows, NumColumns, InitialColumnWidth, Format, ApplyBorders, ApplyShading, ApplyFont, ApplyColor, ApplyHeadingRows, ApplyLastRow, ApplyFirstColumn, ApplyLastColumn, AutoFit, AutoFitBehavior, DefaultTableBehavior])
+        return self.range.ConvertToTable(*arguments)
 
     def Copy(self):
         self.range.Copy()
@@ -20144,238 +18888,102 @@ class Range:
         self.range.Cut()
 
     def Delete(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.range.Delete(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.range.Delete(*arguments)
 
     def DetectLanguage(self):
         self.range.DetectLanguage()
 
     def EndOf(self, Unit=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.range.EndOf(*params)
+        arguments = com_arguments([Unit, Extend])
+        self.range.EndOf(*arguments)
 
     def Expand(self, Unit=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-        ]
-        self.range.Expand(*params)
+        arguments = com_arguments([Unit])
+        self.range.Expand(*arguments)
 
     def ExportAsFixedFormat(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, ExportCurrentPage=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            ExportCurrentPage if ExportCurrentPage is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.range.ExportAsFixedFormat(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, ExportCurrentPage, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, FixedFormatExtClassPtr])
+        self.range.ExportAsFixedFormat(*arguments)
 
     def ExportAsFixedFormat2(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, ExportCurrentPage=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, OptimizeForImageQuality=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            ExportCurrentPage if ExportCurrentPage is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            OptimizeForImageQuality if OptimizeForImageQuality is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.range.ExportAsFixedFormat2(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, ExportCurrentPage, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, OptimizeForImageQuality, FixedFormatExtClassPtr])
+        self.range.ExportAsFixedFormat2(*arguments)
 
     def ExportAsFixedFormat3(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, ExportCurrentPage=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, OptimizeForImageQuality=None, ImproveExportTagging=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            ExportCurrentPage if ExportCurrentPage is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            OptimizeForImageQuality if OptimizeForImageQuality is not None else pythoncom.Missing,
-            ImproveExportTagging if ImproveExportTagging is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.range.ExportAsFixedFormat3(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, ExportCurrentPage, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, OptimizeForImageQuality, ImproveExportTagging, FixedFormatExtClassPtr])
+        self.range.ExportAsFixedFormat3(*arguments)
 
     def ExportFragment(self, FileName=None, Format=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-        ]
-        return self.range.ExportFragment(*params)
+        arguments = com_arguments([FileName, Format])
+        return self.range.ExportFragment(*arguments)
 
     def GetSpellingSuggestions(self, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, SuggestionMode=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
-        params = [
-            CustomDictionary if CustomDictionary is not None else pythoncom.Missing,
-            IgnoreUppercase if IgnoreUppercase is not None else pythoncom.Missing,
-            MainDictionary if MainDictionary is not None else pythoncom.Missing,
-            SuggestionMode if SuggestionMode is not None else pythoncom.Missing,
-            CustomDictionary2 if CustomDictionary2 is not None else pythoncom.Missing,
-            CustomDictionary3 if CustomDictionary3 is not None else pythoncom.Missing,
-            CustomDictionary4 if CustomDictionary4 is not None else pythoncom.Missing,
-            CustomDictionary5 if CustomDictionary5 is not None else pythoncom.Missing,
-            CustomDictionary6 if CustomDictionary6 is not None else pythoncom.Missing,
-            CustomDictionary7 if CustomDictionary7 is not None else pythoncom.Missing,
-            CustomDictionary8 if CustomDictionary8 is not None else pythoncom.Missing,
-            CustomDictionary9 if CustomDictionary9 is not None else pythoncom.Missing,
-            CustomDictionary10 if CustomDictionary10 is not None else pythoncom.Missing,
-        ]
-        return self.range.GetSpellingSuggestions(*params)
+        arguments = com_arguments([CustomDictionary, IgnoreUppercase, MainDictionary, SuggestionMode, CustomDictionary2, CustomDictionary3, CustomDictionary4, CustomDictionary5, CustomDictionary6, CustomDictionary7, CustomDictionary8, CustomDictionary9, CustomDictionary10])
+        return self.range.GetSpellingSuggestions(*arguments)
 
     def GoTo(self, What=None, Which=None, Count=None, Name=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-            Which if Which is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.range.GoTo(*params)
+        arguments = com_arguments([What, Which, Count, Name])
+        self.range.GoTo(*arguments)
 
     def GoToEditableRange(self, EditorID=None):
-        params = [
-            EditorID if EditorID is not None else pythoncom.Missing,
-        ]
-        self.range.GoToEditableRange(*params)
+        arguments = com_arguments([EditorID])
+        self.range.GoToEditableRange(*arguments)
 
     def GoToNext(self, What=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-        ]
-        self.range.GoToNext(*params)
+        arguments = com_arguments([What])
+        self.range.GoToNext(*arguments)
 
     def GoToPrevious(self, What=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-        ]
-        self.range.GoToPrevious(*params)
+        arguments = com_arguments([What])
+        self.range.GoToPrevious(*arguments)
 
     def ImportFragment(self, FileName=None, MatchDestination=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            MatchDestination if MatchDestination is not None else pythoncom.Missing,
-        ]
-        return self.range.ImportFragment(*params)
+        arguments = com_arguments([FileName, MatchDestination])
+        return self.range.ImportFragment(*arguments)
 
     def InRange(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.range.InRange(*params)
+        arguments = com_arguments([Range])
+        return self.range.InRange(*arguments)
 
     def InsertAfter(self, Text=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-        ]
-        self.range.InsertAfter(*params)
+        arguments = com_arguments([Text])
+        self.range.InsertAfter(*arguments)
 
     def InsertAlignmentTab(self, Alignment=None, RelativeTo=None):
-        params = [
-            Alignment if Alignment is not None else pythoncom.Missing,
-            RelativeTo if RelativeTo is not None else pythoncom.Missing,
-        ]
-        self.range.InsertAlignmentTab(*params)
+        arguments = com_arguments([Alignment, RelativeTo])
+        self.range.InsertAlignmentTab(*arguments)
 
     def InsertAutoText(self):
         self.range.InsertAutoText()
 
     def InsertBefore(self, Text=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-        ]
-        self.range.InsertBefore(*params)
+        arguments = com_arguments([Text])
+        self.range.InsertBefore(*arguments)
 
     def InsertBreak(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.range.InsertBreak(*params)
+        arguments = com_arguments([Type])
+        self.range.InsertBreak(*arguments)
 
     def InsertCaption(self, Label=None, Title=None, TitleAutoText=None, Position=None, ExcludeLabel=None):
-        params = [
-            Label if Label is not None else pythoncom.Missing,
-            Title if Title is not None else pythoncom.Missing,
-            TitleAutoText if TitleAutoText is not None else pythoncom.Missing,
-            Position if Position is not None else pythoncom.Missing,
-            ExcludeLabel if ExcludeLabel is not None else pythoncom.Missing,
-        ]
-        self.range.InsertCaption(*params)
+        arguments = com_arguments([Label, Title, TitleAutoText, Position, ExcludeLabel])
+        self.range.InsertCaption(*arguments)
 
     def InsertCrossReference(self, ReferenceType=None, ReferenceKind=None, ReferenceItem=None, InsertAsHyperlink=None, IncludePosition=None, SeparateNumbers=None, SeparatorString=None):
-        params = [
-            ReferenceType if ReferenceType is not None else pythoncom.Missing,
-            ReferenceKind if ReferenceKind is not None else pythoncom.Missing,
-            ReferenceItem if ReferenceItem is not None else pythoncom.Missing,
-            InsertAsHyperlink if InsertAsHyperlink is not None else pythoncom.Missing,
-            IncludePosition if IncludePosition is not None else pythoncom.Missing,
-            SeparateNumbers if SeparateNumbers is not None else pythoncom.Missing,
-            SeparatorString if SeparatorString is not None else pythoncom.Missing,
-        ]
-        self.range.InsertCrossReference(*params)
+        arguments = com_arguments([ReferenceType, ReferenceKind, ReferenceItem, InsertAsHyperlink, IncludePosition, SeparateNumbers, SeparatorString])
+        self.range.InsertCrossReference(*arguments)
 
     def InsertDatabase(self, Format=None, Style=None, LinkToSource=None, Connection=None, SQLStatement=None, SQLStatement1=None, PasswordDocument=None, PasswordTemplate=None, WritePasswordDocument=None, WritePasswordTemplate=None, DataSource=None, From=None, To=None, IncludeFields=None):
-        params = [
-            Format if Format is not None else pythoncom.Missing,
-            Style if Style is not None else pythoncom.Missing,
-            LinkToSource if LinkToSource is not None else pythoncom.Missing,
-            Connection if Connection is not None else pythoncom.Missing,
-            SQLStatement if SQLStatement is not None else pythoncom.Missing,
-            SQLStatement1 if SQLStatement1 is not None else pythoncom.Missing,
-            PasswordDocument if PasswordDocument is not None else pythoncom.Missing,
-            PasswordTemplate if PasswordTemplate is not None else pythoncom.Missing,
-            WritePasswordDocument if WritePasswordDocument is not None else pythoncom.Missing,
-            WritePasswordTemplate if WritePasswordTemplate is not None else pythoncom.Missing,
-            DataSource if DataSource is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            IncludeFields if IncludeFields is not None else pythoncom.Missing,
-        ]
-        self.range.InsertDatabase(*params)
+        arguments = com_arguments([Format, Style, LinkToSource, Connection, SQLStatement, SQLStatement1, PasswordDocument, PasswordTemplate, WritePasswordDocument, WritePasswordTemplate, DataSource, From, To, IncludeFields])
+        self.range.InsertDatabase(*arguments)
 
     def InsertDateTime(self, DateTimeFormat=None, InsertAsField=None, InsertAsFullWidth=None, DateLanguage=None, CalendarType=None):
-        params = [
-            DateTimeFormat if DateTimeFormat is not None else pythoncom.Missing,
-            InsertAsField if InsertAsField is not None else pythoncom.Missing,
-            InsertAsFullWidth if InsertAsFullWidth is not None else pythoncom.Missing,
-            DateLanguage if DateLanguage is not None else pythoncom.Missing,
-            CalendarType if CalendarType is not None else pythoncom.Missing,
-        ]
-        self.range.InsertDateTime(*params)
+        arguments = com_arguments([DateTimeFormat, InsertAsField, InsertAsFullWidth, DateLanguage, CalendarType])
+        self.range.InsertDateTime(*arguments)
 
     def InsertFile(self, FileName=None, Range=None, ConfirmConversions=None, Link=None, Attachment=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            ConfirmConversions if ConfirmConversions is not None else pythoncom.Missing,
-            Link if Link is not None else pythoncom.Missing,
-            Attachment if Attachment is not None else pythoncom.Missing,
-        ]
-        self.range.InsertFile(*params)
+        arguments = com_arguments([FileName, Range, ConfirmConversions, Link, Attachment])
+        self.range.InsertFile(*arguments)
 
     def InsertParagraph(self):
         self.range.InsertParagraph()
@@ -20387,113 +18995,67 @@ class Range:
         self.range.InsertParagraphBefore()
 
     def InsertSymbol(self, CharacterNumber=None, Font=None, Unicode=None, Bias=None):
-        params = [
-            CharacterNumber if CharacterNumber is not None else pythoncom.Missing,
-            Font if Font is not None else pythoncom.Missing,
-            Unicode if Unicode is not None else pythoncom.Missing,
-            Bias if Bias is not None else pythoncom.Missing,
-        ]
-        self.range.InsertSymbol(*params)
+        arguments = com_arguments([CharacterNumber, Font, Unicode, Bias])
+        self.range.InsertSymbol(*arguments)
 
     def InsertXML(self, XML=None, Transform=None):
-        params = [
-            XML if XML is not None else pythoncom.Missing,
-            Transform if Transform is not None else pythoncom.Missing,
-        ]
-        return self.range.InsertXML(*params)
+        arguments = com_arguments([XML, Transform])
+        return self.range.InsertXML(*arguments)
 
     def InStory(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.range.InStory(*params)
+        arguments = com_arguments([Range])
+        return self.range.InStory(*arguments)
 
     def IsEqual(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.range.IsEqual(*params)
+        arguments = com_arguments([Range])
+        return self.range.IsEqual(*arguments)
 
     def LookupNameProperties(self):
         self.range.LookupNameProperties()
 
     def ModifyEnclosure(self, Style=None, Symbol=None, EnclosedText=None):
-        params = [
-            Style if Style is not None else pythoncom.Missing,
-            Symbol if Symbol is not None else pythoncom.Missing,
-            EnclosedText if EnclosedText is not None else pythoncom.Missing,
-        ]
-        self.range.ModifyEnclosure(*params)
+        arguments = com_arguments([Style, Symbol, EnclosedText])
+        self.range.ModifyEnclosure(*arguments)
 
     def Move(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.range.Move(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.range.Move(*arguments)
 
     def MoveEnd(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveEnd(*params)
+        arguments = com_arguments([Unit, Count])
+        self.range.MoveEnd(*arguments)
 
     def MoveEndUntil(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveEndUntil(*params)
+        arguments = com_arguments([Cset, Count])
+        self.range.MoveEndUntil(*arguments)
 
     def MoveEndWhile(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveEndWhile(*params)
+        arguments = com_arguments([Cset, Count])
+        self.range.MoveEndWhile(*arguments)
 
     def MoveStart(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.range.MoveStart(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.range.MoveStart(*arguments)
 
     def MoveStartUntil(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveStartUntil(*params)
+        arguments = com_arguments([Cset, Count])
+        self.range.MoveStartUntil(*arguments)
 
     def MoveStartWhile(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveStartWhile(*params)
+        arguments = com_arguments([Cset, Count])
+        self.range.MoveStartWhile(*arguments)
 
     def MoveUntil(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveUntil(*params)
+        arguments = com_arguments([Cset, Count])
+        self.range.MoveUntil(*arguments)
 
     def MoveWhile(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.range.MoveWhile(*params)
+        arguments = com_arguments([Cset, Count])
+        self.range.MoveWhile(*arguments)
 
     def Next(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.range.Next(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.range.Next(*arguments)
 
     def NextSubdocument(self):
         self.range.NextSubdocument()
@@ -20502,10 +19064,8 @@ class Range:
         self.range.Paste()
 
     def PasteAndFormat(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.range.PasteAndFormat(*params)
+        arguments = com_arguments([Type])
+        self.range.PasteAndFormat(*arguments)
 
     def PasteAppendTable(self):
         self.range.PasteAppendTable()
@@ -20514,90 +19074,42 @@ class Range:
         self.range.PasteAsNestedTable()
 
     def PasteExcelTable(self, LinkedToExcel=None, WordFormatting=None, RTF=None):
-        params = [
-            LinkedToExcel if LinkedToExcel is not None else pythoncom.Missing,
-            WordFormatting if WordFormatting is not None else pythoncom.Missing,
-            RTF if RTF is not None else pythoncom.Missing,
-        ]
-        self.range.PasteExcelTable(*params)
+        arguments = com_arguments([LinkedToExcel, WordFormatting, RTF])
+        self.range.PasteExcelTable(*arguments)
 
     def PasteSpecial(self, IconIndex=None, Link=None, Placement=None, DisplayAsIcon=None, DataType=None, IconFileName=None, IconLabel=None):
-        params = [
-            IconIndex if IconIndex is not None else pythoncom.Missing,
-            Link if Link is not None else pythoncom.Missing,
-            Placement if Placement is not None else pythoncom.Missing,
-            DisplayAsIcon if DisplayAsIcon is not None else pythoncom.Missing,
-            DataType if DataType is not None else pythoncom.Missing,
-            IconFileName if IconFileName is not None else pythoncom.Missing,
-            IconLabel if IconLabel is not None else pythoncom.Missing,
-        ]
-        self.range.PasteSpecial(*params)
+        arguments = com_arguments([IconIndex, Link, Placement, DisplayAsIcon, DataType, IconFileName, IconLabel])
+        self.range.PasteSpecial(*arguments)
 
     def PhoneticGuide(self, Text=None, Alignment=None, Raise=None, FontSize=None, FontName=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-            Alignment if Alignment is not None else pythoncom.Missing,
-            Raise if Raise is not None else pythoncom.Missing,
-            FontSize if FontSize is not None else pythoncom.Missing,
-            FontName if FontName is not None else pythoncom.Missing,
-        ]
-        self.range.PhoneticGuide(*params)
+        arguments = com_arguments([Text, Alignment, Raise, FontSize, FontName])
+        self.range.PhoneticGuide(*arguments)
 
     def Previous(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.range.Previous(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.range.Previous(*arguments)
 
     def PreviousSubdocument(self):
         self.range.PreviousSubdocument()
 
     def Relocate(self, Direction=None):
-        params = [
-            Direction if Direction is not None else pythoncom.Missing,
-        ]
-        self.range.Relocate(*params)
+        arguments = com_arguments([Direction])
+        self.range.Relocate(*arguments)
 
     def Select(self):
         self.range.Select()
 
     def SetListLevel(self, Level=None):
-        params = [
-            Level if Level is not None else pythoncom.Missing,
-        ]
-        self.range.SetListLevel(*params)
+        arguments = com_arguments([Level])
+        self.range.SetListLevel(*arguments)
 
     def SetRange(self, Start=None, End=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            End if End is not None else pythoncom.Missing,
-        ]
-        self.range.SetRange(*params)
+        arguments = com_arguments([Start, End])
+        self.range.SetRange(*arguments)
 
     def Sort(self, ExcludeHeader=None, FieldNumber=None, SortFieldType=None, SortOrder=None, FieldNumber2=None, SortFieldType2=None, SortOrder2=None, FieldNumber3=None, SortFieldType3=None, SortOrder3=None, SortColumn=None, Separator=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
-        params = [
-            ExcludeHeader if ExcludeHeader is not None else pythoncom.Missing,
-            FieldNumber if FieldNumber is not None else pythoncom.Missing,
-            SortFieldType if SortFieldType is not None else pythoncom.Missing,
-            SortOrder if SortOrder is not None else pythoncom.Missing,
-            FieldNumber2 if FieldNumber2 is not None else pythoncom.Missing,
-            SortFieldType2 if SortFieldType2 is not None else pythoncom.Missing,
-            SortOrder2 if SortOrder2 is not None else pythoncom.Missing,
-            FieldNumber3 if FieldNumber3 is not None else pythoncom.Missing,
-            SortFieldType3 if SortFieldType3 is not None else pythoncom.Missing,
-            SortOrder3 if SortOrder3 is not None else pythoncom.Missing,
-            SortColumn if SortColumn is not None else pythoncom.Missing,
-            Separator if Separator is not None else pythoncom.Missing,
-            CaseSensitive if CaseSensitive is not None else pythoncom.Missing,
-            BidiSort if BidiSort is not None else pythoncom.Missing,
-            IgnoreThe if IgnoreThe is not None else pythoncom.Missing,
-            IgnoreKashida if IgnoreKashida is not None else pythoncom.Missing,
-            IgnoreDiacritics if IgnoreDiacritics is not None else pythoncom.Missing,
-            IgnoreHe if IgnoreHe is not None else pythoncom.Missing,
-            LanguageID if LanguageID is not None else pythoncom.Missing,
-        ]
-        self.range.Sort(*params)
+        arguments = com_arguments([ExcludeHeader, FieldNumber, SortFieldType, SortOrder, FieldNumber2, SortFieldType2, SortOrder2, FieldNumber3, SortFieldType3, SortOrder3, SortColumn, Separator, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID])
+        self.range.Sort(*arguments)
 
     def SortAscending(self):
         self.range.SortAscending()
@@ -20606,19 +19118,12 @@ class Range:
         self.range.SortDescending()
 
     def StartOf(self, Unit=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.range.StartOf(*params)
+        arguments = com_arguments([Unit, Extend])
+        self.range.StartOf(*arguments)
 
     def TCSCConverter(self, WdTCSCConverterDirection=None, CommonTerms=None, UseVariants=None):
-        params = [
-            WdTCSCConverterDirection if WdTCSCConverterDirection is not None else pythoncom.Missing,
-            CommonTerms if CommonTerms is not None else pythoncom.Missing,
-            UseVariants if UseVariants is not None else pythoncom.Missing,
-        ]
-        self.range.TCSCConverter(*params)
+        arguments = com_arguments([WdTCSCConverterDirection, CommonTerms, UseVariants])
+        self.range.TCSCConverter(*arguments)
 
     def WholeStory(self):
         self.range.WholeStory()
@@ -20769,10 +19274,8 @@ class Rectangles:
         return self.rectangles.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.rectangles.Item(*params)
+        arguments = com_arguments([Index])
+        return self.rectangles.Item(*arguments)
 
 
 class ReflectionFormat:
@@ -20948,29 +19451,16 @@ class Research:
         return self.research.Parent
 
     def IsResearchService(self, ServiceID=None):
-        params = [
-            ServiceID if ServiceID is not None else pythoncom.Missing,
-        ]
-        return self.research.IsResearchService(*params)
+        arguments = com_arguments([ServiceID])
+        return self.research.IsResearchService(*arguments)
 
     def Query(self, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
-        params = [
-            ServiceID if ServiceID is not None else pythoncom.Missing,
-            QueryString if QueryString is not None else pythoncom.Missing,
-            QueryLanguage if QueryLanguage is not None else pythoncom.Missing,
-            UseSelection if UseSelection is not None else pythoncom.Missing,
-            RequeryContextXML if RequeryContextXML is not None else pythoncom.Missing,
-            NewQueryContextXML if NewQueryContextXML is not None else pythoncom.Missing,
-            LaunchQuery if LaunchQuery is not None else pythoncom.Missing,
-        ]
-        return self.research.Query(*params)
+        arguments = com_arguments([ServiceID, QueryString, QueryLanguage, UseSelection, RequeryContextXML, NewQueryContextXML, LaunchQuery])
+        return self.research.Query(*arguments)
 
     def SetLanguagePair(self, LanguageFrom=None, LanguageTo=None):
-        params = [
-            LanguageFrom if LanguageFrom is not None else pythoncom.Missing,
-            LanguageTo if LanguageTo is not None else pythoncom.Missing,
-        ]
-        return self.research.SetLanguagePair(*params)
+        arguments = com_arguments([LanguageFrom, LanguageTo])
+        return self.research.SetLanguagePair(*arguments)
 
 
 class Reviewer:
@@ -21024,10 +19514,8 @@ class Reviewers:
         return self.reviewers.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.reviewers.Item(*params)
+        arguments = com_arguments([Index])
+        return self.reviewers.Item(*arguments)
 
 
 class Revision:
@@ -21044,14 +19532,11 @@ class Revision:
         return self.revision.Author
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
-        params = [
-            RowIndex if RowIndex is not None else pythoncom.Missing,
-            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([RowIndex, ColumnIndex])
         if callable(self.revision.Cells):
-            return self.revision.Cells(*params)
+            return self.revision.Cells(*arguments)
         else:
-            return self.revision.GetCells(*params)
+            return self.revision.GetCells(*arguments)
 
     @property
     def Creator(self):
@@ -21126,14 +19611,11 @@ class Row:
         return self.row.Borders
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
-        params = [
-            RowIndex if RowIndex is not None else pythoncom.Missing,
-            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([RowIndex, ColumnIndex])
         if callable(self.row.Cells):
-            return self.row.Cells(*params)
+            return self.row.Cells(*arguments)
         else:
-            return self.row.GetCells(*params)
+            return self.row.GetCells(*arguments)
 
     @property
     def Creator(self):
@@ -21224,11 +19706,8 @@ class Row:
         self.row.SpaceBetweenColumns = value
 
     def ConvertToText(self, Separator=None, NestedTables=None):
-        params = [
-            Separator if Separator is not None else pythoncom.Missing,
-            NestedTables if NestedTables is not None else pythoncom.Missing,
-        ]
-        self.row.ConvertToText(*params)
+        arguments = com_arguments([Separator, NestedTables])
+        self.row.ConvertToText(*arguments)
 
     def Delete(self):
         self.row.Delete()
@@ -21237,18 +19716,12 @@ class Row:
         self.row.Select()
 
     def SetHeight(self, RowHeight=None, HeightRule=None):
-        params = [
-            RowHeight if RowHeight is not None else pythoncom.Missing,
-            HeightRule if HeightRule is not None else pythoncom.Missing,
-        ]
-        self.row.SetHeight(*params)
+        arguments = com_arguments([RowHeight, HeightRule])
+        self.row.SetHeight(*arguments)
 
     def SetLeftIndent(self, LeftIndent=None, RulerStyle=None):
-        params = [
-            LeftIndent if LeftIndent is not None else pythoncom.Missing,
-            RulerStyle if RulerStyle is not None else pythoncom.Missing,
-        ]
-        self.row.SetLeftIndent(*params)
+        arguments = com_arguments([LeftIndent, RulerStyle])
+        self.row.SetLeftIndent(*arguments)
 
 
 class Section:
@@ -21327,14 +19800,11 @@ class Selection:
         return self.selection.Borders
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
-        params = [
-            RowIndex if RowIndex is not None else pythoncom.Missing,
-            ColumnIndex if ColumnIndex is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([RowIndex, ColumnIndex])
         if callable(self.selection.Cells):
-            return self.selection.Cells(*params)
+            return self.selection.Cells(*arguments)
         else:
-            return self.selection.GetCells(*params)
+            return self.selection.GetCells(*arguments)
 
     @property
     def Characters(self):
@@ -21473,13 +19943,11 @@ class Selection:
         return self.selection.Hyperlinks
 
     def Information(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Type])
         if callable(self.selection.Information):
-            return self.selection.Information(*params)
+            return self.selection.Information(*arguments)
         else:
-            return self.selection.GetInformation(*params)
+            return self.selection.GetInformation(*arguments)
 
     @property
     def InlineShapes(self):
@@ -21654,13 +20122,11 @@ class Selection:
         return self.selection.Words
 
     def XML(self, DataOnly=None):
-        params = [
-            DataOnly if DataOnly is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([DataOnly])
         if callable(self.selection.XML):
-            return self.selection.XML(*params)
+            return self.selection.XML(*arguments)
         else:
-            return self.selection.GetXML(*params)
+            return self.selection.GetXML(*arguments)
 
     def BoldRun(self):
         self.selection.BoldRun()
@@ -21690,31 +20156,12 @@ class Selection:
         self.selection.ClearParagraphStyle()
 
     def Collapse(self, Direction=None):
-        params = [
-            Direction if Direction is not None else pythoncom.Missing,
-        ]
-        self.selection.Collapse(*params)
+        arguments = com_arguments([Direction])
+        self.selection.Collapse(*arguments)
 
     def ConvertToTable(self, Separator=None, NumRows=None, NumColumns=None, InitialColumnWidth=None, Format=None, ApplyBorders=None, ApplyShading=None, ApplyFont=None, ApplyColor=None, ApplyHeadingRows=None, ApplyLastRow=None, ApplyFirstColumn=None, ApplyLastColumn=None, AutoFit=None, AutoFitBehavior=None, DefaultTableBehavior=None):
-        params = [
-            Separator if Separator is not None else pythoncom.Missing,
-            NumRows if NumRows is not None else pythoncom.Missing,
-            NumColumns if NumColumns is not None else pythoncom.Missing,
-            InitialColumnWidth if InitialColumnWidth is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            ApplyBorders if ApplyBorders is not None else pythoncom.Missing,
-            ApplyShading if ApplyShading is not None else pythoncom.Missing,
-            ApplyFont if ApplyFont is not None else pythoncom.Missing,
-            ApplyColor if ApplyColor is not None else pythoncom.Missing,
-            ApplyHeadingRows if ApplyHeadingRows is not None else pythoncom.Missing,
-            ApplyLastRow if ApplyLastRow is not None else pythoncom.Missing,
-            ApplyFirstColumn if ApplyFirstColumn is not None else pythoncom.Missing,
-            ApplyLastColumn if ApplyLastColumn is not None else pythoncom.Missing,
-            AutoFit if AutoFit is not None else pythoncom.Missing,
-            AutoFitBehavior if AutoFitBehavior is not None else pythoncom.Missing,
-            DefaultTableBehavior if DefaultTableBehavior is not None else pythoncom.Missing,
-        ]
-        return self.selection.ConvertToTable(*params)
+        arguments = com_arguments([Separator, NumRows, NumColumns, InitialColumnWidth, Format, ApplyBorders, ApplyShading, ApplyFont, ApplyColor, ApplyHeadingRows, ApplyLastRow, ApplyFirstColumn, ApplyLastColumn, AutoFit, AutoFitBehavior, DefaultTableBehavior])
+        return self.selection.ConvertToTable(*arguments)
 
     def Copy(self):
         self.selection.Copy()
@@ -21726,11 +20173,8 @@ class Selection:
         self.selection.CopyFormat()
 
     def CreateAutoTextEntry(self, Name=None, StyleName=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            StyleName if StyleName is not None else pythoncom.Missing,
-        ]
-        self.selection.CreateAutoTextEntry(*params)
+        arguments = com_arguments([Name, StyleName])
+        self.selection.CreateAutoTextEntry(*arguments)
 
     def CreateTextbox(self):
         self.selection.CreateTextbox()
@@ -21739,174 +20183,86 @@ class Selection:
         self.selection.Cut()
 
     def Delete(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.Delete(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.selection.Delete(*arguments)
 
     def DetectLanguage(self):
         self.selection.DetectLanguage()
 
     def EndKey(self, Unit=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.selection.EndKey(*params)
+        arguments = com_arguments([Unit, Extend])
+        self.selection.EndKey(*arguments)
 
     def EndOf(self, Unit=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.selection.EndOf(*params)
+        arguments = com_arguments([Unit, Extend])
+        self.selection.EndOf(*arguments)
 
     def EscapeKey(self):
         self.selection.EscapeKey()
 
     def Expand(self, Unit=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-        ]
-        self.selection.Expand(*params)
+        arguments = com_arguments([Unit])
+        self.selection.Expand(*arguments)
 
     def ExportAsFixedFormat(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, ExportCurrentPage=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            ExportCurrentPage if ExportCurrentPage is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.selection.ExportAsFixedFormat(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, ExportCurrentPage, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, FixedFormatExtClassPtr])
+        self.selection.ExportAsFixedFormat(*arguments)
 
     def ExportAsFixedFormat2(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, ExportCurrentPage=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, OptimizeForImageQuality=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            ExportCurrentPage if ExportCurrentPage is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            OptimizeForImageQuality if OptimizeForImageQuality is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.selection.ExportAsFixedFormat2(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, ExportCurrentPage, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, OptimizeForImageQuality, FixedFormatExtClassPtr])
+        self.selection.ExportAsFixedFormat2(*arguments)
 
     def ExportAsFixedFormat3(self, OutputFileName=None, ExportFormat=None, OpenAfterExport=None, OptimizeFor=None, ExportCurrentPage=None, Item=None, IncludeDocProps=None, KeepIRM=None, CreateBookmarks=None, DocStructureTags=None, BitmapMissingFonts=None, UseISO19005_1=None, OptimizeForImageQuality=None, ImproveExportTagging=None, FixedFormatExtClassPtr=None):
-        params = [
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            ExportFormat if ExportFormat is not None else pythoncom.Missing,
-            OpenAfterExport if OpenAfterExport is not None else pythoncom.Missing,
-            OptimizeFor if OptimizeFor is not None else pythoncom.Missing,
-            ExportCurrentPage if ExportCurrentPage is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            IncludeDocProps if IncludeDocProps is not None else pythoncom.Missing,
-            KeepIRM if KeepIRM is not None else pythoncom.Missing,
-            CreateBookmarks if CreateBookmarks is not None else pythoncom.Missing,
-            DocStructureTags if DocStructureTags is not None else pythoncom.Missing,
-            BitmapMissingFonts if BitmapMissingFonts is not None else pythoncom.Missing,
-            UseISO19005_1 if UseISO19005_1 is not None else pythoncom.Missing,
-            OptimizeForImageQuality if OptimizeForImageQuality is not None else pythoncom.Missing,
-            ImproveExportTagging if ImproveExportTagging is not None else pythoncom.Missing,
-            FixedFormatExtClassPtr if FixedFormatExtClassPtr is not None else pythoncom.Missing,
-        ]
-        self.selection.ExportAsFixedFormat3(*params)
+        arguments = com_arguments([OutputFileName, ExportFormat, OpenAfterExport, OptimizeFor, ExportCurrentPage, Item, IncludeDocProps, KeepIRM, CreateBookmarks, DocStructureTags, BitmapMissingFonts, UseISO19005_1, OptimizeForImageQuality, ImproveExportTagging, FixedFormatExtClassPtr])
+        self.selection.ExportAsFixedFormat3(*arguments)
 
     def Extend(self, Character=None):
-        params = [
-            Character if Character is not None else pythoncom.Missing,
-        ]
-        self.selection.Extend(*params)
+        arguments = com_arguments([Character])
+        self.selection.Extend(*arguments)
 
     def GoTo(self, What=None, Which=None, Count=None, Name=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-            Which if Which is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return self.selection.GoTo(*params)
+        arguments = com_arguments([What, Which, Count, Name])
+        return self.selection.GoTo(*arguments)
 
     def GoToEditableRange(self, EditorID=None):
-        params = [
-            EditorID if EditorID is not None else pythoncom.Missing,
-        ]
-        return self.selection.GoToEditableRange(*params)
+        arguments = com_arguments([EditorID])
+        return self.selection.GoToEditableRange(*arguments)
 
     def GoToNext(self, What=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-        ]
-        self.selection.GoToNext(*params)
+        arguments = com_arguments([What])
+        self.selection.GoToNext(*arguments)
 
     def GoToPrevious(self, What=None):
-        params = [
-            What if What is not None else pythoncom.Missing,
-        ]
-        self.selection.GoToPrevious(*params)
+        arguments = com_arguments([What])
+        self.selection.GoToPrevious(*arguments)
 
     def HomeKey(self, Unit=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.selection.HomeKey(*params)
+        arguments = com_arguments([Unit, Extend])
+        self.selection.HomeKey(*arguments)
 
     def InRange(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.selection.InRange(*params)
+        arguments = com_arguments([Range])
+        return self.selection.InRange(*arguments)
 
     def InsertAfter(self, Text=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertAfter(*params)
+        arguments = com_arguments([Text])
+        self.selection.InsertAfter(*arguments)
 
     def InsertBefore(self, Text=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertBefore(*params)
+        arguments = com_arguments([Text])
+        self.selection.InsertBefore(*arguments)
 
     def InsertBreak(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertBreak(*params)
+        arguments = com_arguments([Type])
+        self.selection.InsertBreak(*arguments)
 
     def InsertCaption(self, Label=None, Title=None, TitleAutoText=None, Position=None, ExcludeLabel=None):
-        params = [
-            Label if Label is not None else pythoncom.Missing,
-            Title if Title is not None else pythoncom.Missing,
-            TitleAutoText if TitleAutoText is not None else pythoncom.Missing,
-            Position if Position is not None else pythoncom.Missing,
-            ExcludeLabel if ExcludeLabel is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertCaption(*params)
+        arguments = com_arguments([Label, Title, TitleAutoText, Position, ExcludeLabel])
+        self.selection.InsertCaption(*arguments)
 
     def InsertCells(self, ShiftCells=None):
-        params = [
-            ShiftCells if ShiftCells is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertCells(*params)
+        arguments = com_arguments([ShiftCells])
+        self.selection.InsertCells(*arguments)
 
     def InsertColumns(self):
         self.selection.InsertColumns()
@@ -21915,43 +20271,20 @@ class Selection:
         self.selection.InsertColumnsRight()
 
     def InsertCrossReference(self, ReferenceType=None, ReferenceKind=None, ReferenceItem=None, InsertAsHyperlink=None, IncludePosition=None, SeparateNumbers=None, SeparatorString=None):
-        params = [
-            ReferenceType if ReferenceType is not None else pythoncom.Missing,
-            ReferenceKind if ReferenceKind is not None else pythoncom.Missing,
-            ReferenceItem if ReferenceItem is not None else pythoncom.Missing,
-            InsertAsHyperlink if InsertAsHyperlink is not None else pythoncom.Missing,
-            IncludePosition if IncludePosition is not None else pythoncom.Missing,
-            SeparateNumbers if SeparateNumbers is not None else pythoncom.Missing,
-            SeparatorString if SeparatorString is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertCrossReference(*params)
+        arguments = com_arguments([ReferenceType, ReferenceKind, ReferenceItem, InsertAsHyperlink, IncludePosition, SeparateNumbers, SeparatorString])
+        self.selection.InsertCrossReference(*arguments)
 
     def InsertDateTime(self, DateTimeFormat=None, InsertAsField=None, InsertAsFullWidth=None, DateLanguage=None, CalendarType=None):
-        params = [
-            DateTimeFormat if DateTimeFormat is not None else pythoncom.Missing,
-            InsertAsField if InsertAsField is not None else pythoncom.Missing,
-            InsertAsFullWidth if InsertAsFullWidth is not None else pythoncom.Missing,
-            DateLanguage if DateLanguage is not None else pythoncom.Missing,
-            CalendarType if CalendarType is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertDateTime(*params)
+        arguments = com_arguments([DateTimeFormat, InsertAsField, InsertAsFullWidth, DateLanguage, CalendarType])
+        self.selection.InsertDateTime(*arguments)
 
     def InsertFile(self, FileName=None, Range=None, ConfirmConversions=None, Link=None, Attachment=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            ConfirmConversions if ConfirmConversions is not None else pythoncom.Missing,
-            Link if Link is not None else pythoncom.Missing,
-            Attachment if Attachment is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertFile(*params)
+        arguments = com_arguments([FileName, Range, ConfirmConversions, Link, Attachment])
+        self.selection.InsertFile(*arguments)
 
     def InsertFormula(self, Formula=None, NumberFormat=None):
-        params = [
-            Formula if Formula is not None else pythoncom.Missing,
-            NumberFormat if NumberFormat is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertFormula(*params)
+        arguments = com_arguments([Formula, NumberFormat])
+        self.selection.InsertFormula(*arguments)
 
     def InsertNewPage(self):
         self.selection.InsertNewPage()
@@ -21966,10 +20299,8 @@ class Selection:
         self.selection.InsertParagraphBefore()
 
     def InsertRows(self, NumRows=None):
-        params = [
-            NumRows if NumRows is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertRows(*params)
+        arguments = com_arguments([NumRows])
+        self.selection.InsertRows(*arguments)
 
     def InsertRowsAbove(self):
         self.selection.InsertRowsAbove()
@@ -21981,32 +20312,20 @@ class Selection:
         self.selection.InsertStyleSeparator()
 
     def InsertSymbol(self, CharacterNumber=None, Font=None, Unicode=None, Bias=None):
-        params = [
-            CharacterNumber if CharacterNumber is not None else pythoncom.Missing,
-            Font if Font is not None else pythoncom.Missing,
-            Unicode if Unicode is not None else pythoncom.Missing,
-            Bias if Bias is not None else pythoncom.Missing,
-        ]
-        self.selection.InsertSymbol(*params)
+        arguments = com_arguments([CharacterNumber, Font, Unicode, Bias])
+        self.selection.InsertSymbol(*arguments)
 
     def InsertXML(self, XML=None, Transform=None):
-        params = [
-            XML if XML is not None else pythoncom.Missing,
-            Transform if Transform is not None else pythoncom.Missing,
-        ]
-        return self.selection.InsertXML(*params)
+        arguments = com_arguments([XML, Transform])
+        return self.selection.InsertXML(*arguments)
 
     def InStory(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.selection.InStory(*params)
+        arguments = com_arguments([Range])
+        return self.selection.InStory(*arguments)
 
     def IsEqual(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        return self.selection.IsEqual(*params)
+        arguments = com_arguments([Range])
+        return self.selection.IsEqual(*arguments)
 
     def ItalicRun(self):
         self.selection.ItalicRun()
@@ -22018,115 +20337,67 @@ class Selection:
         self.selection.LtrRun()
 
     def Move(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.Move(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.selection.Move(*arguments)
 
     def MoveDown(self, Unit=None, Count=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveDown(*params)
+        arguments = com_arguments([Unit, Count, Extend])
+        self.selection.MoveDown(*arguments)
 
     def MoveEnd(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.MoveEnd(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.selection.MoveEnd(*arguments)
 
     def MoveEndUntil(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.MoveEndUntil(*params)
+        arguments = com_arguments([Cset, Count])
+        return self.selection.MoveEndUntil(*arguments)
 
     def MoveEndWhile(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveEndWhile(*params)
+        arguments = com_arguments([Cset, Count])
+        self.selection.MoveEndWhile(*arguments)
 
     def MoveLeft(self, Unit=None, Count=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveLeft(*params)
+        arguments = com_arguments([Unit, Count, Extend])
+        self.selection.MoveLeft(*arguments)
 
     def MoveRight(self, Unit=None, Count=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        return self.selection.MoveRight(*params)
+        arguments = com_arguments([Unit, Count, Extend])
+        return self.selection.MoveRight(*arguments)
 
     def MoveStart(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.MoveStart(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.selection.MoveStart(*arguments)
 
     def MoveStartUntil(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveStartUntil(*params)
+        arguments = com_arguments([Cset, Count])
+        self.selection.MoveStartUntil(*arguments)
 
     def MoveStartWhile(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveStartWhile(*params)
+        arguments = com_arguments([Cset, Count])
+        self.selection.MoveStartWhile(*arguments)
 
     def MoveUntil(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveUntil(*params)
+        arguments = com_arguments([Cset, Count])
+        self.selection.MoveUntil(*arguments)
 
     def MoveUp(self, Unit=None, Count=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        return self.selection.MoveUp(*params)
+        arguments = com_arguments([Unit, Count, Extend])
+        return self.selection.MoveUp(*arguments)
 
     def MoveWhile(self, Cset=None, Count=None):
-        params = [
-            Cset if Cset is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        self.selection.MoveWhile(*params)
+        arguments = com_arguments([Cset, Count])
+        self.selection.MoveWhile(*arguments)
 
     def Next(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.Next(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.selection.Next(*arguments)
 
     def NextField(self):
         return self.selection.NextField()
 
     def NextRevision(self, Wrap=None):
-        params = [
-            Wrap if Wrap is not None else pythoncom.Missing,
-        ]
-        return self.selection.NextRevision(*params)
+        arguments = com_arguments([Wrap])
+        return self.selection.NextRevision(*arguments)
 
     def NextSubdocument(self):
         self.selection.NextSubdocument()
@@ -22135,10 +20406,8 @@ class Selection:
         self.selection.Paste()
 
     def PasteAndFormat(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.selection.PasteAndFormat(*params)
+        arguments = com_arguments([Type])
+        self.selection.PasteAndFormat(*arguments)
 
     def PasteAppendTable(self):
         self.selection.PasteAppendTable()
@@ -22147,43 +20416,26 @@ class Selection:
         self.selection.PasteAsNestedTable()
 
     def PasteExcelTable(self, LinkedToExcel=None, WordFormatting=None, RTF=None):
-        params = [
-            LinkedToExcel if LinkedToExcel is not None else pythoncom.Missing,
-            WordFormatting if WordFormatting is not None else pythoncom.Missing,
-            RTF if RTF is not None else pythoncom.Missing,
-        ]
-        self.selection.PasteExcelTable(*params)
+        arguments = com_arguments([LinkedToExcel, WordFormatting, RTF])
+        self.selection.PasteExcelTable(*arguments)
 
     def PasteFormat(self):
         self.selection.PasteFormat()
 
     def PasteSpecial(self, IconIndex=None, Link=None, Placement=None, DisplayAsIcon=None, DataType=None, IconFileName=None, IconLabel=None):
-        params = [
-            IconIndex if IconIndex is not None else pythoncom.Missing,
-            Link if Link is not None else pythoncom.Missing,
-            Placement if Placement is not None else pythoncom.Missing,
-            DisplayAsIcon if DisplayAsIcon is not None else pythoncom.Missing,
-            DataType if DataType is not None else pythoncom.Missing,
-            IconFileName if IconFileName is not None else pythoncom.Missing,
-            IconLabel if IconLabel is not None else pythoncom.Missing,
-        ]
-        self.selection.PasteSpecial(*params)
+        arguments = com_arguments([IconIndex, Link, Placement, DisplayAsIcon, DataType, IconFileName, IconLabel])
+        self.selection.PasteSpecial(*arguments)
 
     def Previous(self, Unit=None, Count=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Count if Count is not None else pythoncom.Missing,
-        ]
-        return self.selection.Previous(*params)
+        arguments = com_arguments([Unit, Count])
+        return self.selection.Previous(*arguments)
 
     def PreviousField(self):
         return self.selection.PreviousField()
 
     def PreviousRevision(self, Wrap=None):
-        params = [
-            Wrap if Wrap is not None else pythoncom.Missing,
-        ]
-        return self.selection.PreviousRevision(*params)
+        arguments = com_arguments([Wrap])
+        return self.selection.PreviousRevision(*arguments)
 
     def PreviousSubdocument(self):
         self.selection.PreviousSubdocument()
@@ -22231,11 +20483,8 @@ class Selection:
         self.selection.SelectRow()
 
     def SetRange(self, Start=None, End=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            End if End is not None else pythoncom.Missing,
-        ]
-        self.selection.SetRange(*params)
+        arguments = com_arguments([Start, End])
+        self.selection.SetRange(*arguments)
 
     def Shrink(self):
         self.selection.Shrink()
@@ -22244,31 +20493,8 @@ class Selection:
         self.selection.ShrinkDiscontiguousSelection()
 
     def Sort(self, ExcludeHeader=None, FieldNumber=None, SortFieldType=None, SortOrder=None, FieldNumber2=None, SortFieldType2=None, SortOrder2=None, FieldNumber3=None, SortFieldType3=None, SortOrder3=None, SortColumn=None, Separator=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None, SubFieldNumber=None, SubFieldNumber2=None, SubFieldNumber3=None):
-        params = [
-            ExcludeHeader if ExcludeHeader is not None else pythoncom.Missing,
-            FieldNumber if FieldNumber is not None else pythoncom.Missing,
-            SortFieldType if SortFieldType is not None else pythoncom.Missing,
-            SortOrder if SortOrder is not None else pythoncom.Missing,
-            FieldNumber2 if FieldNumber2 is not None else pythoncom.Missing,
-            SortFieldType2 if SortFieldType2 is not None else pythoncom.Missing,
-            SortOrder2 if SortOrder2 is not None else pythoncom.Missing,
-            FieldNumber3 if FieldNumber3 is not None else pythoncom.Missing,
-            SortFieldType3 if SortFieldType3 is not None else pythoncom.Missing,
-            SortOrder3 if SortOrder3 is not None else pythoncom.Missing,
-            SortColumn if SortColumn is not None else pythoncom.Missing,
-            Separator if Separator is not None else pythoncom.Missing,
-            CaseSensitive if CaseSensitive is not None else pythoncom.Missing,
-            BidiSort if BidiSort is not None else pythoncom.Missing,
-            IgnoreThe if IgnoreThe is not None else pythoncom.Missing,
-            IgnoreKashida if IgnoreKashida is not None else pythoncom.Missing,
-            IgnoreDiacritics if IgnoreDiacritics is not None else pythoncom.Missing,
-            IgnoreHe if IgnoreHe is not None else pythoncom.Missing,
-            LanguageID if LanguageID is not None else pythoncom.Missing,
-            SubFieldNumber if SubFieldNumber is not None else pythoncom.Missing,
-            SubFieldNumber2 if SubFieldNumber2 is not None else pythoncom.Missing,
-            SubFieldNumber3 if SubFieldNumber3 is not None else pythoncom.Missing,
-        ]
-        self.selection.Sort(*params)
+        arguments = com_arguments([ExcludeHeader, FieldNumber, SortFieldType, SortOrder, FieldNumber2, SortFieldType2, SortOrder2, FieldNumber3, SortFieldType3, SortOrder3, SortColumn, Separator, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID, SubFieldNumber, SubFieldNumber2, SubFieldNumber3])
+        self.selection.Sort(*arguments)
 
     def SortAscending(self):
         self.selection.SortAscending()
@@ -22280,11 +20506,8 @@ class Selection:
         self.selection.SplitTable()
 
     def StartOf(self, Unit=None, Extend=None):
-        params = [
-            Unit if Unit is not None else pythoncom.Missing,
-            Extend if Extend is not None else pythoncom.Missing,
-        ]
-        self.selection.StartOf(*params)
+        arguments = com_arguments([Unit, Extend])
+        self.selection.StartOf(*arguments)
 
     def ToggleCharacterCode(self):
         self.selection.ToggleCharacterCode()
@@ -22296,10 +20519,8 @@ class Selection:
         self.selection.TypeParagraph()
 
     def TypeText(self, Text=None):
-        params = [
-            Text if Text is not None else pythoncom.Missing,
-        ]
-        self.selection.TypeText(*params)
+        arguments = com_arguments([Text])
+        self.selection.TypeText(*arguments)
 
     def WholeStory(self):
         self.selection.WholeStory()
@@ -22615,19 +20836,8 @@ class Series:
         self.series.XValues = value
 
     def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            LegendKey if LegendKey is not None else pythoncom.Missing,
-            AutoText if AutoText is not None else pythoncom.Missing,
-            HasLeaderLines if HasLeaderLines is not None else pythoncom.Missing,
-            ShowSeriesName if ShowSeriesName is not None else pythoncom.Missing,
-            ShowCategoryName if ShowCategoryName is not None else pythoncom.Missing,
-            ShowValue if ShowValue is not None else pythoncom.Missing,
-            ShowPercentage if ShowPercentage is not None else pythoncom.Missing,
-            ShowBubbleSize if ShowBubbleSize is not None else pythoncom.Missing,
-            Separator if Separator is not None else pythoncom.Missing,
-        ]
-        self.series.ApplyDataLabels(*params)
+        arguments = com_arguments([Type, LegendKey, AutoText, HasLeaderLines, ShowSeriesName, ShowCategoryName, ShowValue, ShowPercentage, ShowBubbleSize, Separator])
+        self.series.ApplyDataLabels(*arguments)
 
     def ClearFormats(self):
         self.series.ClearFormats()
@@ -22636,41 +20846,29 @@ class Series:
         self.series.Copy()
 
     def DataLabels(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.series.DataLabels(*params)
+        arguments = com_arguments([Index])
+        return self.series.DataLabels(*arguments)
 
     def Delete(self):
         self.series.Delete()
 
     def ErrorBar(self, Direction=None, Include=None, Type=None, Amount=None, MinusValues=None):
-        params = [
-            Direction if Direction is not None else pythoncom.Missing,
-            Include if Include is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            Amount if Amount is not None else pythoncom.Missing,
-            MinusValues if MinusValues is not None else pythoncom.Missing,
-        ]
-        self.series.ErrorBar(*params)
+        arguments = com_arguments([Direction, Include, Type, Amount, MinusValues])
+        self.series.ErrorBar(*arguments)
 
     def Paste(self):
         self.series.Paste()
 
     def Points(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Points(self.series.Points(*params))
+        arguments = com_arguments([Index])
+        return Points(self.series.Points(*arguments))
 
     def Select(self):
         self.series.Select()
 
     def Trendlines(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Trendlines(self.series.Trendlines(*params))
+        arguments = com_arguments([Index])
+        return Trendlines(self.series.Trendlines(*arguments))
 
 
 class SeriesCollection:
@@ -22695,28 +20893,16 @@ class SeriesCollection:
         return self.seriescollection.Parent
 
     def Add(self, Source=None, Rowcol=None, SeriesLabels=None, CategoryLabels=None, Replace=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Rowcol if Rowcol is not None else pythoncom.Missing,
-            SeriesLabels if SeriesLabels is not None else pythoncom.Missing,
-            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
-            Replace if Replace is not None else pythoncom.Missing,
-        ]
-        return Series(self.seriescollection.Add(*params))
+        arguments = com_arguments([Source, Rowcol, SeriesLabels, CategoryLabels, Replace])
+        return Series(self.seriescollection.Add(*arguments))
 
     def Extend(self, Source=None, Rowcol=None, CategoryLabels=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Rowcol if Rowcol is not None else pythoncom.Missing,
-            CategoryLabels if CategoryLabels is not None else pythoncom.Missing,
-        ]
-        self.seriescollection.Extend(*params)
+        arguments = com_arguments([Source, Rowcol, CategoryLabels])
+        self.seriescollection.Extend(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Series(self.seriescollection.Item(*params))
+        arguments = com_arguments([Index])
+        return Series(self.seriescollection.Item(*arguments))
 
     def NewSeries(self):
         return Series(self.seriescollection.NewSeries())
@@ -22922,16 +21108,12 @@ class ShadowFormat:
         self.shadowformat.Visible = value
 
     def IncrementOffsetX(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shadowformat.IncrementOffsetX(*params)
+        arguments = com_arguments([Increment])
+        self.shadowformat.IncrementOffsetX(*arguments)
 
     def IncrementOffsetY(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shadowformat.IncrementOffsetY(*params)
+        arguments = com_arguments([Increment])
+        self.shadowformat.IncrementOffsetY(*arguments)
 
 
 class Shape:
@@ -23291,89 +21473,61 @@ class Shape:
         self.shape.Apply()
 
     def CanvasCropBottom(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.CanvasCropBottom(*params)
+        arguments = com_arguments([Increment])
+        self.shape.CanvasCropBottom(*arguments)
 
     def CanvasCropLeft(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.CanvasCropLeft(*params)
+        arguments = com_arguments([Increment])
+        self.shape.CanvasCropLeft(*arguments)
 
     def CanvasCropRight(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.CanvasCropRight(*params)
+        arguments = com_arguments([Increment])
+        self.shape.CanvasCropRight(*arguments)
 
     def CanvasCropTop(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.CanvasCropTop(*params)
+        arguments = com_arguments([Increment])
+        self.shape.CanvasCropTop(*arguments)
 
     def ConvertToInlineShape(self):
         self.shape.ConvertToInlineShape()
 
     def Delete(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.shape.Delete(*params)
+        arguments = com_arguments([Index])
+        self.shape.Delete(*arguments)
 
     def Duplicate(self):
         self.shape.Duplicate()
 
     def Flip(self, FlipCmd=None):
-        params = [
-            FlipCmd if FlipCmd is not None else pythoncom.Missing,
-        ]
-        self.shape.Flip(*params)
+        arguments = com_arguments([FlipCmd])
+        self.shape.Flip(*arguments)
 
     def IncrementLeft(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.IncrementLeft(*params)
+        arguments = com_arguments([Increment])
+        self.shape.IncrementLeft(*arguments)
 
     def IncrementRotation(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.IncrementRotation(*params)
+        arguments = com_arguments([Increment])
+        self.shape.IncrementRotation(*arguments)
 
     def IncrementTop(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.shape.IncrementTop(*params)
+        arguments = com_arguments([Increment])
+        self.shape.IncrementTop(*arguments)
 
     def PickUp(self):
         self.shape.PickUp()
 
     def ScaleHeight(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
-        params = [
-            Factor if Factor is not None else pythoncom.Missing,
-            RelativeToOriginalSize if RelativeToOriginalSize is not None else pythoncom.Missing,
-            Scale if Scale is not None else pythoncom.Missing,
-        ]
-        self.shape.ScaleHeight(*params)
+        arguments = com_arguments([Factor, RelativeToOriginalSize, Scale])
+        self.shape.ScaleHeight(*arguments)
 
     def ScaleWidth(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
-        params = [
-            Factor if Factor is not None else pythoncom.Missing,
-            RelativeToOriginalSize if RelativeToOriginalSize is not None else pythoncom.Missing,
-            Scale if Scale is not None else pythoncom.Missing,
-        ]
-        self.shape.ScaleWidth(*params)
+        arguments = com_arguments([Factor, RelativeToOriginalSize, Scale])
+        self.shape.ScaleWidth(*arguments)
 
     def Select(self, Replace=None):
-        params = [
-            Replace if Replace is not None else pythoncom.Missing,
-        ]
-        self.shape.Select(*params)
+        arguments = com_arguments([Replace])
+        self.shape.Select(*arguments)
 
     def SetShapesDefaultProperties(self):
         self.shape.SetShapesDefaultProperties()
@@ -23382,10 +21536,8 @@ class Shape:
         return self.shape.Ungroup()
 
     def ZOrder(self, ZOrderCmd=None):
-        params = [
-            ZOrderCmd if ZOrderCmd is not None else pythoncom.Missing,
-        ]
-        return self.shape.ZOrder(*params)
+        arguments = com_arguments([ZOrderCmd])
+        return self.shape.ZOrder(*arguments)
 
 
 class ShapeNode:
@@ -23470,13 +21622,11 @@ class Source:
         return self.source.Creator
 
     def Field(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Name])
         if callable(self.source.Field):
-            return self.source.Field(*params)
+            return self.source.Field(*arguments)
         else:
-            return self.source.GetField(*params)
+            return self.source.GetField(*arguments)
 
     @property
     def Parent(self):
@@ -23516,16 +21666,12 @@ class Sources:
         return self.sources.Parent
 
     def Add(self, Data=None):
-        params = [
-            Data if Data is not None else pythoncom.Missing,
-        ]
-        self.sources.Add(*params)
+        arguments = com_arguments([Data])
+        self.sources.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.sources.Item(*params)
+        arguments = com_arguments([Index])
+        return self.sources.Item(*arguments)
 
 
 class SpellingSuggestion:
@@ -23751,11 +21897,8 @@ class Style:
         self.style.Delete()
 
     def LinkToListTemplate(self, ListTemplate=None, ListLevelNumber=None):
-        params = [
-            ListTemplate if ListTemplate is not None else pythoncom.Missing,
-            ListLevelNumber if ListLevelNumber is not None else pythoncom.Missing,
-        ]
-        self.style.LinkToListTemplate(*params)
+        arguments = com_arguments([ListTemplate, ListLevelNumber])
+        self.style.LinkToListTemplate(*arguments)
 
 
 class StyleSheet:
@@ -23811,10 +21954,8 @@ class StyleSheet:
         self.stylesheet.Delete()
 
     def Move(self, Precedence=None):
-        params = [
-            Precedence if Precedence is not None else pythoncom.Missing,
-        ]
-        self.stylesheet.Move(*params)
+        arguments = com_arguments([Precedence])
+        self.stylesheet.Move(*arguments)
 
 
 class StyleSheets:
@@ -23842,19 +21983,12 @@ class StyleSheets:
         return self.stylesheets.Parent
 
     def Add(self, FileName=None, LinkType=None, Title=None, Precedence=None):
-        params = [
-            FileName if FileName is not None else pythoncom.Missing,
-            LinkType if LinkType is not None else pythoncom.Missing,
-            Title if Title is not None else pythoncom.Missing,
-            Precedence if Precedence is not None else pythoncom.Missing,
-        ]
-        return StyleSheet(self.stylesheets.Add(*params))
+        arguments = com_arguments([FileName, LinkType, Title, Precedence])
+        return StyleSheet(self.stylesheets.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.stylesheets.Item(*params)
+        arguments = com_arguments([Index])
+        return self.stylesheets.Item(*arguments)
 
 
 class Subdocument:
@@ -23909,10 +22043,8 @@ class Subdocument:
         return self.subdocument.Open()
 
     def Split(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        self.subdocument.Split(*params)
+        arguments = com_arguments([Range])
+        self.subdocument.Split(*arguments)
 
 
 class SynonymInfo:
@@ -23961,13 +22093,11 @@ class SynonymInfo:
         return self.synonyminfo.RelatedWordList
 
     def SynonymList(self, Meaning=None):
-        params = [
-            Meaning if Meaning is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Meaning])
         if callable(self.synonyminfo.SynonymList):
-            return self.synonyminfo.SynonymList(*params)
+            return self.synonyminfo.SynonymList(*arguments)
         else:
-            return self.synonyminfo.GetSynonymList(*params)
+            return self.synonyminfo.GetSynonymList(*arguments)
 
     @property
     def Word(self):
@@ -24060,12 +22190,8 @@ class System:
         return self.system.VerticalResolution
 
     def Connect(self, Path=None, Drive=None, Password=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Drive if Drive is not None else pythoncom.Missing,
-            Password if Password is not None else pythoncom.Missing,
-        ]
-        self.system.Connect(*params)
+        arguments = com_arguments([Path, Drive, Password])
+        self.system.Connect(*arguments)
 
     def MSInfo(self):
         self.system.MSInfo()
@@ -24277,45 +22403,24 @@ class Table:
         return self.table.Uniform
 
     def ApplyStyleDirectFormatting(self, StyleName=None):
-        params = [
-            StyleName if StyleName is not None else pythoncom.Missing,
-        ]
-        self.table.ApplyStyleDirectFormatting(*params)
+        arguments = com_arguments([StyleName])
+        self.table.ApplyStyleDirectFormatting(*arguments)
 
     def AutoFitBehavior(self, Behavior=None):
-        params = [
-            Behavior if Behavior is not None else pythoncom.Missing,
-        ]
-        self.table.AutoFitBehavior(*params)
+        arguments = com_arguments([Behavior])
+        self.table.AutoFitBehavior(*arguments)
 
     def AutoFormat(self, Format=None, ApplyBorders=None, ApplyShading=None, ApplyFont=None, ApplyColor=None, ApplyHeadingRows=None, ApplyLastRow=None, ApplyFirstColumn=None, ApplyLastColumn=None, AutoFit=None):
-        params = [
-            Format if Format is not None else pythoncom.Missing,
-            ApplyBorders if ApplyBorders is not None else pythoncom.Missing,
-            ApplyShading if ApplyShading is not None else pythoncom.Missing,
-            ApplyFont if ApplyFont is not None else pythoncom.Missing,
-            ApplyColor if ApplyColor is not None else pythoncom.Missing,
-            ApplyHeadingRows if ApplyHeadingRows is not None else pythoncom.Missing,
-            ApplyLastRow if ApplyLastRow is not None else pythoncom.Missing,
-            ApplyFirstColumn if ApplyFirstColumn is not None else pythoncom.Missing,
-            ApplyLastColumn if ApplyLastColumn is not None else pythoncom.Missing,
-            AutoFit if AutoFit is not None else pythoncom.Missing,
-        ]
-        self.table.AutoFormat(*params)
+        arguments = com_arguments([Format, ApplyBorders, ApplyShading, ApplyFont, ApplyColor, ApplyHeadingRows, ApplyLastRow, ApplyFirstColumn, ApplyLastColumn, AutoFit])
+        self.table.AutoFormat(*arguments)
 
     def Cell(self, Row=None, Column=None):
-        params = [
-            Row if Row is not None else pythoncom.Missing,
-            Column if Column is not None else pythoncom.Missing,
-        ]
-        return self.table.Cell(*params)
+        arguments = com_arguments([Row, Column])
+        return self.table.Cell(*arguments)
 
     def ConvertToText(self, Separator=None, NestedTables=None):
-        params = [
-            Separator if Separator is not None else pythoncom.Missing,
-            NestedTables if NestedTables is not None else pythoncom.Missing,
-        ]
-        self.table.ConvertToText(*params)
+        arguments = com_arguments([Separator, NestedTables])
+        self.table.ConvertToText(*arguments)
 
     def Delete(self):
         self.table.Delete()
@@ -24324,26 +22429,8 @@ class Table:
         self.table.Select()
 
     def Sort(self, ExcludeHeader=None, FieldNumber=None, SortFieldType=None, SortOrder=None, FieldNumber2=None, SortFieldType2=None, SortOrder2=None, FieldNumber3=None, SortFieldType3=None, SortOrder3=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
-        params = [
-            ExcludeHeader if ExcludeHeader is not None else pythoncom.Missing,
-            FieldNumber if FieldNumber is not None else pythoncom.Missing,
-            SortFieldType if SortFieldType is not None else pythoncom.Missing,
-            SortOrder if SortOrder is not None else pythoncom.Missing,
-            FieldNumber2 if FieldNumber2 is not None else pythoncom.Missing,
-            SortFieldType2 if SortFieldType2 is not None else pythoncom.Missing,
-            SortOrder2 if SortOrder2 is not None else pythoncom.Missing,
-            FieldNumber3 if FieldNumber3 is not None else pythoncom.Missing,
-            SortFieldType3 if SortFieldType3 is not None else pythoncom.Missing,
-            SortOrder3 if SortOrder3 is not None else pythoncom.Missing,
-            CaseSensitive if CaseSensitive is not None else pythoncom.Missing,
-            BidiSort if BidiSort is not None else pythoncom.Missing,
-            IgnoreThe if IgnoreThe is not None else pythoncom.Missing,
-            IgnoreKashida if IgnoreKashida is not None else pythoncom.Missing,
-            IgnoreDiacritics if IgnoreDiacritics is not None else pythoncom.Missing,
-            IgnoreHe if IgnoreHe is not None else pythoncom.Missing,
-            LanguageID if LanguageID is not None else pythoncom.Missing,
-        ]
-        self.table.Sort(*params)
+        arguments = com_arguments([ExcludeHeader, FieldNumber, SortFieldType, SortOrder, FieldNumber2, SortFieldType2, SortOrder2, FieldNumber3, SortFieldType3, SortOrder3, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID])
+        self.table.Sort(*arguments)
 
     def SortAscending(self):
         self.table.SortAscending()
@@ -24352,10 +22439,8 @@ class Table:
         self.table.SortDescending()
 
     def Split(self, BeforeRow=None):
-        params = [
-            BeforeRow if BeforeRow is not None else pythoncom.Missing,
-        ]
-        return self.table.Split(*params)
+        arguments = com_arguments([BeforeRow])
+        return self.table.Split(*arguments)
 
     def UpdateAutoFormat(self):
         self.table.UpdateAutoFormat()
@@ -24871,10 +22956,8 @@ class TableStyle:
         self.tablestyle.TopPadding = value
 
     def Condition(self, ConditionCode=None):
-        params = [
-            ConditionCode if ConditionCode is not None else pythoncom.Missing,
-        ]
-        self.tablestyle.Condition(*params)
+        arguments = com_arguments([ConditionCode])
+        self.tablestyle.Condition(*arguments)
 
 
 class TabStop:
@@ -25004,35 +23087,23 @@ class Task:
         self.task.WindowState = value
 
     def Activate(self, Wait=None):
-        params = [
-            Wait if Wait is not None else pythoncom.Missing,
-        ]
-        self.task.Activate(*params)
+        arguments = com_arguments([Wait])
+        self.task.Activate(*arguments)
 
     def Close(self):
         self.task.Close()
 
     def Move(self, Left=None, Top=None):
-        params = [
-            Left if Left is not None else pythoncom.Missing,
-            Top if Top is not None else pythoncom.Missing,
-        ]
-        self.task.Move(*params)
+        arguments = com_arguments([Left, Top])
+        self.task.Move(*arguments)
 
     def Resize(self, Width=None, Height=None):
-        params = [
-            Width if Width is not None else pythoncom.Missing,
-            Height if Height is not None else pythoncom.Missing,
-        ]
-        self.task.Resize(*params)
+        arguments = com_arguments([Width, Height])
+        self.task.Resize(*arguments)
 
     def SendWindowMessage(self, Message=None, wParam=None, IParam=None):
-        params = [
-            Message if Message is not None else pythoncom.Missing,
-            wParam if wParam is not None else pythoncom.Missing,
-            IParam if IParam is not None else pythoncom.Missing,
-        ]
-        self.task.SendWindowMessage(*params)
+        arguments = com_arguments([Message, wParam, IParam])
+        self.task.SendWindowMessage(*arguments)
 
 
 class TaskPane:
@@ -25086,10 +23157,8 @@ class TaskPanes:
         return self.taskpanes.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.taskpanes.Item(*params)
+        arguments = com_arguments([Index])
+        return self.taskpanes.Item(*arguments)
 
 
 class Template:
@@ -25539,10 +23608,8 @@ class TextFrame:
         self.textframe.DeleteText()
 
     def ValidLinkTarget(self, TargetTextFrame=None):
-        params = [
-            TargetTextFrame if TargetTextFrame is not None else pythoncom.Missing,
-        ]
-        return self.textframe.ValidLinkTarget(*params)
+        arguments = com_arguments([TargetTextFrame])
+        return self.textframe.ValidLinkTarget(*arguments)
 
 
 class TextInput:
@@ -25594,13 +23661,8 @@ class TextInput:
         self.textinput.Clear()
 
     def EditType(self, Type=None, Default=None, Format=None, Enabled=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            Default if Default is not None else pythoncom.Missing,
-            Format if Format is not None else pythoncom.Missing,
-            Enabled if Enabled is not None else pythoncom.Missing,
-        ]
-        self.textinput.EditType(*params)
+        arguments = com_arguments([Type, Default, Format, Enabled])
+        self.textinput.EditType(*arguments)
 
 
 class TextRetrievalMode:
@@ -25871,55 +23933,39 @@ class ThreeDFormat:
         self.threedformat.Z = value
 
     def IncrementRotationHorizontal(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.threedformat.IncrementRotationHorizontal(*params)
+        arguments = com_arguments([Increment])
+        self.threedformat.IncrementRotationHorizontal(*arguments)
 
     def IncrementRotationVertical(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.threedformat.IncrementRotationVertical(*params)
+        arguments = com_arguments([Increment])
+        self.threedformat.IncrementRotationVertical(*arguments)
 
     def IncrementRotationX(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.threedformat.IncrementRotationX(*params)
+        arguments = com_arguments([Increment])
+        self.threedformat.IncrementRotationX(*arguments)
 
     def IncrementRotationY(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.threedformat.IncrementRotationY(*params)
+        arguments = com_arguments([Increment])
+        self.threedformat.IncrementRotationY(*arguments)
 
     def IncrementRotationZ(self, Increment=None):
-        params = [
-            Increment if Increment is not None else pythoncom.Missing,
-        ]
-        self.threedformat.IncrementRotationZ(*params)
+        arguments = com_arguments([Increment])
+        self.threedformat.IncrementRotationZ(*arguments)
 
     def ResetRotation(self):
         self.threedformat.ResetRotation()
 
     def SetExtrusionDirection(self, PresetExtrusionDirection=None):
-        params = [
-            PresetExtrusionDirection if PresetExtrusionDirection is not None else pythoncom.Missing,
-        ]
-        self.threedformat.SetExtrusionDirection(*params)
+        arguments = com_arguments([PresetExtrusionDirection])
+        self.threedformat.SetExtrusionDirection(*arguments)
 
     def SetPresetCamera(self, PresetCamera=None):
-        params = [
-            PresetCamera if PresetCamera is not None else pythoncom.Missing,
-        ]
-        self.threedformat.SetPresetCamera(*params)
+        arguments = com_arguments([PresetCamera])
+        self.threedformat.SetPresetCamera(*arguments)
 
     def SetThreeDFormat(self, PresetThreeDFormat=None):
-        params = [
-            PresetThreeDFormat if PresetThreeDFormat is not None else pythoncom.Missing,
-        ]
-        self.threedformat.SetThreeDFormat(*params)
+        arguments = com_arguments([PresetThreeDFormat])
+        self.threedformat.SetThreeDFormat(*arguments)
 
 
 class TickLabels:
@@ -26179,24 +24225,12 @@ class Trendlines:
         return self.trendlines.Parent
 
     def Add(self, Type=None, Order=None, Period=None, Forward=None, Backward=None, Intercept=None, DisplayEquation=None, DisplayRSquared=None, Name=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            Order if Order is not None else pythoncom.Missing,
-            Period if Period is not None else pythoncom.Missing,
-            Forward if Forward is not None else pythoncom.Missing,
-            Backward if Backward is not None else pythoncom.Missing,
-            Intercept if Intercept is not None else pythoncom.Missing,
-            DisplayEquation if DisplayEquation is not None else pythoncom.Missing,
-            DisplayRSquared if DisplayRSquared is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return Trendline(self.trendlines.Add(*params))
+        arguments = com_arguments([Type, Order, Period, Forward, Backward, Intercept, DisplayEquation, DisplayRSquared, Name])
+        return Trendline(self.trendlines.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Trendline(self.trendlines.Item(*params))
+        arguments = com_arguments([Index])
+        return Trendline(self.trendlines.Item(*arguments))
 
 
 class TwoInitialCapsException:
@@ -26261,10 +24295,8 @@ class UndoRecord:
         self.undorecord.EndCustomRecord()
 
     def StartCustomRecord(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        self.undorecord.StartCustomRecord(*params)
+        arguments = com_arguments([Name])
+        self.undorecord.StartCustomRecord(*arguments)
 
 
 class UpBars:
@@ -26794,16 +24826,12 @@ class View:
         return Zoom(self.view.Zoom)
 
     def CollapseOutline(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        self.view.CollapseOutline(*params)
+        arguments = com_arguments([Range])
+        self.view.CollapseOutline(*arguments)
 
     def ExpandOutline(self, Range=None):
-        params = [
-            Range if Range is not None else pythoncom.Missing,
-        ]
-        self.view.ExpandOutline(*params)
+        arguments = com_arguments([Range])
+        self.view.ExpandOutline(*arguments)
 
     def NextHeaderFooter(self):
         self.view.NextHeaderFooter()
@@ -26815,10 +24843,8 @@ class View:
         self.view.ShowAllHeadings()
 
     def ShowHeading(self, Level=None):
-        params = [
-            Level if Level is not None else pythoncom.Missing,
-        ]
-        self.view.ShowHeading(*params)
+        arguments = com_arguments([Level])
+        self.view.ShowHeading(*arguments)
 
 
 class Walls:
@@ -30935,90 +28961,42 @@ class Window:
         self.window.Activate()
 
     def Close(self, SaveChanges=None, RouteDocument=None):
-        params = [
-            SaveChanges if SaveChanges is not None else pythoncom.Missing,
-            RouteDocument if RouteDocument is not None else pythoncom.Missing,
-        ]
-        self.window.Close(*params)
+        arguments = com_arguments([SaveChanges, RouteDocument])
+        self.window.Close(*arguments)
 
     def GetPoint(self, ScreenPixelsLeft=None, ScreenPixelsTop=None, ScreenPixelsWidth=None, ScreenPixelsHeight=None, obj=None):
-        params = [
-            ScreenPixelsLeft if ScreenPixelsLeft is not None else pythoncom.Missing,
-            ScreenPixelsTop if ScreenPixelsTop is not None else pythoncom.Missing,
-            ScreenPixelsWidth if ScreenPixelsWidth is not None else pythoncom.Missing,
-            ScreenPixelsHeight if ScreenPixelsHeight is not None else pythoncom.Missing,
-            obj if obj is not None else pythoncom.Missing,
-        ]
-        self.window.GetPoint(*params)
+        arguments = com_arguments([ScreenPixelsLeft, ScreenPixelsTop, ScreenPixelsWidth, ScreenPixelsHeight, obj])
+        self.window.GetPoint(*arguments)
 
     def LargeScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
-        params = [
-            Down if Down is not None else pythoncom.Missing,
-            Up if Up is not None else pythoncom.Missing,
-            ToRight if ToRight is not None else pythoncom.Missing,
-            ToLeft if ToLeft is not None else pythoncom.Missing,
-        ]
-        self.window.LargeScroll(*params)
+        arguments = com_arguments([Down, Up, ToRight, ToLeft])
+        self.window.LargeScroll(*arguments)
 
     def NewWindow(self):
         return self.window.NewWindow()
 
     def PageScroll(self, Down=None, Up=None):
-        params = [
-            Down if Down is not None else pythoncom.Missing,
-            Up if Up is not None else pythoncom.Missing,
-        ]
-        self.window.PageScroll(*params)
+        arguments = com_arguments([Down, Up])
+        self.window.PageScroll(*arguments)
 
     def PrintOut(self, Background=None, Append=None, Range=None, OutputFileName=None, From=None, To=None, Item=None, Copies=None, Pages=None, PageType=None, PrintToFile=None, Collate=None, FileName=None, ActivePrinterMacGX=None, ManualDuplexPrint=None, PrintZoomColumn=None, PrintZoomRow=None, PrintZoomPaperWidth=None, PrintZoomPaperHeight=None):
-        params = [
-            Background if Background is not None else pythoncom.Missing,
-            Append if Append is not None else pythoncom.Missing,
-            Range if Range is not None else pythoncom.Missing,
-            OutputFileName if OutputFileName is not None else pythoncom.Missing,
-            From if From is not None else pythoncom.Missing,
-            To if To is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-            Copies if Copies is not None else pythoncom.Missing,
-            Pages if Pages is not None else pythoncom.Missing,
-            PageType if PageType is not None else pythoncom.Missing,
-            PrintToFile if PrintToFile is not None else pythoncom.Missing,
-            Collate if Collate is not None else pythoncom.Missing,
-            FileName if FileName is not None else pythoncom.Missing,
-            ActivePrinterMacGX if ActivePrinterMacGX is not None else pythoncom.Missing,
-            ManualDuplexPrint if ManualDuplexPrint is not None else pythoncom.Missing,
-            PrintZoomColumn if PrintZoomColumn is not None else pythoncom.Missing,
-            PrintZoomRow if PrintZoomRow is not None else pythoncom.Missing,
-            PrintZoomPaperWidth if PrintZoomPaperWidth is not None else pythoncom.Missing,
-            PrintZoomPaperHeight if PrintZoomPaperHeight is not None else pythoncom.Missing,
-        ]
-        self.window.PrintOut(*params)
+        arguments = com_arguments([Background, Append, Range, OutputFileName, From, To, Item, Copies, Pages, PageType, PrintToFile, Collate, FileName, ActivePrinterMacGX, ManualDuplexPrint, PrintZoomColumn, PrintZoomRow, PrintZoomPaperWidth, PrintZoomPaperHeight])
+        self.window.PrintOut(*arguments)
 
     def RangeFromPoint(self, x=None, y=None):
-        params = [
-            x if x is not None else pythoncom.Missing,
-            y if y is not None else pythoncom.Missing,
-        ]
-        return self.window.RangeFromPoint(*params)
+        arguments = com_arguments([x, y])
+        return self.window.RangeFromPoint(*arguments)
 
     def ScrollIntoView(self, Obj=None, Start=None):
-        params = [
-            Obj if Obj is not None else pythoncom.Missing,
-            Start if Start is not None else pythoncom.Missing,
-        ]
-        self.window.ScrollIntoView(*params)
+        arguments = com_arguments([Obj, Start])
+        self.window.ScrollIntoView(*arguments)
 
     def SetFocus(self):
         self.window.SetFocus()
 
     def SmallScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
-        params = [
-            Down if Down is not None else pythoncom.Missing,
-            Up if Up is not None else pythoncom.Missing,
-            ToRight if ToRight is not None else pythoncom.Missing,
-            ToLeft if ToLeft is not None else pythoncom.Missing,
-        ]
-        self.window.SmallScroll(*params)
+        arguments = com_arguments([Down, Up, ToRight, ToLeft])
+        self.window.SmallScroll(*arguments)
 
     def ToggleRibbon(self):
         self.window.ToggleRibbon()
@@ -31209,18 +29187,12 @@ class XMLMapping:
         self.xmlmapping.Delete()
 
     def SetMapping(self, XPath=None, PrefixMapping=None, Source=None):
-        params = [
-            XPath if XPath is not None else pythoncom.Missing,
-            PrefixMapping if PrefixMapping is not None else pythoncom.Missing,
-            Source if Source is not None else pythoncom.Missing,
-        ]
-        return self.xmlmapping.SetMapping(*params)
+        arguments = com_arguments([XPath, PrefixMapping, Source])
+        return self.xmlmapping.SetMapping(*arguments)
 
     def SetMappingByNode(self, Node=None):
-        params = [
-            Node if Node is not None else pythoncom.Missing,
-        ]
-        return self.xmlmapping.SetMappingByNode(*params)
+        arguments = com_arguments([Node])
+        return self.xmlmapping.SetMappingByNode(*arguments)
 
 
 class XMLNamespace:
@@ -31261,10 +29233,8 @@ class XMLNamespace:
         return self.xmlnamespace.XSLTransforms
 
     def AttachToDocument(self, Document=None):
-        params = [
-            Document if Document is not None else pythoncom.Missing,
-        ]
-        self.xmlnamespace.AttachToDocument(*params)
+        arguments = com_arguments([Document])
+        self.xmlnamespace.AttachToDocument(*arguments)
 
     def Delete(self):
         self.xmlnamespace.Delete()
@@ -31364,13 +29334,11 @@ class XMLNode:
         self.xmlnode.Text = value
 
     def ValidationErrorText(self, Advanced=None):
-        params = [
-            Advanced if Advanced is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Advanced])
         if callable(self.xmlnode.ValidationErrorText):
-            return self.xmlnode.ValidationErrorText(*params)
+            return self.xmlnode.ValidationErrorText(*arguments)
         else:
-            return self.xmlnode.GetValidationErrorText(*params)
+            return self.xmlnode.GetValidationErrorText(*arguments)
 
     @property
     def ValidationStatus(self):
@@ -31390,34 +29358,20 @@ class XMLNode:
         self.xmlnode.Delete()
 
     def RemoveChild(self, ChildElement=None):
-        params = [
-            ChildElement if ChildElement is not None else pythoncom.Missing,
-        ]
-        return self.xmlnode.RemoveChild(*params)
+        arguments = com_arguments([ChildElement])
+        return self.xmlnode.RemoveChild(*arguments)
 
     def SelectNodes(self, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
-        params = [
-            XPath if XPath is not None else pythoncom.Missing,
-            PrefixMapping if PrefixMapping is not None else pythoncom.Missing,
-            FastSearchSkippingTextNodes if FastSearchSkippingTextNodes is not None else pythoncom.Missing,
-        ]
-        return self.xmlnode.SelectNodes(*params)
+        arguments = com_arguments([XPath, PrefixMapping, FastSearchSkippingTextNodes])
+        return self.xmlnode.SelectNodes(*arguments)
 
     def SelectSingleNode(self, XPath=None, PrefixMapping=None, FastSearchSkippingTextNodes=None):
-        params = [
-            XPath if XPath is not None else pythoncom.Missing,
-            PrefixMapping if PrefixMapping is not None else pythoncom.Missing,
-            FastSearchSkippingTextNodes if FastSearchSkippingTextNodes is not None else pythoncom.Missing,
-        ]
-        return self.xmlnode.SelectSingleNode(*params)
+        arguments = com_arguments([XPath, PrefixMapping, FastSearchSkippingTextNodes])
+        return self.xmlnode.SelectSingleNode(*arguments)
 
     def SetValidationError(self, Status=None, ErrorText=None, ClearedAutomatically=None):
-        params = [
-            Status if Status is not None else pythoncom.Missing,
-            ErrorText if ErrorText is not None else pythoncom.Missing,
-            ClearedAutomatically if ClearedAutomatically is not None else pythoncom.Missing,
-        ]
-        self.xmlnode.SetValidationError(*params)
+        arguments = com_arguments([Status, ErrorText, ClearedAutomatically])
+        self.xmlnode.SetValidationError(*arguments)
 
     def Validate(self):
         return self.xmlnode.Validate()
@@ -31448,10 +29402,8 @@ class XMLNodes:
         return self.xmlnodes.Parent
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.xmlnodes.Item(*params)
+        arguments = com_arguments([Index])
+        return self.xmlnodes.Item(*arguments)
 
 
 class XMLSchemaReference:
@@ -31535,19 +29487,12 @@ class XMLSchemaReferences:
         self.xmlschemareferences.ShowPlaceholderText = value
 
     def Add(self, NamespaceURI=None, Alias=None, FileName=None, InstallForAllUsers=None):
-        params = [
-            NamespaceURI if NamespaceURI is not None else pythoncom.Missing,
-            Alias if Alias is not None else pythoncom.Missing,
-            FileName if FileName is not None else pythoncom.Missing,
-            InstallForAllUsers if InstallForAllUsers is not None else pythoncom.Missing,
-        ]
-        return XMLSchemaReference(self.xmlschemareferences.Add(*params))
+        arguments = com_arguments([NamespaceURI, Alias, FileName, InstallForAllUsers])
+        return XMLSchemaReference(self.xmlschemareferences.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.xmlschemareferences.Item(*params)
+        arguments = com_arguments([Index])
+        return self.xmlschemareferences.Item(*arguments)
 
     def Validate(self):
         return self.xmlschemareferences.Validate()

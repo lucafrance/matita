@@ -1,3 +1,5 @@
+from . import com_arguments
+
 import win32com.client
 import pythoncom
 
@@ -67,16 +69,12 @@ class Account:
         return Account(self.account.UserName)
 
     def GetAddressEntryFromID(self, ID=None):
-        params = [
-            ID if ID is not None else pythoncom.Missing,
-        ]
-        return ID(self.account.GetAddressEntryFromID(*params))
+        arguments = com_arguments([ID])
+        return ID(self.account.GetAddressEntryFromID(*arguments))
 
     def GetRecipientFromID(self, EntryID=None):
-        params = [
-            EntryID if EntryID is not None else pythoncom.Missing,
-        ]
-        return self.account.GetRecipientFromID(*params)
+        arguments = com_arguments([EntryID])
+        return self.account.GetRecipientFromID(*arguments)
 
 
 class AccountRuleCondition:
@@ -147,10 +145,8 @@ class Accounts:
         return NameSpace(self.accounts.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.accounts.Item(*params)
+        arguments = com_arguments([Index])
+        return self.accounts.Item(*arguments)
 
 
 class AccountSelector:
@@ -300,16 +296,12 @@ class Actions:
         return Action(self.actions.Add())
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.actions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.actions.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.actions.Remove(*params)
+        arguments = com_arguments([Index])
+        self.actions.Remove(*arguments)
 
 
 class AddressEntries:
@@ -338,12 +330,8 @@ class AddressEntries:
         return NameSpace(self.addressentries.Session)
 
     def Add(self, Type=None, Name=None, Address=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            Address if Address is not None else pythoncom.Missing,
-        ]
-        return AddressEntry(self.addressentries.Add(*params))
+        arguments = com_arguments([Type, Name, Address])
+        return AddressEntry(self.addressentries.Add(*arguments))
 
     def GetFirst(self):
         return AddressEntry(self.addressentries.GetFirst())
@@ -358,17 +346,12 @@ class AddressEntries:
         return AddressEntry(self.addressentries.GetPrevious())
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.addressentries.Item(*params)
+        arguments = com_arguments([Index])
+        return self.addressentries.Item(*arguments)
 
     def Sort(self, Property=None, Order=None):
-        params = [
-            Property if Property is not None else pythoncom.Missing,
-            Order if Order is not None else pythoncom.Missing,
-        ]
-        self.addressentries.Sort(*params)
+        arguments = com_arguments([Property, Order])
+        self.addressentries.Sort(*arguments)
 
 
 class AddressEntry:
@@ -436,10 +419,8 @@ class AddressEntry:
         self.addressentry.Delete()
 
     def Details(self, HWnd=None):
-        params = [
-            HWnd if HWnd is not None else pythoncom.Missing,
-        ]
-        self.addressentry.Details(*params)
+        arguments = com_arguments([HWnd])
+        self.addressentry.Details(*arguments)
 
     def GetContact(self):
         return self.addressentry.GetContact()
@@ -451,19 +432,12 @@ class AddressEntry:
         return self.addressentry.GetExchangeUser()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            MinPerChar if MinPerChar is not None else pythoncom.Missing,
-            CompleteFormat if CompleteFormat is not None else pythoncom.Missing,
-        ]
-        return self.addressentry.GetFreeBusy(*params)
+        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        return self.addressentry.GetFreeBusy(*arguments)
 
     def Update(self, MakePermanent=None, Refresh=None):
-        params = [
-            MakePermanent if MakePermanent is not None else pythoncom.Missing,
-            Refresh if Refresh is not None else pythoncom.Missing,
-        ]
-        self.addressentry.Update(*params)
+        arguments = com_arguments([MakePermanent, Refresh])
+        self.addressentry.Update(*arguments)
 
 
 class AddressList:
@@ -553,10 +527,8 @@ class AddressLists:
         return NameSpace(self.addresslists.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.addresslists.Item(*params)
+        arguments = com_arguments([Index])
+        return self.addresslists.Item(*arguments)
 
 
 class AddressRuleCondition:
@@ -692,67 +664,43 @@ class Application:
         return self.application.ActiveWindow()
 
     def AdvancedSearch(self, Scope=None, Filter=None, SearchSubFolders=None, Tag=None):
-        params = [
-            Scope if Scope is not None else pythoncom.Missing,
-            Filter if Filter is not None else pythoncom.Missing,
-            SearchSubFolders if SearchSubFolders is not None else pythoncom.Missing,
-            Tag if Tag is not None else pythoncom.Missing,
-        ]
-        return Search(self.application.AdvancedSearch(*params))
+        arguments = com_arguments([Scope, Filter, SearchSubFolders, Tag])
+        return Search(self.application.AdvancedSearch(*arguments))
 
     def CopyFile(self, FilePath=None, DestFolderPath=None):
-        params = [
-            FilePath if FilePath is not None else pythoncom.Missing,
-            DestFolderPath if DestFolderPath is not None else pythoncom.Missing,
-        ]
-        return self.application.CopyFile(*params)
+        arguments = com_arguments([FilePath, DestFolderPath])
+        return self.application.CopyFile(*arguments)
 
     def CreateItem(self, ItemType=None):
-        params = [
-            ItemType if ItemType is not None else pythoncom.Missing,
-        ]
-        return self.application.CreateItem(*params)
+        arguments = com_arguments([ItemType])
+        return self.application.CreateItem(*arguments)
 
     def CreateItemFromTemplate(self, TemplatePath=None, InFolder=None):
-        params = [
-            TemplatePath if TemplatePath is not None else pythoncom.Missing,
-            InFolder if InFolder is not None else pythoncom.Missing,
-        ]
-        return self.application.CreateItemFromTemplate(*params)
+        arguments = com_arguments([TemplatePath, InFolder])
+        return self.application.CreateItemFromTemplate(*arguments)
 
     def CreateObject(self, ObjectName=None):
-        params = [
-            ObjectName if ObjectName is not None else pythoncom.Missing,
-        ]
-        return self.application.CreateObject(*params)
+        arguments = com_arguments([ObjectName])
+        return self.application.CreateObject(*arguments)
 
     def GetNamespace(self, Type=None):
-        params = [
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        return self.application.GetNamespace(*params)
+        arguments = com_arguments([Type])
+        return self.application.GetNamespace(*arguments)
 
     def GetObjectReference(self, Item=None, ReferenceType=None):
-        params = [
-            Item if Item is not None else pythoncom.Missing,
-            ReferenceType if ReferenceType is not None else pythoncom.Missing,
-        ]
-        return self.application.GetObjectReference(*params)
+        arguments = com_arguments([Item, ReferenceType])
+        return self.application.GetObjectReference(*arguments)
 
     def IsSearchSynchronous(self, LookInFolders=None):
-        params = [
-            LookInFolders if LookInFolders is not None else pythoncom.Missing,
-        ]
-        return self.application.IsSearchSynchronous(*params)
+        arguments = com_arguments([LookInFolders])
+        return self.application.IsSearchSynchronous(*arguments)
 
     def Quit(self):
         self.application.Quit()
 
     def RefreshFormRegionDefinition(self, RegionName=None):
-        params = [
-            RegionName if RegionName is not None else pythoncom.Missing,
-        ]
-        self.application.RefreshFormRegionDefinition(*params)
+        arguments = com_arguments([RegionName])
+        self.application.RefreshFormRegionDefinition(*arguments)
 
 
 class AppointmentItem:
@@ -1204,29 +1152,22 @@ class AppointmentItem:
         self.appointmentitem.ClearRecurrencePattern()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.appointmentitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.appointmentitem.Close(*arguments)
 
     def Copy(self):
         self.appointmentitem.Copy()
 
     def CopyTo(self, DestinationFolder=None, CopyOptions=None):
-        params = [
-            DestinationFolder if DestinationFolder is not None else pythoncom.Missing,
-            CopyOptions if CopyOptions is not None else pythoncom.Missing,
-        ]
-        return self.appointmentitem.CopyTo(*params)
+        arguments = com_arguments([DestinationFolder, CopyOptions])
+        return self.appointmentitem.CopyTo(*arguments)
 
     def Delete(self):
         self.appointmentitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.appointmentitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.appointmentitem.Display(*arguments)
 
     def ForwardAsVcal(self):
         return MailItem(self.appointmentitem.ForwardAsVcal())
@@ -1241,31 +1182,22 @@ class AppointmentItem:
         return self.appointmentitem.GetRecurrencePattern()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.appointmentitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.appointmentitem.Move(*arguments)
 
     def PrintOut(self):
         self.appointmentitem.PrintOut()
 
     def Respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
-        params = [
-            Response if Response is not None else pythoncom.Missing,
-            fNoUI if fNoUI is not None else pythoncom.Missing,
-            fAdditionalTextDialog if fAdditionalTextDialog is not None else pythoncom.Missing,
-        ]
-        return MeetingItem(self.appointmentitem.Respond(*params))
+        arguments = com_arguments([Response, fNoUI, fAdditionalTextDialog])
+        return MeetingItem(self.appointmentitem.Respond(*arguments))
 
     def Save(self):
         self.appointmentitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.appointmentitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.appointmentitem.SaveAs(*arguments)
 
     def Send(self):
         self.appointmentitem.Send()
@@ -1388,10 +1320,8 @@ class Attachment:
         return self.attachment.GetTemporaryFilePath()
 
     def SaveAsFile(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        self.attachment.SaveAsFile(*params)
+        arguments = com_arguments([Path])
+        self.attachment.SaveAsFile(*arguments)
 
 
 class Attachments:
@@ -1420,25 +1350,16 @@ class Attachments:
         return NameSpace(self.attachments.Session)
 
     def Add(self, Source=None, Type=None, Position=None, DisplayName=None):
-        params = [
-            Source if Source is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            Position if Position is not None else pythoncom.Missing,
-            DisplayName if DisplayName is not None else pythoncom.Missing,
-        ]
-        return Attachment(self.attachments.Add(*params))
+        arguments = com_arguments([Source, Type, Position, DisplayName])
+        return Attachment(self.attachments.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.attachments.Item(*params)
+        arguments = com_arguments([Index])
+        return self.attachments.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.attachments.Remove(*params)
+        arguments = com_arguments([Index])
+        self.attachments.Remove(*arguments)
 
 
 class AttachmentSelection:
@@ -1471,16 +1392,12 @@ class AttachmentSelection:
         return NameSpace(self.attachmentselection.Session)
 
     def GetSelection(self, SelectionContents=None):
-        params = [
-            SelectionContents if SelectionContents is not None else pythoncom.Missing,
-        ]
-        return self.attachmentselection.GetSelection(*params)
+        arguments = com_arguments([SelectionContents])
+        return self.attachmentselection.GetSelection(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.attachmentselection.Item(*params)
+        arguments = com_arguments([Index])
+        return self.attachmentselection.Item(*arguments)
 
 
 class AutoFormatRule:
@@ -1563,29 +1480,20 @@ class AutoFormatRules:
         return NameSpace(self.autoformatrules.Session)
 
     def Add(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return self.autoformatrules.Add(*params)
+        arguments = com_arguments([Name])
+        return self.autoformatrules.Add(*arguments)
 
     def Insert(self, Name=None, Index=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.autoformatrules.Insert(*params)
+        arguments = com_arguments([Name, Index])
+        return self.autoformatrules.Insert(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.autoformatrules.Item(*params)
+        arguments = com_arguments([Index])
+        return self.autoformatrules.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.autoformatrules.Remove(*params)
+        arguments = com_arguments([Index])
+        self.autoformatrules.Remove(*arguments)
 
     def RemoveAll(self):
         self.autoformatrules.RemoveAll()
@@ -1687,20 +1595,15 @@ class BusinessCardView:
         self.businesscardview.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return self.businesscardview.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        return self.businesscardview.Copy(*arguments)
 
     def Delete(self):
         self.businesscardview.Delete()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.businesscardview.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.businesscardview.GoToDate(*arguments)
 
     def Reset(self):
         self.businesscardview.Reset()
@@ -1841,16 +1744,12 @@ class CalendarSharing:
         self.calendarsharing.StartDate = value
 
     def ForwardAsICal(self, MailFormat=None):
-        params = [
-            MailFormat if MailFormat is not None else pythoncom.Missing,
-        ]
-        return self.calendarsharing.ForwardAsICal(*params)
+        arguments = com_arguments([MailFormat])
+        return self.calendarsharing.ForwardAsICal(*arguments)
 
     def SaveAsICal(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        self.calendarsharing.SaveAsICal(*params)
+        arguments = com_arguments([Path])
+        self.calendarsharing.SaveAsICal(*arguments)
 
 
 class CalendarView:
@@ -2010,20 +1909,15 @@ class CalendarView:
         self.calendarview.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return self.calendarview.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        return self.calendarview.Copy(*arguments)
 
     def Delete(self):
         self.calendarview.Delete()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.calendarview.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.calendarview.GoToDate(*arguments)
 
     def Reset(self):
         self.calendarview.Reset()
@@ -2161,20 +2055,15 @@ class CardView:
         self.cardview.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return self.cardview.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        return self.cardview.Copy(*arguments)
 
     def Delete(self):
         self.cardview.Delete()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.cardview.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.cardview.GoToDate(*arguments)
 
     def Reset(self):
         self.cardview.Reset()
@@ -2209,24 +2098,16 @@ class Categories:
         return NameSpace(self.categories.Session)
 
     def Add(self, Name=None, Color=None, ShortcutKey=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Color if Color is not None else pythoncom.Missing,
-            ShortcutKey if ShortcutKey is not None else pythoncom.Missing,
-        ]
-        return self.categories.Add(*params)
+        arguments = com_arguments([Name, Color, ShortcutKey])
+        return self.categories.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.categories.Item(*params)
+        arguments = com_arguments([Index])
+        return self.categories.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.categories.Remove(*params)
+        arguments = com_arguments([Index])
+        self.categories.Remove(*arguments)
 
 
 class Category:
@@ -2443,22 +2324,16 @@ class Columns:
         return NameSpace(self.columns.Session)
 
     def Add(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return self.columns.Add(*params)
+        arguments = com_arguments([Name])
+        return self.columns.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Table(self.columns.Item(*params))
+        arguments = com_arguments([Index])
+        return Table(self.columns.Item(*arguments))
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.columns.Remove(*params)
+        arguments = com_arguments([Index])
+        self.columns.Remove(*arguments)
 
     def RemoveAll(self):
         self.columns.RemoveAll()
@@ -2536,10 +2411,8 @@ class Conflicts:
         return Conflict(self.conflicts.GetPrevious())
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.conflicts.Item(*params)
+        arguments = com_arguments([Index])
+        return self.conflicts.Item(*arguments)
 
 
 class ContactItem:
@@ -3724,25 +3597,19 @@ class ContactItem:
         self.contactitem.YomiLastName = value
 
     def AddBusinessCardLogoPicture(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        self.contactitem.AddBusinessCardLogoPicture(*params)
+        arguments = com_arguments([Path])
+        self.contactitem.AddBusinessCardLogoPicture(*arguments)
 
     def AddPicture(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        self.contactitem.AddPicture(*params)
+        arguments = com_arguments([Path])
+        self.contactitem.AddPicture(*arguments)
 
     def ClearTaskFlag(self):
         self.contactitem.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.contactitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.contactitem.Close(*arguments)
 
     def Copy(self):
         self.contactitem.Copy()
@@ -3751,10 +3618,8 @@ class ContactItem:
         self.contactitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.contactitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.contactitem.Display(*arguments)
 
     def ForwardAsBusinessCard(self):
         return self.contactitem.ForwardAsBusinessCard()
@@ -3766,16 +3631,12 @@ class ContactItem:
         return self.contactitem.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        params = [
-            MarkInterval if MarkInterval is not None else pythoncom.Missing,
-        ]
-        self.contactitem.MarkAsTask(*params)
+        arguments = com_arguments([MarkInterval])
+        self.contactitem.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.contactitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.contactitem.Move(*arguments)
 
     def PrintOut(self):
         self.contactitem.PrintOut()
@@ -3790,17 +3651,12 @@ class ContactItem:
         self.contactitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.contactitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.contactitem.SaveAs(*arguments)
 
     def SaveBusinessCardImage(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        self.contactitem.SaveBusinessCardImage(*params)
+        arguments = com_arguments([Path])
+        self.contactitem.SaveBusinessCardImage(*arguments)
 
     def ShowBusinessCardEditor(self):
         self.contactitem.ShowBusinessCardEditor()
@@ -3809,10 +3665,8 @@ class ContactItem:
         self.contactitem.ShowCategoriesDialog()
 
     def ShowCheckPhoneDialog(self, PhoneNumber=None):
-        params = [
-            PhoneNumber if PhoneNumber is not None else pythoncom.Missing,
-        ]
-        self.contactitem.ShowCheckPhoneDialog(*params)
+        arguments = com_arguments([PhoneNumber])
+        self.contactitem.ShowCheckPhoneDialog(*arguments)
 
 
 class ContactsModule:
@@ -3891,40 +3745,28 @@ class Conversation:
         return NameSpace(self.conversation.Session)
 
     def ClearAlwaysAssignCategories(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.conversation.ClearAlwaysAssignCategories(*params)
+        arguments = com_arguments([Store])
+        self.conversation.ClearAlwaysAssignCategories(*arguments)
 
     def GetAlwaysAssignCategories(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        return self.conversation.GetAlwaysAssignCategories(*params)
+        arguments = com_arguments([Store])
+        return self.conversation.GetAlwaysAssignCategories(*arguments)
 
     def GetAlwaysDelete(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        return self.conversation.GetAlwaysDelete(*params)
+        arguments = com_arguments([Store])
+        return self.conversation.GetAlwaysDelete(*arguments)
 
     def GetAlwaysMoveToFolder(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        return self.conversation.GetAlwaysMoveToFolder(*params)
+        arguments = com_arguments([Store])
+        return self.conversation.GetAlwaysMoveToFolder(*arguments)
 
     def GetChildren(self, Item=None):
-        params = [
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        return self.conversation.GetChildren(*params)
+        arguments = com_arguments([Item])
+        return self.conversation.GetChildren(*arguments)
 
     def GetParent(self, Item=None):
-        params = [
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        return self.conversation.GetParent(*params)
+        arguments = com_arguments([Item])
+        return self.conversation.GetParent(*arguments)
 
     def GetRootItems(self):
         return self.conversation.GetRootItems()
@@ -3939,37 +3781,24 @@ class Conversation:
         self.conversation.MarkAsUnread()
 
     def SetAlwaysAssignCategories(self, Categories=None, Store=None):
-        params = [
-            Categories if Categories is not None else pythoncom.Missing,
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.conversation.SetAlwaysAssignCategories(*params)
+        arguments = com_arguments([Categories, Store])
+        self.conversation.SetAlwaysAssignCategories(*arguments)
 
     def SetAlwaysDelete(self, AlwaysDelete=None, Store=None):
-        params = [
-            AlwaysDelete if AlwaysDelete is not None else pythoncom.Missing,
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.conversation.SetAlwaysDelete(*params)
+        arguments = com_arguments([AlwaysDelete, Store])
+        self.conversation.SetAlwaysDelete(*arguments)
 
     def SetAlwaysMoveToFolder(self, MoveToFolder=None, Store=None):
-        params = [
-            MoveToFolder if MoveToFolder is not None else pythoncom.Missing,
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.conversation.SetAlwaysMoveToFolder(*params)
+        arguments = com_arguments([MoveToFolder, Store])
+        self.conversation.SetAlwaysMoveToFolder(*arguments)
 
     def StopAlwaysDelete(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.conversation.StopAlwaysDelete(*params)
+        arguments = com_arguments([Store])
+        self.conversation.StopAlwaysDelete(*arguments)
 
     def StopAlwaysMoveToFolder(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.conversation.StopAlwaysMoveToFolder(*params)
+        arguments = com_arguments([Store])
+        self.conversation.StopAlwaysMoveToFolder(*arguments)
 
 
 class ConversationHeader:
@@ -4314,25 +4143,19 @@ class DistListItem:
         return UserProperties(self.distlistitem.UserProperties)
 
     def AddMember(self, Recipient=None):
-        params = [
-            Recipient if Recipient is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.AddMember(*params)
+        arguments = com_arguments([Recipient])
+        self.distlistitem.AddMember(*arguments)
 
     def AddMembers(self, Recipients=None):
-        params = [
-            Recipients if Recipients is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.AddMembers(*params)
+        arguments = com_arguments([Recipients])
+        self.distlistitem.AddMembers(*arguments)
 
     def ClearTaskFlag(self):
         self.distlistitem.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.distlistitem.Close(*arguments)
 
     def Copy(self):
         self.distlistitem.Copy()
@@ -4341,56 +4164,41 @@ class DistListItem:
         self.distlistitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.distlistitem.Display(*arguments)
 
     def GetConversation(self):
         return self.distlistitem.GetConversation()
 
     def GetMember(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.distlistitem.GetMember(*params)
+        arguments = com_arguments([Index])
+        return self.distlistitem.GetMember(*arguments)
 
     def MarkAsTask(self, MarkInterval=None):
-        params = [
-            MarkInterval if MarkInterval is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.MarkAsTask(*params)
+        arguments = com_arguments([MarkInterval])
+        self.distlistitem.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.distlistitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.distlistitem.Move(*arguments)
 
     def PrintOut(self):
         self.distlistitem.PrintOut()
 
     def RemoveMember(self, Recipient=None):
-        params = [
-            Recipient if Recipient is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.RemoveMember(*params)
+        arguments = com_arguments([Recipient])
+        self.distlistitem.RemoveMember(*arguments)
 
     def RemoveMembers(self, Recipients=None):
-        params = [
-            Recipients if Recipients is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.RemoveMembers(*params)
+        arguments = com_arguments([Recipients])
+        self.distlistitem.RemoveMembers(*arguments)
 
     def Save(self):
         self.distlistitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.distlistitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.distlistitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.distlistitem.ShowCategoriesDialog()
@@ -4586,10 +4394,8 @@ class DocumentItem:
         return UserProperties(self.documentitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.documentitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.documentitem.Close(*arguments)
 
     def Copy(self):
         self.documentitem.Copy()
@@ -4598,16 +4404,12 @@ class DocumentItem:
         self.documentitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.documentitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.documentitem.Display(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.documentitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.documentitem.Move(*arguments)
 
     def PrintOut(self):
         self.documentitem.PrintOut()
@@ -4616,11 +4418,8 @@ class DocumentItem:
         self.documentitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.documentitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.documentitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.documentitem.ShowCategoriesDialog()
@@ -4686,10 +4485,8 @@ class Exceptions:
         return NameSpace(self.exceptions.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.exceptions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.exceptions.Item(*arguments)
 
 
 class ExchangeDistributionList:
@@ -4773,10 +4570,8 @@ class ExchangeDistributionList:
         self.exchangedistributionlist.Delete()
 
     def Details(self, HWnd=None):
-        params = [
-            HWnd if HWnd is not None else pythoncom.Missing,
-        ]
-        self.exchangedistributionlist.Details(*params)
+        arguments = com_arguments([HWnd])
+        self.exchangedistributionlist.Details(*arguments)
 
     def GetContact(self):
         return self.exchangedistributionlist.GetContact()
@@ -4791,12 +4586,8 @@ class ExchangeDistributionList:
         return self.exchangedistributionlist.GetExchangeUser()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            MinPerChar if MinPerChar is not None else pythoncom.Missing,
-            CompleteFormat if CompleteFormat is not None else pythoncom.Missing,
-        ]
-        self.exchangedistributionlist.GetFreeBusy(*params)
+        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        self.exchangedistributionlist.GetFreeBusy(*arguments)
 
     def GetMemberOfList(self):
         return self.exchangedistributionlist.GetMemberOfList()
@@ -4805,11 +4596,8 @@ class ExchangeDistributionList:
         return AddressEntry(self.exchangedistributionlist.GetOwners())
 
     def Update(self, MakePermanent=None, Refresh=None):
-        params = [
-            MakePermanent if MakePermanent is not None else pythoncom.Missing,
-            Refresh if Refresh is not None else pythoncom.Missing,
-        ]
-        self.exchangedistributionlist.Update(*params)
+        arguments = com_arguments([MakePermanent, Refresh])
+        self.exchangedistributionlist.Update(*arguments)
 
 
 class ExchangeUser:
@@ -5037,10 +4825,8 @@ class ExchangeUser:
         self.exchangeuser.Delete()
 
     def Details(self, HWnd=None):
-        params = [
-            HWnd if HWnd is not None else pythoncom.Missing,
-        ]
-        self.exchangeuser.Details(*params)
+        arguments = com_arguments([HWnd])
+        self.exchangeuser.Details(*arguments)
 
     def GetContact(self):
         return self.exchangeuser.GetContact()
@@ -5058,12 +4844,8 @@ class ExchangeUser:
         return self.exchangeuser.GetExchangeUserManager()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            MinPerChar if MinPerChar is not None else pythoncom.Missing,
-            CompleteFormat if CompleteFormat is not None else pythoncom.Missing,
-        ]
-        return self.exchangeuser.GetFreeBusy(*params)
+        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        return self.exchangeuser.GetFreeBusy(*arguments)
 
     def GetMemberOfList(self):
         return ExchangeUser(self.exchangeuser.GetMemberOfList())
@@ -5072,11 +4854,8 @@ class ExchangeUser:
         return self.exchangeuser.GetPicture()
 
     def Update(self, MakePermanent=None, Refresh=None):
-        params = [
-            MakePermanent if MakePermanent is not None else pythoncom.Missing,
-            Refresh if Refresh is not None else pythoncom.Missing,
-        ]
-        self.exchangeuser.Update(*params)
+        arguments = com_arguments([MakePermanent, Refresh])
+        self.exchangeuser.Update(*arguments)
 
 
 class Explorer:
@@ -5188,10 +4967,8 @@ class Explorer:
         self.explorer.Activate()
 
     def AddToSelection(self, Item=None):
-        params = [
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        self.explorer.AddToSelection(*params)
+        arguments = com_arguments([Item])
+        self.explorer.AddToSelection(*arguments)
 
     def ClearSearch(self):
         self.explorer.ClearSearch()
@@ -5206,39 +4983,27 @@ class Explorer:
         self.explorer.Display()
 
     def IsItemSelectableInView(self, Item=None):
-        params = [
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        return self.explorer.IsItemSelectableInView(*params)
+        arguments = com_arguments([Item])
+        return self.explorer.IsItemSelectableInView(*arguments)
 
     def IsPaneVisible(self, Pane=None):
-        params = [
-            Pane if Pane is not None else pythoncom.Missing,
-        ]
-        return self.explorer.IsPaneVisible(*params)
+        arguments = com_arguments([Pane])
+        return self.explorer.IsPaneVisible(*arguments)
 
     def RemoveFromSelection(self, Item=None):
-        params = [
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        self.explorer.RemoveFromSelection(*params)
+        arguments = com_arguments([Item])
+        self.explorer.RemoveFromSelection(*arguments)
 
     def Search(self, Query=None, SearchScope=None):
-        params = [
-            Query if Query is not None else pythoncom.Missing,
-            SearchScope if SearchScope is not None else pythoncom.Missing,
-        ]
-        self.explorer.Search(*params)
+        arguments = com_arguments([Query, SearchScope])
+        self.explorer.Search(*arguments)
 
     def SelectAllItems(self):
         self.explorer.SelectAllItems()
 
     def ShowPane(self, Pane=None, Visible=None):
-        params = [
-            Pane if Pane is not None else pythoncom.Missing,
-            Visible if Visible is not None else pythoncom.Missing,
-        ]
-        self.explorer.ShowPane(*params)
+        arguments = com_arguments([Pane, Visible])
+        self.explorer.ShowPane(*arguments)
 
 
 class Explorers:
@@ -5267,17 +5032,12 @@ class Explorers:
         return NameSpace(self.explorers.Session)
 
     def Add(self, Folder=None, DisplayMode=None):
-        params = [
-            Folder if Folder is not None else pythoncom.Missing,
-            DisplayMode if DisplayMode is not None else pythoncom.Missing,
-        ]
-        return Explorer(self.explorers.Add(*params))
+        arguments = com_arguments([Folder, DisplayMode])
+        return Explorer(self.explorers.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.explorers.Item(*params)
+        arguments = com_arguments([Index])
+        return self.explorers.Item(*arguments)
 
 
 class Folder:
@@ -5433,10 +5193,8 @@ class Folder:
         self.folder.AddToPFFavorites()
 
     def CopyTo(self, DestinationFolder=None):
-        params = [
-            DestinationFolder if DestinationFolder is not None else pythoncom.Missing,
-        ]
-        return self.folder.CopyTo(*params)
+        arguments = com_arguments([DestinationFolder])
+        return self.folder.CopyTo(*arguments)
 
     def Delete(self):
         self.folder.Delete()
@@ -5451,39 +5209,27 @@ class Folder:
         return self.folder.GetCustomIcon()
 
     def GetExplorer(self, DisplayMode=None):
-        params = [
-            DisplayMode if DisplayMode is not None else pythoncom.Missing,
-        ]
-        return self.folder.GetExplorer(*params)
+        arguments = com_arguments([DisplayMode])
+        return self.folder.GetExplorer(*arguments)
 
     def GetOrganizer(self):
         return self.folder.GetOrganizer()
 
     def GetStorage(self, StorageIdentifier=None, StorageIdentifierType=None):
-        params = [
-            StorageIdentifier if StorageIdentifier is not None else pythoncom.Missing,
-            StorageIdentifierType if StorageIdentifierType is not None else pythoncom.Missing,
-        ]
-        return self.folder.GetStorage(*params)
+        arguments = com_arguments([StorageIdentifier, StorageIdentifierType])
+        return self.folder.GetStorage(*arguments)
 
     def GetTable(self, Filter=None, TableContents=None):
-        params = [
-            Filter if Filter is not None else pythoncom.Missing,
-            TableContents if TableContents is not None else pythoncom.Missing,
-        ]
-        return Folder(self.folder.GetTable(*params))
+        arguments = com_arguments([Filter, TableContents])
+        return Folder(self.folder.GetTable(*arguments))
 
     def MoveTo(self, DestinationFolder=None):
-        params = [
-            DestinationFolder if DestinationFolder is not None else pythoncom.Missing,
-        ]
-        self.folder.MoveTo(*params)
+        arguments = com_arguments([DestinationFolder])
+        self.folder.MoveTo(*arguments)
 
     def SetCustomIcon(self, Picture=None):
-        params = [
-            Picture if Picture is not None else pythoncom.Missing,
-        ]
-        self.folder.SetCustomIcon(*params)
+        arguments = com_arguments([Picture])
+        self.folder.SetCustomIcon(*arguments)
 
 
 class Folders:
@@ -5512,11 +5258,8 @@ class Folders:
         return NameSpace(self.folders.Session)
 
     def Add(self, Name=None, Type=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        return Folder(self.folders.Add(*params))
+        arguments = com_arguments([Name, Type])
+        return Folder(self.folders.Add(*arguments))
 
     def GetFirst(self):
         return Folder(self.folders.GetFirst())
@@ -5531,16 +5274,12 @@ class Folders:
         return Folder(self.folders.GetPrevious())
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.folders.Item(*params)
+        arguments = com_arguments([Index])
+        return self.folders.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.folders.Remove(*params)
+        arguments = com_arguments([Index])
+        self.folders.Remove(*arguments)
 
 
 class FormDescription:
@@ -5693,11 +5432,8 @@ class FormDescription:
         self.formdescription.Version = value
 
     def PublishForm(self, Registry=None, Folder=None):
-        params = [
-            Registry if Registry is not None else pythoncom.Missing,
-            Folder if Folder is not None else pythoncom.Missing,
-        ]
-        self.formdescription.PublishForm(*params)
+        arguments = com_arguments([Registry, Folder])
+        self.formdescription.PublishForm(*arguments)
 
 
 class FormNameRuleCondition:
@@ -5834,11 +5570,8 @@ class FormRegion:
         self.formregion.Select()
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
-        params = [
-            Control if Control is not None else pythoncom.Missing,
-            PropertyName if PropertyName is not None else pythoncom.Missing,
-        ]
-        self.formregion.SetControlItemProperty(*params)
+        arguments = com_arguments([Control, PropertyName])
+        self.formregion.SetControlItemProperty(*arguments)
 
 
 class FromRssFeedRuleCondition:
@@ -5980,20 +5713,15 @@ class IconView:
         self.iconview.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return self.iconview.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        return self.iconview.Copy(*arguments)
 
     def Delete(self):
         self.iconview.Delete()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.iconview.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.iconview.GoToDate(*arguments)
 
     def Reset(self):
         self.iconview.Reset()
@@ -6133,22 +5861,16 @@ class Inspector:
         self.inspector.Activate()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.inspector.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.inspector.Close(*arguments)
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.inspector.Display(*params)
+        arguments = com_arguments([Modal])
+        self.inspector.Display(*arguments)
 
     def HideFormPage(self, PageName=None):
-        params = [
-            PageName if PageName is not None else pythoncom.Missing,
-        ]
-        self.inspector.HideFormPage(*params)
+        arguments = com_arguments([PageName])
+        self.inspector.HideFormPage(*arguments)
 
     def IsWordMail(self):
         return self.inspector.IsWordMail()
@@ -6157,42 +5879,28 @@ class Inspector:
         return self.inspector.NewFormRegion()
 
     def OpenFormRegion(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        return self.inspector.OpenFormRegion(*params)
+        arguments = com_arguments([Path])
+        return self.inspector.OpenFormRegion(*arguments)
 
     def SaveFormRegion(self, Page=None, FileName=None):
-        params = [
-            Page if Page is not None else pythoncom.Missing,
-            FileName if FileName is not None else pythoncom.Missing,
-        ]
-        self.inspector.SaveFormRegion(*params)
+        arguments = com_arguments([Page, FileName])
+        self.inspector.SaveFormRegion(*arguments)
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
-        params = [
-            Control if Control is not None else pythoncom.Missing,
-            PropertyName if PropertyName is not None else pythoncom.Missing,
-        ]
-        self.inspector.SetControlItemProperty(*params)
+        arguments = com_arguments([Control, PropertyName])
+        self.inspector.SetControlItemProperty(*arguments)
 
     def SetCurrentFormPage(self, PageName=None):
-        params = [
-            PageName if PageName is not None else pythoncom.Missing,
-        ]
-        self.inspector.SetCurrentFormPage(*params)
+        arguments = com_arguments([PageName])
+        self.inspector.SetCurrentFormPage(*arguments)
 
     def SetSchedulingStartTime(self, Start=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-        ]
-        self.inspector.SetSchedulingStartTime(*params)
+        arguments = com_arguments([Start])
+        self.inspector.SetSchedulingStartTime(*arguments)
 
     def ShowFormPage(self, PageName=None):
-        params = [
-            PageName if PageName is not None else pythoncom.Missing,
-        ]
-        self.inspector.ShowFormPage(*params)
+        arguments = com_arguments([PageName])
+        self.inspector.ShowFormPage(*arguments)
 
 
 class Inspectors:
@@ -6224,10 +5932,8 @@ class Inspectors:
         return Inspector(self.inspectors.Add())
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.inspectors.Item(*params)
+        arguments = com_arguments([Index])
+        return self.inspectors.Item(*arguments)
 
 
 class ItemProperties:
@@ -6259,25 +5965,16 @@ class ItemProperties:
         return NameSpace(self.itemproperties.Session)
 
     def Add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            AddToFolderFields if AddToFolderFields is not None else pythoncom.Missing,
-            DisplayFormat if DisplayFormat is not None else pythoncom.Missing,
-        ]
-        self.itemproperties.Add(*params)
+        arguments = com_arguments([Name, Type, AddToFolderFields, DisplayFormat])
+        self.itemproperties.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.itemproperties.Item(*params)
+        arguments = com_arguments([Index])
+        return self.itemproperties.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.itemproperties.Remove(*params)
+        arguments = com_arguments([Index])
+        self.itemproperties.Remove(*arguments)
 
 
 class ItemProperty:
@@ -6363,10 +6060,8 @@ class Items:
         return self.items.Add()
 
     def Find(self, Filter=None):
-        params = [
-            Filter if Filter is not None else pythoncom.Missing,
-        ]
-        return self.items.Find(*params)
+        arguments = com_arguments([Filter])
+        return self.items.Find(*arguments)
 
     def FindNext(self):
         return self.items.FindNext()
@@ -6384,38 +6079,27 @@ class Items:
         return self.items.GetPrevious()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.items.Item(*params)
+        arguments = com_arguments([Index])
+        return self.items.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.items.Remove(*params)
+        arguments = com_arguments([Index])
+        self.items.Remove(*arguments)
 
     def ResetColumns(self):
         self.items.ResetColumns()
 
     def Restrict(self, Filter=None):
-        params = [
-            Filter if Filter is not None else pythoncom.Missing,
-        ]
-        return self.items.Restrict(*params)
+        arguments = com_arguments([Filter])
+        return self.items.Restrict(*arguments)
 
     def SetColumns(self, Columns=None):
-        params = [
-            Columns if Columns is not None else pythoncom.Missing,
-        ]
-        self.items.SetColumns(*params)
+        arguments = com_arguments([Columns])
+        self.items.SetColumns(*arguments)
 
     def Sort(self, Property=None, Descending=None):
-        params = [
-            Property if Property is not None else pythoncom.Missing,
-            Descending if Descending is not None else pythoncom.Missing,
-        ]
-        self.items.Sort(*params)
+        arguments = com_arguments([Property, Descending])
+        self.items.Sort(*arguments)
 
 
 class JournalItem:
@@ -6696,10 +6380,8 @@ class JournalItem:
         return UserProperties(self.journalitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.journalitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.journalitem.Close(*arguments)
 
     def Copy(self):
         self.journalitem.Copy()
@@ -6708,10 +6390,8 @@ class JournalItem:
         self.journalitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.journalitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.journalitem.Display(*arguments)
 
     def Forward(self):
         return self.journalitem.Forward()
@@ -6720,10 +6400,8 @@ class JournalItem:
         return self.journalitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.journalitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.journalitem.Move(*arguments)
 
     def PrintOut(self):
         self.journalitem.PrintOut()
@@ -6738,11 +6416,8 @@ class JournalItem:
         self.journalitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.journalitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.journalitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.journalitem.ShowCategoriesDialog()
@@ -7358,10 +7033,8 @@ class MailItem:
         self.mailitem.VotingResponse = value
 
     def AddBusinessCard(self, contact=None):
-        params = [
-            contact if contact is not None else pythoncom.Missing,
-        ]
-        self.mailitem.AddBusinessCard(*params)
+        arguments = com_arguments([contact])
+        self.mailitem.AddBusinessCard(*arguments)
 
     def ClearConversationIndex(self):
         self.mailitem.ClearConversationIndex()
@@ -7370,10 +7043,8 @@ class MailItem:
         self.mailitem.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.mailitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.mailitem.Close(*arguments)
 
     def Copy(self):
         self.mailitem.Copy()
@@ -7382,10 +7053,8 @@ class MailItem:
         self.mailitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.mailitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.mailitem.Display(*arguments)
 
     def Forward(self):
         return self.mailitem.Forward()
@@ -7394,16 +7063,12 @@ class MailItem:
         return self.mailitem.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        params = [
-            MarkInterval if MarkInterval is not None else pythoncom.Missing,
-        ]
-        self.mailitem.MarkAsTask(*params)
+        arguments = com_arguments([MarkInterval])
+        self.mailitem.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.mailitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.mailitem.Move(*arguments)
 
     def PrintOut(self):
         self.mailitem.PrintOut()
@@ -7418,11 +7083,8 @@ class MailItem:
         self.mailitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.mailitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.mailitem.SaveAs(*arguments)
 
     def Send(self):
         self.mailitem.Send()
@@ -7865,10 +7527,8 @@ class MeetingItem:
         return UserProperties(self.meetingitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.meetingitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.meetingitem.Close(*arguments)
 
     def Copy(self):
         self.meetingitem.Copy()
@@ -7877,28 +7537,22 @@ class MeetingItem:
         self.meetingitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.meetingitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.meetingitem.Display(*arguments)
 
     def Forward(self):
         return self.meetingitem.Forward()
 
     def GetAssociatedAppointment(self, AddToCalendar=None):
-        params = [
-            AddToCalendar if AddToCalendar is not None else pythoncom.Missing,
-        ]
-        return self.meetingitem.GetAssociatedAppointment(*params)
+        arguments = com_arguments([AddToCalendar])
+        return self.meetingitem.GetAssociatedAppointment(*arguments)
 
     def GetConversation(self):
         return self.meetingitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.meetingitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.meetingitem.Move(*arguments)
 
     def PrintOut(self):
         self.meetingitem.PrintOut()
@@ -7913,11 +7567,8 @@ class MeetingItem:
         self.meetingitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.meetingitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.meetingitem.SaveAs(*arguments)
 
     def Send(self):
         self.meetingitem.Send()
@@ -8058,142 +7709,92 @@ class NameSpace:
         return self.namespace.Type
 
     def AddStore(self, Store=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-        ]
-        self.namespace.AddStore(*params)
+        arguments = com_arguments([Store])
+        self.namespace.AddStore(*arguments)
 
     def AddStoreEx(self, Store=None, Type=None):
-        params = [
-            Store if Store is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.namespace.AddStoreEx(*params)
+        arguments = com_arguments([Store, Type])
+        self.namespace.AddStoreEx(*arguments)
 
     def CompareEntryIDs(self, FirstEntryID=None, SecondEntryID=None):
-        params = [
-            FirstEntryID if FirstEntryID is not None else pythoncom.Missing,
-            SecondEntryID if SecondEntryID is not None else pythoncom.Missing,
-        ]
-        return self.namespace.CompareEntryIDs(*params)
+        arguments = com_arguments([FirstEntryID, SecondEntryID])
+        return self.namespace.CompareEntryIDs(*arguments)
 
     def CreateContactCard(self, Address=None):
-        params = [
-            Address if Address is not None else pythoncom.Missing,
-        ]
-        return self.namespace.CreateContactCard(*params)
+        arguments = com_arguments([Address])
+        return self.namespace.CreateContactCard(*arguments)
 
     def CreateRecipient(self, RecipientName=None):
-        params = [
-            RecipientName if RecipientName is not None else pythoncom.Missing,
-        ]
-        return self.namespace.CreateRecipient(*params)
+        arguments = com_arguments([RecipientName])
+        return self.namespace.CreateRecipient(*arguments)
 
     def CreateSharingItem(self, Context=None, Provider=None):
-        params = [
-            Context if Context is not None else pythoncom.Missing,
-            Provider if Provider is not None else pythoncom.Missing,
-        ]
-        return self.namespace.CreateSharingItem(*params)
+        arguments = com_arguments([Context, Provider])
+        return self.namespace.CreateSharingItem(*arguments)
 
     def Dial(self, ContactItem=None):
-        params = [
-            ContactItem if ContactItem is not None else pythoncom.Missing,
-        ]
-        self.namespace.Dial(*params)
+        arguments = com_arguments([ContactItem])
+        self.namespace.Dial(*arguments)
 
     def GetAddressEntryFromID(self, ID=None):
-        params = [
-            ID if ID is not None else pythoncom.Missing,
-        ]
-        return ID(self.namespace.GetAddressEntryFromID(*params))
+        arguments = com_arguments([ID])
+        return ID(self.namespace.GetAddressEntryFromID(*arguments))
 
     def GetDefaultFolder(self, FolderType=None):
-        params = [
-            FolderType if FolderType is not None else pythoncom.Missing,
-        ]
-        return self.namespace.GetDefaultFolder(*params)
+        arguments = com_arguments([FolderType])
+        return self.namespace.GetDefaultFolder(*arguments)
 
     def GetFolderFromID(self, EntryIDFolder=None, EntryIDStore=None):
-        params = [
-            EntryIDFolder if EntryIDFolder is not None else pythoncom.Missing,
-            EntryIDStore if EntryIDStore is not None else pythoncom.Missing,
-        ]
-        return self.namespace.GetFolderFromID(*params)
+        arguments = com_arguments([EntryIDFolder, EntryIDStore])
+        return self.namespace.GetFolderFromID(*arguments)
 
     def GetGlobalAddressList(self):
         return self.namespace.GetGlobalAddressList()
 
     def GetItemFromID(self, EntryIDItem=None, EntryIDStore=None):
-        params = [
-            EntryIDItem if EntryIDItem is not None else pythoncom.Missing,
-            EntryIDStore if EntryIDStore is not None else pythoncom.Missing,
-        ]
-        return self.namespace.GetItemFromID(*params)
+        arguments = com_arguments([EntryIDItem, EntryIDStore])
+        return self.namespace.GetItemFromID(*arguments)
 
     def GetRecipientFromID(self, EntryID=None):
-        params = [
-            EntryID if EntryID is not None else pythoncom.Missing,
-        ]
-        return self.namespace.GetRecipientFromID(*params)
+        arguments = com_arguments([EntryID])
+        return self.namespace.GetRecipientFromID(*arguments)
 
     def GetSelectNamesDialog(self):
         return self.namespace.GetSelectNamesDialog()
 
     def GetSharedDefaultFolder(self, Recipient=None, FolderType=None):
-        params = [
-            Recipient if Recipient is not None else pythoncom.Missing,
-            FolderType if FolderType is not None else pythoncom.Missing,
-        ]
-        return self.namespace.GetSharedDefaultFolder(*params)
+        arguments = com_arguments([Recipient, FolderType])
+        return self.namespace.GetSharedDefaultFolder(*arguments)
 
     def GetStoreFromID(self, ID=None):
-        params = [
-            ID if ID is not None else pythoncom.Missing,
-        ]
-        return StoreID(self.namespace.GetStoreFromID(*params))
+        arguments = com_arguments([ID])
+        return StoreID(self.namespace.GetStoreFromID(*arguments))
 
     def Logoff(self):
         self.namespace.Logoff()
 
     def Logon(self, Profile=None, Password=None, ShowDialog=None, NewSession=None):
-        params = [
-            Profile if Profile is not None else pythoncom.Missing,
-            Password if Password is not None else pythoncom.Missing,
-            ShowDialog if ShowDialog is not None else pythoncom.Missing,
-            NewSession if NewSession is not None else pythoncom.Missing,
-        ]
-        self.namespace.Logon(*params)
+        arguments = com_arguments([Profile, Password, ShowDialog, NewSession])
+        self.namespace.Logon(*arguments)
 
     def OpenSharedFolder(self, Path=None, Name=None, DownloadAttachments=None, UseTTL=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            DownloadAttachments if DownloadAttachments is not None else pythoncom.Missing,
-            UseTTL if UseTTL is not None else pythoncom.Missing,
-        ]
-        return Folder(self.namespace.OpenSharedFolder(*params))
+        arguments = com_arguments([Path, Name, DownloadAttachments, UseTTL])
+        return Folder(self.namespace.OpenSharedFolder(*arguments))
 
     def OpenSharedItem(self, Path=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-        ]
-        return self.namespace.OpenSharedItem(*params)
+        arguments = com_arguments([Path])
+        return self.namespace.OpenSharedItem(*arguments)
 
     def PickFolder(self):
         return Folder(self.namespace.PickFolder())
 
     def RemoveStore(self, Folder=None):
-        params = [
-            Folder if Folder is not None else pythoncom.Missing,
-        ]
-        self.namespace.RemoveStore(*params)
+        arguments = com_arguments([Folder])
+        self.namespace.RemoveStore(*arguments)
 
     def SendAndReceive(self, showProgressDialog=None):
-        params = [
-            showProgressDialog if showProgressDialog is not None else pythoncom.Missing,
-        ]
-        self.namespace.SendAndReceive(*params)
+        arguments = com_arguments([showProgressDialog])
+        self.namespace.SendAndReceive(*arguments)
 
 
 class NavigationFolder:
@@ -8280,22 +7881,16 @@ class NavigationFolders:
         return NameSpace(self.navigationfolders.Session)
 
     def Add(self, Folder=None):
-        params = [
-            Folder if Folder is not None else pythoncom.Missing,
-        ]
-        return self.navigationfolders.Add(*params)
+        arguments = com_arguments([Folder])
+        return self.navigationfolders.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.navigationfolders.Item(*params)
+        arguments = com_arguments([Index])
+        return self.navigationfolders.Item(*arguments)
 
     def Remove(self, RemovableFolder=None):
-        params = [
-            RemovableFolder if RemovableFolder is not None else pythoncom.Missing,
-        ]
-        self.navigationfolders.Remove(*params)
+        arguments = com_arguments([RemovableFolder])
+        self.navigationfolders.Remove(*arguments)
 
 
 class NavigationGroup:
@@ -8370,28 +7965,20 @@ class NavigationGroups:
         return NameSpace(self.navigationgroups.Session)
 
     def Create(self, GroupDisplayName=None):
-        params = [
-            GroupDisplayName if GroupDisplayName is not None else pythoncom.Missing,
-        ]
-        return self.navigationgroups.Create(*params)
+        arguments = com_arguments([GroupDisplayName])
+        return self.navigationgroups.Create(*arguments)
 
     def Delete(self, Group=None):
-        params = [
-            Group if Group is not None else pythoncom.Missing,
-        ]
-        self.navigationgroups.Delete(*params)
+        arguments = com_arguments([Group])
+        self.navigationgroups.Delete(*arguments)
 
     def GetDefaultNavigationGroup(self, DefaultFolderGroup=None):
-        params = [
-            DefaultFolderGroup if DefaultFolderGroup is not None else pythoncom.Missing,
-        ]
-        return self.navigationgroups.GetDefaultNavigationGroup(*params)
+        arguments = com_arguments([DefaultFolderGroup])
+        return self.navigationgroups.GetDefaultNavigationGroup(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.navigationgroups.Item(*params)
+        arguments = com_arguments([Index])
+        return self.navigationgroups.Item(*arguments)
 
 
 class NavigationModule:
@@ -8466,16 +8053,12 @@ class NavigationModules:
         return NameSpace(self.navigationmodules.Session)
 
     def GetNavigationModule(self, ModuleType=None):
-        params = [
-            ModuleType if ModuleType is not None else pythoncom.Missing,
-        ]
-        return self.navigationmodules.GetNavigationModule(*params)
+        arguments = com_arguments([ModuleType])
+        return self.navigationmodules.GetNavigationModule(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.navigationmodules.Item(*params)
+        arguments = com_arguments([Index])
+        return self.navigationmodules.Item(*arguments)
 
 
 class NavigationPane:
@@ -8712,10 +8295,8 @@ class NoteItem:
         self.noteitem.Width = value
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.noteitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.noteitem.Close(*arguments)
 
     def Copy(self):
         return NoteItem(self.noteitem.Copy())
@@ -8724,16 +8305,12 @@ class NoteItem:
         self.noteitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.noteitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.noteitem.Display(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.noteitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.noteitem.Move(*arguments)
 
     def PrintOut(self):
         self.noteitem.PrintOut()
@@ -8742,11 +8319,8 @@ class NoteItem:
         self.noteitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.noteitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.noteitem.SaveAs(*arguments)
 
 
 class NotesModule:
@@ -9682,11 +9256,8 @@ class OlkComboBox:
         self.olkcombobox.Value = value
 
     def AddItem(self, ItemText=None, Index=None):
-        params = [
-            ItemText if ItemText is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.olkcombobox.AddItem(*params)
+        arguments = com_arguments([ItemText, Index])
+        self.olkcombobox.AddItem(*arguments)
 
     def Clear(self):
         self.olkcombobox.Clear()
@@ -9701,26 +9272,19 @@ class OlkComboBox:
         self.olkcombobox.DropDown()
 
     def GetItem(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.olkcombobox.GetItem(*params)
+        arguments = com_arguments([Index])
+        return self.olkcombobox.GetItem(*arguments)
 
     def Paste(self):
         self.olkcombobox.Paste()
 
     def RemoveItem(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.olkcombobox.RemoveItem(*params)
+        arguments = com_arguments([Index])
+        self.olkcombobox.RemoveItem(*arguments)
 
     def SetItem(self, Index=None, Item=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        self.olkcombobox.SetItem(*params)
+        arguments = com_arguments([Index, Item])
+        self.olkcombobox.SetItem(*arguments)
 
 
 class OlkCommandButton:
@@ -10312,11 +9876,8 @@ class OlkListBox:
         self.olklistbox.Value = value
 
     def AddItem(self, ItemText=None, Index=None):
-        params = [
-            ItemText if ItemText is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.olklistbox.AddItem(*params)
+        arguments = com_arguments([ItemText, Index])
+        self.olklistbox.AddItem(*arguments)
 
     def Clear(self):
         self.olklistbox.Clear()
@@ -10325,36 +9886,24 @@ class OlkListBox:
         self.olklistbox.Copy()
 
     def GetItem(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.olklistbox.GetItem(*params)
+        arguments = com_arguments([Index])
+        return self.olklistbox.GetItem(*arguments)
 
     def GetSelected(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.olklistbox.GetSelected(*params)
+        arguments = com_arguments([Index])
+        return self.olklistbox.GetSelected(*arguments)
 
     def RemoveItem(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.olklistbox.RemoveItem(*params)
+        arguments = com_arguments([Index])
+        self.olklistbox.RemoveItem(*arguments)
 
     def SetItem(self, Index=None, Item=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-            Item if Item is not None else pythoncom.Missing,
-        ]
-        self.olklistbox.SetItem(*params)
+        arguments = com_arguments([Index, Item])
+        self.olklistbox.SetItem(*arguments)
 
     def SetSelected(self, Index=None, Selected=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-            Selected if Selected is not None else pythoncom.Missing,
-        ]
-        self.olklistbox.SetSelected(*params)
+        arguments = com_arguments([Index, Selected])
+        self.olklistbox.SetSelected(*arguments)
 
 
 class OlkOptionButton:
@@ -11622,31 +11171,20 @@ class OrderFields:
         return NameSpace(self.orderfields.Session)
 
     def Add(self, PropertyName=None, IsDescending=None):
-        params = [
-            PropertyName if PropertyName is not None else pythoncom.Missing,
-            IsDescending if IsDescending is not None else pythoncom.Missing,
-        ]
-        return self.orderfields.Add(*params)
+        arguments = com_arguments([PropertyName, IsDescending])
+        return self.orderfields.Add(*arguments)
 
     def Insert(self, PropertyName=None, Index=None, IsDescending=None):
-        params = [
-            PropertyName if PropertyName is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-            IsDescending if IsDescending is not None else pythoncom.Missing,
-        ]
-        return self.orderfields.Insert(*params)
+        arguments = com_arguments([PropertyName, Index, IsDescending])
+        return self.orderfields.Insert(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.orderfields.Item(*params)
+        arguments = com_arguments([Index])
+        return self.orderfields.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.orderfields.Remove(*params)
+        arguments = com_arguments([Index])
+        self.orderfields.Remove(*arguments)
 
     def RemoveAll(self):
         self.orderfields.RemoveAll()
@@ -11720,23 +11258,16 @@ class OutlookBarGroups:
         return NameSpace(self.outlookbargroups.Session)
 
     def Add(self, Name=None, Index=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return OutlookBarGroup(self.outlookbargroups.Add(*params))
+        arguments = com_arguments([Name, Index])
+        return OutlookBarGroup(self.outlookbargroups.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.outlookbargroups.Item(*params)
+        arguments = com_arguments([Index])
+        return self.outlookbargroups.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.outlookbargroups.Remove(*params)
+        arguments = com_arguments([Index])
+        self.outlookbargroups.Remove(*arguments)
 
 
 class OutlookBarPane:
@@ -11811,10 +11342,8 @@ class OutlookBarShortcut:
         return self.outlookbarshortcut.Target
 
     def SetIcon(self, Icon=None):
-        params = [
-            Icon if Icon is not None else pythoncom.Missing,
-        ]
-        self.outlookbarshortcut.SetIcon(*params)
+        arguments = com_arguments([Icon])
+        self.outlookbarshortcut.SetIcon(*arguments)
 
 
 class OutlookBarShortcuts:
@@ -11843,24 +11372,16 @@ class OutlookBarShortcuts:
         return NameSpace(self.outlookbarshortcuts.Session)
 
     def Add(self, Target=None, Name=None, Index=None):
-        params = [
-            Target if Target is not None else pythoncom.Missing,
-            Name if Name is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return OutlookBarShortcut(self.outlookbarshortcuts.Add(*params))
+        arguments = com_arguments([Target, Name, Index])
+        return OutlookBarShortcut(self.outlookbarshortcuts.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.outlookbarshortcuts.Item(*params)
+        arguments = com_arguments([Index])
+        return self.outlookbarshortcuts.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.outlookbarshortcuts.Remove(*params)
+        arguments = com_arguments([Index])
+        self.outlookbarshortcuts.Remove(*arguments)
 
 
 class OutlookBarStorage:
@@ -11918,16 +11439,12 @@ class Pages:
         return Page(self.pages.Add())
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.pages.Item(*params)
+        arguments = com_arguments([Index])
+        return self.pages.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.pages.Remove(*params)
+        arguments = com_arguments([Index])
+        self.pages.Remove(*arguments)
 
 
 class Panes:
@@ -11956,10 +11473,8 @@ class Panes:
         return NameSpace(self.panes.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.panes.Item(*params)
+        arguments = com_arguments([Index])
+        return self.panes.Item(*arguments)
 
 
 class PlaySoundRuleAction:
@@ -12356,10 +11871,8 @@ class PostItem:
         self.postitem.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.postitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.postitem.Close(*arguments)
 
     def Copy(self):
         self.postitem.Copy()
@@ -12368,10 +11881,8 @@ class PostItem:
         self.postitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.postitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.postitem.Display(*arguments)
 
     def Forward(self):
         return self.postitem.Forward()
@@ -12380,16 +11891,12 @@ class PostItem:
         return self.postitem.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        params = [
-            MarkInterval if MarkInterval is not None else pythoncom.Missing,
-        ]
-        self.postitem.MarkAsTask(*params)
+        arguments = com_arguments([MarkInterval])
+        self.postitem.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.postitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.postitem.Move(*arguments)
 
     def Post(self):
         self.postitem.Post()
@@ -12404,11 +11911,8 @@ class PostItem:
         self.postitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.postitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.postitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.postitem.ShowCategoriesDialog()
@@ -12436,66 +11940,44 @@ class PropertyAccessor:
         return NameSpace(self.propertyaccessor.Session)
 
     def BinaryToString(self, Value=None):
-        params = [
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.BinaryToString(*params)
+        arguments = com_arguments([Value])
+        return self.propertyaccessor.BinaryToString(*arguments)
 
     def DeleteProperties(self, SchemaNames=None):
-        params = [
-            SchemaNames if SchemaNames is not None else pythoncom.Missing,
-        ]
-        return Err(self.propertyaccessor.DeleteProperties(*params))
+        arguments = com_arguments([SchemaNames])
+        return Err(self.propertyaccessor.DeleteProperties(*arguments))
 
     def DeleteProperty(self, SchemaName=None):
-        params = [
-            SchemaName if SchemaName is not None else pythoncom.Missing,
-        ]
-        self.propertyaccessor.DeleteProperty(*params)
+        arguments = com_arguments([SchemaName])
+        self.propertyaccessor.DeleteProperty(*arguments)
 
     def GetProperties(self, SchemaNames=None):
-        params = [
-            SchemaNames if SchemaNames is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.GetProperties(*params)
+        arguments = com_arguments([SchemaNames])
+        return self.propertyaccessor.GetProperties(*arguments)
 
     def GetProperty(self, SchemaName=None):
-        params = [
-            SchemaName if SchemaName is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.GetProperty(*params)
+        arguments = com_arguments([SchemaName])
+        return self.propertyaccessor.GetProperty(*arguments)
 
     def LocalTimeToUTC(self, Value=None):
-        params = [
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.LocalTimeToUTC(*params)
+        arguments = com_arguments([Value])
+        return self.propertyaccessor.LocalTimeToUTC(*arguments)
 
     def SetProperties(self, SchemaNames=None, Values=None):
-        params = [
-            SchemaNames if SchemaNames is not None else pythoncom.Missing,
-            Values if Values is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.SetProperties(*params)
+        arguments = com_arguments([SchemaNames, Values])
+        return self.propertyaccessor.SetProperties(*arguments)
 
     def SetProperty(self, SchemaName=None, Value=None):
-        params = [
-            SchemaName if SchemaName is not None else pythoncom.Missing,
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        self.propertyaccessor.SetProperty(*params)
+        arguments = com_arguments([SchemaName, Value])
+        self.propertyaccessor.SetProperty(*arguments)
 
     def StringToBinary(self, Value=None):
-        params = [
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.StringToBinary(*params)
+        arguments = com_arguments([Value])
+        return self.propertyaccessor.StringToBinary(*arguments)
 
     def UTCToLocalTime(self, Value=None):
-        params = [
-            Value if Value is not None else pythoncom.Missing,
-        ]
-        return self.propertyaccessor.UTCToLocalTime(*params)
+        arguments = com_arguments([Value])
+        return self.propertyaccessor.UTCToLocalTime(*arguments)
 
 
 class PropertyPage:
@@ -12504,23 +11986,18 @@ class PropertyPage:
         self.propertypage = propertypage
 
     def Dirty(self, Dirty=None):
-        params = [
-            Dirty if Dirty is not None else pythoncom.Missing,
-        ]
+        arguments = com_arguments([Dirty])
         if callable(self.propertypage.Dirty):
-            return self.propertypage.Dirty(*params)
+            return self.propertypage.Dirty(*arguments)
         else:
-            return self.propertypage.GetDirty(*params)
+            return self.propertypage.GetDirty(*arguments)
 
     def Apply(self):
         return self.propertypage.Apply()
 
     def GetPageInfo(self, HelpFile=None, HelpContext=None):
-        params = [
-            HelpFile if HelpFile is not None else pythoncom.Missing,
-            HelpContext if HelpContext is not None else pythoncom.Missing,
-        ]
-        return self.propertypage.GetPageInfo(*params)
+        arguments = com_arguments([HelpFile, HelpContext])
+        return self.propertypage.GetPageInfo(*arguments)
 
 
 class PropertyPages:
@@ -12549,23 +12026,16 @@ class PropertyPages:
         return NameSpace(self.propertypages.Session)
 
     def Add(self, Page=None, Title=None):
-        params = [
-            Page if Page is not None else pythoncom.Missing,
-            Title if Title is not None else pythoncom.Missing,
-        ]
-        self.propertypages.Add(*params)
+        arguments = com_arguments([Page, Title])
+        self.propertypages.Add(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.propertypages.Item(*params)
+        arguments = com_arguments([Index])
+        return self.propertypages.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.propertypages.Remove(*params)
+        arguments = com_arguments([Index])
+        self.propertypages.Remove(*arguments)
 
 
 class PropertyPageSite:
@@ -12698,12 +12168,8 @@ class Recipient:
         self.recipient.Delete()
 
     def FreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        params = [
-            Start if Start is not None else pythoncom.Missing,
-            MinPerChar if MinPerChar is not None else pythoncom.Missing,
-            CompleteFormat if CompleteFormat is not None else pythoncom.Missing,
-        ]
-        return self.recipient.FreeBusy(*params)
+        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        return self.recipient.FreeBusy(*arguments)
 
     def Resolve(self):
         return self.recipient.Resolve()
@@ -12735,22 +12201,16 @@ class Recipients:
         return NameSpace(self.recipients.Session)
 
     def Add(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return Recipient(self.recipients.Add(*params))
+        arguments = com_arguments([Name])
+        return Recipient(self.recipients.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.recipients.Item(*params)
+        arguments = com_arguments([Index])
+        return self.recipients.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.recipients.Remove(*params)
+        arguments = com_arguments([Index])
+        self.recipients.Remove(*arguments)
 
     def ResolveAll(self):
         return self.recipients.ResolveAll()
@@ -12894,10 +12354,8 @@ class RecurrencePattern:
         self.recurrencepattern.StartTime = value
 
     def GetOccurrence(self, StartDate=None):
-        params = [
-            StartDate if StartDate is not None else pythoncom.Missing,
-        ]
-        return self.recurrencepattern.GetOccurrence(*params)
+        arguments = com_arguments([StartDate])
+        return self.recurrencepattern.GetOccurrence(*arguments)
 
 
 class Reminder:
@@ -12945,10 +12403,8 @@ class Reminder:
         self.reminder.Dismiss()
 
     def Snooze(self, SnoozeTime=None):
-        params = [
-            SnoozeTime if SnoozeTime is not None else pythoncom.Missing,
-        ]
-        self.reminder.Snooze(*params)
+        arguments = com_arguments([SnoozeTime])
+        self.reminder.Snooze(*arguments)
 
 
 class Reminders:
@@ -12977,16 +12433,12 @@ class Reminders:
         return NameSpace(self.reminders.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.reminders.Item(*params)
+        arguments = com_arguments([Index])
+        return self.reminders.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.reminders.Remove(*params)
+        arguments = com_arguments([Index])
+        self.reminders.Remove(*arguments)
 
 
 class RemoteItem:
@@ -13207,10 +12659,8 @@ class RemoteItem:
         return UserProperties(self.remoteitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.remoteitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.remoteitem.Close(*arguments)
 
     def Copy(self):
         self.remoteitem.Copy()
@@ -13219,19 +12669,15 @@ class RemoteItem:
         self.remoteitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.remoteitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.remoteitem.Display(*arguments)
 
     def GetConversation(self):
         return self.remoteitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.remoteitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.remoteitem.Move(*arguments)
 
     def PrintOut(self):
         self.remoteitem.PrintOut()
@@ -13240,11 +12686,8 @@ class RemoteItem:
         self.remoteitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.remoteitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.remoteitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.remoteitem.ShowCategoriesDialog()
@@ -13460,10 +12903,8 @@ class ReportItem:
         return UserProperties(self.reportitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.reportitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.reportitem.Close(*arguments)
 
     def Copy(self):
         self.reportitem.Copy()
@@ -13472,19 +12913,15 @@ class ReportItem:
         self.reportitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.reportitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.reportitem.Display(*arguments)
 
     def GetConversation(self):
         return self.reportitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.reportitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.reportitem.Move(*arguments)
 
     def PrintOut(self):
         self.reportitem.PrintOut()
@@ -13493,11 +12930,8 @@ class ReportItem:
         self.reportitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.reportitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.reportitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.reportitem.ShowCategoriesDialog()
@@ -13549,26 +12983,19 @@ class Results:
         return self.results.GetPrevious()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.results.Item(*params)
+        arguments = com_arguments([Index])
+        return self.results.Item(*arguments)
 
     def ResetColumns(self):
         self.results.ResetColumns()
 
     def SetColumns(self, Columns=None):
-        params = [
-            Columns if Columns is not None else pythoncom.Missing,
-        ]
-        self.results.SetColumns(*params)
+        arguments = com_arguments([Columns])
+        self.results.SetColumns(*arguments)
 
     def Sort(self, Property=None, Descending=None):
-        params = [
-            Property if Property is not None else pythoncom.Missing,
-            Descending if Descending is not None else pythoncom.Missing,
-        ]
-        self.results.Sort(*params)
+        arguments = com_arguments([Property, Descending])
+        self.results.Sort(*arguments)
 
 
 class Row:
@@ -13593,31 +13020,23 @@ class Row:
         return NameSpace(self.row.Session)
 
     def BinaryToString(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.row.BinaryToString(*params)
+        arguments = com_arguments([Index])
+        return self.row.BinaryToString(*arguments)
 
     def GetValues(self):
         return self.row.GetValues()
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.row.Item(*params)
+        arguments = com_arguments([Index])
+        return self.row.Item(*arguments)
 
     def LocalTimeToUTC(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.row.LocalTimeToUTC(*params)
+        arguments = com_arguments([Index])
+        return self.row.LocalTimeToUTC(*arguments)
 
     def UTCToLocalTime(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.row.UTCToLocalTime(*params)
+        arguments = com_arguments([Index])
+        return self.row.UTCToLocalTime(*arguments)
 
 
 class Rule:
@@ -13686,13 +13105,8 @@ class Rule:
         return NameSpace(self.rule.Session)
 
     def Execute(self, ShowProgress=None, Folder=None, IncludeSubfolders=None, RuleExecuteOption=None):
-        params = [
-            ShowProgress if ShowProgress is not None else pythoncom.Missing,
-            Folder if Folder is not None else pythoncom.Missing,
-            IncludeSubfolders if IncludeSubfolders is not None else pythoncom.Missing,
-            RuleExecuteOption if RuleExecuteOption is not None else pythoncom.Missing,
-        ]
-        self.rule.Execute(*params)
+        arguments = com_arguments([ShowProgress, Folder, IncludeSubfolders, RuleExecuteOption])
+        self.rule.Execute(*arguments)
 
 
 class RuleAction:
@@ -13823,10 +13237,8 @@ class RuleActions:
         return RuleAction(self.ruleactions.Stop)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.ruleactions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.ruleactions.Item(*arguments)
 
 
 class RuleCondition:
@@ -13989,10 +13401,8 @@ class RuleConditions:
         return RuleCondition(self.ruleconditions.ToOrCc)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.ruleconditions.Item(*params)
+        arguments = com_arguments([Index])
+        return self.ruleconditions.Item(*arguments)
 
 
 class Rules:
@@ -14029,29 +13439,20 @@ class Rules:
         return NameSpace(self.rules.Session)
 
     def Create(self, Name=None, RuleType=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            RuleType if RuleType is not None else pythoncom.Missing,
-        ]
-        return self.rules.Create(*params)
+        arguments = com_arguments([Name, RuleType])
+        return self.rules.Create(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.rules.Item(*params)
+        arguments = com_arguments([Index])
+        return self.rules.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.rules.Remove(*params)
+        arguments = com_arguments([Index])
+        self.rules.Remove(*arguments)
 
     def Save(self, ShowProgress=None):
-        params = [
-            ShowProgress if ShowProgress is not None else pythoncom.Missing,
-        ]
-        self.rules.Save(*params)
+        arguments = com_arguments([ShowProgress])
+        self.rules.Save(*arguments)
 
 
 class Search:
@@ -14103,10 +13504,8 @@ class Search:
         return self.search.GetTable()
 
     def Save(self, SchFldrName=None):
-        params = [
-            SchFldrName if SchFldrName is not None else pythoncom.Missing,
-        ]
-        self.search.Save(*params)
+        arguments = com_arguments([SchFldrName])
+        self.search.Save(*arguments)
 
     def Stop(self):
         self.search.Stop()
@@ -14142,16 +13541,12 @@ class Selection:
         return NameSpace(self.selection.Session)
 
     def GetSelection(self, SelectionContents=None):
-        params = [
-            SelectionContents if SelectionContents is not None else pythoncom.Missing,
-        ]
-        return self.selection.GetSelection(*params)
+        arguments = com_arguments([SelectionContents])
+        return self.selection.GetSelection(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.selection.Item(*params)
+        arguments = com_arguments([Index])
+        return self.selection.Item(*arguments)
 
 
 class SelectNamesDialog:
@@ -14259,10 +13654,8 @@ class SelectNamesDialog:
         return self.selectnamesdialog.Display()
 
     def SetDefaultDisplayMode(self, defaultMode=None):
-        params = [
-            defaultMode if defaultMode is not None else pythoncom.Missing,
-        ]
-        self.selectnamesdialog.SetDefaultDisplayMode(*params)
+        arguments = com_arguments([defaultMode])
+        self.selectnamesdialog.SetDefaultDisplayMode(*arguments)
 
 
 class SenderInAddressListRuleCondition:
@@ -14911,10 +14304,8 @@ class SharingItem:
         return UserProperties(self.sharingitem.UserProperties)
 
     def AddBusinessCard(self, contact=None):
-        params = [
-            contact if contact is not None else pythoncom.Missing,
-        ]
-        self.sharingitem.AddBusinessCard(*params)
+        arguments = com_arguments([contact])
+        self.sharingitem.AddBusinessCard(*arguments)
 
     def Allow(self):
         self.sharingitem.Allow()
@@ -14926,10 +14317,8 @@ class SharingItem:
         self.sharingitem.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.sharingitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.sharingitem.Close(*arguments)
 
     def Copy(self):
         self.sharingitem.Copy()
@@ -14941,10 +14330,8 @@ class SharingItem:
         return self.sharingitem.Deny()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.sharingitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.sharingitem.Display(*arguments)
 
     def Forward(self):
         return self.sharingitem.Forward()
@@ -14953,16 +14340,12 @@ class SharingItem:
         return self.sharingitem.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        params = [
-            MarkInterval if MarkInterval is not None else pythoncom.Missing,
-        ]
-        self.sharingitem.MarkAsTask(*params)
+        arguments = com_arguments([MarkInterval])
+        self.sharingitem.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.sharingitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.sharingitem.Move(*arguments)
 
     def OpenSharedFolder(self):
         return Folder(self.sharingitem.OpenSharedFolder())
@@ -14980,11 +14363,8 @@ class SharingItem:
         self.sharingitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.sharingitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.sharingitem.SaveAs(*arguments)
 
     def Send(self):
         self.sharingitem.Send()
@@ -15019,10 +14399,8 @@ class SimpleItems:
         return NameSpace(self.simpleitems.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.simpleitems.Item(*params)
+        arguments = com_arguments([Index])
+        return self.simpleitems.Item(*arguments)
 
 
 class SolutionsModule:
@@ -15071,11 +14449,8 @@ class SolutionsModule:
         self.solutionsmodule.Visible = value
 
     def AddSolution(self, Solution=None, Scope=None):
-        params = [
-            Solution if Solution is not None else pythoncom.Missing,
-            Scope if Scope is not None else pythoncom.Missing,
-        ]
-        self.solutionsmodule.AddSolution(*params)
+        arguments = com_arguments([Solution, Scope])
+        self.solutionsmodule.AddSolution(*arguments)
 
 
 class StorageItem:
@@ -15224,10 +14599,8 @@ class Store:
         return Store(self.store.StoreID)
 
     def GetDefaultFolder(self, FolderType=None):
-        params = [
-            FolderType if FolderType is not None else pythoncom.Missing,
-        ]
-        return self.store.GetDefaultFolder(*params)
+        arguments = com_arguments([FolderType])
+        return self.store.GetDefaultFolder(*arguments)
 
     def GetRootFolder(self):
         return self.store.GetRootFolder()
@@ -15239,10 +14612,8 @@ class Store:
         return self.store.GetSearchFolders()
 
     def GetSpecialFolder(self, FolderType=None):
-        params = [
-            FolderType if FolderType is not None else pythoncom.Missing,
-        ]
-        return self.store.GetSpecialFolder(*params)
+        arguments = com_arguments([FolderType])
+        return self.store.GetSpecialFolder(*arguments)
 
     def RefreshQuotaDisplay(self):
         self.store.RefreshQuotaDisplay()
@@ -15274,10 +14645,8 @@ class Stores:
         return NameSpace(self.stores.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return Stores(self.stores.Item(*params))
+        arguments = com_arguments([Index])
+        return Stores(self.stores.Item(*arguments))
 
 
 class SyncObject:
@@ -15342,10 +14711,8 @@ class SyncObjects:
         return NameSpace(self.syncobjects.Session)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.syncobjects.Item(*params)
+        arguments = com_arguments([Index])
+        return self.syncobjects.Item(*arguments)
 
 
 class Table:
@@ -15381,16 +14748,12 @@ class Table:
         return Row(self.table.FindNextRow())
 
     def FindRow(self, Filter=None):
-        params = [
-            Filter if Filter is not None else pythoncom.Missing,
-        ]
-        return Row(self.table.FindRow(*params))
+        arguments = com_arguments([Filter])
+        return Row(self.table.FindRow(*arguments))
 
     def GetArray(self, MaxRows=None):
-        params = [
-            MaxRows if MaxRows is not None else pythoncom.Missing,
-        ]
-        return self.table.GetArray(*params)
+        arguments = com_arguments([MaxRows])
+        return self.table.GetArray(*arguments)
 
     def GetNextRow(self):
         return Row(self.table.GetNextRow())
@@ -15402,17 +14765,12 @@ class Table:
         self.table.MoveToStart()
 
     def Restrict(self, Filter=None):
-        params = [
-            Filter if Filter is not None else pythoncom.Missing,
-        ]
-        return self.table.Restrict(*params)
+        arguments = com_arguments([Filter])
+        return self.table.Restrict(*arguments)
 
     def Sort(self, SortProperty=None, Descending=None):
-        params = [
-            SortProperty if SortProperty is not None else pythoncom.Missing,
-            Descending if Descending is not None else pythoncom.Missing,
-        ]
-        self.table.Sort(*params)
+        arguments = com_arguments([SortProperty, Descending])
+        self.table.Sort(*arguments)
 
 
 class TableView:
@@ -15656,11 +15014,8 @@ class TableView:
         self.tableview.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return self.tableview.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        return self.tableview.Copy(*arguments)
 
     def Delete(self):
         self.tableview.Delete()
@@ -15669,10 +15024,8 @@ class TableView:
         return self.tableview.GetTable()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.tableview.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.tableview.GoToDate(*arguments)
 
     def Reset(self):
         self.tableview.Reset()
@@ -16124,10 +15477,8 @@ class TaskItem:
         self.taskitem.ClearRecurrencePattern()
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.taskitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.taskitem.Close(*arguments)
 
     def Copy(self):
         self.taskitem.Copy()
@@ -16136,10 +15487,8 @@ class TaskItem:
         self.taskitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.taskitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.taskitem.Display(*arguments)
 
     def GetConversation(self):
         return self.taskitem.GetConversation()
@@ -16151,31 +15500,22 @@ class TaskItem:
         self.taskitem.MarkComplete()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.taskitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.taskitem.Move(*arguments)
 
     def PrintOut(self):
         self.taskitem.PrintOut()
 
     def Respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
-        params = [
-            Response if Response is not None else pythoncom.Missing,
-            fNoUI if fNoUI is not None else pythoncom.Missing,
-            fAdditionalTextDialog if fAdditionalTextDialog is not None else pythoncom.Missing,
-        ]
-        return TaskItem(self.taskitem.Respond(*params))
+        arguments = com_arguments([Response, fNoUI, fAdditionalTextDialog])
+        return TaskItem(self.taskitem.Respond(*arguments))
 
     def Save(self):
         self.taskitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.taskitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.taskitem.SaveAs(*arguments)
 
     def Send(self):
         self.taskitem.Send()
@@ -16400,10 +15740,8 @@ class TaskRequestAcceptItem:
         return UserProperties(self.taskrequestacceptitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.taskrequestacceptitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.taskrequestacceptitem.Close(*arguments)
 
     def Copy(self):
         self.taskrequestacceptitem.Copy()
@@ -16412,25 +15750,19 @@ class TaskRequestAcceptItem:
         self.taskrequestacceptitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.taskrequestacceptitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.taskrequestacceptitem.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        params = [
-            AddToTaskList if AddToTaskList is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestacceptitem.GetAssociatedTask(*params)
+        arguments = com_arguments([AddToTaskList])
+        return self.taskrequestacceptitem.GetAssociatedTask(*arguments)
 
     def GetConversation(self):
         return self.taskrequestacceptitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestacceptitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.taskrequestacceptitem.Move(*arguments)
 
     def PrintOut(self):
         self.taskrequestacceptitem.PrintOut()
@@ -16439,11 +15771,8 @@ class TaskRequestAcceptItem:
         self.taskrequestacceptitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.taskrequestacceptitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.taskrequestacceptitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.taskrequestacceptitem.ShowCategoriesDialog()
@@ -16659,10 +15988,8 @@ class TaskRequestDeclineItem:
         return UserProperties(self.taskrequestdeclineitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.taskrequestdeclineitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.taskrequestdeclineitem.Close(*arguments)
 
     def Copy(self):
         self.taskrequestdeclineitem.Copy()
@@ -16671,25 +15998,19 @@ class TaskRequestDeclineItem:
         self.taskrequestdeclineitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.taskrequestdeclineitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.taskrequestdeclineitem.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        params = [
-            AddToTaskList if AddToTaskList is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestdeclineitem.GetAssociatedTask(*params)
+        arguments = com_arguments([AddToTaskList])
+        return self.taskrequestdeclineitem.GetAssociatedTask(*arguments)
 
     def GetConversation(self):
         return self.taskrequestdeclineitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestdeclineitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.taskrequestdeclineitem.Move(*arguments)
 
     def PrintOut(self):
         self.taskrequestdeclineitem.PrintOut()
@@ -16698,11 +16019,8 @@ class TaskRequestDeclineItem:
         self.taskrequestdeclineitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.taskrequestdeclineitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.taskrequestdeclineitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.taskrequestdeclineitem.ShowCategoriesDialog()
@@ -16918,10 +16236,8 @@ class TaskRequestItem:
         return UserProperties(self.taskrequestitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.taskrequestitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.taskrequestitem.Close(*arguments)
 
     def Copy(self):
         self.taskrequestitem.Copy()
@@ -16930,25 +16246,19 @@ class TaskRequestItem:
         self.taskrequestitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.taskrequestitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.taskrequestitem.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        params = [
-            AddToTaskList if AddToTaskList is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestitem.GetAssociatedTask(*params)
+        arguments = com_arguments([AddToTaskList])
+        return self.taskrequestitem.GetAssociatedTask(*arguments)
 
     def GetConversation(self):
         return self.taskrequestitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.taskrequestitem.Move(*arguments)
 
     def PrintOut(self):
         self.taskrequestitem.PrintOut()
@@ -16957,11 +16267,8 @@ class TaskRequestItem:
         self.taskrequestitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.taskrequestitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.taskrequestitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.taskrequestitem.ShowCategoriesDialog()
@@ -17177,10 +16484,8 @@ class TaskRequestUpdateItem:
         return UserProperties(self.taskrequestupdateitem.UserProperties)
 
     def Close(self, SaveMode=None):
-        params = [
-            SaveMode if SaveMode is not None else pythoncom.Missing,
-        ]
-        self.taskrequestupdateitem.Close(*params)
+        arguments = com_arguments([SaveMode])
+        self.taskrequestupdateitem.Close(*arguments)
 
     def Copy(self):
         self.taskrequestupdateitem.Copy()
@@ -17189,25 +16494,19 @@ class TaskRequestUpdateItem:
         self.taskrequestupdateitem.Delete()
 
     def Display(self, Modal=None):
-        params = [
-            Modal if Modal is not None else pythoncom.Missing,
-        ]
-        self.taskrequestupdateitem.Display(*params)
+        arguments = com_arguments([Modal])
+        self.taskrequestupdateitem.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        params = [
-            AddToTaskList if AddToTaskList is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestupdateitem.GetAssociatedTask(*params)
+        arguments = com_arguments([AddToTaskList])
+        return self.taskrequestupdateitem.GetAssociatedTask(*arguments)
 
     def GetConversation(self):
         return self.taskrequestupdateitem.GetConversation()
 
     def Move(self, DestFldr=None):
-        params = [
-            DestFldr if DestFldr is not None else pythoncom.Missing,
-        ]
-        return self.taskrequestupdateitem.Move(*params)
+        arguments = com_arguments([DestFldr])
+        return self.taskrequestupdateitem.Move(*arguments)
 
     def PrintOut(self):
         self.taskrequestupdateitem.PrintOut()
@@ -17216,11 +16515,8 @@ class TaskRequestUpdateItem:
         self.taskrequestupdateitem.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        params = [
-            Path if Path is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-        ]
-        self.taskrequestupdateitem.SaveAs(*params)
+        arguments = com_arguments([Path, Type])
+        self.taskrequestupdateitem.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
         self.taskrequestupdateitem.ShowCategoriesDialog()
@@ -17467,20 +16763,15 @@ class TimelineView:
         self.timelineview.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return self.timelineview.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        return self.timelineview.Copy(*arguments)
 
     def Delete(self):
         self.timelineview.Delete()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.timelineview.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.timelineview.GoToDate(*arguments)
 
     def Reset(self):
         self.timelineview.Reset()
@@ -17580,18 +16871,12 @@ class TimeZones:
         return NameSpace(self.timezones.Session)
 
     def ConvertTime(self, SourceDateTime=None, SourceTimeZone=None, DestinationTimeZone=None):
-        params = [
-            SourceDateTime if SourceDateTime is not None else pythoncom.Missing,
-            SourceTimeZone if SourceTimeZone is not None else pythoncom.Missing,
-            DestinationTimeZone if DestinationTimeZone is not None else pythoncom.Missing,
-        ]
-        return self.timezones.ConvertTime(*params)
+        arguments = com_arguments([SourceDateTime, SourceTimeZone, DestinationTimeZone])
+        return self.timezones.ConvertTime(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.timezones.Item(*params)
+        arguments = com_arguments([Index])
+        return self.timezones.Item(*arguments)
 
 
 class ToOrFromRuleCondition:
@@ -17658,34 +16943,23 @@ class UserDefinedProperties:
         return NameSpace(self.userdefinedproperties.Session)
 
     def Add(self, Name=None, Type=None, DisplayFormat=None, Formula=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            DisplayFormat if DisplayFormat is not None else pythoncom.Missing,
-            Formula if Formula is not None else pythoncom.Missing,
-        ]
-        return self.userdefinedproperties.Add(*params)
+        arguments = com_arguments([Name, Type, DisplayFormat, Formula])
+        return self.userdefinedproperties.Add(*arguments)
 
     def Find(self, Name=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-        ]
-        return self.userdefinedproperties.Find(*params)
+        arguments = com_arguments([Name])
+        return self.userdefinedproperties.Find(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return UserDefinedProperty(self.userdefinedproperties.Item(*params))
+        arguments = com_arguments([Index])
+        return UserDefinedProperty(self.userdefinedproperties.Item(*arguments))
 
     def Refresh(self):
         self.userdefinedproperties.Refresh()
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.userdefinedproperties.Remove(*params)
+        arguments = com_arguments([Index])
+        self.userdefinedproperties.Remove(*arguments)
 
 
 class UserDefinedProperty:
@@ -17755,32 +17029,20 @@ class UserProperties:
         return NameSpace(self.userproperties.Session)
 
     def Add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Type if Type is not None else pythoncom.Missing,
-            AddToFolderFields if AddToFolderFields is not None else pythoncom.Missing,
-            DisplayFormat if DisplayFormat is not None else pythoncom.Missing,
-        ]
-        return UserProperty(self.userproperties.Add(*params))
+        arguments = com_arguments([Name, Type, AddToFolderFields, DisplayFormat])
+        return UserProperty(self.userproperties.Add(*arguments))
 
     def Find(self, Name=None, Custom=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            Custom if Custom is not None else pythoncom.Missing,
-        ]
-        return self.userproperties.Find(*params)
+        arguments = com_arguments([Name, Custom])
+        return self.userproperties.Find(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.userproperties.Item(*params)
+        arguments = com_arguments([Index])
+        return self.userproperties.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.userproperties.Remove(*params)
+        arguments = com_arguments([Index])
+        self.userproperties.Remove(*arguments)
 
 
 class UserProperty:
@@ -17925,20 +17187,15 @@ class View:
         self.view.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        self.view.Copy(*params)
+        arguments = com_arguments([Name, SaveOption])
+        self.view.Copy(*arguments)
 
     def Delete(self):
         self.view.Delete()
 
     def GoToDate(self, Date=None):
-        params = [
-            Date if Date is not None else pythoncom.Missing,
-        ]
-        self.view.GoToDate(*params)
+        arguments = com_arguments([Date])
+        self.view.GoToDate(*arguments)
 
     def Reset(self):
         self.view.Reset()
@@ -18003,29 +17260,20 @@ class ViewFields:
         return NameSpace(self.viewfields.Session)
 
     def Add(self, PropertyName=None):
-        params = [
-            PropertyName if PropertyName is not None else pythoncom.Missing,
-        ]
-        return self.viewfields.Add(*params)
+        arguments = com_arguments([PropertyName])
+        return self.viewfields.Add(*arguments)
 
     def Insert(self, PropertyName=None, Index=None):
-        params = [
-            PropertyName if PropertyName is not None else pythoncom.Missing,
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.viewfields.Insert(*params)
+        arguments = com_arguments([PropertyName, Index])
+        return self.viewfields.Insert(*arguments)
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.viewfields.Item(*params)
+        arguments = com_arguments([Index])
+        return self.viewfields.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.viewfields.Remove(*params)
+        arguments = com_arguments([Index])
+        self.viewfields.Remove(*arguments)
 
 
 class ViewFont:
@@ -18140,22 +17388,14 @@ class Views:
         return NameSpace(self.views.Session)
 
     def Add(self, Name=None, ViewType=None, SaveOption=None):
-        params = [
-            Name if Name is not None else pythoncom.Missing,
-            ViewType if ViewType is not None else pythoncom.Missing,
-            SaveOption if SaveOption is not None else pythoncom.Missing,
-        ]
-        return View(self.views.Add(*params))
+        arguments = com_arguments([Name, ViewType, SaveOption])
+        return View(self.views.Add(*arguments))
 
     def Item(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        return self.views.Item(*params)
+        arguments = com_arguments([Index])
+        return self.views.Item(*arguments)
 
     def Remove(self, Index=None):
-        params = [
-            Index if Index is not None else pythoncom.Missing,
-        ]
-        self.views.Remove(*params)
+        arguments = com_arguments([Index])
+        self.views.Remove(*arguments)
 
