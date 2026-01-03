@@ -12,7 +12,7 @@ class Account:
     def AccountType(self):
         return OlAccountType(self.account.AccountType)
 
-    # Lower case alias for AccountType
+    # Lower case aliases for AccountType
     @property
     def accounttype(self):
         return self.AccountType
@@ -25,7 +25,7 @@ class Account:
     def AutoDiscoverConnectionMode(self):
         return OlAutoDiscoverConnectionMode(self.account.AutoDiscoverConnectionMode)
 
-    # Lower case alias for AutoDiscoverConnectionMode
+    # Lower case aliases for AutoDiscoverConnectionMode
     @property
     def autodiscoverconnectionmode(self):
         return self.AutoDiscoverConnectionMode
@@ -34,7 +34,7 @@ class Account:
     def AutoDiscoverXml(self):
         return self.account.AutoDiscoverXml
 
-    # Lower case alias for AutoDiscoverXml
+    # Lower case aliases for AutoDiscoverXml
     @property
     def autodiscoverxml(self):
         return self.AutoDiscoverXml
@@ -47,7 +47,7 @@ class Account:
     def CurrentUser(self):
         return Recipient(self.account.CurrentUser)
 
-    # Lower case alias for CurrentUser
+    # Lower case aliases for CurrentUser
     @property
     def currentuser(self):
         return self.CurrentUser
@@ -56,7 +56,7 @@ class Account:
     def DeliveryStore(self):
         return Store(self.account.DeliveryStore)
 
-    # Lower case alias for DeliveryStore
+    # Lower case aliases for DeliveryStore
     @property
     def deliverystore(self):
         return self.DeliveryStore
@@ -65,7 +65,7 @@ class Account:
     def DisplayName(self):
         return Account(self.account.DisplayName)
 
-    # Lower case alias for DisplayName
+    # Lower case aliases for DisplayName
     @property
     def displayname(self):
         return self.DisplayName
@@ -74,7 +74,7 @@ class Account:
     def ExchangeConnectionMode(self):
         return OlExchangeConnectionMode(self.account.ExchangeConnectionMode)
 
-    # Lower case alias for ExchangeConnectionMode
+    # Lower case aliases for ExchangeConnectionMode
     @property
     def exchangeconnectionmode(self):
         return self.ExchangeConnectionMode
@@ -83,7 +83,7 @@ class Account:
     def ExchangeMailboxServerName(self):
         return self.account.ExchangeMailboxServerName
 
-    # Lower case alias for ExchangeMailboxServerName
+    # Lower case aliases for ExchangeMailboxServerName
     @property
     def exchangemailboxservername(self):
         return self.ExchangeMailboxServerName
@@ -92,7 +92,7 @@ class Account:
     def ExchangeMailboxServerVersion(self):
         return self.account.ExchangeMailboxServerVersion
 
-    # Lower case alias for ExchangeMailboxServerVersion
+    # Lower case aliases for ExchangeMailboxServerVersion
     @property
     def exchangemailboxserverversion(self):
         return self.ExchangeMailboxServerVersion
@@ -101,7 +101,7 @@ class Account:
     def Parent(self):
         return self.account.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -110,7 +110,7 @@ class Account:
     def Session(self):
         return NameSpace(self.account.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -119,7 +119,7 @@ class Account:
     def SmtpAddress(self):
         return Account(self.account.SmtpAddress)
 
-    # Lower case alias for SmtpAddress
+    # Lower case aliases for SmtpAddress
     @property
     def smtpaddress(self):
         return self.SmtpAddress
@@ -128,7 +128,7 @@ class Account:
     def UserName(self):
         return Account(self.account.UserName)
 
-    # Lower case alias for UserName
+    # Lower case aliases for UserName
     @property
     def username(self):
         return self.UserName
@@ -151,16 +151,15 @@ class AccountRuleCondition:
     def Account(self):
         return Account(self.accountrulecondition.Account)
 
-    # Lower case alias for Account
-    @property
-    def account(self):
-        return self.Account
-
     @Account.setter
     def Account(self, value):
         self.accountrulecondition.Account = value
 
-    # Lower case alias for Account setter
+    # Lower case aliases for Account
+    @property
+    def account(self):
+        return self.Account
+
     @account.setter
     def account(self, value):
         self.Account = value
@@ -177,7 +176,7 @@ class AccountRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.accountrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -186,16 +185,15 @@ class AccountRuleCondition:
     def Enabled(self):
         return self.accountrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.accountrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -204,7 +202,7 @@ class AccountRuleCondition:
     def Parent(self):
         return self.accountrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -213,7 +211,7 @@ class AccountRuleCondition:
     def Session(self):
         return NameSpace(self.accountrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -236,7 +234,7 @@ class Accounts:
     def Count(self):
         return self.accounts.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -245,7 +243,7 @@ class Accounts:
     def Parent(self):
         return self.accounts.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -254,7 +252,7 @@ class Accounts:
     def Session(self):
         return NameSpace(self.accounts.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -281,7 +279,7 @@ class AccountSelector:
     def Parent(self):
         return self.accountselector.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -290,7 +288,7 @@ class AccountSelector:
     def SelectedAccount(self):
         return Account(self.accountselector.SelectedAccount)
 
-    # Lower case alias for SelectedAccount
+    # Lower case aliases for SelectedAccount
     @property
     def selectedaccount(self):
         return self.SelectedAccount
@@ -299,7 +297,7 @@ class AccountSelector:
     def Session(self):
         return NameSpace(self.accountselector.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -322,16 +320,15 @@ class Action:
     def CopyLike(self):
         return OlActionCopyLike(self.action.CopyLike)
 
-    # Lower case alias for CopyLike
-    @property
-    def copylike(self):
-        return self.CopyLike
-
     @CopyLike.setter
     def CopyLike(self, value):
         self.action.CopyLike = value
 
-    # Lower case alias for CopyLike setter
+    # Lower case aliases for CopyLike
+    @property
+    def copylike(self):
+        return self.CopyLike
+
     @copylike.setter
     def copylike(self, value):
         self.CopyLike = value
@@ -340,16 +337,15 @@ class Action:
     def Enabled(self):
         return self.action.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.action.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -358,16 +354,15 @@ class Action:
     def MessageClass(self):
         return Action(self.action.MessageClass)
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.action.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -376,16 +371,15 @@ class Action:
     def Name(self):
         return self.action.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.action.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -394,7 +388,7 @@ class Action:
     def Parent(self):
         return self.action.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -403,16 +397,15 @@ class Action:
     def Prefix(self):
         return self.action.Prefix
 
-    # Lower case alias for Prefix
-    @property
-    def prefix(self):
-        return self.Prefix
-
     @Prefix.setter
     def Prefix(self, value):
         self.action.Prefix = value
 
-    # Lower case alias for Prefix setter
+    # Lower case aliases for Prefix
+    @property
+    def prefix(self):
+        return self.Prefix
+
     @prefix.setter
     def prefix(self, value):
         self.Prefix = value
@@ -421,16 +414,15 @@ class Action:
     def ReplyStyle(self):
         return OlActionReplyStyle(self.action.ReplyStyle)
 
-    # Lower case alias for ReplyStyle
-    @property
-    def replystyle(self):
-        return self.ReplyStyle
-
     @ReplyStyle.setter
     def ReplyStyle(self, value):
         self.action.ReplyStyle = value
 
-    # Lower case alias for ReplyStyle setter
+    # Lower case aliases for ReplyStyle
+    @property
+    def replystyle(self):
+        return self.ReplyStyle
+
     @replystyle.setter
     def replystyle(self, value):
         self.ReplyStyle = value
@@ -439,16 +431,15 @@ class Action:
     def ResponseStyle(self):
         return OlActionResponseStyle(self.action.ResponseStyle)
 
-    # Lower case alias for ResponseStyle
-    @property
-    def responsestyle(self):
-        return self.ResponseStyle
-
     @ResponseStyle.setter
     def ResponseStyle(self, value):
         self.action.ResponseStyle = value
 
-    # Lower case alias for ResponseStyle setter
+    # Lower case aliases for ResponseStyle
+    @property
+    def responsestyle(self):
+        return self.ResponseStyle
+
     @responsestyle.setter
     def responsestyle(self, value):
         self.ResponseStyle = value
@@ -457,7 +448,7 @@ class Action:
     def Session(self):
         return NameSpace(self.action.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -466,16 +457,15 @@ class Action:
     def ShowOn(self):
         return OlActionShowOn(self.action.ShowOn)
 
-    # Lower case alias for ShowOn
-    @property
-    def showon(self):
-        return self.ShowOn
-
     @ShowOn.setter
     def ShowOn(self, value):
         self.action.ShowOn = value
 
-    # Lower case alias for ShowOn setter
+    # Lower case aliases for ShowOn
+    @property
+    def showon(self):
+        return self.ShowOn
+
     @showon.setter
     def showon(self, value):
         self.ShowOn = value
@@ -504,7 +494,7 @@ class Actions:
     def Count(self):
         return self.actions.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -513,7 +503,7 @@ class Actions:
     def Parent(self):
         return self.actions.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -522,7 +512,7 @@ class Actions:
     def Session(self):
         return NameSpace(self.actions.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -556,7 +546,7 @@ class AddressEntries:
     def Count(self):
         return self.addressentries.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -565,7 +555,7 @@ class AddressEntries:
     def Parent(self):
         return self.addressentries.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -574,7 +564,7 @@ class AddressEntries:
     def Session(self):
         return NameSpace(self.addressentries.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -613,16 +603,15 @@ class AddressEntry:
     def Address(self):
         return AddressEntry(self.addressentry.Address)
 
-    # Lower case alias for Address
-    @property
-    def address(self):
-        return self.Address
-
     @Address.setter
     def Address(self, value):
         self.addressentry.Address = value
 
-    # Lower case alias for Address setter
+    # Lower case aliases for Address
+    @property
+    def address(self):
+        return self.Address
+
     @address.setter
     def address(self, value):
         self.Address = value
@@ -631,7 +620,7 @@ class AddressEntry:
     def AddressEntryUserType(self):
         return OlAddressEntryUserType(self.addressentry.AddressEntryUserType)
 
-    # Lower case alias for AddressEntryUserType
+    # Lower case aliases for AddressEntryUserType
     @property
     def addressentryusertype(self):
         return self.AddressEntryUserType
@@ -648,7 +637,7 @@ class AddressEntry:
     def DisplayType(self):
         return OlDisplayType(self.addressentry.DisplayType)
 
-    # Lower case alias for DisplayType
+    # Lower case aliases for DisplayType
     @property
     def displaytype(self):
         return self.DisplayType
@@ -657,7 +646,7 @@ class AddressEntry:
     def ID(self):
         return self.addressentry.ID
 
-    # Lower case alias for ID
+    # Lower case aliases for ID
     @property
     def id(self):
         return self.ID
@@ -666,16 +655,15 @@ class AddressEntry:
     def Name(self):
         return self.addressentry.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.addressentry.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -684,7 +672,7 @@ class AddressEntry:
     def Parent(self):
         return self.addressentry.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -693,7 +681,7 @@ class AddressEntry:
     def PropertyAccessor(self):
         return PropertyAccessor(self.addressentry.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -702,7 +690,7 @@ class AddressEntry:
     def Session(self):
         return NameSpace(self.addressentry.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -711,16 +699,15 @@ class AddressEntry:
     def Type(self):
         return self.addressentry.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.addressentry.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -759,7 +746,7 @@ class AddressList:
     def AddressEntries(self):
         return AddressEntries(self.addresslist.AddressEntries)
 
-    # Lower case alias for AddressEntries
+    # Lower case aliases for AddressEntries
     @property
     def addressentries(self):
         return self.AddressEntries
@@ -768,7 +755,7 @@ class AddressList:
     def AddressListType(self):
         return OlAddressListType(self.addresslist.AddressListType)
 
-    # Lower case alias for AddressListType
+    # Lower case aliases for AddressListType
     @property
     def addresslisttype(self):
         return self.AddressListType
@@ -785,7 +772,7 @@ class AddressList:
     def ID(self):
         return self.addresslist.ID
 
-    # Lower case alias for ID
+    # Lower case aliases for ID
     @property
     def id(self):
         return self.ID
@@ -794,7 +781,7 @@ class AddressList:
     def Index(self):
         return self.addresslist.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -803,7 +790,7 @@ class AddressList:
     def IsInitialAddressList(self):
         return AddressList(self.addresslist.IsInitialAddressList)
 
-    # Lower case alias for IsInitialAddressList
+    # Lower case aliases for IsInitialAddressList
     @property
     def isinitialaddresslist(self):
         return self.IsInitialAddressList
@@ -812,7 +799,7 @@ class AddressList:
     def IsReadOnly(self):
         return AddressList(self.addresslist.IsReadOnly)
 
-    # Lower case alias for IsReadOnly
+    # Lower case aliases for IsReadOnly
     @property
     def isreadonly(self):
         return self.IsReadOnly
@@ -821,7 +808,7 @@ class AddressList:
     def Name(self):
         return self.addresslist.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -830,7 +817,7 @@ class AddressList:
     def Parent(self):
         return self.addresslist.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -839,7 +826,7 @@ class AddressList:
     def PropertyAccessor(self):
         return PropertyAccessor(self.addresslist.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -848,7 +835,7 @@ class AddressList:
     def ResolutionOrder(self):
         return AddressList(self.addresslist.ResolutionOrder)
 
-    # Lower case alias for ResolutionOrder
+    # Lower case aliases for ResolutionOrder
     @property
     def resolutionorder(self):
         return self.ResolutionOrder
@@ -857,7 +844,7 @@ class AddressList:
     def Session(self):
         return NameSpace(self.addresslist.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -883,7 +870,7 @@ class AddressLists:
     def Count(self):
         return self.addresslists.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -892,7 +879,7 @@ class AddressLists:
     def Parent(self):
         return self.addresslists.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -901,7 +888,7 @@ class AddressLists:
     def Session(self):
         return NameSpace(self.addresslists.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -920,16 +907,15 @@ class AddressRuleCondition:
     def Address(self):
         return self.addressrulecondition.Address
 
-    # Lower case alias for Address
-    @property
-    def address(self):
-        return self.Address
-
     @Address.setter
     def Address(self, value):
         self.addressrulecondition.Address = value
 
-    # Lower case alias for Address setter
+    # Lower case aliases for Address
+    @property
+    def address(self):
+        return self.Address
+
     @address.setter
     def address(self, value):
         self.Address = value
@@ -946,7 +932,7 @@ class AddressRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.addressrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -955,16 +941,15 @@ class AddressRuleCondition:
     def Enabled(self):
         return self.addressrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.addressrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -973,7 +958,7 @@ class AddressRuleCondition:
     def Parent(self):
         return self.addressrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -982,7 +967,7 @@ class AddressRuleCondition:
     def Session(self):
         return NameSpace(self.addressrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -1005,7 +990,7 @@ class Application:
     def Assistance(self):
         return self.application.Assistance
 
-    # Lower case alias for Assistance
+    # Lower case aliases for Assistance
     @property
     def assistance(self):
         return self.Assistance
@@ -1018,7 +1003,7 @@ class Application:
     def COMAddIns(self):
         return self.application.COMAddIns
 
-    # Lower case alias for COMAddIns
+    # Lower case aliases for COMAddIns
     @property
     def comaddins(self):
         return self.COMAddIns
@@ -1027,7 +1012,7 @@ class Application:
     def DefaultProfileName(self):
         return self.application.DefaultProfileName
 
-    # Lower case alias for DefaultProfileName
+    # Lower case aliases for DefaultProfileName
     @property
     def defaultprofilename(self):
         return self.DefaultProfileName
@@ -1036,7 +1021,7 @@ class Application:
     def Explorers(self):
         return Explorers(self.application.Explorers)
 
-    # Lower case alias for Explorers
+    # Lower case aliases for Explorers
     @property
     def explorers(self):
         return self.Explorers
@@ -1045,7 +1030,7 @@ class Application:
     def Inspectors(self):
         return Inspectors(self.application.Inspectors)
 
-    # Lower case alias for Inspectors
+    # Lower case aliases for Inspectors
     @property
     def inspectors(self):
         return self.Inspectors
@@ -1054,7 +1039,7 @@ class Application:
     def IsTrusted(self):
         return self.application.IsTrusted
 
-    # Lower case alias for IsTrusted
+    # Lower case aliases for IsTrusted
     @property
     def istrusted(self):
         return self.IsTrusted
@@ -1063,7 +1048,7 @@ class Application:
     def LanguageSettings(self):
         return self.application.LanguageSettings
 
-    # Lower case alias for LanguageSettings
+    # Lower case aliases for LanguageSettings
     @property
     def languagesettings(self):
         return self.LanguageSettings
@@ -1072,7 +1057,7 @@ class Application:
     def Name(self):
         return self.application.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -1081,7 +1066,7 @@ class Application:
     def Parent(self):
         return self.application.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -1090,7 +1075,7 @@ class Application:
     def PickerDialog(self):
         return self.application.PickerDialog
 
-    # Lower case alias for PickerDialog
+    # Lower case aliases for PickerDialog
     @property
     def pickerdialog(self):
         return self.PickerDialog
@@ -1099,7 +1084,7 @@ class Application:
     def ProductCode(self):
         return self.application.ProductCode
 
-    # Lower case alias for ProductCode
+    # Lower case aliases for ProductCode
     @property
     def productcode(self):
         return self.ProductCode
@@ -1108,7 +1093,7 @@ class Application:
     def Reminders(self):
         return Reminders(self.application.Reminders)
 
-    # Lower case alias for Reminders
+    # Lower case aliases for Reminders
     @property
     def reminders(self):
         return self.Reminders
@@ -1117,7 +1102,7 @@ class Application:
     def Session(self):
         return NameSpace(self.application.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -1126,7 +1111,7 @@ class Application:
     def TimeZones(self):
         return TimeZones(self.application.TimeZones)
 
-    # Lower case alias for TimeZones
+    # Lower case aliases for TimeZones
     @property
     def timezones(self):
         return self.TimeZones
@@ -1135,16 +1120,15 @@ class Application:
     def Version(self):
         return self.application.Version
 
-    # Lower case alias for Version
-    @property
-    def version(self):
-        return self.Version
-
     @Version.setter
     def Version(self, value):
         self.application.Version = value
 
-    # Lower case alias for Version setter
+    # Lower case aliases for Version
+    @property
+    def version(self):
+        return self.Version
+
     @version.setter
     def version(self, value):
         self.Version = value
@@ -1207,7 +1191,7 @@ class AppointmentItem:
     def Actions(self):
         return Actions(self.appointmentitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -1216,16 +1200,15 @@ class AppointmentItem:
     def AllDayEvent(self):
         return self.appointmentitem.AllDayEvent
 
-    # Lower case alias for AllDayEvent
-    @property
-    def alldayevent(self):
-        return self.AllDayEvent
-
     @AllDayEvent.setter
     def AllDayEvent(self, value):
         self.appointmentitem.AllDayEvent = value
 
-    # Lower case alias for AllDayEvent setter
+    # Lower case aliases for AllDayEvent
+    @property
+    def alldayevent(self):
+        return self.AllDayEvent
+
     @alldayevent.setter
     def alldayevent(self, value):
         self.AllDayEvent = value
@@ -1238,7 +1221,7 @@ class AppointmentItem:
     def Attachments(self):
         return Attachments(self.appointmentitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -1247,7 +1230,7 @@ class AppointmentItem:
     def AutoResolvedWinner(self):
         return self.appointmentitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -1256,16 +1239,15 @@ class AppointmentItem:
     def BillingInformation(self):
         return self.appointmentitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.appointmentitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -1274,16 +1256,15 @@ class AppointmentItem:
     def Body(self):
         return self.appointmentitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.appointmentitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -1292,16 +1273,15 @@ class AppointmentItem:
     def BusyStatus(self):
         return OlBusyStatus(self.appointmentitem.BusyStatus)
 
-    # Lower case alias for BusyStatus
-    @property
-    def busystatus(self):
-        return self.BusyStatus
-
     @BusyStatus.setter
     def BusyStatus(self, value):
         self.appointmentitem.BusyStatus = value
 
-    # Lower case alias for BusyStatus setter
+    # Lower case aliases for BusyStatus
+    @property
+    def busystatus(self):
+        return self.BusyStatus
+
     @busystatus.setter
     def busystatus(self, value):
         self.BusyStatus = value
@@ -1310,16 +1290,15 @@ class AppointmentItem:
     def Categories(self):
         return self.appointmentitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.appointmentitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -1332,16 +1311,15 @@ class AppointmentItem:
     def Companies(self):
         return self.appointmentitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.appointmentitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -1350,7 +1328,7 @@ class AppointmentItem:
     def Conflicts(self):
         return self.appointmentitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -1359,7 +1337,7 @@ class AppointmentItem:
     def ConversationID(self):
         return Conversation(self.appointmentitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -1368,7 +1346,7 @@ class AppointmentItem:
     def ConversationIndex(self):
         return self.appointmentitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -1377,7 +1355,7 @@ class AppointmentItem:
     def ConversationTopic(self):
         return self.appointmentitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -1386,7 +1364,7 @@ class AppointmentItem:
     def CreationTime(self):
         return self.appointmentitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -1395,7 +1373,7 @@ class AppointmentItem:
     def DownloadState(self):
         return OlDownloadState(self.appointmentitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -1404,16 +1382,15 @@ class AppointmentItem:
     def Duration(self):
         return AppointmentItem(self.appointmentitem.Duration)
 
-    # Lower case alias for Duration
-    @property
-    def duration(self):
-        return self.Duration
-
     @Duration.setter
     def Duration(self, value):
         self.appointmentitem.Duration = value
 
-    # Lower case alias for Duration setter
+    # Lower case aliases for Duration
+    @property
+    def duration(self):
+        return self.Duration
+
     @duration.setter
     def duration(self, value):
         self.Duration = value
@@ -1422,16 +1399,15 @@ class AppointmentItem:
     def End(self):
         return AppointmentItem(self.appointmentitem.End)
 
-    # Lower case alias for End
-    @property
-    def end(self):
-        return self.End
-
     @End.setter
     def End(self, value):
         self.appointmentitem.End = value
 
-    # Lower case alias for End setter
+    # Lower case aliases for End
+    @property
+    def end(self):
+        return self.End
+
     @end.setter
     def end(self, value):
         self.End = value
@@ -1440,16 +1416,15 @@ class AppointmentItem:
     def EndInEndTimeZone(self):
         return AppointmentItem.EndTimeZone(self.appointmentitem.EndInEndTimeZone)
 
-    # Lower case alias for EndInEndTimeZone
-    @property
-    def endinendtimezone(self):
-        return self.EndInEndTimeZone
-
     @EndInEndTimeZone.setter
     def EndInEndTimeZone(self, value):
         self.appointmentitem.EndInEndTimeZone = value
 
-    # Lower case alias for EndInEndTimeZone setter
+    # Lower case aliases for EndInEndTimeZone
+    @property
+    def endinendtimezone(self):
+        return self.EndInEndTimeZone
+
     @endinendtimezone.setter
     def endinendtimezone(self, value):
         self.EndInEndTimeZone = value
@@ -1458,16 +1433,15 @@ class AppointmentItem:
     def EndTimeZone(self):
         return TimeZone(self.appointmentitem.EndTimeZone)
 
-    # Lower case alias for EndTimeZone
-    @property
-    def endtimezone(self):
-        return self.EndTimeZone
-
     @EndTimeZone.setter
     def EndTimeZone(self, value):
         self.appointmentitem.EndTimeZone = value
 
-    # Lower case alias for EndTimeZone setter
+    # Lower case aliases for EndTimeZone
+    @property
+    def endtimezone(self):
+        return self.EndTimeZone
+
     @endtimezone.setter
     def endtimezone(self, value):
         self.EndTimeZone = value
@@ -1476,16 +1450,15 @@ class AppointmentItem:
     def EndUTC(self):
         return self.appointmentitem.EndUTC
 
-    # Lower case alias for EndUTC
-    @property
-    def endutc(self):
-        return self.EndUTC
-
     @EndUTC.setter
     def EndUTC(self, value):
         self.appointmentitem.EndUTC = value
 
-    # Lower case alias for EndUTC setter
+    # Lower case aliases for EndUTC
+    @property
+    def endutc(self):
+        return self.EndUTC
+
     @endutc.setter
     def endutc(self, value):
         self.EndUTC = value
@@ -1494,7 +1467,7 @@ class AppointmentItem:
     def EntryID(self):
         return self.appointmentitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -1503,16 +1476,15 @@ class AppointmentItem:
     def ForceUpdateToAllAttendees(self):
         return self.appointmentitem.ForceUpdateToAllAttendees
 
-    # Lower case alias for ForceUpdateToAllAttendees
-    @property
-    def forceupdatetoallattendees(self):
-        return self.ForceUpdateToAllAttendees
-
     @ForceUpdateToAllAttendees.setter
     def ForceUpdateToAllAttendees(self, value):
         self.appointmentitem.ForceUpdateToAllAttendees = value
 
-    # Lower case alias for ForceUpdateToAllAttendees setter
+    # Lower case aliases for ForceUpdateToAllAttendees
+    @property
+    def forceupdatetoallattendees(self):
+        return self.ForceUpdateToAllAttendees
+
     @forceupdatetoallattendees.setter
     def forceupdatetoallattendees(self, value):
         self.ForceUpdateToAllAttendees = value
@@ -1521,7 +1493,7 @@ class AppointmentItem:
     def FormDescription(self):
         return FormDescription(self.appointmentitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -1530,7 +1502,7 @@ class AppointmentItem:
     def GetInspector(self):
         return Inspector(self.appointmentitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -1539,7 +1511,7 @@ class AppointmentItem:
     def GlobalAppointmentID(self):
         return AppointmentItem(self.appointmentitem.GlobalAppointmentID)
 
-    # Lower case alias for GlobalAppointmentID
+    # Lower case aliases for GlobalAppointmentID
     @property
     def globalappointmentid(self):
         return self.GlobalAppointmentID
@@ -1548,16 +1520,15 @@ class AppointmentItem:
     def Importance(self):
         return OlImportance(self.appointmentitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.appointmentitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -1566,16 +1537,15 @@ class AppointmentItem:
     def InternetCodepage(self):
         return self.appointmentitem.InternetCodepage
 
-    # Lower case alias for InternetCodepage
-    @property
-    def internetcodepage(self):
-        return self.InternetCodepage
-
     @InternetCodepage.setter
     def InternetCodepage(self, value):
         self.appointmentitem.InternetCodepage = value
 
-    # Lower case alias for InternetCodepage setter
+    # Lower case aliases for InternetCodepage
+    @property
+    def internetcodepage(self):
+        return self.InternetCodepage
+
     @internetcodepage.setter
     def internetcodepage(self, value):
         self.InternetCodepage = value
@@ -1584,7 +1554,7 @@ class AppointmentItem:
     def IsConflict(self):
         return self.appointmentitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -1593,7 +1563,7 @@ class AppointmentItem:
     def IsRecurring(self):
         return self.appointmentitem.IsRecurring
 
-    # Lower case alias for IsRecurring
+    # Lower case aliases for IsRecurring
     @property
     def isrecurring(self):
         return self.IsRecurring
@@ -1602,7 +1572,7 @@ class AppointmentItem:
     def ItemProperties(self):
         return ItemProperties(self.appointmentitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -1611,7 +1581,7 @@ class AppointmentItem:
     def LastModificationTime(self):
         return self.appointmentitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -1620,16 +1590,15 @@ class AppointmentItem:
     def Location(self):
         return self.appointmentitem.Location
 
-    # Lower case alias for Location
-    @property
-    def location(self):
-        return self.Location
-
     @Location.setter
     def Location(self, value):
         self.appointmentitem.Location = value
 
-    # Lower case alias for Location setter
+    # Lower case aliases for Location
+    @property
+    def location(self):
+        return self.Location
+
     @location.setter
     def location(self, value):
         self.Location = value
@@ -1638,16 +1607,15 @@ class AppointmentItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.appointmentitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.appointmentitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -1656,16 +1624,15 @@ class AppointmentItem:
     def MeetingStatus(self):
         return OlMeetingStatus(self.appointmentitem.MeetingStatus)
 
-    # Lower case alias for MeetingStatus
-    @property
-    def meetingstatus(self):
-        return self.MeetingStatus
-
     @MeetingStatus.setter
     def MeetingStatus(self, value):
         self.appointmentitem.MeetingStatus = value
 
-    # Lower case alias for MeetingStatus setter
+    # Lower case aliases for MeetingStatus
+    @property
+    def meetingstatus(self):
+        return self.MeetingStatus
+
     @meetingstatus.setter
     def meetingstatus(self, value):
         self.MeetingStatus = value
@@ -1674,7 +1641,7 @@ class AppointmentItem:
     def MeetingWorkspaceURL(self):
         return self.appointmentitem.MeetingWorkspaceURL
 
-    # Lower case alias for MeetingWorkspaceURL
+    # Lower case aliases for MeetingWorkspaceURL
     @property
     def meetingworkspaceurl(self):
         return self.MeetingWorkspaceURL
@@ -1683,16 +1650,15 @@ class AppointmentItem:
     def MessageClass(self):
         return self.appointmentitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.appointmentitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -1701,16 +1667,15 @@ class AppointmentItem:
     def Mileage(self):
         return self.appointmentitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.appointmentitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -1719,16 +1684,15 @@ class AppointmentItem:
     def NoAging(self):
         return self.appointmentitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.appointmentitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -1737,16 +1701,15 @@ class AppointmentItem:
     def OptionalAttendees(self):
         return self.appointmentitem.OptionalAttendees
 
-    # Lower case alias for OptionalAttendees
-    @property
-    def optionalattendees(self):
-        return self.OptionalAttendees
-
     @OptionalAttendees.setter
     def OptionalAttendees(self, value):
         self.appointmentitem.OptionalAttendees = value
 
-    # Lower case alias for OptionalAttendees setter
+    # Lower case aliases for OptionalAttendees
+    @property
+    def optionalattendees(self):
+        return self.OptionalAttendees
+
     @optionalattendees.setter
     def optionalattendees(self, value):
         self.OptionalAttendees = value
@@ -1755,7 +1718,7 @@ class AppointmentItem:
     def Organizer(self):
         return self.appointmentitem.Organizer
 
-    # Lower case alias for Organizer
+    # Lower case aliases for Organizer
     @property
     def organizer(self):
         return self.Organizer
@@ -1764,7 +1727,7 @@ class AppointmentItem:
     def OutlookInternalVersion(self):
         return self.appointmentitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -1773,7 +1736,7 @@ class AppointmentItem:
     def OutlookVersion(self):
         return self.appointmentitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -1782,7 +1745,7 @@ class AppointmentItem:
     def Parent(self):
         return self.appointmentitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -1791,7 +1754,7 @@ class AppointmentItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.appointmentitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -1800,7 +1763,7 @@ class AppointmentItem:
     def Recipients(self):
         return Recipients(self.appointmentitem.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -1809,7 +1772,7 @@ class AppointmentItem:
     def RecurrenceState(self):
         return OlRecurrenceState(self.appointmentitem.RecurrenceState)
 
-    # Lower case alias for RecurrenceState
+    # Lower case aliases for RecurrenceState
     @property
     def recurrencestate(self):
         return self.RecurrenceState
@@ -1818,16 +1781,15 @@ class AppointmentItem:
     def ReminderMinutesBeforeStart(self):
         return self.appointmentitem.ReminderMinutesBeforeStart
 
-    # Lower case alias for ReminderMinutesBeforeStart
-    @property
-    def reminderminutesbeforestart(self):
-        return self.ReminderMinutesBeforeStart
-
     @ReminderMinutesBeforeStart.setter
     def ReminderMinutesBeforeStart(self, value):
         self.appointmentitem.ReminderMinutesBeforeStart = value
 
-    # Lower case alias for ReminderMinutesBeforeStart setter
+    # Lower case aliases for ReminderMinutesBeforeStart
+    @property
+    def reminderminutesbeforestart(self):
+        return self.ReminderMinutesBeforeStart
+
     @reminderminutesbeforestart.setter
     def reminderminutesbeforestart(self, value):
         self.ReminderMinutesBeforeStart = value
@@ -1836,16 +1798,15 @@ class AppointmentItem:
     def ReminderOverrideDefault(self):
         return self.appointmentitem.ReminderOverrideDefault
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.appointmentitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -1854,16 +1815,15 @@ class AppointmentItem:
     def ReminderPlaySound(self):
         return self.appointmentitem.ReminderPlaySound
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.appointmentitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -1872,16 +1832,15 @@ class AppointmentItem:
     def ReminderSet(self):
         return self.appointmentitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.appointmentitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -1890,16 +1849,15 @@ class AppointmentItem:
     def ReminderSoundFile(self):
         return self.appointmentitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.appointmentitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -1908,16 +1866,15 @@ class AppointmentItem:
     def ReplyTime(self):
         return self.appointmentitem.ReplyTime
 
-    # Lower case alias for ReplyTime
-    @property
-    def replytime(self):
-        return self.ReplyTime
-
     @ReplyTime.setter
     def ReplyTime(self, value):
         self.appointmentitem.ReplyTime = value
 
-    # Lower case alias for ReplyTime setter
+    # Lower case aliases for ReplyTime
+    @property
+    def replytime(self):
+        return self.ReplyTime
+
     @replytime.setter
     def replytime(self, value):
         self.ReplyTime = value
@@ -1926,16 +1883,15 @@ class AppointmentItem:
     def RequiredAttendees(self):
         return self.appointmentitem.RequiredAttendees
 
-    # Lower case alias for RequiredAttendees
-    @property
-    def requiredattendees(self):
-        return self.RequiredAttendees
-
     @RequiredAttendees.setter
     def RequiredAttendees(self, value):
         self.appointmentitem.RequiredAttendees = value
 
-    # Lower case alias for RequiredAttendees setter
+    # Lower case aliases for RequiredAttendees
+    @property
+    def requiredattendees(self):
+        return self.RequiredAttendees
+
     @requiredattendees.setter
     def requiredattendees(self, value):
         self.RequiredAttendees = value
@@ -1944,16 +1900,15 @@ class AppointmentItem:
     def Resources(self):
         return self.appointmentitem.Resources
 
-    # Lower case alias for Resources
-    @property
-    def resources(self):
-        return self.Resources
-
     @Resources.setter
     def Resources(self, value):
         self.appointmentitem.Resources = value
 
-    # Lower case alias for Resources setter
+    # Lower case aliases for Resources
+    @property
+    def resources(self):
+        return self.Resources
+
     @resources.setter
     def resources(self, value):
         self.Resources = value
@@ -1962,16 +1917,15 @@ class AppointmentItem:
     def ResponseRequested(self):
         return self.appointmentitem.ResponseRequested
 
-    # Lower case alias for ResponseRequested
-    @property
-    def responserequested(self):
-        return self.ResponseRequested
-
     @ResponseRequested.setter
     def ResponseRequested(self, value):
         self.appointmentitem.ResponseRequested = value
 
-    # Lower case alias for ResponseRequested setter
+    # Lower case aliases for ResponseRequested
+    @property
+    def responserequested(self):
+        return self.ResponseRequested
+
     @responserequested.setter
     def responserequested(self, value):
         self.ResponseRequested = value
@@ -1980,7 +1934,7 @@ class AppointmentItem:
     def ResponseStatus(self):
         return OlResponseStatus(self.appointmentitem.ResponseStatus)
 
-    # Lower case alias for ResponseStatus
+    # Lower case aliases for ResponseStatus
     @property
     def responsestatus(self):
         return self.ResponseStatus
@@ -1989,16 +1943,15 @@ class AppointmentItem:
     def RTFBody(self):
         return self.appointmentitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.appointmentitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -2007,7 +1960,7 @@ class AppointmentItem:
     def Saved(self):
         return self.appointmentitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -2016,16 +1969,15 @@ class AppointmentItem:
     def SendUsingAccount(self):
         return Account(self.appointmentitem.SendUsingAccount)
 
-    # Lower case alias for SendUsingAccount
-    @property
-    def sendusingaccount(self):
-        return self.SendUsingAccount
-
     @SendUsingAccount.setter
     def SendUsingAccount(self, value):
         self.appointmentitem.SendUsingAccount = value
 
-    # Lower case alias for SendUsingAccount setter
+    # Lower case aliases for SendUsingAccount
+    @property
+    def sendusingaccount(self):
+        return self.SendUsingAccount
+
     @sendusingaccount.setter
     def sendusingaccount(self, value):
         self.SendUsingAccount = value
@@ -2034,16 +1986,15 @@ class AppointmentItem:
     def Sensitivity(self):
         return OlSensitivity(self.appointmentitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.appointmentitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -2052,7 +2003,7 @@ class AppointmentItem:
     def Session(self):
         return NameSpace(self.appointmentitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2061,7 +2012,7 @@ class AppointmentItem:
     def Size(self):
         return self.appointmentitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -2070,16 +2021,15 @@ class AppointmentItem:
     def Start(self):
         return self.appointmentitem.Start
 
-    # Lower case alias for Start
-    @property
-    def start(self):
-        return self.Start
-
     @Start.setter
     def Start(self, value):
         self.appointmentitem.Start = value
 
-    # Lower case alias for Start setter
+    # Lower case aliases for Start
+    @property
+    def start(self):
+        return self.Start
+
     @start.setter
     def start(self, value):
         self.Start = value
@@ -2088,16 +2038,15 @@ class AppointmentItem:
     def StartInStartTimeZone(self):
         return AppointmentItem.StartTimeZone(self.appointmentitem.StartInStartTimeZone)
 
-    # Lower case alias for StartInStartTimeZone
-    @property
-    def startinstarttimezone(self):
-        return self.StartInStartTimeZone
-
     @StartInStartTimeZone.setter
     def StartInStartTimeZone(self, value):
         self.appointmentitem.StartInStartTimeZone = value
 
-    # Lower case alias for StartInStartTimeZone setter
+    # Lower case aliases for StartInStartTimeZone
+    @property
+    def startinstarttimezone(self):
+        return self.StartInStartTimeZone
+
     @startinstarttimezone.setter
     def startinstarttimezone(self, value):
         self.StartInStartTimeZone = value
@@ -2106,16 +2055,15 @@ class AppointmentItem:
     def StartTimeZone(self):
         return TimeZone(self.appointmentitem.StartTimeZone)
 
-    # Lower case alias for StartTimeZone
-    @property
-    def starttimezone(self):
-        return self.StartTimeZone
-
     @StartTimeZone.setter
     def StartTimeZone(self, value):
         self.appointmentitem.StartTimeZone = value
 
-    # Lower case alias for StartTimeZone setter
+    # Lower case aliases for StartTimeZone
+    @property
+    def starttimezone(self):
+        return self.StartTimeZone
+
     @starttimezone.setter
     def starttimezone(self, value):
         self.StartTimeZone = value
@@ -2124,16 +2072,15 @@ class AppointmentItem:
     def StartUTC(self):
         return self.appointmentitem.StartUTC
 
-    # Lower case alias for StartUTC
-    @property
-    def startutc(self):
-        return self.StartUTC
-
     @StartUTC.setter
     def StartUTC(self, value):
         self.appointmentitem.StartUTC = value
 
-    # Lower case alias for StartUTC setter
+    # Lower case aliases for StartUTC
+    @property
+    def startutc(self):
+        return self.StartUTC
+
     @startutc.setter
     def startutc(self, value):
         self.StartUTC = value
@@ -2142,16 +2089,15 @@ class AppointmentItem:
     def Subject(self):
         return self.appointmentitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.appointmentitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -2160,16 +2106,15 @@ class AppointmentItem:
     def UnRead(self):
         return self.appointmentitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.appointmentitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -2178,7 +2123,7 @@ class AppointmentItem:
     def UserProperties(self):
         return UserProperties(self.appointmentitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -2250,7 +2195,7 @@ class AssignToCategoryRuleAction:
     def ActionType(self):
         return OlRuleActionType(self.assigntocategoryruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -2263,16 +2208,15 @@ class AssignToCategoryRuleAction:
     def Categories(self):
         return self.assigntocategoryruleaction.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.assigntocategoryruleaction.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -2285,16 +2229,15 @@ class AssignToCategoryRuleAction:
     def Enabled(self):
         return self.assigntocategoryruleaction.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.assigntocategoryruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -2303,7 +2246,7 @@ class AssignToCategoryRuleAction:
     def Parent(self):
         return self.assigntocategoryruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2312,7 +2255,7 @@ class AssignToCategoryRuleAction:
     def Session(self):
         return NameSpace(self.assigntocategoryruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2331,7 +2274,7 @@ class Attachment:
     def BlockLevel(self):
         return OlAttachmentBlockLevel(self.attachment.BlockLevel)
 
-    # Lower case alias for BlockLevel
+    # Lower case aliases for BlockLevel
     @property
     def blocklevel(self):
         return self.BlockLevel
@@ -2344,16 +2287,15 @@ class Attachment:
     def DisplayName(self):
         return self.attachment.DisplayName
 
-    # Lower case alias for DisplayName
-    @property
-    def displayname(self):
-        return self.DisplayName
-
     @DisplayName.setter
     def DisplayName(self, value):
         self.attachment.DisplayName = value
 
-    # Lower case alias for DisplayName setter
+    # Lower case aliases for DisplayName
+    @property
+    def displayname(self):
+        return self.DisplayName
+
     @displayname.setter
     def displayname(self, value):
         self.DisplayName = value
@@ -2362,7 +2304,7 @@ class Attachment:
     def FileName(self):
         return self.attachment.FileName
 
-    # Lower case alias for FileName
+    # Lower case aliases for FileName
     @property
     def filename(self):
         return self.FileName
@@ -2371,7 +2313,7 @@ class Attachment:
     def Index(self):
         return self.attachment.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -2380,7 +2322,7 @@ class Attachment:
     def Parent(self):
         return self.attachment.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2389,7 +2331,7 @@ class Attachment:
     def PathName(self):
         return self.attachment.PathName
 
-    # Lower case alias for PathName
+    # Lower case aliases for PathName
     @property
     def pathname(self):
         return self.PathName
@@ -2398,16 +2340,15 @@ class Attachment:
     def Position(self):
         return self.attachment.Position
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.attachment.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -2416,7 +2357,7 @@ class Attachment:
     def PropertyAccessor(self):
         return PropertyAccessor(self.attachment.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -2425,7 +2366,7 @@ class Attachment:
     def Session(self):
         return NameSpace(self.attachment.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2434,7 +2375,7 @@ class Attachment:
     def Size(self):
         return self.attachment.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -2443,7 +2384,7 @@ class Attachment:
     def Type(self):
         return OlAttachmentType(self.attachment.Type)
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -2476,7 +2417,7 @@ class Attachments:
     def Count(self):
         return self.attachments.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -2485,7 +2426,7 @@ class Attachments:
     def Parent(self):
         return self.attachments.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2494,7 +2435,7 @@ class Attachments:
     def Session(self):
         return NameSpace(self.attachments.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2529,7 +2470,7 @@ class AttachmentSelection:
     def Count(self):
         return self.attachmentselection.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -2538,7 +2479,7 @@ class AttachmentSelection:
     def Location(self):
         return OlSelectionLocation(self.attachmentselection.Location)
 
-    # Lower case alias for Location
+    # Lower case aliases for Location
     @property
     def location(self):
         return self.Location
@@ -2547,7 +2488,7 @@ class AttachmentSelection:
     def Parent(self):
         return self.attachmentselection.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2556,7 +2497,7 @@ class AttachmentSelection:
     def Session(self):
         return NameSpace(self.attachmentselection.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2587,16 +2528,15 @@ class AutoFormatRule:
     def Enabled(self):
         return AutoFormatRule(self.autoformatrule.Enabled)
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.autoformatrule.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -2605,16 +2545,15 @@ class AutoFormatRule:
     def Filter(self):
         return self.autoformatrule.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.autoformatrule.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -2623,7 +2562,7 @@ class AutoFormatRule:
     def Font(self):
         return ViewFont(self.autoformatrule.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -2632,16 +2571,15 @@ class AutoFormatRule:
     def Name(self):
         return self.autoformatrule.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.autoformatrule.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -2650,7 +2588,7 @@ class AutoFormatRule:
     def Parent(self):
         return self.autoformatrule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2659,7 +2597,7 @@ class AutoFormatRule:
     def Session(self):
         return NameSpace(self.autoformatrule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2668,7 +2606,7 @@ class AutoFormatRule:
     def Standard(self):
         return AutoFormatRule(self.autoformatrule.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -2691,7 +2629,7 @@ class AutoFormatRules:
     def Count(self):
         return AutoFormatRule(self.autoformatrules.Count)
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -2700,7 +2638,7 @@ class AutoFormatRules:
     def Parent(self):
         return self.autoformatrules.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2709,7 +2647,7 @@ class AutoFormatRules:
     def Session(self):
         return NameSpace(self.autoformatrules.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2750,16 +2688,15 @@ class BusinessCardView:
     def CardSize(self):
         return self.businesscardview.CardSize
 
-    # Lower case alias for CardSize
-    @property
-    def cardsize(self):
-        return self.CardSize
-
     @CardSize.setter
     def CardSize(self, value):
         self.businesscardview.CardSize = value
 
-    # Lower case alias for CardSize setter
+    # Lower case aliases for CardSize
+    @property
+    def cardsize(self):
+        return self.CardSize
+
     @cardsize.setter
     def cardsize(self, value):
         self.CardSize = value
@@ -2772,16 +2709,15 @@ class BusinessCardView:
     def Filter(self):
         return self.businesscardview.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.businesscardview.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -2790,7 +2726,7 @@ class BusinessCardView:
     def HeadingsFont(self):
         return ViewFont(self.businesscardview.HeadingsFont)
 
-    # Lower case alias for HeadingsFont
+    # Lower case aliases for HeadingsFont
     @property
     def headingsfont(self):
         return self.HeadingsFont
@@ -2799,16 +2735,15 @@ class BusinessCardView:
     def Language(self):
         return self.businesscardview.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.businesscardview.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -2817,16 +2752,15 @@ class BusinessCardView:
     def LockUserChanges(self):
         return self.businesscardview.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.businesscardview.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -2835,16 +2769,15 @@ class BusinessCardView:
     def Name(self):
         return self.businesscardview.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.businesscardview.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -2853,7 +2786,7 @@ class BusinessCardView:
     def Parent(self):
         return self.businesscardview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2862,7 +2795,7 @@ class BusinessCardView:
     def SaveOption(self):
         return OlViewSaveOption(self.businesscardview.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -2871,7 +2804,7 @@ class BusinessCardView:
     def Session(self):
         return NameSpace(self.businesscardview.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -2880,7 +2813,7 @@ class BusinessCardView:
     def SortFields(self):
         return OrderFields(self.businesscardview.SortFields)
 
-    # Lower case alias for SortFields
+    # Lower case aliases for SortFields
     @property
     def sortfields(self):
         return self.SortFields
@@ -2889,7 +2822,7 @@ class BusinessCardView:
     def Standard(self):
         return BusinessCardView(self.businesscardview.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -2898,7 +2831,7 @@ class BusinessCardView:
     def ViewType(self):
         return OlViewType(self.businesscardview.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -2907,16 +2840,15 @@ class BusinessCardView:
     def XML(self):
         return self.businesscardview.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.businesscardview.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -2959,7 +2891,7 @@ class CalendarModule:
     def Name(self):
         return CalendarModule(self.calendarmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -2968,7 +2900,7 @@ class CalendarModule:
     def NavigationGroups(self):
         return NavigationGroups(self.calendarmodule.NavigationGroups)
 
-    # Lower case alias for NavigationGroups
+    # Lower case aliases for NavigationGroups
     @property
     def navigationgroups(self):
         return self.NavigationGroups
@@ -2977,7 +2909,7 @@ class CalendarModule:
     def NavigationModuleType(self):
         return OlNavigationModuleType(self.calendarmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -2986,7 +2918,7 @@ class CalendarModule:
     def Parent(self):
         return self.calendarmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2995,16 +2927,15 @@ class CalendarModule:
     def Position(self):
         return CalendarModule(self.calendarmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.calendarmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -3013,7 +2944,7 @@ class CalendarModule:
     def Session(self):
         return NameSpace(self.calendarmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -3022,16 +2953,15 @@ class CalendarModule:
     def Visible(self):
         return CalendarModule(self.calendarmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.calendarmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -3050,16 +2980,15 @@ class CalendarSharing:
     def CalendarDetail(self):
         return OlCalendarDetail(self.calendarsharing.CalendarDetail)
 
-    # Lower case alias for CalendarDetail
-    @property
-    def calendardetail(self):
-        return self.CalendarDetail
-
     @CalendarDetail.setter
     def CalendarDetail(self, value):
         self.calendarsharing.CalendarDetail = value
 
-    # Lower case alias for CalendarDetail setter
+    # Lower case aliases for CalendarDetail
+    @property
+    def calendardetail(self):
+        return self.CalendarDetail
+
     @calendardetail.setter
     def calendardetail(self, value):
         self.CalendarDetail = value
@@ -3072,16 +3001,15 @@ class CalendarSharing:
     def EndDate(self):
         return CalendarSharing(self.calendarsharing.EndDate)
 
-    # Lower case alias for EndDate
-    @property
-    def enddate(self):
-        return self.EndDate
-
     @EndDate.setter
     def EndDate(self, value):
         self.calendarsharing.EndDate = value
 
-    # Lower case alias for EndDate setter
+    # Lower case aliases for EndDate
+    @property
+    def enddate(self):
+        return self.EndDate
+
     @enddate.setter
     def enddate(self, value):
         self.EndDate = value
@@ -3090,7 +3018,7 @@ class CalendarSharing:
     def Folder(self):
         return Folder(self.calendarsharing.Folder)
 
-    # Lower case alias for Folder
+    # Lower case aliases for Folder
     @property
     def folder(self):
         return self.Folder
@@ -3099,16 +3027,15 @@ class CalendarSharing:
     def IncludeAttachments(self):
         return self.calendarsharing.IncludeAttachments
 
-    # Lower case alias for IncludeAttachments
-    @property
-    def includeattachments(self):
-        return self.IncludeAttachments
-
     @IncludeAttachments.setter
     def IncludeAttachments(self, value):
         self.calendarsharing.IncludeAttachments = value
 
-    # Lower case alias for IncludeAttachments setter
+    # Lower case aliases for IncludeAttachments
+    @property
+    def includeattachments(self):
+        return self.IncludeAttachments
+
     @includeattachments.setter
     def includeattachments(self, value):
         self.IncludeAttachments = value
@@ -3117,16 +3044,15 @@ class CalendarSharing:
     def IncludePrivateDetails(self):
         return self.calendarsharing.IncludePrivateDetails
 
-    # Lower case alias for IncludePrivateDetails
-    @property
-    def includeprivatedetails(self):
-        return self.IncludePrivateDetails
-
     @IncludePrivateDetails.setter
     def IncludePrivateDetails(self, value):
         self.calendarsharing.IncludePrivateDetails = value
 
-    # Lower case alias for IncludePrivateDetails setter
+    # Lower case aliases for IncludePrivateDetails
+    @property
+    def includeprivatedetails(self):
+        return self.IncludePrivateDetails
+
     @includeprivatedetails.setter
     def includeprivatedetails(self, value):
         self.IncludePrivateDetails = value
@@ -3135,16 +3061,15 @@ class CalendarSharing:
     def IncludeWholeCalendar(self):
         return self.calendarsharing.IncludeWholeCalendar
 
-    # Lower case alias for IncludeWholeCalendar
-    @property
-    def includewholecalendar(self):
-        return self.IncludeWholeCalendar
-
     @IncludeWholeCalendar.setter
     def IncludeWholeCalendar(self, value):
         self.calendarsharing.IncludeWholeCalendar = value
 
-    # Lower case alias for IncludeWholeCalendar setter
+    # Lower case aliases for IncludeWholeCalendar
+    @property
+    def includewholecalendar(self):
+        return self.IncludeWholeCalendar
+
     @includewholecalendar.setter
     def includewholecalendar(self, value):
         self.IncludeWholeCalendar = value
@@ -3153,7 +3078,7 @@ class CalendarSharing:
     def Parent(self):
         return self.calendarsharing.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3162,16 +3087,15 @@ class CalendarSharing:
     def RestrictToWorkingHours(self):
         return self.calendarsharing.RestrictToWorkingHours
 
-    # Lower case alias for RestrictToWorkingHours
-    @property
-    def restricttoworkinghours(self):
-        return self.RestrictToWorkingHours
-
     @RestrictToWorkingHours.setter
     def RestrictToWorkingHours(self, value):
         self.calendarsharing.RestrictToWorkingHours = value
 
-    # Lower case alias for RestrictToWorkingHours setter
+    # Lower case aliases for RestrictToWorkingHours
+    @property
+    def restricttoworkinghours(self):
+        return self.RestrictToWorkingHours
+
     @restricttoworkinghours.setter
     def restricttoworkinghours(self, value):
         self.RestrictToWorkingHours = value
@@ -3180,7 +3104,7 @@ class CalendarSharing:
     def Session(self):
         return NameSpace(self.calendarsharing.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -3189,16 +3113,15 @@ class CalendarSharing:
     def StartDate(self):
         return CalendarSharing(self.calendarsharing.StartDate)
 
-    # Lower case alias for StartDate
-    @property
-    def startdate(self):
-        return self.StartDate
-
     @StartDate.setter
     def StartDate(self, value):
         self.calendarsharing.StartDate = value
 
-    # Lower case alias for StartDate setter
+    # Lower case aliases for StartDate
+    @property
+    def startdate(self):
+        return self.StartDate
+
     @startdate.setter
     def startdate(self, value):
         self.StartDate = value
@@ -3225,7 +3148,7 @@ class CalendarView:
     def AutoFormatRules(self):
         return AutoFormatRules(self.calendarview.AutoFormatRules)
 
-    # Lower case alias for AutoFormatRules
+    # Lower case aliases for AutoFormatRules
     @property
     def autoformatrules(self):
         return self.AutoFormatRules
@@ -3234,16 +3157,15 @@ class CalendarView:
     def BoldDatesWithItems(self):
         return CalendarView(self.calendarview.BoldDatesWithItems)
 
-    # Lower case alias for BoldDatesWithItems
-    @property
-    def bolddateswithitems(self):
-        return self.BoldDatesWithItems
-
     @BoldDatesWithItems.setter
     def BoldDatesWithItems(self, value):
         self.calendarview.BoldDatesWithItems = value
 
-    # Lower case alias for BoldDatesWithItems setter
+    # Lower case aliases for BoldDatesWithItems
+    @property
+    def bolddateswithitems(self):
+        return self.BoldDatesWithItems
+
     @bolddateswithitems.setter
     def bolddateswithitems(self, value):
         self.BoldDatesWithItems = value
@@ -3252,16 +3174,15 @@ class CalendarView:
     def BoldSubjects(self):
         return CalendarView(self.calendarview.BoldSubjects)
 
-    # Lower case alias for BoldSubjects
-    @property
-    def boldsubjects(self):
-        return self.BoldSubjects
-
     @BoldSubjects.setter
     def BoldSubjects(self, value):
         self.calendarview.BoldSubjects = value
 
-    # Lower case alias for BoldSubjects setter
+    # Lower case aliases for BoldSubjects
+    @property
+    def boldsubjects(self):
+        return self.BoldSubjects
+
     @boldsubjects.setter
     def boldsubjects(self, value):
         self.BoldSubjects = value
@@ -3270,16 +3191,15 @@ class CalendarView:
     def CalendarViewMode(self):
         return OlCalendarViewMode(self.calendarview.CalendarViewMode)
 
-    # Lower case alias for CalendarViewMode
-    @property
-    def calendarviewmode(self):
-        return self.CalendarViewMode
-
     @CalendarViewMode.setter
     def CalendarViewMode(self, value):
         self.calendarview.CalendarViewMode = value
 
-    # Lower case alias for CalendarViewMode setter
+    # Lower case aliases for CalendarViewMode
+    @property
+    def calendarviewmode(self):
+        return self.CalendarViewMode
+
     @calendarviewmode.setter
     def calendarviewmode(self, value):
         self.CalendarViewMode = value
@@ -3292,16 +3212,15 @@ class CalendarView:
     def DaysInMultiDayMode(self):
         return CalendarView(self.calendarview.DaysInMultiDayMode)
 
-    # Lower case alias for DaysInMultiDayMode
-    @property
-    def daysinmultidaymode(self):
-        return self.DaysInMultiDayMode
-
     @DaysInMultiDayMode.setter
     def DaysInMultiDayMode(self, value):
         self.calendarview.DaysInMultiDayMode = value
 
-    # Lower case alias for DaysInMultiDayMode setter
+    # Lower case aliases for DaysInMultiDayMode
+    @property
+    def daysinmultidaymode(self):
+        return self.DaysInMultiDayMode
+
     @daysinmultidaymode.setter
     def daysinmultidaymode(self, value):
         self.DaysInMultiDayMode = value
@@ -3310,16 +3229,15 @@ class CalendarView:
     def DayWeekTimeScale(self):
         return OlDayWeekTimeScale(self.calendarview.DayWeekTimeScale)
 
-    # Lower case alias for DayWeekTimeScale
-    @property
-    def dayweektimescale(self):
-        return self.DayWeekTimeScale
-
     @DayWeekTimeScale.setter
     def DayWeekTimeScale(self, value):
         self.calendarview.DayWeekTimeScale = value
 
-    # Lower case alias for DayWeekTimeScale setter
+    # Lower case aliases for DayWeekTimeScale
+    @property
+    def dayweektimescale(self):
+        return self.DayWeekTimeScale
+
     @dayweektimescale.setter
     def dayweektimescale(self, value):
         self.DayWeekTimeScale = value
@@ -3328,7 +3246,7 @@ class CalendarView:
     def DisplayedDates(self):
         return CalendarView(self.calendarview.DisplayedDates)
 
-    # Lower case alias for DisplayedDates
+    # Lower case aliases for DisplayedDates
     @property
     def displayeddates(self):
         return self.DisplayedDates
@@ -3337,16 +3255,15 @@ class CalendarView:
     def EndField(self):
         return CalendarView(self.calendarview.EndField)
 
-    # Lower case alias for EndField
-    @property
-    def endfield(self):
-        return self.EndField
-
     @EndField.setter
     def EndField(self, value):
         self.calendarview.EndField = value
 
-    # Lower case alias for EndField setter
+    # Lower case aliases for EndField
+    @property
+    def endfield(self):
+        return self.EndField
+
     @endfield.setter
     def endfield(self, value):
         self.EndField = value
@@ -3355,16 +3272,15 @@ class CalendarView:
     def Filter(self):
         return self.calendarview.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.calendarview.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -3373,16 +3289,15 @@ class CalendarView:
     def Language(self):
         return self.calendarview.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.calendarview.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -3391,16 +3306,15 @@ class CalendarView:
     def LockUserChanges(self):
         return self.calendarview.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.calendarview.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -3409,16 +3323,15 @@ class CalendarView:
     def MonthShowEndTime(self):
         return CalendarView(self.calendarview.MonthShowEndTime)
 
-    # Lower case alias for MonthShowEndTime
-    @property
-    def monthshowendtime(self):
-        return self.MonthShowEndTime
-
     @MonthShowEndTime.setter
     def MonthShowEndTime(self, value):
         self.calendarview.MonthShowEndTime = value
 
-    # Lower case alias for MonthShowEndTime setter
+    # Lower case aliases for MonthShowEndTime
+    @property
+    def monthshowendtime(self):
+        return self.MonthShowEndTime
+
     @monthshowendtime.setter
     def monthshowendtime(self, value):
         self.MonthShowEndTime = value
@@ -3427,16 +3340,15 @@ class CalendarView:
     def Name(self):
         return self.calendarview.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.calendarview.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -3445,7 +3357,7 @@ class CalendarView:
     def Parent(self):
         return self.calendarview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3454,7 +3366,7 @@ class CalendarView:
     def SaveOption(self):
         return OlViewSaveOption(self.calendarview.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -3463,7 +3375,7 @@ class CalendarView:
     def SelectedEndTime(self):
         return CalendarView(self.calendarview.SelectedEndTime)
 
-    # Lower case alias for SelectedEndTime
+    # Lower case aliases for SelectedEndTime
     @property
     def selectedendtime(self):
         return self.SelectedEndTime
@@ -3472,7 +3384,7 @@ class CalendarView:
     def SelectedStartTime(self):
         return CalendarView(self.calendarview.SelectedStartTime)
 
-    # Lower case alias for SelectedStartTime
+    # Lower case aliases for SelectedStartTime
     @property
     def selectedstarttime(self):
         return self.SelectedStartTime
@@ -3481,7 +3393,7 @@ class CalendarView:
     def Session(self):
         return NameSpace(self.calendarview.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -3490,7 +3402,7 @@ class CalendarView:
     def Standard(self):
         return CalendarView(self.calendarview.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -3499,16 +3411,15 @@ class CalendarView:
     def StartField(self):
         return CalendarView(self.calendarview.StartField)
 
-    # Lower case alias for StartField
-    @property
-    def startfield(self):
-        return self.StartField
-
     @StartField.setter
     def StartField(self, value):
         self.calendarview.StartField = value
 
-    # Lower case alias for StartField setter
+    # Lower case aliases for StartField
+    @property
+    def startfield(self):
+        return self.StartField
+
     @startfield.setter
     def startfield(self, value):
         self.StartField = value
@@ -3517,7 +3428,7 @@ class CalendarView:
     def ViewType(self):
         return OlViewType(self.calendarview.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -3526,16 +3437,15 @@ class CalendarView:
     def XML(self):
         return self.calendarview.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.calendarview.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -3570,16 +3480,15 @@ class CardView:
     def AllowInCellEditing(self):
         return CardView(self.cardview.AllowInCellEditing)
 
-    # Lower case alias for AllowInCellEditing
-    @property
-    def allowincellediting(self):
-        return self.AllowInCellEditing
-
     @AllowInCellEditing.setter
     def AllowInCellEditing(self, value):
         self.cardview.AllowInCellEditing = value
 
-    # Lower case alias for AllowInCellEditing setter
+    # Lower case aliases for AllowInCellEditing
+    @property
+    def allowincellediting(self):
+        return self.AllowInCellEditing
+
     @allowincellediting.setter
     def allowincellediting(self, value):
         self.AllowInCellEditing = value
@@ -3592,7 +3501,7 @@ class CardView:
     def AutoFormatRules(self):
         return AutoFormatRules(self.cardview.AutoFormatRules)
 
-    # Lower case alias for AutoFormatRules
+    # Lower case aliases for AutoFormatRules
     @property
     def autoformatrules(self):
         return self.AutoFormatRules
@@ -3601,7 +3510,7 @@ class CardView:
     def BodyFont(self):
         return ViewFont(self.cardview.BodyFont)
 
-    # Lower case alias for BodyFont
+    # Lower case aliases for BodyFont
     @property
     def bodyfont(self):
         return self.BodyFont
@@ -3614,16 +3523,15 @@ class CardView:
     def Filter(self):
         return self.cardview.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.cardview.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -3632,7 +3540,7 @@ class CardView:
     def HeadingsFont(self):
         return ViewFont(self.cardview.HeadingsFont)
 
-    # Lower case alias for HeadingsFont
+    # Lower case aliases for HeadingsFont
     @property
     def headingsfont(self):
         return self.HeadingsFont
@@ -3641,16 +3549,15 @@ class CardView:
     def Language(self):
         return self.cardview.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.cardview.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -3659,16 +3566,15 @@ class CardView:
     def LockUserChanges(self):
         return self.cardview.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.cardview.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -3677,16 +3583,15 @@ class CardView:
     def MultiLineFieldHeight(self):
         return CardView(self.cardview.MultiLineFieldHeight)
 
-    # Lower case alias for MultiLineFieldHeight
-    @property
-    def multilinefieldheight(self):
-        return self.MultiLineFieldHeight
-
     @MultiLineFieldHeight.setter
     def MultiLineFieldHeight(self, value):
         self.cardview.MultiLineFieldHeight = value
 
-    # Lower case alias for MultiLineFieldHeight setter
+    # Lower case aliases for MultiLineFieldHeight
+    @property
+    def multilinefieldheight(self):
+        return self.MultiLineFieldHeight
+
     @multilinefieldheight.setter
     def multilinefieldheight(self, value):
         self.MultiLineFieldHeight = value
@@ -3695,16 +3600,15 @@ class CardView:
     def Name(self):
         return self.cardview.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.cardview.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -3713,7 +3617,7 @@ class CardView:
     def Parent(self):
         return self.cardview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3722,7 +3626,7 @@ class CardView:
     def SaveOption(self):
         return OlViewSaveOption(self.cardview.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -3731,7 +3635,7 @@ class CardView:
     def Session(self):
         return NameSpace(self.cardview.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -3740,16 +3644,15 @@ class CardView:
     def ShowEmptyFields(self):
         return CardView(self.cardview.ShowEmptyFields)
 
-    # Lower case alias for ShowEmptyFields
-    @property
-    def showemptyfields(self):
-        return self.ShowEmptyFields
-
     @ShowEmptyFields.setter
     def ShowEmptyFields(self, value):
         self.cardview.ShowEmptyFields = value
 
-    # Lower case alias for ShowEmptyFields setter
+    # Lower case aliases for ShowEmptyFields
+    @property
+    def showemptyfields(self):
+        return self.ShowEmptyFields
+
     @showemptyfields.setter
     def showemptyfields(self, value):
         self.ShowEmptyFields = value
@@ -3758,7 +3661,7 @@ class CardView:
     def SortFields(self):
         return OrderFields(self.cardview.SortFields)
 
-    # Lower case alias for SortFields
+    # Lower case aliases for SortFields
     @property
     def sortfields(self):
         return self.SortFields
@@ -3767,7 +3670,7 @@ class CardView:
     def Standard(self):
         return CardView(self.cardview.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -3776,7 +3679,7 @@ class CardView:
     def ViewFields(self):
         return ViewFields(self.cardview.ViewFields)
 
-    # Lower case alias for ViewFields
+    # Lower case aliases for ViewFields
     @property
     def viewfields(self):
         return self.ViewFields
@@ -3785,7 +3688,7 @@ class CardView:
     def ViewType(self):
         return OlViewType(self.cardview.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -3794,16 +3697,15 @@ class CardView:
     def Width(self):
         return CardView(self.cardview.Width)
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.cardview.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -3812,16 +3714,15 @@ class CardView:
     def XML(self):
         return self.cardview.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.cardview.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -3864,7 +3765,7 @@ class Categories:
     def Count(self):
         return Category(self.categories.Count)
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -3873,7 +3774,7 @@ class Categories:
     def Parent(self):
         return self.categories.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3882,7 +3783,7 @@ class Categories:
     def Session(self):
         return NameSpace(self.categories.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -3913,7 +3814,7 @@ class Category:
     def CategoryBorderColor(self):
         return Category(self.category.CategoryBorderColor)
 
-    # Lower case alias for CategoryBorderColor
+    # Lower case aliases for CategoryBorderColor
     @property
     def categorybordercolor(self):
         return self.CategoryBorderColor
@@ -3922,7 +3823,7 @@ class Category:
     def CategoryGradientBottomColor(self):
         return Category(self.category.CategoryGradientBottomColor)
 
-    # Lower case alias for CategoryGradientBottomColor
+    # Lower case aliases for CategoryGradientBottomColor
     @property
     def categorygradientbottomcolor(self):
         return self.CategoryGradientBottomColor
@@ -3931,7 +3832,7 @@ class Category:
     def CategoryGradientTopColor(self):
         return Category(self.category.CategoryGradientTopColor)
 
-    # Lower case alias for CategoryGradientTopColor
+    # Lower case aliases for CategoryGradientTopColor
     @property
     def categorygradienttopcolor(self):
         return self.CategoryGradientTopColor
@@ -3940,7 +3841,7 @@ class Category:
     def CategoryID(self):
         return Category(self.category.CategoryID)
 
-    # Lower case alias for CategoryID
+    # Lower case aliases for CategoryID
     @property
     def categoryid(self):
         return self.CategoryID
@@ -3953,16 +3854,15 @@ class Category:
     def Color(self):
         return OlCategoryColor(self.category.Color)
 
-    # Lower case alias for Color
-    @property
-    def color(self):
-        return self.Color
-
     @Color.setter
     def Color(self, value):
         self.category.Color = value
 
-    # Lower case alias for Color setter
+    # Lower case aliases for Color
+    @property
+    def color(self):
+        return self.Color
+
     @color.setter
     def color(self, value):
         self.Color = value
@@ -3971,16 +3871,15 @@ class Category:
     def Name(self):
         return self.category.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.category.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -3989,7 +3888,7 @@ class Category:
     def Parent(self):
         return self.category.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3998,7 +3897,7 @@ class Category:
     def Session(self):
         return NameSpace(self.category.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4007,16 +3906,15 @@ class Category:
     def ShortcutKey(self):
         return OlCategoryShortcutKey(self.category.ShortcutKey)
 
-    # Lower case alias for ShortcutKey
-    @property
-    def shortcutkey(self):
-        return self.ShortcutKey
-
     @ShortcutKey.setter
     def ShortcutKey(self, value):
         self.category.ShortcutKey = value
 
-    # Lower case alias for ShortcutKey setter
+    # Lower case aliases for ShortcutKey
+    @property
+    def shortcutkey(self):
+        return self.ShortcutKey
+
     @shortcutkey.setter
     def shortcutkey(self, value):
         self.ShortcutKey = value
@@ -4035,16 +3933,15 @@ class CategoryRuleCondition:
     def Categories(self):
         return self.categoryrulecondition.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.categoryrulecondition.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -4057,7 +3954,7 @@ class CategoryRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.categoryrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -4066,16 +3963,15 @@ class CategoryRuleCondition:
     def Enabled(self):
         return self.categoryrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.categoryrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -4084,7 +3980,7 @@ class CategoryRuleCondition:
     def Parent(self):
         return self.categoryrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4093,7 +3989,7 @@ class CategoryRuleCondition:
     def Session(self):
         return NameSpace(self.categoryrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4116,7 +4012,7 @@ class Column:
     def Name(self):
         return Column(self.column.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -4125,7 +4021,7 @@ class Column:
     def Parent(self):
         return Column(self.column.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4134,7 +4030,7 @@ class Column:
     def Session(self):
         return NameSpace(self.column.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4149,16 +4045,15 @@ class ColumnFormat:
     def Align(self):
         return OlAlign(self.columnformat.Align)
 
-    # Lower case alias for Align
-    @property
-    def align(self):
-        return self.Align
-
     @Align.setter
     def Align(self, value):
         self.columnformat.Align = value
 
-    # Lower case alias for Align setter
+    # Lower case aliases for Align
+    @property
+    def align(self):
+        return self.Align
+
     @align.setter
     def align(self, value):
         self.Align = value
@@ -4175,16 +4070,15 @@ class ColumnFormat:
     def FieldFormat(self):
         return ColumnFormat(self.columnformat.FieldFormat)
 
-    # Lower case alias for FieldFormat
-    @property
-    def fieldformat(self):
-        return self.FieldFormat
-
     @FieldFormat.setter
     def FieldFormat(self, value):
         self.columnformat.FieldFormat = value
 
-    # Lower case alias for FieldFormat setter
+    # Lower case aliases for FieldFormat
+    @property
+    def fieldformat(self):
+        return self.FieldFormat
+
     @fieldformat.setter
     def fieldformat(self, value):
         self.FieldFormat = value
@@ -4193,7 +4087,7 @@ class ColumnFormat:
     def FieldType(self):
         return OlUserPropertyType(self.columnformat.FieldType)
 
-    # Lower case alias for FieldType
+    # Lower case aliases for FieldType
     @property
     def fieldtype(self):
         return self.FieldType
@@ -4202,16 +4096,15 @@ class ColumnFormat:
     def Label(self):
         return ColumnFormat(self.columnformat.Label)
 
-    # Lower case alias for Label
-    @property
-    def label(self):
-        return self.Label
-
     @Label.setter
     def Label(self, value):
         self.columnformat.Label = value
 
-    # Lower case alias for Label setter
+    # Lower case aliases for Label
+    @property
+    def label(self):
+        return self.Label
+
     @label.setter
     def label(self, value):
         self.Label = value
@@ -4220,7 +4113,7 @@ class ColumnFormat:
     def Parent(self):
         return self.columnformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4229,7 +4122,7 @@ class ColumnFormat:
     def Session(self):
         return NameSpace(self.columnformat.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4238,16 +4131,15 @@ class ColumnFormat:
     def Width(self):
         return self.columnformat.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.columnformat.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -4270,7 +4162,7 @@ class Columns:
     def Count(self):
         return Column(self.columns.Count)
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -4279,7 +4171,7 @@ class Columns:
     def Parent(self):
         return Columns(self.columns.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4288,7 +4180,7 @@ class Columns:
     def Session(self):
         return NameSpace(self.columns.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4326,7 +4218,7 @@ class Conflict:
     def Item(self):
         return self.conflict.Item
 
-    # Lower case alias for Item
+    # Lower case aliases for Item
     @property
     def item(self):
         return self.Item
@@ -4335,7 +4227,7 @@ class Conflict:
     def Name(self):
         return self.conflict.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -4344,7 +4236,7 @@ class Conflict:
     def Parent(self):
         return self.conflict.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4353,7 +4245,7 @@ class Conflict:
     def Session(self):
         return NameSpace(self.conflict.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4362,7 +4254,7 @@ class Conflict:
     def Type(self):
         return OlObjectClass(self.conflict.Type)
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -4385,7 +4277,7 @@ class Conflicts:
     def Count(self):
         return self.conflicts.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -4394,7 +4286,7 @@ class Conflicts:
     def Parent(self):
         return self.conflicts.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4403,7 +4295,7 @@ class Conflicts:
     def Session(self):
         return NameSpace(self.conflicts.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -4434,16 +4326,15 @@ class ContactItem:
     def Account(self):
         return self.contactitem.Account
 
-    # Lower case alias for Account
-    @property
-    def account(self):
-        return self.Account
-
     @Account.setter
     def Account(self, value):
         self.contactitem.Account = value
 
-    # Lower case alias for Account setter
+    # Lower case aliases for Account
+    @property
+    def account(self):
+        return self.Account
+
     @account.setter
     def account(self, value):
         self.Account = value
@@ -4452,7 +4343,7 @@ class ContactItem:
     def Actions(self):
         return Actions(self.contactitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -4461,16 +4352,15 @@ class ContactItem:
     def Anniversary(self):
         return self.contactitem.Anniversary
 
-    # Lower case alias for Anniversary
-    @property
-    def anniversary(self):
-        return self.Anniversary
-
     @Anniversary.setter
     def Anniversary(self, value):
         self.contactitem.Anniversary = value
 
-    # Lower case alias for Anniversary setter
+    # Lower case aliases for Anniversary
+    @property
+    def anniversary(self):
+        return self.Anniversary
+
     @anniversary.setter
     def anniversary(self, value):
         self.Anniversary = value
@@ -4483,16 +4373,15 @@ class ContactItem:
     def AssistantName(self):
         return self.contactitem.AssistantName
 
-    # Lower case alias for AssistantName
-    @property
-    def assistantname(self):
-        return self.AssistantName
-
     @AssistantName.setter
     def AssistantName(self, value):
         self.contactitem.AssistantName = value
 
-    # Lower case alias for AssistantName setter
+    # Lower case aliases for AssistantName
+    @property
+    def assistantname(self):
+        return self.AssistantName
+
     @assistantname.setter
     def assistantname(self, value):
         self.AssistantName = value
@@ -4501,16 +4390,15 @@ class ContactItem:
     def AssistantTelephoneNumber(self):
         return self.contactitem.AssistantTelephoneNumber
 
-    # Lower case alias for AssistantTelephoneNumber
-    @property
-    def assistanttelephonenumber(self):
-        return self.AssistantTelephoneNumber
-
     @AssistantTelephoneNumber.setter
     def AssistantTelephoneNumber(self, value):
         self.contactitem.AssistantTelephoneNumber = value
 
-    # Lower case alias for AssistantTelephoneNumber setter
+    # Lower case aliases for AssistantTelephoneNumber
+    @property
+    def assistanttelephonenumber(self):
+        return self.AssistantTelephoneNumber
+
     @assistanttelephonenumber.setter
     def assistanttelephonenumber(self, value):
         self.AssistantTelephoneNumber = value
@@ -4519,7 +4407,7 @@ class ContactItem:
     def Attachments(self):
         return Attachments(self.contactitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -4528,7 +4416,7 @@ class ContactItem:
     def AutoResolvedWinner(self):
         return self.contactitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -4537,16 +4425,15 @@ class ContactItem:
     def BillingInformation(self):
         return self.contactitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.contactitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -4555,16 +4442,15 @@ class ContactItem:
     def Birthday(self):
         return self.contactitem.Birthday
 
-    # Lower case alias for Birthday
-    @property
-    def birthday(self):
-        return self.Birthday
-
     @Birthday.setter
     def Birthday(self, value):
         self.contactitem.Birthday = value
 
-    # Lower case alias for Birthday setter
+    # Lower case aliases for Birthday
+    @property
+    def birthday(self):
+        return self.Birthday
+
     @birthday.setter
     def birthday(self, value):
         self.Birthday = value
@@ -4573,16 +4459,15 @@ class ContactItem:
     def Body(self):
         return self.contactitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.contactitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -4591,16 +4476,15 @@ class ContactItem:
     def Business2TelephoneNumber(self):
         return self.contactitem.Business2TelephoneNumber
 
-    # Lower case alias for Business2TelephoneNumber
-    @property
-    def business2telephonenumber(self):
-        return self.Business2TelephoneNumber
-
     @Business2TelephoneNumber.setter
     def Business2TelephoneNumber(self, value):
         self.contactitem.Business2TelephoneNumber = value
 
-    # Lower case alias for Business2TelephoneNumber setter
+    # Lower case aliases for Business2TelephoneNumber
+    @property
+    def business2telephonenumber(self):
+        return self.Business2TelephoneNumber
+
     @business2telephonenumber.setter
     def business2telephonenumber(self, value):
         self.Business2TelephoneNumber = value
@@ -4609,16 +4493,15 @@ class ContactItem:
     def BusinessAddress(self):
         return self.contactitem.BusinessAddress
 
-    # Lower case alias for BusinessAddress
-    @property
-    def businessaddress(self):
-        return self.BusinessAddress
-
     @BusinessAddress.setter
     def BusinessAddress(self, value):
         self.contactitem.BusinessAddress = value
 
-    # Lower case alias for BusinessAddress setter
+    # Lower case aliases for BusinessAddress
+    @property
+    def businessaddress(self):
+        return self.BusinessAddress
+
     @businessaddress.setter
     def businessaddress(self, value):
         self.BusinessAddress = value
@@ -4627,16 +4510,15 @@ class ContactItem:
     def BusinessAddressCity(self):
         return self.contactitem.BusinessAddressCity
 
-    # Lower case alias for BusinessAddressCity
-    @property
-    def businessaddresscity(self):
-        return self.BusinessAddressCity
-
     @BusinessAddressCity.setter
     def BusinessAddressCity(self, value):
         self.contactitem.BusinessAddressCity = value
 
-    # Lower case alias for BusinessAddressCity setter
+    # Lower case aliases for BusinessAddressCity
+    @property
+    def businessaddresscity(self):
+        return self.BusinessAddressCity
+
     @businessaddresscity.setter
     def businessaddresscity(self, value):
         self.BusinessAddressCity = value
@@ -4645,16 +4527,15 @@ class ContactItem:
     def BusinessAddressCountry(self):
         return self.contactitem.BusinessAddressCountry
 
-    # Lower case alias for BusinessAddressCountry
-    @property
-    def businessaddresscountry(self):
-        return self.BusinessAddressCountry
-
     @BusinessAddressCountry.setter
     def BusinessAddressCountry(self, value):
         self.contactitem.BusinessAddressCountry = value
 
-    # Lower case alias for BusinessAddressCountry setter
+    # Lower case aliases for BusinessAddressCountry
+    @property
+    def businessaddresscountry(self):
+        return self.BusinessAddressCountry
+
     @businessaddresscountry.setter
     def businessaddresscountry(self, value):
         self.BusinessAddressCountry = value
@@ -4663,16 +4544,15 @@ class ContactItem:
     def BusinessAddressPostalCode(self):
         return self.contactitem.BusinessAddressPostalCode
 
-    # Lower case alias for BusinessAddressPostalCode
-    @property
-    def businessaddresspostalcode(self):
-        return self.BusinessAddressPostalCode
-
     @BusinessAddressPostalCode.setter
     def BusinessAddressPostalCode(self, value):
         self.contactitem.BusinessAddressPostalCode = value
 
-    # Lower case alias for BusinessAddressPostalCode setter
+    # Lower case aliases for BusinessAddressPostalCode
+    @property
+    def businessaddresspostalcode(self):
+        return self.BusinessAddressPostalCode
+
     @businessaddresspostalcode.setter
     def businessaddresspostalcode(self, value):
         self.BusinessAddressPostalCode = value
@@ -4681,16 +4561,15 @@ class ContactItem:
     def BusinessAddressPostOfficeBox(self):
         return self.contactitem.BusinessAddressPostOfficeBox
 
-    # Lower case alias for BusinessAddressPostOfficeBox
-    @property
-    def businessaddresspostofficebox(self):
-        return self.BusinessAddressPostOfficeBox
-
     @BusinessAddressPostOfficeBox.setter
     def BusinessAddressPostOfficeBox(self, value):
         self.contactitem.BusinessAddressPostOfficeBox = value
 
-    # Lower case alias for BusinessAddressPostOfficeBox setter
+    # Lower case aliases for BusinessAddressPostOfficeBox
+    @property
+    def businessaddresspostofficebox(self):
+        return self.BusinessAddressPostOfficeBox
+
     @businessaddresspostofficebox.setter
     def businessaddresspostofficebox(self, value):
         self.BusinessAddressPostOfficeBox = value
@@ -4699,16 +4578,15 @@ class ContactItem:
     def BusinessAddressState(self):
         return self.contactitem.BusinessAddressState
 
-    # Lower case alias for BusinessAddressState
-    @property
-    def businessaddressstate(self):
-        return self.BusinessAddressState
-
     @BusinessAddressState.setter
     def BusinessAddressState(self, value):
         self.contactitem.BusinessAddressState = value
 
-    # Lower case alias for BusinessAddressState setter
+    # Lower case aliases for BusinessAddressState
+    @property
+    def businessaddressstate(self):
+        return self.BusinessAddressState
+
     @businessaddressstate.setter
     def businessaddressstate(self, value):
         self.BusinessAddressState = value
@@ -4717,16 +4595,15 @@ class ContactItem:
     def BusinessAddressStreet(self):
         return self.contactitem.BusinessAddressStreet
 
-    # Lower case alias for BusinessAddressStreet
-    @property
-    def businessaddressstreet(self):
-        return self.BusinessAddressStreet
-
     @BusinessAddressStreet.setter
     def BusinessAddressStreet(self, value):
         self.contactitem.BusinessAddressStreet = value
 
-    # Lower case alias for BusinessAddressStreet setter
+    # Lower case aliases for BusinessAddressStreet
+    @property
+    def businessaddressstreet(self):
+        return self.BusinessAddressStreet
+
     @businessaddressstreet.setter
     def businessaddressstreet(self, value):
         self.BusinessAddressStreet = value
@@ -4735,16 +4612,15 @@ class ContactItem:
     def BusinessCardLayoutXml(self):
         return self.contactitem.BusinessCardLayoutXml
 
-    # Lower case alias for BusinessCardLayoutXml
-    @property
-    def businesscardlayoutxml(self):
-        return self.BusinessCardLayoutXml
-
     @BusinessCardLayoutXml.setter
     def BusinessCardLayoutXml(self, value):
         self.contactitem.BusinessCardLayoutXml = value
 
-    # Lower case alias for BusinessCardLayoutXml setter
+    # Lower case aliases for BusinessCardLayoutXml
+    @property
+    def businesscardlayoutxml(self):
+        return self.BusinessCardLayoutXml
+
     @businesscardlayoutxml.setter
     def businesscardlayoutxml(self, value):
         self.BusinessCardLayoutXml = value
@@ -4753,7 +4629,7 @@ class ContactItem:
     def BusinessCardType(self):
         return OlBusinessCardType(self.contactitem.BusinessCardType)
 
-    # Lower case alias for BusinessCardType
+    # Lower case aliases for BusinessCardType
     @property
     def businesscardtype(self):
         return self.BusinessCardType
@@ -4762,16 +4638,15 @@ class ContactItem:
     def BusinessFaxNumber(self):
         return self.contactitem.BusinessFaxNumber
 
-    # Lower case alias for BusinessFaxNumber
-    @property
-    def businessfaxnumber(self):
-        return self.BusinessFaxNumber
-
     @BusinessFaxNumber.setter
     def BusinessFaxNumber(self, value):
         self.contactitem.BusinessFaxNumber = value
 
-    # Lower case alias for BusinessFaxNumber setter
+    # Lower case aliases for BusinessFaxNumber
+    @property
+    def businessfaxnumber(self):
+        return self.BusinessFaxNumber
+
     @businessfaxnumber.setter
     def businessfaxnumber(self, value):
         self.BusinessFaxNumber = value
@@ -4780,16 +4655,15 @@ class ContactItem:
     def BusinessHomePage(self):
         return self.contactitem.BusinessHomePage
 
-    # Lower case alias for BusinessHomePage
-    @property
-    def businesshomepage(self):
-        return self.BusinessHomePage
-
     @BusinessHomePage.setter
     def BusinessHomePage(self, value):
         self.contactitem.BusinessHomePage = value
 
-    # Lower case alias for BusinessHomePage setter
+    # Lower case aliases for BusinessHomePage
+    @property
+    def businesshomepage(self):
+        return self.BusinessHomePage
+
     @businesshomepage.setter
     def businesshomepage(self, value):
         self.BusinessHomePage = value
@@ -4798,16 +4672,15 @@ class ContactItem:
     def BusinessTelephoneNumber(self):
         return self.contactitem.BusinessTelephoneNumber
 
-    # Lower case alias for BusinessTelephoneNumber
-    @property
-    def businesstelephonenumber(self):
-        return self.BusinessTelephoneNumber
-
     @BusinessTelephoneNumber.setter
     def BusinessTelephoneNumber(self, value):
         self.contactitem.BusinessTelephoneNumber = value
 
-    # Lower case alias for BusinessTelephoneNumber setter
+    # Lower case aliases for BusinessTelephoneNumber
+    @property
+    def businesstelephonenumber(self):
+        return self.BusinessTelephoneNumber
+
     @businesstelephonenumber.setter
     def businesstelephonenumber(self, value):
         self.BusinessTelephoneNumber = value
@@ -4816,16 +4689,15 @@ class ContactItem:
     def CallbackTelephoneNumber(self):
         return self.contactitem.CallbackTelephoneNumber
 
-    # Lower case alias for CallbackTelephoneNumber
-    @property
-    def callbacktelephonenumber(self):
-        return self.CallbackTelephoneNumber
-
     @CallbackTelephoneNumber.setter
     def CallbackTelephoneNumber(self, value):
         self.contactitem.CallbackTelephoneNumber = value
 
-    # Lower case alias for CallbackTelephoneNumber setter
+    # Lower case aliases for CallbackTelephoneNumber
+    @property
+    def callbacktelephonenumber(self):
+        return self.CallbackTelephoneNumber
+
     @callbacktelephonenumber.setter
     def callbacktelephonenumber(self, value):
         self.CallbackTelephoneNumber = value
@@ -4834,16 +4706,15 @@ class ContactItem:
     def CarTelephoneNumber(self):
         return self.contactitem.CarTelephoneNumber
 
-    # Lower case alias for CarTelephoneNumber
-    @property
-    def cartelephonenumber(self):
-        return self.CarTelephoneNumber
-
     @CarTelephoneNumber.setter
     def CarTelephoneNumber(self, value):
         self.contactitem.CarTelephoneNumber = value
 
-    # Lower case alias for CarTelephoneNumber setter
+    # Lower case aliases for CarTelephoneNumber
+    @property
+    def cartelephonenumber(self):
+        return self.CarTelephoneNumber
+
     @cartelephonenumber.setter
     def cartelephonenumber(self, value):
         self.CarTelephoneNumber = value
@@ -4852,16 +4723,15 @@ class ContactItem:
     def Categories(self):
         return self.contactitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.contactitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -4870,16 +4740,15 @@ class ContactItem:
     def Children(self):
         return self.contactitem.Children
 
-    # Lower case alias for Children
-    @property
-    def children(self):
-        return self.Children
-
     @Children.setter
     def Children(self, value):
         self.contactitem.Children = value
 
-    # Lower case alias for Children setter
+    # Lower case aliases for Children
+    @property
+    def children(self):
+        return self.Children
+
     @children.setter
     def children(self, value):
         self.Children = value
@@ -4892,16 +4761,15 @@ class ContactItem:
     def Companies(self):
         return self.contactitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.contactitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -4910,7 +4778,7 @@ class ContactItem:
     def CompanyAndFullName(self):
         return self.contactitem.CompanyAndFullName
 
-    # Lower case alias for CompanyAndFullName
+    # Lower case aliases for CompanyAndFullName
     @property
     def companyandfullname(self):
         return self.CompanyAndFullName
@@ -4919,7 +4787,7 @@ class ContactItem:
     def CompanyLastFirstNoSpace(self):
         return self.contactitem.CompanyLastFirstNoSpace
 
-    # Lower case alias for CompanyLastFirstNoSpace
+    # Lower case aliases for CompanyLastFirstNoSpace
     @property
     def companylastfirstnospace(self):
         return self.CompanyLastFirstNoSpace
@@ -4928,7 +4796,7 @@ class ContactItem:
     def CompanyLastFirstSpaceOnly(self):
         return self.contactitem.CompanyLastFirstSpaceOnly
 
-    # Lower case alias for CompanyLastFirstSpaceOnly
+    # Lower case aliases for CompanyLastFirstSpaceOnly
     @property
     def companylastfirstspaceonly(self):
         return self.CompanyLastFirstSpaceOnly
@@ -4937,16 +4805,15 @@ class ContactItem:
     def CompanyMainTelephoneNumber(self):
         return self.contactitem.CompanyMainTelephoneNumber
 
-    # Lower case alias for CompanyMainTelephoneNumber
-    @property
-    def companymaintelephonenumber(self):
-        return self.CompanyMainTelephoneNumber
-
     @CompanyMainTelephoneNumber.setter
     def CompanyMainTelephoneNumber(self, value):
         self.contactitem.CompanyMainTelephoneNumber = value
 
-    # Lower case alias for CompanyMainTelephoneNumber setter
+    # Lower case aliases for CompanyMainTelephoneNumber
+    @property
+    def companymaintelephonenumber(self):
+        return self.CompanyMainTelephoneNumber
+
     @companymaintelephonenumber.setter
     def companymaintelephonenumber(self, value):
         self.CompanyMainTelephoneNumber = value
@@ -4955,16 +4822,15 @@ class ContactItem:
     def CompanyName(self):
         return self.contactitem.CompanyName
 
-    # Lower case alias for CompanyName
-    @property
-    def companyname(self):
-        return self.CompanyName
-
     @CompanyName.setter
     def CompanyName(self, value):
         self.contactitem.CompanyName = value
 
-    # Lower case alias for CompanyName setter
+    # Lower case aliases for CompanyName
+    @property
+    def companyname(self):
+        return self.CompanyName
+
     @companyname.setter
     def companyname(self, value):
         self.CompanyName = value
@@ -4973,16 +4839,15 @@ class ContactItem:
     def ComputerNetworkName(self):
         return self.contactitem.ComputerNetworkName
 
-    # Lower case alias for ComputerNetworkName
-    @property
-    def computernetworkname(self):
-        return self.ComputerNetworkName
-
     @ComputerNetworkName.setter
     def ComputerNetworkName(self, value):
         self.contactitem.ComputerNetworkName = value
 
-    # Lower case alias for ComputerNetworkName setter
+    # Lower case aliases for ComputerNetworkName
+    @property
+    def computernetworkname(self):
+        return self.ComputerNetworkName
+
     @computernetworkname.setter
     def computernetworkname(self, value):
         self.ComputerNetworkName = value
@@ -4991,7 +4856,7 @@ class ContactItem:
     def Conflicts(self):
         return self.contactitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -5000,7 +4865,7 @@ class ContactItem:
     def ConversationID(self):
         return Conversation(self.contactitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -5009,7 +4874,7 @@ class ContactItem:
     def ConversationIndex(self):
         return self.contactitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -5018,7 +4883,7 @@ class ContactItem:
     def ConversationTopic(self):
         return self.contactitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -5027,7 +4892,7 @@ class ContactItem:
     def CreationTime(self):
         return self.contactitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -5036,16 +4901,15 @@ class ContactItem:
     def CustomerID(self):
         return self.contactitem.CustomerID
 
-    # Lower case alias for CustomerID
-    @property
-    def customerid(self):
-        return self.CustomerID
-
     @CustomerID.setter
     def CustomerID(self, value):
         self.contactitem.CustomerID = value
 
-    # Lower case alias for CustomerID setter
+    # Lower case aliases for CustomerID
+    @property
+    def customerid(self):
+        return self.CustomerID
+
     @customerid.setter
     def customerid(self, value):
         self.CustomerID = value
@@ -5054,16 +4918,15 @@ class ContactItem:
     def Department(self):
         return self.contactitem.Department
 
-    # Lower case alias for Department
-    @property
-    def department(self):
-        return self.Department
-
     @Department.setter
     def Department(self, value):
         self.contactitem.Department = value
 
-    # Lower case alias for Department setter
+    # Lower case aliases for Department
+    @property
+    def department(self):
+        return self.Department
+
     @department.setter
     def department(self, value):
         self.Department = value
@@ -5072,7 +4935,7 @@ class ContactItem:
     def DownloadState(self):
         return OlDownloadState(self.contactitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -5081,16 +4944,15 @@ class ContactItem:
     def Email1Address(self):
         return self.contactitem.Email1Address
 
-    # Lower case alias for Email1Address
-    @property
-    def email1address(self):
-        return self.Email1Address
-
     @Email1Address.setter
     def Email1Address(self, value):
         self.contactitem.Email1Address = value
 
-    # Lower case alias for Email1Address setter
+    # Lower case aliases for Email1Address
+    @property
+    def email1address(self):
+        return self.Email1Address
+
     @email1address.setter
     def email1address(self, value):
         self.Email1Address = value
@@ -5099,16 +4961,15 @@ class ContactItem:
     def Email1AddressType(self):
         return self.contactitem.Email1AddressType
 
-    # Lower case alias for Email1AddressType
-    @property
-    def email1addresstype(self):
-        return self.Email1AddressType
-
     @Email1AddressType.setter
     def Email1AddressType(self, value):
         self.contactitem.Email1AddressType = value
 
-    # Lower case alias for Email1AddressType setter
+    # Lower case aliases for Email1AddressType
+    @property
+    def email1addresstype(self):
+        return self.Email1AddressType
+
     @email1addresstype.setter
     def email1addresstype(self, value):
         self.Email1AddressType = value
@@ -5117,16 +4978,15 @@ class ContactItem:
     def Email1DisplayName(self):
         return self.contactitem.Email1DisplayName
 
-    # Lower case alias for Email1DisplayName
-    @property
-    def email1displayname(self):
-        return self.Email1DisplayName
-
     @Email1DisplayName.setter
     def Email1DisplayName(self, value):
         self.contactitem.Email1DisplayName = value
 
-    # Lower case alias for Email1DisplayName setter
+    # Lower case aliases for Email1DisplayName
+    @property
+    def email1displayname(self):
+        return self.Email1DisplayName
+
     @email1displayname.setter
     def email1displayname(self, value):
         self.Email1DisplayName = value
@@ -5135,7 +4995,7 @@ class ContactItem:
     def Email1EntryID(self):
         return self.contactitem.Email1EntryID
 
-    # Lower case alias for Email1EntryID
+    # Lower case aliases for Email1EntryID
     @property
     def email1entryid(self):
         return self.Email1EntryID
@@ -5144,16 +5004,15 @@ class ContactItem:
     def Email2Address(self):
         return self.contactitem.Email2Address
 
-    # Lower case alias for Email2Address
-    @property
-    def email2address(self):
-        return self.Email2Address
-
     @Email2Address.setter
     def Email2Address(self, value):
         self.contactitem.Email2Address = value
 
-    # Lower case alias for Email2Address setter
+    # Lower case aliases for Email2Address
+    @property
+    def email2address(self):
+        return self.Email2Address
+
     @email2address.setter
     def email2address(self, value):
         self.Email2Address = value
@@ -5162,16 +5021,15 @@ class ContactItem:
     def Email2AddressType(self):
         return self.contactitem.Email2AddressType
 
-    # Lower case alias for Email2AddressType
-    @property
-    def email2addresstype(self):
-        return self.Email2AddressType
-
     @Email2AddressType.setter
     def Email2AddressType(self, value):
         self.contactitem.Email2AddressType = value
 
-    # Lower case alias for Email2AddressType setter
+    # Lower case aliases for Email2AddressType
+    @property
+    def email2addresstype(self):
+        return self.Email2AddressType
+
     @email2addresstype.setter
     def email2addresstype(self, value):
         self.Email2AddressType = value
@@ -5180,16 +5038,15 @@ class ContactItem:
     def Email2DisplayName(self):
         return self.contactitem.Email2DisplayName
 
-    # Lower case alias for Email2DisplayName
-    @property
-    def email2displayname(self):
-        return self.Email2DisplayName
-
     @Email2DisplayName.setter
     def Email2DisplayName(self, value):
         self.contactitem.Email2DisplayName = value
 
-    # Lower case alias for Email2DisplayName setter
+    # Lower case aliases for Email2DisplayName
+    @property
+    def email2displayname(self):
+        return self.Email2DisplayName
+
     @email2displayname.setter
     def email2displayname(self, value):
         self.Email2DisplayName = value
@@ -5198,7 +5055,7 @@ class ContactItem:
     def Email2EntryID(self):
         return self.contactitem.Email2EntryID
 
-    # Lower case alias for Email2EntryID
+    # Lower case aliases for Email2EntryID
     @property
     def email2entryid(self):
         return self.Email2EntryID
@@ -5207,16 +5064,15 @@ class ContactItem:
     def Email3Address(self):
         return self.contactitem.Email3Address
 
-    # Lower case alias for Email3Address
-    @property
-    def email3address(self):
-        return self.Email3Address
-
     @Email3Address.setter
     def Email3Address(self, value):
         self.contactitem.Email3Address = value
 
-    # Lower case alias for Email3Address setter
+    # Lower case aliases for Email3Address
+    @property
+    def email3address(self):
+        return self.Email3Address
+
     @email3address.setter
     def email3address(self, value):
         self.Email3Address = value
@@ -5225,16 +5081,15 @@ class ContactItem:
     def Email3AddressType(self):
         return self.contactitem.Email3AddressType
 
-    # Lower case alias for Email3AddressType
-    @property
-    def email3addresstype(self):
-        return self.Email3AddressType
-
     @Email3AddressType.setter
     def Email3AddressType(self, value):
         self.contactitem.Email3AddressType = value
 
-    # Lower case alias for Email3AddressType setter
+    # Lower case aliases for Email3AddressType
+    @property
+    def email3addresstype(self):
+        return self.Email3AddressType
+
     @email3addresstype.setter
     def email3addresstype(self, value):
         self.Email3AddressType = value
@@ -5243,16 +5098,15 @@ class ContactItem:
     def Email3DisplayName(self):
         return self.contactitem.Email3DisplayName
 
-    # Lower case alias for Email3DisplayName
-    @property
-    def email3displayname(self):
-        return self.Email3DisplayName
-
     @Email3DisplayName.setter
     def Email3DisplayName(self, value):
         self.contactitem.Email3DisplayName = value
 
-    # Lower case alias for Email3DisplayName setter
+    # Lower case aliases for Email3DisplayName
+    @property
+    def email3displayname(self):
+        return self.Email3DisplayName
+
     @email3displayname.setter
     def email3displayname(self, value):
         self.Email3DisplayName = value
@@ -5261,7 +5115,7 @@ class ContactItem:
     def Email3EntryID(self):
         return self.contactitem.Email3EntryID
 
-    # Lower case alias for Email3EntryID
+    # Lower case aliases for Email3EntryID
     @property
     def email3entryid(self):
         return self.Email3EntryID
@@ -5270,7 +5124,7 @@ class ContactItem:
     def EntryID(self):
         return self.contactitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -5279,16 +5133,15 @@ class ContactItem:
     def FileAs(self):
         return self.contactitem.FileAs
 
-    # Lower case alias for FileAs
-    @property
-    def fileas(self):
-        return self.FileAs
-
     @FileAs.setter
     def FileAs(self, value):
         self.contactitem.FileAs = value
 
-    # Lower case alias for FileAs setter
+    # Lower case aliases for FileAs
+    @property
+    def fileas(self):
+        return self.FileAs
+
     @fileas.setter
     def fileas(self, value):
         self.FileAs = value
@@ -5297,16 +5150,15 @@ class ContactItem:
     def FirstName(self):
         return self.contactitem.FirstName
 
-    # Lower case alias for FirstName
-    @property
-    def firstname(self):
-        return self.FirstName
-
     @FirstName.setter
     def FirstName(self, value):
         self.contactitem.FirstName = value
 
-    # Lower case alias for FirstName setter
+    # Lower case aliases for FirstName
+    @property
+    def firstname(self):
+        return self.FirstName
+
     @firstname.setter
     def firstname(self, value):
         self.FirstName = value
@@ -5315,7 +5167,7 @@ class ContactItem:
     def FormDescription(self):
         return FormDescription(self.contactitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -5324,16 +5176,15 @@ class ContactItem:
     def FTPSite(self):
         return self.contactitem.FTPSite
 
-    # Lower case alias for FTPSite
-    @property
-    def ftpsite(self):
-        return self.FTPSite
-
     @FTPSite.setter
     def FTPSite(self, value):
         self.contactitem.FTPSite = value
 
-    # Lower case alias for FTPSite setter
+    # Lower case aliases for FTPSite
+    @property
+    def ftpsite(self):
+        return self.FTPSite
+
     @ftpsite.setter
     def ftpsite(self, value):
         self.FTPSite = value
@@ -5342,16 +5193,15 @@ class ContactItem:
     def FullName(self):
         return self.contactitem.FullName
 
-    # Lower case alias for FullName
-    @property
-    def fullname(self):
-        return self.FullName
-
     @FullName.setter
     def FullName(self, value):
         self.contactitem.FullName = value
 
-    # Lower case alias for FullName setter
+    # Lower case aliases for FullName
+    @property
+    def fullname(self):
+        return self.FullName
+
     @fullname.setter
     def fullname(self, value):
         self.FullName = value
@@ -5360,7 +5210,7 @@ class ContactItem:
     def FullNameAndCompany(self):
         return self.contactitem.FullNameAndCompany
 
-    # Lower case alias for FullNameAndCompany
+    # Lower case aliases for FullNameAndCompany
     @property
     def fullnameandcompany(self):
         return self.FullNameAndCompany
@@ -5369,16 +5219,15 @@ class ContactItem:
     def Gender(self):
         return OlGender(self.contactitem.Gender)
 
-    # Lower case alias for Gender
-    @property
-    def gender(self):
-        return self.Gender
-
     @Gender.setter
     def Gender(self, value):
         self.contactitem.Gender = value
 
-    # Lower case alias for Gender setter
+    # Lower case aliases for Gender
+    @property
+    def gender(self):
+        return self.Gender
+
     @gender.setter
     def gender(self, value):
         self.Gender = value
@@ -5387,7 +5236,7 @@ class ContactItem:
     def GetInspector(self):
         return Inspector(self.contactitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -5396,16 +5245,15 @@ class ContactItem:
     def GovernmentIDNumber(self):
         return self.contactitem.GovernmentIDNumber
 
-    # Lower case alias for GovernmentIDNumber
-    @property
-    def governmentidnumber(self):
-        return self.GovernmentIDNumber
-
     @GovernmentIDNumber.setter
     def GovernmentIDNumber(self, value):
         self.contactitem.GovernmentIDNumber = value
 
-    # Lower case alias for GovernmentIDNumber setter
+    # Lower case aliases for GovernmentIDNumber
+    @property
+    def governmentidnumber(self):
+        return self.GovernmentIDNumber
+
     @governmentidnumber.setter
     def governmentidnumber(self, value):
         self.GovernmentIDNumber = value
@@ -5414,7 +5262,7 @@ class ContactItem:
     def HasPicture(self):
         return self.contactitem.HasPicture
 
-    # Lower case alias for HasPicture
+    # Lower case aliases for HasPicture
     @property
     def haspicture(self):
         return self.HasPicture
@@ -5423,16 +5271,15 @@ class ContactItem:
     def Hobby(self):
         return self.contactitem.Hobby
 
-    # Lower case alias for Hobby
-    @property
-    def hobby(self):
-        return self.Hobby
-
     @Hobby.setter
     def Hobby(self, value):
         self.contactitem.Hobby = value
 
-    # Lower case alias for Hobby setter
+    # Lower case aliases for Hobby
+    @property
+    def hobby(self):
+        return self.Hobby
+
     @hobby.setter
     def hobby(self, value):
         self.Hobby = value
@@ -5441,16 +5288,15 @@ class ContactItem:
     def Home2TelephoneNumber(self):
         return self.contactitem.Home2TelephoneNumber
 
-    # Lower case alias for Home2TelephoneNumber
-    @property
-    def home2telephonenumber(self):
-        return self.Home2TelephoneNumber
-
     @Home2TelephoneNumber.setter
     def Home2TelephoneNumber(self, value):
         self.contactitem.Home2TelephoneNumber = value
 
-    # Lower case alias for Home2TelephoneNumber setter
+    # Lower case aliases for Home2TelephoneNumber
+    @property
+    def home2telephonenumber(self):
+        return self.Home2TelephoneNumber
+
     @home2telephonenumber.setter
     def home2telephonenumber(self, value):
         self.Home2TelephoneNumber = value
@@ -5459,16 +5305,15 @@ class ContactItem:
     def HomeAddress(self):
         return self.contactitem.HomeAddress
 
-    # Lower case alias for HomeAddress
-    @property
-    def homeaddress(self):
-        return self.HomeAddress
-
     @HomeAddress.setter
     def HomeAddress(self, value):
         self.contactitem.HomeAddress = value
 
-    # Lower case alias for HomeAddress setter
+    # Lower case aliases for HomeAddress
+    @property
+    def homeaddress(self):
+        return self.HomeAddress
+
     @homeaddress.setter
     def homeaddress(self, value):
         self.HomeAddress = value
@@ -5477,16 +5322,15 @@ class ContactItem:
     def HomeAddressCity(self):
         return self.contactitem.HomeAddressCity
 
-    # Lower case alias for HomeAddressCity
-    @property
-    def homeaddresscity(self):
-        return self.HomeAddressCity
-
     @HomeAddressCity.setter
     def HomeAddressCity(self, value):
         self.contactitem.HomeAddressCity = value
 
-    # Lower case alias for HomeAddressCity setter
+    # Lower case aliases for HomeAddressCity
+    @property
+    def homeaddresscity(self):
+        return self.HomeAddressCity
+
     @homeaddresscity.setter
     def homeaddresscity(self, value):
         self.HomeAddressCity = value
@@ -5495,16 +5339,15 @@ class ContactItem:
     def HomeAddressCountry(self):
         return self.contactitem.HomeAddressCountry
 
-    # Lower case alias for HomeAddressCountry
-    @property
-    def homeaddresscountry(self):
-        return self.HomeAddressCountry
-
     @HomeAddressCountry.setter
     def HomeAddressCountry(self, value):
         self.contactitem.HomeAddressCountry = value
 
-    # Lower case alias for HomeAddressCountry setter
+    # Lower case aliases for HomeAddressCountry
+    @property
+    def homeaddresscountry(self):
+        return self.HomeAddressCountry
+
     @homeaddresscountry.setter
     def homeaddresscountry(self, value):
         self.HomeAddressCountry = value
@@ -5513,16 +5356,15 @@ class ContactItem:
     def HomeAddressPostalCode(self):
         return self.contactitem.HomeAddressPostalCode
 
-    # Lower case alias for HomeAddressPostalCode
-    @property
-    def homeaddresspostalcode(self):
-        return self.HomeAddressPostalCode
-
     @HomeAddressPostalCode.setter
     def HomeAddressPostalCode(self, value):
         self.contactitem.HomeAddressPostalCode = value
 
-    # Lower case alias for HomeAddressPostalCode setter
+    # Lower case aliases for HomeAddressPostalCode
+    @property
+    def homeaddresspostalcode(self):
+        return self.HomeAddressPostalCode
+
     @homeaddresspostalcode.setter
     def homeaddresspostalcode(self, value):
         self.HomeAddressPostalCode = value
@@ -5531,16 +5373,15 @@ class ContactItem:
     def HomeAddressPostOfficeBox(self):
         return self.contactitem.HomeAddressPostOfficeBox
 
-    # Lower case alias for HomeAddressPostOfficeBox
-    @property
-    def homeaddresspostofficebox(self):
-        return self.HomeAddressPostOfficeBox
-
     @HomeAddressPostOfficeBox.setter
     def HomeAddressPostOfficeBox(self, value):
         self.contactitem.HomeAddressPostOfficeBox = value
 
-    # Lower case alias for HomeAddressPostOfficeBox setter
+    # Lower case aliases for HomeAddressPostOfficeBox
+    @property
+    def homeaddresspostofficebox(self):
+        return self.HomeAddressPostOfficeBox
+
     @homeaddresspostofficebox.setter
     def homeaddresspostofficebox(self, value):
         self.HomeAddressPostOfficeBox = value
@@ -5549,16 +5390,15 @@ class ContactItem:
     def HomeAddressState(self):
         return self.contactitem.HomeAddressState
 
-    # Lower case alias for HomeAddressState
-    @property
-    def homeaddressstate(self):
-        return self.HomeAddressState
-
     @HomeAddressState.setter
     def HomeAddressState(self, value):
         self.contactitem.HomeAddressState = value
 
-    # Lower case alias for HomeAddressState setter
+    # Lower case aliases for HomeAddressState
+    @property
+    def homeaddressstate(self):
+        return self.HomeAddressState
+
     @homeaddressstate.setter
     def homeaddressstate(self, value):
         self.HomeAddressState = value
@@ -5567,16 +5407,15 @@ class ContactItem:
     def HomeAddressStreet(self):
         return self.contactitem.HomeAddressStreet
 
-    # Lower case alias for HomeAddressStreet
-    @property
-    def homeaddressstreet(self):
-        return self.HomeAddressStreet
-
     @HomeAddressStreet.setter
     def HomeAddressStreet(self, value):
         self.contactitem.HomeAddressStreet = value
 
-    # Lower case alias for HomeAddressStreet setter
+    # Lower case aliases for HomeAddressStreet
+    @property
+    def homeaddressstreet(self):
+        return self.HomeAddressStreet
+
     @homeaddressstreet.setter
     def homeaddressstreet(self, value):
         self.HomeAddressStreet = value
@@ -5585,16 +5424,15 @@ class ContactItem:
     def HomeFaxNumber(self):
         return self.contactitem.HomeFaxNumber
 
-    # Lower case alias for HomeFaxNumber
-    @property
-    def homefaxnumber(self):
-        return self.HomeFaxNumber
-
     @HomeFaxNumber.setter
     def HomeFaxNumber(self, value):
         self.contactitem.HomeFaxNumber = value
 
-    # Lower case alias for HomeFaxNumber setter
+    # Lower case aliases for HomeFaxNumber
+    @property
+    def homefaxnumber(self):
+        return self.HomeFaxNumber
+
     @homefaxnumber.setter
     def homefaxnumber(self, value):
         self.HomeFaxNumber = value
@@ -5603,16 +5441,15 @@ class ContactItem:
     def HomeTelephoneNumber(self):
         return self.contactitem.HomeTelephoneNumber
 
-    # Lower case alias for HomeTelephoneNumber
-    @property
-    def hometelephonenumber(self):
-        return self.HomeTelephoneNumber
-
     @HomeTelephoneNumber.setter
     def HomeTelephoneNumber(self, value):
         self.contactitem.HomeTelephoneNumber = value
 
-    # Lower case alias for HomeTelephoneNumber setter
+    # Lower case aliases for HomeTelephoneNumber
+    @property
+    def hometelephonenumber(self):
+        return self.HomeTelephoneNumber
+
     @hometelephonenumber.setter
     def hometelephonenumber(self, value):
         self.HomeTelephoneNumber = value
@@ -5621,16 +5458,15 @@ class ContactItem:
     def IMAddress(self):
         return self.contactitem.IMAddress
 
-    # Lower case alias for IMAddress
-    @property
-    def imaddress(self):
-        return self.IMAddress
-
     @IMAddress.setter
     def IMAddress(self, value):
         self.contactitem.IMAddress = value
 
-    # Lower case alias for IMAddress setter
+    # Lower case aliases for IMAddress
+    @property
+    def imaddress(self):
+        return self.IMAddress
+
     @imaddress.setter
     def imaddress(self, value):
         self.IMAddress = value
@@ -5639,16 +5475,15 @@ class ContactItem:
     def Importance(self):
         return OlImportance(self.contactitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.contactitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -5657,16 +5492,15 @@ class ContactItem:
     def Initials(self):
         return self.contactitem.Initials
 
-    # Lower case alias for Initials
-    @property
-    def initials(self):
-        return self.Initials
-
     @Initials.setter
     def Initials(self, value):
         self.contactitem.Initials = value
 
-    # Lower case alias for Initials setter
+    # Lower case aliases for Initials
+    @property
+    def initials(self):
+        return self.Initials
+
     @initials.setter
     def initials(self, value):
         self.Initials = value
@@ -5675,16 +5509,15 @@ class ContactItem:
     def InternetFreeBusyAddress(self):
         return self.contactitem.InternetFreeBusyAddress
 
-    # Lower case alias for InternetFreeBusyAddress
-    @property
-    def internetfreebusyaddress(self):
-        return self.InternetFreeBusyAddress
-
     @InternetFreeBusyAddress.setter
     def InternetFreeBusyAddress(self, value):
         self.contactitem.InternetFreeBusyAddress = value
 
-    # Lower case alias for InternetFreeBusyAddress setter
+    # Lower case aliases for InternetFreeBusyAddress
+    @property
+    def internetfreebusyaddress(self):
+        return self.InternetFreeBusyAddress
+
     @internetfreebusyaddress.setter
     def internetfreebusyaddress(self, value):
         self.InternetFreeBusyAddress = value
@@ -5693,7 +5526,7 @@ class ContactItem:
     def IsConflict(self):
         return self.contactitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -5702,16 +5535,15 @@ class ContactItem:
     def ISDNNumber(self):
         return self.contactitem.ISDNNumber
 
-    # Lower case alias for ISDNNumber
-    @property
-    def isdnnumber(self):
-        return self.ISDNNumber
-
     @ISDNNumber.setter
     def ISDNNumber(self, value):
         self.contactitem.ISDNNumber = value
 
-    # Lower case alias for ISDNNumber setter
+    # Lower case aliases for ISDNNumber
+    @property
+    def isdnnumber(self):
+        return self.ISDNNumber
+
     @isdnnumber.setter
     def isdnnumber(self, value):
         self.ISDNNumber = value
@@ -5720,7 +5552,7 @@ class ContactItem:
     def IsMarkedAsTask(self):
         return ContactItem(self.contactitem.IsMarkedAsTask)
 
-    # Lower case alias for IsMarkedAsTask
+    # Lower case aliases for IsMarkedAsTask
     @property
     def ismarkedastask(self):
         return self.IsMarkedAsTask
@@ -5729,7 +5561,7 @@ class ContactItem:
     def ItemProperties(self):
         return ItemProperties(self.contactitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -5738,16 +5570,15 @@ class ContactItem:
     def JobTitle(self):
         return self.contactitem.JobTitle
 
-    # Lower case alias for JobTitle
-    @property
-    def jobtitle(self):
-        return self.JobTitle
-
     @JobTitle.setter
     def JobTitle(self, value):
         self.contactitem.JobTitle = value
 
-    # Lower case alias for JobTitle setter
+    # Lower case aliases for JobTitle
+    @property
+    def jobtitle(self):
+        return self.JobTitle
+
     @jobtitle.setter
     def jobtitle(self, value):
         self.JobTitle = value
@@ -5756,16 +5587,15 @@ class ContactItem:
     def Journal(self):
         return self.contactitem.Journal
 
-    # Lower case alias for Journal
-    @property
-    def journal(self):
-        return self.Journal
-
     @Journal.setter
     def Journal(self, value):
         self.contactitem.Journal = value
 
-    # Lower case alias for Journal setter
+    # Lower case aliases for Journal
+    @property
+    def journal(self):
+        return self.Journal
+
     @journal.setter
     def journal(self, value):
         self.Journal = value
@@ -5774,16 +5604,15 @@ class ContactItem:
     def Language(self):
         return self.contactitem.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.contactitem.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -5792,7 +5621,7 @@ class ContactItem:
     def LastFirstAndSuffix(self):
         return self.contactitem.LastFirstAndSuffix
 
-    # Lower case alias for LastFirstAndSuffix
+    # Lower case aliases for LastFirstAndSuffix
     @property
     def lastfirstandsuffix(self):
         return self.LastFirstAndSuffix
@@ -5801,7 +5630,7 @@ class ContactItem:
     def LastFirstNoSpace(self):
         return self.contactitem.LastFirstNoSpace
 
-    # Lower case alias for LastFirstNoSpace
+    # Lower case aliases for LastFirstNoSpace
     @property
     def lastfirstnospace(self):
         return self.LastFirstNoSpace
@@ -5810,7 +5639,7 @@ class ContactItem:
     def LastFirstNoSpaceAndSuffix(self):
         return self.contactitem.LastFirstNoSpaceAndSuffix
 
-    # Lower case alias for LastFirstNoSpaceAndSuffix
+    # Lower case aliases for LastFirstNoSpaceAndSuffix
     @property
     def lastfirstnospaceandsuffix(self):
         return self.LastFirstNoSpaceAndSuffix
@@ -5819,7 +5648,7 @@ class ContactItem:
     def LastFirstNoSpaceCompany(self):
         return self.contactitem.LastFirstNoSpaceCompany
 
-    # Lower case alias for LastFirstNoSpaceCompany
+    # Lower case aliases for LastFirstNoSpaceCompany
     @property
     def lastfirstnospacecompany(self):
         return self.LastFirstNoSpaceCompany
@@ -5828,7 +5657,7 @@ class ContactItem:
     def LastFirstSpaceOnly(self):
         return self.contactitem.LastFirstSpaceOnly
 
-    # Lower case alias for LastFirstSpaceOnly
+    # Lower case aliases for LastFirstSpaceOnly
     @property
     def lastfirstspaceonly(self):
         return self.LastFirstSpaceOnly
@@ -5837,7 +5666,7 @@ class ContactItem:
     def LastFirstSpaceOnlyCompany(self):
         return self.contactitem.LastFirstSpaceOnlyCompany
 
-    # Lower case alias for LastFirstSpaceOnlyCompany
+    # Lower case aliases for LastFirstSpaceOnlyCompany
     @property
     def lastfirstspaceonlycompany(self):
         return self.LastFirstSpaceOnlyCompany
@@ -5846,7 +5675,7 @@ class ContactItem:
     def LastModificationTime(self):
         return self.contactitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -5855,16 +5684,15 @@ class ContactItem:
     def LastName(self):
         return self.contactitem.LastName
 
-    # Lower case alias for LastName
-    @property
-    def lastname(self):
-        return self.LastName
-
     @LastName.setter
     def LastName(self, value):
         self.contactitem.LastName = value
 
-    # Lower case alias for LastName setter
+    # Lower case aliases for LastName
+    @property
+    def lastname(self):
+        return self.LastName
+
     @lastname.setter
     def lastname(self, value):
         self.LastName = value
@@ -5873,7 +5701,7 @@ class ContactItem:
     def LastNameAndFirstName(self):
         return self.contactitem.LastNameAndFirstName
 
-    # Lower case alias for LastNameAndFirstName
+    # Lower case aliases for LastNameAndFirstName
     @property
     def lastnameandfirstname(self):
         return self.LastNameAndFirstName
@@ -5882,16 +5710,15 @@ class ContactItem:
     def MailingAddress(self):
         return self.contactitem.MailingAddress
 
-    # Lower case alias for MailingAddress
-    @property
-    def mailingaddress(self):
-        return self.MailingAddress
-
     @MailingAddress.setter
     def MailingAddress(self, value):
         self.contactitem.MailingAddress = value
 
-    # Lower case alias for MailingAddress setter
+    # Lower case aliases for MailingAddress
+    @property
+    def mailingaddress(self):
+        return self.MailingAddress
+
     @mailingaddress.setter
     def mailingaddress(self, value):
         self.MailingAddress = value
@@ -5900,16 +5727,15 @@ class ContactItem:
     def MailingAddressCity(self):
         return self.contactitem.MailingAddressCity
 
-    # Lower case alias for MailingAddressCity
-    @property
-    def mailingaddresscity(self):
-        return self.MailingAddressCity
-
     @MailingAddressCity.setter
     def MailingAddressCity(self, value):
         self.contactitem.MailingAddressCity = value
 
-    # Lower case alias for MailingAddressCity setter
+    # Lower case aliases for MailingAddressCity
+    @property
+    def mailingaddresscity(self):
+        return self.MailingAddressCity
+
     @mailingaddresscity.setter
     def mailingaddresscity(self, value):
         self.MailingAddressCity = value
@@ -5918,16 +5744,15 @@ class ContactItem:
     def MailingAddressCountry(self):
         return self.contactitem.MailingAddressCountry
 
-    # Lower case alias for MailingAddressCountry
-    @property
-    def mailingaddresscountry(self):
-        return self.MailingAddressCountry
-
     @MailingAddressCountry.setter
     def MailingAddressCountry(self, value):
         self.contactitem.MailingAddressCountry = value
 
-    # Lower case alias for MailingAddressCountry setter
+    # Lower case aliases for MailingAddressCountry
+    @property
+    def mailingaddresscountry(self):
+        return self.MailingAddressCountry
+
     @mailingaddresscountry.setter
     def mailingaddresscountry(self, value):
         self.MailingAddressCountry = value
@@ -5936,16 +5761,15 @@ class ContactItem:
     def MailingAddressPostalCode(self):
         return self.contactitem.MailingAddressPostalCode
 
-    # Lower case alias for MailingAddressPostalCode
-    @property
-    def mailingaddresspostalcode(self):
-        return self.MailingAddressPostalCode
-
     @MailingAddressPostalCode.setter
     def MailingAddressPostalCode(self, value):
         self.contactitem.MailingAddressPostalCode = value
 
-    # Lower case alias for MailingAddressPostalCode setter
+    # Lower case aliases for MailingAddressPostalCode
+    @property
+    def mailingaddresspostalcode(self):
+        return self.MailingAddressPostalCode
+
     @mailingaddresspostalcode.setter
     def mailingaddresspostalcode(self, value):
         self.MailingAddressPostalCode = value
@@ -5954,16 +5778,15 @@ class ContactItem:
     def MailingAddressPostOfficeBox(self):
         return self.contactitem.MailingAddressPostOfficeBox
 
-    # Lower case alias for MailingAddressPostOfficeBox
-    @property
-    def mailingaddresspostofficebox(self):
-        return self.MailingAddressPostOfficeBox
-
     @MailingAddressPostOfficeBox.setter
     def MailingAddressPostOfficeBox(self, value):
         self.contactitem.MailingAddressPostOfficeBox = value
 
-    # Lower case alias for MailingAddressPostOfficeBox setter
+    # Lower case aliases for MailingAddressPostOfficeBox
+    @property
+    def mailingaddresspostofficebox(self):
+        return self.MailingAddressPostOfficeBox
+
     @mailingaddresspostofficebox.setter
     def mailingaddresspostofficebox(self, value):
         self.MailingAddressPostOfficeBox = value
@@ -5972,16 +5795,15 @@ class ContactItem:
     def MailingAddressState(self):
         return self.contactitem.MailingAddressState
 
-    # Lower case alias for MailingAddressState
-    @property
-    def mailingaddressstate(self):
-        return self.MailingAddressState
-
     @MailingAddressState.setter
     def MailingAddressState(self, value):
         self.contactitem.MailingAddressState = value
 
-    # Lower case alias for MailingAddressState setter
+    # Lower case aliases for MailingAddressState
+    @property
+    def mailingaddressstate(self):
+        return self.MailingAddressState
+
     @mailingaddressstate.setter
     def mailingaddressstate(self, value):
         self.MailingAddressState = value
@@ -5990,16 +5812,15 @@ class ContactItem:
     def MailingAddressStreet(self):
         return self.contactitem.MailingAddressStreet
 
-    # Lower case alias for MailingAddressStreet
-    @property
-    def mailingaddressstreet(self):
-        return self.MailingAddressStreet
-
     @MailingAddressStreet.setter
     def MailingAddressStreet(self, value):
         self.contactitem.MailingAddressStreet = value
 
-    # Lower case alias for MailingAddressStreet setter
+    # Lower case aliases for MailingAddressStreet
+    @property
+    def mailingaddressstreet(self):
+        return self.MailingAddressStreet
+
     @mailingaddressstreet.setter
     def mailingaddressstreet(self, value):
         self.MailingAddressStreet = value
@@ -6008,16 +5829,15 @@ class ContactItem:
     def ManagerName(self):
         return self.contactitem.ManagerName
 
-    # Lower case alias for ManagerName
-    @property
-    def managername(self):
-        return self.ManagerName
-
     @ManagerName.setter
     def ManagerName(self, value):
         self.contactitem.ManagerName = value
 
-    # Lower case alias for ManagerName setter
+    # Lower case aliases for ManagerName
+    @property
+    def managername(self):
+        return self.ManagerName
+
     @managername.setter
     def managername(self, value):
         self.ManagerName = value
@@ -6026,16 +5846,15 @@ class ContactItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.contactitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.contactitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -6044,16 +5863,15 @@ class ContactItem:
     def MessageClass(self):
         return self.contactitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.contactitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -6062,16 +5880,15 @@ class ContactItem:
     def MiddleName(self):
         return self.contactitem.MiddleName
 
-    # Lower case alias for MiddleName
-    @property
-    def middlename(self):
-        return self.MiddleName
-
     @MiddleName.setter
     def MiddleName(self, value):
         self.contactitem.MiddleName = value
 
-    # Lower case alias for MiddleName setter
+    # Lower case aliases for MiddleName
+    @property
+    def middlename(self):
+        return self.MiddleName
+
     @middlename.setter
     def middlename(self, value):
         self.MiddleName = value
@@ -6080,16 +5897,15 @@ class ContactItem:
     def Mileage(self):
         return self.contactitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.contactitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -6098,16 +5914,15 @@ class ContactItem:
     def MobileTelephoneNumber(self):
         return self.contactitem.MobileTelephoneNumber
 
-    # Lower case alias for MobileTelephoneNumber
-    @property
-    def mobiletelephonenumber(self):
-        return self.MobileTelephoneNumber
-
     @MobileTelephoneNumber.setter
     def MobileTelephoneNumber(self, value):
         self.contactitem.MobileTelephoneNumber = value
 
-    # Lower case alias for MobileTelephoneNumber setter
+    # Lower case aliases for MobileTelephoneNumber
+    @property
+    def mobiletelephonenumber(self):
+        return self.MobileTelephoneNumber
+
     @mobiletelephonenumber.setter
     def mobiletelephonenumber(self, value):
         self.MobileTelephoneNumber = value
@@ -6116,16 +5931,15 @@ class ContactItem:
     def NetMeetingAlias(self):
         return self.contactitem.NetMeetingAlias
 
-    # Lower case alias for NetMeetingAlias
-    @property
-    def netmeetingalias(self):
-        return self.NetMeetingAlias
-
     @NetMeetingAlias.setter
     def NetMeetingAlias(self, value):
         self.contactitem.NetMeetingAlias = value
 
-    # Lower case alias for NetMeetingAlias setter
+    # Lower case aliases for NetMeetingAlias
+    @property
+    def netmeetingalias(self):
+        return self.NetMeetingAlias
+
     @netmeetingalias.setter
     def netmeetingalias(self, value):
         self.NetMeetingAlias = value
@@ -6134,16 +5948,15 @@ class ContactItem:
     def NetMeetingServer(self):
         return self.contactitem.NetMeetingServer
 
-    # Lower case alias for NetMeetingServer
-    @property
-    def netmeetingserver(self):
-        return self.NetMeetingServer
-
     @NetMeetingServer.setter
     def NetMeetingServer(self, value):
         self.contactitem.NetMeetingServer = value
 
-    # Lower case alias for NetMeetingServer setter
+    # Lower case aliases for NetMeetingServer
+    @property
+    def netmeetingserver(self):
+        return self.NetMeetingServer
+
     @netmeetingserver.setter
     def netmeetingserver(self, value):
         self.NetMeetingServer = value
@@ -6152,16 +5965,15 @@ class ContactItem:
     def NickName(self):
         return self.contactitem.NickName
 
-    # Lower case alias for NickName
-    @property
-    def nickname(self):
-        return self.NickName
-
     @NickName.setter
     def NickName(self, value):
         self.contactitem.NickName = value
 
-    # Lower case alias for NickName setter
+    # Lower case aliases for NickName
+    @property
+    def nickname(self):
+        return self.NickName
+
     @nickname.setter
     def nickname(self, value):
         self.NickName = value
@@ -6170,16 +5982,15 @@ class ContactItem:
     def NoAging(self):
         return self.contactitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.contactitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -6188,16 +5999,15 @@ class ContactItem:
     def OfficeLocation(self):
         return self.contactitem.OfficeLocation
 
-    # Lower case alias for OfficeLocation
-    @property
-    def officelocation(self):
-        return self.OfficeLocation
-
     @OfficeLocation.setter
     def OfficeLocation(self, value):
         self.contactitem.OfficeLocation = value
 
-    # Lower case alias for OfficeLocation setter
+    # Lower case aliases for OfficeLocation
+    @property
+    def officelocation(self):
+        return self.OfficeLocation
+
     @officelocation.setter
     def officelocation(self, value):
         self.OfficeLocation = value
@@ -6206,16 +6016,15 @@ class ContactItem:
     def OrganizationalIDNumber(self):
         return self.contactitem.OrganizationalIDNumber
 
-    # Lower case alias for OrganizationalIDNumber
-    @property
-    def organizationalidnumber(self):
-        return self.OrganizationalIDNumber
-
     @OrganizationalIDNumber.setter
     def OrganizationalIDNumber(self, value):
         self.contactitem.OrganizationalIDNumber = value
 
-    # Lower case alias for OrganizationalIDNumber setter
+    # Lower case aliases for OrganizationalIDNumber
+    @property
+    def organizationalidnumber(self):
+        return self.OrganizationalIDNumber
+
     @organizationalidnumber.setter
     def organizationalidnumber(self, value):
         self.OrganizationalIDNumber = value
@@ -6224,16 +6033,15 @@ class ContactItem:
     def OtherAddress(self):
         return self.contactitem.OtherAddress
 
-    # Lower case alias for OtherAddress
-    @property
-    def otheraddress(self):
-        return self.OtherAddress
-
     @OtherAddress.setter
     def OtherAddress(self, value):
         self.contactitem.OtherAddress = value
 
-    # Lower case alias for OtherAddress setter
+    # Lower case aliases for OtherAddress
+    @property
+    def otheraddress(self):
+        return self.OtherAddress
+
     @otheraddress.setter
     def otheraddress(self, value):
         self.OtherAddress = value
@@ -6242,16 +6050,15 @@ class ContactItem:
     def OtherAddressCity(self):
         return self.contactitem.OtherAddressCity
 
-    # Lower case alias for OtherAddressCity
-    @property
-    def otheraddresscity(self):
-        return self.OtherAddressCity
-
     @OtherAddressCity.setter
     def OtherAddressCity(self, value):
         self.contactitem.OtherAddressCity = value
 
-    # Lower case alias for OtherAddressCity setter
+    # Lower case aliases for OtherAddressCity
+    @property
+    def otheraddresscity(self):
+        return self.OtherAddressCity
+
     @otheraddresscity.setter
     def otheraddresscity(self, value):
         self.OtherAddressCity = value
@@ -6260,16 +6067,15 @@ class ContactItem:
     def OtherAddressCountry(self):
         return self.contactitem.OtherAddressCountry
 
-    # Lower case alias for OtherAddressCountry
-    @property
-    def otheraddresscountry(self):
-        return self.OtherAddressCountry
-
     @OtherAddressCountry.setter
     def OtherAddressCountry(self, value):
         self.contactitem.OtherAddressCountry = value
 
-    # Lower case alias for OtherAddressCountry setter
+    # Lower case aliases for OtherAddressCountry
+    @property
+    def otheraddresscountry(self):
+        return self.OtherAddressCountry
+
     @otheraddresscountry.setter
     def otheraddresscountry(self, value):
         self.OtherAddressCountry = value
@@ -6278,16 +6084,15 @@ class ContactItem:
     def OtherAddressPostalCode(self):
         return self.contactitem.OtherAddressPostalCode
 
-    # Lower case alias for OtherAddressPostalCode
-    @property
-    def otheraddresspostalcode(self):
-        return self.OtherAddressPostalCode
-
     @OtherAddressPostalCode.setter
     def OtherAddressPostalCode(self, value):
         self.contactitem.OtherAddressPostalCode = value
 
-    # Lower case alias for OtherAddressPostalCode setter
+    # Lower case aliases for OtherAddressPostalCode
+    @property
+    def otheraddresspostalcode(self):
+        return self.OtherAddressPostalCode
+
     @otheraddresspostalcode.setter
     def otheraddresspostalcode(self, value):
         self.OtherAddressPostalCode = value
@@ -6296,16 +6101,15 @@ class ContactItem:
     def OtherAddressPostOfficeBox(self):
         return self.contactitem.OtherAddressPostOfficeBox
 
-    # Lower case alias for OtherAddressPostOfficeBox
-    @property
-    def otheraddresspostofficebox(self):
-        return self.OtherAddressPostOfficeBox
-
     @OtherAddressPostOfficeBox.setter
     def OtherAddressPostOfficeBox(self, value):
         self.contactitem.OtherAddressPostOfficeBox = value
 
-    # Lower case alias for OtherAddressPostOfficeBox setter
+    # Lower case aliases for OtherAddressPostOfficeBox
+    @property
+    def otheraddresspostofficebox(self):
+        return self.OtherAddressPostOfficeBox
+
     @otheraddresspostofficebox.setter
     def otheraddresspostofficebox(self, value):
         self.OtherAddressPostOfficeBox = value
@@ -6314,16 +6118,15 @@ class ContactItem:
     def OtherAddressState(self):
         return self.contactitem.OtherAddressState
 
-    # Lower case alias for OtherAddressState
-    @property
-    def otheraddressstate(self):
-        return self.OtherAddressState
-
     @OtherAddressState.setter
     def OtherAddressState(self, value):
         self.contactitem.OtherAddressState = value
 
-    # Lower case alias for OtherAddressState setter
+    # Lower case aliases for OtherAddressState
+    @property
+    def otheraddressstate(self):
+        return self.OtherAddressState
+
     @otheraddressstate.setter
     def otheraddressstate(self, value):
         self.OtherAddressState = value
@@ -6332,16 +6135,15 @@ class ContactItem:
     def OtherAddressStreet(self):
         return self.contactitem.OtherAddressStreet
 
-    # Lower case alias for OtherAddressStreet
-    @property
-    def otheraddressstreet(self):
-        return self.OtherAddressStreet
-
     @OtherAddressStreet.setter
     def OtherAddressStreet(self, value):
         self.contactitem.OtherAddressStreet = value
 
-    # Lower case alias for OtherAddressStreet setter
+    # Lower case aliases for OtherAddressStreet
+    @property
+    def otheraddressstreet(self):
+        return self.OtherAddressStreet
+
     @otheraddressstreet.setter
     def otheraddressstreet(self, value):
         self.OtherAddressStreet = value
@@ -6350,16 +6152,15 @@ class ContactItem:
     def OtherFaxNumber(self):
         return self.contactitem.OtherFaxNumber
 
-    # Lower case alias for OtherFaxNumber
-    @property
-    def otherfaxnumber(self):
-        return self.OtherFaxNumber
-
     @OtherFaxNumber.setter
     def OtherFaxNumber(self, value):
         self.contactitem.OtherFaxNumber = value
 
-    # Lower case alias for OtherFaxNumber setter
+    # Lower case aliases for OtherFaxNumber
+    @property
+    def otherfaxnumber(self):
+        return self.OtherFaxNumber
+
     @otherfaxnumber.setter
     def otherfaxnumber(self, value):
         self.OtherFaxNumber = value
@@ -6368,16 +6169,15 @@ class ContactItem:
     def OtherTelephoneNumber(self):
         return self.contactitem.OtherTelephoneNumber
 
-    # Lower case alias for OtherTelephoneNumber
-    @property
-    def othertelephonenumber(self):
-        return self.OtherTelephoneNumber
-
     @OtherTelephoneNumber.setter
     def OtherTelephoneNumber(self, value):
         self.contactitem.OtherTelephoneNumber = value
 
-    # Lower case alias for OtherTelephoneNumber setter
+    # Lower case aliases for OtherTelephoneNumber
+    @property
+    def othertelephonenumber(self):
+        return self.OtherTelephoneNumber
+
     @othertelephonenumber.setter
     def othertelephonenumber(self, value):
         self.OtherTelephoneNumber = value
@@ -6386,7 +6186,7 @@ class ContactItem:
     def OutlookInternalVersion(self):
         return self.contactitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -6395,7 +6195,7 @@ class ContactItem:
     def OutlookVersion(self):
         return self.contactitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -6404,16 +6204,15 @@ class ContactItem:
     def PagerNumber(self):
         return self.contactitem.PagerNumber
 
-    # Lower case alias for PagerNumber
-    @property
-    def pagernumber(self):
-        return self.PagerNumber
-
     @PagerNumber.setter
     def PagerNumber(self, value):
         self.contactitem.PagerNumber = value
 
-    # Lower case alias for PagerNumber setter
+    # Lower case aliases for PagerNumber
+    @property
+    def pagernumber(self):
+        return self.PagerNumber
+
     @pagernumber.setter
     def pagernumber(self, value):
         self.PagerNumber = value
@@ -6422,7 +6221,7 @@ class ContactItem:
     def Parent(self):
         return self.contactitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6431,16 +6230,15 @@ class ContactItem:
     def PersonalHomePage(self):
         return self.contactitem.PersonalHomePage
 
-    # Lower case alias for PersonalHomePage
-    @property
-    def personalhomepage(self):
-        return self.PersonalHomePage
-
     @PersonalHomePage.setter
     def PersonalHomePage(self, value):
         self.contactitem.PersonalHomePage = value
 
-    # Lower case alias for PersonalHomePage setter
+    # Lower case aliases for PersonalHomePage
+    @property
+    def personalhomepage(self):
+        return self.PersonalHomePage
+
     @personalhomepage.setter
     def personalhomepage(self, value):
         self.PersonalHomePage = value
@@ -6449,16 +6247,15 @@ class ContactItem:
     def PrimaryTelephoneNumber(self):
         return self.contactitem.PrimaryTelephoneNumber
 
-    # Lower case alias for PrimaryTelephoneNumber
-    @property
-    def primarytelephonenumber(self):
-        return self.PrimaryTelephoneNumber
-
     @PrimaryTelephoneNumber.setter
     def PrimaryTelephoneNumber(self, value):
         self.contactitem.PrimaryTelephoneNumber = value
 
-    # Lower case alias for PrimaryTelephoneNumber setter
+    # Lower case aliases for PrimaryTelephoneNumber
+    @property
+    def primarytelephonenumber(self):
+        return self.PrimaryTelephoneNumber
+
     @primarytelephonenumber.setter
     def primarytelephonenumber(self, value):
         self.PrimaryTelephoneNumber = value
@@ -6467,16 +6264,15 @@ class ContactItem:
     def Profession(self):
         return self.contactitem.Profession
 
-    # Lower case alias for Profession
-    @property
-    def profession(self):
-        return self.Profession
-
     @Profession.setter
     def Profession(self, value):
         self.contactitem.Profession = value
 
-    # Lower case alias for Profession setter
+    # Lower case aliases for Profession
+    @property
+    def profession(self):
+        return self.Profession
+
     @profession.setter
     def profession(self, value):
         self.Profession = value
@@ -6485,7 +6281,7 @@ class ContactItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.contactitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -6494,16 +6290,15 @@ class ContactItem:
     def RadioTelephoneNumber(self):
         return self.contactitem.RadioTelephoneNumber
 
-    # Lower case alias for RadioTelephoneNumber
-    @property
-    def radiotelephonenumber(self):
-        return self.RadioTelephoneNumber
-
     @RadioTelephoneNumber.setter
     def RadioTelephoneNumber(self, value):
         self.contactitem.RadioTelephoneNumber = value
 
-    # Lower case alias for RadioTelephoneNumber setter
+    # Lower case aliases for RadioTelephoneNumber
+    @property
+    def radiotelephonenumber(self):
+        return self.RadioTelephoneNumber
+
     @radiotelephonenumber.setter
     def radiotelephonenumber(self, value):
         self.RadioTelephoneNumber = value
@@ -6512,16 +6307,15 @@ class ContactItem:
     def ReferredBy(self):
         return self.contactitem.ReferredBy
 
-    # Lower case alias for ReferredBy
-    @property
-    def referredby(self):
-        return self.ReferredBy
-
     @ReferredBy.setter
     def ReferredBy(self, value):
         self.contactitem.ReferredBy = value
 
-    # Lower case alias for ReferredBy setter
+    # Lower case aliases for ReferredBy
+    @property
+    def referredby(self):
+        return self.ReferredBy
+
     @referredby.setter
     def referredby(self, value):
         self.ReferredBy = value
@@ -6530,16 +6324,15 @@ class ContactItem:
     def ReminderOverrideDefault(self):
         return self.contactitem.ReminderOverrideDefault
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.contactitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -6548,16 +6341,15 @@ class ContactItem:
     def ReminderPlaySound(self):
         return self.contactitem.ReminderPlaySound
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.contactitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -6566,16 +6358,15 @@ class ContactItem:
     def ReminderSet(self):
         return self.contactitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.contactitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -6584,16 +6375,15 @@ class ContactItem:
     def ReminderSoundFile(self):
         return self.contactitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.contactitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -6602,16 +6392,15 @@ class ContactItem:
     def ReminderTime(self):
         return self.contactitem.ReminderTime
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.contactitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -6620,16 +6409,15 @@ class ContactItem:
     def RTFBody(self):
         return self.contactitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.contactitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -6638,7 +6426,7 @@ class ContactItem:
     def Saved(self):
         return self.contactitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -6647,16 +6435,15 @@ class ContactItem:
     def SelectedMailingAddress(self):
         return OlMailingAddress(self.contactitem.SelectedMailingAddress)
 
-    # Lower case alias for SelectedMailingAddress
-    @property
-    def selectedmailingaddress(self):
-        return self.SelectedMailingAddress
-
     @SelectedMailingAddress.setter
     def SelectedMailingAddress(self, value):
         self.contactitem.SelectedMailingAddress = value
 
-    # Lower case alias for SelectedMailingAddress setter
+    # Lower case aliases for SelectedMailingAddress
+    @property
+    def selectedmailingaddress(self):
+        return self.SelectedMailingAddress
+
     @selectedmailingaddress.setter
     def selectedmailingaddress(self, value):
         self.SelectedMailingAddress = value
@@ -6665,16 +6452,15 @@ class ContactItem:
     def Sensitivity(self):
         return OlSensitivity(self.contactitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.contactitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -6683,7 +6469,7 @@ class ContactItem:
     def Session(self):
         return NameSpace(self.contactitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -6692,7 +6478,7 @@ class ContactItem:
     def Size(self):
         return self.contactitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -6701,16 +6487,15 @@ class ContactItem:
     def Spouse(self):
         return self.contactitem.Spouse
 
-    # Lower case alias for Spouse
-    @property
-    def spouse(self):
-        return self.Spouse
-
     @Spouse.setter
     def Spouse(self, value):
         self.contactitem.Spouse = value
 
-    # Lower case alias for Spouse setter
+    # Lower case aliases for Spouse
+    @property
+    def spouse(self):
+        return self.Spouse
+
     @spouse.setter
     def spouse(self, value):
         self.Spouse = value
@@ -6719,16 +6504,15 @@ class ContactItem:
     def Subject(self):
         return self.contactitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.contactitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -6737,16 +6521,15 @@ class ContactItem:
     def Suffix(self):
         return self.contactitem.Suffix
 
-    # Lower case alias for Suffix
-    @property
-    def suffix(self):
-        return self.Suffix
-
     @Suffix.setter
     def Suffix(self, value):
         self.contactitem.Suffix = value
 
-    # Lower case alias for Suffix setter
+    # Lower case aliases for Suffix
+    @property
+    def suffix(self):
+        return self.Suffix
+
     @suffix.setter
     def suffix(self, value):
         self.Suffix = value
@@ -6755,16 +6538,15 @@ class ContactItem:
     def TaskCompletedDate(self):
         return ContactItem(self.contactitem.TaskCompletedDate)
 
-    # Lower case alias for TaskCompletedDate
-    @property
-    def taskcompleteddate(self):
-        return self.TaskCompletedDate
-
     @TaskCompletedDate.setter
     def TaskCompletedDate(self, value):
         self.contactitem.TaskCompletedDate = value
 
-    # Lower case alias for TaskCompletedDate setter
+    # Lower case aliases for TaskCompletedDate
+    @property
+    def taskcompleteddate(self):
+        return self.TaskCompletedDate
+
     @taskcompleteddate.setter
     def taskcompleteddate(self, value):
         self.TaskCompletedDate = value
@@ -6773,16 +6555,15 @@ class ContactItem:
     def TaskDueDate(self):
         return ContactItem(self.contactitem.TaskDueDate)
 
-    # Lower case alias for TaskDueDate
-    @property
-    def taskduedate(self):
-        return self.TaskDueDate
-
     @TaskDueDate.setter
     def TaskDueDate(self, value):
         self.contactitem.TaskDueDate = value
 
-    # Lower case alias for TaskDueDate setter
+    # Lower case aliases for TaskDueDate
+    @property
+    def taskduedate(self):
+        return self.TaskDueDate
+
     @taskduedate.setter
     def taskduedate(self, value):
         self.TaskDueDate = value
@@ -6791,16 +6572,15 @@ class ContactItem:
     def TaskStartDate(self):
         return ContactItem(self.contactitem.TaskStartDate)
 
-    # Lower case alias for TaskStartDate
-    @property
-    def taskstartdate(self):
-        return self.TaskStartDate
-
     @TaskStartDate.setter
     def TaskStartDate(self, value):
         self.contactitem.TaskStartDate = value
 
-    # Lower case alias for TaskStartDate setter
+    # Lower case aliases for TaskStartDate
+    @property
+    def taskstartdate(self):
+        return self.TaskStartDate
+
     @taskstartdate.setter
     def taskstartdate(self, value):
         self.TaskStartDate = value
@@ -6809,16 +6589,15 @@ class ContactItem:
     def TaskSubject(self):
         return ContactItem(self.contactitem.TaskSubject)
 
-    # Lower case alias for TaskSubject
-    @property
-    def tasksubject(self):
-        return self.TaskSubject
-
     @TaskSubject.setter
     def TaskSubject(self, value):
         self.contactitem.TaskSubject = value
 
-    # Lower case alias for TaskSubject setter
+    # Lower case aliases for TaskSubject
+    @property
+    def tasksubject(self):
+        return self.TaskSubject
+
     @tasksubject.setter
     def tasksubject(self, value):
         self.TaskSubject = value
@@ -6827,16 +6606,15 @@ class ContactItem:
     def TelexNumber(self):
         return self.contactitem.TelexNumber
 
-    # Lower case alias for TelexNumber
-    @property
-    def telexnumber(self):
-        return self.TelexNumber
-
     @TelexNumber.setter
     def TelexNumber(self, value):
         self.contactitem.TelexNumber = value
 
-    # Lower case alias for TelexNumber setter
+    # Lower case aliases for TelexNumber
+    @property
+    def telexnumber(self):
+        return self.TelexNumber
+
     @telexnumber.setter
     def telexnumber(self, value):
         self.TelexNumber = value
@@ -6845,16 +6623,15 @@ class ContactItem:
     def Title(self):
         return self.contactitem.Title
 
-    # Lower case alias for Title
-    @property
-    def title(self):
-        return self.Title
-
     @Title.setter
     def Title(self, value):
         self.contactitem.Title = value
 
-    # Lower case alias for Title setter
+    # Lower case aliases for Title
+    @property
+    def title(self):
+        return self.Title
+
     @title.setter
     def title(self, value):
         self.Title = value
@@ -6863,16 +6640,15 @@ class ContactItem:
     def ToDoTaskOrdinal(self):
         return ContactItem(self.contactitem.ToDoTaskOrdinal)
 
-    # Lower case alias for ToDoTaskOrdinal
-    @property
-    def todotaskordinal(self):
-        return self.ToDoTaskOrdinal
-
     @ToDoTaskOrdinal.setter
     def ToDoTaskOrdinal(self, value):
         self.contactitem.ToDoTaskOrdinal = value
 
-    # Lower case alias for ToDoTaskOrdinal setter
+    # Lower case aliases for ToDoTaskOrdinal
+    @property
+    def todotaskordinal(self):
+        return self.ToDoTaskOrdinal
+
     @todotaskordinal.setter
     def todotaskordinal(self, value):
         self.ToDoTaskOrdinal = value
@@ -6881,16 +6657,15 @@ class ContactItem:
     def TTYTDDTelephoneNumber(self):
         return self.contactitem.TTYTDDTelephoneNumber
 
-    # Lower case alias for TTYTDDTelephoneNumber
-    @property
-    def ttytddtelephonenumber(self):
-        return self.TTYTDDTelephoneNumber
-
     @TTYTDDTelephoneNumber.setter
     def TTYTDDTelephoneNumber(self, value):
         self.contactitem.TTYTDDTelephoneNumber = value
 
-    # Lower case alias for TTYTDDTelephoneNumber setter
+    # Lower case aliases for TTYTDDTelephoneNumber
+    @property
+    def ttytddtelephonenumber(self):
+        return self.TTYTDDTelephoneNumber
+
     @ttytddtelephonenumber.setter
     def ttytddtelephonenumber(self, value):
         self.TTYTDDTelephoneNumber = value
@@ -6899,16 +6674,15 @@ class ContactItem:
     def UnRead(self):
         return self.contactitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.contactitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -6917,16 +6691,15 @@ class ContactItem:
     def User1(self):
         return self.contactitem.User1
 
-    # Lower case alias for User1
-    @property
-    def user1(self):
-        return self.User1
-
     @User1.setter
     def User1(self, value):
         self.contactitem.User1 = value
 
-    # Lower case alias for User1 setter
+    # Lower case aliases for User1
+    @property
+    def user1(self):
+        return self.User1
+
     @user1.setter
     def user1(self, value):
         self.User1 = value
@@ -6935,16 +6708,15 @@ class ContactItem:
     def User2(self):
         return self.contactitem.User2
 
-    # Lower case alias for User2
-    @property
-    def user2(self):
-        return self.User2
-
     @User2.setter
     def User2(self, value):
         self.contactitem.User2 = value
 
-    # Lower case alias for User2 setter
+    # Lower case aliases for User2
+    @property
+    def user2(self):
+        return self.User2
+
     @user2.setter
     def user2(self, value):
         self.User2 = value
@@ -6953,16 +6725,15 @@ class ContactItem:
     def User3(self):
         return self.contactitem.User3
 
-    # Lower case alias for User3
-    @property
-    def user3(self):
-        return self.User3
-
     @User3.setter
     def User3(self, value):
         self.contactitem.User3 = value
 
-    # Lower case alias for User3 setter
+    # Lower case aliases for User3
+    @property
+    def user3(self):
+        return self.User3
+
     @user3.setter
     def user3(self, value):
         self.User3 = value
@@ -6971,16 +6742,15 @@ class ContactItem:
     def User4(self):
         return self.contactitem.User4
 
-    # Lower case alias for User4
-    @property
-    def user4(self):
-        return self.User4
-
     @User4.setter
     def User4(self, value):
         self.contactitem.User4 = value
 
-    # Lower case alias for User4 setter
+    # Lower case aliases for User4
+    @property
+    def user4(self):
+        return self.User4
+
     @user4.setter
     def user4(self, value):
         self.User4 = value
@@ -6989,7 +6759,7 @@ class ContactItem:
     def UserProperties(self):
         return UserProperties(self.contactitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -6998,16 +6768,15 @@ class ContactItem:
     def WebPage(self):
         return self.contactitem.WebPage
 
-    # Lower case alias for WebPage
-    @property
-    def webpage(self):
-        return self.WebPage
-
     @WebPage.setter
     def WebPage(self, value):
         self.contactitem.WebPage = value
 
-    # Lower case alias for WebPage setter
+    # Lower case aliases for WebPage
+    @property
+    def webpage(self):
+        return self.WebPage
+
     @webpage.setter
     def webpage(self, value):
         self.WebPage = value
@@ -7016,16 +6785,15 @@ class ContactItem:
     def YomiCompanyName(self):
         return self.contactitem.YomiCompanyName
 
-    # Lower case alias for YomiCompanyName
-    @property
-    def yomicompanyname(self):
-        return self.YomiCompanyName
-
     @YomiCompanyName.setter
     def YomiCompanyName(self, value):
         self.contactitem.YomiCompanyName = value
 
-    # Lower case alias for YomiCompanyName setter
+    # Lower case aliases for YomiCompanyName
+    @property
+    def yomicompanyname(self):
+        return self.YomiCompanyName
+
     @yomicompanyname.setter
     def yomicompanyname(self, value):
         self.YomiCompanyName = value
@@ -7034,16 +6802,15 @@ class ContactItem:
     def YomiFirstName(self):
         return self.contactitem.YomiFirstName
 
-    # Lower case alias for YomiFirstName
-    @property
-    def yomifirstname(self):
-        return self.YomiFirstName
-
     @YomiFirstName.setter
     def YomiFirstName(self, value):
         self.contactitem.YomiFirstName = value
 
-    # Lower case alias for YomiFirstName setter
+    # Lower case aliases for YomiFirstName
+    @property
+    def yomifirstname(self):
+        return self.YomiFirstName
+
     @yomifirstname.setter
     def yomifirstname(self, value):
         self.YomiFirstName = value
@@ -7052,16 +6819,15 @@ class ContactItem:
     def YomiLastName(self):
         return self.contactitem.YomiLastName
 
-    # Lower case alias for YomiLastName
-    @property
-    def yomilastname(self):
-        return self.YomiLastName
-
     @YomiLastName.setter
     def YomiLastName(self, value):
         self.contactitem.YomiLastName = value
 
-    # Lower case alias for YomiLastName setter
+    # Lower case aliases for YomiLastName
+    @property
+    def yomilastname(self):
+        return self.YomiLastName
+
     @yomilastname.setter
     def yomilastname(self, value):
         self.YomiLastName = value
@@ -7156,7 +6922,7 @@ class ContactsModule:
     def Name(self):
         return ContactsModule(self.contactsmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -7165,7 +6931,7 @@ class ContactsModule:
     def NavigationGroups(self):
         return NavigationGroups(self.contactsmodule.NavigationGroups)
 
-    # Lower case alias for NavigationGroups
+    # Lower case aliases for NavigationGroups
     @property
     def navigationgroups(self):
         return self.NavigationGroups
@@ -7174,7 +6940,7 @@ class ContactsModule:
     def NavigationModuleType(self):
         return olNavigationModuleType(self.contactsmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -7183,7 +6949,7 @@ class ContactsModule:
     def Parent(self):
         return self.contactsmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7192,16 +6958,15 @@ class ContactsModule:
     def Position(self):
         return ContactsModule(self.contactsmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.contactsmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -7210,7 +6975,7 @@ class ContactsModule:
     def Session(self):
         return NameSpace(self.contactsmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -7219,16 +6984,15 @@ class ContactsModule:
     def Visible(self):
         return ContactsModule(self.contactsmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.contactsmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -7251,7 +7015,7 @@ class Conversation:
     def ConversationID(self):
         return Conversation(self.conversation.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -7260,7 +7024,7 @@ class Conversation:
     def Parent(self):
         return Conversation(self.conversation.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7269,7 +7033,7 @@ class Conversation:
     def Session(self):
         return NameSpace(self.conversation.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -7348,7 +7112,7 @@ class ConversationHeader:
     def ConversationID(self):
         return Conversation(self.conversationheader.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -7357,7 +7121,7 @@ class ConversationHeader:
     def ConversationTopic(self):
         return self.conversationheader.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -7366,7 +7130,7 @@ class ConversationHeader:
     def Parent(self):
         return self.conversationheader.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7375,7 +7139,7 @@ class ConversationHeader:
     def Session(self):
         return NameSpace(self.conversationheader.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -7396,7 +7160,7 @@ class DistListItem:
     def Actions(self):
         return Actions(self.distlistitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -7409,7 +7173,7 @@ class DistListItem:
     def Attachments(self):
         return Attachments(self.distlistitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -7418,7 +7182,7 @@ class DistListItem:
     def AutoResolvedWinner(self):
         return self.distlistitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -7427,16 +7191,15 @@ class DistListItem:
     def BillingInformation(self):
         return self.distlistitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.distlistitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -7445,16 +7208,15 @@ class DistListItem:
     def Body(self):
         return self.distlistitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.distlistitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -7463,16 +7225,15 @@ class DistListItem:
     def Categories(self):
         return self.distlistitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.distlistitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -7485,16 +7246,15 @@ class DistListItem:
     def Companies(self):
         return self.distlistitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.distlistitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -7503,7 +7263,7 @@ class DistListItem:
     def Conflicts(self):
         return self.distlistitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -7512,7 +7272,7 @@ class DistListItem:
     def ConversationID(self):
         return Conversation(self.distlistitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -7521,7 +7281,7 @@ class DistListItem:
     def ConversationIndex(self):
         return self.distlistitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -7530,7 +7290,7 @@ class DistListItem:
     def ConversationTopic(self):
         return self.distlistitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -7539,7 +7299,7 @@ class DistListItem:
     def CreationTime(self):
         return self.distlistitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -7548,16 +7308,15 @@ class DistListItem:
     def DLName(self):
         return self.distlistitem.DLName
 
-    # Lower case alias for DLName
-    @property
-    def dlname(self):
-        return self.DLName
-
     @DLName.setter
     def DLName(self, value):
         self.distlistitem.DLName = value
 
-    # Lower case alias for DLName setter
+    # Lower case aliases for DLName
+    @property
+    def dlname(self):
+        return self.DLName
+
     @dlname.setter
     def dlname(self, value):
         self.DLName = value
@@ -7566,7 +7325,7 @@ class DistListItem:
     def DownloadState(self):
         return OlDownloadState(self.distlistitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -7575,7 +7334,7 @@ class DistListItem:
     def EntryID(self):
         return self.distlistitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -7584,7 +7343,7 @@ class DistListItem:
     def FormDescription(self):
         return FormDescription(self.distlistitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -7593,7 +7352,7 @@ class DistListItem:
     def GetInspector(self):
         return Inspector(self.distlistitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -7602,16 +7361,15 @@ class DistListItem:
     def Importance(self):
         return OlImportance(self.distlistitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.distlistitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -7620,7 +7378,7 @@ class DistListItem:
     def IsConflict(self):
         return self.distlistitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -7629,7 +7387,7 @@ class DistListItem:
     def IsMarkedAsTask(self):
         return DistListItem(self.distlistitem.IsMarkedAsTask)
 
-    # Lower case alias for IsMarkedAsTask
+    # Lower case aliases for IsMarkedAsTask
     @property
     def ismarkedastask(self):
         return self.IsMarkedAsTask
@@ -7638,7 +7396,7 @@ class DistListItem:
     def ItemProperties(self):
         return ItemProperties(self.distlistitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -7647,7 +7405,7 @@ class DistListItem:
     def LastModificationTime(self):
         return self.distlistitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -7656,16 +7414,15 @@ class DistListItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.distlistitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.distlistitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -7674,7 +7431,7 @@ class DistListItem:
     def MemberCount(self):
         return self.distlistitem.MemberCount
 
-    # Lower case alias for MemberCount
+    # Lower case aliases for MemberCount
     @property
     def membercount(self):
         return self.MemberCount
@@ -7683,16 +7440,15 @@ class DistListItem:
     def MessageClass(self):
         return self.distlistitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.distlistitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -7701,16 +7457,15 @@ class DistListItem:
     def Mileage(self):
         return self.distlistitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.distlistitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -7719,16 +7474,15 @@ class DistListItem:
     def NoAging(self):
         return self.distlistitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.distlistitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -7737,7 +7491,7 @@ class DistListItem:
     def OutlookInternalVersion(self):
         return self.distlistitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -7746,7 +7500,7 @@ class DistListItem:
     def OutlookVersion(self):
         return self.distlistitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -7755,7 +7509,7 @@ class DistListItem:
     def Parent(self):
         return self.distlistitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7764,7 +7518,7 @@ class DistListItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.distlistitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -7773,16 +7527,15 @@ class DistListItem:
     def ReminderOverrideDefault(self):
         return self.distlistitem.ReminderOverrideDefault
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.distlistitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -7791,16 +7544,15 @@ class DistListItem:
     def ReminderPlaySound(self):
         return self.distlistitem.ReminderPlaySound
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.distlistitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -7809,16 +7561,15 @@ class DistListItem:
     def ReminderSet(self):
         return self.distlistitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.distlistitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -7827,16 +7578,15 @@ class DistListItem:
     def ReminderSoundFile(self):
         return self.distlistitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.distlistitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -7845,16 +7595,15 @@ class DistListItem:
     def ReminderTime(self):
         return self.distlistitem.ReminderTime
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.distlistitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -7863,16 +7612,15 @@ class DistListItem:
     def RTFBody(self):
         return self.distlistitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.distlistitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -7881,7 +7629,7 @@ class DistListItem:
     def Saved(self):
         return self.distlistitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -7890,16 +7638,15 @@ class DistListItem:
     def Sensitivity(self):
         return OlSensitivity(self.distlistitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.distlistitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -7908,7 +7655,7 @@ class DistListItem:
     def Session(self):
         return NameSpace(self.distlistitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -7917,7 +7664,7 @@ class DistListItem:
     def Size(self):
         return self.distlistitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -7926,16 +7673,15 @@ class DistListItem:
     def Subject(self):
         return self.distlistitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.distlistitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -7944,16 +7690,15 @@ class DistListItem:
     def TaskCompletedDate(self):
         return DistListItem(self.distlistitem.TaskCompletedDate)
 
-    # Lower case alias for TaskCompletedDate
-    @property
-    def taskcompleteddate(self):
-        return self.TaskCompletedDate
-
     @TaskCompletedDate.setter
     def TaskCompletedDate(self, value):
         self.distlistitem.TaskCompletedDate = value
 
-    # Lower case alias for TaskCompletedDate setter
+    # Lower case aliases for TaskCompletedDate
+    @property
+    def taskcompleteddate(self):
+        return self.TaskCompletedDate
+
     @taskcompleteddate.setter
     def taskcompleteddate(self, value):
         self.TaskCompletedDate = value
@@ -7962,16 +7707,15 @@ class DistListItem:
     def TaskDueDate(self):
         return DistListItem(self.distlistitem.TaskDueDate)
 
-    # Lower case alias for TaskDueDate
-    @property
-    def taskduedate(self):
-        return self.TaskDueDate
-
     @TaskDueDate.setter
     def TaskDueDate(self, value):
         self.distlistitem.TaskDueDate = value
 
-    # Lower case alias for TaskDueDate setter
+    # Lower case aliases for TaskDueDate
+    @property
+    def taskduedate(self):
+        return self.TaskDueDate
+
     @taskduedate.setter
     def taskduedate(self, value):
         self.TaskDueDate = value
@@ -7980,16 +7724,15 @@ class DistListItem:
     def TaskStartDate(self):
         return DistListItem(self.distlistitem.TaskStartDate)
 
-    # Lower case alias for TaskStartDate
-    @property
-    def taskstartdate(self):
-        return self.TaskStartDate
-
     @TaskStartDate.setter
     def TaskStartDate(self, value):
         self.distlistitem.TaskStartDate = value
 
-    # Lower case alias for TaskStartDate setter
+    # Lower case aliases for TaskStartDate
+    @property
+    def taskstartdate(self):
+        return self.TaskStartDate
+
     @taskstartdate.setter
     def taskstartdate(self, value):
         self.TaskStartDate = value
@@ -7998,16 +7741,15 @@ class DistListItem:
     def TaskSubject(self):
         return DistListItem(self.distlistitem.TaskSubject)
 
-    # Lower case alias for TaskSubject
-    @property
-    def tasksubject(self):
-        return self.TaskSubject
-
     @TaskSubject.setter
     def TaskSubject(self, value):
         self.distlistitem.TaskSubject = value
 
-    # Lower case alias for TaskSubject setter
+    # Lower case aliases for TaskSubject
+    @property
+    def tasksubject(self):
+        return self.TaskSubject
+
     @tasksubject.setter
     def tasksubject(self, value):
         self.TaskSubject = value
@@ -8016,16 +7758,15 @@ class DistListItem:
     def ToDoTaskOrdinal(self):
         return DistListItem(self.distlistitem.ToDoTaskOrdinal)
 
-    # Lower case alias for ToDoTaskOrdinal
-    @property
-    def todotaskordinal(self):
-        return self.ToDoTaskOrdinal
-
     @ToDoTaskOrdinal.setter
     def ToDoTaskOrdinal(self, value):
         self.distlistitem.ToDoTaskOrdinal = value
 
-    # Lower case alias for ToDoTaskOrdinal setter
+    # Lower case aliases for ToDoTaskOrdinal
+    @property
+    def todotaskordinal(self):
+        return self.ToDoTaskOrdinal
+
     @todotaskordinal.setter
     def todotaskordinal(self, value):
         self.ToDoTaskOrdinal = value
@@ -8034,16 +7775,15 @@ class DistListItem:
     def UnRead(self):
         return self.distlistitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.distlistitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -8052,7 +7792,7 @@ class DistListItem:
     def UserProperties(self):
         return UserProperties(self.distlistitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -8128,7 +7868,7 @@ class DocumentItem:
     def Actions(self):
         return Actions(self.documentitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -8141,7 +7881,7 @@ class DocumentItem:
     def Attachments(self):
         return Attachments(self.documentitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -8150,7 +7890,7 @@ class DocumentItem:
     def AutoResolvedWinner(self):
         return self.documentitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -8159,16 +7899,15 @@ class DocumentItem:
     def BillingInformation(self):
         return self.documentitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.documentitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -8177,7 +7916,7 @@ class DocumentItem:
     def Body(self):
         return self.documentitem.Body
 
-    # Lower case alias for Body
+    # Lower case aliases for Body
     @property
     def body(self):
         return self.Body
@@ -8186,16 +7925,15 @@ class DocumentItem:
     def Categories(self):
         return self.documentitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.documentitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -8208,16 +7946,15 @@ class DocumentItem:
     def Companies(self):
         return self.documentitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.documentitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -8226,7 +7963,7 @@ class DocumentItem:
     def Conflicts(self):
         return self.documentitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -8235,7 +7972,7 @@ class DocumentItem:
     def ConversationIndex(self):
         return self.documentitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -8244,7 +7981,7 @@ class DocumentItem:
     def ConversationTopic(self):
         return self.documentitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -8253,7 +7990,7 @@ class DocumentItem:
     def CreationTime(self):
         return self.documentitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -8262,7 +7999,7 @@ class DocumentItem:
     def DownloadState(self):
         return OlDownloadState(self.documentitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -8271,7 +8008,7 @@ class DocumentItem:
     def EntryID(self):
         return self.documentitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -8280,7 +8017,7 @@ class DocumentItem:
     def FormDescription(self):
         return FormDescription(self.documentitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -8289,7 +8026,7 @@ class DocumentItem:
     def GetInspector(self):
         return self.documentitem.GetInspector
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -8298,16 +8035,15 @@ class DocumentItem:
     def Importance(self):
         return OlImportance(self.documentitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.documentitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -8316,7 +8052,7 @@ class DocumentItem:
     def IsConflict(self):
         return self.documentitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -8325,7 +8061,7 @@ class DocumentItem:
     def ItemProperties(self):
         return ItemProperties(self.documentitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -8334,7 +8070,7 @@ class DocumentItem:
     def LastModificationTime(self):
         return self.documentitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -8343,7 +8079,7 @@ class DocumentItem:
     def MarkForDownload(self):
         return self.documentitem.MarkForDownload
 
-    # Lower case alias for MarkForDownload
+    # Lower case aliases for MarkForDownload
     @property
     def markfordownload(self):
         return self.MarkForDownload
@@ -8352,16 +8088,15 @@ class DocumentItem:
     def MessageClass(self):
         return self.documentitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.documentitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -8370,16 +8105,15 @@ class DocumentItem:
     def Mileage(self):
         return self.documentitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.documentitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -8388,16 +8122,15 @@ class DocumentItem:
     def NoAging(self):
         return self.documentitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.documentitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -8406,7 +8139,7 @@ class DocumentItem:
     def OutlookInternalVersion(self):
         return self.documentitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -8415,7 +8148,7 @@ class DocumentItem:
     def OutlookVersion(self):
         return self.documentitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -8424,7 +8157,7 @@ class DocumentItem:
     def Parent(self):
         return self.documentitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8433,7 +8166,7 @@ class DocumentItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.documentitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -8442,7 +8175,7 @@ class DocumentItem:
     def Saved(self):
         return self.documentitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -8451,16 +8184,15 @@ class DocumentItem:
     def Sensitivity(self):
         return OlSensitivity(self.documentitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.documentitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -8469,7 +8201,7 @@ class DocumentItem:
     def Session(self):
         return NameSpace(self.documentitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -8478,7 +8210,7 @@ class DocumentItem:
     def Size(self):
         return self.documentitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -8487,16 +8219,15 @@ class DocumentItem:
     def Subject(self):
         return self.documentitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.documentitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -8505,16 +8236,15 @@ class DocumentItem:
     def UnRead(self):
         return self.documentitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.documentitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -8523,7 +8253,7 @@ class DocumentItem:
     def UserProperties(self):
         return UserProperties(self.documentitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -8573,7 +8303,7 @@ class Exception:
     def AppointmentItem(self):
         return AppointmentItem(self.exception.AppointmentItem)
 
-    # Lower case alias for AppointmentItem
+    # Lower case aliases for AppointmentItem
     @property
     def appointmentitem(self):
         return self.AppointmentItem
@@ -8586,7 +8316,7 @@ class Exception:
     def Deleted(self):
         return AppointmentItem(self.exception.Deleted)
 
-    # Lower case alias for Deleted
+    # Lower case aliases for Deleted
     @property
     def deleted(self):
         return self.Deleted
@@ -8595,7 +8325,7 @@ class Exception:
     def OriginalDate(self):
         return AppointmentItem(self.exception.OriginalDate)
 
-    # Lower case alias for OriginalDate
+    # Lower case aliases for OriginalDate
     @property
     def originaldate(self):
         return self.OriginalDate
@@ -8604,7 +8334,7 @@ class Exception:
     def Parent(self):
         return self.exception.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8613,7 +8343,7 @@ class Exception:
     def Session(self):
         return NameSpace(self.exception.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -8636,7 +8366,7 @@ class Exceptions:
     def Count(self):
         return self.exceptions.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -8645,7 +8375,7 @@ class Exceptions:
     def Parent(self):
         return self.exceptions.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8654,7 +8384,7 @@ class Exceptions:
     def Session(self):
         return NameSpace(self.exceptions.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -8673,16 +8403,15 @@ class ExchangeDistributionList:
     def Address(self):
         return ExchangeDistributionList(self.exchangedistributionlist.Address)
 
-    # Lower case alias for Address
-    @property
-    def address(self):
-        return self.Address
-
     @Address.setter
     def Address(self, value):
         self.exchangedistributionlist.Address = value
 
-    # Lower case alias for Address setter
+    # Lower case aliases for Address
+    @property
+    def address(self):
+        return self.Address
+
     @address.setter
     def address(self, value):
         self.Address = value
@@ -8691,7 +8420,7 @@ class ExchangeDistributionList:
     def AddressEntryUserType(self):
         return OlAddressEntryUserType(self.exchangedistributionlist.AddressEntryUserType)
 
-    # Lower case alias for AddressEntryUserType
+    # Lower case aliases for AddressEntryUserType
     @property
     def addressentryusertype(self):
         return self.AddressEntryUserType
@@ -8700,7 +8429,7 @@ class ExchangeDistributionList:
     def Alias(self):
         return ExchangeDistributionList(self.exchangedistributionlist.Alias)
 
-    # Lower case alias for Alias
+    # Lower case aliases for Alias
     @property
     def alias(self):
         return self.Alias
@@ -8717,16 +8446,15 @@ class ExchangeDistributionList:
     def Comments(self):
         return self.exchangedistributionlist.Comments
 
-    # Lower case alias for Comments
-    @property
-    def comments(self):
-        return self.Comments
-
     @Comments.setter
     def Comments(self, value):
         self.exchangedistributionlist.Comments = value
 
-    # Lower case alias for Comments setter
+    # Lower case aliases for Comments
+    @property
+    def comments(self):
+        return self.Comments
+
     @comments.setter
     def comments(self, value):
         self.Comments = value
@@ -8735,7 +8463,7 @@ class ExchangeDistributionList:
     def DisplayType(self):
         return OlDisplayType(self.exchangedistributionlist.DisplayType)
 
-    # Lower case alias for DisplayType
+    # Lower case aliases for DisplayType
     @property
     def displaytype(self):
         return self.DisplayType
@@ -8744,7 +8472,7 @@ class ExchangeDistributionList:
     def ID(self):
         return ExchangeDistributionList(self.exchangedistributionlist.ID)
 
-    # Lower case alias for ID
+    # Lower case aliases for ID
     @property
     def id(self):
         return self.ID
@@ -8753,16 +8481,15 @@ class ExchangeDistributionList:
     def Name(self):
         return ExchangeDistributionList(self.exchangedistributionlist.Name)
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.exchangedistributionlist.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -8771,7 +8498,7 @@ class ExchangeDistributionList:
     def Parent(self):
         return ExchangeDistributionList(self.exchangedistributionlist.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8780,7 +8507,7 @@ class ExchangeDistributionList:
     def PrimarySmtpAddress(self):
         return ExchangeDistributionList(self.exchangedistributionlist.PrimarySmtpAddress)
 
-    # Lower case alias for PrimarySmtpAddress
+    # Lower case aliases for PrimarySmtpAddress
     @property
     def primarysmtpaddress(self):
         return self.PrimarySmtpAddress
@@ -8789,7 +8516,7 @@ class ExchangeDistributionList:
     def PropertyAccessor(self):
         return PropertyAccessor(self.exchangedistributionlist.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -8798,7 +8525,7 @@ class ExchangeDistributionList:
     def Session(self):
         return NameSpace(self.exchangedistributionlist.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -8807,16 +8534,15 @@ class ExchangeDistributionList:
     def Type(self):
         return ExchangeDistributionList(self.exchangedistributionlist.Type)
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.exchangedistributionlist.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -8864,16 +8590,15 @@ class ExchangeUser:
     def Address(self):
         return ExchangeUser(self.exchangeuser.Address)
 
-    # Lower case alias for Address
-    @property
-    def address(self):
-        return self.Address
-
     @Address.setter
     def Address(self, value):
         self.exchangeuser.Address = value
 
-    # Lower case alias for Address setter
+    # Lower case aliases for Address
+    @property
+    def address(self):
+        return self.Address
+
     @address.setter
     def address(self, value):
         self.Address = value
@@ -8882,7 +8607,7 @@ class ExchangeUser:
     def AddressEntryUserType(self):
         return OlAddressEntryUserType(self.exchangeuser.AddressEntryUserType)
 
-    # Lower case alias for AddressEntryUserType
+    # Lower case aliases for AddressEntryUserType
     @property
     def addressentryusertype(self):
         return self.AddressEntryUserType
@@ -8891,7 +8616,7 @@ class ExchangeUser:
     def Alias(self):
         return ExchangeUser(self.exchangeuser.Alias)
 
-    # Lower case alias for Alias
+    # Lower case aliases for Alias
     @property
     def alias(self):
         return self.Alias
@@ -8904,16 +8629,15 @@ class ExchangeUser:
     def AssistantName(self):
         return ExchangeUser(self.exchangeuser.AssistantName)
 
-    # Lower case alias for AssistantName
-    @property
-    def assistantname(self):
-        return self.AssistantName
-
     @AssistantName.setter
     def AssistantName(self, value):
         self.exchangeuser.AssistantName = value
 
-    # Lower case alias for AssistantName setter
+    # Lower case aliases for AssistantName
+    @property
+    def assistantname(self):
+        return self.AssistantName
+
     @assistantname.setter
     def assistantname(self, value):
         self.AssistantName = value
@@ -8922,16 +8646,15 @@ class ExchangeUser:
     def BusinessTelephoneNumber(self):
         return ExchangeUser(self.exchangeuser.BusinessTelephoneNumber)
 
-    # Lower case alias for BusinessTelephoneNumber
-    @property
-    def businesstelephonenumber(self):
-        return self.BusinessTelephoneNumber
-
     @BusinessTelephoneNumber.setter
     def BusinessTelephoneNumber(self, value):
         self.exchangeuser.BusinessTelephoneNumber = value
 
-    # Lower case alias for BusinessTelephoneNumber setter
+    # Lower case aliases for BusinessTelephoneNumber
+    @property
+    def businesstelephonenumber(self):
+        return self.BusinessTelephoneNumber
+
     @businesstelephonenumber.setter
     def businesstelephonenumber(self, value):
         self.BusinessTelephoneNumber = value
@@ -8940,16 +8663,15 @@ class ExchangeUser:
     def City(self):
         return ExchangeUser(self.exchangeuser.City)
 
-    # Lower case alias for City
-    @property
-    def city(self):
-        return self.City
-
     @City.setter
     def City(self, value):
         self.exchangeuser.City = value
 
-    # Lower case alias for City setter
+    # Lower case aliases for City
+    @property
+    def city(self):
+        return self.City
+
     @city.setter
     def city(self, value):
         self.City = value
@@ -8962,16 +8684,15 @@ class ExchangeUser:
     def Comments(self):
         return self.exchangeuser.Comments
 
-    # Lower case alias for Comments
-    @property
-    def comments(self):
-        return self.Comments
-
     @Comments.setter
     def Comments(self, value):
         self.exchangeuser.Comments = value
 
-    # Lower case alias for Comments setter
+    # Lower case aliases for Comments
+    @property
+    def comments(self):
+        return self.Comments
+
     @comments.setter
     def comments(self, value):
         self.Comments = value
@@ -8980,16 +8701,15 @@ class ExchangeUser:
     def CompanyName(self):
         return ExchangeUser(self.exchangeuser.CompanyName)
 
-    # Lower case alias for CompanyName
-    @property
-    def companyname(self):
-        return self.CompanyName
-
     @CompanyName.setter
     def CompanyName(self, value):
         self.exchangeuser.CompanyName = value
 
-    # Lower case alias for CompanyName setter
+    # Lower case aliases for CompanyName
+    @property
+    def companyname(self):
+        return self.CompanyName
+
     @companyname.setter
     def companyname(self, value):
         self.CompanyName = value
@@ -8998,16 +8718,15 @@ class ExchangeUser:
     def Department(self):
         return ExchangeUser(self.exchangeuser.Department)
 
-    # Lower case alias for Department
-    @property
-    def department(self):
-        return self.Department
-
     @Department.setter
     def Department(self, value):
         self.exchangeuser.Department = value
 
-    # Lower case alias for Department setter
+    # Lower case aliases for Department
+    @property
+    def department(self):
+        return self.Department
+
     @department.setter
     def department(self, value):
         self.Department = value
@@ -9016,7 +8735,7 @@ class ExchangeUser:
     def DisplayType(self):
         return OlDisplayType(self.exchangeuser.DisplayType)
 
-    # Lower case alias for DisplayType
+    # Lower case aliases for DisplayType
     @property
     def displaytype(self):
         return self.DisplayType
@@ -9025,16 +8744,15 @@ class ExchangeUser:
     def FirstName(self):
         return ExchangeUser(self.exchangeuser.FirstName)
 
-    # Lower case alias for FirstName
-    @property
-    def firstname(self):
-        return self.FirstName
-
     @FirstName.setter
     def FirstName(self, value):
         self.exchangeuser.FirstName = value
 
-    # Lower case alias for FirstName setter
+    # Lower case aliases for FirstName
+    @property
+    def firstname(self):
+        return self.FirstName
+
     @firstname.setter
     def firstname(self, value):
         self.FirstName = value
@@ -9043,7 +8761,7 @@ class ExchangeUser:
     def ID(self):
         return ExchangeUser(self.exchangeuser.ID)
 
-    # Lower case alias for ID
+    # Lower case aliases for ID
     @property
     def id(self):
         return self.ID
@@ -9052,16 +8770,15 @@ class ExchangeUser:
     def JobTitle(self):
         return ExchangeUser(self.exchangeuser.JobTitle)
 
-    # Lower case alias for JobTitle
-    @property
-    def jobtitle(self):
-        return self.JobTitle
-
     @JobTitle.setter
     def JobTitle(self, value):
         self.exchangeuser.JobTitle = value
 
-    # Lower case alias for JobTitle setter
+    # Lower case aliases for JobTitle
+    @property
+    def jobtitle(self):
+        return self.JobTitle
+
     @jobtitle.setter
     def jobtitle(self, value):
         self.JobTitle = value
@@ -9070,16 +8787,15 @@ class ExchangeUser:
     def LastName(self):
         return ExchangeUser(self.exchangeuser.LastName)
 
-    # Lower case alias for LastName
-    @property
-    def lastname(self):
-        return self.LastName
-
     @LastName.setter
     def LastName(self, value):
         self.exchangeuser.LastName = value
 
-    # Lower case alias for LastName setter
+    # Lower case aliases for LastName
+    @property
+    def lastname(self):
+        return self.LastName
+
     @lastname.setter
     def lastname(self, value):
         self.LastName = value
@@ -9088,16 +8804,15 @@ class ExchangeUser:
     def MobileTelephoneNumber(self):
         return ExchangeUser(self.exchangeuser.MobileTelephoneNumber)
 
-    # Lower case alias for MobileTelephoneNumber
-    @property
-    def mobiletelephonenumber(self):
-        return self.MobileTelephoneNumber
-
     @MobileTelephoneNumber.setter
     def MobileTelephoneNumber(self, value):
         self.exchangeuser.MobileTelephoneNumber = value
 
-    # Lower case alias for MobileTelephoneNumber setter
+    # Lower case aliases for MobileTelephoneNumber
+    @property
+    def mobiletelephonenumber(self):
+        return self.MobileTelephoneNumber
+
     @mobiletelephonenumber.setter
     def mobiletelephonenumber(self, value):
         self.MobileTelephoneNumber = value
@@ -9106,16 +8821,15 @@ class ExchangeUser:
     def Name(self):
         return ExchangeUser(self.exchangeuser.Name)
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.exchangeuser.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -9124,16 +8838,15 @@ class ExchangeUser:
     def OfficeLocation(self):
         return ExchangeUser(self.exchangeuser.OfficeLocation)
 
-    # Lower case alias for OfficeLocation
-    @property
-    def officelocation(self):
-        return self.OfficeLocation
-
     @OfficeLocation.setter
     def OfficeLocation(self, value):
         self.exchangeuser.OfficeLocation = value
 
-    # Lower case alias for OfficeLocation setter
+    # Lower case aliases for OfficeLocation
+    @property
+    def officelocation(self):
+        return self.OfficeLocation
+
     @officelocation.setter
     def officelocation(self, value):
         self.OfficeLocation = value
@@ -9142,7 +8855,7 @@ class ExchangeUser:
     def Parent(self):
         return ExchangeUser(self.exchangeuser.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9151,16 +8864,15 @@ class ExchangeUser:
     def PostalCode(self):
         return ExchangeUser(self.exchangeuser.PostalCode)
 
-    # Lower case alias for PostalCode
-    @property
-    def postalcode(self):
-        return self.PostalCode
-
     @PostalCode.setter
     def PostalCode(self, value):
         self.exchangeuser.PostalCode = value
 
-    # Lower case alias for PostalCode setter
+    # Lower case aliases for PostalCode
+    @property
+    def postalcode(self):
+        return self.PostalCode
+
     @postalcode.setter
     def postalcode(self, value):
         self.PostalCode = value
@@ -9169,7 +8881,7 @@ class ExchangeUser:
     def PrimarySmtpAddress(self):
         return ExchangeUser(self.exchangeuser.PrimarySmtpAddress)
 
-    # Lower case alias for PrimarySmtpAddress
+    # Lower case aliases for PrimarySmtpAddress
     @property
     def primarysmtpaddress(self):
         return self.PrimarySmtpAddress
@@ -9178,7 +8890,7 @@ class ExchangeUser:
     def PropertyAccessor(self):
         return PropertyAccessor(self.exchangeuser.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -9187,7 +8899,7 @@ class ExchangeUser:
     def Session(self):
         return NameSpace(self.exchangeuser.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -9196,16 +8908,15 @@ class ExchangeUser:
     def StateOrProvince(self):
         return ExchangeUser(self.exchangeuser.StateOrProvince)
 
-    # Lower case alias for StateOrProvince
-    @property
-    def stateorprovince(self):
-        return self.StateOrProvince
-
     @StateOrProvince.setter
     def StateOrProvince(self, value):
         self.exchangeuser.StateOrProvince = value
 
-    # Lower case alias for StateOrProvince setter
+    # Lower case aliases for StateOrProvince
+    @property
+    def stateorprovince(self):
+        return self.StateOrProvince
+
     @stateorprovince.setter
     def stateorprovince(self, value):
         self.StateOrProvince = value
@@ -9214,16 +8925,15 @@ class ExchangeUser:
     def StreetAddress(self):
         return ExchangeUser(self.exchangeuser.StreetAddress)
 
-    # Lower case alias for StreetAddress
-    @property
-    def streetaddress(self):
-        return self.StreetAddress
-
     @StreetAddress.setter
     def StreetAddress(self, value):
         self.exchangeuser.StreetAddress = value
 
-    # Lower case alias for StreetAddress setter
+    # Lower case aliases for StreetAddress
+    @property
+    def streetaddress(self):
+        return self.StreetAddress
+
     @streetaddress.setter
     def streetaddress(self, value):
         self.StreetAddress = value
@@ -9232,16 +8942,15 @@ class ExchangeUser:
     def Type(self):
         return ExchangeUser(self.exchangeuser.Type)
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.exchangeuser.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -9250,16 +8959,15 @@ class ExchangeUser:
     def YomiCompanyName(self):
         return ExchangeUser(self.exchangeuser.YomiCompanyName)
 
-    # Lower case alias for YomiCompanyName
-    @property
-    def yomicompanyname(self):
-        return self.YomiCompanyName
-
     @YomiCompanyName.setter
     def YomiCompanyName(self, value):
         self.exchangeuser.YomiCompanyName = value
 
-    # Lower case alias for YomiCompanyName setter
+    # Lower case aliases for YomiCompanyName
+    @property
+    def yomicompanyname(self):
+        return self.YomiCompanyName
+
     @yomicompanyname.setter
     def yomicompanyname(self, value):
         self.YomiCompanyName = value
@@ -9268,16 +8976,15 @@ class ExchangeUser:
     def YomiDepartment(self):
         return ExchangeUser(self.exchangeuser.YomiDepartment)
 
-    # Lower case alias for YomiDepartment
-    @property
-    def yomidepartment(self):
-        return self.YomiDepartment
-
     @YomiDepartment.setter
     def YomiDepartment(self, value):
         self.exchangeuser.YomiDepartment = value
 
-    # Lower case alias for YomiDepartment setter
+    # Lower case aliases for YomiDepartment
+    @property
+    def yomidepartment(self):
+        return self.YomiDepartment
+
     @yomidepartment.setter
     def yomidepartment(self, value):
         self.YomiDepartment = value
@@ -9286,16 +8993,15 @@ class ExchangeUser:
     def YomiDisplayName(self):
         return ExchangeUser(self.exchangeuser.YomiDisplayName)
 
-    # Lower case alias for YomiDisplayName
-    @property
-    def yomidisplayname(self):
-        return self.YomiDisplayName
-
     @YomiDisplayName.setter
     def YomiDisplayName(self, value):
         self.exchangeuser.YomiDisplayName = value
 
-    # Lower case alias for YomiDisplayName setter
+    # Lower case aliases for YomiDisplayName
+    @property
+    def yomidisplayname(self):
+        return self.YomiDisplayName
+
     @yomidisplayname.setter
     def yomidisplayname(self, value):
         self.YomiDisplayName = value
@@ -9304,16 +9010,15 @@ class ExchangeUser:
     def YomiFirstName(self):
         return ExchangeUser(self.exchangeuser.YomiFirstName)
 
-    # Lower case alias for YomiFirstName
-    @property
-    def yomifirstname(self):
-        return self.YomiFirstName
-
     @YomiFirstName.setter
     def YomiFirstName(self, value):
         self.exchangeuser.YomiFirstName = value
 
-    # Lower case alias for YomiFirstName setter
+    # Lower case aliases for YomiFirstName
+    @property
+    def yomifirstname(self):
+        return self.YomiFirstName
+
     @yomifirstname.setter
     def yomifirstname(self, value):
         self.YomiFirstName = value
@@ -9322,16 +9027,15 @@ class ExchangeUser:
     def YomiLastName(self):
         return ExchangeUser(self.exchangeuser.YomiLastName)
 
-    # Lower case alias for YomiLastName
-    @property
-    def yomilastname(self):
-        return self.YomiLastName
-
     @YomiLastName.setter
     def YomiLastName(self, value):
         self.exchangeuser.YomiLastName = value
 
-    # Lower case alias for YomiLastName setter
+    # Lower case aliases for YomiLastName
+    @property
+    def yomilastname(self):
+        return self.YomiLastName
+
     @yomilastname.setter
     def yomilastname(self, value):
         self.YomiLastName = value
@@ -9382,7 +9086,7 @@ class Explorer:
     def AccountSelector(self):
         return AccountSelector(self.explorer.AccountSelector)
 
-    # Lower case alias for AccountSelector
+    # Lower case aliases for AccountSelector
     @property
     def accountselector(self):
         return self.AccountSelector
@@ -9395,7 +9099,7 @@ class Explorer:
     def AttachmentSelection(self):
         return AttachmentSelection(self.explorer.AttachmentSelection)
 
-    # Lower case alias for AttachmentSelection
+    # Lower case aliases for AttachmentSelection
     @property
     def attachmentselection(self):
         return self.AttachmentSelection
@@ -9404,7 +9108,7 @@ class Explorer:
     def Caption(self):
         return self.explorer.Caption
 
-    # Lower case alias for Caption
+    # Lower case aliases for Caption
     @property
     def caption(self):
         return self.Caption
@@ -9417,16 +9121,15 @@ class Explorer:
     def CurrentFolder(self):
         return Folder(self.explorer.CurrentFolder)
 
-    # Lower case alias for CurrentFolder
-    @property
-    def currentfolder(self):
-        return self.CurrentFolder
-
     @CurrentFolder.setter
     def CurrentFolder(self, value):
         self.explorer.CurrentFolder = value
 
-    # Lower case alias for CurrentFolder setter
+    # Lower case aliases for CurrentFolder
+    @property
+    def currentfolder(self):
+        return self.CurrentFolder
+
     @currentfolder.setter
     def currentfolder(self, value):
         self.CurrentFolder = value
@@ -9435,16 +9138,15 @@ class Explorer:
     def CurrentView(self):
         return self.explorer.CurrentView
 
-    # Lower case alias for CurrentView
-    @property
-    def currentview(self):
-        return self.CurrentView
-
     @CurrentView.setter
     def CurrentView(self, value):
         self.explorer.CurrentView = value
 
-    # Lower case alias for CurrentView setter
+    # Lower case aliases for CurrentView
+    @property
+    def currentview(self):
+        return self.CurrentView
+
     @currentview.setter
     def currentview(self, value):
         self.CurrentView = value
@@ -9453,16 +9155,15 @@ class Explorer:
     def Height(self):
         return self.explorer.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.explorer.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -9471,7 +9172,7 @@ class Explorer:
     def HTMLDocument(self):
         return self.explorer.HTMLDocument
 
-    # Lower case alias for HTMLDocument
+    # Lower case aliases for HTMLDocument
     @property
     def htmldocument(self):
         return self.HTMLDocument
@@ -9480,16 +9181,15 @@ class Explorer:
     def Left(self):
         return self.explorer.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.explorer.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -9498,7 +9198,7 @@ class Explorer:
     def NavigationPane(self):
         return NavigationPane(self.explorer.NavigationPane)
 
-    # Lower case alias for NavigationPane
+    # Lower case aliases for NavigationPane
     @property
     def navigationpane(self):
         return self.NavigationPane
@@ -9507,7 +9207,7 @@ class Explorer:
     def Panes(self):
         return Panes(self.explorer.Panes)
 
-    # Lower case alias for Panes
+    # Lower case aliases for Panes
     @property
     def panes(self):
         return self.Panes
@@ -9516,7 +9216,7 @@ class Explorer:
     def Parent(self):
         return self.explorer.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9525,7 +9225,7 @@ class Explorer:
     def Selection(self):
         return Selection(self.explorer.Selection)
 
-    # Lower case alias for Selection
+    # Lower case aliases for Selection
     @property
     def selection(self):
         return self.Selection
@@ -9534,7 +9234,7 @@ class Explorer:
     def Session(self):
         return NameSpace(self.explorer.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -9543,16 +9243,15 @@ class Explorer:
     def Top(self):
         return self.explorer.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.explorer.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -9561,16 +9260,15 @@ class Explorer:
     def Width(self):
         return self.explorer.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.explorer.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -9579,16 +9277,15 @@ class Explorer:
     def WindowState(self):
         return OlWindowState(self.explorer.WindowState)
 
-    # Lower case alias for WindowState
-    @property
-    def windowstate(self):
-        return self.WindowState
-
     @WindowState.setter
     def WindowState(self, value):
         self.explorer.WindowState = value
 
-    # Lower case alias for WindowState setter
+    # Lower case aliases for WindowState
+    @property
+    def windowstate(self):
+        return self.WindowState
+
     @windowstate.setter
     def windowstate(self, value):
         self.WindowState = value
@@ -9653,7 +9350,7 @@ class Explorers:
     def Count(self):
         return self.explorers.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -9662,7 +9359,7 @@ class Explorers:
     def Parent(self):
         return self.explorers.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9671,7 +9368,7 @@ class Explorers:
     def Session(self):
         return NameSpace(self.explorers.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -9694,16 +9391,15 @@ class Folder:
     def AddressBookName(self):
         return Folder(self.folder.AddressBookName)
 
-    # Lower case alias for AddressBookName
-    @property
-    def addressbookname(self):
-        return self.AddressBookName
-
     @AddressBookName.setter
     def AddressBookName(self, value):
         self.folder.AddressBookName = value
 
-    # Lower case alias for AddressBookName setter
+    # Lower case aliases for AddressBookName
+    @property
+    def addressbookname(self):
+        return self.AddressBookName
+
     @addressbookname.setter
     def addressbookname(self, value):
         self.AddressBookName = value
@@ -9720,7 +9416,7 @@ class Folder:
     def CurrentView(self):
         return View(self.folder.CurrentView)
 
-    # Lower case alias for CurrentView
+    # Lower case aliases for CurrentView
     @property
     def currentview(self):
         return self.CurrentView
@@ -9729,16 +9425,15 @@ class Folder:
     def CustomViewsOnly(self):
         return self.folder.CustomViewsOnly
 
-    # Lower case alias for CustomViewsOnly
-    @property
-    def customviewsonly(self):
-        return self.CustomViewsOnly
-
     @CustomViewsOnly.setter
     def CustomViewsOnly(self, value):
         self.folder.CustomViewsOnly = value
 
-    # Lower case alias for CustomViewsOnly setter
+    # Lower case aliases for CustomViewsOnly
+    @property
+    def customviewsonly(self):
+        return self.CustomViewsOnly
+
     @customviewsonly.setter
     def customviewsonly(self, value):
         self.CustomViewsOnly = value
@@ -9747,7 +9442,7 @@ class Folder:
     def DefaultItemType(self):
         return OlItemType(self.folder.DefaultItemType)
 
-    # Lower case alias for DefaultItemType
+    # Lower case aliases for DefaultItemType
     @property
     def defaultitemtype(self):
         return self.DefaultItemType
@@ -9756,7 +9451,7 @@ class Folder:
     def DefaultMessageClass(self):
         return self.folder.DefaultMessageClass
 
-    # Lower case alias for DefaultMessageClass
+    # Lower case aliases for DefaultMessageClass
     @property
     def defaultmessageclass(self):
         return self.DefaultMessageClass
@@ -9765,16 +9460,15 @@ class Folder:
     def Description(self):
         return self.folder.Description
 
-    # Lower case alias for Description
-    @property
-    def description(self):
-        return self.Description
-
     @Description.setter
     def Description(self, value):
         self.folder.Description = value
 
-    # Lower case alias for Description setter
+    # Lower case aliases for Description
+    @property
+    def description(self):
+        return self.Description
+
     @description.setter
     def description(self, value):
         self.Description = value
@@ -9783,7 +9477,7 @@ class Folder:
     def EntryID(self):
         return self.folder.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -9792,7 +9486,7 @@ class Folder:
     def FolderPath(self):
         return self.folder.FolderPath
 
-    # Lower case alias for FolderPath
+    # Lower case aliases for FolderPath
     @property
     def folderpath(self):
         return self.FolderPath
@@ -9801,7 +9495,7 @@ class Folder:
     def Folders(self):
         return Folders(self.folder.Folders)
 
-    # Lower case alias for Folders
+    # Lower case aliases for Folders
     @property
     def folders(self):
         return self.Folders
@@ -9810,16 +9504,15 @@ class Folder:
     def InAppFolderSyncObject(self):
         return self.folder.InAppFolderSyncObject
 
-    # Lower case alias for InAppFolderSyncObject
-    @property
-    def inappfoldersyncobject(self):
-        return self.InAppFolderSyncObject
-
     @InAppFolderSyncObject.setter
     def InAppFolderSyncObject(self, value):
         self.folder.InAppFolderSyncObject = value
 
-    # Lower case alias for InAppFolderSyncObject setter
+    # Lower case aliases for InAppFolderSyncObject
+    @property
+    def inappfoldersyncobject(self):
+        return self.InAppFolderSyncObject
+
     @inappfoldersyncobject.setter
     def inappfoldersyncobject(self, value):
         self.InAppFolderSyncObject = value
@@ -9828,7 +9521,7 @@ class Folder:
     def IsSharePointFolder(self):
         return self.folder.IsSharePointFolder
 
-    # Lower case alias for IsSharePointFolder
+    # Lower case aliases for IsSharePointFolder
     @property
     def issharepointfolder(self):
         return self.IsSharePointFolder
@@ -9837,7 +9530,7 @@ class Folder:
     def Items(self):
         return Items(self.folder.Items)
 
-    # Lower case alias for Items
+    # Lower case aliases for Items
     @property
     def items(self):
         return self.Items
@@ -9846,16 +9539,15 @@ class Folder:
     def Name(self):
         return self.folder.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.folder.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -9864,7 +9556,7 @@ class Folder:
     def Parent(self):
         return self.folder.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9873,7 +9565,7 @@ class Folder:
     def PropertyAccessor(self):
         return PropertyAccessor(self.folder.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -9882,7 +9574,7 @@ class Folder:
     def Session(self):
         return NameSpace(self.folder.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -9891,16 +9583,15 @@ class Folder:
     def ShowAsOutlookAB(self):
         return self.folder.ShowAsOutlookAB
 
-    # Lower case alias for ShowAsOutlookAB
-    @property
-    def showasoutlookab(self):
-        return self.ShowAsOutlookAB
-
     @ShowAsOutlookAB.setter
     def ShowAsOutlookAB(self, value):
         self.folder.ShowAsOutlookAB = value
 
-    # Lower case alias for ShowAsOutlookAB setter
+    # Lower case aliases for ShowAsOutlookAB
+    @property
+    def showasoutlookab(self):
+        return self.ShowAsOutlookAB
+
     @showasoutlookab.setter
     def showasoutlookab(self, value):
         self.ShowAsOutlookAB = value
@@ -9909,16 +9600,15 @@ class Folder:
     def ShowItemCount(self):
         return self.folder.ShowItemCount
 
-    # Lower case alias for ShowItemCount
-    @property
-    def showitemcount(self):
-        return self.ShowItemCount
-
     @ShowItemCount.setter
     def ShowItemCount(self, value):
         self.folder.ShowItemCount = value
 
-    # Lower case alias for ShowItemCount setter
+    # Lower case aliases for ShowItemCount
+    @property
+    def showitemcount(self):
+        return self.ShowItemCount
+
     @showitemcount.setter
     def showitemcount(self, value):
         self.ShowItemCount = value
@@ -9927,7 +9617,7 @@ class Folder:
     def Store(self):
         return Store(self.folder.Store)
 
-    # Lower case alias for Store
+    # Lower case aliases for Store
     @property
     def store(self):
         return self.Store
@@ -9936,7 +9626,7 @@ class Folder:
     def StoreID(self):
         return self.folder.StoreID
 
-    # Lower case alias for StoreID
+    # Lower case aliases for StoreID
     @property
     def storeid(self):
         return self.StoreID
@@ -9945,7 +9635,7 @@ class Folder:
     def UnReadItemCount(self):
         return self.folder.UnReadItemCount
 
-    # Lower case alias for UnReadItemCount
+    # Lower case aliases for UnReadItemCount
     @property
     def unreaditemcount(self):
         return self.UnReadItemCount
@@ -9954,7 +9644,7 @@ class Folder:
     def UserDefinedProperties(self):
         return UserDefinedProperties(self.folder.UserDefinedProperties)
 
-    # Lower case alias for UserDefinedProperties
+    # Lower case aliases for UserDefinedProperties
     @property
     def userdefinedproperties(self):
         return self.UserDefinedProperties
@@ -9963,7 +9653,7 @@ class Folder:
     def Views(self):
         return Views(self.folder.Views)
 
-    # Lower case alias for Views
+    # Lower case aliases for Views
     @property
     def views(self):
         return self.Views
@@ -9972,16 +9662,15 @@ class Folder:
     def WebViewOn(self):
         return self.folder.WebViewOn
 
-    # Lower case alias for WebViewOn
-    @property
-    def webviewon(self):
-        return self.WebViewOn
-
     @WebViewOn.setter
     def WebViewOn(self, value):
         self.folder.WebViewOn = value
 
-    # Lower case alias for WebViewOn setter
+    # Lower case aliases for WebViewOn
+    @property
+    def webviewon(self):
+        return self.WebViewOn
+
     @webviewon.setter
     def webviewon(self, value):
         self.WebViewOn = value
@@ -9990,16 +9679,15 @@ class Folder:
     def WebViewURL(self):
         return self.folder.WebViewURL
 
-    # Lower case alias for WebViewURL
-    @property
-    def webviewurl(self):
-        return self.WebViewURL
-
     @WebViewURL.setter
     def WebViewURL(self, value):
         self.folder.WebViewURL = value
 
-    # Lower case alias for WebViewURL setter
+    # Lower case aliases for WebViewURL
+    @property
+    def webviewurl(self):
+        return self.WebViewURL
+
     @webviewurl.setter
     def webviewurl(self, value):
         self.WebViewURL = value
@@ -10064,7 +9752,7 @@ class Folders:
     def Count(self):
         return self.folders.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -10073,7 +9761,7 @@ class Folders:
     def Parent(self):
         return self.folders.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10082,7 +9770,7 @@ class Folders:
     def Session(self):
         return NameSpace(self.folders.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -10125,16 +9813,15 @@ class FormDescription:
     def Category(self):
         return self.formdescription.Category
 
-    # Lower case alias for Category
-    @property
-    def category(self):
-        return self.Category
-
     @Category.setter
     def Category(self, value):
         self.formdescription.Category = value
 
-    # Lower case alias for Category setter
+    # Lower case aliases for Category
+    @property
+    def category(self):
+        return self.Category
+
     @category.setter
     def category(self, value):
         self.Category = value
@@ -10143,16 +9830,15 @@ class FormDescription:
     def CategorySub(self):
         return self.formdescription.CategorySub
 
-    # Lower case alias for CategorySub
-    @property
-    def categorysub(self):
-        return self.CategorySub
-
     @CategorySub.setter
     def CategorySub(self, value):
         self.formdescription.CategorySub = value
 
-    # Lower case alias for CategorySub setter
+    # Lower case aliases for CategorySub
+    @property
+    def categorysub(self):
+        return self.CategorySub
+
     @categorysub.setter
     def categorysub(self, value):
         self.CategorySub = value
@@ -10165,16 +9851,15 @@ class FormDescription:
     def Comment(self):
         return self.formdescription.Comment
 
-    # Lower case alias for Comment
-    @property
-    def comment(self):
-        return self.Comment
-
     @Comment.setter
     def Comment(self, value):
         self.formdescription.Comment = value
 
-    # Lower case alias for Comment setter
+    # Lower case aliases for Comment
+    @property
+    def comment(self):
+        return self.Comment
+
     @comment.setter
     def comment(self, value):
         self.Comment = value
@@ -10183,16 +9868,15 @@ class FormDescription:
     def ContactName(self):
         return FormDescription(self.formdescription.ContactName)
 
-    # Lower case alias for ContactName
-    @property
-    def contactname(self):
-        return self.ContactName
-
     @ContactName.setter
     def ContactName(self, value):
         self.formdescription.ContactName = value
 
-    # Lower case alias for ContactName setter
+    # Lower case aliases for ContactName
+    @property
+    def contactname(self):
+        return self.ContactName
+
     @contactname.setter
     def contactname(self, value):
         self.ContactName = value
@@ -10201,16 +9885,15 @@ class FormDescription:
     def DisplayName(self):
         return self.formdescription.DisplayName
 
-    # Lower case alias for DisplayName
-    @property
-    def displayname(self):
-        return self.DisplayName
-
     @DisplayName.setter
     def DisplayName(self, value):
         self.formdescription.DisplayName = value
 
-    # Lower case alias for DisplayName setter
+    # Lower case aliases for DisplayName
+    @property
+    def displayname(self):
+        return self.DisplayName
+
     @displayname.setter
     def displayname(self, value):
         self.DisplayName = value
@@ -10219,16 +9902,15 @@ class FormDescription:
     def Hidden(self):
         return self.formdescription.Hidden
 
-    # Lower case alias for Hidden
-    @property
-    def hidden(self):
-        return self.Hidden
-
     @Hidden.setter
     def Hidden(self, value):
         self.formdescription.Hidden = value
 
-    # Lower case alias for Hidden setter
+    # Lower case aliases for Hidden
+    @property
+    def hidden(self):
+        return self.Hidden
+
     @hidden.setter
     def hidden(self, value):
         self.Hidden = value
@@ -10237,16 +9919,15 @@ class FormDescription:
     def Icon(self):
         return self.formdescription.Icon
 
-    # Lower case alias for Icon
-    @property
-    def icon(self):
-        return self.Icon
-
     @Icon.setter
     def Icon(self, value):
         self.formdescription.Icon = value
 
-    # Lower case alias for Icon setter
+    # Lower case aliases for Icon
+    @property
+    def icon(self):
+        return self.Icon
+
     @icon.setter
     def icon(self, value):
         self.Icon = value
@@ -10255,16 +9936,15 @@ class FormDescription:
     def Locked(self):
         return self.formdescription.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.formdescription.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -10273,7 +9953,7 @@ class FormDescription:
     def MessageClass(self):
         return FormDescription(self.formdescription.MessageClass)
 
-    # Lower case alias for MessageClass
+    # Lower case aliases for MessageClass
     @property
     def messageclass(self):
         return self.MessageClass
@@ -10282,16 +9962,15 @@ class FormDescription:
     def MiniIcon(self):
         return self.formdescription.MiniIcon
 
-    # Lower case alias for MiniIcon
-    @property
-    def miniicon(self):
-        return self.MiniIcon
-
     @MiniIcon.setter
     def MiniIcon(self, value):
         self.formdescription.MiniIcon = value
 
-    # Lower case alias for MiniIcon setter
+    # Lower case aliases for MiniIcon
+    @property
+    def miniicon(self):
+        return self.MiniIcon
+
     @miniicon.setter
     def miniicon(self, value):
         self.MiniIcon = value
@@ -10300,16 +9979,15 @@ class FormDescription:
     def Name(self):
         return self.formdescription.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.formdescription.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -10318,16 +9996,15 @@ class FormDescription:
     def Number(self):
         return self.formdescription.Number
 
-    # Lower case alias for Number
-    @property
-    def number(self):
-        return self.Number
-
     @Number.setter
     def Number(self, value):
         self.formdescription.Number = value
 
-    # Lower case alias for Number setter
+    # Lower case aliases for Number
+    @property
+    def number(self):
+        return self.Number
+
     @number.setter
     def number(self, value):
         self.Number = value
@@ -10336,16 +10013,15 @@ class FormDescription:
     def OneOff(self):
         return self.formdescription.OneOff
 
-    # Lower case alias for OneOff
-    @property
-    def oneoff(self):
-        return self.OneOff
-
     @OneOff.setter
     def OneOff(self, value):
         self.formdescription.OneOff = value
 
-    # Lower case alias for OneOff setter
+    # Lower case aliases for OneOff
+    @property
+    def oneoff(self):
+        return self.OneOff
+
     @oneoff.setter
     def oneoff(self, value):
         self.OneOff = value
@@ -10354,7 +10030,7 @@ class FormDescription:
     def Parent(self):
         return self.formdescription.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10363,7 +10039,7 @@ class FormDescription:
     def ScriptText(self):
         return self.formdescription.ScriptText
 
-    # Lower case alias for ScriptText
+    # Lower case aliases for ScriptText
     @property
     def scripttext(self):
         return self.ScriptText
@@ -10372,7 +10048,7 @@ class FormDescription:
     def Session(self):
         return NameSpace(self.formdescription.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -10381,16 +10057,15 @@ class FormDescription:
     def Template(self):
         return self.formdescription.Template
 
-    # Lower case alias for Template
-    @property
-    def template(self):
-        return self.Template
-
     @Template.setter
     def Template(self, value):
         self.formdescription.Template = value
 
-    # Lower case alias for Template setter
+    # Lower case aliases for Template
+    @property
+    def template(self):
+        return self.Template
+
     @template.setter
     def template(self, value):
         self.Template = value
@@ -10399,16 +10074,15 @@ class FormDescription:
     def UseWordMail(self):
         return self.formdescription.UseWordMail
 
-    # Lower case alias for UseWordMail
-    @property
-    def usewordmail(self):
-        return self.UseWordMail
-
     @UseWordMail.setter
     def UseWordMail(self, value):
         self.formdescription.UseWordMail = value
 
-    # Lower case alias for UseWordMail setter
+    # Lower case aliases for UseWordMail
+    @property
+    def usewordmail(self):
+        return self.UseWordMail
+
     @usewordmail.setter
     def usewordmail(self, value):
         self.UseWordMail = value
@@ -10417,16 +10091,15 @@ class FormDescription:
     def Version(self):
         return self.formdescription.Version
 
-    # Lower case alias for Version
-    @property
-    def version(self):
-        return self.Version
-
     @Version.setter
     def Version(self, value):
         self.formdescription.Version = value
 
-    # Lower case alias for Version setter
+    # Lower case aliases for Version
+    @property
+    def version(self):
+        return self.Version
+
     @version.setter
     def version(self, value):
         self.Version = value
@@ -10453,7 +10126,7 @@ class FormNameRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.formnamerulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -10462,16 +10135,15 @@ class FormNameRuleCondition:
     def Enabled(self):
         return self.formnamerulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.formnamerulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -10480,16 +10152,15 @@ class FormNameRuleCondition:
     def FormName(self):
         return self.formnamerulecondition.FormName
 
-    # Lower case alias for FormName
-    @property
-    def formname(self):
-        return self.FormName
-
     @FormName.setter
     def FormName(self, value):
         self.formnamerulecondition.FormName = value
 
-    # Lower case alias for FormName setter
+    # Lower case aliases for FormName
+    @property
+    def formname(self):
+        return self.FormName
+
     @formname.setter
     def formname(self, value):
         self.FormName = value
@@ -10498,7 +10169,7 @@ class FormNameRuleCondition:
     def Parent(self):
         return self.formnamerulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10507,7 +10178,7 @@ class FormNameRuleCondition:
     def Session(self):
         return NameSpace(self.formnamerulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -10530,16 +10201,15 @@ class FormRegion:
     def Detail(self):
         return self.formregion.Detail
 
-    # Lower case alias for Detail
-    @property
-    def detail(self):
-        return self.Detail
-
     @Detail.setter
     def Detail(self, value):
         self.formregion.Detail = value
 
-    # Lower case alias for Detail setter
+    # Lower case aliases for Detail
+    @property
+    def detail(self):
+        return self.Detail
+
     @detail.setter
     def detail(self, value):
         self.Detail = value
@@ -10548,7 +10218,7 @@ class FormRegion:
     def DisplayName(self):
         return self.formregion.DisplayName
 
-    # Lower case alias for DisplayName
+    # Lower case aliases for DisplayName
     @property
     def displayname(self):
         return self.DisplayName
@@ -10557,16 +10227,15 @@ class FormRegion:
     def EnableAutoLayout(self):
         return self.formregion.EnableAutoLayout
 
-    # Lower case alias for EnableAutoLayout
-    @property
-    def enableautolayout(self):
-        return self.EnableAutoLayout
-
     @EnableAutoLayout.setter
     def EnableAutoLayout(self, value):
         self.formregion.EnableAutoLayout = value
 
-    # Lower case alias for EnableAutoLayout setter
+    # Lower case aliases for EnableAutoLayout
+    @property
+    def enableautolayout(self):
+        return self.EnableAutoLayout
+
     @enableautolayout.setter
     def enableautolayout(self, value):
         self.EnableAutoLayout = value
@@ -10575,7 +10244,7 @@ class FormRegion:
     def Form(self):
         return self.formregion.Form
 
-    # Lower case alias for Form
+    # Lower case aliases for Form
     @property
     def form(self):
         return self.Form
@@ -10584,7 +10253,7 @@ class FormRegion:
     def FormRegionMode(self):
         return OlFormRegionMode(self.formregion.FormRegionMode)
 
-    # Lower case alias for FormRegionMode
+    # Lower case aliases for FormRegionMode
     @property
     def formregionmode(self):
         return self.FormRegionMode
@@ -10593,7 +10262,7 @@ class FormRegion:
     def Inspector(self):
         return Inspector(self.formregion.Inspector)
 
-    # Lower case alias for Inspector
+    # Lower case aliases for Inspector
     @property
     def inspector(self):
         return self.Inspector
@@ -10602,7 +10271,7 @@ class FormRegion:
     def InternalName(self):
         return self.formregion.InternalName
 
-    # Lower case alias for InternalName
+    # Lower case aliases for InternalName
     @property
     def internalname(self):
         return self.InternalName
@@ -10611,7 +10280,7 @@ class FormRegion:
     def IsExpanded(self):
         return self.formregion.IsExpanded
 
-    # Lower case alias for IsExpanded
+    # Lower case aliases for IsExpanded
     @property
     def isexpanded(self):
         return self.IsExpanded
@@ -10620,7 +10289,7 @@ class FormRegion:
     def Item(self):
         return self.formregion.Item
 
-    # Lower case alias for Item
+    # Lower case aliases for Item
     @property
     def item(self):
         return self.Item
@@ -10629,7 +10298,7 @@ class FormRegion:
     def Language(self):
         return self.formregion.Language
 
-    # Lower case alias for Language
+    # Lower case aliases for Language
     @property
     def language(self):
         return self.Language
@@ -10638,7 +10307,7 @@ class FormRegion:
     def Parent(self):
         return self.formregion.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10647,7 +10316,7 @@ class FormRegion:
     def Session(self):
         return NameSpace(self.formregion.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -10656,16 +10325,15 @@ class FormRegion:
     def SuppressControlReplacement(self):
         return self.formregion.SuppressControlReplacement
 
-    # Lower case alias for SuppressControlReplacement
-    @property
-    def suppresscontrolreplacement(self):
-        return self.SuppressControlReplacement
-
     @SuppressControlReplacement.setter
     def SuppressControlReplacement(self, value):
         self.formregion.SuppressControlReplacement = value
 
-    # Lower case alias for SuppressControlReplacement setter
+    # Lower case aliases for SuppressControlReplacement
+    @property
+    def suppresscontrolreplacement(self):
+        return self.SuppressControlReplacement
+
     @suppresscontrolreplacement.setter
     def suppresscontrolreplacement(self, value):
         self.SuppressControlReplacement = value
@@ -10674,16 +10342,15 @@ class FormRegion:
     def Visible(self):
         return self.formregion.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.formregion.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -10716,7 +10383,7 @@ class FromRssFeedRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.fromrssfeedrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -10725,16 +10392,15 @@ class FromRssFeedRuleCondition:
     def Enabled(self):
         return self.fromrssfeedrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.fromrssfeedrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -10743,16 +10409,15 @@ class FromRssFeedRuleCondition:
     def FromRssFeed(self):
         return self.fromrssfeedrulecondition.FromRssFeed
 
-    # Lower case alias for FromRssFeed
-    @property
-    def fromrssfeed(self):
-        return self.FromRssFeed
-
     @FromRssFeed.setter
     def FromRssFeed(self, value):
         self.fromrssfeedrulecondition.FromRssFeed = value
 
-    # Lower case alias for FromRssFeed setter
+    # Lower case aliases for FromRssFeed
+    @property
+    def fromrssfeed(self):
+        return self.FromRssFeed
+
     @fromrssfeed.setter
     def fromrssfeed(self, value):
         self.FromRssFeed = value
@@ -10761,7 +10426,7 @@ class FromRssFeedRuleCondition:
     def Parent(self):
         return self.fromrssfeedrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10770,7 +10435,7 @@ class FromRssFeedRuleCondition:
     def Session(self):
         return NameSpace(self.fromrssfeedrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -10793,16 +10458,15 @@ class IconView:
     def Filter(self):
         return self.iconview.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.iconview.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -10811,16 +10475,15 @@ class IconView:
     def IconPlacement(self):
         return OlIconViewPlacement(self.iconview.IconPlacement)
 
-    # Lower case alias for IconPlacement
-    @property
-    def iconplacement(self):
-        return self.IconPlacement
-
     @IconPlacement.setter
     def IconPlacement(self, value):
         self.iconview.IconPlacement = value
 
-    # Lower case alias for IconPlacement setter
+    # Lower case aliases for IconPlacement
+    @property
+    def iconplacement(self):
+        return self.IconPlacement
+
     @iconplacement.setter
     def iconplacement(self, value):
         self.IconPlacement = value
@@ -10829,16 +10492,15 @@ class IconView:
     def IconViewType(self):
         return OlIconViewType(self.iconview.IconViewType)
 
-    # Lower case alias for IconViewType
-    @property
-    def iconviewtype(self):
-        return self.IconViewType
-
     @IconViewType.setter
     def IconViewType(self, value):
         self.iconview.IconViewType = value
 
-    # Lower case alias for IconViewType setter
+    # Lower case aliases for IconViewType
+    @property
+    def iconviewtype(self):
+        return self.IconViewType
+
     @iconviewtype.setter
     def iconviewtype(self, value):
         self.IconViewType = value
@@ -10847,16 +10509,15 @@ class IconView:
     def Language(self):
         return self.iconview.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.iconview.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -10865,16 +10526,15 @@ class IconView:
     def LockUserChanges(self):
         return self.iconview.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.iconview.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -10883,16 +10543,15 @@ class IconView:
     def Name(self):
         return self.iconview.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.iconview.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -10901,7 +10560,7 @@ class IconView:
     def Parent(self):
         return self.iconview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10910,7 +10569,7 @@ class IconView:
     def SaveOption(self):
         return OlViewSaveOption(self.iconview.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -10919,7 +10578,7 @@ class IconView:
     def Session(self):
         return NameSpace(self.iconview.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -10928,7 +10587,7 @@ class IconView:
     def SortFields(self):
         return OrderFields(self.iconview.SortFields)
 
-    # Lower case alias for SortFields
+    # Lower case aliases for SortFields
     @property
     def sortfields(self):
         return self.SortFields
@@ -10937,7 +10596,7 @@ class IconView:
     def Standard(self):
         return IconView(self.iconview.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -10946,7 +10605,7 @@ class IconView:
     def ViewType(self):
         return OlViewType(self.iconview.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -10955,16 +10614,15 @@ class IconView:
     def XML(self):
         return self.iconview.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.iconview.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -11007,7 +10665,7 @@ class ImportanceRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.importancerulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -11016,16 +10674,15 @@ class ImportanceRuleCondition:
     def Enabled(self):
         return self.importancerulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.importancerulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -11034,16 +10691,15 @@ class ImportanceRuleCondition:
     def Importance(self):
         return OlImportance(self.importancerulecondition.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.importancerulecondition.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -11052,7 +10708,7 @@ class ImportanceRuleCondition:
     def Parent(self):
         return self.importancerulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11061,7 +10717,7 @@ class ImportanceRuleCondition:
     def Session(self):
         return NameSpace(self.importancerulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -11080,7 +10736,7 @@ class Inspector:
     def AttachmentSelection(self):
         return AttachmentSelection(self.inspector.AttachmentSelection)
 
-    # Lower case alias for AttachmentSelection
+    # Lower case aliases for AttachmentSelection
     @property
     def attachmentselection(self):
         return self.AttachmentSelection
@@ -11089,7 +10745,7 @@ class Inspector:
     def Caption(self):
         return self.inspector.Caption
 
-    # Lower case alias for Caption
+    # Lower case aliases for Caption
     @property
     def caption(self):
         return self.Caption
@@ -11102,7 +10758,7 @@ class Inspector:
     def CurrentItem(self):
         return self.inspector.CurrentItem
 
-    # Lower case alias for CurrentItem
+    # Lower case aliases for CurrentItem
     @property
     def currentitem(self):
         return self.CurrentItem
@@ -11111,7 +10767,7 @@ class Inspector:
     def EditorType(self):
         return OlEditorType(self.inspector.EditorType)
 
-    # Lower case alias for EditorType
+    # Lower case aliases for EditorType
     @property
     def editortype(self):
         return self.EditorType
@@ -11120,16 +10776,15 @@ class Inspector:
     def Height(self):
         return self.inspector.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.inspector.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -11138,16 +10793,15 @@ class Inspector:
     def Left(self):
         return self.inspector.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.inspector.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -11156,7 +10810,7 @@ class Inspector:
     def ModifiedFormPages(self):
         return Pages(self.inspector.ModifiedFormPages)
 
-    # Lower case alias for ModifiedFormPages
+    # Lower case aliases for ModifiedFormPages
     @property
     def modifiedformpages(self):
         return self.ModifiedFormPages
@@ -11165,7 +10819,7 @@ class Inspector:
     def Parent(self):
         return self.inspector.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11174,7 +10828,7 @@ class Inspector:
     def Session(self):
         return NameSpace(self.inspector.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -11183,16 +10837,15 @@ class Inspector:
     def Top(self):
         return self.inspector.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.inspector.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -11201,16 +10854,15 @@ class Inspector:
     def Width(self):
         return self.inspector.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.inspector.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -11219,16 +10871,15 @@ class Inspector:
     def WindowState(self):
         return OlWindowState(self.inspector.WindowState)
 
-    # Lower case alias for WindowState
-    @property
-    def windowstate(self):
-        return self.WindowState
-
     @WindowState.setter
     def WindowState(self, value):
         self.inspector.WindowState = value
 
-    # Lower case alias for WindowState setter
+    # Lower case aliases for WindowState
+    @property
+    def windowstate(self):
+        return self.WindowState
+
     @windowstate.setter
     def windowstate(self, value):
         self.WindowState = value
@@ -11237,7 +10888,7 @@ class Inspector:
     def WordEditor(self):
         return self.inspector.WordEditor
 
-    # Lower case alias for WordEditor
+    # Lower case aliases for WordEditor
     @property
     def wordeditor(self):
         return self.WordEditor
@@ -11305,7 +10956,7 @@ class Inspectors:
     def Count(self):
         return self.inspectors.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -11314,7 +10965,7 @@ class Inspectors:
     def Parent(self):
         return self.inspectors.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11323,7 +10974,7 @@ class Inspectors:
     def Session(self):
         return NameSpace(self.inspectors.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -11356,7 +11007,7 @@ class ItemProperties:
     def Count(self):
         return self.itemproperties.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -11365,7 +11016,7 @@ class ItemProperties:
     def Parent(self):
         return self.itemproperties.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11374,7 +11025,7 @@ class ItemProperties:
     def Session(self):
         return NameSpace(self.itemproperties.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -11409,7 +11060,7 @@ class ItemProperty:
     def IsUserProperty(self):
         return self.itemproperty.IsUserProperty
 
-    # Lower case alias for IsUserProperty
+    # Lower case aliases for IsUserProperty
     @property
     def isuserproperty(self):
         return self.IsUserProperty
@@ -11418,16 +11069,15 @@ class ItemProperty:
     def Name(self):
         return self.itemproperty.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.itemproperty.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -11436,7 +11086,7 @@ class ItemProperty:
     def Parent(self):
         return self.itemproperty.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11445,7 +11095,7 @@ class ItemProperty:
     def Session(self):
         return NameSpace(self.itemproperty.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -11454,7 +11104,7 @@ class ItemProperty:
     def Type(self):
         return OlUserPropertyType(self.itemproperty.Type)
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -11463,16 +11113,15 @@ class ItemProperty:
     def Value(self):
         return self.itemproperty.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.itemproperty.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -11495,7 +11144,7 @@ class Items:
     def Count(self):
         return self.items.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -11504,16 +11153,15 @@ class Items:
     def IncludeRecurrences(self):
         return Items(self.items.IncludeRecurrences)
 
-    # Lower case alias for IncludeRecurrences
-    @property
-    def includerecurrences(self):
-        return self.IncludeRecurrences
-
     @IncludeRecurrences.setter
     def IncludeRecurrences(self, value):
         self.items.IncludeRecurrences = value
 
-    # Lower case alias for IncludeRecurrences setter
+    # Lower case aliases for IncludeRecurrences
+    @property
+    def includerecurrences(self):
+        return self.IncludeRecurrences
+
     @includerecurrences.setter
     def includerecurrences(self, value):
         self.IncludeRecurrences = value
@@ -11522,7 +11170,7 @@ class Items:
     def Parent(self):
         return self.items.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11531,7 +11179,7 @@ class Items:
     def Session(self):
         return NameSpace(self.items.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -11591,7 +11239,7 @@ class JournalItem:
     def Actions(self):
         return Actions(self.journalitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -11604,7 +11252,7 @@ class JournalItem:
     def Attachments(self):
         return Attachments(self.journalitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -11613,7 +11261,7 @@ class JournalItem:
     def AutoResolvedWinner(self):
         return self.journalitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -11622,16 +11270,15 @@ class JournalItem:
     def BillingInformation(self):
         return self.journalitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.journalitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -11640,16 +11287,15 @@ class JournalItem:
     def Body(self):
         return self.journalitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.journalitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -11658,16 +11304,15 @@ class JournalItem:
     def Categories(self):
         return self.journalitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.journalitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -11680,16 +11325,15 @@ class JournalItem:
     def Companies(self):
         return self.journalitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.journalitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -11698,7 +11342,7 @@ class JournalItem:
     def Conflicts(self):
         return Conflicts(self.journalitem.Conflicts)
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -11707,16 +11351,15 @@ class JournalItem:
     def ContactNames(self):
         return self.journalitem.ContactNames
 
-    # Lower case alias for ContactNames
-    @property
-    def contactnames(self):
-        return self.ContactNames
-
     @ContactNames.setter
     def ContactNames(self, value):
         self.journalitem.ContactNames = value
 
-    # Lower case alias for ContactNames setter
+    # Lower case aliases for ContactNames
+    @property
+    def contactnames(self):
+        return self.ContactNames
+
     @contactnames.setter
     def contactnames(self, value):
         self.ContactNames = value
@@ -11725,7 +11368,7 @@ class JournalItem:
     def ConversationID(self):
         return Conversation(self.journalitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -11734,7 +11377,7 @@ class JournalItem:
     def ConversationIndex(self):
         return self.journalitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -11743,7 +11386,7 @@ class JournalItem:
     def ConversationTopic(self):
         return self.journalitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -11752,7 +11395,7 @@ class JournalItem:
     def CreationTime(self):
         return self.journalitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -11761,16 +11404,15 @@ class JournalItem:
     def DocPosted(self):
         return self.journalitem.DocPosted
 
-    # Lower case alias for DocPosted
-    @property
-    def docposted(self):
-        return self.DocPosted
-
     @DocPosted.setter
     def DocPosted(self, value):
         self.journalitem.DocPosted = value
 
-    # Lower case alias for DocPosted setter
+    # Lower case aliases for DocPosted
+    @property
+    def docposted(self):
+        return self.DocPosted
+
     @docposted.setter
     def docposted(self, value):
         self.DocPosted = value
@@ -11779,16 +11421,15 @@ class JournalItem:
     def DocPrinted(self):
         return self.journalitem.DocPrinted
 
-    # Lower case alias for DocPrinted
-    @property
-    def docprinted(self):
-        return self.DocPrinted
-
     @DocPrinted.setter
     def DocPrinted(self, value):
         self.journalitem.DocPrinted = value
 
-    # Lower case alias for DocPrinted setter
+    # Lower case aliases for DocPrinted
+    @property
+    def docprinted(self):
+        return self.DocPrinted
+
     @docprinted.setter
     def docprinted(self, value):
         self.DocPrinted = value
@@ -11797,16 +11438,15 @@ class JournalItem:
     def DocRouted(self):
         return self.journalitem.DocRouted
 
-    # Lower case alias for DocRouted
-    @property
-    def docrouted(self):
-        return self.DocRouted
-
     @DocRouted.setter
     def DocRouted(self, value):
         self.journalitem.DocRouted = value
 
-    # Lower case alias for DocRouted setter
+    # Lower case aliases for DocRouted
+    @property
+    def docrouted(self):
+        return self.DocRouted
+
     @docrouted.setter
     def docrouted(self, value):
         self.DocRouted = value
@@ -11815,16 +11455,15 @@ class JournalItem:
     def DocSaved(self):
         return self.journalitem.DocSaved
 
-    # Lower case alias for DocSaved
-    @property
-    def docsaved(self):
-        return self.DocSaved
-
     @DocSaved.setter
     def DocSaved(self, value):
         self.journalitem.DocSaved = value
 
-    # Lower case alias for DocSaved setter
+    # Lower case aliases for DocSaved
+    @property
+    def docsaved(self):
+        return self.DocSaved
+
     @docsaved.setter
     def docsaved(self, value):
         self.DocSaved = value
@@ -11833,7 +11472,7 @@ class JournalItem:
     def DownloadState(self):
         return OlDownloadState(self.journalitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -11842,16 +11481,15 @@ class JournalItem:
     def Duration(self):
         return JournalItem(self.journalitem.Duration)
 
-    # Lower case alias for Duration
-    @property
-    def duration(self):
-        return self.Duration
-
     @Duration.setter
     def Duration(self, value):
         self.journalitem.Duration = value
 
-    # Lower case alias for Duration setter
+    # Lower case aliases for Duration
+    @property
+    def duration(self):
+        return self.Duration
+
     @duration.setter
     def duration(self, value):
         self.Duration = value
@@ -11860,16 +11498,15 @@ class JournalItem:
     def End(self):
         return self.journalitem.End
 
-    # Lower case alias for End
-    @property
-    def end(self):
-        return self.End
-
     @End.setter
     def End(self, value):
         self.journalitem.End = value
 
-    # Lower case alias for End setter
+    # Lower case aliases for End
+    @property
+    def end(self):
+        return self.End
+
     @end.setter
     def end(self, value):
         self.End = value
@@ -11878,7 +11515,7 @@ class JournalItem:
     def EntryID(self):
         return self.journalitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -11887,7 +11524,7 @@ class JournalItem:
     def FormDescription(self):
         return FormDescription(self.journalitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -11896,7 +11533,7 @@ class JournalItem:
     def GetInspector(self):
         return Inspector(self.journalitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -11905,16 +11542,15 @@ class JournalItem:
     def Importance(self):
         return OlImportance(self.journalitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.journalitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -11923,7 +11559,7 @@ class JournalItem:
     def IsConflict(self):
         return self.journalitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -11932,7 +11568,7 @@ class JournalItem:
     def ItemProperties(self):
         return ItemProperties(self.journalitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -11941,7 +11577,7 @@ class JournalItem:
     def LastModificationTime(self):
         return self.journalitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -11950,16 +11586,15 @@ class JournalItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.journalitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.journalitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -11968,16 +11603,15 @@ class JournalItem:
     def MessageClass(self):
         return self.journalitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.journalitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -11986,16 +11620,15 @@ class JournalItem:
     def Mileage(self):
         return self.journalitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.journalitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -12004,16 +11637,15 @@ class JournalItem:
     def NoAging(self):
         return self.journalitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.journalitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -12022,7 +11654,7 @@ class JournalItem:
     def OutlookInternalVersion(self):
         return self.journalitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -12031,7 +11663,7 @@ class JournalItem:
     def OutlookVersion(self):
         return self.journalitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -12040,7 +11672,7 @@ class JournalItem:
     def Parent(self):
         return self.journalitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -12049,7 +11681,7 @@ class JournalItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.journalitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -12058,7 +11690,7 @@ class JournalItem:
     def Recipients(self):
         return Recipients(self.journalitem.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -12067,7 +11699,7 @@ class JournalItem:
     def Saved(self):
         return self.journalitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -12076,16 +11708,15 @@ class JournalItem:
     def Sensitivity(self):
         return OlSensitivity(self.journalitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.journalitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -12094,7 +11725,7 @@ class JournalItem:
     def Session(self):
         return NameSpace(self.journalitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -12103,7 +11734,7 @@ class JournalItem:
     def Size(self):
         return self.journalitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -12112,16 +11743,15 @@ class JournalItem:
     def Start(self):
         return self.journalitem.Start
 
-    # Lower case alias for Start
-    @property
-    def start(self):
-        return self.Start
-
     @Start.setter
     def Start(self, value):
         self.journalitem.Start = value
 
-    # Lower case alias for Start setter
+    # Lower case aliases for Start
+    @property
+    def start(self):
+        return self.Start
+
     @start.setter
     def start(self, value):
         self.Start = value
@@ -12130,16 +11760,15 @@ class JournalItem:
     def Subject(self):
         return self.journalitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.journalitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -12148,16 +11777,15 @@ class JournalItem:
     def Type(self):
         return self.journalitem.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.journalitem.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -12166,16 +11794,15 @@ class JournalItem:
     def UnRead(self):
         return self.journalitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.journalitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -12184,7 +11811,7 @@ class JournalItem:
     def UserProperties(self):
         return UserProperties(self.journalitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -12256,7 +11883,7 @@ class JournalModule:
     def Name(self):
         return JournalModule(self.journalmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -12265,7 +11892,7 @@ class JournalModule:
     def NavigationGroups(self):
         return NavigationGroups(self.journalmodule.NavigationGroups)
 
-    # Lower case alias for NavigationGroups
+    # Lower case aliases for NavigationGroups
     @property
     def navigationgroups(self):
         return self.NavigationGroups
@@ -12274,7 +11901,7 @@ class JournalModule:
     def NavigationModuleType(self):
         return olNavigationModuleType(self.journalmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -12283,7 +11910,7 @@ class JournalModule:
     def Parent(self):
         return self.journalmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -12292,16 +11919,15 @@ class JournalModule:
     def Position(self):
         return JournalModule(self.journalmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.journalmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -12310,7 +11936,7 @@ class JournalModule:
     def Session(self):
         return NameSpace(self.journalmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -12319,16 +11945,15 @@ class JournalModule:
     def Visible(self):
         return JournalModule(self.journalmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.journalmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -12343,7 +11968,7 @@ class MailItem:
     def Actions(self):
         return Actions(self.mailitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -12352,16 +11977,15 @@ class MailItem:
     def AlternateRecipientAllowed(self):
         return self.mailitem.AlternateRecipientAllowed
 
-    # Lower case alias for AlternateRecipientAllowed
-    @property
-    def alternaterecipientallowed(self):
-        return self.AlternateRecipientAllowed
-
     @AlternateRecipientAllowed.setter
     def AlternateRecipientAllowed(self, value):
         self.mailitem.AlternateRecipientAllowed = value
 
-    # Lower case alias for AlternateRecipientAllowed setter
+    # Lower case aliases for AlternateRecipientAllowed
+    @property
+    def alternaterecipientallowed(self):
+        return self.AlternateRecipientAllowed
+
     @alternaterecipientallowed.setter
     def alternaterecipientallowed(self, value):
         self.AlternateRecipientAllowed = value
@@ -12374,7 +11998,7 @@ class MailItem:
     def Attachments(self):
         return Attachments(self.mailitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -12383,16 +12007,15 @@ class MailItem:
     def AutoForwarded(self):
         return self.mailitem.AutoForwarded
 
-    # Lower case alias for AutoForwarded
-    @property
-    def autoforwarded(self):
-        return self.AutoForwarded
-
     @AutoForwarded.setter
     def AutoForwarded(self, value):
         self.mailitem.AutoForwarded = value
 
-    # Lower case alias for AutoForwarded setter
+    # Lower case aliases for AutoForwarded
+    @property
+    def autoforwarded(self):
+        return self.AutoForwarded
+
     @autoforwarded.setter
     def autoforwarded(self, value):
         self.AutoForwarded = value
@@ -12401,7 +12024,7 @@ class MailItem:
     def AutoResolvedWinner(self):
         return self.mailitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -12410,16 +12033,15 @@ class MailItem:
     def BCC(self):
         return MailItem(self.mailitem.BCC)
 
-    # Lower case alias for BCC
-    @property
-    def bcc(self):
-        return self.BCC
-
     @BCC.setter
     def BCC(self, value):
         self.mailitem.BCC = value
 
-    # Lower case alias for BCC setter
+    # Lower case aliases for BCC
+    @property
+    def bcc(self):
+        return self.BCC
+
     @bcc.setter
     def bcc(self, value):
         self.BCC = value
@@ -12428,16 +12050,15 @@ class MailItem:
     def BillingInformation(self):
         return self.mailitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.mailitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -12446,16 +12067,15 @@ class MailItem:
     def Body(self):
         return self.mailitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.mailitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -12464,16 +12084,15 @@ class MailItem:
     def BodyFormat(self):
         return OlBodyFormat(self.mailitem.BodyFormat)
 
-    # Lower case alias for BodyFormat
-    @property
-    def bodyformat(self):
-        return self.BodyFormat
-
     @BodyFormat.setter
     def BodyFormat(self, value):
         self.mailitem.BodyFormat = value
 
-    # Lower case alias for BodyFormat setter
+    # Lower case aliases for BodyFormat
+    @property
+    def bodyformat(self):
+        return self.BodyFormat
+
     @bodyformat.setter
     def bodyformat(self, value):
         self.BodyFormat = value
@@ -12482,16 +12101,15 @@ class MailItem:
     def Categories(self):
         return self.mailitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.mailitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -12500,16 +12118,15 @@ class MailItem:
     def CC(self):
         return MailItem(self.mailitem.CC)
 
-    # Lower case alias for CC
-    @property
-    def cc(self):
-        return self.CC
-
     @CC.setter
     def CC(self, value):
         self.mailitem.CC = value
 
-    # Lower case alias for CC setter
+    # Lower case aliases for CC
+    @property
+    def cc(self):
+        return self.CC
+
     @cc.setter
     def cc(self, value):
         self.CC = value
@@ -12522,16 +12139,15 @@ class MailItem:
     def Companies(self):
         return self.mailitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.mailitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -12540,7 +12156,7 @@ class MailItem:
     def Conflicts(self):
         return self.mailitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -12549,7 +12165,7 @@ class MailItem:
     def ConversationID(self):
         return Conversation(self.mailitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -12558,7 +12174,7 @@ class MailItem:
     def ConversationIndex(self):
         return self.mailitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -12567,7 +12183,7 @@ class MailItem:
     def ConversationTopic(self):
         return self.mailitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -12576,7 +12192,7 @@ class MailItem:
     def CreationTime(self):
         return self.mailitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -12585,16 +12201,15 @@ class MailItem:
     def DeferredDeliveryTime(self):
         return self.mailitem.DeferredDeliveryTime
 
-    # Lower case alias for DeferredDeliveryTime
-    @property
-    def deferreddeliverytime(self):
-        return self.DeferredDeliveryTime
-
     @DeferredDeliveryTime.setter
     def DeferredDeliveryTime(self, value):
         self.mailitem.DeferredDeliveryTime = value
 
-    # Lower case alias for DeferredDeliveryTime setter
+    # Lower case aliases for DeferredDeliveryTime
+    @property
+    def deferreddeliverytime(self):
+        return self.DeferredDeliveryTime
+
     @deferreddeliverytime.setter
     def deferreddeliverytime(self, value):
         self.DeferredDeliveryTime = value
@@ -12603,16 +12218,15 @@ class MailItem:
     def DeleteAfterSubmit(self):
         return self.mailitem.DeleteAfterSubmit
 
-    # Lower case alias for DeleteAfterSubmit
-    @property
-    def deleteaftersubmit(self):
-        return self.DeleteAfterSubmit
-
     @DeleteAfterSubmit.setter
     def DeleteAfterSubmit(self, value):
         self.mailitem.DeleteAfterSubmit = value
 
-    # Lower case alias for DeleteAfterSubmit setter
+    # Lower case aliases for DeleteAfterSubmit
+    @property
+    def deleteaftersubmit(self):
+        return self.DeleteAfterSubmit
+
     @deleteaftersubmit.setter
     def deleteaftersubmit(self, value):
         self.DeleteAfterSubmit = value
@@ -12621,7 +12235,7 @@ class MailItem:
     def DownloadState(self):
         return OlDownloadState(self.mailitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -12630,7 +12244,7 @@ class MailItem:
     def EntryID(self):
         return self.mailitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -12639,16 +12253,15 @@ class MailItem:
     def ExpiryTime(self):
         return self.mailitem.ExpiryTime
 
-    # Lower case alias for ExpiryTime
-    @property
-    def expirytime(self):
-        return self.ExpiryTime
-
     @ExpiryTime.setter
     def ExpiryTime(self, value):
         self.mailitem.ExpiryTime = value
 
-    # Lower case alias for ExpiryTime setter
+    # Lower case aliases for ExpiryTime
+    @property
+    def expirytime(self):
+        return self.ExpiryTime
+
     @expirytime.setter
     def expirytime(self, value):
         self.ExpiryTime = value
@@ -12657,16 +12270,15 @@ class MailItem:
     def FlagRequest(self):
         return self.mailitem.FlagRequest
 
-    # Lower case alias for FlagRequest
-    @property
-    def flagrequest(self):
-        return self.FlagRequest
-
     @FlagRequest.setter
     def FlagRequest(self, value):
         self.mailitem.FlagRequest = value
 
-    # Lower case alias for FlagRequest setter
+    # Lower case aliases for FlagRequest
+    @property
+    def flagrequest(self):
+        return self.FlagRequest
+
     @flagrequest.setter
     def flagrequest(self, value):
         self.FlagRequest = value
@@ -12675,7 +12287,7 @@ class MailItem:
     def FormDescription(self):
         return FormDescription(self.mailitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -12684,7 +12296,7 @@ class MailItem:
     def GetInspector(self):
         return Inspector(self.mailitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -12693,16 +12305,15 @@ class MailItem:
     def HTMLBody(self):
         return self.mailitem.HTMLBody
 
-    # Lower case alias for HTMLBody
-    @property
-    def htmlbody(self):
-        return self.HTMLBody
-
     @HTMLBody.setter
     def HTMLBody(self, value):
         self.mailitem.HTMLBody = value
 
-    # Lower case alias for HTMLBody setter
+    # Lower case aliases for HTMLBody
+    @property
+    def htmlbody(self):
+        return self.HTMLBody
+
     @htmlbody.setter
     def htmlbody(self, value):
         self.HTMLBody = value
@@ -12711,16 +12322,15 @@ class MailItem:
     def Importance(self):
         return OlImportance(self.mailitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.mailitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -12729,16 +12339,15 @@ class MailItem:
     def InternetCodepage(self):
         return self.mailitem.InternetCodepage
 
-    # Lower case alias for InternetCodepage
-    @property
-    def internetcodepage(self):
-        return self.InternetCodepage
-
     @InternetCodepage.setter
     def InternetCodepage(self, value):
         self.mailitem.InternetCodepage = value
 
-    # Lower case alias for InternetCodepage setter
+    # Lower case aliases for InternetCodepage
+    @property
+    def internetcodepage(self):
+        return self.InternetCodepage
+
     @internetcodepage.setter
     def internetcodepage(self, value):
         self.InternetCodepage = value
@@ -12747,7 +12356,7 @@ class MailItem:
     def IsConflict(self):
         return self.mailitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -12756,7 +12365,7 @@ class MailItem:
     def IsMarkedAsTask(self):
         return MailItem(self.mailitem.IsMarkedAsTask)
 
-    # Lower case alias for IsMarkedAsTask
+    # Lower case aliases for IsMarkedAsTask
     @property
     def ismarkedastask(self):
         return self.IsMarkedAsTask
@@ -12765,7 +12374,7 @@ class MailItem:
     def ItemProperties(self):
         return ItemProperties(self.mailitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -12774,7 +12383,7 @@ class MailItem:
     def LastModificationTime(self):
         return self.mailitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -12783,16 +12392,15 @@ class MailItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.mailitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.mailitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -12801,16 +12409,15 @@ class MailItem:
     def MessageClass(self):
         return self.mailitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.mailitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -12819,16 +12426,15 @@ class MailItem:
     def Mileage(self):
         return self.mailitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.mailitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -12837,16 +12443,15 @@ class MailItem:
     def NoAging(self):
         return self.mailitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.mailitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -12855,16 +12460,15 @@ class MailItem:
     def OriginatorDeliveryReportRequested(self):
         return self.mailitem.OriginatorDeliveryReportRequested
 
-    # Lower case alias for OriginatorDeliveryReportRequested
-    @property
-    def originatordeliveryreportrequested(self):
-        return self.OriginatorDeliveryReportRequested
-
     @OriginatorDeliveryReportRequested.setter
     def OriginatorDeliveryReportRequested(self, value):
         self.mailitem.OriginatorDeliveryReportRequested = value
 
-    # Lower case alias for OriginatorDeliveryReportRequested setter
+    # Lower case aliases for OriginatorDeliveryReportRequested
+    @property
+    def originatordeliveryreportrequested(self):
+        return self.OriginatorDeliveryReportRequested
+
     @originatordeliveryreportrequested.setter
     def originatordeliveryreportrequested(self, value):
         self.OriginatorDeliveryReportRequested = value
@@ -12873,7 +12477,7 @@ class MailItem:
     def OutlookInternalVersion(self):
         return self.mailitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -12882,7 +12486,7 @@ class MailItem:
     def OutlookVersion(self):
         return self.mailitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -12891,7 +12495,7 @@ class MailItem:
     def Parent(self):
         return self.mailitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -12900,16 +12504,15 @@ class MailItem:
     def Permission(self):
         return self.mailitem.Permission
 
-    # Lower case alias for Permission
-    @property
-    def permission(self):
-        return self.Permission
-
     @Permission.setter
     def Permission(self, value):
         self.mailitem.Permission = value
 
-    # Lower case alias for Permission setter
+    # Lower case aliases for Permission
+    @property
+    def permission(self):
+        return self.Permission
+
     @permission.setter
     def permission(self, value):
         self.Permission = value
@@ -12918,16 +12521,15 @@ class MailItem:
     def PermissionService(self):
         return self.mailitem.PermissionService
 
-    # Lower case alias for PermissionService
-    @property
-    def permissionservice(self):
-        return self.PermissionService
-
     @PermissionService.setter
     def PermissionService(self, value):
         self.mailitem.PermissionService = value
 
-    # Lower case alias for PermissionService setter
+    # Lower case aliases for PermissionService
+    @property
+    def permissionservice(self):
+        return self.PermissionService
+
     @permissionservice.setter
     def permissionservice(self, value):
         self.PermissionService = value
@@ -12936,16 +12538,15 @@ class MailItem:
     def PermissionTemplateGuid(self):
         return MailItem(self.mailitem.PermissionTemplateGuid)
 
-    # Lower case alias for PermissionTemplateGuid
-    @property
-    def permissiontemplateguid(self):
-        return self.PermissionTemplateGuid
-
     @PermissionTemplateGuid.setter
     def PermissionTemplateGuid(self, value):
         self.mailitem.PermissionTemplateGuid = value
 
-    # Lower case alias for PermissionTemplateGuid setter
+    # Lower case aliases for PermissionTemplateGuid
+    @property
+    def permissiontemplateguid(self):
+        return self.PermissionTemplateGuid
+
     @permissiontemplateguid.setter
     def permissiontemplateguid(self, value):
         self.PermissionTemplateGuid = value
@@ -12954,7 +12555,7 @@ class MailItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.mailitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -12963,7 +12564,7 @@ class MailItem:
     def ReadReceiptRequested(self):
         return self.mailitem.ReadReceiptRequested
 
-    # Lower case alias for ReadReceiptRequested
+    # Lower case aliases for ReadReceiptRequested
     @property
     def readreceiptrequested(self):
         return self.ReadReceiptRequested
@@ -12972,7 +12573,7 @@ class MailItem:
     def ReceivedByEntryID(self):
         return self.mailitem.ReceivedByEntryID
 
-    # Lower case alias for ReceivedByEntryID
+    # Lower case aliases for ReceivedByEntryID
     @property
     def receivedbyentryid(self):
         return self.ReceivedByEntryID
@@ -12981,7 +12582,7 @@ class MailItem:
     def ReceivedByName(self):
         return self.mailitem.ReceivedByName
 
-    # Lower case alias for ReceivedByName
+    # Lower case aliases for ReceivedByName
     @property
     def receivedbyname(self):
         return self.ReceivedByName
@@ -12990,7 +12591,7 @@ class MailItem:
     def ReceivedOnBehalfOfEntryID(self):
         return self.mailitem.ReceivedOnBehalfOfEntryID
 
-    # Lower case alias for ReceivedOnBehalfOfEntryID
+    # Lower case aliases for ReceivedOnBehalfOfEntryID
     @property
     def receivedonbehalfofentryid(self):
         return self.ReceivedOnBehalfOfEntryID
@@ -12999,7 +12600,7 @@ class MailItem:
     def ReceivedOnBehalfOfName(self):
         return self.mailitem.ReceivedOnBehalfOfName
 
-    # Lower case alias for ReceivedOnBehalfOfName
+    # Lower case aliases for ReceivedOnBehalfOfName
     @property
     def receivedonbehalfofname(self):
         return self.ReceivedOnBehalfOfName
@@ -13008,7 +12609,7 @@ class MailItem:
     def ReceivedTime(self):
         return self.mailitem.ReceivedTime
 
-    # Lower case alias for ReceivedTime
+    # Lower case aliases for ReceivedTime
     @property
     def receivedtime(self):
         return self.ReceivedTime
@@ -13017,16 +12618,15 @@ class MailItem:
     def RecipientReassignmentProhibited(self):
         return self.mailitem.RecipientReassignmentProhibited
 
-    # Lower case alias for RecipientReassignmentProhibited
-    @property
-    def recipientreassignmentprohibited(self):
-        return self.RecipientReassignmentProhibited
-
     @RecipientReassignmentProhibited.setter
     def RecipientReassignmentProhibited(self, value):
         self.mailitem.RecipientReassignmentProhibited = value
 
-    # Lower case alias for RecipientReassignmentProhibited setter
+    # Lower case aliases for RecipientReassignmentProhibited
+    @property
+    def recipientreassignmentprohibited(self):
+        return self.RecipientReassignmentProhibited
+
     @recipientreassignmentprohibited.setter
     def recipientreassignmentprohibited(self, value):
         self.RecipientReassignmentProhibited = value
@@ -13035,7 +12635,7 @@ class MailItem:
     def Recipients(self):
         return Recipients(self.mailitem.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -13044,16 +12644,15 @@ class MailItem:
     def ReminderOverrideDefault(self):
         return self.mailitem.ReminderOverrideDefault
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.mailitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -13062,16 +12661,15 @@ class MailItem:
     def ReminderPlaySound(self):
         return self.mailitem.ReminderPlaySound
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.mailitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -13080,16 +12678,15 @@ class MailItem:
     def ReminderSet(self):
         return self.mailitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.mailitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -13098,16 +12695,15 @@ class MailItem:
     def ReminderSoundFile(self):
         return self.mailitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.mailitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -13116,16 +12712,15 @@ class MailItem:
     def ReminderTime(self):
         return self.mailitem.ReminderTime
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.mailitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -13134,16 +12729,15 @@ class MailItem:
     def RemoteStatus(self):
         return OlRemoteStatus(self.mailitem.RemoteStatus)
 
-    # Lower case alias for RemoteStatus
-    @property
-    def remotestatus(self):
-        return self.RemoteStatus
-
     @RemoteStatus.setter
     def RemoteStatus(self, value):
         self.mailitem.RemoteStatus = value
 
-    # Lower case alias for RemoteStatus setter
+    # Lower case aliases for RemoteStatus
+    @property
+    def remotestatus(self):
+        return self.RemoteStatus
+
     @remotestatus.setter
     def remotestatus(self, value):
         self.RemoteStatus = value
@@ -13152,7 +12746,7 @@ class MailItem:
     def ReplyRecipientNames(self):
         return self.mailitem.ReplyRecipientNames
 
-    # Lower case alias for ReplyRecipientNames
+    # Lower case aliases for ReplyRecipientNames
     @property
     def replyrecipientnames(self):
         return self.ReplyRecipientNames
@@ -13161,7 +12755,7 @@ class MailItem:
     def ReplyRecipients(self):
         return Recipients(self.mailitem.ReplyRecipients)
 
-    # Lower case alias for ReplyRecipients
+    # Lower case aliases for ReplyRecipients
     @property
     def replyrecipients(self):
         return self.ReplyRecipients
@@ -13170,7 +12764,7 @@ class MailItem:
     def RetentionExpirationDate(self):
         return MailItem(self.mailitem.RetentionExpirationDate)
 
-    # Lower case alias for RetentionExpirationDate
+    # Lower case aliases for RetentionExpirationDate
     @property
     def retentionexpirationdate(self):
         return self.RetentionExpirationDate
@@ -13179,7 +12773,7 @@ class MailItem:
     def RetentionPolicyName(self):
         return self.mailitem.RetentionPolicyName
 
-    # Lower case alias for RetentionPolicyName
+    # Lower case aliases for RetentionPolicyName
     @property
     def retentionpolicyname(self):
         return self.RetentionPolicyName
@@ -13188,16 +12782,15 @@ class MailItem:
     def RTFBody(self):
         return self.mailitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.mailitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -13206,7 +12799,7 @@ class MailItem:
     def Saved(self):
         return self.mailitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -13215,16 +12808,15 @@ class MailItem:
     def SaveSentMessageFolder(self):
         return Folder(self.mailitem.SaveSentMessageFolder)
 
-    # Lower case alias for SaveSentMessageFolder
-    @property
-    def savesentmessagefolder(self):
-        return self.SaveSentMessageFolder
-
     @SaveSentMessageFolder.setter
     def SaveSentMessageFolder(self, value):
         self.mailitem.SaveSentMessageFolder = value
 
-    # Lower case alias for SaveSentMessageFolder setter
+    # Lower case aliases for SaveSentMessageFolder
+    @property
+    def savesentmessagefolder(self):
+        return self.SaveSentMessageFolder
+
     @savesentmessagefolder.setter
     def savesentmessagefolder(self, value):
         self.SaveSentMessageFolder = value
@@ -13233,16 +12825,15 @@ class MailItem:
     def Sender(self):
         return self.mailitem.Sender
 
-    # Lower case alias for Sender
-    @property
-    def sender(self):
-        return self.Sender
-
     @Sender.setter
     def Sender(self, value):
         self.mailitem.Sender = value
 
-    # Lower case alias for Sender setter
+    # Lower case aliases for Sender
+    @property
+    def sender(self):
+        return self.Sender
+
     @sender.setter
     def sender(self, value):
         self.Sender = value
@@ -13251,7 +12842,7 @@ class MailItem:
     def SenderEmailAddress(self):
         return self.mailitem.SenderEmailAddress
 
-    # Lower case alias for SenderEmailAddress
+    # Lower case aliases for SenderEmailAddress
     @property
     def senderemailaddress(self):
         return self.SenderEmailAddress
@@ -13260,7 +12851,7 @@ class MailItem:
     def SenderEmailType(self):
         return self.mailitem.SenderEmailType
 
-    # Lower case alias for SenderEmailType
+    # Lower case aliases for SenderEmailType
     @property
     def senderemailtype(self):
         return self.SenderEmailType
@@ -13269,7 +12860,7 @@ class MailItem:
     def SenderName(self):
         return self.mailitem.SenderName
 
-    # Lower case alias for SenderName
+    # Lower case aliases for SenderName
     @property
     def sendername(self):
         return self.SenderName
@@ -13278,16 +12869,15 @@ class MailItem:
     def SendUsingAccount(self):
         return Account(self.mailitem.SendUsingAccount)
 
-    # Lower case alias for SendUsingAccount
-    @property
-    def sendusingaccount(self):
-        return self.SendUsingAccount
-
     @SendUsingAccount.setter
     def SendUsingAccount(self, value):
         self.mailitem.SendUsingAccount = value
 
-    # Lower case alias for SendUsingAccount setter
+    # Lower case aliases for SendUsingAccount
+    @property
+    def sendusingaccount(self):
+        return self.SendUsingAccount
+
     @sendusingaccount.setter
     def sendusingaccount(self, value):
         self.SendUsingAccount = value
@@ -13296,16 +12886,15 @@ class MailItem:
     def Sensitivity(self):
         return OlSensitivity(self.mailitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.mailitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -13314,7 +12903,7 @@ class MailItem:
     def Sent(self):
         return self.mailitem.Sent
 
-    # Lower case alias for Sent
+    # Lower case aliases for Sent
     @property
     def sent(self):
         return self.Sent
@@ -13323,7 +12912,7 @@ class MailItem:
     def SentOn(self):
         return self.mailitem.SentOn
 
-    # Lower case alias for SentOn
+    # Lower case aliases for SentOn
     @property
     def senton(self):
         return self.SentOn
@@ -13332,16 +12921,15 @@ class MailItem:
     def SentOnBehalfOfName(self):
         return self.mailitem.SentOnBehalfOfName
 
-    # Lower case alias for SentOnBehalfOfName
-    @property
-    def sentonbehalfofname(self):
-        return self.SentOnBehalfOfName
-
     @SentOnBehalfOfName.setter
     def SentOnBehalfOfName(self, value):
         self.mailitem.SentOnBehalfOfName = value
 
-    # Lower case alias for SentOnBehalfOfName setter
+    # Lower case aliases for SentOnBehalfOfName
+    @property
+    def sentonbehalfofname(self):
+        return self.SentOnBehalfOfName
+
     @sentonbehalfofname.setter
     def sentonbehalfofname(self, value):
         self.SentOnBehalfOfName = value
@@ -13350,7 +12938,7 @@ class MailItem:
     def Session(self):
         return NameSpace(self.mailitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -13359,7 +12947,7 @@ class MailItem:
     def Size(self):
         return self.mailitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -13368,16 +12956,15 @@ class MailItem:
     def Subject(self):
         return self.mailitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.mailitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -13386,7 +12973,7 @@ class MailItem:
     def Submitted(self):
         return self.mailitem.Submitted
 
-    # Lower case alias for Submitted
+    # Lower case aliases for Submitted
     @property
     def submitted(self):
         return self.Submitted
@@ -13395,16 +12982,15 @@ class MailItem:
     def TaskCompletedDate(self):
         return MailItem(self.mailitem.TaskCompletedDate)
 
-    # Lower case alias for TaskCompletedDate
-    @property
-    def taskcompleteddate(self):
-        return self.TaskCompletedDate
-
     @TaskCompletedDate.setter
     def TaskCompletedDate(self, value):
         self.mailitem.TaskCompletedDate = value
 
-    # Lower case alias for TaskCompletedDate setter
+    # Lower case aliases for TaskCompletedDate
+    @property
+    def taskcompleteddate(self):
+        return self.TaskCompletedDate
+
     @taskcompleteddate.setter
     def taskcompleteddate(self, value):
         self.TaskCompletedDate = value
@@ -13413,16 +12999,15 @@ class MailItem:
     def TaskDueDate(self):
         return MailItem(self.mailitem.TaskDueDate)
 
-    # Lower case alias for TaskDueDate
-    @property
-    def taskduedate(self):
-        return self.TaskDueDate
-
     @TaskDueDate.setter
     def TaskDueDate(self, value):
         self.mailitem.TaskDueDate = value
 
-    # Lower case alias for TaskDueDate setter
+    # Lower case aliases for TaskDueDate
+    @property
+    def taskduedate(self):
+        return self.TaskDueDate
+
     @taskduedate.setter
     def taskduedate(self, value):
         self.TaskDueDate = value
@@ -13431,16 +13016,15 @@ class MailItem:
     def TaskStartDate(self):
         return MailItem(self.mailitem.TaskStartDate)
 
-    # Lower case alias for TaskStartDate
-    @property
-    def taskstartdate(self):
-        return self.TaskStartDate
-
     @TaskStartDate.setter
     def TaskStartDate(self, value):
         self.mailitem.TaskStartDate = value
 
-    # Lower case alias for TaskStartDate setter
+    # Lower case aliases for TaskStartDate
+    @property
+    def taskstartdate(self):
+        return self.TaskStartDate
+
     @taskstartdate.setter
     def taskstartdate(self, value):
         self.TaskStartDate = value
@@ -13449,16 +13033,15 @@ class MailItem:
     def TaskSubject(self):
         return MailItem(self.mailitem.TaskSubject)
 
-    # Lower case alias for TaskSubject
-    @property
-    def tasksubject(self):
-        return self.TaskSubject
-
     @TaskSubject.setter
     def TaskSubject(self, value):
         self.mailitem.TaskSubject = value
 
-    # Lower case alias for TaskSubject setter
+    # Lower case aliases for TaskSubject
+    @property
+    def tasksubject(self):
+        return self.TaskSubject
+
     @tasksubject.setter
     def tasksubject(self, value):
         self.TaskSubject = value
@@ -13467,16 +13050,15 @@ class MailItem:
     def To(self):
         return self.mailitem.To
 
-    # Lower case alias for To
-    @property
-    def to(self):
-        return self.To
-
     @To.setter
     def To(self, value):
         self.mailitem.To = value
 
-    # Lower case alias for To setter
+    # Lower case aliases for To
+    @property
+    def to(self):
+        return self.To
+
     @to.setter
     def to(self, value):
         self.To = value
@@ -13485,16 +13067,15 @@ class MailItem:
     def ToDoTaskOrdinal(self):
         return MailItem(self.mailitem.ToDoTaskOrdinal)
 
-    # Lower case alias for ToDoTaskOrdinal
-    @property
-    def todotaskordinal(self):
-        return self.ToDoTaskOrdinal
-
     @ToDoTaskOrdinal.setter
     def ToDoTaskOrdinal(self, value):
         self.mailitem.ToDoTaskOrdinal = value
 
-    # Lower case alias for ToDoTaskOrdinal setter
+    # Lower case aliases for ToDoTaskOrdinal
+    @property
+    def todotaskordinal(self):
+        return self.ToDoTaskOrdinal
+
     @todotaskordinal.setter
     def todotaskordinal(self, value):
         self.ToDoTaskOrdinal = value
@@ -13503,16 +13084,15 @@ class MailItem:
     def UnRead(self):
         return self.mailitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.mailitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -13521,7 +13101,7 @@ class MailItem:
     def UserProperties(self):
         return UserProperties(self.mailitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -13530,16 +13110,15 @@ class MailItem:
     def VotingOptions(self):
         return self.mailitem.VotingOptions
 
-    # Lower case alias for VotingOptions
-    @property
-    def votingoptions(self):
-        return self.VotingOptions
-
     @VotingOptions.setter
     def VotingOptions(self, value):
         self.mailitem.VotingOptions = value
 
-    # Lower case alias for VotingOptions setter
+    # Lower case aliases for VotingOptions
+    @property
+    def votingoptions(self):
+        return self.VotingOptions
+
     @votingoptions.setter
     def votingoptions(self, value):
         self.VotingOptions = value
@@ -13548,16 +13127,15 @@ class MailItem:
     def VotingResponse(self):
         return self.mailitem.VotingResponse
 
-    # Lower case alias for VotingResponse
-    @property
-    def votingresponse(self):
-        return self.VotingResponse
-
     @VotingResponse.setter
     def VotingResponse(self, value):
         self.mailitem.VotingResponse = value
 
-    # Lower case alias for VotingResponse setter
+    # Lower case aliases for VotingResponse
+    @property
+    def votingresponse(self):
+        return self.VotingResponse
+
     @votingresponse.setter
     def votingresponse(self, value):
         self.VotingResponse = value
@@ -13640,7 +13218,7 @@ class MailModule:
     def Name(self):
         return MailModule(self.mailmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -13649,7 +13227,7 @@ class MailModule:
     def NavigationGroups(self):
         return NavigationGroups(self.mailmodule.NavigationGroups)
 
-    # Lower case alias for NavigationGroups
+    # Lower case aliases for NavigationGroups
     @property
     def navigationgroups(self):
         return self.NavigationGroups
@@ -13658,7 +13236,7 @@ class MailModule:
     def NavigationModuleType(self):
         return olNavigationModuleType(self.mailmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -13667,7 +13245,7 @@ class MailModule:
     def Parent(self):
         return self.mailmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13676,16 +13254,15 @@ class MailModule:
     def Position(self):
         return MailModule(self.mailmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.mailmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -13694,7 +13271,7 @@ class MailModule:
     def Session(self):
         return NameSpace(self.mailmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -13703,16 +13280,15 @@ class MailModule:
     def Visible(self):
         return MailModule(self.mailmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.mailmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -13727,7 +13303,7 @@ class MarkAsTaskRuleAction:
     def ActionType(self):
         return OlRuleActionType(self.markastaskruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -13744,16 +13320,15 @@ class MarkAsTaskRuleAction:
     def Enabled(self):
         return self.markastaskruleaction.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.markastaskruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -13762,16 +13337,15 @@ class MarkAsTaskRuleAction:
     def FlagTo(self):
         return self.markastaskruleaction.FlagTo
 
-    # Lower case alias for FlagTo
-    @property
-    def flagto(self):
-        return self.FlagTo
-
     @FlagTo.setter
     def FlagTo(self, value):
         self.markastaskruleaction.FlagTo = value
 
-    # Lower case alias for FlagTo setter
+    # Lower case aliases for FlagTo
+    @property
+    def flagto(self):
+        return self.FlagTo
+
     @flagto.setter
     def flagto(self, value):
         self.FlagTo = value
@@ -13780,16 +13354,15 @@ class MarkAsTaskRuleAction:
     def MarkInterval(self):
         return OlMarkInterval(self.markastaskruleaction.MarkInterval)
 
-    # Lower case alias for MarkInterval
-    @property
-    def markinterval(self):
-        return self.MarkInterval
-
     @MarkInterval.setter
     def MarkInterval(self, value):
         self.markastaskruleaction.MarkInterval = value
 
-    # Lower case alias for MarkInterval setter
+    # Lower case aliases for MarkInterval
+    @property
+    def markinterval(self):
+        return self.MarkInterval
+
     @markinterval.setter
     def markinterval(self, value):
         self.MarkInterval = value
@@ -13798,7 +13371,7 @@ class MarkAsTaskRuleAction:
     def Parent(self):
         return self.markastaskruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13807,7 +13380,7 @@ class MarkAsTaskRuleAction:
     def Session(self):
         return NameSpace(self.markastaskruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -13822,7 +13395,7 @@ class MeetingItem:
     def Actions(self):
         return Actions(self.meetingitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -13835,7 +13408,7 @@ class MeetingItem:
     def Attachments(self):
         return Attachments(self.meetingitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -13844,16 +13417,15 @@ class MeetingItem:
     def AutoForwarded(self):
         return self.meetingitem.AutoForwarded
 
-    # Lower case alias for AutoForwarded
-    @property
-    def autoforwarded(self):
-        return self.AutoForwarded
-
     @AutoForwarded.setter
     def AutoForwarded(self, value):
         self.meetingitem.AutoForwarded = value
 
-    # Lower case alias for AutoForwarded setter
+    # Lower case aliases for AutoForwarded
+    @property
+    def autoforwarded(self):
+        return self.AutoForwarded
+
     @autoforwarded.setter
     def autoforwarded(self, value):
         self.AutoForwarded = value
@@ -13862,7 +13434,7 @@ class MeetingItem:
     def AutoResolvedWinner(self):
         return self.meetingitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -13871,16 +13443,15 @@ class MeetingItem:
     def BillingInformation(self):
         return self.meetingitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.meetingitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -13889,16 +13460,15 @@ class MeetingItem:
     def Body(self):
         return self.meetingitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.meetingitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -13907,16 +13477,15 @@ class MeetingItem:
     def Categories(self):
         return self.meetingitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.meetingitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -13929,16 +13498,15 @@ class MeetingItem:
     def Companies(self):
         return self.meetingitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.meetingitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -13947,7 +13515,7 @@ class MeetingItem:
     def Conflicts(self):
         return self.meetingitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -13956,7 +13524,7 @@ class MeetingItem:
     def ConversationID(self):
         return Conversation(self.meetingitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -13965,7 +13533,7 @@ class MeetingItem:
     def ConversationIndex(self):
         return self.meetingitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -13974,7 +13542,7 @@ class MeetingItem:
     def ConversationTopic(self):
         return self.meetingitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -13983,7 +13551,7 @@ class MeetingItem:
     def CreationTime(self):
         return self.meetingitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -13992,16 +13560,15 @@ class MeetingItem:
     def DeferredDeliveryTime(self):
         return self.meetingitem.DeferredDeliveryTime
 
-    # Lower case alias for DeferredDeliveryTime
-    @property
-    def deferreddeliverytime(self):
-        return self.DeferredDeliveryTime
-
     @DeferredDeliveryTime.setter
     def DeferredDeliveryTime(self, value):
         self.meetingitem.DeferredDeliveryTime = value
 
-    # Lower case alias for DeferredDeliveryTime setter
+    # Lower case aliases for DeferredDeliveryTime
+    @property
+    def deferreddeliverytime(self):
+        return self.DeferredDeliveryTime
+
     @deferreddeliverytime.setter
     def deferreddeliverytime(self, value):
         self.DeferredDeliveryTime = value
@@ -14010,16 +13577,15 @@ class MeetingItem:
     def DeleteAfterSubmit(self):
         return self.meetingitem.DeleteAfterSubmit
 
-    # Lower case alias for DeleteAfterSubmit
-    @property
-    def deleteaftersubmit(self):
-        return self.DeleteAfterSubmit
-
     @DeleteAfterSubmit.setter
     def DeleteAfterSubmit(self, value):
         self.meetingitem.DeleteAfterSubmit = value
 
-    # Lower case alias for DeleteAfterSubmit setter
+    # Lower case aliases for DeleteAfterSubmit
+    @property
+    def deleteaftersubmit(self):
+        return self.DeleteAfterSubmit
+
     @deleteaftersubmit.setter
     def deleteaftersubmit(self, value):
         self.DeleteAfterSubmit = value
@@ -14028,7 +13594,7 @@ class MeetingItem:
     def DownloadState(self):
         return OlDownloadState(self.meetingitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -14037,7 +13603,7 @@ class MeetingItem:
     def EntryID(self):
         return self.meetingitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -14046,16 +13612,15 @@ class MeetingItem:
     def ExpiryTime(self):
         return self.meetingitem.ExpiryTime
 
-    # Lower case alias for ExpiryTime
-    @property
-    def expirytime(self):
-        return self.ExpiryTime
-
     @ExpiryTime.setter
     def ExpiryTime(self, value):
         self.meetingitem.ExpiryTime = value
 
-    # Lower case alias for ExpiryTime setter
+    # Lower case aliases for ExpiryTime
+    @property
+    def expirytime(self):
+        return self.ExpiryTime
+
     @expirytime.setter
     def expirytime(self, value):
         self.ExpiryTime = value
@@ -14064,7 +13629,7 @@ class MeetingItem:
     def FormDescription(self):
         return FormDescription(self.meetingitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -14073,7 +13638,7 @@ class MeetingItem:
     def GetInspector(self):
         return Inspector(self.meetingitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -14082,16 +13647,15 @@ class MeetingItem:
     def Importance(self):
         return OlImportance(self.meetingitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.meetingitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -14100,7 +13664,7 @@ class MeetingItem:
     def IsConflict(self):
         return self.meetingitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -14109,7 +13673,7 @@ class MeetingItem:
     def IsLatestVersion(self):
         return MeetingItem(self.meetingitem.IsLatestVersion)
 
-    # Lower case alias for IsLatestVersion
+    # Lower case aliases for IsLatestVersion
     @property
     def islatestversion(self):
         return self.IsLatestVersion
@@ -14118,7 +13682,7 @@ class MeetingItem:
     def ItemProperties(self):
         return ItemProperties(self.meetingitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -14127,7 +13691,7 @@ class MeetingItem:
     def LastModificationTime(self):
         return self.meetingitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -14136,16 +13700,15 @@ class MeetingItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.meetingitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.meetingitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -14154,7 +13717,7 @@ class MeetingItem:
     def MeetingWorkspaceURL(self):
         return self.meetingitem.MeetingWorkspaceURL
 
-    # Lower case alias for MeetingWorkspaceURL
+    # Lower case aliases for MeetingWorkspaceURL
     @property
     def meetingworkspaceurl(self):
         return self.MeetingWorkspaceURL
@@ -14163,16 +13726,15 @@ class MeetingItem:
     def MessageClass(self):
         return self.meetingitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.meetingitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -14181,16 +13743,15 @@ class MeetingItem:
     def Mileage(self):
         return self.meetingitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.meetingitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -14199,16 +13760,15 @@ class MeetingItem:
     def NoAging(self):
         return self.meetingitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.meetingitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -14217,16 +13777,15 @@ class MeetingItem:
     def OriginatorDeliveryReportRequested(self):
         return self.meetingitem.OriginatorDeliveryReportRequested
 
-    # Lower case alias for OriginatorDeliveryReportRequested
-    @property
-    def originatordeliveryreportrequested(self):
-        return self.OriginatorDeliveryReportRequested
-
     @OriginatorDeliveryReportRequested.setter
     def OriginatorDeliveryReportRequested(self, value):
         self.meetingitem.OriginatorDeliveryReportRequested = value
 
-    # Lower case alias for OriginatorDeliveryReportRequested setter
+    # Lower case aliases for OriginatorDeliveryReportRequested
+    @property
+    def originatordeliveryreportrequested(self):
+        return self.OriginatorDeliveryReportRequested
+
     @originatordeliveryreportrequested.setter
     def originatordeliveryreportrequested(self, value):
         self.OriginatorDeliveryReportRequested = value
@@ -14235,7 +13794,7 @@ class MeetingItem:
     def OutlookInternalVersion(self):
         return self.meetingitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -14244,7 +13803,7 @@ class MeetingItem:
     def OutlookVersion(self):
         return self.meetingitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -14253,7 +13812,7 @@ class MeetingItem:
     def Parent(self):
         return self.meetingitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -14262,7 +13821,7 @@ class MeetingItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.meetingitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -14271,16 +13830,15 @@ class MeetingItem:
     def ReceivedTime(self):
         return self.meetingitem.ReceivedTime
 
-    # Lower case alias for ReceivedTime
-    @property
-    def receivedtime(self):
-        return self.ReceivedTime
-
     @ReceivedTime.setter
     def ReceivedTime(self, value):
         self.meetingitem.ReceivedTime = value
 
-    # Lower case alias for ReceivedTime setter
+    # Lower case aliases for ReceivedTime
+    @property
+    def receivedtime(self):
+        return self.ReceivedTime
+
     @receivedtime.setter
     def receivedtime(self, value):
         self.ReceivedTime = value
@@ -14289,7 +13847,7 @@ class MeetingItem:
     def Recipients(self):
         return Recipients(self.meetingitem.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -14298,16 +13856,15 @@ class MeetingItem:
     def ReminderSet(self):
         return self.meetingitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.meetingitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -14316,16 +13873,15 @@ class MeetingItem:
     def ReminderTime(self):
         return self.meetingitem.ReminderTime
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.meetingitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -14334,7 +13890,7 @@ class MeetingItem:
     def ReplyRecipients(self):
         return Recipients(self.meetingitem.ReplyRecipients)
 
-    # Lower case alias for ReplyRecipients
+    # Lower case aliases for ReplyRecipients
     @property
     def replyrecipients(self):
         return self.ReplyRecipients
@@ -14343,7 +13899,7 @@ class MeetingItem:
     def RetentionExpirationDate(self):
         return MeetingItem(self.meetingitem.RetentionExpirationDate)
 
-    # Lower case alias for RetentionExpirationDate
+    # Lower case aliases for RetentionExpirationDate
     @property
     def retentionexpirationdate(self):
         return self.RetentionExpirationDate
@@ -14352,7 +13908,7 @@ class MeetingItem:
     def RetentionPolicyName(self):
         return self.meetingitem.RetentionPolicyName
 
-    # Lower case alias for RetentionPolicyName
+    # Lower case aliases for RetentionPolicyName
     @property
     def retentionpolicyname(self):
         return self.RetentionPolicyName
@@ -14361,16 +13917,15 @@ class MeetingItem:
     def RTFBody(self):
         return self.meetingitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.meetingitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -14379,7 +13934,7 @@ class MeetingItem:
     def Saved(self):
         return self.meetingitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -14388,7 +13943,7 @@ class MeetingItem:
     def SaveSentMessageFolder(self):
         return self.meetingitem.SaveSentMessageFolder
 
-    # Lower case alias for SaveSentMessageFolder
+    # Lower case aliases for SaveSentMessageFolder
     @property
     def savesentmessagefolder(self):
         return self.SaveSentMessageFolder
@@ -14397,7 +13952,7 @@ class MeetingItem:
     def SenderEmailAddress(self):
         return self.meetingitem.SenderEmailAddress
 
-    # Lower case alias for SenderEmailAddress
+    # Lower case aliases for SenderEmailAddress
     @property
     def senderemailaddress(self):
         return self.SenderEmailAddress
@@ -14406,7 +13961,7 @@ class MeetingItem:
     def SenderEmailType(self):
         return self.meetingitem.SenderEmailType
 
-    # Lower case alias for SenderEmailType
+    # Lower case aliases for SenderEmailType
     @property
     def senderemailtype(self):
         return self.SenderEmailType
@@ -14415,7 +13970,7 @@ class MeetingItem:
     def SenderName(self):
         return self.meetingitem.SenderName
 
-    # Lower case alias for SenderName
+    # Lower case aliases for SenderName
     @property
     def sendername(self):
         return self.SenderName
@@ -14424,16 +13979,15 @@ class MeetingItem:
     def SendUsingAccount(self):
         return Account(self.meetingitem.SendUsingAccount)
 
-    # Lower case alias for SendUsingAccount
-    @property
-    def sendusingaccount(self):
-        return self.SendUsingAccount
-
     @SendUsingAccount.setter
     def SendUsingAccount(self, value):
         self.meetingitem.SendUsingAccount = value
 
-    # Lower case alias for SendUsingAccount setter
+    # Lower case aliases for SendUsingAccount
+    @property
+    def sendusingaccount(self):
+        return self.SendUsingAccount
+
     @sendusingaccount.setter
     def sendusingaccount(self, value):
         self.SendUsingAccount = value
@@ -14442,16 +13996,15 @@ class MeetingItem:
     def Sensitivity(self):
         return OlSensitivity(self.meetingitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.meetingitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -14460,7 +14013,7 @@ class MeetingItem:
     def Sent(self):
         return self.meetingitem.Sent
 
-    # Lower case alias for Sent
+    # Lower case aliases for Sent
     @property
     def sent(self):
         return self.Sent
@@ -14469,7 +14022,7 @@ class MeetingItem:
     def SentOn(self):
         return self.meetingitem.SentOn
 
-    # Lower case alias for SentOn
+    # Lower case aliases for SentOn
     @property
     def senton(self):
         return self.SentOn
@@ -14478,7 +14031,7 @@ class MeetingItem:
     def Session(self):
         return NameSpace(self.meetingitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -14487,7 +14040,7 @@ class MeetingItem:
     def Size(self):
         return self.meetingitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -14496,16 +14049,15 @@ class MeetingItem:
     def Subject(self):
         return self.meetingitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.meetingitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -14514,7 +14066,7 @@ class MeetingItem:
     def Submitted(self):
         return self.meetingitem.Submitted
 
-    # Lower case alias for Submitted
+    # Lower case aliases for Submitted
     @property
     def submitted(self):
         return self.Submitted
@@ -14523,16 +14075,15 @@ class MeetingItem:
     def UnRead(self):
         return self.meetingitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.meetingitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -14541,7 +14092,7 @@ class MeetingItem:
     def UserProperties(self):
         return UserProperties(self.meetingitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -14606,7 +14157,7 @@ class MoveOrCopyRuleAction:
     def ActionType(self):
         return OlRuleActionType(self.moveorcopyruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -14623,16 +14174,15 @@ class MoveOrCopyRuleAction:
     def Enabled(self):
         return self.moveorcopyruleaction.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.moveorcopyruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -14641,16 +14191,15 @@ class MoveOrCopyRuleAction:
     def Folder(self):
         return Folder(self.moveorcopyruleaction.Folder)
 
-    # Lower case alias for Folder
-    @property
-    def folder(self):
-        return self.Folder
-
     @Folder.setter
     def Folder(self, value):
         self.moveorcopyruleaction.Folder = value
 
-    # Lower case alias for Folder setter
+    # Lower case aliases for Folder
+    @property
+    def folder(self):
+        return self.Folder
+
     @folder.setter
     def folder(self, value):
         self.Folder = value
@@ -14659,7 +14208,7 @@ class MoveOrCopyRuleAction:
     def Parent(self):
         return self.moveorcopyruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -14668,7 +14217,7 @@ class MoveOrCopyRuleAction:
     def Session(self):
         return NameSpace(self.moveorcopyruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -14683,7 +14232,7 @@ class NameSpace:
     def Accounts(self):
         return Accounts(self.namespace.Accounts)
 
-    # Lower case alias for Accounts
+    # Lower case aliases for Accounts
     @property
     def accounts(self):
         return self.Accounts
@@ -14692,7 +14241,7 @@ class NameSpace:
     def AddressLists(self):
         return AddressLists(self.namespace.AddressLists)
 
-    # Lower case alias for AddressLists
+    # Lower case aliases for AddressLists
     @property
     def addresslists(self):
         return self.AddressLists
@@ -14705,7 +14254,7 @@ class NameSpace:
     def AutoDiscoverConnectionMode(self):
         return OlAutoDiscoverConnectionMode(self.namespace.AutoDiscoverConnectionMode)
 
-    # Lower case alias for AutoDiscoverConnectionMode
+    # Lower case aliases for AutoDiscoverConnectionMode
     @property
     def autodiscoverconnectionmode(self):
         return self.AutoDiscoverConnectionMode
@@ -14714,7 +14263,7 @@ class NameSpace:
     def AutoDiscoverXml(self):
         return self.namespace.AutoDiscoverXml
 
-    # Lower case alias for AutoDiscoverXml
+    # Lower case aliases for AutoDiscoverXml
     @property
     def autodiscoverxml(self):
         return self.AutoDiscoverXml
@@ -14723,16 +14272,15 @@ class NameSpace:
     def Categories(self):
         return Categories(self.namespace.Categories)
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.namespace.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -14745,7 +14293,7 @@ class NameSpace:
     def CurrentProfileName(self):
         return self.namespace.CurrentProfileName
 
-    # Lower case alias for CurrentProfileName
+    # Lower case aliases for CurrentProfileName
     @property
     def currentprofilename(self):
         return self.CurrentProfileName
@@ -14754,7 +14302,7 @@ class NameSpace:
     def CurrentUser(self):
         return Recipient(self.namespace.CurrentUser)
 
-    # Lower case alias for CurrentUser
+    # Lower case aliases for CurrentUser
     @property
     def currentuser(self):
         return self.CurrentUser
@@ -14763,7 +14311,7 @@ class NameSpace:
     def DefaultStore(self):
         return Store(self.namespace.DefaultStore)
 
-    # Lower case alias for DefaultStore
+    # Lower case aliases for DefaultStore
     @property
     def defaultstore(self):
         return self.DefaultStore
@@ -14772,7 +14320,7 @@ class NameSpace:
     def ExchangeConnectionMode(self):
         return OlExchangeConnectionMode(self.namespace.ExchangeConnectionMode)
 
-    # Lower case alias for ExchangeConnectionMode
+    # Lower case aliases for ExchangeConnectionMode
     @property
     def exchangeconnectionmode(self):
         return self.ExchangeConnectionMode
@@ -14781,7 +14329,7 @@ class NameSpace:
     def ExchangeMailboxServerName(self):
         return self.namespace.ExchangeMailboxServerName
 
-    # Lower case alias for ExchangeMailboxServerName
+    # Lower case aliases for ExchangeMailboxServerName
     @property
     def exchangemailboxservername(self):
         return self.ExchangeMailboxServerName
@@ -14790,7 +14338,7 @@ class NameSpace:
     def ExchangeMailboxServerVersion(self):
         return self.namespace.ExchangeMailboxServerVersion
 
-    # Lower case alias for ExchangeMailboxServerVersion
+    # Lower case aliases for ExchangeMailboxServerVersion
     @property
     def exchangemailboxserverversion(self):
         return self.ExchangeMailboxServerVersion
@@ -14799,7 +14347,7 @@ class NameSpace:
     def Folders(self):
         return Folders(self.namespace.Folders)
 
-    # Lower case alias for Folders
+    # Lower case aliases for Folders
     @property
     def folders(self):
         return self.Folders
@@ -14808,7 +14356,7 @@ class NameSpace:
     def Offline(self):
         return self.namespace.Offline
 
-    # Lower case alias for Offline
+    # Lower case aliases for Offline
     @property
     def offline(self):
         return self.Offline
@@ -14817,7 +14365,7 @@ class NameSpace:
     def Parent(self):
         return self.namespace.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -14826,7 +14374,7 @@ class NameSpace:
     def Session(self):
         return NameSpace(self.namespace.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -14835,7 +14383,7 @@ class NameSpace:
     def Stores(self):
         return Stores(self.namespace.Stores)
 
-    # Lower case alias for Stores
+    # Lower case aliases for Stores
     @property
     def stores(self):
         return self.Stores
@@ -14844,7 +14392,7 @@ class NameSpace:
     def SyncObjects(self):
         return SyncObjects(self.namespace.SyncObjects)
 
-    # Lower case alias for SyncObjects
+    # Lower case aliases for SyncObjects
     @property
     def syncobjects(self):
         return self.SyncObjects
@@ -14853,7 +14401,7 @@ class NameSpace:
     def Type(self):
         return self.namespace.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -14964,7 +14512,7 @@ class NavigationFolder:
     def DisplayName(self):
         return NavigationFolder(self.navigationfolder.DisplayName)
 
-    # Lower case alias for DisplayName
+    # Lower case aliases for DisplayName
     @property
     def displayname(self):
         return self.DisplayName
@@ -14973,7 +14521,7 @@ class NavigationFolder:
     def Folder(self):
         return Folder(self.navigationfolder.Folder)
 
-    # Lower case alias for Folder
+    # Lower case aliases for Folder
     @property
     def folder(self):
         return self.Folder
@@ -14982,7 +14530,7 @@ class NavigationFolder:
     def IsRemovable(self):
         return NavigationFolder(self.navigationfolder.IsRemovable)
 
-    # Lower case alias for IsRemovable
+    # Lower case aliases for IsRemovable
     @property
     def isremovable(self):
         return self.IsRemovable
@@ -14991,16 +14539,15 @@ class NavigationFolder:
     def IsSelected(self):
         return NavigationFolder(self.navigationfolder.IsSelected)
 
-    # Lower case alias for IsSelected
-    @property
-    def isselected(self):
-        return self.IsSelected
-
     @IsSelected.setter
     def IsSelected(self, value):
         self.navigationfolder.IsSelected = value
 
-    # Lower case alias for IsSelected setter
+    # Lower case aliases for IsSelected
+    @property
+    def isselected(self):
+        return self.IsSelected
+
     @isselected.setter
     def isselected(self, value):
         self.IsSelected = value
@@ -15009,16 +14556,15 @@ class NavigationFolder:
     def IsSideBySide(self):
         return NavigationFolder(self.navigationfolder.IsSideBySide)
 
-    # Lower case alias for IsSideBySide
-    @property
-    def issidebyside(self):
-        return self.IsSideBySide
-
     @IsSideBySide.setter
     def IsSideBySide(self, value):
         self.navigationfolder.IsSideBySide = value
 
-    # Lower case alias for IsSideBySide setter
+    # Lower case aliases for IsSideBySide
+    @property
+    def issidebyside(self):
+        return self.IsSideBySide
+
     @issidebyside.setter
     def issidebyside(self, value):
         self.IsSideBySide = value
@@ -15027,7 +14573,7 @@ class NavigationFolder:
     def Parent(self):
         return self.navigationfolder.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15036,16 +14582,15 @@ class NavigationFolder:
     def Position(self):
         return NavigationFolder(self.navigationfolder.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.navigationfolder.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -15054,7 +14599,7 @@ class NavigationFolder:
     def Session(self):
         return NameSpace(self.navigationfolder.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15077,7 +14622,7 @@ class NavigationFolders:
     def Count(self):
         return self.navigationfolders.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -15086,7 +14631,7 @@ class NavigationFolders:
     def Parent(self):
         return self.navigationfolders.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15095,7 +14640,7 @@ class NavigationFolders:
     def Session(self):
         return NameSpace(self.navigationfolders.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15130,7 +14675,7 @@ class NavigationGroup:
     def GroupType(self):
         return OlGroupType(self.navigationgroup.GroupType)
 
-    # Lower case alias for GroupType
+    # Lower case aliases for GroupType
     @property
     def grouptype(self):
         return self.GroupType
@@ -15139,16 +14684,15 @@ class NavigationGroup:
     def Name(self):
         return NavigationGroup(self.navigationgroup.Name)
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.navigationgroup.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -15157,7 +14701,7 @@ class NavigationGroup:
     def NavigationFolders(self):
         return NavigationFolders(self.navigationgroup.NavigationFolders)
 
-    # Lower case alias for NavigationFolders
+    # Lower case aliases for NavigationFolders
     @property
     def navigationfolders(self):
         return self.NavigationFolders
@@ -15166,7 +14710,7 @@ class NavigationGroup:
     def Parent(self):
         return self.navigationgroup.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15175,16 +14719,15 @@ class NavigationGroup:
     def Position(self):
         return NavigationGroup(self.navigationgroup.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.navigationgroup.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -15193,7 +14736,7 @@ class NavigationGroup:
     def Session(self):
         return NameSpace(self.navigationgroup.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15216,7 +14759,7 @@ class NavigationGroups:
     def Count(self):
         return self.navigationgroups.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -15225,7 +14768,7 @@ class NavigationGroups:
     def Parent(self):
         return self.navigationgroups.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15234,7 +14777,7 @@ class NavigationGroups:
     def Session(self):
         return NameSpace(self.navigationgroups.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15273,7 +14816,7 @@ class NavigationModule:
     def Name(self):
         return NavigationModule(self.navigationmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -15282,7 +14825,7 @@ class NavigationModule:
     def NavigationModuleType(self):
         return olNavigationModuleType(self.navigationmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -15291,7 +14834,7 @@ class NavigationModule:
     def Parent(self):
         return self.navigationmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15300,16 +14843,15 @@ class NavigationModule:
     def Position(self):
         return NavigationModule(self.navigationmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.navigationmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -15318,7 +14860,7 @@ class NavigationModule:
     def Session(self):
         return NameSpace(self.navigationmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15327,16 +14869,15 @@ class NavigationModule:
     def Visible(self):
         return NavigationModule(self.navigationmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.navigationmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -15359,7 +14900,7 @@ class NavigationModules:
     def Count(self):
         return self.navigationmodules.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -15368,7 +14909,7 @@ class NavigationModules:
     def Parent(self):
         return self.navigationmodules.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15377,7 +14918,7 @@ class NavigationModules:
     def Session(self):
         return NameSpace(self.navigationmodules.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15408,16 +14949,15 @@ class NavigationPane:
     def CurrentModule(self):
         return NavigationModule(self.navigationpane.CurrentModule)
 
-    # Lower case alias for CurrentModule
-    @property
-    def currentmodule(self):
-        return self.CurrentModule
-
     @CurrentModule.setter
     def CurrentModule(self, value):
         self.navigationpane.CurrentModule = value
 
-    # Lower case alias for CurrentModule setter
+    # Lower case aliases for CurrentModule
+    @property
+    def currentmodule(self):
+        return self.CurrentModule
+
     @currentmodule.setter
     def currentmodule(self, value):
         self.CurrentModule = value
@@ -15426,16 +14966,15 @@ class NavigationPane:
     def DisplayedModuleCount(self):
         return NavigationModule(self.navigationpane.DisplayedModuleCount)
 
-    # Lower case alias for DisplayedModuleCount
-    @property
-    def displayedmodulecount(self):
-        return self.DisplayedModuleCount
-
     @DisplayedModuleCount.setter
     def DisplayedModuleCount(self, value):
         self.navigationpane.DisplayedModuleCount = value
 
-    # Lower case alias for DisplayedModuleCount setter
+    # Lower case aliases for DisplayedModuleCount
+    @property
+    def displayedmodulecount(self):
+        return self.DisplayedModuleCount
+
     @displayedmodulecount.setter
     def displayedmodulecount(self, value):
         self.DisplayedModuleCount = value
@@ -15444,16 +14983,15 @@ class NavigationPane:
     def IsCollapsed(self):
         return self.navigationpane.IsCollapsed
 
-    # Lower case alias for IsCollapsed
-    @property
-    def iscollapsed(self):
-        return self.IsCollapsed
-
     @IsCollapsed.setter
     def IsCollapsed(self, value):
         self.navigationpane.IsCollapsed = value
 
-    # Lower case alias for IsCollapsed setter
+    # Lower case aliases for IsCollapsed
+    @property
+    def iscollapsed(self):
+        return self.IsCollapsed
+
     @iscollapsed.setter
     def iscollapsed(self, value):
         self.IsCollapsed = value
@@ -15462,7 +15000,7 @@ class NavigationPane:
     def Modules(self):
         return NavigationModules(self.navigationpane.Modules)
 
-    # Lower case alias for Modules
+    # Lower case aliases for Modules
     @property
     def modules(self):
         return self.Modules
@@ -15471,7 +15009,7 @@ class NavigationPane:
     def Parent(self):
         return self.navigationpane.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15480,7 +15018,7 @@ class NavigationPane:
     def Session(self):
         return NameSpace(self.navigationpane.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15495,7 +15033,7 @@ class NewItemAlertRuleAction:
     def ActionType(self):
         return OlRuleActionType(self.newitemalertruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -15512,16 +15050,15 @@ class NewItemAlertRuleAction:
     def Enabled(self):
         return self.newitemalertruleaction.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.newitemalertruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -15530,7 +15067,7 @@ class NewItemAlertRuleAction:
     def Parent(self):
         return self.newitemalertruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15539,7 +15076,7 @@ class NewItemAlertRuleAction:
     def Session(self):
         return NameSpace(self.newitemalertruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15548,16 +15085,15 @@ class NewItemAlertRuleAction:
     def Text(self):
         return self.newitemalertruleaction.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.newitemalertruleaction.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -15576,7 +15112,7 @@ class NoteItem:
     def AutoResolvedWinner(self):
         return self.noteitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -15585,16 +15121,15 @@ class NoteItem:
     def Body(self):
         return self.noteitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.noteitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -15603,16 +15138,15 @@ class NoteItem:
     def Categories(self):
         return self.noteitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.noteitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -15625,7 +15159,7 @@ class NoteItem:
     def Conflicts(self):
         return self.noteitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -15634,7 +15168,7 @@ class NoteItem:
     def CreationTime(self):
         return self.noteitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -15643,7 +15177,7 @@ class NoteItem:
     def DownloadState(self):
         return OlDownloadState(self.noteitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -15652,7 +15186,7 @@ class NoteItem:
     def EntryID(self):
         return self.noteitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -15661,7 +15195,7 @@ class NoteItem:
     def GetInspector(self):
         return Inspector(self.noteitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -15670,16 +15204,15 @@ class NoteItem:
     def Height(self):
         return self.noteitem.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.noteitem.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -15688,7 +15221,7 @@ class NoteItem:
     def IsConflict(self):
         return self.noteitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -15697,7 +15230,7 @@ class NoteItem:
     def ItemProperties(self):
         return ItemProperties(self.noteitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -15706,7 +15239,7 @@ class NoteItem:
     def LastModificationTime(self):
         return self.noteitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -15715,16 +15248,15 @@ class NoteItem:
     def Left(self):
         return self.noteitem.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.noteitem.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -15733,16 +15265,15 @@ class NoteItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.noteitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.noteitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -15751,16 +15282,15 @@ class NoteItem:
     def MessageClass(self):
         return self.noteitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.noteitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -15769,7 +15299,7 @@ class NoteItem:
     def Parent(self):
         return self.noteitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15778,7 +15308,7 @@ class NoteItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.noteitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -15787,7 +15317,7 @@ class NoteItem:
     def Saved(self):
         return self.noteitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -15796,7 +15326,7 @@ class NoteItem:
     def Session(self):
         return NameSpace(self.noteitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15805,7 +15335,7 @@ class NoteItem:
     def Size(self):
         return self.noteitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -15814,16 +15344,15 @@ class NoteItem:
     def Subject(self):
         return self.noteitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.noteitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -15832,16 +15361,15 @@ class NoteItem:
     def Top(self):
         return self.noteitem.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.noteitem.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -15850,16 +15378,15 @@ class NoteItem:
     def Width(self):
         return self.noteitem.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.noteitem.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -15910,7 +15437,7 @@ class NotesModule:
     def Name(self):
         return NotesModule(self.notesmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -15919,7 +15446,7 @@ class NotesModule:
     def NavigationGroups(self):
         return NavigationGroups(self.notesmodule.NavigationGroups)
 
-    # Lower case alias for NavigationGroups
+    # Lower case aliases for NavigationGroups
     @property
     def navigationgroups(self):
         return self.NavigationGroups
@@ -15928,7 +15455,7 @@ class NotesModule:
     def NavigationModuleType(self):
         return olNavigationModuleType(self.notesmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -15937,7 +15464,7 @@ class NotesModule:
     def Parent(self):
         return self.notesmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15946,16 +15473,15 @@ class NotesModule:
     def Position(self):
         return NotesModule(self.notesmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.notesmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -15964,7 +15490,7 @@ class NotesModule:
     def Session(self):
         return NameSpace(self.notesmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -15973,16 +15499,15 @@ class NotesModule:
     def Visible(self):
         return NotesModule(self.notesmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.notesmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -16488,16 +16013,15 @@ class OlkBusinessCardControl:
     def MouseIcon(self):
         return self.olkbusinesscardcontrol.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkbusinesscardcontrol.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -16506,16 +16030,15 @@ class OlkBusinessCardControl:
     def MousePointer(self):
         return OlMousePointer(self.olkbusinesscardcontrol.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkbusinesscardcontrol.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -16530,16 +16053,15 @@ class OlkCategory:
     def AutoSize(self):
         return self.olkcategory.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olkcategory.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -16548,16 +16070,15 @@ class OlkCategory:
     def BackColor(self):
         return self.olkcategory.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olkcategory.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -16566,16 +16087,15 @@ class OlkCategory:
     def BackStyle(self):
         return olBackStyle(self.olkcategory.BackStyle)
 
-    # Lower case alias for BackStyle
-    @property
-    def backstyle(self):
-        return self.BackStyle
-
     @BackStyle.setter
     def BackStyle(self, value):
         self.olkcategory.BackStyle = value
 
-    # Lower case alias for BackStyle setter
+    # Lower case aliases for BackStyle
+    @property
+    def backstyle(self):
+        return self.BackStyle
+
     @backstyle.setter
     def backstyle(self, value):
         self.BackStyle = value
@@ -16584,16 +16104,15 @@ class OlkCategory:
     def Enabled(self):
         return self.olkcategory.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkcategory.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -16602,16 +16121,15 @@ class OlkCategory:
     def ForeColor(self):
         return self.olkcategory.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olkcategory.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -16620,16 +16138,15 @@ class OlkCategory:
     def MouseIcon(self):
         return self.olkcategory.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkcategory.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -16638,16 +16155,15 @@ class OlkCategory:
     def MousePointer(self):
         return OlMousePointer(self.olkcategory.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcategory.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -16662,16 +16178,15 @@ class OlkCheckBox:
     def Accelerator(self):
         return self.olkcheckbox.Accelerator
 
-    # Lower case alias for Accelerator
-    @property
-    def accelerator(self):
-        return self.Accelerator
-
     @Accelerator.setter
     def Accelerator(self, value):
         self.olkcheckbox.Accelerator = value
 
-    # Lower case alias for Accelerator setter
+    # Lower case aliases for Accelerator
+    @property
+    def accelerator(self):
+        return self.Accelerator
+
     @accelerator.setter
     def accelerator(self, value):
         self.Accelerator = value
@@ -16680,16 +16195,15 @@ class OlkCheckBox:
     def Alignment(self):
         return olAlignment(self.olkcheckbox.Alignment)
 
-    # Lower case alias for Alignment
-    @property
-    def alignment(self):
-        return self.Alignment
-
     @Alignment.setter
     def Alignment(self, value):
         self.olkcheckbox.Alignment = value
 
-    # Lower case alias for Alignment setter
+    # Lower case aliases for Alignment
+    @property
+    def alignment(self):
+        return self.Alignment
+
     @alignment.setter
     def alignment(self, value):
         self.Alignment = value
@@ -16698,16 +16212,15 @@ class OlkCheckBox:
     def BackColor(self):
         return self.olkcheckbox.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olkcheckbox.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -16716,16 +16229,15 @@ class OlkCheckBox:
     def BackStyle(self):
         return olBackStyle(self.olkcheckbox.BackStyle)
 
-    # Lower case alias for BackStyle
-    @property
-    def backstyle(self):
-        return self.BackStyle
-
     @BackStyle.setter
     def BackStyle(self, value):
         self.olkcheckbox.BackStyle = value
 
-    # Lower case alias for BackStyle setter
+    # Lower case aliases for BackStyle
+    @property
+    def backstyle(self):
+        return self.BackStyle
+
     @backstyle.setter
     def backstyle(self, value):
         self.BackStyle = value
@@ -16734,16 +16246,15 @@ class OlkCheckBox:
     def Caption(self):
         return self.olkcheckbox.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.olkcheckbox.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -16752,16 +16263,15 @@ class OlkCheckBox:
     def Enabled(self):
         return self.olkcheckbox.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkcheckbox.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -16770,7 +16280,7 @@ class OlkCheckBox:
     def Font(self):
         return self.olkcheckbox.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -16779,16 +16289,15 @@ class OlkCheckBox:
     def ForeColor(self):
         return self.olkcheckbox.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olkcheckbox.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -16797,16 +16306,15 @@ class OlkCheckBox:
     def MouseIcon(self):
         return self.olkcheckbox.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkcheckbox.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -16815,16 +16323,15 @@ class OlkCheckBox:
     def MousePointer(self):
         return OlMousePointer(self.olkcheckbox.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcheckbox.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -16833,16 +16340,15 @@ class OlkCheckBox:
     def TripleState(self):
         return self.olkcheckbox.TripleState
 
-    # Lower case alias for TripleState
-    @property
-    def triplestate(self):
-        return self.TripleState
-
     @TripleState.setter
     def TripleState(self, value):
         self.olkcheckbox.TripleState = value
 
-    # Lower case alias for TripleState setter
+    # Lower case aliases for TripleState
+    @property
+    def triplestate(self):
+        return self.TripleState
+
     @triplestate.setter
     def triplestate(self, value):
         self.TripleState = value
@@ -16851,16 +16357,15 @@ class OlkCheckBox:
     def Value(self):
         return self.olkcheckbox.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olkcheckbox.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -16869,16 +16374,15 @@ class OlkCheckBox:
     def WordWrap(self):
         return self.olkcheckbox.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.olkcheckbox.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -16893,16 +16397,15 @@ class OlkComboBox:
     def AutoSize(self):
         return self.olkcombobox.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olkcombobox.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -16911,16 +16414,15 @@ class OlkComboBox:
     def AutoTab(self):
         return self.olkcombobox.AutoTab
 
-    # Lower case alias for AutoTab
-    @property
-    def autotab(self):
-        return self.AutoTab
-
     @AutoTab.setter
     def AutoTab(self, value):
         self.olkcombobox.AutoTab = value
 
-    # Lower case alias for AutoTab setter
+    # Lower case aliases for AutoTab
+    @property
+    def autotab(self):
+        return self.AutoTab
+
     @autotab.setter
     def autotab(self, value):
         self.AutoTab = value
@@ -16929,16 +16431,15 @@ class OlkComboBox:
     def AutoWordSelect(self):
         return self.olkcombobox.AutoWordSelect
 
-    # Lower case alias for AutoWordSelect
-    @property
-    def autowordselect(self):
-        return self.AutoWordSelect
-
     @AutoWordSelect.setter
     def AutoWordSelect(self, value):
         self.olkcombobox.AutoWordSelect = value
 
-    # Lower case alias for AutoWordSelect setter
+    # Lower case aliases for AutoWordSelect
+    @property
+    def autowordselect(self):
+        return self.AutoWordSelect
+
     @autowordselect.setter
     def autowordselect(self, value):
         self.AutoWordSelect = value
@@ -16947,16 +16448,15 @@ class OlkComboBox:
     def BackColor(self):
         return self.olkcombobox.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olkcombobox.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -16965,16 +16465,15 @@ class OlkComboBox:
     def BorderStyle(self):
         return OlBorderStyle(self.olkcombobox.BorderStyle)
 
-    # Lower case alias for BorderStyle
-    @property
-    def borderstyle(self):
-        return self.BorderStyle
-
     @BorderStyle.setter
     def BorderStyle(self, value):
         self.olkcombobox.BorderStyle = value
 
-    # Lower case alias for BorderStyle setter
+    # Lower case aliases for BorderStyle
+    @property
+    def borderstyle(self):
+        return self.BorderStyle
+
     @borderstyle.setter
     def borderstyle(self, value):
         self.BorderStyle = value
@@ -16983,16 +16482,15 @@ class OlkComboBox:
     def DragBehavior(self):
         return self.olkcombobox.DragBehavior
 
-    # Lower case alias for DragBehavior
-    @property
-    def dragbehavior(self):
-        return self.DragBehavior
-
     @DragBehavior.setter
     def DragBehavior(self, value):
         self.olkcombobox.DragBehavior = value
 
-    # Lower case alias for DragBehavior setter
+    # Lower case aliases for DragBehavior
+    @property
+    def dragbehavior(self):
+        return self.DragBehavior
+
     @dragbehavior.setter
     def dragbehavior(self, value):
         self.DragBehavior = value
@@ -17001,16 +16499,15 @@ class OlkComboBox:
     def Enabled(self):
         return self.olkcombobox.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkcombobox.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -17019,16 +16516,15 @@ class OlkComboBox:
     def EnterFieldBehavior(self):
         return olEnterFieldBehavior(self.olkcombobox.EnterFieldBehavior)
 
-    # Lower case alias for EnterFieldBehavior
-    @property
-    def enterfieldbehavior(self):
-        return self.EnterFieldBehavior
-
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
         self.olkcombobox.EnterFieldBehavior = value
 
-    # Lower case alias for EnterFieldBehavior setter
+    # Lower case aliases for EnterFieldBehavior
+    @property
+    def enterfieldbehavior(self):
+        return self.EnterFieldBehavior
+
     @enterfieldbehavior.setter
     def enterfieldbehavior(self, value):
         self.EnterFieldBehavior = value
@@ -17037,7 +16533,7 @@ class OlkComboBox:
     def Font(self):
         return self.olkcombobox.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -17046,16 +16542,15 @@ class OlkComboBox:
     def ForeColor(self):
         return self.olkcombobox.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olkcombobox.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -17064,16 +16559,15 @@ class OlkComboBox:
     def HideSelection(self):
         return self.olkcombobox.HideSelection
 
-    # Lower case alias for HideSelection
-    @property
-    def hideselection(self):
-        return self.HideSelection
-
     @HideSelection.setter
     def HideSelection(self, value):
         self.olkcombobox.HideSelection = value
 
-    # Lower case alias for HideSelection setter
+    # Lower case aliases for HideSelection
+    @property
+    def hideselection(self):
+        return self.HideSelection
+
     @hideselection.setter
     def hideselection(self, value):
         self.HideSelection = value
@@ -17082,7 +16576,7 @@ class OlkComboBox:
     def ListCount(self):
         return self.olkcombobox.ListCount
 
-    # Lower case alias for ListCount
+    # Lower case aliases for ListCount
     @property
     def listcount(self):
         return self.ListCount
@@ -17091,16 +16585,15 @@ class OlkComboBox:
     def ListIndex(self):
         return self.olkcombobox.ListIndex
 
-    # Lower case alias for ListIndex
-    @property
-    def listindex(self):
-        return self.ListIndex
-
     @ListIndex.setter
     def ListIndex(self, value):
         self.olkcombobox.ListIndex = value
 
-    # Lower case alias for ListIndex setter
+    # Lower case aliases for ListIndex
+    @property
+    def listindex(self):
+        return self.ListIndex
+
     @listindex.setter
     def listindex(self, value):
         self.ListIndex = value
@@ -17109,16 +16602,15 @@ class OlkComboBox:
     def Locked(self):
         return self.olkcombobox.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.olkcombobox.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -17127,16 +16619,15 @@ class OlkComboBox:
     def MaxLength(self):
         return self.olkcombobox.MaxLength
 
-    # Lower case alias for MaxLength
-    @property
-    def maxlength(self):
-        return self.MaxLength
-
     @MaxLength.setter
     def MaxLength(self, value):
         self.olkcombobox.MaxLength = value
 
-    # Lower case alias for MaxLength setter
+    # Lower case aliases for MaxLength
+    @property
+    def maxlength(self):
+        return self.MaxLength
+
     @maxlength.setter
     def maxlength(self, value):
         self.MaxLength = value
@@ -17145,16 +16636,15 @@ class OlkComboBox:
     def MouseIcon(self):
         return self.olkcombobox.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkcombobox.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -17163,16 +16653,15 @@ class OlkComboBox:
     def MousePointer(self):
         return OlMousePointer(self.olkcombobox.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcombobox.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -17181,16 +16670,15 @@ class OlkComboBox:
     def SelectionMargin(self):
         return self.olkcombobox.SelectionMargin
 
-    # Lower case alias for SelectionMargin
-    @property
-    def selectionmargin(self):
-        return self.SelectionMargin
-
     @SelectionMargin.setter
     def SelectionMargin(self, value):
         self.olkcombobox.SelectionMargin = value
 
-    # Lower case alias for SelectionMargin setter
+    # Lower case aliases for SelectionMargin
+    @property
+    def selectionmargin(self):
+        return self.SelectionMargin
+
     @selectionmargin.setter
     def selectionmargin(self, value):
         self.SelectionMargin = value
@@ -17199,16 +16687,15 @@ class OlkComboBox:
     def SelLength(self):
         return self.olkcombobox.SelLength
 
-    # Lower case alias for SelLength
-    @property
-    def sellength(self):
-        return self.SelLength
-
     @SelLength.setter
     def SelLength(self, value):
         self.olkcombobox.SelLength = value
 
-    # Lower case alias for SelLength setter
+    # Lower case aliases for SelLength
+    @property
+    def sellength(self):
+        return self.SelLength
+
     @sellength.setter
     def sellength(self, value):
         self.SelLength = value
@@ -17217,16 +16704,15 @@ class OlkComboBox:
     def SelStart(self):
         return self.olkcombobox.SelStart
 
-    # Lower case alias for SelStart
-    @property
-    def selstart(self):
-        return self.SelStart
-
     @SelStart.setter
     def SelStart(self, value):
         self.olkcombobox.SelStart = value
 
-    # Lower case alias for SelStart setter
+    # Lower case aliases for SelStart
+    @property
+    def selstart(self):
+        return self.SelStart
+
     @selstart.setter
     def selstart(self, value):
         self.SelStart = value
@@ -17235,7 +16721,7 @@ class OlkComboBox:
     def SelText(self):
         return self.olkcombobox.SelText
 
-    # Lower case alias for SelText
+    # Lower case aliases for SelText
     @property
     def seltext(self):
         return self.SelText
@@ -17244,16 +16730,15 @@ class OlkComboBox:
     def Style(self):
         return OlComboBoxStyle(self.olkcombobox.Style)
 
-    # Lower case alias for Style
-    @property
-    def style(self):
-        return self.Style
-
     @Style.setter
     def Style(self, value):
         self.olkcombobox.Style = value
 
-    # Lower case alias for Style setter
+    # Lower case aliases for Style
+    @property
+    def style(self):
+        return self.Style
+
     @style.setter
     def style(self, value):
         self.Style = value
@@ -17262,16 +16747,15 @@ class OlkComboBox:
     def Text(self):
         return self.olkcombobox.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.olkcombobox.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -17280,16 +16764,15 @@ class OlkComboBox:
     def TextAlign(self):
         return OlTextAlign(self.olkcombobox.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olkcombobox.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -17298,16 +16781,15 @@ class OlkComboBox:
     def TopIndex(self):
         return self.olkcombobox.TopIndex
 
-    # Lower case alias for TopIndex
-    @property
-    def topindex(self):
-        return self.TopIndex
-
     @TopIndex.setter
     def TopIndex(self, value):
         self.olkcombobox.TopIndex = value
 
-    # Lower case alias for TopIndex setter
+    # Lower case aliases for TopIndex
+    @property
+    def topindex(self):
+        return self.TopIndex
+
     @topindex.setter
     def topindex(self, value):
         self.TopIndex = value
@@ -17316,16 +16798,15 @@ class OlkComboBox:
     def Value(self):
         return self.olkcombobox.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olkcombobox.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -17371,16 +16852,15 @@ class OlkCommandButton:
     def Accelerator(self):
         return self.olkcommandbutton.Accelerator
 
-    # Lower case alias for Accelerator
-    @property
-    def accelerator(self):
-        return self.Accelerator
-
     @Accelerator.setter
     def Accelerator(self, value):
         self.olkcommandbutton.Accelerator = value
 
-    # Lower case alias for Accelerator setter
+    # Lower case aliases for Accelerator
+    @property
+    def accelerator(self):
+        return self.Accelerator
+
     @accelerator.setter
     def accelerator(self, value):
         self.Accelerator = value
@@ -17389,16 +16869,15 @@ class OlkCommandButton:
     def AutoSize(self):
         return self.olkcommandbutton.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olkcommandbutton.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -17407,16 +16886,15 @@ class OlkCommandButton:
     def Caption(self):
         return self.olkcommandbutton.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.olkcommandbutton.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -17425,16 +16903,15 @@ class OlkCommandButton:
     def DisplayDropArrow(self):
         return self.olkcommandbutton.DisplayDropArrow
 
-    # Lower case alias for DisplayDropArrow
-    @property
-    def displaydroparrow(self):
-        return self.DisplayDropArrow
-
     @DisplayDropArrow.setter
     def DisplayDropArrow(self, value):
         self.olkcommandbutton.DisplayDropArrow = value
 
-    # Lower case alias for DisplayDropArrow setter
+    # Lower case aliases for DisplayDropArrow
+    @property
+    def displaydroparrow(self):
+        return self.DisplayDropArrow
+
     @displaydroparrow.setter
     def displaydroparrow(self, value):
         self.DisplayDropArrow = value
@@ -17443,16 +16920,15 @@ class OlkCommandButton:
     def Enabled(self):
         return self.olkcommandbutton.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkcommandbutton.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -17461,7 +16937,7 @@ class OlkCommandButton:
     def Font(self):
         return self.olkcommandbutton.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -17470,16 +16946,15 @@ class OlkCommandButton:
     def MouseIcon(self):
         return self.olkcommandbutton.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkcommandbutton.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -17488,16 +16963,15 @@ class OlkCommandButton:
     def MousePointer(self):
         return OlMousePointer(self.olkcommandbutton.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcommandbutton.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -17506,16 +16980,15 @@ class OlkCommandButton:
     def Picture(self):
         return self.olkcommandbutton.Picture
 
-    # Lower case alias for Picture
-    @property
-    def picture(self):
-        return self.Picture
-
     @Picture.setter
     def Picture(self, value):
         self.olkcommandbutton.Picture = value
 
-    # Lower case alias for Picture setter
+    # Lower case aliases for Picture
+    @property
+    def picture(self):
+        return self.Picture
+
     @picture.setter
     def picture(self, value):
         self.Picture = value
@@ -17524,16 +16997,15 @@ class OlkCommandButton:
     def PictureAlignment(self):
         return OlPictureAlignment(self.olkcommandbutton.PictureAlignment)
 
-    # Lower case alias for PictureAlignment
-    @property
-    def picturealignment(self):
-        return self.PictureAlignment
-
     @PictureAlignment.setter
     def PictureAlignment(self, value):
         self.olkcommandbutton.PictureAlignment = value
 
-    # Lower case alias for PictureAlignment setter
+    # Lower case aliases for PictureAlignment
+    @property
+    def picturealignment(self):
+        return self.PictureAlignment
+
     @picturealignment.setter
     def picturealignment(self, value):
         self.PictureAlignment = value
@@ -17542,16 +17014,15 @@ class OlkCommandButton:
     def TextAlign(self):
         return OlTextAlign(self.olkcommandbutton.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olkcommandbutton.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -17560,16 +17031,15 @@ class OlkCommandButton:
     def WordWrap(self):
         return self.olkcommandbutton.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.olkcommandbutton.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -17584,16 +17054,15 @@ class OlkContactPhoto:
     def Enabled(self):
         return self.olkcontactphoto.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkcontactphoto.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -17602,16 +17071,15 @@ class OlkContactPhoto:
     def MouseIcon(self):
         return self.olkcontactphoto.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkcontactphoto.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -17620,16 +17088,15 @@ class OlkContactPhoto:
     def MousePointer(self):
         return OlMousePointer(self.olkcontactphoto.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkcontactphoto.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -17644,16 +17111,15 @@ class OlkDateControl:
     def AutoSize(self):
         return self.olkdatecontrol.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olkdatecontrol.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -17662,16 +17128,15 @@ class OlkDateControl:
     def AutoWordSelect(self):
         return self.olkdatecontrol.AutoWordSelect
 
-    # Lower case alias for AutoWordSelect
-    @property
-    def autowordselect(self):
-        return self.AutoWordSelect
-
     @AutoWordSelect.setter
     def AutoWordSelect(self, value):
         self.olkdatecontrol.AutoWordSelect = value
 
-    # Lower case alias for AutoWordSelect setter
+    # Lower case aliases for AutoWordSelect
+    @property
+    def autowordselect(self):
+        return self.AutoWordSelect
+
     @autowordselect.setter
     def autowordselect(self, value):
         self.AutoWordSelect = value
@@ -17680,16 +17145,15 @@ class OlkDateControl:
     def BackColor(self):
         return self.olkdatecontrol.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olkdatecontrol.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -17698,16 +17162,15 @@ class OlkDateControl:
     def BackStyle(self):
         return olBackStyle(self.olkdatecontrol.BackStyle)
 
-    # Lower case alias for BackStyle
-    @property
-    def backstyle(self):
-        return self.BackStyle
-
     @BackStyle.setter
     def BackStyle(self, value):
         self.olkdatecontrol.BackStyle = value
 
-    # Lower case alias for BackStyle setter
+    # Lower case aliases for BackStyle
+    @property
+    def backstyle(self):
+        return self.BackStyle
+
     @backstyle.setter
     def backstyle(self, value):
         self.BackStyle = value
@@ -17716,16 +17179,15 @@ class OlkDateControl:
     def Date(self):
         return self.olkdatecontrol.Date
 
-    # Lower case alias for Date
-    @property
-    def date(self):
-        return self.Date
-
     @Date.setter
     def Date(self, value):
         self.olkdatecontrol.Date = value
 
-    # Lower case alias for Date setter
+    # Lower case aliases for Date
+    @property
+    def date(self):
+        return self.Date
+
     @date.setter
     def date(self, value):
         self.Date = value
@@ -17734,16 +17196,15 @@ class OlkDateControl:
     def Enabled(self):
         return self.olkdatecontrol.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkdatecontrol.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -17752,16 +17213,15 @@ class OlkDateControl:
     def EnterFieldBehavior(self):
         return olEnterFieldBehavior(self.olkdatecontrol.EnterFieldBehavior)
 
-    # Lower case alias for EnterFieldBehavior
-    @property
-    def enterfieldbehavior(self):
-        return self.EnterFieldBehavior
-
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
         self.olkdatecontrol.EnterFieldBehavior = value
 
-    # Lower case alias for EnterFieldBehavior setter
+    # Lower case aliases for EnterFieldBehavior
+    @property
+    def enterfieldbehavior(self):
+        return self.EnterFieldBehavior
+
     @enterfieldbehavior.setter
     def enterfieldbehavior(self, value):
         self.EnterFieldBehavior = value
@@ -17770,7 +17230,7 @@ class OlkDateControl:
     def Font(self):
         return self.olkdatecontrol.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -17779,16 +17239,15 @@ class OlkDateControl:
     def ForeColor(self):
         return self.olkdatecontrol.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olkdatecontrol.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -17797,16 +17256,15 @@ class OlkDateControl:
     def HideSelection(self):
         return self.olkdatecontrol.HideSelection
 
-    # Lower case alias for HideSelection
-    @property
-    def hideselection(self):
-        return self.HideSelection
-
     @HideSelection.setter
     def HideSelection(self, value):
         self.olkdatecontrol.HideSelection = value
 
-    # Lower case alias for HideSelection setter
+    # Lower case aliases for HideSelection
+    @property
+    def hideselection(self):
+        return self.HideSelection
+
     @hideselection.setter
     def hideselection(self, value):
         self.HideSelection = value
@@ -17815,16 +17273,15 @@ class OlkDateControl:
     def Locked(self):
         return self.olkdatecontrol.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.olkdatecontrol.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -17833,16 +17290,15 @@ class OlkDateControl:
     def MouseIcon(self):
         return self.olkdatecontrol.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkdatecontrol.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -17851,16 +17307,15 @@ class OlkDateControl:
     def MousePointer(self):
         return OlMousePointer(self.olkdatecontrol.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkdatecontrol.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -17869,16 +17324,15 @@ class OlkDateControl:
     def ShowNoneButton(self):
         return self.olkdatecontrol.ShowNoneButton
 
-    # Lower case alias for ShowNoneButton
-    @property
-    def shownonebutton(self):
-        return self.ShowNoneButton
-
     @ShowNoneButton.setter
     def ShowNoneButton(self, value):
         self.olkdatecontrol.ShowNoneButton = value
 
-    # Lower case alias for ShowNoneButton setter
+    # Lower case aliases for ShowNoneButton
+    @property
+    def shownonebutton(self):
+        return self.ShowNoneButton
+
     @shownonebutton.setter
     def shownonebutton(self, value):
         self.ShowNoneButton = value
@@ -17887,16 +17341,15 @@ class OlkDateControl:
     def Text(self):
         return self.olkdatecontrol.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.olkdatecontrol.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -17905,16 +17358,15 @@ class OlkDateControl:
     def TextAlign(self):
         return OlTextAlign(self.olkdatecontrol.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olkdatecontrol.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -17923,16 +17375,15 @@ class OlkDateControl:
     def Value(self):
         return self.olkdatecontrol.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olkdatecontrol.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -17950,16 +17401,15 @@ class OlkFrameHeader:
     def Alignment(self):
         return olAlignment(self.olkframeheader.Alignment)
 
-    # Lower case alias for Alignment
-    @property
-    def alignment(self):
-        return self.Alignment
-
     @Alignment.setter
     def Alignment(self, value):
         self.olkframeheader.Alignment = value
 
-    # Lower case alias for Alignment setter
+    # Lower case aliases for Alignment
+    @property
+    def alignment(self):
+        return self.Alignment
+
     @alignment.setter
     def alignment(self, value):
         self.Alignment = value
@@ -17968,16 +17418,15 @@ class OlkFrameHeader:
     def Caption(self):
         return self.olkframeheader.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.olkframeheader.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -17986,16 +17435,15 @@ class OlkFrameHeader:
     def Enabled(self):
         return self.olkframeheader.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkframeheader.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -18004,7 +17452,7 @@ class OlkFrameHeader:
     def Font(self):
         return self.olkframeheader.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -18013,16 +17461,15 @@ class OlkFrameHeader:
     def ForeColor(self):
         return self.olkframeheader.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olkframeheader.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -18031,16 +17478,15 @@ class OlkFrameHeader:
     def MouseIcon(self):
         return self.olkframeheader.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkframeheader.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -18049,16 +17495,15 @@ class OlkFrameHeader:
     def MousePointer(self):
         return OlMousePointer(self.olkframeheader.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkframeheader.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -18073,16 +17518,15 @@ class OlkInfoBar:
     def MouseIcon(self):
         return self.olkinfobar.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkinfobar.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -18091,16 +17535,15 @@ class OlkInfoBar:
     def MousePointer(self):
         return OlMousePointer(self.olkinfobar.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkinfobar.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -18115,16 +17558,15 @@ class OlkLabel:
     def Accelerator(self):
         return self.olklabel.Accelerator
 
-    # Lower case alias for Accelerator
-    @property
-    def accelerator(self):
-        return self.Accelerator
-
     @Accelerator.setter
     def Accelerator(self, value):
         self.olklabel.Accelerator = value
 
-    # Lower case alias for Accelerator setter
+    # Lower case aliases for Accelerator
+    @property
+    def accelerator(self):
+        return self.Accelerator
+
     @accelerator.setter
     def accelerator(self, value):
         self.Accelerator = value
@@ -18133,16 +17575,15 @@ class OlkLabel:
     def AutoSize(self):
         return self.olklabel.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olklabel.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -18151,16 +17592,15 @@ class OlkLabel:
     def BackColor(self):
         return self.olklabel.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olklabel.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -18169,16 +17609,15 @@ class OlkLabel:
     def BackStyle(self):
         return olBackStyle(self.olklabel.BackStyle)
 
-    # Lower case alias for BackStyle
-    @property
-    def backstyle(self):
-        return self.BackStyle
-
     @BackStyle.setter
     def BackStyle(self, value):
         self.olklabel.BackStyle = value
 
-    # Lower case alias for BackStyle setter
+    # Lower case aliases for BackStyle
+    @property
+    def backstyle(self):
+        return self.BackStyle
+
     @backstyle.setter
     def backstyle(self, value):
         self.BackStyle = value
@@ -18187,16 +17626,15 @@ class OlkLabel:
     def BorderStyle(self):
         return OlBorderStyle(self.olklabel.BorderStyle)
 
-    # Lower case alias for BorderStyle
-    @property
-    def borderstyle(self):
-        return self.BorderStyle
-
     @BorderStyle.setter
     def BorderStyle(self, value):
         self.olklabel.BorderStyle = value
 
-    # Lower case alias for BorderStyle setter
+    # Lower case aliases for BorderStyle
+    @property
+    def borderstyle(self):
+        return self.BorderStyle
+
     @borderstyle.setter
     def borderstyle(self, value):
         self.BorderStyle = value
@@ -18205,16 +17643,15 @@ class OlkLabel:
     def Caption(self):
         return self.olklabel.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.olklabel.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -18223,16 +17660,15 @@ class OlkLabel:
     def Enabled(self):
         return self.olklabel.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olklabel.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -18241,7 +17677,7 @@ class OlkLabel:
     def Font(self):
         return self.olklabel.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -18250,16 +17686,15 @@ class OlkLabel:
     def ForeColor(self):
         return self.olklabel.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olklabel.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -18268,16 +17703,15 @@ class OlkLabel:
     def MouseIcon(self):
         return self.olklabel.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olklabel.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -18286,16 +17720,15 @@ class OlkLabel:
     def MousePointer(self):
         return OlMousePointer(self.olklabel.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olklabel.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -18304,16 +17737,15 @@ class OlkLabel:
     def TextAlign(self):
         return OlTextAlign(self.olklabel.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olklabel.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -18322,16 +17754,15 @@ class OlkLabel:
     def UseHeaderColor(self):
         return self.olklabel.UseHeaderColor
 
-    # Lower case alias for UseHeaderColor
-    @property
-    def useheadercolor(self):
-        return self.UseHeaderColor
-
     @UseHeaderColor.setter
     def UseHeaderColor(self, value):
         self.olklabel.UseHeaderColor = value
 
-    # Lower case alias for UseHeaderColor setter
+    # Lower case aliases for UseHeaderColor
+    @property
+    def useheadercolor(self):
+        return self.UseHeaderColor
+
     @useheadercolor.setter
     def useheadercolor(self, value):
         self.UseHeaderColor = value
@@ -18340,16 +17771,15 @@ class OlkLabel:
     def WordWrap(self):
         return self.olklabel.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.olklabel.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -18364,16 +17794,15 @@ class OlkListBox:
     def BackColor(self):
         return self.olklistbox.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olklistbox.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -18382,16 +17811,15 @@ class OlkListBox:
     def BorderStyle(self):
         return OlBorderStyle(self.olklistbox.BorderStyle)
 
-    # Lower case alias for BorderStyle
-    @property
-    def borderstyle(self):
-        return self.BorderStyle
-
     @BorderStyle.setter
     def BorderStyle(self, value):
         self.olklistbox.BorderStyle = value
 
-    # Lower case alias for BorderStyle setter
+    # Lower case aliases for BorderStyle
+    @property
+    def borderstyle(self):
+        return self.BorderStyle
+
     @borderstyle.setter
     def borderstyle(self, value):
         self.BorderStyle = value
@@ -18400,16 +17828,15 @@ class OlkListBox:
     def Enabled(self):
         return self.olklistbox.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olklistbox.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -18418,7 +17845,7 @@ class OlkListBox:
     def Font(self):
         return self.olklistbox.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -18427,16 +17854,15 @@ class OlkListBox:
     def ForeColor(self):
         return self.olklistbox.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olklistbox.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -18445,7 +17871,7 @@ class OlkListBox:
     def ListCount(self):
         return self.olklistbox.ListCount
 
-    # Lower case alias for ListCount
+    # Lower case aliases for ListCount
     @property
     def listcount(self):
         return self.ListCount
@@ -18454,16 +17880,15 @@ class OlkListBox:
     def ListIndex(self):
         return self.olklistbox.ListIndex
 
-    # Lower case alias for ListIndex
-    @property
-    def listindex(self):
-        return self.ListIndex
-
     @ListIndex.setter
     def ListIndex(self, value):
         self.olklistbox.ListIndex = value
 
-    # Lower case alias for ListIndex setter
+    # Lower case aliases for ListIndex
+    @property
+    def listindex(self):
+        return self.ListIndex
+
     @listindex.setter
     def listindex(self, value):
         self.ListIndex = value
@@ -18472,16 +17897,15 @@ class OlkListBox:
     def Locked(self):
         return self.olklistbox.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.olklistbox.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -18490,16 +17914,15 @@ class OlkListBox:
     def MatchEntry(self):
         return olMatchEntry(self.olklistbox.MatchEntry)
 
-    # Lower case alias for MatchEntry
-    @property
-    def matchentry(self):
-        return self.MatchEntry
-
     @MatchEntry.setter
     def MatchEntry(self, value):
         self.olklistbox.MatchEntry = value
 
-    # Lower case alias for MatchEntry setter
+    # Lower case aliases for MatchEntry
+    @property
+    def matchentry(self):
+        return self.MatchEntry
+
     @matchentry.setter
     def matchentry(self, value):
         self.MatchEntry = value
@@ -18508,16 +17931,15 @@ class OlkListBox:
     def MouseIcon(self):
         return self.olklistbox.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olklistbox.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -18526,16 +17948,15 @@ class OlkListBox:
     def MousePointer(self):
         return OlMousePointer(self.olklistbox.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olklistbox.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -18544,16 +17965,15 @@ class OlkListBox:
     def MultiSelect(self):
         return OlMultiSelect(self.olklistbox.MultiSelect)
 
-    # Lower case alias for MultiSelect
-    @property
-    def multiselect(self):
-        return self.MultiSelect
-
     @MultiSelect.setter
     def MultiSelect(self, value):
         self.olklistbox.MultiSelect = value
 
-    # Lower case alias for MultiSelect setter
+    # Lower case aliases for MultiSelect
+    @property
+    def multiselect(self):
+        return self.MultiSelect
+
     @multiselect.setter
     def multiselect(self, value):
         self.MultiSelect = value
@@ -18562,16 +17982,15 @@ class OlkListBox:
     def Text(self):
         return self.olklistbox.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.olklistbox.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -18580,16 +17999,15 @@ class OlkListBox:
     def TextAlign(self):
         return OlTextAlign(self.olklistbox.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olklistbox.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -18598,16 +18016,15 @@ class OlkListBox:
     def TopIndex(self):
         return self.olklistbox.TopIndex
 
-    # Lower case alias for TopIndex
-    @property
-    def topindex(self):
-        return self.TopIndex
-
     @TopIndex.setter
     def TopIndex(self, value):
         self.olklistbox.TopIndex = value
 
-    # Lower case alias for TopIndex setter
+    # Lower case aliases for TopIndex
+    @property
+    def topindex(self):
+        return self.TopIndex
+
     @topindex.setter
     def topindex(self, value):
         self.TopIndex = value
@@ -18616,16 +18033,15 @@ class OlkListBox:
     def Value(self):
         return self.olklistbox.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olklistbox.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -18670,16 +18086,15 @@ class OlkOptionButton:
     def Accelerator(self):
         return self.olkoptionbutton.Accelerator
 
-    # Lower case alias for Accelerator
-    @property
-    def accelerator(self):
-        return self.Accelerator
-
     @Accelerator.setter
     def Accelerator(self, value):
         self.olkoptionbutton.Accelerator = value
 
-    # Lower case alias for Accelerator setter
+    # Lower case aliases for Accelerator
+    @property
+    def accelerator(self):
+        return self.Accelerator
+
     @accelerator.setter
     def accelerator(self, value):
         self.Accelerator = value
@@ -18688,16 +18103,15 @@ class OlkOptionButton:
     def Alignment(self):
         return olAlignment(self.olkoptionbutton.Alignment)
 
-    # Lower case alias for Alignment
-    @property
-    def alignment(self):
-        return self.Alignment
-
     @Alignment.setter
     def Alignment(self, value):
         self.olkoptionbutton.Alignment = value
 
-    # Lower case alias for Alignment setter
+    # Lower case aliases for Alignment
+    @property
+    def alignment(self):
+        return self.Alignment
+
     @alignment.setter
     def alignment(self, value):
         self.Alignment = value
@@ -18706,16 +18120,15 @@ class OlkOptionButton:
     def BackColor(self):
         return self.olkoptionbutton.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olkoptionbutton.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -18724,16 +18137,15 @@ class OlkOptionButton:
     def BackStyle(self):
         return olBackStyle(self.olkoptionbutton.BackStyle)
 
-    # Lower case alias for BackStyle
-    @property
-    def backstyle(self):
-        return self.BackStyle
-
     @BackStyle.setter
     def BackStyle(self, value):
         self.olkoptionbutton.BackStyle = value
 
-    # Lower case alias for BackStyle setter
+    # Lower case aliases for BackStyle
+    @property
+    def backstyle(self):
+        return self.BackStyle
+
     @backstyle.setter
     def backstyle(self, value):
         self.BackStyle = value
@@ -18742,16 +18154,15 @@ class OlkOptionButton:
     def Caption(self):
         return self.olkoptionbutton.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.olkoptionbutton.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -18760,16 +18171,15 @@ class OlkOptionButton:
     def Enabled(self):
         return self.olkoptionbutton.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olkoptionbutton.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -18778,7 +18188,7 @@ class OlkOptionButton:
     def Font(self):
         return self.olkoptionbutton.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -18787,16 +18197,15 @@ class OlkOptionButton:
     def ForeColor(self):
         return self.olkoptionbutton.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olkoptionbutton.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -18805,16 +18214,15 @@ class OlkOptionButton:
     def GroupName(self):
         return self.olkoptionbutton.GroupName
 
-    # Lower case alias for GroupName
-    @property
-    def groupname(self):
-        return self.GroupName
-
     @GroupName.setter
     def GroupName(self, value):
         self.olkoptionbutton.GroupName = value
 
-    # Lower case alias for GroupName setter
+    # Lower case aliases for GroupName
+    @property
+    def groupname(self):
+        return self.GroupName
+
     @groupname.setter
     def groupname(self, value):
         self.GroupName = value
@@ -18823,16 +18231,15 @@ class OlkOptionButton:
     def MouseIcon(self):
         return self.olkoptionbutton.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olkoptionbutton.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -18841,16 +18248,15 @@ class OlkOptionButton:
     def MousePointer(self):
         return OlMousePointer(self.olkoptionbutton.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olkoptionbutton.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -18859,16 +18265,15 @@ class OlkOptionButton:
     def Value(self):
         return self.olkoptionbutton.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olkoptionbutton.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -18877,16 +18282,15 @@ class OlkOptionButton:
     def WordWrap(self):
         return self.olkoptionbutton.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.olkoptionbutton.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -18901,16 +18305,15 @@ class OlkPageControl:
     def Page(self):
         return OlPageType(self.olkpagecontrol.Page)
 
-    # Lower case alias for Page
-    @property
-    def page(self):
-        return self.Page
-
     @Page.setter
     def Page(self, value):
         self.olkpagecontrol.Page = value
 
-    # Lower case alias for Page setter
+    # Lower case aliases for Page
+    @property
+    def page(self):
+        return self.Page
+
     @page.setter
     def page(self, value):
         self.Page = value
@@ -18925,16 +18328,15 @@ class OlkSenderPhoto:
     def Enabled(self):
         return self.olksenderphoto.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olksenderphoto.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -18943,16 +18345,15 @@ class OlkSenderPhoto:
     def MouseIcon(self):
         return self.olksenderphoto.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olksenderphoto.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -18961,16 +18362,15 @@ class OlkSenderPhoto:
     def MousePointer(self):
         return OlMousePointer(self.olksenderphoto.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olksenderphoto.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -18979,7 +18379,7 @@ class OlkSenderPhoto:
     def PreferredHeight(self):
         return self.olksenderphoto.PreferredHeight
 
-    # Lower case alias for PreferredHeight
+    # Lower case aliases for PreferredHeight
     @property
     def preferredheight(self):
         return self.PreferredHeight
@@ -18988,7 +18388,7 @@ class OlkSenderPhoto:
     def PreferredWidth(self):
         return self.olksenderphoto.PreferredWidth
 
-    # Lower case alias for PreferredWidth
+    # Lower case aliases for PreferredWidth
     @property
     def preferredwidth(self):
         return self.PreferredWidth
@@ -19003,16 +18403,15 @@ class OlkTextBox:
     def AutoSize(self):
         return self.olktextbox.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olktextbox.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -19021,16 +18420,15 @@ class OlkTextBox:
     def AutoTab(self):
         return self.olktextbox.AutoTab
 
-    # Lower case alias for AutoTab
-    @property
-    def autotab(self):
-        return self.AutoTab
-
     @AutoTab.setter
     def AutoTab(self, value):
         self.olktextbox.AutoTab = value
 
-    # Lower case alias for AutoTab setter
+    # Lower case aliases for AutoTab
+    @property
+    def autotab(self):
+        return self.AutoTab
+
     @autotab.setter
     def autotab(self, value):
         self.AutoTab = value
@@ -19039,16 +18437,15 @@ class OlkTextBox:
     def AutoWordSelect(self):
         return self.olktextbox.AutoWordSelect
 
-    # Lower case alias for AutoWordSelect
-    @property
-    def autowordselect(self):
-        return self.AutoWordSelect
-
     @AutoWordSelect.setter
     def AutoWordSelect(self, value):
         self.olktextbox.AutoWordSelect = value
 
-    # Lower case alias for AutoWordSelect setter
+    # Lower case aliases for AutoWordSelect
+    @property
+    def autowordselect(self):
+        return self.AutoWordSelect
+
     @autowordselect.setter
     def autowordselect(self, value):
         self.AutoWordSelect = value
@@ -19057,16 +18454,15 @@ class OlkTextBox:
     def BackColor(self):
         return self.olktextbox.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olktextbox.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -19075,16 +18471,15 @@ class OlkTextBox:
     def BorderStyle(self):
         return OlBorderStyle(self.olktextbox.BorderStyle)
 
-    # Lower case alias for BorderStyle
-    @property
-    def borderstyle(self):
-        return self.BorderStyle
-
     @BorderStyle.setter
     def BorderStyle(self, value):
         self.olktextbox.BorderStyle = value
 
-    # Lower case alias for BorderStyle setter
+    # Lower case aliases for BorderStyle
+    @property
+    def borderstyle(self):
+        return self.BorderStyle
+
     @borderstyle.setter
     def borderstyle(self, value):
         self.BorderStyle = value
@@ -19093,16 +18488,15 @@ class OlkTextBox:
     def DragBehavior(self):
         return self.olktextbox.DragBehavior
 
-    # Lower case alias for DragBehavior
-    @property
-    def dragbehavior(self):
-        return self.DragBehavior
-
     @DragBehavior.setter
     def DragBehavior(self, value):
         self.olktextbox.DragBehavior = value
 
-    # Lower case alias for DragBehavior setter
+    # Lower case aliases for DragBehavior
+    @property
+    def dragbehavior(self):
+        return self.DragBehavior
+
     @dragbehavior.setter
     def dragbehavior(self, value):
         self.DragBehavior = value
@@ -19111,16 +18505,15 @@ class OlkTextBox:
     def Enabled(self):
         return self.olktextbox.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olktextbox.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -19129,16 +18522,15 @@ class OlkTextBox:
     def EnterFieldBehavior(self):
         return olEnterFieldBehavior(self.olktextbox.EnterFieldBehavior)
 
-    # Lower case alias for EnterFieldBehavior
-    @property
-    def enterfieldbehavior(self):
-        return self.EnterFieldBehavior
-
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
         self.olktextbox.EnterFieldBehavior = value
 
-    # Lower case alias for EnterFieldBehavior setter
+    # Lower case aliases for EnterFieldBehavior
+    @property
+    def enterfieldbehavior(self):
+        return self.EnterFieldBehavior
+
     @enterfieldbehavior.setter
     def enterfieldbehavior(self, value):
         self.EnterFieldBehavior = value
@@ -19147,16 +18539,15 @@ class OlkTextBox:
     def EnterKeyBehavior(self):
         return self.olktextbox.EnterKeyBehavior
 
-    # Lower case alias for EnterKeyBehavior
-    @property
-    def enterkeybehavior(self):
-        return self.EnterKeyBehavior
-
     @EnterKeyBehavior.setter
     def EnterKeyBehavior(self, value):
         self.olktextbox.EnterKeyBehavior = value
 
-    # Lower case alias for EnterKeyBehavior setter
+    # Lower case aliases for EnterKeyBehavior
+    @property
+    def enterkeybehavior(self):
+        return self.EnterKeyBehavior
+
     @enterkeybehavior.setter
     def enterkeybehavior(self, value):
         self.EnterKeyBehavior = value
@@ -19165,7 +18556,7 @@ class OlkTextBox:
     def Font(self):
         return self.olktextbox.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -19174,16 +18565,15 @@ class OlkTextBox:
     def ForeColor(self):
         return self.olktextbox.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olktextbox.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -19192,16 +18582,15 @@ class OlkTextBox:
     def HideSelection(self):
         return self.olktextbox.HideSelection
 
-    # Lower case alias for HideSelection
-    @property
-    def hideselection(self):
-        return self.HideSelection
-
     @HideSelection.setter
     def HideSelection(self, value):
         self.olktextbox.HideSelection = value
 
-    # Lower case alias for HideSelection setter
+    # Lower case aliases for HideSelection
+    @property
+    def hideselection(self):
+        return self.HideSelection
+
     @hideselection.setter
     def hideselection(self, value):
         self.HideSelection = value
@@ -19210,16 +18599,15 @@ class OlkTextBox:
     def IntegralHeight(self):
         return self.olktextbox.IntegralHeight
 
-    # Lower case alias for IntegralHeight
-    @property
-    def integralheight(self):
-        return self.IntegralHeight
-
     @IntegralHeight.setter
     def IntegralHeight(self, value):
         self.olktextbox.IntegralHeight = value
 
-    # Lower case alias for IntegralHeight setter
+    # Lower case aliases for IntegralHeight
+    @property
+    def integralheight(self):
+        return self.IntegralHeight
+
     @integralheight.setter
     def integralheight(self, value):
         self.IntegralHeight = value
@@ -19228,16 +18616,15 @@ class OlkTextBox:
     def Locked(self):
         return self.olktextbox.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.olktextbox.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -19246,16 +18633,15 @@ class OlkTextBox:
     def MaxLength(self):
         return self.olktextbox.MaxLength
 
-    # Lower case alias for MaxLength
-    @property
-    def maxlength(self):
-        return self.MaxLength
-
     @MaxLength.setter
     def MaxLength(self, value):
         self.olktextbox.MaxLength = value
 
-    # Lower case alias for MaxLength setter
+    # Lower case aliases for MaxLength
+    @property
+    def maxlength(self):
+        return self.MaxLength
+
     @maxlength.setter
     def maxlength(self, value):
         self.MaxLength = value
@@ -19264,16 +18650,15 @@ class OlkTextBox:
     def MouseIcon(self):
         return self.olktextbox.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olktextbox.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -19282,16 +18667,15 @@ class OlkTextBox:
     def MousePointer(self):
         return OlMousePointer(self.olktextbox.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olktextbox.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -19300,16 +18684,15 @@ class OlkTextBox:
     def Multiline(self):
         return self.olktextbox.Multiline
 
-    # Lower case alias for Multiline
-    @property
-    def multiline(self):
-        return self.Multiline
-
     @Multiline.setter
     def Multiline(self, value):
         self.olktextbox.Multiline = value
 
-    # Lower case alias for Multiline setter
+    # Lower case aliases for Multiline
+    @property
+    def multiline(self):
+        return self.Multiline
+
     @multiline.setter
     def multiline(self, value):
         self.Multiline = value
@@ -19318,16 +18701,15 @@ class OlkTextBox:
     def PasswordChar(self):
         return self.olktextbox.PasswordChar
 
-    # Lower case alias for PasswordChar
-    @property
-    def passwordchar(self):
-        return self.PasswordChar
-
     @PasswordChar.setter
     def PasswordChar(self, value):
         self.olktextbox.PasswordChar = value
 
-    # Lower case alias for PasswordChar setter
+    # Lower case aliases for PasswordChar
+    @property
+    def passwordchar(self):
+        return self.PasswordChar
+
     @passwordchar.setter
     def passwordchar(self, value):
         self.PasswordChar = value
@@ -19336,16 +18718,15 @@ class OlkTextBox:
     def Scrollbars(self):
         return olScrollBars(self.olktextbox.Scrollbars)
 
-    # Lower case alias for Scrollbars
-    @property
-    def scrollbars(self):
-        return self.Scrollbars
-
     @Scrollbars.setter
     def Scrollbars(self, value):
         self.olktextbox.Scrollbars = value
 
-    # Lower case alias for Scrollbars setter
+    # Lower case aliases for Scrollbars
+    @property
+    def scrollbars(self):
+        return self.Scrollbars
+
     @scrollbars.setter
     def scrollbars(self, value):
         self.Scrollbars = value
@@ -19354,16 +18735,15 @@ class OlkTextBox:
     def SelectionMargin(self):
         return self.olktextbox.SelectionMargin
 
-    # Lower case alias for SelectionMargin
-    @property
-    def selectionmargin(self):
-        return self.SelectionMargin
-
     @SelectionMargin.setter
     def SelectionMargin(self, value):
         self.olktextbox.SelectionMargin = value
 
-    # Lower case alias for SelectionMargin setter
+    # Lower case aliases for SelectionMargin
+    @property
+    def selectionmargin(self):
+        return self.SelectionMargin
+
     @selectionmargin.setter
     def selectionmargin(self, value):
         self.SelectionMargin = value
@@ -19372,16 +18752,15 @@ class OlkTextBox:
     def SelLength(self):
         return self.olktextbox.SelLength
 
-    # Lower case alias for SelLength
-    @property
-    def sellength(self):
-        return self.SelLength
-
     @SelLength.setter
     def SelLength(self, value):
         self.olktextbox.SelLength = value
 
-    # Lower case alias for SelLength setter
+    # Lower case aliases for SelLength
+    @property
+    def sellength(self):
+        return self.SelLength
+
     @sellength.setter
     def sellength(self, value):
         self.SelLength = value
@@ -19390,16 +18769,15 @@ class OlkTextBox:
     def SelStart(self):
         return self.olktextbox.SelStart
 
-    # Lower case alias for SelStart
-    @property
-    def selstart(self):
-        return self.SelStart
-
     @SelStart.setter
     def SelStart(self, value):
         self.olktextbox.SelStart = value
 
-    # Lower case alias for SelStart setter
+    # Lower case aliases for SelStart
+    @property
+    def selstart(self):
+        return self.SelStart
+
     @selstart.setter
     def selstart(self, value):
         self.SelStart = value
@@ -19408,7 +18786,7 @@ class OlkTextBox:
     def SelText(self):
         return self.olktextbox.SelText
 
-    # Lower case alias for SelText
+    # Lower case aliases for SelText
     @property
     def seltext(self):
         return self.SelText
@@ -19417,16 +18795,15 @@ class OlkTextBox:
     def TabKeyBehavior(self):
         return self.olktextbox.TabKeyBehavior
 
-    # Lower case alias for TabKeyBehavior
-    @property
-    def tabkeybehavior(self):
-        return self.TabKeyBehavior
-
     @TabKeyBehavior.setter
     def TabKeyBehavior(self, value):
         self.olktextbox.TabKeyBehavior = value
 
-    # Lower case alias for TabKeyBehavior setter
+    # Lower case aliases for TabKeyBehavior
+    @property
+    def tabkeybehavior(self):
+        return self.TabKeyBehavior
+
     @tabkeybehavior.setter
     def tabkeybehavior(self, value):
         self.TabKeyBehavior = value
@@ -19435,16 +18812,15 @@ class OlkTextBox:
     def Text(self):
         return self.olktextbox.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.olktextbox.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -19453,16 +18829,15 @@ class OlkTextBox:
     def TextAlign(self):
         return OlTextAlign(self.olktextbox.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olktextbox.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -19471,16 +18846,15 @@ class OlkTextBox:
     def Value(self):
         return self.olktextbox.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olktextbox.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -19489,16 +18863,15 @@ class OlkTextBox:
     def WordWrap(self):
         return self.olktextbox.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.olktextbox.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -19525,16 +18898,15 @@ class OlkTimeControl:
     def AutoSize(self):
         return self.olktimecontrol.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.olktimecontrol.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -19543,16 +18915,15 @@ class OlkTimeControl:
     def AutoWordSelect(self):
         return self.olktimecontrol.AutoWordSelect
 
-    # Lower case alias for AutoWordSelect
-    @property
-    def autowordselect(self):
-        return self.AutoWordSelect
-
     @AutoWordSelect.setter
     def AutoWordSelect(self, value):
         self.olktimecontrol.AutoWordSelect = value
 
-    # Lower case alias for AutoWordSelect setter
+    # Lower case aliases for AutoWordSelect
+    @property
+    def autowordselect(self):
+        return self.AutoWordSelect
+
     @autowordselect.setter
     def autowordselect(self, value):
         self.AutoWordSelect = value
@@ -19561,16 +18932,15 @@ class OlkTimeControl:
     def BackColor(self):
         return self.olktimecontrol.BackColor
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.olktimecontrol.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -19579,16 +18949,15 @@ class OlkTimeControl:
     def BackStyle(self):
         return olBackStyle(self.olktimecontrol.BackStyle)
 
-    # Lower case alias for BackStyle
-    @property
-    def backstyle(self):
-        return self.BackStyle
-
     @BackStyle.setter
     def BackStyle(self, value):
         self.olktimecontrol.BackStyle = value
 
-    # Lower case alias for BackStyle setter
+    # Lower case aliases for BackStyle
+    @property
+    def backstyle(self):
+        return self.BackStyle
+
     @backstyle.setter
     def backstyle(self, value):
         self.BackStyle = value
@@ -19597,16 +18966,15 @@ class OlkTimeControl:
     def Enabled(self):
         return self.olktimecontrol.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olktimecontrol.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -19615,16 +18983,15 @@ class OlkTimeControl:
     def EnterFieldBehavior(self):
         return olEnterFieldBehavior(self.olktimecontrol.EnterFieldBehavior)
 
-    # Lower case alias for EnterFieldBehavior
-    @property
-    def enterfieldbehavior(self):
-        return self.EnterFieldBehavior
-
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
         self.olktimecontrol.EnterFieldBehavior = value
 
-    # Lower case alias for EnterFieldBehavior setter
+    # Lower case aliases for EnterFieldBehavior
+    @property
+    def enterfieldbehavior(self):
+        return self.EnterFieldBehavior
+
     @enterfieldbehavior.setter
     def enterfieldbehavior(self, value):
         self.EnterFieldBehavior = value
@@ -19633,7 +19000,7 @@ class OlkTimeControl:
     def Font(self):
         return self.olktimecontrol.Font
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -19642,16 +19009,15 @@ class OlkTimeControl:
     def ForeColor(self):
         return self.olktimecontrol.ForeColor
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.olktimecontrol.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -19660,16 +19026,15 @@ class OlkTimeControl:
     def HideSelection(self):
         return self.olktimecontrol.HideSelection
 
-    # Lower case alias for HideSelection
-    @property
-    def hideselection(self):
-        return self.HideSelection
-
     @HideSelection.setter
     def HideSelection(self, value):
         self.olktimecontrol.HideSelection = value
 
-    # Lower case alias for HideSelection setter
+    # Lower case aliases for HideSelection
+    @property
+    def hideselection(self):
+        return self.HideSelection
+
     @hideselection.setter
     def hideselection(self, value):
         self.HideSelection = value
@@ -19678,16 +19043,15 @@ class OlkTimeControl:
     def IntervalTime(self):
         return self.olktimecontrol.IntervalTime
 
-    # Lower case alias for IntervalTime
-    @property
-    def intervaltime(self):
-        return self.IntervalTime
-
     @IntervalTime.setter
     def IntervalTime(self, value):
         self.olktimecontrol.IntervalTime = value
 
-    # Lower case alias for IntervalTime setter
+    # Lower case aliases for IntervalTime
+    @property
+    def intervaltime(self):
+        return self.IntervalTime
+
     @intervaltime.setter
     def intervaltime(self, value):
         self.IntervalTime = value
@@ -19696,16 +19060,15 @@ class OlkTimeControl:
     def Locked(self):
         return self.olktimecontrol.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.olktimecontrol.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -19714,16 +19077,15 @@ class OlkTimeControl:
     def MouseIcon(self):
         return self.olktimecontrol.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olktimecontrol.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -19732,16 +19094,15 @@ class OlkTimeControl:
     def MousePointer(self):
         return OlMousePointer(self.olktimecontrol.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olktimecontrol.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -19750,16 +19111,15 @@ class OlkTimeControl:
     def ReferenceTime(self):
         return self.olktimecontrol.ReferenceTime
 
-    # Lower case alias for ReferenceTime
-    @property
-    def referencetime(self):
-        return self.ReferenceTime
-
     @ReferenceTime.setter
     def ReferenceTime(self, value):
         self.olktimecontrol.ReferenceTime = value
 
-    # Lower case alias for ReferenceTime setter
+    # Lower case aliases for ReferenceTime
+    @property
+    def referencetime(self):
+        return self.ReferenceTime
+
     @referencetime.setter
     def referencetime(self, value):
         self.ReferenceTime = value
@@ -19768,16 +19128,15 @@ class OlkTimeControl:
     def Style(self):
         return OlTimeStyle(self.olktimecontrol.Style)
 
-    # Lower case alias for Style
-    @property
-    def style(self):
-        return self.Style
-
     @Style.setter
     def Style(self, value):
         self.olktimecontrol.Style = value
 
-    # Lower case alias for Style setter
+    # Lower case aliases for Style
+    @property
+    def style(self):
+        return self.Style
+
     @style.setter
     def style(self, value):
         self.Style = value
@@ -19786,16 +19145,15 @@ class OlkTimeControl:
     def Text(self):
         return self.olktimecontrol.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.olktimecontrol.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -19804,16 +19162,15 @@ class OlkTimeControl:
     def TextAlign(self):
         return OlTextAlign(self.olktimecontrol.TextAlign)
 
-    # Lower case alias for TextAlign
-    @property
-    def textalign(self):
-        return self.TextAlign
-
     @TextAlign.setter
     def TextAlign(self, value):
         self.olktimecontrol.TextAlign = value
 
-    # Lower case alias for TextAlign setter
+    # Lower case aliases for TextAlign
+    @property
+    def textalign(self):
+        return self.TextAlign
+
     @textalign.setter
     def textalign(self, value):
         self.TextAlign = value
@@ -19822,16 +19179,15 @@ class OlkTimeControl:
     def Time(self):
         return self.olktimecontrol.Time
 
-    # Lower case alias for Time
-    @property
-    def time(self):
-        return self.Time
-
     @Time.setter
     def Time(self, value):
         self.olktimecontrol.Time = value
 
-    # Lower case alias for Time setter
+    # Lower case aliases for Time
+    @property
+    def time(self):
+        return self.Time
+
     @time.setter
     def time(self, value):
         self.Time = value
@@ -19840,16 +19196,15 @@ class OlkTimeControl:
     def Value(self):
         return self.olktimecontrol.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olktimecontrol.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -19867,16 +19222,15 @@ class OlkTimeZoneControl:
     def AppointmentTimeField(self):
         return OlAppointmentTimeField(self.olktimezonecontrol.AppointmentTimeField)
 
-    # Lower case alias for AppointmentTimeField
-    @property
-    def appointmenttimefield(self):
-        return self.AppointmentTimeField
-
     @AppointmentTimeField.setter
     def AppointmentTimeField(self, value):
         self.olktimezonecontrol.AppointmentTimeField = value
 
-    # Lower case alias for AppointmentTimeField setter
+    # Lower case aliases for AppointmentTimeField
+    @property
+    def appointmenttimefield(self):
+        return self.AppointmentTimeField
+
     @appointmenttimefield.setter
     def appointmenttimefield(self, value):
         self.AppointmentTimeField = value
@@ -19885,16 +19239,15 @@ class OlkTimeZoneControl:
     def BorderStyle(self):
         return OlBorderStyle(self.olktimezonecontrol.BorderStyle)
 
-    # Lower case alias for BorderStyle
-    @property
-    def borderstyle(self):
-        return self.BorderStyle
-
     @BorderStyle.setter
     def BorderStyle(self, value):
         self.olktimezonecontrol.BorderStyle = value
 
-    # Lower case alias for BorderStyle setter
+    # Lower case aliases for BorderStyle
+    @property
+    def borderstyle(self):
+        return self.BorderStyle
+
     @borderstyle.setter
     def borderstyle(self, value):
         self.BorderStyle = value
@@ -19903,16 +19256,15 @@ class OlkTimeZoneControl:
     def Enabled(self):
         return self.olktimezonecontrol.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.olktimezonecontrol.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -19921,16 +19273,15 @@ class OlkTimeZoneControl:
     def Locked(self):
         return self.olktimezonecontrol.Locked
 
-    # Lower case alias for Locked
-    @property
-    def locked(self):
-        return self.Locked
-
     @Locked.setter
     def Locked(self, value):
         self.olktimezonecontrol.Locked = value
 
-    # Lower case alias for Locked setter
+    # Lower case aliases for Locked
+    @property
+    def locked(self):
+        return self.Locked
+
     @locked.setter
     def locked(self, value):
         self.Locked = value
@@ -19939,16 +19290,15 @@ class OlkTimeZoneControl:
     def MouseIcon(self):
         return self.olktimezonecontrol.MouseIcon
 
-    # Lower case alias for MouseIcon
-    @property
-    def mouseicon(self):
-        return self.MouseIcon
-
     @MouseIcon.setter
     def MouseIcon(self, value):
         self.olktimezonecontrol.MouseIcon = value
 
-    # Lower case alias for MouseIcon setter
+    # Lower case aliases for MouseIcon
+    @property
+    def mouseicon(self):
+        return self.MouseIcon
+
     @mouseicon.setter
     def mouseicon(self, value):
         self.MouseIcon = value
@@ -19957,16 +19307,15 @@ class OlkTimeZoneControl:
     def MousePointer(self):
         return OlMousePointer(self.olktimezonecontrol.MousePointer)
 
-    # Lower case alias for MousePointer
-    @property
-    def mousepointer(self):
-        return self.MousePointer
-
     @MousePointer.setter
     def MousePointer(self, value):
         self.olktimezonecontrol.MousePointer = value
 
-    # Lower case alias for MousePointer setter
+    # Lower case aliases for MousePointer
+    @property
+    def mousepointer(self):
+        return self.MousePointer
+
     @mousepointer.setter
     def mousepointer(self, value):
         self.MousePointer = value
@@ -19975,16 +19324,15 @@ class OlkTimeZoneControl:
     def SelectedTimeZoneIndex(self):
         return Application.TimeZones(self.olktimezonecontrol.SelectedTimeZoneIndex)
 
-    # Lower case alias for SelectedTimeZoneIndex
-    @property
-    def selectedtimezoneindex(self):
-        return self.SelectedTimeZoneIndex
-
     @SelectedTimeZoneIndex.setter
     def SelectedTimeZoneIndex(self, value):
         self.olktimezonecontrol.SelectedTimeZoneIndex = value
 
-    # Lower case alias for SelectedTimeZoneIndex setter
+    # Lower case aliases for SelectedTimeZoneIndex
+    @property
+    def selectedtimezoneindex(self):
+        return self.SelectedTimeZoneIndex
+
     @selectedtimezoneindex.setter
     def selectedtimezoneindex(self, value):
         self.SelectedTimeZoneIndex = value
@@ -19993,16 +19341,15 @@ class OlkTimeZoneControl:
     def Value(self):
         return self.olktimezonecontrol.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.olktimezonecontrol.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -20603,16 +19950,15 @@ class OrderField:
     def IsDescending(self):
         return OrderField(self.orderfield.IsDescending)
 
-    # Lower case alias for IsDescending
-    @property
-    def isdescending(self):
-        return self.IsDescending
-
     @IsDescending.setter
     def IsDescending(self, value):
         self.orderfield.IsDescending = value
 
-    # Lower case alias for IsDescending setter
+    # Lower case aliases for IsDescending
+    @property
+    def isdescending(self):
+        return self.IsDescending
+
     @isdescending.setter
     def isdescending(self, value):
         self.IsDescending = value
@@ -20621,7 +19967,7 @@ class OrderField:
     def Parent(self):
         return self.orderfield.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20630,7 +19976,7 @@ class OrderField:
     def Session(self):
         return NameSpace(self.orderfield.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -20639,7 +19985,7 @@ class OrderField:
     def ViewXMLSchemaName(self):
         return OrderField(self.orderfield.ViewXMLSchemaName)
 
-    # Lower case alias for ViewXMLSchemaName
+    # Lower case aliases for ViewXMLSchemaName
     @property
     def viewxmlschemaname(self):
         return self.ViewXMLSchemaName
@@ -20662,7 +20008,7 @@ class OrderFields:
     def Count(self):
         return OrderField(self.orderfields.Count)
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -20671,7 +20017,7 @@ class OrderFields:
     def Parent(self):
         return self.orderfields.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20680,7 +20026,7 @@ class OrderFields:
     def Session(self):
         return NameSpace(self.orderfields.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -20722,16 +20068,15 @@ class OutlookBarGroup:
     def Name(self):
         return self.outlookbargroup.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.outlookbargroup.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -20740,7 +20085,7 @@ class OutlookBarGroup:
     def Parent(self):
         return self.outlookbargroup.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20749,7 +20094,7 @@ class OutlookBarGroup:
     def Session(self):
         return NameSpace(self.outlookbargroup.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -20758,7 +20103,7 @@ class OutlookBarGroup:
     def Shortcuts(self):
         return OutlookBarShortcuts(self.outlookbargroup.Shortcuts)
 
-    # Lower case alias for Shortcuts
+    # Lower case aliases for Shortcuts
     @property
     def shortcuts(self):
         return self.Shortcuts
@@ -20767,16 +20112,15 @@ class OutlookBarGroup:
     def ViewType(self):
         return OlOutlookBarViewType(self.outlookbargroup.ViewType)
 
-    # Lower case alias for ViewType
-    @property
-    def viewtype(self):
-        return self.ViewType
-
     @ViewType.setter
     def ViewType(self, value):
         self.outlookbargroup.ViewType = value
 
-    # Lower case alias for ViewType setter
+    # Lower case aliases for ViewType
+    @property
+    def viewtype(self):
+        return self.ViewType
+
     @viewtype.setter
     def viewtype(self, value):
         self.ViewType = value
@@ -20799,7 +20143,7 @@ class OutlookBarGroups:
     def Count(self):
         return self.outlookbargroups.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -20808,7 +20152,7 @@ class OutlookBarGroups:
     def Parent(self):
         return self.outlookbargroups.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20817,7 +20161,7 @@ class OutlookBarGroups:
     def Session(self):
         return NameSpace(self.outlookbargroups.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -20852,7 +20196,7 @@ class OutlookBarPane:
     def Contents(self):
         return OutlookBarStorage(self.outlookbarpane.Contents)
 
-    # Lower case alias for Contents
+    # Lower case aliases for Contents
     @property
     def contents(self):
         return self.Contents
@@ -20861,7 +20205,7 @@ class OutlookBarPane:
     def Name(self):
         return self.outlookbarpane.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -20870,7 +20214,7 @@ class OutlookBarPane:
     def Parent(self):
         return self.outlookbarpane.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20879,7 +20223,7 @@ class OutlookBarPane:
     def Session(self):
         return NameSpace(self.outlookbarpane.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -20888,16 +20232,15 @@ class OutlookBarPane:
     def Visible(self):
         return self.outlookbarpane.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.outlookbarpane.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -20920,16 +20263,15 @@ class OutlookBarShortcut:
     def Name(self):
         return self.outlookbarshortcut.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.outlookbarshortcut.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -20938,7 +20280,7 @@ class OutlookBarShortcut:
     def Parent(self):
         return self.outlookbarshortcut.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20947,7 +20289,7 @@ class OutlookBarShortcut:
     def Session(self):
         return NameSpace(self.outlookbarshortcut.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -20956,7 +20298,7 @@ class OutlookBarShortcut:
     def Target(self):
         return self.outlookbarshortcut.Target
 
-    # Lower case alias for Target
+    # Lower case aliases for Target
     @property
     def target(self):
         return self.Target
@@ -20983,7 +20325,7 @@ class OutlookBarShortcuts:
     def Count(self):
         return self.outlookbarshortcuts.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -20992,7 +20334,7 @@ class OutlookBarShortcuts:
     def Parent(self):
         return self.outlookbarshortcuts.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21001,7 +20343,7 @@ class OutlookBarShortcuts:
     def Session(self):
         return NameSpace(self.outlookbarshortcuts.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -21036,7 +20378,7 @@ class OutlookBarStorage:
     def Groups(self):
         return OutlookBarGroups(self.outlookbarstorage.Groups)
 
-    # Lower case alias for Groups
+    # Lower case aliases for Groups
     @property
     def groups(self):
         return self.Groups
@@ -21045,7 +20387,7 @@ class OutlookBarStorage:
     def Parent(self):
         return self.outlookbarstorage.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21054,7 +20396,7 @@ class OutlookBarStorage:
     def Session(self):
         return NameSpace(self.outlookbarstorage.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -21077,7 +20419,7 @@ class Pages:
     def Count(self):
         return self.pages.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -21086,7 +20428,7 @@ class Pages:
     def Parent(self):
         return self.pages.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21095,7 +20437,7 @@ class Pages:
     def Session(self):
         return NameSpace(self.pages.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -21129,7 +20471,7 @@ class Panes:
     def Count(self):
         return self.panes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -21138,7 +20480,7 @@ class Panes:
     def Parent(self):
         return self.panes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21147,7 +20489,7 @@ class Panes:
     def Session(self):
         return NameSpace(self.panes.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -21166,7 +20508,7 @@ class PlaySoundRuleAction:
     def ActionType(self):
         return OlRuleActionType(self.playsoundruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -21183,16 +20525,15 @@ class PlaySoundRuleAction:
     def Enabled(self):
         return self.playsoundruleaction.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.playsoundruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -21201,16 +20542,15 @@ class PlaySoundRuleAction:
     def FilePath(self):
         return self.playsoundruleaction.FilePath
 
-    # Lower case alias for FilePath
-    @property
-    def filepath(self):
-        return self.FilePath
-
     @FilePath.setter
     def FilePath(self, value):
         self.playsoundruleaction.FilePath = value
 
-    # Lower case alias for FilePath setter
+    # Lower case aliases for FilePath
+    @property
+    def filepath(self):
+        return self.FilePath
+
     @filepath.setter
     def filepath(self, value):
         self.FilePath = value
@@ -21219,7 +20559,7 @@ class PlaySoundRuleAction:
     def Parent(self):
         return self.playsoundruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21228,7 +20568,7 @@ class PlaySoundRuleAction:
     def Session(self):
         return NameSpace(self.playsoundruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -21243,7 +20583,7 @@ class PostItem:
     def Actions(self):
         return Actions(self.postitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -21256,7 +20596,7 @@ class PostItem:
     def Attachments(self):
         return Attachments(self.postitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -21265,7 +20605,7 @@ class PostItem:
     def AutoResolvedWinner(self):
         return self.postitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -21274,16 +20614,15 @@ class PostItem:
     def BillingInformation(self):
         return self.postitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.postitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -21292,16 +20631,15 @@ class PostItem:
     def Body(self):
         return self.postitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.postitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -21310,16 +20648,15 @@ class PostItem:
     def BodyFormat(self):
         return OlBodyFormat(self.postitem.BodyFormat)
 
-    # Lower case alias for BodyFormat
-    @property
-    def bodyformat(self):
-        return self.BodyFormat
-
     @BodyFormat.setter
     def BodyFormat(self, value):
         self.postitem.BodyFormat = value
 
-    # Lower case alias for BodyFormat setter
+    # Lower case aliases for BodyFormat
+    @property
+    def bodyformat(self):
+        return self.BodyFormat
+
     @bodyformat.setter
     def bodyformat(self, value):
         self.BodyFormat = value
@@ -21328,16 +20665,15 @@ class PostItem:
     def Categories(self):
         return self.postitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.postitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -21350,16 +20686,15 @@ class PostItem:
     def Companies(self):
         return self.postitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.postitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -21368,7 +20703,7 @@ class PostItem:
     def Conflicts(self):
         return self.postitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -21377,7 +20712,7 @@ class PostItem:
     def ConversationID(self):
         return Conversation(self.postitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -21386,7 +20721,7 @@ class PostItem:
     def ConversationIndex(self):
         return self.postitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -21395,7 +20730,7 @@ class PostItem:
     def ConversationTopic(self):
         return self.postitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -21404,7 +20739,7 @@ class PostItem:
     def CreationTime(self):
         return self.postitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -21413,7 +20748,7 @@ class PostItem:
     def DownloadState(self):
         return OlDownloadState(self.postitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -21422,7 +20757,7 @@ class PostItem:
     def EntryID(self):
         return self.postitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -21431,16 +20766,15 @@ class PostItem:
     def ExpiryTime(self):
         return self.postitem.ExpiryTime
 
-    # Lower case alias for ExpiryTime
-    @property
-    def expirytime(self):
-        return self.ExpiryTime
-
     @ExpiryTime.setter
     def ExpiryTime(self, value):
         self.postitem.ExpiryTime = value
 
-    # Lower case alias for ExpiryTime setter
+    # Lower case aliases for ExpiryTime
+    @property
+    def expirytime(self):
+        return self.ExpiryTime
+
     @expirytime.setter
     def expirytime(self, value):
         self.ExpiryTime = value
@@ -21449,7 +20783,7 @@ class PostItem:
     def FormDescription(self):
         return FormDescription(self.postitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -21458,7 +20792,7 @@ class PostItem:
     def GetInspector(self):
         return Inspector(self.postitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -21467,16 +20801,15 @@ class PostItem:
     def HTMLBody(self):
         return self.postitem.HTMLBody
 
-    # Lower case alias for HTMLBody
-    @property
-    def htmlbody(self):
-        return self.HTMLBody
-
     @HTMLBody.setter
     def HTMLBody(self, value):
         self.postitem.HTMLBody = value
 
-    # Lower case alias for HTMLBody setter
+    # Lower case aliases for HTMLBody
+    @property
+    def htmlbody(self):
+        return self.HTMLBody
+
     @htmlbody.setter
     def htmlbody(self, value):
         self.HTMLBody = value
@@ -21485,16 +20818,15 @@ class PostItem:
     def Importance(self):
         return OlImportance(self.postitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.postitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -21503,16 +20835,15 @@ class PostItem:
     def InternetCodepage(self):
         return self.postitem.InternetCodepage
 
-    # Lower case alias for InternetCodepage
-    @property
-    def internetcodepage(self):
-        return self.InternetCodepage
-
     @InternetCodepage.setter
     def InternetCodepage(self, value):
         self.postitem.InternetCodepage = value
 
-    # Lower case alias for InternetCodepage setter
+    # Lower case aliases for InternetCodepage
+    @property
+    def internetcodepage(self):
+        return self.InternetCodepage
+
     @internetcodepage.setter
     def internetcodepage(self, value):
         self.InternetCodepage = value
@@ -21521,7 +20852,7 @@ class PostItem:
     def IsConflict(self):
         return self.postitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -21530,7 +20861,7 @@ class PostItem:
     def IsMarkedAsTask(self):
         return PostItem(self.postitem.IsMarkedAsTask)
 
-    # Lower case alias for IsMarkedAsTask
+    # Lower case aliases for IsMarkedAsTask
     @property
     def ismarkedastask(self):
         return self.IsMarkedAsTask
@@ -21539,7 +20870,7 @@ class PostItem:
     def ItemProperties(self):
         return ItemProperties(self.postitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -21548,7 +20879,7 @@ class PostItem:
     def LastModificationTime(self):
         return self.postitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -21557,16 +20888,15 @@ class PostItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.postitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.postitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -21575,16 +20905,15 @@ class PostItem:
     def MessageClass(self):
         return self.postitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.postitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -21593,16 +20922,15 @@ class PostItem:
     def Mileage(self):
         return self.postitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.postitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -21611,16 +20939,15 @@ class PostItem:
     def NoAging(self):
         return self.postitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.postitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -21629,7 +20956,7 @@ class PostItem:
     def OutlookInternalVersion(self):
         return self.postitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -21638,7 +20965,7 @@ class PostItem:
     def OutlookVersion(self):
         return self.postitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -21647,7 +20974,7 @@ class PostItem:
     def Parent(self):
         return self.postitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21656,7 +20983,7 @@ class PostItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.postitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -21665,7 +20992,7 @@ class PostItem:
     def ReceivedTime(self):
         return self.postitem.ReceivedTime
 
-    # Lower case alias for ReceivedTime
+    # Lower case aliases for ReceivedTime
     @property
     def receivedtime(self):
         return self.ReceivedTime
@@ -21674,16 +21001,15 @@ class PostItem:
     def ReminderOverrideDefault(self):
         return self.postitem.ReminderOverrideDefault
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.postitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -21692,16 +21018,15 @@ class PostItem:
     def ReminderPlaySound(self):
         return self.postitem.ReminderPlaySound
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.postitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -21710,16 +21035,15 @@ class PostItem:
     def ReminderSet(self):
         return self.postitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.postitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -21728,16 +21052,15 @@ class PostItem:
     def ReminderSoundFile(self):
         return self.postitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.postitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -21746,16 +21069,15 @@ class PostItem:
     def ReminderTime(self):
         return self.postitem.ReminderTime
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.postitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -21764,16 +21086,15 @@ class PostItem:
     def RTFBody(self):
         return self.postitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.postitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -21782,7 +21103,7 @@ class PostItem:
     def Saved(self):
         return self.postitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -21791,7 +21112,7 @@ class PostItem:
     def SenderEmailAddress(self):
         return self.postitem.SenderEmailAddress
 
-    # Lower case alias for SenderEmailAddress
+    # Lower case aliases for SenderEmailAddress
     @property
     def senderemailaddress(self):
         return self.SenderEmailAddress
@@ -21800,7 +21121,7 @@ class PostItem:
     def SenderEmailType(self):
         return self.postitem.SenderEmailType
 
-    # Lower case alias for SenderEmailType
+    # Lower case aliases for SenderEmailType
     @property
     def senderemailtype(self):
         return self.SenderEmailType
@@ -21809,7 +21130,7 @@ class PostItem:
     def SenderName(self):
         return self.postitem.SenderName
 
-    # Lower case alias for SenderName
+    # Lower case aliases for SenderName
     @property
     def sendername(self):
         return self.SenderName
@@ -21818,16 +21139,15 @@ class PostItem:
     def Sensitivity(self):
         return OlSensitivity(self.postitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.postitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -21836,7 +21156,7 @@ class PostItem:
     def SentOn(self):
         return self.postitem.SentOn
 
-    # Lower case alias for SentOn
+    # Lower case aliases for SentOn
     @property
     def senton(self):
         return self.SentOn
@@ -21845,7 +21165,7 @@ class PostItem:
     def Session(self):
         return NameSpace(self.postitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -21854,7 +21174,7 @@ class PostItem:
     def Size(self):
         return self.postitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -21863,16 +21183,15 @@ class PostItem:
     def Subject(self):
         return self.postitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.postitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -21881,16 +21200,15 @@ class PostItem:
     def TaskCompletedDate(self):
         return PostItem(self.postitem.TaskCompletedDate)
 
-    # Lower case alias for TaskCompletedDate
-    @property
-    def taskcompleteddate(self):
-        return self.TaskCompletedDate
-
     @TaskCompletedDate.setter
     def TaskCompletedDate(self, value):
         self.postitem.TaskCompletedDate = value
 
-    # Lower case alias for TaskCompletedDate setter
+    # Lower case aliases for TaskCompletedDate
+    @property
+    def taskcompleteddate(self):
+        return self.TaskCompletedDate
+
     @taskcompleteddate.setter
     def taskcompleteddate(self, value):
         self.TaskCompletedDate = value
@@ -21899,16 +21217,15 @@ class PostItem:
     def TaskDueDate(self):
         return PostItem(self.postitem.TaskDueDate)
 
-    # Lower case alias for TaskDueDate
-    @property
-    def taskduedate(self):
-        return self.TaskDueDate
-
     @TaskDueDate.setter
     def TaskDueDate(self, value):
         self.postitem.TaskDueDate = value
 
-    # Lower case alias for TaskDueDate setter
+    # Lower case aliases for TaskDueDate
+    @property
+    def taskduedate(self):
+        return self.TaskDueDate
+
     @taskduedate.setter
     def taskduedate(self, value):
         self.TaskDueDate = value
@@ -21917,16 +21234,15 @@ class PostItem:
     def TaskStartDate(self):
         return PostItem(self.postitem.TaskStartDate)
 
-    # Lower case alias for TaskStartDate
-    @property
-    def taskstartdate(self):
-        return self.TaskStartDate
-
     @TaskStartDate.setter
     def TaskStartDate(self, value):
         self.postitem.TaskStartDate = value
 
-    # Lower case alias for TaskStartDate setter
+    # Lower case aliases for TaskStartDate
+    @property
+    def taskstartdate(self):
+        return self.TaskStartDate
+
     @taskstartdate.setter
     def taskstartdate(self, value):
         self.TaskStartDate = value
@@ -21935,16 +21251,15 @@ class PostItem:
     def TaskSubject(self):
         return PostItem(self.postitem.TaskSubject)
 
-    # Lower case alias for TaskSubject
-    @property
-    def tasksubject(self):
-        return self.TaskSubject
-
     @TaskSubject.setter
     def TaskSubject(self, value):
         self.postitem.TaskSubject = value
 
-    # Lower case alias for TaskSubject setter
+    # Lower case aliases for TaskSubject
+    @property
+    def tasksubject(self):
+        return self.TaskSubject
+
     @tasksubject.setter
     def tasksubject(self, value):
         self.TaskSubject = value
@@ -21953,16 +21268,15 @@ class PostItem:
     def ToDoTaskOrdinal(self):
         return PostItem(self.postitem.ToDoTaskOrdinal)
 
-    # Lower case alias for ToDoTaskOrdinal
-    @property
-    def todotaskordinal(self):
-        return self.ToDoTaskOrdinal
-
     @ToDoTaskOrdinal.setter
     def ToDoTaskOrdinal(self, value):
         self.postitem.ToDoTaskOrdinal = value
 
-    # Lower case alias for ToDoTaskOrdinal setter
+    # Lower case aliases for ToDoTaskOrdinal
+    @property
+    def todotaskordinal(self):
+        return self.ToDoTaskOrdinal
+
     @todotaskordinal.setter
     def todotaskordinal(self, value):
         self.ToDoTaskOrdinal = value
@@ -21971,16 +21285,15 @@ class PostItem:
     def UnRead(self):
         return self.postitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.postitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -21989,7 +21302,7 @@ class PostItem:
     def UserProperties(self):
         return UserProperties(self.postitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -22065,7 +21378,7 @@ class PropertyAccessor:
     def Parent(self):
         return PropertyAccessor(self.propertyaccessor.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22074,7 +21387,7 @@ class PropertyAccessor:
     def Session(self):
         return NameSpace(self.propertyaccessor.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22132,7 +21445,7 @@ class PropertyPage:
         else:
             return self.propertypage.GetDirty(*arguments)
 
-    # Lower case alias for Dirty
+    # Lower case aliases for Dirty
     def dirty(self, Dirty=None):
         arguments = [Dirty]
         return self.Dirty(*arguments)
@@ -22162,7 +21475,7 @@ class PropertyPages:
     def Count(self):
         return self.propertypages.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -22171,7 +21484,7 @@ class PropertyPages:
     def Parent(self):
         return self.propertypages.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22180,7 +21493,7 @@ class PropertyPages:
     def Session(self):
         return NameSpace(self.propertypages.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22215,7 +21528,7 @@ class PropertyPageSite:
     def Parent(self):
         return self.propertypagesite.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22224,7 +21537,7 @@ class PropertyPageSite:
     def Session(self):
         return NameSpace(self.propertypagesite.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22242,7 +21555,7 @@ class Recipient:
     def Address(self):
         return self.recipient.Address
 
-    # Lower case alias for Address
+    # Lower case aliases for Address
     @property
     def address(self):
         return self.Address
@@ -22251,16 +21564,15 @@ class Recipient:
     def AddressEntry(self):
         return AddressEntry(self.recipient.AddressEntry)
 
-    # Lower case alias for AddressEntry
-    @property
-    def addressentry(self):
-        return self.AddressEntry
-
     @AddressEntry.setter
     def AddressEntry(self, value):
         self.recipient.AddressEntry = value
 
-    # Lower case alias for AddressEntry setter
+    # Lower case aliases for AddressEntry
+    @property
+    def addressentry(self):
+        return self.AddressEntry
+
     @addressentry.setter
     def addressentry(self, value):
         self.AddressEntry = value
@@ -22273,16 +21585,15 @@ class Recipient:
     def AutoResponse(self):
         return Recipient(self.recipient.AutoResponse)
 
-    # Lower case alias for AutoResponse
-    @property
-    def autoresponse(self):
-        return self.AutoResponse
-
     @AutoResponse.setter
     def AutoResponse(self, value):
         self.recipient.AutoResponse = value
 
-    # Lower case alias for AutoResponse setter
+    # Lower case aliases for AutoResponse
+    @property
+    def autoresponse(self):
+        return self.AutoResponse
+
     @autoresponse.setter
     def autoresponse(self, value):
         self.AutoResponse = value
@@ -22295,7 +21606,7 @@ class Recipient:
     def DisplayType(self):
         return OlDisplayType(self.recipient.DisplayType)
 
-    # Lower case alias for DisplayType
+    # Lower case aliases for DisplayType
     @property
     def displaytype(self):
         return self.DisplayType
@@ -22304,7 +21615,7 @@ class Recipient:
     def EntryID(self):
         return self.recipient.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -22313,7 +21624,7 @@ class Recipient:
     def Index(self):
         return self.recipient.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -22322,7 +21633,7 @@ class Recipient:
     def MeetingResponseStatus(self):
         return OlResponseStatus(self.recipient.MeetingResponseStatus)
 
-    # Lower case alias for MeetingResponseStatus
+    # Lower case aliases for MeetingResponseStatus
     @property
     def meetingresponsestatus(self):
         return self.MeetingResponseStatus
@@ -22331,7 +21642,7 @@ class Recipient:
     def Name(self):
         return self.recipient.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -22340,7 +21651,7 @@ class Recipient:
     def Parent(self):
         return self.recipient.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22349,7 +21660,7 @@ class Recipient:
     def PropertyAccessor(self):
         return PropertyAccessor(self.recipient.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -22358,7 +21669,7 @@ class Recipient:
     def Resolved(self):
         return self.recipient.Resolved
 
-    # Lower case alias for Resolved
+    # Lower case aliases for Resolved
     @property
     def resolved(self):
         return self.Resolved
@@ -22367,16 +21678,15 @@ class Recipient:
     def Sendable(self):
         return Recipient(self.recipient.Sendable)
 
-    # Lower case alias for Sendable
-    @property
-    def sendable(self):
-        return self.Sendable
-
     @Sendable.setter
     def Sendable(self, value):
         self.recipient.Sendable = value
 
-    # Lower case alias for Sendable setter
+    # Lower case aliases for Sendable
+    @property
+    def sendable(self):
+        return self.Sendable
+
     @sendable.setter
     def sendable(self, value):
         self.Sendable = value
@@ -22385,7 +21695,7 @@ class Recipient:
     def Session(self):
         return NameSpace(self.recipient.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22394,16 +21704,15 @@ class Recipient:
     def TrackingStatus(self):
         return OlTrackingStatus(self.recipient.TrackingStatus)
 
-    # Lower case alias for TrackingStatus
-    @property
-    def trackingstatus(self):
-        return self.TrackingStatus
-
     @TrackingStatus.setter
     def TrackingStatus(self, value):
         self.recipient.TrackingStatus = value
 
-    # Lower case alias for TrackingStatus setter
+    # Lower case aliases for TrackingStatus
+    @property
+    def trackingstatus(self):
+        return self.TrackingStatus
+
     @trackingstatus.setter
     def trackingstatus(self, value):
         self.TrackingStatus = value
@@ -22412,16 +21721,15 @@ class Recipient:
     def TrackingStatusTime(self):
         return self.recipient.TrackingStatusTime
 
-    # Lower case alias for TrackingStatusTime
-    @property
-    def trackingstatustime(self):
-        return self.TrackingStatusTime
-
     @TrackingStatusTime.setter
     def TrackingStatusTime(self, value):
         self.recipient.TrackingStatusTime = value
 
-    # Lower case alias for TrackingStatusTime setter
+    # Lower case aliases for TrackingStatusTime
+    @property
+    def trackingstatustime(self):
+        return self.TrackingStatusTime
+
     @trackingstatustime.setter
     def trackingstatustime(self, value):
         self.TrackingStatusTime = value
@@ -22430,16 +21738,15 @@ class Recipient:
     def Type(self):
         return self.recipient.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.recipient.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -22472,7 +21779,7 @@ class Recipients:
     def Count(self):
         return self.recipients.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -22481,7 +21788,7 @@ class Recipients:
     def Parent(self):
         return self.recipients.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22490,7 +21797,7 @@ class Recipients:
     def Session(self):
         return NameSpace(self.recipients.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22528,16 +21835,15 @@ class RecurrencePattern:
     def DayOfMonth(self):
         return self.recurrencepattern.DayOfMonth
 
-    # Lower case alias for DayOfMonth
-    @property
-    def dayofmonth(self):
-        return self.DayOfMonth
-
     @DayOfMonth.setter
     def DayOfMonth(self, value):
         self.recurrencepattern.DayOfMonth = value
 
-    # Lower case alias for DayOfMonth setter
+    # Lower case aliases for DayOfMonth
+    @property
+    def dayofmonth(self):
+        return self.DayOfMonth
+
     @dayofmonth.setter
     def dayofmonth(self, value):
         self.DayOfMonth = value
@@ -22546,16 +21852,15 @@ class RecurrencePattern:
     def DayOfWeekMask(self):
         return OlDaysOfWeek(self.recurrencepattern.DayOfWeekMask)
 
-    # Lower case alias for DayOfWeekMask
-    @property
-    def dayofweekmask(self):
-        return self.DayOfWeekMask
-
     @DayOfWeekMask.setter
     def DayOfWeekMask(self, value):
         self.recurrencepattern.DayOfWeekMask = value
 
-    # Lower case alias for DayOfWeekMask setter
+    # Lower case aliases for DayOfWeekMask
+    @property
+    def dayofweekmask(self):
+        return self.DayOfWeekMask
+
     @dayofweekmask.setter
     def dayofweekmask(self, value):
         self.DayOfWeekMask = value
@@ -22564,16 +21869,15 @@ class RecurrencePattern:
     def Duration(self):
         return RecurrencePattern(self.recurrencepattern.Duration)
 
-    # Lower case alias for Duration
-    @property
-    def duration(self):
-        return self.Duration
-
     @Duration.setter
     def Duration(self, value):
         self.recurrencepattern.Duration = value
 
-    # Lower case alias for Duration setter
+    # Lower case aliases for Duration
+    @property
+    def duration(self):
+        return self.Duration
+
     @duration.setter
     def duration(self, value):
         self.Duration = value
@@ -22582,16 +21886,15 @@ class RecurrencePattern:
     def EndTime(self):
         return self.recurrencepattern.EndTime
 
-    # Lower case alias for EndTime
-    @property
-    def endtime(self):
-        return self.EndTime
-
     @EndTime.setter
     def EndTime(self, value):
         self.recurrencepattern.EndTime = value
 
-    # Lower case alias for EndTime setter
+    # Lower case aliases for EndTime
+    @property
+    def endtime(self):
+        return self.EndTime
+
     @endtime.setter
     def endtime(self, value):
         self.EndTime = value
@@ -22600,7 +21903,7 @@ class RecurrencePattern:
     def Exceptions(self):
         return Exceptions(self.recurrencepattern.Exceptions)
 
-    # Lower case alias for Exceptions
+    # Lower case aliases for Exceptions
     @property
     def exceptions(self):
         return self.Exceptions
@@ -22609,16 +21912,15 @@ class RecurrencePattern:
     def Instance(self):
         return self.recurrencepattern.Instance
 
-    # Lower case alias for Instance
-    @property
-    def instance(self):
-        return self.Instance
-
     @Instance.setter
     def Instance(self, value):
         self.recurrencepattern.Instance = value
 
-    # Lower case alias for Instance setter
+    # Lower case aliases for Instance
+    @property
+    def instance(self):
+        return self.Instance
+
     @instance.setter
     def instance(self, value):
         self.Instance = value
@@ -22627,16 +21929,15 @@ class RecurrencePattern:
     def Interval(self):
         return self.recurrencepattern.Interval
 
-    # Lower case alias for Interval
-    @property
-    def interval(self):
-        return self.Interval
-
     @Interval.setter
     def Interval(self, value):
         self.recurrencepattern.Interval = value
 
-    # Lower case alias for Interval setter
+    # Lower case aliases for Interval
+    @property
+    def interval(self):
+        return self.Interval
+
     @interval.setter
     def interval(self, value):
         self.Interval = value
@@ -22645,16 +21946,15 @@ class RecurrencePattern:
     def MonthOfYear(self):
         return self.recurrencepattern.MonthOfYear
 
-    # Lower case alias for MonthOfYear
-    @property
-    def monthofyear(self):
-        return self.MonthOfYear
-
     @MonthOfYear.setter
     def MonthOfYear(self, value):
         self.recurrencepattern.MonthOfYear = value
 
-    # Lower case alias for MonthOfYear setter
+    # Lower case aliases for MonthOfYear
+    @property
+    def monthofyear(self):
+        return self.MonthOfYear
+
     @monthofyear.setter
     def monthofyear(self, value):
         self.MonthOfYear = value
@@ -22663,16 +21963,15 @@ class RecurrencePattern:
     def NoEndDate(self):
         return self.recurrencepattern.NoEndDate
 
-    # Lower case alias for NoEndDate
-    @property
-    def noenddate(self):
-        return self.NoEndDate
-
     @NoEndDate.setter
     def NoEndDate(self, value):
         self.recurrencepattern.NoEndDate = value
 
-    # Lower case alias for NoEndDate setter
+    # Lower case aliases for NoEndDate
+    @property
+    def noenddate(self):
+        return self.NoEndDate
+
     @noenddate.setter
     def noenddate(self, value):
         self.NoEndDate = value
@@ -22681,16 +21980,15 @@ class RecurrencePattern:
     def Occurrences(self):
         return self.recurrencepattern.Occurrences
 
-    # Lower case alias for Occurrences
-    @property
-    def occurrences(self):
-        return self.Occurrences
-
     @Occurrences.setter
     def Occurrences(self, value):
         self.recurrencepattern.Occurrences = value
 
-    # Lower case alias for Occurrences setter
+    # Lower case aliases for Occurrences
+    @property
+    def occurrences(self):
+        return self.Occurrences
+
     @occurrences.setter
     def occurrences(self, value):
         self.Occurrences = value
@@ -22699,7 +21997,7 @@ class RecurrencePattern:
     def Parent(self):
         return self.recurrencepattern.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22708,16 +22006,15 @@ class RecurrencePattern:
     def PatternEndDate(self):
         return self.recurrencepattern.PatternEndDate
 
-    # Lower case alias for PatternEndDate
-    @property
-    def patternenddate(self):
-        return self.PatternEndDate
-
     @PatternEndDate.setter
     def PatternEndDate(self, value):
         self.recurrencepattern.PatternEndDate = value
 
-    # Lower case alias for PatternEndDate setter
+    # Lower case aliases for PatternEndDate
+    @property
+    def patternenddate(self):
+        return self.PatternEndDate
+
     @patternenddate.setter
     def patternenddate(self, value):
         self.PatternEndDate = value
@@ -22726,16 +22023,15 @@ class RecurrencePattern:
     def PatternStartDate(self):
         return self.recurrencepattern.PatternStartDate
 
-    # Lower case alias for PatternStartDate
-    @property
-    def patternstartdate(self):
-        return self.PatternStartDate
-
     @PatternStartDate.setter
     def PatternStartDate(self, value):
         self.recurrencepattern.PatternStartDate = value
 
-    # Lower case alias for PatternStartDate setter
+    # Lower case aliases for PatternStartDate
+    @property
+    def patternstartdate(self):
+        return self.PatternStartDate
+
     @patternstartdate.setter
     def patternstartdate(self, value):
         self.PatternStartDate = value
@@ -22744,16 +22040,15 @@ class RecurrencePattern:
     def RecurrenceType(self):
         return OlRecurrenceType(self.recurrencepattern.RecurrenceType)
 
-    # Lower case alias for RecurrenceType
-    @property
-    def recurrencetype(self):
-        return self.RecurrenceType
-
     @RecurrenceType.setter
     def RecurrenceType(self, value):
         self.recurrencepattern.RecurrenceType = value
 
-    # Lower case alias for RecurrenceType setter
+    # Lower case aliases for RecurrenceType
+    @property
+    def recurrencetype(self):
+        return self.RecurrenceType
+
     @recurrencetype.setter
     def recurrencetype(self, value):
         self.RecurrenceType = value
@@ -22762,16 +22057,15 @@ class RecurrencePattern:
     def Regenerate(self):
         return self.recurrencepattern.Regenerate
 
-    # Lower case alias for Regenerate
-    @property
-    def regenerate(self):
-        return self.Regenerate
-
     @Regenerate.setter
     def Regenerate(self, value):
         self.recurrencepattern.Regenerate = value
 
-    # Lower case alias for Regenerate setter
+    # Lower case aliases for Regenerate
+    @property
+    def regenerate(self):
+        return self.Regenerate
+
     @regenerate.setter
     def regenerate(self, value):
         self.Regenerate = value
@@ -22780,7 +22074,7 @@ class RecurrencePattern:
     def Session(self):
         return NameSpace(self.recurrencepattern.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22789,16 +22083,15 @@ class RecurrencePattern:
     def StartTime(self):
         return self.recurrencepattern.StartTime
 
-    # Lower case alias for StartTime
-    @property
-    def starttime(self):
-        return self.StartTime
-
     @StartTime.setter
     def StartTime(self, value):
         self.recurrencepattern.StartTime = value
 
-    # Lower case alias for StartTime setter
+    # Lower case aliases for StartTime
+    @property
+    def starttime(self):
+        return self.StartTime
+
     @starttime.setter
     def starttime(self, value):
         self.StartTime = value
@@ -22821,7 +22114,7 @@ class Reminder:
     def Caption(self):
         return self.reminder.Caption
 
-    # Lower case alias for Caption
+    # Lower case aliases for Caption
     @property
     def caption(self):
         return self.Caption
@@ -22834,7 +22127,7 @@ class Reminder:
     def IsVisible(self):
         return self.reminder.IsVisible
 
-    # Lower case alias for IsVisible
+    # Lower case aliases for IsVisible
     @property
     def isvisible(self):
         return self.IsVisible
@@ -22843,7 +22136,7 @@ class Reminder:
     def Item(self):
         return self.reminder.Item
 
-    # Lower case alias for Item
+    # Lower case aliases for Item
     @property
     def item(self):
         return self.Item
@@ -22852,7 +22145,7 @@ class Reminder:
     def NextReminderDate(self):
         return self.reminder.NextReminderDate
 
-    # Lower case alias for NextReminderDate
+    # Lower case aliases for NextReminderDate
     @property
     def nextreminderdate(self):
         return self.NextReminderDate
@@ -22861,7 +22154,7 @@ class Reminder:
     def OriginalReminderDate(self):
         return self.reminder.OriginalReminderDate
 
-    # Lower case alias for OriginalReminderDate
+    # Lower case aliases for OriginalReminderDate
     @property
     def originalreminderdate(self):
         return self.OriginalReminderDate
@@ -22870,7 +22163,7 @@ class Reminder:
     def Parent(self):
         return self.reminder.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22879,7 +22172,7 @@ class Reminder:
     def Session(self):
         return NameSpace(self.reminder.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22909,7 +22202,7 @@ class Reminders:
     def Count(self):
         return self.reminders.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -22918,7 +22211,7 @@ class Reminders:
     def Parent(self):
         return self.reminders.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22927,7 +22220,7 @@ class Reminders:
     def Session(self):
         return NameSpace(self.reminders.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -22950,7 +22243,7 @@ class RemoteItem:
     def Actions(self):
         return Actions(self.remoteitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -22963,7 +22256,7 @@ class RemoteItem:
     def Attachments(self):
         return Attachments(self.remoteitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -22972,7 +22265,7 @@ class RemoteItem:
     def AutoResolvedWinner(self):
         return self.remoteitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -22981,16 +22274,15 @@ class RemoteItem:
     def BillingInformation(self):
         return self.remoteitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.remoteitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -22999,16 +22291,15 @@ class RemoteItem:
     def Body(self):
         return self.remoteitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.remoteitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -23017,16 +22308,15 @@ class RemoteItem:
     def Categories(self):
         return self.remoteitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.remoteitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -23039,16 +22329,15 @@ class RemoteItem:
     def Companies(self):
         return self.remoteitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.remoteitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -23057,7 +22346,7 @@ class RemoteItem:
     def Conflicts(self):
         return self.remoteitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -23066,7 +22355,7 @@ class RemoteItem:
     def ConversationID(self):
         return Conversation(self.remoteitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -23075,7 +22364,7 @@ class RemoteItem:
     def ConversationIndex(self):
         return self.remoteitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -23084,7 +22373,7 @@ class RemoteItem:
     def ConversationTopic(self):
         return self.remoteitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -23093,7 +22382,7 @@ class RemoteItem:
     def CreationTime(self):
         return self.remoteitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -23102,7 +22391,7 @@ class RemoteItem:
     def DownloadState(self):
         return OlDownloadState(self.remoteitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -23111,7 +22400,7 @@ class RemoteItem:
     def EntryID(self):
         return self.remoteitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -23120,7 +22409,7 @@ class RemoteItem:
     def FormDescription(self):
         return FormDescription(self.remoteitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -23129,7 +22418,7 @@ class RemoteItem:
     def GetInspector(self):
         return Inspector(self.remoteitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -23138,7 +22427,7 @@ class RemoteItem:
     def HasAttachment(self):
         return self.remoteitem.HasAttachment
 
-    # Lower case alias for HasAttachment
+    # Lower case aliases for HasAttachment
     @property
     def hasattachment(self):
         return self.HasAttachment
@@ -23147,16 +22436,15 @@ class RemoteItem:
     def Importance(self):
         return OlImportance(self.remoteitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.remoteitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -23165,7 +22453,7 @@ class RemoteItem:
     def IsConflict(self):
         return self.remoteitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -23174,7 +22462,7 @@ class RemoteItem:
     def ItemProperties(self):
         return ItemProperties(self.remoteitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -23183,7 +22471,7 @@ class RemoteItem:
     def LastModificationTime(self):
         return self.remoteitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -23192,16 +22480,15 @@ class RemoteItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.remoteitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.remoteitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -23210,16 +22497,15 @@ class RemoteItem:
     def MessageClass(self):
         return self.remoteitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.remoteitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -23228,16 +22514,15 @@ class RemoteItem:
     def Mileage(self):
         return self.remoteitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.remoteitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -23246,16 +22531,15 @@ class RemoteItem:
     def NoAging(self):
         return self.remoteitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.remoteitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -23264,7 +22548,7 @@ class RemoteItem:
     def OutlookInternalVersion(self):
         return self.remoteitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -23273,7 +22557,7 @@ class RemoteItem:
     def OutlookVersion(self):
         return self.remoteitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -23282,7 +22566,7 @@ class RemoteItem:
     def Parent(self):
         return self.remoteitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23291,7 +22575,7 @@ class RemoteItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.remoteitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -23300,7 +22584,7 @@ class RemoteItem:
     def RemoteMessageClass(self):
         return self.remoteitem.RemoteMessageClass
 
-    # Lower case alias for RemoteMessageClass
+    # Lower case aliases for RemoteMessageClass
     @property
     def remotemessageclass(self):
         return self.RemoteMessageClass
@@ -23309,7 +22593,7 @@ class RemoteItem:
     def Saved(self):
         return self.remoteitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -23318,16 +22602,15 @@ class RemoteItem:
     def Sensitivity(self):
         return OlSensitivity(self.remoteitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.remoteitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -23336,7 +22619,7 @@ class RemoteItem:
     def Session(self):
         return NameSpace(self.remoteitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -23345,7 +22628,7 @@ class RemoteItem:
     def Size(self):
         return self.remoteitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -23354,16 +22637,15 @@ class RemoteItem:
     def Subject(self):
         return self.remoteitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.remoteitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -23372,7 +22654,7 @@ class RemoteItem:
     def TransferSize(self):
         return self.remoteitem.TransferSize
 
-    # Lower case alias for TransferSize
+    # Lower case aliases for TransferSize
     @property
     def transfersize(self):
         return self.TransferSize
@@ -23381,7 +22663,7 @@ class RemoteItem:
     def TransferTime(self):
         return self.remoteitem.TransferTime
 
-    # Lower case alias for TransferTime
+    # Lower case aliases for TransferTime
     @property
     def transfertime(self):
         return self.TransferTime
@@ -23390,16 +22672,15 @@ class RemoteItem:
     def UnRead(self):
         return self.remoteitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.remoteitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -23408,7 +22689,7 @@ class RemoteItem:
     def UserProperties(self):
         return UserProperties(self.remoteitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -23457,7 +22738,7 @@ class ReportItem:
     def Actions(self):
         return Actions(self.reportitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -23470,7 +22751,7 @@ class ReportItem:
     def Attachments(self):
         return Attachments(self.reportitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -23479,7 +22760,7 @@ class ReportItem:
     def AutoResolvedWinner(self):
         return self.reportitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -23488,16 +22769,15 @@ class ReportItem:
     def BillingInformation(self):
         return self.reportitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.reportitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -23506,16 +22786,15 @@ class ReportItem:
     def Body(self):
         return self.reportitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.reportitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -23524,16 +22803,15 @@ class ReportItem:
     def Categories(self):
         return self.reportitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.reportitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -23546,16 +22824,15 @@ class ReportItem:
     def Companies(self):
         return self.reportitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.reportitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -23564,7 +22841,7 @@ class ReportItem:
     def Conflicts(self):
         return self.reportitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -23573,7 +22850,7 @@ class ReportItem:
     def ConversationID(self):
         return Conversation(self.reportitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -23582,7 +22859,7 @@ class ReportItem:
     def ConversationIndex(self):
         return self.reportitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -23591,7 +22868,7 @@ class ReportItem:
     def ConversationTopic(self):
         return self.reportitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -23600,7 +22877,7 @@ class ReportItem:
     def CreationTime(self):
         return self.reportitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -23609,7 +22886,7 @@ class ReportItem:
     def DownloadState(self):
         return OlDownloadState(self.reportitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -23618,7 +22895,7 @@ class ReportItem:
     def EntryID(self):
         return self.reportitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -23627,7 +22904,7 @@ class ReportItem:
     def FormDescription(self):
         return FormDescription(self.reportitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -23636,7 +22913,7 @@ class ReportItem:
     def GetInspector(self):
         return Inspector(self.reportitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -23645,16 +22922,15 @@ class ReportItem:
     def Importance(self):
         return OlImportance(self.reportitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.reportitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -23663,7 +22939,7 @@ class ReportItem:
     def IsConflict(self):
         return self.reportitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -23672,7 +22948,7 @@ class ReportItem:
     def ItemProperties(self):
         return ItemProperties(self.reportitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -23681,7 +22957,7 @@ class ReportItem:
     def LastModificationTime(self):
         return self.reportitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -23690,16 +22966,15 @@ class ReportItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.reportitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.reportitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -23708,16 +22983,15 @@ class ReportItem:
     def MessageClass(self):
         return self.reportitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.reportitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -23726,16 +23000,15 @@ class ReportItem:
     def Mileage(self):
         return self.reportitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.reportitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -23744,16 +23017,15 @@ class ReportItem:
     def NoAging(self):
         return self.reportitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.reportitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -23762,7 +23034,7 @@ class ReportItem:
     def OutlookInternalVersion(self):
         return self.reportitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -23771,7 +23043,7 @@ class ReportItem:
     def OutlookVersion(self):
         return self.reportitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -23780,7 +23052,7 @@ class ReportItem:
     def Parent(self):
         return self.reportitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23789,7 +23061,7 @@ class ReportItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.reportitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -23798,7 +23070,7 @@ class ReportItem:
     def RetentionExpirationDate(self):
         return ReportItem(self.reportitem.RetentionExpirationDate)
 
-    # Lower case alias for RetentionExpirationDate
+    # Lower case aliases for RetentionExpirationDate
     @property
     def retentionexpirationdate(self):
         return self.RetentionExpirationDate
@@ -23807,7 +23079,7 @@ class ReportItem:
     def RetentionPolicyName(self):
         return self.reportitem.RetentionPolicyName
 
-    # Lower case alias for RetentionPolicyName
+    # Lower case aliases for RetentionPolicyName
     @property
     def retentionpolicyname(self):
         return self.RetentionPolicyName
@@ -23816,7 +23088,7 @@ class ReportItem:
     def Saved(self):
         return self.reportitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -23825,16 +23097,15 @@ class ReportItem:
     def Sensitivity(self):
         return OlSensitivity(self.reportitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.reportitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -23843,7 +23114,7 @@ class ReportItem:
     def Session(self):
         return NameSpace(self.reportitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -23852,7 +23123,7 @@ class ReportItem:
     def Size(self):
         return self.reportitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -23861,16 +23132,15 @@ class ReportItem:
     def Subject(self):
         return self.reportitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.reportitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -23879,16 +23149,15 @@ class ReportItem:
     def UnRead(self):
         return self.reportitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.reportitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -23897,7 +23166,7 @@ class ReportItem:
     def UserProperties(self):
         return UserProperties(self.reportitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -23954,7 +23223,7 @@ class Results:
     def Count(self):
         return self.results.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -23963,16 +23232,15 @@ class Results:
     def DefaultItemType(self):
         return OlItemType(self.results.DefaultItemType)
 
-    # Lower case alias for DefaultItemType
-    @property
-    def defaultitemtype(self):
-        return self.DefaultItemType
-
     @DefaultItemType.setter
     def DefaultItemType(self, value):
         self.results.DefaultItemType = value
 
-    # Lower case alias for DefaultItemType setter
+    # Lower case aliases for DefaultItemType
+    @property
+    def defaultitemtype(self):
+        return self.DefaultItemType
+
     @defaultitemtype.setter
     def defaultitemtype(self, value):
         self.DefaultItemType = value
@@ -23981,7 +23249,7 @@ class Results:
     def Parent(self):
         return self.results.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23990,7 +23258,7 @@ class Results:
     def Session(self):
         return NameSpace(self.results.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24040,7 +23308,7 @@ class Row:
     def Parent(self):
         return Row(self.row.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24049,7 +23317,7 @@ class Row:
     def Session(self):
         return NameSpace(self.row.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24083,7 +23351,7 @@ class Rule:
     def Actions(self):
         return RuleActions(self.rule.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -24100,7 +23368,7 @@ class Rule:
     def Conditions(self):
         return RuleConditions(self.rule.Conditions)
 
-    # Lower case alias for Conditions
+    # Lower case aliases for Conditions
     @property
     def conditions(self):
         return self.Conditions
@@ -24109,16 +23377,15 @@ class Rule:
     def Enabled(self):
         return self.rule.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.rule.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -24127,7 +23394,7 @@ class Rule:
     def Exceptions(self):
         return RuleConditions(self.rule.Exceptions)
 
-    # Lower case alias for Exceptions
+    # Lower case aliases for Exceptions
     @property
     def exceptions(self):
         return self.Exceptions
@@ -24136,16 +23403,15 @@ class Rule:
     def ExecutionOrder(self):
         return Rules(self.rule.ExecutionOrder)
 
-    # Lower case alias for ExecutionOrder
-    @property
-    def executionorder(self):
-        return self.ExecutionOrder
-
     @ExecutionOrder.setter
     def ExecutionOrder(self, value):
         self.rule.ExecutionOrder = value
 
-    # Lower case alias for ExecutionOrder setter
+    # Lower case aliases for ExecutionOrder
+    @property
+    def executionorder(self):
+        return self.ExecutionOrder
+
     @executionorder.setter
     def executionorder(self, value):
         self.ExecutionOrder = value
@@ -24154,7 +23420,7 @@ class Rule:
     def IsLocalRule(self):
         return self.rule.IsLocalRule
 
-    # Lower case alias for IsLocalRule
+    # Lower case aliases for IsLocalRule
     @property
     def islocalrule(self):
         return self.IsLocalRule
@@ -24163,16 +23429,15 @@ class Rule:
     def Name(self):
         return self.rule.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.rule.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -24181,7 +23446,7 @@ class Rule:
     def Parent(self):
         return self.rule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24190,7 +23455,7 @@ class Rule:
     def RuleType(self):
         return OlRuleType(self.rule.RuleType)
 
-    # Lower case alias for RuleType
+    # Lower case aliases for RuleType
     @property
     def ruletype(self):
         return self.RuleType
@@ -24199,7 +23464,7 @@ class Rule:
     def Session(self):
         return NameSpace(self.rule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24218,7 +23483,7 @@ class RuleAction:
     def ActionType(self):
         return OlRuleActionType(self.ruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -24235,16 +23500,15 @@ class RuleAction:
     def Enabled(self):
         return RuleAction(self.ruleaction.Enabled)
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.ruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -24253,7 +23517,7 @@ class RuleAction:
     def Parent(self):
         return self.ruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24262,7 +23526,7 @@ class RuleAction:
     def Session(self):
         return NameSpace(self.ruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24281,7 +23545,7 @@ class RuleActions:
     def AssignToCategory(self):
         return AssignToCategoryRuleAction(self.ruleactions.AssignToCategory)
 
-    # Lower case alias for AssignToCategory
+    # Lower case aliases for AssignToCategory
     @property
     def assigntocategory(self):
         return self.AssignToCategory
@@ -24290,7 +23554,7 @@ class RuleActions:
     def CC(self):
         return SendRuleAction(self.ruleactions.CC)
 
-    # Lower case alias for CC
+    # Lower case aliases for CC
     @property
     def cc(self):
         return self.CC
@@ -24303,7 +23567,7 @@ class RuleActions:
     def ClearCategories(self):
         return RuleAction(self.ruleactions.ClearCategories)
 
-    # Lower case alias for ClearCategories
+    # Lower case aliases for ClearCategories
     @property
     def clearcategories(self):
         return self.ClearCategories
@@ -24312,7 +23576,7 @@ class RuleActions:
     def CopyToFolder(self):
         return MoveOrCopyRuleAction(self.ruleactions.CopyToFolder)
 
-    # Lower case alias for CopyToFolder
+    # Lower case aliases for CopyToFolder
     @property
     def copytofolder(self):
         return self.CopyToFolder
@@ -24321,7 +23585,7 @@ class RuleActions:
     def Count(self):
         return self.ruleactions.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -24330,7 +23594,7 @@ class RuleActions:
     def Delete(self):
         return RuleAction(self.ruleactions.Delete)
 
-    # Lower case alias for Delete
+    # Lower case aliases for Delete
     @property
     def delete(self):
         return self.Delete
@@ -24339,7 +23603,7 @@ class RuleActions:
     def DeletePermanently(self):
         return RuleAction(self.ruleactions.DeletePermanently)
 
-    # Lower case alias for DeletePermanently
+    # Lower case aliases for DeletePermanently
     @property
     def deletepermanently(self):
         return self.DeletePermanently
@@ -24348,7 +23612,7 @@ class RuleActions:
     def DesktopAlert(self):
         return RuleAction(self.ruleactions.DesktopAlert)
 
-    # Lower case alias for DesktopAlert
+    # Lower case aliases for DesktopAlert
     @property
     def desktopalert(self):
         return self.DesktopAlert
@@ -24357,7 +23621,7 @@ class RuleActions:
     def Forward(self):
         return SendRuleAction(self.ruleactions.Forward)
 
-    # Lower case alias for Forward
+    # Lower case aliases for Forward
     @property
     def forward(self):
         return self.Forward
@@ -24366,7 +23630,7 @@ class RuleActions:
     def ForwardAsAttachment(self):
         return SendRuleAction(self.ruleactions.ForwardAsAttachment)
 
-    # Lower case alias for ForwardAsAttachment
+    # Lower case aliases for ForwardAsAttachment
     @property
     def forwardasattachment(self):
         return self.ForwardAsAttachment
@@ -24375,7 +23639,7 @@ class RuleActions:
     def MarkAsTask(self):
         return MarkAsTaskRuleAction(self.ruleactions.MarkAsTask)
 
-    # Lower case alias for MarkAsTask
+    # Lower case aliases for MarkAsTask
     @property
     def markastask(self):
         return self.MarkAsTask
@@ -24384,7 +23648,7 @@ class RuleActions:
     def MoveToFolder(self):
         return MoveOrCopyRuleAction(self.ruleactions.MoveToFolder)
 
-    # Lower case alias for MoveToFolder
+    # Lower case aliases for MoveToFolder
     @property
     def movetofolder(self):
         return self.MoveToFolder
@@ -24393,7 +23657,7 @@ class RuleActions:
     def NewItemAlert(self):
         return NewItemAlertRuleAction(self.ruleactions.NewItemAlert)
 
-    # Lower case alias for NewItemAlert
+    # Lower case aliases for NewItemAlert
     @property
     def newitemalert(self):
         return self.NewItemAlert
@@ -24402,7 +23666,7 @@ class RuleActions:
     def NotifyDelivery(self):
         return RuleAction(self.ruleactions.NotifyDelivery)
 
-    # Lower case alias for NotifyDelivery
+    # Lower case aliases for NotifyDelivery
     @property
     def notifydelivery(self):
         return self.NotifyDelivery
@@ -24411,7 +23675,7 @@ class RuleActions:
     def NotifyRead(self):
         return RuleAction(self.ruleactions.NotifyRead)
 
-    # Lower case alias for NotifyRead
+    # Lower case aliases for NotifyRead
     @property
     def notifyread(self):
         return self.NotifyRead
@@ -24420,7 +23684,7 @@ class RuleActions:
     def Parent(self):
         return self.ruleactions.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24429,7 +23693,7 @@ class RuleActions:
     def PlaySound(self):
         return PlaySoundRuleAction(self.ruleactions.PlaySound)
 
-    # Lower case alias for PlaySound
+    # Lower case aliases for PlaySound
     @property
     def playsound(self):
         return self.PlaySound
@@ -24438,7 +23702,7 @@ class RuleActions:
     def Redirect(self):
         return SendRuleAction(self.ruleactions.Redirect)
 
-    # Lower case alias for Redirect
+    # Lower case aliases for Redirect
     @property
     def redirect(self):
         return self.Redirect
@@ -24447,7 +23711,7 @@ class RuleActions:
     def Session(self):
         return NameSpace(self.ruleactions.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24456,7 +23720,7 @@ class RuleActions:
     def Stop(self):
         return RuleAction(self.ruleactions.Stop)
 
-    # Lower case alias for Stop
+    # Lower case aliases for Stop
     @property
     def stop(self):
         return self.Stop
@@ -24483,7 +23747,7 @@ class RuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.rulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -24492,16 +23756,15 @@ class RuleCondition:
     def Enabled(self):
         return RuleCondition(self.rulecondition.Enabled)
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.rulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -24510,7 +23773,7 @@ class RuleCondition:
     def Parent(self):
         return self.rulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24519,7 +23782,7 @@ class RuleCondition:
     def Session(self):
         return NameSpace(self.rulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24534,7 +23797,7 @@ class RuleConditions:
     def Account(self):
         return AccountRuleCondition(self.ruleconditions.Account)
 
-    # Lower case alias for Account
+    # Lower case aliases for Account
     @property
     def account(self):
         return self.Account
@@ -24543,7 +23806,7 @@ class RuleConditions:
     def AnyCategory(self):
         return RuleCondition(self.ruleconditions.AnyCategory)
 
-    # Lower case alias for AnyCategory
+    # Lower case aliases for AnyCategory
     @property
     def anycategory(self):
         return self.AnyCategory
@@ -24556,7 +23819,7 @@ class RuleConditions:
     def Body(self):
         return TextRuleCondition(self.ruleconditions.Body)
 
-    # Lower case alias for Body
+    # Lower case aliases for Body
     @property
     def body(self):
         return self.Body
@@ -24565,7 +23828,7 @@ class RuleConditions:
     def BodyOrSubject(self):
         return TextRuleCondition(self.ruleconditions.BodyOrSubject)
 
-    # Lower case alias for BodyOrSubject
+    # Lower case aliases for BodyOrSubject
     @property
     def bodyorsubject(self):
         return self.BodyOrSubject
@@ -24574,7 +23837,7 @@ class RuleConditions:
     def Category(self):
         return CategoryRuleCondition(self.ruleconditions.Category)
 
-    # Lower case alias for Category
+    # Lower case aliases for Category
     @property
     def category(self):
         return self.Category
@@ -24583,7 +23846,7 @@ class RuleConditions:
     def CC(self):
         return RuleCondition(self.ruleconditions.CC)
 
-    # Lower case alias for CC
+    # Lower case aliases for CC
     @property
     def cc(self):
         return self.CC
@@ -24596,7 +23859,7 @@ class RuleConditions:
     def Count(self):
         return self.ruleconditions.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -24605,7 +23868,7 @@ class RuleConditions:
     def FormName(self):
         return FormNameRuleCondition(self.ruleconditions.FormName)
 
-    # Lower case alias for FormName
+    # Lower case aliases for FormName
     @property
     def formname(self):
         return self.FormName
@@ -24618,7 +23881,7 @@ class RuleConditions:
     def FromAnyRSSFeed(self):
         return RuleCondition(self.ruleconditions.FromAnyRSSFeed)
 
-    # Lower case alias for FromAnyRSSFeed
+    # Lower case aliases for FromAnyRSSFeed
     @property
     def fromanyrssfeed(self):
         return self.FromAnyRSSFeed
@@ -24627,7 +23890,7 @@ class RuleConditions:
     def FromRssFeed(self):
         return FromRssFeedRuleCondition(self.ruleconditions.FromRssFeed)
 
-    # Lower case alias for FromRssFeed
+    # Lower case aliases for FromRssFeed
     @property
     def fromrssfeed(self):
         return self.FromRssFeed
@@ -24636,7 +23899,7 @@ class RuleConditions:
     def HasAttachment(self):
         return RuleCondition(self.ruleconditions.HasAttachment)
 
-    # Lower case alias for HasAttachment
+    # Lower case aliases for HasAttachment
     @property
     def hasattachment(self):
         return self.HasAttachment
@@ -24645,7 +23908,7 @@ class RuleConditions:
     def Importance(self):
         return ImportanceRuleCondition(self.ruleconditions.Importance)
 
-    # Lower case alias for Importance
+    # Lower case aliases for Importance
     @property
     def importance(self):
         return self.Importance
@@ -24654,7 +23917,7 @@ class RuleConditions:
     def MeetingInviteOrUpdate(self):
         return RuleCondition(self.ruleconditions.MeetingInviteOrUpdate)
 
-    # Lower case alias for MeetingInviteOrUpdate
+    # Lower case aliases for MeetingInviteOrUpdate
     @property
     def meetinginviteorupdate(self):
         return self.MeetingInviteOrUpdate
@@ -24663,7 +23926,7 @@ class RuleConditions:
     def MessageHeader(self):
         return TextRuleCondition(self.ruleconditions.MessageHeader)
 
-    # Lower case alias for MessageHeader
+    # Lower case aliases for MessageHeader
     @property
     def messageheader(self):
         return self.MessageHeader
@@ -24672,7 +23935,7 @@ class RuleConditions:
     def NotTo(self):
         return RuleCondition(self.ruleconditions.NotTo)
 
-    # Lower case alias for NotTo
+    # Lower case aliases for NotTo
     @property
     def notto(self):
         return self.NotTo
@@ -24681,7 +23944,7 @@ class RuleConditions:
     def OnLocalMachine(self):
         return RuleCondition(self.ruleconditions.OnLocalMachine)
 
-    # Lower case alias for OnLocalMachine
+    # Lower case aliases for OnLocalMachine
     @property
     def onlocalmachine(self):
         return self.OnLocalMachine
@@ -24690,7 +23953,7 @@ class RuleConditions:
     def OnlyToMe(self):
         return RuleCondition(self.ruleconditions.OnlyToMe)
 
-    # Lower case alias for OnlyToMe
+    # Lower case aliases for OnlyToMe
     @property
     def onlytome(self):
         return self.OnlyToMe
@@ -24699,7 +23962,7 @@ class RuleConditions:
     def OnOtherMachine(self):
         return RuleCondition(self.ruleconditions.OnOtherMachine)
 
-    # Lower case alias for OnOtherMachine
+    # Lower case aliases for OnOtherMachine
     @property
     def onothermachine(self):
         return self.OnOtherMachine
@@ -24708,7 +23971,7 @@ class RuleConditions:
     def Parent(self):
         return self.ruleconditions.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24717,7 +23980,7 @@ class RuleConditions:
     def RecipientAddress(self):
         return AddressRuleCondition(self.ruleconditions.RecipientAddress)
 
-    # Lower case alias for RecipientAddress
+    # Lower case aliases for RecipientAddress
     @property
     def recipientaddress(self):
         return self.RecipientAddress
@@ -24726,7 +23989,7 @@ class RuleConditions:
     def SenderAddress(self):
         return AddressRuleCondition(self.ruleconditions.SenderAddress)
 
-    # Lower case alias for SenderAddress
+    # Lower case aliases for SenderAddress
     @property
     def senderaddress(self):
         return self.SenderAddress
@@ -24735,7 +23998,7 @@ class RuleConditions:
     def SenderInAddressList(self):
         return SenderInAddressListRuleCondition(self.ruleconditions.SenderInAddressList)
 
-    # Lower case alias for SenderInAddressList
+    # Lower case aliases for SenderInAddressList
     @property
     def senderinaddresslist(self):
         return self.SenderInAddressList
@@ -24744,7 +24007,7 @@ class RuleConditions:
     def SentTo(self):
         return ToOrFromRuleCondition(self.ruleconditions.SentTo)
 
-    # Lower case alias for SentTo
+    # Lower case aliases for SentTo
     @property
     def sentto(self):
         return self.SentTo
@@ -24753,7 +24016,7 @@ class RuleConditions:
     def Session(self):
         return NameSpace(self.ruleconditions.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24762,7 +24025,7 @@ class RuleConditions:
     def Subject(self):
         return TextRuleCondition(self.ruleconditions.Subject)
 
-    # Lower case alias for Subject
+    # Lower case aliases for Subject
     @property
     def subject(self):
         return self.Subject
@@ -24771,7 +24034,7 @@ class RuleConditions:
     def ToMe(self):
         return RuleCondition(self.ruleconditions.ToMe)
 
-    # Lower case alias for ToMe
+    # Lower case aliases for ToMe
     @property
     def tome(self):
         return self.ToMe
@@ -24780,7 +24043,7 @@ class RuleConditions:
     def ToOrCc(self):
         return RuleCondition(self.ruleconditions.ToOrCc)
 
-    # Lower case alias for ToOrCc
+    # Lower case aliases for ToOrCc
     @property
     def toorcc(self):
         return self.ToOrCc
@@ -24807,7 +24070,7 @@ class Rules:
     def Count(self):
         return self.rules.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -24816,16 +24079,15 @@ class Rules:
     def IsRssRulesProcessingEnabled(self):
         return self.rules.IsRssRulesProcessingEnabled
 
-    # Lower case alias for IsRssRulesProcessingEnabled
-    @property
-    def isrssrulesprocessingenabled(self):
-        return self.IsRssRulesProcessingEnabled
-
     @IsRssRulesProcessingEnabled.setter
     def IsRssRulesProcessingEnabled(self, value):
         self.rules.IsRssRulesProcessingEnabled = value
 
-    # Lower case alias for IsRssRulesProcessingEnabled setter
+    # Lower case aliases for IsRssRulesProcessingEnabled
+    @property
+    def isrssrulesprocessingenabled(self):
+        return self.IsRssRulesProcessingEnabled
+
     @isrssrulesprocessingenabled.setter
     def isrssrulesprocessingenabled(self, value):
         self.IsRssRulesProcessingEnabled = value
@@ -24834,7 +24096,7 @@ class Rules:
     def Parent(self):
         return self.rules.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24843,7 +24105,7 @@ class Rules:
     def Session(self):
         return NameSpace(self.rules.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24882,7 +24144,7 @@ class Search:
     def Filter(self):
         return self.search.Filter
 
-    # Lower case alias for Filter
+    # Lower case aliases for Filter
     @property
     def filter(self):
         return self.Filter
@@ -24891,7 +24153,7 @@ class Search:
     def IsSynchronous(self):
         return self.search.IsSynchronous
 
-    # Lower case alias for IsSynchronous
+    # Lower case aliases for IsSynchronous
     @property
     def issynchronous(self):
         return self.IsSynchronous
@@ -24900,7 +24162,7 @@ class Search:
     def Parent(self):
         return self.search.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24909,7 +24171,7 @@ class Search:
     def Results(self):
         return Results(self.search.Results)
 
-    # Lower case alias for Results
+    # Lower case aliases for Results
     @property
     def results(self):
         return self.Results
@@ -24918,7 +24180,7 @@ class Search:
     def Scope(self):
         return self.search.Scope
 
-    # Lower case alias for Scope
+    # Lower case aliases for Scope
     @property
     def scope(self):
         return self.Scope
@@ -24927,7 +24189,7 @@ class Search:
     def SearchSubFolders(self):
         return self.search.SearchSubFolders
 
-    # Lower case alias for SearchSubFolders
+    # Lower case aliases for SearchSubFolders
     @property
     def searchsubfolders(self):
         return self.SearchSubFolders
@@ -24936,7 +24198,7 @@ class Search:
     def Session(self):
         return NameSpace(self.search.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -24945,7 +24207,7 @@ class Search:
     def Tag(self):
         return self.search.Tag
 
-    # Lower case alias for Tag
+    # Lower case aliases for Tag
     @property
     def tag(self):
         return self.Tag
@@ -24978,7 +24240,7 @@ class Selection:
     def Count(self):
         return self.selection.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -24987,7 +24249,7 @@ class Selection:
     def Location(self):
         return OlSelectionLocation(self.selection.Location)
 
-    # Lower case alias for Location
+    # Lower case aliases for Location
     @property
     def location(self):
         return self.Location
@@ -24996,7 +24258,7 @@ class Selection:
     def Parent(self):
         return self.selection.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25005,7 +24267,7 @@ class Selection:
     def Session(self):
         return NameSpace(self.selection.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -25028,16 +24290,15 @@ class SelectNamesDialog:
     def AllowMultipleSelection(self):
         return self.selectnamesdialog.AllowMultipleSelection
 
-    # Lower case alias for AllowMultipleSelection
-    @property
-    def allowmultipleselection(self):
-        return self.AllowMultipleSelection
-
     @AllowMultipleSelection.setter
     def AllowMultipleSelection(self, value):
         self.selectnamesdialog.AllowMultipleSelection = value
 
-    # Lower case alias for AllowMultipleSelection setter
+    # Lower case aliases for AllowMultipleSelection
+    @property
+    def allowmultipleselection(self):
+        return self.AllowMultipleSelection
+
     @allowmultipleselection.setter
     def allowmultipleselection(self, value):
         self.AllowMultipleSelection = value
@@ -25050,16 +24311,15 @@ class SelectNamesDialog:
     def BccLabel(self):
         return self.selectnamesdialog.BccLabel
 
-    # Lower case alias for BccLabel
-    @property
-    def bcclabel(self):
-        return self.BccLabel
-
     @BccLabel.setter
     def BccLabel(self, value):
         self.selectnamesdialog.BccLabel = value
 
-    # Lower case alias for BccLabel setter
+    # Lower case aliases for BccLabel
+    @property
+    def bcclabel(self):
+        return self.BccLabel
+
     @bcclabel.setter
     def bcclabel(self, value):
         self.BccLabel = value
@@ -25068,16 +24328,15 @@ class SelectNamesDialog:
     def Caption(self):
         return self.selectnamesdialog.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.selectnamesdialog.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -25086,16 +24345,15 @@ class SelectNamesDialog:
     def CcLabel(self):
         return self.selectnamesdialog.CcLabel
 
-    # Lower case alias for CcLabel
-    @property
-    def cclabel(self):
-        return self.CcLabel
-
     @CcLabel.setter
     def CcLabel(self, value):
         self.selectnamesdialog.CcLabel = value
 
-    # Lower case alias for CcLabel setter
+    # Lower case aliases for CcLabel
+    @property
+    def cclabel(self):
+        return self.CcLabel
+
     @cclabel.setter
     def cclabel(self, value):
         self.CcLabel = value
@@ -25108,16 +24366,15 @@ class SelectNamesDialog:
     def ForceResolution(self):
         return SelectNamesDialog.Recipients(self.selectnamesdialog.ForceResolution)
 
-    # Lower case alias for ForceResolution
-    @property
-    def forceresolution(self):
-        return self.ForceResolution
-
     @ForceResolution.setter
     def ForceResolution(self, value):
         self.selectnamesdialog.ForceResolution = value
 
-    # Lower case alias for ForceResolution setter
+    # Lower case aliases for ForceResolution
+    @property
+    def forceresolution(self):
+        return self.ForceResolution
+
     @forceresolution.setter
     def forceresolution(self, value):
         self.ForceResolution = value
@@ -25126,16 +24383,15 @@ class SelectNamesDialog:
     def InitialAddressList(self):
         return AddressList(self.selectnamesdialog.InitialAddressList)
 
-    # Lower case alias for InitialAddressList
-    @property
-    def initialaddresslist(self):
-        return self.InitialAddressList
-
     @InitialAddressList.setter
     def InitialAddressList(self, value):
         self.selectnamesdialog.InitialAddressList = value
 
-    # Lower case alias for InitialAddressList setter
+    # Lower case aliases for InitialAddressList
+    @property
+    def initialaddresslist(self):
+        return self.InitialAddressList
+
     @initialaddresslist.setter
     def initialaddresslist(self, value):
         self.InitialAddressList = value
@@ -25144,16 +24400,15 @@ class SelectNamesDialog:
     def NumberOfRecipientSelectors(self):
         return OlRecipientSelectors(self.selectnamesdialog.NumberOfRecipientSelectors)
 
-    # Lower case alias for NumberOfRecipientSelectors
-    @property
-    def numberofrecipientselectors(self):
-        return self.NumberOfRecipientSelectors
-
     @NumberOfRecipientSelectors.setter
     def NumberOfRecipientSelectors(self, value):
         self.selectnamesdialog.NumberOfRecipientSelectors = value
 
-    # Lower case alias for NumberOfRecipientSelectors setter
+    # Lower case aliases for NumberOfRecipientSelectors
+    @property
+    def numberofrecipientselectors(self):
+        return self.NumberOfRecipientSelectors
+
     @numberofrecipientselectors.setter
     def numberofrecipientselectors(self, value):
         self.NumberOfRecipientSelectors = value
@@ -25162,7 +24417,7 @@ class SelectNamesDialog:
     def Parent(self):
         return SelectNamesDialog(self.selectnamesdialog.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25171,16 +24426,15 @@ class SelectNamesDialog:
     def Recipients(self):
         return Recipients(self.selectnamesdialog.Recipients)
 
-    # Lower case alias for Recipients
-    @property
-    def recipients(self):
-        return self.Recipients
-
     @Recipients.setter
     def Recipients(self, value):
         self.selectnamesdialog.Recipients = value
 
-    # Lower case alias for Recipients setter
+    # Lower case aliases for Recipients
+    @property
+    def recipients(self):
+        return self.Recipients
+
     @recipients.setter
     def recipients(self, value):
         self.Recipients = value
@@ -25189,7 +24443,7 @@ class SelectNamesDialog:
     def Session(self):
         return NameSpace(self.selectnamesdialog.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -25198,16 +24452,15 @@ class SelectNamesDialog:
     def ShowOnlyInitialAddressList(self):
         return AddressList(self.selectnamesdialog.ShowOnlyInitialAddressList)
 
-    # Lower case alias for ShowOnlyInitialAddressList
-    @property
-    def showonlyinitialaddresslist(self):
-        return self.ShowOnlyInitialAddressList
-
     @ShowOnlyInitialAddressList.setter
     def ShowOnlyInitialAddressList(self, value):
         self.selectnamesdialog.ShowOnlyInitialAddressList = value
 
-    # Lower case alias for ShowOnlyInitialAddressList setter
+    # Lower case aliases for ShowOnlyInitialAddressList
+    @property
+    def showonlyinitialaddresslist(self):
+        return self.ShowOnlyInitialAddressList
+
     @showonlyinitialaddresslist.setter
     def showonlyinitialaddresslist(self, value):
         self.ShowOnlyInitialAddressList = value
@@ -25216,16 +24469,15 @@ class SelectNamesDialog:
     def ToLabel(self):
         return self.selectnamesdialog.ToLabel
 
-    # Lower case alias for ToLabel
-    @property
-    def tolabel(self):
-        return self.ToLabel
-
     @ToLabel.setter
     def ToLabel(self, value):
         self.selectnamesdialog.ToLabel = value
 
-    # Lower case alias for ToLabel setter
+    # Lower case aliases for ToLabel
+    @property
+    def tolabel(self):
+        return self.ToLabel
+
     @tolabel.setter
     def tolabel(self, value):
         self.ToLabel = value
@@ -25247,16 +24499,15 @@ class SenderInAddressListRuleCondition:
     def AddressList(self):
         return AddressList(self.senderinaddresslistrulecondition.AddressList)
 
-    # Lower case alias for AddressList
-    @property
-    def addresslist(self):
-        return self.AddressList
-
     @AddressList.setter
     def AddressList(self, value):
         self.senderinaddresslistrulecondition.AddressList = value
 
-    # Lower case alias for AddressList setter
+    # Lower case aliases for AddressList
+    @property
+    def addresslist(self):
+        return self.AddressList
+
     @addresslist.setter
     def addresslist(self, value):
         self.AddressList = value
@@ -25273,7 +24524,7 @@ class SenderInAddressListRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.senderinaddresslistrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -25282,16 +24533,15 @@ class SenderInAddressListRuleCondition:
     def Enabled(self):
         return self.senderinaddresslistrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.senderinaddresslistrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -25300,7 +24550,7 @@ class SenderInAddressListRuleCondition:
     def Parent(self):
         return self.senderinaddresslistrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25309,7 +24559,7 @@ class SenderInAddressListRuleCondition:
     def Session(self):
         return NameSpace(self.senderinaddresslistrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -25324,7 +24574,7 @@ class SendRuleAction:
     def ActionType(self):
         return OlRuleActionType(self.sendruleaction.ActionType)
 
-    # Lower case alias for ActionType
+    # Lower case aliases for ActionType
     @property
     def actiontype(self):
         return self.ActionType
@@ -25341,16 +24591,15 @@ class SendRuleAction:
     def Enabled(self):
         return self.sendruleaction.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.sendruleaction.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -25359,7 +24608,7 @@ class SendRuleAction:
     def Parent(self):
         return self.sendruleaction.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25368,7 +24617,7 @@ class SendRuleAction:
     def Recipients(self):
         return Recipients(self.sendruleaction.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -25377,7 +24626,7 @@ class SendRuleAction:
     def Session(self):
         return NameSpace(self.sendruleaction.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -25392,7 +24641,7 @@ class SharingItem:
     def Actions(self):
         return Actions(self.sharingitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -25401,16 +24650,15 @@ class SharingItem:
     def AllowWriteAccess(self):
         return self.sharingitem.AllowWriteAccess
 
-    # Lower case alias for AllowWriteAccess
-    @property
-    def allowwriteaccess(self):
-        return self.AllowWriteAccess
-
     @AllowWriteAccess.setter
     def AllowWriteAccess(self, value):
         self.sharingitem.AllowWriteAccess = value
 
-    # Lower case alias for AllowWriteAccess setter
+    # Lower case aliases for AllowWriteAccess
+    @property
+    def allowwriteaccess(self):
+        return self.AllowWriteAccess
+
     @allowwriteaccess.setter
     def allowwriteaccess(self, value):
         self.AllowWriteAccess = value
@@ -25419,16 +24667,15 @@ class SharingItem:
     def AlternateRecipientAllowed(self):
         return self.sharingitem.AlternateRecipientAllowed
 
-    # Lower case alias for AlternateRecipientAllowed
-    @property
-    def alternaterecipientallowed(self):
-        return self.AlternateRecipientAllowed
-
     @AlternateRecipientAllowed.setter
     def AlternateRecipientAllowed(self, value):
         self.sharingitem.AlternateRecipientAllowed = value
 
-    # Lower case alias for AlternateRecipientAllowed setter
+    # Lower case aliases for AlternateRecipientAllowed
+    @property
+    def alternaterecipientallowed(self):
+        return self.AlternateRecipientAllowed
+
     @alternaterecipientallowed.setter
     def alternaterecipientallowed(self, value):
         self.AlternateRecipientAllowed = value
@@ -25441,7 +24688,7 @@ class SharingItem:
     def Attachments(self):
         return Attachments(self.sharingitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -25450,16 +24697,15 @@ class SharingItem:
     def AutoForwarded(self):
         return self.sharingitem.AutoForwarded
 
-    # Lower case alias for AutoForwarded
-    @property
-    def autoforwarded(self):
-        return self.AutoForwarded
-
     @AutoForwarded.setter
     def AutoForwarded(self, value):
         self.sharingitem.AutoForwarded = value
 
-    # Lower case alias for AutoForwarded setter
+    # Lower case aliases for AutoForwarded
+    @property
+    def autoforwarded(self):
+        return self.AutoForwarded
+
     @autoforwarded.setter
     def autoforwarded(self, value):
         self.AutoForwarded = value
@@ -25468,16 +24714,15 @@ class SharingItem:
     def BCC(self):
         return SharingItem(self.sharingitem.BCC)
 
-    # Lower case alias for BCC
-    @property
-    def bcc(self):
-        return self.BCC
-
     @BCC.setter
     def BCC(self, value):
         self.sharingitem.BCC = value
 
-    # Lower case alias for BCC setter
+    # Lower case aliases for BCC
+    @property
+    def bcc(self):
+        return self.BCC
+
     @bcc.setter
     def bcc(self, value):
         self.BCC = value
@@ -25486,16 +24731,15 @@ class SharingItem:
     def BillingInformation(self):
         return SharingItem(self.sharingitem.BillingInformation)
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.sharingitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -25504,16 +24748,15 @@ class SharingItem:
     def Body(self):
         return SharingItem(self.sharingitem.Body)
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.sharingitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -25522,16 +24765,15 @@ class SharingItem:
     def BodyFormat(self):
         return OlBodyFormat(self.sharingitem.BodyFormat)
 
-    # Lower case alias for BodyFormat
-    @property
-    def bodyformat(self):
-        return self.BodyFormat
-
     @BodyFormat.setter
     def BodyFormat(self, value):
         self.sharingitem.BodyFormat = value
 
-    # Lower case alias for BodyFormat setter
+    # Lower case aliases for BodyFormat
+    @property
+    def bodyformat(self):
+        return self.BodyFormat
+
     @bodyformat.setter
     def bodyformat(self, value):
         self.BodyFormat = value
@@ -25540,16 +24782,15 @@ class SharingItem:
     def Categories(self):
         return SharingItem(self.sharingitem.Categories)
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.sharingitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -25558,16 +24799,15 @@ class SharingItem:
     def CC(self):
         return SharingItem(self.sharingitem.CC)
 
-    # Lower case alias for CC
-    @property
-    def cc(self):
-        return self.CC
-
     @CC.setter
     def CC(self, value):
         self.sharingitem.CC = value
 
-    # Lower case alias for CC setter
+    # Lower case aliases for CC
+    @property
+    def cc(self):
+        return self.CC
+
     @cc.setter
     def cc(self, value):
         self.CC = value
@@ -25580,16 +24820,15 @@ class SharingItem:
     def Companies(self):
         return SharingItem(self.sharingitem.Companies)
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.sharingitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -25598,7 +24837,7 @@ class SharingItem:
     def Conflicts(self):
         return self.sharingitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -25607,7 +24846,7 @@ class SharingItem:
     def ConversationID(self):
         return Conversation(self.sharingitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -25616,7 +24855,7 @@ class SharingItem:
     def ConversationIndex(self):
         return SharingItem(self.sharingitem.ConversationIndex)
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -25625,7 +24864,7 @@ class SharingItem:
     def ConversationTopic(self):
         return SharingItem(self.sharingitem.ConversationTopic)
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -25634,7 +24873,7 @@ class SharingItem:
     def CreationTime(self):
         return SharingItem(self.sharingitem.CreationTime)
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -25643,16 +24882,15 @@ class SharingItem:
     def DeferredDeliveryTime(self):
         return SharingItem(self.sharingitem.DeferredDeliveryTime)
 
-    # Lower case alias for DeferredDeliveryTime
-    @property
-    def deferreddeliverytime(self):
-        return self.DeferredDeliveryTime
-
     @DeferredDeliveryTime.setter
     def DeferredDeliveryTime(self, value):
         self.sharingitem.DeferredDeliveryTime = value
 
-    # Lower case alias for DeferredDeliveryTime setter
+    # Lower case aliases for DeferredDeliveryTime
+    @property
+    def deferreddeliverytime(self):
+        return self.DeferredDeliveryTime
+
     @deferreddeliverytime.setter
     def deferreddeliverytime(self, value):
         self.DeferredDeliveryTime = value
@@ -25661,16 +24899,15 @@ class SharingItem:
     def DeleteAfterSubmit(self):
         return self.sharingitem.DeleteAfterSubmit
 
-    # Lower case alias for DeleteAfterSubmit
-    @property
-    def deleteaftersubmit(self):
-        return self.DeleteAfterSubmit
-
     @DeleteAfterSubmit.setter
     def DeleteAfterSubmit(self, value):
         self.sharingitem.DeleteAfterSubmit = value
 
-    # Lower case alias for DeleteAfterSubmit setter
+    # Lower case aliases for DeleteAfterSubmit
+    @property
+    def deleteaftersubmit(self):
+        return self.DeleteAfterSubmit
+
     @deleteaftersubmit.setter
     def deleteaftersubmit(self, value):
         self.DeleteAfterSubmit = value
@@ -25679,7 +24916,7 @@ class SharingItem:
     def DownloadState(self):
         return OlDownloadState(self.sharingitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -25688,7 +24925,7 @@ class SharingItem:
     def EntryID(self):
         return SharingItem(self.sharingitem.EntryID)
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -25697,16 +24934,15 @@ class SharingItem:
     def ExpiryTime(self):
         return SharingItem(self.sharingitem.ExpiryTime)
 
-    # Lower case alias for ExpiryTime
-    @property
-    def expirytime(self):
-        return self.ExpiryTime
-
     @ExpiryTime.setter
     def ExpiryTime(self, value):
         self.sharingitem.ExpiryTime = value
 
-    # Lower case alias for ExpiryTime setter
+    # Lower case aliases for ExpiryTime
+    @property
+    def expirytime(self):
+        return self.ExpiryTime
+
     @expirytime.setter
     def expirytime(self, value):
         self.ExpiryTime = value
@@ -25715,16 +24951,15 @@ class SharingItem:
     def FlagRequest(self):
         return SharingItem(self.sharingitem.FlagRequest)
 
-    # Lower case alias for FlagRequest
-    @property
-    def flagrequest(self):
-        return self.FlagRequest
-
     @FlagRequest.setter
     def FlagRequest(self, value):
         self.sharingitem.FlagRequest = value
 
-    # Lower case alias for FlagRequest setter
+    # Lower case aliases for FlagRequest
+    @property
+    def flagrequest(self):
+        return self.FlagRequest
+
     @flagrequest.setter
     def flagrequest(self, value):
         self.FlagRequest = value
@@ -25733,7 +24968,7 @@ class SharingItem:
     def FormDescription(self):
         return FormDescription(self.sharingitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -25742,7 +24977,7 @@ class SharingItem:
     def GetInspector(self):
         return Inspector(self.sharingitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -25751,16 +24986,15 @@ class SharingItem:
     def HTMLBody(self):
         return SharingItem(self.sharingitem.HTMLBody)
 
-    # Lower case alias for HTMLBody
-    @property
-    def htmlbody(self):
-        return self.HTMLBody
-
     @HTMLBody.setter
     def HTMLBody(self, value):
         self.sharingitem.HTMLBody = value
 
-    # Lower case alias for HTMLBody setter
+    # Lower case aliases for HTMLBody
+    @property
+    def htmlbody(self):
+        return self.HTMLBody
+
     @htmlbody.setter
     def htmlbody(self, value):
         self.HTMLBody = value
@@ -25769,16 +25003,15 @@ class SharingItem:
     def Importance(self):
         return OlImportance(self.sharingitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.sharingitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -25787,16 +25020,15 @@ class SharingItem:
     def InternetCodepage(self):
         return self.sharingitem.InternetCodepage
 
-    # Lower case alias for InternetCodepage
-    @property
-    def internetcodepage(self):
-        return self.InternetCodepage
-
     @InternetCodepage.setter
     def InternetCodepage(self, value):
         self.sharingitem.InternetCodepage = value
 
-    # Lower case alias for InternetCodepage setter
+    # Lower case aliases for InternetCodepage
+    @property
+    def internetcodepage(self):
+        return self.InternetCodepage
+
     @internetcodepage.setter
     def internetcodepage(self, value):
         self.InternetCodepage = value
@@ -25805,7 +25037,7 @@ class SharingItem:
     def IsConflict(self):
         return SharingItem(self.sharingitem.IsConflict)
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -25814,7 +25046,7 @@ class SharingItem:
     def IsMarkedAsTask(self):
         return SharingItem(self.sharingitem.IsMarkedAsTask)
 
-    # Lower case alias for IsMarkedAsTask
+    # Lower case aliases for IsMarkedAsTask
     @property
     def ismarkedastask(self):
         return self.IsMarkedAsTask
@@ -25823,7 +25055,7 @@ class SharingItem:
     def ItemProperties(self):
         return ItemProperties(self.sharingitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -25832,7 +25064,7 @@ class SharingItem:
     def LastModificationTime(self):
         return SharingItem(self.sharingitem.LastModificationTime)
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -25841,16 +25073,15 @@ class SharingItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.sharingitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.sharingitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -25859,16 +25090,15 @@ class SharingItem:
     def MessageClass(self):
         return SharingItem(self.sharingitem.MessageClass)
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.sharingitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -25877,16 +25107,15 @@ class SharingItem:
     def Mileage(self):
         return SharingItem(self.sharingitem.Mileage)
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.sharingitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -25895,16 +25124,15 @@ class SharingItem:
     def NoAging(self):
         return SharingItem(self.sharingitem.NoAging)
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.sharingitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -25913,16 +25141,15 @@ class SharingItem:
     def OriginatorDeliveryReportRequested(self):
         return SharingItem(self.sharingitem.OriginatorDeliveryReportRequested)
 
-    # Lower case alias for OriginatorDeliveryReportRequested
-    @property
-    def originatordeliveryreportrequested(self):
-        return self.OriginatorDeliveryReportRequested
-
     @OriginatorDeliveryReportRequested.setter
     def OriginatorDeliveryReportRequested(self, value):
         self.sharingitem.OriginatorDeliveryReportRequested = value
 
-    # Lower case alias for OriginatorDeliveryReportRequested setter
+    # Lower case aliases for OriginatorDeliveryReportRequested
+    @property
+    def originatordeliveryreportrequested(self):
+        return self.OriginatorDeliveryReportRequested
+
     @originatordeliveryreportrequested.setter
     def originatordeliveryreportrequested(self, value):
         self.OriginatorDeliveryReportRequested = value
@@ -25931,7 +25158,7 @@ class SharingItem:
     def OutlookInternalVersion(self):
         return SharingItem(self.sharingitem.OutlookInternalVersion)
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -25940,7 +25167,7 @@ class SharingItem:
     def OutlookVersion(self):
         return SharingItem(self.sharingitem.OutlookVersion)
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -25949,7 +25176,7 @@ class SharingItem:
     def Parent(self):
         return SharingItem(self.sharingitem.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25958,16 +25185,15 @@ class SharingItem:
     def Permission(self):
         return self.sharingitem.Permission
 
-    # Lower case alias for Permission
-    @property
-    def permission(self):
-        return self.Permission
-
     @Permission.setter
     def Permission(self, value):
         self.sharingitem.Permission = value
 
-    # Lower case alias for Permission setter
+    # Lower case aliases for Permission
+    @property
+    def permission(self):
+        return self.Permission
+
     @permission.setter
     def permission(self, value):
         self.Permission = value
@@ -25976,16 +25202,15 @@ class SharingItem:
     def PermissionService(self):
         return self.sharingitem.PermissionService
 
-    # Lower case alias for PermissionService
-    @property
-    def permissionservice(self):
-        return self.PermissionService
-
     @PermissionService.setter
     def PermissionService(self, value):
         self.sharingitem.PermissionService = value
 
-    # Lower case alias for PermissionService setter
+    # Lower case aliases for PermissionService
+    @property
+    def permissionservice(self):
+        return self.PermissionService
+
     @permissionservice.setter
     def permissionservice(self, value):
         self.PermissionService = value
@@ -25994,16 +25219,15 @@ class SharingItem:
     def PermissionTemplateGuid(self):
         return SharingItem(self.sharingitem.PermissionTemplateGuid)
 
-    # Lower case alias for PermissionTemplateGuid
-    @property
-    def permissiontemplateguid(self):
-        return self.PermissionTemplateGuid
-
     @PermissionTemplateGuid.setter
     def PermissionTemplateGuid(self, value):
         self.sharingitem.PermissionTemplateGuid = value
 
-    # Lower case alias for PermissionTemplateGuid setter
+    # Lower case aliases for PermissionTemplateGuid
+    @property
+    def permissiontemplateguid(self):
+        return self.PermissionTemplateGuid
+
     @permissiontemplateguid.setter
     def permissiontemplateguid(self, value):
         self.PermissionTemplateGuid = value
@@ -26012,7 +25236,7 @@ class SharingItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.sharingitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -26021,7 +25245,7 @@ class SharingItem:
     def ReadReceiptRequested(self):
         return self.sharingitem.ReadReceiptRequested
 
-    # Lower case alias for ReadReceiptRequested
+    # Lower case aliases for ReadReceiptRequested
     @property
     def readreceiptrequested(self):
         return self.ReadReceiptRequested
@@ -26030,7 +25254,7 @@ class SharingItem:
     def ReceivedByEntryID(self):
         return self.sharingitem.ReceivedByEntryID
 
-    # Lower case alias for ReceivedByEntryID
+    # Lower case aliases for ReceivedByEntryID
     @property
     def receivedbyentryid(self):
         return self.ReceivedByEntryID
@@ -26039,7 +25263,7 @@ class SharingItem:
     def ReceivedByName(self):
         return SharingItem(self.sharingitem.ReceivedByName)
 
-    # Lower case alias for ReceivedByName
+    # Lower case aliases for ReceivedByName
     @property
     def receivedbyname(self):
         return self.ReceivedByName
@@ -26048,7 +25272,7 @@ class SharingItem:
     def ReceivedOnBehalfOfEntryID(self):
         return self.sharingitem.ReceivedOnBehalfOfEntryID
 
-    # Lower case alias for ReceivedOnBehalfOfEntryID
+    # Lower case aliases for ReceivedOnBehalfOfEntryID
     @property
     def receivedonbehalfofentryid(self):
         return self.ReceivedOnBehalfOfEntryID
@@ -26057,7 +25281,7 @@ class SharingItem:
     def ReceivedOnBehalfOfName(self):
         return SharingItem(self.sharingitem.ReceivedOnBehalfOfName)
 
-    # Lower case alias for ReceivedOnBehalfOfName
+    # Lower case aliases for ReceivedOnBehalfOfName
     @property
     def receivedonbehalfofname(self):
         return self.ReceivedOnBehalfOfName
@@ -26066,7 +25290,7 @@ class SharingItem:
     def ReceivedTime(self):
         return SharingItem(self.sharingitem.ReceivedTime)
 
-    # Lower case alias for ReceivedTime
+    # Lower case aliases for ReceivedTime
     @property
     def receivedtime(self):
         return self.ReceivedTime
@@ -26075,16 +25299,15 @@ class SharingItem:
     def RecipientReassignmentProhibited(self):
         return SharingItem(self.sharingitem.RecipientReassignmentProhibited)
 
-    # Lower case alias for RecipientReassignmentProhibited
-    @property
-    def recipientreassignmentprohibited(self):
-        return self.RecipientReassignmentProhibited
-
     @RecipientReassignmentProhibited.setter
     def RecipientReassignmentProhibited(self, value):
         self.sharingitem.RecipientReassignmentProhibited = value
 
-    # Lower case alias for RecipientReassignmentProhibited setter
+    # Lower case aliases for RecipientReassignmentProhibited
+    @property
+    def recipientreassignmentprohibited(self):
+        return self.RecipientReassignmentProhibited
+
     @recipientreassignmentprohibited.setter
     def recipientreassignmentprohibited(self, value):
         self.RecipientReassignmentProhibited = value
@@ -26093,7 +25316,7 @@ class SharingItem:
     def Recipients(self):
         return Recipients(self.sharingitem.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -26102,16 +25325,15 @@ class SharingItem:
     def ReminderOverrideDefault(self):
         return SharingItem(self.sharingitem.ReminderOverrideDefault)
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.sharingitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -26120,16 +25342,15 @@ class SharingItem:
     def ReminderPlaySound(self):
         return SharingItem(self.sharingitem.ReminderPlaySound)
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.sharingitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -26138,16 +25359,15 @@ class SharingItem:
     def ReminderSet(self):
         return SharingItem(self.sharingitem.ReminderSet)
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.sharingitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -26156,16 +25376,15 @@ class SharingItem:
     def ReminderSoundFile(self):
         return self.sharingitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.sharingitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -26174,16 +25393,15 @@ class SharingItem:
     def ReminderTime(self):
         return SharingItem(self.sharingitem.ReminderTime)
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.sharingitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -26192,7 +25410,7 @@ class SharingItem:
     def RemoteID(self):
         return SharingItem(self.sharingitem.RemoteID)
 
-    # Lower case alias for RemoteID
+    # Lower case aliases for RemoteID
     @property
     def remoteid(self):
         return self.RemoteID
@@ -26201,7 +25419,7 @@ class SharingItem:
     def RemoteName(self):
         return SharingItem(self.sharingitem.RemoteName)
 
-    # Lower case alias for RemoteName
+    # Lower case aliases for RemoteName
     @property
     def remotename(self):
         return self.RemoteName
@@ -26210,7 +25428,7 @@ class SharingItem:
     def RemotePath(self):
         return SharingItem(self.sharingitem.RemotePath)
 
-    # Lower case alias for RemotePath
+    # Lower case aliases for RemotePath
     @property
     def remotepath(self):
         return self.RemotePath
@@ -26219,16 +25437,15 @@ class SharingItem:
     def RemoteStatus(self):
         return OlRemoteStatus(self.sharingitem.RemoteStatus)
 
-    # Lower case alias for RemoteStatus
-    @property
-    def remotestatus(self):
-        return self.RemoteStatus
-
     @RemoteStatus.setter
     def RemoteStatus(self, value):
         self.sharingitem.RemoteStatus = value
 
-    # Lower case alias for RemoteStatus setter
+    # Lower case aliases for RemoteStatus
+    @property
+    def remotestatus(self):
+        return self.RemoteStatus
+
     @remotestatus.setter
     def remotestatus(self, value):
         self.RemoteStatus = value
@@ -26237,7 +25454,7 @@ class SharingItem:
     def ReplyRecipientNames(self):
         return SharingItem(self.sharingitem.ReplyRecipientNames)
 
-    # Lower case alias for ReplyRecipientNames
+    # Lower case aliases for ReplyRecipientNames
     @property
     def replyrecipientnames(self):
         return self.ReplyRecipientNames
@@ -26246,7 +25463,7 @@ class SharingItem:
     def ReplyRecipients(self):
         return Recipients(self.sharingitem.ReplyRecipients)
 
-    # Lower case alias for ReplyRecipients
+    # Lower case aliases for ReplyRecipients
     @property
     def replyrecipients(self):
         return self.ReplyRecipients
@@ -26255,7 +25472,7 @@ class SharingItem:
     def RequestedFolder(self):
         return OlDefaultFolders(self.sharingitem.RequestedFolder)
 
-    # Lower case alias for RequestedFolder
+    # Lower case aliases for RequestedFolder
     @property
     def requestedfolder(self):
         return self.RequestedFolder
@@ -26264,7 +25481,7 @@ class SharingItem:
     def RetentionExpirationDate(self):
         return SharingItem(self.sharingitem.RetentionExpirationDate)
 
-    # Lower case alias for RetentionExpirationDate
+    # Lower case aliases for RetentionExpirationDate
     @property
     def retentionexpirationdate(self):
         return self.RetentionExpirationDate
@@ -26273,7 +25490,7 @@ class SharingItem:
     def RetentionPolicyName(self):
         return self.sharingitem.RetentionPolicyName
 
-    # Lower case alias for RetentionPolicyName
+    # Lower case aliases for RetentionPolicyName
     @property
     def retentionpolicyname(self):
         return self.RetentionPolicyName
@@ -26282,16 +25499,15 @@ class SharingItem:
     def RTFBody(self):
         return self.sharingitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.sharingitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -26300,7 +25516,7 @@ class SharingItem:
     def Saved(self):
         return SharingItem(self.sharingitem.Saved)
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -26309,16 +25525,15 @@ class SharingItem:
     def SaveSentMessageFolder(self):
         return Folder(self.sharingitem.SaveSentMessageFolder)
 
-    # Lower case alias for SaveSentMessageFolder
-    @property
-    def savesentmessagefolder(self):
-        return self.SaveSentMessageFolder
-
     @SaveSentMessageFolder.setter
     def SaveSentMessageFolder(self, value):
         self.sharingitem.SaveSentMessageFolder = value
 
-    # Lower case alias for SaveSentMessageFolder setter
+    # Lower case aliases for SaveSentMessageFolder
+    @property
+    def savesentmessagefolder(self):
+        return self.SaveSentMessageFolder
+
     @savesentmessagefolder.setter
     def savesentmessagefolder(self, value):
         self.SaveSentMessageFolder = value
@@ -26327,7 +25542,7 @@ class SharingItem:
     def SenderEmailAddress(self):
         return SharingItem(self.sharingitem.SenderEmailAddress)
 
-    # Lower case alias for SenderEmailAddress
+    # Lower case aliases for SenderEmailAddress
     @property
     def senderemailaddress(self):
         return self.SenderEmailAddress
@@ -26336,7 +25551,7 @@ class SharingItem:
     def SenderEmailType(self):
         return SharingItem(self.sharingitem.SenderEmailType)
 
-    # Lower case alias for SenderEmailType
+    # Lower case aliases for SenderEmailType
     @property
     def senderemailtype(self):
         return self.SenderEmailType
@@ -26345,7 +25560,7 @@ class SharingItem:
     def SenderName(self):
         return SharingItem(self.sharingitem.SenderName)
 
-    # Lower case alias for SenderName
+    # Lower case aliases for SenderName
     @property
     def sendername(self):
         return self.SenderName
@@ -26354,16 +25569,15 @@ class SharingItem:
     def SendUsingAccount(self):
         return Account(self.sharingitem.SendUsingAccount)
 
-    # Lower case alias for SendUsingAccount
-    @property
-    def sendusingaccount(self):
-        return self.SendUsingAccount
-
     @SendUsingAccount.setter
     def SendUsingAccount(self, value):
         self.sharingitem.SendUsingAccount = value
 
-    # Lower case alias for SendUsingAccount setter
+    # Lower case aliases for SendUsingAccount
+    @property
+    def sendusingaccount(self):
+        return self.SendUsingAccount
+
     @sendusingaccount.setter
     def sendusingaccount(self, value):
         self.SendUsingAccount = value
@@ -26372,16 +25586,15 @@ class SharingItem:
     def Sensitivity(self):
         return OlSensitivity(self.sharingitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.sharingitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -26390,7 +25603,7 @@ class SharingItem:
     def Sent(self):
         return SharingItem(self.sharingitem.Sent)
 
-    # Lower case alias for Sent
+    # Lower case aliases for Sent
     @property
     def sent(self):
         return self.Sent
@@ -26399,7 +25612,7 @@ class SharingItem:
     def SentOn(self):
         return SharingItem(self.sharingitem.SentOn)
 
-    # Lower case alias for SentOn
+    # Lower case aliases for SentOn
     @property
     def senton(self):
         return self.SentOn
@@ -26408,16 +25621,15 @@ class SharingItem:
     def SentOnBehalfOfName(self):
         return SharingItem(self.sharingitem.SentOnBehalfOfName)
 
-    # Lower case alias for SentOnBehalfOfName
-    @property
-    def sentonbehalfofname(self):
-        return self.SentOnBehalfOfName
-
     @SentOnBehalfOfName.setter
     def SentOnBehalfOfName(self, value):
         self.sharingitem.SentOnBehalfOfName = value
 
-    # Lower case alias for SentOnBehalfOfName setter
+    # Lower case aliases for SentOnBehalfOfName
+    @property
+    def sentonbehalfofname(self):
+        return self.SentOnBehalfOfName
+
     @sentonbehalfofname.setter
     def sentonbehalfofname(self, value):
         self.SentOnBehalfOfName = value
@@ -26426,7 +25638,7 @@ class SharingItem:
     def Session(self):
         return NameSpace(self.sharingitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -26435,7 +25647,7 @@ class SharingItem:
     def SharingProvider(self):
         return OlSharingProvider(self.sharingitem.SharingProvider)
 
-    # Lower case alias for SharingProvider
+    # Lower case aliases for SharingProvider
     @property
     def sharingprovider(self):
         return self.SharingProvider
@@ -26444,7 +25656,7 @@ class SharingItem:
     def SharingProviderGuid(self):
         return SharingItem(self.sharingitem.SharingProviderGuid)
 
-    # Lower case alias for SharingProviderGuid
+    # Lower case aliases for SharingProviderGuid
     @property
     def sharingproviderguid(self):
         return self.SharingProviderGuid
@@ -26453,7 +25665,7 @@ class SharingItem:
     def Size(self):
         return SharingItem(self.sharingitem.Size)
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -26462,16 +25674,15 @@ class SharingItem:
     def Subject(self):
         return SharingItem(self.sharingitem.Subject)
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.sharingitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -26480,7 +25691,7 @@ class SharingItem:
     def Submitted(self):
         return SharingItem(self.sharingitem.Submitted)
 
-    # Lower case alias for Submitted
+    # Lower case aliases for Submitted
     @property
     def submitted(self):
         return self.Submitted
@@ -26489,16 +25700,15 @@ class SharingItem:
     def TaskCompletedDate(self):
         return SharingItem(self.sharingitem.TaskCompletedDate)
 
-    # Lower case alias for TaskCompletedDate
-    @property
-    def taskcompleteddate(self):
-        return self.TaskCompletedDate
-
     @TaskCompletedDate.setter
     def TaskCompletedDate(self, value):
         self.sharingitem.TaskCompletedDate = value
 
-    # Lower case alias for TaskCompletedDate setter
+    # Lower case aliases for TaskCompletedDate
+    @property
+    def taskcompleteddate(self):
+        return self.TaskCompletedDate
+
     @taskcompleteddate.setter
     def taskcompleteddate(self, value):
         self.TaskCompletedDate = value
@@ -26507,16 +25717,15 @@ class SharingItem:
     def TaskDueDate(self):
         return SharingItem(self.sharingitem.TaskDueDate)
 
-    # Lower case alias for TaskDueDate
-    @property
-    def taskduedate(self):
-        return self.TaskDueDate
-
     @TaskDueDate.setter
     def TaskDueDate(self, value):
         self.sharingitem.TaskDueDate = value
 
-    # Lower case alias for TaskDueDate setter
+    # Lower case aliases for TaskDueDate
+    @property
+    def taskduedate(self):
+        return self.TaskDueDate
+
     @taskduedate.setter
     def taskduedate(self, value):
         self.TaskDueDate = value
@@ -26525,16 +25734,15 @@ class SharingItem:
     def TaskStartDate(self):
         return SharingItem(self.sharingitem.TaskStartDate)
 
-    # Lower case alias for TaskStartDate
-    @property
-    def taskstartdate(self):
-        return self.TaskStartDate
-
     @TaskStartDate.setter
     def TaskStartDate(self, value):
         self.sharingitem.TaskStartDate = value
 
-    # Lower case alias for TaskStartDate setter
+    # Lower case aliases for TaskStartDate
+    @property
+    def taskstartdate(self):
+        return self.TaskStartDate
+
     @taskstartdate.setter
     def taskstartdate(self, value):
         self.TaskStartDate = value
@@ -26543,16 +25751,15 @@ class SharingItem:
     def TaskSubject(self):
         return SharingItem(self.sharingitem.TaskSubject)
 
-    # Lower case alias for TaskSubject
-    @property
-    def tasksubject(self):
-        return self.TaskSubject
-
     @TaskSubject.setter
     def TaskSubject(self, value):
         self.sharingitem.TaskSubject = value
 
-    # Lower case alias for TaskSubject setter
+    # Lower case aliases for TaskSubject
+    @property
+    def tasksubject(self):
+        return self.TaskSubject
+
     @tasksubject.setter
     def tasksubject(self, value):
         self.TaskSubject = value
@@ -26561,16 +25768,15 @@ class SharingItem:
     def To(self):
         return SharingItem(self.sharingitem.To)
 
-    # Lower case alias for To
-    @property
-    def to(self):
-        return self.To
-
     @To.setter
     def To(self, value):
         self.sharingitem.To = value
 
-    # Lower case alias for To setter
+    # Lower case aliases for To
+    @property
+    def to(self):
+        return self.To
+
     @to.setter
     def to(self, value):
         self.To = value
@@ -26579,16 +25785,15 @@ class SharingItem:
     def ToDoTaskOrdinal(self):
         return SharingItem(self.sharingitem.ToDoTaskOrdinal)
 
-    # Lower case alias for ToDoTaskOrdinal
-    @property
-    def todotaskordinal(self):
-        return self.ToDoTaskOrdinal
-
     @ToDoTaskOrdinal.setter
     def ToDoTaskOrdinal(self, value):
         self.sharingitem.ToDoTaskOrdinal = value
 
-    # Lower case alias for ToDoTaskOrdinal setter
+    # Lower case aliases for ToDoTaskOrdinal
+    @property
+    def todotaskordinal(self):
+        return self.ToDoTaskOrdinal
+
     @todotaskordinal.setter
     def todotaskordinal(self, value):
         self.ToDoTaskOrdinal = value
@@ -26597,16 +25802,15 @@ class SharingItem:
     def Type(self):
         return OlSharingMsgType(self.sharingitem.Type)
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.sharingitem.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -26615,16 +25819,15 @@ class SharingItem:
     def UnRead(self):
         return SharingItem(self.sharingitem.UnRead)
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.sharingitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -26633,7 +25836,7 @@ class SharingItem:
     def UserProperties(self):
         return UserProperties(self.sharingitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -26725,7 +25928,7 @@ class SimpleItems:
     def Count(self):
         return SimpleItems(self.simpleitems.Count)
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -26734,7 +25937,7 @@ class SimpleItems:
     def Parent(self):
         return SimpleItems(self.simpleitems.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -26743,7 +25946,7 @@ class SimpleItems:
     def Session(self):
         return NameSpace(self.simpleitems.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -26770,7 +25973,7 @@ class SolutionsModule:
     def Name(self):
         return SolutionsModule(self.solutionsmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -26779,7 +25982,7 @@ class SolutionsModule:
     def NavigationModuleType(self):
         return OlNavigationModuleType(self.solutionsmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -26788,7 +25991,7 @@ class SolutionsModule:
     def Parent(self):
         return SolutionsModule(self.solutionsmodule.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -26797,16 +26000,15 @@ class SolutionsModule:
     def Position(self):
         return SolutionsModule(self.solutionsmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.solutionsmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -26815,7 +26017,7 @@ class SolutionsModule:
     def Session(self):
         return NameSpace(self.solutionsmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -26824,16 +26026,15 @@ class SolutionsModule:
     def Visible(self):
         return self.solutionsmodule.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.solutionsmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -26856,7 +26057,7 @@ class StorageItem:
     def Attachments(self):
         return Attachments(self.storageitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -26865,16 +26066,15 @@ class StorageItem:
     def Body(self):
         return self.storageitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.storageitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -26887,7 +26087,7 @@ class StorageItem:
     def CreationTime(self):
         return StorageItem(self.storageitem.CreationTime)
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -26896,16 +26096,15 @@ class StorageItem:
     def Creator(self):
         return StorageItem(self.storageitem.Creator)
 
-    # Lower case alias for Creator
-    @property
-    def creator(self):
-        return self.Creator
-
     @Creator.setter
     def Creator(self, value):
         self.storageitem.Creator = value
 
-    # Lower case alias for Creator setter
+    # Lower case aliases for Creator
+    @property
+    def creator(self):
+        return self.Creator
+
     @creator.setter
     def creator(self, value):
         self.Creator = value
@@ -26914,7 +26113,7 @@ class StorageItem:
     def EntryID(self):
         return self.storageitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -26923,7 +26122,7 @@ class StorageItem:
     def LastModificationTime(self):
         return self.storageitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -26932,7 +26131,7 @@ class StorageItem:
     def Parent(self):
         return self.storageitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -26941,7 +26140,7 @@ class StorageItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.storageitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -26950,7 +26149,7 @@ class StorageItem:
     def Session(self):
         return NameSpace(self.storageitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -26959,7 +26158,7 @@ class StorageItem:
     def Size(self):
         return StorageItem(self.storageitem.Size)
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -26968,16 +26167,15 @@ class StorageItem:
     def Subject(self):
         return self.storageitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.storageitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -26986,7 +26184,7 @@ class StorageItem:
     def UserProperties(self):
         return UserProperties(self.storageitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -27011,7 +26209,7 @@ class Store:
     def Categories(self):
         return Categories(self.store.Categories)
 
-    # Lower case alias for Categories
+    # Lower case aliases for Categories
     @property
     def categories(self):
         return self.Categories
@@ -27024,7 +26222,7 @@ class Store:
     def DisplayName(self):
         return Store(self.store.DisplayName)
 
-    # Lower case alias for DisplayName
+    # Lower case aliases for DisplayName
     @property
     def displayname(self):
         return self.DisplayName
@@ -27033,7 +26231,7 @@ class Store:
     def ExchangeStoreType(self):
         return OlExchangeStoreType(self.store.ExchangeStoreType)
 
-    # Lower case alias for ExchangeStoreType
+    # Lower case aliases for ExchangeStoreType
     @property
     def exchangestoretype(self):
         return self.ExchangeStoreType
@@ -27042,7 +26240,7 @@ class Store:
     def FilePath(self):
         return self.store.FilePath
 
-    # Lower case alias for FilePath
+    # Lower case aliases for FilePath
     @property
     def filepath(self):
         return self.FilePath
@@ -27051,7 +26249,7 @@ class Store:
     def IsCachedExchange(self):
         return Store(self.store.IsCachedExchange)
 
-    # Lower case alias for IsCachedExchange
+    # Lower case aliases for IsCachedExchange
     @property
     def iscachedexchange(self):
         return self.IsCachedExchange
@@ -27060,7 +26258,7 @@ class Store:
     def IsConversationEnabled(self):
         return self.store.IsConversationEnabled
 
-    # Lower case alias for IsConversationEnabled
+    # Lower case aliases for IsConversationEnabled
     @property
     def isconversationenabled(self):
         return self.IsConversationEnabled
@@ -27069,7 +26267,7 @@ class Store:
     def IsDataFileStore(self):
         return Store(self.store.IsDataFileStore)
 
-    # Lower case alias for IsDataFileStore
+    # Lower case aliases for IsDataFileStore
     @property
     def isdatafilestore(self):
         return self.IsDataFileStore
@@ -27078,7 +26276,7 @@ class Store:
     def IsInstantSearchEnabled(self):
         return self.store.IsInstantSearchEnabled
 
-    # Lower case alias for IsInstantSearchEnabled
+    # Lower case aliases for IsInstantSearchEnabled
     @property
     def isinstantsearchenabled(self):
         return self.IsInstantSearchEnabled
@@ -27087,7 +26285,7 @@ class Store:
     def IsOpen(self):
         return Store(self.store.IsOpen)
 
-    # Lower case alias for IsOpen
+    # Lower case aliases for IsOpen
     @property
     def isopen(self):
         return self.IsOpen
@@ -27096,7 +26294,7 @@ class Store:
     def Parent(self):
         return self.store.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -27105,7 +26303,7 @@ class Store:
     def PropertyAccessor(self):
         return PropertyAccessor(self.store.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -27114,7 +26312,7 @@ class Store:
     def Session(self):
         return NameSpace(self.store.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -27123,7 +26321,7 @@ class Store:
     def StoreID(self):
         return Store(self.store.StoreID)
 
-    # Lower case alias for StoreID
+    # Lower case aliases for StoreID
     @property
     def storeid(self):
         return self.StoreID
@@ -27166,7 +26364,7 @@ class Stores:
     def Count(self):
         return self.stores.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -27175,7 +26373,7 @@ class Stores:
     def Parent(self):
         return self.stores.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -27184,7 +26382,7 @@ class Stores:
     def Session(self):
         return NameSpace(self.stores.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -27211,7 +26409,7 @@ class SyncObject:
     def Name(self):
         return self.syncobject.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -27220,7 +26418,7 @@ class SyncObject:
     def Parent(self):
         return self.syncobject.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -27229,7 +26427,7 @@ class SyncObject:
     def Session(self):
         return NameSpace(self.syncobject.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -27250,7 +26448,7 @@ class SyncObjects:
     def AppFolders(self):
         return self.syncobjects.AppFolders
 
-    # Lower case alias for AppFolders
+    # Lower case aliases for AppFolders
     @property
     def appfolders(self):
         return self.AppFolders
@@ -27267,7 +26465,7 @@ class SyncObjects:
     def Count(self):
         return self.syncobjects.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -27276,7 +26474,7 @@ class SyncObjects:
     def Parent(self):
         return self.syncobjects.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -27285,7 +26483,7 @@ class SyncObjects:
     def Session(self):
         return NameSpace(self.syncobjects.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -27312,7 +26510,7 @@ class Table:
     def Columns(self):
         return Columns(self.table.Columns)
 
-    # Lower case alias for Columns
+    # Lower case aliases for Columns
     @property
     def columns(self):
         return self.Columns
@@ -27321,7 +26519,7 @@ class Table:
     def EndOfTable(self):
         return Table(self.table.EndOfTable)
 
-    # Lower case alias for EndOfTable
+    # Lower case aliases for EndOfTable
     @property
     def endoftable(self):
         return self.EndOfTable
@@ -27330,7 +26528,7 @@ class Table:
     def Parent(self):
         return Table(self.table.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -27339,7 +26537,7 @@ class Table:
     def Session(self):
         return NameSpace(self.table.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -27382,16 +26580,15 @@ class TableView:
     def AllowInCellEditing(self):
         return TableView(self.tableview.AllowInCellEditing)
 
-    # Lower case alias for AllowInCellEditing
-    @property
-    def allowincellediting(self):
-        return self.AllowInCellEditing
-
     @AllowInCellEditing.setter
     def AllowInCellEditing(self, value):
         self.tableview.AllowInCellEditing = value
 
-    # Lower case alias for AllowInCellEditing setter
+    # Lower case aliases for AllowInCellEditing
+    @property
+    def allowincellediting(self):
+        return self.AllowInCellEditing
+
     @allowincellediting.setter
     def allowincellediting(self, value):
         self.AllowInCellEditing = value
@@ -27400,16 +26597,15 @@ class TableView:
     def AlwaysExpandConversation(self):
         return self.tableview.AlwaysExpandConversation
 
-    # Lower case alias for AlwaysExpandConversation
-    @property
-    def alwaysexpandconversation(self):
-        return self.AlwaysExpandConversation
-
     @AlwaysExpandConversation.setter
     def AlwaysExpandConversation(self, value):
         self.tableview.AlwaysExpandConversation = value
 
-    # Lower case alias for AlwaysExpandConversation setter
+    # Lower case aliases for AlwaysExpandConversation
+    @property
+    def alwaysexpandconversation(self):
+        return self.AlwaysExpandConversation
+
     @alwaysexpandconversation.setter
     def alwaysexpandconversation(self, value):
         self.AlwaysExpandConversation = value
@@ -27422,7 +26618,7 @@ class TableView:
     def AutoFormatRules(self):
         return AutoFormatRules(self.tableview.AutoFormatRules)
 
-    # Lower case alias for AutoFormatRules
+    # Lower case aliases for AutoFormatRules
     @property
     def autoformatrules(self):
         return self.AutoFormatRules
@@ -27431,16 +26627,15 @@ class TableView:
     def AutomaticColumnSizing(self):
         return TableView(self.tableview.AutomaticColumnSizing)
 
-    # Lower case alias for AutomaticColumnSizing
-    @property
-    def automaticcolumnsizing(self):
-        return self.AutomaticColumnSizing
-
     @AutomaticColumnSizing.setter
     def AutomaticColumnSizing(self, value):
         self.tableview.AutomaticColumnSizing = value
 
-    # Lower case alias for AutomaticColumnSizing setter
+    # Lower case aliases for AutomaticColumnSizing
+    @property
+    def automaticcolumnsizing(self):
+        return self.AutomaticColumnSizing
+
     @automaticcolumnsizing.setter
     def automaticcolumnsizing(self, value):
         self.AutomaticColumnSizing = value
@@ -27449,16 +26644,15 @@ class TableView:
     def AutomaticGrouping(self):
         return TableView(self.tableview.AutomaticGrouping)
 
-    # Lower case alias for AutomaticGrouping
-    @property
-    def automaticgrouping(self):
-        return self.AutomaticGrouping
-
     @AutomaticGrouping.setter
     def AutomaticGrouping(self, value):
         self.tableview.AutomaticGrouping = value
 
-    # Lower case alias for AutomaticGrouping setter
+    # Lower case aliases for AutomaticGrouping
+    @property
+    def automaticgrouping(self):
+        return self.AutomaticGrouping
+
     @automaticgrouping.setter
     def automaticgrouping(self, value):
         self.AutomaticGrouping = value
@@ -27467,16 +26661,15 @@ class TableView:
     def AutoPreview(self):
         return OlAutoPreview(self.tableview.AutoPreview)
 
-    # Lower case alias for AutoPreview
-    @property
-    def autopreview(self):
-        return self.AutoPreview
-
     @AutoPreview.setter
     def AutoPreview(self, value):
         self.tableview.AutoPreview = value
 
-    # Lower case alias for AutoPreview setter
+    # Lower case aliases for AutoPreview
+    @property
+    def autopreview(self):
+        return self.AutoPreview
+
     @autopreview.setter
     def autopreview(self, value):
         self.AutoPreview = value
@@ -27485,7 +26678,7 @@ class TableView:
     def AutoPreviewFont(self):
         return ViewFont(self.tableview.AutoPreviewFont)
 
-    # Lower case alias for AutoPreviewFont
+    # Lower case aliases for AutoPreviewFont
     @property
     def autopreviewfont(self):
         return self.AutoPreviewFont
@@ -27498,7 +26691,7 @@ class TableView:
     def ColumnFont(self):
         return ViewFont(self.tableview.ColumnFont)
 
-    # Lower case alias for ColumnFont
+    # Lower case aliases for ColumnFont
     @property
     def columnfont(self):
         return self.ColumnFont
@@ -27507,16 +26700,15 @@ class TableView:
     def DefaultExpandCollapseSetting(self):
         return OlDefaultExpandCollapseSetting(self.tableview.DefaultExpandCollapseSetting)
 
-    # Lower case alias for DefaultExpandCollapseSetting
-    @property
-    def defaultexpandcollapsesetting(self):
-        return self.DefaultExpandCollapseSetting
-
     @DefaultExpandCollapseSetting.setter
     def DefaultExpandCollapseSetting(self, value):
         self.tableview.DefaultExpandCollapseSetting = value
 
-    # Lower case alias for DefaultExpandCollapseSetting setter
+    # Lower case aliases for DefaultExpandCollapseSetting
+    @property
+    def defaultexpandcollapsesetting(self):
+        return self.DefaultExpandCollapseSetting
+
     @defaultexpandcollapsesetting.setter
     def defaultexpandcollapsesetting(self, value):
         self.DefaultExpandCollapseSetting = value
@@ -27525,16 +26717,15 @@ class TableView:
     def Filter(self):
         return self.tableview.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.tableview.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -27543,16 +26734,15 @@ class TableView:
     def GridLineStyle(self):
         return OlGridLineStyle(self.tableview.GridLineStyle)
 
-    # Lower case alias for GridLineStyle
-    @property
-    def gridlinestyle(self):
-        return self.GridLineStyle
-
     @GridLineStyle.setter
     def GridLineStyle(self, value):
         self.tableview.GridLineStyle = value
 
-    # Lower case alias for GridLineStyle setter
+    # Lower case aliases for GridLineStyle
+    @property
+    def gridlinestyle(self):
+        return self.GridLineStyle
+
     @gridlinestyle.setter
     def gridlinestyle(self, value):
         self.GridLineStyle = value
@@ -27561,7 +26751,7 @@ class TableView:
     def GroupByFields(self):
         return OrderFields(self.tableview.GroupByFields)
 
-    # Lower case alias for GroupByFields
+    # Lower case aliases for GroupByFields
     @property
     def groupbyfields(self):
         return self.GroupByFields
@@ -27570,16 +26760,15 @@ class TableView:
     def HideReadingPaneHeaderInfo(self):
         return TableView(self.tableview.HideReadingPaneHeaderInfo)
 
-    # Lower case alias for HideReadingPaneHeaderInfo
-    @property
-    def hidereadingpaneheaderinfo(self):
-        return self.HideReadingPaneHeaderInfo
-
     @HideReadingPaneHeaderInfo.setter
     def HideReadingPaneHeaderInfo(self, value):
         self.tableview.HideReadingPaneHeaderInfo = value
 
-    # Lower case alias for HideReadingPaneHeaderInfo setter
+    # Lower case aliases for HideReadingPaneHeaderInfo
+    @property
+    def hidereadingpaneheaderinfo(self):
+        return self.HideReadingPaneHeaderInfo
+
     @hidereadingpaneheaderinfo.setter
     def hidereadingpaneheaderinfo(self, value):
         self.HideReadingPaneHeaderInfo = value
@@ -27588,16 +26777,15 @@ class TableView:
     def Language(self):
         return self.tableview.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.tableview.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -27606,16 +26794,15 @@ class TableView:
     def LockUserChanges(self):
         return self.tableview.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.tableview.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -27624,16 +26811,15 @@ class TableView:
     def MaxLinesInMultiLineView(self):
         return TableView(self.tableview.MaxLinesInMultiLineView)
 
-    # Lower case alias for MaxLinesInMultiLineView
-    @property
-    def maxlinesinmultilineview(self):
-        return self.MaxLinesInMultiLineView
-
     @MaxLinesInMultiLineView.setter
     def MaxLinesInMultiLineView(self, value):
         self.tableview.MaxLinesInMultiLineView = value
 
-    # Lower case alias for MaxLinesInMultiLineView setter
+    # Lower case aliases for MaxLinesInMultiLineView
+    @property
+    def maxlinesinmultilineview(self):
+        return self.MaxLinesInMultiLineView
+
     @maxlinesinmultilineview.setter
     def maxlinesinmultilineview(self, value):
         self.MaxLinesInMultiLineView = value
@@ -27642,16 +26828,15 @@ class TableView:
     def Multiline(self):
         return OlMultiLine(self.tableview.Multiline)
 
-    # Lower case alias for Multiline
-    @property
-    def multiline(self):
-        return self.Multiline
-
     @Multiline.setter
     def Multiline(self, value):
         self.tableview.Multiline = value
 
-    # Lower case alias for Multiline setter
+    # Lower case aliases for Multiline
+    @property
+    def multiline(self):
+        return self.Multiline
+
     @multiline.setter
     def multiline(self, value):
         self.Multiline = value
@@ -27660,16 +26845,15 @@ class TableView:
     def MultiLineWidth(self):
         return TableView(self.tableview.MultiLineWidth)
 
-    # Lower case alias for MultiLineWidth
-    @property
-    def multilinewidth(self):
-        return self.MultiLineWidth
-
     @MultiLineWidth.setter
     def MultiLineWidth(self, value):
         self.tableview.MultiLineWidth = value
 
-    # Lower case alias for MultiLineWidth setter
+    # Lower case aliases for MultiLineWidth
+    @property
+    def multilinewidth(self):
+        return self.MultiLineWidth
+
     @multilinewidth.setter
     def multilinewidth(self, value):
         self.MultiLineWidth = value
@@ -27678,16 +26862,15 @@ class TableView:
     def Name(self):
         return self.tableview.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.tableview.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -27696,7 +26879,7 @@ class TableView:
     def Parent(self):
         return self.tableview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -27705,7 +26888,7 @@ class TableView:
     def RowFont(self):
         return ViewFont(self.tableview.RowFont)
 
-    # Lower case alias for RowFont
+    # Lower case aliases for RowFont
     @property
     def rowfont(self):
         return self.RowFont
@@ -27714,7 +26897,7 @@ class TableView:
     def SaveOption(self):
         return OlViewSaveOption(self.tableview.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -27723,7 +26906,7 @@ class TableView:
     def Session(self):
         return NameSpace(self.tableview.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -27732,16 +26915,15 @@ class TableView:
     def ShowConversationByDate(self):
         return self.tableview.ShowConversationByDate
 
-    # Lower case alias for ShowConversationByDate
-    @property
-    def showconversationbydate(self):
-        return self.ShowConversationByDate
-
     @ShowConversationByDate.setter
     def ShowConversationByDate(self, value):
         self.tableview.ShowConversationByDate = value
 
-    # Lower case alias for ShowConversationByDate setter
+    # Lower case aliases for ShowConversationByDate
+    @property
+    def showconversationbydate(self):
+        return self.ShowConversationByDate
+
     @showconversationbydate.setter
     def showconversationbydate(self, value):
         self.ShowConversationByDate = value
@@ -27750,16 +26932,15 @@ class TableView:
     def ShowConversationSendersAboveSubject(self):
         return self.tableview.ShowConversationSendersAboveSubject
 
-    # Lower case alias for ShowConversationSendersAboveSubject
-    @property
-    def showconversationsendersabovesubject(self):
-        return self.ShowConversationSendersAboveSubject
-
     @ShowConversationSendersAboveSubject.setter
     def ShowConversationSendersAboveSubject(self, value):
         self.tableview.ShowConversationSendersAboveSubject = value
 
-    # Lower case alias for ShowConversationSendersAboveSubject setter
+    # Lower case aliases for ShowConversationSendersAboveSubject
+    @property
+    def showconversationsendersabovesubject(self):
+        return self.ShowConversationSendersAboveSubject
+
     @showconversationsendersabovesubject.setter
     def showconversationsendersabovesubject(self, value):
         self.ShowConversationSendersAboveSubject = value
@@ -27768,16 +26949,15 @@ class TableView:
     def ShowFullConversations(self):
         return self.tableview.ShowFullConversations
 
-    # Lower case alias for ShowFullConversations
-    @property
-    def showfullconversations(self):
-        return self.ShowFullConversations
-
     @ShowFullConversations.setter
     def ShowFullConversations(self, value):
         self.tableview.ShowFullConversations = value
 
-    # Lower case alias for ShowFullConversations setter
+    # Lower case aliases for ShowFullConversations
+    @property
+    def showfullconversations(self):
+        return self.ShowFullConversations
+
     @showfullconversations.setter
     def showfullconversations(self, value):
         self.ShowFullConversations = value
@@ -27786,16 +26966,15 @@ class TableView:
     def ShowItemsInGroups(self):
         return TableView(self.tableview.ShowItemsInGroups)
 
-    # Lower case alias for ShowItemsInGroups
-    @property
-    def showitemsingroups(self):
-        return self.ShowItemsInGroups
-
     @ShowItemsInGroups.setter
     def ShowItemsInGroups(self, value):
         self.tableview.ShowItemsInGroups = value
 
-    # Lower case alias for ShowItemsInGroups setter
+    # Lower case aliases for ShowItemsInGroups
+    @property
+    def showitemsingroups(self):
+        return self.ShowItemsInGroups
+
     @showitemsingroups.setter
     def showitemsingroups(self, value):
         self.ShowItemsInGroups = value
@@ -27804,16 +26983,15 @@ class TableView:
     def ShowNewItemRow(self):
         return TableView(self.tableview.ShowNewItemRow)
 
-    # Lower case alias for ShowNewItemRow
-    @property
-    def shownewitemrow(self):
-        return self.ShowNewItemRow
-
     @ShowNewItemRow.setter
     def ShowNewItemRow(self, value):
         self.tableview.ShowNewItemRow = value
 
-    # Lower case alias for ShowNewItemRow setter
+    # Lower case aliases for ShowNewItemRow
+    @property
+    def shownewitemrow(self):
+        return self.ShowNewItemRow
+
     @shownewitemrow.setter
     def shownewitemrow(self, value):
         self.ShowNewItemRow = value
@@ -27822,16 +27000,15 @@ class TableView:
     def ShowReadingPane(self):
         return TableView(self.tableview.ShowReadingPane)
 
-    # Lower case alias for ShowReadingPane
-    @property
-    def showreadingpane(self):
-        return self.ShowReadingPane
-
     @ShowReadingPane.setter
     def ShowReadingPane(self, value):
         self.tableview.ShowReadingPane = value
 
-    # Lower case alias for ShowReadingPane setter
+    # Lower case aliases for ShowReadingPane
+    @property
+    def showreadingpane(self):
+        return self.ShowReadingPane
+
     @showreadingpane.setter
     def showreadingpane(self, value):
         self.ShowReadingPane = value
@@ -27840,7 +27017,7 @@ class TableView:
     def SortFields(self):
         return OrderFields(self.tableview.SortFields)
 
-    # Lower case alias for SortFields
+    # Lower case aliases for SortFields
     @property
     def sortfields(self):
         return self.SortFields
@@ -27849,7 +27026,7 @@ class TableView:
     def Standard(self):
         return TableView(self.tableview.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -27858,7 +27035,7 @@ class TableView:
     def ViewFields(self):
         return ViewFields(self.tableview.ViewFields)
 
-    # Lower case alias for ViewFields
+    # Lower case aliases for ViewFields
     @property
     def viewfields(self):
         return self.ViewFields
@@ -27867,7 +27044,7 @@ class TableView:
     def ViewType(self):
         return OlViewType(self.tableview.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -27876,16 +27053,15 @@ class TableView:
     def XML(self):
         return self.tableview.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.tableview.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -27923,7 +27099,7 @@ class TaskItem:
     def Actions(self):
         return Actions(self.taskitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -27932,16 +27108,15 @@ class TaskItem:
     def ActualWork(self):
         return self.taskitem.ActualWork
 
-    # Lower case alias for ActualWork
-    @property
-    def actualwork(self):
-        return self.ActualWork
-
     @ActualWork.setter
     def ActualWork(self, value):
         self.taskitem.ActualWork = value
 
-    # Lower case alias for ActualWork setter
+    # Lower case aliases for ActualWork
+    @property
+    def actualwork(self):
+        return self.ActualWork
+
     @actualwork.setter
     def actualwork(self, value):
         self.ActualWork = value
@@ -27954,7 +27129,7 @@ class TaskItem:
     def Attachments(self):
         return Attachments(self.taskitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -27963,7 +27138,7 @@ class TaskItem:
     def AutoResolvedWinner(self):
         return self.taskitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -27972,16 +27147,15 @@ class TaskItem:
     def BillingInformation(self):
         return self.taskitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.taskitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -27990,16 +27164,15 @@ class TaskItem:
     def Body(self):
         return self.taskitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.taskitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -28008,16 +27181,15 @@ class TaskItem:
     def CardData(self):
         return self.taskitem.CardData
 
-    # Lower case alias for CardData
-    @property
-    def carddata(self):
-        return self.CardData
-
     @CardData.setter
     def CardData(self, value):
         self.taskitem.CardData = value
 
-    # Lower case alias for CardData setter
+    # Lower case aliases for CardData
+    @property
+    def carddata(self):
+        return self.CardData
+
     @carddata.setter
     def carddata(self, value):
         self.CardData = value
@@ -28026,16 +27198,15 @@ class TaskItem:
     def Categories(self):
         return self.taskitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.taskitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -28048,16 +27219,15 @@ class TaskItem:
     def Companies(self):
         return self.taskitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.taskitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -28066,16 +27236,15 @@ class TaskItem:
     def Complete(self):
         return self.taskitem.Complete
 
-    # Lower case alias for Complete
-    @property
-    def complete(self):
-        return self.Complete
-
     @Complete.setter
     def Complete(self, value):
         self.taskitem.Complete = value
 
-    # Lower case alias for Complete setter
+    # Lower case aliases for Complete
+    @property
+    def complete(self):
+        return self.Complete
+
     @complete.setter
     def complete(self, value):
         self.Complete = value
@@ -28084,7 +27253,7 @@ class TaskItem:
     def Conflicts(self):
         return self.taskitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -28093,16 +27262,15 @@ class TaskItem:
     def ContactNames(self):
         return self.taskitem.ContactNames
 
-    # Lower case alias for ContactNames
-    @property
-    def contactnames(self):
-        return self.ContactNames
-
     @ContactNames.setter
     def ContactNames(self, value):
         self.taskitem.ContactNames = value
 
-    # Lower case alias for ContactNames setter
+    # Lower case aliases for ContactNames
+    @property
+    def contactnames(self):
+        return self.ContactNames
+
     @contactnames.setter
     def contactnames(self, value):
         self.ContactNames = value
@@ -28111,7 +27279,7 @@ class TaskItem:
     def ConversationID(self):
         return Conversation(self.taskitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -28120,7 +27288,7 @@ class TaskItem:
     def ConversationIndex(self):
         return self.taskitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -28129,7 +27297,7 @@ class TaskItem:
     def ConversationTopic(self):
         return self.taskitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -28138,7 +27306,7 @@ class TaskItem:
     def CreationTime(self):
         return self.taskitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -28147,16 +27315,15 @@ class TaskItem:
     def DateCompleted(self):
         return self.taskitem.DateCompleted
 
-    # Lower case alias for DateCompleted
-    @property
-    def datecompleted(self):
-        return self.DateCompleted
-
     @DateCompleted.setter
     def DateCompleted(self, value):
         self.taskitem.DateCompleted = value
 
-    # Lower case alias for DateCompleted setter
+    # Lower case aliases for DateCompleted
+    @property
+    def datecompleted(self):
+        return self.DateCompleted
+
     @datecompleted.setter
     def datecompleted(self, value):
         self.DateCompleted = value
@@ -28165,7 +27332,7 @@ class TaskItem:
     def DelegationState(self):
         return OlTaskDelegationState(self.taskitem.DelegationState)
 
-    # Lower case alias for DelegationState
+    # Lower case aliases for DelegationState
     @property
     def delegationstate(self):
         return self.DelegationState
@@ -28174,7 +27341,7 @@ class TaskItem:
     def Delegator(self):
         return self.taskitem.Delegator
 
-    # Lower case alias for Delegator
+    # Lower case aliases for Delegator
     @property
     def delegator(self):
         return self.Delegator
@@ -28183,7 +27350,7 @@ class TaskItem:
     def DownloadState(self):
         return OlDownloadState(self.taskitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -28192,16 +27359,15 @@ class TaskItem:
     def DueDate(self):
         return self.taskitem.DueDate
 
-    # Lower case alias for DueDate
-    @property
-    def duedate(self):
-        return self.DueDate
-
     @DueDate.setter
     def DueDate(self, value):
         self.taskitem.DueDate = value
 
-    # Lower case alias for DueDate setter
+    # Lower case aliases for DueDate
+    @property
+    def duedate(self):
+        return self.DueDate
+
     @duedate.setter
     def duedate(self, value):
         self.DueDate = value
@@ -28210,7 +27376,7 @@ class TaskItem:
     def EntryID(self):
         return self.taskitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -28219,7 +27385,7 @@ class TaskItem:
     def FormDescription(self):
         return FormDescription(self.taskitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -28228,7 +27394,7 @@ class TaskItem:
     def GetInspector(self):
         return Inspector(self.taskitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -28237,16 +27403,15 @@ class TaskItem:
     def Importance(self):
         return OlImportance(self.taskitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.taskitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -28255,16 +27420,15 @@ class TaskItem:
     def InternetCodepage(self):
         return self.taskitem.InternetCodepage
 
-    # Lower case alias for InternetCodepage
-    @property
-    def internetcodepage(self):
-        return self.InternetCodepage
-
     @InternetCodepage.setter
     def InternetCodepage(self, value):
         self.taskitem.InternetCodepage = value
 
-    # Lower case alias for InternetCodepage setter
+    # Lower case aliases for InternetCodepage
+    @property
+    def internetcodepage(self):
+        return self.InternetCodepage
+
     @internetcodepage.setter
     def internetcodepage(self, value):
         self.InternetCodepage = value
@@ -28273,7 +27437,7 @@ class TaskItem:
     def IsConflict(self):
         return self.taskitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -28282,7 +27446,7 @@ class TaskItem:
     def IsRecurring(self):
         return self.taskitem.IsRecurring
 
-    # Lower case alias for IsRecurring
+    # Lower case aliases for IsRecurring
     @property
     def isrecurring(self):
         return self.IsRecurring
@@ -28291,7 +27455,7 @@ class TaskItem:
     def ItemProperties(self):
         return ItemProperties(self.taskitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -28300,7 +27464,7 @@ class TaskItem:
     def LastModificationTime(self):
         return self.taskitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -28309,16 +27473,15 @@ class TaskItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.taskitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.taskitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -28327,16 +27490,15 @@ class TaskItem:
     def MessageClass(self):
         return self.taskitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.taskitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -28345,16 +27507,15 @@ class TaskItem:
     def Mileage(self):
         return self.taskitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.taskitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -28363,16 +27524,15 @@ class TaskItem:
     def NoAging(self):
         return self.taskitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.taskitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -28381,16 +27541,15 @@ class TaskItem:
     def Ordinal(self):
         return self.taskitem.Ordinal
 
-    # Lower case alias for Ordinal
-    @property
-    def ordinal(self):
-        return self.Ordinal
-
     @Ordinal.setter
     def Ordinal(self, value):
         self.taskitem.Ordinal = value
 
-    # Lower case alias for Ordinal setter
+    # Lower case aliases for Ordinal
+    @property
+    def ordinal(self):
+        return self.Ordinal
+
     @ordinal.setter
     def ordinal(self, value):
         self.Ordinal = value
@@ -28399,7 +27558,7 @@ class TaskItem:
     def OutlookInternalVersion(self):
         return self.taskitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -28408,7 +27567,7 @@ class TaskItem:
     def OutlookVersion(self):
         return self.taskitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -28417,16 +27576,15 @@ class TaskItem:
     def Owner(self):
         return self.taskitem.Owner
 
-    # Lower case alias for Owner
-    @property
-    def owner(self):
-        return self.Owner
-
     @Owner.setter
     def Owner(self, value):
         self.taskitem.Owner = value
 
-    # Lower case alias for Owner setter
+    # Lower case aliases for Owner
+    @property
+    def owner(self):
+        return self.Owner
+
     @owner.setter
     def owner(self, value):
         self.Owner = value
@@ -28435,7 +27593,7 @@ class TaskItem:
     def Ownership(self):
         return OlTaskOwnership(self.taskitem.Ownership)
 
-    # Lower case alias for Ownership
+    # Lower case aliases for Ownership
     @property
     def ownership(self):
         return self.Ownership
@@ -28444,7 +27602,7 @@ class TaskItem:
     def Parent(self):
         return self.taskitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -28453,16 +27611,15 @@ class TaskItem:
     def PercentComplete(self):
         return self.taskitem.PercentComplete
 
-    # Lower case alias for PercentComplete
-    @property
-    def percentcomplete(self):
-        return self.PercentComplete
-
     @PercentComplete.setter
     def PercentComplete(self, value):
         self.taskitem.PercentComplete = value
 
-    # Lower case alias for PercentComplete setter
+    # Lower case aliases for PercentComplete
+    @property
+    def percentcomplete(self):
+        return self.PercentComplete
+
     @percentcomplete.setter
     def percentcomplete(self, value):
         self.PercentComplete = value
@@ -28471,7 +27628,7 @@ class TaskItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.taskitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -28480,7 +27637,7 @@ class TaskItem:
     def Recipients(self):
         return Recipients(self.taskitem.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -28489,16 +27646,15 @@ class TaskItem:
     def ReminderOverrideDefault(self):
         return self.taskitem.ReminderOverrideDefault
 
-    # Lower case alias for ReminderOverrideDefault
-    @property
-    def reminderoverridedefault(self):
-        return self.ReminderOverrideDefault
-
     @ReminderOverrideDefault.setter
     def ReminderOverrideDefault(self, value):
         self.taskitem.ReminderOverrideDefault = value
 
-    # Lower case alias for ReminderOverrideDefault setter
+    # Lower case aliases for ReminderOverrideDefault
+    @property
+    def reminderoverridedefault(self):
+        return self.ReminderOverrideDefault
+
     @reminderoverridedefault.setter
     def reminderoverridedefault(self, value):
         self.ReminderOverrideDefault = value
@@ -28507,16 +27663,15 @@ class TaskItem:
     def ReminderPlaySound(self):
         return self.taskitem.ReminderPlaySound
 
-    # Lower case alias for ReminderPlaySound
-    @property
-    def reminderplaysound(self):
-        return self.ReminderPlaySound
-
     @ReminderPlaySound.setter
     def ReminderPlaySound(self, value):
         self.taskitem.ReminderPlaySound = value
 
-    # Lower case alias for ReminderPlaySound setter
+    # Lower case aliases for ReminderPlaySound
+    @property
+    def reminderplaysound(self):
+        return self.ReminderPlaySound
+
     @reminderplaysound.setter
     def reminderplaysound(self, value):
         self.ReminderPlaySound = value
@@ -28525,16 +27680,15 @@ class TaskItem:
     def ReminderSet(self):
         return self.taskitem.ReminderSet
 
-    # Lower case alias for ReminderSet
-    @property
-    def reminderset(self):
-        return self.ReminderSet
-
     @ReminderSet.setter
     def ReminderSet(self, value):
         self.taskitem.ReminderSet = value
 
-    # Lower case alias for ReminderSet setter
+    # Lower case aliases for ReminderSet
+    @property
+    def reminderset(self):
+        return self.ReminderSet
+
     @reminderset.setter
     def reminderset(self, value):
         self.ReminderSet = value
@@ -28543,16 +27697,15 @@ class TaskItem:
     def ReminderSoundFile(self):
         return self.taskitem.ReminderSoundFile
 
-    # Lower case alias for ReminderSoundFile
-    @property
-    def remindersoundfile(self):
-        return self.ReminderSoundFile
-
     @ReminderSoundFile.setter
     def ReminderSoundFile(self, value):
         self.taskitem.ReminderSoundFile = value
 
-    # Lower case alias for ReminderSoundFile setter
+    # Lower case aliases for ReminderSoundFile
+    @property
+    def remindersoundfile(self):
+        return self.ReminderSoundFile
+
     @remindersoundfile.setter
     def remindersoundfile(self, value):
         self.ReminderSoundFile = value
@@ -28561,16 +27714,15 @@ class TaskItem:
     def ReminderTime(self):
         return self.taskitem.ReminderTime
 
-    # Lower case alias for ReminderTime
-    @property
-    def remindertime(self):
-        return self.ReminderTime
-
     @ReminderTime.setter
     def ReminderTime(self, value):
         self.taskitem.ReminderTime = value
 
-    # Lower case alias for ReminderTime setter
+    # Lower case aliases for ReminderTime
+    @property
+    def remindertime(self):
+        return self.ReminderTime
+
     @remindertime.setter
     def remindertime(self, value):
         self.ReminderTime = value
@@ -28579,7 +27731,7 @@ class TaskItem:
     def ResponseState(self):
         return OlTaskResponse(self.taskitem.ResponseState)
 
-    # Lower case alias for ResponseState
+    # Lower case aliases for ResponseState
     @property
     def responsestate(self):
         return self.ResponseState
@@ -28588,16 +27740,15 @@ class TaskItem:
     def Role(self):
         return self.taskitem.Role
 
-    # Lower case alias for Role
-    @property
-    def role(self):
-        return self.Role
-
     @Role.setter
     def Role(self, value):
         self.taskitem.Role = value
 
-    # Lower case alias for Role setter
+    # Lower case aliases for Role
+    @property
+    def role(self):
+        return self.Role
+
     @role.setter
     def role(self, value):
         self.Role = value
@@ -28606,16 +27757,15 @@ class TaskItem:
     def RTFBody(self):
         return self.taskitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.taskitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -28624,7 +27774,7 @@ class TaskItem:
     def Saved(self):
         return self.taskitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -28633,16 +27783,15 @@ class TaskItem:
     def SchedulePlusPriority(self):
         return self.taskitem.SchedulePlusPriority
 
-    # Lower case alias for SchedulePlusPriority
-    @property
-    def schedulepluspriority(self):
-        return self.SchedulePlusPriority
-
     @SchedulePlusPriority.setter
     def SchedulePlusPriority(self, value):
         self.taskitem.SchedulePlusPriority = value
 
-    # Lower case alias for SchedulePlusPriority setter
+    # Lower case aliases for SchedulePlusPriority
+    @property
+    def schedulepluspriority(self):
+        return self.SchedulePlusPriority
+
     @schedulepluspriority.setter
     def schedulepluspriority(self, value):
         self.SchedulePlusPriority = value
@@ -28651,16 +27800,15 @@ class TaskItem:
     def SendUsingAccount(self):
         return Account(self.taskitem.SendUsingAccount)
 
-    # Lower case alias for SendUsingAccount
-    @property
-    def sendusingaccount(self):
-        return self.SendUsingAccount
-
     @SendUsingAccount.setter
     def SendUsingAccount(self, value):
         self.taskitem.SendUsingAccount = value
 
-    # Lower case alias for SendUsingAccount setter
+    # Lower case aliases for SendUsingAccount
+    @property
+    def sendusingaccount(self):
+        return self.SendUsingAccount
+
     @sendusingaccount.setter
     def sendusingaccount(self, value):
         self.SendUsingAccount = value
@@ -28669,16 +27817,15 @@ class TaskItem:
     def Sensitivity(self):
         return OlSensitivity(self.taskitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.taskitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -28687,7 +27834,7 @@ class TaskItem:
     def Session(self):
         return NameSpace(self.taskitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -28696,7 +27843,7 @@ class TaskItem:
     def Size(self):
         return self.taskitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -28705,16 +27852,15 @@ class TaskItem:
     def StartDate(self):
         return self.taskitem.StartDate
 
-    # Lower case alias for StartDate
-    @property
-    def startdate(self):
-        return self.StartDate
-
     @StartDate.setter
     def StartDate(self, value):
         self.taskitem.StartDate = value
 
-    # Lower case alias for StartDate setter
+    # Lower case aliases for StartDate
+    @property
+    def startdate(self):
+        return self.StartDate
+
     @startdate.setter
     def startdate(self, value):
         self.StartDate = value
@@ -28723,16 +27869,15 @@ class TaskItem:
     def Status(self):
         return OlTaskStatus(self.taskitem.Status)
 
-    # Lower case alias for Status
-    @property
-    def status(self):
-        return self.Status
-
     @Status.setter
     def Status(self, value):
         self.taskitem.Status = value
 
-    # Lower case alias for Status setter
+    # Lower case aliases for Status
+    @property
+    def status(self):
+        return self.Status
+
     @status.setter
     def status(self, value):
         self.Status = value
@@ -28741,16 +27886,15 @@ class TaskItem:
     def StatusOnCompletionRecipients(self):
         return self.taskitem.StatusOnCompletionRecipients
 
-    # Lower case alias for StatusOnCompletionRecipients
-    @property
-    def statusoncompletionrecipients(self):
-        return self.StatusOnCompletionRecipients
-
     @StatusOnCompletionRecipients.setter
     def StatusOnCompletionRecipients(self, value):
         self.taskitem.StatusOnCompletionRecipients = value
 
-    # Lower case alias for StatusOnCompletionRecipients setter
+    # Lower case aliases for StatusOnCompletionRecipients
+    @property
+    def statusoncompletionrecipients(self):
+        return self.StatusOnCompletionRecipients
+
     @statusoncompletionrecipients.setter
     def statusoncompletionrecipients(self, value):
         self.StatusOnCompletionRecipients = value
@@ -28759,16 +27903,15 @@ class TaskItem:
     def StatusUpdateRecipients(self):
         return self.taskitem.StatusUpdateRecipients
 
-    # Lower case alias for StatusUpdateRecipients
-    @property
-    def statusupdaterecipients(self):
-        return self.StatusUpdateRecipients
-
     @StatusUpdateRecipients.setter
     def StatusUpdateRecipients(self, value):
         self.taskitem.StatusUpdateRecipients = value
 
-    # Lower case alias for StatusUpdateRecipients setter
+    # Lower case aliases for StatusUpdateRecipients
+    @property
+    def statusupdaterecipients(self):
+        return self.StatusUpdateRecipients
+
     @statusupdaterecipients.setter
     def statusupdaterecipients(self, value):
         self.StatusUpdateRecipients = value
@@ -28777,16 +27920,15 @@ class TaskItem:
     def Subject(self):
         return self.taskitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.taskitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -28795,16 +27937,15 @@ class TaskItem:
     def TeamTask(self):
         return self.taskitem.TeamTask
 
-    # Lower case alias for TeamTask
-    @property
-    def teamtask(self):
-        return self.TeamTask
-
     @TeamTask.setter
     def TeamTask(self, value):
         self.taskitem.TeamTask = value
 
-    # Lower case alias for TeamTask setter
+    # Lower case aliases for TeamTask
+    @property
+    def teamtask(self):
+        return self.TeamTask
+
     @teamtask.setter
     def teamtask(self, value):
         self.TeamTask = value
@@ -28813,16 +27954,15 @@ class TaskItem:
     def ToDoTaskOrdinal(self):
         return TaskItem(self.taskitem.ToDoTaskOrdinal)
 
-    # Lower case alias for ToDoTaskOrdinal
-    @property
-    def todotaskordinal(self):
-        return self.ToDoTaskOrdinal
-
     @ToDoTaskOrdinal.setter
     def ToDoTaskOrdinal(self, value):
         self.taskitem.ToDoTaskOrdinal = value
 
-    # Lower case alias for ToDoTaskOrdinal setter
+    # Lower case aliases for ToDoTaskOrdinal
+    @property
+    def todotaskordinal(self):
+        return self.ToDoTaskOrdinal
+
     @todotaskordinal.setter
     def todotaskordinal(self, value):
         self.ToDoTaskOrdinal = value
@@ -28831,16 +27971,15 @@ class TaskItem:
     def TotalWork(self):
         return self.taskitem.TotalWork
 
-    # Lower case alias for TotalWork
-    @property
-    def totalwork(self):
-        return self.TotalWork
-
     @TotalWork.setter
     def TotalWork(self, value):
         self.taskitem.TotalWork = value
 
-    # Lower case alias for TotalWork setter
+    # Lower case aliases for TotalWork
+    @property
+    def totalwork(self):
+        return self.TotalWork
+
     @totalwork.setter
     def totalwork(self, value):
         self.TotalWork = value
@@ -28849,16 +27988,15 @@ class TaskItem:
     def UnRead(self):
         return self.taskitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.taskitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -28867,7 +28005,7 @@ class TaskItem:
     def UserProperties(self):
         return UserProperties(self.taskitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -28944,7 +28082,7 @@ class TaskRequestAcceptItem:
     def Actions(self):
         return Actions(self.taskrequestacceptitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -28957,7 +28095,7 @@ class TaskRequestAcceptItem:
     def Attachments(self):
         return Attachments(self.taskrequestacceptitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -28966,7 +28104,7 @@ class TaskRequestAcceptItem:
     def AutoResolvedWinner(self):
         return self.taskrequestacceptitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -28975,16 +28113,15 @@ class TaskRequestAcceptItem:
     def BillingInformation(self):
         return self.taskrequestacceptitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.taskrequestacceptitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -28993,16 +28130,15 @@ class TaskRequestAcceptItem:
     def Body(self):
         return self.taskrequestacceptitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.taskrequestacceptitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -29011,16 +28147,15 @@ class TaskRequestAcceptItem:
     def Categories(self):
         return self.taskrequestacceptitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.taskrequestacceptitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -29033,16 +28168,15 @@ class TaskRequestAcceptItem:
     def Companies(self):
         return self.taskrequestacceptitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.taskrequestacceptitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -29051,7 +28185,7 @@ class TaskRequestAcceptItem:
     def Conflicts(self):
         return self.taskrequestacceptitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -29060,7 +28194,7 @@ class TaskRequestAcceptItem:
     def ConversationID(self):
         return Conversation(self.taskrequestacceptitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -29069,7 +28203,7 @@ class TaskRequestAcceptItem:
     def ConversationIndex(self):
         return self.taskrequestacceptitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -29078,7 +28212,7 @@ class TaskRequestAcceptItem:
     def ConversationTopic(self):
         return self.taskrequestacceptitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -29087,7 +28221,7 @@ class TaskRequestAcceptItem:
     def CreationTime(self):
         return self.taskrequestacceptitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -29096,7 +28230,7 @@ class TaskRequestAcceptItem:
     def DownloadState(self):
         return OlDownloadState(self.taskrequestacceptitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -29105,7 +28239,7 @@ class TaskRequestAcceptItem:
     def EntryID(self):
         return self.taskrequestacceptitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -29114,7 +28248,7 @@ class TaskRequestAcceptItem:
     def FormDescription(self):
         return FormDescription(self.taskrequestacceptitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -29123,7 +28257,7 @@ class TaskRequestAcceptItem:
     def GetInspector(self):
         return Inspector(self.taskrequestacceptitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -29132,16 +28266,15 @@ class TaskRequestAcceptItem:
     def Importance(self):
         return OlImportance(self.taskrequestacceptitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.taskrequestacceptitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -29150,7 +28283,7 @@ class TaskRequestAcceptItem:
     def IsConflict(self):
         return self.taskrequestacceptitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -29159,7 +28292,7 @@ class TaskRequestAcceptItem:
     def ItemProperties(self):
         return ItemProperties(self.taskrequestacceptitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -29168,7 +28301,7 @@ class TaskRequestAcceptItem:
     def LastModificationTime(self):
         return self.taskrequestacceptitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -29177,16 +28310,15 @@ class TaskRequestAcceptItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.taskrequestacceptitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.taskrequestacceptitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -29195,16 +28327,15 @@ class TaskRequestAcceptItem:
     def MessageClass(self):
         return self.taskrequestacceptitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.taskrequestacceptitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -29213,16 +28344,15 @@ class TaskRequestAcceptItem:
     def Mileage(self):
         return self.taskrequestacceptitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.taskrequestacceptitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -29231,16 +28361,15 @@ class TaskRequestAcceptItem:
     def NoAging(self):
         return self.taskrequestacceptitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.taskrequestacceptitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -29249,7 +28378,7 @@ class TaskRequestAcceptItem:
     def OutlookInternalVersion(self):
         return self.taskrequestacceptitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -29258,7 +28387,7 @@ class TaskRequestAcceptItem:
     def OutlookVersion(self):
         return self.taskrequestacceptitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -29267,7 +28396,7 @@ class TaskRequestAcceptItem:
     def Parent(self):
         return self.taskrequestacceptitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -29276,7 +28405,7 @@ class TaskRequestAcceptItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.taskrequestacceptitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -29285,16 +28414,15 @@ class TaskRequestAcceptItem:
     def RTFBody(self):
         return self.taskrequestacceptitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.taskrequestacceptitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -29303,7 +28431,7 @@ class TaskRequestAcceptItem:
     def Saved(self):
         return self.taskrequestacceptitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -29312,16 +28440,15 @@ class TaskRequestAcceptItem:
     def Sensitivity(self):
         return OlSensitivity(self.taskrequestacceptitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.taskrequestacceptitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -29330,7 +28457,7 @@ class TaskRequestAcceptItem:
     def Session(self):
         return NameSpace(self.taskrequestacceptitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -29339,7 +28466,7 @@ class TaskRequestAcceptItem:
     def Size(self):
         return self.taskrequestacceptitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -29348,16 +28475,15 @@ class TaskRequestAcceptItem:
     def Subject(self):
         return self.taskrequestacceptitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.taskrequestacceptitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -29366,16 +28492,15 @@ class TaskRequestAcceptItem:
     def UnRead(self):
         return self.taskrequestacceptitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.taskrequestacceptitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -29384,7 +28509,7 @@ class TaskRequestAcceptItem:
     def UserProperties(self):
         return UserProperties(self.taskrequestacceptitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -29437,7 +28562,7 @@ class TaskRequestDeclineItem:
     def Actions(self):
         return Actions(self.taskrequestdeclineitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -29450,7 +28575,7 @@ class TaskRequestDeclineItem:
     def Attachments(self):
         return Attachments(self.taskrequestdeclineitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -29459,7 +28584,7 @@ class TaskRequestDeclineItem:
     def AutoResolvedWinner(self):
         return self.taskrequestdeclineitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -29468,16 +28593,15 @@ class TaskRequestDeclineItem:
     def BillingInformation(self):
         return self.taskrequestdeclineitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.taskrequestdeclineitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -29486,16 +28610,15 @@ class TaskRequestDeclineItem:
     def Body(self):
         return self.taskrequestdeclineitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.taskrequestdeclineitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -29504,16 +28627,15 @@ class TaskRequestDeclineItem:
     def Categories(self):
         return self.taskrequestdeclineitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.taskrequestdeclineitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -29526,16 +28648,15 @@ class TaskRequestDeclineItem:
     def Companies(self):
         return self.taskrequestdeclineitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.taskrequestdeclineitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -29544,7 +28665,7 @@ class TaskRequestDeclineItem:
     def Conflicts(self):
         return self.taskrequestdeclineitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -29553,7 +28674,7 @@ class TaskRequestDeclineItem:
     def ConversationID(self):
         return Conversation(self.taskrequestdeclineitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -29562,7 +28683,7 @@ class TaskRequestDeclineItem:
     def ConversationIndex(self):
         return self.taskrequestdeclineitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -29571,7 +28692,7 @@ class TaskRequestDeclineItem:
     def ConversationTopic(self):
         return self.taskrequestdeclineitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -29580,7 +28701,7 @@ class TaskRequestDeclineItem:
     def CreationTime(self):
         return self.taskrequestdeclineitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -29589,7 +28710,7 @@ class TaskRequestDeclineItem:
     def DownloadState(self):
         return OlDownloadState(self.taskrequestdeclineitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -29598,7 +28719,7 @@ class TaskRequestDeclineItem:
     def EntryID(self):
         return self.taskrequestdeclineitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -29607,7 +28728,7 @@ class TaskRequestDeclineItem:
     def FormDescription(self):
         return FormDescription(self.taskrequestdeclineitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -29616,7 +28737,7 @@ class TaskRequestDeclineItem:
     def GetInspector(self):
         return Inspector(self.taskrequestdeclineitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -29625,16 +28746,15 @@ class TaskRequestDeclineItem:
     def Importance(self):
         return OlImportance(self.taskrequestdeclineitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.taskrequestdeclineitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -29643,7 +28763,7 @@ class TaskRequestDeclineItem:
     def IsConflict(self):
         return self.taskrequestdeclineitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -29652,7 +28772,7 @@ class TaskRequestDeclineItem:
     def ItemProperties(self):
         return ItemProperties(self.taskrequestdeclineitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -29661,7 +28781,7 @@ class TaskRequestDeclineItem:
     def LastModificationTime(self):
         return self.taskrequestdeclineitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -29670,16 +28790,15 @@ class TaskRequestDeclineItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.taskrequestdeclineitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.taskrequestdeclineitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -29688,16 +28807,15 @@ class TaskRequestDeclineItem:
     def MessageClass(self):
         return self.taskrequestdeclineitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.taskrequestdeclineitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -29706,16 +28824,15 @@ class TaskRequestDeclineItem:
     def Mileage(self):
         return self.taskrequestdeclineitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.taskrequestdeclineitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -29724,16 +28841,15 @@ class TaskRequestDeclineItem:
     def NoAging(self):
         return self.taskrequestdeclineitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.taskrequestdeclineitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -29742,7 +28858,7 @@ class TaskRequestDeclineItem:
     def OutlookInternalVersion(self):
         return self.taskrequestdeclineitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -29751,7 +28867,7 @@ class TaskRequestDeclineItem:
     def OutlookVersion(self):
         return self.taskrequestdeclineitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -29760,7 +28876,7 @@ class TaskRequestDeclineItem:
     def Parent(self):
         return self.taskrequestdeclineitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -29769,7 +28885,7 @@ class TaskRequestDeclineItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.taskrequestdeclineitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -29778,16 +28894,15 @@ class TaskRequestDeclineItem:
     def RTFBody(self):
         return self.taskrequestdeclineitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.taskrequestdeclineitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -29796,7 +28911,7 @@ class TaskRequestDeclineItem:
     def Saved(self):
         return self.taskrequestdeclineitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -29805,16 +28920,15 @@ class TaskRequestDeclineItem:
     def Sensitivity(self):
         return OlSensitivity(self.taskrequestdeclineitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.taskrequestdeclineitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -29823,7 +28937,7 @@ class TaskRequestDeclineItem:
     def Session(self):
         return NameSpace(self.taskrequestdeclineitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -29832,7 +28946,7 @@ class TaskRequestDeclineItem:
     def Size(self):
         return self.taskrequestdeclineitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -29841,16 +28955,15 @@ class TaskRequestDeclineItem:
     def Subject(self):
         return self.taskrequestdeclineitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.taskrequestdeclineitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -29859,16 +28972,15 @@ class TaskRequestDeclineItem:
     def UnRead(self):
         return self.taskrequestdeclineitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.taskrequestdeclineitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -29877,7 +28989,7 @@ class TaskRequestDeclineItem:
     def UserProperties(self):
         return UserProperties(self.taskrequestdeclineitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -29930,7 +29042,7 @@ class TaskRequestItem:
     def Actions(self):
         return Actions(self.taskrequestitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -29943,7 +29055,7 @@ class TaskRequestItem:
     def Attachments(self):
         return Attachments(self.taskrequestitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -29952,7 +29064,7 @@ class TaskRequestItem:
     def AutoResolvedWinner(self):
         return self.taskrequestitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -29961,16 +29073,15 @@ class TaskRequestItem:
     def BillingInformation(self):
         return self.taskrequestitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.taskrequestitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -29979,16 +29090,15 @@ class TaskRequestItem:
     def Body(self):
         return self.taskrequestitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.taskrequestitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -29997,16 +29107,15 @@ class TaskRequestItem:
     def Categories(self):
         return self.taskrequestitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.taskrequestitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -30019,16 +29128,15 @@ class TaskRequestItem:
     def Companies(self):
         return self.taskrequestitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.taskrequestitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -30037,7 +29145,7 @@ class TaskRequestItem:
     def Conflicts(self):
         return self.taskrequestitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -30046,7 +29154,7 @@ class TaskRequestItem:
     def ConversationID(self):
         return Conversation(self.taskrequestitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -30055,7 +29163,7 @@ class TaskRequestItem:
     def ConversationIndex(self):
         return self.taskrequestitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -30064,7 +29172,7 @@ class TaskRequestItem:
     def ConversationTopic(self):
         return self.taskrequestitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -30073,7 +29181,7 @@ class TaskRequestItem:
     def CreationTime(self):
         return self.taskrequestitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -30082,7 +29190,7 @@ class TaskRequestItem:
     def DownloadState(self):
         return OlDownloadState(self.taskrequestitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -30091,7 +29199,7 @@ class TaskRequestItem:
     def EntryID(self):
         return self.taskrequestitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -30100,7 +29208,7 @@ class TaskRequestItem:
     def FormDescription(self):
         return FormDescription(self.taskrequestitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -30109,7 +29217,7 @@ class TaskRequestItem:
     def GetInspector(self):
         return Inspector(self.taskrequestitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -30118,16 +29226,15 @@ class TaskRequestItem:
     def Importance(self):
         return OlImportance(self.taskrequestitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.taskrequestitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -30136,7 +29243,7 @@ class TaskRequestItem:
     def IsConflict(self):
         return self.taskrequestitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -30145,7 +29252,7 @@ class TaskRequestItem:
     def ItemProperties(self):
         return ItemProperties(self.taskrequestitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -30154,7 +29261,7 @@ class TaskRequestItem:
     def LastModificationTime(self):
         return self.taskrequestitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -30163,16 +29270,15 @@ class TaskRequestItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.taskrequestitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.taskrequestitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -30181,16 +29287,15 @@ class TaskRequestItem:
     def MessageClass(self):
         return self.taskrequestitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.taskrequestitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -30199,16 +29304,15 @@ class TaskRequestItem:
     def Mileage(self):
         return self.taskrequestitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.taskrequestitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -30217,16 +29321,15 @@ class TaskRequestItem:
     def NoAging(self):
         return self.taskrequestitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.taskrequestitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -30235,7 +29338,7 @@ class TaskRequestItem:
     def OutlookInternalVersion(self):
         return self.taskrequestitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -30244,7 +29347,7 @@ class TaskRequestItem:
     def OutlookVersion(self):
         return self.taskrequestitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -30253,7 +29356,7 @@ class TaskRequestItem:
     def Parent(self):
         return self.taskrequestitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -30262,7 +29365,7 @@ class TaskRequestItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.taskrequestitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -30271,16 +29374,15 @@ class TaskRequestItem:
     def RTFBody(self):
         return self.taskrequestitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.taskrequestitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -30289,7 +29391,7 @@ class TaskRequestItem:
     def Saved(self):
         return self.taskrequestitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -30298,16 +29400,15 @@ class TaskRequestItem:
     def Sensitivity(self):
         return OlSensitivity(self.taskrequestitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.taskrequestitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -30316,7 +29417,7 @@ class TaskRequestItem:
     def Session(self):
         return NameSpace(self.taskrequestitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -30325,7 +29426,7 @@ class TaskRequestItem:
     def Size(self):
         return self.taskrequestitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -30334,16 +29435,15 @@ class TaskRequestItem:
     def Subject(self):
         return self.taskrequestitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.taskrequestitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -30352,16 +29452,15 @@ class TaskRequestItem:
     def UnRead(self):
         return self.taskrequestitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.taskrequestitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -30370,7 +29469,7 @@ class TaskRequestItem:
     def UserProperties(self):
         return UserProperties(self.taskrequestitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -30423,7 +29522,7 @@ class TaskRequestUpdateItem:
     def Actions(self):
         return Actions(self.taskrequestupdateitem.Actions)
 
-    # Lower case alias for Actions
+    # Lower case aliases for Actions
     @property
     def actions(self):
         return self.Actions
@@ -30436,7 +29535,7 @@ class TaskRequestUpdateItem:
     def Attachments(self):
         return Attachments(self.taskrequestupdateitem.Attachments)
 
-    # Lower case alias for Attachments
+    # Lower case aliases for Attachments
     @property
     def attachments(self):
         return self.Attachments
@@ -30445,7 +29544,7 @@ class TaskRequestUpdateItem:
     def AutoResolvedWinner(self):
         return self.taskrequestupdateitem.AutoResolvedWinner
 
-    # Lower case alias for AutoResolvedWinner
+    # Lower case aliases for AutoResolvedWinner
     @property
     def autoresolvedwinner(self):
         return self.AutoResolvedWinner
@@ -30454,16 +29553,15 @@ class TaskRequestUpdateItem:
     def BillingInformation(self):
         return self.taskrequestupdateitem.BillingInformation
 
-    # Lower case alias for BillingInformation
-    @property
-    def billinginformation(self):
-        return self.BillingInformation
-
     @BillingInformation.setter
     def BillingInformation(self, value):
         self.taskrequestupdateitem.BillingInformation = value
 
-    # Lower case alias for BillingInformation setter
+    # Lower case aliases for BillingInformation
+    @property
+    def billinginformation(self):
+        return self.BillingInformation
+
     @billinginformation.setter
     def billinginformation(self, value):
         self.BillingInformation = value
@@ -30472,16 +29570,15 @@ class TaskRequestUpdateItem:
     def Body(self):
         return self.taskrequestupdateitem.Body
 
-    # Lower case alias for Body
-    @property
-    def body(self):
-        return self.Body
-
     @Body.setter
     def Body(self, value):
         self.taskrequestupdateitem.Body = value
 
-    # Lower case alias for Body setter
+    # Lower case aliases for Body
+    @property
+    def body(self):
+        return self.Body
+
     @body.setter
     def body(self, value):
         self.Body = value
@@ -30490,16 +29587,15 @@ class TaskRequestUpdateItem:
     def Categories(self):
         return self.taskrequestupdateitem.Categories
 
-    # Lower case alias for Categories
-    @property
-    def categories(self):
-        return self.Categories
-
     @Categories.setter
     def Categories(self, value):
         self.taskrequestupdateitem.Categories = value
 
-    # Lower case alias for Categories setter
+    # Lower case aliases for Categories
+    @property
+    def categories(self):
+        return self.Categories
+
     @categories.setter
     def categories(self, value):
         self.Categories = value
@@ -30512,16 +29608,15 @@ class TaskRequestUpdateItem:
     def Companies(self):
         return self.taskrequestupdateitem.Companies
 
-    # Lower case alias for Companies
-    @property
-    def companies(self):
-        return self.Companies
-
     @Companies.setter
     def Companies(self, value):
         self.taskrequestupdateitem.Companies = value
 
-    # Lower case alias for Companies setter
+    # Lower case aliases for Companies
+    @property
+    def companies(self):
+        return self.Companies
+
     @companies.setter
     def companies(self, value):
         self.Companies = value
@@ -30530,7 +29625,7 @@ class TaskRequestUpdateItem:
     def Conflicts(self):
         return self.taskrequestupdateitem.Conflicts
 
-    # Lower case alias for Conflicts
+    # Lower case aliases for Conflicts
     @property
     def conflicts(self):
         return self.Conflicts
@@ -30539,7 +29634,7 @@ class TaskRequestUpdateItem:
     def ConversationID(self):
         return Conversation(self.taskrequestupdateitem.ConversationID)
 
-    # Lower case alias for ConversationID
+    # Lower case aliases for ConversationID
     @property
     def conversationid(self):
         return self.ConversationID
@@ -30548,7 +29643,7 @@ class TaskRequestUpdateItem:
     def ConversationIndex(self):
         return self.taskrequestupdateitem.ConversationIndex
 
-    # Lower case alias for ConversationIndex
+    # Lower case aliases for ConversationIndex
     @property
     def conversationindex(self):
         return self.ConversationIndex
@@ -30557,7 +29652,7 @@ class TaskRequestUpdateItem:
     def ConversationTopic(self):
         return self.taskrequestupdateitem.ConversationTopic
 
-    # Lower case alias for ConversationTopic
+    # Lower case aliases for ConversationTopic
     @property
     def conversationtopic(self):
         return self.ConversationTopic
@@ -30566,7 +29661,7 @@ class TaskRequestUpdateItem:
     def CreationTime(self):
         return self.taskrequestupdateitem.CreationTime
 
-    # Lower case alias for CreationTime
+    # Lower case aliases for CreationTime
     @property
     def creationtime(self):
         return self.CreationTime
@@ -30575,7 +29670,7 @@ class TaskRequestUpdateItem:
     def DownloadState(self):
         return OlDownloadState(self.taskrequestupdateitem.DownloadState)
 
-    # Lower case alias for DownloadState
+    # Lower case aliases for DownloadState
     @property
     def downloadstate(self):
         return self.DownloadState
@@ -30584,7 +29679,7 @@ class TaskRequestUpdateItem:
     def EntryID(self):
         return self.taskrequestupdateitem.EntryID
 
-    # Lower case alias for EntryID
+    # Lower case aliases for EntryID
     @property
     def entryid(self):
         return self.EntryID
@@ -30593,7 +29688,7 @@ class TaskRequestUpdateItem:
     def FormDescription(self):
         return FormDescription(self.taskrequestupdateitem.FormDescription)
 
-    # Lower case alias for FormDescription
+    # Lower case aliases for FormDescription
     @property
     def formdescription(self):
         return self.FormDescription
@@ -30602,7 +29697,7 @@ class TaskRequestUpdateItem:
     def GetInspector(self):
         return Inspector(self.taskrequestupdateitem.GetInspector)
 
-    # Lower case alias for GetInspector
+    # Lower case aliases for GetInspector
     @property
     def getinspector(self):
         return self.GetInspector
@@ -30611,16 +29706,15 @@ class TaskRequestUpdateItem:
     def Importance(self):
         return OlImportance(self.taskrequestupdateitem.Importance)
 
-    # Lower case alias for Importance
-    @property
-    def importance(self):
-        return self.Importance
-
     @Importance.setter
     def Importance(self, value):
         self.taskrequestupdateitem.Importance = value
 
-    # Lower case alias for Importance setter
+    # Lower case aliases for Importance
+    @property
+    def importance(self):
+        return self.Importance
+
     @importance.setter
     def importance(self, value):
         self.Importance = value
@@ -30629,7 +29723,7 @@ class TaskRequestUpdateItem:
     def IsConflict(self):
         return self.taskrequestupdateitem.IsConflict
 
-    # Lower case alias for IsConflict
+    # Lower case aliases for IsConflict
     @property
     def isconflict(self):
         return self.IsConflict
@@ -30638,7 +29732,7 @@ class TaskRequestUpdateItem:
     def ItemProperties(self):
         return ItemProperties(self.taskrequestupdateitem.ItemProperties)
 
-    # Lower case alias for ItemProperties
+    # Lower case aliases for ItemProperties
     @property
     def itemproperties(self):
         return self.ItemProperties
@@ -30647,7 +29741,7 @@ class TaskRequestUpdateItem:
     def LastModificationTime(self):
         return self.taskrequestupdateitem.LastModificationTime
 
-    # Lower case alias for LastModificationTime
+    # Lower case aliases for LastModificationTime
     @property
     def lastmodificationtime(self):
         return self.LastModificationTime
@@ -30656,16 +29750,15 @@ class TaskRequestUpdateItem:
     def MarkForDownload(self):
         return OlRemoteStatus(self.taskrequestupdateitem.MarkForDownload)
 
-    # Lower case alias for MarkForDownload
-    @property
-    def markfordownload(self):
-        return self.MarkForDownload
-
     @MarkForDownload.setter
     def MarkForDownload(self, value):
         self.taskrequestupdateitem.MarkForDownload = value
 
-    # Lower case alias for MarkForDownload setter
+    # Lower case aliases for MarkForDownload
+    @property
+    def markfordownload(self):
+        return self.MarkForDownload
+
     @markfordownload.setter
     def markfordownload(self, value):
         self.MarkForDownload = value
@@ -30674,16 +29767,15 @@ class TaskRequestUpdateItem:
     def MessageClass(self):
         return self.taskrequestupdateitem.MessageClass
 
-    # Lower case alias for MessageClass
-    @property
-    def messageclass(self):
-        return self.MessageClass
-
     @MessageClass.setter
     def MessageClass(self, value):
         self.taskrequestupdateitem.MessageClass = value
 
-    # Lower case alias for MessageClass setter
+    # Lower case aliases for MessageClass
+    @property
+    def messageclass(self):
+        return self.MessageClass
+
     @messageclass.setter
     def messageclass(self, value):
         self.MessageClass = value
@@ -30692,16 +29784,15 @@ class TaskRequestUpdateItem:
     def Mileage(self):
         return self.taskrequestupdateitem.Mileage
 
-    # Lower case alias for Mileage
-    @property
-    def mileage(self):
-        return self.Mileage
-
     @Mileage.setter
     def Mileage(self, value):
         self.taskrequestupdateitem.Mileage = value
 
-    # Lower case alias for Mileage setter
+    # Lower case aliases for Mileage
+    @property
+    def mileage(self):
+        return self.Mileage
+
     @mileage.setter
     def mileage(self, value):
         self.Mileage = value
@@ -30710,16 +29801,15 @@ class TaskRequestUpdateItem:
     def NoAging(self):
         return self.taskrequestupdateitem.NoAging
 
-    # Lower case alias for NoAging
-    @property
-    def noaging(self):
-        return self.NoAging
-
     @NoAging.setter
     def NoAging(self, value):
         self.taskrequestupdateitem.NoAging = value
 
-    # Lower case alias for NoAging setter
+    # Lower case aliases for NoAging
+    @property
+    def noaging(self):
+        return self.NoAging
+
     @noaging.setter
     def noaging(self, value):
         self.NoAging = value
@@ -30728,7 +29818,7 @@ class TaskRequestUpdateItem:
     def OutlookInternalVersion(self):
         return self.taskrequestupdateitem.OutlookInternalVersion
 
-    # Lower case alias for OutlookInternalVersion
+    # Lower case aliases for OutlookInternalVersion
     @property
     def outlookinternalversion(self):
         return self.OutlookInternalVersion
@@ -30737,7 +29827,7 @@ class TaskRequestUpdateItem:
     def OutlookVersion(self):
         return self.taskrequestupdateitem.OutlookVersion
 
-    # Lower case alias for OutlookVersion
+    # Lower case aliases for OutlookVersion
     @property
     def outlookversion(self):
         return self.OutlookVersion
@@ -30746,7 +29836,7 @@ class TaskRequestUpdateItem:
     def Parent(self):
         return self.taskrequestupdateitem.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -30755,7 +29845,7 @@ class TaskRequestUpdateItem:
     def PropertyAccessor(self):
         return PropertyAccessor(self.taskrequestupdateitem.PropertyAccessor)
 
-    # Lower case alias for PropertyAccessor
+    # Lower case aliases for PropertyAccessor
     @property
     def propertyaccessor(self):
         return self.PropertyAccessor
@@ -30764,16 +29854,15 @@ class TaskRequestUpdateItem:
     def RTFBody(self):
         return self.taskrequestupdateitem.RTFBody
 
-    # Lower case alias for RTFBody
-    @property
-    def rtfbody(self):
-        return self.RTFBody
-
     @RTFBody.setter
     def RTFBody(self, value):
         self.taskrequestupdateitem.RTFBody = value
 
-    # Lower case alias for RTFBody setter
+    # Lower case aliases for RTFBody
+    @property
+    def rtfbody(self):
+        return self.RTFBody
+
     @rtfbody.setter
     def rtfbody(self, value):
         self.RTFBody = value
@@ -30782,7 +29871,7 @@ class TaskRequestUpdateItem:
     def Saved(self):
         return self.taskrequestupdateitem.Saved
 
-    # Lower case alias for Saved
+    # Lower case aliases for Saved
     @property
     def saved(self):
         return self.Saved
@@ -30791,16 +29880,15 @@ class TaskRequestUpdateItem:
     def Sensitivity(self):
         return OlSensitivity(self.taskrequestupdateitem.Sensitivity)
 
-    # Lower case alias for Sensitivity
-    @property
-    def sensitivity(self):
-        return self.Sensitivity
-
     @Sensitivity.setter
     def Sensitivity(self, value):
         self.taskrequestupdateitem.Sensitivity = value
 
-    # Lower case alias for Sensitivity setter
+    # Lower case aliases for Sensitivity
+    @property
+    def sensitivity(self):
+        return self.Sensitivity
+
     @sensitivity.setter
     def sensitivity(self, value):
         self.Sensitivity = value
@@ -30809,7 +29897,7 @@ class TaskRequestUpdateItem:
     def Session(self):
         return NameSpace(self.taskrequestupdateitem.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -30818,7 +29906,7 @@ class TaskRequestUpdateItem:
     def Size(self):
         return self.taskrequestupdateitem.Size
 
-    # Lower case alias for Size
+    # Lower case aliases for Size
     @property
     def size(self):
         return self.Size
@@ -30827,16 +29915,15 @@ class TaskRequestUpdateItem:
     def Subject(self):
         return self.taskrequestupdateitem.Subject
 
-    # Lower case alias for Subject
-    @property
-    def subject(self):
-        return self.Subject
-
     @Subject.setter
     def Subject(self, value):
         self.taskrequestupdateitem.Subject = value
 
-    # Lower case alias for Subject setter
+    # Lower case aliases for Subject
+    @property
+    def subject(self):
+        return self.Subject
+
     @subject.setter
     def subject(self, value):
         self.Subject = value
@@ -30845,16 +29932,15 @@ class TaskRequestUpdateItem:
     def UnRead(self):
         return self.taskrequestupdateitem.UnRead
 
-    # Lower case alias for UnRead
-    @property
-    def unread(self):
-        return self.UnRead
-
     @UnRead.setter
     def UnRead(self, value):
         self.taskrequestupdateitem.UnRead = value
 
-    # Lower case alias for UnRead setter
+    # Lower case aliases for UnRead
+    @property
+    def unread(self):
+        return self.UnRead
+
     @unread.setter
     def unread(self, value):
         self.UnRead = value
@@ -30863,7 +29949,7 @@ class TaskRequestUpdateItem:
     def UserProperties(self):
         return UserProperties(self.taskrequestupdateitem.UserProperties)
 
-    # Lower case alias for UserProperties
+    # Lower case aliases for UserProperties
     @property
     def userproperties(self):
         return self.UserProperties
@@ -30924,7 +30010,7 @@ class TasksModule:
     def Name(self):
         return TasksModule(self.tasksmodule.Name)
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -30933,7 +30019,7 @@ class TasksModule:
     def NavigationGroups(self):
         return NavigationGroups(self.tasksmodule.NavigationGroups)
 
-    # Lower case alias for NavigationGroups
+    # Lower case aliases for NavigationGroups
     @property
     def navigationgroups(self):
         return self.NavigationGroups
@@ -30942,7 +30028,7 @@ class TasksModule:
     def NavigationModuleType(self):
         return OlNavigationModuleType(self.tasksmodule.NavigationModuleType)
 
-    # Lower case alias for NavigationModuleType
+    # Lower case aliases for NavigationModuleType
     @property
     def navigationmoduletype(self):
         return self.NavigationModuleType
@@ -30951,7 +30037,7 @@ class TasksModule:
     def Parent(self):
         return self.tasksmodule.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -30960,16 +30046,15 @@ class TasksModule:
     def Position(self):
         return TasksModule(self.tasksmodule.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.tasksmodule.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -30978,7 +30063,7 @@ class TasksModule:
     def Session(self):
         return NameSpace(self.tasksmodule.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -30987,16 +30072,15 @@ class TasksModule:
     def Visible(self):
         return TasksModule(self.tasksmodule.Visible)
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.tasksmodule.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -31019,7 +30103,7 @@ class TextRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.textrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -31028,16 +30112,15 @@ class TextRuleCondition:
     def Enabled(self):
         return self.textrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.textrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -31046,7 +30129,7 @@ class TextRuleCondition:
     def Parent(self):
         return self.textrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31055,7 +30138,7 @@ class TextRuleCondition:
     def Session(self):
         return NameSpace(self.textrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31064,16 +30147,15 @@ class TextRuleCondition:
     def Text(self):
         return self.textrulecondition.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.textrulecondition.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -31096,16 +30178,15 @@ class TimelineView:
     def DefaultExpandCollapseSetting(self):
         return OlDefaultExpandCollapseSetting(self.timelineview.DefaultExpandCollapseSetting)
 
-    # Lower case alias for DefaultExpandCollapseSetting
-    @property
-    def defaultexpandcollapsesetting(self):
-        return self.DefaultExpandCollapseSetting
-
     @DefaultExpandCollapseSetting.setter
     def DefaultExpandCollapseSetting(self, value):
         self.timelineview.DefaultExpandCollapseSetting = value
 
-    # Lower case alias for DefaultExpandCollapseSetting setter
+    # Lower case aliases for DefaultExpandCollapseSetting
+    @property
+    def defaultexpandcollapsesetting(self):
+        return self.DefaultExpandCollapseSetting
+
     @defaultexpandcollapsesetting.setter
     def defaultexpandcollapsesetting(self, value):
         self.DefaultExpandCollapseSetting = value
@@ -31114,16 +30195,15 @@ class TimelineView:
     def EndField(self):
         return TimelineView(self.timelineview.EndField)
 
-    # Lower case alias for EndField
-    @property
-    def endfield(self):
-        return self.EndField
-
     @EndField.setter
     def EndField(self, value):
         self.timelineview.EndField = value
 
-    # Lower case alias for EndField setter
+    # Lower case aliases for EndField
+    @property
+    def endfield(self):
+        return self.EndField
+
     @endfield.setter
     def endfield(self, value):
         self.EndField = value
@@ -31132,16 +30212,15 @@ class TimelineView:
     def Filter(self):
         return self.timelineview.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.timelineview.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -31150,7 +30229,7 @@ class TimelineView:
     def GroupByFields(self):
         return OrderFields(self.timelineview.GroupByFields)
 
-    # Lower case alias for GroupByFields
+    # Lower case aliases for GroupByFields
     @property
     def groupbyfields(self):
         return self.GroupByFields
@@ -31159,7 +30238,7 @@ class TimelineView:
     def ItemFont(self):
         return ViewFont(self.timelineview.ItemFont)
 
-    # Lower case alias for ItemFont
+    # Lower case aliases for ItemFont
     @property
     def itemfont(self):
         return self.ItemFont
@@ -31168,16 +30247,15 @@ class TimelineView:
     def Language(self):
         return self.timelineview.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.timelineview.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -31186,16 +30264,15 @@ class TimelineView:
     def LockUserChanges(self):
         return self.timelineview.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.timelineview.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -31204,7 +30281,7 @@ class TimelineView:
     def LowerScaleFont(self):
         return ViewFont(self.timelineview.LowerScaleFont)
 
-    # Lower case alias for LowerScaleFont
+    # Lower case aliases for LowerScaleFont
     @property
     def lowerscalefont(self):
         return self.LowerScaleFont
@@ -31213,16 +30290,15 @@ class TimelineView:
     def MaxLabelWidth(self):
         return TimelineView(self.timelineview.MaxLabelWidth)
 
-    # Lower case alias for MaxLabelWidth
-    @property
-    def maxlabelwidth(self):
-        return self.MaxLabelWidth
-
     @MaxLabelWidth.setter
     def MaxLabelWidth(self, value):
         self.timelineview.MaxLabelWidth = value
 
-    # Lower case alias for MaxLabelWidth setter
+    # Lower case aliases for MaxLabelWidth
+    @property
+    def maxlabelwidth(self):
+        return self.MaxLabelWidth
+
     @maxlabelwidth.setter
     def maxlabelwidth(self, value):
         self.MaxLabelWidth = value
@@ -31231,16 +30307,15 @@ class TimelineView:
     def Name(self):
         return self.timelineview.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.timelineview.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -31249,7 +30324,7 @@ class TimelineView:
     def Parent(self):
         return self.timelineview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31258,7 +30333,7 @@ class TimelineView:
     def SaveOption(self):
         return OlViewSaveOption(self.timelineview.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -31267,7 +30342,7 @@ class TimelineView:
     def Session(self):
         return NameSpace(self.timelineview.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31276,16 +30351,15 @@ class TimelineView:
     def ShowLabelWhenViewingByMonth(self):
         return TimelineView(self.timelineview.ShowLabelWhenViewingByMonth)
 
-    # Lower case alias for ShowLabelWhenViewingByMonth
-    @property
-    def showlabelwhenviewingbymonth(self):
-        return self.ShowLabelWhenViewingByMonth
-
     @ShowLabelWhenViewingByMonth.setter
     def ShowLabelWhenViewingByMonth(self, value):
         self.timelineview.ShowLabelWhenViewingByMonth = value
 
-    # Lower case alias for ShowLabelWhenViewingByMonth setter
+    # Lower case aliases for ShowLabelWhenViewingByMonth
+    @property
+    def showlabelwhenviewingbymonth(self):
+        return self.ShowLabelWhenViewingByMonth
+
     @showlabelwhenviewingbymonth.setter
     def showlabelwhenviewingbymonth(self, value):
         self.ShowLabelWhenViewingByMonth = value
@@ -31294,16 +30368,15 @@ class TimelineView:
     def ShowWeekNumbers(self):
         return TimelineView(self.timelineview.ShowWeekNumbers)
 
-    # Lower case alias for ShowWeekNumbers
-    @property
-    def showweeknumbers(self):
-        return self.ShowWeekNumbers
-
     @ShowWeekNumbers.setter
     def ShowWeekNumbers(self, value):
         self.timelineview.ShowWeekNumbers = value
 
-    # Lower case alias for ShowWeekNumbers setter
+    # Lower case aliases for ShowWeekNumbers
+    @property
+    def showweeknumbers(self):
+        return self.ShowWeekNumbers
+
     @showweeknumbers.setter
     def showweeknumbers(self, value):
         self.ShowWeekNumbers = value
@@ -31312,7 +30385,7 @@ class TimelineView:
     def Standard(self):
         return TimelineView(self.timelineview.Standard)
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -31321,16 +30394,15 @@ class TimelineView:
     def StartField(self):
         return TimelineView(self.timelineview.StartField)
 
-    # Lower case alias for StartField
-    @property
-    def startfield(self):
-        return self.StartField
-
     @StartField.setter
     def StartField(self, value):
         self.timelineview.StartField = value
 
-    # Lower case alias for StartField setter
+    # Lower case aliases for StartField
+    @property
+    def startfield(self):
+        return self.StartField
+
     @startfield.setter
     def startfield(self, value):
         self.StartField = value
@@ -31339,16 +30411,15 @@ class TimelineView:
     def TimelineViewMode(self):
         return OlTimelineViewMode(self.timelineview.TimelineViewMode)
 
-    # Lower case alias for TimelineViewMode
-    @property
-    def timelineviewmode(self):
-        return self.TimelineViewMode
-
     @TimelineViewMode.setter
     def TimelineViewMode(self, value):
         self.timelineview.TimelineViewMode = value
 
-    # Lower case alias for TimelineViewMode setter
+    # Lower case aliases for TimelineViewMode
+    @property
+    def timelineviewmode(self):
+        return self.TimelineViewMode
+
     @timelineviewmode.setter
     def timelineviewmode(self, value):
         self.TimelineViewMode = value
@@ -31357,7 +30428,7 @@ class TimelineView:
     def UpperScaleFont(self):
         return ViewFont(self.timelineview.UpperScaleFont)
 
-    # Lower case alias for UpperScaleFont
+    # Lower case aliases for UpperScaleFont
     @property
     def upperscalefont(self):
         return self.UpperScaleFont
@@ -31366,7 +30437,7 @@ class TimelineView:
     def ViewType(self):
         return OlViewType(self.timelineview.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -31375,16 +30446,15 @@ class TimelineView:
     def XML(self):
         return self.timelineview.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.timelineview.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -31423,7 +30493,7 @@ class TimeZone:
     def Bias(self):
         return self.timezone.Bias
 
-    # Lower case alias for Bias
+    # Lower case aliases for Bias
     @property
     def bias(self):
         return self.Bias
@@ -31436,7 +30506,7 @@ class TimeZone:
     def DaylightBias(self):
         return self.timezone.DaylightBias
 
-    # Lower case alias for DaylightBias
+    # Lower case aliases for DaylightBias
     @property
     def daylightbias(self):
         return self.DaylightBias
@@ -31445,7 +30515,7 @@ class TimeZone:
     def DaylightDate(self):
         return self.timezone.DaylightDate
 
-    # Lower case alias for DaylightDate
+    # Lower case aliases for DaylightDate
     @property
     def daylightdate(self):
         return self.DaylightDate
@@ -31454,7 +30524,7 @@ class TimeZone:
     def DaylightDesignation(self):
         return self.timezone.DaylightDesignation
 
-    # Lower case alias for DaylightDesignation
+    # Lower case aliases for DaylightDesignation
     @property
     def daylightdesignation(self):
         return self.DaylightDesignation
@@ -31463,7 +30533,7 @@ class TimeZone:
     def ID(self):
         return self.timezone.ID
 
-    # Lower case alias for ID
+    # Lower case aliases for ID
     @property
     def id(self):
         return self.ID
@@ -31472,7 +30542,7 @@ class TimeZone:
     def Name(self):
         return self.timezone.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -31481,7 +30551,7 @@ class TimeZone:
     def Parent(self):
         return self.timezone.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31490,7 +30560,7 @@ class TimeZone:
     def Session(self):
         return NameSpace(self.timezone.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31499,7 +30569,7 @@ class TimeZone:
     def StandardBias(self):
         return self.timezone.StandardBias
 
-    # Lower case alias for StandardBias
+    # Lower case aliases for StandardBias
     @property
     def standardbias(self):
         return self.StandardBias
@@ -31508,7 +30578,7 @@ class TimeZone:
     def StandardDate(self):
         return self.timezone.StandardDate
 
-    # Lower case alias for StandardDate
+    # Lower case aliases for StandardDate
     @property
     def standarddate(self):
         return self.StandardDate
@@ -31517,7 +30587,7 @@ class TimeZone:
     def StandardDesignation(self):
         return self.timezone.StandardDesignation
 
-    # Lower case alias for StandardDesignation
+    # Lower case aliases for StandardDesignation
     @property
     def standarddesignation(self):
         return self.StandardDesignation
@@ -31543,7 +30613,7 @@ class TimeZones:
     def Count(self):
         return self.timezones.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -31552,7 +30622,7 @@ class TimeZones:
     def CurrentTimeZone(self):
         return TimeZone(self.timezones.CurrentTimeZone)
 
-    # Lower case alias for CurrentTimeZone
+    # Lower case aliases for CurrentTimeZone
     @property
     def currenttimezone(self):
         return self.CurrentTimeZone
@@ -31561,7 +30631,7 @@ class TimeZones:
     def Parent(self):
         return self.timezones.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31570,7 +30640,7 @@ class TimeZones:
     def Session(self):
         return NameSpace(self.timezones.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31601,7 +30671,7 @@ class ToOrFromRuleCondition:
     def ConditionType(self):
         return OlRuleConditionType(self.toorfromrulecondition.ConditionType)
 
-    # Lower case alias for ConditionType
+    # Lower case aliases for ConditionType
     @property
     def conditiontype(self):
         return self.ConditionType
@@ -31610,16 +30680,15 @@ class ToOrFromRuleCondition:
     def Enabled(self):
         return self.toorfromrulecondition.Enabled
 
-    # Lower case alias for Enabled
-    @property
-    def enabled(self):
-        return self.Enabled
-
     @Enabled.setter
     def Enabled(self, value):
         self.toorfromrulecondition.Enabled = value
 
-    # Lower case alias for Enabled setter
+    # Lower case aliases for Enabled
+    @property
+    def enabled(self):
+        return self.Enabled
+
     @enabled.setter
     def enabled(self, value):
         self.Enabled = value
@@ -31628,7 +30697,7 @@ class ToOrFromRuleCondition:
     def Parent(self):
         return self.toorfromrulecondition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31637,7 +30706,7 @@ class ToOrFromRuleCondition:
     def Recipients(self):
         return Recipients(self.toorfromrulecondition.Recipients)
 
-    # Lower case alias for Recipients
+    # Lower case aliases for Recipients
     @property
     def recipients(self):
         return self.Recipients
@@ -31646,7 +30715,7 @@ class ToOrFromRuleCondition:
     def Session(self):
         return NameSpace(self.toorfromrulecondition.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31669,7 +30738,7 @@ class UserDefinedProperties:
     def Count(self):
         return self.userdefinedproperties.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -31678,7 +30747,7 @@ class UserDefinedProperties:
     def Parent(self):
         return self.userdefinedproperties.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31687,7 +30756,7 @@ class UserDefinedProperties:
     def Session(self):
         return NameSpace(self.userdefinedproperties.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31729,7 +30798,7 @@ class UserDefinedProperty:
     def DisplayFormat(self):
         return UserDefinedProperty(self.userdefinedproperty.DisplayFormat)
 
-    # Lower case alias for DisplayFormat
+    # Lower case aliases for DisplayFormat
     @property
     def displayformat(self):
         return self.DisplayFormat
@@ -31738,7 +30807,7 @@ class UserDefinedProperty:
     def Formula(self):
         return self.userdefinedproperty.Formula
 
-    # Lower case alias for Formula
+    # Lower case aliases for Formula
     @property
     def formula(self):
         return self.Formula
@@ -31747,7 +30816,7 @@ class UserDefinedProperty:
     def Name(self):
         return self.userdefinedproperty.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -31756,7 +30825,7 @@ class UserDefinedProperty:
     def Parent(self):
         return self.userdefinedproperty.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31765,7 +30834,7 @@ class UserDefinedProperty:
     def Session(self):
         return NameSpace(self.userdefinedproperty.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31774,7 +30843,7 @@ class UserDefinedProperty:
     def Type(self):
         return OlUserPropertyType(self.userdefinedproperty.Type)
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -31800,7 +30869,7 @@ class UserProperties:
     def Count(self):
         return self.userproperties.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -31809,7 +30878,7 @@ class UserProperties:
     def Parent(self):
         return self.userproperties.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31818,7 +30887,7 @@ class UserProperties:
     def Session(self):
         return NameSpace(self.userproperties.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31857,16 +30926,15 @@ class UserProperty:
     def Formula(self):
         return self.userproperty.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.userproperty.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -31875,7 +30943,7 @@ class UserProperty:
     def Name(self):
         return self.userproperty.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -31884,7 +30952,7 @@ class UserProperty:
     def Parent(self):
         return self.userproperty.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -31893,7 +30961,7 @@ class UserProperty:
     def Session(self):
         return NameSpace(self.userproperty.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -31902,7 +30970,7 @@ class UserProperty:
     def Type(self):
         return OlUserPropertyType(self.userproperty.Type)
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -31911,16 +30979,15 @@ class UserProperty:
     def ValidationFormula(self):
         return self.userproperty.ValidationFormula
 
-    # Lower case alias for ValidationFormula
-    @property
-    def validationformula(self):
-        return self.ValidationFormula
-
     @ValidationFormula.setter
     def ValidationFormula(self, value):
         self.userproperty.ValidationFormula = value
 
-    # Lower case alias for ValidationFormula setter
+    # Lower case aliases for ValidationFormula
+    @property
+    def validationformula(self):
+        return self.ValidationFormula
+
     @validationformula.setter
     def validationformula(self, value):
         self.ValidationFormula = value
@@ -31929,16 +30996,15 @@ class UserProperty:
     def ValidationText(self):
         return self.userproperty.ValidationText
 
-    # Lower case alias for ValidationText
-    @property
-    def validationtext(self):
-        return self.ValidationText
-
     @ValidationText.setter
     def ValidationText(self, value):
         self.userproperty.ValidationText = value
 
-    # Lower case alias for ValidationText setter
+    # Lower case aliases for ValidationText
+    @property
+    def validationtext(self):
+        return self.ValidationText
+
     @validationtext.setter
     def validationtext(self, value):
         self.ValidationText = value
@@ -31947,16 +31013,15 @@ class UserProperty:
     def Value(self):
         return self.userproperty.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.userproperty.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -31982,16 +31047,15 @@ class View:
     def Filter(self):
         return self.view.Filter
 
-    # Lower case alias for Filter
-    @property
-    def filter(self):
-        return self.Filter
-
     @Filter.setter
     def Filter(self, value):
         self.view.Filter = value
 
-    # Lower case alias for Filter setter
+    # Lower case aliases for Filter
+    @property
+    def filter(self):
+        return self.Filter
+
     @filter.setter
     def filter(self, value):
         self.Filter = value
@@ -32000,16 +31064,15 @@ class View:
     def Language(self):
         return self.view.Language
 
-    # Lower case alias for Language
-    @property
-    def language(self):
-        return self.Language
-
     @Language.setter
     def Language(self, value):
         self.view.Language = value
 
-    # Lower case alias for Language setter
+    # Lower case aliases for Language
+    @property
+    def language(self):
+        return self.Language
+
     @language.setter
     def language(self, value):
         self.Language = value
@@ -32018,16 +31081,15 @@ class View:
     def LockUserChanges(self):
         return self.view.LockUserChanges
 
-    # Lower case alias for LockUserChanges
-    @property
-    def lockuserchanges(self):
-        return self.LockUserChanges
-
     @LockUserChanges.setter
     def LockUserChanges(self, value):
         self.view.LockUserChanges = value
 
-    # Lower case alias for LockUserChanges setter
+    # Lower case aliases for LockUserChanges
+    @property
+    def lockuserchanges(self):
+        return self.LockUserChanges
+
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.LockUserChanges = value
@@ -32036,16 +31098,15 @@ class View:
     def Name(self):
         return self.view.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.view.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -32054,7 +31115,7 @@ class View:
     def Parent(self):
         return self.view.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -32063,7 +31124,7 @@ class View:
     def SaveOption(self):
         return OlViewSaveOption(self.view.SaveOption)
 
-    # Lower case alias for SaveOption
+    # Lower case aliases for SaveOption
     @property
     def saveoption(self):
         return self.SaveOption
@@ -32072,7 +31133,7 @@ class View:
     def Session(self):
         return NameSpace(self.view.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -32081,7 +31142,7 @@ class View:
     def Standard(self):
         return self.view.Standard
 
-    # Lower case alias for Standard
+    # Lower case aliases for Standard
     @property
     def standard(self):
         return self.Standard
@@ -32090,7 +31151,7 @@ class View:
     def ViewType(self):
         return OlViewType(self.view.ViewType)
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -32099,16 +31160,15 @@ class View:
     def XML(self):
         return self.view.XML
 
-    # Lower case alias for XML
-    @property
-    def xml(self):
-        return self.XML
-
     @XML.setter
     def XML(self, value):
         self.view.XML = value
 
-    # Lower case alias for XML setter
+    # Lower case aliases for XML
+    @property
+    def xml(self):
+        return self.XML
+
     @xml.setter
     def xml(self, value):
         self.XML = value
@@ -32151,7 +31211,7 @@ class ViewField:
     def ColumnFormat(self):
         return ColumnFormat(self.viewfield.ColumnFormat)
 
-    # Lower case alias for ColumnFormat
+    # Lower case aliases for ColumnFormat
     @property
     def columnformat(self):
         return self.ColumnFormat
@@ -32160,7 +31220,7 @@ class ViewField:
     def Parent(self):
         return self.viewfield.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -32169,7 +31229,7 @@ class ViewField:
     def Session(self):
         return NameSpace(self.viewfield.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -32178,7 +31238,7 @@ class ViewField:
     def ViewXMLSchemaName(self):
         return ViewField(self.viewfield.ViewXMLSchemaName)
 
-    # Lower case alias for ViewXMLSchemaName
+    # Lower case aliases for ViewXMLSchemaName
     @property
     def viewxmlschemaname(self):
         return self.ViewXMLSchemaName
@@ -32201,7 +31261,7 @@ class ViewFields:
     def Count(self):
         return ViewField(self.viewfields.Count)
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -32210,7 +31270,7 @@ class ViewFields:
     def Parent(self):
         return self.viewfields.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -32219,7 +31279,7 @@ class ViewFields:
     def Session(self):
         return NameSpace(self.viewfields.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -32254,16 +31314,15 @@ class ViewFont:
     def Bold(self):
         return ViewFont(self.viewfont.Bold)
 
-    # Lower case alias for Bold
-    @property
-    def bold(self):
-        return self.Bold
-
     @Bold.setter
     def Bold(self, value):
         self.viewfont.Bold = value
 
-    # Lower case alias for Bold setter
+    # Lower case aliases for Bold
+    @property
+    def bold(self):
+        return self.Bold
+
     @bold.setter
     def bold(self, value):
         self.Bold = value
@@ -32276,16 +31335,15 @@ class ViewFont:
     def Color(self):
         return OlColor(self.viewfont.Color)
 
-    # Lower case alias for Color
-    @property
-    def color(self):
-        return self.Color
-
     @Color.setter
     def Color(self, value):
         self.viewfont.Color = value
 
-    # Lower case alias for Color setter
+    # Lower case aliases for Color
+    @property
+    def color(self):
+        return self.Color
+
     @color.setter
     def color(self, value):
         self.Color = value
@@ -32294,16 +31352,15 @@ class ViewFont:
     def ExtendedColor(self):
         return OlCategoryColor(self.viewfont.ExtendedColor)
 
-    # Lower case alias for ExtendedColor
-    @property
-    def extendedcolor(self):
-        return self.ExtendedColor
-
     @ExtendedColor.setter
     def ExtendedColor(self, value):
         self.viewfont.ExtendedColor = value
 
-    # Lower case alias for ExtendedColor setter
+    # Lower case aliases for ExtendedColor
+    @property
+    def extendedcolor(self):
+        return self.ExtendedColor
+
     @extendedcolor.setter
     def extendedcolor(self, value):
         self.ExtendedColor = value
@@ -32312,16 +31369,15 @@ class ViewFont:
     def Italic(self):
         return ViewFont(self.viewfont.Italic)
 
-    # Lower case alias for Italic
-    @property
-    def italic(self):
-        return self.Italic
-
     @Italic.setter
     def Italic(self, value):
         self.viewfont.Italic = value
 
-    # Lower case alias for Italic setter
+    # Lower case aliases for Italic
+    @property
+    def italic(self):
+        return self.Italic
+
     @italic.setter
     def italic(self, value):
         self.Italic = value
@@ -32330,16 +31386,15 @@ class ViewFont:
     def Name(self):
         return self.viewfont.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.viewfont.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -32348,7 +31403,7 @@ class ViewFont:
     def Parent(self):
         return self.viewfont.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -32357,7 +31412,7 @@ class ViewFont:
     def Session(self):
         return NameSpace(self.viewfont.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session
@@ -32366,16 +31421,15 @@ class ViewFont:
     def Size(self):
         return self.viewfont.Size
 
-    # Lower case alias for Size
-    @property
-    def size(self):
-        return self.Size
-
     @Size.setter
     def Size(self, value):
         self.viewfont.Size = value
 
-    # Lower case alias for Size setter
+    # Lower case aliases for Size
+    @property
+    def size(self):
+        return self.Size
+
     @size.setter
     def size(self, value):
         self.Size = value
@@ -32384,16 +31438,15 @@ class ViewFont:
     def Strikethrough(self):
         return ViewFont(self.viewfont.Strikethrough)
 
-    # Lower case alias for Strikethrough
-    @property
-    def strikethrough(self):
-        return self.Strikethrough
-
     @Strikethrough.setter
     def Strikethrough(self, value):
         self.viewfont.Strikethrough = value
 
-    # Lower case alias for Strikethrough setter
+    # Lower case aliases for Strikethrough
+    @property
+    def strikethrough(self):
+        return self.Strikethrough
+
     @strikethrough.setter
     def strikethrough(self, value):
         self.Strikethrough = value
@@ -32402,16 +31455,15 @@ class ViewFont:
     def Underline(self):
         return ViewFont(self.viewfont.Underline)
 
-    # Lower case alias for Underline
-    @property
-    def underline(self):
-        return self.Underline
-
     @Underline.setter
     def Underline(self, value):
         self.viewfont.Underline = value
 
-    # Lower case alias for Underline setter
+    # Lower case aliases for Underline
+    @property
+    def underline(self):
+        return self.Underline
+
     @underline.setter
     def underline(self, value):
         self.Underline = value
@@ -32434,7 +31486,7 @@ class Views:
     def Count(self):
         return self.views.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -32443,7 +31495,7 @@ class Views:
     def Parent(self):
         return self.views.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -32452,7 +31504,7 @@ class Views:
     def Session(self):
         return NameSpace(self.views.Session)
 
-    # Lower case alias for Session
+    # Lower case aliases for Session
     @property
     def session(self):
         return self.Session

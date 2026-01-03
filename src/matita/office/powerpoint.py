@@ -12,16 +12,15 @@ class ActionSetting:
     def Action(self):
         return self.actionsetting.Action
 
-    # Lower case alias for Action
-    @property
-    def action(self):
-        return self.Action
-
     @Action.setter
     def Action(self, value):
         self.actionsetting.Action = value
 
-    # Lower case alias for Action setter
+    # Lower case aliases for Action
+    @property
+    def action(self):
+        return self.Action
+
     @action.setter
     def action(self, value):
         self.Action = value
@@ -30,16 +29,15 @@ class ActionSetting:
     def ActionVerb(self):
         return self.actionsetting.ActionVerb
 
-    # Lower case alias for ActionVerb
-    @property
-    def actionverb(self):
-        return self.ActionVerb
-
     @ActionVerb.setter
     def ActionVerb(self, value):
         self.actionsetting.ActionVerb = value
 
-    # Lower case alias for ActionVerb setter
+    # Lower case aliases for ActionVerb
+    @property
+    def actionverb(self):
+        return self.ActionVerb
+
     @actionverb.setter
     def actionverb(self, value):
         self.ActionVerb = value
@@ -48,16 +46,15 @@ class ActionSetting:
     def AnimateAction(self):
         return self.actionsetting.AnimateAction
 
-    # Lower case alias for AnimateAction
-    @property
-    def animateaction(self):
-        return self.AnimateAction
-
     @AnimateAction.setter
     def AnimateAction(self, value):
         self.actionsetting.AnimateAction = value
 
-    # Lower case alias for AnimateAction setter
+    # Lower case aliases for AnimateAction
+    @property
+    def animateaction(self):
+        return self.AnimateAction
+
     @animateaction.setter
     def animateaction(self, value):
         self.AnimateAction = value
@@ -70,7 +67,7 @@ class ActionSetting:
     def Hyperlink(self):
         return Hyperlink(self.actionsetting.Hyperlink)
 
-    # Lower case alias for Hyperlink
+    # Lower case aliases for Hyperlink
     @property
     def hyperlink(self):
         return self.Hyperlink
@@ -79,7 +76,7 @@ class ActionSetting:
     def Parent(self):
         return self.actionsetting.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -88,16 +85,15 @@ class ActionSetting:
     def Run(self):
         return self.actionsetting.Run
 
-    # Lower case alias for Run
-    @property
-    def run(self):
-        return self.Run
-
     @Run.setter
     def Run(self, value):
         self.actionsetting.Run = value
 
-    # Lower case alias for Run setter
+    # Lower case aliases for Run
+    @property
+    def run(self):
+        return self.Run
+
     @run.setter
     def run(self, value):
         self.Run = value
@@ -106,16 +102,15 @@ class ActionSetting:
     def ShowAndReturn(self):
         return self.actionsetting.ShowAndReturn
 
-    # Lower case alias for ShowAndReturn
-    @property
-    def showandreturn(self):
-        return self.ShowAndReturn
-
     @ShowAndReturn.setter
     def ShowAndReturn(self, value):
         self.actionsetting.ShowAndReturn = value
 
-    # Lower case alias for ShowAndReturn setter
+    # Lower case aliases for ShowAndReturn
+    @property
+    def showandreturn(self):
+        return self.ShowAndReturn
+
     @showandreturn.setter
     def showandreturn(self, value):
         self.ShowAndReturn = value
@@ -124,16 +119,15 @@ class ActionSetting:
     def SlideShowName(self):
         return self.actionsetting.SlideShowName
 
-    # Lower case alias for SlideShowName
-    @property
-    def slideshowname(self):
-        return self.SlideShowName
-
     @SlideShowName.setter
     def SlideShowName(self, value):
         self.actionsetting.SlideShowName = value
 
-    # Lower case alias for SlideShowName setter
+    # Lower case aliases for SlideShowName
+    @property
+    def slideshowname(self):
+        return self.SlideShowName
+
     @slideshowname.setter
     def slideshowname(self, value):
         self.SlideShowName = value
@@ -142,7 +136,7 @@ class ActionSetting:
     def SoundEffect(self):
         return SoundEffect(self.actionsetting.SoundEffect)
 
-    # Lower case alias for SoundEffect
+    # Lower case aliases for SoundEffect
     @property
     def soundeffect(self):
         return self.SoundEffect
@@ -164,7 +158,7 @@ class ActionSettings:
     def Count(self):
         return self.actionsettings.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -173,7 +167,7 @@ class ActionSettings:
     def Parent(self):
         return self.actionsettings.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -196,16 +190,15 @@ class AddIn:
     def AutoLoad(self):
         return self.addin.AutoLoad
 
-    # Lower case alias for AutoLoad
-    @property
-    def autoload(self):
-        return self.AutoLoad
-
     @AutoLoad.setter
     def AutoLoad(self, value):
         self.addin.AutoLoad = value
 
-    # Lower case alias for AutoLoad setter
+    # Lower case aliases for AutoLoad
+    @property
+    def autoload(self):
+        return self.AutoLoad
+
     @autoload.setter
     def autoload(self, value):
         self.AutoLoad = value
@@ -214,7 +207,7 @@ class AddIn:
     def FullName(self):
         return self.addin.FullName
 
-    # Lower case alias for FullName
+    # Lower case aliases for FullName
     @property
     def fullname(self):
         return self.FullName
@@ -223,16 +216,15 @@ class AddIn:
     def Loaded(self):
         return self.addin.Loaded
 
-    # Lower case alias for Loaded
-    @property
-    def loaded(self):
-        return self.Loaded
-
     @Loaded.setter
     def Loaded(self, value):
         self.addin.Loaded = value
 
-    # Lower case alias for Loaded setter
+    # Lower case aliases for Loaded
+    @property
+    def loaded(self):
+        return self.Loaded
+
     @loaded.setter
     def loaded(self, value):
         self.Loaded = value
@@ -241,7 +233,7 @@ class AddIn:
     def Name(self):
         return self.addin.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -250,7 +242,7 @@ class AddIn:
     def Parent(self):
         return self.addin.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -259,7 +251,7 @@ class AddIn:
     def Path(self):
         return AddIn(self.addin.Path)
 
-    # Lower case alias for Path
+    # Lower case aliases for Path
     @property
     def path(self):
         return self.Path
@@ -268,16 +260,15 @@ class AddIn:
     def Registered(self):
         return self.addin.Registered
 
-    # Lower case alias for Registered
-    @property
-    def registered(self):
-        return self.Registered
-
     @Registered.setter
     def Registered(self, value):
         self.addin.Registered = value
 
-    # Lower case alias for Registered setter
+    # Lower case aliases for Registered
+    @property
+    def registered(self):
+        return self.Registered
+
     @registered.setter
     def registered(self, value):
         self.Registered = value
@@ -299,7 +290,7 @@ class AddIns:
     def Count(self):
         return self.addins.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -308,7 +299,7 @@ class AddIns:
     def Parent(self):
         return self.addins.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -339,7 +330,7 @@ class Adjustments:
     def Count(self):
         return self.adjustments.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -348,7 +339,7 @@ class Adjustments:
     def Creator(self):
         return self.adjustments.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -357,16 +348,15 @@ class Adjustments:
     def Item(self):
         return self.adjustments.Item
 
-    # Lower case alias for Item
-    @property
-    def item(self):
-        return self.Item
-
     @Item.setter
     def Item(self, value):
         self.adjustments.Item = value
 
-    # Lower case alias for Item setter
+    # Lower case aliases for Item
+    @property
+    def item(self):
+        return self.Item
+
     @item.setter
     def item(self, value):
         self.Item = value
@@ -375,7 +365,7 @@ class Adjustments:
     def Parent(self):
         return self.adjustments.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -390,16 +380,15 @@ class AnimationBehavior:
     def Accumulate(self):
         return self.animationbehavior.Accumulate
 
-    # Lower case alias for Accumulate
-    @property
-    def accumulate(self):
-        return self.Accumulate
-
     @Accumulate.setter
     def Accumulate(self, value):
         self.animationbehavior.Accumulate = value
 
-    # Lower case alias for Accumulate setter
+    # Lower case aliases for Accumulate
+    @property
+    def accumulate(self):
+        return self.Accumulate
+
     @accumulate.setter
     def accumulate(self, value):
         self.Accumulate = value
@@ -408,16 +397,15 @@ class AnimationBehavior:
     def Additive(self):
         return self.animationbehavior.Additive
 
-    # Lower case alias for Additive
-    @property
-    def additive(self):
-        return self.Additive
-
     @Additive.setter
     def Additive(self, value):
         self.animationbehavior.Additive = value
 
-    # Lower case alias for Additive setter
+    # Lower case aliases for Additive
+    @property
+    def additive(self):
+        return self.Additive
+
     @additive.setter
     def additive(self, value):
         self.Additive = value
@@ -430,7 +418,7 @@ class AnimationBehavior:
     def ColorEffect(self):
         return ColorEffect(self.animationbehavior.ColorEffect)
 
-    # Lower case alias for ColorEffect
+    # Lower case aliases for ColorEffect
     @property
     def coloreffect(self):
         return self.ColorEffect
@@ -439,7 +427,7 @@ class AnimationBehavior:
     def CommandEffect(self):
         return CommandEffect(self.animationbehavior.CommandEffect)
 
-    # Lower case alias for CommandEffect
+    # Lower case aliases for CommandEffect
     @property
     def commandeffect(self):
         return self.CommandEffect
@@ -448,7 +436,7 @@ class AnimationBehavior:
     def FilterEffect(self):
         return FilterEffect(self.animationbehavior.FilterEffect)
 
-    # Lower case alias for FilterEffect
+    # Lower case aliases for FilterEffect
     @property
     def filtereffect(self):
         return self.FilterEffect
@@ -457,7 +445,7 @@ class AnimationBehavior:
     def MotionEffect(self):
         return MotionEffect(self.animationbehavior.MotionEffect)
 
-    # Lower case alias for MotionEffect
+    # Lower case aliases for MotionEffect
     @property
     def motioneffect(self):
         return self.MotionEffect
@@ -466,7 +454,7 @@ class AnimationBehavior:
     def Parent(self):
         return self.animationbehavior.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -475,7 +463,7 @@ class AnimationBehavior:
     def PropertyEffect(self):
         return PropertyEffect(self.animationbehavior.PropertyEffect)
 
-    # Lower case alias for PropertyEffect
+    # Lower case aliases for PropertyEffect
     @property
     def propertyeffect(self):
         return self.PropertyEffect
@@ -484,7 +472,7 @@ class AnimationBehavior:
     def RotationEffect(self):
         return RotationEffect(self.animationbehavior.RotationEffect)
 
-    # Lower case alias for RotationEffect
+    # Lower case aliases for RotationEffect
     @property
     def rotationeffect(self):
         return self.RotationEffect
@@ -493,7 +481,7 @@ class AnimationBehavior:
     def ScaleEffect(self):
         return ScaleEffect(self.animationbehavior.ScaleEffect)
 
-    # Lower case alias for ScaleEffect
+    # Lower case aliases for ScaleEffect
     @property
     def scaleeffect(self):
         return self.ScaleEffect
@@ -502,7 +490,7 @@ class AnimationBehavior:
     def SetEffect(self):
         return SetEffect(self.animationbehavior.SetEffect)
 
-    # Lower case alias for SetEffect
+    # Lower case aliases for SetEffect
     @property
     def seteffect(self):
         return self.SetEffect
@@ -511,7 +499,7 @@ class AnimationBehavior:
     def Timing(self):
         return Timing(self.animationbehavior.Timing)
 
-    # Lower case alias for Timing
+    # Lower case aliases for Timing
     @property
     def timing(self):
         return self.Timing
@@ -520,16 +508,15 @@ class AnimationBehavior:
     def Type(self):
         return self.animationbehavior.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.animationbehavior.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -551,7 +538,7 @@ class AnimationBehaviors:
     def Count(self):
         return self.animationbehaviors.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -560,7 +547,7 @@ class AnimationBehaviors:
     def Parent(self):
         return self.animationbehaviors.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -587,16 +574,15 @@ class AnimationPoint:
     def Formula(self):
         return self.animationpoint.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.animationpoint.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -605,7 +591,7 @@ class AnimationPoint:
     def Parent(self):
         return self.animationpoint.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -614,16 +600,15 @@ class AnimationPoint:
     def Time(self):
         return self.animationpoint.Time
 
-    # Lower case alias for Time
-    @property
-    def time(self):
-        return self.Time
-
     @Time.setter
     def Time(self, value):
         self.animationpoint.Time = value
 
-    # Lower case alias for Time setter
+    # Lower case aliases for Time
+    @property
+    def time(self):
+        return self.Time
+
     @time.setter
     def time(self, value):
         self.Time = value
@@ -632,16 +617,15 @@ class AnimationPoint:
     def Value(self):
         return self.animationpoint.Value
 
-    # Lower case alias for Value
-    @property
-    def value(self):
-        return self.Value
-
     @Value.setter
     def Value(self, value):
         self.animationpoint.Value = value
 
-    # Lower case alias for Value setter
+    # Lower case aliases for Value
+    @property
+    def value(self):
+        return self.Value
+
     @value.setter
     def value(self, value):
         self.Value = value
@@ -663,7 +647,7 @@ class AnimationPoints:
     def Count(self):
         return self.animationpoints.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -672,7 +656,7 @@ class AnimationPoints:
     def Parent(self):
         return self.animationpoints.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -681,16 +665,15 @@ class AnimationPoints:
     def Smooth(self):
         return self.animationpoints.Smooth
 
-    # Lower case alias for Smooth
-    @property
-    def smooth(self):
-        return self.Smooth
-
     @Smooth.setter
     def Smooth(self, value):
         self.animationpoints.Smooth = value
 
-    # Lower case alias for Smooth setter
+    # Lower case aliases for Smooth
+    @property
+    def smooth(self):
+        return self.Smooth
+
     @smooth.setter
     def smooth(self, value):
         self.Smooth = value
@@ -713,16 +696,15 @@ class AnimationSettings:
     def AdvanceMode(self):
         return self.animationsettings.AdvanceMode
 
-    # Lower case alias for AdvanceMode
-    @property
-    def advancemode(self):
-        return self.AdvanceMode
-
     @AdvanceMode.setter
     def AdvanceMode(self, value):
         self.animationsettings.AdvanceMode = value
 
-    # Lower case alias for AdvanceMode setter
+    # Lower case aliases for AdvanceMode
+    @property
+    def advancemode(self):
+        return self.AdvanceMode
+
     @advancemode.setter
     def advancemode(self, value):
         self.AdvanceMode = value
@@ -731,16 +713,15 @@ class AnimationSettings:
     def AdvanceTime(self):
         return self.animationsettings.AdvanceTime
 
-    # Lower case alias for AdvanceTime
-    @property
-    def advancetime(self):
-        return self.AdvanceTime
-
     @AdvanceTime.setter
     def AdvanceTime(self, value):
         self.animationsettings.AdvanceTime = value
 
-    # Lower case alias for AdvanceTime setter
+    # Lower case aliases for AdvanceTime
+    @property
+    def advancetime(self):
+        return self.AdvanceTime
+
     @advancetime.setter
     def advancetime(self, value):
         self.AdvanceTime = value
@@ -749,16 +730,15 @@ class AnimationSettings:
     def AfterEffect(self):
         return PpAfterEffect(self.animationsettings.AfterEffect)
 
-    # Lower case alias for AfterEffect
-    @property
-    def aftereffect(self):
-        return self.AfterEffect
-
     @AfterEffect.setter
     def AfterEffect(self, value):
         self.animationsettings.AfterEffect = value
 
-    # Lower case alias for AfterEffect setter
+    # Lower case aliases for AfterEffect
+    @property
+    def aftereffect(self):
+        return self.AfterEffect
+
     @aftereffect.setter
     def aftereffect(self, value):
         self.AfterEffect = value
@@ -767,16 +747,15 @@ class AnimationSettings:
     def Animate(self):
         return self.animationsettings.Animate
 
-    # Lower case alias for Animate
-    @property
-    def animate(self):
-        return self.Animate
-
     @Animate.setter
     def Animate(self, value):
         self.animationsettings.Animate = value
 
-    # Lower case alias for Animate setter
+    # Lower case aliases for Animate
+    @property
+    def animate(self):
+        return self.Animate
+
     @animate.setter
     def animate(self, value):
         self.Animate = value
@@ -785,16 +764,15 @@ class AnimationSettings:
     def AnimateBackground(self):
         return self.animationsettings.AnimateBackground
 
-    # Lower case alias for AnimateBackground
-    @property
-    def animatebackground(self):
-        return self.AnimateBackground
-
     @AnimateBackground.setter
     def AnimateBackground(self, value):
         self.animationsettings.AnimateBackground = value
 
-    # Lower case alias for AnimateBackground setter
+    # Lower case aliases for AnimateBackground
+    @property
+    def animatebackground(self):
+        return self.AnimateBackground
+
     @animatebackground.setter
     def animatebackground(self, value):
         self.AnimateBackground = value
@@ -803,16 +781,15 @@ class AnimationSettings:
     def AnimateTextInReverse(self):
         return self.animationsettings.AnimateTextInReverse
 
-    # Lower case alias for AnimateTextInReverse
-    @property
-    def animatetextinreverse(self):
-        return self.AnimateTextInReverse
-
     @AnimateTextInReverse.setter
     def AnimateTextInReverse(self, value):
         self.animationsettings.AnimateTextInReverse = value
 
-    # Lower case alias for AnimateTextInReverse setter
+    # Lower case aliases for AnimateTextInReverse
+    @property
+    def animatetextinreverse(self):
+        return self.AnimateTextInReverse
+
     @animatetextinreverse.setter
     def animatetextinreverse(self, value):
         self.AnimateTextInReverse = value
@@ -821,16 +798,15 @@ class AnimationSettings:
     def AnimationOrder(self):
         return self.animationsettings.AnimationOrder
 
-    # Lower case alias for AnimationOrder
-    @property
-    def animationorder(self):
-        return self.AnimationOrder
-
     @AnimationOrder.setter
     def AnimationOrder(self, value):
         self.animationsettings.AnimationOrder = value
 
-    # Lower case alias for AnimationOrder setter
+    # Lower case aliases for AnimationOrder
+    @property
+    def animationorder(self):
+        return self.AnimationOrder
+
     @animationorder.setter
     def animationorder(self, value):
         self.AnimationOrder = value
@@ -843,16 +819,15 @@ class AnimationSettings:
     def ChartUnitEffect(self):
         return self.animationsettings.ChartUnitEffect
 
-    # Lower case alias for ChartUnitEffect
-    @property
-    def chartuniteffect(self):
-        return self.ChartUnitEffect
-
     @ChartUnitEffect.setter
     def ChartUnitEffect(self, value):
         self.animationsettings.ChartUnitEffect = value
 
-    # Lower case alias for ChartUnitEffect setter
+    # Lower case aliases for ChartUnitEffect
+    @property
+    def chartuniteffect(self):
+        return self.ChartUnitEffect
+
     @chartuniteffect.setter
     def chartuniteffect(self, value):
         self.ChartUnitEffect = value
@@ -861,16 +836,15 @@ class AnimationSettings:
     def DimColor(self):
         return ColorFormat(self.animationsettings.DimColor)
 
-    # Lower case alias for DimColor
-    @property
-    def dimcolor(self):
-        return self.DimColor
-
     @DimColor.setter
     def DimColor(self, value):
         self.animationsettings.DimColor = value
 
-    # Lower case alias for DimColor setter
+    # Lower case aliases for DimColor
+    @property
+    def dimcolor(self):
+        return self.DimColor
+
     @dimcolor.setter
     def dimcolor(self, value):
         self.DimColor = value
@@ -879,16 +853,15 @@ class AnimationSettings:
     def EntryEffect(self):
         return self.animationsettings.EntryEffect
 
-    # Lower case alias for EntryEffect
-    @property
-    def entryeffect(self):
-        return self.EntryEffect
-
     @EntryEffect.setter
     def EntryEffect(self, value):
         self.animationsettings.EntryEffect = value
 
-    # Lower case alias for EntryEffect setter
+    # Lower case aliases for EntryEffect
+    @property
+    def entryeffect(self):
+        return self.EntryEffect
+
     @entryeffect.setter
     def entryeffect(self, value):
         self.EntryEffect = value
@@ -897,7 +870,7 @@ class AnimationSettings:
     def Parent(self):
         return self.animationsettings.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -906,7 +879,7 @@ class AnimationSettings:
     def PlaySettings(self):
         return PlaySettings(self.animationsettings.PlaySettings)
 
-    # Lower case alias for PlaySettings
+    # Lower case aliases for PlaySettings
     @property
     def playsettings(self):
         return self.PlaySettings
@@ -915,7 +888,7 @@ class AnimationSettings:
     def SoundEffect(self):
         return SoundEffect(self.animationsettings.SoundEffect)
 
-    # Lower case alias for SoundEffect
+    # Lower case aliases for SoundEffect
     @property
     def soundeffect(self):
         return self.SoundEffect
@@ -924,16 +897,15 @@ class AnimationSettings:
     def TextLevelEffect(self):
         return self.animationsettings.TextLevelEffect
 
-    # Lower case alias for TextLevelEffect
-    @property
-    def textleveleffect(self):
-        return self.TextLevelEffect
-
     @TextLevelEffect.setter
     def TextLevelEffect(self, value):
         self.animationsettings.TextLevelEffect = value
 
-    # Lower case alias for TextLevelEffect setter
+    # Lower case aliases for TextLevelEffect
+    @property
+    def textleveleffect(self):
+        return self.TextLevelEffect
+
     @textleveleffect.setter
     def textleveleffect(self, value):
         self.TextLevelEffect = value
@@ -942,16 +914,15 @@ class AnimationSettings:
     def TextUnitEffect(self):
         return self.animationsettings.TextUnitEffect
 
-    # Lower case alias for TextUnitEffect
-    @property
-    def textuniteffect(self):
-        return self.TextUnitEffect
-
     @TextUnitEffect.setter
     def TextUnitEffect(self, value):
         self.animationsettings.TextUnitEffect = value
 
-    # Lower case alias for TextUnitEffect setter
+    # Lower case aliases for TextUnitEffect
+    @property
+    def textuniteffect(self):
+        return self.TextUnitEffect
+
     @textuniteffect.setter
     def textuniteffect(self, value):
         self.TextUnitEffect = value
@@ -970,7 +941,7 @@ class Application:
     def Active(self):
         return self.application.Active
 
-    # Lower case alias for Active
+    # Lower case aliases for Active
     @property
     def active(self):
         return self.Active
@@ -979,7 +950,7 @@ class Application:
     def ActiveEncryptionSession(self):
         return self.application.ActiveEncryptionSession
 
-    # Lower case alias for ActiveEncryptionSession
+    # Lower case aliases for ActiveEncryptionSession
     @property
     def activeencryptionsession(self):
         return self.ActiveEncryptionSession
@@ -988,7 +959,7 @@ class Application:
     def ActivePresentation(self):
         return Presentation(self.application.ActivePresentation)
 
-    # Lower case alias for ActivePresentation
+    # Lower case aliases for ActivePresentation
     @property
     def activepresentation(self):
         return self.ActivePresentation
@@ -997,7 +968,7 @@ class Application:
     def ActivePrinter(self):
         return self.application.ActivePrinter
 
-    # Lower case alias for ActivePrinter
+    # Lower case aliases for ActivePrinter
     @property
     def activeprinter(self):
         return self.ActivePrinter
@@ -1006,7 +977,7 @@ class Application:
     def ActiveProtectedViewWindow(self):
         return ProtectedViewWindow(self.application.ActiveProtectedViewWindow)
 
-    # Lower case alias for ActiveProtectedViewWindow
+    # Lower case aliases for ActiveProtectedViewWindow
     @property
     def activeprotectedviewwindow(self):
         return self.ActiveProtectedViewWindow
@@ -1015,7 +986,7 @@ class Application:
     def ActiveWindow(self):
         return DocumentWindow(self.application.ActiveWindow)
 
-    # Lower case alias for ActiveWindow
+    # Lower case aliases for ActiveWindow
     @property
     def activewindow(self):
         return self.ActiveWindow
@@ -1024,7 +995,7 @@ class Application:
     def AddIns(self):
         return AddIns(self.application.AddIns)
 
-    # Lower case alias for AddIns
+    # Lower case aliases for AddIns
     @property
     def addins(self):
         return self.AddIns
@@ -1033,7 +1004,7 @@ class Application:
     def Assistance(self):
         return self.application.Assistance
 
-    # Lower case alias for Assistance
+    # Lower case aliases for Assistance
     @property
     def assistance(self):
         return self.Assistance
@@ -1042,7 +1013,7 @@ class Application:
     def AutoCorrect(self):
         return AutoCorrect(self.application.AutoCorrect)
 
-    # Lower case alias for AutoCorrect
+    # Lower case aliases for AutoCorrect
     @property
     def autocorrect(self):
         return self.AutoCorrect
@@ -1051,16 +1022,15 @@ class Application:
     def AutomationSecurity(self):
         return self.application.AutomationSecurity
 
-    # Lower case alias for AutomationSecurity
-    @property
-    def automationsecurity(self):
-        return self.AutomationSecurity
-
     @AutomationSecurity.setter
     def AutomationSecurity(self, value):
         self.application.AutomationSecurity = value
 
-    # Lower case alias for AutomationSecurity setter
+    # Lower case aliases for AutomationSecurity
+    @property
+    def automationsecurity(self):
+        return self.AutomationSecurity
+
     @automationsecurity.setter
     def automationsecurity(self, value):
         self.AutomationSecurity = value
@@ -1069,7 +1039,7 @@ class Application:
     def Build(self):
         return self.application.Build
 
-    # Lower case alias for Build
+    # Lower case aliases for Build
     @property
     def build(self):
         return self.Build
@@ -1078,16 +1048,15 @@ class Application:
     def Caption(self):
         return self.application.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.application.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -1096,7 +1065,7 @@ class Application:
     def COMAddIns(self):
         return self.application.COMAddIns
 
-    # Lower case alias for COMAddIns
+    # Lower case aliases for COMAddIns
     @property
     def comaddins(self):
         return self.COMAddIns
@@ -1105,7 +1074,7 @@ class Application:
     def CommandBars(self):
         return self.application.CommandBars
 
-    # Lower case alias for CommandBars
+    # Lower case aliases for CommandBars
     @property
     def commandbars(self):
         return self.CommandBars
@@ -1114,7 +1083,7 @@ class Application:
     def Creator(self):
         return self.application.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -1123,16 +1092,15 @@ class Application:
     def DisplayAlerts(self):
         return self.application.DisplayAlerts
 
-    # Lower case alias for DisplayAlerts
-    @property
-    def displayalerts(self):
-        return self.DisplayAlerts
-
     @DisplayAlerts.setter
     def DisplayAlerts(self, value):
         self.application.DisplayAlerts = value
 
-    # Lower case alias for DisplayAlerts setter
+    # Lower case aliases for DisplayAlerts
+    @property
+    def displayalerts(self):
+        return self.DisplayAlerts
+
     @displayalerts.setter
     def displayalerts(self, value):
         self.DisplayAlerts = value
@@ -1141,16 +1109,15 @@ class Application:
     def DisplayDocumentInformationPanel(self):
         return self.application.DisplayDocumentInformationPanel
 
-    # Lower case alias for DisplayDocumentInformationPanel
-    @property
-    def displaydocumentinformationpanel(self):
-        return self.DisplayDocumentInformationPanel
-
     @DisplayDocumentInformationPanel.setter
     def DisplayDocumentInformationPanel(self, value):
         self.application.DisplayDocumentInformationPanel = value
 
-    # Lower case alias for DisplayDocumentInformationPanel setter
+    # Lower case aliases for DisplayDocumentInformationPanel
+    @property
+    def displaydocumentinformationpanel(self):
+        return self.DisplayDocumentInformationPanel
+
     @displaydocumentinformationpanel.setter
     def displaydocumentinformationpanel(self, value):
         self.DisplayDocumentInformationPanel = value
@@ -1159,16 +1126,15 @@ class Application:
     def DisplayGridLines(self):
         return self.application.DisplayGridLines
 
-    # Lower case alias for DisplayGridLines
-    @property
-    def displaygridlines(self):
-        return self.DisplayGridLines
-
     @DisplayGridLines.setter
     def DisplayGridLines(self, value):
         self.application.DisplayGridLines = value
 
-    # Lower case alias for DisplayGridLines setter
+    # Lower case aliases for DisplayGridLines
+    @property
+    def displaygridlines(self):
+        return self.DisplayGridLines
+
     @displaygridlines.setter
     def displaygridlines(self, value):
         self.DisplayGridLines = value
@@ -1177,16 +1143,15 @@ class Application:
     def FeatureInstall(self):
         return self.application.FeatureInstall
 
-    # Lower case alias for FeatureInstall
-    @property
-    def featureinstall(self):
-        return self.FeatureInstall
-
     @FeatureInstall.setter
     def FeatureInstall(self, value):
         self.application.FeatureInstall = value
 
-    # Lower case alias for FeatureInstall setter
+    # Lower case aliases for FeatureInstall
+    @property
+    def featureinstall(self):
+        return self.FeatureInstall
+
     @featureinstall.setter
     def featureinstall(self, value):
         self.FeatureInstall = value
@@ -1198,7 +1163,7 @@ class Application:
         else:
             return self.application.GetFileConverters(*arguments)
 
-    # Lower case alias for FileConverters
+    # Lower case aliases for FileConverters
     def fileconverters(self, Index1=None, Index2=None):
         arguments = [Index1, Index2]
         return self.FileConverters(*arguments)
@@ -1210,7 +1175,7 @@ class Application:
         else:
             return self.application.GetFileDialog(*arguments)
 
-    # Lower case alias for FileDialog
+    # Lower case aliases for FileDialog
     def filedialog(self, Type=None):
         arguments = [Type]
         return self.FileDialog(*arguments)
@@ -1219,16 +1184,15 @@ class Application:
     def FileValidation(self):
         return self.application.FileValidation
 
-    # Lower case alias for FileValidation
-    @property
-    def filevalidation(self):
-        return self.FileValidation
-
     @FileValidation.setter
     def FileValidation(self, value):
         self.application.FileValidation = value
 
-    # Lower case alias for FileValidation setter
+    # Lower case aliases for FileValidation
+    @property
+    def filevalidation(self):
+        return self.FileValidation
+
     @filevalidation.setter
     def filevalidation(self, value):
         self.FileValidation = value
@@ -1237,16 +1201,15 @@ class Application:
     def Height(self):
         return self.application.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.application.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -1255,7 +1218,7 @@ class Application:
     def IsSandboxed(self):
         return self.application.IsSandboxed
 
-    # Lower case alias for IsSandboxed
+    # Lower case aliases for IsSandboxed
     @property
     def issandboxed(self):
         return self.IsSandboxed
@@ -1264,7 +1227,7 @@ class Application:
     def LanguageSettings(self):
         return self.application.LanguageSettings
 
-    # Lower case alias for LanguageSettings
+    # Lower case aliases for LanguageSettings
     @property
     def languagesettings(self):
         return self.LanguageSettings
@@ -1273,16 +1236,15 @@ class Application:
     def Left(self):
         return self.application.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.application.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -1291,7 +1253,7 @@ class Application:
     def Name(self):
         return self.application.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -1300,7 +1262,7 @@ class Application:
     def NewPresentation(self):
         return self.application.NewPresentation
 
-    # Lower case alias for NewPresentation
+    # Lower case aliases for NewPresentation
     @property
     def newpresentation(self):
         return self.NewPresentation
@@ -1309,7 +1271,7 @@ class Application:
     def OperatingSystem(self):
         return self.application.OperatingSystem
 
-    # Lower case alias for OperatingSystem
+    # Lower case aliases for OperatingSystem
     @property
     def operatingsystem(self):
         return self.OperatingSystem
@@ -1318,7 +1280,7 @@ class Application:
     def Options(self):
         return Options(self.application.Options)
 
-    # Lower case alias for Options
+    # Lower case aliases for Options
     @property
     def options(self):
         return self.Options
@@ -1327,7 +1289,7 @@ class Application:
     def Path(self):
         return Application(self.application.Path)
 
-    # Lower case alias for Path
+    # Lower case aliases for Path
     @property
     def path(self):
         return self.Path
@@ -1336,7 +1298,7 @@ class Application:
     def Presentations(self):
         return Presentations(self.application.Presentations)
 
-    # Lower case alias for Presentations
+    # Lower case aliases for Presentations
     @property
     def presentations(self):
         return self.Presentations
@@ -1345,7 +1307,7 @@ class Application:
     def ProductCode(self):
         return self.application.ProductCode
 
-    # Lower case alias for ProductCode
+    # Lower case aliases for ProductCode
     @property
     def productcode(self):
         return self.ProductCode
@@ -1354,7 +1316,7 @@ class Application:
     def ProtectedViewWindows(self):
         return ProtectedViewWindows(self.application.ProtectedViewWindows)
 
-    # Lower case alias for ProtectedViewWindows
+    # Lower case aliases for ProtectedViewWindows
     @property
     def protectedviewwindows(self):
         return self.ProtectedViewWindows
@@ -1363,7 +1325,7 @@ class Application:
     def SensitivityLabelPolicy(self):
         return self.application.SensitivityLabelPolicy
 
-    # Lower case alias for SensitivityLabelPolicy
+    # Lower case aliases for SensitivityLabelPolicy
     @property
     def sensitivitylabelpolicy(self):
         return self.SensitivityLabelPolicy
@@ -1372,16 +1334,15 @@ class Application:
     def ShowStartupDialog(self):
         return self.application.ShowStartupDialog
 
-    # Lower case alias for ShowStartupDialog
-    @property
-    def showstartupdialog(self):
-        return self.ShowStartupDialog
-
     @ShowStartupDialog.setter
     def ShowStartupDialog(self, value):
         self.application.ShowStartupDialog = value
 
-    # Lower case alias for ShowStartupDialog setter
+    # Lower case aliases for ShowStartupDialog
+    @property
+    def showstartupdialog(self):
+        return self.ShowStartupDialog
+
     @showstartupdialog.setter
     def showstartupdialog(self, value):
         self.ShowStartupDialog = value
@@ -1390,16 +1351,15 @@ class Application:
     def ShowWindowsInTaskbar(self):
         return self.application.ShowWindowsInTaskbar
 
-    # Lower case alias for ShowWindowsInTaskbar
-    @property
-    def showwindowsintaskbar(self):
-        return self.ShowWindowsInTaskbar
-
     @ShowWindowsInTaskbar.setter
     def ShowWindowsInTaskbar(self, value):
         self.application.ShowWindowsInTaskbar = value
 
-    # Lower case alias for ShowWindowsInTaskbar setter
+    # Lower case aliases for ShowWindowsInTaskbar
+    @property
+    def showwindowsintaskbar(self):
+        return self.ShowWindowsInTaskbar
+
     @showwindowsintaskbar.setter
     def showwindowsintaskbar(self, value):
         self.ShowWindowsInTaskbar = value
@@ -1408,7 +1368,7 @@ class Application:
     def SlideShowWindows(self):
         return SlideShowWindows(self.application.SlideShowWindows)
 
-    # Lower case alias for SlideShowWindows
+    # Lower case aliases for SlideShowWindows
     @property
     def slideshowwindows(self):
         return self.SlideShowWindows
@@ -1417,7 +1377,7 @@ class Application:
     def SmartArtColors(self):
         return Application(self.application.SmartArtColors)
 
-    # Lower case alias for SmartArtColors
+    # Lower case aliases for SmartArtColors
     @property
     def smartartcolors(self):
         return self.SmartArtColors
@@ -1426,7 +1386,7 @@ class Application:
     def SmartArtLayouts(self):
         return Application(self.application.SmartArtLayouts)
 
-    # Lower case alias for SmartArtLayouts
+    # Lower case aliases for SmartArtLayouts
     @property
     def smartartlayouts(self):
         return self.SmartArtLayouts
@@ -1435,7 +1395,7 @@ class Application:
     def SmartArtQuickStyles(self):
         return Application(self.application.SmartArtQuickStyles)
 
-    # Lower case alias for SmartArtQuickStyles
+    # Lower case aliases for SmartArtQuickStyles
     @property
     def smartartquickstyles(self):
         return self.SmartArtQuickStyles
@@ -1444,16 +1404,15 @@ class Application:
     def Top(self):
         return self.application.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.application.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -1462,7 +1421,7 @@ class Application:
     def VBE(self):
         return self.application.VBE
 
-    # Lower case alias for VBE
+    # Lower case aliases for VBE
     @property
     def vbe(self):
         return self.VBE
@@ -1471,7 +1430,7 @@ class Application:
     def Version(self):
         return self.application.Version
 
-    # Lower case alias for Version
+    # Lower case aliases for Version
     @property
     def version(self):
         return self.Version
@@ -1480,16 +1439,15 @@ class Application:
     def Visible(self):
         return self.application.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.application.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -1498,16 +1456,15 @@ class Application:
     def Width(self):
         return self.application.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.application.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -1516,7 +1473,7 @@ class Application:
     def Windows(self):
         return DocumentWindows(self.application.Windows)
 
-    # Lower case alias for Windows
+    # Lower case aliases for Windows
     @property
     def windows(self):
         return self.Windows
@@ -1525,16 +1482,15 @@ class Application:
     def WindowState(self):
         return self.application.WindowState
 
-    # Lower case alias for WindowState
-    @property
-    def windowstate(self):
-        return self.WindowState
-
     @WindowState.setter
     def WindowState(self, value):
         self.application.WindowState = value
 
-    # Lower case alias for WindowState setter
+    # Lower case aliases for WindowState
+    @property
+    def windowstate(self):
+        return self.WindowState
+
     @windowstate.setter
     def windowstate(self, value):
         self.WindowState = value
@@ -1566,16 +1522,15 @@ class AutoCorrect:
     def DisplayAutoCorrectOptions(self):
         return self.autocorrect.DisplayAutoCorrectOptions
 
-    # Lower case alias for DisplayAutoCorrectOptions
-    @property
-    def displayautocorrectoptions(self):
-        return self.DisplayAutoCorrectOptions
-
     @DisplayAutoCorrectOptions.setter
     def DisplayAutoCorrectOptions(self, value):
         self.autocorrect.DisplayAutoCorrectOptions = value
 
-    # Lower case alias for DisplayAutoCorrectOptions setter
+    # Lower case aliases for DisplayAutoCorrectOptions
+    @property
+    def displayautocorrectoptions(self):
+        return self.DisplayAutoCorrectOptions
+
     @displayautocorrectoptions.setter
     def displayautocorrectoptions(self, value):
         self.DisplayAutoCorrectOptions = value
@@ -1584,16 +1539,15 @@ class AutoCorrect:
     def DisplayAutoLayoutOptions(self):
         return self.autocorrect.DisplayAutoLayoutOptions
 
-    # Lower case alias for DisplayAutoLayoutOptions
-    @property
-    def displayautolayoutoptions(self):
-        return self.DisplayAutoLayoutOptions
-
     @DisplayAutoLayoutOptions.setter
     def DisplayAutoLayoutOptions(self, value):
         self.autocorrect.DisplayAutoLayoutOptions = value
 
-    # Lower case alias for DisplayAutoLayoutOptions setter
+    # Lower case aliases for DisplayAutoLayoutOptions
+    @property
+    def displayautolayoutoptions(self):
+        return self.DisplayAutoLayoutOptions
+
     @displayautolayoutoptions.setter
     def displayautolayoutoptions(self, value):
         self.DisplayAutoLayoutOptions = value
@@ -1612,7 +1566,7 @@ class Axes:
     def Count(self):
         return self.axes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -1621,7 +1575,7 @@ class Axes:
     def Creator(self):
         return self.axes.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -1630,7 +1584,7 @@ class Axes:
     def Parent(self):
         return self.axes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -1653,16 +1607,15 @@ class Axis:
     def AxisBetweenCategories(self):
         return self.axis.AxisBetweenCategories
 
-    # Lower case alias for AxisBetweenCategories
-    @property
-    def axisbetweencategories(self):
-        return self.AxisBetweenCategories
-
     @AxisBetweenCategories.setter
     def AxisBetweenCategories(self, value):
         self.axis.AxisBetweenCategories = value
 
-    # Lower case alias for AxisBetweenCategories setter
+    # Lower case aliases for AxisBetweenCategories
+    @property
+    def axisbetweencategories(self):
+        return self.AxisBetweenCategories
+
     @axisbetweencategories.setter
     def axisbetweencategories(self, value):
         self.AxisBetweenCategories = value
@@ -1671,7 +1624,7 @@ class Axis:
     def AxisGroup(self):
         return XlAxisGroup(self.axis.AxisGroup)
 
-    # Lower case alias for AxisGroup
+    # Lower case aliases for AxisGroup
     @property
     def axisgroup(self):
         return self.AxisGroup
@@ -1680,7 +1633,7 @@ class Axis:
     def AxisTitle(self):
         return AxisTitle(self.axis.AxisTitle)
 
-    # Lower case alias for AxisTitle
+    # Lower case aliases for AxisTitle
     @property
     def axistitle(self):
         return self.AxisTitle
@@ -1689,16 +1642,15 @@ class Axis:
     def BaseUnit(self):
         return XlTimeUnit(self.axis.BaseUnit)
 
-    # Lower case alias for BaseUnit
-    @property
-    def baseunit(self):
-        return self.BaseUnit
-
     @BaseUnit.setter
     def BaseUnit(self, value):
         self.axis.BaseUnit = value
 
-    # Lower case alias for BaseUnit setter
+    # Lower case aliases for BaseUnit
+    @property
+    def baseunit(self):
+        return self.BaseUnit
+
     @baseunit.setter
     def baseunit(self, value):
         self.BaseUnit = value
@@ -1707,16 +1659,15 @@ class Axis:
     def BaseUnitIsAuto(self):
         return self.axis.BaseUnitIsAuto
 
-    # Lower case alias for BaseUnitIsAuto
-    @property
-    def baseunitisauto(self):
-        return self.BaseUnitIsAuto
-
     @BaseUnitIsAuto.setter
     def BaseUnitIsAuto(self, value):
         self.axis.BaseUnitIsAuto = value
 
-    # Lower case alias for BaseUnitIsAuto setter
+    # Lower case aliases for BaseUnitIsAuto
+    @property
+    def baseunitisauto(self):
+        return self.BaseUnitIsAuto
+
     @baseunitisauto.setter
     def baseunitisauto(self, value):
         self.BaseUnitIsAuto = value
@@ -1725,7 +1676,7 @@ class Axis:
     def Border(self):
         return ChartBorder(self.axis.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -1734,16 +1685,15 @@ class Axis:
     def CategoryNames(self):
         return self.axis.CategoryNames
 
-    # Lower case alias for CategoryNames
-    @property
-    def categorynames(self):
-        return self.CategoryNames
-
     @CategoryNames.setter
     def CategoryNames(self, value):
         self.axis.CategoryNames = value
 
-    # Lower case alias for CategoryNames setter
+    # Lower case aliases for CategoryNames
+    @property
+    def categorynames(self):
+        return self.CategoryNames
+
     @categorynames.setter
     def categorynames(self, value):
         self.CategoryNames = value
@@ -1752,16 +1702,15 @@ class Axis:
     def CategoryType(self):
         return XlCategoryType(self.axis.CategoryType)
 
-    # Lower case alias for CategoryType
-    @property
-    def categorytype(self):
-        return self.CategoryType
-
     @CategoryType.setter
     def CategoryType(self, value):
         self.axis.CategoryType = value
 
-    # Lower case alias for CategoryType setter
+    # Lower case aliases for CategoryType
+    @property
+    def categorytype(self):
+        return self.CategoryType
+
     @categorytype.setter
     def categorytype(self, value):
         self.CategoryType = value
@@ -1770,7 +1719,7 @@ class Axis:
     def Creator(self):
         return self.axis.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -1779,16 +1728,15 @@ class Axis:
     def Crosses(self):
         return self.axis.Crosses
 
-    # Lower case alias for Crosses
-    @property
-    def crosses(self):
-        return self.Crosses
-
     @Crosses.setter
     def Crosses(self, value):
         self.axis.Crosses = value
 
-    # Lower case alias for Crosses setter
+    # Lower case aliases for Crosses
+    @property
+    def crosses(self):
+        return self.Crosses
+
     @crosses.setter
     def crosses(self, value):
         self.Crosses = value
@@ -1797,16 +1745,15 @@ class Axis:
     def CrossesAt(self):
         return self.axis.CrossesAt
 
-    # Lower case alias for CrossesAt
-    @property
-    def crossesat(self):
-        return self.CrossesAt
-
     @CrossesAt.setter
     def CrossesAt(self, value):
         self.axis.CrossesAt = value
 
-    # Lower case alias for CrossesAt setter
+    # Lower case aliases for CrossesAt
+    @property
+    def crossesat(self):
+        return self.CrossesAt
+
     @crossesat.setter
     def crossesat(self, value):
         self.CrossesAt = value
@@ -1815,16 +1762,15 @@ class Axis:
     def DisplayUnit(self):
         return XlDisplayUnit(self.axis.DisplayUnit)
 
-    # Lower case alias for DisplayUnit
-    @property
-    def displayunit(self):
-        return self.DisplayUnit
-
     @DisplayUnit.setter
     def DisplayUnit(self, value):
         self.axis.DisplayUnit = value
 
-    # Lower case alias for DisplayUnit setter
+    # Lower case aliases for DisplayUnit
+    @property
+    def displayunit(self):
+        return self.DisplayUnit
+
     @displayunit.setter
     def displayunit(self, value):
         self.DisplayUnit = value
@@ -1833,16 +1779,15 @@ class Axis:
     def DisplayUnitCustom(self):
         return self.axis.DisplayUnitCustom
 
-    # Lower case alias for DisplayUnitCustom
-    @property
-    def displayunitcustom(self):
-        return self.DisplayUnitCustom
-
     @DisplayUnitCustom.setter
     def DisplayUnitCustom(self, value):
         self.axis.DisplayUnitCustom = value
 
-    # Lower case alias for DisplayUnitCustom setter
+    # Lower case aliases for DisplayUnitCustom
+    @property
+    def displayunitcustom(self):
+        return self.DisplayUnitCustom
+
     @displayunitcustom.setter
     def displayunitcustom(self, value):
         self.DisplayUnitCustom = value
@@ -1851,7 +1796,7 @@ class Axis:
     def DisplayUnitLabel(self):
         return DisplayUnitLabel(self.axis.DisplayUnitLabel)
 
-    # Lower case alias for DisplayUnitLabel
+    # Lower case aliases for DisplayUnitLabel
     @property
     def displayunitlabel(self):
         return self.DisplayUnitLabel
@@ -1860,7 +1805,7 @@ class Axis:
     def Format(self):
         return ChartFormat(self.axis.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -1869,16 +1814,15 @@ class Axis:
     def HasDisplayUnitLabel(self):
         return self.axis.HasDisplayUnitLabel
 
-    # Lower case alias for HasDisplayUnitLabel
-    @property
-    def hasdisplayunitlabel(self):
-        return self.HasDisplayUnitLabel
-
     @HasDisplayUnitLabel.setter
     def HasDisplayUnitLabel(self, value):
         self.axis.HasDisplayUnitLabel = value
 
-    # Lower case alias for HasDisplayUnitLabel setter
+    # Lower case aliases for HasDisplayUnitLabel
+    @property
+    def hasdisplayunitlabel(self):
+        return self.HasDisplayUnitLabel
+
     @hasdisplayunitlabel.setter
     def hasdisplayunitlabel(self, value):
         self.HasDisplayUnitLabel = value
@@ -1887,16 +1831,15 @@ class Axis:
     def HasMajorGridlines(self):
         return self.axis.HasMajorGridlines
 
-    # Lower case alias for HasMajorGridlines
-    @property
-    def hasmajorgridlines(self):
-        return self.HasMajorGridlines
-
     @HasMajorGridlines.setter
     def HasMajorGridlines(self, value):
         self.axis.HasMajorGridlines = value
 
-    # Lower case alias for HasMajorGridlines setter
+    # Lower case aliases for HasMajorGridlines
+    @property
+    def hasmajorgridlines(self):
+        return self.HasMajorGridlines
+
     @hasmajorgridlines.setter
     def hasmajorgridlines(self, value):
         self.HasMajorGridlines = value
@@ -1905,16 +1848,15 @@ class Axis:
     def HasMinorGridlines(self):
         return self.axis.HasMinorGridlines
 
-    # Lower case alias for HasMinorGridlines
-    @property
-    def hasminorgridlines(self):
-        return self.HasMinorGridlines
-
     @HasMinorGridlines.setter
     def HasMinorGridlines(self, value):
         self.axis.HasMinorGridlines = value
 
-    # Lower case alias for HasMinorGridlines setter
+    # Lower case aliases for HasMinorGridlines
+    @property
+    def hasminorgridlines(self):
+        return self.HasMinorGridlines
+
     @hasminorgridlines.setter
     def hasminorgridlines(self, value):
         self.HasMinorGridlines = value
@@ -1923,16 +1865,15 @@ class Axis:
     def HasTitle(self):
         return self.axis.HasTitle
 
-    # Lower case alias for HasTitle
-    @property
-    def hastitle(self):
-        return self.HasTitle
-
     @HasTitle.setter
     def HasTitle(self, value):
         self.axis.HasTitle = value
 
-    # Lower case alias for HasTitle setter
+    # Lower case aliases for HasTitle
+    @property
+    def hastitle(self):
+        return self.HasTitle
+
     @hastitle.setter
     def hastitle(self, value):
         self.HasTitle = value
@@ -1941,7 +1882,7 @@ class Axis:
     def Height(self):
         return self.axis.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -1950,7 +1891,7 @@ class Axis:
     def Left(self):
         return self.axis.Left
 
-    # Lower case alias for Left
+    # Lower case aliases for Left
     @property
     def left(self):
         return self.Left
@@ -1959,16 +1900,15 @@ class Axis:
     def LogBase(self):
         return self.axis.LogBase
 
-    # Lower case alias for LogBase
-    @property
-    def logbase(self):
-        return self.LogBase
-
     @LogBase.setter
     def LogBase(self, value):
         self.axis.LogBase = value
 
-    # Lower case alias for LogBase setter
+    # Lower case aliases for LogBase
+    @property
+    def logbase(self):
+        return self.LogBase
+
     @logbase.setter
     def logbase(self, value):
         self.LogBase = value
@@ -1977,7 +1917,7 @@ class Axis:
     def MajorGridlines(self):
         return Gridlines(self.axis.MajorGridlines)
 
-    # Lower case alias for MajorGridlines
+    # Lower case aliases for MajorGridlines
     @property
     def majorgridlines(self):
         return self.MajorGridlines
@@ -1986,16 +1926,15 @@ class Axis:
     def MajorTickMark(self):
         return XlTickMark(self.axis.MajorTickMark)
 
-    # Lower case alias for MajorTickMark
-    @property
-    def majortickmark(self):
-        return self.MajorTickMark
-
     @MajorTickMark.setter
     def MajorTickMark(self, value):
         self.axis.MajorTickMark = value
 
-    # Lower case alias for MajorTickMark setter
+    # Lower case aliases for MajorTickMark
+    @property
+    def majortickmark(self):
+        return self.MajorTickMark
+
     @majortickmark.setter
     def majortickmark(self, value):
         self.MajorTickMark = value
@@ -2004,16 +1943,15 @@ class Axis:
     def MajorUnit(self):
         return self.axis.MajorUnit
 
-    # Lower case alias for MajorUnit
-    @property
-    def majorunit(self):
-        return self.MajorUnit
-
     @MajorUnit.setter
     def MajorUnit(self, value):
         self.axis.MajorUnit = value
 
-    # Lower case alias for MajorUnit setter
+    # Lower case aliases for MajorUnit
+    @property
+    def majorunit(self):
+        return self.MajorUnit
+
     @majorunit.setter
     def majorunit(self, value):
         self.MajorUnit = value
@@ -2022,16 +1960,15 @@ class Axis:
     def MajorUnitIsAuto(self):
         return self.axis.MajorUnitIsAuto
 
-    # Lower case alias for MajorUnitIsAuto
-    @property
-    def majorunitisauto(self):
-        return self.MajorUnitIsAuto
-
     @MajorUnitIsAuto.setter
     def MajorUnitIsAuto(self, value):
         self.axis.MajorUnitIsAuto = value
 
-    # Lower case alias for MajorUnitIsAuto setter
+    # Lower case aliases for MajorUnitIsAuto
+    @property
+    def majorunitisauto(self):
+        return self.MajorUnitIsAuto
+
     @majorunitisauto.setter
     def majorunitisauto(self, value):
         self.MajorUnitIsAuto = value
@@ -2040,16 +1977,15 @@ class Axis:
     def MajorUnitScale(self):
         return self.axis.MajorUnitScale
 
-    # Lower case alias for MajorUnitScale
-    @property
-    def majorunitscale(self):
-        return self.MajorUnitScale
-
     @MajorUnitScale.setter
     def MajorUnitScale(self, value):
         self.axis.MajorUnitScale = value
 
-    # Lower case alias for MajorUnitScale setter
+    # Lower case aliases for MajorUnitScale
+    @property
+    def majorunitscale(self):
+        return self.MajorUnitScale
+
     @majorunitscale.setter
     def majorunitscale(self, value):
         self.MajorUnitScale = value
@@ -2058,16 +1994,15 @@ class Axis:
     def MaximumScale(self):
         return self.axis.MaximumScale
 
-    # Lower case alias for MaximumScale
-    @property
-    def maximumscale(self):
-        return self.MaximumScale
-
     @MaximumScale.setter
     def MaximumScale(self, value):
         self.axis.MaximumScale = value
 
-    # Lower case alias for MaximumScale setter
+    # Lower case aliases for MaximumScale
+    @property
+    def maximumscale(self):
+        return self.MaximumScale
+
     @maximumscale.setter
     def maximumscale(self, value):
         self.MaximumScale = value
@@ -2076,16 +2011,15 @@ class Axis:
     def MaximumScaleIsAuto(self):
         return self.axis.MaximumScaleIsAuto
 
-    # Lower case alias for MaximumScaleIsAuto
-    @property
-    def maximumscaleisauto(self):
-        return self.MaximumScaleIsAuto
-
     @MaximumScaleIsAuto.setter
     def MaximumScaleIsAuto(self, value):
         self.axis.MaximumScaleIsAuto = value
 
-    # Lower case alias for MaximumScaleIsAuto setter
+    # Lower case aliases for MaximumScaleIsAuto
+    @property
+    def maximumscaleisauto(self):
+        return self.MaximumScaleIsAuto
+
     @maximumscaleisauto.setter
     def maximumscaleisauto(self, value):
         self.MaximumScaleIsAuto = value
@@ -2094,16 +2028,15 @@ class Axis:
     def MinimumScale(self):
         return self.axis.MinimumScale
 
-    # Lower case alias for MinimumScale
-    @property
-    def minimumscale(self):
-        return self.MinimumScale
-
     @MinimumScale.setter
     def MinimumScale(self, value):
         self.axis.MinimumScale = value
 
-    # Lower case alias for MinimumScale setter
+    # Lower case aliases for MinimumScale
+    @property
+    def minimumscale(self):
+        return self.MinimumScale
+
     @minimumscale.setter
     def minimumscale(self, value):
         self.MinimumScale = value
@@ -2112,16 +2045,15 @@ class Axis:
     def MinimumScaleIsAuto(self):
         return self.axis.MinimumScaleIsAuto
 
-    # Lower case alias for MinimumScaleIsAuto
-    @property
-    def minimumscaleisauto(self):
-        return self.MinimumScaleIsAuto
-
     @MinimumScaleIsAuto.setter
     def MinimumScaleIsAuto(self, value):
         self.axis.MinimumScaleIsAuto = value
 
-    # Lower case alias for MinimumScaleIsAuto setter
+    # Lower case aliases for MinimumScaleIsAuto
+    @property
+    def minimumscaleisauto(self):
+        return self.MinimumScaleIsAuto
+
     @minimumscaleisauto.setter
     def minimumscaleisauto(self, value):
         self.MinimumScaleIsAuto = value
@@ -2130,7 +2062,7 @@ class Axis:
     def MinorGridlines(self):
         return Gridlines(self.axis.MinorGridlines)
 
-    # Lower case alias for MinorGridlines
+    # Lower case aliases for MinorGridlines
     @property
     def minorgridlines(self):
         return self.MinorGridlines
@@ -2139,16 +2071,15 @@ class Axis:
     def MinorTickMark(self):
         return XlTickMark(self.axis.MinorTickMark)
 
-    # Lower case alias for MinorTickMark
-    @property
-    def minortickmark(self):
-        return self.MinorTickMark
-
     @MinorTickMark.setter
     def MinorTickMark(self, value):
         self.axis.MinorTickMark = value
 
-    # Lower case alias for MinorTickMark setter
+    # Lower case aliases for MinorTickMark
+    @property
+    def minortickmark(self):
+        return self.MinorTickMark
+
     @minortickmark.setter
     def minortickmark(self, value):
         self.MinorTickMark = value
@@ -2157,16 +2088,15 @@ class Axis:
     def MinorUnit(self):
         return self.axis.MinorUnit
 
-    # Lower case alias for MinorUnit
-    @property
-    def minorunit(self):
-        return self.MinorUnit
-
     @MinorUnit.setter
     def MinorUnit(self, value):
         self.axis.MinorUnit = value
 
-    # Lower case alias for MinorUnit setter
+    # Lower case aliases for MinorUnit
+    @property
+    def minorunit(self):
+        return self.MinorUnit
+
     @minorunit.setter
     def minorunit(self, value):
         self.MinorUnit = value
@@ -2175,16 +2105,15 @@ class Axis:
     def MinorUnitIsAuto(self):
         return self.axis.MinorUnitIsAuto
 
-    # Lower case alias for MinorUnitIsAuto
-    @property
-    def minorunitisauto(self):
-        return self.MinorUnitIsAuto
-
     @MinorUnitIsAuto.setter
     def MinorUnitIsAuto(self, value):
         self.axis.MinorUnitIsAuto = value
 
-    # Lower case alias for MinorUnitIsAuto setter
+    # Lower case aliases for MinorUnitIsAuto
+    @property
+    def minorunitisauto(self):
+        return self.MinorUnitIsAuto
+
     @minorunitisauto.setter
     def minorunitisauto(self, value):
         self.MinorUnitIsAuto = value
@@ -2193,16 +2122,15 @@ class Axis:
     def MinorUnitScale(self):
         return self.axis.MinorUnitScale
 
-    # Lower case alias for MinorUnitScale
-    @property
-    def minorunitscale(self):
-        return self.MinorUnitScale
-
     @MinorUnitScale.setter
     def MinorUnitScale(self, value):
         self.axis.MinorUnitScale = value
 
-    # Lower case alias for MinorUnitScale setter
+    # Lower case aliases for MinorUnitScale
+    @property
+    def minorunitscale(self):
+        return self.MinorUnitScale
+
     @minorunitscale.setter
     def minorunitscale(self, value):
         self.MinorUnitScale = value
@@ -2211,7 +2139,7 @@ class Axis:
     def Parent(self):
         return self.axis.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2220,16 +2148,15 @@ class Axis:
     def ReversePlotOrder(self):
         return self.axis.ReversePlotOrder
 
-    # Lower case alias for ReversePlotOrder
-    @property
-    def reverseplotorder(self):
-        return self.ReversePlotOrder
-
     @ReversePlotOrder.setter
     def ReversePlotOrder(self, value):
         self.axis.ReversePlotOrder = value
 
-    # Lower case alias for ReversePlotOrder setter
+    # Lower case aliases for ReversePlotOrder
+    @property
+    def reverseplotorder(self):
+        return self.ReversePlotOrder
+
     @reverseplotorder.setter
     def reverseplotorder(self, value):
         self.ReversePlotOrder = value
@@ -2238,16 +2165,15 @@ class Axis:
     def ScaleType(self):
         return XlScaleType(self.axis.ScaleType)
 
-    # Lower case alias for ScaleType
-    @property
-    def scaletype(self):
-        return self.ScaleType
-
     @ScaleType.setter
     def ScaleType(self, value):
         self.axis.ScaleType = value
 
-    # Lower case alias for ScaleType setter
+    # Lower case aliases for ScaleType
+    @property
+    def scaletype(self):
+        return self.ScaleType
+
     @scaletype.setter
     def scaletype(self, value):
         self.ScaleType = value
@@ -2256,16 +2182,15 @@ class Axis:
     def TickLabelPosition(self):
         return self.axis.TickLabelPosition
 
-    # Lower case alias for TickLabelPosition
-    @property
-    def ticklabelposition(self):
-        return self.TickLabelPosition
-
     @TickLabelPosition.setter
     def TickLabelPosition(self, value):
         self.axis.TickLabelPosition = value
 
-    # Lower case alias for TickLabelPosition setter
+    # Lower case aliases for TickLabelPosition
+    @property
+    def ticklabelposition(self):
+        return self.TickLabelPosition
+
     @ticklabelposition.setter
     def ticklabelposition(self, value):
         self.TickLabelPosition = value
@@ -2274,7 +2199,7 @@ class Axis:
     def TickLabels(self):
         return TickLabels(self.axis.TickLabels)
 
-    # Lower case alias for TickLabels
+    # Lower case aliases for TickLabels
     @property
     def ticklabels(self):
         return self.TickLabels
@@ -2283,16 +2208,15 @@ class Axis:
     def TickLabelSpacing(self):
         return self.axis.TickLabelSpacing
 
-    # Lower case alias for TickLabelSpacing
-    @property
-    def ticklabelspacing(self):
-        return self.TickLabelSpacing
-
     @TickLabelSpacing.setter
     def TickLabelSpacing(self, value):
         self.axis.TickLabelSpacing = value
 
-    # Lower case alias for TickLabelSpacing setter
+    # Lower case aliases for TickLabelSpacing
+    @property
+    def ticklabelspacing(self):
+        return self.TickLabelSpacing
+
     @ticklabelspacing.setter
     def ticklabelspacing(self, value):
         self.TickLabelSpacing = value
@@ -2301,16 +2225,15 @@ class Axis:
     def TickLabelSpacingIsAuto(self):
         return self.axis.TickLabelSpacingIsAuto
 
-    # Lower case alias for TickLabelSpacingIsAuto
-    @property
-    def ticklabelspacingisauto(self):
-        return self.TickLabelSpacingIsAuto
-
     @TickLabelSpacingIsAuto.setter
     def TickLabelSpacingIsAuto(self, value):
         self.axis.TickLabelSpacingIsAuto = value
 
-    # Lower case alias for TickLabelSpacingIsAuto setter
+    # Lower case aliases for TickLabelSpacingIsAuto
+    @property
+    def ticklabelspacingisauto(self):
+        return self.TickLabelSpacingIsAuto
+
     @ticklabelspacingisauto.setter
     def ticklabelspacingisauto(self, value):
         self.TickLabelSpacingIsAuto = value
@@ -2319,16 +2242,15 @@ class Axis:
     def TickMarkSpacing(self):
         return self.axis.TickMarkSpacing
 
-    # Lower case alias for TickMarkSpacing
-    @property
-    def tickmarkspacing(self):
-        return self.TickMarkSpacing
-
     @TickMarkSpacing.setter
     def TickMarkSpacing(self, value):
         self.axis.TickMarkSpacing = value
 
-    # Lower case alias for TickMarkSpacing setter
+    # Lower case aliases for TickMarkSpacing
+    @property
+    def tickmarkspacing(self):
+        return self.TickMarkSpacing
+
     @tickmarkspacing.setter
     def tickmarkspacing(self, value):
         self.TickMarkSpacing = value
@@ -2337,7 +2259,7 @@ class Axis:
     def Top(self):
         return self.axis.Top
 
-    # Lower case alias for Top
+    # Lower case aliases for Top
     @property
     def top(self):
         return self.Top
@@ -2346,7 +2268,7 @@ class Axis:
     def Type(self):
         return XlAxisType(self.axis.Type)
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -2355,7 +2277,7 @@ class Axis:
     def Width(self):
         return self.axis.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -2380,16 +2302,15 @@ class AxisTitle:
     def Caption(self):
         return self.axistitle.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.axistitle.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -2401,7 +2322,7 @@ class AxisTitle:
         else:
             return ChartCharacters(self.axistitle.GetCharacters(*arguments))
 
-    # Lower case alias for Characters
+    # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
         arguments = [Start, Length]
         return self.Characters(*arguments)
@@ -2410,7 +2331,7 @@ class AxisTitle:
     def Creator(self):
         return self.axistitle.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -2419,7 +2340,7 @@ class AxisTitle:
     def Format(self):
         return ChartFormat(self.axistitle.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -2428,16 +2349,15 @@ class AxisTitle:
     def Formula(self):
         return self.axistitle.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.axistitle.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -2446,16 +2366,15 @@ class AxisTitle:
     def FormulaLocal(self):
         return self.axistitle.FormulaLocal
 
-    # Lower case alias for FormulaLocal
-    @property
-    def formulalocal(self):
-        return self.FormulaLocal
-
     @FormulaLocal.setter
     def FormulaLocal(self, value):
         self.axistitle.FormulaLocal = value
 
-    # Lower case alias for FormulaLocal setter
+    # Lower case aliases for FormulaLocal
+    @property
+    def formulalocal(self):
+        return self.FormulaLocal
+
     @formulalocal.setter
     def formulalocal(self, value):
         self.FormulaLocal = value
@@ -2464,16 +2383,15 @@ class AxisTitle:
     def FormulaR1C1(self):
         return self.axistitle.FormulaR1C1
 
-    # Lower case alias for FormulaR1C1
-    @property
-    def formular1c1(self):
-        return self.FormulaR1C1
-
     @FormulaR1C1.setter
     def FormulaR1C1(self, value):
         self.axistitle.FormulaR1C1 = value
 
-    # Lower case alias for FormulaR1C1 setter
+    # Lower case aliases for FormulaR1C1
+    @property
+    def formular1c1(self):
+        return self.FormulaR1C1
+
     @formular1c1.setter
     def formular1c1(self, value):
         self.FormulaR1C1 = value
@@ -2482,16 +2400,15 @@ class AxisTitle:
     def FormulaR1C1Local(self):
         return self.axistitle.FormulaR1C1Local
 
-    # Lower case alias for FormulaR1C1Local
-    @property
-    def formular1c1local(self):
-        return self.FormulaR1C1Local
-
     @FormulaR1C1Local.setter
     def FormulaR1C1Local(self, value):
         self.axistitle.FormulaR1C1Local = value
 
-    # Lower case alias for FormulaR1C1Local setter
+    # Lower case aliases for FormulaR1C1Local
+    @property
+    def formular1c1local(self):
+        return self.FormulaR1C1Local
+
     @formular1c1local.setter
     def formular1c1local(self, value):
         self.FormulaR1C1Local = value
@@ -2500,7 +2417,7 @@ class AxisTitle:
     def Height(self):
         return self.axistitle.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -2509,16 +2426,15 @@ class AxisTitle:
     def HorizontalAlignment(self):
         return self.axistitle.HorizontalAlignment
 
-    # Lower case alias for HorizontalAlignment
-    @property
-    def horizontalalignment(self):
-        return self.HorizontalAlignment
-
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
         self.axistitle.HorizontalAlignment = value
 
-    # Lower case alias for HorizontalAlignment setter
+    # Lower case aliases for HorizontalAlignment
+    @property
+    def horizontalalignment(self):
+        return self.HorizontalAlignment
+
     @horizontalalignment.setter
     def horizontalalignment(self, value):
         self.HorizontalAlignment = value
@@ -2527,16 +2443,15 @@ class AxisTitle:
     def IncludeInLayout(self):
         return self.axistitle.IncludeInLayout
 
-    # Lower case alias for IncludeInLayout
-    @property
-    def includeinlayout(self):
-        return self.IncludeInLayout
-
     @IncludeInLayout.setter
     def IncludeInLayout(self, value):
         self.axistitle.IncludeInLayout = value
 
-    # Lower case alias for IncludeInLayout setter
+    # Lower case aliases for IncludeInLayout
+    @property
+    def includeinlayout(self):
+        return self.IncludeInLayout
+
     @includeinlayout.setter
     def includeinlayout(self, value):
         self.IncludeInLayout = value
@@ -2545,16 +2460,15 @@ class AxisTitle:
     def Left(self):
         return self.axistitle.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.axistitle.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -2563,7 +2477,7 @@ class AxisTitle:
     def Name(self):
         return self.axistitle.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -2572,16 +2486,15 @@ class AxisTitle:
     def Orientation(self):
         return self.axistitle.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.axistitle.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -2590,7 +2503,7 @@ class AxisTitle:
     def Parent(self):
         return self.axistitle.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2599,16 +2512,15 @@ class AxisTitle:
     def Position(self):
         return XlChartElementPosition(self.axistitle.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.axistitle.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -2617,16 +2529,15 @@ class AxisTitle:
     def ReadingOrder(self):
         return XlReadingOrder(self.axistitle.ReadingOrder)
 
-    # Lower case alias for ReadingOrder
-    @property
-    def readingorder(self):
-        return self.ReadingOrder
-
     @ReadingOrder.setter
     def ReadingOrder(self, value):
         self.axistitle.ReadingOrder = value
 
-    # Lower case alias for ReadingOrder setter
+    # Lower case aliases for ReadingOrder
+    @property
+    def readingorder(self):
+        return self.ReadingOrder
+
     @readingorder.setter
     def readingorder(self, value):
         self.ReadingOrder = value
@@ -2635,16 +2546,15 @@ class AxisTitle:
     def Shadow(self):
         return self.axistitle.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.axistitle.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -2653,16 +2563,15 @@ class AxisTitle:
     def Text(self):
         return self.axistitle.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.axistitle.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -2671,16 +2580,15 @@ class AxisTitle:
     def Top(self):
         return self.axistitle.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.axistitle.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -2689,16 +2597,15 @@ class AxisTitle:
     def VerticalAlignment(self):
         return self.axistitle.VerticalAlignment
 
-    # Lower case alias for VerticalAlignment
-    @property
-    def verticalalignment(self):
-        return self.VerticalAlignment
-
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
         self.axistitle.VerticalAlignment = value
 
-    # Lower case alias for VerticalAlignment setter
+    # Lower case aliases for VerticalAlignment
+    @property
+    def verticalalignment(self):
+        return self.VerticalAlignment
+
     @verticalalignment.setter
     def verticalalignment(self, value):
         self.VerticalAlignment = value
@@ -2707,7 +2614,7 @@ class AxisTitle:
     def Width(self):
         return self.axistitle.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -2735,7 +2642,7 @@ class Borders:
     def Count(self):
         return self.borders.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -2744,7 +2651,7 @@ class Borders:
     def Parent(self):
         return self.borders.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2767,7 +2674,7 @@ class Broadcast:
     def AttendeeUrl(self):
         return self.broadcast.AttendeeUrl
 
-    # Lower case alias for AttendeeUrl
+    # Lower case aliases for AttendeeUrl
     @property
     def attendeeurl(self):
         return self.AttendeeUrl
@@ -2776,7 +2683,7 @@ class Broadcast:
     def IsBroadcasting(self):
         return self.broadcast.IsBroadcasting
 
-    # Lower case alias for IsBroadcasting
+    # Lower case aliases for IsBroadcasting
     @property
     def isbroadcasting(self):
         return self.IsBroadcasting
@@ -2785,7 +2692,7 @@ class Broadcast:
     def Parent(self):
         return self.broadcast.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2811,16 +2718,15 @@ class BulletFormat:
     def Character(self):
         return self.bulletformat.Character
 
-    # Lower case alias for Character
-    @property
-    def character(self):
-        return self.Character
-
     @Character.setter
     def Character(self, value):
         self.bulletformat.Character = value
 
-    # Lower case alias for Character setter
+    # Lower case aliases for Character
+    @property
+    def character(self):
+        return self.Character
+
     @character.setter
     def character(self, value):
         self.Character = value
@@ -2829,7 +2735,7 @@ class BulletFormat:
     def Font(self):
         return Font(self.bulletformat.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -2838,7 +2744,7 @@ class BulletFormat:
     def Number(self):
         return self.bulletformat.Number
 
-    # Lower case alias for Number
+    # Lower case aliases for Number
     @property
     def number(self):
         return self.Number
@@ -2847,7 +2753,7 @@ class BulletFormat:
     def Parent(self):
         return self.bulletformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -2856,16 +2762,15 @@ class BulletFormat:
     def RelativeSize(self):
         return self.bulletformat.RelativeSize
 
-    # Lower case alias for RelativeSize
-    @property
-    def relativesize(self):
-        return self.RelativeSize
-
     @RelativeSize.setter
     def RelativeSize(self, value):
         self.bulletformat.RelativeSize = value
 
-    # Lower case alias for RelativeSize setter
+    # Lower case aliases for RelativeSize
+    @property
+    def relativesize(self):
+        return self.RelativeSize
+
     @relativesize.setter
     def relativesize(self, value):
         self.RelativeSize = value
@@ -2874,16 +2779,15 @@ class BulletFormat:
     def StartValue(self):
         return self.bulletformat.StartValue
 
-    # Lower case alias for StartValue
-    @property
-    def startvalue(self):
-        return self.StartValue
-
     @StartValue.setter
     def StartValue(self, value):
         self.bulletformat.StartValue = value
 
-    # Lower case alias for StartValue setter
+    # Lower case aliases for StartValue
+    @property
+    def startvalue(self):
+        return self.StartValue
+
     @startvalue.setter
     def startvalue(self, value):
         self.StartValue = value
@@ -2892,16 +2796,15 @@ class BulletFormat:
     def Style(self):
         return self.bulletformat.Style
 
-    # Lower case alias for Style
-    @property
-    def style(self):
-        return self.Style
-
     @Style.setter
     def Style(self, value):
         self.bulletformat.Style = value
 
-    # Lower case alias for Style setter
+    # Lower case aliases for Style
+    @property
+    def style(self):
+        return self.Style
+
     @style.setter
     def style(self, value):
         self.Style = value
@@ -2910,16 +2813,15 @@ class BulletFormat:
     def Type(self):
         return self.bulletformat.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.bulletformat.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -2928,16 +2830,15 @@ class BulletFormat:
     def UseTextColor(self):
         return self.bulletformat.UseTextColor
 
-    # Lower case alias for UseTextColor
-    @property
-    def usetextcolor(self):
-        return self.UseTextColor
-
     @UseTextColor.setter
     def UseTextColor(self, value):
         self.bulletformat.UseTextColor = value
 
-    # Lower case alias for UseTextColor setter
+    # Lower case aliases for UseTextColor
+    @property
+    def usetextcolor(self):
+        return self.UseTextColor
+
     @usetextcolor.setter
     def usetextcolor(self, value):
         self.UseTextColor = value
@@ -2946,16 +2847,15 @@ class BulletFormat:
     def UseTextFont(self):
         return self.bulletformat.UseTextFont
 
-    # Lower case alias for UseTextFont
-    @property
-    def usetextfont(self):
-        return self.UseTextFont
-
     @UseTextFont.setter
     def UseTextFont(self, value):
         self.bulletformat.UseTextFont = value
 
-    # Lower case alias for UseTextFont setter
+    # Lower case aliases for UseTextFont
+    @property
+    def usetextfont(self):
+        return self.UseTextFont
+
     @usetextfont.setter
     def usetextfont(self, value):
         self.UseTextFont = value
@@ -2973,16 +2873,15 @@ class CalloutFormat:
     def Accent(self):
         return self.calloutformat.Accent
 
-    # Lower case alias for Accent
-    @property
-    def accent(self):
-        return self.Accent
-
     @Accent.setter
     def Accent(self, value):
         self.calloutformat.Accent = value
 
-    # Lower case alias for Accent setter
+    # Lower case aliases for Accent
+    @property
+    def accent(self):
+        return self.Accent
+
     @accent.setter
     def accent(self, value):
         self.Accent = value
@@ -2991,16 +2890,15 @@ class CalloutFormat:
     def Angle(self):
         return self.calloutformat.Angle
 
-    # Lower case alias for Angle
-    @property
-    def angle(self):
-        return self.Angle
-
     @Angle.setter
     def Angle(self, value):
         self.calloutformat.Angle = value
 
-    # Lower case alias for Angle setter
+    # Lower case aliases for Angle
+    @property
+    def angle(self):
+        return self.Angle
+
     @angle.setter
     def angle(self, value):
         self.Angle = value
@@ -3013,16 +2911,15 @@ class CalloutFormat:
     def AutoAttach(self):
         return self.calloutformat.AutoAttach
 
-    # Lower case alias for AutoAttach
-    @property
-    def autoattach(self):
-        return self.AutoAttach
-
     @AutoAttach.setter
     def AutoAttach(self, value):
         self.calloutformat.AutoAttach = value
 
-    # Lower case alias for AutoAttach setter
+    # Lower case aliases for AutoAttach
+    @property
+    def autoattach(self):
+        return self.AutoAttach
+
     @autoattach.setter
     def autoattach(self, value):
         self.AutoAttach = value
@@ -3031,7 +2928,7 @@ class CalloutFormat:
     def AutoLength(self):
         return self.calloutformat.AutoLength
 
-    # Lower case alias for AutoLength
+    # Lower case aliases for AutoLength
     @property
     def autolength(self):
         return self.AutoLength
@@ -3040,16 +2937,15 @@ class CalloutFormat:
     def Border(self):
         return self.calloutformat.Border
 
-    # Lower case alias for Border
-    @property
-    def border(self):
-        return self.Border
-
     @Border.setter
     def Border(self, value):
         self.calloutformat.Border = value
 
-    # Lower case alias for Border setter
+    # Lower case aliases for Border
+    @property
+    def border(self):
+        return self.Border
+
     @border.setter
     def border(self, value):
         self.Border = value
@@ -3058,7 +2954,7 @@ class CalloutFormat:
     def Creator(self):
         return self.calloutformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -3067,7 +2963,7 @@ class CalloutFormat:
     def Drop(self):
         return self.calloutformat.Drop
 
-    # Lower case alias for Drop
+    # Lower case aliases for Drop
     @property
     def drop(self):
         return self.Drop
@@ -3076,7 +2972,7 @@ class CalloutFormat:
     def DropType(self):
         return self.calloutformat.DropType
 
-    # Lower case alias for DropType
+    # Lower case aliases for DropType
     @property
     def droptype(self):
         return self.DropType
@@ -3085,16 +2981,15 @@ class CalloutFormat:
     def Gap(self):
         return self.calloutformat.Gap
 
-    # Lower case alias for Gap
-    @property
-    def gap(self):
-        return self.Gap
-
     @Gap.setter
     def Gap(self, value):
         self.calloutformat.Gap = value
 
-    # Lower case alias for Gap setter
+    # Lower case aliases for Gap
+    @property
+    def gap(self):
+        return self.Gap
+
     @gap.setter
     def gap(self, value):
         self.Gap = value
@@ -3103,7 +2998,7 @@ class CalloutFormat:
     def Length(self):
         return self.calloutformat.Length
 
-    # Lower case alias for Length
+    # Lower case aliases for Length
     @property
     def length(self):
         return self.Length
@@ -3112,7 +3007,7 @@ class CalloutFormat:
     def Parent(self):
         return self.calloutformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3121,16 +3016,15 @@ class CalloutFormat:
     def Type(self):
         return self.calloutformat.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.calloutformat.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -3164,7 +3058,7 @@ class Cell:
     def Borders(self):
         return Borders(self.cell.Borders)
 
-    # Lower case alias for Borders
+    # Lower case aliases for Borders
     @property
     def borders(self):
         return self.Borders
@@ -3173,7 +3067,7 @@ class Cell:
     def Parent(self):
         return self.cell.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3182,7 +3076,7 @@ class Cell:
     def Selected(self):
         return self.cell.Selected
 
-    # Lower case alias for Selected
+    # Lower case aliases for Selected
     @property
     def selected(self):
         return self.Selected
@@ -3191,7 +3085,7 @@ class Cell:
     def Shape(self):
         return Shape(self.cell.Shape)
 
-    # Lower case alias for Shape
+    # Lower case aliases for Shape
     @property
     def shape(self):
         return self.Shape
@@ -3224,7 +3118,7 @@ class CellRange:
     def Borders(self):
         return Borders(self.cellrange.Borders)
 
-    # Lower case alias for Borders
+    # Lower case aliases for Borders
     @property
     def borders(self):
         return self.Borders
@@ -3233,7 +3127,7 @@ class CellRange:
     def Count(self):
         return self.cellrange.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -3242,7 +3136,7 @@ class CellRange:
     def Parent(self):
         return self.cellrange.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3261,16 +3155,15 @@ class Chart:
     def AlternativeText(self):
         return self.chart.AlternativeText
 
-    # Lower case alias for AlternativeText
-    @property
-    def alternativetext(self):
-        return self.AlternativeText
-
     @AlternativeText.setter
     def AlternativeText(self, value):
         self.chart.AlternativeText = value
 
-    # Lower case alias for AlternativeText setter
+    # Lower case aliases for AlternativeText
+    @property
+    def alternativetext(self):
+        return self.AlternativeText
+
     @alternativetext.setter
     def alternativetext(self, value):
         self.AlternativeText = value
@@ -3283,16 +3176,15 @@ class Chart:
     def AutoScaling(self):
         return self.chart.AutoScaling
 
-    # Lower case alias for AutoScaling
-    @property
-    def autoscaling(self):
-        return self.AutoScaling
-
     @AutoScaling.setter
     def AutoScaling(self, value):
         self.chart.AutoScaling = value
 
-    # Lower case alias for AutoScaling setter
+    # Lower case aliases for AutoScaling
+    @property
+    def autoscaling(self):
+        return self.AutoScaling
+
     @autoscaling.setter
     def autoscaling(self, value):
         self.AutoScaling = value
@@ -3301,7 +3193,7 @@ class Chart:
     def BackWall(self):
         return Walls(self.chart.BackWall)
 
-    # Lower case alias for BackWall
+    # Lower case aliases for BackWall
     @property
     def backwall(self):
         return self.BackWall
@@ -3310,16 +3202,15 @@ class Chart:
     def BarShape(self):
         return XlBarShape(self.chart.BarShape)
 
-    # Lower case alias for BarShape
-    @property
-    def barshape(self):
-        return self.BarShape
-
     @BarShape.setter
     def BarShape(self, value):
         self.chart.BarShape = value
 
-    # Lower case alias for BarShape setter
+    # Lower case aliases for BarShape
+    @property
+    def barshape(self):
+        return self.BarShape
+
     @barshape.setter
     def barshape(self, value):
         self.BarShape = value
@@ -3328,7 +3219,7 @@ class Chart:
     def ChartArea(self):
         return ChartArea(self.chart.ChartArea)
 
-    # Lower case alias for ChartArea
+    # Lower case aliases for ChartArea
     @property
     def chartarea(self):
         return self.ChartArea
@@ -3337,7 +3228,7 @@ class Chart:
     def ChartData(self):
         return ChartData(self.chart.ChartData)
 
-    # Lower case alias for ChartData
+    # Lower case aliases for ChartData
     @property
     def chartdata(self):
         return self.ChartData
@@ -3346,16 +3237,15 @@ class Chart:
     def ChartStyle(self):
         return self.chart.ChartStyle
 
-    # Lower case alias for ChartStyle
-    @property
-    def chartstyle(self):
-        return self.ChartStyle
-
     @ChartStyle.setter
     def ChartStyle(self, value):
         self.chart.ChartStyle = value
 
-    # Lower case alias for ChartStyle setter
+    # Lower case aliases for ChartStyle
+    @property
+    def chartstyle(self):
+        return self.ChartStyle
+
     @chartstyle.setter
     def chartstyle(self, value):
         self.ChartStyle = value
@@ -3364,7 +3254,7 @@ class Chart:
     def ChartTitle(self):
         return ChartTitle(self.chart.ChartTitle)
 
-    # Lower case alias for ChartTitle
+    # Lower case aliases for ChartTitle
     @property
     def charttitle(self):
         return self.ChartTitle
@@ -3373,16 +3263,15 @@ class Chart:
     def ChartType(self):
         return self.chart.ChartType
 
-    # Lower case alias for ChartType
-    @property
-    def charttype(self):
-        return self.ChartType
-
     @ChartType.setter
     def ChartType(self, value):
         self.chart.ChartType = value
 
-    # Lower case alias for ChartType setter
+    # Lower case aliases for ChartType
+    @property
+    def charttype(self):
+        return self.ChartType
+
     @charttype.setter
     def charttype(self, value):
         self.ChartType = value
@@ -3391,7 +3280,7 @@ class Chart:
     def Creator(self):
         return self.chart.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -3400,7 +3289,7 @@ class Chart:
     def DataTable(self):
         return DataTable(self.chart.DataTable)
 
-    # Lower case alias for DataTable
+    # Lower case aliases for DataTable
     @property
     def datatable(self):
         return self.DataTable
@@ -3409,16 +3298,15 @@ class Chart:
     def DepthPercent(self):
         return self.chart.DepthPercent
 
-    # Lower case alias for DepthPercent
-    @property
-    def depthpercent(self):
-        return self.DepthPercent
-
     @DepthPercent.setter
     def DepthPercent(self, value):
         self.chart.DepthPercent = value
 
-    # Lower case alias for DepthPercent setter
+    # Lower case aliases for DepthPercent
+    @property
+    def depthpercent(self):
+        return self.DepthPercent
+
     @depthpercent.setter
     def depthpercent(self, value):
         self.DepthPercent = value
@@ -3427,16 +3315,15 @@ class Chart:
     def DisplayBlanksAs(self):
         return XlDisplayBlanksAs(self.chart.DisplayBlanksAs)
 
-    # Lower case alias for DisplayBlanksAs
-    @property
-    def displayblanksas(self):
-        return self.DisplayBlanksAs
-
     @DisplayBlanksAs.setter
     def DisplayBlanksAs(self, value):
         self.chart.DisplayBlanksAs = value
 
-    # Lower case alias for DisplayBlanksAs setter
+    # Lower case aliases for DisplayBlanksAs
+    @property
+    def displayblanksas(self):
+        return self.DisplayBlanksAs
+
     @displayblanksas.setter
     def displayblanksas(self, value):
         self.DisplayBlanksAs = value
@@ -3445,16 +3332,15 @@ class Chart:
     def Elevation(self):
         return self.chart.Elevation
 
-    # Lower case alias for Elevation
-    @property
-    def elevation(self):
-        return self.Elevation
-
     @Elevation.setter
     def Elevation(self, value):
         self.chart.Elevation = value
 
-    # Lower case alias for Elevation setter
+    # Lower case aliases for Elevation
+    @property
+    def elevation(self):
+        return self.Elevation
+
     @elevation.setter
     def elevation(self, value):
         self.Elevation = value
@@ -3463,7 +3349,7 @@ class Chart:
     def Floor(self):
         return Floor(self.chart.Floor)
 
-    # Lower case alias for Floor
+    # Lower case aliases for Floor
     @property
     def floor(self):
         return self.Floor
@@ -3472,7 +3358,7 @@ class Chart:
     def Format(self):
         return self.chart.Format
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -3481,16 +3367,15 @@ class Chart:
     def GapDepth(self):
         return self.chart.GapDepth
 
-    # Lower case alias for GapDepth
-    @property
-    def gapdepth(self):
-        return self.GapDepth
-
     @GapDepth.setter
     def GapDepth(self, value):
         self.chart.GapDepth = value
 
-    # Lower case alias for GapDepth setter
+    # Lower case aliases for GapDepth
+    @property
+    def gapdepth(self):
+        return self.GapDepth
+
     @gapdepth.setter
     def gapdepth(self, value):
         self.GapDepth = value
@@ -3499,16 +3384,15 @@ class Chart:
     def HasAxis(self):
         return self.chart.HasAxis
 
-    # Lower case alias for HasAxis
-    @property
-    def hasaxis(self):
-        return self.HasAxis
-
     @HasAxis.setter
     def HasAxis(self, value):
         self.chart.HasAxis = value
 
-    # Lower case alias for HasAxis setter
+    # Lower case aliases for HasAxis
+    @property
+    def hasaxis(self):
+        return self.HasAxis
+
     @hasaxis.setter
     def hasaxis(self, value):
         self.HasAxis = value
@@ -3517,16 +3401,15 @@ class Chart:
     def HasDataTable(self):
         return self.chart.HasDataTable
 
-    # Lower case alias for HasDataTable
-    @property
-    def hasdatatable(self):
-        return self.HasDataTable
-
     @HasDataTable.setter
     def HasDataTable(self, value):
         self.chart.HasDataTable = value
 
-    # Lower case alias for HasDataTable setter
+    # Lower case aliases for HasDataTable
+    @property
+    def hasdatatable(self):
+        return self.HasDataTable
+
     @hasdatatable.setter
     def hasdatatable(self, value):
         self.HasDataTable = value
@@ -3535,16 +3418,15 @@ class Chart:
     def HasLegend(self):
         return self.chart.HasLegend
 
-    # Lower case alias for HasLegend
-    @property
-    def haslegend(self):
-        return self.HasLegend
-
     @HasLegend.setter
     def HasLegend(self, value):
         self.chart.HasLegend = value
 
-    # Lower case alias for HasLegend setter
+    # Lower case aliases for HasLegend
+    @property
+    def haslegend(self):
+        return self.HasLegend
+
     @haslegend.setter
     def haslegend(self, value):
         self.HasLegend = value
@@ -3553,16 +3435,15 @@ class Chart:
     def HasTitle(self):
         return self.chart.HasTitle
 
-    # Lower case alias for HasTitle
-    @property
-    def hastitle(self):
-        return self.HasTitle
-
     @HasTitle.setter
     def HasTitle(self, value):
         self.chart.HasTitle = value
 
-    # Lower case alias for HasTitle setter
+    # Lower case aliases for HasTitle
+    @property
+    def hastitle(self):
+        return self.HasTitle
+
     @hastitle.setter
     def hastitle(self, value):
         self.HasTitle = value
@@ -3571,16 +3452,15 @@ class Chart:
     def HeightPercent(self):
         return self.chart.HeightPercent
 
-    # Lower case alias for HeightPercent
-    @property
-    def heightpercent(self):
-        return self.HeightPercent
-
     @HeightPercent.setter
     def HeightPercent(self, value):
         self.chart.HeightPercent = value
 
-    # Lower case alias for HeightPercent setter
+    # Lower case aliases for HeightPercent
+    @property
+    def heightpercent(self):
+        return self.HeightPercent
+
     @heightpercent.setter
     def heightpercent(self, value):
         self.HeightPercent = value
@@ -3589,7 +3469,7 @@ class Chart:
     def Legend(self):
         return Legend(self.chart.Legend)
 
-    # Lower case alias for Legend
+    # Lower case aliases for Legend
     @property
     def legend(self):
         return self.Legend
@@ -3598,16 +3478,15 @@ class Chart:
     def Name(self):
         return self.chart.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.chart.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -3616,7 +3495,7 @@ class Chart:
     def Parent(self):
         return self.chart.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -3625,16 +3504,15 @@ class Chart:
     def Perspective(self):
         return self.chart.Perspective
 
-    # Lower case alias for Perspective
-    @property
-    def perspective(self):
-        return self.Perspective
-
     @Perspective.setter
     def Perspective(self, value):
         self.chart.Perspective = value
 
-    # Lower case alias for Perspective setter
+    # Lower case aliases for Perspective
+    @property
+    def perspective(self):
+        return self.Perspective
+
     @perspective.setter
     def perspective(self, value):
         self.Perspective = value
@@ -3643,7 +3521,7 @@ class Chart:
     def PlotArea(self):
         return PlotArea(self.chart.PlotArea)
 
-    # Lower case alias for PlotArea
+    # Lower case aliases for PlotArea
     @property
     def plotarea(self):
         return self.PlotArea
@@ -3652,16 +3530,15 @@ class Chart:
     def PlotBy(self):
         return self.chart.PlotBy
 
-    # Lower case alias for PlotBy
-    @property
-    def plotby(self):
-        return self.PlotBy
-
     @PlotBy.setter
     def PlotBy(self, value):
         self.chart.PlotBy = value
 
-    # Lower case alias for PlotBy setter
+    # Lower case aliases for PlotBy
+    @property
+    def plotby(self):
+        return self.PlotBy
+
     @plotby.setter
     def plotby(self, value):
         self.PlotBy = value
@@ -3670,16 +3547,15 @@ class Chart:
     def PlotVisibleOnly(self):
         return self.chart.PlotVisibleOnly
 
-    # Lower case alias for PlotVisibleOnly
-    @property
-    def plotvisibleonly(self):
-        return self.PlotVisibleOnly
-
     @PlotVisibleOnly.setter
     def PlotVisibleOnly(self, value):
         self.chart.PlotVisibleOnly = value
 
-    # Lower case alias for PlotVisibleOnly setter
+    # Lower case aliases for PlotVisibleOnly
+    @property
+    def plotvisibleonly(self):
+        return self.PlotVisibleOnly
+
     @plotvisibleonly.setter
     def plotvisibleonly(self, value):
         self.PlotVisibleOnly = value
@@ -3688,16 +3564,15 @@ class Chart:
     def RightAngleAxes(self):
         return self.chart.RightAngleAxes
 
-    # Lower case alias for RightAngleAxes
-    @property
-    def rightangleaxes(self):
-        return self.RightAngleAxes
-
     @RightAngleAxes.setter
     def RightAngleAxes(self, value):
         self.chart.RightAngleAxes = value
 
-    # Lower case alias for RightAngleAxes setter
+    # Lower case aliases for RightAngleAxes
+    @property
+    def rightangleaxes(self):
+        return self.RightAngleAxes
+
     @rightangleaxes.setter
     def rightangleaxes(self, value):
         self.RightAngleAxes = value
@@ -3706,16 +3581,15 @@ class Chart:
     def Rotation(self):
         return self.chart.Rotation
 
-    # Lower case alias for Rotation
-    @property
-    def rotation(self):
-        return self.Rotation
-
     @Rotation.setter
     def Rotation(self, value):
         self.chart.Rotation = value
 
-    # Lower case alias for Rotation setter
+    # Lower case aliases for Rotation
+    @property
+    def rotation(self):
+        return self.Rotation
+
     @rotation.setter
     def rotation(self, value):
         self.Rotation = value
@@ -3724,7 +3598,7 @@ class Chart:
     def Shapes(self):
         return Shapes(self.chart.Shapes)
 
-    # Lower case alias for Shapes
+    # Lower case aliases for Shapes
     @property
     def shapes(self):
         return self.Shapes
@@ -3733,16 +3607,15 @@ class Chart:
     def ShowAllFieldButtons(self):
         return self.chart.ShowAllFieldButtons
 
-    # Lower case alias for ShowAllFieldButtons
-    @property
-    def showallfieldbuttons(self):
-        return self.ShowAllFieldButtons
-
     @ShowAllFieldButtons.setter
     def ShowAllFieldButtons(self, value):
         self.chart.ShowAllFieldButtons = value
 
-    # Lower case alias for ShowAllFieldButtons setter
+    # Lower case aliases for ShowAllFieldButtons
+    @property
+    def showallfieldbuttons(self):
+        return self.ShowAllFieldButtons
+
     @showallfieldbuttons.setter
     def showallfieldbuttons(self, value):
         self.ShowAllFieldButtons = value
@@ -3751,16 +3624,15 @@ class Chart:
     def ShowAxisFieldButtons(self):
         return self.chart.ShowAxisFieldButtons
 
-    # Lower case alias for ShowAxisFieldButtons
-    @property
-    def showaxisfieldbuttons(self):
-        return self.ShowAxisFieldButtons
-
     @ShowAxisFieldButtons.setter
     def ShowAxisFieldButtons(self, value):
         self.chart.ShowAxisFieldButtons = value
 
-    # Lower case alias for ShowAxisFieldButtons setter
+    # Lower case aliases for ShowAxisFieldButtons
+    @property
+    def showaxisfieldbuttons(self):
+        return self.ShowAxisFieldButtons
+
     @showaxisfieldbuttons.setter
     def showaxisfieldbuttons(self, value):
         self.ShowAxisFieldButtons = value
@@ -3769,16 +3641,15 @@ class Chart:
     def ShowDataLabelsOverMaximum(self):
         return self.chart.ShowDataLabelsOverMaximum
 
-    # Lower case alias for ShowDataLabelsOverMaximum
-    @property
-    def showdatalabelsovermaximum(self):
-        return self.ShowDataLabelsOverMaximum
-
     @ShowDataLabelsOverMaximum.setter
     def ShowDataLabelsOverMaximum(self, value):
         self.chart.ShowDataLabelsOverMaximum = value
 
-    # Lower case alias for ShowDataLabelsOverMaximum setter
+    # Lower case aliases for ShowDataLabelsOverMaximum
+    @property
+    def showdatalabelsovermaximum(self):
+        return self.ShowDataLabelsOverMaximum
+
     @showdatalabelsovermaximum.setter
     def showdatalabelsovermaximum(self, value):
         self.ShowDataLabelsOverMaximum = value
@@ -3787,16 +3658,15 @@ class Chart:
     def ShowLegendFieldButtons(self):
         return self.chart.ShowLegendFieldButtons
 
-    # Lower case alias for ShowLegendFieldButtons
-    @property
-    def showlegendfieldbuttons(self):
-        return self.ShowLegendFieldButtons
-
     @ShowLegendFieldButtons.setter
     def ShowLegendFieldButtons(self, value):
         self.chart.ShowLegendFieldButtons = value
 
-    # Lower case alias for ShowLegendFieldButtons setter
+    # Lower case aliases for ShowLegendFieldButtons
+    @property
+    def showlegendfieldbuttons(self):
+        return self.ShowLegendFieldButtons
+
     @showlegendfieldbuttons.setter
     def showlegendfieldbuttons(self, value):
         self.ShowLegendFieldButtons = value
@@ -3805,16 +3675,15 @@ class Chart:
     def ShowReportFilterFieldButtons(self):
         return self.chart.ShowReportFilterFieldButtons
 
-    # Lower case alias for ShowReportFilterFieldButtons
-    @property
-    def showreportfilterfieldbuttons(self):
-        return self.ShowReportFilterFieldButtons
-
     @ShowReportFilterFieldButtons.setter
     def ShowReportFilterFieldButtons(self, value):
         self.chart.ShowReportFilterFieldButtons = value
 
-    # Lower case alias for ShowReportFilterFieldButtons setter
+    # Lower case aliases for ShowReportFilterFieldButtons
+    @property
+    def showreportfilterfieldbuttons(self):
+        return self.ShowReportFilterFieldButtons
+
     @showreportfilterfieldbuttons.setter
     def showreportfilterfieldbuttons(self, value):
         self.ShowReportFilterFieldButtons = value
@@ -3823,16 +3692,15 @@ class Chart:
     def ShowValueFieldButtons(self):
         return self.chart.ShowValueFieldButtons
 
-    # Lower case alias for ShowValueFieldButtons
-    @property
-    def showvaluefieldbuttons(self):
-        return self.ShowValueFieldButtons
-
     @ShowValueFieldButtons.setter
     def ShowValueFieldButtons(self, value):
         self.chart.ShowValueFieldButtons = value
 
-    # Lower case alias for ShowValueFieldButtons setter
+    # Lower case aliases for ShowValueFieldButtons
+    @property
+    def showvaluefieldbuttons(self):
+        return self.ShowValueFieldButtons
+
     @showvaluefieldbuttons.setter
     def showvaluefieldbuttons(self, value):
         self.ShowValueFieldButtons = value
@@ -3841,7 +3709,7 @@ class Chart:
     def SideWall(self):
         return Walls(self.chart.SideWall)
 
-    # Lower case alias for SideWall
+    # Lower case aliases for SideWall
     @property
     def sidewall(self):
         return self.SideWall
@@ -3850,16 +3718,15 @@ class Chart:
     def Title(self):
         return self.chart.Title
 
-    # Lower case alias for Title
-    @property
-    def title(self):
-        return self.Title
-
     @Title.setter
     def Title(self, value):
         self.chart.Title = value
 
-    # Lower case alias for Title setter
+    # Lower case aliases for Title
+    @property
+    def title(self):
+        return self.Title
+
     @title.setter
     def title(self, value):
         self.Title = value
@@ -3868,7 +3735,7 @@ class Chart:
     def Walls(self):
         return Walls(self.chart.Walls)
 
-    # Lower case alias for Walls
+    # Lower case aliases for Walls
     @property
     def walls(self):
         return self.Walls
@@ -3968,7 +3835,7 @@ class ChartArea:
     def Creator(self):
         return self.chartarea.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -3977,7 +3844,7 @@ class ChartArea:
     def Format(self):
         return ChartFormat(self.chartarea.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -3986,16 +3853,15 @@ class ChartArea:
     def Height(self):
         return self.chartarea.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.chartarea.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -4004,16 +3870,15 @@ class ChartArea:
     def Left(self):
         return self.chartarea.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.chartarea.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -4022,7 +3887,7 @@ class ChartArea:
     def Name(self):
         return self.chartarea.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -4031,7 +3896,7 @@ class ChartArea:
     def Parent(self):
         return self.chartarea.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4040,16 +3905,15 @@ class ChartArea:
     def Shadow(self):
         return self.chartarea.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.chartarea.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -4058,16 +3922,15 @@ class ChartArea:
     def Top(self):
         return self.chartarea.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.chartarea.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -4076,16 +3939,15 @@ class ChartArea:
     def Width(self):
         return self.chartarea.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.chartarea.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -4119,16 +3981,15 @@ class ChartBorder:
     def Color(self):
         return self.chartborder.Color
 
-    # Lower case alias for Color
-    @property
-    def color(self):
-        return self.Color
-
     @Color.setter
     def Color(self, value):
         self.chartborder.Color = value
 
-    # Lower case alias for Color setter
+    # Lower case aliases for Color
+    @property
+    def color(self):
+        return self.Color
+
     @color.setter
     def color(self, value):
         self.Color = value
@@ -4137,16 +3998,15 @@ class ChartBorder:
     def ColorIndex(self):
         return self.chartborder.ColorIndex
 
-    # Lower case alias for ColorIndex
-    @property
-    def colorindex(self):
-        return self.ColorIndex
-
     @ColorIndex.setter
     def ColorIndex(self, value):
         self.chartborder.ColorIndex = value
 
-    # Lower case alias for ColorIndex setter
+    # Lower case aliases for ColorIndex
+    @property
+    def colorindex(self):
+        return self.ColorIndex
+
     @colorindex.setter
     def colorindex(self, value):
         self.ColorIndex = value
@@ -4155,7 +4015,7 @@ class ChartBorder:
     def Creator(self):
         return self.chartborder.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -4164,16 +4024,15 @@ class ChartBorder:
     def LineStyle(self):
         return XlLineStyle(self.chartborder.LineStyle)
 
-    # Lower case alias for LineStyle
-    @property
-    def linestyle(self):
-        return self.LineStyle
-
     @LineStyle.setter
     def LineStyle(self, value):
         self.chartborder.LineStyle = value
 
-    # Lower case alias for LineStyle setter
+    # Lower case aliases for LineStyle
+    @property
+    def linestyle(self):
+        return self.LineStyle
+
     @linestyle.setter
     def linestyle(self, value):
         self.LineStyle = value
@@ -4182,7 +4041,7 @@ class ChartBorder:
     def Parent(self):
         return self.chartborder.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4191,16 +4050,15 @@ class ChartBorder:
     def Weight(self):
         return XlBorderWeight(self.chartborder.Weight)
 
-    # Lower case alias for Weight
-    @property
-    def weight(self):
-        return self.Weight
-
     @Weight.setter
     def Weight(self, value):
         self.chartborder.Weight = value
 
-    # Lower case alias for Weight setter
+    # Lower case aliases for Weight
+    @property
+    def weight(self):
+        return self.Weight
+
     @weight.setter
     def weight(self, value):
         self.Weight = value
@@ -4219,7 +4077,7 @@ class ChartCharacters:
     def Caption(self):
         return self.chartcharacters.Caption
 
-    # Lower case alias for Caption
+    # Lower case aliases for Caption
     @property
     def caption(self):
         return self.Caption
@@ -4228,7 +4086,7 @@ class ChartCharacters:
     def Count(self):
         return self.chartcharacters.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -4237,7 +4095,7 @@ class ChartCharacters:
     def Creator(self):
         return self.chartcharacters.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -4246,7 +4104,7 @@ class ChartCharacters:
     def Font(self):
         return ChartFont(self.chartcharacters.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -4255,7 +4113,7 @@ class ChartCharacters:
     def Parent(self):
         return self.chartcharacters.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4264,16 +4122,15 @@ class ChartCharacters:
     def PhoneticCharacters(self):
         return self.chartcharacters.PhoneticCharacters
 
-    # Lower case alias for PhoneticCharacters
-    @property
-    def phoneticcharacters(self):
-        return self.PhoneticCharacters
-
     @PhoneticCharacters.setter
     def PhoneticCharacters(self, value):
         self.chartcharacters.PhoneticCharacters = value
 
-    # Lower case alias for PhoneticCharacters setter
+    # Lower case aliases for PhoneticCharacters
+    @property
+    def phoneticcharacters(self):
+        return self.PhoneticCharacters
+
     @phoneticcharacters.setter
     def phoneticcharacters(self, value):
         self.PhoneticCharacters = value
@@ -4282,16 +4139,15 @@ class ChartCharacters:
     def Text(self):
         return self.chartcharacters.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.chartcharacters.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -4313,7 +4169,7 @@ class ChartData:
     def IsLinked(self):
         return self.chartdata.IsLinked
 
-    # Lower case alias for IsLinked
+    # Lower case aliases for IsLinked
     @property
     def islinked(self):
         return self.IsLinked
@@ -4322,7 +4178,7 @@ class ChartData:
     def Workbook(self):
         return self.chartdata.Workbook
 
-    # Lower case alias for Workbook
+    # Lower case aliases for Workbook
     @property
     def workbook(self):
         return self.Workbook
@@ -4347,16 +4203,15 @@ class ChartFont:
     def Background(self):
         return XlBackground(self.chartfont.Background)
 
-    # Lower case alias for Background
-    @property
-    def background(self):
-        return self.Background
-
     @Background.setter
     def Background(self, value):
         self.chartfont.Background = value
 
-    # Lower case alias for Background setter
+    # Lower case aliases for Background
+    @property
+    def background(self):
+        return self.Background
+
     @background.setter
     def background(self, value):
         self.Background = value
@@ -4365,16 +4220,15 @@ class ChartFont:
     def Bold(self):
         return self.chartfont.Bold
 
-    # Lower case alias for Bold
-    @property
-    def bold(self):
-        return self.Bold
-
     @Bold.setter
     def Bold(self, value):
         self.chartfont.Bold = value
 
-    # Lower case alias for Bold setter
+    # Lower case aliases for Bold
+    @property
+    def bold(self):
+        return self.Bold
+
     @bold.setter
     def bold(self, value):
         self.Bold = value
@@ -4383,16 +4237,15 @@ class ChartFont:
     def Color(self):
         return self.chartfont.Color
 
-    # Lower case alias for Color
-    @property
-    def color(self):
-        return self.Color
-
     @Color.setter
     def Color(self, value):
         self.chartfont.Color = value
 
-    # Lower case alias for Color setter
+    # Lower case aliases for Color
+    @property
+    def color(self):
+        return self.Color
+
     @color.setter
     def color(self, value):
         self.Color = value
@@ -4401,16 +4254,15 @@ class ChartFont:
     def ColorIndex(self):
         return self.chartfont.ColorIndex
 
-    # Lower case alias for ColorIndex
-    @property
-    def colorindex(self):
-        return self.ColorIndex
-
     @ColorIndex.setter
     def ColorIndex(self, value):
         self.chartfont.ColorIndex = value
 
-    # Lower case alias for ColorIndex setter
+    # Lower case aliases for ColorIndex
+    @property
+    def colorindex(self):
+        return self.ColorIndex
+
     @colorindex.setter
     def colorindex(self, value):
         self.ColorIndex = value
@@ -4419,7 +4271,7 @@ class ChartFont:
     def Creator(self):
         return self.chartfont.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -4428,16 +4280,15 @@ class ChartFont:
     def FontStyle(self):
         return self.chartfont.FontStyle
 
-    # Lower case alias for FontStyle
-    @property
-    def fontstyle(self):
-        return self.FontStyle
-
     @FontStyle.setter
     def FontStyle(self, value):
         self.chartfont.FontStyle = value
 
-    # Lower case alias for FontStyle setter
+    # Lower case aliases for FontStyle
+    @property
+    def fontstyle(self):
+        return self.FontStyle
+
     @fontstyle.setter
     def fontstyle(self, value):
         self.FontStyle = value
@@ -4446,16 +4297,15 @@ class ChartFont:
     def Italic(self):
         return self.chartfont.Italic
 
-    # Lower case alias for Italic
-    @property
-    def italic(self):
-        return self.Italic
-
     @Italic.setter
     def Italic(self, value):
         self.chartfont.Italic = value
 
-    # Lower case alias for Italic setter
+    # Lower case aliases for Italic
+    @property
+    def italic(self):
+        return self.Italic
+
     @italic.setter
     def italic(self, value):
         self.Italic = value
@@ -4464,16 +4314,15 @@ class ChartFont:
     def Name(self):
         return self.chartfont.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.chartfont.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -4482,7 +4331,7 @@ class ChartFont:
     def Parent(self):
         return self.chartfont.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4491,16 +4340,15 @@ class ChartFont:
     def Size(self):
         return self.chartfont.Size
 
-    # Lower case alias for Size
-    @property
-    def size(self):
-        return self.Size
-
     @Size.setter
     def Size(self, value):
         self.chartfont.Size = value
 
-    # Lower case alias for Size setter
+    # Lower case aliases for Size
+    @property
+    def size(self):
+        return self.Size
+
     @size.setter
     def size(self, value):
         self.Size = value
@@ -4509,16 +4357,15 @@ class ChartFont:
     def StrikeThrough(self):
         return self.chartfont.StrikeThrough
 
-    # Lower case alias for StrikeThrough
-    @property
-    def strikethrough(self):
-        return self.StrikeThrough
-
     @StrikeThrough.setter
     def StrikeThrough(self, value):
         self.chartfont.StrikeThrough = value
 
-    # Lower case alias for StrikeThrough setter
+    # Lower case aliases for StrikeThrough
+    @property
+    def strikethrough(self):
+        return self.StrikeThrough
+
     @strikethrough.setter
     def strikethrough(self, value):
         self.StrikeThrough = value
@@ -4527,16 +4374,15 @@ class ChartFont:
     def Subscript(self):
         return self.chartfont.Subscript
 
-    # Lower case alias for Subscript
-    @property
-    def subscript(self):
-        return self.Subscript
-
     @Subscript.setter
     def Subscript(self, value):
         self.chartfont.Subscript = value
 
-    # Lower case alias for Subscript setter
+    # Lower case aliases for Subscript
+    @property
+    def subscript(self):
+        return self.Subscript
+
     @subscript.setter
     def subscript(self, value):
         self.Subscript = value
@@ -4545,16 +4391,15 @@ class ChartFont:
     def Underline(self):
         return XlUnderlineStyle(self.chartfont.Underline)
 
-    # Lower case alias for Underline
-    @property
-    def underline(self):
-        return self.Underline
-
     @Underline.setter
     def Underline(self, value):
         self.chartfont.Underline = value
 
-    # Lower case alias for Underline setter
+    # Lower case aliases for Underline
+    @property
+    def underline(self):
+        return self.Underline
+
     @underline.setter
     def underline(self, value):
         self.Underline = value
@@ -4573,7 +4418,7 @@ class ChartFormat:
     def Creator(self):
         return self.chartformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -4582,7 +4427,7 @@ class ChartFormat:
     def Fill(self):
         return FillFormat(self.chartformat.Fill)
 
-    # Lower case alias for Fill
+    # Lower case aliases for Fill
     @property
     def fill(self):
         return self.Fill
@@ -4591,7 +4436,7 @@ class ChartFormat:
     def Glow(self):
         return self.chartformat.Glow
 
-    # Lower case alias for Glow
+    # Lower case aliases for Glow
     @property
     def glow(self):
         return self.Glow
@@ -4600,7 +4445,7 @@ class ChartFormat:
     def Line(self):
         return LineFormat(self.chartformat.Line)
 
-    # Lower case alias for Line
+    # Lower case aliases for Line
     @property
     def line(self):
         return self.Line
@@ -4609,7 +4454,7 @@ class ChartFormat:
     def Parent(self):
         return self.chartformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4618,7 +4463,7 @@ class ChartFormat:
     def PictureFormat(self):
         return PictureFormat(self.chartformat.PictureFormat)
 
-    # Lower case alias for PictureFormat
+    # Lower case aliases for PictureFormat
     @property
     def pictureformat(self):
         return self.PictureFormat
@@ -4627,7 +4472,7 @@ class ChartFormat:
     def Shadow(self):
         return ShadowFormat(self.chartformat.Shadow)
 
-    # Lower case alias for Shadow
+    # Lower case aliases for Shadow
     @property
     def shadow(self):
         return self.Shadow
@@ -4636,7 +4481,7 @@ class ChartFormat:
     def SoftEdge(self):
         return self.chartformat.SoftEdge
 
-    # Lower case alias for SoftEdge
+    # Lower case aliases for SoftEdge
     @property
     def softedge(self):
         return self.SoftEdge
@@ -4645,7 +4490,7 @@ class ChartFormat:
     def TextFrame2(self):
         return TextFrame2(self.chartformat.TextFrame2)
 
-    # Lower case alias for TextFrame2
+    # Lower case aliases for TextFrame2
     @property
     def textframe2(self):
         return self.TextFrame2
@@ -4654,7 +4499,7 @@ class ChartFormat:
     def ThreeD(self):
         return ThreeDFormat(self.chartformat.ThreeD)
 
-    # Lower case alias for ThreeD
+    # Lower case aliases for ThreeD
     @property
     def threed(self):
         return self.ThreeD
@@ -4673,16 +4518,15 @@ class ChartGroup:
     def AxisGroup(self):
         return XlAxisGroup(self.chartgroup.AxisGroup)
 
-    # Lower case alias for AxisGroup
-    @property
-    def axisgroup(self):
-        return self.AxisGroup
-
     @AxisGroup.setter
     def AxisGroup(self, value):
         self.chartgroup.AxisGroup = value
 
-    # Lower case alias for AxisGroup setter
+    # Lower case aliases for AxisGroup
+    @property
+    def axisgroup(self):
+        return self.AxisGroup
+
     @axisgroup.setter
     def axisgroup(self, value):
         self.AxisGroup = value
@@ -4691,16 +4535,15 @@ class ChartGroup:
     def BubbleScale(self):
         return self.chartgroup.BubbleScale
 
-    # Lower case alias for BubbleScale
-    @property
-    def bubblescale(self):
-        return self.BubbleScale
-
     @BubbleScale.setter
     def BubbleScale(self, value):
         self.chartgroup.BubbleScale = value
 
-    # Lower case alias for BubbleScale setter
+    # Lower case aliases for BubbleScale
+    @property
+    def bubblescale(self):
+        return self.BubbleScale
+
     @bubblescale.setter
     def bubblescale(self, value):
         self.BubbleScale = value
@@ -4709,7 +4552,7 @@ class ChartGroup:
     def Creator(self):
         return self.chartgroup.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -4718,16 +4561,15 @@ class ChartGroup:
     def DoughnutHoleSize(self):
         return self.chartgroup.DoughnutHoleSize
 
-    # Lower case alias for DoughnutHoleSize
-    @property
-    def doughnutholesize(self):
-        return self.DoughnutHoleSize
-
     @DoughnutHoleSize.setter
     def DoughnutHoleSize(self, value):
         self.chartgroup.DoughnutHoleSize = value
 
-    # Lower case alias for DoughnutHoleSize setter
+    # Lower case aliases for DoughnutHoleSize
+    @property
+    def doughnutholesize(self):
+        return self.DoughnutHoleSize
+
     @doughnutholesize.setter
     def doughnutholesize(self, value):
         self.DoughnutHoleSize = value
@@ -4736,7 +4578,7 @@ class ChartGroup:
     def DownBars(self):
         return DownBars(self.chartgroup.DownBars)
 
-    # Lower case alias for DownBars
+    # Lower case aliases for DownBars
     @property
     def downbars(self):
         return self.DownBars
@@ -4745,7 +4587,7 @@ class ChartGroup:
     def DropLines(self):
         return DropLines(self.chartgroup.DropLines)
 
-    # Lower case alias for DropLines
+    # Lower case aliases for DropLines
     @property
     def droplines(self):
         return self.DropLines
@@ -4754,16 +4596,15 @@ class ChartGroup:
     def FirstSliceAngle(self):
         return self.chartgroup.FirstSliceAngle
 
-    # Lower case alias for FirstSliceAngle
-    @property
-    def firstsliceangle(self):
-        return self.FirstSliceAngle
-
     @FirstSliceAngle.setter
     def FirstSliceAngle(self, value):
         self.chartgroup.FirstSliceAngle = value
 
-    # Lower case alias for FirstSliceAngle setter
+    # Lower case aliases for FirstSliceAngle
+    @property
+    def firstsliceangle(self):
+        return self.FirstSliceAngle
+
     @firstsliceangle.setter
     def firstsliceangle(self, value):
         self.FirstSliceAngle = value
@@ -4772,16 +4613,15 @@ class ChartGroup:
     def GapWidth(self):
         return self.chartgroup.GapWidth
 
-    # Lower case alias for GapWidth
-    @property
-    def gapwidth(self):
-        return self.GapWidth
-
     @GapWidth.setter
     def GapWidth(self, value):
         self.chartgroup.GapWidth = value
 
-    # Lower case alias for GapWidth setter
+    # Lower case aliases for GapWidth
+    @property
+    def gapwidth(self):
+        return self.GapWidth
+
     @gapwidth.setter
     def gapwidth(self, value):
         self.GapWidth = value
@@ -4790,16 +4630,15 @@ class ChartGroup:
     def Has3DShading(self):
         return self.chartgroup.Has3DShading
 
-    # Lower case alias for Has3DShading
-    @property
-    def has3dshading(self):
-        return self.Has3DShading
-
     @Has3DShading.setter
     def Has3DShading(self, value):
         self.chartgroup.Has3DShading = value
 
-    # Lower case alias for Has3DShading setter
+    # Lower case aliases for Has3DShading
+    @property
+    def has3dshading(self):
+        return self.Has3DShading
+
     @has3dshading.setter
     def has3dshading(self, value):
         self.Has3DShading = value
@@ -4808,16 +4647,15 @@ class ChartGroup:
     def HasDropLines(self):
         return self.chartgroup.HasDropLines
 
-    # Lower case alias for HasDropLines
-    @property
-    def hasdroplines(self):
-        return self.HasDropLines
-
     @HasDropLines.setter
     def HasDropLines(self, value):
         self.chartgroup.HasDropLines = value
 
-    # Lower case alias for HasDropLines setter
+    # Lower case aliases for HasDropLines
+    @property
+    def hasdroplines(self):
+        return self.HasDropLines
+
     @hasdroplines.setter
     def hasdroplines(self, value):
         self.HasDropLines = value
@@ -4826,16 +4664,15 @@ class ChartGroup:
     def HasHiLoLines(self):
         return self.chartgroup.HasHiLoLines
 
-    # Lower case alias for HasHiLoLines
-    @property
-    def hashilolines(self):
-        return self.HasHiLoLines
-
     @HasHiLoLines.setter
     def HasHiLoLines(self, value):
         self.chartgroup.HasHiLoLines = value
 
-    # Lower case alias for HasHiLoLines setter
+    # Lower case aliases for HasHiLoLines
+    @property
+    def hashilolines(self):
+        return self.HasHiLoLines
+
     @hashilolines.setter
     def hashilolines(self, value):
         self.HasHiLoLines = value
@@ -4844,16 +4681,15 @@ class ChartGroup:
     def HasRadarAxisLabels(self):
         return self.chartgroup.HasRadarAxisLabels
 
-    # Lower case alias for HasRadarAxisLabels
-    @property
-    def hasradaraxislabels(self):
-        return self.HasRadarAxisLabels
-
     @HasRadarAxisLabels.setter
     def HasRadarAxisLabels(self, value):
         self.chartgroup.HasRadarAxisLabels = value
 
-    # Lower case alias for HasRadarAxisLabels setter
+    # Lower case aliases for HasRadarAxisLabels
+    @property
+    def hasradaraxislabels(self):
+        return self.HasRadarAxisLabels
+
     @hasradaraxislabels.setter
     def hasradaraxislabels(self, value):
         self.HasRadarAxisLabels = value
@@ -4862,16 +4698,15 @@ class ChartGroup:
     def HasSeriesLines(self):
         return self.chartgroup.HasSeriesLines
 
-    # Lower case alias for HasSeriesLines
-    @property
-    def hasserieslines(self):
-        return self.HasSeriesLines
-
     @HasSeriesLines.setter
     def HasSeriesLines(self, value):
         self.chartgroup.HasSeriesLines = value
 
-    # Lower case alias for HasSeriesLines setter
+    # Lower case aliases for HasSeriesLines
+    @property
+    def hasserieslines(self):
+        return self.HasSeriesLines
+
     @hasserieslines.setter
     def hasserieslines(self, value):
         self.HasSeriesLines = value
@@ -4880,16 +4715,15 @@ class ChartGroup:
     def HasUpDownBars(self):
         return self.chartgroup.HasUpDownBars
 
-    # Lower case alias for HasUpDownBars
-    @property
-    def hasupdownbars(self):
-        return self.HasUpDownBars
-
     @HasUpDownBars.setter
     def HasUpDownBars(self, value):
         self.chartgroup.HasUpDownBars = value
 
-    # Lower case alias for HasUpDownBars setter
+    # Lower case aliases for HasUpDownBars
+    @property
+    def hasupdownbars(self):
+        return self.HasUpDownBars
+
     @hasupdownbars.setter
     def hasupdownbars(self, value):
         self.HasUpDownBars = value
@@ -4898,7 +4732,7 @@ class ChartGroup:
     def HiLoLines(self):
         return HiLoLines(self.chartgroup.HiLoLines)
 
-    # Lower case alias for HiLoLines
+    # Lower case aliases for HiLoLines
     @property
     def hilolines(self):
         return self.HiLoLines
@@ -4907,7 +4741,7 @@ class ChartGroup:
     def Index(self):
         return self.chartgroup.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -4916,16 +4750,15 @@ class ChartGroup:
     def Overlap(self):
         return self.chartgroup.Overlap
 
-    # Lower case alias for Overlap
-    @property
-    def overlap(self):
-        return self.Overlap
-
     @Overlap.setter
     def Overlap(self, value):
         self.chartgroup.Overlap = value
 
-    # Lower case alias for Overlap setter
+    # Lower case aliases for Overlap
+    @property
+    def overlap(self):
+        return self.Overlap
+
     @overlap.setter
     def overlap(self, value):
         self.Overlap = value
@@ -4934,7 +4767,7 @@ class ChartGroup:
     def Parent(self):
         return self.chartgroup.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -4943,7 +4776,7 @@ class ChartGroup:
     def RadarAxisLabels(self):
         return TickLabels(self.chartgroup.RadarAxisLabels)
 
-    # Lower case alias for RadarAxisLabels
+    # Lower case aliases for RadarAxisLabels
     @property
     def radaraxislabels(self):
         return self.RadarAxisLabels
@@ -4952,16 +4785,15 @@ class ChartGroup:
     def SecondPlotSize(self):
         return self.chartgroup.SecondPlotSize
 
-    # Lower case alias for SecondPlotSize
-    @property
-    def secondplotsize(self):
-        return self.SecondPlotSize
-
     @SecondPlotSize.setter
     def SecondPlotSize(self, value):
         self.chartgroup.SecondPlotSize = value
 
-    # Lower case alias for SecondPlotSize setter
+    # Lower case aliases for SecondPlotSize
+    @property
+    def secondplotsize(self):
+        return self.SecondPlotSize
+
     @secondplotsize.setter
     def secondplotsize(self, value):
         self.SecondPlotSize = value
@@ -4970,7 +4802,7 @@ class ChartGroup:
     def SeriesLines(self):
         return SeriesLines(self.chartgroup.SeriesLines)
 
-    # Lower case alias for SeriesLines
+    # Lower case aliases for SeriesLines
     @property
     def serieslines(self):
         return self.SeriesLines
@@ -4979,16 +4811,15 @@ class ChartGroup:
     def ShowNegativeBubbles(self):
         return self.chartgroup.ShowNegativeBubbles
 
-    # Lower case alias for ShowNegativeBubbles
-    @property
-    def shownegativebubbles(self):
-        return self.ShowNegativeBubbles
-
     @ShowNegativeBubbles.setter
     def ShowNegativeBubbles(self, value):
         self.chartgroup.ShowNegativeBubbles = value
 
-    # Lower case alias for ShowNegativeBubbles setter
+    # Lower case aliases for ShowNegativeBubbles
+    @property
+    def shownegativebubbles(self):
+        return self.ShowNegativeBubbles
+
     @shownegativebubbles.setter
     def shownegativebubbles(self, value):
         self.ShowNegativeBubbles = value
@@ -4997,16 +4828,15 @@ class ChartGroup:
     def SizeRepresents(self):
         return self.chartgroup.SizeRepresents
 
-    # Lower case alias for SizeRepresents
-    @property
-    def sizerepresents(self):
-        return self.SizeRepresents
-
     @SizeRepresents.setter
     def SizeRepresents(self, value):
         self.chartgroup.SizeRepresents = value
 
-    # Lower case alias for SizeRepresents setter
+    # Lower case aliases for SizeRepresents
+    @property
+    def sizerepresents(self):
+        return self.SizeRepresents
+
     @sizerepresents.setter
     def sizerepresents(self, value):
         self.SizeRepresents = value
@@ -5015,16 +4845,15 @@ class ChartGroup:
     def SplitType(self):
         return XlChartSplitType(self.chartgroup.SplitType)
 
-    # Lower case alias for SplitType
-    @property
-    def splittype(self):
-        return self.SplitType
-
     @SplitType.setter
     def SplitType(self, value):
         self.chartgroup.SplitType = value
 
-    # Lower case alias for SplitType setter
+    # Lower case aliases for SplitType
+    @property
+    def splittype(self):
+        return self.SplitType
+
     @splittype.setter
     def splittype(self, value):
         self.SplitType = value
@@ -5033,16 +4862,15 @@ class ChartGroup:
     def SplitValue(self):
         return self.chartgroup.SplitValue
 
-    # Lower case alias for SplitValue
-    @property
-    def splitvalue(self):
-        return self.SplitValue
-
     @SplitValue.setter
     def SplitValue(self, value):
         self.chartgroup.SplitValue = value
 
-    # Lower case alias for SplitValue setter
+    # Lower case aliases for SplitValue
+    @property
+    def splitvalue(self):
+        return self.SplitValue
+
     @splitvalue.setter
     def splitvalue(self, value):
         self.SplitValue = value
@@ -5051,7 +4879,7 @@ class ChartGroup:
     def UpBars(self):
         return UpBars(self.chartgroup.UpBars)
 
-    # Lower case alias for UpBars
+    # Lower case aliases for UpBars
     @property
     def upbars(self):
         return self.UpBars
@@ -5060,16 +4888,15 @@ class ChartGroup:
     def VaryByCategories(self):
         return self.chartgroup.VaryByCategories
 
-    # Lower case alias for VaryByCategories
-    @property
-    def varybycategories(self):
-        return self.VaryByCategories
-
     @VaryByCategories.setter
     def VaryByCategories(self, value):
         self.chartgroup.VaryByCategories = value
 
-    # Lower case alias for VaryByCategories setter
+    # Lower case aliases for VaryByCategories
+    @property
+    def varybycategories(self):
+        return self.VaryByCategories
+
     @varybycategories.setter
     def varybycategories(self, value):
         self.VaryByCategories = value
@@ -5092,7 +4919,7 @@ class ChartGroups:
     def Count(self):
         return self.chartgroups.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -5101,7 +4928,7 @@ class ChartGroups:
     def Creator(self):
         return self.chartgroups.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -5110,7 +4937,7 @@ class ChartGroups:
     def Parent(self):
         return self.chartgroups.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5133,16 +4960,15 @@ class ChartTitle:
     def Caption(self):
         return self.charttitle.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.charttitle.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -5154,7 +4980,7 @@ class ChartTitle:
         else:
             return ChartCharacters(self.charttitle.GetCharacters(*arguments))
 
-    # Lower case alias for Characters
+    # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
         arguments = [Start, Length]
         return self.Characters(*arguments)
@@ -5163,7 +4989,7 @@ class ChartTitle:
     def Creator(self):
         return self.charttitle.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -5172,7 +4998,7 @@ class ChartTitle:
     def Format(self):
         return ChartFormat(self.charttitle.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -5181,16 +5007,15 @@ class ChartTitle:
     def Formula(self):
         return self.charttitle.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.charttitle.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -5199,16 +5024,15 @@ class ChartTitle:
     def FormulaLocal(self):
         return self.charttitle.FormulaLocal
 
-    # Lower case alias for FormulaLocal
-    @property
-    def formulalocal(self):
-        return self.FormulaLocal
-
     @FormulaLocal.setter
     def FormulaLocal(self, value):
         self.charttitle.FormulaLocal = value
 
-    # Lower case alias for FormulaLocal setter
+    # Lower case aliases for FormulaLocal
+    @property
+    def formulalocal(self):
+        return self.FormulaLocal
+
     @formulalocal.setter
     def formulalocal(self, value):
         self.FormulaLocal = value
@@ -5217,16 +5041,15 @@ class ChartTitle:
     def FormulaR1C1(self):
         return self.charttitle.FormulaR1C1
 
-    # Lower case alias for FormulaR1C1
-    @property
-    def formular1c1(self):
-        return self.FormulaR1C1
-
     @FormulaR1C1.setter
     def FormulaR1C1(self, value):
         self.charttitle.FormulaR1C1 = value
 
-    # Lower case alias for FormulaR1C1 setter
+    # Lower case aliases for FormulaR1C1
+    @property
+    def formular1c1(self):
+        return self.FormulaR1C1
+
     @formular1c1.setter
     def formular1c1(self, value):
         self.FormulaR1C1 = value
@@ -5235,16 +5058,15 @@ class ChartTitle:
     def FormulaR1C1Local(self):
         return self.charttitle.FormulaR1C1Local
 
-    # Lower case alias for FormulaR1C1Local
-    @property
-    def formular1c1local(self):
-        return self.FormulaR1C1Local
-
     @FormulaR1C1Local.setter
     def FormulaR1C1Local(self, value):
         self.charttitle.FormulaR1C1Local = value
 
-    # Lower case alias for FormulaR1C1Local setter
+    # Lower case aliases for FormulaR1C1Local
+    @property
+    def formular1c1local(self):
+        return self.FormulaR1C1Local
+
     @formular1c1local.setter
     def formular1c1local(self, value):
         self.FormulaR1C1Local = value
@@ -5253,16 +5075,15 @@ class ChartTitle:
     def Height(self):
         return self.charttitle.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.charttitle.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -5271,16 +5092,15 @@ class ChartTitle:
     def HorizontalAlignment(self):
         return self.charttitle.HorizontalAlignment
 
-    # Lower case alias for HorizontalAlignment
-    @property
-    def horizontalalignment(self):
-        return self.HorizontalAlignment
-
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
         self.charttitle.HorizontalAlignment = value
 
-    # Lower case alias for HorizontalAlignment setter
+    # Lower case aliases for HorizontalAlignment
+    @property
+    def horizontalalignment(self):
+        return self.HorizontalAlignment
+
     @horizontalalignment.setter
     def horizontalalignment(self, value):
         self.HorizontalAlignment = value
@@ -5289,16 +5109,15 @@ class ChartTitle:
     def IncludeInLayout(self):
         return self.charttitle.IncludeInLayout
 
-    # Lower case alias for IncludeInLayout
-    @property
-    def includeinlayout(self):
-        return self.IncludeInLayout
-
     @IncludeInLayout.setter
     def IncludeInLayout(self, value):
         self.charttitle.IncludeInLayout = value
 
-    # Lower case alias for IncludeInLayout setter
+    # Lower case aliases for IncludeInLayout
+    @property
+    def includeinlayout(self):
+        return self.IncludeInLayout
+
     @includeinlayout.setter
     def includeinlayout(self, value):
         self.IncludeInLayout = value
@@ -5307,16 +5126,15 @@ class ChartTitle:
     def Left(self):
         return self.charttitle.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.charttitle.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -5325,7 +5143,7 @@ class ChartTitle:
     def Name(self):
         return self.charttitle.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -5334,16 +5152,15 @@ class ChartTitle:
     def Orientation(self):
         return self.charttitle.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.charttitle.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -5352,7 +5169,7 @@ class ChartTitle:
     def Parent(self):
         return self.charttitle.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5361,16 +5178,15 @@ class ChartTitle:
     def Position(self):
         return XlChartElementPosition(self.charttitle.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.charttitle.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -5379,16 +5195,15 @@ class ChartTitle:
     def ReadingOrder(self):
         return XlReadingOrder(self.charttitle.ReadingOrder)
 
-    # Lower case alias for ReadingOrder
-    @property
-    def readingorder(self):
-        return self.ReadingOrder
-
     @ReadingOrder.setter
     def ReadingOrder(self, value):
         self.charttitle.ReadingOrder = value
 
-    # Lower case alias for ReadingOrder setter
+    # Lower case aliases for ReadingOrder
+    @property
+    def readingorder(self):
+        return self.ReadingOrder
+
     @readingorder.setter
     def readingorder(self, value):
         self.ReadingOrder = value
@@ -5397,16 +5212,15 @@ class ChartTitle:
     def Shadow(self):
         return self.charttitle.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.charttitle.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -5415,16 +5229,15 @@ class ChartTitle:
     def Text(self):
         return self.charttitle.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.charttitle.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -5433,16 +5246,15 @@ class ChartTitle:
     def Top(self):
         return self.charttitle.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.charttitle.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -5451,16 +5263,15 @@ class ChartTitle:
     def VerticalAlignment(self):
         return self.charttitle.VerticalAlignment
 
-    # Lower case alias for VerticalAlignment
-    @property
-    def verticalalignment(self):
-        return self.VerticalAlignment
-
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
         self.charttitle.VerticalAlignment = value
 
-    # Lower case alias for VerticalAlignment setter
+    # Lower case aliases for VerticalAlignment
+    @property
+    def verticalalignment(self):
+        return self.VerticalAlignment
+
     @verticalalignment.setter
     def verticalalignment(self, value):
         self.VerticalAlignment = value
@@ -5469,16 +5280,15 @@ class ChartTitle:
     def Width(self):
         return self.charttitle.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.charttitle.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -5503,16 +5313,15 @@ class Coauthoring:
     def FavorServerEditsDuringMerge(self):
         return self.coauthoring.FavorServerEditsDuringMerge
 
-    # Lower case alias for FavorServerEditsDuringMerge
-    @property
-    def favorservereditsduringmerge(self):
-        return self.FavorServerEditsDuringMerge
-
     @FavorServerEditsDuringMerge.setter
     def FavorServerEditsDuringMerge(self, value):
         self.coauthoring.FavorServerEditsDuringMerge = value
 
-    # Lower case alias for FavorServerEditsDuringMerge setter
+    # Lower case aliases for FavorServerEditsDuringMerge
+    @property
+    def favorservereditsduringmerge(self):
+        return self.FavorServerEditsDuringMerge
+
     @favorservereditsduringmerge.setter
     def favorservereditsduringmerge(self, value):
         self.FavorServerEditsDuringMerge = value
@@ -5521,7 +5330,7 @@ class Coauthoring:
     def MergeMode(self):
         return self.coauthoring.MergeMode
 
-    # Lower case alias for MergeMode
+    # Lower case aliases for MergeMode
     @property
     def mergemode(self):
         return self.MergeMode
@@ -5530,7 +5339,7 @@ class Coauthoring:
     def Parent(self):
         return self.coauthoring.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5539,7 +5348,7 @@ class Coauthoring:
     def PendingUpdates(self):
         return self.coauthoring.PendingUpdates
 
-    # Lower case alias for PendingUpdates
+    # Lower case aliases for PendingUpdates
     @property
     def pendingupdates(self):
         return self.PendingUpdates
@@ -5561,7 +5370,7 @@ class ColorEffect:
     def By(self):
         return ColorFormat(self.coloreffect.By)
 
-    # Lower case alias for By
+    # Lower case aliases for By
     @property
     def by(self):
         return self.By
@@ -5574,7 +5383,7 @@ class ColorEffect:
     def Parent(self):
         return self.coloreffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5583,16 +5392,15 @@ class ColorEffect:
     def To(self):
         return self.coloreffect.To
 
-    # Lower case alias for To
-    @property
-    def to(self):
-        return self.To
-
     @To.setter
     def To(self, value):
         self.coloreffect.To = value
 
-    # Lower case alias for To setter
+    # Lower case aliases for To
+    @property
+    def to(self):
+        return self.To
+
     @to.setter
     def to(self, value):
         self.To = value
@@ -5611,16 +5419,15 @@ class ColorFormat:
     def Brightness(self):
         return self.colorformat.Brightness
 
-    # Lower case alias for Brightness
-    @property
-    def brightness(self):
-        return self.Brightness
-
     @Brightness.setter
     def Brightness(self, value):
         self.colorformat.Brightness = value
 
-    # Lower case alias for Brightness setter
+    # Lower case aliases for Brightness
+    @property
+    def brightness(self):
+        return self.Brightness
+
     @brightness.setter
     def brightness(self, value):
         self.Brightness = value
@@ -5629,7 +5436,7 @@ class ColorFormat:
     def Creator(self):
         return self.colorformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -5638,16 +5445,15 @@ class ColorFormat:
     def ObjectThemeColor(self):
         return ColorFormat(self.colorformat.ObjectThemeColor)
 
-    # Lower case alias for ObjectThemeColor
-    @property
-    def objectthemecolor(self):
-        return self.ObjectThemeColor
-
     @ObjectThemeColor.setter
     def ObjectThemeColor(self, value):
         self.colorformat.ObjectThemeColor = value
 
-    # Lower case alias for ObjectThemeColor setter
+    # Lower case aliases for ObjectThemeColor
+    @property
+    def objectthemecolor(self):
+        return self.ObjectThemeColor
+
     @objectthemecolor.setter
     def objectthemecolor(self, value):
         self.ObjectThemeColor = value
@@ -5656,7 +5462,7 @@ class ColorFormat:
     def Parent(self):
         return self.colorformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5665,16 +5471,15 @@ class ColorFormat:
     def RGB(self):
         return self.colorformat.RGB
 
-    # Lower case alias for RGB
-    @property
-    def rgb(self):
-        return self.RGB
-
     @RGB.setter
     def RGB(self, value):
         self.colorformat.RGB = value
 
-    # Lower case alias for RGB setter
+    # Lower case aliases for RGB
+    @property
+    def rgb(self):
+        return self.RGB
+
     @rgb.setter
     def rgb(self, value):
         self.RGB = value
@@ -5683,16 +5488,15 @@ class ColorFormat:
     def SchemeColor(self):
         return self.colorformat.SchemeColor
 
-    # Lower case alias for SchemeColor
-    @property
-    def schemecolor(self):
-        return self.SchemeColor
-
     @SchemeColor.setter
     def SchemeColor(self, value):
         self.colorformat.SchemeColor = value
 
-    # Lower case alias for SchemeColor setter
+    # Lower case aliases for SchemeColor
+    @property
+    def schemecolor(self):
+        return self.SchemeColor
+
     @schemecolor.setter
     def schemecolor(self, value):
         self.SchemeColor = value
@@ -5701,16 +5505,15 @@ class ColorFormat:
     def TintAndShade(self):
         return self.colorformat.TintAndShade
 
-    # Lower case alias for TintAndShade
-    @property
-    def tintandshade(self):
-        return self.TintAndShade
-
     @TintAndShade.setter
     def TintAndShade(self, value):
         self.colorformat.TintAndShade = value
 
-    # Lower case alias for TintAndShade setter
+    # Lower case aliases for TintAndShade
+    @property
+    def tintandshade(self):
+        return self.TintAndShade
+
     @tintandshade.setter
     def tintandshade(self, value):
         self.TintAndShade = value
@@ -5719,7 +5522,7 @@ class ColorFormat:
     def Type(self):
         return self.colorformat.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -5738,7 +5541,7 @@ class ColorScheme:
     def Count(self):
         return self.colorscheme.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -5747,7 +5550,7 @@ class ColorScheme:
     def Parent(self):
         return self.colorscheme.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5776,7 +5579,7 @@ class ColorSchemes:
     def Count(self):
         return self.colorschemes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -5785,7 +5588,7 @@ class ColorSchemes:
     def Parent(self):
         return self.colorschemes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5815,7 +5618,7 @@ class Column:
         else:
             return CellRange(self.column.GetCells(*arguments))
 
-    # Lower case alias for Cells
+    # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
         arguments = [RowIndex, ColumnIndex]
         return self.Cells(*arguments)
@@ -5824,7 +5627,7 @@ class Column:
     def Parent(self):
         return self.column.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5833,16 +5636,15 @@ class Column:
     def Width(self):
         return self.column.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.column.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -5870,7 +5672,7 @@ class Columns:
     def Count(self):
         return self.columns.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -5879,7 +5681,7 @@ class Columns:
     def Parent(self):
         return self.columns.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5906,16 +5708,15 @@ class CommandEffect:
     def Bookmark(self):
         return self.commandeffect.Bookmark
 
-    # Lower case alias for Bookmark
-    @property
-    def bookmark(self):
-        return self.Bookmark
-
     @Bookmark.setter
     def Bookmark(self, value):
         self.commandeffect.Bookmark = value
 
-    # Lower case alias for Bookmark setter
+    # Lower case aliases for Bookmark
+    @property
+    def bookmark(self):
+        return self.Bookmark
+
     @bookmark.setter
     def bookmark(self, value):
         self.Bookmark = value
@@ -5924,16 +5725,15 @@ class CommandEffect:
     def Command(self):
         return self.commandeffect.Command
 
-    # Lower case alias for Command
-    @property
-    def command(self):
-        return self.Command
-
     @Command.setter
     def Command(self, value):
         self.commandeffect.Command = value
 
-    # Lower case alias for Command setter
+    # Lower case aliases for Command
+    @property
+    def command(self):
+        return self.Command
+
     @command.setter
     def command(self, value):
         self.Command = value
@@ -5942,7 +5742,7 @@ class CommandEffect:
     def Parent(self):
         return self.commandeffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -5951,16 +5751,15 @@ class CommandEffect:
     def Type(self):
         return self.commandeffect.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.commandeffect.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -5979,7 +5778,7 @@ class Comment:
     def Author(self):
         return Comment(self.comment.Author)
 
-    # Lower case alias for Author
+    # Lower case aliases for Author
     @property
     def author(self):
         return self.Author
@@ -5988,7 +5787,7 @@ class Comment:
     def AuthorIndex(self):
         return self.comment.AuthorIndex
 
-    # Lower case alias for AuthorIndex
+    # Lower case aliases for AuthorIndex
     @property
     def authorindex(self):
         return self.AuthorIndex
@@ -5997,7 +5796,7 @@ class Comment:
     def AuthorInitials(self):
         return Comment(self.comment.AuthorInitials)
 
-    # Lower case alias for AuthorInitials
+    # Lower case aliases for AuthorInitials
     @property
     def authorinitials(self):
         return self.AuthorInitials
@@ -6006,7 +5805,7 @@ class Comment:
     def DateTime(self):
         return self.comment.DateTime
 
-    # Lower case alias for DateTime
+    # Lower case aliases for DateTime
     @property
     def datetime(self):
         return self.DateTime
@@ -6015,7 +5814,7 @@ class Comment:
     def Left(self):
         return self.comment.Left
 
-    # Lower case alias for Left
+    # Lower case aliases for Left
     @property
     def left(self):
         return self.Left
@@ -6024,7 +5823,7 @@ class Comment:
     def Parent(self):
         return self.comment.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6033,7 +5832,7 @@ class Comment:
     def Text(self):
         return self.comment.Text
 
-    # Lower case alias for Text
+    # Lower case aliases for Text
     @property
     def text(self):
         return self.Text
@@ -6042,7 +5841,7 @@ class Comment:
     def Top(self):
         return self.comment.Top
 
-    # Lower case alias for Top
+    # Lower case aliases for Top
     @property
     def top(self):
         return self.Top
@@ -6064,7 +5863,7 @@ class Comments:
     def Count(self):
         return self.comments.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -6073,7 +5872,7 @@ class Comments:
     def Parent(self):
         return self.comments.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6100,16 +5899,15 @@ class ConnectorFormat:
     def BeginConnected(self):
         return self.connectorformat.BeginConnected
 
-    # Lower case alias for BeginConnected
-    @property
-    def beginconnected(self):
-        return self.BeginConnected
-
     @BeginConnected.setter
     def BeginConnected(self, value):
         self.connectorformat.BeginConnected = value
 
-    # Lower case alias for BeginConnected setter
+    # Lower case aliases for BeginConnected
+    @property
+    def beginconnected(self):
+        return self.BeginConnected
+
     @beginconnected.setter
     def beginconnected(self, value):
         self.BeginConnected = value
@@ -6118,7 +5916,7 @@ class ConnectorFormat:
     def BeginConnectedShape(self):
         return Shape(self.connectorformat.BeginConnectedShape)
 
-    # Lower case alias for BeginConnectedShape
+    # Lower case aliases for BeginConnectedShape
     @property
     def beginconnectedshape(self):
         return self.BeginConnectedShape
@@ -6127,7 +5925,7 @@ class ConnectorFormat:
     def BeginConnectionSite(self):
         return self.connectorformat.BeginConnectionSite
 
-    # Lower case alias for BeginConnectionSite
+    # Lower case aliases for BeginConnectionSite
     @property
     def beginconnectionsite(self):
         return self.BeginConnectionSite
@@ -6136,7 +5934,7 @@ class ConnectorFormat:
     def Creator(self):
         return self.connectorformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -6145,7 +5943,7 @@ class ConnectorFormat:
     def EndConnected(self):
         return self.connectorformat.EndConnected
 
-    # Lower case alias for EndConnected
+    # Lower case aliases for EndConnected
     @property
     def endconnected(self):
         return self.EndConnected
@@ -6154,7 +5952,7 @@ class ConnectorFormat:
     def EndConnectedShape(self):
         return Shape(self.connectorformat.EndConnectedShape)
 
-    # Lower case alias for EndConnectedShape
+    # Lower case aliases for EndConnectedShape
     @property
     def endconnectedshape(self):
         return self.EndConnectedShape
@@ -6163,7 +5961,7 @@ class ConnectorFormat:
     def EndConnectionSite(self):
         return self.connectorformat.EndConnectionSite
 
-    # Lower case alias for EndConnectionSite
+    # Lower case aliases for EndConnectionSite
     @property
     def endconnectionsite(self):
         return self.EndConnectionSite
@@ -6172,7 +5970,7 @@ class ConnectorFormat:
     def Parent(self):
         return self.connectorformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6181,16 +5979,15 @@ class ConnectorFormat:
     def Type(self):
         return self.connectorformat.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.connectorformat.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -6223,7 +6020,7 @@ class CustomerData:
     def Count(self):
         return self.customerdata.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -6232,7 +6029,7 @@ class CustomerData:
     def Parent(self):
         return CustomerData(self.customerdata.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6262,7 +6059,7 @@ class CustomLayout:
     def Background(self):
         return ShapeRange(self.customlayout.Background)
 
-    # Lower case alias for Background
+    # Lower case aliases for Background
     @property
     def background(self):
         return self.Background
@@ -6271,7 +6068,7 @@ class CustomLayout:
     def CustomerData(self):
         return CustomerData(self.customlayout.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -6280,7 +6077,7 @@ class CustomLayout:
     def Design(self):
         return Design(self.customlayout.Design)
 
-    # Lower case alias for Design
+    # Lower case aliases for Design
     @property
     def design(self):
         return self.Design
@@ -6289,16 +6086,15 @@ class CustomLayout:
     def DisplayMasterShapes(self):
         return self.customlayout.DisplayMasterShapes
 
-    # Lower case alias for DisplayMasterShapes
-    @property
-    def displaymastershapes(self):
-        return self.DisplayMasterShapes
-
     @DisplayMasterShapes.setter
     def DisplayMasterShapes(self, value):
         self.customlayout.DisplayMasterShapes = value
 
-    # Lower case alias for DisplayMasterShapes setter
+    # Lower case aliases for DisplayMasterShapes
+    @property
+    def displaymastershapes(self):
+        return self.DisplayMasterShapes
+
     @displaymastershapes.setter
     def displaymastershapes(self, value):
         self.DisplayMasterShapes = value
@@ -6307,16 +6103,15 @@ class CustomLayout:
     def FollowMasterBackground(self):
         return self.customlayout.FollowMasterBackground
 
-    # Lower case alias for FollowMasterBackground
-    @property
-    def followmasterbackground(self):
-        return self.FollowMasterBackground
-
     @FollowMasterBackground.setter
     def FollowMasterBackground(self, value):
         self.customlayout.FollowMasterBackground = value
 
-    # Lower case alias for FollowMasterBackground setter
+    # Lower case aliases for FollowMasterBackground
+    @property
+    def followmasterbackground(self):
+        return self.FollowMasterBackground
+
     @followmasterbackground.setter
     def followmasterbackground(self, value):
         self.FollowMasterBackground = value
@@ -6325,7 +6120,7 @@ class CustomLayout:
     def HeadersFooters(self):
         return HeadersFooters(self.customlayout.HeadersFooters)
 
-    # Lower case alias for HeadersFooters
+    # Lower case aliases for HeadersFooters
     @property
     def headersfooters(self):
         return self.HeadersFooters
@@ -6334,7 +6129,7 @@ class CustomLayout:
     def Height(self):
         return self.customlayout.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -6343,7 +6138,7 @@ class CustomLayout:
     def Hyperlinks(self):
         return Hyperlinks(self.customlayout.Hyperlinks)
 
-    # Lower case alias for Hyperlinks
+    # Lower case aliases for Hyperlinks
     @property
     def hyperlinks(self):
         return self.Hyperlinks
@@ -6352,7 +6147,7 @@ class CustomLayout:
     def Index(self):
         return CustomLayouts(self.customlayout.Index)
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -6361,16 +6156,15 @@ class CustomLayout:
     def MatchingName(self):
         return self.customlayout.MatchingName
 
-    # Lower case alias for MatchingName
-    @property
-    def matchingname(self):
-        return self.MatchingName
-
     @MatchingName.setter
     def MatchingName(self, value):
         self.customlayout.MatchingName = value
 
-    # Lower case alias for MatchingName setter
+    # Lower case aliases for MatchingName
+    @property
+    def matchingname(self):
+        return self.MatchingName
+
     @matchingname.setter
     def matchingname(self, value):
         self.MatchingName = value
@@ -6379,16 +6173,15 @@ class CustomLayout:
     def Name(self):
         return self.customlayout.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.customlayout.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -6397,7 +6190,7 @@ class CustomLayout:
     def Parent(self):
         return CustomLayout(self.customlayout.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6406,16 +6199,15 @@ class CustomLayout:
     def Preserved(self):
         return self.customlayout.Preserved
 
-    # Lower case alias for Preserved
-    @property
-    def preserved(self):
-        return self.Preserved
-
     @Preserved.setter
     def Preserved(self, value):
         self.customlayout.Preserved = value
 
-    # Lower case alias for Preserved setter
+    # Lower case aliases for Preserved
+    @property
+    def preserved(self):
+        return self.Preserved
+
     @preserved.setter
     def preserved(self, value):
         self.Preserved = value
@@ -6424,7 +6216,7 @@ class CustomLayout:
     def Shapes(self):
         return Shapes(self.customlayout.Shapes)
 
-    # Lower case alias for Shapes
+    # Lower case aliases for Shapes
     @property
     def shapes(self):
         return self.Shapes
@@ -6433,7 +6225,7 @@ class CustomLayout:
     def SlideShowTransition(self):
         return SlideShowTransition(self.customlayout.SlideShowTransition)
 
-    # Lower case alias for SlideShowTransition
+    # Lower case aliases for SlideShowTransition
     @property
     def slideshowtransition(self):
         return self.SlideShowTransition
@@ -6442,7 +6234,7 @@ class CustomLayout:
     def ThemeColorScheme(self):
         return self.customlayout.ThemeColorScheme
 
-    # Lower case alias for ThemeColorScheme
+    # Lower case aliases for ThemeColorScheme
     @property
     def themecolorscheme(self):
         return self.ThemeColorScheme
@@ -6451,7 +6243,7 @@ class CustomLayout:
     def TimeLine(self):
         return TimeLine(self.customlayout.TimeLine)
 
-    # Lower case alias for TimeLine
+    # Lower case aliases for TimeLine
     @property
     def timeline(self):
         return self.TimeLine
@@ -6460,7 +6252,7 @@ class CustomLayout:
     def Width(self):
         return self.customlayout.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -6498,7 +6290,7 @@ class CustomLayouts:
     def Count(self):
         return self.customlayouts.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -6507,7 +6299,7 @@ class CustomLayouts:
     def Parent(self):
         return self.customlayouts.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6538,16 +6330,15 @@ class DataLabel:
     def AutoText(self):
         return self.datalabel.AutoText
 
-    # Lower case alias for AutoText
-    @property
-    def autotext(self):
-        return self.AutoText
-
     @AutoText.setter
     def AutoText(self, value):
         self.datalabel.AutoText = value
 
-    # Lower case alias for AutoText setter
+    # Lower case aliases for AutoText
+    @property
+    def autotext(self):
+        return self.AutoText
+
     @autotext.setter
     def autotext(self, value):
         self.AutoText = value
@@ -6556,16 +6347,15 @@ class DataLabel:
     def Caption(self):
         return self.datalabel.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.datalabel.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -6577,7 +6367,7 @@ class DataLabel:
         else:
             return ChartCharacters(self.datalabel.GetCharacters(*arguments))
 
-    # Lower case alias for Characters
+    # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
         arguments = [Start, Length]
         return self.Characters(*arguments)
@@ -6586,7 +6376,7 @@ class DataLabel:
     def Creator(self):
         return self.datalabel.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -6595,7 +6385,7 @@ class DataLabel:
     def Format(self):
         return ChartFormat(self.datalabel.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -6604,16 +6394,15 @@ class DataLabel:
     def Formula(self):
         return self.datalabel.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.datalabel.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -6622,16 +6411,15 @@ class DataLabel:
     def FormulaLocal(self):
         return self.datalabel.FormulaLocal
 
-    # Lower case alias for FormulaLocal
-    @property
-    def formulalocal(self):
-        return self.FormulaLocal
-
     @FormulaLocal.setter
     def FormulaLocal(self, value):
         self.datalabel.FormulaLocal = value
 
-    # Lower case alias for FormulaLocal setter
+    # Lower case aliases for FormulaLocal
+    @property
+    def formulalocal(self):
+        return self.FormulaLocal
+
     @formulalocal.setter
     def formulalocal(self, value):
         self.FormulaLocal = value
@@ -6640,16 +6428,15 @@ class DataLabel:
     def FormulaR1C1(self):
         return self.datalabel.FormulaR1C1
 
-    # Lower case alias for FormulaR1C1
-    @property
-    def formular1c1(self):
-        return self.FormulaR1C1
-
     @FormulaR1C1.setter
     def FormulaR1C1(self, value):
         self.datalabel.FormulaR1C1 = value
 
-    # Lower case alias for FormulaR1C1 setter
+    # Lower case aliases for FormulaR1C1
+    @property
+    def formular1c1(self):
+        return self.FormulaR1C1
+
     @formular1c1.setter
     def formular1c1(self, value):
         self.FormulaR1C1 = value
@@ -6658,16 +6445,15 @@ class DataLabel:
     def FormulaR1C1Local(self):
         return self.datalabel.FormulaR1C1Local
 
-    # Lower case alias for FormulaR1C1Local
-    @property
-    def formular1c1local(self):
-        return self.FormulaR1C1Local
-
     @FormulaR1C1Local.setter
     def FormulaR1C1Local(self, value):
         self.datalabel.FormulaR1C1Local = value
 
-    # Lower case alias for FormulaR1C1Local setter
+    # Lower case aliases for FormulaR1C1Local
+    @property
+    def formular1c1local(self):
+        return self.FormulaR1C1Local
+
     @formular1c1local.setter
     def formular1c1local(self, value):
         self.FormulaR1C1Local = value
@@ -6676,7 +6462,7 @@ class DataLabel:
     def Height(self):
         return self.datalabel.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -6685,16 +6471,15 @@ class DataLabel:
     def HorizontalAlignment(self):
         return self.datalabel.HorizontalAlignment
 
-    # Lower case alias for HorizontalAlignment
-    @property
-    def horizontalalignment(self):
-        return self.HorizontalAlignment
-
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
         self.datalabel.HorizontalAlignment = value
 
-    # Lower case alias for HorizontalAlignment setter
+    # Lower case aliases for HorizontalAlignment
+    @property
+    def horizontalalignment(self):
+        return self.HorizontalAlignment
+
     @horizontalalignment.setter
     def horizontalalignment(self, value):
         self.HorizontalAlignment = value
@@ -6703,16 +6488,15 @@ class DataLabel:
     def Left(self):
         return self.datalabel.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.datalabel.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -6721,7 +6505,7 @@ class DataLabel:
     def Name(self):
         return self.datalabel.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -6730,16 +6514,15 @@ class DataLabel:
     def NumberFormat(self):
         return self.datalabel.NumberFormat
 
-    # Lower case alias for NumberFormat
-    @property
-    def numberformat(self):
-        return self.NumberFormat
-
     @NumberFormat.setter
     def NumberFormat(self, value):
         self.datalabel.NumberFormat = value
 
-    # Lower case alias for NumberFormat setter
+    # Lower case aliases for NumberFormat
+    @property
+    def numberformat(self):
+        return self.NumberFormat
+
     @numberformat.setter
     def numberformat(self, value):
         self.NumberFormat = value
@@ -6748,16 +6531,15 @@ class DataLabel:
     def NumberFormatLinked(self):
         return self.datalabel.NumberFormatLinked
 
-    # Lower case alias for NumberFormatLinked
-    @property
-    def numberformatlinked(self):
-        return self.NumberFormatLinked
-
     @NumberFormatLinked.setter
     def NumberFormatLinked(self, value):
         self.datalabel.NumberFormatLinked = value
 
-    # Lower case alias for NumberFormatLinked setter
+    # Lower case aliases for NumberFormatLinked
+    @property
+    def numberformatlinked(self):
+        return self.NumberFormatLinked
+
     @numberformatlinked.setter
     def numberformatlinked(self, value):
         self.NumberFormatLinked = value
@@ -6766,16 +6548,15 @@ class DataLabel:
     def NumberFormatLocal(self):
         return self.datalabel.NumberFormatLocal
 
-    # Lower case alias for NumberFormatLocal
-    @property
-    def numberformatlocal(self):
-        return self.NumberFormatLocal
-
     @NumberFormatLocal.setter
     def NumberFormatLocal(self, value):
         self.datalabel.NumberFormatLocal = value
 
-    # Lower case alias for NumberFormatLocal setter
+    # Lower case aliases for NumberFormatLocal
+    @property
+    def numberformatlocal(self):
+        return self.NumberFormatLocal
+
     @numberformatlocal.setter
     def numberformatlocal(self, value):
         self.NumberFormatLocal = value
@@ -6784,16 +6565,15 @@ class DataLabel:
     def Orientation(self):
         return self.datalabel.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.datalabel.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -6802,7 +6582,7 @@ class DataLabel:
     def Parent(self):
         return self.datalabel.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -6811,16 +6591,15 @@ class DataLabel:
     def Position(self):
         return XlDataLabelPosition(self.datalabel.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.datalabel.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -6829,16 +6608,15 @@ class DataLabel:
     def ReadingOrder(self):
         return XlReadingOrder(self.datalabel.ReadingOrder)
 
-    # Lower case alias for ReadingOrder
-    @property
-    def readingorder(self):
-        return self.ReadingOrder
-
     @ReadingOrder.setter
     def ReadingOrder(self, value):
         self.datalabel.ReadingOrder = value
 
-    # Lower case alias for ReadingOrder setter
+    # Lower case aliases for ReadingOrder
+    @property
+    def readingorder(self):
+        return self.ReadingOrder
+
     @readingorder.setter
     def readingorder(self, value):
         self.ReadingOrder = value
@@ -6847,16 +6625,15 @@ class DataLabel:
     def Separator(self):
         return self.datalabel.Separator
 
-    # Lower case alias for Separator
-    @property
-    def separator(self):
-        return self.Separator
-
     @Separator.setter
     def Separator(self, value):
         self.datalabel.Separator = value
 
-    # Lower case alias for Separator setter
+    # Lower case aliases for Separator
+    @property
+    def separator(self):
+        return self.Separator
+
     @separator.setter
     def separator(self, value):
         self.Separator = value
@@ -6865,16 +6642,15 @@ class DataLabel:
     def Shadow(self):
         return self.datalabel.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.datalabel.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -6883,16 +6659,15 @@ class DataLabel:
     def ShowBubbleSize(self):
         return self.datalabel.ShowBubbleSize
 
-    # Lower case alias for ShowBubbleSize
-    @property
-    def showbubblesize(self):
-        return self.ShowBubbleSize
-
     @ShowBubbleSize.setter
     def ShowBubbleSize(self, value):
         self.datalabel.ShowBubbleSize = value
 
-    # Lower case alias for ShowBubbleSize setter
+    # Lower case aliases for ShowBubbleSize
+    @property
+    def showbubblesize(self):
+        return self.ShowBubbleSize
+
     @showbubblesize.setter
     def showbubblesize(self, value):
         self.ShowBubbleSize = value
@@ -6901,16 +6676,15 @@ class DataLabel:
     def ShowCategoryName(self):
         return self.datalabel.ShowCategoryName
 
-    # Lower case alias for ShowCategoryName
-    @property
-    def showcategoryname(self):
-        return self.ShowCategoryName
-
     @ShowCategoryName.setter
     def ShowCategoryName(self, value):
         self.datalabel.ShowCategoryName = value
 
-    # Lower case alias for ShowCategoryName setter
+    # Lower case aliases for ShowCategoryName
+    @property
+    def showcategoryname(self):
+        return self.ShowCategoryName
+
     @showcategoryname.setter
     def showcategoryname(self, value):
         self.ShowCategoryName = value
@@ -6919,16 +6693,15 @@ class DataLabel:
     def ShowLegendKey(self):
         return self.datalabel.ShowLegendKey
 
-    # Lower case alias for ShowLegendKey
-    @property
-    def showlegendkey(self):
-        return self.ShowLegendKey
-
     @ShowLegendKey.setter
     def ShowLegendKey(self, value):
         self.datalabel.ShowLegendKey = value
 
-    # Lower case alias for ShowLegendKey setter
+    # Lower case aliases for ShowLegendKey
+    @property
+    def showlegendkey(self):
+        return self.ShowLegendKey
+
     @showlegendkey.setter
     def showlegendkey(self, value):
         self.ShowLegendKey = value
@@ -6937,16 +6710,15 @@ class DataLabel:
     def ShowPercentage(self):
         return self.datalabel.ShowPercentage
 
-    # Lower case alias for ShowPercentage
-    @property
-    def showpercentage(self):
-        return self.ShowPercentage
-
     @ShowPercentage.setter
     def ShowPercentage(self, value):
         self.datalabel.ShowPercentage = value
 
-    # Lower case alias for ShowPercentage setter
+    # Lower case aliases for ShowPercentage
+    @property
+    def showpercentage(self):
+        return self.ShowPercentage
+
     @showpercentage.setter
     def showpercentage(self, value):
         self.ShowPercentage = value
@@ -6955,16 +6727,15 @@ class DataLabel:
     def ShowSeriesName(self):
         return self.datalabel.ShowSeriesName
 
-    # Lower case alias for ShowSeriesName
-    @property
-    def showseriesname(self):
-        return self.ShowSeriesName
-
     @ShowSeriesName.setter
     def ShowSeriesName(self, value):
         self.datalabel.ShowSeriesName = value
 
-    # Lower case alias for ShowSeriesName setter
+    # Lower case aliases for ShowSeriesName
+    @property
+    def showseriesname(self):
+        return self.ShowSeriesName
+
     @showseriesname.setter
     def showseriesname(self, value):
         self.ShowSeriesName = value
@@ -6973,16 +6744,15 @@ class DataLabel:
     def ShowValue(self):
         return self.datalabel.ShowValue
 
-    # Lower case alias for ShowValue
-    @property
-    def showvalue(self):
-        return self.ShowValue
-
     @ShowValue.setter
     def ShowValue(self, value):
         self.datalabel.ShowValue = value
 
-    # Lower case alias for ShowValue setter
+    # Lower case aliases for ShowValue
+    @property
+    def showvalue(self):
+        return self.ShowValue
+
     @showvalue.setter
     def showvalue(self, value):
         self.ShowValue = value
@@ -6991,16 +6761,15 @@ class DataLabel:
     def Text(self):
         return self.datalabel.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.datalabel.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -7009,16 +6778,15 @@ class DataLabel:
     def Top(self):
         return self.datalabel.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.datalabel.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -7027,16 +6795,15 @@ class DataLabel:
     def VerticalAlignment(self):
         return self.datalabel.VerticalAlignment
 
-    # Lower case alias for VerticalAlignment
-    @property
-    def verticalalignment(self):
-        return self.VerticalAlignment
-
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
         self.datalabel.VerticalAlignment = value
 
-    # Lower case alias for VerticalAlignment setter
+    # Lower case aliases for VerticalAlignment
+    @property
+    def verticalalignment(self):
+        return self.VerticalAlignment
+
     @verticalalignment.setter
     def verticalalignment(self, value):
         self.VerticalAlignment = value
@@ -7045,7 +6812,7 @@ class DataLabel:
     def Width(self):
         return self.datalabel.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -7073,16 +6840,15 @@ class DataLabels:
     def AutoText(self):
         return self.datalabels.AutoText
 
-    # Lower case alias for AutoText
-    @property
-    def autotext(self):
-        return self.AutoText
-
     @AutoText.setter
     def AutoText(self, value):
         self.datalabels.AutoText = value
 
-    # Lower case alias for AutoText setter
+    # Lower case aliases for AutoText
+    @property
+    def autotext(self):
+        return self.AutoText
+
     @autotext.setter
     def autotext(self, value):
         self.AutoText = value
@@ -7091,7 +6857,7 @@ class DataLabels:
     def Count(self):
         return self.datalabels.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -7100,7 +6866,7 @@ class DataLabels:
     def Creator(self):
         return self.datalabels.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -7109,7 +6875,7 @@ class DataLabels:
     def Format(self):
         return ChartFormat(self.datalabels.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -7118,16 +6884,15 @@ class DataLabels:
     def HorizontalAlignment(self):
         return self.datalabels.HorizontalAlignment
 
-    # Lower case alias for HorizontalAlignment
-    @property
-    def horizontalalignment(self):
-        return self.HorizontalAlignment
-
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
         self.datalabels.HorizontalAlignment = value
 
-    # Lower case alias for HorizontalAlignment setter
+    # Lower case aliases for HorizontalAlignment
+    @property
+    def horizontalalignment(self):
+        return self.HorizontalAlignment
+
     @horizontalalignment.setter
     def horizontalalignment(self, value):
         self.HorizontalAlignment = value
@@ -7136,7 +6901,7 @@ class DataLabels:
     def Name(self):
         return self.datalabels.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -7145,16 +6910,15 @@ class DataLabels:
     def NumberFormat(self):
         return self.datalabels.NumberFormat
 
-    # Lower case alias for NumberFormat
-    @property
-    def numberformat(self):
-        return self.NumberFormat
-
     @NumberFormat.setter
     def NumberFormat(self, value):
         self.datalabels.NumberFormat = value
 
-    # Lower case alias for NumberFormat setter
+    # Lower case aliases for NumberFormat
+    @property
+    def numberformat(self):
+        return self.NumberFormat
+
     @numberformat.setter
     def numberformat(self, value):
         self.NumberFormat = value
@@ -7163,16 +6927,15 @@ class DataLabels:
     def NumberFormatLinked(self):
         return self.datalabels.NumberFormatLinked
 
-    # Lower case alias for NumberFormatLinked
-    @property
-    def numberformatlinked(self):
-        return self.NumberFormatLinked
-
     @NumberFormatLinked.setter
     def NumberFormatLinked(self, value):
         self.datalabels.NumberFormatLinked = value
 
-    # Lower case alias for NumberFormatLinked setter
+    # Lower case aliases for NumberFormatLinked
+    @property
+    def numberformatlinked(self):
+        return self.NumberFormatLinked
+
     @numberformatlinked.setter
     def numberformatlinked(self, value):
         self.NumberFormatLinked = value
@@ -7181,16 +6944,15 @@ class DataLabels:
     def NumberFormatLocal(self):
         return self.datalabels.NumberFormatLocal
 
-    # Lower case alias for NumberFormatLocal
-    @property
-    def numberformatlocal(self):
-        return self.NumberFormatLocal
-
     @NumberFormatLocal.setter
     def NumberFormatLocal(self, value):
         self.datalabels.NumberFormatLocal = value
 
-    # Lower case alias for NumberFormatLocal setter
+    # Lower case aliases for NumberFormatLocal
+    @property
+    def numberformatlocal(self):
+        return self.NumberFormatLocal
+
     @numberformatlocal.setter
     def numberformatlocal(self, value):
         self.NumberFormatLocal = value
@@ -7199,16 +6961,15 @@ class DataLabels:
     def Orientation(self):
         return self.datalabels.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.datalabels.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -7217,7 +6978,7 @@ class DataLabels:
     def Parent(self):
         return self.datalabels.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7226,16 +6987,15 @@ class DataLabels:
     def ReadingOrder(self):
         return XlReadingOrder(self.datalabels.ReadingOrder)
 
-    # Lower case alias for ReadingOrder
-    @property
-    def readingorder(self):
-        return self.ReadingOrder
-
     @ReadingOrder.setter
     def ReadingOrder(self, value):
         self.datalabels.ReadingOrder = value
 
-    # Lower case alias for ReadingOrder setter
+    # Lower case aliases for ReadingOrder
+    @property
+    def readingorder(self):
+        return self.ReadingOrder
+
     @readingorder.setter
     def readingorder(self, value):
         self.ReadingOrder = value
@@ -7244,16 +7004,15 @@ class DataLabels:
     def Separator(self):
         return self.datalabels.Separator
 
-    # Lower case alias for Separator
-    @property
-    def separator(self):
-        return self.Separator
-
     @Separator.setter
     def Separator(self, value):
         self.datalabels.Separator = value
 
-    # Lower case alias for Separator setter
+    # Lower case aliases for Separator
+    @property
+    def separator(self):
+        return self.Separator
+
     @separator.setter
     def separator(self, value):
         self.Separator = value
@@ -7262,16 +7021,15 @@ class DataLabels:
     def Shadow(self):
         return self.datalabels.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.datalabels.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -7280,16 +7038,15 @@ class DataLabels:
     def ShowBubbleSize(self):
         return self.datalabels.ShowBubbleSize
 
-    # Lower case alias for ShowBubbleSize
-    @property
-    def showbubblesize(self):
-        return self.ShowBubbleSize
-
     @ShowBubbleSize.setter
     def ShowBubbleSize(self, value):
         self.datalabels.ShowBubbleSize = value
 
-    # Lower case alias for ShowBubbleSize setter
+    # Lower case aliases for ShowBubbleSize
+    @property
+    def showbubblesize(self):
+        return self.ShowBubbleSize
+
     @showbubblesize.setter
     def showbubblesize(self, value):
         self.ShowBubbleSize = value
@@ -7298,16 +7055,15 @@ class DataLabels:
     def ShowCategoryName(self):
         return self.datalabels.ShowCategoryName
 
-    # Lower case alias for ShowCategoryName
-    @property
-    def showcategoryname(self):
-        return self.ShowCategoryName
-
     @ShowCategoryName.setter
     def ShowCategoryName(self, value):
         self.datalabels.ShowCategoryName = value
 
-    # Lower case alias for ShowCategoryName setter
+    # Lower case aliases for ShowCategoryName
+    @property
+    def showcategoryname(self):
+        return self.ShowCategoryName
+
     @showcategoryname.setter
     def showcategoryname(self, value):
         self.ShowCategoryName = value
@@ -7316,16 +7072,15 @@ class DataLabels:
     def ShowLegendKey(self):
         return self.datalabels.ShowLegendKey
 
-    # Lower case alias for ShowLegendKey
-    @property
-    def showlegendkey(self):
-        return self.ShowLegendKey
-
     @ShowLegendKey.setter
     def ShowLegendKey(self, value):
         self.datalabels.ShowLegendKey = value
 
-    # Lower case alias for ShowLegendKey setter
+    # Lower case aliases for ShowLegendKey
+    @property
+    def showlegendkey(self):
+        return self.ShowLegendKey
+
     @showlegendkey.setter
     def showlegendkey(self, value):
         self.ShowLegendKey = value
@@ -7334,16 +7089,15 @@ class DataLabels:
     def ShowPercentage(self):
         return self.datalabels.ShowPercentage
 
-    # Lower case alias for ShowPercentage
-    @property
-    def showpercentage(self):
-        return self.ShowPercentage
-
     @ShowPercentage.setter
     def ShowPercentage(self, value):
         self.datalabels.ShowPercentage = value
 
-    # Lower case alias for ShowPercentage setter
+    # Lower case aliases for ShowPercentage
+    @property
+    def showpercentage(self):
+        return self.ShowPercentage
+
     @showpercentage.setter
     def showpercentage(self, value):
         self.ShowPercentage = value
@@ -7352,16 +7106,15 @@ class DataLabels:
     def ShowSeriesName(self):
         return self.datalabels.ShowSeriesName
 
-    # Lower case alias for ShowSeriesName
-    @property
-    def showseriesname(self):
-        return self.ShowSeriesName
-
     @ShowSeriesName.setter
     def ShowSeriesName(self, value):
         self.datalabels.ShowSeriesName = value
 
-    # Lower case alias for ShowSeriesName setter
+    # Lower case aliases for ShowSeriesName
+    @property
+    def showseriesname(self):
+        return self.ShowSeriesName
+
     @showseriesname.setter
     def showseriesname(self, value):
         self.ShowSeriesName = value
@@ -7370,16 +7123,15 @@ class DataLabels:
     def ShowValue(self):
         return self.datalabels.ShowValue
 
-    # Lower case alias for ShowValue
-    @property
-    def showvalue(self):
-        return self.ShowValue
-
     @ShowValue.setter
     def ShowValue(self, value):
         self.datalabels.ShowValue = value
 
-    # Lower case alias for ShowValue setter
+    # Lower case aliases for ShowValue
+    @property
+    def showvalue(self):
+        return self.ShowValue
+
     @showvalue.setter
     def showvalue(self, value):
         self.ShowValue = value
@@ -7388,16 +7140,15 @@ class DataLabels:
     def VerticalAlignment(self):
         return self.datalabels.VerticalAlignment
 
-    # Lower case alias for VerticalAlignment
-    @property
-    def verticalalignment(self):
-        return self.VerticalAlignment
-
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
         self.datalabels.VerticalAlignment = value
 
-    # Lower case alias for VerticalAlignment setter
+    # Lower case aliases for VerticalAlignment
+    @property
+    def verticalalignment(self):
+        return self.VerticalAlignment
+
     @verticalalignment.setter
     def verticalalignment(self, value):
         self.VerticalAlignment = value
@@ -7426,7 +7177,7 @@ class DataTable:
     def Border(self):
         return ChartBorder(self.datatable.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -7435,7 +7186,7 @@ class DataTable:
     def Creator(self):
         return self.datatable.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -7444,7 +7195,7 @@ class DataTable:
     def Font(self):
         return ChartFont(self.datatable.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -7453,7 +7204,7 @@ class DataTable:
     def Format(self):
         return ChartFormat(self.datatable.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -7462,16 +7213,15 @@ class DataTable:
     def HasBorderHorizontal(self):
         return self.datatable.HasBorderHorizontal
 
-    # Lower case alias for HasBorderHorizontal
-    @property
-    def hasborderhorizontal(self):
-        return self.HasBorderHorizontal
-
     @HasBorderHorizontal.setter
     def HasBorderHorizontal(self, value):
         self.datatable.HasBorderHorizontal = value
 
-    # Lower case alias for HasBorderHorizontal setter
+    # Lower case aliases for HasBorderHorizontal
+    @property
+    def hasborderhorizontal(self):
+        return self.HasBorderHorizontal
+
     @hasborderhorizontal.setter
     def hasborderhorizontal(self, value):
         self.HasBorderHorizontal = value
@@ -7480,16 +7230,15 @@ class DataTable:
     def HasBorderOutline(self):
         return self.datatable.HasBorderOutline
 
-    # Lower case alias for HasBorderOutline
-    @property
-    def hasborderoutline(self):
-        return self.HasBorderOutline
-
     @HasBorderOutline.setter
     def HasBorderOutline(self, value):
         self.datatable.HasBorderOutline = value
 
-    # Lower case alias for HasBorderOutline setter
+    # Lower case aliases for HasBorderOutline
+    @property
+    def hasborderoutline(self):
+        return self.HasBorderOutline
+
     @hasborderoutline.setter
     def hasborderoutline(self, value):
         self.HasBorderOutline = value
@@ -7498,16 +7247,15 @@ class DataTable:
     def HasBorderVertical(self):
         return self.datatable.HasBorderVertical
 
-    # Lower case alias for HasBorderVertical
-    @property
-    def hasbordervertical(self):
-        return self.HasBorderVertical
-
     @HasBorderVertical.setter
     def HasBorderVertical(self, value):
         self.datatable.HasBorderVertical = value
 
-    # Lower case alias for HasBorderVertical setter
+    # Lower case aliases for HasBorderVertical
+    @property
+    def hasbordervertical(self):
+        return self.HasBorderVertical
+
     @hasbordervertical.setter
     def hasbordervertical(self, value):
         self.HasBorderVertical = value
@@ -7516,7 +7264,7 @@ class DataTable:
     def Parent(self):
         return self.datatable.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7525,16 +7273,15 @@ class DataTable:
     def ShowLegendKey(self):
         return self.datatable.ShowLegendKey
 
-    # Lower case alias for ShowLegendKey
-    @property
-    def showlegendkey(self):
-        return self.ShowLegendKey
-
     @ShowLegendKey.setter
     def ShowLegendKey(self, value):
         self.datatable.ShowLegendKey = value
 
-    # Lower case alias for ShowLegendKey setter
+    # Lower case aliases for ShowLegendKey
+    @property
+    def showlegendkey(self):
+        return self.ShowLegendKey
+
     @showlegendkey.setter
     def showlegendkey(self, value):
         self.ShowLegendKey = value
@@ -7559,7 +7306,7 @@ class Design:
     def Index(self):
         return self.design.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -7568,16 +7315,15 @@ class Design:
     def Name(self):
         return self.design.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.design.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -7586,7 +7332,7 @@ class Design:
     def Parent(self):
         return self.design.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7595,16 +7341,15 @@ class Design:
     def Preserved(self):
         return self.design.Preserved
 
-    # Lower case alias for Preserved
-    @property
-    def preserved(self):
-        return self.Preserved
-
     @Preserved.setter
     def Preserved(self, value):
         self.design.Preserved = value
 
-    # Lower case alias for Preserved setter
+    # Lower case aliases for Preserved
+    @property
+    def preserved(self):
+        return self.Preserved
+
     @preserved.setter
     def preserved(self, value):
         self.Preserved = value
@@ -7613,7 +7358,7 @@ class Design:
     def SlideMaster(self):
         return Master(self.design.SlideMaster)
 
-    # Lower case alias for SlideMaster
+    # Lower case aliases for SlideMaster
     @property
     def slidemaster(self):
         return self.SlideMaster
@@ -7639,7 +7384,7 @@ class Designs:
     def Count(self):
         return self.designs.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -7648,7 +7393,7 @@ class Designs:
     def Parent(self):
         return self.designs.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7683,16 +7428,15 @@ class DisplayUnitLabel:
     def Caption(self):
         return self.displayunitlabel.Caption
 
-    # Lower case alias for Caption
-    @property
-    def caption(self):
-        return self.Caption
-
     @Caption.setter
     def Caption(self, value):
         self.displayunitlabel.Caption = value
 
-    # Lower case alias for Caption setter
+    # Lower case aliases for Caption
+    @property
+    def caption(self):
+        return self.Caption
+
     @caption.setter
     def caption(self, value):
         self.Caption = value
@@ -7704,7 +7448,7 @@ class DisplayUnitLabel:
         else:
             return ChartCharacters(self.displayunitlabel.GetCharacters(*arguments))
 
-    # Lower case alias for Characters
+    # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
         arguments = [Start, Length]
         return self.Characters(*arguments)
@@ -7713,7 +7457,7 @@ class DisplayUnitLabel:
     def Creator(self):
         return self.displayunitlabel.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -7722,7 +7466,7 @@ class DisplayUnitLabel:
     def Format(self):
         return ChartFormat(self.displayunitlabel.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -7731,16 +7475,15 @@ class DisplayUnitLabel:
     def Formula(self):
         return self.displayunitlabel.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.displayunitlabel.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -7749,16 +7492,15 @@ class DisplayUnitLabel:
     def FormulaLocal(self):
         return self.displayunitlabel.FormulaLocal
 
-    # Lower case alias for FormulaLocal
-    @property
-    def formulalocal(self):
-        return self.FormulaLocal
-
     @FormulaLocal.setter
     def FormulaLocal(self, value):
         self.displayunitlabel.FormulaLocal = value
 
-    # Lower case alias for FormulaLocal setter
+    # Lower case aliases for FormulaLocal
+    @property
+    def formulalocal(self):
+        return self.FormulaLocal
+
     @formulalocal.setter
     def formulalocal(self, value):
         self.FormulaLocal = value
@@ -7767,16 +7509,15 @@ class DisplayUnitLabel:
     def FormulaR1C1(self):
         return self.displayunitlabel.FormulaR1C1
 
-    # Lower case alias for FormulaR1C1
-    @property
-    def formular1c1(self):
-        return self.FormulaR1C1
-
     @FormulaR1C1.setter
     def FormulaR1C1(self, value):
         self.displayunitlabel.FormulaR1C1 = value
 
-    # Lower case alias for FormulaR1C1 setter
+    # Lower case aliases for FormulaR1C1
+    @property
+    def formular1c1(self):
+        return self.FormulaR1C1
+
     @formular1c1.setter
     def formular1c1(self, value):
         self.FormulaR1C1 = value
@@ -7785,16 +7526,15 @@ class DisplayUnitLabel:
     def FormulaR1C1Local(self):
         return self.displayunitlabel.FormulaR1C1Local
 
-    # Lower case alias for FormulaR1C1Local
-    @property
-    def formular1c1local(self):
-        return self.FormulaR1C1Local
-
     @FormulaR1C1Local.setter
     def FormulaR1C1Local(self, value):
         self.displayunitlabel.FormulaR1C1Local = value
 
-    # Lower case alias for FormulaR1C1Local setter
+    # Lower case aliases for FormulaR1C1Local
+    @property
+    def formular1c1local(self):
+        return self.FormulaR1C1Local
+
     @formular1c1local.setter
     def formular1c1local(self, value):
         self.FormulaR1C1Local = value
@@ -7803,7 +7543,7 @@ class DisplayUnitLabel:
     def Height(self):
         return self.displayunitlabel.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -7812,16 +7552,15 @@ class DisplayUnitLabel:
     def HorizontalAlignment(self):
         return self.displayunitlabel.HorizontalAlignment
 
-    # Lower case alias for HorizontalAlignment
-    @property
-    def horizontalalignment(self):
-        return self.HorizontalAlignment
-
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
         self.displayunitlabel.HorizontalAlignment = value
 
-    # Lower case alias for HorizontalAlignment setter
+    # Lower case aliases for HorizontalAlignment
+    @property
+    def horizontalalignment(self):
+        return self.HorizontalAlignment
+
     @horizontalalignment.setter
     def horizontalalignment(self, value):
         self.HorizontalAlignment = value
@@ -7830,16 +7569,15 @@ class DisplayUnitLabel:
     def Left(self):
         return self.displayunitlabel.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.displayunitlabel.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -7848,7 +7586,7 @@ class DisplayUnitLabel:
     def Name(self):
         return self.displayunitlabel.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -7857,16 +7595,15 @@ class DisplayUnitLabel:
     def Orientation(self):
         return self.displayunitlabel.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.displayunitlabel.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -7875,7 +7612,7 @@ class DisplayUnitLabel:
     def Parent(self):
         return self.displayunitlabel.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -7884,16 +7621,15 @@ class DisplayUnitLabel:
     def Position(self):
         return XlChartElementPosition(self.displayunitlabel.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.displayunitlabel.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -7902,16 +7638,15 @@ class DisplayUnitLabel:
     def ReadingOrder(self):
         return XlReadingOrder(self.displayunitlabel.ReadingOrder)
 
-    # Lower case alias for ReadingOrder
-    @property
-    def readingorder(self):
-        return self.ReadingOrder
-
     @ReadingOrder.setter
     def ReadingOrder(self, value):
         self.displayunitlabel.ReadingOrder = value
 
-    # Lower case alias for ReadingOrder setter
+    # Lower case aliases for ReadingOrder
+    @property
+    def readingorder(self):
+        return self.ReadingOrder
+
     @readingorder.setter
     def readingorder(self, value):
         self.ReadingOrder = value
@@ -7920,16 +7655,15 @@ class DisplayUnitLabel:
     def Shadow(self):
         return self.displayunitlabel.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.displayunitlabel.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -7938,16 +7672,15 @@ class DisplayUnitLabel:
     def Text(self):
         return self.displayunitlabel.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.displayunitlabel.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -7956,16 +7689,15 @@ class DisplayUnitLabel:
     def Top(self):
         return self.displayunitlabel.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.displayunitlabel.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -7974,16 +7706,15 @@ class DisplayUnitLabel:
     def VerticalAlignment(self):
         return self.displayunitlabel.VerticalAlignment
 
-    # Lower case alias for VerticalAlignment
-    @property
-    def verticalalignment(self):
-        return self.VerticalAlignment
-
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
         self.displayunitlabel.VerticalAlignment = value
 
-    # Lower case alias for VerticalAlignment setter
+    # Lower case aliases for VerticalAlignment
+    @property
+    def verticalalignment(self):
+        return self.VerticalAlignment
+
     @verticalalignment.setter
     def verticalalignment(self, value):
         self.VerticalAlignment = value
@@ -7992,7 +7723,7 @@ class DisplayUnitLabel:
     def Width(self):
         return self.displayunitlabel.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -8013,7 +7744,7 @@ class DocumentWindow:
     def Active(self):
         return self.documentwindow.Active
 
-    # Lower case alias for Active
+    # Lower case aliases for Active
     @property
     def active(self):
         return self.Active
@@ -8022,7 +7753,7 @@ class DocumentWindow:
     def ActivePane(self):
         return Pane(self.documentwindow.ActivePane)
 
-    # Lower case alias for ActivePane
+    # Lower case aliases for ActivePane
     @property
     def activepane(self):
         return self.ActivePane
@@ -8035,16 +7766,15 @@ class DocumentWindow:
     def BlackAndWhite(self):
         return self.documentwindow.BlackAndWhite
 
-    # Lower case alias for BlackAndWhite
-    @property
-    def blackandwhite(self):
-        return self.BlackAndWhite
-
     @BlackAndWhite.setter
     def BlackAndWhite(self, value):
         self.documentwindow.BlackAndWhite = value
 
-    # Lower case alias for BlackAndWhite setter
+    # Lower case aliases for BlackAndWhite
+    @property
+    def blackandwhite(self):
+        return self.BlackAndWhite
+
     @blackandwhite.setter
     def blackandwhite(self, value):
         self.BlackAndWhite = value
@@ -8053,7 +7783,7 @@ class DocumentWindow:
     def Caption(self):
         return self.documentwindow.Caption
 
-    # Lower case alias for Caption
+    # Lower case aliases for Caption
     @property
     def caption(self):
         return self.Caption
@@ -8062,16 +7792,15 @@ class DocumentWindow:
     def Height(self):
         return self.documentwindow.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.documentwindow.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -8080,16 +7809,15 @@ class DocumentWindow:
     def Left(self):
         return self.documentwindow.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.documentwindow.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -8098,7 +7826,7 @@ class DocumentWindow:
     def Panes(self):
         return Panes(self.documentwindow.Panes)
 
-    # Lower case alias for Panes
+    # Lower case aliases for Panes
     @property
     def panes(self):
         return self.Panes
@@ -8107,7 +7835,7 @@ class DocumentWindow:
     def Parent(self):
         return self.documentwindow.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8116,7 +7844,7 @@ class DocumentWindow:
     def Presentation(self):
         return Presentation(self.documentwindow.Presentation)
 
-    # Lower case alias for Presentation
+    # Lower case aliases for Presentation
     @property
     def presentation(self):
         return self.Presentation
@@ -8125,7 +7853,7 @@ class DocumentWindow:
     def Selection(self):
         return Selection(self.documentwindow.Selection)
 
-    # Lower case alias for Selection
+    # Lower case aliases for Selection
     @property
     def selection(self):
         return self.Selection
@@ -8134,16 +7862,15 @@ class DocumentWindow:
     def SplitHorizontal(self):
         return self.documentwindow.SplitHorizontal
 
-    # Lower case alias for SplitHorizontal
-    @property
-    def splithorizontal(self):
-        return self.SplitHorizontal
-
     @SplitHorizontal.setter
     def SplitHorizontal(self, value):
         self.documentwindow.SplitHorizontal = value
 
-    # Lower case alias for SplitHorizontal setter
+    # Lower case aliases for SplitHorizontal
+    @property
+    def splithorizontal(self):
+        return self.SplitHorizontal
+
     @splithorizontal.setter
     def splithorizontal(self, value):
         self.SplitHorizontal = value
@@ -8152,16 +7879,15 @@ class DocumentWindow:
     def SplitVertical(self):
         return self.documentwindow.SplitVertical
 
-    # Lower case alias for SplitVertical
-    @property
-    def splitvertical(self):
-        return self.SplitVertical
-
     @SplitVertical.setter
     def SplitVertical(self, value):
         self.documentwindow.SplitVertical = value
 
-    # Lower case alias for SplitVertical setter
+    # Lower case aliases for SplitVertical
+    @property
+    def splitvertical(self):
+        return self.SplitVertical
+
     @splitvertical.setter
     def splitvertical(self, value):
         self.SplitVertical = value
@@ -8170,16 +7896,15 @@ class DocumentWindow:
     def Top(self):
         return self.documentwindow.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.documentwindow.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -8188,7 +7913,7 @@ class DocumentWindow:
     def View(self):
         return View(self.documentwindow.View)
 
-    # Lower case alias for View
+    # Lower case aliases for View
     @property
     def view(self):
         return self.View
@@ -8197,16 +7922,15 @@ class DocumentWindow:
     def ViewType(self):
         return self.documentwindow.ViewType
 
-    # Lower case alias for ViewType
-    @property
-    def viewtype(self):
-        return self.ViewType
-
     @ViewType.setter
     def ViewType(self, value):
         self.documentwindow.ViewType = value
 
-    # Lower case alias for ViewType setter
+    # Lower case aliases for ViewType
+    @property
+    def viewtype(self):
+        return self.ViewType
+
     @viewtype.setter
     def viewtype(self, value):
         self.ViewType = value
@@ -8215,16 +7939,15 @@ class DocumentWindow:
     def Width(self):
         return self.documentwindow.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.documentwindow.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -8233,16 +7956,15 @@ class DocumentWindow:
     def WindowState(self):
         return self.documentwindow.WindowState
 
-    # Lower case alias for WindowState
-    @property
-    def windowstate(self):
-        return self.WindowState
-
     @WindowState.setter
     def WindowState(self, value):
         self.documentwindow.WindowState = value
 
-    # Lower case alias for WindowState setter
+    # Lower case aliases for WindowState
+    @property
+    def windowstate(self):
+        return self.WindowState
+
     @windowstate.setter
     def windowstate(self, value):
         self.WindowState = value
@@ -8308,7 +8030,7 @@ class DocumentWindows:
     def Count(self):
         return self.documentwindows.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -8317,7 +8039,7 @@ class DocumentWindows:
     def Parent(self):
         return self.documentwindows.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8344,7 +8066,7 @@ class DownBars:
     def Creator(self):
         return self.downbars.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -8353,7 +8075,7 @@ class DownBars:
     def Format(self):
         return ChartFormat(self.downbars.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -8362,7 +8084,7 @@ class DownBars:
     def Name(self):
         return self.downbars.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -8371,7 +8093,7 @@ class DownBars:
     def Parent(self):
         return self.downbars.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8396,7 +8118,7 @@ class DropLines:
     def Border(self):
         return ChartBorder(self.droplines.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -8405,7 +8127,7 @@ class DropLines:
     def Creator(self):
         return self.droplines.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -8414,7 +8136,7 @@ class DropLines:
     def Format(self):
         return ChartFormat(self.droplines.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -8423,7 +8145,7 @@ class DropLines:
     def Name(self):
         return self.droplines.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -8432,7 +8154,7 @@ class DropLines:
     def Parent(self):
         return self.droplines.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8457,7 +8179,7 @@ class Effect:
     def Behaviors(self):
         return AnimationBehaviors(self.effect.Behaviors)
 
-    # Lower case alias for Behaviors
+    # Lower case aliases for Behaviors
     @property
     def behaviors(self):
         return self.Behaviors
@@ -8466,7 +8188,7 @@ class Effect:
     def DisplayName(self):
         return self.effect.DisplayName
 
-    # Lower case alias for DisplayName
+    # Lower case aliases for DisplayName
     @property
     def displayname(self):
         return self.DisplayName
@@ -8475,7 +8197,7 @@ class Effect:
     def EffectInformation(self):
         return EffectInformation(self.effect.EffectInformation)
 
-    # Lower case alias for EffectInformation
+    # Lower case aliases for EffectInformation
     @property
     def effectinformation(self):
         return self.EffectInformation
@@ -8484,7 +8206,7 @@ class Effect:
     def EffectParameters(self):
         return EffectParameters(self.effect.EffectParameters)
 
-    # Lower case alias for EffectParameters
+    # Lower case aliases for EffectParameters
     @property
     def effectparameters(self):
         return self.EffectParameters
@@ -8493,16 +8215,15 @@ class Effect:
     def EffectType(self):
         return self.effect.EffectType
 
-    # Lower case alias for EffectType
-    @property
-    def effecttype(self):
-        return self.EffectType
-
     @EffectType.setter
     def EffectType(self, value):
         self.effect.EffectType = value
 
-    # Lower case alias for EffectType setter
+    # Lower case aliases for EffectType
+    @property
+    def effecttype(self):
+        return self.EffectType
+
     @effecttype.setter
     def effecttype(self, value):
         self.EffectType = value
@@ -8511,16 +8232,15 @@ class Effect:
     def Exit(self):
         return self.effect.Exit
 
-    # Lower case alias for Exit
-    @property
-    def exit(self):
-        return self.Exit
-
     @Exit.setter
     def Exit(self, value):
         self.effect.Exit = value
 
-    # Lower case alias for Exit setter
+    # Lower case aliases for Exit
+    @property
+    def exit(self):
+        return self.Exit
+
     @exit.setter
     def exit(self, value):
         self.Exit = value
@@ -8529,7 +8249,7 @@ class Effect:
     def Index(self):
         return self.effect.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -8538,16 +8258,15 @@ class Effect:
     def Paragraph(self):
         return self.effect.Paragraph
 
-    # Lower case alias for Paragraph
-    @property
-    def paragraph(self):
-        return self.Paragraph
-
     @Paragraph.setter
     def Paragraph(self, value):
         self.effect.Paragraph = value
 
-    # Lower case alias for Paragraph setter
+    # Lower case aliases for Paragraph
+    @property
+    def paragraph(self):
+        return self.Paragraph
+
     @paragraph.setter
     def paragraph(self, value):
         self.Paragraph = value
@@ -8556,7 +8275,7 @@ class Effect:
     def Parent(self):
         return self.effect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8565,7 +8284,7 @@ class Effect:
     def Shape(self):
         return Shape(self.effect.Shape)
 
-    # Lower case alias for Shape
+    # Lower case aliases for Shape
     @property
     def shape(self):
         return self.Shape
@@ -8574,16 +8293,15 @@ class Effect:
     def TextRangeLength(self):
         return self.effect.TextRangeLength
 
-    # Lower case alias for TextRangeLength
-    @property
-    def textrangelength(self):
-        return self.TextRangeLength
-
     @TextRangeLength.setter
     def TextRangeLength(self, value):
         self.effect.TextRangeLength = value
 
-    # Lower case alias for TextRangeLength setter
+    # Lower case aliases for TextRangeLength
+    @property
+    def textrangelength(self):
+        return self.TextRangeLength
+
     @textrangelength.setter
     def textrangelength(self, value):
         self.TextRangeLength = value
@@ -8592,16 +8310,15 @@ class Effect:
     def TextRangeStart(self):
         return self.effect.TextRangeStart
 
-    # Lower case alias for TextRangeStart
-    @property
-    def textrangestart(self):
-        return self.TextRangeStart
-
     @TextRangeStart.setter
     def TextRangeStart(self, value):
         self.effect.TextRangeStart = value
 
-    # Lower case alias for TextRangeStart setter
+    # Lower case aliases for TextRangeStart
+    @property
+    def textrangestart(self):
+        return self.TextRangeStart
+
     @textrangestart.setter
     def textrangestart(self, value):
         self.TextRangeStart = value
@@ -8610,7 +8327,7 @@ class Effect:
     def Timing(self):
         return Timing(self.effect.Timing)
 
-    # Lower case alias for Timing
+    # Lower case aliases for Timing
     @property
     def timing(self):
         return self.Timing
@@ -8640,7 +8357,7 @@ class EffectInformation:
     def AfterEffect(self):
         return PpAfterEffect(self.effectinformation.AfterEffect)
 
-    # Lower case alias for AfterEffect
+    # Lower case aliases for AfterEffect
     @property
     def aftereffect(self):
         return self.AfterEffect
@@ -8649,7 +8366,7 @@ class EffectInformation:
     def AnimateBackground(self):
         return self.effectinformation.AnimateBackground
 
-    # Lower case alias for AnimateBackground
+    # Lower case aliases for AnimateBackground
     @property
     def animatebackground(self):
         return self.AnimateBackground
@@ -8658,16 +8375,15 @@ class EffectInformation:
     def AnimateTextInReverse(self):
         return self.effectinformation.AnimateTextInReverse
 
-    # Lower case alias for AnimateTextInReverse
-    @property
-    def animatetextinreverse(self):
-        return self.AnimateTextInReverse
-
     @AnimateTextInReverse.setter
     def AnimateTextInReverse(self, value):
         self.effectinformation.AnimateTextInReverse = value
 
-    # Lower case alias for AnimateTextInReverse setter
+    # Lower case aliases for AnimateTextInReverse
+    @property
+    def animatetextinreverse(self):
+        return self.AnimateTextInReverse
+
     @animatetextinreverse.setter
     def animatetextinreverse(self, value):
         self.AnimateTextInReverse = value
@@ -8680,7 +8396,7 @@ class EffectInformation:
     def BuildByLevelEffect(self):
         return self.effectinformation.BuildByLevelEffect
 
-    # Lower case alias for BuildByLevelEffect
+    # Lower case aliases for BuildByLevelEffect
     @property
     def buildbyleveleffect(self):
         return self.BuildByLevelEffect
@@ -8689,7 +8405,7 @@ class EffectInformation:
     def Dim(self):
         return ColorFormat(self.effectinformation.Dim)
 
-    # Lower case alias for Dim
+    # Lower case aliases for Dim
     @property
     def dim(self):
         return self.Dim
@@ -8698,7 +8414,7 @@ class EffectInformation:
     def Parent(self):
         return self.effectinformation.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8707,7 +8423,7 @@ class EffectInformation:
     def PlaySettings(self):
         return PlaySettings(self.effectinformation.PlaySettings)
 
-    # Lower case alias for PlaySettings
+    # Lower case aliases for PlaySettings
     @property
     def playsettings(self):
         return self.PlaySettings
@@ -8716,7 +8432,7 @@ class EffectInformation:
     def SoundEffect(self):
         return SoundEffect(self.effectinformation.SoundEffect)
 
-    # Lower case alias for SoundEffect
+    # Lower case aliases for SoundEffect
     @property
     def soundeffect(self):
         return self.SoundEffect
@@ -8725,7 +8441,7 @@ class EffectInformation:
     def TextUnitEffect(self):
         return self.effectinformation.TextUnitEffect
 
-    # Lower case alias for TextUnitEffect
+    # Lower case aliases for TextUnitEffect
     @property
     def textuniteffect(self):
         return self.TextUnitEffect
@@ -8740,16 +8456,15 @@ class EffectParameters:
     def Amount(self):
         return self.effectparameters.Amount
 
-    # Lower case alias for Amount
-    @property
-    def amount(self):
-        return self.Amount
-
     @Amount.setter
     def Amount(self, value):
         self.effectparameters.Amount = value
 
-    # Lower case alias for Amount setter
+    # Lower case aliases for Amount
+    @property
+    def amount(self):
+        return self.Amount
+
     @amount.setter
     def amount(self, value):
         self.Amount = value
@@ -8762,7 +8477,7 @@ class EffectParameters:
     def Color2(self):
         return ColorFormat(self.effectparameters.Color2)
 
-    # Lower case alias for Color2
+    # Lower case aliases for Color2
     @property
     def color2(self):
         return self.Color2
@@ -8771,16 +8486,15 @@ class EffectParameters:
     def Direction(self):
         return self.effectparameters.Direction
 
-    # Lower case alias for Direction
-    @property
-    def direction(self):
-        return self.Direction
-
     @Direction.setter
     def Direction(self, value):
         self.effectparameters.Direction = value
 
-    # Lower case alias for Direction setter
+    # Lower case aliases for Direction
+    @property
+    def direction(self):
+        return self.Direction
+
     @direction.setter
     def direction(self, value):
         self.Direction = value
@@ -8789,16 +8503,15 @@ class EffectParameters:
     def FontName(self):
         return self.effectparameters.FontName
 
-    # Lower case alias for FontName
-    @property
-    def fontname(self):
-        return self.FontName
-
     @FontName.setter
     def FontName(self, value):
         self.effectparameters.FontName = value
 
-    # Lower case alias for FontName setter
+    # Lower case aliases for FontName
+    @property
+    def fontname(self):
+        return self.FontName
+
     @fontname.setter
     def fontname(self, value):
         self.FontName = value
@@ -8807,7 +8520,7 @@ class EffectParameters:
     def Parent(self):
         return self.effectparameters.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8816,16 +8529,15 @@ class EffectParameters:
     def Relative(self):
         return self.effectparameters.Relative
 
-    # Lower case alias for Relative
-    @property
-    def relative(self):
-        return self.Relative
-
     @Relative.setter
     def Relative(self, value):
         self.effectparameters.Relative = value
 
-    # Lower case alias for Relative setter
+    # Lower case aliases for Relative
+    @property
+    def relative(self):
+        return self.Relative
+
     @relative.setter
     def relative(self, value):
         self.Relative = value
@@ -8834,16 +8546,15 @@ class EffectParameters:
     def Size(self):
         return self.effectparameters.Size
 
-    # Lower case alias for Size
-    @property
-    def size(self):
-        return self.Size
-
     @Size.setter
     def Size(self, value):
         self.effectparameters.Size = value
 
-    # Lower case alias for Size setter
+    # Lower case aliases for Size
+    @property
+    def size(self):
+        return self.Size
+
     @size.setter
     def size(self, value):
         self.Size = value
@@ -8862,7 +8573,7 @@ class ErrorBars:
     def Border(self):
         return ChartBorder(self.errorbars.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -8871,7 +8582,7 @@ class ErrorBars:
     def Creator(self):
         return self.errorbars.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -8880,16 +8591,15 @@ class ErrorBars:
     def EndStyle(self):
         return self.errorbars.EndStyle
 
-    # Lower case alias for EndStyle
-    @property
-    def endstyle(self):
-        return self.EndStyle
-
     @EndStyle.setter
     def EndStyle(self, value):
         self.errorbars.EndStyle = value
 
-    # Lower case alias for EndStyle setter
+    # Lower case aliases for EndStyle
+    @property
+    def endstyle(self):
+        return self.EndStyle
+
     @endstyle.setter
     def endstyle(self, value):
         self.EndStyle = value
@@ -8898,7 +8608,7 @@ class ErrorBars:
     def Format(self):
         return ChartFormat(self.errorbars.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -8907,7 +8617,7 @@ class ErrorBars:
     def Name(self):
         return self.errorbars.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -8916,7 +8626,7 @@ class ErrorBars:
     def Parent(self):
         return self.errorbars.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8944,7 +8654,7 @@ class ExtraColors:
     def Count(self):
         return self.extracolors.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -8953,7 +8663,7 @@ class ExtraColors:
     def Parent(self):
         return self.extracolors.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -8983,7 +8693,7 @@ class FileConverter:
     def CanOpen(self):
         return self.fileconverter.CanOpen
 
-    # Lower case alias for CanOpen
+    # Lower case aliases for CanOpen
     @property
     def canopen(self):
         return self.CanOpen
@@ -8992,7 +8702,7 @@ class FileConverter:
     def CanSave(self):
         return self.fileconverter.CanSave
 
-    # Lower case alias for CanSave
+    # Lower case aliases for CanSave
     @property
     def cansave(self):
         return self.CanSave
@@ -9001,7 +8711,7 @@ class FileConverter:
     def ClassName(self):
         return self.fileconverter.ClassName
 
-    # Lower case alias for ClassName
+    # Lower case aliases for ClassName
     @property
     def classname(self):
         return self.ClassName
@@ -9010,7 +8720,7 @@ class FileConverter:
     def Creator(self):
         return self.fileconverter.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -9019,7 +8729,7 @@ class FileConverter:
     def Extensions(self):
         return FileConverter(self.fileconverter.Extensions)
 
-    # Lower case alias for Extensions
+    # Lower case aliases for Extensions
     @property
     def extensions(self):
         return self.Extensions
@@ -9028,7 +8738,7 @@ class FileConverter:
     def FormatName(self):
         return self.fileconverter.FormatName
 
-    # Lower case alias for FormatName
+    # Lower case aliases for FormatName
     @property
     def formatname(self):
         return self.FormatName
@@ -9037,7 +8747,7 @@ class FileConverter:
     def Name(self):
         return self.fileconverter.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -9046,7 +8756,7 @@ class FileConverter:
     def OpenFormat(self):
         return self.fileconverter.OpenFormat
 
-    # Lower case alias for OpenFormat
+    # Lower case aliases for OpenFormat
     @property
     def openformat(self):
         return self.OpenFormat
@@ -9055,7 +8765,7 @@ class FileConverter:
     def Parent(self):
         return FileConverter(self.fileconverter.Parent)
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9064,7 +8774,7 @@ class FileConverter:
     def Path(self):
         return self.fileconverter.Path
 
-    # Lower case alias for Path
+    # Lower case aliases for Path
     @property
     def path(self):
         return self.Path
@@ -9073,7 +8783,7 @@ class FileConverter:
     def SaveFormat(self):
         return self.fileconverter.SaveFormat
 
-    # Lower case alias for SaveFormat
+    # Lower case aliases for SaveFormat
     @property
     def saveformat(self):
         return self.SaveFormat
@@ -9091,7 +8801,7 @@ class FileConverters:
     def Count(self):
         return self.fileconverters.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -9114,16 +8824,15 @@ class FillFormat:
     def BackColor(self):
         return ColorFormat(self.fillformat.BackColor)
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.fillformat.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -9132,7 +8841,7 @@ class FillFormat:
     def Creator(self):
         return self.fillformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -9141,16 +8850,15 @@ class FillFormat:
     def ForeColor(self):
         return ColorFormat(self.fillformat.ForeColor)
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.fillformat.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -9159,16 +8867,15 @@ class FillFormat:
     def GradientAngle(self):
         return self.fillformat.GradientAngle
 
-    # Lower case alias for GradientAngle
-    @property
-    def gradientangle(self):
-        return self.GradientAngle
-
     @GradientAngle.setter
     def GradientAngle(self, value):
         self.fillformat.GradientAngle = value
 
-    # Lower case alias for GradientAngle setter
+    # Lower case aliases for GradientAngle
+    @property
+    def gradientangle(self):
+        return self.GradientAngle
+
     @gradientangle.setter
     def gradientangle(self, value):
         self.GradientAngle = value
@@ -9177,7 +8884,7 @@ class FillFormat:
     def GradientColorType(self):
         return self.fillformat.GradientColorType
 
-    # Lower case alias for GradientColorType
+    # Lower case aliases for GradientColorType
     @property
     def gradientcolortype(self):
         return self.GradientColorType
@@ -9186,7 +8893,7 @@ class FillFormat:
     def GradientDegree(self):
         return self.fillformat.GradientDegree
 
-    # Lower case alias for GradientDegree
+    # Lower case aliases for GradientDegree
     @property
     def gradientdegree(self):
         return self.GradientDegree
@@ -9195,7 +8902,7 @@ class FillFormat:
     def GradientStops(self):
         return self.fillformat.GradientStops
 
-    # Lower case alias for GradientStops
+    # Lower case aliases for GradientStops
     @property
     def gradientstops(self):
         return self.GradientStops
@@ -9204,7 +8911,7 @@ class FillFormat:
     def GradientStyle(self):
         return self.fillformat.GradientStyle
 
-    # Lower case alias for GradientStyle
+    # Lower case aliases for GradientStyle
     @property
     def gradientstyle(self):
         return self.GradientStyle
@@ -9213,7 +8920,7 @@ class FillFormat:
     def GradientVariant(self):
         return self.fillformat.GradientVariant
 
-    # Lower case alias for GradientVariant
+    # Lower case aliases for GradientVariant
     @property
     def gradientvariant(self):
         return self.GradientVariant
@@ -9222,7 +8929,7 @@ class FillFormat:
     def Parent(self):
         return self.fillformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9231,7 +8938,7 @@ class FillFormat:
     def Pattern(self):
         return self.fillformat.Pattern
 
-    # Lower case alias for Pattern
+    # Lower case aliases for Pattern
     @property
     def pattern(self):
         return self.Pattern
@@ -9240,7 +8947,7 @@ class FillFormat:
     def PictureEffects(self):
         return self.fillformat.PictureEffects
 
-    # Lower case alias for PictureEffects
+    # Lower case aliases for PictureEffects
     @property
     def pictureeffects(self):
         return self.PictureEffects
@@ -9249,7 +8956,7 @@ class FillFormat:
     def PresetGradientType(self):
         return self.fillformat.PresetGradientType
 
-    # Lower case alias for PresetGradientType
+    # Lower case aliases for PresetGradientType
     @property
     def presetgradienttype(self):
         return self.PresetGradientType
@@ -9258,7 +8965,7 @@ class FillFormat:
     def PresetTexture(self):
         return self.fillformat.PresetTexture
 
-    # Lower case alias for PresetTexture
+    # Lower case aliases for PresetTexture
     @property
     def presettexture(self):
         return self.PresetTexture
@@ -9267,16 +8974,15 @@ class FillFormat:
     def RotateWithObject(self):
         return self.fillformat.RotateWithObject
 
-    # Lower case alias for RotateWithObject
-    @property
-    def rotatewithobject(self):
-        return self.RotateWithObject
-
     @RotateWithObject.setter
     def RotateWithObject(self, value):
         self.fillformat.RotateWithObject = value
 
-    # Lower case alias for RotateWithObject setter
+    # Lower case aliases for RotateWithObject
+    @property
+    def rotatewithobject(self):
+        return self.RotateWithObject
+
     @rotatewithobject.setter
     def rotatewithobject(self, value):
         self.RotateWithObject = value
@@ -9285,16 +8991,15 @@ class FillFormat:
     def TextureAlignment(self):
         return self.fillformat.TextureAlignment
 
-    # Lower case alias for TextureAlignment
-    @property
-    def texturealignment(self):
-        return self.TextureAlignment
-
     @TextureAlignment.setter
     def TextureAlignment(self, value):
         self.fillformat.TextureAlignment = value
 
-    # Lower case alias for TextureAlignment setter
+    # Lower case aliases for TextureAlignment
+    @property
+    def texturealignment(self):
+        return self.TextureAlignment
+
     @texturealignment.setter
     def texturealignment(self, value):
         self.TextureAlignment = value
@@ -9303,16 +9008,15 @@ class FillFormat:
     def TextureHorizontalScale(self):
         return self.fillformat.TextureHorizontalScale
 
-    # Lower case alias for TextureHorizontalScale
-    @property
-    def texturehorizontalscale(self):
-        return self.TextureHorizontalScale
-
     @TextureHorizontalScale.setter
     def TextureHorizontalScale(self, value):
         self.fillformat.TextureHorizontalScale = value
 
-    # Lower case alias for TextureHorizontalScale setter
+    # Lower case aliases for TextureHorizontalScale
+    @property
+    def texturehorizontalscale(self):
+        return self.TextureHorizontalScale
+
     @texturehorizontalscale.setter
     def texturehorizontalscale(self, value):
         self.TextureHorizontalScale = value
@@ -9321,7 +9025,7 @@ class FillFormat:
     def TextureName(self):
         return self.fillformat.TextureName
 
-    # Lower case alias for TextureName
+    # Lower case aliases for TextureName
     @property
     def texturename(self):
         return self.TextureName
@@ -9330,16 +9034,15 @@ class FillFormat:
     def TextureOffsetX(self):
         return self.fillformat.TextureOffsetX
 
-    # Lower case alias for TextureOffsetX
-    @property
-    def textureoffsetx(self):
-        return self.TextureOffsetX
-
     @TextureOffsetX.setter
     def TextureOffsetX(self, value):
         self.fillformat.TextureOffsetX = value
 
-    # Lower case alias for TextureOffsetX setter
+    # Lower case aliases for TextureOffsetX
+    @property
+    def textureoffsetx(self):
+        return self.TextureOffsetX
+
     @textureoffsetx.setter
     def textureoffsetx(self, value):
         self.TextureOffsetX = value
@@ -9348,16 +9051,15 @@ class FillFormat:
     def TextureOffsetY(self):
         return self.fillformat.TextureOffsetY
 
-    # Lower case alias for TextureOffsetY
-    @property
-    def textureoffsety(self):
-        return self.TextureOffsetY
-
     @TextureOffsetY.setter
     def TextureOffsetY(self, value):
         self.fillformat.TextureOffsetY = value
 
-    # Lower case alias for TextureOffsetY setter
+    # Lower case aliases for TextureOffsetY
+    @property
+    def textureoffsety(self):
+        return self.TextureOffsetY
+
     @textureoffsety.setter
     def textureoffsety(self, value):
         self.TextureOffsetY = value
@@ -9366,16 +9068,15 @@ class FillFormat:
     def TextureTile(self):
         return self.fillformat.TextureTile
 
-    # Lower case alias for TextureTile
-    @property
-    def texturetile(self):
-        return self.TextureTile
-
     @TextureTile.setter
     def TextureTile(self, value):
         self.fillformat.TextureTile = value
 
-    # Lower case alias for TextureTile setter
+    # Lower case aliases for TextureTile
+    @property
+    def texturetile(self):
+        return self.TextureTile
+
     @texturetile.setter
     def texturetile(self, value):
         self.TextureTile = value
@@ -9384,7 +9085,7 @@ class FillFormat:
     def TextureType(self):
         return self.fillformat.TextureType
 
-    # Lower case alias for TextureType
+    # Lower case aliases for TextureType
     @property
     def texturetype(self):
         return self.TextureType
@@ -9393,16 +9094,15 @@ class FillFormat:
     def TextureVerticalScale(self):
         return self.fillformat.TextureVerticalScale
 
-    # Lower case alias for TextureVerticalScale
-    @property
-    def textureverticalscale(self):
-        return self.TextureVerticalScale
-
     @TextureVerticalScale.setter
     def TextureVerticalScale(self, value):
         self.fillformat.TextureVerticalScale = value
 
-    # Lower case alias for TextureVerticalScale setter
+    # Lower case aliases for TextureVerticalScale
+    @property
+    def textureverticalscale(self):
+        return self.TextureVerticalScale
+
     @textureverticalscale.setter
     def textureverticalscale(self, value):
         self.TextureVerticalScale = value
@@ -9411,16 +9111,15 @@ class FillFormat:
     def Transparency(self):
         return self.fillformat.Transparency
 
-    # Lower case alias for Transparency
-    @property
-    def transparency(self):
-        return self.Transparency
-
     @Transparency.setter
     def Transparency(self, value):
         self.fillformat.Transparency = value
 
-    # Lower case alias for Transparency setter
+    # Lower case aliases for Transparency
+    @property
+    def transparency(self):
+        return self.Transparency
+
     @transparency.setter
     def transparency(self, value):
         self.Transparency = value
@@ -9429,7 +9128,7 @@ class FillFormat:
     def Type(self):
         return self.fillformat.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -9438,16 +9137,15 @@ class FillFormat:
     def Visible(self):
         return self.fillformat.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.fillformat.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -9500,7 +9198,7 @@ class FilterEffect:
     def Parent(self):
         return self.filtereffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9509,16 +9207,15 @@ class FilterEffect:
     def Reveal(self):
         return self.filtereffect.Reveal
 
-    # Lower case alias for Reveal
-    @property
-    def reveal(self):
-        return self.Reveal
-
     @Reveal.setter
     def Reveal(self, value):
         self.filtereffect.Reveal = value
 
-    # Lower case alias for Reveal setter
+    # Lower case aliases for Reveal
+    @property
+    def reveal(self):
+        return self.Reveal
+
     @reveal.setter
     def reveal(self, value):
         self.Reveal = value
@@ -9527,16 +9224,15 @@ class FilterEffect:
     def Subtype(self):
         return self.filtereffect.Subtype
 
-    # Lower case alias for Subtype
-    @property
-    def subtype(self):
-        return self.Subtype
-
     @Subtype.setter
     def Subtype(self, value):
         self.filtereffect.Subtype = value
 
-    # Lower case alias for Subtype setter
+    # Lower case aliases for Subtype
+    @property
+    def subtype(self):
+        return self.Subtype
+
     @subtype.setter
     def subtype(self, value):
         self.Subtype = value
@@ -9545,16 +9241,15 @@ class FilterEffect:
     def Type(self):
         return self.filtereffect.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.filtereffect.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -9573,7 +9268,7 @@ class Floor:
     def Creator(self):
         return self.floor.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -9582,7 +9277,7 @@ class Floor:
     def Format(self):
         return ChartFormat(self.floor.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -9591,7 +9286,7 @@ class Floor:
     def Name(self):
         return self.floor.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -9600,7 +9295,7 @@ class Floor:
     def Parent(self):
         return self.floor.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9609,16 +9304,15 @@ class Floor:
     def PictureType(self):
         return self.floor.PictureType
 
-    # Lower case alias for PictureType
-    @property
-    def picturetype(self):
-        return self.PictureType
-
     @PictureType.setter
     def PictureType(self, value):
         self.floor.PictureType = value
 
-    # Lower case alias for PictureType setter
+    # Lower case aliases for PictureType
+    @property
+    def picturetype(self):
+        return self.PictureType
+
     @picturetype.setter
     def picturetype(self, value):
         self.PictureType = value
@@ -9627,16 +9321,15 @@ class Floor:
     def Thickness(self):
         return self.floor.Thickness
 
-    # Lower case alias for Thickness
-    @property
-    def thickness(self):
-        return self.Thickness
-
     @Thickness.setter
     def Thickness(self, value):
         self.floor.Thickness = value
 
-    # Lower case alias for Thickness setter
+    # Lower case aliases for Thickness
+    @property
+    def thickness(self):
+        return self.Thickness
+
     @thickness.setter
     def thickness(self, value):
         self.Thickness = value
@@ -9664,16 +9357,15 @@ class Font:
     def AutoRotateNumbers(self):
         return self.font.AutoRotateNumbers
 
-    # Lower case alias for AutoRotateNumbers
-    @property
-    def autorotatenumbers(self):
-        return self.AutoRotateNumbers
-
     @AutoRotateNumbers.setter
     def AutoRotateNumbers(self, value):
         self.font.AutoRotateNumbers = value
 
-    # Lower case alias for AutoRotateNumbers setter
+    # Lower case aliases for AutoRotateNumbers
+    @property
+    def autorotatenumbers(self):
+        return self.AutoRotateNumbers
+
     @autorotatenumbers.setter
     def autorotatenumbers(self, value):
         self.AutoRotateNumbers = value
@@ -9682,16 +9374,15 @@ class Font:
     def BaselineOffset(self):
         return self.font.BaselineOffset
 
-    # Lower case alias for BaselineOffset
-    @property
-    def baselineoffset(self):
-        return self.BaselineOffset
-
     @BaselineOffset.setter
     def BaselineOffset(self, value):
         self.font.BaselineOffset = value
 
-    # Lower case alias for BaselineOffset setter
+    # Lower case aliases for BaselineOffset
+    @property
+    def baselineoffset(self):
+        return self.BaselineOffset
+
     @baselineoffset.setter
     def baselineoffset(self, value):
         self.BaselineOffset = value
@@ -9700,16 +9391,15 @@ class Font:
     def Bold(self):
         return self.font.Bold
 
-    # Lower case alias for Bold
-    @property
-    def bold(self):
-        return self.Bold
-
     @Bold.setter
     def Bold(self, value):
         self.font.Bold = value
 
-    # Lower case alias for Bold setter
+    # Lower case aliases for Bold
+    @property
+    def bold(self):
+        return self.Bold
+
     @bold.setter
     def bold(self, value):
         self.Bold = value
@@ -9718,16 +9408,15 @@ class Font:
     def Color(self):
         return Font(self.font.Color)
 
-    # Lower case alias for Color
-    @property
-    def color(self):
-        return self.Color
-
     @Color.setter
     def Color(self, value):
         self.font.Color = value
 
-    # Lower case alias for Color setter
+    # Lower case aliases for Color
+    @property
+    def color(self):
+        return self.Color
+
     @color.setter
     def color(self, value):
         self.Color = value
@@ -9736,7 +9425,7 @@ class Font:
     def Embeddable(self):
         return self.font.Embeddable
 
-    # Lower case alias for Embeddable
+    # Lower case aliases for Embeddable
     @property
     def embeddable(self):
         return self.Embeddable
@@ -9745,7 +9434,7 @@ class Font:
     def Embedded(self):
         return self.font.Embedded
 
-    # Lower case alias for Embedded
+    # Lower case aliases for Embedded
     @property
     def embedded(self):
         return self.Embedded
@@ -9754,16 +9443,15 @@ class Font:
     def Emboss(self):
         return self.font.Emboss
 
-    # Lower case alias for Emboss
-    @property
-    def emboss(self):
-        return self.Emboss
-
     @Emboss.setter
     def Emboss(self, value):
         self.font.Emboss = value
 
-    # Lower case alias for Emboss setter
+    # Lower case aliases for Emboss
+    @property
+    def emboss(self):
+        return self.Emboss
+
     @emboss.setter
     def emboss(self, value):
         self.Emboss = value
@@ -9772,16 +9460,15 @@ class Font:
     def Name(self):
         return self.font.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.font.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -9790,16 +9477,15 @@ class Font:
     def NameAscii(self):
         return self.font.NameAscii
 
-    # Lower case alias for NameAscii
-    @property
-    def nameascii(self):
-        return self.NameAscii
-
     @NameAscii.setter
     def NameAscii(self, value):
         self.font.NameAscii = value
 
-    # Lower case alias for NameAscii setter
+    # Lower case aliases for NameAscii
+    @property
+    def nameascii(self):
+        return self.NameAscii
+
     @nameascii.setter
     def nameascii(self, value):
         self.NameAscii = value
@@ -9808,16 +9494,15 @@ class Font:
     def NameComplexScript(self):
         return self.font.NameComplexScript
 
-    # Lower case alias for NameComplexScript
-    @property
-    def namecomplexscript(self):
-        return self.NameComplexScript
-
     @NameComplexScript.setter
     def NameComplexScript(self, value):
         self.font.NameComplexScript = value
 
-    # Lower case alias for NameComplexScript setter
+    # Lower case aliases for NameComplexScript
+    @property
+    def namecomplexscript(self):
+        return self.NameComplexScript
+
     @namecomplexscript.setter
     def namecomplexscript(self, value):
         self.NameComplexScript = value
@@ -9826,16 +9511,15 @@ class Font:
     def NameFarEast(self):
         return self.font.NameFarEast
 
-    # Lower case alias for NameFarEast
-    @property
-    def namefareast(self):
-        return self.NameFarEast
-
     @NameFarEast.setter
     def NameFarEast(self, value):
         self.font.NameFarEast = value
 
-    # Lower case alias for NameFarEast setter
+    # Lower case aliases for NameFarEast
+    @property
+    def namefareast(self):
+        return self.NameFarEast
+
     @namefareast.setter
     def namefareast(self, value):
         self.NameFarEast = value
@@ -9844,16 +9528,15 @@ class Font:
     def NameOther(self):
         return self.font.NameOther
 
-    # Lower case alias for NameOther
-    @property
-    def nameother(self):
-        return self.NameOther
-
     @NameOther.setter
     def NameOther(self, value):
         self.font.NameOther = value
 
-    # Lower case alias for NameOther setter
+    # Lower case aliases for NameOther
+    @property
+    def nameother(self):
+        return self.NameOther
+
     @nameother.setter
     def nameother(self, value):
         self.NameOther = value
@@ -9862,7 +9545,7 @@ class Font:
     def Parent(self):
         return self.font.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -9871,16 +9554,15 @@ class Font:
     def Shadow(self):
         return self.font.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.font.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -9889,16 +9571,15 @@ class Font:
     def Size(self):
         return self.font.Size
 
-    # Lower case alias for Size
-    @property
-    def size(self):
-        return self.Size
-
     @Size.setter
     def Size(self, value):
         self.font.Size = value
 
-    # Lower case alias for Size setter
+    # Lower case aliases for Size
+    @property
+    def size(self):
+        return self.Size
+
     @size.setter
     def size(self, value):
         self.Size = value
@@ -9907,16 +9588,15 @@ class Font:
     def Subscript(self):
         return self.font.Subscript
 
-    # Lower case alias for Subscript
-    @property
-    def subscript(self):
-        return self.Subscript
-
     @Subscript.setter
     def Subscript(self, value):
         self.font.Subscript = value
 
-    # Lower case alias for Subscript setter
+    # Lower case aliases for Subscript
+    @property
+    def subscript(self):
+        return self.Subscript
+
     @subscript.setter
     def subscript(self, value):
         self.Subscript = value
@@ -9925,16 +9605,15 @@ class Font:
     def Superscript(self):
         return self.font.Superscript
 
-    # Lower case alias for Superscript
-    @property
-    def superscript(self):
-        return self.Superscript
-
     @Superscript.setter
     def Superscript(self, value):
         self.font.Superscript = value
 
-    # Lower case alias for Superscript setter
+    # Lower case aliases for Superscript
+    @property
+    def superscript(self):
+        return self.Superscript
+
     @superscript.setter
     def superscript(self, value):
         self.Superscript = value
@@ -9943,16 +9622,15 @@ class Font:
     def Underline(self):
         return self.font.Underline
 
-    # Lower case alias for Underline
-    @property
-    def underline(self):
-        return self.Underline
-
     @Underline.setter
     def Underline(self, value):
         self.font.Underline = value
 
-    # Lower case alias for Underline setter
+    # Lower case aliases for Underline
+    @property
+    def underline(self):
+        return self.Underline
+
     @underline.setter
     def underline(self, value):
         self.Underline = value
@@ -9974,7 +9652,7 @@ class Fonts:
     def Count(self):
         return self.fonts.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -9983,7 +9661,7 @@ class Fonts:
     def Parent(self):
         return self.fonts.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10010,7 +9688,7 @@ class FreeformBuilder:
     def Creator(self):
         return self.freeformbuilder.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10019,7 +9697,7 @@ class FreeformBuilder:
     def Parent(self):
         return self.freeformbuilder.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10045,7 +9723,7 @@ class GridLines:
     def Border(self):
         return ChartBorder(self.gridlines.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -10054,7 +9732,7 @@ class GridLines:
     def Creator(self):
         return self.gridlines.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10063,7 +9741,7 @@ class GridLines:
     def Name(self):
         return self.gridlines.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -10072,7 +9750,7 @@ class GridLines:
     def Parent(self):
         return self.gridlines.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10097,7 +9775,7 @@ class GroupShapes:
     def Count(self):
         return self.groupshapes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -10106,7 +9784,7 @@ class GroupShapes:
     def Creator(self):
         return self.groupshapes.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10115,7 +9793,7 @@ class GroupShapes:
     def Parent(self):
         return self.groupshapes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10142,16 +9820,15 @@ class HeaderFooter:
     def Format(self):
         return self.headerfooter.Format
 
-    # Lower case alias for Format
-    @property
-    def format(self):
-        return self.Format
-
     @Format.setter
     def Format(self, value):
         self.headerfooter.Format = value
 
-    # Lower case alias for Format setter
+    # Lower case aliases for Format
+    @property
+    def format(self):
+        return self.Format
+
     @format.setter
     def format(self, value):
         self.Format = value
@@ -10160,7 +9837,7 @@ class HeaderFooter:
     def Parent(self):
         return self.headerfooter.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10169,16 +9846,15 @@ class HeaderFooter:
     def Text(self):
         return self.headerfooter.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.headerfooter.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -10187,16 +9863,15 @@ class HeaderFooter:
     def UseFormat(self):
         return self.headerfooter.UseFormat
 
-    # Lower case alias for UseFormat
-    @property
-    def useformat(self):
-        return self.UseFormat
-
     @UseFormat.setter
     def UseFormat(self, value):
         self.headerfooter.UseFormat = value
 
-    # Lower case alias for UseFormat setter
+    # Lower case aliases for UseFormat
+    @property
+    def useformat(self):
+        return self.UseFormat
+
     @useformat.setter
     def useformat(self, value):
         self.UseFormat = value
@@ -10205,16 +9880,15 @@ class HeaderFooter:
     def Visible(self):
         return self.headerfooter.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.headerfooter.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -10233,7 +9907,7 @@ class HeadersFooters:
     def DateAndTime(self):
         return HeaderFooter(self.headersfooters.DateAndTime)
 
-    # Lower case alias for DateAndTime
+    # Lower case aliases for DateAndTime
     @property
     def dateandtime(self):
         return self.DateAndTime
@@ -10242,16 +9916,15 @@ class HeadersFooters:
     def DisplayOnTitleSlide(self):
         return self.headersfooters.DisplayOnTitleSlide
 
-    # Lower case alias for DisplayOnTitleSlide
-    @property
-    def displayontitleslide(self):
-        return self.DisplayOnTitleSlide
-
     @DisplayOnTitleSlide.setter
     def DisplayOnTitleSlide(self, value):
         self.headersfooters.DisplayOnTitleSlide = value
 
-    # Lower case alias for DisplayOnTitleSlide setter
+    # Lower case aliases for DisplayOnTitleSlide
+    @property
+    def displayontitleslide(self):
+        return self.DisplayOnTitleSlide
+
     @displayontitleslide.setter
     def displayontitleslide(self, value):
         self.DisplayOnTitleSlide = value
@@ -10260,7 +9933,7 @@ class HeadersFooters:
     def Footer(self):
         return HeaderFooter(self.headersfooters.Footer)
 
-    # Lower case alias for Footer
+    # Lower case aliases for Footer
     @property
     def footer(self):
         return self.Footer
@@ -10269,7 +9942,7 @@ class HeadersFooters:
     def Header(self):
         return HeaderFooter(self.headersfooters.Header)
 
-    # Lower case alias for Header
+    # Lower case aliases for Header
     @property
     def header(self):
         return self.Header
@@ -10278,7 +9951,7 @@ class HeadersFooters:
     def Parent(self):
         return self.headersfooters.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10287,7 +9960,7 @@ class HeadersFooters:
     def SlideNumber(self):
         return HeaderFooter(self.headersfooters.SlideNumber)
 
-    # Lower case alias for SlideNumber
+    # Lower case aliases for SlideNumber
     @property
     def slidenumber(self):
         return self.SlideNumber
@@ -10309,7 +9982,7 @@ class HiLoLines:
     def Border(self):
         return ChartBorder(self.hilolines.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -10318,7 +9991,7 @@ class HiLoLines:
     def Creator(self):
         return self.hilolines.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10327,7 +10000,7 @@ class HiLoLines:
     def Format(self):
         return ChartFormat(self.hilolines.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -10336,7 +10009,7 @@ class HiLoLines:
     def Name(self):
         return self.hilolines.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -10345,7 +10018,7 @@ class HiLoLines:
     def Parent(self):
         return self.hilolines.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10366,16 +10039,15 @@ class Hyperlink:
     def Address(self):
         return self.hyperlink.Address
 
-    # Lower case alias for Address
-    @property
-    def address(self):
-        return self.Address
-
     @Address.setter
     def Address(self, value):
         self.hyperlink.Address = value
 
-    # Lower case alias for Address setter
+    # Lower case aliases for Address
+    @property
+    def address(self):
+        return self.Address
+
     @address.setter
     def address(self, value):
         self.Address = value
@@ -10388,16 +10060,15 @@ class Hyperlink:
     def EmailSubject(self):
         return self.hyperlink.EmailSubject
 
-    # Lower case alias for EmailSubject
-    @property
-    def emailsubject(self):
-        return self.EmailSubject
-
     @EmailSubject.setter
     def EmailSubject(self, value):
         self.hyperlink.EmailSubject = value
 
-    # Lower case alias for EmailSubject setter
+    # Lower case aliases for EmailSubject
+    @property
+    def emailsubject(self):
+        return self.EmailSubject
+
     @emailsubject.setter
     def emailsubject(self, value):
         self.EmailSubject = value
@@ -10406,7 +10077,7 @@ class Hyperlink:
     def Parent(self):
         return self.hyperlink.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10415,16 +10086,15 @@ class Hyperlink:
     def ScreenTip(self):
         return self.hyperlink.ScreenTip
 
-    # Lower case alias for ScreenTip
-    @property
-    def screentip(self):
-        return self.ScreenTip
-
     @ScreenTip.setter
     def ScreenTip(self, value):
         self.hyperlink.ScreenTip = value
 
-    # Lower case alias for ScreenTip setter
+    # Lower case aliases for ScreenTip
+    @property
+    def screentip(self):
+        return self.ScreenTip
+
     @screentip.setter
     def screentip(self, value):
         self.ScreenTip = value
@@ -10433,16 +10103,15 @@ class Hyperlink:
     def ShowAndReturn(self):
         return self.hyperlink.ShowAndReturn
 
-    # Lower case alias for ShowAndReturn
-    @property
-    def showandreturn(self):
-        return self.ShowAndReturn
-
     @ShowAndReturn.setter
     def ShowAndReturn(self, value):
         self.hyperlink.ShowAndReturn = value
 
-    # Lower case alias for ShowAndReturn setter
+    # Lower case aliases for ShowAndReturn
+    @property
+    def showandreturn(self):
+        return self.ShowAndReturn
+
     @showandreturn.setter
     def showandreturn(self, value):
         self.ShowAndReturn = value
@@ -10451,16 +10120,15 @@ class Hyperlink:
     def SubAddress(self):
         return self.hyperlink.SubAddress
 
-    # Lower case alias for SubAddress
-    @property
-    def subaddress(self):
-        return self.SubAddress
-
     @SubAddress.setter
     def SubAddress(self, value):
         self.hyperlink.SubAddress = value
 
-    # Lower case alias for SubAddress setter
+    # Lower case aliases for SubAddress
+    @property
+    def subaddress(self):
+        return self.SubAddress
+
     @subaddress.setter
     def subaddress(self, value):
         self.SubAddress = value
@@ -10469,16 +10137,15 @@ class Hyperlink:
     def TextToDisplay(self):
         return self.hyperlink.TextToDisplay
 
-    # Lower case alias for TextToDisplay
-    @property
-    def texttodisplay(self):
-        return self.TextToDisplay
-
     @TextToDisplay.setter
     def TextToDisplay(self, value):
         self.hyperlink.TextToDisplay = value
 
-    # Lower case alias for TextToDisplay setter
+    # Lower case aliases for TextToDisplay
+    @property
+    def texttodisplay(self):
+        return self.TextToDisplay
+
     @texttodisplay.setter
     def texttodisplay(self, value):
         self.TextToDisplay = value
@@ -10487,7 +10154,7 @@ class Hyperlink:
     def Type(self):
         return self.hyperlink.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -10522,7 +10189,7 @@ class Hyperlinks:
     def Count(self):
         return self.hyperlinks.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -10531,7 +10198,7 @@ class Hyperlinks:
     def Parent(self):
         return self.hyperlinks.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10554,16 +10221,15 @@ class Interior:
     def Color(self):
         return self.interior.Color
 
-    # Lower case alias for Color
-    @property
-    def color(self):
-        return self.Color
-
     @Color.setter
     def Color(self, value):
         self.interior.Color = value
 
-    # Lower case alias for Color setter
+    # Lower case aliases for Color
+    @property
+    def color(self):
+        return self.Color
+
     @color.setter
     def color(self, value):
         self.Color = value
@@ -10572,16 +10238,15 @@ class Interior:
     def ColorIndex(self):
         return self.interior.ColorIndex
 
-    # Lower case alias for ColorIndex
-    @property
-    def colorindex(self):
-        return self.ColorIndex
-
     @ColorIndex.setter
     def ColorIndex(self, value):
         self.interior.ColorIndex = value
 
-    # Lower case alias for ColorIndex setter
+    # Lower case aliases for ColorIndex
+    @property
+    def colorindex(self):
+        return self.ColorIndex
+
     @colorindex.setter
     def colorindex(self, value):
         self.ColorIndex = value
@@ -10590,7 +10255,7 @@ class Interior:
     def Creator(self):
         return self.interior.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10599,16 +10264,15 @@ class Interior:
     def InvertIfNegative(self):
         return self.interior.InvertIfNegative
 
-    # Lower case alias for InvertIfNegative
-    @property
-    def invertifnegative(self):
-        return self.InvertIfNegative
-
     @InvertIfNegative.setter
     def InvertIfNegative(self, value):
         self.interior.InvertIfNegative = value
 
-    # Lower case alias for InvertIfNegative setter
+    # Lower case aliases for InvertIfNegative
+    @property
+    def invertifnegative(self):
+        return self.InvertIfNegative
+
     @invertifnegative.setter
     def invertifnegative(self, value):
         self.InvertIfNegative = value
@@ -10617,7 +10281,7 @@ class Interior:
     def Parent(self):
         return self.interior.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10626,16 +10290,15 @@ class Interior:
     def Pattern(self):
         return XlPattern(self.interior.Pattern)
 
-    # Lower case alias for Pattern
-    @property
-    def pattern(self):
-        return self.Pattern
-
     @Pattern.setter
     def Pattern(self, value):
         self.interior.Pattern = value
 
-    # Lower case alias for Pattern setter
+    # Lower case aliases for Pattern
+    @property
+    def pattern(self):
+        return self.Pattern
+
     @pattern.setter
     def pattern(self, value):
         self.Pattern = value
@@ -10644,16 +10307,15 @@ class Interior:
     def PatternColor(self):
         return self.interior.PatternColor
 
-    # Lower case alias for PatternColor
-    @property
-    def patterncolor(self):
-        return self.PatternColor
-
     @PatternColor.setter
     def PatternColor(self, value):
         self.interior.PatternColor = value
 
-    # Lower case alias for PatternColor setter
+    # Lower case aliases for PatternColor
+    @property
+    def patterncolor(self):
+        return self.PatternColor
+
     @patterncolor.setter
     def patterncolor(self, value):
         self.PatternColor = value
@@ -10662,16 +10324,15 @@ class Interior:
     def PatternColorIndex(self):
         return XlColorIndex(self.interior.PatternColorIndex)
 
-    # Lower case alias for PatternColorIndex
-    @property
-    def patterncolorindex(self):
-        return self.PatternColorIndex
-
     @PatternColorIndex.setter
     def PatternColorIndex(self, value):
         self.interior.PatternColorIndex = value
 
-    # Lower case alias for PatternColorIndex setter
+    # Lower case aliases for PatternColorIndex
+    @property
+    def patterncolorindex(self):
+        return self.PatternColorIndex
+
     @patterncolorindex.setter
     def patterncolorindex(self, value):
         self.PatternColorIndex = value
@@ -10690,7 +10351,7 @@ class LeaderLines:
     def Border(self):
         return ChartBorder(self.leaderlines.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -10699,7 +10360,7 @@ class LeaderLines:
     def Creator(self):
         return self.leaderlines.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10708,7 +10369,7 @@ class LeaderLines:
     def Format(self):
         return ChartFormat(self.leaderlines.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -10717,7 +10378,7 @@ class LeaderLines:
     def Parent(self):
         return self.leaderlines.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10742,7 +10403,7 @@ class Legend:
     def Creator(self):
         return self.legend.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10751,7 +10412,7 @@ class Legend:
     def Format(self):
         return ChartFormat(self.legend.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -10760,16 +10421,15 @@ class Legend:
     def Height(self):
         return self.legend.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.legend.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -10778,16 +10438,15 @@ class Legend:
     def IncludeInLayout(self):
         return self.legend.IncludeInLayout
 
-    # Lower case alias for IncludeInLayout
-    @property
-    def includeinlayout(self):
-        return self.IncludeInLayout
-
     @IncludeInLayout.setter
     def IncludeInLayout(self, value):
         self.legend.IncludeInLayout = value
 
-    # Lower case alias for IncludeInLayout setter
+    # Lower case aliases for IncludeInLayout
+    @property
+    def includeinlayout(self):
+        return self.IncludeInLayout
+
     @includeinlayout.setter
     def includeinlayout(self, value):
         self.IncludeInLayout = value
@@ -10796,7 +10455,7 @@ class Legend:
     def Left(self):
         return self.legend.Left
 
-    # Lower case alias for Left
+    # Lower case aliases for Left
     @property
     def left(self):
         return self.Left
@@ -10805,7 +10464,7 @@ class Legend:
     def Name(self):
         return self.legend.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -10814,7 +10473,7 @@ class Legend:
     def Parent(self):
         return self.legend.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10823,16 +10482,15 @@ class Legend:
     def Position(self):
         return XlLegendPosition(self.legend.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.legend.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -10841,16 +10499,15 @@ class Legend:
     def Shadow(self):
         return self.legend.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.legend.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -10859,16 +10516,15 @@ class Legend:
     def Top(self):
         return self.legend.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.legend.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -10877,16 +10533,15 @@ class Legend:
     def Width(self):
         return self.legend.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.legend.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -10920,7 +10575,7 @@ class LegendEntries:
     def Count(self):
         return self.legendentries.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -10929,7 +10584,7 @@ class LegendEntries:
     def Creator(self):
         return self.legendentries.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10938,7 +10593,7 @@ class LegendEntries:
     def Parent(self):
         return self.legendentries.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -10961,7 +10616,7 @@ class LegendEntry:
     def Creator(self):
         return self.legendentry.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -10970,7 +10625,7 @@ class LegendEntry:
     def Font(self):
         return ChartFont(self.legendentry.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -10979,7 +10634,7 @@ class LegendEntry:
     def Format(self):
         return ChartFormat(self.legendentry.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -10988,7 +10643,7 @@ class LegendEntry:
     def Height(self):
         return self.legendentry.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -10997,7 +10652,7 @@ class LegendEntry:
     def Index(self):
         return self.legendentry.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -11006,7 +10661,7 @@ class LegendEntry:
     def Left(self):
         return self.legendentry.Left
 
-    # Lower case alias for Left
+    # Lower case aliases for Left
     @property
     def left(self):
         return self.Left
@@ -11015,7 +10670,7 @@ class LegendEntry:
     def LegendKey(self):
         return LegendKey(self.legendentry.LegendKey)
 
-    # Lower case alias for LegendKey
+    # Lower case aliases for LegendKey
     @property
     def legendkey(self):
         return self.LegendKey
@@ -11024,7 +10679,7 @@ class LegendEntry:
     def Parent(self):
         return self.legendentry.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11033,7 +10688,7 @@ class LegendEntry:
     def Top(self):
         return self.legendentry.Top
 
-    # Lower case alias for Top
+    # Lower case aliases for Top
     @property
     def top(self):
         return self.Top
@@ -11042,7 +10697,7 @@ class LegendEntry:
     def Width(self):
         return self.legendentry.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -11067,7 +10722,7 @@ class LegendKey:
     def Creator(self):
         return self.legendkey.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -11076,7 +10731,7 @@ class LegendKey:
     def Format(self):
         return ChartFormat(self.legendkey.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -11085,7 +10740,7 @@ class LegendKey:
     def Height(self):
         return self.legendkey.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -11094,16 +10749,15 @@ class LegendKey:
     def InvertIfNegative(self):
         return self.legendkey.InvertIfNegative
 
-    # Lower case alias for InvertIfNegative
-    @property
-    def invertifnegative(self):
-        return self.InvertIfNegative
-
     @InvertIfNegative.setter
     def InvertIfNegative(self, value):
         self.legendkey.InvertIfNegative = value
 
-    # Lower case alias for InvertIfNegative setter
+    # Lower case aliases for InvertIfNegative
+    @property
+    def invertifnegative(self):
+        return self.InvertIfNegative
+
     @invertifnegative.setter
     def invertifnegative(self, value):
         self.InvertIfNegative = value
@@ -11112,7 +10766,7 @@ class LegendKey:
     def Left(self):
         return self.legendkey.Left
 
-    # Lower case alias for Left
+    # Lower case aliases for Left
     @property
     def left(self):
         return self.Left
@@ -11121,16 +10775,15 @@ class LegendKey:
     def MarkerBackgroundColor(self):
         return self.legendkey.MarkerBackgroundColor
 
-    # Lower case alias for MarkerBackgroundColor
-    @property
-    def markerbackgroundcolor(self):
-        return self.MarkerBackgroundColor
-
     @MarkerBackgroundColor.setter
     def MarkerBackgroundColor(self, value):
         self.legendkey.MarkerBackgroundColor = value
 
-    # Lower case alias for MarkerBackgroundColor setter
+    # Lower case aliases for MarkerBackgroundColor
+    @property
+    def markerbackgroundcolor(self):
+        return self.MarkerBackgroundColor
+
     @markerbackgroundcolor.setter
     def markerbackgroundcolor(self, value):
         self.MarkerBackgroundColor = value
@@ -11139,16 +10792,15 @@ class LegendKey:
     def MarkerBackgroundColorIndex(self):
         return XlColorIndex(self.legendkey.MarkerBackgroundColorIndex)
 
-    # Lower case alias for MarkerBackgroundColorIndex
-    @property
-    def markerbackgroundcolorindex(self):
-        return self.MarkerBackgroundColorIndex
-
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
         self.legendkey.MarkerBackgroundColorIndex = value
 
-    # Lower case alias for MarkerBackgroundColorIndex setter
+    # Lower case aliases for MarkerBackgroundColorIndex
+    @property
+    def markerbackgroundcolorindex(self):
+        return self.MarkerBackgroundColorIndex
+
     @markerbackgroundcolorindex.setter
     def markerbackgroundcolorindex(self, value):
         self.MarkerBackgroundColorIndex = value
@@ -11157,16 +10809,15 @@ class LegendKey:
     def MarkerForegroundColor(self):
         return self.legendkey.MarkerForegroundColor
 
-    # Lower case alias for MarkerForegroundColor
-    @property
-    def markerforegroundcolor(self):
-        return self.MarkerForegroundColor
-
     @MarkerForegroundColor.setter
     def MarkerForegroundColor(self, value):
         self.legendkey.MarkerForegroundColor = value
 
-    # Lower case alias for MarkerForegroundColor setter
+    # Lower case aliases for MarkerForegroundColor
+    @property
+    def markerforegroundcolor(self):
+        return self.MarkerForegroundColor
+
     @markerforegroundcolor.setter
     def markerforegroundcolor(self, value):
         self.MarkerForegroundColor = value
@@ -11175,16 +10826,15 @@ class LegendKey:
     def MarkerForegroundColorIndex(self):
         return XlColorIndex(self.legendkey.MarkerForegroundColorIndex)
 
-    # Lower case alias for MarkerForegroundColorIndex
-    @property
-    def markerforegroundcolorindex(self):
-        return self.MarkerForegroundColorIndex
-
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
         self.legendkey.MarkerForegroundColorIndex = value
 
-    # Lower case alias for MarkerForegroundColorIndex setter
+    # Lower case aliases for MarkerForegroundColorIndex
+    @property
+    def markerforegroundcolorindex(self):
+        return self.MarkerForegroundColorIndex
+
     @markerforegroundcolorindex.setter
     def markerforegroundcolorindex(self, value):
         self.MarkerForegroundColorIndex = value
@@ -11193,16 +10843,15 @@ class LegendKey:
     def MarkerSize(self):
         return self.legendkey.MarkerSize
 
-    # Lower case alias for MarkerSize
-    @property
-    def markersize(self):
-        return self.MarkerSize
-
     @MarkerSize.setter
     def MarkerSize(self, value):
         self.legendkey.MarkerSize = value
 
-    # Lower case alias for MarkerSize setter
+    # Lower case aliases for MarkerSize
+    @property
+    def markersize(self):
+        return self.MarkerSize
+
     @markersize.setter
     def markersize(self, value):
         self.MarkerSize = value
@@ -11211,16 +10860,15 @@ class LegendKey:
     def MarkerStyle(self):
         return XlMarkerStyle(self.legendkey.MarkerStyle)
 
-    # Lower case alias for MarkerStyle
-    @property
-    def markerstyle(self):
-        return self.MarkerStyle
-
     @MarkerStyle.setter
     def MarkerStyle(self, value):
         self.legendkey.MarkerStyle = value
 
-    # Lower case alias for MarkerStyle setter
+    # Lower case aliases for MarkerStyle
+    @property
+    def markerstyle(self):
+        return self.MarkerStyle
+
     @markerstyle.setter
     def markerstyle(self, value):
         self.MarkerStyle = value
@@ -11229,7 +10877,7 @@ class LegendKey:
     def Parent(self):
         return self.legendkey.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11238,16 +10886,15 @@ class LegendKey:
     def PictureType(self):
         return XlChartPictureType(self.legendkey.PictureType)
 
-    # Lower case alias for PictureType
-    @property
-    def picturetype(self):
-        return self.PictureType
-
     @PictureType.setter
     def PictureType(self, value):
         self.legendkey.PictureType = value
 
-    # Lower case alias for PictureType setter
+    # Lower case aliases for PictureType
+    @property
+    def picturetype(self):
+        return self.PictureType
+
     @picturetype.setter
     def picturetype(self, value):
         self.PictureType = value
@@ -11256,16 +10903,15 @@ class LegendKey:
     def PictureUnit2(self):
         return self.legendkey.PictureUnit2
 
-    # Lower case alias for PictureUnit2
-    @property
-    def pictureunit2(self):
-        return self.PictureUnit2
-
     @PictureUnit2.setter
     def PictureUnit2(self, value):
         self.legendkey.PictureUnit2 = value
 
-    # Lower case alias for PictureUnit2 setter
+    # Lower case aliases for PictureUnit2
+    @property
+    def pictureunit2(self):
+        return self.PictureUnit2
+
     @pictureunit2.setter
     def pictureunit2(self, value):
         self.PictureUnit2 = value
@@ -11274,16 +10920,15 @@ class LegendKey:
     def Shadow(self):
         return self.legendkey.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.legendkey.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -11292,16 +10937,15 @@ class LegendKey:
     def Smooth(self):
         return self.legendkey.Smooth
 
-    # Lower case alias for Smooth
-    @property
-    def smooth(self):
-        return self.Smooth
-
     @Smooth.setter
     def Smooth(self, value):
         self.legendkey.Smooth = value
 
-    # Lower case alias for Smooth setter
+    # Lower case aliases for Smooth
+    @property
+    def smooth(self):
+        return self.Smooth
+
     @smooth.setter
     def smooth(self, value):
         self.Smooth = value
@@ -11310,7 +10954,7 @@ class LegendKey:
     def Top(self):
         return self.legendkey.Top
 
-    # Lower case alias for Top
+    # Lower case aliases for Top
     @property
     def top(self):
         return self.Top
@@ -11319,7 +10963,7 @@ class LegendKey:
     def Width(self):
         return self.legendkey.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -11344,16 +10988,15 @@ class LineFormat:
     def BackColor(self):
         return ColorFormat(self.lineformat.BackColor)
 
-    # Lower case alias for BackColor
-    @property
-    def backcolor(self):
-        return self.BackColor
-
     @BackColor.setter
     def BackColor(self, value):
         self.lineformat.BackColor = value
 
-    # Lower case alias for BackColor setter
+    # Lower case aliases for BackColor
+    @property
+    def backcolor(self):
+        return self.BackColor
+
     @backcolor.setter
     def backcolor(self, value):
         self.BackColor = value
@@ -11362,16 +11005,15 @@ class LineFormat:
     def BeginArrowheadLength(self):
         return self.lineformat.BeginArrowheadLength
 
-    # Lower case alias for BeginArrowheadLength
-    @property
-    def beginarrowheadlength(self):
-        return self.BeginArrowheadLength
-
     @BeginArrowheadLength.setter
     def BeginArrowheadLength(self, value):
         self.lineformat.BeginArrowheadLength = value
 
-    # Lower case alias for BeginArrowheadLength setter
+    # Lower case aliases for BeginArrowheadLength
+    @property
+    def beginarrowheadlength(self):
+        return self.BeginArrowheadLength
+
     @beginarrowheadlength.setter
     def beginarrowheadlength(self, value):
         self.BeginArrowheadLength = value
@@ -11380,16 +11022,15 @@ class LineFormat:
     def BeginArrowheadStyle(self):
         return self.lineformat.BeginArrowheadStyle
 
-    # Lower case alias for BeginArrowheadStyle
-    @property
-    def beginarrowheadstyle(self):
-        return self.BeginArrowheadStyle
-
     @BeginArrowheadStyle.setter
     def BeginArrowheadStyle(self, value):
         self.lineformat.BeginArrowheadStyle = value
 
-    # Lower case alias for BeginArrowheadStyle setter
+    # Lower case aliases for BeginArrowheadStyle
+    @property
+    def beginarrowheadstyle(self):
+        return self.BeginArrowheadStyle
+
     @beginarrowheadstyle.setter
     def beginarrowheadstyle(self, value):
         self.BeginArrowheadStyle = value
@@ -11398,16 +11039,15 @@ class LineFormat:
     def BeginArrowheadWidth(self):
         return self.lineformat.BeginArrowheadWidth
 
-    # Lower case alias for BeginArrowheadWidth
-    @property
-    def beginarrowheadwidth(self):
-        return self.BeginArrowheadWidth
-
     @BeginArrowheadWidth.setter
     def BeginArrowheadWidth(self, value):
         self.lineformat.BeginArrowheadWidth = value
 
-    # Lower case alias for BeginArrowheadWidth setter
+    # Lower case aliases for BeginArrowheadWidth
+    @property
+    def beginarrowheadwidth(self):
+        return self.BeginArrowheadWidth
+
     @beginarrowheadwidth.setter
     def beginarrowheadwidth(self, value):
         self.BeginArrowheadWidth = value
@@ -11416,7 +11056,7 @@ class LineFormat:
     def Creator(self):
         return self.lineformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -11425,16 +11065,15 @@ class LineFormat:
     def DashStyle(self):
         return self.lineformat.DashStyle
 
-    # Lower case alias for DashStyle
-    @property
-    def dashstyle(self):
-        return self.DashStyle
-
     @DashStyle.setter
     def DashStyle(self, value):
         self.lineformat.DashStyle = value
 
-    # Lower case alias for DashStyle setter
+    # Lower case aliases for DashStyle
+    @property
+    def dashstyle(self):
+        return self.DashStyle
+
     @dashstyle.setter
     def dashstyle(self, value):
         self.DashStyle = value
@@ -11443,16 +11082,15 @@ class LineFormat:
     def EndArrowheadLength(self):
         return self.lineformat.EndArrowheadLength
 
-    # Lower case alias for EndArrowheadLength
-    @property
-    def endarrowheadlength(self):
-        return self.EndArrowheadLength
-
     @EndArrowheadLength.setter
     def EndArrowheadLength(self, value):
         self.lineformat.EndArrowheadLength = value
 
-    # Lower case alias for EndArrowheadLength setter
+    # Lower case aliases for EndArrowheadLength
+    @property
+    def endarrowheadlength(self):
+        return self.EndArrowheadLength
+
     @endarrowheadlength.setter
     def endarrowheadlength(self, value):
         self.EndArrowheadLength = value
@@ -11461,16 +11099,15 @@ class LineFormat:
     def EndArrowheadStyle(self):
         return self.lineformat.EndArrowheadStyle
 
-    # Lower case alias for EndArrowheadStyle
-    @property
-    def endarrowheadstyle(self):
-        return self.EndArrowheadStyle
-
     @EndArrowheadStyle.setter
     def EndArrowheadStyle(self, value):
         self.lineformat.EndArrowheadStyle = value
 
-    # Lower case alias for EndArrowheadStyle setter
+    # Lower case aliases for EndArrowheadStyle
+    @property
+    def endarrowheadstyle(self):
+        return self.EndArrowheadStyle
+
     @endarrowheadstyle.setter
     def endarrowheadstyle(self, value):
         self.EndArrowheadStyle = value
@@ -11479,16 +11116,15 @@ class LineFormat:
     def EndArrowheadWidth(self):
         return self.lineformat.EndArrowheadWidth
 
-    # Lower case alias for EndArrowheadWidth
-    @property
-    def endarrowheadwidth(self):
-        return self.EndArrowheadWidth
-
     @EndArrowheadWidth.setter
     def EndArrowheadWidth(self, value):
         self.lineformat.EndArrowheadWidth = value
 
-    # Lower case alias for EndArrowheadWidth setter
+    # Lower case aliases for EndArrowheadWidth
+    @property
+    def endarrowheadwidth(self):
+        return self.EndArrowheadWidth
+
     @endarrowheadwidth.setter
     def endarrowheadwidth(self, value):
         self.EndArrowheadWidth = value
@@ -11497,16 +11133,15 @@ class LineFormat:
     def ForeColor(self):
         return ColorFormat(self.lineformat.ForeColor)
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.lineformat.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -11515,16 +11150,15 @@ class LineFormat:
     def InsetPen(self):
         return self.lineformat.InsetPen
 
-    # Lower case alias for InsetPen
-    @property
-    def insetpen(self):
-        return self.InsetPen
-
     @InsetPen.setter
     def InsetPen(self, value):
         self.lineformat.InsetPen = value
 
-    # Lower case alias for InsetPen setter
+    # Lower case aliases for InsetPen
+    @property
+    def insetpen(self):
+        return self.InsetPen
+
     @insetpen.setter
     def insetpen(self, value):
         self.InsetPen = value
@@ -11533,7 +11167,7 @@ class LineFormat:
     def Parent(self):
         return self.lineformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11542,16 +11176,15 @@ class LineFormat:
     def Pattern(self):
         return self.lineformat.Pattern
 
-    # Lower case alias for Pattern
-    @property
-    def pattern(self):
-        return self.Pattern
-
     @Pattern.setter
     def Pattern(self, value):
         self.lineformat.Pattern = value
 
-    # Lower case alias for Pattern setter
+    # Lower case aliases for Pattern
+    @property
+    def pattern(self):
+        return self.Pattern
+
     @pattern.setter
     def pattern(self, value):
         self.Pattern = value
@@ -11560,16 +11193,15 @@ class LineFormat:
     def Style(self):
         return self.lineformat.Style
 
-    # Lower case alias for Style
-    @property
-    def style(self):
-        return self.Style
-
     @Style.setter
     def Style(self, value):
         self.lineformat.Style = value
 
-    # Lower case alias for Style setter
+    # Lower case aliases for Style
+    @property
+    def style(self):
+        return self.Style
+
     @style.setter
     def style(self, value):
         self.Style = value
@@ -11578,16 +11210,15 @@ class LineFormat:
     def Transparency(self):
         return self.lineformat.Transparency
 
-    # Lower case alias for Transparency
-    @property
-    def transparency(self):
-        return self.Transparency
-
     @Transparency.setter
     def Transparency(self, value):
         self.lineformat.Transparency = value
 
-    # Lower case alias for Transparency setter
+    # Lower case aliases for Transparency
+    @property
+    def transparency(self):
+        return self.Transparency
+
     @transparency.setter
     def transparency(self, value):
         self.Transparency = value
@@ -11596,16 +11227,15 @@ class LineFormat:
     def Visible(self):
         return self.lineformat.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.lineformat.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -11614,16 +11244,15 @@ class LineFormat:
     def Weight(self):
         return self.lineformat.Weight
 
-    # Lower case alias for Weight
-    @property
-    def weight(self):
-        return self.Weight
-
     @Weight.setter
     def Weight(self, value):
         self.lineformat.Weight = value
 
-    # Lower case alias for Weight setter
+    # Lower case aliases for Weight
+    @property
+    def weight(self):
+        return self.Weight
+
     @weight.setter
     def weight(self, value):
         self.Weight = value
@@ -11642,16 +11271,15 @@ class LinkFormat:
     def AutoUpdate(self):
         return self.linkformat.AutoUpdate
 
-    # Lower case alias for AutoUpdate
-    @property
-    def autoupdate(self):
-        return self.AutoUpdate
-
     @AutoUpdate.setter
     def AutoUpdate(self, value):
         self.linkformat.AutoUpdate = value
 
-    # Lower case alias for AutoUpdate setter
+    # Lower case aliases for AutoUpdate
+    @property
+    def autoupdate(self):
+        return self.AutoUpdate
+
     @autoupdate.setter
     def autoupdate(self, value):
         self.AutoUpdate = value
@@ -11660,7 +11288,7 @@ class LinkFormat:
     def Parent(self):
         return self.linkformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11669,16 +11297,15 @@ class LinkFormat:
     def SourceFullName(self):
         return self.linkformat.SourceFullName
 
-    # Lower case alias for SourceFullName
-    @property
-    def sourcefullname(self):
-        return self.SourceFullName
-
     @SourceFullName.setter
     def SourceFullName(self, value):
         self.linkformat.SourceFullName = value
 
-    # Lower case alias for SourceFullName setter
+    # Lower case aliases for SourceFullName
+    @property
+    def sourcefullname(self):
+        return self.SourceFullName
+
     @sourcefullname.setter
     def sourcefullname(self, value):
         self.SourceFullName = value
@@ -11703,7 +11330,7 @@ class Master:
     def Background(self):
         return ShapeRange(self.master.Background)
 
-    # Lower case alias for Background
+    # Lower case aliases for Background
     @property
     def background(self):
         return self.Background
@@ -11712,16 +11339,15 @@ class Master:
     def BackgroundStyle(self):
         return self.master.BackgroundStyle
 
-    # Lower case alias for BackgroundStyle
-    @property
-    def backgroundstyle(self):
-        return self.BackgroundStyle
-
     @BackgroundStyle.setter
     def BackgroundStyle(self, value):
         self.master.BackgroundStyle = value
 
-    # Lower case alias for BackgroundStyle setter
+    # Lower case aliases for BackgroundStyle
+    @property
+    def backgroundstyle(self):
+        return self.BackgroundStyle
+
     @backgroundstyle.setter
     def backgroundstyle(self, value):
         self.BackgroundStyle = value
@@ -11730,16 +11356,15 @@ class Master:
     def ColorScheme(self):
         return ColorScheme(self.master.ColorScheme)
 
-    # Lower case alias for ColorScheme
-    @property
-    def colorscheme(self):
-        return self.ColorScheme
-
     @ColorScheme.setter
     def ColorScheme(self, value):
         self.master.ColorScheme = value
 
-    # Lower case alias for ColorScheme setter
+    # Lower case aliases for ColorScheme
+    @property
+    def colorscheme(self):
+        return self.ColorScheme
+
     @colorscheme.setter
     def colorscheme(self, value):
         self.ColorScheme = value
@@ -11748,7 +11373,7 @@ class Master:
     def CustomerData(self):
         return CustomerData(self.master.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -11757,7 +11382,7 @@ class Master:
     def CustomLayouts(self):
         return CustomLayouts(self.master.CustomLayouts)
 
-    # Lower case alias for CustomLayouts
+    # Lower case aliases for CustomLayouts
     @property
     def customlayouts(self):
         return self.CustomLayouts
@@ -11766,7 +11391,7 @@ class Master:
     def Design(self):
         return Design(self.master.Design)
 
-    # Lower case alias for Design
+    # Lower case aliases for Design
     @property
     def design(self):
         return self.Design
@@ -11775,7 +11400,7 @@ class Master:
     def HeadersFooters(self):
         return HeadersFooters(self.master.HeadersFooters)
 
-    # Lower case alias for HeadersFooters
+    # Lower case aliases for HeadersFooters
     @property
     def headersfooters(self):
         return self.HeadersFooters
@@ -11784,16 +11409,15 @@ class Master:
     def Height(self):
         return self.master.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.master.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -11802,7 +11426,7 @@ class Master:
     def Hyperlinks(self):
         return Hyperlinks(self.master.Hyperlinks)
 
-    # Lower case alias for Hyperlinks
+    # Lower case aliases for Hyperlinks
     @property
     def hyperlinks(self):
         return self.Hyperlinks
@@ -11811,16 +11435,15 @@ class Master:
     def Name(self):
         return self.master.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.master.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -11829,7 +11452,7 @@ class Master:
     def Parent(self):
         return self.master.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -11838,7 +11461,7 @@ class Master:
     def Shapes(self):
         return Shapes(self.master.Shapes)
 
-    # Lower case alias for Shapes
+    # Lower case aliases for Shapes
     @property
     def shapes(self):
         return self.Shapes
@@ -11847,7 +11470,7 @@ class Master:
     def SlideShowTransition(self):
         return SlideShowTransition(self.master.SlideShowTransition)
 
-    # Lower case alias for SlideShowTransition
+    # Lower case aliases for SlideShowTransition
     @property
     def slideshowtransition(self):
         return self.SlideShowTransition
@@ -11856,7 +11479,7 @@ class Master:
     def TextStyles(self):
         return TextStyles(self.master.TextStyles)
 
-    # Lower case alias for TextStyles
+    # Lower case aliases for TextStyles
     @property
     def textstyles(self):
         return self.TextStyles
@@ -11865,7 +11488,7 @@ class Master:
     def Theme(self):
         return self.master.Theme
 
-    # Lower case alias for Theme
+    # Lower case aliases for Theme
     @property
     def theme(self):
         return self.Theme
@@ -11874,7 +11497,7 @@ class Master:
     def TimeLine(self):
         return TimeLine(self.master.TimeLine)
 
-    # Lower case alias for TimeLine
+    # Lower case aliases for TimeLine
     @property
     def timeline(self):
         return self.TimeLine
@@ -11883,7 +11506,7 @@ class Master:
     def Width(self):
         return self.master.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -11905,7 +11528,7 @@ class MediaBookmark:
     def Index(self):
         return self.mediabookmark.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -11914,7 +11537,7 @@ class MediaBookmark:
     def Name(self):
         return self.mediabookmark.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -11923,7 +11546,7 @@ class MediaBookmark:
     def Position(self):
         return self.mediabookmark.Position
 
-    # Lower case alias for Position
+    # Lower case aliases for Position
     @property
     def position(self):
         return self.Position
@@ -11944,7 +11567,7 @@ class MediaBookmarks:
     def Count(self):
         return self.mediabookmarks.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -11971,7 +11594,7 @@ class MediaFormat:
     def AudioCompressionType(self):
         return self.mediaformat.AudioCompressionType
 
-    # Lower case alias for AudioCompressionType
+    # Lower case aliases for AudioCompressionType
     @property
     def audiocompressiontype(self):
         return self.AudioCompressionType
@@ -11980,7 +11603,7 @@ class MediaFormat:
     def AudioSamplingRate(self):
         return self.mediaformat.AudioSamplingRate
 
-    # Lower case alias for AudioSamplingRate
+    # Lower case aliases for AudioSamplingRate
     @property
     def audiosamplingrate(self):
         return self.AudioSamplingRate
@@ -11989,16 +11612,15 @@ class MediaFormat:
     def EndPoint(self):
         return self.mediaformat.EndPoint
 
-    # Lower case alias for EndPoint
-    @property
-    def endpoint(self):
-        return self.EndPoint
-
     @EndPoint.setter
     def EndPoint(self, value):
         self.mediaformat.EndPoint = value
 
-    # Lower case alias for EndPoint setter
+    # Lower case aliases for EndPoint
+    @property
+    def endpoint(self):
+        return self.EndPoint
+
     @endpoint.setter
     def endpoint(self, value):
         self.EndPoint = value
@@ -12007,16 +11629,15 @@ class MediaFormat:
     def FadeInDuration(self):
         return self.mediaformat.FadeInDuration
 
-    # Lower case alias for FadeInDuration
-    @property
-    def fadeinduration(self):
-        return self.FadeInDuration
-
     @FadeInDuration.setter
     def FadeInDuration(self, value):
         self.mediaformat.FadeInDuration = value
 
-    # Lower case alias for FadeInDuration setter
+    # Lower case aliases for FadeInDuration
+    @property
+    def fadeinduration(self):
+        return self.FadeInDuration
+
     @fadeinduration.setter
     def fadeinduration(self, value):
         self.FadeInDuration = value
@@ -12025,16 +11646,15 @@ class MediaFormat:
     def FadeOutDuration(self):
         return self.mediaformat.FadeOutDuration
 
-    # Lower case alias for FadeOutDuration
-    @property
-    def fadeoutduration(self):
-        return self.FadeOutDuration
-
     @FadeOutDuration.setter
     def FadeOutDuration(self, value):
         self.mediaformat.FadeOutDuration = value
 
-    # Lower case alias for FadeOutDuration setter
+    # Lower case aliases for FadeOutDuration
+    @property
+    def fadeoutduration(self):
+        return self.FadeOutDuration
+
     @fadeoutduration.setter
     def fadeoutduration(self, value):
         self.FadeOutDuration = value
@@ -12043,7 +11663,7 @@ class MediaFormat:
     def IsEmbedded(self):
         return self.mediaformat.IsEmbedded
 
-    # Lower case alias for IsEmbedded
+    # Lower case aliases for IsEmbedded
     @property
     def isembedded(self):
         return self.IsEmbedded
@@ -12052,7 +11672,7 @@ class MediaFormat:
     def IsLinked(self):
         return self.mediaformat.IsLinked
 
-    # Lower case alias for IsLinked
+    # Lower case aliases for IsLinked
     @property
     def islinked(self):
         return self.IsLinked
@@ -12061,7 +11681,7 @@ class MediaFormat:
     def Length(self):
         return self.mediaformat.Length
 
-    # Lower case alias for Length
+    # Lower case aliases for Length
     @property
     def length(self):
         return self.Length
@@ -12070,7 +11690,7 @@ class MediaFormat:
     def MediaBookmarks(self):
         return MediaBookmarks(self.mediaformat.MediaBookmarks)
 
-    # Lower case alias for MediaBookmarks
+    # Lower case aliases for MediaBookmarks
     @property
     def mediabookmarks(self):
         return self.MediaBookmarks
@@ -12079,16 +11699,15 @@ class MediaFormat:
     def Muted(self):
         return self.mediaformat.Muted
 
-    # Lower case alias for Muted
-    @property
-    def muted(self):
-        return self.Muted
-
     @Muted.setter
     def Muted(self, value):
         self.mediaformat.Muted = value
 
-    # Lower case alias for Muted setter
+    # Lower case aliases for Muted
+    @property
+    def muted(self):
+        return self.Muted
+
     @muted.setter
     def muted(self, value):
         self.Muted = value
@@ -12097,7 +11716,7 @@ class MediaFormat:
     def Parent(self):
         return self.mediaformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -12106,7 +11725,7 @@ class MediaFormat:
     def ResamplingStatus(self):
         return self.mediaformat.ResamplingStatus
 
-    # Lower case alias for ResamplingStatus
+    # Lower case aliases for ResamplingStatus
     @property
     def resamplingstatus(self):
         return self.ResamplingStatus
@@ -12115,7 +11734,7 @@ class MediaFormat:
     def SampleHeight(self):
         return self.mediaformat.SampleHeight
 
-    # Lower case alias for SampleHeight
+    # Lower case aliases for SampleHeight
     @property
     def sampleheight(self):
         return self.SampleHeight
@@ -12124,7 +11743,7 @@ class MediaFormat:
     def SampleWidth(self):
         return self.mediaformat.SampleWidth
 
-    # Lower case alias for SampleWidth
+    # Lower case aliases for SampleWidth
     @property
     def samplewidth(self):
         return self.SampleWidth
@@ -12133,16 +11752,15 @@ class MediaFormat:
     def StartPoint(self):
         return self.mediaformat.StartPoint
 
-    # Lower case alias for StartPoint
-    @property
-    def startpoint(self):
-        return self.StartPoint
-
     @StartPoint.setter
     def StartPoint(self, value):
         self.mediaformat.StartPoint = value
 
-    # Lower case alias for StartPoint setter
+    # Lower case aliases for StartPoint
+    @property
+    def startpoint(self):
+        return self.StartPoint
+
     @startpoint.setter
     def startpoint(self, value):
         self.StartPoint = value
@@ -12151,7 +11769,7 @@ class MediaFormat:
     def VideoCompressionType(self):
         return self.mediaformat.VideoCompressionType
 
-    # Lower case alias for VideoCompressionType
+    # Lower case aliases for VideoCompressionType
     @property
     def videocompressiontype(self):
         return self.VideoCompressionType
@@ -12160,7 +11778,7 @@ class MediaFormat:
     def VideoFrameRate(self):
         return self.mediaformat.VideoFrameRate
 
-    # Lower case alias for VideoFrameRate
+    # Lower case aliases for VideoFrameRate
     @property
     def videoframerate(self):
         return self.VideoFrameRate
@@ -12169,16 +11787,15 @@ class MediaFormat:
     def Volume(self):
         return self.mediaformat.Volume
 
-    # Lower case alias for Volume
-    @property
-    def volume(self):
-        return self.Volume
-
     @Volume.setter
     def Volume(self, value):
         self.mediaformat.Volume = value
 
-    # Lower case alias for Volume setter
+    # Lower case aliases for Volume
+    @property
+    def volume(self):
+        return self.Volume
+
     @volume.setter
     def volume(self, value):
         self.Volume = value
@@ -12213,16 +11830,15 @@ class Model3DFormat:
     def AutoFit(self):
         return self.model3dformat.AutoFit
 
-    # Lower case alias for AutoFit
-    @property
-    def autofit(self):
-        return self.AutoFit
-
     @AutoFit.setter
     def AutoFit(self, value):
         self.model3dformat.AutoFit = value
 
-    # Lower case alias for AutoFit setter
+    # Lower case aliases for AutoFit
+    @property
+    def autofit(self):
+        return self.AutoFit
+
     @autofit.setter
     def autofit(self, value):
         self.AutoFit = value
@@ -12231,16 +11847,15 @@ class Model3DFormat:
     def CameraPositionX(self):
         return self.model3dformat.CameraPositionX
 
-    # Lower case alias for CameraPositionX
-    @property
-    def camerapositionx(self):
-        return self.CameraPositionX
-
     @CameraPositionX.setter
     def CameraPositionX(self, value):
         self.model3dformat.CameraPositionX = value
 
-    # Lower case alias for CameraPositionX setter
+    # Lower case aliases for CameraPositionX
+    @property
+    def camerapositionx(self):
+        return self.CameraPositionX
+
     @camerapositionx.setter
     def camerapositionx(self, value):
         self.CameraPositionX = value
@@ -12249,16 +11864,15 @@ class Model3DFormat:
     def CameraPositionY(self):
         return self.model3dformat.CameraPositionY
 
-    # Lower case alias for CameraPositionY
-    @property
-    def camerapositiony(self):
-        return self.CameraPositionY
-
     @CameraPositionY.setter
     def CameraPositionY(self, value):
         self.model3dformat.CameraPositionY = value
 
-    # Lower case alias for CameraPositionY setter
+    # Lower case aliases for CameraPositionY
+    @property
+    def camerapositiony(self):
+        return self.CameraPositionY
+
     @camerapositiony.setter
     def camerapositiony(self, value):
         self.CameraPositionY = value
@@ -12267,16 +11881,15 @@ class Model3DFormat:
     def CameraPositionZ(self):
         return self.model3dformat.CameraPositionZ
 
-    # Lower case alias for CameraPositionZ
-    @property
-    def camerapositionz(self):
-        return self.CameraPositionZ
-
     @CameraPositionZ.setter
     def CameraPositionZ(self, value):
         self.model3dformat.CameraPositionZ = value
 
-    # Lower case alias for CameraPositionZ setter
+    # Lower case aliases for CameraPositionZ
+    @property
+    def camerapositionz(self):
+        return self.CameraPositionZ
+
     @camerapositionz.setter
     def camerapositionz(self, value):
         self.CameraPositionZ = value
@@ -12285,7 +11898,7 @@ class Model3DFormat:
     def Creator(self):
         return self.model3dformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -12294,16 +11907,15 @@ class Model3DFormat:
     def FieldOfView(self):
         return self.model3dformat.FieldOfView
 
-    # Lower case alias for FieldOfView
-    @property
-    def fieldofview(self):
-        return self.FieldOfView
-
     @FieldOfView.setter
     def FieldOfView(self, value):
         self.model3dformat.FieldOfView = value
 
-    # Lower case alias for FieldOfView setter
+    # Lower case aliases for FieldOfView
+    @property
+    def fieldofview(self):
+        return self.FieldOfView
+
     @fieldofview.setter
     def fieldofview(self, value):
         self.FieldOfView = value
@@ -12312,16 +11924,15 @@ class Model3DFormat:
     def LookAtPointX(self):
         return self.model3dformat.LookAtPointX
 
-    # Lower case alias for LookAtPointX
-    @property
-    def lookatpointx(self):
-        return self.LookAtPointX
-
     @LookAtPointX.setter
     def LookAtPointX(self, value):
         self.model3dformat.LookAtPointX = value
 
-    # Lower case alias for LookAtPointX setter
+    # Lower case aliases for LookAtPointX
+    @property
+    def lookatpointx(self):
+        return self.LookAtPointX
+
     @lookatpointx.setter
     def lookatpointx(self, value):
         self.LookAtPointX = value
@@ -12330,16 +11941,15 @@ class Model3DFormat:
     def LookAtPointY(self):
         return self.model3dformat.LookAtPointY
 
-    # Lower case alias for LookAtPointY
-    @property
-    def lookatpointy(self):
-        return self.LookAtPointY
-
     @LookAtPointY.setter
     def LookAtPointY(self, value):
         self.model3dformat.LookAtPointY = value
 
-    # Lower case alias for LookAtPointY setter
+    # Lower case aliases for LookAtPointY
+    @property
+    def lookatpointy(self):
+        return self.LookAtPointY
+
     @lookatpointy.setter
     def lookatpointy(self, value):
         self.LookAtPointY = value
@@ -12348,16 +11958,15 @@ class Model3DFormat:
     def LookAtPointZ(self):
         return self.model3dformat.LookAtPointZ
 
-    # Lower case alias for LookAtPointZ
-    @property
-    def lookatpointz(self):
-        return self.LookAtPointZ
-
     @LookAtPointZ.setter
     def LookAtPointZ(self, value):
         self.model3dformat.LookAtPointZ = value
 
-    # Lower case alias for LookAtPointZ setter
+    # Lower case aliases for LookAtPointZ
+    @property
+    def lookatpointz(self):
+        return self.LookAtPointZ
+
     @lookatpointz.setter
     def lookatpointz(self, value):
         self.LookAtPointZ = value
@@ -12366,7 +11975,7 @@ class Model3DFormat:
     def Parent(self):
         return self.model3dformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -12375,16 +11984,15 @@ class Model3DFormat:
     def RotationX(self):
         return self.model3dformat.RotationX
 
-    # Lower case alias for RotationX
-    @property
-    def rotationx(self):
-        return self.RotationX
-
     @RotationX.setter
     def RotationX(self, value):
         self.model3dformat.RotationX = value
 
-    # Lower case alias for RotationX setter
+    # Lower case aliases for RotationX
+    @property
+    def rotationx(self):
+        return self.RotationX
+
     @rotationx.setter
     def rotationx(self, value):
         self.RotationX = value
@@ -12393,16 +12001,15 @@ class Model3DFormat:
     def RotationY(self):
         return self.model3dformat.RotationY
 
-    # Lower case alias for RotationY
-    @property
-    def rotationy(self):
-        return self.RotationY
-
     @RotationY.setter
     def RotationY(self, value):
         self.model3dformat.RotationY = value
 
-    # Lower case alias for RotationY setter
+    # Lower case aliases for RotationY
+    @property
+    def rotationy(self):
+        return self.RotationY
+
     @rotationy.setter
     def rotationy(self, value):
         self.RotationY = value
@@ -12411,16 +12018,15 @@ class Model3DFormat:
     def RotationZ(self):
         return self.model3dformat.RotationZ
 
-    # Lower case alias for RotationZ
-    @property
-    def rotationz(self):
-        return self.RotationZ
-
     @RotationZ.setter
     def RotationZ(self, value):
         self.model3dformat.RotationZ = value
 
-    # Lower case alias for RotationZ setter
+    # Lower case aliases for RotationZ
+    @property
+    def rotationz(self):
+        return self.RotationZ
+
     @rotationz.setter
     def rotationz(self, value):
         self.RotationZ = value
@@ -12455,16 +12061,15 @@ class MotionEffect:
     def ByX(self):
         return self.motioneffect.ByX
 
-    # Lower case alias for ByX
-    @property
-    def byx(self):
-        return self.ByX
-
     @ByX.setter
     def ByX(self, value):
         self.motioneffect.ByX = value
 
-    # Lower case alias for ByX setter
+    # Lower case aliases for ByX
+    @property
+    def byx(self):
+        return self.ByX
+
     @byx.setter
     def byx(self, value):
         self.ByX = value
@@ -12473,16 +12078,15 @@ class MotionEffect:
     def ByY(self):
         return self.motioneffect.ByY
 
-    # Lower case alias for ByY
-    @property
-    def byy(self):
-        return self.ByY
-
     @ByY.setter
     def ByY(self, value):
         self.motioneffect.ByY = value
 
-    # Lower case alias for ByY setter
+    # Lower case aliases for ByY
+    @property
+    def byy(self):
+        return self.ByY
+
     @byy.setter
     def byy(self, value):
         self.ByY = value
@@ -12491,16 +12095,15 @@ class MotionEffect:
     def FromX(self):
         return self.motioneffect.FromX
 
-    # Lower case alias for FromX
-    @property
-    def fromx(self):
-        return self.FromX
-
     @FromX.setter
     def FromX(self, value):
         self.motioneffect.FromX = value
 
-    # Lower case alias for FromX setter
+    # Lower case aliases for FromX
+    @property
+    def fromx(self):
+        return self.FromX
+
     @fromx.setter
     def fromx(self, value):
         self.FromX = value
@@ -12509,16 +12112,15 @@ class MotionEffect:
     def FromY(self):
         return MotionEffect(self.motioneffect.FromY)
 
-    # Lower case alias for FromY
-    @property
-    def fromy(self):
-        return self.FromY
-
     @FromY.setter
     def FromY(self, value):
         self.motioneffect.FromY = value
 
-    # Lower case alias for FromY setter
+    # Lower case aliases for FromY
+    @property
+    def fromy(self):
+        return self.FromY
+
     @fromy.setter
     def fromy(self, value):
         self.FromY = value
@@ -12527,7 +12129,7 @@ class MotionEffect:
     def Parent(self):
         return self.motioneffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -12536,16 +12138,15 @@ class MotionEffect:
     def Path(self):
         return self.motioneffect.Path
 
-    # Lower case alias for Path
-    @property
-    def path(self):
-        return self.Path
-
     @Path.setter
     def Path(self, value):
         self.motioneffect.Path = value
 
-    # Lower case alias for Path setter
+    # Lower case aliases for Path
+    @property
+    def path(self):
+        return self.Path
+
     @path.setter
     def path(self, value):
         self.Path = value
@@ -12554,16 +12155,15 @@ class MotionEffect:
     def ToX(self):
         return self.motioneffect.ToX
 
-    # Lower case alias for ToX
-    @property
-    def tox(self):
-        return self.ToX
-
     @ToX.setter
     def ToX(self, value):
         self.motioneffect.ToX = value
 
-    # Lower case alias for ToX setter
+    # Lower case aliases for ToX
+    @property
+    def tox(self):
+        return self.ToX
+
     @tox.setter
     def tox(self, value):
         self.ToX = value
@@ -12572,16 +12172,15 @@ class MotionEffect:
     def ToY(self):
         return MotionEffect(self.motioneffect.ToY)
 
-    # Lower case alias for ToY
-    @property
-    def toy(self):
-        return self.ToY
-
     @ToY.setter
     def ToY(self, value):
         self.motioneffect.ToY = value
 
-    # Lower case alias for ToY setter
+    # Lower case aliases for ToY
+    @property
+    def toy(self):
+        return self.ToY
+
     @toy.setter
     def toy(self, value):
         self.ToY = value
@@ -12986,7 +12585,7 @@ class NamedSlideShow:
     def Count(self):
         return self.namedslideshow.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -12995,7 +12594,7 @@ class NamedSlideShow:
     def Name(self):
         return self.namedslideshow.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -13004,7 +12603,7 @@ class NamedSlideShow:
     def Parent(self):
         return self.namedslideshow.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13013,7 +12612,7 @@ class NamedSlideShow:
     def SlideIDs(self):
         return self.namedslideshow.SlideIDs
 
-    # Lower case alias for SlideIDs
+    # Lower case aliases for SlideIDs
     @property
     def slideids(self):
         return self.SlideIDs
@@ -13038,7 +12637,7 @@ class NamedSlideShows:
     def Count(self):
         return self.namedslideshows.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -13047,7 +12646,7 @@ class NamedSlideShows:
     def Parent(self):
         return self.namedslideshows.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13074,7 +12673,7 @@ class ObjectVerbs:
     def Count(self):
         return self.objectverbs.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -13083,7 +12682,7 @@ class ObjectVerbs:
     def Parent(self):
         return self.objectverbs.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13106,16 +12705,15 @@ class OLEFormat:
     def FollowColors(self):
         return self.oleformat.FollowColors
 
-    # Lower case alias for FollowColors
-    @property
-    def followcolors(self):
-        return self.FollowColors
-
     @FollowColors.setter
     def FollowColors(self, value):
         self.oleformat.FollowColors = value
 
-    # Lower case alias for FollowColors setter
+    # Lower case aliases for FollowColors
+    @property
+    def followcolors(self):
+        return self.FollowColors
+
     @followcolors.setter
     def followcolors(self, value):
         self.FollowColors = value
@@ -13124,7 +12722,7 @@ class OLEFormat:
     def Object(self):
         return self.oleformat.Object
 
-    # Lower case alias for Object
+    # Lower case aliases for Object
     @property
     def object(self):
         return self.Object
@@ -13133,7 +12731,7 @@ class OLEFormat:
     def ObjectVerbs(self):
         return ObjectVerbs(self.oleformat.ObjectVerbs)
 
-    # Lower case alias for ObjectVerbs
+    # Lower case aliases for ObjectVerbs
     @property
     def objectverbs(self):
         return self.ObjectVerbs
@@ -13142,7 +12740,7 @@ class OLEFormat:
     def Parent(self):
         return self.oleformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13151,7 +12749,7 @@ class OLEFormat:
     def ProgID(self):
         return self.oleformat.ProgID
 
-    # Lower case alias for ProgID
+    # Lower case aliases for ProgID
     @property
     def progid(self):
         return self.ProgID
@@ -13173,16 +12771,15 @@ class Options:
     def DisplayPasteOptions(self):
         return self.options.DisplayPasteOptions
 
-    # Lower case alias for DisplayPasteOptions
-    @property
-    def displaypasteoptions(self):
-        return self.DisplayPasteOptions
-
     @DisplayPasteOptions.setter
     def DisplayPasteOptions(self, value):
         self.options.DisplayPasteOptions = value
 
-    # Lower case alias for DisplayPasteOptions setter
+    # Lower case aliases for DisplayPasteOptions
+    @property
+    def displaypasteoptions(self):
+        return self.DisplayPasteOptions
+
     @displaypasteoptions.setter
     def displaypasteoptions(self, value):
         self.DisplayPasteOptions = value
@@ -13191,7 +12788,7 @@ class Options:
     def ShowCoauthoringMergeChanges(self):
         return self.options.ShowCoauthoringMergeChanges
 
-    # Lower case alias for ShowCoauthoringMergeChanges
+    # Lower case aliases for ShowCoauthoringMergeChanges
     @property
     def showcoauthoringmergechanges(self):
         return self.ShowCoauthoringMergeChanges
@@ -13210,16 +12807,15 @@ class PageSetup:
     def FirstSlideNumber(self):
         return self.pagesetup.FirstSlideNumber
 
-    # Lower case alias for FirstSlideNumber
-    @property
-    def firstslidenumber(self):
-        return self.FirstSlideNumber
-
     @FirstSlideNumber.setter
     def FirstSlideNumber(self, value):
         self.pagesetup.FirstSlideNumber = value
 
-    # Lower case alias for FirstSlideNumber setter
+    # Lower case aliases for FirstSlideNumber
+    @property
+    def firstslidenumber(self):
+        return self.FirstSlideNumber
+
     @firstslidenumber.setter
     def firstslidenumber(self, value):
         self.FirstSlideNumber = value
@@ -13228,16 +12824,15 @@ class PageSetup:
     def NotesOrientation(self):
         return self.pagesetup.NotesOrientation
 
-    # Lower case alias for NotesOrientation
-    @property
-    def notesorientation(self):
-        return self.NotesOrientation
-
     @NotesOrientation.setter
     def NotesOrientation(self, value):
         self.pagesetup.NotesOrientation = value
 
-    # Lower case alias for NotesOrientation setter
+    # Lower case aliases for NotesOrientation
+    @property
+    def notesorientation(self):
+        return self.NotesOrientation
+
     @notesorientation.setter
     def notesorientation(self, value):
         self.NotesOrientation = value
@@ -13246,7 +12841,7 @@ class PageSetup:
     def Parent(self):
         return self.pagesetup.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13255,16 +12850,15 @@ class PageSetup:
     def SlideHeight(self):
         return self.pagesetup.SlideHeight
 
-    # Lower case alias for SlideHeight
-    @property
-    def slideheight(self):
-        return self.SlideHeight
-
     @SlideHeight.setter
     def SlideHeight(self, value):
         self.pagesetup.SlideHeight = value
 
-    # Lower case alias for SlideHeight setter
+    # Lower case aliases for SlideHeight
+    @property
+    def slideheight(self):
+        return self.SlideHeight
+
     @slideheight.setter
     def slideheight(self, value):
         self.SlideHeight = value
@@ -13273,16 +12867,15 @@ class PageSetup:
     def SlideOrientation(self):
         return self.pagesetup.SlideOrientation
 
-    # Lower case alias for SlideOrientation
-    @property
-    def slideorientation(self):
-        return self.SlideOrientation
-
     @SlideOrientation.setter
     def SlideOrientation(self, value):
         self.pagesetup.SlideOrientation = value
 
-    # Lower case alias for SlideOrientation setter
+    # Lower case aliases for SlideOrientation
+    @property
+    def slideorientation(self):
+        return self.SlideOrientation
+
     @slideorientation.setter
     def slideorientation(self, value):
         self.SlideOrientation = value
@@ -13291,16 +12884,15 @@ class PageSetup:
     def SlideSize(self):
         return self.pagesetup.SlideSize
 
-    # Lower case alias for SlideSize
-    @property
-    def slidesize(self):
-        return self.SlideSize
-
     @SlideSize.setter
     def SlideSize(self, value):
         self.pagesetup.SlideSize = value
 
-    # Lower case alias for SlideSize setter
+    # Lower case aliases for SlideSize
+    @property
+    def slidesize(self):
+        return self.SlideSize
+
     @slidesize.setter
     def slidesize(self, value):
         self.SlideSize = value
@@ -13309,16 +12901,15 @@ class PageSetup:
     def SlideWidth(self):
         return self.pagesetup.SlideWidth
 
-    # Lower case alias for SlideWidth
-    @property
-    def slidewidth(self):
-        return self.SlideWidth
-
     @SlideWidth.setter
     def SlideWidth(self, value):
         self.pagesetup.SlideWidth = value
 
-    # Lower case alias for SlideWidth setter
+    # Lower case aliases for SlideWidth
+    @property
+    def slidewidth(self):
+        return self.SlideWidth
+
     @slidewidth.setter
     def slidewidth(self, value):
         self.SlideWidth = value
@@ -13333,7 +12924,7 @@ class Pane:
     def Active(self):
         return self.pane.Active
 
-    # Lower case alias for Active
+    # Lower case aliases for Active
     @property
     def active(self):
         return self.Active
@@ -13346,7 +12937,7 @@ class Pane:
     def Parent(self):
         return self.pane.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13355,7 +12946,7 @@ class Pane:
     def ViewType(self):
         return self.pane.ViewType
 
-    # Lower case alias for ViewType
+    # Lower case aliases for ViewType
     @property
     def viewtype(self):
         return self.ViewType
@@ -13380,7 +12971,7 @@ class Panes:
     def Count(self):
         return self.panes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -13389,7 +12980,7 @@ class Panes:
     def Parent(self):
         return self.panes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13408,16 +12999,15 @@ class ParagraphFormat:
     def Alignment(self):
         return self.paragraphformat.Alignment
 
-    # Lower case alias for Alignment
-    @property
-    def alignment(self):
-        return self.Alignment
-
     @Alignment.setter
     def Alignment(self, value):
         self.paragraphformat.Alignment = value
 
-    # Lower case alias for Alignment setter
+    # Lower case aliases for Alignment
+    @property
+    def alignment(self):
+        return self.Alignment
+
     @alignment.setter
     def alignment(self, value):
         self.Alignment = value
@@ -13430,16 +13020,15 @@ class ParagraphFormat:
     def BaseLineAlignment(self):
         return self.paragraphformat.BaseLineAlignment
 
-    # Lower case alias for BaseLineAlignment
-    @property
-    def baselinealignment(self):
-        return self.BaseLineAlignment
-
     @BaseLineAlignment.setter
     def BaseLineAlignment(self, value):
         self.paragraphformat.BaseLineAlignment = value
 
-    # Lower case alias for BaseLineAlignment setter
+    # Lower case aliases for BaseLineAlignment
+    @property
+    def baselinealignment(self):
+        return self.BaseLineAlignment
+
     @baselinealignment.setter
     def baselinealignment(self, value):
         self.BaseLineAlignment = value
@@ -13448,7 +13037,7 @@ class ParagraphFormat:
     def Bullet(self):
         return BulletFormat(self.paragraphformat.Bullet)
 
-    # Lower case alias for Bullet
+    # Lower case aliases for Bullet
     @property
     def bullet(self):
         return self.Bullet
@@ -13457,16 +13046,15 @@ class ParagraphFormat:
     def FarEastLineBreakControl(self):
         return self.paragraphformat.FarEastLineBreakControl
 
-    # Lower case alias for FarEastLineBreakControl
-    @property
-    def fareastlinebreakcontrol(self):
-        return self.FarEastLineBreakControl
-
     @FarEastLineBreakControl.setter
     def FarEastLineBreakControl(self, value):
         self.paragraphformat.FarEastLineBreakControl = value
 
-    # Lower case alias for FarEastLineBreakControl setter
+    # Lower case aliases for FarEastLineBreakControl
+    @property
+    def fareastlinebreakcontrol(self):
+        return self.FarEastLineBreakControl
+
     @fareastlinebreakcontrol.setter
     def fareastlinebreakcontrol(self, value):
         self.FarEastLineBreakControl = value
@@ -13475,16 +13063,15 @@ class ParagraphFormat:
     def HangingPunctuation(self):
         return self.paragraphformat.HangingPunctuation
 
-    # Lower case alias for HangingPunctuation
-    @property
-    def hangingpunctuation(self):
-        return self.HangingPunctuation
-
     @HangingPunctuation.setter
     def HangingPunctuation(self, value):
         self.paragraphformat.HangingPunctuation = value
 
-    # Lower case alias for HangingPunctuation setter
+    # Lower case aliases for HangingPunctuation
+    @property
+    def hangingpunctuation(self):
+        return self.HangingPunctuation
+
     @hangingpunctuation.setter
     def hangingpunctuation(self, value):
         self.HangingPunctuation = value
@@ -13493,16 +13080,15 @@ class ParagraphFormat:
     def LineRuleAfter(self):
         return self.paragraphformat.LineRuleAfter
 
-    # Lower case alias for LineRuleAfter
-    @property
-    def lineruleafter(self):
-        return self.LineRuleAfter
-
     @LineRuleAfter.setter
     def LineRuleAfter(self, value):
         self.paragraphformat.LineRuleAfter = value
 
-    # Lower case alias for LineRuleAfter setter
+    # Lower case aliases for LineRuleAfter
+    @property
+    def lineruleafter(self):
+        return self.LineRuleAfter
+
     @lineruleafter.setter
     def lineruleafter(self, value):
         self.LineRuleAfter = value
@@ -13511,16 +13097,15 @@ class ParagraphFormat:
     def LineRuleBefore(self):
         return self.paragraphformat.LineRuleBefore
 
-    # Lower case alias for LineRuleBefore
-    @property
-    def linerulebefore(self):
-        return self.LineRuleBefore
-
     @LineRuleBefore.setter
     def LineRuleBefore(self, value):
         self.paragraphformat.LineRuleBefore = value
 
-    # Lower case alias for LineRuleBefore setter
+    # Lower case aliases for LineRuleBefore
+    @property
+    def linerulebefore(self):
+        return self.LineRuleBefore
+
     @linerulebefore.setter
     def linerulebefore(self, value):
         self.LineRuleBefore = value
@@ -13529,16 +13114,15 @@ class ParagraphFormat:
     def LineRuleWithin(self):
         return self.paragraphformat.LineRuleWithin
 
-    # Lower case alias for LineRuleWithin
-    @property
-    def linerulewithin(self):
-        return self.LineRuleWithin
-
     @LineRuleWithin.setter
     def LineRuleWithin(self, value):
         self.paragraphformat.LineRuleWithin = value
 
-    # Lower case alias for LineRuleWithin setter
+    # Lower case aliases for LineRuleWithin
+    @property
+    def linerulewithin(self):
+        return self.LineRuleWithin
+
     @linerulewithin.setter
     def linerulewithin(self, value):
         self.LineRuleWithin = value
@@ -13547,7 +13131,7 @@ class ParagraphFormat:
     def Parent(self):
         return self.paragraphformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13556,16 +13140,15 @@ class ParagraphFormat:
     def SpaceAfter(self):
         return self.paragraphformat.SpaceAfter
 
-    # Lower case alias for SpaceAfter
-    @property
-    def spaceafter(self):
-        return self.SpaceAfter
-
     @SpaceAfter.setter
     def SpaceAfter(self, value):
         self.paragraphformat.SpaceAfter = value
 
-    # Lower case alias for SpaceAfter setter
+    # Lower case aliases for SpaceAfter
+    @property
+    def spaceafter(self):
+        return self.SpaceAfter
+
     @spaceafter.setter
     def spaceafter(self, value):
         self.SpaceAfter = value
@@ -13574,16 +13157,15 @@ class ParagraphFormat:
     def SpaceBefore(self):
         return self.paragraphformat.SpaceBefore
 
-    # Lower case alias for SpaceBefore
-    @property
-    def spacebefore(self):
-        return self.SpaceBefore
-
     @SpaceBefore.setter
     def SpaceBefore(self, value):
         self.paragraphformat.SpaceBefore = value
 
-    # Lower case alias for SpaceBefore setter
+    # Lower case aliases for SpaceBefore
+    @property
+    def spacebefore(self):
+        return self.SpaceBefore
+
     @spacebefore.setter
     def spacebefore(self, value):
         self.SpaceBefore = value
@@ -13592,16 +13174,15 @@ class ParagraphFormat:
     def SpaceWithin(self):
         return self.paragraphformat.SpaceWithin
 
-    # Lower case alias for SpaceWithin
-    @property
-    def spacewithin(self):
-        return self.SpaceWithin
-
     @SpaceWithin.setter
     def SpaceWithin(self, value):
         self.paragraphformat.SpaceWithin = value
 
-    # Lower case alias for SpaceWithin setter
+    # Lower case aliases for SpaceWithin
+    @property
+    def spacewithin(self):
+        return self.SpaceWithin
+
     @spacewithin.setter
     def spacewithin(self, value):
         self.SpaceWithin = value
@@ -13610,16 +13191,15 @@ class ParagraphFormat:
     def TextDirection(self):
         return self.paragraphformat.TextDirection
 
-    # Lower case alias for TextDirection
-    @property
-    def textdirection(self):
-        return self.TextDirection
-
     @TextDirection.setter
     def TextDirection(self, value):
         self.paragraphformat.TextDirection = value
 
-    # Lower case alias for TextDirection setter
+    # Lower case aliases for TextDirection
+    @property
+    def textdirection(self):
+        return self.TextDirection
+
     @textdirection.setter
     def textdirection(self, value):
         self.TextDirection = value
@@ -13628,16 +13208,15 @@ class ParagraphFormat:
     def WordWrap(self):
         return self.paragraphformat.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.paragraphformat.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -13656,16 +13235,15 @@ class PictureFormat:
     def Brightness(self):
         return self.pictureformat.Brightness
 
-    # Lower case alias for Brightness
-    @property
-    def brightness(self):
-        return self.Brightness
-
     @Brightness.setter
     def Brightness(self, value):
         self.pictureformat.Brightness = value
 
-    # Lower case alias for Brightness setter
+    # Lower case aliases for Brightness
+    @property
+    def brightness(self):
+        return self.Brightness
+
     @brightness.setter
     def brightness(self, value):
         self.Brightness = value
@@ -13674,16 +13252,15 @@ class PictureFormat:
     def ColorType(self):
         return self.pictureformat.ColorType
 
-    # Lower case alias for ColorType
-    @property
-    def colortype(self):
-        return self.ColorType
-
     @ColorType.setter
     def ColorType(self, value):
         self.pictureformat.ColorType = value
 
-    # Lower case alias for ColorType setter
+    # Lower case aliases for ColorType
+    @property
+    def colortype(self):
+        return self.ColorType
+
     @colortype.setter
     def colortype(self, value):
         self.ColorType = value
@@ -13692,16 +13269,15 @@ class PictureFormat:
     def Contrast(self):
         return self.pictureformat.Contrast
 
-    # Lower case alias for Contrast
-    @property
-    def contrast(self):
-        return self.Contrast
-
     @Contrast.setter
     def Contrast(self, value):
         self.pictureformat.Contrast = value
 
-    # Lower case alias for Contrast setter
+    # Lower case aliases for Contrast
+    @property
+    def contrast(self):
+        return self.Contrast
+
     @contrast.setter
     def contrast(self, value):
         self.Contrast = value
@@ -13710,7 +13286,7 @@ class PictureFormat:
     def Creator(self):
         return self.pictureformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -13719,16 +13295,15 @@ class PictureFormat:
     def Crop(self):
         return self.pictureformat.Crop
 
-    # Lower case alias for Crop
-    @property
-    def crop(self):
-        return self.Crop
-
     @Crop.setter
     def Crop(self, value):
         self.pictureformat.Crop = value
 
-    # Lower case alias for Crop setter
+    # Lower case aliases for Crop
+    @property
+    def crop(self):
+        return self.Crop
+
     @crop.setter
     def crop(self, value):
         self.Crop = value
@@ -13737,16 +13312,15 @@ class PictureFormat:
     def CropBottom(self):
         return self.pictureformat.CropBottom
 
-    # Lower case alias for CropBottom
-    @property
-    def cropbottom(self):
-        return self.CropBottom
-
     @CropBottom.setter
     def CropBottom(self, value):
         self.pictureformat.CropBottom = value
 
-    # Lower case alias for CropBottom setter
+    # Lower case aliases for CropBottom
+    @property
+    def cropbottom(self):
+        return self.CropBottom
+
     @cropbottom.setter
     def cropbottom(self, value):
         self.CropBottom = value
@@ -13755,16 +13329,15 @@ class PictureFormat:
     def CropLeft(self):
         return self.pictureformat.CropLeft
 
-    # Lower case alias for CropLeft
-    @property
-    def cropleft(self):
-        return self.CropLeft
-
     @CropLeft.setter
     def CropLeft(self, value):
         self.pictureformat.CropLeft = value
 
-    # Lower case alias for CropLeft setter
+    # Lower case aliases for CropLeft
+    @property
+    def cropleft(self):
+        return self.CropLeft
+
     @cropleft.setter
     def cropleft(self, value):
         self.CropLeft = value
@@ -13773,16 +13346,15 @@ class PictureFormat:
     def CropRight(self):
         return self.pictureformat.CropRight
 
-    # Lower case alias for CropRight
-    @property
-    def cropright(self):
-        return self.CropRight
-
     @CropRight.setter
     def CropRight(self, value):
         self.pictureformat.CropRight = value
 
-    # Lower case alias for CropRight setter
+    # Lower case aliases for CropRight
+    @property
+    def cropright(self):
+        return self.CropRight
+
     @cropright.setter
     def cropright(self, value):
         self.CropRight = value
@@ -13791,16 +13363,15 @@ class PictureFormat:
     def CropTop(self):
         return self.pictureformat.CropTop
 
-    # Lower case alias for CropTop
-    @property
-    def croptop(self):
-        return self.CropTop
-
     @CropTop.setter
     def CropTop(self, value):
         self.pictureformat.CropTop = value
 
-    # Lower case alias for CropTop setter
+    # Lower case aliases for CropTop
+    @property
+    def croptop(self):
+        return self.CropTop
+
     @croptop.setter
     def croptop(self, value):
         self.CropTop = value
@@ -13809,7 +13380,7 @@ class PictureFormat:
     def Parent(self):
         return self.pictureformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13818,16 +13389,15 @@ class PictureFormat:
     def TransparencyColor(self):
         return self.pictureformat.TransparencyColor
 
-    # Lower case alias for TransparencyColor
-    @property
-    def transparencycolor(self):
-        return self.TransparencyColor
-
     @TransparencyColor.setter
     def TransparencyColor(self, value):
         self.pictureformat.TransparencyColor = value
 
-    # Lower case alias for TransparencyColor setter
+    # Lower case aliases for TransparencyColor
+    @property
+    def transparencycolor(self):
+        return self.TransparencyColor
+
     @transparencycolor.setter
     def transparencycolor(self, value):
         self.TransparencyColor = value
@@ -13836,16 +13406,15 @@ class PictureFormat:
     def TransparentBackground(self):
         return self.pictureformat.TransparentBackground
 
-    # Lower case alias for TransparentBackground
-    @property
-    def transparentbackground(self):
-        return self.TransparentBackground
-
     @TransparentBackground.setter
     def TransparentBackground(self, value):
         self.pictureformat.TransparentBackground = value
 
-    # Lower case alias for TransparentBackground setter
+    # Lower case aliases for TransparentBackground
+    @property
+    def transparentbackground(self):
+        return self.TransparentBackground
+
     @transparentbackground.setter
     def transparentbackground(self, value):
         self.TransparentBackground = value
@@ -13872,7 +13441,7 @@ class PlaceholderFormat:
     def ContainedType(self):
         return self.placeholderformat.ContainedType
 
-    # Lower case alias for ContainedType
+    # Lower case aliases for ContainedType
     @property
     def containedtype(self):
         return self.ContainedType
@@ -13881,16 +13450,15 @@ class PlaceholderFormat:
     def Name(self):
         return self.placeholderformat.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.placeholderformat.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -13899,7 +13467,7 @@ class PlaceholderFormat:
     def Parent(self):
         return self.placeholderformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13908,7 +13476,7 @@ class PlaceholderFormat:
     def Type(self):
         return self.placeholderformat.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -13930,7 +13498,7 @@ class Placeholders:
     def Count(self):
         return self.placeholders.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -13939,7 +13507,7 @@ class Placeholders:
     def Parent(self):
         return self.placeholders.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13966,16 +13534,15 @@ class Player:
     def CurrentPosition(self):
         return self.player.CurrentPosition
 
-    # Lower case alias for CurrentPosition
-    @property
-    def currentposition(self):
-        return self.CurrentPosition
-
     @CurrentPosition.setter
     def CurrentPosition(self, value):
         self.player.CurrentPosition = value
 
-    # Lower case alias for CurrentPosition setter
+    # Lower case aliases for CurrentPosition
+    @property
+    def currentposition(self):
+        return self.CurrentPosition
+
     @currentposition.setter
     def currentposition(self, value):
         self.CurrentPosition = value
@@ -13984,7 +13551,7 @@ class Player:
     def Parent(self):
         return self.player.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -13993,7 +13560,7 @@ class Player:
     def State(self):
         return self.player.State
 
-    # Lower case alias for State
+    # Lower case aliases for State
     @property
     def state(self):
         return self.State
@@ -14020,16 +13587,15 @@ class PlaySettings:
     def ActionVerb(self):
         return self.playsettings.ActionVerb
 
-    # Lower case alias for ActionVerb
-    @property
-    def actionverb(self):
-        return self.ActionVerb
-
     @ActionVerb.setter
     def ActionVerb(self, value):
         self.playsettings.ActionVerb = value
 
-    # Lower case alias for ActionVerb setter
+    # Lower case aliases for ActionVerb
+    @property
+    def actionverb(self):
+        return self.ActionVerb
+
     @actionverb.setter
     def actionverb(self, value):
         self.ActionVerb = value
@@ -14042,16 +13608,15 @@ class PlaySettings:
     def HideWhileNotPlaying(self):
         return self.playsettings.HideWhileNotPlaying
 
-    # Lower case alias for HideWhileNotPlaying
-    @property
-    def hidewhilenotplaying(self):
-        return self.HideWhileNotPlaying
-
     @HideWhileNotPlaying.setter
     def HideWhileNotPlaying(self, value):
         self.playsettings.HideWhileNotPlaying = value
 
-    # Lower case alias for HideWhileNotPlaying setter
+    # Lower case aliases for HideWhileNotPlaying
+    @property
+    def hidewhilenotplaying(self):
+        return self.HideWhileNotPlaying
+
     @hidewhilenotplaying.setter
     def hidewhilenotplaying(self, value):
         self.HideWhileNotPlaying = value
@@ -14060,16 +13625,15 @@ class PlaySettings:
     def LoopUntilStopped(self):
         return self.playsettings.LoopUntilStopped
 
-    # Lower case alias for LoopUntilStopped
-    @property
-    def loopuntilstopped(self):
-        return self.LoopUntilStopped
-
     @LoopUntilStopped.setter
     def LoopUntilStopped(self, value):
         self.playsettings.LoopUntilStopped = value
 
-    # Lower case alias for LoopUntilStopped setter
+    # Lower case aliases for LoopUntilStopped
+    @property
+    def loopuntilstopped(self):
+        return self.LoopUntilStopped
+
     @loopuntilstopped.setter
     def loopuntilstopped(self, value):
         self.LoopUntilStopped = value
@@ -14078,7 +13642,7 @@ class PlaySettings:
     def Parent(self):
         return self.playsettings.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -14087,16 +13651,15 @@ class PlaySettings:
     def PauseAnimation(self):
         return self.playsettings.PauseAnimation
 
-    # Lower case alias for PauseAnimation
-    @property
-    def pauseanimation(self):
-        return self.PauseAnimation
-
     @PauseAnimation.setter
     def PauseAnimation(self, value):
         self.playsettings.PauseAnimation = value
 
-    # Lower case alias for PauseAnimation setter
+    # Lower case aliases for PauseAnimation
+    @property
+    def pauseanimation(self):
+        return self.PauseAnimation
+
     @pauseanimation.setter
     def pauseanimation(self, value):
         self.PauseAnimation = value
@@ -14105,16 +13668,15 @@ class PlaySettings:
     def PlayOnEntry(self):
         return self.playsettings.PlayOnEntry
 
-    # Lower case alias for PlayOnEntry
-    @property
-    def playonentry(self):
-        return self.PlayOnEntry
-
     @PlayOnEntry.setter
     def PlayOnEntry(self, value):
         self.playsettings.PlayOnEntry = value
 
-    # Lower case alias for PlayOnEntry setter
+    # Lower case aliases for PlayOnEntry
+    @property
+    def playonentry(self):
+        return self.PlayOnEntry
+
     @playonentry.setter
     def playonentry(self, value):
         self.PlayOnEntry = value
@@ -14123,16 +13685,15 @@ class PlaySettings:
     def RewindMovie(self):
         return self.playsettings.RewindMovie
 
-    # Lower case alias for RewindMovie
-    @property
-    def rewindmovie(self):
-        return self.RewindMovie
-
     @RewindMovie.setter
     def RewindMovie(self, value):
         self.playsettings.RewindMovie = value
 
-    # Lower case alias for RewindMovie setter
+    # Lower case aliases for RewindMovie
+    @property
+    def rewindmovie(self):
+        return self.RewindMovie
+
     @rewindmovie.setter
     def rewindmovie(self, value):
         self.RewindMovie = value
@@ -14141,16 +13702,15 @@ class PlaySettings:
     def StopAfterSlides(self):
         return self.playsettings.StopAfterSlides
 
-    # Lower case alias for StopAfterSlides
-    @property
-    def stopafterslides(self):
-        return self.StopAfterSlides
-
     @StopAfterSlides.setter
     def StopAfterSlides(self, value):
         self.playsettings.StopAfterSlides = value
 
-    # Lower case alias for StopAfterSlides setter
+    # Lower case aliases for StopAfterSlides
+    @property
+    def stopafterslides(self):
+        return self.StopAfterSlides
+
     @stopafterslides.setter
     def stopafterslides(self, value):
         self.StopAfterSlides = value
@@ -14169,7 +13729,7 @@ class PlotArea:
     def Creator(self):
         return self.plotarea.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -14178,7 +13738,7 @@ class PlotArea:
     def Format(self):
         return ChartFormat(self.plotarea.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -14187,16 +13747,15 @@ class PlotArea:
     def Height(self):
         return self.plotarea.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.plotarea.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -14205,16 +13764,15 @@ class PlotArea:
     def InsideHeight(self):
         return self.plotarea.InsideHeight
 
-    # Lower case alias for InsideHeight
-    @property
-    def insideheight(self):
-        return self.InsideHeight
-
     @InsideHeight.setter
     def InsideHeight(self, value):
         self.plotarea.InsideHeight = value
 
-    # Lower case alias for InsideHeight setter
+    # Lower case aliases for InsideHeight
+    @property
+    def insideheight(self):
+        return self.InsideHeight
+
     @insideheight.setter
     def insideheight(self, value):
         self.InsideHeight = value
@@ -14223,16 +13781,15 @@ class PlotArea:
     def InsideLeft(self):
         return self.plotarea.InsideLeft
 
-    # Lower case alias for InsideLeft
-    @property
-    def insideleft(self):
-        return self.InsideLeft
-
     @InsideLeft.setter
     def InsideLeft(self, value):
         self.plotarea.InsideLeft = value
 
-    # Lower case alias for InsideLeft setter
+    # Lower case aliases for InsideLeft
+    @property
+    def insideleft(self):
+        return self.InsideLeft
+
     @insideleft.setter
     def insideleft(self, value):
         self.InsideLeft = value
@@ -14241,16 +13798,15 @@ class PlotArea:
     def InsideTop(self):
         return self.plotarea.InsideTop
 
-    # Lower case alias for InsideTop
-    @property
-    def insidetop(self):
-        return self.InsideTop
-
     @InsideTop.setter
     def InsideTop(self, value):
         self.plotarea.InsideTop = value
 
-    # Lower case alias for InsideTop setter
+    # Lower case aliases for InsideTop
+    @property
+    def insidetop(self):
+        return self.InsideTop
+
     @insidetop.setter
     def insidetop(self, value):
         self.InsideTop = value
@@ -14259,16 +13815,15 @@ class PlotArea:
     def InsideWidth(self):
         return self.plotarea.InsideWidth
 
-    # Lower case alias for InsideWidth
-    @property
-    def insidewidth(self):
-        return self.InsideWidth
-
     @InsideWidth.setter
     def InsideWidth(self, value):
         self.plotarea.InsideWidth = value
 
-    # Lower case alias for InsideWidth setter
+    # Lower case aliases for InsideWidth
+    @property
+    def insidewidth(self):
+        return self.InsideWidth
+
     @insidewidth.setter
     def insidewidth(self, value):
         self.InsideWidth = value
@@ -14277,16 +13832,15 @@ class PlotArea:
     def Left(self):
         return self.plotarea.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.plotarea.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -14295,7 +13849,7 @@ class PlotArea:
     def Name(self):
         return self.plotarea.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -14304,7 +13858,7 @@ class PlotArea:
     def Parent(self):
         return self.plotarea.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -14313,16 +13867,15 @@ class PlotArea:
     def Position(self):
         return XlChartElementPosition(self.plotarea.Position)
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.plotarea.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -14331,16 +13884,15 @@ class PlotArea:
     def Top(self):
         return self.plotarea.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.plotarea.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -14349,16 +13901,15 @@ class PlotArea:
     def Width(self):
         return self.plotarea.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.plotarea.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -14383,16 +13934,15 @@ class Point:
     def ApplyPictToEnd(self):
         return self.point.ApplyPictToEnd
 
-    # Lower case alias for ApplyPictToEnd
-    @property
-    def applypicttoend(self):
-        return self.ApplyPictToEnd
-
     @ApplyPictToEnd.setter
     def ApplyPictToEnd(self, value):
         self.point.ApplyPictToEnd = value
 
-    # Lower case alias for ApplyPictToEnd setter
+    # Lower case aliases for ApplyPictToEnd
+    @property
+    def applypicttoend(self):
+        return self.ApplyPictToEnd
+
     @applypicttoend.setter
     def applypicttoend(self, value):
         self.ApplyPictToEnd = value
@@ -14401,16 +13951,15 @@ class Point:
     def ApplyPictToFront(self):
         return self.point.ApplyPictToFront
 
-    # Lower case alias for ApplyPictToFront
-    @property
-    def applypicttofront(self):
-        return self.ApplyPictToFront
-
     @ApplyPictToFront.setter
     def ApplyPictToFront(self, value):
         self.point.ApplyPictToFront = value
 
-    # Lower case alias for ApplyPictToFront setter
+    # Lower case aliases for ApplyPictToFront
+    @property
+    def applypicttofront(self):
+        return self.ApplyPictToFront
+
     @applypicttofront.setter
     def applypicttofront(self, value):
         self.ApplyPictToFront = value
@@ -14419,16 +13968,15 @@ class Point:
     def ApplyPictToSides(self):
         return self.point.ApplyPictToSides
 
-    # Lower case alias for ApplyPictToSides
-    @property
-    def applypicttosides(self):
-        return self.ApplyPictToSides
-
     @ApplyPictToSides.setter
     def ApplyPictToSides(self, value):
         self.point.ApplyPictToSides = value
 
-    # Lower case alias for ApplyPictToSides setter
+    # Lower case aliases for ApplyPictToSides
+    @property
+    def applypicttosides(self):
+        return self.ApplyPictToSides
+
     @applypicttosides.setter
     def applypicttosides(self, value):
         self.ApplyPictToSides = value
@@ -14437,7 +13985,7 @@ class Point:
     def Creator(self):
         return self.point.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -14446,7 +13994,7 @@ class Point:
     def DataLabel(self):
         return DataLabel(self.point.DataLabel)
 
-    # Lower case alias for DataLabel
+    # Lower case aliases for DataLabel
     @property
     def datalabel(self):
         return self.DataLabel
@@ -14455,16 +14003,15 @@ class Point:
     def Explosion(self):
         return self.point.Explosion
 
-    # Lower case alias for Explosion
-    @property
-    def explosion(self):
-        return self.Explosion
-
     @Explosion.setter
     def Explosion(self, value):
         self.point.Explosion = value
 
-    # Lower case alias for Explosion setter
+    # Lower case aliases for Explosion
+    @property
+    def explosion(self):
+        return self.Explosion
+
     @explosion.setter
     def explosion(self, value):
         self.Explosion = value
@@ -14473,7 +14020,7 @@ class Point:
     def Format(self):
         return ChartFormat(self.point.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -14482,16 +14029,15 @@ class Point:
     def Has3DEffect(self):
         return self.point.Has3DEffect
 
-    # Lower case alias for Has3DEffect
-    @property
-    def has3deffect(self):
-        return self.Has3DEffect
-
     @Has3DEffect.setter
     def Has3DEffect(self, value):
         self.point.Has3DEffect = value
 
-    # Lower case alias for Has3DEffect setter
+    # Lower case aliases for Has3DEffect
+    @property
+    def has3deffect(self):
+        return self.Has3DEffect
+
     @has3deffect.setter
     def has3deffect(self, value):
         self.Has3DEffect = value
@@ -14500,16 +14046,15 @@ class Point:
     def HasDataLabel(self):
         return self.point.HasDataLabel
 
-    # Lower case alias for HasDataLabel
-    @property
-    def hasdatalabel(self):
-        return self.HasDataLabel
-
     @HasDataLabel.setter
     def HasDataLabel(self, value):
         self.point.HasDataLabel = value
 
-    # Lower case alias for HasDataLabel setter
+    # Lower case aliases for HasDataLabel
+    @property
+    def hasdatalabel(self):
+        return self.HasDataLabel
+
     @hasdatalabel.setter
     def hasdatalabel(self, value):
         self.HasDataLabel = value
@@ -14518,7 +14063,7 @@ class Point:
     def Height(self):
         return self.point.Height
 
-    # Lower case alias for Height
+    # Lower case aliases for Height
     @property
     def height(self):
         return self.Height
@@ -14527,16 +14072,15 @@ class Point:
     def InvertIfNegative(self):
         return self.point.InvertIfNegative
 
-    # Lower case alias for InvertIfNegative
-    @property
-    def invertifnegative(self):
-        return self.InvertIfNegative
-
     @InvertIfNegative.setter
     def InvertIfNegative(self, value):
         self.point.InvertIfNegative = value
 
-    # Lower case alias for InvertIfNegative setter
+    # Lower case aliases for InvertIfNegative
+    @property
+    def invertifnegative(self):
+        return self.InvertIfNegative
+
     @invertifnegative.setter
     def invertifnegative(self, value):
         self.InvertIfNegative = value
@@ -14545,7 +14089,7 @@ class Point:
     def Left(self):
         return self.point.Left
 
-    # Lower case alias for Left
+    # Lower case aliases for Left
     @property
     def left(self):
         return self.Left
@@ -14554,16 +14098,15 @@ class Point:
     def MarkerBackgroundColor(self):
         return self.point.MarkerBackgroundColor
 
-    # Lower case alias for MarkerBackgroundColor
-    @property
-    def markerbackgroundcolor(self):
-        return self.MarkerBackgroundColor
-
     @MarkerBackgroundColor.setter
     def MarkerBackgroundColor(self, value):
         self.point.MarkerBackgroundColor = value
 
-    # Lower case alias for MarkerBackgroundColor setter
+    # Lower case aliases for MarkerBackgroundColor
+    @property
+    def markerbackgroundcolor(self):
+        return self.MarkerBackgroundColor
+
     @markerbackgroundcolor.setter
     def markerbackgroundcolor(self, value):
         self.MarkerBackgroundColor = value
@@ -14572,16 +14115,15 @@ class Point:
     def MarkerBackgroundColorIndex(self):
         return XlColorIndex(self.point.MarkerBackgroundColorIndex)
 
-    # Lower case alias for MarkerBackgroundColorIndex
-    @property
-    def markerbackgroundcolorindex(self):
-        return self.MarkerBackgroundColorIndex
-
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
         self.point.MarkerBackgroundColorIndex = value
 
-    # Lower case alias for MarkerBackgroundColorIndex setter
+    # Lower case aliases for MarkerBackgroundColorIndex
+    @property
+    def markerbackgroundcolorindex(self):
+        return self.MarkerBackgroundColorIndex
+
     @markerbackgroundcolorindex.setter
     def markerbackgroundcolorindex(self, value):
         self.MarkerBackgroundColorIndex = value
@@ -14590,16 +14132,15 @@ class Point:
     def MarkerForegroundColor(self):
         return self.point.MarkerForegroundColor
 
-    # Lower case alias for MarkerForegroundColor
-    @property
-    def markerforegroundcolor(self):
-        return self.MarkerForegroundColor
-
     @MarkerForegroundColor.setter
     def MarkerForegroundColor(self, value):
         self.point.MarkerForegroundColor = value
 
-    # Lower case alias for MarkerForegroundColor setter
+    # Lower case aliases for MarkerForegroundColor
+    @property
+    def markerforegroundcolor(self):
+        return self.MarkerForegroundColor
+
     @markerforegroundcolor.setter
     def markerforegroundcolor(self, value):
         self.MarkerForegroundColor = value
@@ -14608,16 +14149,15 @@ class Point:
     def MarkerForegroundColorIndex(self):
         return XlColorIndex(self.point.MarkerForegroundColorIndex)
 
-    # Lower case alias for MarkerForegroundColorIndex
-    @property
-    def markerforegroundcolorindex(self):
-        return self.MarkerForegroundColorIndex
-
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
         self.point.MarkerForegroundColorIndex = value
 
-    # Lower case alias for MarkerForegroundColorIndex setter
+    # Lower case aliases for MarkerForegroundColorIndex
+    @property
+    def markerforegroundcolorindex(self):
+        return self.MarkerForegroundColorIndex
+
     @markerforegroundcolorindex.setter
     def markerforegroundcolorindex(self, value):
         self.MarkerForegroundColorIndex = value
@@ -14626,16 +14166,15 @@ class Point:
     def MarkerSize(self):
         return self.point.MarkerSize
 
-    # Lower case alias for MarkerSize
-    @property
-    def markersize(self):
-        return self.MarkerSize
-
     @MarkerSize.setter
     def MarkerSize(self, value):
         self.point.MarkerSize = value
 
-    # Lower case alias for MarkerSize setter
+    # Lower case aliases for MarkerSize
+    @property
+    def markersize(self):
+        return self.MarkerSize
+
     @markersize.setter
     def markersize(self, value):
         self.MarkerSize = value
@@ -14644,16 +14183,15 @@ class Point:
     def MarkerStyle(self):
         return XlMarkerStyle(self.point.MarkerStyle)
 
-    # Lower case alias for MarkerStyle
-    @property
-    def markerstyle(self):
-        return self.MarkerStyle
-
     @MarkerStyle.setter
     def MarkerStyle(self, value):
         self.point.MarkerStyle = value
 
-    # Lower case alias for MarkerStyle setter
+    # Lower case aliases for MarkerStyle
+    @property
+    def markerstyle(self):
+        return self.MarkerStyle
+
     @markerstyle.setter
     def markerstyle(self, value):
         self.MarkerStyle = value
@@ -14662,7 +14200,7 @@ class Point:
     def Name(self):
         return self.point.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -14671,7 +14209,7 @@ class Point:
     def Parent(self):
         return self.point.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -14680,16 +14218,15 @@ class Point:
     def PictureType(self):
         return XlChartPictureType(self.point.PictureType)
 
-    # Lower case alias for PictureType
-    @property
-    def picturetype(self):
-        return self.PictureType
-
     @PictureType.setter
     def PictureType(self, value):
         self.point.PictureType = value
 
-    # Lower case alias for PictureType setter
+    # Lower case aliases for PictureType
+    @property
+    def picturetype(self):
+        return self.PictureType
+
     @picturetype.setter
     def picturetype(self, value):
         self.PictureType = value
@@ -14698,16 +14235,15 @@ class Point:
     def PictureUnit2(self):
         return self.point.PictureUnit2
 
-    # Lower case alias for PictureUnit2
-    @property
-    def pictureunit2(self):
-        return self.PictureUnit2
-
     @PictureUnit2.setter
     def PictureUnit2(self, value):
         self.point.PictureUnit2 = value
 
-    # Lower case alias for PictureUnit2 setter
+    # Lower case aliases for PictureUnit2
+    @property
+    def pictureunit2(self):
+        return self.PictureUnit2
+
     @pictureunit2.setter
     def pictureunit2(self, value):
         self.PictureUnit2 = value
@@ -14716,16 +14252,15 @@ class Point:
     def SecondaryPlot(self):
         return self.point.SecondaryPlot
 
-    # Lower case alias for SecondaryPlot
-    @property
-    def secondaryplot(self):
-        return self.SecondaryPlot
-
     @SecondaryPlot.setter
     def SecondaryPlot(self, value):
         self.point.SecondaryPlot = value
 
-    # Lower case alias for SecondaryPlot setter
+    # Lower case aliases for SecondaryPlot
+    @property
+    def secondaryplot(self):
+        return self.SecondaryPlot
+
     @secondaryplot.setter
     def secondaryplot(self, value):
         self.SecondaryPlot = value
@@ -14734,16 +14269,15 @@ class Point:
     def Shadow(self):
         return self.point.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.point.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -14752,7 +14286,7 @@ class Point:
     def Top(self):
         return self.point.Top
 
-    # Lower case alias for Top
+    # Lower case aliases for Top
     @property
     def top(self):
         return self.Top
@@ -14761,7 +14295,7 @@ class Point:
     def Width(self):
         return self.point.Width
 
-    # Lower case alias for Width
+    # Lower case aliases for Width
     @property
     def width(self):
         return self.Width
@@ -14806,7 +14340,7 @@ class Points:
     def Count(self):
         return self.points.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -14815,7 +14349,7 @@ class Points:
     def Creator(self):
         return self.points.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -14824,7 +14358,7 @@ class Points:
     def Parent(self):
         return self.points.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15494,16 +15028,15 @@ class Presentation:
     def AutoSaveOn(self):
         return self.presentation.AutoSaveOn
 
-    # Lower case alias for AutoSaveOn
-    @property
-    def autosaveon(self):
-        return self.AutoSaveOn
-
     @AutoSaveOn.setter
     def AutoSaveOn(self, value):
         self.presentation.AutoSaveOn = value
 
-    # Lower case alias for AutoSaveOn setter
+    # Lower case aliases for AutoSaveOn
+    @property
+    def autosaveon(self):
+        return self.AutoSaveOn
+
     @autosaveon.setter
     def autosaveon(self, value):
         self.AutoSaveOn = value
@@ -15512,7 +15045,7 @@ class Presentation:
     def Broadcast(self):
         return Broadcast(self.presentation.Broadcast)
 
-    # Lower case alias for Broadcast
+    # Lower case aliases for Broadcast
     @property
     def broadcast(self):
         return self.Broadcast
@@ -15521,7 +15054,7 @@ class Presentation:
     def BuiltInDocumentProperties(self):
         return self.presentation.BuiltInDocumentProperties
 
-    # Lower case alias for BuiltInDocumentProperties
+    # Lower case aliases for BuiltInDocumentProperties
     @property
     def builtindocumentproperties(self):
         return self.BuiltInDocumentProperties
@@ -15530,7 +15063,7 @@ class Presentation:
     def Coauthoring(self):
         return Coauthoring(self.presentation.Coauthoring)
 
-    # Lower case alias for Coauthoring
+    # Lower case aliases for Coauthoring
     @property
     def coauthoring(self):
         return self.Coauthoring
@@ -15539,7 +15072,7 @@ class Presentation:
     def ColorSchemes(self):
         return ColorSchemes(self.presentation.ColorSchemes)
 
-    # Lower case alias for ColorSchemes
+    # Lower case aliases for ColorSchemes
     @property
     def colorschemes(self):
         return self.ColorSchemes
@@ -15548,7 +15081,7 @@ class Presentation:
     def CommandBars(self):
         return self.presentation.CommandBars
 
-    # Lower case alias for CommandBars
+    # Lower case aliases for CommandBars
     @property
     def commandbars(self):
         return self.CommandBars
@@ -15557,7 +15090,7 @@ class Presentation:
     def Container(self):
         return self.presentation.Container
 
-    # Lower case alias for Container
+    # Lower case aliases for Container
     @property
     def container(self):
         return self.Container
@@ -15566,7 +15099,7 @@ class Presentation:
     def ContentTypeProperties(self):
         return self.presentation.ContentTypeProperties
 
-    # Lower case alias for ContentTypeProperties
+    # Lower case aliases for ContentTypeProperties
     @property
     def contenttypeproperties(self):
         return self.ContentTypeProperties
@@ -15575,7 +15108,7 @@ class Presentation:
     def CreateVideoStatus(self):
         return Presentation(self.presentation.CreateVideoStatus)
 
-    # Lower case alias for CreateVideoStatus
+    # Lower case aliases for CreateVideoStatus
     @property
     def createvideostatus(self):
         return self.CreateVideoStatus
@@ -15584,7 +15117,7 @@ class Presentation:
     def CustomDocumentProperties(self):
         return self.presentation.CustomDocumentProperties
 
-    # Lower case alias for CustomDocumentProperties
+    # Lower case aliases for CustomDocumentProperties
     @property
     def customdocumentproperties(self):
         return self.CustomDocumentProperties
@@ -15593,7 +15126,7 @@ class Presentation:
     def CustomerData(self):
         return CustomerData(self.presentation.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -15602,7 +15135,7 @@ class Presentation:
     def CustomXMLParts(self):
         return self.presentation.CustomXMLParts
 
-    # Lower case alias for CustomXMLParts
+    # Lower case aliases for CustomXMLParts
     @property
     def customxmlparts(self):
         return self.CustomXMLParts
@@ -15611,16 +15144,15 @@ class Presentation:
     def DefaultLanguageID(self):
         return self.presentation.DefaultLanguageID
 
-    # Lower case alias for DefaultLanguageID
-    @property
-    def defaultlanguageid(self):
-        return self.DefaultLanguageID
-
     @DefaultLanguageID.setter
     def DefaultLanguageID(self, value):
         self.presentation.DefaultLanguageID = value
 
-    # Lower case alias for DefaultLanguageID setter
+    # Lower case aliases for DefaultLanguageID
+    @property
+    def defaultlanguageid(self):
+        return self.DefaultLanguageID
+
     @defaultlanguageid.setter
     def defaultlanguageid(self, value):
         self.DefaultLanguageID = value
@@ -15629,7 +15161,7 @@ class Presentation:
     def DefaultShape(self):
         return Shape(self.presentation.DefaultShape)
 
-    # Lower case alias for DefaultShape
+    # Lower case aliases for DefaultShape
     @property
     def defaultshape(self):
         return self.DefaultShape
@@ -15638,7 +15170,7 @@ class Presentation:
     def Designs(self):
         return Designs(self.presentation.Designs)
 
-    # Lower case alias for Designs
+    # Lower case aliases for Designs
     @property
     def designs(self):
         return self.Designs
@@ -15647,16 +15179,15 @@ class Presentation:
     def DisplayComments(self):
         return self.presentation.DisplayComments
 
-    # Lower case alias for DisplayComments
-    @property
-    def displaycomments(self):
-        return self.DisplayComments
-
     @DisplayComments.setter
     def DisplayComments(self, value):
         self.presentation.DisplayComments = value
 
-    # Lower case alias for DisplayComments setter
+    # Lower case aliases for DisplayComments
+    @property
+    def displaycomments(self):
+        return self.DisplayComments
+
     @displaycomments.setter
     def displaycomments(self, value):
         self.DisplayComments = value
@@ -15665,7 +15196,7 @@ class Presentation:
     def DocumentInspectors(self):
         return self.presentation.DocumentInspectors
 
-    # Lower case alias for DocumentInspectors
+    # Lower case aliases for DocumentInspectors
     @property
     def documentinspectors(self):
         return self.DocumentInspectors
@@ -15674,7 +15205,7 @@ class Presentation:
     def DocumentLibraryVersions(self):
         return self.presentation.DocumentLibraryVersions
 
-    # Lower case alias for DocumentLibraryVersions
+    # Lower case aliases for DocumentLibraryVersions
     @property
     def documentlibraryversions(self):
         return self.DocumentLibraryVersions
@@ -15683,16 +15214,15 @@ class Presentation:
     def EncryptionProvider(self):
         return self.presentation.EncryptionProvider
 
-    # Lower case alias for EncryptionProvider
-    @property
-    def encryptionprovider(self):
-        return self.EncryptionProvider
-
     @EncryptionProvider.setter
     def EncryptionProvider(self, value):
         self.presentation.EncryptionProvider = value
 
-    # Lower case alias for EncryptionProvider setter
+    # Lower case aliases for EncryptionProvider
+    @property
+    def encryptionprovider(self):
+        return self.EncryptionProvider
+
     @encryptionprovider.setter
     def encryptionprovider(self, value):
         self.EncryptionProvider = value
@@ -15701,16 +15231,15 @@ class Presentation:
     def EnvelopeVisible(self):
         return self.presentation.EnvelopeVisible
 
-    # Lower case alias for EnvelopeVisible
-    @property
-    def envelopevisible(self):
-        return self.EnvelopeVisible
-
     @EnvelopeVisible.setter
     def EnvelopeVisible(self, value):
         self.presentation.EnvelopeVisible = value
 
-    # Lower case alias for EnvelopeVisible setter
+    # Lower case aliases for EnvelopeVisible
+    @property
+    def envelopevisible(self):
+        return self.EnvelopeVisible
+
     @envelopevisible.setter
     def envelopevisible(self, value):
         self.EnvelopeVisible = value
@@ -15719,7 +15248,7 @@ class Presentation:
     def ExtraColors(self):
         return ExtraColors(self.presentation.ExtraColors)
 
-    # Lower case alias for ExtraColors
+    # Lower case aliases for ExtraColors
     @property
     def extracolors(self):
         return self.ExtraColors
@@ -15728,16 +15257,15 @@ class Presentation:
     def FarEastLineBreakLanguage(self):
         return self.presentation.FarEastLineBreakLanguage
 
-    # Lower case alias for FarEastLineBreakLanguage
-    @property
-    def fareastlinebreaklanguage(self):
-        return self.FarEastLineBreakLanguage
-
     @FarEastLineBreakLanguage.setter
     def FarEastLineBreakLanguage(self, value):
         self.presentation.FarEastLineBreakLanguage = value
 
-    # Lower case alias for FarEastLineBreakLanguage setter
+    # Lower case aliases for FarEastLineBreakLanguage
+    @property
+    def fareastlinebreaklanguage(self):
+        return self.FarEastLineBreakLanguage
+
     @fareastlinebreaklanguage.setter
     def fareastlinebreaklanguage(self, value):
         self.FarEastLineBreakLanguage = value
@@ -15746,16 +15274,15 @@ class Presentation:
     def FarEastLineBreakLevel(self):
         return self.presentation.FarEastLineBreakLevel
 
-    # Lower case alias for FarEastLineBreakLevel
-    @property
-    def fareastlinebreaklevel(self):
-        return self.FarEastLineBreakLevel
-
     @FarEastLineBreakLevel.setter
     def FarEastLineBreakLevel(self, value):
         self.presentation.FarEastLineBreakLevel = value
 
-    # Lower case alias for FarEastLineBreakLevel setter
+    # Lower case aliases for FarEastLineBreakLevel
+    @property
+    def fareastlinebreaklevel(self):
+        return self.FarEastLineBreakLevel
+
     @fareastlinebreaklevel.setter
     def fareastlinebreaklevel(self, value):
         self.FarEastLineBreakLevel = value
@@ -15764,16 +15291,15 @@ class Presentation:
     def Final(self):
         return self.presentation.Final
 
-    # Lower case alias for Final
-    @property
-    def final(self):
-        return self.Final
-
     @Final.setter
     def Final(self, value):
         self.presentation.Final = value
 
-    # Lower case alias for Final setter
+    # Lower case aliases for Final
+    @property
+    def final(self):
+        return self.Final
+
     @final.setter
     def final(self, value):
         self.Final = value
@@ -15782,7 +15308,7 @@ class Presentation:
     def Fonts(self):
         return Fonts(self.presentation.Fonts)
 
-    # Lower case alias for Fonts
+    # Lower case aliases for Fonts
     @property
     def fonts(self):
         return self.Fonts
@@ -15791,7 +15317,7 @@ class Presentation:
     def FullName(self):
         return self.presentation.FullName
 
-    # Lower case alias for FullName
+    # Lower case aliases for FullName
     @property
     def fullname(self):
         return self.FullName
@@ -15800,16 +15326,15 @@ class Presentation:
     def GridDistance(self):
         return self.presentation.GridDistance
 
-    # Lower case alias for GridDistance
-    @property
-    def griddistance(self):
-        return self.GridDistance
-
     @GridDistance.setter
     def GridDistance(self, value):
         self.presentation.GridDistance = value
 
-    # Lower case alias for GridDistance setter
+    # Lower case aliases for GridDistance
+    @property
+    def griddistance(self):
+        return self.GridDistance
+
     @griddistance.setter
     def griddistance(self, value):
         self.GridDistance = value
@@ -15818,7 +15343,7 @@ class Presentation:
     def HandoutMaster(self):
         return Master(self.presentation.HandoutMaster)
 
-    # Lower case alias for HandoutMaster
+    # Lower case aliases for HandoutMaster
     @property
     def handoutmaster(self):
         return self.HandoutMaster
@@ -15827,7 +15352,7 @@ class Presentation:
     def HasHandoutMaster(self):
         return self.presentation.HasHandoutMaster
 
-    # Lower case alias for HasHandoutMaster
+    # Lower case aliases for HasHandoutMaster
     @property
     def hashandoutmaster(self):
         return self.HasHandoutMaster
@@ -15836,7 +15361,7 @@ class Presentation:
     def HasNotesMaster(self):
         return self.presentation.HasNotesMaster
 
-    # Lower case alias for HasNotesMaster
+    # Lower case aliases for HasNotesMaster
     @property
     def hasnotesmaster(self):
         return self.HasNotesMaster
@@ -15845,7 +15370,7 @@ class Presentation:
     def HasTitleMaster(self):
         return self.presentation.HasTitleMaster
 
-    # Lower case alias for HasTitleMaster
+    # Lower case aliases for HasTitleMaster
     @property
     def hastitlemaster(self):
         return self.HasTitleMaster
@@ -15854,7 +15379,7 @@ class Presentation:
     def HasVBProject(self):
         return self.presentation.HasVBProject
 
-    # Lower case alias for HasVBProject
+    # Lower case aliases for HasVBProject
     @property
     def hasvbproject(self):
         return self.HasVBProject
@@ -15863,7 +15388,7 @@ class Presentation:
     def InMergeMode(self):
         return self.presentation.InMergeMode
 
-    # Lower case alias for InMergeMode
+    # Lower case aliases for InMergeMode
     @property
     def inmergemode(self):
         return self.InMergeMode
@@ -15872,7 +15397,7 @@ class Presentation:
     def IsFullyDownloaded(self):
         return self.presentation.IsFullyDownloaded
 
-    # Lower case alias for IsFullyDownloaded
+    # Lower case aliases for IsFullyDownloaded
     @property
     def isfullydownloaded(self):
         return self.IsFullyDownloaded
@@ -15881,16 +15406,15 @@ class Presentation:
     def LayoutDirection(self):
         return self.presentation.LayoutDirection
 
-    # Lower case alias for LayoutDirection
-    @property
-    def layoutdirection(self):
-        return self.LayoutDirection
-
     @LayoutDirection.setter
     def LayoutDirection(self, value):
         self.presentation.LayoutDirection = value
 
-    # Lower case alias for LayoutDirection setter
+    # Lower case aliases for LayoutDirection
+    @property
+    def layoutdirection(self):
+        return self.LayoutDirection
+
     @layoutdirection.setter
     def layoutdirection(self, value):
         self.LayoutDirection = value
@@ -15899,7 +15423,7 @@ class Presentation:
     def Name(self):
         return self.presentation.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -15908,16 +15432,15 @@ class Presentation:
     def NoLineBreakAfter(self):
         return self.presentation.NoLineBreakAfter
 
-    # Lower case alias for NoLineBreakAfter
-    @property
-    def nolinebreakafter(self):
-        return self.NoLineBreakAfter
-
     @NoLineBreakAfter.setter
     def NoLineBreakAfter(self, value):
         self.presentation.NoLineBreakAfter = value
 
-    # Lower case alias for NoLineBreakAfter setter
+    # Lower case aliases for NoLineBreakAfter
+    @property
+    def nolinebreakafter(self):
+        return self.NoLineBreakAfter
+
     @nolinebreakafter.setter
     def nolinebreakafter(self, value):
         self.NoLineBreakAfter = value
@@ -15926,16 +15449,15 @@ class Presentation:
     def NoLineBreakBefore(self):
         return self.presentation.NoLineBreakBefore
 
-    # Lower case alias for NoLineBreakBefore
-    @property
-    def nolinebreakbefore(self):
-        return self.NoLineBreakBefore
-
     @NoLineBreakBefore.setter
     def NoLineBreakBefore(self, value):
         self.presentation.NoLineBreakBefore = value
 
-    # Lower case alias for NoLineBreakBefore setter
+    # Lower case aliases for NoLineBreakBefore
+    @property
+    def nolinebreakbefore(self):
+        return self.NoLineBreakBefore
+
     @nolinebreakbefore.setter
     def nolinebreakbefore(self, value):
         self.NoLineBreakBefore = value
@@ -15944,7 +15466,7 @@ class Presentation:
     def NotesMaster(self):
         return Master(self.presentation.NotesMaster)
 
-    # Lower case alias for NotesMaster
+    # Lower case aliases for NotesMaster
     @property
     def notesmaster(self):
         return self.NotesMaster
@@ -15953,7 +15475,7 @@ class Presentation:
     def PageSetup(self):
         return PageSetup(self.presentation.PageSetup)
 
-    # Lower case alias for PageSetup
+    # Lower case aliases for PageSetup
     @property
     def pagesetup(self):
         return self.PageSetup
@@ -15962,7 +15484,7 @@ class Presentation:
     def Parent(self):
         return self.presentation.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -15971,16 +15493,15 @@ class Presentation:
     def Password(self):
         return self.presentation.Password
 
-    # Lower case alias for Password
-    @property
-    def password(self):
-        return self.Password
-
     @Password.setter
     def Password(self, value):
         self.presentation.Password = value
 
-    # Lower case alias for Password setter
+    # Lower case aliases for Password
+    @property
+    def password(self):
+        return self.Password
+
     @password.setter
     def password(self, value):
         self.Password = value
@@ -15989,7 +15510,7 @@ class Presentation:
     def PasswordEncryptionAlgorithm(self):
         return self.presentation.PasswordEncryptionAlgorithm
 
-    # Lower case alias for PasswordEncryptionAlgorithm
+    # Lower case aliases for PasswordEncryptionAlgorithm
     @property
     def passwordencryptionalgorithm(self):
         return self.PasswordEncryptionAlgorithm
@@ -15998,7 +15519,7 @@ class Presentation:
     def PasswordEncryptionFileProperties(self):
         return self.presentation.PasswordEncryptionFileProperties
 
-    # Lower case alias for PasswordEncryptionFileProperties
+    # Lower case aliases for PasswordEncryptionFileProperties
     @property
     def passwordencryptionfileproperties(self):
         return self.PasswordEncryptionFileProperties
@@ -16007,7 +15528,7 @@ class Presentation:
     def PasswordEncryptionKeyLength(self):
         return self.presentation.PasswordEncryptionKeyLength
 
-    # Lower case alias for PasswordEncryptionKeyLength
+    # Lower case aliases for PasswordEncryptionKeyLength
     @property
     def passwordencryptionkeylength(self):
         return self.PasswordEncryptionKeyLength
@@ -16016,7 +15537,7 @@ class Presentation:
     def PasswordEncryptionProvider(self):
         return self.presentation.PasswordEncryptionProvider
 
-    # Lower case alias for PasswordEncryptionProvider
+    # Lower case aliases for PasswordEncryptionProvider
     @property
     def passwordencryptionprovider(self):
         return self.PasswordEncryptionProvider
@@ -16025,7 +15546,7 @@ class Presentation:
     def Path(self):
         return Presentation(self.presentation.Path)
 
-    # Lower case alias for Path
+    # Lower case aliases for Path
     @property
     def path(self):
         return self.Path
@@ -16034,7 +15555,7 @@ class Presentation:
     def PrintOptions(self):
         return PrintOptions(self.presentation.PrintOptions)
 
-    # Lower case alias for PrintOptions
+    # Lower case aliases for PrintOptions
     @property
     def printoptions(self):
         return self.PrintOptions
@@ -16043,7 +15564,7 @@ class Presentation:
     def ReadOnly(self):
         return self.presentation.ReadOnly
 
-    # Lower case alias for ReadOnly
+    # Lower case aliases for ReadOnly
     @property
     def readonly(self):
         return self.ReadOnly
@@ -16052,7 +15573,7 @@ class Presentation:
     def ReadOnlyRecommended(self):
         return self.presentation.ReadOnlyRecommended
 
-    # Lower case alias for ReadOnlyRecommended
+    # Lower case aliases for ReadOnlyRecommended
     @property
     def readonlyrecommended(self):
         return self.ReadOnlyRecommended
@@ -16061,16 +15582,15 @@ class Presentation:
     def RemovePersonalInformation(self):
         return self.presentation.RemovePersonalInformation
 
-    # Lower case alias for RemovePersonalInformation
-    @property
-    def removepersonalinformation(self):
-        return self.RemovePersonalInformation
-
     @RemovePersonalInformation.setter
     def RemovePersonalInformation(self, value):
         self.presentation.RemovePersonalInformation = value
 
-    # Lower case alias for RemovePersonalInformation setter
+    # Lower case aliases for RemovePersonalInformation
+    @property
+    def removepersonalinformation(self):
+        return self.RemovePersonalInformation
+
     @removepersonalinformation.setter
     def removepersonalinformation(self, value):
         self.RemovePersonalInformation = value
@@ -16079,7 +15599,7 @@ class Presentation:
     def Research(self):
         return Research(self.presentation.Research)
 
-    # Lower case alias for Research
+    # Lower case aliases for Research
     @property
     def research(self):
         return self.Research
@@ -16088,16 +15608,15 @@ class Presentation:
     def Saved(self):
         return self.presentation.Saved
 
-    # Lower case alias for Saved
-    @property
-    def saved(self):
-        return self.Saved
-
     @Saved.setter
     def Saved(self, value):
         self.presentation.Saved = value
 
-    # Lower case alias for Saved setter
+    # Lower case aliases for Saved
+    @property
+    def saved(self):
+        return self.Saved
+
     @saved.setter
     def saved(self, value):
         self.Saved = value
@@ -16106,7 +15625,7 @@ class Presentation:
     def SectionProperties(self):
         return SectionProperties(self.presentation.SectionProperties)
 
-    # Lower case alias for SectionProperties
+    # Lower case aliases for SectionProperties
     @property
     def sectionproperties(self):
         return self.SectionProperties
@@ -16115,7 +15634,7 @@ class Presentation:
     def SensitivityLabel(self):
         return self.presentation.SensitivityLabel
 
-    # Lower case alias for SensitivityLabel
+    # Lower case aliases for SensitivityLabel
     @property
     def sensitivitylabel(self):
         return self.SensitivityLabel
@@ -16124,7 +15643,7 @@ class Presentation:
     def ServerPolicy(self):
         return self.presentation.ServerPolicy
 
-    # Lower case alias for ServerPolicy
+    # Lower case aliases for ServerPolicy
     @property
     def serverpolicy(self):
         return self.ServerPolicy
@@ -16133,7 +15652,7 @@ class Presentation:
     def SharedWorkspace(self):
         return self.presentation.SharedWorkspace
 
-    # Lower case alias for SharedWorkspace
+    # Lower case aliases for SharedWorkspace
     @property
     def sharedworkspace(self):
         return self.SharedWorkspace
@@ -16142,7 +15661,7 @@ class Presentation:
     def Signatures(self):
         return self.presentation.Signatures
 
-    # Lower case alias for Signatures
+    # Lower case aliases for Signatures
     @property
     def signatures(self):
         return self.Signatures
@@ -16151,7 +15670,7 @@ class Presentation:
     def SlideMaster(self):
         return Master(self.presentation.SlideMaster)
 
-    # Lower case alias for SlideMaster
+    # Lower case aliases for SlideMaster
     @property
     def slidemaster(self):
         return self.SlideMaster
@@ -16160,7 +15679,7 @@ class Presentation:
     def Slides(self):
         return Slides(self.presentation.Slides)
 
-    # Lower case alias for Slides
+    # Lower case aliases for Slides
     @property
     def slides(self):
         return self.Slides
@@ -16169,7 +15688,7 @@ class Presentation:
     def SlideShowSettings(self):
         return SlideShowSettings(self.presentation.SlideShowSettings)
 
-    # Lower case alias for SlideShowSettings
+    # Lower case aliases for SlideShowSettings
     @property
     def slideshowsettings(self):
         return self.SlideShowSettings
@@ -16178,7 +15697,7 @@ class Presentation:
     def SlideShowWindow(self):
         return SlideShowWindow(self.presentation.SlideShowWindow)
 
-    # Lower case alias for SlideShowWindow
+    # Lower case aliases for SlideShowWindow
     @property
     def slideshowwindow(self):
         return self.SlideShowWindow
@@ -16187,16 +15706,15 @@ class Presentation:
     def SnapToGrid(self):
         return self.presentation.SnapToGrid
 
-    # Lower case alias for SnapToGrid
-    @property
-    def snaptogrid(self):
-        return self.SnapToGrid
-
     @SnapToGrid.setter
     def SnapToGrid(self, value):
         self.presentation.SnapToGrid = value
 
-    # Lower case alias for SnapToGrid setter
+    # Lower case aliases for SnapToGrid
+    @property
+    def snaptogrid(self):
+        return self.SnapToGrid
+
     @snaptogrid.setter
     def snaptogrid(self, value):
         self.SnapToGrid = value
@@ -16205,7 +15723,7 @@ class Presentation:
     def Sync(self):
         return self.presentation.Sync
 
-    # Lower case alias for Sync
+    # Lower case aliases for Sync
     @property
     def sync(self):
         return self.Sync
@@ -16214,7 +15732,7 @@ class Presentation:
     def Tags(self):
         return Tags(self.presentation.Tags)
 
-    # Lower case alias for Tags
+    # Lower case aliases for Tags
     @property
     def tags(self):
         return self.Tags
@@ -16223,7 +15741,7 @@ class Presentation:
     def TemplateName(self):
         return self.presentation.TemplateName
 
-    # Lower case alias for TemplateName
+    # Lower case aliases for TemplateName
     @property
     def templatename(self):
         return self.TemplateName
@@ -16232,7 +15750,7 @@ class Presentation:
     def TitleMaster(self):
         return Master(self.presentation.TitleMaster)
 
-    # Lower case alias for TitleMaster
+    # Lower case aliases for TitleMaster
     @property
     def titlemaster(self):
         return self.TitleMaster
@@ -16241,7 +15759,7 @@ class Presentation:
     def VBASigned(self):
         return self.presentation.VBASigned
 
-    # Lower case alias for VBASigned
+    # Lower case aliases for VBASigned
     @property
     def vbasigned(self):
         return self.VBASigned
@@ -16250,7 +15768,7 @@ class Presentation:
     def VBProject(self):
         return self.presentation.VBProject
 
-    # Lower case alias for VBProject
+    # Lower case aliases for VBProject
     @property
     def vbproject(self):
         return self.VBProject
@@ -16259,7 +15777,7 @@ class Presentation:
     def Windows(self):
         return DocumentWindows(self.presentation.Windows)
 
-    # Lower case alias for Windows
+    # Lower case aliases for Windows
     @property
     def windows(self):
         return self.Windows
@@ -16268,16 +15786,15 @@ class Presentation:
     def WritePassword(self):
         return self.presentation.WritePassword
 
-    # Lower case alias for WritePassword
-    @property
-    def writepassword(self):
-        return self.WritePassword
-
     @WritePassword.setter
     def WritePassword(self, value):
         self.presentation.WritePassword = value
 
-    # Lower case alias for WritePassword setter
+    # Lower case aliases for WritePassword
+    @property
+    def writepassword(self):
+        return self.WritePassword
+
     @writepassword.setter
     def writepassword(self, value):
         self.WritePassword = value
@@ -16413,7 +15930,7 @@ class Presentations:
     def Count(self):
         return self.presentations.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -16422,7 +15939,7 @@ class Presentations:
     def Parent(self):
         return self.presentations.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -16461,7 +15978,7 @@ class PrintOptions:
     def ActivePrinter(self):
         return self.printoptions.ActivePrinter
 
-    # Lower case alias for ActivePrinter
+    # Lower case aliases for ActivePrinter
     @property
     def activeprinter(self):
         return self.ActivePrinter
@@ -16474,16 +15991,15 @@ class PrintOptions:
     def Collate(self):
         return self.printoptions.Collate
 
-    # Lower case alias for Collate
-    @property
-    def collate(self):
-        return self.Collate
-
     @Collate.setter
     def Collate(self, value):
         self.printoptions.Collate = value
 
-    # Lower case alias for Collate setter
+    # Lower case aliases for Collate
+    @property
+    def collate(self):
+        return self.Collate
+
     @collate.setter
     def collate(self, value):
         self.Collate = value
@@ -16492,16 +16008,15 @@ class PrintOptions:
     def FitToPage(self):
         return self.printoptions.FitToPage
 
-    # Lower case alias for FitToPage
-    @property
-    def fittopage(self):
-        return self.FitToPage
-
     @FitToPage.setter
     def FitToPage(self, value):
         self.printoptions.FitToPage = value
 
-    # Lower case alias for FitToPage setter
+    # Lower case aliases for FitToPage
+    @property
+    def fittopage(self):
+        return self.FitToPage
+
     @fittopage.setter
     def fittopage(self, value):
         self.FitToPage = value
@@ -16510,16 +16025,15 @@ class PrintOptions:
     def FrameSlides(self):
         return self.printoptions.FrameSlides
 
-    # Lower case alias for FrameSlides
-    @property
-    def frameslides(self):
-        return self.FrameSlides
-
     @FrameSlides.setter
     def FrameSlides(self, value):
         self.printoptions.FrameSlides = value
 
-    # Lower case alias for FrameSlides setter
+    # Lower case aliases for FrameSlides
+    @property
+    def frameslides(self):
+        return self.FrameSlides
+
     @frameslides.setter
     def frameslides(self, value):
         self.FrameSlides = value
@@ -16528,16 +16042,15 @@ class PrintOptions:
     def HandoutOrder(self):
         return self.printoptions.HandoutOrder
 
-    # Lower case alias for HandoutOrder
-    @property
-    def handoutorder(self):
-        return self.HandoutOrder
-
     @HandoutOrder.setter
     def HandoutOrder(self, value):
         self.printoptions.HandoutOrder = value
 
-    # Lower case alias for HandoutOrder setter
+    # Lower case aliases for HandoutOrder
+    @property
+    def handoutorder(self):
+        return self.HandoutOrder
+
     @handoutorder.setter
     def handoutorder(self, value):
         self.HandoutOrder = value
@@ -16546,16 +16059,15 @@ class PrintOptions:
     def HighQuality(self):
         return self.printoptions.HighQuality
 
-    # Lower case alias for HighQuality
-    @property
-    def highquality(self):
-        return self.HighQuality
-
     @HighQuality.setter
     def HighQuality(self, value):
         self.printoptions.HighQuality = value
 
-    # Lower case alias for HighQuality setter
+    # Lower case aliases for HighQuality
+    @property
+    def highquality(self):
+        return self.HighQuality
+
     @highquality.setter
     def highquality(self, value):
         self.HighQuality = value
@@ -16564,16 +16076,15 @@ class PrintOptions:
     def NumberOfCopies(self):
         return self.printoptions.NumberOfCopies
 
-    # Lower case alias for NumberOfCopies
-    @property
-    def numberofcopies(self):
-        return self.NumberOfCopies
-
     @NumberOfCopies.setter
     def NumberOfCopies(self, value):
         self.printoptions.NumberOfCopies = value
 
-    # Lower case alias for NumberOfCopies setter
+    # Lower case aliases for NumberOfCopies
+    @property
+    def numberofcopies(self):
+        return self.NumberOfCopies
+
     @numberofcopies.setter
     def numberofcopies(self, value):
         self.NumberOfCopies = value
@@ -16582,16 +16093,15 @@ class PrintOptions:
     def OutputType(self):
         return self.printoptions.OutputType
 
-    # Lower case alias for OutputType
-    @property
-    def outputtype(self):
-        return self.OutputType
-
     @OutputType.setter
     def OutputType(self, value):
         self.printoptions.OutputType = value
 
-    # Lower case alias for OutputType setter
+    # Lower case aliases for OutputType
+    @property
+    def outputtype(self):
+        return self.OutputType
+
     @outputtype.setter
     def outputtype(self, value):
         self.OutputType = value
@@ -16600,7 +16110,7 @@ class PrintOptions:
     def Parent(self):
         return self.printoptions.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -16609,16 +16119,15 @@ class PrintOptions:
     def PrintColorType(self):
         return self.printoptions.PrintColorType
 
-    # Lower case alias for PrintColorType
-    @property
-    def printcolortype(self):
-        return self.PrintColorType
-
     @PrintColorType.setter
     def PrintColorType(self, value):
         self.printoptions.PrintColorType = value
 
-    # Lower case alias for PrintColorType setter
+    # Lower case aliases for PrintColorType
+    @property
+    def printcolortype(self):
+        return self.PrintColorType
+
     @printcolortype.setter
     def printcolortype(self, value):
         self.PrintColorType = value
@@ -16627,16 +16136,15 @@ class PrintOptions:
     def PrintComments(self):
         return self.printoptions.PrintComments
 
-    # Lower case alias for PrintComments
-    @property
-    def printcomments(self):
-        return self.PrintComments
-
     @PrintComments.setter
     def PrintComments(self, value):
         self.printoptions.PrintComments = value
 
-    # Lower case alias for PrintComments setter
+    # Lower case aliases for PrintComments
+    @property
+    def printcomments(self):
+        return self.PrintComments
+
     @printcomments.setter
     def printcomments(self, value):
         self.PrintComments = value
@@ -16645,16 +16153,15 @@ class PrintOptions:
     def PrintFontsAsGraphics(self):
         return self.printoptions.PrintFontsAsGraphics
 
-    # Lower case alias for PrintFontsAsGraphics
-    @property
-    def printfontsasgraphics(self):
-        return self.PrintFontsAsGraphics
-
     @PrintFontsAsGraphics.setter
     def PrintFontsAsGraphics(self, value):
         self.printoptions.PrintFontsAsGraphics = value
 
-    # Lower case alias for PrintFontsAsGraphics setter
+    # Lower case aliases for PrintFontsAsGraphics
+    @property
+    def printfontsasgraphics(self):
+        return self.PrintFontsAsGraphics
+
     @printfontsasgraphics.setter
     def printfontsasgraphics(self, value):
         self.PrintFontsAsGraphics = value
@@ -16663,16 +16170,15 @@ class PrintOptions:
     def PrintHiddenSlides(self):
         return self.printoptions.PrintHiddenSlides
 
-    # Lower case alias for PrintHiddenSlides
-    @property
-    def printhiddenslides(self):
-        return self.PrintHiddenSlides
-
     @PrintHiddenSlides.setter
     def PrintHiddenSlides(self, value):
         self.printoptions.PrintHiddenSlides = value
 
-    # Lower case alias for PrintHiddenSlides setter
+    # Lower case aliases for PrintHiddenSlides
+    @property
+    def printhiddenslides(self):
+        return self.PrintHiddenSlides
+
     @printhiddenslides.setter
     def printhiddenslides(self, value):
         self.PrintHiddenSlides = value
@@ -16681,16 +16187,15 @@ class PrintOptions:
     def PrintInBackground(self):
         return self.printoptions.PrintInBackground
 
-    # Lower case alias for PrintInBackground
-    @property
-    def printinbackground(self):
-        return self.PrintInBackground
-
     @PrintInBackground.setter
     def PrintInBackground(self, value):
         self.printoptions.PrintInBackground = value
 
-    # Lower case alias for PrintInBackground setter
+    # Lower case aliases for PrintInBackground
+    @property
+    def printinbackground(self):
+        return self.PrintInBackground
+
     @printinbackground.setter
     def printinbackground(self, value):
         self.PrintInBackground = value
@@ -16699,7 +16204,7 @@ class PrintOptions:
     def Ranges(self):
         return PrintRanges(self.printoptions.Ranges)
 
-    # Lower case alias for Ranges
+    # Lower case aliases for Ranges
     @property
     def ranges(self):
         return self.Ranges
@@ -16708,16 +16213,15 @@ class PrintOptions:
     def RangeType(self):
         return self.printoptions.RangeType
 
-    # Lower case alias for RangeType
-    @property
-    def rangetype(self):
-        return self.RangeType
-
     @RangeType.setter
     def RangeType(self, value):
         self.printoptions.RangeType = value
 
-    # Lower case alias for RangeType setter
+    # Lower case aliases for RangeType
+    @property
+    def rangetype(self):
+        return self.RangeType
+
     @rangetype.setter
     def rangetype(self, value):
         self.RangeType = value
@@ -16726,16 +16230,15 @@ class PrintOptions:
     def sectionIndex(self):
         return PrintOptions(self.printoptions.sectionIndex)
 
-    # Lower case alias for sectionIndex
-    @property
-    def sectionindex(self):
-        return self.sectionIndex
-
     @sectionIndex.setter
     def sectionIndex(self, value):
         self.printoptions.sectionIndex = value
 
-    # Lower case alias for sectionIndex setter
+    # Lower case aliases for sectionIndex
+    @property
+    def sectionindex(self):
+        return self.sectionIndex
+
     @sectionindex.setter
     def sectionindex(self, value):
         self.sectionIndex = value
@@ -16744,16 +16247,15 @@ class PrintOptions:
     def SlideShowName(self):
         return self.printoptions.SlideShowName
 
-    # Lower case alias for SlideShowName
-    @property
-    def slideshowname(self):
-        return self.SlideShowName
-
     @SlideShowName.setter
     def SlideShowName(self, value):
         self.printoptions.SlideShowName = value
 
-    # Lower case alias for SlideShowName setter
+    # Lower case aliases for SlideShowName
+    @property
+    def slideshowname(self):
+        return self.SlideShowName
+
     @slideshowname.setter
     def slideshowname(self, value):
         self.SlideShowName = value
@@ -16772,7 +16274,7 @@ class PrintRange:
     def End(self):
         return self.printrange.End
 
-    # Lower case alias for End
+    # Lower case aliases for End
     @property
     def end(self):
         return self.End
@@ -16781,7 +16283,7 @@ class PrintRange:
     def Parent(self):
         return self.printrange.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -16790,7 +16292,7 @@ class PrintRange:
     def Start(self):
         return self.printrange.Start
 
-    # Lower case alias for Start
+    # Lower case aliases for Start
     @property
     def start(self):
         return self.Start
@@ -16815,7 +16317,7 @@ class PrintRanges:
     def Count(self):
         return self.printranges.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -16824,7 +16326,7 @@ class PrintRanges:
     def Parent(self):
         return self.printranges.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -16862,7 +16364,7 @@ class PropertyEffect:
     def Parent(self):
         return self.propertyeffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -16871,7 +16373,7 @@ class PropertyEffect:
     def Points(self):
         return AnimationPoints(self.propertyeffect.Points)
 
-    # Lower case alias for Points
+    # Lower case aliases for Points
     @property
     def points(self):
         return self.Points
@@ -16888,16 +16390,15 @@ class PropertyEffect:
     def To(self):
         return self.propertyeffect.To
 
-    # Lower case alias for To
-    @property
-    def to(self):
-        return self.To
-
     @To.setter
     def To(self, value):
         self.propertyeffect.To = value
 
-    # Lower case alias for To setter
+    # Lower case aliases for To
+    @property
+    def to(self):
+        return self.To
+
     @to.setter
     def to(self, value):
         self.To = value
@@ -16912,7 +16413,7 @@ class ProtectedViewWindow:
     def Active(self):
         return self.protectedviewwindow.Active
 
-    # Lower case alias for Active
+    # Lower case aliases for Active
     @property
     def active(self):
         return self.Active
@@ -16925,7 +16426,7 @@ class ProtectedViewWindow:
     def Caption(self):
         return self.protectedviewwindow.Caption
 
-    # Lower case alias for Caption
+    # Lower case aliases for Caption
     @property
     def caption(self):
         return self.Caption
@@ -16934,16 +16435,15 @@ class ProtectedViewWindow:
     def Height(self):
         return self.protectedviewwindow.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.protectedviewwindow.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -16952,16 +16452,15 @@ class ProtectedViewWindow:
     def Left(self):
         return self.protectedviewwindow.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.protectedviewwindow.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -16970,7 +16469,7 @@ class ProtectedViewWindow:
     def Parent(self):
         return self.protectedviewwindow.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -16979,7 +16478,7 @@ class ProtectedViewWindow:
     def Presentation(self):
         return Presentation(self.protectedviewwindow.Presentation)
 
-    # Lower case alias for Presentation
+    # Lower case aliases for Presentation
     @property
     def presentation(self):
         return self.Presentation
@@ -16988,7 +16487,7 @@ class ProtectedViewWindow:
     def SourceName(self):
         return ProtectedViewWindow(self.protectedviewwindow.SourceName)
 
-    # Lower case alias for SourceName
+    # Lower case aliases for SourceName
     @property
     def sourcename(self):
         return self.SourceName
@@ -16997,7 +16496,7 @@ class ProtectedViewWindow:
     def SourcePath(self):
         return ProtectedViewWindow(self.protectedviewwindow.SourcePath)
 
-    # Lower case alias for SourcePath
+    # Lower case aliases for SourcePath
     @property
     def sourcepath(self):
         return self.SourcePath
@@ -17006,16 +16505,15 @@ class ProtectedViewWindow:
     def Top(self):
         return self.protectedviewwindow.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.protectedviewwindow.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -17024,16 +16522,15 @@ class ProtectedViewWindow:
     def Width(self):
         return self.protectedviewwindow.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.protectedviewwindow.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -17042,16 +16539,15 @@ class ProtectedViewWindow:
     def WindowState(self):
         return self.protectedviewwindow.WindowState
 
-    # Lower case alias for WindowState
-    @property
-    def windowstate(self):
-        return self.WindowState
-
     @WindowState.setter
     def WindowState(self, value):
         self.protectedviewwindow.WindowState = value
 
-    # Lower case alias for WindowState setter
+    # Lower case aliases for WindowState
+    @property
+    def windowstate(self):
+        return self.WindowState
+
     @windowstate.setter
     def windowstate(self, value):
         self.WindowState = value
@@ -17080,7 +16576,7 @@ class ProtectedViewWindows:
     def Count(self):
         return self.protectedviewwindows.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17089,7 +16585,7 @@ class ProtectedViewWindows:
     def Parent(self):
         return self.protectedviewwindows.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17116,16 +16612,15 @@ class PublishObject:
     def FileName(self):
         return self.publishobject.FileName
 
-    # Lower case alias for FileName
-    @property
-    def filename(self):
-        return self.FileName
-
     @FileName.setter
     def FileName(self, value):
         self.publishobject.FileName = value
 
-    # Lower case alias for FileName setter
+    # Lower case aliases for FileName
+    @property
+    def filename(self):
+        return self.FileName
+
     @filename.setter
     def filename(self, value):
         self.FileName = value
@@ -17134,16 +16629,15 @@ class PublishObject:
     def HTMLVersion(self):
         return self.publishobject.HTMLVersion
 
-    # Lower case alias for HTMLVersion
-    @property
-    def htmlversion(self):
-        return self.HTMLVersion
-
     @HTMLVersion.setter
     def HTMLVersion(self, value):
         self.publishobject.HTMLVersion = value
 
-    # Lower case alias for HTMLVersion setter
+    # Lower case aliases for HTMLVersion
+    @property
+    def htmlversion(self):
+        return self.HTMLVersion
+
     @htmlversion.setter
     def htmlversion(self, value):
         self.HTMLVersion = value
@@ -17152,7 +16646,7 @@ class PublishObject:
     def Parent(self):
         return self.publishobject.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17161,16 +16655,15 @@ class PublishObject:
     def RangeEnd(self):
         return self.publishobject.RangeEnd
 
-    # Lower case alias for RangeEnd
-    @property
-    def rangeend(self):
-        return self.RangeEnd
-
     @RangeEnd.setter
     def RangeEnd(self, value):
         self.publishobject.RangeEnd = value
 
-    # Lower case alias for RangeEnd setter
+    # Lower case aliases for RangeEnd
+    @property
+    def rangeend(self):
+        return self.RangeEnd
+
     @rangeend.setter
     def rangeend(self, value):
         self.RangeEnd = value
@@ -17179,16 +16672,15 @@ class PublishObject:
     def RangeStart(self):
         return self.publishobject.RangeStart
 
-    # Lower case alias for RangeStart
-    @property
-    def rangestart(self):
-        return self.RangeStart
-
     @RangeStart.setter
     def RangeStart(self, value):
         self.publishobject.RangeStart = value
 
-    # Lower case alias for RangeStart setter
+    # Lower case aliases for RangeStart
+    @property
+    def rangestart(self):
+        return self.RangeStart
+
     @rangestart.setter
     def rangestart(self, value):
         self.RangeStart = value
@@ -17197,16 +16689,15 @@ class PublishObject:
     def SlideShowName(self):
         return self.publishobject.SlideShowName
 
-    # Lower case alias for SlideShowName
-    @property
-    def slideshowname(self):
-        return self.SlideShowName
-
     @SlideShowName.setter
     def SlideShowName(self, value):
         self.publishobject.SlideShowName = value
 
-    # Lower case alias for SlideShowName setter
+    # Lower case aliases for SlideShowName
+    @property
+    def slideshowname(self):
+        return self.SlideShowName
+
     @slideshowname.setter
     def slideshowname(self, value):
         self.SlideShowName = value
@@ -17215,16 +16706,15 @@ class PublishObject:
     def SourceType(self):
         return self.publishobject.SourceType
 
-    # Lower case alias for SourceType
-    @property
-    def sourcetype(self):
-        return self.SourceType
-
     @SourceType.setter
     def SourceType(self, value):
         self.publishobject.SourceType = value
 
-    # Lower case alias for SourceType setter
+    # Lower case aliases for SourceType
+    @property
+    def sourcetype(self):
+        return self.SourceType
+
     @sourcetype.setter
     def sourcetype(self, value):
         self.SourceType = value
@@ -17233,16 +16723,15 @@ class PublishObject:
     def SpeakerNotes(self):
         return self.publishobject.SpeakerNotes
 
-    # Lower case alias for SpeakerNotes
-    @property
-    def speakernotes(self):
-        return self.SpeakerNotes
-
     @SpeakerNotes.setter
     def SpeakerNotes(self, value):
         self.publishobject.SpeakerNotes = value
 
-    # Lower case alias for SpeakerNotes setter
+    # Lower case aliases for SpeakerNotes
+    @property
+    def speakernotes(self):
+        return self.SpeakerNotes
+
     @speakernotes.setter
     def speakernotes(self, value):
         self.SpeakerNotes = value
@@ -17267,7 +16756,7 @@ class PublishObjects:
     def Count(self):
         return self.publishobjects.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17276,7 +16765,7 @@ class PublishObjects:
     def Parent(self):
         return self.publishobjects.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17298,7 +16787,7 @@ class ResampleMediaTasks:
     def Count(self):
         return self.resamplemediatasks.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17307,7 +16796,7 @@ class ResampleMediaTasks:
     def PercentComplete(self):
         return self.resamplemediatasks.PercentComplete
 
-    # Lower case alias for PercentComplete
+    # Lower case aliases for PercentComplete
     @property
     def percentcomplete(self):
         return self.PercentComplete
@@ -17339,7 +16828,7 @@ class Research:
     def Parent(self):
         return self.research.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17370,7 +16859,7 @@ class RGBColor:
     def Parent(self):
         return self.rgbcolor.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17379,16 +16868,15 @@ class RGBColor:
     def RGB(self):
         return PpColorSchemeIndex(self.rgbcolor.RGB)
 
-    # Lower case alias for RGB
-    @property
-    def rgb(self):
-        return self.RGB
-
     @RGB.setter
     def RGB(self, value):
         self.rgbcolor.RGB = value
 
-    # Lower case alias for RGB setter
+    # Lower case aliases for RGB
+    @property
+    def rgb(self):
+        return self.RGB
+
     @rgb.setter
     def rgb(self, value):
         self.RGB = value
@@ -17407,16 +16895,15 @@ class RotationEffect:
     def By(self):
         return self.rotationeffect.By
 
-    # Lower case alias for By
-    @property
-    def by(self):
-        return self.By
-
     @By.setter
     def By(self, value):
         self.rotationeffect.By = value
 
-    # Lower case alias for By setter
+    # Lower case aliases for By
+    @property
+    def by(self):
+        return self.By
+
     @by.setter
     def by(self, value):
         self.By = value
@@ -17433,7 +16920,7 @@ class RotationEffect:
     def Parent(self):
         return self.rotationeffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17442,16 +16929,15 @@ class RotationEffect:
     def To(self):
         return self.rotationeffect.To
 
-    # Lower case alias for To
-    @property
-    def to(self):
-        return self.To
-
     @To.setter
     def To(self, value):
         self.rotationeffect.To = value
 
-    # Lower case alias for To setter
+    # Lower case aliases for To
+    @property
+    def to(self):
+        return self.To
+
     @to.setter
     def to(self, value):
         self.To = value
@@ -17473,7 +16959,7 @@ class Row:
         else:
             return CellRange(self.row.GetCells(*arguments))
 
-    # Lower case alias for Cells
+    # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
         arguments = [RowIndex, ColumnIndex]
         return self.Cells(*arguments)
@@ -17482,16 +16968,15 @@ class Row:
     def Height(self):
         return self.row.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.row.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -17500,7 +16985,7 @@ class Row:
     def Parent(self):
         return self.row.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17528,7 +17013,7 @@ class Rows:
     def Count(self):
         return self.rows.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17537,7 +17022,7 @@ class Rows:
     def Parent(self):
         return self.rows.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17564,7 +17049,7 @@ class Ruler:
     def Levels(self):
         return RulerLevels(self.ruler.Levels)
 
-    # Lower case alias for Levels
+    # Lower case aliases for Levels
     @property
     def levels(self):
         return self.Levels
@@ -17573,7 +17058,7 @@ class Ruler:
     def Parent(self):
         return self.ruler.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17582,7 +17067,7 @@ class Ruler:
     def TabStops(self):
         return TabStops(self.ruler.TabStops)
 
-    # Lower case alias for TabStops
+    # Lower case aliases for TabStops
     @property
     def tabstops(self):
         return self.TabStops
@@ -17601,16 +17086,15 @@ class RulerLevel:
     def FirstMargin(self):
         return self.rulerlevel.FirstMargin
 
-    # Lower case alias for FirstMargin
-    @property
-    def firstmargin(self):
-        return self.FirstMargin
-
     @FirstMargin.setter
     def FirstMargin(self, value):
         self.rulerlevel.FirstMargin = value
 
-    # Lower case alias for FirstMargin setter
+    # Lower case aliases for FirstMargin
+    @property
+    def firstmargin(self):
+        return self.FirstMargin
+
     @firstmargin.setter
     def firstmargin(self, value):
         self.FirstMargin = value
@@ -17619,16 +17103,15 @@ class RulerLevel:
     def LeftMargin(self):
         return self.rulerlevel.LeftMargin
 
-    # Lower case alias for LeftMargin
-    @property
-    def leftmargin(self):
-        return self.LeftMargin
-
     @LeftMargin.setter
     def LeftMargin(self, value):
         self.rulerlevel.LeftMargin = value
 
-    # Lower case alias for LeftMargin setter
+    # Lower case aliases for LeftMargin
+    @property
+    def leftmargin(self):
+        return self.LeftMargin
+
     @leftmargin.setter
     def leftmargin(self, value):
         self.LeftMargin = value
@@ -17637,7 +17120,7 @@ class RulerLevel:
     def Parent(self):
         return self.rulerlevel.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17659,7 +17142,7 @@ class RulerLevels:
     def Count(self):
         return self.rulerlevels.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17668,7 +17151,7 @@ class RulerLevels:
     def Parent(self):
         return self.rulerlevels.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17691,16 +17174,15 @@ class ScaleEffect:
     def ByX(self):
         return self.scaleeffect.ByX
 
-    # Lower case alias for ByX
-    @property
-    def byx(self):
-        return self.ByX
-
     @ByX.setter
     def ByX(self, value):
         self.scaleeffect.ByX = value
 
-    # Lower case alias for ByX setter
+    # Lower case aliases for ByX
+    @property
+    def byx(self):
+        return self.ByX
+
     @byx.setter
     def byx(self, value):
         self.ByX = value
@@ -17709,16 +17191,15 @@ class ScaleEffect:
     def ByY(self):
         return self.scaleeffect.ByY
 
-    # Lower case alias for ByY
-    @property
-    def byy(self):
-        return self.ByY
-
     @ByY.setter
     def ByY(self, value):
         self.scaleeffect.ByY = value
 
-    # Lower case alias for ByY setter
+    # Lower case aliases for ByY
+    @property
+    def byy(self):
+        return self.ByY
+
     @byy.setter
     def byy(self, value):
         self.ByY = value
@@ -17727,16 +17208,15 @@ class ScaleEffect:
     def FromX(self):
         return self.scaleeffect.FromX
 
-    # Lower case alias for FromX
-    @property
-    def fromx(self):
-        return self.FromX
-
     @FromX.setter
     def FromX(self, value):
         self.scaleeffect.FromX = value
 
-    # Lower case alias for FromX setter
+    # Lower case aliases for FromX
+    @property
+    def fromx(self):
+        return self.FromX
+
     @fromx.setter
     def fromx(self, value):
         self.FromX = value
@@ -17745,16 +17225,15 @@ class ScaleEffect:
     def FromY(self):
         return ScaleEffect(self.scaleeffect.FromY)
 
-    # Lower case alias for FromY
-    @property
-    def fromy(self):
-        return self.FromY
-
     @FromY.setter
     def FromY(self, value):
         self.scaleeffect.FromY = value
 
-    # Lower case alias for FromY setter
+    # Lower case aliases for FromY
+    @property
+    def fromy(self):
+        return self.FromY
+
     @fromy.setter
     def fromy(self, value):
         self.FromY = value
@@ -17763,7 +17242,7 @@ class ScaleEffect:
     def Parent(self):
         return self.scaleeffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17772,16 +17251,15 @@ class ScaleEffect:
     def ToX(self):
         return self.scaleeffect.ToX
 
-    # Lower case alias for ToX
-    @property
-    def tox(self):
-        return self.ToX
-
     @ToX.setter
     def ToX(self, value):
         self.scaleeffect.ToX = value
 
-    # Lower case alias for ToX setter
+    # Lower case aliases for ToX
+    @property
+    def tox(self):
+        return self.ToX
+
     @tox.setter
     def tox(self, value):
         self.ToX = value
@@ -17790,16 +17268,15 @@ class ScaleEffect:
     def ToY(self):
         return ScaleEffect(self.scaleeffect.ToY)
 
-    # Lower case alias for ToY
-    @property
-    def toy(self):
-        return self.ToY
-
     @ToY.setter
     def ToY(self, value):
         self.scaleeffect.ToY = value
 
-    # Lower case alias for ToY setter
+    # Lower case aliases for ToY
+    @property
+    def toy(self):
+        return self.ToY
+
     @toy.setter
     def toy(self, value):
         self.ToY = value
@@ -17818,7 +17295,7 @@ class SectionProperties:
     def Count(self):
         return self.sectionproperties.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17827,7 +17304,7 @@ class SectionProperties:
     def Parent(self):
         return self.sectionproperties.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17882,7 +17359,7 @@ class Selection:
     def ChildShapeRange(self):
         return ShapeRange(self.selection.ChildShapeRange)
 
-    # Lower case alias for ChildShapeRange
+    # Lower case aliases for ChildShapeRange
     @property
     def childshaperange(self):
         return self.ChildShapeRange
@@ -17891,7 +17368,7 @@ class Selection:
     def HasChildShapeRange(self):
         return self.selection.HasChildShapeRange
 
-    # Lower case alias for HasChildShapeRange
+    # Lower case aliases for HasChildShapeRange
     @property
     def haschildshaperange(self):
         return self.HasChildShapeRange
@@ -17900,7 +17377,7 @@ class Selection:
     def Parent(self):
         return self.selection.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -17909,7 +17386,7 @@ class Selection:
     def ShapeRange(self):
         return ShapeRange(self.selection.ShapeRange)
 
-    # Lower case alias for ShapeRange
+    # Lower case aliases for ShapeRange
     @property
     def shaperange(self):
         return self.ShapeRange
@@ -17918,7 +17395,7 @@ class Selection:
     def SlideRange(self):
         return SlideRange(self.selection.SlideRange)
 
-    # Lower case alias for SlideRange
+    # Lower case aliases for SlideRange
     @property
     def sliderange(self):
         return self.SlideRange
@@ -17927,7 +17404,7 @@ class Selection:
     def TextRange(self):
         return TextRange(self.selection.TextRange)
 
-    # Lower case alias for TextRange
+    # Lower case aliases for TextRange
     @property
     def textrange(self):
         return self.TextRange
@@ -17936,7 +17413,7 @@ class Selection:
     def TextRange2(self):
         return self.selection.TextRange2
 
-    # Lower case alias for TextRange2
+    # Lower case aliases for TextRange2
     @property
     def textrange2(self):
         return self.TextRange2
@@ -17945,7 +17422,7 @@ class Selection:
     def Type(self):
         return self.selection.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -17976,7 +17453,7 @@ class Sequence:
     def Count(self):
         return self.sequence.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -17985,7 +17462,7 @@ class Sequence:
     def Parent(self):
         return self.sequence.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -18048,7 +17525,7 @@ class Sequences:
     def Count(self):
         return self.sequences.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -18057,7 +17534,7 @@ class Sequences:
     def Parent(self):
         return self.sequences.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -18084,16 +17561,15 @@ class Series:
     def ApplyPictToEnd(self):
         return self.series.ApplyPictToEnd
 
-    # Lower case alias for ApplyPictToEnd
-    @property
-    def applypicttoend(self):
-        return self.ApplyPictToEnd
-
     @ApplyPictToEnd.setter
     def ApplyPictToEnd(self, value):
         self.series.ApplyPictToEnd = value
 
-    # Lower case alias for ApplyPictToEnd setter
+    # Lower case aliases for ApplyPictToEnd
+    @property
+    def applypicttoend(self):
+        return self.ApplyPictToEnd
+
     @applypicttoend.setter
     def applypicttoend(self, value):
         self.ApplyPictToEnd = value
@@ -18102,16 +17578,15 @@ class Series:
     def ApplyPictToFront(self):
         return self.series.ApplyPictToFront
 
-    # Lower case alias for ApplyPictToFront
-    @property
-    def applypicttofront(self):
-        return self.ApplyPictToFront
-
     @ApplyPictToFront.setter
     def ApplyPictToFront(self, value):
         self.series.ApplyPictToFront = value
 
-    # Lower case alias for ApplyPictToFront setter
+    # Lower case aliases for ApplyPictToFront
+    @property
+    def applypicttofront(self):
+        return self.ApplyPictToFront
+
     @applypicttofront.setter
     def applypicttofront(self, value):
         self.ApplyPictToFront = value
@@ -18120,16 +17595,15 @@ class Series:
     def ApplyPictToSides(self):
         return self.series.ApplyPictToSides
 
-    # Lower case alias for ApplyPictToSides
-    @property
-    def applypicttosides(self):
-        return self.ApplyPictToSides
-
     @ApplyPictToSides.setter
     def ApplyPictToSides(self, value):
         self.series.ApplyPictToSides = value
 
-    # Lower case alias for ApplyPictToSides setter
+    # Lower case aliases for ApplyPictToSides
+    @property
+    def applypicttosides(self):
+        return self.ApplyPictToSides
+
     @applypicttosides.setter
     def applypicttosides(self, value):
         self.ApplyPictToSides = value
@@ -18138,16 +17612,15 @@ class Series:
     def AxisGroup(self):
         return XlAxisGroup(self.series.AxisGroup)
 
-    # Lower case alias for AxisGroup
-    @property
-    def axisgroup(self):
-        return self.AxisGroup
-
     @AxisGroup.setter
     def AxisGroup(self, value):
         self.series.AxisGroup = value
 
-    # Lower case alias for AxisGroup setter
+    # Lower case aliases for AxisGroup
+    @property
+    def axisgroup(self):
+        return self.AxisGroup
+
     @axisgroup.setter
     def axisgroup(self, value):
         self.AxisGroup = value
@@ -18156,16 +17629,15 @@ class Series:
     def BarShape(self):
         return XlBarShape(self.series.BarShape)
 
-    # Lower case alias for BarShape
-    @property
-    def barshape(self):
-        return self.BarShape
-
     @BarShape.setter
     def BarShape(self, value):
         self.series.BarShape = value
 
-    # Lower case alias for BarShape setter
+    # Lower case aliases for BarShape
+    @property
+    def barshape(self):
+        return self.BarShape
+
     @barshape.setter
     def barshape(self, value):
         self.BarShape = value
@@ -18174,16 +17646,15 @@ class Series:
     def BubbleSizes(self):
         return self.series.BubbleSizes
 
-    # Lower case alias for BubbleSizes
-    @property
-    def bubblesizes(self):
-        return self.BubbleSizes
-
     @BubbleSizes.setter
     def BubbleSizes(self, value):
         self.series.BubbleSizes = value
 
-    # Lower case alias for BubbleSizes setter
+    # Lower case aliases for BubbleSizes
+    @property
+    def bubblesizes(self):
+        return self.BubbleSizes
+
     @bubblesizes.setter
     def bubblesizes(self, value):
         self.BubbleSizes = value
@@ -18192,16 +17663,15 @@ class Series:
     def ChartType(self):
         return self.series.ChartType
 
-    # Lower case alias for ChartType
-    @property
-    def charttype(self):
-        return self.ChartType
-
     @ChartType.setter
     def ChartType(self, value):
         self.series.ChartType = value
 
-    # Lower case alias for ChartType setter
+    # Lower case aliases for ChartType
+    @property
+    def charttype(self):
+        return self.ChartType
+
     @charttype.setter
     def charttype(self, value):
         self.ChartType = value
@@ -18210,7 +17680,7 @@ class Series:
     def Creator(self):
         return self.series.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -18219,7 +17689,7 @@ class Series:
     def ErrorBars(self):
         return ErrorBars(self.series.ErrorBars)
 
-    # Lower case alias for ErrorBars
+    # Lower case aliases for ErrorBars
     @property
     def errorbars(self):
         return self.ErrorBars
@@ -18228,16 +17698,15 @@ class Series:
     def Explosion(self):
         return self.series.Explosion
 
-    # Lower case alias for Explosion
-    @property
-    def explosion(self):
-        return self.Explosion
-
     @Explosion.setter
     def Explosion(self, value):
         self.series.Explosion = value
 
-    # Lower case alias for Explosion setter
+    # Lower case aliases for Explosion
+    @property
+    def explosion(self):
+        return self.Explosion
+
     @explosion.setter
     def explosion(self, value):
         self.Explosion = value
@@ -18246,7 +17715,7 @@ class Series:
     def Format(self):
         return ChartFormat(self.series.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -18255,16 +17724,15 @@ class Series:
     def Formula(self):
         return self.series.Formula
 
-    # Lower case alias for Formula
-    @property
-    def formula(self):
-        return self.Formula
-
     @Formula.setter
     def Formula(self, value):
         self.series.Formula = value
 
-    # Lower case alias for Formula setter
+    # Lower case aliases for Formula
+    @property
+    def formula(self):
+        return self.Formula
+
     @formula.setter
     def formula(self, value):
         self.Formula = value
@@ -18273,16 +17741,15 @@ class Series:
     def FormulaLocal(self):
         return self.series.FormulaLocal
 
-    # Lower case alias for FormulaLocal
-    @property
-    def formulalocal(self):
-        return self.FormulaLocal
-
     @FormulaLocal.setter
     def FormulaLocal(self, value):
         self.series.FormulaLocal = value
 
-    # Lower case alias for FormulaLocal setter
+    # Lower case aliases for FormulaLocal
+    @property
+    def formulalocal(self):
+        return self.FormulaLocal
+
     @formulalocal.setter
     def formulalocal(self, value):
         self.FormulaLocal = value
@@ -18291,16 +17758,15 @@ class Series:
     def FormulaR1C1(self):
         return self.series.FormulaR1C1
 
-    # Lower case alias for FormulaR1C1
-    @property
-    def formular1c1(self):
-        return self.FormulaR1C1
-
     @FormulaR1C1.setter
     def FormulaR1C1(self, value):
         self.series.FormulaR1C1 = value
 
-    # Lower case alias for FormulaR1C1 setter
+    # Lower case aliases for FormulaR1C1
+    @property
+    def formular1c1(self):
+        return self.FormulaR1C1
+
     @formular1c1.setter
     def formular1c1(self, value):
         self.FormulaR1C1 = value
@@ -18309,16 +17775,15 @@ class Series:
     def FormulaR1C1Local(self):
         return self.series.FormulaR1C1Local
 
-    # Lower case alias for FormulaR1C1Local
-    @property
-    def formular1c1local(self):
-        return self.FormulaR1C1Local
-
     @FormulaR1C1Local.setter
     def FormulaR1C1Local(self, value):
         self.series.FormulaR1C1Local = value
 
-    # Lower case alias for FormulaR1C1Local setter
+    # Lower case aliases for FormulaR1C1Local
+    @property
+    def formular1c1local(self):
+        return self.FormulaR1C1Local
+
     @formular1c1local.setter
     def formular1c1local(self, value):
         self.FormulaR1C1Local = value
@@ -18327,16 +17792,15 @@ class Series:
     def Has3DEffect(self):
         return self.series.Has3DEffect
 
-    # Lower case alias for Has3DEffect
-    @property
-    def has3deffect(self):
-        return self.Has3DEffect
-
     @Has3DEffect.setter
     def Has3DEffect(self, value):
         self.series.Has3DEffect = value
 
-    # Lower case alias for Has3DEffect setter
+    # Lower case aliases for Has3DEffect
+    @property
+    def has3deffect(self):
+        return self.Has3DEffect
+
     @has3deffect.setter
     def has3deffect(self, value):
         self.Has3DEffect = value
@@ -18345,16 +17809,15 @@ class Series:
     def HasDataLabels(self):
         return self.series.HasDataLabels
 
-    # Lower case alias for HasDataLabels
-    @property
-    def hasdatalabels(self):
-        return self.HasDataLabels
-
     @HasDataLabels.setter
     def HasDataLabels(self, value):
         self.series.HasDataLabels = value
 
-    # Lower case alias for HasDataLabels setter
+    # Lower case aliases for HasDataLabels
+    @property
+    def hasdatalabels(self):
+        return self.HasDataLabels
+
     @hasdatalabels.setter
     def hasdatalabels(self, value):
         self.HasDataLabels = value
@@ -18363,16 +17826,15 @@ class Series:
     def HasErrorBars(self):
         return self.series.HasErrorBars
 
-    # Lower case alias for HasErrorBars
-    @property
-    def haserrorbars(self):
-        return self.HasErrorBars
-
     @HasErrorBars.setter
     def HasErrorBars(self, value):
         self.series.HasErrorBars = value
 
-    # Lower case alias for HasErrorBars setter
+    # Lower case aliases for HasErrorBars
+    @property
+    def haserrorbars(self):
+        return self.HasErrorBars
+
     @haserrorbars.setter
     def haserrorbars(self, value):
         self.HasErrorBars = value
@@ -18381,16 +17843,15 @@ class Series:
     def HasLeaderLines(self):
         return self.series.HasLeaderLines
 
-    # Lower case alias for HasLeaderLines
-    @property
-    def hasleaderlines(self):
-        return self.HasLeaderLines
-
     @HasLeaderLines.setter
     def HasLeaderLines(self, value):
         self.series.HasLeaderLines = value
 
-    # Lower case alias for HasLeaderLines setter
+    # Lower case aliases for HasLeaderLines
+    @property
+    def hasleaderlines(self):
+        return self.HasLeaderLines
+
     @hasleaderlines.setter
     def hasleaderlines(self, value):
         self.HasLeaderLines = value
@@ -18399,16 +17860,15 @@ class Series:
     def InvertColor(self):
         return self.series.InvertColor
 
-    # Lower case alias for InvertColor
-    @property
-    def invertcolor(self):
-        return self.InvertColor
-
     @InvertColor.setter
     def InvertColor(self, value):
         self.series.InvertColor = value
 
-    # Lower case alias for InvertColor setter
+    # Lower case aliases for InvertColor
+    @property
+    def invertcolor(self):
+        return self.InvertColor
+
     @invertcolor.setter
     def invertcolor(self, value):
         self.InvertColor = value
@@ -18417,16 +17877,15 @@ class Series:
     def InvertColorIndex(self):
         return self.series.InvertColorIndex
 
-    # Lower case alias for InvertColorIndex
-    @property
-    def invertcolorindex(self):
-        return self.InvertColorIndex
-
     @InvertColorIndex.setter
     def InvertColorIndex(self, value):
         self.series.InvertColorIndex = value
 
-    # Lower case alias for InvertColorIndex setter
+    # Lower case aliases for InvertColorIndex
+    @property
+    def invertcolorindex(self):
+        return self.InvertColorIndex
+
     @invertcolorindex.setter
     def invertcolorindex(self, value):
         self.InvertColorIndex = value
@@ -18435,16 +17894,15 @@ class Series:
     def InvertIfNegative(self):
         return self.series.InvertIfNegative
 
-    # Lower case alias for InvertIfNegative
-    @property
-    def invertifnegative(self):
-        return self.InvertIfNegative
-
     @InvertIfNegative.setter
     def InvertIfNegative(self, value):
         self.series.InvertIfNegative = value
 
-    # Lower case alias for InvertIfNegative setter
+    # Lower case aliases for InvertIfNegative
+    @property
+    def invertifnegative(self):
+        return self.InvertIfNegative
+
     @invertifnegative.setter
     def invertifnegative(self, value):
         self.InvertIfNegative = value
@@ -18453,7 +17911,7 @@ class Series:
     def LeaderLines(self):
         return LeaderLines(self.series.LeaderLines)
 
-    # Lower case alias for LeaderLines
+    # Lower case aliases for LeaderLines
     @property
     def leaderlines(self):
         return self.LeaderLines
@@ -18462,16 +17920,15 @@ class Series:
     def MarkerBackgroundColor(self):
         return self.series.MarkerBackgroundColor
 
-    # Lower case alias for MarkerBackgroundColor
-    @property
-    def markerbackgroundcolor(self):
-        return self.MarkerBackgroundColor
-
     @MarkerBackgroundColor.setter
     def MarkerBackgroundColor(self, value):
         self.series.MarkerBackgroundColor = value
 
-    # Lower case alias for MarkerBackgroundColor setter
+    # Lower case aliases for MarkerBackgroundColor
+    @property
+    def markerbackgroundcolor(self):
+        return self.MarkerBackgroundColor
+
     @markerbackgroundcolor.setter
     def markerbackgroundcolor(self, value):
         self.MarkerBackgroundColor = value
@@ -18480,16 +17937,15 @@ class Series:
     def MarkerBackgroundColorIndex(self):
         return XlColorIndex(self.series.MarkerBackgroundColorIndex)
 
-    # Lower case alias for MarkerBackgroundColorIndex
-    @property
-    def markerbackgroundcolorindex(self):
-        return self.MarkerBackgroundColorIndex
-
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
         self.series.MarkerBackgroundColorIndex = value
 
-    # Lower case alias for MarkerBackgroundColorIndex setter
+    # Lower case aliases for MarkerBackgroundColorIndex
+    @property
+    def markerbackgroundcolorindex(self):
+        return self.MarkerBackgroundColorIndex
+
     @markerbackgroundcolorindex.setter
     def markerbackgroundcolorindex(self, value):
         self.MarkerBackgroundColorIndex = value
@@ -18498,16 +17954,15 @@ class Series:
     def MarkerForegroundColor(self):
         return self.series.MarkerForegroundColor
 
-    # Lower case alias for MarkerForegroundColor
-    @property
-    def markerforegroundcolor(self):
-        return self.MarkerForegroundColor
-
     @MarkerForegroundColor.setter
     def MarkerForegroundColor(self, value):
         self.series.MarkerForegroundColor = value
 
-    # Lower case alias for MarkerForegroundColor setter
+    # Lower case aliases for MarkerForegroundColor
+    @property
+    def markerforegroundcolor(self):
+        return self.MarkerForegroundColor
+
     @markerforegroundcolor.setter
     def markerforegroundcolor(self, value):
         self.MarkerForegroundColor = value
@@ -18516,16 +17971,15 @@ class Series:
     def MarkerForegroundColorIndex(self):
         return XlColorIndex(self.series.MarkerForegroundColorIndex)
 
-    # Lower case alias for MarkerForegroundColorIndex
-    @property
-    def markerforegroundcolorindex(self):
-        return self.MarkerForegroundColorIndex
-
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
         self.series.MarkerForegroundColorIndex = value
 
-    # Lower case alias for MarkerForegroundColorIndex setter
+    # Lower case aliases for MarkerForegroundColorIndex
+    @property
+    def markerforegroundcolorindex(self):
+        return self.MarkerForegroundColorIndex
+
     @markerforegroundcolorindex.setter
     def markerforegroundcolorindex(self, value):
         self.MarkerForegroundColorIndex = value
@@ -18534,16 +17988,15 @@ class Series:
     def MarkerSize(self):
         return self.series.MarkerSize
 
-    # Lower case alias for MarkerSize
-    @property
-    def markersize(self):
-        return self.MarkerSize
-
     @MarkerSize.setter
     def MarkerSize(self, value):
         self.series.MarkerSize = value
 
-    # Lower case alias for MarkerSize setter
+    # Lower case aliases for MarkerSize
+    @property
+    def markersize(self):
+        return self.MarkerSize
+
     @markersize.setter
     def markersize(self, value):
         self.MarkerSize = value
@@ -18552,16 +18005,15 @@ class Series:
     def MarkerStyle(self):
         return XlMarkerStyle(self.series.MarkerStyle)
 
-    # Lower case alias for MarkerStyle
-    @property
-    def markerstyle(self):
-        return self.MarkerStyle
-
     @MarkerStyle.setter
     def MarkerStyle(self, value):
         self.series.MarkerStyle = value
 
-    # Lower case alias for MarkerStyle setter
+    # Lower case aliases for MarkerStyle
+    @property
+    def markerstyle(self):
+        return self.MarkerStyle
+
     @markerstyle.setter
     def markerstyle(self, value):
         self.MarkerStyle = value
@@ -18570,16 +18022,15 @@ class Series:
     def Name(self):
         return self.series.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.series.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -18588,7 +18039,7 @@ class Series:
     def Parent(self):
         return self.series.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -18597,16 +18048,15 @@ class Series:
     def PictureType(self):
         return XlChartPictureType(self.series.PictureType)
 
-    # Lower case alias for PictureType
-    @property
-    def picturetype(self):
-        return self.PictureType
-
     @PictureType.setter
     def PictureType(self, value):
         self.series.PictureType = value
 
-    # Lower case alias for PictureType setter
+    # Lower case aliases for PictureType
+    @property
+    def picturetype(self):
+        return self.PictureType
+
     @picturetype.setter
     def picturetype(self, value):
         self.PictureType = value
@@ -18615,16 +18065,15 @@ class Series:
     def PictureUnit2(self):
         return self.series.PictureUnit2
 
-    # Lower case alias for PictureUnit2
-    @property
-    def pictureunit2(self):
-        return self.PictureUnit2
-
     @PictureUnit2.setter
     def PictureUnit2(self, value):
         self.series.PictureUnit2 = value
 
-    # Lower case alias for PictureUnit2 setter
+    # Lower case aliases for PictureUnit2
+    @property
+    def pictureunit2(self):
+        return self.PictureUnit2
+
     @pictureunit2.setter
     def pictureunit2(self, value):
         self.PictureUnit2 = value
@@ -18633,7 +18082,7 @@ class Series:
     def PlotColorIndex(self):
         return self.series.PlotColorIndex
 
-    # Lower case alias for PlotColorIndex
+    # Lower case aliases for PlotColorIndex
     @property
     def plotcolorindex(self):
         return self.PlotColorIndex
@@ -18642,16 +18091,15 @@ class Series:
     def PlotOrder(self):
         return self.series.PlotOrder
 
-    # Lower case alias for PlotOrder
-    @property
-    def plotorder(self):
-        return self.PlotOrder
-
     @PlotOrder.setter
     def PlotOrder(self, value):
         self.series.PlotOrder = value
 
-    # Lower case alias for PlotOrder setter
+    # Lower case aliases for PlotOrder
+    @property
+    def plotorder(self):
+        return self.PlotOrder
+
     @plotorder.setter
     def plotorder(self, value):
         self.PlotOrder = value
@@ -18660,16 +18108,15 @@ class Series:
     def Shadow(self):
         return self.series.Shadow
 
-    # Lower case alias for Shadow
-    @property
-    def shadow(self):
-        return self.Shadow
-
     @Shadow.setter
     def Shadow(self, value):
         self.series.Shadow = value
 
-    # Lower case alias for Shadow setter
+    # Lower case aliases for Shadow
+    @property
+    def shadow(self):
+        return self.Shadow
+
     @shadow.setter
     def shadow(self, value):
         self.Shadow = value
@@ -18678,16 +18125,15 @@ class Series:
     def Smooth(self):
         return self.series.Smooth
 
-    # Lower case alias for Smooth
-    @property
-    def smooth(self):
-        return self.Smooth
-
     @Smooth.setter
     def Smooth(self, value):
         self.series.Smooth = value
 
-    # Lower case alias for Smooth setter
+    # Lower case aliases for Smooth
+    @property
+    def smooth(self):
+        return self.Smooth
+
     @smooth.setter
     def smooth(self, value):
         self.Smooth = value
@@ -18696,16 +18142,15 @@ class Series:
     def Type(self):
         return self.series.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.series.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -18714,16 +18159,15 @@ class Series:
     def Values(self):
         return self.series.Values
 
-    # Lower case alias for Values
-    @property
-    def values(self):
-        return self.Values
-
     @Values.setter
     def Values(self, value):
         self.series.Values = value
 
-    # Lower case alias for Values setter
+    # Lower case aliases for Values
+    @property
+    def values(self):
+        return self.Values
+
     @values.setter
     def values(self, value):
         self.Values = value
@@ -18732,16 +18176,15 @@ class Series:
     def XValues(self):
         return self.series.XValues
 
-    # Lower case alias for XValues
-    @property
-    def xvalues(self):
-        return self.XValues
-
     @XValues.setter
     def XValues(self, value):
         self.series.XValues = value
 
-    # Lower case alias for XValues setter
+    # Lower case aliases for XValues
+    @property
+    def xvalues(self):
+        return self.XValues
+
     @xvalues.setter
     def xvalues(self, value):
         self.XValues = value
@@ -18795,7 +18238,7 @@ class SeriesCollection:
     def Count(self):
         return self.seriescollection.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -18804,7 +18247,7 @@ class SeriesCollection:
     def Creator(self):
         return self.seriescollection.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -18813,7 +18256,7 @@ class SeriesCollection:
     def Parent(self):
         return self.seriescollection.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -18847,7 +18290,7 @@ class SeriesLines:
     def Border(self):
         return ChartBorder(self.serieslines.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -18856,7 +18299,7 @@ class SeriesLines:
     def Creator(self):
         return self.serieslines.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -18865,7 +18308,7 @@ class SeriesLines:
     def Format(self):
         return ChartFormat(self.serieslines.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -18874,7 +18317,7 @@ class SeriesLines:
     def Name(self):
         return self.serieslines.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -18883,7 +18326,7 @@ class SeriesLines:
     def Parent(self):
         return self.serieslines.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -18908,7 +18351,7 @@ class SetEffect:
     def Parent(self):
         return self.seteffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -18925,16 +18368,15 @@ class SetEffect:
     def To(self):
         return self.seteffect.To
 
-    # Lower case alias for To
-    @property
-    def to(self):
-        return self.To
-
     @To.setter
     def To(self, value):
         self.seteffect.To = value
 
-    # Lower case alias for To setter
+    # Lower case aliases for To
+    @property
+    def to(self):
+        return self.To
+
     @to.setter
     def to(self, value):
         self.To = value
@@ -18953,16 +18395,15 @@ class ShadowFormat:
     def Blur(self):
         return self.shadowformat.Blur
 
-    # Lower case alias for Blur
-    @property
-    def blur(self):
-        return self.Blur
-
     @Blur.setter
     def Blur(self, value):
         self.shadowformat.Blur = value
 
-    # Lower case alias for Blur setter
+    # Lower case aliases for Blur
+    @property
+    def blur(self):
+        return self.Blur
+
     @blur.setter
     def blur(self, value):
         self.Blur = value
@@ -18971,7 +18412,7 @@ class ShadowFormat:
     def Creator(self):
         return self.shadowformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -18980,16 +18421,15 @@ class ShadowFormat:
     def ForeColor(self):
         return ColorFormat(self.shadowformat.ForeColor)
 
-    # Lower case alias for ForeColor
-    @property
-    def forecolor(self):
-        return self.ForeColor
-
     @ForeColor.setter
     def ForeColor(self, value):
         self.shadowformat.ForeColor = value
 
-    # Lower case alias for ForeColor setter
+    # Lower case aliases for ForeColor
+    @property
+    def forecolor(self):
+        return self.ForeColor
+
     @forecolor.setter
     def forecolor(self, value):
         self.ForeColor = value
@@ -18998,16 +18438,15 @@ class ShadowFormat:
     def Obscured(self):
         return self.shadowformat.Obscured
 
-    # Lower case alias for Obscured
-    @property
-    def obscured(self):
-        return self.Obscured
-
     @Obscured.setter
     def Obscured(self, value):
         self.shadowformat.Obscured = value
 
-    # Lower case alias for Obscured setter
+    # Lower case aliases for Obscured
+    @property
+    def obscured(self):
+        return self.Obscured
+
     @obscured.setter
     def obscured(self, value):
         self.Obscured = value
@@ -19016,16 +18455,15 @@ class ShadowFormat:
     def OffsetX(self):
         return self.shadowformat.OffsetX
 
-    # Lower case alias for OffsetX
-    @property
-    def offsetx(self):
-        return self.OffsetX
-
     @OffsetX.setter
     def OffsetX(self, value):
         self.shadowformat.OffsetX = value
 
-    # Lower case alias for OffsetX setter
+    # Lower case aliases for OffsetX
+    @property
+    def offsetx(self):
+        return self.OffsetX
+
     @offsetx.setter
     def offsetx(self, value):
         self.OffsetX = value
@@ -19034,16 +18472,15 @@ class ShadowFormat:
     def OffsetY(self):
         return self.shadowformat.OffsetY
 
-    # Lower case alias for OffsetY
-    @property
-    def offsety(self):
-        return self.OffsetY
-
     @OffsetY.setter
     def OffsetY(self, value):
         self.shadowformat.OffsetY = value
 
-    # Lower case alias for OffsetY setter
+    # Lower case aliases for OffsetY
+    @property
+    def offsety(self):
+        return self.OffsetY
+
     @offsety.setter
     def offsety(self, value):
         self.OffsetY = value
@@ -19052,7 +18489,7 @@ class ShadowFormat:
     def Parent(self):
         return self.shadowformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -19061,16 +18498,15 @@ class ShadowFormat:
     def RotateWithShape(self):
         return self.shadowformat.RotateWithShape
 
-    # Lower case alias for RotateWithShape
-    @property
-    def rotatewithshape(self):
-        return self.RotateWithShape
-
     @RotateWithShape.setter
     def RotateWithShape(self, value):
         self.shadowformat.RotateWithShape = value
 
-    # Lower case alias for RotateWithShape setter
+    # Lower case aliases for RotateWithShape
+    @property
+    def rotatewithshape(self):
+        return self.RotateWithShape
+
     @rotatewithshape.setter
     def rotatewithshape(self, value):
         self.RotateWithShape = value
@@ -19079,16 +18515,15 @@ class ShadowFormat:
     def Size(self):
         return self.shadowformat.Size
 
-    # Lower case alias for Size
-    @property
-    def size(self):
-        return self.Size
-
     @Size.setter
     def Size(self, value):
         self.shadowformat.Size = value
 
-    # Lower case alias for Size setter
+    # Lower case aliases for Size
+    @property
+    def size(self):
+        return self.Size
+
     @size.setter
     def size(self, value):
         self.Size = value
@@ -19097,16 +18532,15 @@ class ShadowFormat:
     def Style(self):
         return self.shadowformat.Style
 
-    # Lower case alias for Style
-    @property
-    def style(self):
-        return self.Style
-
     @Style.setter
     def Style(self, value):
         self.shadowformat.Style = value
 
-    # Lower case alias for Style setter
+    # Lower case aliases for Style
+    @property
+    def style(self):
+        return self.Style
+
     @style.setter
     def style(self, value):
         self.Style = value
@@ -19115,16 +18549,15 @@ class ShadowFormat:
     def Transparency(self):
         return self.shadowformat.Transparency
 
-    # Lower case alias for Transparency
-    @property
-    def transparency(self):
-        return self.Transparency
-
     @Transparency.setter
     def Transparency(self, value):
         self.shadowformat.Transparency = value
 
-    # Lower case alias for Transparency setter
+    # Lower case aliases for Transparency
+    @property
+    def transparency(self):
+        return self.Transparency
+
     @transparency.setter
     def transparency(self, value):
         self.Transparency = value
@@ -19133,16 +18566,15 @@ class ShadowFormat:
     def Type(self):
         return self.shadowformat.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.shadowformat.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -19151,16 +18583,15 @@ class ShadowFormat:
     def Visible(self):
         return self.shadowformat.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.shadowformat.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -19183,7 +18614,7 @@ class Shape:
     def ActionSettings(self):
         return ActionSettings(self.shape.ActionSettings)
 
-    # Lower case alias for ActionSettings
+    # Lower case aliases for ActionSettings
     @property
     def actionsettings(self):
         return self.ActionSettings
@@ -19192,7 +18623,7 @@ class Shape:
     def Adjustments(self):
         return Adjustments(self.shape.Adjustments)
 
-    # Lower case alias for Adjustments
+    # Lower case aliases for Adjustments
     @property
     def adjustments(self):
         return self.Adjustments
@@ -19201,16 +18632,15 @@ class Shape:
     def AlternativeText(self):
         return self.shape.AlternativeText
 
-    # Lower case alias for AlternativeText
-    @property
-    def alternativetext(self):
-        return self.AlternativeText
-
     @AlternativeText.setter
     def AlternativeText(self, value):
         self.shape.AlternativeText = value
 
-    # Lower case alias for AlternativeText setter
+    # Lower case aliases for AlternativeText
+    @property
+    def alternativetext(self):
+        return self.AlternativeText
+
     @alternativetext.setter
     def alternativetext(self, value):
         self.AlternativeText = value
@@ -19219,7 +18649,7 @@ class Shape:
     def AnimationSettings(self):
         return AnimationSettings(self.shape.AnimationSettings)
 
-    # Lower case alias for AnimationSettings
+    # Lower case aliases for AnimationSettings
     @property
     def animationsettings(self):
         return self.AnimationSettings
@@ -19232,16 +18662,15 @@ class Shape:
     def AutoShapeType(self):
         return Shape(self.shape.AutoShapeType)
 
-    # Lower case alias for AutoShapeType
-    @property
-    def autoshapetype(self):
-        return self.AutoShapeType
-
     @AutoShapeType.setter
     def AutoShapeType(self, value):
         self.shape.AutoShapeType = value
 
-    # Lower case alias for AutoShapeType setter
+    # Lower case aliases for AutoShapeType
+    @property
+    def autoshapetype(self):
+        return self.AutoShapeType
+
     @autoshapetype.setter
     def autoshapetype(self, value):
         self.AutoShapeType = value
@@ -19250,16 +18679,15 @@ class Shape:
     def BackgroundStyle(self):
         return self.shape.BackgroundStyle
 
-    # Lower case alias for BackgroundStyle
-    @property
-    def backgroundstyle(self):
-        return self.BackgroundStyle
-
     @BackgroundStyle.setter
     def BackgroundStyle(self, value):
         self.shape.BackgroundStyle = value
 
-    # Lower case alias for BackgroundStyle setter
+    # Lower case aliases for BackgroundStyle
+    @property
+    def backgroundstyle(self):
+        return self.BackgroundStyle
+
     @backgroundstyle.setter
     def backgroundstyle(self, value):
         self.BackgroundStyle = value
@@ -19268,16 +18696,15 @@ class Shape:
     def BlackWhiteMode(self):
         return self.shape.BlackWhiteMode
 
-    # Lower case alias for BlackWhiteMode
-    @property
-    def blackwhitemode(self):
-        return self.BlackWhiteMode
-
     @BlackWhiteMode.setter
     def BlackWhiteMode(self, value):
         self.shape.BlackWhiteMode = value
 
-    # Lower case alias for BlackWhiteMode setter
+    # Lower case aliases for BlackWhiteMode
+    @property
+    def blackwhitemode(self):
+        return self.BlackWhiteMode
+
     @blackwhitemode.setter
     def blackwhitemode(self, value):
         self.BlackWhiteMode = value
@@ -19286,7 +18713,7 @@ class Shape:
     def Callout(self):
         return CalloutFormat(self.shape.Callout)
 
-    # Lower case alias for Callout
+    # Lower case aliases for Callout
     @property
     def callout(self):
         return self.Callout
@@ -19295,7 +18722,7 @@ class Shape:
     def Chart(self):
         return Chart(self.shape.Chart)
 
-    # Lower case alias for Chart
+    # Lower case aliases for Chart
     @property
     def chart(self):
         return self.Chart
@@ -19304,7 +18731,7 @@ class Shape:
     def Child(self):
         return self.shape.Child
 
-    # Lower case alias for Child
+    # Lower case aliases for Child
     @property
     def child(self):
         return self.Child
@@ -19313,7 +18740,7 @@ class Shape:
     def ConnectionSiteCount(self):
         return self.shape.ConnectionSiteCount
 
-    # Lower case alias for ConnectionSiteCount
+    # Lower case aliases for ConnectionSiteCount
     @property
     def connectionsitecount(self):
         return self.ConnectionSiteCount
@@ -19322,7 +18749,7 @@ class Shape:
     def Connector(self):
         return self.shape.Connector
 
-    # Lower case alias for Connector
+    # Lower case aliases for Connector
     @property
     def connector(self):
         return self.Connector
@@ -19331,7 +18758,7 @@ class Shape:
     def ConnectorFormat(self):
         return ConnectorFormat(self.shape.ConnectorFormat)
 
-    # Lower case alias for ConnectorFormat
+    # Lower case aliases for ConnectorFormat
     @property
     def connectorformat(self):
         return self.ConnectorFormat
@@ -19340,7 +18767,7 @@ class Shape:
     def Creator(self):
         return self.shape.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -19349,7 +18776,7 @@ class Shape:
     def CustomerData(self):
         return CustomerData(self.shape.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -19358,16 +18785,15 @@ class Shape:
     def Decorative(self):
         return self.shape.Decorative
 
-    # Lower case alias for Decorative
-    @property
-    def decorative(self):
-        return self.Decorative
-
     @Decorative.setter
     def Decorative(self, value):
         self.shape.Decorative = value
 
-    # Lower case alias for Decorative setter
+    # Lower case aliases for Decorative
+    @property
+    def decorative(self):
+        return self.Decorative
+
     @decorative.setter
     def decorative(self, value):
         self.Decorative = value
@@ -19376,7 +18802,7 @@ class Shape:
     def Fill(self):
         return FillFormat(self.shape.Fill)
 
-    # Lower case alias for Fill
+    # Lower case aliases for Fill
     @property
     def fill(self):
         return self.Fill
@@ -19385,7 +18811,7 @@ class Shape:
     def Glow(self):
         return self.shape.Glow
 
-    # Lower case alias for Glow
+    # Lower case aliases for Glow
     @property
     def glow(self):
         return self.Glow
@@ -19394,16 +18820,15 @@ class Shape:
     def GraphicStyle(self):
         return self.shape.GraphicStyle
 
-    # Lower case alias for GraphicStyle
-    @property
-    def graphicstyle(self):
-        return self.GraphicStyle
-
     @GraphicStyle.setter
     def GraphicStyle(self, value):
         self.shape.GraphicStyle = value
 
-    # Lower case alias for GraphicStyle setter
+    # Lower case aliases for GraphicStyle
+    @property
+    def graphicstyle(self):
+        return self.GraphicStyle
+
     @graphicstyle.setter
     def graphicstyle(self, value):
         self.GraphicStyle = value
@@ -19412,7 +18837,7 @@ class Shape:
     def GroupItems(self):
         return GroupShapes(self.shape.GroupItems)
 
-    # Lower case alias for GroupItems
+    # Lower case aliases for GroupItems
     @property
     def groupitems(self):
         return self.GroupItems
@@ -19421,7 +18846,7 @@ class Shape:
     def HasChart(self):
         return self.shape.HasChart
 
-    # Lower case alias for HasChart
+    # Lower case aliases for HasChart
     @property
     def haschart(self):
         return self.HasChart
@@ -19430,7 +18855,7 @@ class Shape:
     def HasSmartArt(self):
         return self.shape.HasSmartArt
 
-    # Lower case alias for HasSmartArt
+    # Lower case aliases for HasSmartArt
     @property
     def hassmartart(self):
         return self.HasSmartArt
@@ -19439,7 +18864,7 @@ class Shape:
     def HasTable(self):
         return self.shape.HasTable
 
-    # Lower case alias for HasTable
+    # Lower case aliases for HasTable
     @property
     def hastable(self):
         return self.HasTable
@@ -19448,7 +18873,7 @@ class Shape:
     def HasTextFrame(self):
         return self.shape.HasTextFrame
 
-    # Lower case alias for HasTextFrame
+    # Lower case aliases for HasTextFrame
     @property
     def hastextframe(self):
         return self.HasTextFrame
@@ -19457,16 +18882,15 @@ class Shape:
     def Height(self):
         return self.shape.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.shape.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -19475,7 +18899,7 @@ class Shape:
     def HorizontalFlip(self):
         return self.shape.HorizontalFlip
 
-    # Lower case alias for HorizontalFlip
+    # Lower case aliases for HorizontalFlip
     @property
     def horizontalflip(self):
         return self.HorizontalFlip
@@ -19484,7 +18908,7 @@ class Shape:
     def Id(self):
         return self.shape.Id
 
-    # Lower case alias for Id
+    # Lower case aliases for Id
     @property
     def id(self):
         return self.Id
@@ -19493,16 +18917,15 @@ class Shape:
     def Left(self):
         return self.shape.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.shape.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -19511,7 +18934,7 @@ class Shape:
     def Line(self):
         return LineFormat(self.shape.Line)
 
-    # Lower case alias for Line
+    # Lower case aliases for Line
     @property
     def line(self):
         return self.Line
@@ -19520,7 +18943,7 @@ class Shape:
     def LinkFormat(self):
         return LinkFormat(self.shape.LinkFormat)
 
-    # Lower case alias for LinkFormat
+    # Lower case aliases for LinkFormat
     @property
     def linkformat(self):
         return self.LinkFormat
@@ -19529,16 +18952,15 @@ class Shape:
     def LockAspectRatio(self):
         return self.shape.LockAspectRatio
 
-    # Lower case alias for LockAspectRatio
-    @property
-    def lockaspectratio(self):
-        return self.LockAspectRatio
-
     @LockAspectRatio.setter
     def LockAspectRatio(self, value):
         self.shape.LockAspectRatio = value
 
-    # Lower case alias for LockAspectRatio setter
+    # Lower case aliases for LockAspectRatio
+    @property
+    def lockaspectratio(self):
+        return self.LockAspectRatio
+
     @lockaspectratio.setter
     def lockaspectratio(self, value):
         self.LockAspectRatio = value
@@ -19547,7 +18969,7 @@ class Shape:
     def MediaFormat(self):
         return self.shape.MediaFormat
 
-    # Lower case alias for MediaFormat
+    # Lower case aliases for MediaFormat
     @property
     def mediaformat(self):
         return self.MediaFormat
@@ -19556,7 +18978,7 @@ class Shape:
     def MediaType(self):
         return self.shape.MediaType
 
-    # Lower case alias for MediaType
+    # Lower case aliases for MediaType
     @property
     def mediatype(self):
         return self.MediaType
@@ -19565,7 +18987,7 @@ class Shape:
     def Model3D(self):
         return Model3DFormat(self.shape.Model3D)
 
-    # Lower case alias for Model3D
+    # Lower case aliases for Model3D
     @property
     def model3d(self):
         return self.Model3D
@@ -19574,16 +18996,15 @@ class Shape:
     def Name(self):
         return self.shape.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.shape.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -19592,7 +19013,7 @@ class Shape:
     def Nodes(self):
         return ShapeNodes(self.shape.Nodes)
 
-    # Lower case alias for Nodes
+    # Lower case aliases for Nodes
     @property
     def nodes(self):
         return self.Nodes
@@ -19601,7 +19022,7 @@ class Shape:
     def OLEFormat(self):
         return OLEFormat(self.shape.OLEFormat)
 
-    # Lower case alias for OLEFormat
+    # Lower case aliases for OLEFormat
     @property
     def oleformat(self):
         return self.OLEFormat
@@ -19610,7 +19031,7 @@ class Shape:
     def Parent(self):
         return self.shape.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -19619,7 +19040,7 @@ class Shape:
     def ParentGroup(self):
         return Shape(self.shape.ParentGroup)
 
-    # Lower case alias for ParentGroup
+    # Lower case aliases for ParentGroup
     @property
     def parentgroup(self):
         return self.ParentGroup
@@ -19628,7 +19049,7 @@ class Shape:
     def PictureFormat(self):
         return PictureFormat(self.shape.PictureFormat)
 
-    # Lower case alias for PictureFormat
+    # Lower case aliases for PictureFormat
     @property
     def pictureformat(self):
         return self.PictureFormat
@@ -19637,7 +19058,7 @@ class Shape:
     def PlaceholderFormat(self):
         return PlaceholderFormat(self.shape.PlaceholderFormat)
 
-    # Lower case alias for PlaceholderFormat
+    # Lower case aliases for PlaceholderFormat
     @property
     def placeholderformat(self):
         return self.PlaceholderFormat
@@ -19646,7 +19067,7 @@ class Shape:
     def Reflection(self):
         return self.shape.Reflection
 
-    # Lower case alias for Reflection
+    # Lower case aliases for Reflection
     @property
     def reflection(self):
         return self.Reflection
@@ -19655,16 +19076,15 @@ class Shape:
     def Rotation(self):
         return self.shape.Rotation
 
-    # Lower case alias for Rotation
-    @property
-    def rotation(self):
-        return self.Rotation
-
     @Rotation.setter
     def Rotation(self, value):
         self.shape.Rotation = value
 
-    # Lower case alias for Rotation setter
+    # Lower case aliases for Rotation
+    @property
+    def rotation(self):
+        return self.Rotation
+
     @rotation.setter
     def rotation(self, value):
         self.Rotation = value
@@ -19673,7 +19093,7 @@ class Shape:
     def Shadow(self):
         return ShadowFormat(self.shape.Shadow)
 
-    # Lower case alias for Shadow
+    # Lower case aliases for Shadow
     @property
     def shadow(self):
         return self.Shadow
@@ -19682,16 +19102,15 @@ class Shape:
     def ShapeStyle(self):
         return self.shape.ShapeStyle
 
-    # Lower case alias for ShapeStyle
-    @property
-    def shapestyle(self):
-        return self.ShapeStyle
-
     @ShapeStyle.setter
     def ShapeStyle(self, value):
         self.shape.ShapeStyle = value
 
-    # Lower case alias for ShapeStyle setter
+    # Lower case aliases for ShapeStyle
+    @property
+    def shapestyle(self):
+        return self.ShapeStyle
+
     @shapestyle.setter
     def shapestyle(self, value):
         self.ShapeStyle = value
@@ -19700,7 +19119,7 @@ class Shape:
     def SmartArt(self):
         return Shape(self.shape.SmartArt)
 
-    # Lower case alias for SmartArt
+    # Lower case aliases for SmartArt
     @property
     def smartart(self):
         return self.SmartArt
@@ -19709,7 +19128,7 @@ class Shape:
     def SoftEdge(self):
         return self.shape.SoftEdge
 
-    # Lower case alias for SoftEdge
+    # Lower case aliases for SoftEdge
     @property
     def softedge(self):
         return self.SoftEdge
@@ -19718,7 +19137,7 @@ class Shape:
     def Table(self):
         return Table(self.shape.Table)
 
-    # Lower case alias for Table
+    # Lower case aliases for Table
     @property
     def table(self):
         return self.Table
@@ -19727,7 +19146,7 @@ class Shape:
     def Tags(self):
         return Tags(self.shape.Tags)
 
-    # Lower case alias for Tags
+    # Lower case aliases for Tags
     @property
     def tags(self):
         return self.Tags
@@ -19736,7 +19155,7 @@ class Shape:
     def TextEffect(self):
         return TextEffectFormat(self.shape.TextEffect)
 
-    # Lower case alias for TextEffect
+    # Lower case aliases for TextEffect
     @property
     def texteffect(self):
         return self.TextEffect
@@ -19745,7 +19164,7 @@ class Shape:
     def TextFrame(self):
         return TextFrame(self.shape.TextFrame)
 
-    # Lower case alias for TextFrame
+    # Lower case aliases for TextFrame
     @property
     def textframe(self):
         return self.TextFrame
@@ -19754,7 +19173,7 @@ class Shape:
     def TextFrame2(self):
         return TextFrame2(self.shape.TextFrame2)
 
-    # Lower case alias for TextFrame2
+    # Lower case aliases for TextFrame2
     @property
     def textframe2(self):
         return self.TextFrame2
@@ -19763,7 +19182,7 @@ class Shape:
     def ThreeD(self):
         return ThreeDFormat(self.shape.ThreeD)
 
-    # Lower case alias for ThreeD
+    # Lower case aliases for ThreeD
     @property
     def threed(self):
         return self.ThreeD
@@ -19772,7 +19191,7 @@ class Shape:
     def Title(self):
         return Shape(self.shape.Title)
 
-    # Lower case alias for Title
+    # Lower case aliases for Title
     @property
     def title(self):
         return self.Title
@@ -19781,16 +19200,15 @@ class Shape:
     def Top(self):
         return self.shape.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.shape.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -19799,7 +19217,7 @@ class Shape:
     def Type(self):
         return self.shape.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -19808,7 +19226,7 @@ class Shape:
     def VerticalFlip(self):
         return self.shape.VerticalFlip
 
-    # Lower case alias for VerticalFlip
+    # Lower case aliases for VerticalFlip
     @property
     def verticalflip(self):
         return self.VerticalFlip
@@ -19817,7 +19235,7 @@ class Shape:
     def Vertices(self):
         return self.shape.Vertices
 
-    # Lower case alias for Vertices
+    # Lower case aliases for Vertices
     @property
     def vertices(self):
         return self.Vertices
@@ -19826,16 +19244,15 @@ class Shape:
     def Visible(self):
         return self.shape.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.shape.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -19844,16 +19261,15 @@ class Shape:
     def Width(self):
         return self.shape.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.shape.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -19862,7 +19278,7 @@ class Shape:
     def ZOrderPosition(self):
         return self.shape.ZOrderPosition
 
-    # Lower case alias for ZOrderPosition
+    # Lower case aliases for ZOrderPosition
     @property
     def zorderposition(self):
         return self.ZOrderPosition
@@ -19953,7 +19369,7 @@ class ShapeNode:
     def Creator(self):
         return self.shapenode.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -19962,7 +19378,7 @@ class ShapeNode:
     def EditingType(self):
         return self.shapenode.EditingType
 
-    # Lower case alias for EditingType
+    # Lower case aliases for EditingType
     @property
     def editingtype(self):
         return self.EditingType
@@ -19971,7 +19387,7 @@ class ShapeNode:
     def Parent(self):
         return self.shapenode.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -19980,7 +19396,7 @@ class ShapeNode:
     def Points(self):
         return self.shapenode.Points
 
-    # Lower case alias for Points
+    # Lower case aliases for Points
     @property
     def points(self):
         return self.Points
@@ -19989,7 +19405,7 @@ class ShapeNode:
     def SegmentType(self):
         return self.shapenode.SegmentType
 
-    # Lower case alias for SegmentType
+    # Lower case aliases for SegmentType
     @property
     def segmenttype(self):
         return self.SegmentType
@@ -20011,7 +19427,7 @@ class ShapeNodes:
     def Count(self):
         return self.shapenodes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -20020,7 +19436,7 @@ class ShapeNodes:
     def Creator(self):
         return self.shapenodes.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -20029,7 +19445,7 @@ class ShapeNodes:
     def Parent(self):
         return self.shapenodes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20068,7 +19484,7 @@ class ShapeRange:
     def ActionSettings(self):
         return ActionSettings(self.shaperange.ActionSettings)
 
-    # Lower case alias for ActionSettings
+    # Lower case aliases for ActionSettings
     @property
     def actionsettings(self):
         return self.ActionSettings
@@ -20077,7 +19493,7 @@ class ShapeRange:
     def Adjustments(self):
         return Adjustments(self.shaperange.Adjustments)
 
-    # Lower case alias for Adjustments
+    # Lower case aliases for Adjustments
     @property
     def adjustments(self):
         return self.Adjustments
@@ -20086,16 +19502,15 @@ class ShapeRange:
     def AlternativeText(self):
         return self.shaperange.AlternativeText
 
-    # Lower case alias for AlternativeText
-    @property
-    def alternativetext(self):
-        return self.AlternativeText
-
     @AlternativeText.setter
     def AlternativeText(self, value):
         self.shaperange.AlternativeText = value
 
-    # Lower case alias for AlternativeText setter
+    # Lower case aliases for AlternativeText
+    @property
+    def alternativetext(self):
+        return self.AlternativeText
+
     @alternativetext.setter
     def alternativetext(self, value):
         self.AlternativeText = value
@@ -20104,7 +19519,7 @@ class ShapeRange:
     def AnimationSettings(self):
         return AnimationSettings(self.shaperange.AnimationSettings)
 
-    # Lower case alias for AnimationSettings
+    # Lower case aliases for AnimationSettings
     @property
     def animationsettings(self):
         return self.AnimationSettings
@@ -20117,16 +19532,15 @@ class ShapeRange:
     def AutoShapeType(self):
         return ShapeRange(self.shaperange.AutoShapeType)
 
-    # Lower case alias for AutoShapeType
-    @property
-    def autoshapetype(self):
-        return self.AutoShapeType
-
     @AutoShapeType.setter
     def AutoShapeType(self, value):
         self.shaperange.AutoShapeType = value
 
-    # Lower case alias for AutoShapeType setter
+    # Lower case aliases for AutoShapeType
+    @property
+    def autoshapetype(self):
+        return self.AutoShapeType
+
     @autoshapetype.setter
     def autoshapetype(self, value):
         self.AutoShapeType = value
@@ -20135,16 +19549,15 @@ class ShapeRange:
     def BackgroundStyle(self):
         return self.shaperange.BackgroundStyle
 
-    # Lower case alias for BackgroundStyle
-    @property
-    def backgroundstyle(self):
-        return self.BackgroundStyle
-
     @BackgroundStyle.setter
     def BackgroundStyle(self, value):
         self.shaperange.BackgroundStyle = value
 
-    # Lower case alias for BackgroundStyle setter
+    # Lower case aliases for BackgroundStyle
+    @property
+    def backgroundstyle(self):
+        return self.BackgroundStyle
+
     @backgroundstyle.setter
     def backgroundstyle(self, value):
         self.BackgroundStyle = value
@@ -20153,16 +19566,15 @@ class ShapeRange:
     def BlackWhiteMode(self):
         return self.shaperange.BlackWhiteMode
 
-    # Lower case alias for BlackWhiteMode
-    @property
-    def blackwhitemode(self):
-        return self.BlackWhiteMode
-
     @BlackWhiteMode.setter
     def BlackWhiteMode(self, value):
         self.shaperange.BlackWhiteMode = value
 
-    # Lower case alias for BlackWhiteMode setter
+    # Lower case aliases for BlackWhiteMode
+    @property
+    def blackwhitemode(self):
+        return self.BlackWhiteMode
+
     @blackwhitemode.setter
     def blackwhitemode(self, value):
         self.BlackWhiteMode = value
@@ -20171,7 +19583,7 @@ class ShapeRange:
     def Callout(self):
         return CalloutFormat(self.shaperange.Callout)
 
-    # Lower case alias for Callout
+    # Lower case aliases for Callout
     @property
     def callout(self):
         return self.Callout
@@ -20180,7 +19592,7 @@ class ShapeRange:
     def Chart(self):
         return Chart(self.shaperange.Chart)
 
-    # Lower case alias for Chart
+    # Lower case aliases for Chart
     @property
     def chart(self):
         return self.Chart
@@ -20189,7 +19601,7 @@ class ShapeRange:
     def Child(self):
         return self.shaperange.Child
 
-    # Lower case alias for Child
+    # Lower case aliases for Child
     @property
     def child(self):
         return self.Child
@@ -20198,7 +19610,7 @@ class ShapeRange:
     def ConnectionSiteCount(self):
         return self.shaperange.ConnectionSiteCount
 
-    # Lower case alias for ConnectionSiteCount
+    # Lower case aliases for ConnectionSiteCount
     @property
     def connectionsitecount(self):
         return self.ConnectionSiteCount
@@ -20207,7 +19619,7 @@ class ShapeRange:
     def Connector(self):
         return self.shaperange.Connector
 
-    # Lower case alias for Connector
+    # Lower case aliases for Connector
     @property
     def connector(self):
         return self.Connector
@@ -20216,7 +19628,7 @@ class ShapeRange:
     def ConnectorFormat(self):
         return ConnectorFormat(self.shaperange.ConnectorFormat)
 
-    # Lower case alias for ConnectorFormat
+    # Lower case aliases for ConnectorFormat
     @property
     def connectorformat(self):
         return self.ConnectorFormat
@@ -20225,7 +19637,7 @@ class ShapeRange:
     def Count(self):
         return self.shaperange.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -20234,7 +19646,7 @@ class ShapeRange:
     def Creator(self):
         return self.shaperange.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -20243,7 +19655,7 @@ class ShapeRange:
     def CustomerData(self):
         return CustomerData(self.shaperange.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -20252,16 +19664,15 @@ class ShapeRange:
     def Decorative(self):
         return self.shaperange.Decorative
 
-    # Lower case alias for Decorative
-    @property
-    def decorative(self):
-        return self.Decorative
-
     @Decorative.setter
     def Decorative(self, value):
         self.shaperange.Decorative = value
 
-    # Lower case alias for Decorative setter
+    # Lower case aliases for Decorative
+    @property
+    def decorative(self):
+        return self.Decorative
+
     @decorative.setter
     def decorative(self, value):
         self.Decorative = value
@@ -20270,7 +19681,7 @@ class ShapeRange:
     def Fill(self):
         return FillFormat(self.shaperange.Fill)
 
-    # Lower case alias for Fill
+    # Lower case aliases for Fill
     @property
     def fill(self):
         return self.Fill
@@ -20279,7 +19690,7 @@ class ShapeRange:
     def Glow(self):
         return self.shaperange.Glow
 
-    # Lower case alias for Glow
+    # Lower case aliases for Glow
     @property
     def glow(self):
         return self.Glow
@@ -20288,16 +19699,15 @@ class ShapeRange:
     def GraphicStyle(self):
         return self.shaperange.GraphicStyle
 
-    # Lower case alias for GraphicStyle
-    @property
-    def graphicstyle(self):
-        return self.GraphicStyle
-
     @GraphicStyle.setter
     def GraphicStyle(self, value):
         self.shaperange.GraphicStyle = value
 
-    # Lower case alias for GraphicStyle setter
+    # Lower case aliases for GraphicStyle
+    @property
+    def graphicstyle(self):
+        return self.GraphicStyle
+
     @graphicstyle.setter
     def graphicstyle(self, value):
         self.GraphicStyle = value
@@ -20306,7 +19716,7 @@ class ShapeRange:
     def GroupItems(self):
         return GroupShapes(self.shaperange.GroupItems)
 
-    # Lower case alias for GroupItems
+    # Lower case aliases for GroupItems
     @property
     def groupitems(self):
         return self.GroupItems
@@ -20315,7 +19725,7 @@ class ShapeRange:
     def HasChart(self):
         return self.shaperange.HasChart
 
-    # Lower case alias for HasChart
+    # Lower case aliases for HasChart
     @property
     def haschart(self):
         return self.HasChart
@@ -20324,7 +19734,7 @@ class ShapeRange:
     def HasSmartArt(self):
         return self.shaperange.HasSmartArt
 
-    # Lower case alias for HasSmartArt
+    # Lower case aliases for HasSmartArt
     @property
     def hassmartart(self):
         return self.HasSmartArt
@@ -20333,7 +19743,7 @@ class ShapeRange:
     def HasTable(self):
         return self.shaperange.HasTable
 
-    # Lower case alias for HasTable
+    # Lower case aliases for HasTable
     @property
     def hastable(self):
         return self.HasTable
@@ -20342,7 +19752,7 @@ class ShapeRange:
     def HasTextFrame(self):
         return self.shaperange.HasTextFrame
 
-    # Lower case alias for HasTextFrame
+    # Lower case aliases for HasTextFrame
     @property
     def hastextframe(self):
         return self.HasTextFrame
@@ -20351,16 +19761,15 @@ class ShapeRange:
     def Height(self):
         return self.shaperange.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.shaperange.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -20369,7 +19778,7 @@ class ShapeRange:
     def HorizontalFlip(self):
         return self.shaperange.HorizontalFlip
 
-    # Lower case alias for HorizontalFlip
+    # Lower case aliases for HorizontalFlip
     @property
     def horizontalflip(self):
         return self.HorizontalFlip
@@ -20378,7 +19787,7 @@ class ShapeRange:
     def Id(self):
         return self.shaperange.Id
 
-    # Lower case alias for Id
+    # Lower case aliases for Id
     @property
     def id(self):
         return self.Id
@@ -20387,16 +19796,15 @@ class ShapeRange:
     def Left(self):
         return self.shaperange.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.shaperange.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -20405,7 +19813,7 @@ class ShapeRange:
     def Line(self):
         return LineFormat(self.shaperange.Line)
 
-    # Lower case alias for Line
+    # Lower case aliases for Line
     @property
     def line(self):
         return self.Line
@@ -20414,7 +19822,7 @@ class ShapeRange:
     def LinkFormat(self):
         return LinkFormat(self.shaperange.LinkFormat)
 
-    # Lower case alias for LinkFormat
+    # Lower case aliases for LinkFormat
     @property
     def linkformat(self):
         return self.LinkFormat
@@ -20423,16 +19831,15 @@ class ShapeRange:
     def LockAspectRatio(self):
         return self.shaperange.LockAspectRatio
 
-    # Lower case alias for LockAspectRatio
-    @property
-    def lockaspectratio(self):
-        return self.LockAspectRatio
-
     @LockAspectRatio.setter
     def LockAspectRatio(self, value):
         self.shaperange.LockAspectRatio = value
 
-    # Lower case alias for LockAspectRatio setter
+    # Lower case aliases for LockAspectRatio
+    @property
+    def lockaspectratio(self):
+        return self.LockAspectRatio
+
     @lockaspectratio.setter
     def lockaspectratio(self, value):
         self.LockAspectRatio = value
@@ -20441,7 +19848,7 @@ class ShapeRange:
     def MediaFormat(self):
         return MediaFormat(self.shaperange.MediaFormat)
 
-    # Lower case alias for MediaFormat
+    # Lower case aliases for MediaFormat
     @property
     def mediaformat(self):
         return self.MediaFormat
@@ -20450,7 +19857,7 @@ class ShapeRange:
     def MediaType(self):
         return self.shaperange.MediaType
 
-    # Lower case alias for MediaType
+    # Lower case aliases for MediaType
     @property
     def mediatype(self):
         return self.MediaType
@@ -20459,7 +19866,7 @@ class ShapeRange:
     def Model3D(self):
         return Model3DFormat(self.shaperange.Model3D)
 
-    # Lower case alias for Model3D
+    # Lower case aliases for Model3D
     @property
     def model3d(self):
         return self.Model3D
@@ -20468,16 +19875,15 @@ class ShapeRange:
     def Name(self):
         return self.shaperange.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.shaperange.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -20486,7 +19892,7 @@ class ShapeRange:
     def Nodes(self):
         return ShapeNodes(self.shaperange.Nodes)
 
-    # Lower case alias for Nodes
+    # Lower case aliases for Nodes
     @property
     def nodes(self):
         return self.Nodes
@@ -20495,7 +19901,7 @@ class ShapeRange:
     def OLEFormat(self):
         return OLEFormat(self.shaperange.OLEFormat)
 
-    # Lower case alias for OLEFormat
+    # Lower case aliases for OLEFormat
     @property
     def oleformat(self):
         return self.OLEFormat
@@ -20504,7 +19910,7 @@ class ShapeRange:
     def Parent(self):
         return self.shaperange.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20513,7 +19919,7 @@ class ShapeRange:
     def ParentGroup(self):
         return Shape(self.shaperange.ParentGroup)
 
-    # Lower case alias for ParentGroup
+    # Lower case aliases for ParentGroup
     @property
     def parentgroup(self):
         return self.ParentGroup
@@ -20522,7 +19928,7 @@ class ShapeRange:
     def PictureFormat(self):
         return PictureFormat(self.shaperange.PictureFormat)
 
-    # Lower case alias for PictureFormat
+    # Lower case aliases for PictureFormat
     @property
     def pictureformat(self):
         return self.PictureFormat
@@ -20531,7 +19937,7 @@ class ShapeRange:
     def PlaceholderFormat(self):
         return PlaceholderFormat(self.shaperange.PlaceholderFormat)
 
-    # Lower case alias for PlaceholderFormat
+    # Lower case aliases for PlaceholderFormat
     @property
     def placeholderformat(self):
         return self.PlaceholderFormat
@@ -20540,7 +19946,7 @@ class ShapeRange:
     def Reflection(self):
         return self.shaperange.Reflection
 
-    # Lower case alias for Reflection
+    # Lower case aliases for Reflection
     @property
     def reflection(self):
         return self.Reflection
@@ -20549,16 +19955,15 @@ class ShapeRange:
     def Rotation(self):
         return self.shaperange.Rotation
 
-    # Lower case alias for Rotation
-    @property
-    def rotation(self):
-        return self.Rotation
-
     @Rotation.setter
     def Rotation(self, value):
         self.shaperange.Rotation = value
 
-    # Lower case alias for Rotation setter
+    # Lower case aliases for Rotation
+    @property
+    def rotation(self):
+        return self.Rotation
+
     @rotation.setter
     def rotation(self, value):
         self.Rotation = value
@@ -20567,7 +19972,7 @@ class ShapeRange:
     def Shadow(self):
         return ShadowFormat(self.shaperange.Shadow)
 
-    # Lower case alias for Shadow
+    # Lower case aliases for Shadow
     @property
     def shadow(self):
         return self.Shadow
@@ -20576,7 +19981,7 @@ class ShapeRange:
     def ShapeStyle(self):
         return self.shaperange.ShapeStyle
 
-    # Lower case alias for ShapeStyle
+    # Lower case aliases for ShapeStyle
     @property
     def shapestyle(self):
         return self.ShapeStyle
@@ -20585,7 +19990,7 @@ class ShapeRange:
     def SmartArt(self):
         return ShapeRange(self.shaperange.SmartArt)
 
-    # Lower case alias for SmartArt
+    # Lower case aliases for SmartArt
     @property
     def smartart(self):
         return self.SmartArt
@@ -20594,7 +19999,7 @@ class ShapeRange:
     def SoftEdge(self):
         return self.shaperange.SoftEdge
 
-    # Lower case alias for SoftEdge
+    # Lower case aliases for SoftEdge
     @property
     def softedge(self):
         return self.SoftEdge
@@ -20603,7 +20008,7 @@ class ShapeRange:
     def Table(self):
         return Table(self.shaperange.Table)
 
-    # Lower case alias for Table
+    # Lower case aliases for Table
     @property
     def table(self):
         return self.Table
@@ -20612,7 +20017,7 @@ class ShapeRange:
     def Tags(self):
         return Tags(self.shaperange.Tags)
 
-    # Lower case alias for Tags
+    # Lower case aliases for Tags
     @property
     def tags(self):
         return self.Tags
@@ -20621,7 +20026,7 @@ class ShapeRange:
     def TextEffect(self):
         return TextEffectFormat(self.shaperange.TextEffect)
 
-    # Lower case alias for TextEffect
+    # Lower case aliases for TextEffect
     @property
     def texteffect(self):
         return self.TextEffect
@@ -20630,7 +20035,7 @@ class ShapeRange:
     def TextFrame(self):
         return TextFrame(self.shaperange.TextFrame)
 
-    # Lower case alias for TextFrame
+    # Lower case aliases for TextFrame
     @property
     def textframe(self):
         return self.TextFrame
@@ -20639,7 +20044,7 @@ class ShapeRange:
     def TextFrame2(self):
         return TextFrame2(self.shaperange.TextFrame2)
 
-    # Lower case alias for TextFrame2
+    # Lower case aliases for TextFrame2
     @property
     def textframe2(self):
         return self.TextFrame2
@@ -20648,7 +20053,7 @@ class ShapeRange:
     def ThreeD(self):
         return ThreeDFormat(self.shaperange.ThreeD)
 
-    # Lower case alias for ThreeD
+    # Lower case aliases for ThreeD
     @property
     def threed(self):
         return self.ThreeD
@@ -20657,7 +20062,7 @@ class ShapeRange:
     def Title(self):
         return Shape(self.shaperange.Title)
 
-    # Lower case alias for Title
+    # Lower case aliases for Title
     @property
     def title(self):
         return self.Title
@@ -20666,16 +20071,15 @@ class ShapeRange:
     def Top(self):
         return self.shaperange.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.shaperange.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -20684,7 +20088,7 @@ class ShapeRange:
     def Type(self):
         return self.shaperange.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -20693,7 +20097,7 @@ class ShapeRange:
     def VerticalFlip(self):
         return self.shaperange.VerticalFlip
 
-    # Lower case alias for VerticalFlip
+    # Lower case aliases for VerticalFlip
     @property
     def verticalflip(self):
         return self.VerticalFlip
@@ -20702,7 +20106,7 @@ class ShapeRange:
     def Vertices(self):
         return self.shaperange.Vertices
 
-    # Lower case alias for Vertices
+    # Lower case aliases for Vertices
     @property
     def vertices(self):
         return self.Vertices
@@ -20711,16 +20115,15 @@ class ShapeRange:
     def Visible(self):
         return self.shaperange.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.shaperange.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -20729,16 +20132,15 @@ class ShapeRange:
     def Width(self):
         return self.shaperange.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.shaperange.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -20747,7 +20149,7 @@ class ShapeRange:
     def ZOrderPosition(self):
         return self.shaperange.ZOrderPosition
 
-    # Lower case alias for ZOrderPosition
+    # Lower case aliases for ZOrderPosition
     @property
     def zorderposition(self):
         return self.ZOrderPosition
@@ -20859,7 +20261,7 @@ class Shapes:
     def Count(self):
         return self.shapes.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -20868,7 +20270,7 @@ class Shapes:
     def Creator(self):
         return self.shapes.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -20877,7 +20279,7 @@ class Shapes:
     def HasTitle(self):
         return self.shapes.HasTitle
 
-    # Lower case alias for HasTitle
+    # Lower case aliases for HasTitle
     @property
     def hastitle(self):
         return self.HasTitle
@@ -20886,7 +20288,7 @@ class Shapes:
     def Parent(self):
         return self.shapes.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -20895,7 +20297,7 @@ class Shapes:
     def Placeholders(self):
         return Placeholders(self.shapes.Placeholders)
 
-    # Lower case alias for Placeholders
+    # Lower case aliases for Placeholders
     @property
     def placeholders(self):
         return self.Placeholders
@@ -20904,7 +20306,7 @@ class Shapes:
     def Title(self):
         return Shape(self.shapes.Title)
 
-    # Lower case alias for Title
+    # Lower case aliases for Title
     @property
     def title(self):
         return self.Title
@@ -21020,7 +20422,7 @@ class Slide:
     def Background(self):
         return ShapeRange(self.slide.Background)
 
-    # Lower case alias for Background
+    # Lower case aliases for Background
     @property
     def background(self):
         return self.Background
@@ -21029,16 +20431,15 @@ class Slide:
     def BackgroundStyle(self):
         return self.slide.BackgroundStyle
 
-    # Lower case alias for BackgroundStyle
-    @property
-    def backgroundstyle(self):
-        return self.BackgroundStyle
-
     @BackgroundStyle.setter
     def BackgroundStyle(self, value):
         self.slide.BackgroundStyle = value
 
-    # Lower case alias for BackgroundStyle setter
+    # Lower case aliases for BackgroundStyle
+    @property
+    def backgroundstyle(self):
+        return self.BackgroundStyle
+
     @backgroundstyle.setter
     def backgroundstyle(self, value):
         self.BackgroundStyle = value
@@ -21047,16 +20448,15 @@ class Slide:
     def ColorScheme(self):
         return ColorScheme(self.slide.ColorScheme)
 
-    # Lower case alias for ColorScheme
-    @property
-    def colorscheme(self):
-        return self.ColorScheme
-
     @ColorScheme.setter
     def ColorScheme(self, value):
         self.slide.ColorScheme = value
 
-    # Lower case alias for ColorScheme setter
+    # Lower case aliases for ColorScheme
+    @property
+    def colorscheme(self):
+        return self.ColorScheme
+
     @colorscheme.setter
     def colorscheme(self, value):
         self.ColorScheme = value
@@ -21065,7 +20465,7 @@ class Slide:
     def Comments(self):
         return Comments(self.slide.Comments)
 
-    # Lower case alias for Comments
+    # Lower case aliases for Comments
     @property
     def comments(self):
         return self.Comments
@@ -21074,7 +20474,7 @@ class Slide:
     def CustomerData(self):
         return CustomerData(self.slide.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -21083,7 +20483,7 @@ class Slide:
     def CustomLayout(self):
         return CustomLayout(self.slide.CustomLayout)
 
-    # Lower case alias for CustomLayout
+    # Lower case aliases for CustomLayout
     @property
     def customlayout(self):
         return self.CustomLayout
@@ -21092,7 +20492,7 @@ class Slide:
     def Design(self):
         return Design(self.slide.Design)
 
-    # Lower case alias for Design
+    # Lower case aliases for Design
     @property
     def design(self):
         return self.Design
@@ -21101,16 +20501,15 @@ class Slide:
     def DisplayMasterShapes(self):
         return self.slide.DisplayMasterShapes
 
-    # Lower case alias for DisplayMasterShapes
-    @property
-    def displaymastershapes(self):
-        return self.DisplayMasterShapes
-
     @DisplayMasterShapes.setter
     def DisplayMasterShapes(self, value):
         self.slide.DisplayMasterShapes = value
 
-    # Lower case alias for DisplayMasterShapes setter
+    # Lower case aliases for DisplayMasterShapes
+    @property
+    def displaymastershapes(self):
+        return self.DisplayMasterShapes
+
     @displaymastershapes.setter
     def displaymastershapes(self, value):
         self.DisplayMasterShapes = value
@@ -21119,16 +20518,15 @@ class Slide:
     def FollowMasterBackground(self):
         return self.slide.FollowMasterBackground
 
-    # Lower case alias for FollowMasterBackground
-    @property
-    def followmasterbackground(self):
-        return self.FollowMasterBackground
-
     @FollowMasterBackground.setter
     def FollowMasterBackground(self, value):
         self.slide.FollowMasterBackground = value
 
-    # Lower case alias for FollowMasterBackground setter
+    # Lower case aliases for FollowMasterBackground
+    @property
+    def followmasterbackground(self):
+        return self.FollowMasterBackground
+
     @followmasterbackground.setter
     def followmasterbackground(self, value):
         self.FollowMasterBackground = value
@@ -21137,7 +20535,7 @@ class Slide:
     def HasNotesPage(self):
         return self.slide.HasNotesPage
 
-    # Lower case alias for HasNotesPage
+    # Lower case aliases for HasNotesPage
     @property
     def hasnotespage(self):
         return self.HasNotesPage
@@ -21146,7 +20544,7 @@ class Slide:
     def HeadersFooters(self):
         return HeadersFooters(self.slide.HeadersFooters)
 
-    # Lower case alias for HeadersFooters
+    # Lower case aliases for HeadersFooters
     @property
     def headersfooters(self):
         return self.HeadersFooters
@@ -21155,7 +20553,7 @@ class Slide:
     def Hyperlinks(self):
         return Hyperlinks(self.slide.Hyperlinks)
 
-    # Lower case alias for Hyperlinks
+    # Lower case aliases for Hyperlinks
     @property
     def hyperlinks(self):
         return self.Hyperlinks
@@ -21164,16 +20562,15 @@ class Slide:
     def Layout(self):
         return PpSlideLayout(self.slide.Layout)
 
-    # Lower case alias for Layout
-    @property
-    def layout(self):
-        return self.Layout
-
     @Layout.setter
     def Layout(self, value):
         self.slide.Layout = value
 
-    # Lower case alias for Layout setter
+    # Lower case aliases for Layout
+    @property
+    def layout(self):
+        return self.Layout
+
     @layout.setter
     def layout(self, value):
         self.Layout = value
@@ -21182,7 +20579,7 @@ class Slide:
     def Master(self):
         return Master(self.slide.Master)
 
-    # Lower case alias for Master
+    # Lower case aliases for Master
     @property
     def master(self):
         return self.Master
@@ -21191,7 +20588,7 @@ class Slide:
     def Name(self):
         return self.slide.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -21200,7 +20597,7 @@ class Slide:
     def NotesPage(self):
         return SlideRange(self.slide.NotesPage)
 
-    # Lower case alias for NotesPage
+    # Lower case aliases for NotesPage
     @property
     def notespage(self):
         return self.NotesPage
@@ -21209,7 +20606,7 @@ class Slide:
     def Parent(self):
         return self.slide.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21218,7 +20615,7 @@ class Slide:
     def PrintSteps(self):
         return self.slide.PrintSteps
 
-    # Lower case alias for PrintSteps
+    # Lower case aliases for PrintSteps
     @property
     def printsteps(self):
         return self.PrintSteps
@@ -21227,7 +20624,7 @@ class Slide:
     def sectionIndex(self):
         return Slide(self.slide.sectionIndex)
 
-    # Lower case alias for sectionIndex
+    # Lower case aliases for sectionIndex
     @property
     def sectionindex(self):
         return self.sectionIndex
@@ -21236,7 +20633,7 @@ class Slide:
     def Shapes(self):
         return Shapes(self.slide.Shapes)
 
-    # Lower case alias for Shapes
+    # Lower case aliases for Shapes
     @property
     def shapes(self):
         return self.Shapes
@@ -21245,7 +20642,7 @@ class Slide:
     def SlideID(self):
         return self.slide.SlideID
 
-    # Lower case alias for SlideID
+    # Lower case aliases for SlideID
     @property
     def slideid(self):
         return self.SlideID
@@ -21254,7 +20651,7 @@ class Slide:
     def SlideIndex(self):
         return Slides(self.slide.SlideIndex)
 
-    # Lower case alias for SlideIndex
+    # Lower case aliases for SlideIndex
     @property
     def slideindex(self):
         return self.SlideIndex
@@ -21263,7 +20660,7 @@ class Slide:
     def SlideNumber(self):
         return self.slide.SlideNumber
 
-    # Lower case alias for SlideNumber
+    # Lower case aliases for SlideNumber
     @property
     def slidenumber(self):
         return self.SlideNumber
@@ -21272,7 +20669,7 @@ class Slide:
     def SlideShowTransition(self):
         return SlideShowTransition(self.slide.SlideShowTransition)
 
-    # Lower case alias for SlideShowTransition
+    # Lower case aliases for SlideShowTransition
     @property
     def slideshowtransition(self):
         return self.SlideShowTransition
@@ -21281,7 +20678,7 @@ class Slide:
     def Tags(self):
         return Tags(self.slide.Tags)
 
-    # Lower case alias for Tags
+    # Lower case aliases for Tags
     @property
     def tags(self):
         return self.Tags
@@ -21290,7 +20687,7 @@ class Slide:
     def ThemeColorScheme(self):
         return self.slide.ThemeColorScheme
 
-    # Lower case alias for ThemeColorScheme
+    # Lower case aliases for ThemeColorScheme
     @property
     def themecolorscheme(self):
         return self.ThemeColorScheme
@@ -21299,7 +20696,7 @@ class Slide:
     def TimeLine(self):
         return TimeLine(self.slide.TimeLine)
 
-    # Lower case alias for TimeLine
+    # Lower case aliases for TimeLine
     @property
     def timeline(self):
         return self.TimeLine
@@ -21364,7 +20761,7 @@ class SlideRange:
     def Background(self):
         return ShapeRange(self.sliderange.Background)
 
-    # Lower case alias for Background
+    # Lower case aliases for Background
     @property
     def background(self):
         return self.Background
@@ -21373,16 +20770,15 @@ class SlideRange:
     def BackgroundStyle(self):
         return self.sliderange.BackgroundStyle
 
-    # Lower case alias for BackgroundStyle
-    @property
-    def backgroundstyle(self):
-        return self.BackgroundStyle
-
     @BackgroundStyle.setter
     def BackgroundStyle(self, value):
         self.sliderange.BackgroundStyle = value
 
-    # Lower case alias for BackgroundStyle setter
+    # Lower case aliases for BackgroundStyle
+    @property
+    def backgroundstyle(self):
+        return self.BackgroundStyle
+
     @backgroundstyle.setter
     def backgroundstyle(self, value):
         self.BackgroundStyle = value
@@ -21391,16 +20787,15 @@ class SlideRange:
     def ColorScheme(self):
         return ColorScheme(self.sliderange.ColorScheme)
 
-    # Lower case alias for ColorScheme
-    @property
-    def colorscheme(self):
-        return self.ColorScheme
-
     @ColorScheme.setter
     def ColorScheme(self, value):
         self.sliderange.ColorScheme = value
 
-    # Lower case alias for ColorScheme setter
+    # Lower case aliases for ColorScheme
+    @property
+    def colorscheme(self):
+        return self.ColorScheme
+
     @colorscheme.setter
     def colorscheme(self, value):
         self.ColorScheme = value
@@ -21409,7 +20804,7 @@ class SlideRange:
     def Comments(self):
         return Comments(self.sliderange.Comments)
 
-    # Lower case alias for Comments
+    # Lower case aliases for Comments
     @property
     def comments(self):
         return self.Comments
@@ -21418,7 +20813,7 @@ class SlideRange:
     def Count(self):
         return self.sliderange.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -21427,7 +20822,7 @@ class SlideRange:
     def CustomerData(self):
         return CustomerData(self.sliderange.CustomerData)
 
-    # Lower case alias for CustomerData
+    # Lower case aliases for CustomerData
     @property
     def customerdata(self):
         return self.CustomerData
@@ -21436,7 +20831,7 @@ class SlideRange:
     def CustomLayout(self):
         return CustomLayout(self.sliderange.CustomLayout)
 
-    # Lower case alias for CustomLayout
+    # Lower case aliases for CustomLayout
     @property
     def customlayout(self):
         return self.CustomLayout
@@ -21445,7 +20840,7 @@ class SlideRange:
     def Design(self):
         return Design(self.sliderange.Design)
 
-    # Lower case alias for Design
+    # Lower case aliases for Design
     @property
     def design(self):
         return self.Design
@@ -21454,16 +20849,15 @@ class SlideRange:
     def DisplayMasterShapes(self):
         return self.sliderange.DisplayMasterShapes
 
-    # Lower case alias for DisplayMasterShapes
-    @property
-    def displaymastershapes(self):
-        return self.DisplayMasterShapes
-
     @DisplayMasterShapes.setter
     def DisplayMasterShapes(self, value):
         self.sliderange.DisplayMasterShapes = value
 
-    # Lower case alias for DisplayMasterShapes setter
+    # Lower case aliases for DisplayMasterShapes
+    @property
+    def displaymastershapes(self):
+        return self.DisplayMasterShapes
+
     @displaymastershapes.setter
     def displaymastershapes(self, value):
         self.DisplayMasterShapes = value
@@ -21472,16 +20866,15 @@ class SlideRange:
     def FollowMasterBackground(self):
         return self.sliderange.FollowMasterBackground
 
-    # Lower case alias for FollowMasterBackground
-    @property
-    def followmasterbackground(self):
-        return self.FollowMasterBackground
-
     @FollowMasterBackground.setter
     def FollowMasterBackground(self, value):
         self.sliderange.FollowMasterBackground = value
 
-    # Lower case alias for FollowMasterBackground setter
+    # Lower case aliases for FollowMasterBackground
+    @property
+    def followmasterbackground(self):
+        return self.FollowMasterBackground
+
     @followmasterbackground.setter
     def followmasterbackground(self, value):
         self.FollowMasterBackground = value
@@ -21490,7 +20883,7 @@ class SlideRange:
     def HasNotesPage(self):
         return self.sliderange.HasNotesPage
 
-    # Lower case alias for HasNotesPage
+    # Lower case aliases for HasNotesPage
     @property
     def hasnotespage(self):
         return self.HasNotesPage
@@ -21499,7 +20892,7 @@ class SlideRange:
     def HeadersFooters(self):
         return HeadersFooters(self.sliderange.HeadersFooters)
 
-    # Lower case alias for HeadersFooters
+    # Lower case aliases for HeadersFooters
     @property
     def headersfooters(self):
         return self.HeadersFooters
@@ -21508,7 +20901,7 @@ class SlideRange:
     def Hyperlinks(self):
         return Hyperlinks(self.sliderange.Hyperlinks)
 
-    # Lower case alias for Hyperlinks
+    # Lower case aliases for Hyperlinks
     @property
     def hyperlinks(self):
         return self.Hyperlinks
@@ -21517,16 +20910,15 @@ class SlideRange:
     def Layout(self):
         return PpSlideLayout(self.sliderange.Layout)
 
-    # Lower case alias for Layout
-    @property
-    def layout(self):
-        return self.Layout
-
     @Layout.setter
     def Layout(self, value):
         self.sliderange.Layout = value
 
-    # Lower case alias for Layout setter
+    # Lower case aliases for Layout
+    @property
+    def layout(self):
+        return self.Layout
+
     @layout.setter
     def layout(self, value):
         self.Layout = value
@@ -21535,7 +20927,7 @@ class SlideRange:
     def Master(self):
         return Master(self.sliderange.Master)
 
-    # Lower case alias for Master
+    # Lower case aliases for Master
     @property
     def master(self):
         return self.Master
@@ -21544,16 +20936,15 @@ class SlideRange:
     def Name(self):
         return self.sliderange.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.sliderange.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -21562,7 +20953,7 @@ class SlideRange:
     def NotesPage(self):
         return SlideRange(self.sliderange.NotesPage)
 
-    # Lower case alias for NotesPage
+    # Lower case aliases for NotesPage
     @property
     def notespage(self):
         return self.NotesPage
@@ -21571,7 +20962,7 @@ class SlideRange:
     def Parent(self):
         return self.sliderange.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21580,7 +20971,7 @@ class SlideRange:
     def PrintSteps(self):
         return self.sliderange.PrintSteps
 
-    # Lower case alias for PrintSteps
+    # Lower case aliases for PrintSteps
     @property
     def printsteps(self):
         return self.PrintSteps
@@ -21589,7 +20980,7 @@ class SlideRange:
     def sectionIndex(self):
         return SlideRange(self.sliderange.sectionIndex)
 
-    # Lower case alias for sectionIndex
+    # Lower case aliases for sectionIndex
     @property
     def sectionindex(self):
         return self.sectionIndex
@@ -21598,7 +20989,7 @@ class SlideRange:
     def Shapes(self):
         return Shapes(self.sliderange.Shapes)
 
-    # Lower case alias for Shapes
+    # Lower case aliases for Shapes
     @property
     def shapes(self):
         return self.Shapes
@@ -21607,7 +20998,7 @@ class SlideRange:
     def SlideID(self):
         return self.sliderange.SlideID
 
-    # Lower case alias for SlideID
+    # Lower case aliases for SlideID
     @property
     def slideid(self):
         return self.SlideID
@@ -21616,7 +21007,7 @@ class SlideRange:
     def SlideIndex(self):
         return Slides(self.sliderange.SlideIndex)
 
-    # Lower case alias for SlideIndex
+    # Lower case aliases for SlideIndex
     @property
     def slideindex(self):
         return self.SlideIndex
@@ -21625,7 +21016,7 @@ class SlideRange:
     def SlideNumber(self):
         return self.sliderange.SlideNumber
 
-    # Lower case alias for SlideNumber
+    # Lower case aliases for SlideNumber
     @property
     def slidenumber(self):
         return self.SlideNumber
@@ -21634,7 +21025,7 @@ class SlideRange:
     def SlideShowTransition(self):
         return SlideShowTransition(self.sliderange.SlideShowTransition)
 
-    # Lower case alias for SlideShowTransition
+    # Lower case aliases for SlideShowTransition
     @property
     def slideshowtransition(self):
         return self.SlideShowTransition
@@ -21643,7 +21034,7 @@ class SlideRange:
     def Tags(self):
         return Tags(self.sliderange.Tags)
 
-    # Lower case alias for Tags
+    # Lower case aliases for Tags
     @property
     def tags(self):
         return self.Tags
@@ -21652,7 +21043,7 @@ class SlideRange:
     def ThemeColorScheme(self):
         return self.sliderange.ThemeColorScheme
 
-    # Lower case alias for ThemeColorScheme
+    # Lower case aliases for ThemeColorScheme
     @property
     def themecolorscheme(self):
         return self.ThemeColorScheme
@@ -21661,7 +21052,7 @@ class SlideRange:
     def TimeLine(self):
         return TimeLine(self.sliderange.TimeLine)
 
-    # Lower case alias for TimeLine
+    # Lower case aliases for TimeLine
     @property
     def timeline(self):
         return self.TimeLine
@@ -21730,7 +21121,7 @@ class Slides:
     def Count(self):
         return self.slides.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -21739,7 +21130,7 @@ class Slides:
     def Parent(self):
         return self.slides.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21778,16 +21169,15 @@ class SlideShowSettings:
     def AdvanceMode(self):
         return self.slideshowsettings.AdvanceMode
 
-    # Lower case alias for AdvanceMode
-    @property
-    def advancemode(self):
-        return self.AdvanceMode
-
     @AdvanceMode.setter
     def AdvanceMode(self, value):
         self.slideshowsettings.AdvanceMode = value
 
-    # Lower case alias for AdvanceMode setter
+    # Lower case aliases for AdvanceMode
+    @property
+    def advancemode(self):
+        return self.AdvanceMode
+
     @advancemode.setter
     def advancemode(self, value):
         self.AdvanceMode = value
@@ -21800,16 +21190,15 @@ class SlideShowSettings:
     def EndingSlide(self):
         return self.slideshowsettings.EndingSlide
 
-    # Lower case alias for EndingSlide
-    @property
-    def endingslide(self):
-        return self.EndingSlide
-
     @EndingSlide.setter
     def EndingSlide(self, value):
         self.slideshowsettings.EndingSlide = value
 
-    # Lower case alias for EndingSlide setter
+    # Lower case aliases for EndingSlide
+    @property
+    def endingslide(self):
+        return self.EndingSlide
+
     @endingslide.setter
     def endingslide(self, value):
         self.EndingSlide = value
@@ -21818,16 +21207,15 @@ class SlideShowSettings:
     def LoopUntilStopped(self):
         return self.slideshowsettings.LoopUntilStopped
 
-    # Lower case alias for LoopUntilStopped
-    @property
-    def loopuntilstopped(self):
-        return self.LoopUntilStopped
-
     @LoopUntilStopped.setter
     def LoopUntilStopped(self, value):
         self.slideshowsettings.LoopUntilStopped = value
 
-    # Lower case alias for LoopUntilStopped setter
+    # Lower case aliases for LoopUntilStopped
+    @property
+    def loopuntilstopped(self):
+        return self.LoopUntilStopped
+
     @loopuntilstopped.setter
     def loopuntilstopped(self, value):
         self.LoopUntilStopped = value
@@ -21836,7 +21224,7 @@ class SlideShowSettings:
     def NamedSlideShows(self):
         return NamedSlideShows(self.slideshowsettings.NamedSlideShows)
 
-    # Lower case alias for NamedSlideShows
+    # Lower case aliases for NamedSlideShows
     @property
     def namedslideshows(self):
         return self.NamedSlideShows
@@ -21845,7 +21233,7 @@ class SlideShowSettings:
     def Parent(self):
         return self.slideshowsettings.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -21854,7 +21242,7 @@ class SlideShowSettings:
     def PointerColor(self):
         return ColorFormat(self.slideshowsettings.PointerColor)
 
-    # Lower case alias for PointerColor
+    # Lower case aliases for PointerColor
     @property
     def pointercolor(self):
         return self.PointerColor
@@ -21863,16 +21251,15 @@ class SlideShowSettings:
     def RangeType(self):
         return self.slideshowsettings.RangeType
 
-    # Lower case alias for RangeType
-    @property
-    def rangetype(self):
-        return self.RangeType
-
     @RangeType.setter
     def RangeType(self, value):
         self.slideshowsettings.RangeType = value
 
-    # Lower case alias for RangeType setter
+    # Lower case aliases for RangeType
+    @property
+    def rangetype(self):
+        return self.RangeType
+
     @rangetype.setter
     def rangetype(self, value):
         self.RangeType = value
@@ -21881,16 +21268,15 @@ class SlideShowSettings:
     def ShowMediaControls(self):
         return self.slideshowsettings.ShowMediaControls
 
-    # Lower case alias for ShowMediaControls
-    @property
-    def showmediacontrols(self):
-        return self.ShowMediaControls
-
     @ShowMediaControls.setter
     def ShowMediaControls(self, value):
         self.slideshowsettings.ShowMediaControls = value
 
-    # Lower case alias for ShowMediaControls setter
+    # Lower case aliases for ShowMediaControls
+    @property
+    def showmediacontrols(self):
+        return self.ShowMediaControls
+
     @showmediacontrols.setter
     def showmediacontrols(self, value):
         self.ShowMediaControls = value
@@ -21899,16 +21285,15 @@ class SlideShowSettings:
     def ShowPresenterView(self):
         return SlideShowSettings(self.slideshowsettings.ShowPresenterView)
 
-    # Lower case alias for ShowPresenterView
-    @property
-    def showpresenterview(self):
-        return self.ShowPresenterView
-
     @ShowPresenterView.setter
     def ShowPresenterView(self, value):
         self.slideshowsettings.ShowPresenterView = value
 
-    # Lower case alias for ShowPresenterView setter
+    # Lower case aliases for ShowPresenterView
+    @property
+    def showpresenterview(self):
+        return self.ShowPresenterView
+
     @showpresenterview.setter
     def showpresenterview(self, value):
         self.ShowPresenterView = value
@@ -21917,16 +21302,15 @@ class SlideShowSettings:
     def ShowScrollbar(self):
         return self.slideshowsettings.ShowScrollbar
 
-    # Lower case alias for ShowScrollbar
-    @property
-    def showscrollbar(self):
-        return self.ShowScrollbar
-
     @ShowScrollbar.setter
     def ShowScrollbar(self, value):
         self.slideshowsettings.ShowScrollbar = value
 
-    # Lower case alias for ShowScrollbar setter
+    # Lower case aliases for ShowScrollbar
+    @property
+    def showscrollbar(self):
+        return self.ShowScrollbar
+
     @showscrollbar.setter
     def showscrollbar(self, value):
         self.ShowScrollbar = value
@@ -21935,16 +21319,15 @@ class SlideShowSettings:
     def ShowType(self):
         return self.slideshowsettings.ShowType
 
-    # Lower case alias for ShowType
-    @property
-    def showtype(self):
-        return self.ShowType
-
     @ShowType.setter
     def ShowType(self, value):
         self.slideshowsettings.ShowType = value
 
-    # Lower case alias for ShowType setter
+    # Lower case aliases for ShowType
+    @property
+    def showtype(self):
+        return self.ShowType
+
     @showtype.setter
     def showtype(self, value):
         self.ShowType = value
@@ -21953,16 +21336,15 @@ class SlideShowSettings:
     def ShowWithAnimation(self):
         return self.slideshowsettings.ShowWithAnimation
 
-    # Lower case alias for ShowWithAnimation
-    @property
-    def showwithanimation(self):
-        return self.ShowWithAnimation
-
     @ShowWithAnimation.setter
     def ShowWithAnimation(self, value):
         self.slideshowsettings.ShowWithAnimation = value
 
-    # Lower case alias for ShowWithAnimation setter
+    # Lower case aliases for ShowWithAnimation
+    @property
+    def showwithanimation(self):
+        return self.ShowWithAnimation
+
     @showwithanimation.setter
     def showwithanimation(self, value):
         self.ShowWithAnimation = value
@@ -21971,16 +21353,15 @@ class SlideShowSettings:
     def ShowWithNarration(self):
         return self.slideshowsettings.ShowWithNarration
 
-    # Lower case alias for ShowWithNarration
-    @property
-    def showwithnarration(self):
-        return self.ShowWithNarration
-
     @ShowWithNarration.setter
     def ShowWithNarration(self, value):
         self.slideshowsettings.ShowWithNarration = value
 
-    # Lower case alias for ShowWithNarration setter
+    # Lower case aliases for ShowWithNarration
+    @property
+    def showwithnarration(self):
+        return self.ShowWithNarration
+
     @showwithnarration.setter
     def showwithnarration(self, value):
         self.ShowWithNarration = value
@@ -21989,16 +21370,15 @@ class SlideShowSettings:
     def SlideShowName(self):
         return self.slideshowsettings.SlideShowName
 
-    # Lower case alias for SlideShowName
-    @property
-    def slideshowname(self):
-        return self.SlideShowName
-
     @SlideShowName.setter
     def SlideShowName(self, value):
         self.slideshowsettings.SlideShowName = value
 
-    # Lower case alias for SlideShowName setter
+    # Lower case aliases for SlideShowName
+    @property
+    def slideshowname(self):
+        return self.SlideShowName
+
     @slideshowname.setter
     def slideshowname(self, value):
         self.SlideShowName = value
@@ -22007,16 +21387,15 @@ class SlideShowSettings:
     def StartingSlide(self):
         return self.slideshowsettings.StartingSlide
 
-    # Lower case alias for StartingSlide
-    @property
-    def startingslide(self):
-        return self.StartingSlide
-
     @StartingSlide.setter
     def StartingSlide(self, value):
         self.slideshowsettings.StartingSlide = value
 
-    # Lower case alias for StartingSlide setter
+    # Lower case aliases for StartingSlide
+    @property
+    def startingslide(self):
+        return self.StartingSlide
+
     @startingslide.setter
     def startingslide(self, value):
         self.StartingSlide = value
@@ -22034,16 +21413,15 @@ class SlideShowTransition:
     def AdvanceOnClick(self):
         return self.slideshowtransition.AdvanceOnClick
 
-    # Lower case alias for AdvanceOnClick
-    @property
-    def advanceonclick(self):
-        return self.AdvanceOnClick
-
     @AdvanceOnClick.setter
     def AdvanceOnClick(self, value):
         self.slideshowtransition.AdvanceOnClick = value
 
-    # Lower case alias for AdvanceOnClick setter
+    # Lower case aliases for AdvanceOnClick
+    @property
+    def advanceonclick(self):
+        return self.AdvanceOnClick
+
     @advanceonclick.setter
     def advanceonclick(self, value):
         self.AdvanceOnClick = value
@@ -22052,16 +21430,15 @@ class SlideShowTransition:
     def AdvanceOnTime(self):
         return self.slideshowtransition.AdvanceOnTime
 
-    # Lower case alias for AdvanceOnTime
-    @property
-    def advanceontime(self):
-        return self.AdvanceOnTime
-
     @AdvanceOnTime.setter
     def AdvanceOnTime(self, value):
         self.slideshowtransition.AdvanceOnTime = value
 
-    # Lower case alias for AdvanceOnTime setter
+    # Lower case aliases for AdvanceOnTime
+    @property
+    def advanceontime(self):
+        return self.AdvanceOnTime
+
     @advanceontime.setter
     def advanceontime(self, value):
         self.AdvanceOnTime = value
@@ -22070,16 +21447,15 @@ class SlideShowTransition:
     def AdvanceTime(self):
         return self.slideshowtransition.AdvanceTime
 
-    # Lower case alias for AdvanceTime
-    @property
-    def advancetime(self):
-        return self.AdvanceTime
-
     @AdvanceTime.setter
     def AdvanceTime(self, value):
         self.slideshowtransition.AdvanceTime = value
 
-    # Lower case alias for AdvanceTime setter
+    # Lower case aliases for AdvanceTime
+    @property
+    def advancetime(self):
+        return self.AdvanceTime
+
     @advancetime.setter
     def advancetime(self, value):
         self.AdvanceTime = value
@@ -22092,16 +21468,15 @@ class SlideShowTransition:
     def Duration(self):
         return self.slideshowtransition.Duration
 
-    # Lower case alias for Duration
-    @property
-    def duration(self):
-        return self.Duration
-
     @Duration.setter
     def Duration(self, value):
         self.slideshowtransition.Duration = value
 
-    # Lower case alias for Duration setter
+    # Lower case aliases for Duration
+    @property
+    def duration(self):
+        return self.Duration
+
     @duration.setter
     def duration(self, value):
         self.Duration = value
@@ -22110,16 +21485,15 @@ class SlideShowTransition:
     def EntryEffect(self):
         return self.slideshowtransition.EntryEffect
 
-    # Lower case alias for EntryEffect
-    @property
-    def entryeffect(self):
-        return self.EntryEffect
-
     @EntryEffect.setter
     def EntryEffect(self, value):
         self.slideshowtransition.EntryEffect = value
 
-    # Lower case alias for EntryEffect setter
+    # Lower case aliases for EntryEffect
+    @property
+    def entryeffect(self):
+        return self.EntryEffect
+
     @entryeffect.setter
     def entryeffect(self, value):
         self.EntryEffect = value
@@ -22128,16 +21502,15 @@ class SlideShowTransition:
     def Hidden(self):
         return self.slideshowtransition.Hidden
 
-    # Lower case alias for Hidden
-    @property
-    def hidden(self):
-        return self.Hidden
-
     @Hidden.setter
     def Hidden(self, value):
         self.slideshowtransition.Hidden = value
 
-    # Lower case alias for Hidden setter
+    # Lower case aliases for Hidden
+    @property
+    def hidden(self):
+        return self.Hidden
+
     @hidden.setter
     def hidden(self, value):
         self.Hidden = value
@@ -22146,16 +21519,15 @@ class SlideShowTransition:
     def LoopSoundUntilNext(self):
         return self.slideshowtransition.LoopSoundUntilNext
 
-    # Lower case alias for LoopSoundUntilNext
-    @property
-    def loopsounduntilnext(self):
-        return self.LoopSoundUntilNext
-
     @LoopSoundUntilNext.setter
     def LoopSoundUntilNext(self, value):
         self.slideshowtransition.LoopSoundUntilNext = value
 
-    # Lower case alias for LoopSoundUntilNext setter
+    # Lower case aliases for LoopSoundUntilNext
+    @property
+    def loopsounduntilnext(self):
+        return self.LoopSoundUntilNext
+
     @loopsounduntilnext.setter
     def loopsounduntilnext(self, value):
         self.LoopSoundUntilNext = value
@@ -22164,7 +21536,7 @@ class SlideShowTransition:
     def Parent(self):
         return self.slideshowtransition.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22173,7 +21545,7 @@ class SlideShowTransition:
     def SoundEffect(self):
         return SoundEffect(self.slideshowtransition.SoundEffect)
 
-    # Lower case alias for SoundEffect
+    # Lower case aliases for SoundEffect
     @property
     def soundeffect(self):
         return self.SoundEffect
@@ -22182,16 +21554,15 @@ class SlideShowTransition:
     def Speed(self):
         return self.slideshowtransition.Speed
 
-    # Lower case alias for Speed
-    @property
-    def speed(self):
-        return self.Speed
-
     @Speed.setter
     def Speed(self, value):
         self.slideshowtransition.Speed = value
 
-    # Lower case alias for Speed setter
+    # Lower case aliases for Speed
+    @property
+    def speed(self):
+        return self.Speed
+
     @speed.setter
     def speed(self, value):
         self.Speed = value
@@ -22206,16 +21577,15 @@ class SlideShowView:
     def AcceleratorsEnabled(self):
         return self.slideshowview.AcceleratorsEnabled
 
-    # Lower case alias for AcceleratorsEnabled
-    @property
-    def acceleratorsenabled(self):
-        return self.AcceleratorsEnabled
-
     @AcceleratorsEnabled.setter
     def AcceleratorsEnabled(self, value):
         self.slideshowview.AcceleratorsEnabled = value
 
-    # Lower case alias for AcceleratorsEnabled setter
+    # Lower case aliases for AcceleratorsEnabled
+    @property
+    def acceleratorsenabled(self):
+        return self.AcceleratorsEnabled
+
     @acceleratorsenabled.setter
     def acceleratorsenabled(self, value):
         self.AcceleratorsEnabled = value
@@ -22224,7 +21594,7 @@ class SlideShowView:
     def AdvanceMode(self):
         return self.slideshowview.AdvanceMode
 
-    # Lower case alias for AdvanceMode
+    # Lower case aliases for AdvanceMode
     @property
     def advancemode(self):
         return self.AdvanceMode
@@ -22237,7 +21607,7 @@ class SlideShowView:
     def CurrentShowPosition(self):
         return self.slideshowview.CurrentShowPosition
 
-    # Lower case alias for CurrentShowPosition
+    # Lower case aliases for CurrentShowPosition
     @property
     def currentshowposition(self):
         return self.CurrentShowPosition
@@ -22246,7 +21616,7 @@ class SlideShowView:
     def IsNamedShow(self):
         return self.slideshowview.IsNamedShow
 
-    # Lower case alias for IsNamedShow
+    # Lower case aliases for IsNamedShow
     @property
     def isnamedshow(self):
         return self.IsNamedShow
@@ -22255,7 +21625,7 @@ class SlideShowView:
     def LastSlideViewed(self):
         return Slide(self.slideshowview.LastSlideViewed)
 
-    # Lower case alias for LastSlideViewed
+    # Lower case aliases for LastSlideViewed
     @property
     def lastslideviewed(self):
         return self.LastSlideViewed
@@ -22264,7 +21634,7 @@ class SlideShowView:
     def MediaControlsHeight(self):
         return self.slideshowview.MediaControlsHeight
 
-    # Lower case alias for MediaControlsHeight
+    # Lower case aliases for MediaControlsHeight
     @property
     def mediacontrolsheight(self):
         return self.MediaControlsHeight
@@ -22273,7 +21643,7 @@ class SlideShowView:
     def MediaControlsLeft(self):
         return Slide(self.slideshowview.MediaControlsLeft)
 
-    # Lower case alias for MediaControlsLeft
+    # Lower case aliases for MediaControlsLeft
     @property
     def mediacontrolsleft(self):
         return self.MediaControlsLeft
@@ -22282,7 +21652,7 @@ class SlideShowView:
     def MediaControlsTop(self):
         return Slide(self.slideshowview.MediaControlsTop)
 
-    # Lower case alias for MediaControlsTop
+    # Lower case aliases for MediaControlsTop
     @property
     def mediacontrolstop(self):
         return self.MediaControlsTop
@@ -22291,7 +21661,7 @@ class SlideShowView:
     def MediaControlsVisible(self):
         return self.slideshowview.MediaControlsVisible
 
-    # Lower case alias for MediaControlsVisible
+    # Lower case aliases for MediaControlsVisible
     @property
     def mediacontrolsvisible(self):
         return self.MediaControlsVisible
@@ -22300,7 +21670,7 @@ class SlideShowView:
     def MediaControlsWidth(self):
         return self.slideshowview.MediaControlsWidth
 
-    # Lower case alias for MediaControlsWidth
+    # Lower case aliases for MediaControlsWidth
     @property
     def mediacontrolswidth(self):
         return self.MediaControlsWidth
@@ -22309,7 +21679,7 @@ class SlideShowView:
     def Parent(self):
         return self.slideshowview.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22318,7 +21688,7 @@ class SlideShowView:
     def PointerColor(self):
         return ColorFormat(self.slideshowview.PointerColor)
 
-    # Lower case alias for PointerColor
+    # Lower case aliases for PointerColor
     @property
     def pointercolor(self):
         return self.PointerColor
@@ -22327,16 +21697,15 @@ class SlideShowView:
     def PointerType(self):
         return self.slideshowview.PointerType
 
-    # Lower case alias for PointerType
-    @property
-    def pointertype(self):
-        return self.PointerType
-
     @PointerType.setter
     def PointerType(self, value):
         self.slideshowview.PointerType = value
 
-    # Lower case alias for PointerType setter
+    # Lower case aliases for PointerType
+    @property
+    def pointertype(self):
+        return self.PointerType
+
     @pointertype.setter
     def pointertype(self, value):
         self.PointerType = value
@@ -22345,7 +21714,7 @@ class SlideShowView:
     def PresentationElapsedTime(self):
         return self.slideshowview.PresentationElapsedTime
 
-    # Lower case alias for PresentationElapsedTime
+    # Lower case aliases for PresentationElapsedTime
     @property
     def presentationelapsedtime(self):
         return self.PresentationElapsedTime
@@ -22354,7 +21723,7 @@ class SlideShowView:
     def Slide(self):
         return Slide(self.slideshowview.Slide)
 
-    # Lower case alias for Slide
+    # Lower case aliases for Slide
     @property
     def slide(self):
         return self.Slide
@@ -22363,16 +21732,15 @@ class SlideShowView:
     def SlideElapsedTime(self):
         return self.slideshowview.SlideElapsedTime
 
-    # Lower case alias for SlideElapsedTime
-    @property
-    def slideelapsedtime(self):
-        return self.SlideElapsedTime
-
     @SlideElapsedTime.setter
     def SlideElapsedTime(self, value):
         self.slideshowview.SlideElapsedTime = value
 
-    # Lower case alias for SlideElapsedTime setter
+    # Lower case aliases for SlideElapsedTime
+    @property
+    def slideelapsedtime(self):
+        return self.SlideElapsedTime
+
     @slideelapsedtime.setter
     def slideelapsedtime(self, value):
         self.SlideElapsedTime = value
@@ -22381,7 +21749,7 @@ class SlideShowView:
     def SlideShowName(self):
         return self.slideshowview.SlideShowName
 
-    # Lower case alias for SlideShowName
+    # Lower case aliases for SlideShowName
     @property
     def slideshowname(self):
         return self.SlideShowName
@@ -22390,16 +21758,15 @@ class SlideShowView:
     def State(self):
         return self.slideshowview.State
 
-    # Lower case alias for State
-    @property
-    def state(self):
-        return self.State
-
     @State.setter
     def State(self, value):
         self.slideshowview.State = value
 
-    # Lower case alias for State setter
+    # Lower case aliases for State
+    @property
+    def state(self):
+        return self.State
+
     @state.setter
     def state(self, value):
         self.State = value
@@ -22408,7 +21775,7 @@ class SlideShowView:
     def Zoom(self):
         return self.slideshowview.Zoom
 
-    # Lower case alias for Zoom
+    # Lower case aliases for Zoom
     @property
     def zoom(self):
         return self.Zoom
@@ -22476,7 +21843,7 @@ class SlideShowWindow:
     def Active(self):
         return self.slideshowwindow.Active
 
-    # Lower case alias for Active
+    # Lower case aliases for Active
     @property
     def active(self):
         return self.Active
@@ -22489,16 +21856,15 @@ class SlideShowWindow:
     def Height(self):
         return self.slideshowwindow.Height
 
-    # Lower case alias for Height
-    @property
-    def height(self):
-        return self.Height
-
     @Height.setter
     def Height(self, value):
         self.slideshowwindow.Height = value
 
-    # Lower case alias for Height setter
+    # Lower case aliases for Height
+    @property
+    def height(self):
+        return self.Height
+
     @height.setter
     def height(self, value):
         self.Height = value
@@ -22507,7 +21873,7 @@ class SlideShowWindow:
     def IsFullScreen(self):
         return self.slideshowwindow.IsFullScreen
 
-    # Lower case alias for IsFullScreen
+    # Lower case aliases for IsFullScreen
     @property
     def isfullscreen(self):
         return self.IsFullScreen
@@ -22516,16 +21882,15 @@ class SlideShowWindow:
     def Left(self):
         return self.slideshowwindow.Left
 
-    # Lower case alias for Left
-    @property
-    def left(self):
-        return self.Left
-
     @Left.setter
     def Left(self, value):
         self.slideshowwindow.Left = value
 
-    # Lower case alias for Left setter
+    # Lower case aliases for Left
+    @property
+    def left(self):
+        return self.Left
+
     @left.setter
     def left(self, value):
         self.Left = value
@@ -22534,7 +21899,7 @@ class SlideShowWindow:
     def Parent(self):
         return self.slideshowwindow.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22543,7 +21908,7 @@ class SlideShowWindow:
     def Presentation(self):
         return Presentation(self.slideshowwindow.Presentation)
 
-    # Lower case alias for Presentation
+    # Lower case aliases for Presentation
     @property
     def presentation(self):
         return self.Presentation
@@ -22552,16 +21917,15 @@ class SlideShowWindow:
     def Top(self):
         return self.slideshowwindow.Top
 
-    # Lower case alias for Top
-    @property
-    def top(self):
-        return self.Top
-
     @Top.setter
     def Top(self, value):
         self.slideshowwindow.Top = value
 
-    # Lower case alias for Top setter
+    # Lower case aliases for Top
+    @property
+    def top(self):
+        return self.Top
+
     @top.setter
     def top(self, value):
         self.Top = value
@@ -22570,7 +21934,7 @@ class SlideShowWindow:
     def View(self):
         return SlideShowView(self.slideshowwindow.View)
 
-    # Lower case alias for View
+    # Lower case aliases for View
     @property
     def view(self):
         return self.View
@@ -22579,16 +21943,15 @@ class SlideShowWindow:
     def Width(self):
         return self.slideshowwindow.Width
 
-    # Lower case alias for Width
-    @property
-    def width(self):
-        return self.Width
-
     @Width.setter
     def Width(self, value):
         self.slideshowwindow.Width = value
 
-    # Lower case alias for Width setter
+    # Lower case aliases for Width
+    @property
+    def width(self):
+        return self.Width
+
     @width.setter
     def width(self, value):
         self.Width = value
@@ -22613,7 +21976,7 @@ class SlideShowWindows:
     def Count(self):
         return self.slideshowwindows.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -22622,7 +21985,7 @@ class SlideShowWindows:
     def Parent(self):
         return self.slideshowwindows.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22645,16 +22008,15 @@ class SoundEffect:
     def Name(self):
         return self.soundeffect.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.soundeffect.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -22663,7 +22025,7 @@ class SoundEffect:
     def Parent(self):
         return self.soundeffect.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22672,16 +22034,15 @@ class SoundEffect:
     def Type(self):
         return self.soundeffect.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.soundeffect.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -22703,16 +22064,15 @@ class Table:
     def AlternativeText(self):
         return self.table.AlternativeText
 
-    # Lower case alias for AlternativeText
-    @property
-    def alternativetext(self):
-        return self.AlternativeText
-
     @AlternativeText.setter
     def AlternativeText(self, value):
         self.table.AlternativeText = value
 
-    # Lower case alias for AlternativeText setter
+    # Lower case aliases for AlternativeText
+    @property
+    def alternativetext(self):
+        return self.AlternativeText
+
     @alternativetext.setter
     def alternativetext(self, value):
         self.AlternativeText = value
@@ -22725,7 +22085,7 @@ class Table:
     def Background(self):
         return TableBackground(self.table.Background)
 
-    # Lower case alias for Background
+    # Lower case aliases for Background
     @property
     def background(self):
         return self.Background
@@ -22734,7 +22094,7 @@ class Table:
     def Columns(self):
         return Columns(self.table.Columns)
 
-    # Lower case alias for Columns
+    # Lower case aliases for Columns
     @property
     def columns(self):
         return self.Columns
@@ -22743,16 +22103,15 @@ class Table:
     def FirstCol(self):
         return self.table.FirstCol
 
-    # Lower case alias for FirstCol
-    @property
-    def firstcol(self):
-        return self.FirstCol
-
     @FirstCol.setter
     def FirstCol(self, value):
         self.table.FirstCol = value
 
-    # Lower case alias for FirstCol setter
+    # Lower case aliases for FirstCol
+    @property
+    def firstcol(self):
+        return self.FirstCol
+
     @firstcol.setter
     def firstcol(self, value):
         self.FirstCol = value
@@ -22761,16 +22120,15 @@ class Table:
     def FirstRow(self):
         return self.table.FirstRow
 
-    # Lower case alias for FirstRow
-    @property
-    def firstrow(self):
-        return self.FirstRow
-
     @FirstRow.setter
     def FirstRow(self, value):
         self.table.FirstRow = value
 
-    # Lower case alias for FirstRow setter
+    # Lower case aliases for FirstRow
+    @property
+    def firstrow(self):
+        return self.FirstRow
+
     @firstrow.setter
     def firstrow(self, value):
         self.FirstRow = value
@@ -22779,16 +22137,15 @@ class Table:
     def HorizBanding(self):
         return self.table.HorizBanding
 
-    # Lower case alias for HorizBanding
-    @property
-    def horizbanding(self):
-        return self.HorizBanding
-
     @HorizBanding.setter
     def HorizBanding(self, value):
         self.table.HorizBanding = value
 
-    # Lower case alias for HorizBanding setter
+    # Lower case aliases for HorizBanding
+    @property
+    def horizbanding(self):
+        return self.HorizBanding
+
     @horizbanding.setter
     def horizbanding(self, value):
         self.HorizBanding = value
@@ -22797,16 +22154,15 @@ class Table:
     def LastCol(self):
         return self.table.LastCol
 
-    # Lower case alias for LastCol
-    @property
-    def lastcol(self):
-        return self.LastCol
-
     @LastCol.setter
     def LastCol(self, value):
         self.table.LastCol = value
 
-    # Lower case alias for LastCol setter
+    # Lower case aliases for LastCol
+    @property
+    def lastcol(self):
+        return self.LastCol
+
     @lastcol.setter
     def lastcol(self, value):
         self.LastCol = value
@@ -22815,16 +22171,15 @@ class Table:
     def LastRow(self):
         return self.table.LastRow
 
-    # Lower case alias for LastRow
-    @property
-    def lastrow(self):
-        return self.LastRow
-
     @LastRow.setter
     def LastRow(self, value):
         self.table.LastRow = value
 
-    # Lower case alias for LastRow setter
+    # Lower case aliases for LastRow
+    @property
+    def lastrow(self):
+        return self.LastRow
+
     @lastrow.setter
     def lastrow(self, value):
         self.LastRow = value
@@ -22833,7 +22188,7 @@ class Table:
     def Parent(self):
         return self.table.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -22842,7 +22197,7 @@ class Table:
     def Rows(self):
         return Rows(self.table.Rows)
 
-    # Lower case alias for Rows
+    # Lower case aliases for Rows
     @property
     def rows(self):
         return self.Rows
@@ -22851,7 +22206,7 @@ class Table:
     def Style(self):
         return TableStyle(self.table.Style)
 
-    # Lower case alias for Style
+    # Lower case aliases for Style
     @property
     def style(self):
         return self.Style
@@ -22860,16 +22215,15 @@ class Table:
     def TableDirection(self):
         return self.table.TableDirection
 
-    # Lower case alias for TableDirection
-    @property
-    def tabledirection(self):
-        return self.TableDirection
-
     @TableDirection.setter
     def TableDirection(self, value):
         self.table.TableDirection = value
 
-    # Lower case alias for TableDirection setter
+    # Lower case aliases for TableDirection
+    @property
+    def tabledirection(self):
+        return self.TableDirection
+
     @tabledirection.setter
     def tabledirection(self, value):
         self.TableDirection = value
@@ -22878,16 +22232,15 @@ class Table:
     def Title(self):
         return Table(self.table.Title)
 
-    # Lower case alias for Title
-    @property
-    def title(self):
-        return self.Title
-
     @Title.setter
     def Title(self, value):
         self.table.Title = value
 
-    # Lower case alias for Title setter
+    # Lower case aliases for Title
+    @property
+    def title(self):
+        return self.Title
+
     @title.setter
     def title(self, value):
         self.Title = value
@@ -22896,16 +22249,15 @@ class Table:
     def VertBanding(self):
         return self.table.VertBanding
 
-    # Lower case alias for VertBanding
-    @property
-    def vertbanding(self):
-        return self.VertBanding
-
     @VertBanding.setter
     def VertBanding(self, value):
         self.table.VertBanding = value
 
-    # Lower case alias for VertBanding setter
+    # Lower case aliases for VertBanding
+    @property
+    def vertbanding(self):
+        return self.VertBanding
+
     @vertbanding.setter
     def vertbanding(self, value):
         self.VertBanding = value
@@ -22932,7 +22284,7 @@ class TableBackground:
     def Fill(self):
         return FillFormat(self.tablebackground.Fill)
 
-    # Lower case alias for Fill
+    # Lower case aliases for Fill
     @property
     def fill(self):
         return self.Fill
@@ -22941,7 +22293,7 @@ class TableBackground:
     def Picture(self):
         return PictureFormat(self.tablebackground.Picture)
 
-    # Lower case alias for Picture
+    # Lower case aliases for Picture
     @property
     def picture(self):
         return self.Picture
@@ -22950,7 +22302,7 @@ class TableBackground:
     def Reflection(self):
         return self.tablebackground.Reflection
 
-    # Lower case alias for Reflection
+    # Lower case aliases for Reflection
     @property
     def reflection(self):
         return self.Reflection
@@ -22959,7 +22311,7 @@ class TableBackground:
     def Shadow(self):
         return ShadowFormat(self.tablebackground.Shadow)
 
-    # Lower case alias for Shadow
+    # Lower case aliases for Shadow
     @property
     def shadow(self):
         return self.Shadow
@@ -22974,7 +22326,7 @@ class TableStyle:
     def Id(self):
         return self.tablestyle.Id
 
-    # Lower case alias for Id
+    # Lower case aliases for Id
     @property
     def id(self):
         return self.Id
@@ -22983,7 +22335,7 @@ class TableStyle:
     def Name(self):
         return self.tablestyle.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -23002,7 +22354,7 @@ class TabStop:
     def Parent(self):
         return self.tabstop.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23011,16 +22363,15 @@ class TabStop:
     def Position(self):
         return self.tabstop.Position
 
-    # Lower case alias for Position
-    @property
-    def position(self):
-        return self.Position
-
     @Position.setter
     def Position(self, value):
         self.tabstop.Position = value
 
-    # Lower case alias for Position setter
+    # Lower case aliases for Position
+    @property
+    def position(self):
+        return self.Position
+
     @position.setter
     def position(self, value):
         self.Position = value
@@ -23029,16 +22380,15 @@ class TabStop:
     def Type(self):
         return self.tabstop.Type
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.tabstop.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -23063,7 +22413,7 @@ class TabStops:
     def Count(self):
         return self.tabstops.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -23072,16 +22422,15 @@ class TabStops:
     def DefaultSpacing(self):
         return self.tabstops.DefaultSpacing
 
-    # Lower case alias for DefaultSpacing
-    @property
-    def defaultspacing(self):
-        return self.DefaultSpacing
-
     @DefaultSpacing.setter
     def DefaultSpacing(self, value):
         self.tabstops.DefaultSpacing = value
 
-    # Lower case alias for DefaultSpacing setter
+    # Lower case aliases for DefaultSpacing
+    @property
+    def defaultspacing(self):
+        return self.DefaultSpacing
+
     @defaultspacing.setter
     def defaultspacing(self, value):
         self.DefaultSpacing = value
@@ -23090,7 +22439,7 @@ class TabStops:
     def Parent(self):
         return self.tabstops.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23117,7 +22466,7 @@ class Tags:
     def Count(self):
         return self.tags.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -23126,7 +22475,7 @@ class Tags:
     def Parent(self):
         return self.tags.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23161,16 +22510,15 @@ class TextEffectFormat:
     def Alignment(self):
         return self.texteffectformat.Alignment
 
-    # Lower case alias for Alignment
-    @property
-    def alignment(self):
-        return self.Alignment
-
     @Alignment.setter
     def Alignment(self, value):
         self.texteffectformat.Alignment = value
 
-    # Lower case alias for Alignment setter
+    # Lower case aliases for Alignment
+    @property
+    def alignment(self):
+        return self.Alignment
+
     @alignment.setter
     def alignment(self, value):
         self.Alignment = value
@@ -23183,7 +22531,7 @@ class TextEffectFormat:
     def Creator(self):
         return self.texteffectformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -23192,16 +22540,15 @@ class TextEffectFormat:
     def FontBold(self):
         return self.texteffectformat.FontBold
 
-    # Lower case alias for FontBold
-    @property
-    def fontbold(self):
-        return self.FontBold
-
     @FontBold.setter
     def FontBold(self, value):
         self.texteffectformat.FontBold = value
 
-    # Lower case alias for FontBold setter
+    # Lower case aliases for FontBold
+    @property
+    def fontbold(self):
+        return self.FontBold
+
     @fontbold.setter
     def fontbold(self, value):
         self.FontBold = value
@@ -23210,16 +22557,15 @@ class TextEffectFormat:
     def FontItalic(self):
         return self.texteffectformat.FontItalic
 
-    # Lower case alias for FontItalic
-    @property
-    def fontitalic(self):
-        return self.FontItalic
-
     @FontItalic.setter
     def FontItalic(self, value):
         self.texteffectformat.FontItalic = value
 
-    # Lower case alias for FontItalic setter
+    # Lower case aliases for FontItalic
+    @property
+    def fontitalic(self):
+        return self.FontItalic
+
     @fontitalic.setter
     def fontitalic(self, value):
         self.FontItalic = value
@@ -23228,16 +22574,15 @@ class TextEffectFormat:
     def FontName(self):
         return self.texteffectformat.FontName
 
-    # Lower case alias for FontName
-    @property
-    def fontname(self):
-        return self.FontName
-
     @FontName.setter
     def FontName(self, value):
         self.texteffectformat.FontName = value
 
-    # Lower case alias for FontName setter
+    # Lower case aliases for FontName
+    @property
+    def fontname(self):
+        return self.FontName
+
     @fontname.setter
     def fontname(self, value):
         self.FontName = value
@@ -23246,16 +22591,15 @@ class TextEffectFormat:
     def FontSize(self):
         return self.texteffectformat.FontSize
 
-    # Lower case alias for FontSize
-    @property
-    def fontsize(self):
-        return self.FontSize
-
     @FontSize.setter
     def FontSize(self, value):
         self.texteffectformat.FontSize = value
 
-    # Lower case alias for FontSize setter
+    # Lower case aliases for FontSize
+    @property
+    def fontsize(self):
+        return self.FontSize
+
     @fontsize.setter
     def fontsize(self, value):
         self.FontSize = value
@@ -23264,16 +22608,15 @@ class TextEffectFormat:
     def KernedPairs(self):
         return self.texteffectformat.KernedPairs
 
-    # Lower case alias for KernedPairs
-    @property
-    def kernedpairs(self):
-        return self.KernedPairs
-
     @KernedPairs.setter
     def KernedPairs(self, value):
         self.texteffectformat.KernedPairs = value
 
-    # Lower case alias for KernedPairs setter
+    # Lower case aliases for KernedPairs
+    @property
+    def kernedpairs(self):
+        return self.KernedPairs
+
     @kernedpairs.setter
     def kernedpairs(self, value):
         self.KernedPairs = value
@@ -23282,16 +22625,15 @@ class TextEffectFormat:
     def NormalizedHeight(self):
         return self.texteffectformat.NormalizedHeight
 
-    # Lower case alias for NormalizedHeight
-    @property
-    def normalizedheight(self):
-        return self.NormalizedHeight
-
     @NormalizedHeight.setter
     def NormalizedHeight(self, value):
         self.texteffectformat.NormalizedHeight = value
 
-    # Lower case alias for NormalizedHeight setter
+    # Lower case aliases for NormalizedHeight
+    @property
+    def normalizedheight(self):
+        return self.NormalizedHeight
+
     @normalizedheight.setter
     def normalizedheight(self, value):
         self.NormalizedHeight = value
@@ -23300,7 +22642,7 @@ class TextEffectFormat:
     def Parent(self):
         return self.texteffectformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23309,16 +22651,15 @@ class TextEffectFormat:
     def PresetShape(self):
         return self.texteffectformat.PresetShape
 
-    # Lower case alias for PresetShape
-    @property
-    def presetshape(self):
-        return self.PresetShape
-
     @PresetShape.setter
     def PresetShape(self, value):
         self.texteffectformat.PresetShape = value
 
-    # Lower case alias for PresetShape setter
+    # Lower case aliases for PresetShape
+    @property
+    def presetshape(self):
+        return self.PresetShape
+
     @presetshape.setter
     def presetshape(self, value):
         self.PresetShape = value
@@ -23327,16 +22668,15 @@ class TextEffectFormat:
     def PresetTextEffect(self):
         return self.texteffectformat.PresetTextEffect
 
-    # Lower case alias for PresetTextEffect
-    @property
-    def presettexteffect(self):
-        return self.PresetTextEffect
-
     @PresetTextEffect.setter
     def PresetTextEffect(self, value):
         self.texteffectformat.PresetTextEffect = value
 
-    # Lower case alias for PresetTextEffect setter
+    # Lower case aliases for PresetTextEffect
+    @property
+    def presettexteffect(self):
+        return self.PresetTextEffect
+
     @presettexteffect.setter
     def presettexteffect(self, value):
         self.PresetTextEffect = value
@@ -23345,16 +22685,15 @@ class TextEffectFormat:
     def RotatedChars(self):
         return self.texteffectformat.RotatedChars
 
-    # Lower case alias for RotatedChars
-    @property
-    def rotatedchars(self):
-        return self.RotatedChars
-
     @RotatedChars.setter
     def RotatedChars(self, value):
         self.texteffectformat.RotatedChars = value
 
-    # Lower case alias for RotatedChars setter
+    # Lower case aliases for RotatedChars
+    @property
+    def rotatedchars(self):
+        return self.RotatedChars
+
     @rotatedchars.setter
     def rotatedchars(self, value):
         self.RotatedChars = value
@@ -23363,16 +22702,15 @@ class TextEffectFormat:
     def Text(self):
         return self.texteffectformat.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.texteffectformat.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -23381,16 +22719,15 @@ class TextEffectFormat:
     def Tracking(self):
         return self.texteffectformat.Tracking
 
-    # Lower case alias for Tracking
-    @property
-    def tracking(self):
-        return self.Tracking
-
     @Tracking.setter
     def Tracking(self, value):
         self.texteffectformat.Tracking = value
 
-    # Lower case alias for Tracking setter
+    # Lower case aliases for Tracking
+    @property
+    def tracking(self):
+        return self.Tracking
+
     @tracking.setter
     def tracking(self, value):
         self.Tracking = value
@@ -23412,16 +22749,15 @@ class TextFrame:
     def AutoSize(self):
         return self.textframe.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.textframe.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -23430,7 +22766,7 @@ class TextFrame:
     def Creator(self):
         return self.textframe.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -23439,7 +22775,7 @@ class TextFrame:
     def HasText(self):
         return self.textframe.HasText
 
-    # Lower case alias for HasText
+    # Lower case aliases for HasText
     @property
     def hastext(self):
         return self.HasText
@@ -23448,16 +22784,15 @@ class TextFrame:
     def HorizontalAnchor(self):
         return self.textframe.HorizontalAnchor
 
-    # Lower case alias for HorizontalAnchor
-    @property
-    def horizontalanchor(self):
-        return self.HorizontalAnchor
-
     @HorizontalAnchor.setter
     def HorizontalAnchor(self, value):
         self.textframe.HorizontalAnchor = value
 
-    # Lower case alias for HorizontalAnchor setter
+    # Lower case aliases for HorizontalAnchor
+    @property
+    def horizontalanchor(self):
+        return self.HorizontalAnchor
+
     @horizontalanchor.setter
     def horizontalanchor(self, value):
         self.HorizontalAnchor = value
@@ -23466,16 +22801,15 @@ class TextFrame:
     def MarginBottom(self):
         return self.textframe.MarginBottom
 
-    # Lower case alias for MarginBottom
-    @property
-    def marginbottom(self):
-        return self.MarginBottom
-
     @MarginBottom.setter
     def MarginBottom(self, value):
         self.textframe.MarginBottom = value
 
-    # Lower case alias for MarginBottom setter
+    # Lower case aliases for MarginBottom
+    @property
+    def marginbottom(self):
+        return self.MarginBottom
+
     @marginbottom.setter
     def marginbottom(self, value):
         self.MarginBottom = value
@@ -23484,16 +22818,15 @@ class TextFrame:
     def MarginLeft(self):
         return self.textframe.MarginLeft
 
-    # Lower case alias for MarginLeft
-    @property
-    def marginleft(self):
-        return self.MarginLeft
-
     @MarginLeft.setter
     def MarginLeft(self, value):
         self.textframe.MarginLeft = value
 
-    # Lower case alias for MarginLeft setter
+    # Lower case aliases for MarginLeft
+    @property
+    def marginleft(self):
+        return self.MarginLeft
+
     @marginleft.setter
     def marginleft(self, value):
         self.MarginLeft = value
@@ -23502,16 +22835,15 @@ class TextFrame:
     def MarginRight(self):
         return self.textframe.MarginRight
 
-    # Lower case alias for MarginRight
-    @property
-    def marginright(self):
-        return self.MarginRight
-
     @MarginRight.setter
     def MarginRight(self, value):
         self.textframe.MarginRight = value
 
-    # Lower case alias for MarginRight setter
+    # Lower case aliases for MarginRight
+    @property
+    def marginright(self):
+        return self.MarginRight
+
     @marginright.setter
     def marginright(self, value):
         self.MarginRight = value
@@ -23520,16 +22852,15 @@ class TextFrame:
     def MarginTop(self):
         return self.textframe.MarginTop
 
-    # Lower case alias for MarginTop
-    @property
-    def margintop(self):
-        return self.MarginTop
-
     @MarginTop.setter
     def MarginTop(self, value):
         self.textframe.MarginTop = value
 
-    # Lower case alias for MarginTop setter
+    # Lower case aliases for MarginTop
+    @property
+    def margintop(self):
+        return self.MarginTop
+
     @margintop.setter
     def margintop(self, value):
         self.MarginTop = value
@@ -23538,16 +22869,15 @@ class TextFrame:
     def Orientation(self):
         return self.textframe.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.textframe.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -23556,7 +22886,7 @@ class TextFrame:
     def Parent(self):
         return self.textframe.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23565,7 +22895,7 @@ class TextFrame:
     def Ruler(self):
         return Ruler(self.textframe.Ruler)
 
-    # Lower case alias for Ruler
+    # Lower case aliases for Ruler
     @property
     def ruler(self):
         return self.Ruler
@@ -23574,7 +22904,7 @@ class TextFrame:
     def TextRange(self):
         return TextRange(self.textframe.TextRange)
 
-    # Lower case alias for TextRange
+    # Lower case aliases for TextRange
     @property
     def textrange(self):
         return self.TextRange
@@ -23583,16 +22913,15 @@ class TextFrame:
     def VerticalAnchor(self):
         return self.textframe.VerticalAnchor
 
-    # Lower case alias for VerticalAnchor
-    @property
-    def verticalanchor(self):
-        return self.VerticalAnchor
-
     @VerticalAnchor.setter
     def VerticalAnchor(self, value):
         self.textframe.VerticalAnchor = value
 
-    # Lower case alias for VerticalAnchor setter
+    # Lower case aliases for VerticalAnchor
+    @property
+    def verticalanchor(self):
+        return self.VerticalAnchor
+
     @verticalanchor.setter
     def verticalanchor(self, value):
         self.VerticalAnchor = value
@@ -23601,16 +22930,15 @@ class TextFrame:
     def WordWrap(self):
         return self.textframe.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.textframe.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -23632,16 +22960,15 @@ class TextFrame2:
     def AutoSize(self):
         return self.textframe2.AutoSize
 
-    # Lower case alias for AutoSize
-    @property
-    def autosize(self):
-        return self.AutoSize
-
     @AutoSize.setter
     def AutoSize(self, value):
         self.textframe2.AutoSize = value
 
-    # Lower case alias for AutoSize setter
+    # Lower case aliases for AutoSize
+    @property
+    def autosize(self):
+        return self.AutoSize
+
     @autosize.setter
     def autosize(self, value):
         self.AutoSize = value
@@ -23650,7 +22977,7 @@ class TextFrame2:
     def Column(self):
         return Column(self.textframe2.Column)
 
-    # Lower case alias for Column
+    # Lower case aliases for Column
     @property
     def column(self):
         return self.Column
@@ -23659,7 +22986,7 @@ class TextFrame2:
     def Creator(self):
         return self.textframe2.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -23668,7 +22995,7 @@ class TextFrame2:
     def HasText(self):
         return self.textframe2.HasText
 
-    # Lower case alias for HasText
+    # Lower case aliases for HasText
     @property
     def hastext(self):
         return self.HasText
@@ -23677,16 +23004,15 @@ class TextFrame2:
     def HorizontalAnchor(self):
         return self.textframe2.HorizontalAnchor
 
-    # Lower case alias for HorizontalAnchor
-    @property
-    def horizontalanchor(self):
-        return self.HorizontalAnchor
-
     @HorizontalAnchor.setter
     def HorizontalAnchor(self, value):
         self.textframe2.HorizontalAnchor = value
 
-    # Lower case alias for HorizontalAnchor setter
+    # Lower case aliases for HorizontalAnchor
+    @property
+    def horizontalanchor(self):
+        return self.HorizontalAnchor
+
     @horizontalanchor.setter
     def horizontalanchor(self, value):
         self.HorizontalAnchor = value
@@ -23695,16 +23021,15 @@ class TextFrame2:
     def MarginBottom(self):
         return self.textframe2.MarginBottom
 
-    # Lower case alias for MarginBottom
-    @property
-    def marginbottom(self):
-        return self.MarginBottom
-
     @MarginBottom.setter
     def MarginBottom(self, value):
         self.textframe2.MarginBottom = value
 
-    # Lower case alias for MarginBottom setter
+    # Lower case aliases for MarginBottom
+    @property
+    def marginbottom(self):
+        return self.MarginBottom
+
     @marginbottom.setter
     def marginbottom(self, value):
         self.MarginBottom = value
@@ -23713,16 +23038,15 @@ class TextFrame2:
     def MarginLeft(self):
         return self.textframe2.MarginLeft
 
-    # Lower case alias for MarginLeft
-    @property
-    def marginleft(self):
-        return self.MarginLeft
-
     @MarginLeft.setter
     def MarginLeft(self, value):
         self.textframe2.MarginLeft = value
 
-    # Lower case alias for MarginLeft setter
+    # Lower case aliases for MarginLeft
+    @property
+    def marginleft(self):
+        return self.MarginLeft
+
     @marginleft.setter
     def marginleft(self, value):
         self.MarginLeft = value
@@ -23731,16 +23055,15 @@ class TextFrame2:
     def MarginRight(self):
         return self.textframe2.MarginRight
 
-    # Lower case alias for MarginRight
-    @property
-    def marginright(self):
-        return self.MarginRight
-
     @MarginRight.setter
     def MarginRight(self, value):
         self.textframe2.MarginRight = value
 
-    # Lower case alias for MarginRight setter
+    # Lower case aliases for MarginRight
+    @property
+    def marginright(self):
+        return self.MarginRight
+
     @marginright.setter
     def marginright(self, value):
         self.MarginRight = value
@@ -23749,16 +23072,15 @@ class TextFrame2:
     def MarginTop(self):
         return self.textframe2.MarginTop
 
-    # Lower case alias for MarginTop
-    @property
-    def margintop(self):
-        return self.MarginTop
-
     @MarginTop.setter
     def MarginTop(self, value):
         self.textframe2.MarginTop = value
 
-    # Lower case alias for MarginTop setter
+    # Lower case aliases for MarginTop
+    @property
+    def margintop(self):
+        return self.MarginTop
+
     @margintop.setter
     def margintop(self, value):
         self.MarginTop = value
@@ -23767,16 +23089,15 @@ class TextFrame2:
     def NoTextRotation(self):
         return self.textframe2.NoTextRotation
 
-    # Lower case alias for NoTextRotation
-    @property
-    def notextrotation(self):
-        return self.NoTextRotation
-
     @NoTextRotation.setter
     def NoTextRotation(self, value):
         self.textframe2.NoTextRotation = value
 
-    # Lower case alias for NoTextRotation setter
+    # Lower case aliases for NoTextRotation
+    @property
+    def notextrotation(self):
+        return self.NoTextRotation
+
     @notextrotation.setter
     def notextrotation(self, value):
         self.NoTextRotation = value
@@ -23785,16 +23106,15 @@ class TextFrame2:
     def Orientation(self):
         return self.textframe2.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.textframe2.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -23803,7 +23123,7 @@ class TextFrame2:
     def Parent(self):
         return self.textframe2.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -23812,16 +23132,15 @@ class TextFrame2:
     def PathFormat(self):
         return self.textframe2.PathFormat
 
-    # Lower case alias for PathFormat
-    @property
-    def pathformat(self):
-        return self.PathFormat
-
     @PathFormat.setter
     def PathFormat(self, value):
         self.textframe2.PathFormat = value
 
-    # Lower case alias for PathFormat setter
+    # Lower case aliases for PathFormat
+    @property
+    def pathformat(self):
+        return self.PathFormat
+
     @pathformat.setter
     def pathformat(self, value):
         self.PathFormat = value
@@ -23830,7 +23149,7 @@ class TextFrame2:
     def Ruler(self):
         return self.textframe2.Ruler
 
-    # Lower case alias for Ruler
+    # Lower case aliases for Ruler
     @property
     def ruler(self):
         return self.Ruler
@@ -23839,7 +23158,7 @@ class TextFrame2:
     def TextRange(self):
         return self.textframe2.TextRange
 
-    # Lower case alias for TextRange
+    # Lower case aliases for TextRange
     @property
     def textrange(self):
         return self.TextRange
@@ -23848,7 +23167,7 @@ class TextFrame2:
     def ThreeD(self):
         return ThreeDFormat(self.textframe2.ThreeD)
 
-    # Lower case alias for ThreeD
+    # Lower case aliases for ThreeD
     @property
     def threed(self):
         return self.ThreeD
@@ -23857,16 +23176,15 @@ class TextFrame2:
     def VerticalAnchor(self):
         return self.textframe2.VerticalAnchor
 
-    # Lower case alias for VerticalAnchor
-    @property
-    def verticalanchor(self):
-        return self.VerticalAnchor
-
     @VerticalAnchor.setter
     def VerticalAnchor(self, value):
         self.textframe2.VerticalAnchor = value
 
-    # Lower case alias for VerticalAnchor setter
+    # Lower case aliases for VerticalAnchor
+    @property
+    def verticalanchor(self):
+        return self.VerticalAnchor
+
     @verticalanchor.setter
     def verticalanchor(self, value):
         self.VerticalAnchor = value
@@ -23875,16 +23193,15 @@ class TextFrame2:
     def WarpFormat(self):
         return self.textframe2.WarpFormat
 
-    # Lower case alias for WarpFormat
-    @property
-    def warpformat(self):
-        return self.WarpFormat
-
     @WarpFormat.setter
     def WarpFormat(self, value):
         self.textframe2.WarpFormat = value
 
-    # Lower case alias for WarpFormat setter
+    # Lower case aliases for WarpFormat
+    @property
+    def warpformat(self):
+        return self.WarpFormat
+
     @warpformat.setter
     def warpformat(self, value):
         self.WarpFormat = value
@@ -23893,16 +23210,15 @@ class TextFrame2:
     def WordArtFormat(self):
         return self.textframe2.WordArtFormat
 
-    # Lower case alias for WordArtFormat
-    @property
-    def wordartformat(self):
-        return self.WordArtFormat
-
     @WordArtFormat.setter
     def WordArtFormat(self, value):
         self.textframe2.WordArtFormat = value
 
-    # Lower case alias for WordArtFormat setter
+    # Lower case aliases for WordArtFormat
+    @property
+    def wordartformat(self):
+        return self.WordArtFormat
+
     @wordartformat.setter
     def wordartformat(self, value):
         self.WordArtFormat = value
@@ -23911,16 +23227,15 @@ class TextFrame2:
     def WordWrap(self):
         return self.textframe2.WordWrap
 
-    # Lower case alias for WordWrap
-    @property
-    def wordwrap(self):
-        return self.WordWrap
-
     @WordWrap.setter
     def WordWrap(self, value):
         self.textframe2.WordWrap = value
 
-    # Lower case alias for WordWrap setter
+    # Lower case aliases for WordWrap
+    @property
+    def wordwrap(self):
+        return self.WordWrap
+
     @wordwrap.setter
     def wordwrap(self, value):
         self.WordWrap = value
@@ -23938,7 +23253,7 @@ class TextRange:
     def ActionSettings(self):
         return ActionSettings(self.textrange.ActionSettings)
 
-    # Lower case alias for ActionSettings
+    # Lower case aliases for ActionSettings
     @property
     def actionsettings(self):
         return self.ActionSettings
@@ -23951,7 +23266,7 @@ class TextRange:
     def BoundHeight(self):
         return self.textrange.BoundHeight
 
-    # Lower case alias for BoundHeight
+    # Lower case aliases for BoundHeight
     @property
     def boundheight(self):
         return self.BoundHeight
@@ -23960,7 +23275,7 @@ class TextRange:
     def BoundLeft(self):
         return self.textrange.BoundLeft
 
-    # Lower case alias for BoundLeft
+    # Lower case aliases for BoundLeft
     @property
     def boundleft(self):
         return self.BoundLeft
@@ -23969,7 +23284,7 @@ class TextRange:
     def BoundTop(self):
         return self.textrange.BoundTop
 
-    # Lower case alias for BoundTop
+    # Lower case aliases for BoundTop
     @property
     def boundtop(self):
         return self.BoundTop
@@ -23978,7 +23293,7 @@ class TextRange:
     def BoundWidth(self):
         return self.textrange.BoundWidth
 
-    # Lower case alias for BoundWidth
+    # Lower case aliases for BoundWidth
     @property
     def boundwidth(self):
         return self.BoundWidth
@@ -23987,7 +23302,7 @@ class TextRange:
     def Count(self):
         return self.textrange.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -23996,7 +23311,7 @@ class TextRange:
     def Font(self):
         return Font(self.textrange.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -24005,16 +23320,15 @@ class TextRange:
     def IndentLevel(self):
         return self.textrange.IndentLevel
 
-    # Lower case alias for IndentLevel
-    @property
-    def indentlevel(self):
-        return self.IndentLevel
-
     @IndentLevel.setter
     def IndentLevel(self, value):
         self.textrange.IndentLevel = value
 
-    # Lower case alias for IndentLevel setter
+    # Lower case aliases for IndentLevel
+    @property
+    def indentlevel(self):
+        return self.IndentLevel
+
     @indentlevel.setter
     def indentlevel(self, value):
         self.IndentLevel = value
@@ -24023,16 +23337,15 @@ class TextRange:
     def LanguageID(self):
         return self.textrange.LanguageID
 
-    # Lower case alias for LanguageID
-    @property
-    def languageid(self):
-        return self.LanguageID
-
     @LanguageID.setter
     def LanguageID(self, value):
         self.textrange.LanguageID = value
 
-    # Lower case alias for LanguageID setter
+    # Lower case aliases for LanguageID
+    @property
+    def languageid(self):
+        return self.LanguageID
+
     @languageid.setter
     def languageid(self, value):
         self.LanguageID = value
@@ -24041,7 +23354,7 @@ class TextRange:
     def Length(self):
         return self.textrange.Length
 
-    # Lower case alias for Length
+    # Lower case aliases for Length
     @property
     def length(self):
         return self.Length
@@ -24050,7 +23363,7 @@ class TextRange:
     def ParagraphFormat(self):
         return ParagraphFormat(self.textrange.ParagraphFormat)
 
-    # Lower case alias for ParagraphFormat
+    # Lower case aliases for ParagraphFormat
     @property
     def paragraphformat(self):
         return self.ParagraphFormat
@@ -24059,7 +23372,7 @@ class TextRange:
     def Parent(self):
         return self.textrange.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24068,7 +23381,7 @@ class TextRange:
     def Start(self):
         return self.textrange.Start
 
-    # Lower case alias for Start
+    # Lower case aliases for Start
     @property
     def start(self):
         return self.Start
@@ -24077,16 +23390,15 @@ class TextRange:
     def Text(self):
         return self.textrange.Text
 
-    # Lower case alias for Text
-    @property
-    def text(self):
-        return self.Text
-
     @Text.setter
     def Text(self, value):
         self.textrange.Text = value
 
-    # Lower case alias for Text setter
+    # Lower case aliases for Text
+    @property
+    def text(self):
+        return self.Text
+
     @text.setter
     def text(self, value):
         self.Text = value
@@ -24198,7 +23510,7 @@ class TextStyle:
     def Levels(self):
         return TextStyleLevels(self.textstyle.Levels)
 
-    # Lower case alias for Levels
+    # Lower case aliases for Levels
     @property
     def levels(self):
         return self.Levels
@@ -24207,7 +23519,7 @@ class TextStyle:
     def Parent(self):
         return self.textstyle.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24216,7 +23528,7 @@ class TextStyle:
     def Ruler(self):
         return Ruler(self.textstyle.Ruler)
 
-    # Lower case alias for Ruler
+    # Lower case aliases for Ruler
     @property
     def ruler(self):
         return self.Ruler
@@ -24225,7 +23537,7 @@ class TextStyle:
     def TextFrame(self):
         return TextFrame(self.textstyle.TextFrame)
 
-    # Lower case alias for TextFrame
+    # Lower case aliases for TextFrame
     @property
     def textframe(self):
         return self.TextFrame
@@ -24244,7 +23556,7 @@ class TextStyleLevel:
     def Font(self):
         return Font(self.textstylelevel.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -24253,7 +23565,7 @@ class TextStyleLevel:
     def ParagraphFormat(self):
         return ParagraphFormat(self.textstylelevel.ParagraphFormat)
 
-    # Lower case alias for ParagraphFormat
+    # Lower case aliases for ParagraphFormat
     @property
     def paragraphformat(self):
         return self.ParagraphFormat
@@ -24262,7 +23574,7 @@ class TextStyleLevel:
     def Parent(self):
         return self.textstylelevel.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24284,7 +23596,7 @@ class TextStyleLevels:
     def Count(self):
         return self.textstylelevels.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -24293,7 +23605,7 @@ class TextStyleLevels:
     def Parent(self):
         return self.textstylelevels.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24319,7 +23631,7 @@ class TextStyles:
     def Count(self):
         return self.textstyles.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -24328,7 +23640,7 @@ class TextStyles:
     def Parent(self):
         return self.textstyles.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24351,16 +23663,15 @@ class ThreeDFormat:
     def BevelBottomDepth(self):
         return ThreeDFormat(self.threedformat.BevelBottomDepth)
 
-    # Lower case alias for BevelBottomDepth
-    @property
-    def bevelbottomdepth(self):
-        return self.BevelBottomDepth
-
     @BevelBottomDepth.setter
     def BevelBottomDepth(self, value):
         self.threedformat.BevelBottomDepth = value
 
-    # Lower case alias for BevelBottomDepth setter
+    # Lower case aliases for BevelBottomDepth
+    @property
+    def bevelbottomdepth(self):
+        return self.BevelBottomDepth
+
     @bevelbottomdepth.setter
     def bevelbottomdepth(self, value):
         self.BevelBottomDepth = value
@@ -24369,16 +23680,15 @@ class ThreeDFormat:
     def BevelBottomInset(self):
         return ThreeDFormat(self.threedformat.BevelBottomInset)
 
-    # Lower case alias for BevelBottomInset
-    @property
-    def bevelbottominset(self):
-        return self.BevelBottomInset
-
     @BevelBottomInset.setter
     def BevelBottomInset(self, value):
         self.threedformat.BevelBottomInset = value
 
-    # Lower case alias for BevelBottomInset setter
+    # Lower case aliases for BevelBottomInset
+    @property
+    def bevelbottominset(self):
+        return self.BevelBottomInset
+
     @bevelbottominset.setter
     def bevelbottominset(self, value):
         self.BevelBottomInset = value
@@ -24387,16 +23697,15 @@ class ThreeDFormat:
     def BevelBottomType(self):
         return self.threedformat.BevelBottomType
 
-    # Lower case alias for BevelBottomType
-    @property
-    def bevelbottomtype(self):
-        return self.BevelBottomType
-
     @BevelBottomType.setter
     def BevelBottomType(self, value):
         self.threedformat.BevelBottomType = value
 
-    # Lower case alias for BevelBottomType setter
+    # Lower case aliases for BevelBottomType
+    @property
+    def bevelbottomtype(self):
+        return self.BevelBottomType
+
     @bevelbottomtype.setter
     def bevelbottomtype(self, value):
         self.BevelBottomType = value
@@ -24405,16 +23714,15 @@ class ThreeDFormat:
     def BevelTopDepth(self):
         return ThreeDFormat(self.threedformat.BevelTopDepth)
 
-    # Lower case alias for BevelTopDepth
-    @property
-    def beveltopdepth(self):
-        return self.BevelTopDepth
-
     @BevelTopDepth.setter
     def BevelTopDepth(self, value):
         self.threedformat.BevelTopDepth = value
 
-    # Lower case alias for BevelTopDepth setter
+    # Lower case aliases for BevelTopDepth
+    @property
+    def beveltopdepth(self):
+        return self.BevelTopDepth
+
     @beveltopdepth.setter
     def beveltopdepth(self, value):
         self.BevelTopDepth = value
@@ -24423,16 +23731,15 @@ class ThreeDFormat:
     def BevelTopInset(self):
         return ThreeDFormat(self.threedformat.BevelTopInset)
 
-    # Lower case alias for BevelTopInset
-    @property
-    def beveltopinset(self):
-        return self.BevelTopInset
-
     @BevelTopInset.setter
     def BevelTopInset(self, value):
         self.threedformat.BevelTopInset = value
 
-    # Lower case alias for BevelTopInset setter
+    # Lower case aliases for BevelTopInset
+    @property
+    def beveltopinset(self):
+        return self.BevelTopInset
+
     @beveltopinset.setter
     def beveltopinset(self, value):
         self.BevelTopInset = value
@@ -24441,16 +23748,15 @@ class ThreeDFormat:
     def BevelTopType(self):
         return self.threedformat.BevelTopType
 
-    # Lower case alias for BevelTopType
-    @property
-    def beveltoptype(self):
-        return self.BevelTopType
-
     @BevelTopType.setter
     def BevelTopType(self, value):
         self.threedformat.BevelTopType = value
 
-    # Lower case alias for BevelTopType setter
+    # Lower case aliases for BevelTopType
+    @property
+    def beveltoptype(self):
+        return self.BevelTopType
+
     @beveltoptype.setter
     def beveltoptype(self, value):
         self.BevelTopType = value
@@ -24459,7 +23765,7 @@ class ThreeDFormat:
     def ContourColor(self):
         return ColorFormat(self.threedformat.ContourColor)
 
-    # Lower case alias for ContourColor
+    # Lower case aliases for ContourColor
     @property
     def contourcolor(self):
         return self.ContourColor
@@ -24468,16 +23774,15 @@ class ThreeDFormat:
     def ContourWidth(self):
         return ThreeDFormat(self.threedformat.ContourWidth)
 
-    # Lower case alias for ContourWidth
-    @property
-    def contourwidth(self):
-        return self.ContourWidth
-
     @ContourWidth.setter
     def ContourWidth(self, value):
         self.threedformat.ContourWidth = value
 
-    # Lower case alias for ContourWidth setter
+    # Lower case aliases for ContourWidth
+    @property
+    def contourwidth(self):
+        return self.ContourWidth
+
     @contourwidth.setter
     def contourwidth(self, value):
         self.ContourWidth = value
@@ -24486,7 +23791,7 @@ class ThreeDFormat:
     def Creator(self):
         return self.threedformat.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -24495,16 +23800,15 @@ class ThreeDFormat:
     def Depth(self):
         return self.threedformat.Depth
 
-    # Lower case alias for Depth
-    @property
-    def depth(self):
-        return self.Depth
-
     @Depth.setter
     def Depth(self, value):
         self.threedformat.Depth = value
 
-    # Lower case alias for Depth setter
+    # Lower case aliases for Depth
+    @property
+    def depth(self):
+        return self.Depth
+
     @depth.setter
     def depth(self, value):
         self.Depth = value
@@ -24513,7 +23817,7 @@ class ThreeDFormat:
     def ExtrusionColor(self):
         return ColorFormat(self.threedformat.ExtrusionColor)
 
-    # Lower case alias for ExtrusionColor
+    # Lower case aliases for ExtrusionColor
     @property
     def extrusioncolor(self):
         return self.ExtrusionColor
@@ -24522,16 +23826,15 @@ class ThreeDFormat:
     def ExtrusionColorType(self):
         return self.threedformat.ExtrusionColorType
 
-    # Lower case alias for ExtrusionColorType
-    @property
-    def extrusioncolortype(self):
-        return self.ExtrusionColorType
-
     @ExtrusionColorType.setter
     def ExtrusionColorType(self, value):
         self.threedformat.ExtrusionColorType = value
 
-    # Lower case alias for ExtrusionColorType setter
+    # Lower case aliases for ExtrusionColorType
+    @property
+    def extrusioncolortype(self):
+        return self.ExtrusionColorType
+
     @extrusioncolortype.setter
     def extrusioncolortype(self, value):
         self.ExtrusionColorType = value
@@ -24540,16 +23843,15 @@ class ThreeDFormat:
     def FieldOfView(self):
         return ThreeDFormat(self.threedformat.FieldOfView)
 
-    # Lower case alias for FieldOfView
-    @property
-    def fieldofview(self):
-        return self.FieldOfView
-
     @FieldOfView.setter
     def FieldOfView(self, value):
         self.threedformat.FieldOfView = value
 
-    # Lower case alias for FieldOfView setter
+    # Lower case aliases for FieldOfView
+    @property
+    def fieldofview(self):
+        return self.FieldOfView
+
     @fieldofview.setter
     def fieldofview(self, value):
         self.FieldOfView = value
@@ -24558,16 +23860,15 @@ class ThreeDFormat:
     def LightAngle(self):
         return self.threedformat.LightAngle
 
-    # Lower case alias for LightAngle
-    @property
-    def lightangle(self):
-        return self.LightAngle
-
     @LightAngle.setter
     def LightAngle(self, value):
         self.threedformat.LightAngle = value
 
-    # Lower case alias for LightAngle setter
+    # Lower case aliases for LightAngle
+    @property
+    def lightangle(self):
+        return self.LightAngle
+
     @lightangle.setter
     def lightangle(self, value):
         self.LightAngle = value
@@ -24576,7 +23877,7 @@ class ThreeDFormat:
     def Parent(self):
         return self.threedformat.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -24585,16 +23886,15 @@ class ThreeDFormat:
     def Perspective(self):
         return self.threedformat.Perspective
 
-    # Lower case alias for Perspective
-    @property
-    def perspective(self):
-        return self.Perspective
-
     @Perspective.setter
     def Perspective(self, value):
         self.threedformat.Perspective = value
 
-    # Lower case alias for Perspective setter
+    # Lower case aliases for Perspective
+    @property
+    def perspective(self):
+        return self.Perspective
+
     @perspective.setter
     def perspective(self, value):
         self.Perspective = value
@@ -24603,7 +23903,7 @@ class ThreeDFormat:
     def PresetCamera(self):
         return ThreeDFormat(self.threedformat.PresetCamera)
 
-    # Lower case alias for PresetCamera
+    # Lower case aliases for PresetCamera
     @property
     def presetcamera(self):
         return self.PresetCamera
@@ -24612,7 +23912,7 @@ class ThreeDFormat:
     def PresetExtrusionDirection(self):
         return self.threedformat.PresetExtrusionDirection
 
-    # Lower case alias for PresetExtrusionDirection
+    # Lower case aliases for PresetExtrusionDirection
     @property
     def presetextrusiondirection(self):
         return self.PresetExtrusionDirection
@@ -24621,16 +23921,15 @@ class ThreeDFormat:
     def PresetLighting(self):
         return ThreeDFormat(self.threedformat.PresetLighting)
 
-    # Lower case alias for PresetLighting
-    @property
-    def presetlighting(self):
-        return self.PresetLighting
-
     @PresetLighting.setter
     def PresetLighting(self, value):
         self.threedformat.PresetLighting = value
 
-    # Lower case alias for PresetLighting setter
+    # Lower case aliases for PresetLighting
+    @property
+    def presetlighting(self):
+        return self.PresetLighting
+
     @presetlighting.setter
     def presetlighting(self, value):
         self.PresetLighting = value
@@ -24639,16 +23938,15 @@ class ThreeDFormat:
     def PresetLightingDirection(self):
         return self.threedformat.PresetLightingDirection
 
-    # Lower case alias for PresetLightingDirection
-    @property
-    def presetlightingdirection(self):
-        return self.PresetLightingDirection
-
     @PresetLightingDirection.setter
     def PresetLightingDirection(self, value):
         self.threedformat.PresetLightingDirection = value
 
-    # Lower case alias for PresetLightingDirection setter
+    # Lower case aliases for PresetLightingDirection
+    @property
+    def presetlightingdirection(self):
+        return self.PresetLightingDirection
+
     @presetlightingdirection.setter
     def presetlightingdirection(self, value):
         self.PresetLightingDirection = value
@@ -24657,16 +23955,15 @@ class ThreeDFormat:
     def PresetLightingSoftness(self):
         return self.threedformat.PresetLightingSoftness
 
-    # Lower case alias for PresetLightingSoftness
-    @property
-    def presetlightingsoftness(self):
-        return self.PresetLightingSoftness
-
     @PresetLightingSoftness.setter
     def PresetLightingSoftness(self, value):
         self.threedformat.PresetLightingSoftness = value
 
-    # Lower case alias for PresetLightingSoftness setter
+    # Lower case aliases for PresetLightingSoftness
+    @property
+    def presetlightingsoftness(self):
+        return self.PresetLightingSoftness
+
     @presetlightingsoftness.setter
     def presetlightingsoftness(self, value):
         self.PresetLightingSoftness = value
@@ -24675,16 +23972,15 @@ class ThreeDFormat:
     def PresetMaterial(self):
         return self.threedformat.PresetMaterial
 
-    # Lower case alias for PresetMaterial
-    @property
-    def presetmaterial(self):
-        return self.PresetMaterial
-
     @PresetMaterial.setter
     def PresetMaterial(self, value):
         self.threedformat.PresetMaterial = value
 
-    # Lower case alias for PresetMaterial setter
+    # Lower case aliases for PresetMaterial
+    @property
+    def presetmaterial(self):
+        return self.PresetMaterial
+
     @presetmaterial.setter
     def presetmaterial(self, value):
         self.PresetMaterial = value
@@ -24693,7 +23989,7 @@ class ThreeDFormat:
     def PresetThreeDFormat(self):
         return self.threedformat.PresetThreeDFormat
 
-    # Lower case alias for PresetThreeDFormat
+    # Lower case aliases for PresetThreeDFormat
     @property
     def presetthreedformat(self):
         return self.PresetThreeDFormat
@@ -24702,16 +23998,15 @@ class ThreeDFormat:
     def ProjectText(self):
         return self.threedformat.ProjectText
 
-    # Lower case alias for ProjectText
-    @property
-    def projecttext(self):
-        return self.ProjectText
-
     @ProjectText.setter
     def ProjectText(self, value):
         self.threedformat.ProjectText = value
 
-    # Lower case alias for ProjectText setter
+    # Lower case aliases for ProjectText
+    @property
+    def projecttext(self):
+        return self.ProjectText
+
     @projecttext.setter
     def projecttext(self, value):
         self.ProjectText = value
@@ -24720,16 +24015,15 @@ class ThreeDFormat:
     def RotationX(self):
         return self.threedformat.RotationX
 
-    # Lower case alias for RotationX
-    @property
-    def rotationx(self):
-        return self.RotationX
-
     @RotationX.setter
     def RotationX(self, value):
         self.threedformat.RotationX = value
 
-    # Lower case alias for RotationX setter
+    # Lower case aliases for RotationX
+    @property
+    def rotationx(self):
+        return self.RotationX
+
     @rotationx.setter
     def rotationx(self, value):
         self.RotationX = value
@@ -24738,16 +24032,15 @@ class ThreeDFormat:
     def RotationY(self):
         return self.threedformat.RotationY
 
-    # Lower case alias for RotationY
-    @property
-    def rotationy(self):
-        return self.RotationY
-
     @RotationY.setter
     def RotationY(self, value):
         self.threedformat.RotationY = value
 
-    # Lower case alias for RotationY setter
+    # Lower case aliases for RotationY
+    @property
+    def rotationy(self):
+        return self.RotationY
+
     @rotationy.setter
     def rotationy(self, value):
         self.RotationY = value
@@ -24756,16 +24049,15 @@ class ThreeDFormat:
     def RotationZ(self):
         return ThreeDFormat(self.threedformat.RotationZ)
 
-    # Lower case alias for RotationZ
-    @property
-    def rotationz(self):
-        return self.RotationZ
-
     @RotationZ.setter
     def RotationZ(self, value):
         self.threedformat.RotationZ = value
 
-    # Lower case alias for RotationZ setter
+    # Lower case aliases for RotationZ
+    @property
+    def rotationz(self):
+        return self.RotationZ
+
     @rotationz.setter
     def rotationz(self, value):
         self.RotationZ = value
@@ -24774,16 +24066,15 @@ class ThreeDFormat:
     def Visible(self):
         return self.threedformat.Visible
 
-    # Lower case alias for Visible
-    @property
-    def visible(self):
-        return self.Visible
-
     @Visible.setter
     def Visible(self, value):
         self.threedformat.Visible = value
 
-    # Lower case alias for Visible setter
+    # Lower case aliases for Visible
+    @property
+    def visible(self):
+        return self.Visible
+
     @visible.setter
     def visible(self, value):
         self.Visible = value
@@ -24792,16 +24083,15 @@ class ThreeDFormat:
     def Z(self):
         return ThreeDFormat(self.threedformat.Z)
 
-    # Lower case alias for Z
-    @property
-    def z(self):
-        return self.Z
-
     @Z.setter
     def Z(self, value):
         self.threedformat.Z = value
 
-    # Lower case alias for Z setter
+    # Lower case aliases for Z
+    @property
+    def z(self):
+        return self.Z
+
     @z.setter
     def z(self, value):
         self.Z = value
@@ -24851,16 +24141,15 @@ class TickLabels:
     def Alignment(self):
         return self.ticklabels.Alignment
 
-    # Lower case alias for Alignment
-    @property
-    def alignment(self):
-        return self.Alignment
-
     @Alignment.setter
     def Alignment(self, value):
         self.ticklabels.Alignment = value
 
-    # Lower case alias for Alignment setter
+    # Lower case aliases for Alignment
+    @property
+    def alignment(self):
+        return self.Alignment
+
     @alignment.setter
     def alignment(self, value):
         self.Alignment = value
@@ -24873,7 +24162,7 @@ class TickLabels:
     def Creator(self):
         return self.ticklabels.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -24882,7 +24171,7 @@ class TickLabels:
     def Depth(self):
         return self.ticklabels.Depth
 
-    # Lower case alias for Depth
+    # Lower case aliases for Depth
     @property
     def depth(self):
         return self.Depth
@@ -24891,7 +24180,7 @@ class TickLabels:
     def Font(self):
         return ChartFont(self.ticklabels.Font)
 
-    # Lower case alias for Font
+    # Lower case aliases for Font
     @property
     def font(self):
         return self.Font
@@ -24900,7 +24189,7 @@ class TickLabels:
     def Format(self):
         return ChartFormat(self.ticklabels.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -24909,16 +24198,15 @@ class TickLabels:
     def MultiLevel(self):
         return self.ticklabels.MultiLevel
 
-    # Lower case alias for MultiLevel
-    @property
-    def multilevel(self):
-        return self.MultiLevel
-
     @MultiLevel.setter
     def MultiLevel(self, value):
         self.ticklabels.MultiLevel = value
 
-    # Lower case alias for MultiLevel setter
+    # Lower case aliases for MultiLevel
+    @property
+    def multilevel(self):
+        return self.MultiLevel
+
     @multilevel.setter
     def multilevel(self, value):
         self.MultiLevel = value
@@ -24927,7 +24215,7 @@ class TickLabels:
     def Name(self):
         return self.ticklabels.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -24936,16 +24224,15 @@ class TickLabels:
     def NumberFormat(self):
         return self.ticklabels.NumberFormat
 
-    # Lower case alias for NumberFormat
-    @property
-    def numberformat(self):
-        return self.NumberFormat
-
     @NumberFormat.setter
     def NumberFormat(self, value):
         self.ticklabels.NumberFormat = value
 
-    # Lower case alias for NumberFormat setter
+    # Lower case aliases for NumberFormat
+    @property
+    def numberformat(self):
+        return self.NumberFormat
+
     @numberformat.setter
     def numberformat(self, value):
         self.NumberFormat = value
@@ -24954,16 +24241,15 @@ class TickLabels:
     def NumberFormatLinked(self):
         return self.ticklabels.NumberFormatLinked
 
-    # Lower case alias for NumberFormatLinked
-    @property
-    def numberformatlinked(self):
-        return self.NumberFormatLinked
-
     @NumberFormatLinked.setter
     def NumberFormatLinked(self, value):
         self.ticklabels.NumberFormatLinked = value
 
-    # Lower case alias for NumberFormatLinked setter
+    # Lower case aliases for NumberFormatLinked
+    @property
+    def numberformatlinked(self):
+        return self.NumberFormatLinked
+
     @numberformatlinked.setter
     def numberformatlinked(self, value):
         self.NumberFormatLinked = value
@@ -24972,16 +24258,15 @@ class TickLabels:
     def NumberFormatLocal(self):
         return self.ticklabels.NumberFormatLocal
 
-    # Lower case alias for NumberFormatLocal
-    @property
-    def numberformatlocal(self):
-        return self.NumberFormatLocal
-
     @NumberFormatLocal.setter
     def NumberFormatLocal(self, value):
         self.ticklabels.NumberFormatLocal = value
 
-    # Lower case alias for NumberFormatLocal setter
+    # Lower case aliases for NumberFormatLocal
+    @property
+    def numberformatlocal(self):
+        return self.NumberFormatLocal
+
     @numberformatlocal.setter
     def numberformatlocal(self, value):
         self.NumberFormatLocal = value
@@ -24990,16 +24275,15 @@ class TickLabels:
     def Offset(self):
         return self.ticklabels.Offset
 
-    # Lower case alias for Offset
-    @property
-    def offset(self):
-        return self.Offset
-
     @Offset.setter
     def Offset(self, value):
         self.ticklabels.Offset = value
 
-    # Lower case alias for Offset setter
+    # Lower case aliases for Offset
+    @property
+    def offset(self):
+        return self.Offset
+
     @offset.setter
     def offset(self, value):
         self.Offset = value
@@ -25008,16 +24292,15 @@ class TickLabels:
     def Orientation(self):
         return self.ticklabels.Orientation
 
-    # Lower case alias for Orientation
-    @property
-    def orientation(self):
-        return self.Orientation
-
     @Orientation.setter
     def Orientation(self, value):
         self.ticklabels.Orientation = value
 
-    # Lower case alias for Orientation setter
+    # Lower case aliases for Orientation
+    @property
+    def orientation(self):
+        return self.Orientation
+
     @orientation.setter
     def orientation(self, value):
         self.Orientation = value
@@ -25026,7 +24309,7 @@ class TickLabels:
     def Parent(self):
         return self.ticklabels.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25035,16 +24318,15 @@ class TickLabels:
     def ReadingOrder(self):
         return XlReadingOrder(self.ticklabels.ReadingOrder)
 
-    # Lower case alias for ReadingOrder
-    @property
-    def readingorder(self):
-        return self.ReadingOrder
-
     @ReadingOrder.setter
     def ReadingOrder(self, value):
         self.ticklabels.ReadingOrder = value
 
-    # Lower case alias for ReadingOrder setter
+    # Lower case aliases for ReadingOrder
+    @property
+    def readingorder(self):
+        return self.ReadingOrder
+
     @readingorder.setter
     def readingorder(self, value):
         self.ReadingOrder = value
@@ -25069,7 +24351,7 @@ class TimeLine:
     def InteractiveSequences(self):
         return Sequences(self.timeline.InteractiveSequences)
 
-    # Lower case alias for InteractiveSequences
+    # Lower case aliases for InteractiveSequences
     @property
     def interactivesequences(self):
         return self.InteractiveSequences
@@ -25078,7 +24360,7 @@ class TimeLine:
     def MainSequence(self):
         return Sequence(self.timeline.MainSequence)
 
-    # Lower case alias for MainSequence
+    # Lower case aliases for MainSequence
     @property
     def mainsequence(self):
         return self.MainSequence
@@ -25087,7 +24369,7 @@ class TimeLine:
     def Parent(self):
         return self.timeline.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25102,16 +24384,15 @@ class Timing:
     def Accelerate(self):
         return self.timing.Accelerate
 
-    # Lower case alias for Accelerate
-    @property
-    def accelerate(self):
-        return self.Accelerate
-
     @Accelerate.setter
     def Accelerate(self, value):
         self.timing.Accelerate = value
 
-    # Lower case alias for Accelerate setter
+    # Lower case aliases for Accelerate
+    @property
+    def accelerate(self):
+        return self.Accelerate
+
     @accelerate.setter
     def accelerate(self, value):
         self.Accelerate = value
@@ -25124,16 +24405,15 @@ class Timing:
     def AutoReverse(self):
         return self.timing.AutoReverse
 
-    # Lower case alias for AutoReverse
-    @property
-    def autoreverse(self):
-        return self.AutoReverse
-
     @AutoReverse.setter
     def AutoReverse(self, value):
         self.timing.AutoReverse = value
 
-    # Lower case alias for AutoReverse setter
+    # Lower case aliases for AutoReverse
+    @property
+    def autoreverse(self):
+        return self.AutoReverse
+
     @autoreverse.setter
     def autoreverse(self, value):
         self.AutoReverse = value
@@ -25142,16 +24422,15 @@ class Timing:
     def BounceEnd(self):
         return self.timing.BounceEnd
 
-    # Lower case alias for BounceEnd
-    @property
-    def bounceend(self):
-        return self.BounceEnd
-
     @BounceEnd.setter
     def BounceEnd(self, value):
         self.timing.BounceEnd = value
 
-    # Lower case alias for BounceEnd setter
+    # Lower case aliases for BounceEnd
+    @property
+    def bounceend(self):
+        return self.BounceEnd
+
     @bounceend.setter
     def bounceend(self, value):
         self.BounceEnd = value
@@ -25160,16 +24439,15 @@ class Timing:
     def BounceEndIntensity(self):
         return self.timing.BounceEndIntensity
 
-    # Lower case alias for BounceEndIntensity
-    @property
-    def bounceendintensity(self):
-        return self.BounceEndIntensity
-
     @BounceEndIntensity.setter
     def BounceEndIntensity(self, value):
         self.timing.BounceEndIntensity = value
 
-    # Lower case alias for BounceEndIntensity setter
+    # Lower case aliases for BounceEndIntensity
+    @property
+    def bounceendintensity(self):
+        return self.BounceEndIntensity
+
     @bounceendintensity.setter
     def bounceendintensity(self, value):
         self.BounceEndIntensity = value
@@ -25178,16 +24456,15 @@ class Timing:
     def Decelerate(self):
         return self.timing.Decelerate
 
-    # Lower case alias for Decelerate
-    @property
-    def decelerate(self):
-        return self.Decelerate
-
     @Decelerate.setter
     def Decelerate(self, value):
         self.timing.Decelerate = value
 
-    # Lower case alias for Decelerate setter
+    # Lower case aliases for Decelerate
+    @property
+    def decelerate(self):
+        return self.Decelerate
+
     @decelerate.setter
     def decelerate(self, value):
         self.Decelerate = value
@@ -25196,7 +24473,7 @@ class Timing:
     def Parent(self):
         return self.timing.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25205,16 +24482,15 @@ class Timing:
     def RepeatCount(self):
         return self.timing.RepeatCount
 
-    # Lower case alias for RepeatCount
-    @property
-    def repeatcount(self):
-        return self.RepeatCount
-
     @RepeatCount.setter
     def RepeatCount(self, value):
         self.timing.RepeatCount = value
 
-    # Lower case alias for RepeatCount setter
+    # Lower case aliases for RepeatCount
+    @property
+    def repeatcount(self):
+        return self.RepeatCount
+
     @repeatcount.setter
     def repeatcount(self, value):
         self.RepeatCount = value
@@ -25223,16 +24499,15 @@ class Timing:
     def RepeatDuration(self):
         return self.timing.RepeatDuration
 
-    # Lower case alias for RepeatDuration
-    @property
-    def repeatduration(self):
-        return self.RepeatDuration
-
     @RepeatDuration.setter
     def RepeatDuration(self, value):
         self.timing.RepeatDuration = value
 
-    # Lower case alias for RepeatDuration setter
+    # Lower case aliases for RepeatDuration
+    @property
+    def repeatduration(self):
+        return self.RepeatDuration
+
     @repeatduration.setter
     def repeatduration(self, value):
         self.RepeatDuration = value
@@ -25241,16 +24516,15 @@ class Timing:
     def Restart(self):
         return self.timing.Restart
 
-    # Lower case alias for Restart
-    @property
-    def restart(self):
-        return self.Restart
-
     @Restart.setter
     def Restart(self, value):
         self.timing.Restart = value
 
-    # Lower case alias for Restart setter
+    # Lower case aliases for Restart
+    @property
+    def restart(self):
+        return self.Restart
+
     @restart.setter
     def restart(self, value):
         self.Restart = value
@@ -25259,16 +24533,15 @@ class Timing:
     def RewindAtEnd(self):
         return self.timing.RewindAtEnd
 
-    # Lower case alias for RewindAtEnd
-    @property
-    def rewindatend(self):
-        return self.RewindAtEnd
-
     @RewindAtEnd.setter
     def RewindAtEnd(self, value):
         self.timing.RewindAtEnd = value
 
-    # Lower case alias for RewindAtEnd setter
+    # Lower case aliases for RewindAtEnd
+    @property
+    def rewindatend(self):
+        return self.RewindAtEnd
+
     @rewindatend.setter
     def rewindatend(self, value):
         self.RewindAtEnd = value
@@ -25277,16 +24550,15 @@ class Timing:
     def SmoothEnd(self):
         return self.timing.SmoothEnd
 
-    # Lower case alias for SmoothEnd
-    @property
-    def smoothend(self):
-        return self.SmoothEnd
-
     @SmoothEnd.setter
     def SmoothEnd(self, value):
         self.timing.SmoothEnd = value
 
-    # Lower case alias for SmoothEnd setter
+    # Lower case aliases for SmoothEnd
+    @property
+    def smoothend(self):
+        return self.SmoothEnd
+
     @smoothend.setter
     def smoothend(self, value):
         self.SmoothEnd = value
@@ -25295,16 +24567,15 @@ class Timing:
     def SmoothStart(self):
         return self.timing.SmoothStart
 
-    # Lower case alias for SmoothStart
-    @property
-    def smoothstart(self):
-        return self.SmoothStart
-
     @SmoothStart.setter
     def SmoothStart(self, value):
         self.timing.SmoothStart = value
 
-    # Lower case alias for SmoothStart setter
+    # Lower case aliases for SmoothStart
+    @property
+    def smoothstart(self):
+        return self.SmoothStart
+
     @smoothstart.setter
     def smoothstart(self, value):
         self.SmoothStart = value
@@ -25313,16 +24584,15 @@ class Timing:
     def Speed(self):
         return self.timing.Speed
 
-    # Lower case alias for Speed
-    @property
-    def speed(self):
-        return self.Speed
-
     @Speed.setter
     def Speed(self, value):
         self.timing.Speed = value
 
-    # Lower case alias for Speed setter
+    # Lower case aliases for Speed
+    @property
+    def speed(self):
+        return self.Speed
+
     @speed.setter
     def speed(self, value):
         self.Speed = value
@@ -25331,16 +24601,15 @@ class Timing:
     def triggerBookmark(self):
         return self.timing.triggerBookmark
 
-    # Lower case alias for triggerBookmark
-    @property
-    def triggerbookmark(self):
-        return self.triggerBookmark
-
     @triggerBookmark.setter
     def triggerBookmark(self, value):
         self.timing.triggerBookmark = value
 
-    # Lower case alias for triggerBookmark setter
+    # Lower case aliases for triggerBookmark
+    @property
+    def triggerbookmark(self):
+        return self.triggerBookmark
+
     @triggerbookmark.setter
     def triggerbookmark(self, value):
         self.triggerBookmark = value
@@ -25349,16 +24618,15 @@ class Timing:
     def TriggerDelayTime(self):
         return self.timing.TriggerDelayTime
 
-    # Lower case alias for TriggerDelayTime
-    @property
-    def triggerdelaytime(self):
-        return self.TriggerDelayTime
-
     @TriggerDelayTime.setter
     def TriggerDelayTime(self, value):
         self.timing.TriggerDelayTime = value
 
-    # Lower case alias for TriggerDelayTime setter
+    # Lower case aliases for TriggerDelayTime
+    @property
+    def triggerdelaytime(self):
+        return self.TriggerDelayTime
+
     @triggerdelaytime.setter
     def triggerdelaytime(self, value):
         self.TriggerDelayTime = value
@@ -25367,16 +24635,15 @@ class Timing:
     def TriggerShape(self):
         return self.timing.TriggerShape
 
-    # Lower case alias for TriggerShape
-    @property
-    def triggershape(self):
-        return self.TriggerShape
-
     @TriggerShape.setter
     def TriggerShape(self, value):
         self.timing.TriggerShape = value
 
-    # Lower case alias for TriggerShape setter
+    # Lower case aliases for TriggerShape
+    @property
+    def triggershape(self):
+        return self.TriggerShape
+
     @triggershape.setter
     def triggershape(self, value):
         self.TriggerShape = value
@@ -25385,16 +24652,15 @@ class Timing:
     def TriggerType(self):
         return self.timing.TriggerType
 
-    # Lower case alias for TriggerType
-    @property
-    def triggertype(self):
-        return self.TriggerType
-
     @TriggerType.setter
     def TriggerType(self, value):
         self.timing.TriggerType = value
 
-    # Lower case alias for TriggerType setter
+    # Lower case aliases for TriggerType
+    @property
+    def triggertype(self):
+        return self.TriggerType
+
     @triggertype.setter
     def triggertype(self, value):
         self.TriggerType = value
@@ -25413,16 +24679,15 @@ class Trendline:
     def Backward2(self):
         return self.trendline.Backward2
 
-    # Lower case alias for Backward2
-    @property
-    def backward2(self):
-        return self.Backward2
-
     @Backward2.setter
     def Backward2(self, value):
         self.trendline.Backward2 = value
 
-    # Lower case alias for Backward2 setter
+    # Lower case aliases for Backward2
+    @property
+    def backward2(self):
+        return self.Backward2
+
     @backward2.setter
     def backward2(self, value):
         self.Backward2 = value
@@ -25431,7 +24696,7 @@ class Trendline:
     def Border(self):
         return ChartBorder(self.trendline.Border)
 
-    # Lower case alias for Border
+    # Lower case aliases for Border
     @property
     def border(self):
         return self.Border
@@ -25440,7 +24705,7 @@ class Trendline:
     def Creator(self):
         return self.trendline.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -25449,7 +24714,7 @@ class Trendline:
     def DataLabel(self):
         return DataLabel(self.trendline.DataLabel)
 
-    # Lower case alias for DataLabel
+    # Lower case aliases for DataLabel
     @property
     def datalabel(self):
         return self.DataLabel
@@ -25458,16 +24723,15 @@ class Trendline:
     def DisplayEquation(self):
         return self.trendline.DisplayEquation
 
-    # Lower case alias for DisplayEquation
-    @property
-    def displayequation(self):
-        return self.DisplayEquation
-
     @DisplayEquation.setter
     def DisplayEquation(self, value):
         self.trendline.DisplayEquation = value
 
-    # Lower case alias for DisplayEquation setter
+    # Lower case aliases for DisplayEquation
+    @property
+    def displayequation(self):
+        return self.DisplayEquation
+
     @displayequation.setter
     def displayequation(self, value):
         self.DisplayEquation = value
@@ -25476,16 +24740,15 @@ class Trendline:
     def DisplayRSquared(self):
         return self.trendline.DisplayRSquared
 
-    # Lower case alias for DisplayRSquared
-    @property
-    def displayrsquared(self):
-        return self.DisplayRSquared
-
     @DisplayRSquared.setter
     def DisplayRSquared(self, value):
         self.trendline.DisplayRSquared = value
 
-    # Lower case alias for DisplayRSquared setter
+    # Lower case aliases for DisplayRSquared
+    @property
+    def displayrsquared(self):
+        return self.DisplayRSquared
+
     @displayrsquared.setter
     def displayrsquared(self, value):
         self.DisplayRSquared = value
@@ -25494,7 +24757,7 @@ class Trendline:
     def Format(self):
         return ChartFormat(self.trendline.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -25503,16 +24766,15 @@ class Trendline:
     def Forward2(self):
         return self.trendline.Forward2
 
-    # Lower case alias for Forward2
-    @property
-    def forward2(self):
-        return self.Forward2
-
     @Forward2.setter
     def Forward2(self, value):
         self.trendline.Forward2 = value
 
-    # Lower case alias for Forward2 setter
+    # Lower case aliases for Forward2
+    @property
+    def forward2(self):
+        return self.Forward2
+
     @forward2.setter
     def forward2(self, value):
         self.Forward2 = value
@@ -25521,7 +24783,7 @@ class Trendline:
     def Index(self):
         return self.trendline.Index
 
-    # Lower case alias for Index
+    # Lower case aliases for Index
     @property
     def index(self):
         return self.Index
@@ -25530,16 +24792,15 @@ class Trendline:
     def Intercept(self):
         return self.trendline.Intercept
 
-    # Lower case alias for Intercept
-    @property
-    def intercept(self):
-        return self.Intercept
-
     @Intercept.setter
     def Intercept(self, value):
         self.trendline.Intercept = value
 
-    # Lower case alias for Intercept setter
+    # Lower case aliases for Intercept
+    @property
+    def intercept(self):
+        return self.Intercept
+
     @intercept.setter
     def intercept(self, value):
         self.Intercept = value
@@ -25548,16 +24809,15 @@ class Trendline:
     def InterceptIsAuto(self):
         return self.trendline.InterceptIsAuto
 
-    # Lower case alias for InterceptIsAuto
-    @property
-    def interceptisauto(self):
-        return self.InterceptIsAuto
-
     @InterceptIsAuto.setter
     def InterceptIsAuto(self, value):
         self.trendline.InterceptIsAuto = value
 
-    # Lower case alias for InterceptIsAuto setter
+    # Lower case aliases for InterceptIsAuto
+    @property
+    def interceptisauto(self):
+        return self.InterceptIsAuto
+
     @interceptisauto.setter
     def interceptisauto(self, value):
         self.InterceptIsAuto = value
@@ -25566,16 +24826,15 @@ class Trendline:
     def Name(self):
         return self.trendline.Name
 
-    # Lower case alias for Name
-    @property
-    def name(self):
-        return self.Name
-
     @Name.setter
     def Name(self, value):
         self.trendline.Name = value
 
-    # Lower case alias for Name setter
+    # Lower case aliases for Name
+    @property
+    def name(self):
+        return self.Name
+
     @name.setter
     def name(self, value):
         self.Name = value
@@ -25584,16 +24843,15 @@ class Trendline:
     def NameIsAuto(self):
         return self.trendline.NameIsAuto
 
-    # Lower case alias for NameIsAuto
-    @property
-    def nameisauto(self):
-        return self.NameIsAuto
-
     @NameIsAuto.setter
     def NameIsAuto(self, value):
         self.trendline.NameIsAuto = value
 
-    # Lower case alias for NameIsAuto setter
+    # Lower case aliases for NameIsAuto
+    @property
+    def nameisauto(self):
+        return self.NameIsAuto
+
     @nameisauto.setter
     def nameisauto(self, value):
         self.NameIsAuto = value
@@ -25602,16 +24860,15 @@ class Trendline:
     def Order(self):
         return self.trendline.Order
 
-    # Lower case alias for Order
-    @property
-    def order(self):
-        return self.Order
-
     @Order.setter
     def Order(self, value):
         self.trendline.Order = value
 
-    # Lower case alias for Order setter
+    # Lower case aliases for Order
+    @property
+    def order(self):
+        return self.Order
+
     @order.setter
     def order(self, value):
         self.Order = value
@@ -25620,7 +24877,7 @@ class Trendline:
     def Parent(self):
         return self.trendline.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25629,16 +24886,15 @@ class Trendline:
     def Period(self):
         return self.trendline.Period
 
-    # Lower case alias for Period
-    @property
-    def period(self):
-        return self.Period
-
     @Period.setter
     def Period(self, value):
         self.trendline.Period = value
 
-    # Lower case alias for Period setter
+    # Lower case aliases for Period
+    @property
+    def period(self):
+        return self.Period
+
     @period.setter
     def period(self, value):
         self.Period = value
@@ -25647,16 +24903,15 @@ class Trendline:
     def Type(self):
         return XlTrendlineType(self.trendline.Type)
 
-    # Lower case alias for Type
-    @property
-    def type(self):
-        return self.Type
-
     @Type.setter
     def Type(self, value):
         self.trendline.Type = value
 
-    # Lower case alias for Type setter
+    # Lower case aliases for Type
+    @property
+    def type(self):
+        return self.Type
+
     @type.setter
     def type(self, value):
         self.Type = value
@@ -25684,7 +24939,7 @@ class Trendlines:
     def Count(self):
         return self.trendlines.Count
 
-    # Lower case alias for Count
+    # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
@@ -25693,7 +24948,7 @@ class Trendlines:
     def Creator(self):
         return self.trendlines.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -25702,7 +24957,7 @@ class Trendlines:
     def Parent(self):
         return self.trendlines.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25729,7 +24984,7 @@ class UpBars:
     def Creator(self):
         return self.upbars.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -25738,7 +24993,7 @@ class UpBars:
     def Fill(self):
         return FillFormat(self.upbars.Fill)
 
-    # Lower case alias for Fill
+    # Lower case aliases for Fill
     @property
     def fill(self):
         return self.Fill
@@ -25747,7 +25002,7 @@ class UpBars:
     def Format(self):
         return ChartFormat(self.upbars.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -25756,7 +25011,7 @@ class UpBars:
     def Name(self):
         return self.upbars.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -25765,7 +25020,7 @@ class UpBars:
     def Parent(self):
         return self.upbars.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25790,16 +25045,15 @@ class View:
     def DisplaySlideMiniature(self):
         return self.view.DisplaySlideMiniature
 
-    # Lower case alias for DisplaySlideMiniature
-    @property
-    def displayslideminiature(self):
-        return self.DisplaySlideMiniature
-
     @DisplaySlideMiniature.setter
     def DisplaySlideMiniature(self, value):
         self.view.DisplaySlideMiniature = value
 
-    # Lower case alias for DisplaySlideMiniature setter
+    # Lower case aliases for DisplaySlideMiniature
+    @property
+    def displayslideminiature(self):
+        return self.DisplaySlideMiniature
+
     @displayslideminiature.setter
     def displayslideminiature(self, value):
         self.DisplaySlideMiniature = value
@@ -25808,7 +25062,7 @@ class View:
     def MediaControlsHeight(self):
         return self.view.MediaControlsHeight
 
-    # Lower case alias for MediaControlsHeight
+    # Lower case aliases for MediaControlsHeight
     @property
     def mediacontrolsheight(self):
         return self.MediaControlsHeight
@@ -25817,7 +25071,7 @@ class View:
     def MediaControlsLeft(self):
         return self.view.MediaControlsLeft
 
-    # Lower case alias for MediaControlsLeft
+    # Lower case aliases for MediaControlsLeft
     @property
     def mediacontrolsleft(self):
         return self.MediaControlsLeft
@@ -25826,7 +25080,7 @@ class View:
     def MediaControlsTop(self):
         return self.view.MediaControlsTop
 
-    # Lower case alias for MediaControlsTop
+    # Lower case aliases for MediaControlsTop
     @property
     def mediacontrolstop(self):
         return self.MediaControlsTop
@@ -25835,7 +25089,7 @@ class View:
     def MediaControlsVisible(self):
         return self.view.MediaControlsVisible
 
-    # Lower case alias for MediaControlsVisible
+    # Lower case aliases for MediaControlsVisible
     @property
     def mediacontrolsvisible(self):
         return self.MediaControlsVisible
@@ -25844,7 +25098,7 @@ class View:
     def MediaControlsWidth(self):
         return self.view.MediaControlsWidth
 
-    # Lower case alias for MediaControlsWidth
+    # Lower case aliases for MediaControlsWidth
     @property
     def mediacontrolswidth(self):
         return self.MediaControlsWidth
@@ -25853,7 +25107,7 @@ class View:
     def Parent(self):
         return self.view.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25862,7 +25116,7 @@ class View:
     def PrintOptions(self):
         return PrintOptions(self.view.PrintOptions)
 
-    # Lower case alias for PrintOptions
+    # Lower case aliases for PrintOptions
     @property
     def printoptions(self):
         return self.PrintOptions
@@ -25871,16 +25125,15 @@ class View:
     def Slide(self):
         return Slide(self.view.Slide)
 
-    # Lower case alias for Slide
-    @property
-    def slide(self):
-        return self.Slide
-
     @Slide.setter
     def Slide(self, value):
         self.view.Slide = value
 
-    # Lower case alias for Slide setter
+    # Lower case aliases for Slide
+    @property
+    def slide(self):
+        return self.Slide
+
     @slide.setter
     def slide(self, value):
         self.Slide = value
@@ -25889,7 +25142,7 @@ class View:
     def Type(self):
         return self.view.Type
 
-    # Lower case alias for Type
+    # Lower case aliases for Type
     @property
     def type(self):
         return self.Type
@@ -25898,16 +25151,15 @@ class View:
     def Zoom(self):
         return self.view.Zoom
 
-    # Lower case alias for Zoom
-    @property
-    def zoom(self):
-        return self.Zoom
-
     @Zoom.setter
     def Zoom(self, value):
         self.view.Zoom = value
 
-    # Lower case alias for Zoom setter
+    # Lower case aliases for Zoom
+    @property
+    def zoom(self):
+        return self.Zoom
+
     @zoom.setter
     def zoom(self, value):
         self.Zoom = value
@@ -25916,16 +25168,15 @@ class View:
     def ZoomToFit(self):
         return self.view.ZoomToFit
 
-    # Lower case alias for ZoomToFit
-    @property
-    def zoomtofit(self):
-        return self.ZoomToFit
-
     @ZoomToFit.setter
     def ZoomToFit(self, value):
         self.view.ZoomToFit = value
 
-    # Lower case alias for ZoomToFit setter
+    # Lower case aliases for ZoomToFit
+    @property
+    def zoomtofit(self):
+        return self.ZoomToFit
+
     @zoomtofit.setter
     def zoomtofit(self, value):
         self.ZoomToFit = value
@@ -25963,7 +25214,7 @@ class Walls:
     def Creator(self):
         return self.walls.Creator
 
-    # Lower case alias for Creator
+    # Lower case aliases for Creator
     @property
     def creator(self):
         return self.Creator
@@ -25972,7 +25223,7 @@ class Walls:
     def Format(self):
         return ChartFormat(self.walls.Format)
 
-    # Lower case alias for Format
+    # Lower case aliases for Format
     @property
     def format(self):
         return self.Format
@@ -25981,7 +25232,7 @@ class Walls:
     def Name(self):
         return self.walls.Name
 
-    # Lower case alias for Name
+    # Lower case aliases for Name
     @property
     def name(self):
         return self.Name
@@ -25990,7 +25241,7 @@ class Walls:
     def Parent(self):
         return self.walls.Parent
 
-    # Lower case alias for Parent
+    # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
@@ -25999,16 +25250,15 @@ class Walls:
     def PictureType(self):
         return self.walls.PictureType
 
-    # Lower case alias for PictureType
-    @property
-    def picturetype(self):
-        return self.PictureType
-
     @PictureType.setter
     def PictureType(self, value):
         self.walls.PictureType = value
 
-    # Lower case alias for PictureType setter
+    # Lower case aliases for PictureType
+    @property
+    def picturetype(self):
+        return self.PictureType
+
     @picturetype.setter
     def picturetype(self, value):
         self.PictureType = value
@@ -26017,16 +25267,15 @@ class Walls:
     def PictureUnit(self):
         return self.walls.PictureUnit
 
-    # Lower case alias for PictureUnit
-    @property
-    def pictureunit(self):
-        return self.PictureUnit
-
     @PictureUnit.setter
     def PictureUnit(self, value):
         self.walls.PictureUnit = value
 
-    # Lower case alias for PictureUnit setter
+    # Lower case aliases for PictureUnit
+    @property
+    def pictureunit(self):
+        return self.PictureUnit
+
     @pictureunit.setter
     def pictureunit(self, value):
         self.PictureUnit = value
@@ -26035,16 +25284,15 @@ class Walls:
     def Thickness(self):
         return self.walls.Thickness
 
-    # Lower case alias for Thickness
-    @property
-    def thickness(self):
-        return self.Thickness
-
     @Thickness.setter
     def Thickness(self, value):
         self.walls.Thickness = value
 
-    # Lower case alias for Thickness setter
+    # Lower case aliases for Thickness
+    @property
+    def thickness(self):
+        return self.Thickness
+
     @thickness.setter
     def thickness(self, value):
         self.Thickness = value
