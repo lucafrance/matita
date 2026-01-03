@@ -44,7 +44,7 @@ End Sub
 
 ```
 
-See the [documentation](./documentation.md) for more details.
+See the [documentation](./docs/documentation.md) for more details.
 
 ## Installation
 
