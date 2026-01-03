@@ -27,23 +27,23 @@ class TestOffice(unittest.TestCase):
 
         # Write value to cell and read it back
         cell = wks.Range("A1")
+        cell2 = wks.Cells(2,1)
         self.assertIs(type(cell), excel.Range)
+        self.assertIs(type(cell2), excel.Range)
         cell.Value = "Lorem Ipsum"
+        cell2.value = 12345.678
         self.assertEqual(cell.Value, "Lorem Ipsum")
         self.assertEqual(cell.Value2, "Lorem Ipsum")
+        self.assertEqual(cell2.value, 12345.678)
+        self.assertEqual(cell2.value2, 12345.678)
 
-        # Write value to another cell differently and read it back
-        cell2 = wks.Cells(2,1)
-        self.assertIs(type(cell2), excel.Range)
-        cell2.Value = 12345.678
-        self.assertEqual(cell2.Value, 12345.678)
-        self.assertEqual(cell2.Value2, 12345.678)
-        \
         # Test that `Range.Address` behaves as expected
         used_range = wks.UsedRange
         self.assertIs(type(used_range), excel.Range)
         self.assertEqual(used_range.Address(), "$A$1:$A$2")
         self.assertEqual(used_range.Address(ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
+        self.assertEqual(used_range.address(), "$A$1:$A$2")
+        self.assertEqual(used_range.address(ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
 
         # Test Range.Cells
         cell3 = used_range.Cells(2,1)
@@ -54,10 +54,11 @@ class TestOffice(unittest.TestCase):
         self.assertIs(type(wks_ciao), excel.Worksheet)
         wks_ciao.Name = "ciao"
         self.assertEqual(wks_ciao.Name, "ciao")
+        self.assertEqual(wks_ciao.name, "ciao")
         wks_ciao = None
         wks_ciao = wkb.Worksheets("ciao")
         self.assertIs(type(wks_ciao), excel.Worksheet)
-        
+
         # Close workbook without saving
         wkb.Close(SaveChanges=False)
         xl_app.Quit()

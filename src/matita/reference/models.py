@@ -272,12 +272,13 @@ class DocPage:
     def to_python_properties(self):
         """Return python code for all properties of the object"""
         code = []
+        reserved_words = ["application", "class", "from", "property"]
         for p in self.properties:
             if p.property_name is None:
                 logging.info("Property '{}' ignored when exporting '{}', because property_name is None.".format(p.title, self.title))
                 continue
-
-            # Getter method
+            
+            # Getter method - no arguments
             if len(p.parameters) == 0 or not p.is_read_only_property:
                 if p.property_class is not None:
                     code.append("    @property")
@@ -289,6 +290,16 @@ class DocPage:
                     code.append(f"    def {p.property_name}(self):")
                     code.append(f"        return self.{self.object_name.lower()}.{p.property_name}")
                     code.append(f"")
+                # Don't create lower case alias for reserved words in Python
+                # E.g. `Access.BoundObjectFrame.Class`
+                if p.property_name.lower() not in reserved_words:
+                    #Lower case alias
+                    code.append(f"    # Lower case alias for {p.property_name}")
+                    code.append(f"    @property")
+                    code.append(f"    def {p.property_name.lower()}(self):")
+                    code.append(f"        return self.{p.property_name}")
+                    code.append(f"")
+            # Getter method - with arguments
             else:
                 code.append(f"    def {p.property_name}(self, {p.parameters_code()}):")
                 code.append(p.to_python_arguments_expansion())
@@ -304,15 +315,35 @@ class DocPage:
                     code.append(f"        else:")
                     code.append(f"            return self.{self.object_name.lower()}.Get{p.property_name}(*arguments)")
                     code.append(f"")
+                #Lower case alias
+                # # Don't create lower case alias for reserved words in Python
+                # E.g. `Access.BoundObjectFrame.Class`
+                if p.property_name.lower() not in reserved_words:
+                    code.append(f"    # Lower case alias for {p.property_name}")
+                    code.append(f"    def {p.property_name.lower()}(self, {p.parameters_code()}):")
+                    code.append(f"        arguments = [{", ".join(p.parameters)}]")
+                    code.append(f"        return self.{p.property_name}(*arguments)")
+                    code.append(f"")
 
             # Setter method
             # If the property is editable, it must have a setter method.
             # If so, no argument can be used in the setter method.
+            #
+            # Don't create lower case alias for reserved words in Python
+            # E.g. `Access.BoundObjectFrame.Class`
             if not p.is_read_only_property:
                 code.append(f"    @{p.property_name}.setter")
                 code.append(f"    def {p.property_name}(self, value):")
                 code.append(f"        self.{self.object_name.lower()}.{p.property_name} = value")
                 code.append("")
+                
+                # Lower case alias
+                if p.property_name.lower() not in reserved_words:
+                    code.append(f"    # Lower case alias for {p.property_name} setter")
+                    code.append(f"    @{p.property_name.lower()}.setter")
+                    code.append(f"    def {p.property_name.lower()}(self, value):")
+                    code.append(f"        self.{p.property_name} = value")
+                    code.append("")
 
         return code
     
