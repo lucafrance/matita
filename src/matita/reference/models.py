@@ -368,32 +368,41 @@ class DocPage:
 
         return code
     
+    def to_python_method_function(self, parent_is_collection=False):
+        """Return python code for a single method of the object"""
+        
+        if not self.is_method:
+            logging.info(f"Method '{self.title}' ignored when exporting for '{self.object_name}', because it is not a method.")
+            return []
+        
+        code = []
+        if len(self.parameters) == 0:
+            code.append(f"    def {self.method_name}(self):")
+            code_line = f"self.{self.object_name.lower()}.{self.method_name}()"
+        else:
+            code.append(f"    def {self.method_name}(self, {self.parameters_code()}):")
+            code.append(self.to_python_arguments_expansion())
+            code_line = f"self.{self.object_name.lower()}.{self.method_name}(*arguments)"
+        if self.has_return_value:
+            if self.return_value_class is not None:
+                code_line = f"{self.return_value_class}({code_line})"
+            # Certain methods of a collection can only return certain types
+            # e.g. `Worksheets.Add`` returns a `Worksheet`
+            # `.startswith("Open") is for methods like `Workbooks.OpenText`
+            elif parent_is_collection and (self.method_name == "Add" or self.method_name.startswith("Open")):
+                code_line = f"{self.object_name[:-1]}({code_line})"
+            code_line = "return " + code_line
+        code_line = " "*8 + code_line
+        code.append(code_line)
+        code.append("")
+
+        return code
+    
     def to_python_methods(self):
         """Return python code for all methods of the object"""
         code = []
         for m in self.methods:
-            if len(m.parameters) == 0:
-                code.append(f"    def {m.method_name}(self):")
-                code_line = f"self.{self.object_name.lower()}.{m.method_name}()"
-            else:
-                code.append(f"    def {m.method_name}(self, {m.parameters_code()}):")
-                code.append(m.to_python_arguments_expansion())
-                # Actual method invocation
-                code_line = f"self.{self.object_name.lower()}.{m.method_name}(*arguments)"
-            if m.has_return_value:
-                if m.return_value_class is not None:
-                    code_line = f"{m.return_value_class}({code_line})"
-                # Certain methods of a collection can only return certain types
-                # e.g. `Worksheets.Add`` returns a `Worksheet`
-                # `.startswith("Open") is for methods like `Workbooks.OpenText`
-                elif self.is_collection and \
-                    (m.method_name == "Add" or m.method_name.startswith("Open")):
-                    code_line = f"{self.object_name[:-1]}({code_line})"
-                code_line = "return " + code_line
-            code_line = " "*8 + code_line
-            code.append(code_line)
-            code.append("")
-
+            code += m.to_python_method_function(parent_is_collection=self.is_collection)
         return code
 
 class VbaDocs:
