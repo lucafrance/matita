@@ -269,9 +269,60 @@ class DocPage:
         """Return python code to expand arguments for COM calls"""
         return "        arguments = com_arguments([" + ", ".join(self.parameters) + "])"
 
+    def to_python_property_getter(self):
+        """Return python code for getter and setter of the property"""
+        if not self.is_property:
+            logging.info(f"Property '{self.title}' ignored when exporting getter for '{self.object_name}', because it is not a property.")
+            return []
+        
+        code = []
+        # Getter method - no arguments
+        if len(self.parameters) == 0 or not self.is_read_only_property:
+            if self.property_class is not None:
+                code.append("    @property")
+                code.append(f"    def {self.property_name}(self):")
+                code.append(f"        return {self.property_class}(self.{self.object_name.lower()}.{self.property_name})")
+            else:
+                code.append("    @property")
+                code.append(f"    def {self.property_name}(self):")
+                code.append(f"        return self.{self.object_name.lower()}.{self.property_name}")
+            code.append(f"")
+        # Getter method - with arguments
+        else:
+            code.append(f"    def {self.property_name}(self, {self.parameters_code()}):")
+            code.append(self.to_python_arguments_expansion())
+            if self.property_class is not None:
+                code.append(f"        if callable(self.{self.object_name.lower()}.{self.property_name}):")
+                code.append(f"            return {self.property_class}(self.{self.object_name.lower()}.{self.property_name}(*arguments))")
+                code.append(f"        else:")
+                code.append(f"            return {self.property_class}(self.{self.object_name.lower()}.Get{self.property_name}(*arguments))")
+            else:
+                code.append(f"        if callable(self.{self.object_name.lower()}.{self.property_name}):")
+                code.append(f"            return self.{self.object_name.lower()}.{self.property_name}(*arguments)")
+                code.append(f"        else:")
+                code.append(f"            return self.{self.object_name.lower()}.Get{self.property_name}(*arguments)")
+            code.append(f"")
+
+        return code
+        
+    def to_python_property_setter(self):
+        """Return python code for setter of the property"""
+        if not self.is_property:
+            logging.info(f"Property '{self.title}' ignored when exporting setter for '{self.object_name}', because it is not a property.")
+            return []
+        
+        # If the property is editable, it must have a setter method.
+        code = []
+        if not self.is_read_only_property:
+            code.append(f"    @{self.property_name}.setter")
+            code.append(f"    def {self.property_name}(self, value):")
+            code.append(f"        self.{self.object_name.lower()}.{self.property_name} = value")
+            code.append("")
+
+        return code
+
     def to_python_property_aliases(self):
         """Return python code of lower case aliases if the DocPage is a property"""
-        
         if not self.is_property:
             logging.info(f"Property '{self.title}' ignored when exporting lower case aliases for '{self.object_name}', because it is not a property.")
             return []
@@ -310,46 +361,9 @@ class DocPage:
             if p.property_name is None:
                 logging.info("Property '{}' ignored when exporting '{}', because property_name is None.".format(p.title, self.title))
                 continue
-            
-            # Getter method - no arguments
-            if len(p.parameters) == 0 or not p.is_read_only_property:
-                if p.property_class is not None:
-                    code.append("    @property")
-                    code.append(f"    def {p.property_name}(self):")
-                    code.append(f"        return {p.property_class}(self.{self.object_name.lower()}.{p.property_name})")
-                    code.append(f"")
-                else:
-                    code.append("    @property")
-                    code.append(f"    def {p.property_name}(self):")
-                    code.append(f"        return self.{self.object_name.lower()}.{p.property_name}")
-                    code.append(f"")
-            # Getter method - with arguments
-            else:
-                code.append(f"    def {p.property_name}(self, {p.parameters_code()}):")
-                code.append(p.to_python_arguments_expansion())
-                if p.property_class is not None:
-                    code.append(f"        if callable(self.{self.object_name.lower()}.{p.property_name}):")
-                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.{p.property_name}(*arguments))")
-                    code.append(f"        else:")
-                    code.append(f"            return {p.property_class}(self.{self.object_name.lower()}.Get{p.property_name}(*arguments))")
-                    code.append(f"")
-                else:
-                    code.append(f"        if callable(self.{self.object_name.lower()}.{p.property_name}):")
-                    code.append(f"            return self.{self.object_name.lower()}.{p.property_name}(*arguments)")
-                    code.append(f"        else:")
-                    code.append(f"            return self.{self.object_name.lower()}.Get{p.property_name}(*arguments)")
-                    code.append(f"")
 
-            # Setter method
-            # If the property is editable, it must have a setter method.
-            # If so, no argument can be used in the setter method.
-            if not p.is_read_only_property:
-                code.append(f"    @{p.property_name}.setter")
-                code.append(f"    def {p.property_name}(self, value):")
-                code.append(f"        self.{self.object_name.lower()}.{p.property_name} = value")
-                code.append("")
-            
-            # Add lower case aliases
+            code += p.to_python_property_getter()
+            code += p.to_python_property_setter()
             code += p.to_python_property_aliases()
 
         return code
