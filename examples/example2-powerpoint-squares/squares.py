@@ -31,3 +31,18 @@
 #     Wend
     
 # End Sub
+
+from matita.office import powerpoint as pp
+
+def squares():
+    pp_app = pp.Application().new()
+    pp_app.visible = True
+    # `pp_app.presentations.add()` is not working
+    prs = pp.Presentation(pp_app.presentations.presentations.Add())
+    print(type(prs))
+    # Direct `Slides.add()` method unavailable
+    # Will be fixed with https://github.com/MicrosoftDocs/VBA-Docs/pull/1937
+    sld = prs.slides.slides.Add(1, pp.ppLayoutBlank)
+
+if __name__ == "__main__":
+    squares()
