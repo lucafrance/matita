@@ -1,5 +1,7 @@
 import unittest
 
+import win32com.client
+
 from matita.office import access, excel, outlook, powerpoint, word
 
 class TestExcel(unittest.TestCase):
@@ -57,6 +59,12 @@ class TestExcel(unittest.TestCase):
     def test_excel_constants(self):
         self.assertEqual(excel.xlAscending, 1)
         self.assertEqual(excel.xlDescending, 2)
+
+    def test_excel_com_object(self):
+        wkb = self.xl_app.Workbooks.Add()
+        self.assertIs(type(wkb), excel.Workbook)
+        self.assertIs(type(wkb.com_object), win32com.client.CDispatch)
+        wkb.Close(SaveChanges=False)
 
 class TestPowerPoint(unittest.TestCase):
 
