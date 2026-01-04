@@ -32,6 +32,8 @@
     
 # End Sub
 
+import random
+
 from matita.office import powerpoint as pp
 
 def squares():
@@ -40,7 +42,29 @@ def squares():
     prs = pp_app.presentations.add()
     # Direct `Slides.add()` method unavailable
     # Will be fixed with https://github.com/MicrosoftDocs/VBA-Docs/pull/1937
-    sld = prs.slides.slides.Add(1, pp.ppLayoutBlank)
+    sld = pp.Slide(prs.slides.slides.Add(1, pp.ppLayoutBlank))
+
+    for _ in range(1):
+        side = random.random() * prs.pagesetup.slideheight / 3
+        left = -side + random.random() * (side + prs.pagesetup.slidewidth)
+        top = -side + random.random() * (side + prs.pagesetup.slideheight)
+        shp = sld.shapes.addshape(pp.msoShapeRectangle, left, top, side, side)
+        shp.line.visible = False
+        shp.fill.forecolor.rgb = random.randint(0, 256 ** 3)
+        print(type(shp))
+        # eff = sld.timeline.mainsequence.addeffect(
+        #     Shape=shp,
+        #     effectId=pp.msoAnimEffectFly,
+        #     trigger=pp.msoAnimTriggerAfterPrevious
+        # )
+        # direction = random.choice([
+        #     pp.msoAnimDirectionLeft,
+        #     pp.msoAnimDirectionTop,
+        #     pp.msoAnimDirectionRight,
+        #     pp.msoAnimDirectionBottom
+        # ])
+        # eff.effect_parameters.direction = direction
+        # eff.timing.duration = 0.2
 
 if __name__ == "__main__":
     squares()
