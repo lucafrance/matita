@@ -135,7 +135,7 @@ class AccessObject:
         return self.Type
 
     def GetDependencyInfo(self):
-        return self.accessobject.GetDependencyInfo()
+        return DependencyInfo(self.accessobject.GetDependencyInfo())
 
     # Lower case alias for GetDependencyInfo
     def getdependencyinfo(self):
@@ -143,7 +143,7 @@ class AccessObject:
 
     def IsDependentUpon(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
-        return self.accessobject.IsDependentUpon(*arguments)
+        return Boolean(self.accessobject.IsDependentUpon(*arguments))
 
     # Lower case alias for IsDependentUpon
     def isdependentupon(self, ObjectType=None, ObjectName=None):
@@ -1629,7 +1629,7 @@ class AdditionalData:
 
     def Add(self, var=None):
         arguments = com_arguments([var])
-        return self.additionaldata.Add(*arguments)
+        return AdditionalData(self.additionaldata.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, var=None):
@@ -2449,7 +2449,7 @@ class Application:
 
     def AccessError(self, ErrorNumber=None):
         arguments = com_arguments([ErrorNumber])
-        return self.application.AccessError(*arguments)
+        return Variant(self.application.AccessError(*arguments))
 
     # Lower case alias for AccessError
     def accesserror(self, ErrorNumber=None):
@@ -2465,7 +2465,7 @@ class Application:
 
     def BuildCriteria(self, Field=None, FieldType=None, Expression=None):
         arguments = com_arguments([Field, FieldType, Expression])
-        return self.application.BuildCriteria(*arguments)
+        return String(self.application.BuildCriteria(*arguments))
 
     # Lower case alias for BuildCriteria
     def buildcriteria(self, Field=None, FieldType=None, Expression=None):
@@ -2480,7 +2480,7 @@ class Application:
         return self.CloseCurrentDatabase()
 
     def CodeDb(self):
-        return self.application.CodeDb()
+        return Database(self.application.CodeDb())
 
     # Lower case alias for CodeDb
     def codedb(self):
@@ -2488,7 +2488,7 @@ class Application:
 
     def ColumnHistory(self, TableName=None, ColumnName=None, queryString=None):
         arguments = com_arguments([TableName, ColumnName, queryString])
-        return self.application.ColumnHistory(*arguments)
+        return String(self.application.ColumnHistory(*arguments))
 
     # Lower case alias for ColumnHistory
     def columnhistory(self, TableName=None, ColumnName=None, queryString=None):
@@ -2514,7 +2514,7 @@ class Application:
         return self.CreateAccessProject(*arguments)
 
     def CreateAdditionalData(self):
-        return self.application.CreateAdditionalData()
+        return AdditionalData(self.application.CreateAdditionalData())
 
     # Lower case alias for CreateAdditionalData
     def createadditionaldata(self):
@@ -2522,7 +2522,7 @@ class Application:
 
     def CreateControl(self, FormName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([FormName, ControlType, Section, Parent, ColumnName, Left, Top, Width, Height])
-        return self.application.CreateControl(*arguments)
+        return Control(self.application.CreateControl(*arguments))
 
     # Lower case alias for CreateControl
     def createcontrol(self, FormName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
@@ -2531,7 +2531,7 @@ class Application:
 
     def CreateForm(self, Database=None, FormTemplate=None):
         arguments = com_arguments([Database, FormTemplate])
-        return self.application.CreateForm(*arguments)
+        return Form(self.application.CreateForm(*arguments))
 
     # Lower case alias for CreateForm
     def createform(self, Database=None, FormTemplate=None):
@@ -2540,7 +2540,7 @@ class Application:
 
     def CreateGroupLevel(self, ReportName=None, Expression=None, Header=None, Footer=None):
         arguments = com_arguments([ReportName, Expression, Header, Footer])
-        return self.application.CreateGroupLevel(*arguments)
+        return Long(self.application.CreateGroupLevel(*arguments))
 
     # Lower case alias for CreateGroupLevel
     def creategrouplevel(self, ReportName=None, Expression=None, Header=None, Footer=None):
@@ -2549,7 +2549,7 @@ class Application:
 
     def CreateReport(self, Database=None, ReportTemplate=None):
         arguments = com_arguments([Database, ReportTemplate])
-        return self.application.CreateReport(*arguments)
+        return Report(self.application.CreateReport(*arguments))
 
     # Lower case alias for CreateReport
     def createreport(self, Database=None, ReportTemplate=None):
@@ -2558,7 +2558,7 @@ class Application:
 
     def CreateReportControl(self, ReportName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([ReportName, ControlType, Section, Parent, ColumnName, Left, Top, Width, Height])
-        return self.application.CreateReportControl(*arguments)
+        return Control(self.application.CreateReportControl(*arguments))
 
     # Lower case alias for CreateReportControl
     def createreportcontrol(self, ReportName=None, ControlType=None, Section=None, Parent=None, ColumnName=None, Left=None, Top=None, Width=None, Height=None):
@@ -2566,14 +2566,14 @@ class Application:
         return self.CreateReportControl(*arguments)
 
     def CurrentDb(self):
-        return self.application.CurrentDb()
+        return Database(self.application.CurrentDb())
 
     # Lower case alias for CurrentDb
     def currentdb(self):
         return self.CurrentDb()
 
     def CurrentUser(self):
-        return self.application.CurrentUser()
+        return String(self.application.CurrentUser())
 
     # Lower case alias for CurrentUser
     def currentuser(self):
@@ -2581,7 +2581,7 @@ class Application:
 
     def CurrentWebUser(self, DisplayOption=None):
         arguments = com_arguments([DisplayOption])
-        return self.application.CurrentWebUser(*arguments)
+        return Variant(self.application.CurrentWebUser(*arguments))
 
     # Lower case alias for CurrentWebUser
     def currentwebuser(self, DisplayOption=None):
@@ -2590,7 +2590,7 @@ class Application:
 
     def CurrentWebUserGroups(self, DisplayOption=None):
         arguments = com_arguments([DisplayOption])
-        return self.application.CurrentWebUserGroups(*arguments)
+        return Variant(self.application.CurrentWebUserGroups(*arguments))
 
     # Lower case alias for CurrentWebUserGroups
     def currentwebusergroups(self, DisplayOption=None):
@@ -2599,7 +2599,7 @@ class Application:
 
     def DCount(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DCount(*arguments)
+        return Variant(self.application.DCount(*arguments))
 
     # Lower case alias for DCount
     def dcount(self, Expr=None, Domain=None, Criteria=None):
@@ -2617,7 +2617,7 @@ class Application:
 
     def DDEInitiate(self, Application=None, Topic=None):
         arguments = com_arguments([Application, Topic])
-        return self.application.DDEInitiate(*arguments)
+        return Variant(self.application.DDEInitiate(*arguments))
 
     # Lower case alias for DDEInitiate
     def ddeinitiate(self, Application=None, Topic=None):
@@ -2635,7 +2635,7 @@ class Application:
 
     def DDERequest(self, ChanNum=None, Item=None):
         arguments = com_arguments([ChanNum, Item])
-        return self.application.DDERequest(*arguments)
+        return String(self.application.DDERequest(*arguments))
 
     # Lower case alias for DDERequest
     def dderequest(self, ChanNum=None, Item=None):
@@ -2659,7 +2659,7 @@ class Application:
         return self.DDETerminateAll()
 
     def DefaultWorkspaceClone(self):
-        return self.application.DefaultWorkspaceClone()
+        return Workspace(self.application.DefaultWorkspaceClone())
 
     # Lower case alias for DefaultWorkspaceClone
     def defaultworkspaceclone(self):
@@ -2685,7 +2685,7 @@ class Application:
 
     def DFirst(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DFirst(*arguments)
+        return Variant(self.application.DFirst(*arguments))
 
     # Lower case alias for DFirst
     def dfirst(self, Expr=None, Domain=None, Criteria=None):
@@ -2703,7 +2703,7 @@ class Application:
 
     def DLast(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DLast(*arguments)
+        return Variant(self.application.DLast(*arguments))
 
     # Lower case alias for DLast
     def dlast(self, Expr=None, Domain=None, Criteria=None):
@@ -2712,7 +2712,7 @@ class Application:
 
     def DLookup(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DLookup(*arguments)
+        return Variant(self.application.DLookup(*arguments))
 
     # Lower case alias for DLookup
     def dlookup(self, Expr=None, Domain=None, Criteria=None):
@@ -2721,7 +2721,7 @@ class Application:
 
     def DMax(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DMax(*arguments)
+        return Variant(self.application.DMax(*arguments))
 
     # Lower case alias for DMax
     def dmax(self, Expr=None, Domain=None, Criteria=None):
@@ -2730,7 +2730,7 @@ class Application:
 
     def DMin(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DMin(*arguments)
+        return Variant(self.application.DMin(*arguments))
 
     # Lower case alias for DMin
     def dmin(self, Expr=None, Domain=None, Criteria=None):
@@ -2739,7 +2739,7 @@ class Application:
 
     def DStDev(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DStDev(*arguments)
+        return Variant(self.application.DStDev(*arguments))
 
     # Lower case alias for DStDev
     def dstdev(self, Expr=None, Domain=None, Criteria=None):
@@ -2748,7 +2748,7 @@ class Application:
 
     def DStDevP(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DStDevP(*arguments)
+        return Variant(self.application.DStDevP(*arguments))
 
     # Lower case alias for DStDevP
     def dstdevp(self, Expr=None, Domain=None, Criteria=None):
@@ -2757,7 +2757,7 @@ class Application:
 
     def DSum(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DSum(*arguments)
+        return Variant(self.application.DSum(*arguments))
 
     # Lower case alias for DSum
     def dsum(self, Expr=None, Domain=None, Criteria=None):
@@ -2766,7 +2766,7 @@ class Application:
 
     def DVar(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DVar(*arguments)
+        return Variant(self.application.DVar(*arguments))
 
     # Lower case alias for DVar
     def dvar(self, Expr=None, Domain=None, Criteria=None):
@@ -2775,7 +2775,7 @@ class Application:
 
     def DVarP(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([Expr, Domain, Criteria])
-        return self.application.DVarP(*arguments)
+        return Variant(self.application.DVarP(*arguments))
 
     # Lower case alias for DVarP
     def dvarp(self, Expr=None, Domain=None, Criteria=None):
@@ -2793,7 +2793,7 @@ class Application:
 
     def EuroConvert(self, Number=None, SourceCurrency=None, TargetCurrency=None, FullPrecision=None, TriangulationPrecision=None):
         arguments = com_arguments([Number, SourceCurrency, TargetCurrency, FullPrecision, TriangulationPrecision])
-        return self.application.EuroConvert(*arguments)
+        return Double(self.application.EuroConvert(*arguments))
 
     # Lower case alias for EuroConvert
     def euroconvert(self, Number=None, SourceCurrency=None, TargetCurrency=None, FullPrecision=None, TriangulationPrecision=None):
@@ -2802,7 +2802,7 @@ class Application:
 
     def Eval(self, StringExpr=None):
         arguments = com_arguments([StringExpr])
-        return self.application.Eval(*arguments)
+        return Variant(self.application.Eval(*arguments))
 
     # Lower case alias for Eval
     def eval(self, StringExpr=None):
@@ -2838,7 +2838,7 @@ class Application:
 
     def GetHiddenAttribute(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([ObjectType, ObjectName])
-        return self.application.GetHiddenAttribute(*arguments)
+        return Boolean(self.application.GetHiddenAttribute(*arguments))
 
     # Lower case alias for GetHiddenAttribute
     def gethiddenattribute(self, ObjectType=None, ObjectName=None):
@@ -2847,7 +2847,7 @@ class Application:
 
     def GetOption(self, OptionName=None):
         arguments = com_arguments([OptionName])
-        return self.application.GetOption(*arguments)
+        return Variant(self.application.GetOption(*arguments))
 
     # Lower case alias for GetOption
     def getoption(self, OptionName=None):
@@ -2856,7 +2856,7 @@ class Application:
 
     def GUIDFromString(self, String=None):
         arguments = com_arguments([String])
-        return self.application.GUIDFromString(*arguments)
+        return Variant(self.application.GUIDFromString(*arguments))
 
     # Lower case alias for GUIDFromString
     def guidfromstring(self, String=None):
@@ -2865,7 +2865,7 @@ class Application:
 
     def HtmlEncode(self, PlainText=None, Length=None):
         arguments = com_arguments([PlainText, Length])
-        return self.application.HtmlEncode(*arguments)
+        return String(self.application.HtmlEncode(*arguments))
 
     # Lower case alias for HtmlEncode
     def htmlencode(self, PlainText=None, Length=None):
@@ -2873,7 +2873,7 @@ class Application:
         return self.HtmlEncode(*arguments)
 
     def hWndAccessApp(self):
-        return self.application.hWndAccessApp()
+        return Long(self.application.hWndAccessApp())
 
     # Lower case alias for hWndAccessApp
     def hwndaccessapp(self):
@@ -2881,7 +2881,7 @@ class Application:
 
     def HyperlinkPart(self, Hyperlink=None, Part=None):
         arguments = com_arguments([Hyperlink, Part])
-        return self.application.HyperlinkPart(*arguments)
+        return String(self.application.HyperlinkPart(*arguments))
 
     # Lower case alias for HyperlinkPart
     def hyperlinkpart(self, Hyperlink=None, Part=None):
@@ -2917,7 +2917,7 @@ class Application:
 
     def IsCurrentWebUserInGroup(self, GroupNameOrID=None):
         arguments = com_arguments([GroupNameOrID])
-        return self.application.IsCurrentWebUserInGroup(*arguments)
+        return Boolean(self.application.IsCurrentWebUserInGroup(*arguments))
 
     # Lower case alias for IsCurrentWebUserInGroup
     def iscurrentwebuseringroup(self, GroupNameOrID=None):
@@ -2944,7 +2944,7 @@ class Application:
 
     def LoadPicture(self, FileName=None):
         arguments = com_arguments([FileName])
-        return self.application.LoadPicture(*arguments)
+        return Object(self.application.LoadPicture(*arguments))
 
     # Lower case alias for LoadPicture
     def loadpicture(self, FileName=None):
@@ -2971,7 +2971,7 @@ class Application:
 
     def Nz(self, Value=None, ValueIfNull=None):
         arguments = com_arguments([Value, ValueIfNull])
-        return self.application.Nz(*arguments)
+        return Variant(self.application.Nz(*arguments))
 
     # Lower case alias for Nz
     def nz(self, Value=None, ValueIfNull=None):
@@ -2998,7 +2998,7 @@ class Application:
 
     def PlainText(self, RichText=None, Length=None):
         arguments = com_arguments([RichText, Length])
-        return self.application.PlainText(*arguments)
+        return String(self.application.PlainText(*arguments))
 
     # Lower case alias for PlainText
     def plaintext(self, RichText=None, Length=None):
@@ -3030,7 +3030,7 @@ class Application:
 
     def Run(self, Procedure=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Procedure, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.application.Run(*arguments)
+        return Variant(self.application.Run(*arguments))
 
     # Lower case alias for Run
     def run(self, Procedure=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -3093,7 +3093,7 @@ class Application:
 
     def StringFromGUID(self, Guid=None):
         arguments = com_arguments([Guid])
-        return self.application.StringFromGUID(*arguments)
+        return Variant(self.application.StringFromGUID(*arguments))
 
     # Lower case alias for StringFromGUID
     def stringfromguid(self, Guid=None):
@@ -3102,7 +3102,7 @@ class Application:
 
     def SysCmd(self, Action=None, Argument2=None, Argument3=None):
         arguments = com_arguments([Action, Argument2, Argument3])
-        return self.application.SysCmd(*arguments)
+        return Variant(self.application.SysCmd(*arguments))
 
     # Lower case alias for SysCmd
     def syscmd(self, Action=None, Argument2=None, Argument3=None):
@@ -20509,7 +20509,7 @@ class FormatConditions:
 
     def Add(self, Type=None, Operator=None, Expression1=None, Expression2=None):
         arguments = com_arguments([Type, Operator, Expression1, Expression2])
-        return self.formatconditions.Add(*arguments)
+        return FormatCondition(self.formatconditions.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Type=None, Operator=None, Expression1=None, Expression2=None):
@@ -22120,7 +22120,7 @@ class ImportExportSpecifications:
 
     def Add(self, Name=None, SpecificationDefinition=None):
         arguments = com_arguments([Name, SpecificationDefinition])
-        return self.importexportspecifications.Add(*arguments)
+        return ImportExportSpecification(self.importexportspecifications.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Name=None, SpecificationDefinition=None):
@@ -26003,7 +26003,7 @@ class Module:
 
     def CreateEventProc(self, EventName=None, ObjectName=None):
         arguments = com_arguments([EventName, ObjectName])
-        return self.module.CreateEventProc(*arguments)
+        return Long(self.module.CreateEventProc(*arguments))
 
     # Lower case alias for CreateEventProc
     def createeventproc(self, EventName=None, ObjectName=None):
@@ -26021,7 +26021,7 @@ class Module:
 
     def Find(self, Target=None, StartLine=None, StartColumn=None, EndLine=None, EndColumn=None, WholeWord=None, MatchCase=None, PatternSearch=None):
         arguments = com_arguments([Target, StartLine, StartColumn, EndLine, EndColumn, WholeWord, MatchCase, PatternSearch])
-        return self.module.Find(*arguments)
+        return Boolean(self.module.Find(*arguments))
 
     # Lower case alias for Find
     def find(self, Target=None, StartLine=None, StartColumn=None, EndLine=None, EndColumn=None, WholeWord=None, MatchCase=None, PatternSearch=None):
@@ -31038,7 +31038,7 @@ class Operation:
 
     def Execute(self, bstrParameters=None):
         arguments = com_arguments([bstrParameters])
-        return self.operation.Execute(*arguments)
+        return Variant(self.operation.Execute(*arguments))
 
     # Lower case alias for Execute
     def execute(self, bstrParameters=None):
@@ -34295,7 +34295,7 @@ class Pages:
 
     def Add(self, Before=None):
         arguments = com_arguments([Before])
-        return self.pages.Add(*arguments)
+        return Page(self.pages.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Before=None):
@@ -35465,7 +35465,7 @@ class References:
 
     def AddFromFile(self, FileName=None):
         arguments = com_arguments([FileName])
-        return self.references.AddFromFile(*arguments)
+        return Reference(self.references.AddFromFile(*arguments))
 
     # Lower case alias for AddFromFile
     def addfromfile(self, FileName=None):
@@ -35474,7 +35474,7 @@ class References:
 
     def AddFromGuid(self, Guid=None, Major=None, Minor=None):
         arguments = com_arguments([Guid, Major, Minor])
-        return self.references.AddFromGuid(*arguments)
+        return Reference(self.references.AddFromGuid(*arguments))
 
     # Lower case alias for AddFromGuid
     def addfromguid(self, Guid=None, Major=None, Minor=None):
@@ -35483,7 +35483,7 @@ class References:
 
     def Item(self, var=None):
         arguments = com_arguments([var])
-        return self.references.Item(*arguments)
+        return Reference(self.references.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, var=None):
@@ -37783,7 +37783,7 @@ class Report:
 
     def TextHeight(self, Expr=None):
         arguments = com_arguments([Expr])
-        return self.report.TextHeight(*arguments)
+        return Single(self.report.TextHeight(*arguments))
 
     # Lower case alias for TextHeight
     def textheight(self, Expr=None):
@@ -37792,7 +37792,7 @@ class Report:
 
     def TextWidth(self, Expr=None):
         arguments = com_arguments([Expr])
-        return self.report.TextWidth(*arguments)
+        return Single(self.report.TextWidth(*arguments))
 
     # Lower case alias for TextWidth
     def textwidth(self, Expr=None):
@@ -38885,7 +38885,7 @@ class SmartTagProperties:
 
     def Add(self, Name=None, Value=None):
         arguments = com_arguments([Name, Value])
-        return SmartTagPropertie(self.smarttagproperties.Add(*arguments))
+        return SmartTagProperty(self.smarttagproperties.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Name=None, Value=None):
@@ -38981,7 +38981,7 @@ class SmartTags:
 
     def Add(self, Name=None):
         arguments = com_arguments([Name])
-        return self.smarttags.Add(*arguments)
+        return SmartTag(self.smarttags.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Name=None):

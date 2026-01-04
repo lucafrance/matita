@@ -113,8 +113,17 @@ class DocPage:
             self.has_return_value = True
             s = sections[0]
             line = s.paragraphs[0].txt.splitlines()[0]
-            if "**[" in line:
+            if any(word in line.lower() for word in ["nothing", "none", "false"]):
+                self.return_value_class = None
+            elif "**[" in line:
                 self.return_value_class = line.split("**[", 1)[1].split("](")[0]
+            elif "**" in line:
+                self.return_value_class = line.split("**", 1)[1].split("**", 1)[0]
+            elif " " in line.strip():
+                logging.warning(f"Unexpected format in 'Return value' section, could not parse '{self.title}': '{line}'")
+            else:
+                self.return_value_class = line
+            
 
     def process_title(self):
         if self.title is None:

@@ -579,7 +579,7 @@ class AddIns2:
 
     def Add(self, FileName=None, CopyFile=None):
         arguments = com_arguments([FileName, CopyFile])
-        return AddIns(self.addins2.Add(*arguments))
+        return AddIn(self.addins2.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, FileName=None, CopyFile=None):
@@ -3463,7 +3463,7 @@ class Application:
 
     def CentimetersToPoints(self, Centimeters=None):
         arguments = com_arguments([Centimeters])
-        return self.application.CentimetersToPoints(*arguments)
+        return Double(self.application.CentimetersToPoints(*arguments))
 
     # Lower case alias for CentimetersToPoints
     def centimeterstopoints(self, Centimeters=None):
@@ -3490,7 +3490,7 @@ class Application:
 
     def ConvertFormula(self, Formula=None, FromReferenceStyle=None, ToReferenceStyle=None, ToAbsolute=None, RelativeTo=None):
         arguments = com_arguments([Formula, FromReferenceStyle, ToReferenceStyle, ToAbsolute, RelativeTo])
-        return self.application.ConvertFormula(*arguments)
+        return Variant(self.application.ConvertFormula(*arguments))
 
     # Lower case alias for ConvertFormula
     def convertformula(self, Formula=None, FromReferenceStyle=None, ToReferenceStyle=None, ToAbsolute=None, RelativeTo=None):
@@ -3508,7 +3508,7 @@ class Application:
 
     def DDEInitiate(self, App=None, Topic=None):
         arguments = com_arguments([App, Topic])
-        return self.application.DDEInitiate(*arguments)
+        return Long(self.application.DDEInitiate(*arguments))
 
     # Lower case alias for DDEInitiate
     def ddeinitiate(self, App=None, Topic=None):
@@ -3526,7 +3526,7 @@ class Application:
 
     def DDERequest(self, Channel=None, Item=None):
         arguments = com_arguments([Channel, Item])
-        return self.application.DDERequest(*arguments)
+        return Variant(self.application.DDERequest(*arguments))
 
     # Lower case alias for DDERequest
     def dderequest(self, Channel=None, Item=None):
@@ -3569,7 +3569,7 @@ class Application:
 
     def Evaluate(self, Name=None):
         arguments = com_arguments([Name])
-        return self.application.Evaluate(*arguments)
+        return Variant(self.application.Evaluate(*arguments))
 
     # Lower case alias for Evaluate
     def evaluate(self, Name=None):
@@ -3578,7 +3578,7 @@ class Application:
 
     def ExecuteExcel4Macro(self, String=None):
         arguments = com_arguments([String])
-        return self.application.ExecuteExcel4Macro(*arguments)
+        return Variant(self.application.ExecuteExcel4Macro(*arguments))
 
     # Lower case alias for ExecuteExcel4Macro
     def executeexcel4macro(self, String=None):
@@ -3586,7 +3586,7 @@ class Application:
         return self.ExecuteExcel4Macro(*arguments)
 
     def FindFile(self):
-        return self.application.FindFile()
+        return Boolean(self.application.FindFile())
 
     # Lower case alias for FindFile
     def findfile(self):
@@ -3594,7 +3594,7 @@ class Application:
 
     def GetCustomListContents(self, ListNum=None):
         arguments = com_arguments([ListNum])
-        return self.application.GetCustomListContents(*arguments)
+        return Variant(self.application.GetCustomListContents(*arguments))
 
     # Lower case alias for GetCustomListContents
     def getcustomlistcontents(self, ListNum=None):
@@ -3603,7 +3603,7 @@ class Application:
 
     def GetCustomListNum(self, ListArray=None):
         arguments = com_arguments([ListArray])
-        return self.application.GetCustomListNum(*arguments)
+        return Long(self.application.GetCustomListNum(*arguments))
 
     # Lower case alias for GetCustomListNum
     def getcustomlistnum(self, ListArray=None):
@@ -3612,7 +3612,7 @@ class Application:
 
     def GetOpenFilename(self, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None, MultiSelect=None):
         arguments = com_arguments([FileFilter, FilterIndex, Title, ButtonText, MultiSelect])
-        return self.application.GetOpenFilename(*arguments)
+        return Variant(self.application.GetOpenFilename(*arguments))
 
     # Lower case alias for GetOpenFilename
     def getopenfilename(self, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None, MultiSelect=None):
@@ -3621,7 +3621,7 @@ class Application:
 
     def GetPhonetic(self, Text=None):
         arguments = com_arguments([Text])
-        return self.application.GetPhonetic(*arguments)
+        return String(self.application.GetPhonetic(*arguments))
 
     # Lower case alias for GetPhonetic
     def getphonetic(self, Text=None):
@@ -3630,7 +3630,7 @@ class Application:
 
     def GetSaveAsFilename(self, InitialFilename=None, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None):
         arguments = com_arguments([InitialFilename, FileFilter, FilterIndex, Title, ButtonText])
-        return self.application.GetSaveAsFilename(*arguments)
+        return Variant(self.application.GetSaveAsFilename(*arguments))
 
     # Lower case alias for GetSaveAsFilename
     def getsaveasfilename(self, InitialFilename=None, FileFilter=None, FilterIndex=None, Title=None, ButtonText=None):
@@ -3657,7 +3657,7 @@ class Application:
 
     def InchesToPoints(self, Inches=None):
         arguments = com_arguments([Inches])
-        return self.application.InchesToPoints(*arguments)
+        return Double(self.application.InchesToPoints(*arguments))
 
     # Lower case alias for InchesToPoints
     def inchestopoints(self, Inches=None):
@@ -3666,7 +3666,7 @@ class Application:
 
     def InputBox(self, Prompt=None, Title=None, Default=None, Left=None, Top=None, HelpFile=None, HelpContextID=None, Type=None):
         arguments = com_arguments([Prompt, Title, Default, Left, Top, HelpFile, HelpContextID, Type])
-        return self.application.InputBox(*arguments)
+        return Variant(self.application.InputBox(*arguments))
 
     # Lower case alias for InputBox
     def inputbox(self, Prompt=None, Title=None, Default=None, Left=None, Top=None, HelpFile=None, HelpContextID=None, Type=None):
@@ -3675,7 +3675,7 @@ class Application:
 
     def Intersect(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.application.Intersect(*arguments)
+        return Range(self.application.Intersect(*arguments))
 
     # Lower case alias for Intersect
     def intersect(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -3708,7 +3708,7 @@ class Application:
         return self.MailLogon(*arguments)
 
     def NextLetter(self):
-        return self.application.NextLetter()
+        return Workbook(self.application.NextLetter())
 
     # Lower case alias for NextLetter
     def nextletter(self):
@@ -3768,7 +3768,7 @@ class Application:
 
     def RegisterXLL(self, FileName=None):
         arguments = com_arguments([FileName])
-        return self.application.RegisterXLL(*arguments)
+        return Boolean(self.application.RegisterXLL(*arguments))
 
     # Lower case alias for RegisterXLL
     def registerxll(self, FileName=None):
@@ -3784,7 +3784,7 @@ class Application:
 
     def Run(self, Macro=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Macro, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.application.Run(*arguments)
+        return Variant(self.application.Run(*arguments))
 
     # Lower case alias for Run
     def run(self, Macro=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -3811,7 +3811,7 @@ class Application:
 
     def SharePointVersion(self, bstrUrl=None):
         arguments = com_arguments([bstrUrl])
-        return self.application.SharePointVersion(*arguments)
+        return Long(self.application.SharePointVersion(*arguments))
 
     # Lower case alias for SharePointVersion
     def sharepointversion(self, bstrUrl=None):
@@ -3827,7 +3827,7 @@ class Application:
 
     def Union(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.application.Union(*arguments)
+        return Range(self.application.Union(*arguments))
 
     # Lower case alias for Union
     def union(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -3845,7 +3845,7 @@ class Application:
 
     def Wait(self, Time=None):
         arguments = com_arguments([Time])
-        return self.application.Wait(*arguments)
+        return Boolean(self.application.Wait(*arguments))
 
     # Lower case alias for Wait
     def wait(self, Time=None):
@@ -4137,7 +4137,7 @@ class AutoCorrect:
 
     def AddReplacement(self, What=None, Replacement=None):
         arguments = com_arguments([What, Replacement])
-        return self.autocorrect.AddReplacement(*arguments)
+        return Variant(self.autocorrect.AddReplacement(*arguments))
 
     # Lower case alias for AddReplacement
     def addreplacement(self, What=None, Replacement=None):
@@ -4146,7 +4146,7 @@ class AutoCorrect:
 
     def DeleteReplacement(self, What=None):
         arguments = com_arguments([What])
-        return self.autocorrect.DeleteReplacement(*arguments)
+        return Variant(self.autocorrect.DeleteReplacement(*arguments))
 
     # Lower case alias for DeleteReplacement
     def deletereplacement(self, What=None):
@@ -4352,7 +4352,7 @@ class Axes:
 
     def Item(self, Type=None, AxisGroup=None):
         arguments = com_arguments([Type, AxisGroup])
-        return self.axes.Item(*arguments)
+        return Axis(self.axes.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, Type=None, AxisGroup=None):
@@ -5049,14 +5049,14 @@ class Axis:
         return self.Width
 
     def Delete(self):
-        return self.axis.Delete()
+        return Variant(self.axis.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.axis.Select()
+        return Variant(self.axis.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -5394,14 +5394,14 @@ class AxisTitle:
         return self.Width
 
     def Delete(self):
-        return self.axistitle.Delete()
+        return Variant(self.axistitle.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.axistitle.Select()
+        return Variant(self.axistitle.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -5742,7 +5742,7 @@ class CalculatedFields:
 
     def Add(self, Name=None, Formula=None, UseStandardFormula=None):
         arguments = com_arguments([Name, Formula, UseStandardFormula])
-        return CalculatedField(self.calculatedfields.Add(*arguments))
+        return PivotField(self.calculatedfields.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Name=None, Formula=None, UseStandardFormula=None):
@@ -5800,7 +5800,7 @@ class CalculatedItems:
 
     def Add(self, Name=None, Formula=None, UseStandardFormula=None):
         arguments = com_arguments([Name, Formula, UseStandardFormula])
-        return CalculatedItem(self.calculateditems.Add(*arguments))
+        return PivotItem(self.calculateditems.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Name=None, Formula=None, UseStandardFormula=None):
@@ -6636,7 +6636,7 @@ class Characters:
         self.Text = value
 
     def Delete(self):
-        return self.characters.Delete()
+        return Variant(self.characters.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -6644,7 +6644,7 @@ class Characters:
 
     def Insert(self, String=None):
         arguments = com_arguments([String])
-        return self.characters.Insert(*arguments)
+        return Variant(self.characters.Insert(*arguments))
 
     # Lower case alias for Insert
     def insert(self, String=None):
@@ -7415,7 +7415,7 @@ class Chart:
 
     def Axes(self, Type=None, AxisGroup=None):
         arguments = com_arguments([Type, AxisGroup])
-        return self.chart.Axes(*arguments)
+        return Object(self.chart.Axes(*arguments))
 
     # Lower case alias for Axes
     def axes(self, Type=None, AxisGroup=None):
@@ -7424,7 +7424,7 @@ class Chart:
 
     def ChartGroups(self, Index=None):
         arguments = com_arguments([Index])
-        return self.chart.ChartGroups(*arguments)
+        return Object(self.chart.ChartGroups(*arguments))
 
     # Lower case alias for ChartGroups
     def chartgroups(self, Index=None):
@@ -7433,7 +7433,7 @@ class Chart:
 
     def ChartObjects(self, Index=None):
         arguments = com_arguments([Index])
-        return self.chart.ChartObjects(*arguments)
+        return Object(self.chart.ChartObjects(*arguments))
 
     # Lower case alias for ChartObjects
     def chartobjects(self, Index=None):
@@ -7492,7 +7492,7 @@ class Chart:
 
     def Evaluate(self, Name=None):
         arguments = com_arguments([Name])
-        return self.chart.Evaluate(*arguments)
+        return Variant(self.chart.Evaluate(*arguments))
 
     # Lower case alias for Evaluate
     def evaluate(self, Name=None):
@@ -7501,7 +7501,7 @@ class Chart:
 
     def Export(self, FileName=None, FilterName=None, Interactive=None):
         arguments = com_arguments([FileName, FilterName, Interactive])
-        return self.chart.Export(*arguments)
+        return Boolean(self.chart.Export(*arguments))
 
     # Lower case alias for Export
     def export(self, FileName=None, FilterName=None, Interactive=None):
@@ -7546,7 +7546,7 @@ class Chart:
 
     def OLEObjects(self, Index=None):
         arguments = com_arguments([Index])
-        return self.chart.OLEObjects(*arguments)
+        return Object(self.chart.OLEObjects(*arguments))
 
     # Lower case alias for OLEObjects
     def oleobjects(self, Index=None):
@@ -7564,7 +7564,7 @@ class Chart:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName, IgnorePrintAreas])
-        return self.chart.PrintOut(*arguments)
+        return Variant(self.chart.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
@@ -7625,7 +7625,7 @@ class Chart:
 
     def SeriesCollection(self, Index=None):
         arguments = com_arguments([Index])
-        return self.chart.SeriesCollection(*arguments)
+        return Object(self.chart.SeriesCollection(*arguments))
 
     # Lower case alias for SeriesCollection
     def seriescollection(self, Index=None):
@@ -7818,35 +7818,35 @@ class ChartArea:
         self.Width = value
 
     def Clear(self):
-        return self.chartarea.Clear()
+        return Variant(self.chartarea.Clear())
 
     # Lower case alias for Clear
     def clear(self):
         return self.Clear()
 
     def ClearContents(self):
-        return self.chartarea.ClearContents()
+        return Variant(self.chartarea.ClearContents())
 
     # Lower case alias for ClearContents
     def clearcontents(self):
         return self.ClearContents()
 
     def ClearFormats(self):
-        return self.chartarea.ClearFormats()
+        return Variant(self.chartarea.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Copy(self):
-        return self.chartarea.Copy()
+        return Variant(self.chartarea.Copy())
 
     # Lower case alias for Copy
     def copy(self):
         return self.Copy()
 
     def Select(self):
-        return self.chartarea.Select()
+        return Variant(self.chartarea.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -8363,7 +8363,7 @@ class ChartGroup:
 
     def SeriesCollection(self, Index=None):
         arguments = com_arguments([Index])
-        return self.chartgroup.SeriesCollection(*arguments)
+        return Object(self.chartgroup.SeriesCollection(*arguments))
 
     # Lower case alias for SeriesCollection
     def seriescollection(self, Index=None):
@@ -8695,21 +8695,21 @@ class ChartObject:
         return self.ZOrder
 
     def Activate(self):
-        return self.chartobject.Activate()
+        return Variant(self.chartobject.Activate())
 
     # Lower case alias for Activate
     def activate(self):
         return self.Activate()
 
     def BringToFront(self):
-        return self.chartobject.BringToFront()
+        return Variant(self.chartobject.BringToFront())
 
     # Lower case alias for BringToFront
     def bringtofront(self):
         return self.BringToFront()
 
     def Copy(self):
-        return self.chartobject.Copy()
+        return Variant(self.chartobject.Copy())
 
     # Lower case alias for Copy
     def copy(self):
@@ -8717,7 +8717,7 @@ class ChartObject:
 
     def CopyPicture(self, Appearance=None, Format=None):
         arguments = com_arguments([Appearance, Format])
-        return self.chartobject.CopyPicture(*arguments)
+        return Variant(self.chartobject.CopyPicture(*arguments))
 
     # Lower case alias for CopyPicture
     def copypicture(self, Appearance=None, Format=None):
@@ -8725,21 +8725,21 @@ class ChartObject:
         return self.CopyPicture(*arguments)
 
     def Cut(self):
-        return self.chartobject.Cut()
+        return Variant(self.chartobject.Cut())
 
     # Lower case alias for Cut
     def cut(self):
         return self.Cut()
 
     def Delete(self):
-        return self.chartobject.Delete()
+        return Variant(self.chartobject.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Duplicate(self):
-        return self.chartobject.Duplicate()
+        return Object(self.chartobject.Duplicate())
 
     # Lower case alias for Duplicate
     def duplicate(self):
@@ -8747,7 +8747,7 @@ class ChartObject:
 
     def Select(self, Replace=None):
         arguments = com_arguments([Replace])
-        return self.chartobject.Select(*arguments)
+        return Variant(self.chartobject.Select(*arguments))
 
     # Lower case alias for Select
     def select(self, Replace=None):
@@ -8755,7 +8755,7 @@ class ChartObject:
         return self.Select(*arguments)
 
     def SendToBack(self):
-        return self.chartobject.SendToBack()
+        return Variant(self.chartobject.SendToBack())
 
     # Lower case alias for SendToBack
     def sendtoback(self):
@@ -8973,7 +8973,7 @@ class ChartObjects:
         return self.Add(*arguments)
 
     def Copy(self):
-        return self.chartobjects.Copy()
+        return Variant(self.chartobjects.Copy())
 
     # Lower case alias for Copy
     def copy(self):
@@ -8981,7 +8981,7 @@ class ChartObjects:
 
     def CopyPicture(self, Appearance=None, Format=None):
         arguments = com_arguments([Appearance, Format])
-        return self.chartobjects.CopyPicture(*arguments)
+        return Variant(self.chartobjects.CopyPicture(*arguments))
 
     # Lower case alias for CopyPicture
     def copypicture(self, Appearance=None, Format=None):
@@ -8989,21 +8989,21 @@ class ChartObjects:
         return self.CopyPicture(*arguments)
 
     def Cut(self):
-        return self.chartobjects.Cut()
+        return Variant(self.chartobjects.Cut())
 
     # Lower case alias for Cut
     def cut(self):
         return self.Cut()
 
     def Delete(self):
-        return self.chartobjects.Delete()
+        return Variant(self.chartobjects.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Duplicate(self):
-        return self.chartobjects.Duplicate()
+        return Object(self.chartobjects.Duplicate())
 
     # Lower case alias for Duplicate
     def duplicate(self):
@@ -9020,7 +9020,7 @@ class ChartObjects:
 
     def Select(self, Replace=None):
         arguments = com_arguments([Replace])
-        return self.chartobjects.Select(*arguments)
+        return Variant(self.chartobjects.Select(*arguments))
 
     # Lower case alias for Select
     def select(self, Replace=None):
@@ -9141,7 +9141,7 @@ class Charts:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName, IgnorePrintAreas])
-        return self.charts.PrintOut(*arguments)
+        return Variant(self.charts.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
@@ -9498,14 +9498,14 @@ class ChartTitle:
         return self.Width
 
     def Delete(self):
-        return self.charttitle.Delete()
+        return Variant(self.charttitle.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.charttitle.Select()
+        return Variant(self.charttitle.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -10081,7 +10081,7 @@ class ColorStops:
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
-        return self.colorstops.Item(*arguments)
+        return ColorStops(self.colorstops.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, Index=None):
@@ -10163,14 +10163,14 @@ class Comment:
         return self.Delete()
 
     def Next(self):
-        return self.comment.Next()
+        return Comment(self.comment.Next())
 
     # Lower case alias for Next
     def next(self):
         return self.Next()
 
     def Previous(self):
-        return self.comment.Previous()
+        return Comment(self.comment.Previous())
 
     # Lower case alias for Previous
     def previous(self):
@@ -10178,7 +10178,7 @@ class Comment:
 
     def Text(self, Text=None, Start=None, Overwrite=None):
         arguments = com_arguments([Text, Start, Overwrite])
-        return self.comment.Text(*arguments)
+        return String(self.comment.Text(*arguments))
 
     # Lower case alias for Text
     def text(self, Text=None, Start=None, Overwrite=None):
@@ -10327,7 +10327,7 @@ class CommentThreaded:
 
     def AddReply(self, Text=None):
         arguments = com_arguments([Text])
-        return self.commentthreaded.AddReply(*arguments)
+        return CommentThreaded(self.commentthreaded.AddReply(*arguments))
 
     # Lower case alias for AddReply
     def addreply(self, Text=None):
@@ -10342,14 +10342,14 @@ class CommentThreaded:
         return self.Delete()
 
     def Next(self):
-        return self.commentthreaded.Next()
+        return CommentThreaded(self.commentthreaded.Next())
 
     # Lower case alias for Next
     def next(self):
         return self.Next()
 
     def Previous(self):
-        return self.commentthreaded.Previous()
+        return CommentThreaded(self.commentthreaded.Previous())
 
     # Lower case alias for Previous
     def previous(self):
@@ -10357,7 +10357,7 @@ class CommentThreaded:
 
     def Text(self, Text=None, Start=None, Overwrite=None):
         arguments = com_arguments([Text, Start, Overwrite])
-        return self.commentthreaded.Text(*arguments)
+        return String(self.commentthreaded.Text(*arguments))
 
     # Lower case alias for Text
     def text(self, Text=None, Start=None, Overwrite=None):
@@ -10469,7 +10469,7 @@ class Connections:
 
     def Add(self, Name=None, Description=None, ConnectionString=None, CommandText=None, lCmdtype=None, CreateModelConnection=None, ImportRelationships=None):
         arguments = com_arguments([Name, Description, ConnectionString, CommandText, lCmdtype, CreateModelConnection, ImportRelationships])
-        return Connection(self.connections.Add(*arguments))
+        return WorkbookConnection(self.connections.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Name=None, Description=None, ConnectionString=None, CommandText=None, lCmdtype=None, CreateModelConnection=None, ImportRelationships=None):
@@ -10478,7 +10478,7 @@ class Connections:
 
     def AddFromFile(self, FileName=None, CreateModelConnection=None, ImportRelationships=None):
         arguments = com_arguments([FileName, CreateModelConnection, ImportRelationships])
-        return self.connections.AddFromFile(*arguments)
+        return WorkbookConnection(self.connections.AddFromFile(*arguments))
 
     # Lower case alias for AddFromFile
     def addfromfile(self, FileName=None, CreateModelConnection=None, ImportRelationships=None):
@@ -10487,7 +10487,7 @@ class Connections:
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
-        return self.connections.Item(*arguments)
+        return WorkbookConnection(self.connections.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, Index=None):
@@ -11063,7 +11063,7 @@ class ControlFormat:
 
     def List(self, Index=None):
         arguments = com_arguments([Index])
-        return self.controlformat.List(*arguments)
+        return Variant(self.controlformat.List(*arguments))
 
     # Lower case alias for List
     def list(self, Index=None):
@@ -11543,7 +11543,7 @@ class CubeFields:
 
     def AddSet(self, Name=None, Caption=None):
         arguments = com_arguments([Name, Caption])
-        return self.cubefields.AddSet(*arguments)
+        return CubeField(self.cubefields.AddSet(*arguments))
 
     # Lower case alias for AddSet
     def addset(self, Name=None, Caption=None):
@@ -12672,14 +12672,14 @@ class DataLabel:
         return self.Width
 
     def Delete(self):
-        return self.datalabel.Delete()
+        return Variant(self.datalabel.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.datalabel.Select()
+        return Variant(self.datalabel.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -13033,7 +13033,7 @@ class DataLabels:
         self.VerticalAlignment = value
 
     def Delete(self):
-        return self.datalabels.Delete()
+        return Variant(self.datalabels.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -13049,7 +13049,7 @@ class DataLabels:
         return self.Item(*arguments)
 
     def Select(self):
-        return self.datalabels.Select()
+        return Variant(self.datalabels.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -14161,14 +14161,14 @@ class DisplayUnitLabel:
         return self.Width
 
     def Delete(self):
-        return self.displayunitlabel.Delete()
+        return Variant(self.displayunitlabel.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.displayunitlabel.Select()
+        return Variant(self.displayunitlabel.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -14221,14 +14221,14 @@ class DownBars:
         return self.Parent
 
     def Delete(self):
-        return self.downbars.Delete()
+        return Variant(self.downbars.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.downbars.Select()
+        return Variant(self.downbars.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -14290,14 +14290,14 @@ class DropLines:
         return self.Parent
 
     def Delete(self):
-        return self.droplines.Delete()
+        return Variant(self.droplines.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.droplines.Select()
+        return Variant(self.droplines.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -14430,21 +14430,21 @@ class ErrorBars:
         return self.Parent
 
     def ClearFormats(self):
-        return self.errorbars.ClearFormats()
+        return Variant(self.errorbars.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Delete(self):
-        return self.errorbars.Delete()
+        return Variant(self.errorbars.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.errorbars.Select()
+        return Variant(self.errorbars.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -15436,7 +15436,7 @@ class Floor:
         self.Thickness = value
 
     def ClearFormats(self):
-        return self.floor.ClearFormats()
+        return Variant(self.floor.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
@@ -15450,7 +15450,7 @@ class Floor:
         return self.Paste()
 
     def Select(self):
-        return self.floor.Select()
+        return Variant(self.floor.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -16149,7 +16149,7 @@ class FormatConditions:
         return self.Add(*arguments)
 
     def AddAboveAverage(self):
-        return self.formatconditions.AddAboveAverage()
+        return AboveAverage(self.formatconditions.AddAboveAverage())
 
     # Lower case alias for AddAboveAverage
     def addaboveaverage(self):
@@ -16157,7 +16157,7 @@ class FormatConditions:
 
     def AddColorScale(self, ColorScaleType=None):
         arguments = com_arguments([ColorScaleType])
-        return self.formatconditions.AddColorScale(*arguments)
+        return ColorScale(self.formatconditions.AddColorScale(*arguments))
 
     # Lower case alias for AddColorScale
     def addcolorscale(self, ColorScaleType=None):
@@ -16165,28 +16165,28 @@ class FormatConditions:
         return self.AddColorScale(*arguments)
 
     def AddDatabar(self):
-        return self.formatconditions.AddDatabar()
+        return Databar(self.formatconditions.AddDatabar())
 
     # Lower case alias for AddDatabar
     def adddatabar(self):
         return self.AddDatabar()
 
     def AddIconSetCondition(self):
-        return self.formatconditions.AddIconSetCondition()
+        return IconSetCondition(self.formatconditions.AddIconSetCondition())
 
     # Lower case alias for AddIconSetCondition
     def addiconsetcondition(self):
         return self.AddIconSetCondition()
 
     def AddTop10(self):
-        return self.formatconditions.AddTop10()
+        return Top10(self.formatconditions.AddTop10())
 
     # Lower case alias for AddTop10
     def addtop10(self):
         return self.AddTop10()
 
     def AddUniqueValues(self):
-        return self.formatconditions.AddUniqueValues()
+        return UniqueValues(self.formatconditions.AddUniqueValues())
 
     # Lower case alias for AddUniqueValues
     def adduniquevalues(self):
@@ -16246,7 +16246,7 @@ class FreeformBuilder:
         return self.AddNodes(*arguments)
 
     def ConvertToShape(self):
-        return self.freeformbuilder.ConvertToShape()
+        return Shape(self.freeformbuilder.ConvertToShape())
 
     # Lower case alias for ConvertToShape
     def converttoshape(self):
@@ -16523,14 +16523,14 @@ class Gridlines:
         return self.Parent
 
     def Delete(self):
-        return self.gridlines.Delete()
+        return Variant(self.gridlines.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.gridlines.Select()
+        return Variant(self.gridlines.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -16682,14 +16682,14 @@ class HiLoLines:
         return self.Parent
 
     def Delete(self):
-        return self.hilolines.Delete()
+        return Variant(self.hilolines.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.hilolines.Select()
+        return Variant(self.hilolines.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -17785,7 +17785,7 @@ class IRtdServer:
 
     def ConnectData(self, TopicID=None, Strings=None, GetNewValues=None):
         arguments = com_arguments([TopicID, Strings, GetNewValues])
-        return self.irtdserver.ConnectData(*arguments)
+        return Variant(self.irtdserver.ConnectData(*arguments))
 
     # Lower case alias for ConnectData
     def connectdata(self, TopicID=None, Strings=None, GetNewValues=None):
@@ -17802,7 +17802,7 @@ class IRtdServer:
         return self.DisconnectData(*arguments)
 
     def Heartbeat(self):
-        return self.irtdserver.Heartbeat()
+        return Long(self.irtdserver.Heartbeat())
 
     # Lower case alias for Heartbeat
     def heartbeat(self):
@@ -17810,7 +17810,7 @@ class IRtdServer:
 
     def RefreshData(self, TopicCount=None):
         arguments = com_arguments([TopicCount])
-        return self.irtdserver.RefreshData(*arguments)
+        return Variant(self.irtdserver.RefreshData(*arguments))
 
     # Lower case alias for RefreshData
     def refreshdata(self, TopicCount=None):
@@ -17819,7 +17819,7 @@ class IRtdServer:
 
     def ServerStart(self, CallbackObject=None):
         arguments = com_arguments([CallbackObject])
-        return self.irtdserver.ServerStart(*arguments)
+        return Long(self.irtdserver.ServerStart(*arguments))
 
     # Lower case alias for ServerStart
     def serverstart(self, CallbackObject=None):
@@ -18096,14 +18096,14 @@ class Legend:
         self.Width = value
 
     def Clear(self):
-        return self.legend.Clear()
+        return Variant(self.legend.Clear())
 
     # Lower case alias for Clear
     def clear(self):
         return self.Clear()
 
     def Delete(self):
-        return self.legend.Delete()
+        return Variant(self.legend.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -18111,7 +18111,7 @@ class Legend:
 
     def LegendEntries(self, Index=None):
         arguments = com_arguments([Index])
-        return self.legend.LegendEntries(*arguments)
+        return Object(self.legend.LegendEntries(*arguments))
 
     # Lower case alias for LegendEntries
     def legendentries(self, Index=None):
@@ -18119,7 +18119,7 @@ class Legend:
         return self.LegendEntries(*arguments)
 
     def Select(self):
-        return self.legend.Select()
+        return Variant(self.legend.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -18275,14 +18275,14 @@ class LegendEntry:
         return self.Width
 
     def Delete(self):
-        return self.legendentry.Delete()
+        return Variant(self.legendentry.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.legendentry.Select()
+        return Variant(self.legendentry.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -18549,14 +18549,14 @@ class LegendKey:
         return self.Width
 
     def ClearFormats(self):
-        return self.legendkey.ClearFormats()
+        return Variant(self.legendkey.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Delete(self):
-        return self.legendkey.Delete()
+        return Variant(self.legendkey.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -19671,7 +19671,7 @@ class ListObject:
 
     def Publish(self, Target=None, LinkSource=None):
         arguments = com_arguments([Target, LinkSource])
-        return self.listobject.Publish(*arguments)
+        return String(self.listobject.Publish(*arguments))
 
     # Lower case alias for Publish
     def publish(self, Target=None, LinkSource=None):
@@ -20410,7 +20410,7 @@ class Names:
 
     def Item(self, Index=None, IndexLocal=None, RefersTo=None):
         arguments = com_arguments([Index, IndexLocal, RefersTo])
-        return self.names.Item(*arguments)
+        return Name(self.names.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, Index=None, IndexLocal=None, RefersTo=None):
@@ -22026,21 +22026,21 @@ class OLEObject:
         return self.ZOrder
 
     def Activate(self):
-        return self.oleobject.Activate()
+        return Variant(self.oleobject.Activate())
 
     # Lower case alias for Activate
     def activate(self):
         return self.Activate()
 
     def BringToFront(self):
-        return self.oleobject.BringToFront()
+        return Variant(self.oleobject.BringToFront())
 
     # Lower case alias for BringToFront
     def bringtofront(self):
         return self.BringToFront()
 
     def Copy(self):
-        return self.oleobject.Copy()
+        return Variant(self.oleobject.Copy())
 
     # Lower case alias for Copy
     def copy(self):
@@ -22048,7 +22048,7 @@ class OLEObject:
 
     def CopyPicture(self, Appearance=None, Format=None):
         arguments = com_arguments([Appearance, Format])
-        return self.oleobject.CopyPicture(*arguments)
+        return Variant(self.oleobject.CopyPicture(*arguments))
 
     # Lower case alias for CopyPicture
     def copypicture(self, Appearance=None, Format=None):
@@ -22056,21 +22056,21 @@ class OLEObject:
         return self.CopyPicture(*arguments)
 
     def Cut(self):
-        return self.oleobject.Cut()
+        return Variant(self.oleobject.Cut())
 
     # Lower case alias for Cut
     def cut(self):
         return self.Cut()
 
     def Delete(self):
-        return self.oleobject.Delete()
+        return Variant(self.oleobject.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Duplicate(self):
-        return self.oleobject.Duplicate()
+        return Object(self.oleobject.Duplicate())
 
     # Lower case alias for Duplicate
     def duplicate(self):
@@ -22078,7 +22078,7 @@ class OLEObject:
 
     def Select(self, Replace=None):
         arguments = com_arguments([Replace])
-        return self.oleobject.Select(*arguments)
+        return Variant(self.oleobject.Select(*arguments))
 
     # Lower case alias for Select
     def select(self, Replace=None):
@@ -22086,14 +22086,14 @@ class OLEObject:
         return self.Select(*arguments)
 
     def SendToBack(self):
-        return self.oleobject.SendToBack()
+        return Variant(self.oleobject.SendToBack())
 
     # Lower case alias for SendToBack
     def sendtoback(self):
         return self.SendToBack()
 
     def Update(self):
-        return self.oleobject.Update()
+        return Variant(self.oleobject.Update())
 
     # Lower case alias for Update
     def update(self):
@@ -22101,7 +22101,7 @@ class OLEObject:
 
     def Verb(self, Verb=None):
         arguments = com_arguments([Verb])
-        return self.oleobject.Verb(*arguments)
+        return Variant(self.oleobject.Verb(*arguments))
 
     # Lower case alias for Verb
     def verb(self, Verb=None):
@@ -22398,14 +22398,14 @@ class OLEObjects:
         return self.Add(*arguments)
 
     def BringToFront(self):
-        return self.oleobjects.BringToFront()
+        return Variant(self.oleobjects.BringToFront())
 
     # Lower case alias for BringToFront
     def bringtofront(self):
         return self.BringToFront()
 
     def Copy(self):
-        return self.oleobjects.Copy()
+        return Variant(self.oleobjects.Copy())
 
     # Lower case alias for Copy
     def copy(self):
@@ -22413,7 +22413,7 @@ class OLEObjects:
 
     def CopyPicture(self, Appearance=None, Format=None):
         arguments = com_arguments([Appearance, Format])
-        return self.oleobjects.CopyPicture(*arguments)
+        return Variant(self.oleobjects.CopyPicture(*arguments))
 
     # Lower case alias for CopyPicture
     def copypicture(self, Appearance=None, Format=None):
@@ -22421,21 +22421,21 @@ class OLEObjects:
         return self.CopyPicture(*arguments)
 
     def Cut(self):
-        return self.oleobjects.Cut()
+        return Variant(self.oleobjects.Cut())
 
     # Lower case alias for Cut
     def cut(self):
         return self.Cut()
 
     def Delete(self):
-        return self.oleobjects.Delete()
+        return Variant(self.oleobjects.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Duplicate(self):
-        return self.oleobjects.Duplicate()
+        return Object(self.oleobjects.Duplicate())
 
     # Lower case alias for Duplicate
     def duplicate(self):
@@ -22452,7 +22452,7 @@ class OLEObjects:
 
     def Select(self, Replace=None):
         arguments = com_arguments([Replace])
-        return self.oleobjects.Select(*arguments)
+        return Variant(self.oleobjects.Select(*arguments))
 
     # Lower case alias for Select
     def select(self, Replace=None):
@@ -22460,7 +22460,7 @@ class OLEObjects:
         return self.Select(*arguments)
 
     def SendToBack(self):
-        return self.oleobjects.SendToBack()
+        return Variant(self.oleobjects.SendToBack())
 
     # Lower case alias for SendToBack
     def sendtoback(self):
@@ -22547,7 +22547,7 @@ class Outline:
 
     def ShowLevels(self, RowLevels=None, ColumnLevels=None):
         arguments = com_arguments([RowLevels, ColumnLevels])
-        return self.outline.ShowLevels(*arguments)
+        return Variant(self.outline.ShowLevels(*arguments))
 
     # Lower case alias for ShowLevels
     def showlevels(self, RowLevels=None, ColumnLevels=None):
@@ -23470,7 +23470,7 @@ class Pane:
         return self.VisibleRange
 
     def Activate(self):
-        return self.pane.Activate()
+        return Boolean(self.pane.Activate())
 
     # Lower case alias for Activate
     def activate(self):
@@ -23478,7 +23478,7 @@ class Pane:
 
     def LargeScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
         arguments = com_arguments([Down, Up, ToRight, ToLeft])
-        return self.pane.LargeScroll(*arguments)
+        return Variant(self.pane.LargeScroll(*arguments))
 
     # Lower case alias for LargeScroll
     def largescroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
@@ -23487,7 +23487,7 @@ class Pane:
 
     def PointsToScreenPixelsX(self, Points=None):
         arguments = com_arguments([Points])
-        return self.pane.PointsToScreenPixelsX(*arguments)
+        return Long(self.pane.PointsToScreenPixelsX(*arguments))
 
     # Lower case alias for PointsToScreenPixelsX
     def pointstoscreenpixelsx(self, Points=None):
@@ -23496,7 +23496,7 @@ class Pane:
 
     def PointsToScreenPixelsY(self, Points=None):
         arguments = com_arguments([Points])
-        return self.pane.PointsToScreenPixelsY(*arguments)
+        return Long(self.pane.PointsToScreenPixelsY(*arguments))
 
     # Lower case alias for PointsToScreenPixelsY
     def pointstoscreenpixelsy(self, Points=None):
@@ -23514,7 +23514,7 @@ class Pane:
 
     def SmallScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
         arguments = com_arguments([Down, Up, ToRight, ToLeft])
-        return self.pane.SmallScroll(*arguments)
+        return Variant(self.pane.SmallScroll(*arguments))
 
     # Lower case alias for SmallScroll
     def smallscroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
@@ -24728,7 +24728,7 @@ class PivotCache:
 
     def CreatePivotTable(self, TableDestination=None, TableName=None, ReadData=None, DefaultVersion=None):
         arguments = com_arguments([TableDestination, TableName, ReadData, DefaultVersion])
-        return self.pivotcache.CreatePivotTable(*arguments)
+        return PivotTable(self.pivotcache.CreatePivotTable(*arguments))
 
     # Lower case alias for CreatePivotTable
     def createpivottable(self, TableDestination=None, TableName=None, ReadData=None, DefaultVersion=None):
@@ -24804,7 +24804,7 @@ class PivotCaches:
 
     def Create(self, SourceType=None, SourceData=None, Version=None):
         arguments = com_arguments([SourceType, SourceData, Version])
-        return self.pivotcaches.Create(*arguments)
+        return PivotCache(self.pivotcaches.Create(*arguments))
 
     # Lower case alias for Create
     def create(self, SourceType=None, SourceData=None, Version=None):
@@ -26074,7 +26074,7 @@ class PivotField:
         return self.AutoSort(*arguments)
 
     def CalculatedItems(self):
-        return self.pivotfield.CalculatedItems()
+        return CalculatedItems(self.pivotfield.CalculatedItems())
 
     # Lower case alias for CalculatedItems
     def calculateditems(self):
@@ -26126,7 +26126,7 @@ class PivotField:
 
     def PivotItems(self, Index=None):
         arguments = com_arguments([Index])
-        return self.pivotfield.PivotItems(*arguments)
+        return Variant(self.pivotfield.PivotItems(*arguments))
 
     # Lower case alias for PivotItems
     def pivotitems(self, Index=None):
@@ -26424,7 +26424,7 @@ class PivotFilters:
 
     def Add(self, Type=None, DataField=None, Value1=None, Value2=None, Order=None, Name=None, Description=None, MemberPropertyField=None, WholeDayFilter=None):
         arguments = com_arguments([Type, DataField, Value1, Value2, Order, Name, Description, MemberPropertyField, WholeDayFilter])
-        return self.pivotfilters.Add(*arguments)
+        return PivotFilter(self.pivotfilters.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Type=None, DataField=None, Value1=None, Value2=None, Order=None, Name=None, Description=None, MemberPropertyField=None, WholeDayFilter=None):
@@ -28623,7 +28623,7 @@ class PivotTable:
 
     def AddDataField(self, Field=None, Caption=None, Function=None):
         arguments = com_arguments([Field, Caption, Function])
-        return self.pivottable.AddDataField(*arguments)
+        return PivotField(self.pivottable.AddDataField(*arguments))
 
     # Lower case alias for AddDataField
     def adddatafield(self, Field=None, Caption=None, Function=None):
@@ -28632,7 +28632,7 @@ class PivotTable:
 
     def AddFields(self, RowFields=None, ColumnFields=None, PageFields=None, AddToTable=None):
         arguments = com_arguments([RowFields, ColumnFields, PageFields, AddToTable])
-        return self.pivottable.AddFields(*arguments)
+        return Variant(self.pivottable.AddFields(*arguments))
 
     # Lower case alias for AddFields
     def addfields(self, RowFields=None, ColumnFields=None, PageFields=None, AddToTable=None):
@@ -28647,7 +28647,7 @@ class PivotTable:
         return self.AllocateChanges()
 
     def CalculatedFields(self):
-        return self.pivottable.CalculatedFields()
+        return CalculatedFields(self.pivottable.CalculatedFields())
 
     # Lower case alias for CalculatedFields
     def calculatedfields(self):
@@ -28703,7 +28703,7 @@ class PivotTable:
 
     def CreateCubeFile(self, File=None, Measures=None, Levels=None, Members=None, Properties=None):
         arguments = com_arguments([File, Measures, Levels, Members, Properties])
-        return self.pivottable.CreateCubeFile(*arguments)
+        return String(self.pivottable.CreateCubeFile(*arguments))
 
     # Lower case alias for CreateCubeFile
     def createcubefile(self, File=None, Measures=None, Levels=None, Members=None, Properties=None):
@@ -28719,7 +28719,7 @@ class PivotTable:
 
     def GetData(self, Name=None):
         arguments = com_arguments([Name])
-        return self.pivottable.GetData(*arguments)
+        return Double(self.pivottable.GetData(*arguments))
 
     # Lower case alias for GetData
     def getdata(self, Name=None):
@@ -28728,7 +28728,7 @@ class PivotTable:
 
     def GetPivotData(self, DataField=None, Field1=None, Item1=None, Field2=None, Item2=None, Field3=None, Item3=None, Field4=None, Item4=None, Field5=None, Item5=None, Field6=None, Item6=None, Field7=None, Item7=None, Field8=None, Item8=None, Field9=None, Item9=None, Field10=None, Item10=None, Field11=None, Item11=None, Field12=None, Item12=None, Field13=None, Item13=None, Field14=None, Item14=None):
         arguments = com_arguments([DataField, Field1, Item1, Field2, Item2, Field3, Item3, Field4, Item4, Field5, Item5, Field6, Item6, Field7, Item7, Field8, Item8, Field9, Item9, Field10, Item10, Field11, Item11, Field12, Item12, Field13, Item13, Field14, Item14])
-        return self.pivottable.GetPivotData(*arguments)
+        return Range(self.pivottable.GetPivotData(*arguments))
 
     # Lower case alias for GetPivotData
     def getpivotdata(self, DataField=None, Field1=None, Item1=None, Field2=None, Item2=None, Field3=None, Item3=None, Field4=None, Item4=None, Field5=None, Item5=None, Field6=None, Item6=None, Field7=None, Item7=None, Field8=None, Item8=None, Field9=None, Item9=None, Field10=None, Item10=None, Field11=None, Item11=None, Field12=None, Item12=None, Field13=None, Item13=None, Field14=None, Item14=None):
@@ -28743,7 +28743,7 @@ class PivotTable:
         return self.ListFormulas()
 
     def PivotCache(self):
-        return self.pivottable.PivotCache()
+        return PivotCache(self.pivottable.PivotCache())
 
     # Lower case alias for PivotCache
     def pivotcache(self):
@@ -28751,7 +28751,7 @@ class PivotTable:
 
     def PivotFields(self, Index=None):
         arguments = com_arguments([Index])
-        return self.pivottable.PivotFields(*arguments)
+        return Object(self.pivottable.PivotFields(*arguments))
 
     # Lower case alias for PivotFields
     def pivotfields(self, Index=None):
@@ -28784,7 +28784,7 @@ class PivotTable:
         return self.RefreshDataSourceValues()
 
     def RefreshTable(self):
-        return self.pivottable.RefreshTable()
+        return Boolean(self.pivottable.RefreshTable())
 
     # Lower case alias for RefreshTable
     def refreshtable(self):
@@ -28810,7 +28810,7 @@ class PivotTable:
 
     def ShowPages(self, PageField=None):
         arguments = com_arguments([PageField])
-        return self.pivottable.ShowPages(*arguments)
+        return Variant(self.pivottable.ShowPages(*arguments))
 
     # Lower case alias for ShowPages
     def showpages(self, PageField=None):
@@ -28884,7 +28884,7 @@ class PivotTableChangeList:
 
     def Add(self, Tuple=None, Value=None, AllocationValue=None, AllocationMethod=None, AllocationWeightExpression=None):
         arguments = com_arguments([Tuple, Value, AllocationValue, AllocationMethod, AllocationWeightExpression])
-        return self.pivottablechangelist.Add(*arguments)
+        return ValueChange(self.pivottablechangelist.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Tuple=None, Value=None, AllocationValue=None, AllocationMethod=None, AllocationWeightExpression=None):
@@ -29149,14 +29149,14 @@ class PlotArea:
         self.Width = value
 
     def ClearFormats(self):
-        return self.plotarea.ClearFormats()
+        return Variant(self.plotarea.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Select(self):
-        return self.plotarea.Select()
+        return Variant(self.plotarea.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -29552,28 +29552,28 @@ class Point:
         return self.ApplyDataLabels(*arguments)
 
     def ClearFormats(self):
-        return self.point.ClearFormats()
+        return Variant(self.point.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Copy(self):
-        return self.point.Copy()
+        return Variant(self.point.Copy())
 
     # Lower case alias for Copy
     def copy(self):
         return self.Copy()
 
     def Delete(self):
-        return self.point.Delete()
+        return Variant(self.point.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Paste(self):
-        return self.point.Paste()
+        return Variant(self.point.Paste())
 
     # Lower case alias for Paste
     def paste(self):
@@ -29581,7 +29581,7 @@ class Point:
 
     def PieSliceLocation(self, loc=None, Index=None):
         arguments = com_arguments([loc, Index])
-        return self.point.PieSliceLocation(*arguments)
+        return Double(self.point.PieSliceLocation(*arguments))
 
     # Lower case alias for PieSliceLocation
     def pieslicelocation(self, loc=None, Index=None):
@@ -29589,7 +29589,7 @@ class Point:
         return self.PieSliceLocation(*arguments)
 
     def Select(self):
-        return self.point.Select()
+        return Variant(self.point.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -29821,7 +29821,7 @@ class ProtectedViewWindow:
         return self.Activate()
 
     def Close(self):
-        return self.protectedviewwindow.Close()
+        return Boolean(self.protectedviewwindow.Close())
 
     # Lower case alias for Close
     def close(self):
@@ -31201,7 +31201,7 @@ class QueryTable:
 
     def Refresh(self, BackgroundQuery=None):
         arguments = com_arguments([BackgroundQuery])
-        return self.querytable.Refresh(*arguments)
+        return Boolean(self.querytable.Refresh(*arguments))
 
     # Lower case alias for Refresh
     def refresh(self, BackgroundQuery=None):
@@ -32521,7 +32521,7 @@ class Range:
         return self.XPath
 
     def Activate(self):
-        return self.range.Activate()
+        return Variant(self.range.Activate())
 
     # Lower case alias for Activate
     def activate(self):
@@ -32529,7 +32529,7 @@ class Range:
 
     def AddComment(self, Text=None):
         arguments = com_arguments([Text])
-        return self.range.AddComment(*arguments)
+        return Comment(self.range.AddComment(*arguments))
 
     # Lower case alias for AddComment
     def addcomment(self, Text=None):
@@ -32538,7 +32538,7 @@ class Range:
 
     def AddCommentThreaded(self, Text=None):
         arguments = com_arguments([Text])
-        return self.range.AddCommentThreaded(*arguments)
+        return CommentThreaded(self.range.AddCommentThreaded(*arguments))
 
     # Lower case alias for AddCommentThreaded
     def addcommentthreaded(self, Text=None):
@@ -32547,7 +32547,7 @@ class Range:
 
     def AdvancedFilter(self, Action=None, CriteriaRange=None, CopyToRange=None, Unique=None):
         arguments = com_arguments([Action, CriteriaRange, CopyToRange, Unique])
-        return self.range.AdvancedFilter(*arguments)
+        return Variant(self.range.AdvancedFilter(*arguments))
 
     # Lower case alias for AdvancedFilter
     def advancedfilter(self, Action=None, CriteriaRange=None, CopyToRange=None, Unique=None):
@@ -32563,7 +32563,7 @@ class Range:
 
     def ApplyNames(self, Names=None, IgnoreRelativeAbsolute=None, UseRowColumnNames=None, OmitColumn=None, OmitRow=None, Order=None, AppendLast=None):
         arguments = com_arguments([Names, IgnoreRelativeAbsolute, UseRowColumnNames, OmitColumn, OmitRow, Order, AppendLast])
-        return self.range.ApplyNames(*arguments)
+        return Variant(self.range.ApplyNames(*arguments))
 
     # Lower case alias for ApplyNames
     def applynames(self, Names=None, IgnoreRelativeAbsolute=None, UseRowColumnNames=None, OmitColumn=None, OmitRow=None, Order=None, AppendLast=None):
@@ -32571,7 +32571,7 @@ class Range:
         return self.ApplyNames(*arguments)
 
     def ApplyOutlineStyles(self):
-        return self.range.ApplyOutlineStyles()
+        return Variant(self.range.ApplyOutlineStyles())
 
     # Lower case alias for ApplyOutlineStyles
     def applyoutlinestyles(self):
@@ -32579,7 +32579,7 @@ class Range:
 
     def AutoComplete(self, String=None):
         arguments = com_arguments([String])
-        return self.range.AutoComplete(*arguments)
+        return String(self.range.AutoComplete(*arguments))
 
     # Lower case alias for AutoComplete
     def autocomplete(self, String=None):
@@ -32588,7 +32588,7 @@ class Range:
 
     def AutoFill(self, Destination=None, Type=None):
         arguments = com_arguments([Destination, Type])
-        return self.range.AutoFill(*arguments)
+        return Variant(self.range.AutoFill(*arguments))
 
     # Lower case alias for AutoFill
     def autofill(self, Destination=None, Type=None):
@@ -32597,7 +32597,7 @@ class Range:
 
     def AutoFilter(self, Field=None, Criteria1=None, Operator=None, Criteria2=None, SubField=None, VisibleDropDown=None):
         arguments = com_arguments([Field, Criteria1, Operator, Criteria2, SubField, VisibleDropDown])
-        return self.range.AutoFilter(*arguments)
+        return Variant(self.range.AutoFilter(*arguments))
 
     # Lower case alias for AutoFilter
     def autofilter(self, Field=None, Criteria1=None, Operator=None, Criteria2=None, SubField=None, VisibleDropDown=None):
@@ -32605,14 +32605,14 @@ class Range:
         return self.AutoFilter(*arguments)
 
     def AutoFit(self):
-        return self.range.AutoFit()
+        return Variant(self.range.AutoFit())
 
     # Lower case alias for AutoFit
     def autofit(self):
         return self.AutoFit()
 
     def AutoOutline(self):
-        return self.range.AutoOutline()
+        return Variant(self.range.AutoOutline())
 
     # Lower case alias for AutoOutline
     def autooutline(self):
@@ -32620,7 +32620,7 @@ class Range:
 
     def BorderAround(self, LineStyle=None, Weight=None, ColorIndex=None, Color=None, ThemeColor=None):
         arguments = com_arguments([LineStyle, Weight, ColorIndex, Color, ThemeColor])
-        return self.range.BorderAround(*arguments)
+        return Variant(self.range.BorderAround(*arguments))
 
     # Lower case alias for BorderAround
     def borderaround(self, LineStyle=None, Weight=None, ColorIndex=None, Color=None, ThemeColor=None):
@@ -32628,14 +32628,14 @@ class Range:
         return self.BorderAround(*arguments)
 
     def Calculate(self):
-        return self.range.Calculate()
+        return Variant(self.range.Calculate())
 
     # Lower case alias for Calculate
     def calculate(self):
         return self.Calculate()
 
     def CalculateRowMajorOrder(self):
-        return self.range.CalculateRowMajorOrder()
+        return Variant(self.range.CalculateRowMajorOrder())
 
     # Lower case alias for CalculateRowMajorOrder
     def calculaterowmajororder(self):
@@ -32643,7 +32643,7 @@ class Range:
 
     def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
         arguments = com_arguments([CustomDictionary, IgnoreUppercase, AlwaysSuggest, SpellLang])
-        return self.range.CheckSpelling(*arguments)
+        return Variant(self.range.CheckSpelling(*arguments))
 
     # Lower case alias for CheckSpelling
     def checkspelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
@@ -32651,7 +32651,7 @@ class Range:
         return self.CheckSpelling(*arguments)
 
     def Clear(self):
-        return self.range.Clear()
+        return Variant(self.range.Clear())
 
     # Lower case alias for Clear
     def clear(self):
@@ -32665,14 +32665,14 @@ class Range:
         return self.ClearComments()
 
     def ClearContents(self):
-        return self.range.ClearContents()
+        return Variant(self.range.ClearContents())
 
     # Lower case alias for ClearContents
     def clearcontents(self):
         return self.ClearContents()
 
     def ClearFormats(self):
-        return self.range.ClearFormats()
+        return Variant(self.range.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
@@ -32686,14 +32686,14 @@ class Range:
         return self.ClearHyperlinks()
 
     def ClearNotes(self):
-        return self.range.ClearNotes()
+        return Variant(self.range.ClearNotes())
 
     # Lower case alias for ClearNotes
     def clearnotes(self):
         return self.ClearNotes()
 
     def ClearOutline(self):
-        return self.range.ClearOutline()
+        return Variant(self.range.ClearOutline())
 
     # Lower case alias for ClearOutline
     def clearoutline(self):
@@ -32701,7 +32701,7 @@ class Range:
 
     def ColumnDifferences(self, Comparison=None):
         arguments = com_arguments([Comparison])
-        return self.range.ColumnDifferences(*arguments)
+        return Range(self.range.ColumnDifferences(*arguments))
 
     # Lower case alias for ColumnDifferences
     def columndifferences(self, Comparison=None):
@@ -32710,7 +32710,7 @@ class Range:
 
     def Consolidate(self, Sources=None, Function=None, TopRow=None, LeftColumn=None, CreateLinks=None):
         arguments = com_arguments([Sources, Function, TopRow, LeftColumn, CreateLinks])
-        return self.range.Consolidate(*arguments)
+        return Variant(self.range.Consolidate(*arguments))
 
     # Lower case alias for Consolidate
     def consolidate(self, Sources=None, Function=None, TopRow=None, LeftColumn=None, CreateLinks=None):
@@ -32728,7 +32728,7 @@ class Range:
 
     def Copy(self, Destination=None):
         arguments = com_arguments([Destination])
-        return self.range.Copy(*arguments)
+        return Variant(self.range.Copy(*arguments))
 
     # Lower case alias for Copy
     def copy(self, Destination=None):
@@ -32737,7 +32737,7 @@ class Range:
 
     def CopyFromRecordset(self, Data=None, MaxRows=None, MaxColumns=None):
         arguments = com_arguments([Data, MaxRows, MaxColumns])
-        return self.range.CopyFromRecordset(*arguments)
+        return Long(self.range.CopyFromRecordset(*arguments))
 
     # Lower case alias for CopyFromRecordset
     def copyfromrecordset(self, Data=None, MaxRows=None, MaxColumns=None):
@@ -32746,7 +32746,7 @@ class Range:
 
     def CopyPicture(self, Appearance=None, Format=None):
         arguments = com_arguments([Appearance, Format])
-        return self.range.CopyPicture(*arguments)
+        return Variant(self.range.CopyPicture(*arguments))
 
     # Lower case alias for CopyPicture
     def copypicture(self, Appearance=None, Format=None):
@@ -32755,7 +32755,7 @@ class Range:
 
     def CreateNames(self, Top=None, Left=None, Bottom=None, Right=None):
         arguments = com_arguments([Top, Left, Bottom, Right])
-        return self.range.CreateNames(*arguments)
+        return Variant(self.range.CreateNames(*arguments))
 
     # Lower case alias for CreateNames
     def createnames(self, Top=None, Left=None, Bottom=None, Right=None):
@@ -32764,7 +32764,7 @@ class Range:
 
     def Cut(self, Destination=None):
         arguments = com_arguments([Destination])
-        return self.range.Cut(*arguments)
+        return Variant(self.range.Cut(*arguments))
 
     # Lower case alias for Cut
     def cut(self, Destination=None):
@@ -32773,7 +32773,7 @@ class Range:
 
     def DataSeries(self, Rowcol=None, Type=None, Date=None, Step=None, Stop=None, Trend=None):
         arguments = com_arguments([Rowcol, Type, Date, Step, Stop, Trend])
-        return self.range.DataSeries(*arguments)
+        return Variant(self.range.DataSeries(*arguments))
 
     # Lower case alias for DataSeries
     def dataseries(self, Rowcol=None, Type=None, Date=None, Step=None, Stop=None, Trend=None):
@@ -32789,7 +32789,7 @@ class Range:
 
     def Delete(self, Shift=None):
         arguments = com_arguments([Shift])
-        return self.range.Delete(*arguments)
+        return Variant(self.range.Delete(*arguments))
 
     # Lower case alias for Delete
     def delete(self, Shift=None):
@@ -32797,7 +32797,7 @@ class Range:
         return self.Delete(*arguments)
 
     def DialogBox(self):
-        return self.range.DialogBox()
+        return Variant(self.range.DialogBox())
 
     # Lower case alias for DialogBox
     def dialogbox(self):
@@ -32819,7 +32819,7 @@ class Range:
 
     def EditionOptions(self, Type=None, Option=None, Name=None, Reference=None, Appearance=None, ChartSize=None, Format=None):
         arguments = com_arguments([Type, Option, Name, Reference, Appearance, ChartSize, Format])
-        return self.range.EditionOptions(*arguments)
+        return Variant(self.range.EditionOptions(*arguments))
 
     # Lower case alias for EditionOptions
     def editionoptions(self, Type=None, Option=None, Name=None, Reference=None, Appearance=None, ChartSize=None, Format=None):
@@ -32836,28 +32836,28 @@ class Range:
         return self.ExportAsFixedFormat(*arguments)
 
     def FillDown(self):
-        return self.range.FillDown()
+        return Variant(self.range.FillDown())
 
     # Lower case alias for FillDown
     def filldown(self):
         return self.FillDown()
 
     def FillLeft(self):
-        return self.range.FillLeft()
+        return Variant(self.range.FillLeft())
 
     # Lower case alias for FillLeft
     def fillleft(self):
         return self.FillLeft()
 
     def FillRight(self):
-        return self.range.FillRight()
+        return Variant(self.range.FillRight())
 
     # Lower case alias for FillRight
     def fillright(self):
         return self.FillRight()
 
     def FillUp(self):
-        return self.range.FillUp()
+        return Variant(self.range.FillUp())
 
     # Lower case alias for FillUp
     def fillup(self):
@@ -32865,7 +32865,7 @@ class Range:
 
     def Find(self, What=None, After=None, LookIn=None, LookAt=None, SearchOrder=None, SearchDirection=None, MatchCase=None, MatchByte=None, SearchFormat=None):
         arguments = com_arguments([What, After, LookIn, LookAt, SearchOrder, SearchDirection, MatchCase, MatchByte, SearchFormat])
-        return self.range.Find(*arguments)
+        return Range(self.range.Find(*arguments))
 
     # Lower case alias for Find
     def find(self, What=None, After=None, LookIn=None, LookAt=None, SearchOrder=None, SearchDirection=None, MatchCase=None, MatchByte=None, SearchFormat=None):
@@ -32874,7 +32874,7 @@ class Range:
 
     def FindNext(self, After=None):
         arguments = com_arguments([After])
-        return self.range.FindNext(*arguments)
+        return Range(self.range.FindNext(*arguments))
 
     # Lower case alias for FindNext
     def findnext(self, After=None):
@@ -32883,7 +32883,7 @@ class Range:
 
     def FindPrevious(self, Before=None):
         arguments = com_arguments([Before])
-        return self.range.FindPrevious(*arguments)
+        return Range(self.range.FindPrevious(*arguments))
 
     # Lower case alias for FindPrevious
     def findprevious(self, Before=None):
@@ -32891,7 +32891,7 @@ class Range:
         return self.FindPrevious(*arguments)
 
     def FunctionWizard(self):
-        return self.range.FunctionWizard()
+        return Variant(self.range.FunctionWizard())
 
     # Lower case alias for FunctionWizard
     def functionwizard(self):
@@ -32899,7 +32899,7 @@ class Range:
 
     def Group(self, Start=None, End=None, By=None, Periods=None):
         arguments = com_arguments([Start, End, By, Periods])
-        return self.range.Group(*arguments)
+        return Variant(self.range.Group(*arguments))
 
     # Lower case alias for Group
     def group(self, Start=None, End=None, By=None, Periods=None):
@@ -32908,7 +32908,7 @@ class Range:
 
     def Insert(self, Shift=None, CopyOrigin=None):
         arguments = com_arguments([Shift, CopyOrigin])
-        return self.range.Insert(*arguments)
+        return Variant(self.range.Insert(*arguments))
 
     # Lower case alias for Insert
     def insert(self, Shift=None, CopyOrigin=None):
@@ -32925,14 +32925,14 @@ class Range:
         return self.InsertIndent(*arguments)
 
     def Justify(self):
-        return self.range.Justify()
+        return Variant(self.range.Justify())
 
     # Lower case alias for Justify
     def justify(self):
         return self.Justify()
 
     def ListNames(self):
-        return self.range.ListNames()
+        return Variant(self.range.ListNames())
 
     # Lower case alias for ListNames
     def listnames(self):
@@ -32949,7 +32949,7 @@ class Range:
 
     def NavigateArrow(self, TowardPrecedent=None, ArrowNumber=None, LinkNumber=None):
         arguments = com_arguments([TowardPrecedent, ArrowNumber, LinkNumber])
-        return self.range.NavigateArrow(*arguments)
+        return Variant(self.range.NavigateArrow(*arguments))
 
     # Lower case alias for NavigateArrow
     def navigatearrow(self, TowardPrecedent=None, ArrowNumber=None, LinkNumber=None):
@@ -32958,7 +32958,7 @@ class Range:
 
     def NoteText(self, Text=None, Start=None, Length=None):
         arguments = com_arguments([Text, Start, Length])
-        return self.range.NoteText(*arguments)
+        return String(self.range.NoteText(*arguments))
 
     # Lower case alias for NoteText
     def notetext(self, Text=None, Start=None, Length=None):
@@ -32967,7 +32967,7 @@ class Range:
 
     def Parse(self, ParseLine=None, Destination=None):
         arguments = com_arguments([ParseLine, Destination])
-        return self.range.Parse(*arguments)
+        return Variant(self.range.Parse(*arguments))
 
     # Lower case alias for Parse
     def parse(self, ParseLine=None, Destination=None):
@@ -32976,7 +32976,7 @@ class Range:
 
     def PasteSpecial(self, Paste=None, Operation=None, SkipBlanks=None, Transpose=None):
         arguments = com_arguments([Paste, Operation, SkipBlanks, Transpose])
-        return self.range.PasteSpecial(*arguments)
+        return Variant(self.range.PasteSpecial(*arguments))
 
     # Lower case alias for PasteSpecial
     def pastespecial(self, Paste=None, Operation=None, SkipBlanks=None, Transpose=None):
@@ -32985,7 +32985,7 @@ class Range:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName])
-        return self.range.PrintOut(*arguments)
+        return Variant(self.range.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
@@ -32994,7 +32994,7 @@ class Range:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([EnableChanges])
-        return self.range.PrintPreview(*arguments)
+        return Variant(self.range.PrintPreview(*arguments))
 
     # Lower case alias for PrintPreview
     def printpreview(self, EnableChanges=None):
@@ -33011,7 +33011,7 @@ class Range:
         return self.RemoveDuplicates(*arguments)
 
     def RemoveSubtotal(self):
-        return self.range.RemoveSubtotal()
+        return Variant(self.range.RemoveSubtotal())
 
     # Lower case alias for RemoveSubtotal
     def removesubtotal(self):
@@ -33019,7 +33019,7 @@ class Range:
 
     def Replace(self, What=None, Replacement=None, LookAt=None, SearchOrder=None, MatchCase=None, MatchByte=None, SearchFormat=None, ReplaceFormat=None, FormulaVersion=None):
         arguments = com_arguments([What, Replacement, LookAt, SearchOrder, MatchCase, MatchByte, SearchFormat, ReplaceFormat, FormulaVersion])
-        return self.range.Replace(*arguments)
+        return Boolean(self.range.Replace(*arguments))
 
     # Lower case alias for Replace
     def replace(self, What=None, Replacement=None, LookAt=None, SearchOrder=None, MatchCase=None, MatchByte=None, SearchFormat=None, ReplaceFormat=None, FormulaVersion=None):
@@ -33035,7 +33035,7 @@ class Range:
 
     def RowDifferences(self, Comparison=None):
         arguments = com_arguments([Comparison])
-        return self.range.RowDifferences(*arguments)
+        return Range(self.range.RowDifferences(*arguments))
 
     # Lower case alias for RowDifferences
     def rowdifferences(self, Comparison=None):
@@ -33044,7 +33044,7 @@ class Range:
 
     def Run(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.range.Run(*arguments)
+        return Variant(self.range.Run(*arguments))
 
     # Lower case alias for Run
     def run(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -33052,7 +33052,7 @@ class Range:
         return self.Run(*arguments)
 
     def Select(self):
-        return self.range.Select()
+        return Variant(self.range.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -33075,7 +33075,7 @@ class Range:
         return self.SetPhonetic()
 
     def Show(self):
-        return self.range.Show()
+        return Variant(self.range.Show())
 
     # Lower case alias for Show
     def show(self):
@@ -33090,7 +33090,7 @@ class Range:
 
     def ShowDependents(self, Remove=None):
         arguments = com_arguments([Remove])
-        return self.range.ShowDependents(*arguments)
+        return Variant(self.range.ShowDependents(*arguments))
 
     # Lower case alias for ShowDependents
     def showdependents(self, Remove=None):
@@ -33098,7 +33098,7 @@ class Range:
         return self.ShowDependents(*arguments)
 
     def ShowErrors(self):
-        return self.range.ShowErrors()
+        return Variant(self.range.ShowErrors())
 
     # Lower case alias for ShowErrors
     def showerrors(self):
@@ -33106,7 +33106,7 @@ class Range:
 
     def ShowPrecedents(self, Remove=None):
         arguments = com_arguments([Remove])
-        return self.range.ShowPrecedents(*arguments)
+        return Variant(self.range.ShowPrecedents(*arguments))
 
     # Lower case alias for ShowPrecedents
     def showprecedents(self, Remove=None):
@@ -33115,7 +33115,7 @@ class Range:
 
     def Sort(self, Key1=None, Order1=None, Key2=None, Type=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, SortMethod=None, DataOption1=None, DataOption2=None, DataOption3=None):
         arguments = com_arguments([Key1, Order1, Key2, Type, Order2, Key3, Order3, Header, OrderCustom, MatchCase, Orientation, SortMethod, DataOption1, DataOption2, DataOption3])
-        return self.range.Sort(*arguments)
+        return Variant(self.range.Sort(*arguments))
 
     # Lower case alias for Sort
     def sort(self, Key1=None, Order1=None, Key2=None, Type=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, SortMethod=None, DataOption1=None, DataOption2=None, DataOption3=None):
@@ -33124,7 +33124,7 @@ class Range:
 
     def SortSpecial(self, SortMethod=None, Key1=None, Order1=None, Type=None, Key2=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, DataOption1=None, DataOption2=None, DataOption3=None):
         arguments = com_arguments([SortMethod, Key1, Order1, Type, Key2, Order2, Key3, Order3, Header, OrderCustom, MatchCase, Orientation, DataOption1, DataOption2, DataOption3])
-        return self.range.SortSpecial(*arguments)
+        return Variant(self.range.SortSpecial(*arguments))
 
     # Lower case alias for SortSpecial
     def sortspecial(self, SortMethod=None, Key1=None, Order1=None, Type=None, Key2=None, Order2=None, Key3=None, Order3=None, Header=None, OrderCustom=None, MatchCase=None, Orientation=None, DataOption1=None, DataOption2=None, DataOption3=None):
@@ -33142,7 +33142,7 @@ class Range:
 
     def SpecialCells(self, Type=None, Value=None):
         arguments = com_arguments([Type, Value])
-        return self.range.SpecialCells(*arguments)
+        return Range(self.range.SpecialCells(*arguments))
 
     # Lower case alias for SpecialCells
     def specialcells(self, Type=None, Value=None):
@@ -33151,7 +33151,7 @@ class Range:
 
     def SubscribeTo(self, Edition=None, Format=None):
         arguments = com_arguments([Edition, Format])
-        return self.range.SubscribeTo(*arguments)
+        return Variant(self.range.SubscribeTo(*arguments))
 
     # Lower case alias for SubscribeTo
     def subscribeto(self, Edition=None, Format=None):
@@ -33160,7 +33160,7 @@ class Range:
 
     def Subtotal(self, GroupBy=None, Function=None, TotalList=None, Replace=None, PageBreaks=None, SummaryBelowData=None):
         arguments = com_arguments([GroupBy, Function, TotalList, Replace, PageBreaks, SummaryBelowData])
-        return self.range.Subtotal(*arguments)
+        return Variant(self.range.Subtotal(*arguments))
 
     # Lower case alias for Subtotal
     def subtotal(self, GroupBy=None, Function=None, TotalList=None, Replace=None, PageBreaks=None, SummaryBelowData=None):
@@ -33169,7 +33169,7 @@ class Range:
 
     def Table(self, RowInput=None, ColumnInput=None):
         arguments = com_arguments([RowInput, ColumnInput])
-        return self.range.Table(*arguments)
+        return Variant(self.range.Table(*arguments))
 
     # Lower case alias for Table
     def table(self, RowInput=None, ColumnInput=None):
@@ -33178,7 +33178,7 @@ class Range:
 
     def TextToColumns(self, Destination=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None):
         arguments = com_arguments([Destination, DataType, TextQualifier, ConsecutiveDelimiter, Tab, Semicolon, Comma, Space, Other, OtherChar, FieldInfo, DecimalSeparator, ThousandsSeparator, TrailingMinusNumbers])
-        return self.range.TextToColumns(*arguments)
+        return Variant(self.range.TextToColumns(*arguments))
 
     # Lower case alias for TextToColumns
     def texttocolumns(self, Destination=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None):
@@ -33186,7 +33186,7 @@ class Range:
         return self.TextToColumns(*arguments)
 
     def Ungroup(self):
-        return self.range.Ungroup()
+        return Variant(self.range.Ungroup())
 
     # Lower case alias for Ungroup
     def ungroup(self):
@@ -33536,7 +33536,7 @@ class Research:
 
     def IsResearchService(self, ServiceID=None):
         arguments = com_arguments([ServiceID])
-        return self.research.IsResearchService(*arguments)
+        return Boolean(self.research.IsResearchService(*arguments))
 
     # Lower case alias for IsResearchService
     def isresearchservice(self, ServiceID=None):
@@ -33545,7 +33545,7 @@ class Research:
 
     def Query(self, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
         arguments = com_arguments([ServiceID, QueryString, QueryLanguage, UseSelection, RequeryContextXML, NewQueryContextXML, LaunchQuery])
-        return self.research.Query(*arguments)
+        return Variant(self.research.Query(*arguments))
 
     # Lower case alias for Query
     def query(self, ServiceID=None, QueryString=None, QueryLanguage=None, UseSelection=None, RequeryContextXML=None, NewQueryContextXML=None, LaunchQuery=None):
@@ -33554,7 +33554,7 @@ class Research:
 
     def SetLanguagePair(self, LanguageFrom=None, LanguageTo=None):
         arguments = com_arguments([LanguageFrom, LanguageTo])
-        return self.research.SetLanguagePair(*arguments)
+        return Variant(self.research.SetLanguagePair(*arguments))
 
     # Lower case alias for SetLanguagePair
     def setlanguagepair(self, LanguageFrom=None, LanguageTo=None):
@@ -33824,7 +33824,7 @@ class Scenario:
 
     def ChangeScenario(self, ChangingCells=None, Values=None):
         arguments = com_arguments([ChangingCells, Values])
-        return self.scenario.ChangeScenario(*arguments)
+        return Variant(self.scenario.ChangeScenario(*arguments))
 
     # Lower case alias for ChangeScenario
     def changescenario(self, ChangingCells=None, Values=None):
@@ -33832,14 +33832,14 @@ class Scenario:
         return self.ChangeScenario(*arguments)
 
     def Delete(self):
-        return self.scenario.Delete()
+        return Variant(self.scenario.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Show(self):
-        return self.scenario.Show()
+        return Variant(self.scenario.Show())
 
     # Lower case alias for Show
     def show(self):
@@ -33896,7 +33896,7 @@ class Scenarios:
 
     def CreateSummary(self, ReportType=None, ResultCells=None):
         arguments = com_arguments([ReportType, ResultCells])
-        return self.scenarios.CreateSummary(*arguments)
+        return Variant(self.scenarios.CreateSummary(*arguments))
 
     # Lower case alias for CreateSummary
     def createsummary(self, ReportType=None, ResultCells=None):
@@ -33914,7 +33914,7 @@ class Scenarios:
 
     def Merge(self, Source=None):
         arguments = com_arguments([Source])
-        return self.scenarios.Merge(*arguments)
+        return Variant(self.scenarios.Merge(*arguments))
 
     # Lower case alias for Merge
     def merge(self, Source=None):
@@ -34573,14 +34573,14 @@ class Series:
         return self.ApplyDataLabels(*arguments)
 
     def ClearFormats(self):
-        return self.series.ClearFormats()
+        return Variant(self.series.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Copy(self):
-        return self.series.Copy()
+        return Variant(self.series.Copy())
 
     # Lower case alias for Copy
     def copy(self):
@@ -34588,7 +34588,7 @@ class Series:
 
     def DataLabels(self, Index=None):
         arguments = com_arguments([Index])
-        return self.series.DataLabels(*arguments)
+        return Object(self.series.DataLabels(*arguments))
 
     # Lower case alias for DataLabels
     def datalabels(self, Index=None):
@@ -34596,7 +34596,7 @@ class Series:
         return self.DataLabels(*arguments)
 
     def Delete(self):
-        return self.series.Delete()
+        return Variant(self.series.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -34604,7 +34604,7 @@ class Series:
 
     def ErrorBar(self, Direction=None, Include=None, Type=None, Amount=None, MinusValues=None):
         arguments = com_arguments([Direction, Include, Type, Amount, MinusValues])
-        return self.series.ErrorBar(*arguments)
+        return Variant(self.series.ErrorBar(*arguments))
 
     # Lower case alias for ErrorBar
     def errorbar(self, Direction=None, Include=None, Type=None, Amount=None, MinusValues=None):
@@ -34626,7 +34626,7 @@ class Series:
         return self.GeoProjectionType()
 
     def Paste(self):
-        return self.series.Paste()
+        return Variant(self.series.Paste())
 
     # Lower case alias for Paste
     def paste(self):
@@ -34634,7 +34634,7 @@ class Series:
 
     def Points(self, Index=None):
         arguments = com_arguments([Index])
-        return self.series.Points(*arguments)
+        return Object(self.series.Points(*arguments))
 
     # Lower case alias for Points
     def points(self, Index=None):
@@ -34649,7 +34649,7 @@ class Series:
         return self.RegionLabelOptions()
 
     def Select(self):
-        return self.series.Select()
+        return Variant(self.series.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -34657,7 +34657,7 @@ class Series:
 
     def Trendlines(self, Index=None):
         arguments = com_arguments([Index])
-        return self.series.Trendlines(*arguments)
+        return Object(self.series.Trendlines(*arguments))
 
     # Lower case alias for Trendlines
     def trendlines(self, Index=None):
@@ -34715,7 +34715,7 @@ class SeriesCollection:
 
     def Extend(self, Source=None, RowCol=None, CategoryLabels=None):
         arguments = com_arguments([Source, RowCol, CategoryLabels])
-        return self.seriescollection.Extend(*arguments)
+        return Variant(self.seriescollection.Extend(*arguments))
 
     # Lower case alias for Extend
     def extend(self, Source=None, RowCol=None, CategoryLabels=None):
@@ -34732,7 +34732,7 @@ class SeriesCollection:
         return self.Item(*arguments)
 
     def NewSeries(self):
-        return self.seriescollection.NewSeries()
+        return Series(self.seriescollection.NewSeries())
 
     # Lower case alias for NewSeries
     def newseries(self):
@@ -34740,7 +34740,7 @@ class SeriesCollection:
 
     def Paste(self, RowCol=None, SeriesLabels=None, CategoryLabels=None, Replace=None, NewSeries=None):
         arguments = com_arguments([RowCol, SeriesLabels, CategoryLabels, Replace, NewSeries])
-        return self.seriescollection.Paste(*arguments)
+        return Variant(self.seriescollection.Paste(*arguments))
 
     # Lower case alias for Paste
     def paste(self, RowCol=None, SeriesLabels=None, CategoryLabels=None, Replace=None, NewSeries=None):
@@ -34803,14 +34803,14 @@ class SeriesLines:
         return self.Parent
 
     def Delete(self):
-        return self.serieslines.Delete()
+        return Variant(self.serieslines.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.serieslines.Select()
+        return Variant(self.serieslines.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -34858,7 +34858,7 @@ class ServerViewableItems:
 
     def Add(self, Obj=None):
         arguments = com_arguments([Obj])
-        return ServerViewableItem(self.serverviewableitems.Add(*arguments))
+        return Object(self.serverviewableitems.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Obj=None):
@@ -34883,7 +34883,7 @@ class ServerViewableItems:
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
-        return self.serverviewableitems.Item(*arguments)
+        return Object(self.serverviewableitems.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, Index=None):
@@ -35854,7 +35854,7 @@ class Shape:
         return self.Delete()
 
     def Duplicate(self):
-        return self.shape.Duplicate()
+        return Shape(self.shape.Duplicate())
 
     # Lower case alias for Duplicate
     def duplicate(self):
@@ -36163,7 +36163,7 @@ class Shapes:
 
     def Add3DModel(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([FileName, LinkToFile, SaveWithDocument, Left, Top, Width, Height])
-        return self.shapes.Add3DModel(*arguments)
+        return Shape(self.shapes.Add3DModel(*arguments))
 
     # Lower case alias for Add3DModel
     def add3dmodel(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
@@ -36172,7 +36172,7 @@ class Shapes:
 
     def AddCallout(self, Type=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Type, Left, Top, Width, Height])
-        return self.shapes.AddCallout(*arguments)
+        return Shape(self.shapes.AddCallout(*arguments))
 
     # Lower case alias for AddCallout
     def addcallout(self, Type=None, Left=None, Top=None, Width=None, Height=None):
@@ -36181,7 +36181,7 @@ class Shapes:
 
     def AddConnector(self, Type=None, BeginX=None, BeginY=None, EndX=None, EndY=None):
         arguments = com_arguments([Type, BeginX, BeginY, EndX, EndY])
-        return self.shapes.AddConnector(*arguments)
+        return Shape(self.shapes.AddConnector(*arguments))
 
     # Lower case alias for AddConnector
     def addconnector(self, Type=None, BeginX=None, BeginY=None, EndX=None, EndY=None):
@@ -36190,7 +36190,7 @@ class Shapes:
 
     def AddCurve(self, SafeArrayOfPoints=None):
         arguments = com_arguments([SafeArrayOfPoints])
-        return self.shapes.AddCurve(*arguments)
+        return Shape(self.shapes.AddCurve(*arguments))
 
     # Lower case alias for AddCurve
     def addcurve(self, SafeArrayOfPoints=None):
@@ -36199,7 +36199,7 @@ class Shapes:
 
     def AddFormControl(self, Type=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Type, Left, Top, Width, Height])
-        return self.shapes.AddFormControl(*arguments)
+        return Shape(self.shapes.AddFormControl(*arguments))
 
     # Lower case alias for AddFormControl
     def addformcontrol(self, Type=None, Left=None, Top=None, Width=None, Height=None):
@@ -36208,7 +36208,7 @@ class Shapes:
 
     def AddLabel(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Orientation, Left, Top, Width, Height])
-        return self.shapes.AddLabel(*arguments)
+        return Shape(self.shapes.AddLabel(*arguments))
 
     # Lower case alias for AddLabel
     def addlabel(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
@@ -36217,7 +36217,7 @@ class Shapes:
 
     def AddLine(self, BeginX=None, BeginY=None, EndX=None, EndY=None):
         arguments = com_arguments([BeginX, BeginY, EndX, EndY])
-        return self.shapes.AddLine(*arguments)
+        return Shape(self.shapes.AddLine(*arguments))
 
     # Lower case alias for AddLine
     def addline(self, BeginX=None, BeginY=None, EndX=None, EndY=None):
@@ -36226,7 +36226,7 @@ class Shapes:
 
     def AddOLEObject(self, ClassType=None, FileName=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([ClassType, FileName, Link, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Left, Top, Width, Height])
-        return self.shapes.AddOLEObject(*arguments)
+        return Shape(self.shapes.AddOLEObject(*arguments))
 
     # Lower case alias for AddOLEObject
     def addoleobject(self, ClassType=None, FileName=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, Left=None, Top=None, Width=None, Height=None):
@@ -36235,7 +36235,7 @@ class Shapes:
 
     def AddPicture(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([FileName, LinkToFile, SaveWithDocument, Left, Top, Width, Height])
-        return self.shapes.AddPicture(*arguments)
+        return Shape(self.shapes.AddPicture(*arguments))
 
     # Lower case alias for AddPicture
     def addpicture(self, FileName=None, LinkToFile=None, SaveWithDocument=None, Left=None, Top=None, Width=None, Height=None):
@@ -36244,7 +36244,7 @@ class Shapes:
 
     def AddPolyline(self, SafeArrayOfPoints=None):
         arguments = com_arguments([SafeArrayOfPoints])
-        return self.shapes.AddPolyline(*arguments)
+        return Shape(self.shapes.AddPolyline(*arguments))
 
     # Lower case alias for AddPolyline
     def addpolyline(self, SafeArrayOfPoints=None):
@@ -36253,7 +36253,7 @@ class Shapes:
 
     def AddShape(self, Type=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Type, Left, Top, Width, Height])
-        return self.shapes.AddShape(*arguments)
+        return Shape(self.shapes.AddShape(*arguments))
 
     # Lower case alias for AddShape
     def addshape(self, Type=None, Left=None, Top=None, Width=None, Height=None):
@@ -36262,7 +36262,7 @@ class Shapes:
 
     def AddSmartArt(self, Layout=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Layout, Left, Top, Width, Height])
-        return self.shapes.AddSmartArt(*arguments)
+        return Shape(self.shapes.AddSmartArt(*arguments))
 
     # Lower case alias for AddSmartArt
     def addsmartart(self, Layout=None, Left=None, Top=None, Width=None, Height=None):
@@ -36271,7 +36271,7 @@ class Shapes:
 
     def AddTextbox(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
         arguments = com_arguments([Orientation, Left, Top, Width, Height])
-        return self.shapes.AddTextbox(*arguments)
+        return Shape(self.shapes.AddTextbox(*arguments))
 
     # Lower case alias for AddTextbox
     def addtextbox(self, Orientation=None, Left=None, Top=None, Width=None, Height=None):
@@ -36280,7 +36280,7 @@ class Shapes:
 
     def AddTextEffect(self, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
         arguments = com_arguments([PresetTextEffect, Text, FontName, FontSize, FontBold, FontItalic, Left, Top])
-        return self.shapes.AddTextEffect(*arguments)
+        return Shape(self.shapes.AddTextEffect(*arguments))
 
     # Lower case alias for AddTextEffect
     def addtexteffect(self, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
@@ -36289,7 +36289,7 @@ class Shapes:
 
     def BuildFreeform(self, EditingType=None, X1=None, Y1=None):
         arguments = com_arguments([EditingType, X1, Y1])
-        return self.shapes.BuildFreeform(*arguments)
+        return FreeformBuilder(self.shapes.BuildFreeform(*arguments))
 
     # Lower case alias for BuildFreeform
     def buildfreeform(self, EditingType=None, X1=None, Y1=None):
@@ -36444,7 +36444,7 @@ class Sheets:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName, IgnorePrintAreas])
-        return self.sheets.PrintOut(*arguments)
+        return Variant(self.sheets.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
@@ -37269,7 +37269,7 @@ class SlicerCaches:
 
     def Add(self, Source=None, SourceField=None, Name=None, SlicerCacheType=None):
         arguments = com_arguments([Source, SourceField, Name, SlicerCacheType])
-        return self.slicercaches.Add(*arguments)
+        return SlicerCache(self.slicercaches.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Source=None, SourceField=None, Name=None, SlicerCacheType=None):
@@ -37889,7 +37889,7 @@ class SortFields:
 
     def Add(self, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None):
         arguments = com_arguments([Key, SortOn, Order, CustomOrder, DataOption])
-        return self.sortfields.Add(*arguments)
+        return SortField(self.sortfields.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None):
@@ -37898,7 +37898,7 @@ class SortFields:
 
     def Add2(self, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None, SubField=None):
         arguments = com_arguments([Key, SortOn, Order, CustomOrder, DataOption, SubField])
-        return self.sortfields.Add2(*arguments)
+        return SortField(self.sortfields.Add2(*arguments))
 
     # Lower case alias for Add2
     def add2(self, Key=None, SortOn=None, Order=None, CustomOrder=None, DataOption=None, SubField=None):
@@ -38418,7 +38418,7 @@ class SparklineGroups:
 
     def Add(self, Type=None, SourceData=None):
         arguments = com_arguments([Type, SourceData])
-        return self.sparklinegroups.Add(*arguments)
+        return SparklineGroup(self.sparklinegroups.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, Type=None, SourceData=None):
@@ -39434,7 +39434,7 @@ class Style:
         self.WrapText = value
 
     def Delete(self):
-        return self.style.Delete()
+        return Variant(self.style.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -39503,7 +39503,7 @@ class Styles:
 
     def Merge(self, Workbook=None):
         arguments = com_arguments([Workbook])
-        return self.styles.Merge(*arguments)
+        return Variant(self.styles.Merge(*arguments))
 
     # Lower case alias for Merge
     def merge(self, Workbook=None):
@@ -39738,7 +39738,7 @@ class TableStyle:
 
     def Duplicate(self, NewTableStyleName=None):
         arguments = com_arguments([NewTableStyleName])
-        return self.tablestyle.Duplicate(*arguments)
+        return TableStyle(self.tablestyle.Duplicate(*arguments))
 
     # Lower case alias for Duplicate
     def duplicate(self, NewTableStyleName=None):
@@ -39918,7 +39918,7 @@ class TableStyles:
 
     def Add(self, TableStyleName=None):
         arguments = com_arguments([TableStyleName])
-        return self.tablestyles.Add(*arguments)
+        return TableStyle(self.tablestyles.Add(*arguments))
 
     # Lower case alias for Add
     def add(self, TableStyleName=None):
@@ -39927,7 +39927,7 @@ class TableStyles:
 
     def Item(self, Index=None):
         arguments = com_arguments([Index])
-        return self.tablestyles.Item(*arguments)
+        return TableStyle(self.tablestyles.Item(*arguments))
 
     # Lower case alias for Item
     def item(self, Index=None):
@@ -40407,7 +40407,7 @@ class TextFrame:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([Start, Length])
-        return self.textframe.Characters(*arguments)
+        return Characters(self.textframe.Characters(*arguments))
 
     # Lower case alias for Characters
     def characters(self, Start=None, Length=None):
@@ -41450,14 +41450,14 @@ class TickLabels:
         self.ReadingOrder = value
 
     def Delete(self):
-        return self.ticklabels.Delete()
+        return Variant(self.ticklabels.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.ticklabels.Select()
+        return Variant(self.ticklabels.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -42025,21 +42025,21 @@ class Trendline:
         self.Type = value
 
     def ClearFormats(self):
-        return self.trendline.ClearFormats()
+        return Variant(self.trendline.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
         return self.ClearFormats()
 
     def Delete(self):
-        return self.trendline.Delete()
+        return Variant(self.trendline.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.trendline.Select()
+        return Variant(self.trendline.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -42347,14 +42347,14 @@ class UpBars:
         return self.Parent
 
     def Delete(self):
-        return self.upbars.Delete()
+        return Variant(self.upbars.Delete())
 
     # Lower case alias for Delete
     def delete(self):
         return self.Delete()
 
     def Select(self):
-        return self.upbars.Select()
+        return Variant(self.upbars.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -43107,7 +43107,7 @@ class Walls:
         self.Thickness = value
 
     def ClearFormats(self):
-        return self.walls.ClearFormats()
+        return Variant(self.walls.ClearFormats())
 
     # Lower case alias for ClearFormats
     def clearformats(self):
@@ -43121,7 +43121,7 @@ class Walls:
         return self.Paste()
 
     def Select(self):
-        return self.walls.Select()
+        return Variant(self.walls.Select())
 
     # Lower case alias for Select
     def select(self):
@@ -44221,21 +44221,21 @@ class Window:
         self.Zoom = value
 
     def Activate(self):
-        return self.window.Activate()
+        return Variant(self.window.Activate())
 
     # Lower case alias for Activate
     def activate(self):
         return self.Activate()
 
     def ActivateNext(self):
-        return self.window.ActivateNext()
+        return Variant(self.window.ActivateNext())
 
     # Lower case alias for ActivateNext
     def activatenext(self):
         return self.ActivateNext()
 
     def ActivatePrevious(self):
-        return self.window.ActivatePrevious()
+        return Variant(self.window.ActivatePrevious())
 
     # Lower case alias for ActivatePrevious
     def activateprevious(self):
@@ -44252,7 +44252,7 @@ class Window:
 
     def LargeScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
         arguments = com_arguments([Down, Up, ToRight, ToLeft])
-        return self.window.LargeScroll(*arguments)
+        return Variant(self.window.LargeScroll(*arguments))
 
     # Lower case alias for LargeScroll
     def largescroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
@@ -44260,7 +44260,7 @@ class Window:
         return self.LargeScroll(*arguments)
 
     def NewWindow(self):
-        return self.window.NewWindow()
+        return Window(self.window.NewWindow())
 
     # Lower case alias for NewWindow
     def newwindow(self):
@@ -44268,7 +44268,7 @@ class Window:
 
     def PointsToScreenPixelsX(self, Points=None):
         arguments = com_arguments([Points])
-        return self.window.PointsToScreenPixelsX(*arguments)
+        return Long(self.window.PointsToScreenPixelsX(*arguments))
 
     # Lower case alias for PointsToScreenPixelsX
     def pointstoscreenpixelsx(self, Points=None):
@@ -44277,7 +44277,7 @@ class Window:
 
     def PointsToScreenPixelsY(self, Points=None):
         arguments = com_arguments([Points])
-        return self.window.PointsToScreenPixelsY(*arguments)
+        return Long(self.window.PointsToScreenPixelsY(*arguments))
 
     # Lower case alias for PointsToScreenPixelsY
     def pointstoscreenpixelsy(self, Points=None):
@@ -44286,7 +44286,7 @@ class Window:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName])
-        return self.window.PrintOut(*arguments)
+        return Variant(self.window.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None):
@@ -44295,7 +44295,7 @@ class Window:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([EnableChanges])
-        return self.window.PrintPreview(*arguments)
+        return Variant(self.window.PrintPreview(*arguments))
 
     # Lower case alias for PrintPreview
     def printpreview(self, EnableChanges=None):
@@ -44304,7 +44304,7 @@ class Window:
 
     def RangeFromPoint(self, x=None, y=None):
         arguments = com_arguments([x, y])
-        return self.window.RangeFromPoint(*arguments)
+        return Object(self.window.RangeFromPoint(*arguments))
 
     # Lower case alias for RangeFromPoint
     def rangefrompoint(self, x=None, y=None):
@@ -44322,7 +44322,7 @@ class Window:
 
     def ScrollWorkbookTabs(self, Sheets=None, Position=None):
         arguments = com_arguments([Sheets, Position])
-        return self.window.ScrollWorkbookTabs(*arguments)
+        return Variant(self.window.ScrollWorkbookTabs(*arguments))
 
     # Lower case alias for ScrollWorkbookTabs
     def scrollworkbooktabs(self, Sheets=None, Position=None):
@@ -44331,7 +44331,7 @@ class Window:
 
     def SmallScroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
         arguments = com_arguments([Down, Up, ToRight, ToLeft])
-        return self.window.SmallScroll(*arguments)
+        return Variant(self.window.SmallScroll(*arguments))
 
     # Lower case alias for SmallScroll
     def smallscroll(self, Down=None, Up=None, ToRight=None, ToLeft=None):
@@ -44401,7 +44401,7 @@ class Windows:
 
     def Arrange(self, ArrangeStyle=None, ActiveWorkbook=None, SyncHorizontal=None, SyncVertical=None):
         arguments = com_arguments([ArrangeStyle, ActiveWorkbook, SyncHorizontal, SyncVertical])
-        return self.windows.Arrange(*arguments)
+        return Variant(self.windows.Arrange(*arguments))
 
     # Lower case alias for Arrange
     def arrange(self, ArrangeStyle=None, ActiveWorkbook=None, SyncHorizontal=None, SyncVertical=None):
@@ -44409,7 +44409,7 @@ class Windows:
         return self.Arrange(*arguments)
 
     def BreakSideBySide(self):
-        return self.windows.BreakSideBySide()
+        return Boolean(self.windows.BreakSideBySide())
 
     # Lower case alias for BreakSideBySide
     def breaksidebyside(self):
@@ -44417,7 +44417,7 @@ class Windows:
 
     def CompareSideBySideWith(self, WindowName=None):
         arguments = com_arguments([WindowName])
-        return self.windows.CompareSideBySideWith(*arguments)
+        return Boolean(self.windows.CompareSideBySideWith(*arguments))
 
     # Lower case alias for CompareSideBySideWith
     def comparesidebysidewith(self, WindowName=None):
@@ -45775,7 +45775,7 @@ class Workbook:
         return self.BreakLink(*arguments)
 
     def CanCheckIn(self):
-        return self.workbook.CanCheckIn()
+        return Boolean(self.workbook.CanCheckIn())
 
     # Lower case alias for CanCheckIn
     def cancheckin(self):
@@ -45857,7 +45857,7 @@ class Workbook:
         return self.EndReview()
 
     def ExclusiveAccess(self):
-        return self.workbook.ExclusiveAccess()
+        return Boolean(self.workbook.ExclusiveAccess())
 
     # Lower case alias for ExclusiveAccess
     def exclusiveaccess(self):
@@ -45889,14 +45889,14 @@ class Workbook:
         return self.ForwardMailer()
 
     def GetWorkflowTasks(self):
-        return self.workbook.GetWorkflowTasks()
+        return WorkFlowTasks(self.workbook.GetWorkflowTasks())
 
     # Lower case alias for GetWorkflowTasks
     def getworkflowtasks(self):
         return self.GetWorkflowTasks()
 
     def GetWorkflowTemplates(self):
-        return self.workbook.GetWorkflowTemplates()
+        return WorkflowTemplates(self.workbook.GetWorkflowTemplates())
 
     # Lower case alias for GetWorkflowTemplates
     def getworkflowtemplates(self):
@@ -45913,7 +45913,7 @@ class Workbook:
 
     def LinkInfo(self, Name=None, LinkInfo=None, Type=None, EditionRef=None):
         arguments = com_arguments([Name, LinkInfo, Type, EditionRef])
-        return self.workbook.LinkInfo(*arguments)
+        return Variant(self.workbook.LinkInfo(*arguments))
 
     # Lower case alias for LinkInfo
     def linkinfo(self, Name=None, LinkInfo=None, Type=None, EditionRef=None):
@@ -45922,7 +45922,7 @@ class Workbook:
 
     def LinkSources(self, Type=None):
         arguments = com_arguments([Type])
-        return self.workbook.LinkSources(*arguments)
+        return Variant(self.workbook.LinkSources(*arguments))
 
     # Lower case alias for LinkSources
     def linksources(self, Type=None):
@@ -45946,7 +45946,7 @@ class Workbook:
         return self.MergeWorkbook(*arguments)
 
     def NewWindow(self):
-        return self.workbook.NewWindow()
+        return Window(self.workbook.NewWindow())
 
     # Lower case alias for NewWindow
     def newwindow(self):
@@ -45962,7 +45962,7 @@ class Workbook:
         return self.OpenLinks(*arguments)
 
     def PivotCaches(self):
-        return self.workbook.PivotCaches()
+        return PivotCaches(self.workbook.PivotCaches())
 
     # Lower case alias for PivotCaches
     def pivotcaches(self):
@@ -45979,7 +45979,7 @@ class Workbook:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName, IgnorePrintAreas])
-        return self.workbook.PrintOut(*arguments)
+        return Variant(self.workbook.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
@@ -46321,7 +46321,7 @@ class Workbooks:
 
     def CanCheckOut(self, FileName=None):
         arguments = com_arguments([FileName])
-        return self.workbooks.CanCheckOut(*arguments)
+        return Boolean(self.workbooks.CanCheckOut(*arguments))
 
     # Lower case alias for CanCheckOut
     def cancheckout(self, FileName=None):
@@ -47019,7 +47019,7 @@ class Worksheet:
 
     def ChartObjects(self, Index=None):
         arguments = com_arguments([Index])
-        return self.worksheet.ChartObjects(*arguments)
+        return Object(self.worksheet.ChartObjects(*arguments))
 
     # Lower case alias for ChartObjects
     def chartobjects(self, Index=None):
@@ -47066,7 +47066,7 @@ class Worksheet:
         return self.Copy(*arguments)
 
     def Delete(self):
-        return self.worksheet.Delete()
+        return Boolean(self.worksheet.Delete())
 
     # Lower case alias for Delete
     def delete(self):
@@ -47074,7 +47074,7 @@ class Worksheet:
 
     def Evaluate(self, Name=None):
         arguments = com_arguments([Name])
-        return self.worksheet.Evaluate(*arguments)
+        return Variant(self.worksheet.Evaluate(*arguments))
 
     # Lower case alias for Evaluate
     def evaluate(self, Name=None):
@@ -47101,7 +47101,7 @@ class Worksheet:
 
     def OLEObjects(self, Index=None):
         arguments = com_arguments([Index])
-        return self.worksheet.OLEObjects(*arguments)
+        return Object(self.worksheet.OLEObjects(*arguments))
 
     # Lower case alias for OLEObjects
     def oleobjects(self, Index=None):
@@ -47146,7 +47146,7 @@ class Worksheet:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName, IgnorePrintAreas])
-        return self.worksheet.PrintOut(*arguments)
+        return Variant(self.worksheet.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
@@ -47189,7 +47189,7 @@ class Worksheet:
 
     def Scenarios(self, Index=None):
         arguments = com_arguments([Index])
-        return self.worksheet.Scenarios(*arguments)
+        return Object(self.worksheet.Scenarios(*arguments))
 
     # Lower case alias for Scenarios
     def scenarios(self, Index=None):
@@ -47239,7 +47239,7 @@ class Worksheet:
 
     def XmlDataQuery(self, XPath=None, SelectionNamespaces=None, Map=None):
         arguments = com_arguments([XPath, SelectionNamespaces, Map])
-        return self.worksheet.XmlDataQuery(*arguments)
+        return Range(self.worksheet.XmlDataQuery(*arguments))
 
     # Lower case alias for XmlDataQuery
     def xmldataquery(self, XPath=None, SelectionNamespaces=None, Map=None):
@@ -47248,7 +47248,7 @@ class Worksheet:
 
     def XmlMapQuery(self, XPath=None, SelectionNamespaces=None, Map=None):
         arguments = com_arguments([XPath, SelectionNamespaces, Map])
-        return self.worksheet.XmlMapQuery(*arguments)
+        return Range(self.worksheet.XmlMapQuery(*arguments))
 
     # Lower case alias for XmlMapQuery
     def xmlmapquery(self, XPath=None, SelectionNamespaces=None, Map=None):
@@ -47285,7 +47285,7 @@ class WorksheetFunction:
 
     def AccrInt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7])
-        return self.worksheetfunction.AccrInt(*arguments)
+        return Double(self.worksheetfunction.AccrInt(*arguments))
 
     # Lower case alias for AccrInt
     def accrint(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
@@ -47294,7 +47294,7 @@ class WorksheetFunction:
 
     def AccrIntM(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.AccrIntM(*arguments)
+        return Double(self.worksheetfunction.AccrIntM(*arguments))
 
     # Lower case alias for AccrIntM
     def accrintm(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -47303,7 +47303,7 @@ class WorksheetFunction:
 
     def Acos(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Acos(*arguments)
+        return Double(self.worksheetfunction.Acos(*arguments))
 
     # Lower case alias for Acos
     def acos(self, Arg1=None):
@@ -47312,7 +47312,7 @@ class WorksheetFunction:
 
     def Acosh(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Acosh(*arguments)
+        return Double(self.worksheetfunction.Acosh(*arguments))
 
     # Lower case alias for Acosh
     def acosh(self, Arg1=None):
@@ -47321,7 +47321,7 @@ class WorksheetFunction:
 
     def Aggregate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Aggregate(*arguments)
+        return Double(self.worksheetfunction.Aggregate(*arguments))
 
     # Lower case alias for Aggregate
     def aggregate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47330,7 +47330,7 @@ class WorksheetFunction:
 
     def AmorDegrc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7])
-        return self.worksheetfunction.AmorDegrc(*arguments)
+        return Double(self.worksheetfunction.AmorDegrc(*arguments))
 
     # Lower case alias for AmorDegrc
     def amordegrc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
@@ -47339,7 +47339,7 @@ class WorksheetFunction:
 
     def AmorLinc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7])
-        return self.worksheetfunction.AmorLinc(*arguments)
+        return Double(self.worksheetfunction.AmorLinc(*arguments))
 
     # Lower case alias for AmorLinc
     def amorlinc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
@@ -47348,11 +47348,11 @@ class WorksheetFunction:
 
     def And(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.And(*arguments)
+        return Boolean(self.worksheetfunction.And(*arguments))
 
     def Asc(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Asc(*arguments)
+        return String(self.worksheetfunction.Asc(*arguments))
 
     # Lower case alias for Asc
     def asc(self, Arg1=None):
@@ -47361,7 +47361,7 @@ class WorksheetFunction:
 
     def Asin(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Asin(*arguments)
+        return Double(self.worksheetfunction.Asin(*arguments))
 
     # Lower case alias for Asin
     def asin(self, Arg1=None):
@@ -47370,7 +47370,7 @@ class WorksheetFunction:
 
     def Asinh(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Asinh(*arguments)
+        return Double(self.worksheetfunction.Asinh(*arguments))
 
     # Lower case alias for Asinh
     def asinh(self, Arg1=None):
@@ -47379,7 +47379,7 @@ class WorksheetFunction:
 
     def Atan2(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Atan2(*arguments)
+        return Double(self.worksheetfunction.Atan2(*arguments))
 
     # Lower case alias for Atan2
     def atan2(self, Arg1=None, Arg2=None):
@@ -47388,7 +47388,7 @@ class WorksheetFunction:
 
     def Atanh(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Atanh(*arguments)
+        return Double(self.worksheetfunction.Atanh(*arguments))
 
     # Lower case alias for Atanh
     def atanh(self, Arg1=None):
@@ -47397,7 +47397,7 @@ class WorksheetFunction:
 
     def AveDev(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.AveDev(*arguments)
+        return Double(self.worksheetfunction.AveDev(*arguments))
 
     # Lower case alias for AveDev
     def avedev(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47406,7 +47406,7 @@ class WorksheetFunction:
 
     def Average(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Average(*arguments)
+        return Double(self.worksheetfunction.Average(*arguments))
 
     # Lower case alias for Average
     def average(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47415,7 +47415,7 @@ class WorksheetFunction:
 
     def AverageIf(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.AverageIf(*arguments)
+        return Double(self.worksheetfunction.AverageIf(*arguments))
 
     # Lower case alias for AverageIf
     def averageif(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47424,7 +47424,7 @@ class WorksheetFunction:
 
     def AverageIfs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.AverageIfs(*arguments)
+        return Double(self.worksheetfunction.AverageIfs(*arguments))
 
     # Lower case alias for AverageIfs
     def averageifs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47433,7 +47433,7 @@ class WorksheetFunction:
 
     def BahtText(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.BahtText(*arguments)
+        return String(self.worksheetfunction.BahtText(*arguments))
 
     # Lower case alias for BahtText
     def bahttext(self, Arg1=None):
@@ -47442,7 +47442,7 @@ class WorksheetFunction:
 
     def BesselI(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.BesselI(*arguments)
+        return Double(self.worksheetfunction.BesselI(*arguments))
 
     # Lower case alias for BesselI
     def besseli(self, Arg1=None, Arg2=None):
@@ -47451,7 +47451,7 @@ class WorksheetFunction:
 
     def BesselJ(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.BesselJ(*arguments)
+        return Double(self.worksheetfunction.BesselJ(*arguments))
 
     # Lower case alias for BesselJ
     def besselj(self, Arg1=None, Arg2=None):
@@ -47460,7 +47460,7 @@ class WorksheetFunction:
 
     def BesselK(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.BesselK(*arguments)
+        return Double(self.worksheetfunction.BesselK(*arguments))
 
     # Lower case alias for BesselK
     def besselk(self, Arg1=None, Arg2=None):
@@ -47469,7 +47469,7 @@ class WorksheetFunction:
 
     def BesselY(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.BesselY(*arguments)
+        return Double(self.worksheetfunction.BesselY(*arguments))
 
     # Lower case alias for BesselY
     def bessely(self, Arg1=None, Arg2=None):
@@ -47478,7 +47478,7 @@ class WorksheetFunction:
 
     def BetaDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.BetaDist(*arguments)
+        return Double(self.worksheetfunction.BetaDist(*arguments))
 
     # Lower case alias for BetaDist
     def betadist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -47487,7 +47487,7 @@ class WorksheetFunction:
 
     def BetaInv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.BetaInv(*arguments)
+        return Double(self.worksheetfunction.BetaInv(*arguments))
 
     # Lower case alias for BetaInv
     def betainv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -47496,7 +47496,7 @@ class WorksheetFunction:
 
     def Beta_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.Beta_Dist(*arguments)
+        return Double(self.worksheetfunction.Beta_Dist(*arguments))
 
     # Lower case alias for Beta_Dist
     def beta_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -47505,7 +47505,7 @@ class WorksheetFunction:
 
     def Beta_Inv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Beta_Inv(*arguments)
+        return Double(self.worksheetfunction.Beta_Inv(*arguments))
 
     # Lower case alias for Beta_Inv
     def beta_inv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -47514,7 +47514,7 @@ class WorksheetFunction:
 
     def Bin2Dec(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Bin2Dec(*arguments)
+        return String(self.worksheetfunction.Bin2Dec(*arguments))
 
     # Lower case alias for Bin2Dec
     def bin2dec(self, Arg1=None):
@@ -47523,7 +47523,7 @@ class WorksheetFunction:
 
     def Bin2Hex(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Bin2Hex(*arguments)
+        return String(self.worksheetfunction.Bin2Hex(*arguments))
 
     # Lower case alias for Bin2Hex
     def bin2hex(self, Arg1=None, Arg2=None):
@@ -47532,7 +47532,7 @@ class WorksheetFunction:
 
     def Bin2Oct(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Bin2Oct(*arguments)
+        return String(self.worksheetfunction.Bin2Oct(*arguments))
 
     # Lower case alias for Bin2Oct
     def bin2oct(self, Arg1=None, Arg2=None):
@@ -47541,7 +47541,7 @@ class WorksheetFunction:
 
     def BinomDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.BinomDist(*arguments)
+        return Double(self.worksheetfunction.BinomDist(*arguments))
 
     # Lower case alias for BinomDist
     def binomdist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47550,7 +47550,7 @@ class WorksheetFunction:
 
     def Binom_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Binom_Dist(*arguments)
+        return Double(self.worksheetfunction.Binom_Dist(*arguments))
 
     # Lower case alias for Binom_Dist
     def binom_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47559,7 +47559,7 @@ class WorksheetFunction:
 
     def Binom_Inv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Binom_Inv(*arguments)
+        return Double(self.worksheetfunction.Binom_Inv(*arguments))
 
     # Lower case alias for Binom_Inv
     def binom_inv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47568,7 +47568,7 @@ class WorksheetFunction:
 
     def Ceiling(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Ceiling(*arguments)
+        return Double(self.worksheetfunction.Ceiling(*arguments))
 
     # Lower case alias for Ceiling
     def ceiling(self, Arg1=None, Arg2=None):
@@ -47577,7 +47577,7 @@ class WorksheetFunction:
 
     def Ceiling_Precise(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Ceiling_Precise(*arguments)
+        return Double(self.worksheetfunction.Ceiling_Precise(*arguments))
 
     # Lower case alias for Ceiling_Precise
     def ceiling_precise(self, Arg1=None, Arg2=None):
@@ -47586,7 +47586,7 @@ class WorksheetFunction:
 
     def ChiDist(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiDist(*arguments)
+        return Double(self.worksheetfunction.ChiDist(*arguments))
 
     # Lower case alias for ChiDist
     def chidist(self, Arg1=None, Arg2=None):
@@ -47595,7 +47595,7 @@ class WorksheetFunction:
 
     def ChiInv(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiInv(*arguments)
+        return Double(self.worksheetfunction.ChiInv(*arguments))
 
     # Lower case alias for ChiInv
     def chiinv(self, Arg1=None, Arg2=None):
@@ -47604,7 +47604,7 @@ class WorksheetFunction:
 
     def ChiSq_Dist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.ChiSq_Dist(*arguments)
+        return Double(self.worksheetfunction.ChiSq_Dist(*arguments))
 
     # Lower case alias for ChiSq_Dist
     def chisq_dist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47613,7 +47613,7 @@ class WorksheetFunction:
 
     def ChiSq_Dist_RT(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiSq_Dist_RT(*arguments)
+        return Double(self.worksheetfunction.ChiSq_Dist_RT(*arguments))
 
     # Lower case alias for ChiSq_Dist_RT
     def chisq_dist_rt(self, Arg1=None, Arg2=None):
@@ -47622,7 +47622,7 @@ class WorksheetFunction:
 
     def ChiSq_Inv(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiSq_Inv(*arguments)
+        return Double(self.worksheetfunction.ChiSq_Inv(*arguments))
 
     # Lower case alias for ChiSq_Inv
     def chisq_inv(self, Arg1=None, Arg2=None):
@@ -47631,7 +47631,7 @@ class WorksheetFunction:
 
     def ChiSq_Inv_RT(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiSq_Inv_RT(*arguments)
+        return Double(self.worksheetfunction.ChiSq_Inv_RT(*arguments))
 
     # Lower case alias for ChiSq_Inv_RT
     def chisq_inv_rt(self, Arg1=None, Arg2=None):
@@ -47640,7 +47640,7 @@ class WorksheetFunction:
 
     def ChiSq_Test(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiSq_Test(*arguments)
+        return Double(self.worksheetfunction.ChiSq_Test(*arguments))
 
     # Lower case alias for ChiSq_Test
     def chisq_test(self, Arg1=None, Arg2=None):
@@ -47649,7 +47649,7 @@ class WorksheetFunction:
 
     def ChiTest(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ChiTest(*arguments)
+        return Double(self.worksheetfunction.ChiTest(*arguments))
 
     # Lower case alias for ChiTest
     def chitest(self, Arg1=None, Arg2=None):
@@ -47658,7 +47658,7 @@ class WorksheetFunction:
 
     def Choose(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Choose(*arguments)
+        return Variant(self.worksheetfunction.Choose(*arguments))
 
     # Lower case alias for Choose
     def choose(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47667,7 +47667,7 @@ class WorksheetFunction:
 
     def Clean(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Clean(*arguments)
+        return String(self.worksheetfunction.Clean(*arguments))
 
     # Lower case alias for Clean
     def clean(self, Arg1=None):
@@ -47676,7 +47676,7 @@ class WorksheetFunction:
 
     def Combin(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Combin(*arguments)
+        return Double(self.worksheetfunction.Combin(*arguments))
 
     # Lower case alias for Combin
     def combin(self, Arg1=None, Arg2=None):
@@ -47685,7 +47685,7 @@ class WorksheetFunction:
 
     def Complex(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Complex(*arguments)
+        return String(self.worksheetfunction.Complex(*arguments))
 
     # Lower case alias for Complex
     def complex(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47694,7 +47694,7 @@ class WorksheetFunction:
 
     def Confidence(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Confidence(*arguments)
+        return Double(self.worksheetfunction.Confidence(*arguments))
 
     # Lower case alias for Confidence
     def confidence(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47703,7 +47703,7 @@ class WorksheetFunction:
 
     def Confidence_Norm(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Confidence_Norm(*arguments)
+        return Double(self.worksheetfunction.Confidence_Norm(*arguments))
 
     # Lower case alias for Confidence_Norm
     def confidence_norm(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47712,7 +47712,7 @@ class WorksheetFunction:
 
     def Confidence_T(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Confidence_T(*arguments)
+        return Double(self.worksheetfunction.Confidence_T(*arguments))
 
     # Lower case alias for Confidence_T
     def confidence_t(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47721,7 +47721,7 @@ class WorksheetFunction:
 
     def Convert(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Convert(*arguments)
+        return Double(self.worksheetfunction.Convert(*arguments))
 
     # Lower case alias for Convert
     def convert(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47730,7 +47730,7 @@ class WorksheetFunction:
 
     def Correl(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Correl(*arguments)
+        return Double(self.worksheetfunction.Correl(*arguments))
 
     # Lower case alias for Correl
     def correl(self, Arg1=None, Arg2=None):
@@ -47739,7 +47739,7 @@ class WorksheetFunction:
 
     def Cosh(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Cosh(*arguments)
+        return Double(self.worksheetfunction.Cosh(*arguments))
 
     # Lower case alias for Cosh
     def cosh(self, Arg1=None):
@@ -47748,7 +47748,7 @@ class WorksheetFunction:
 
     def Count(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Count(*arguments)
+        return Double(self.worksheetfunction.Count(*arguments))
 
     # Lower case alias for Count
     def count(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47757,7 +47757,7 @@ class WorksheetFunction:
 
     def CountA(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.CountA(*arguments)
+        return Double(self.worksheetfunction.CountA(*arguments))
 
     # Lower case alias for CountA
     def counta(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47766,7 +47766,7 @@ class WorksheetFunction:
 
     def CountBlank(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.CountBlank(*arguments)
+        return Double(self.worksheetfunction.CountBlank(*arguments))
 
     # Lower case alias for CountBlank
     def countblank(self, Arg1=None):
@@ -47775,7 +47775,7 @@ class WorksheetFunction:
 
     def CountIf(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.CountIf(*arguments)
+        return Double(self.worksheetfunction.CountIf(*arguments))
 
     # Lower case alias for CountIf
     def countif(self, Arg1=None, Arg2=None):
@@ -47784,7 +47784,7 @@ class WorksheetFunction:
 
     def CountIfs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.CountIfs(*arguments)
+        return Double(self.worksheetfunction.CountIfs(*arguments))
 
     # Lower case alias for CountIfs
     def countifs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -47793,7 +47793,7 @@ class WorksheetFunction:
 
     def CoupDayBs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.CoupDayBs(*arguments)
+        return Double(self.worksheetfunction.CoupDayBs(*arguments))
 
     # Lower case alias for CoupDayBs
     def coupdaybs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47802,7 +47802,7 @@ class WorksheetFunction:
 
     def CoupDays(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.CoupDays(*arguments)
+        return Double(self.worksheetfunction.CoupDays(*arguments))
 
     # Lower case alias for CoupDays
     def coupdays(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47811,7 +47811,7 @@ class WorksheetFunction:
 
     def CoupDaysNc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.CoupDaysNc(*arguments)
+        return Double(self.worksheetfunction.CoupDaysNc(*arguments))
 
     # Lower case alias for CoupDaysNc
     def coupdaysnc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47820,7 +47820,7 @@ class WorksheetFunction:
 
     def CoupNcd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.CoupNcd(*arguments)
+        return Double(self.worksheetfunction.CoupNcd(*arguments))
 
     # Lower case alias for CoupNcd
     def coupncd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47829,7 +47829,7 @@ class WorksheetFunction:
 
     def CoupNum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.CoupNum(*arguments)
+        return Double(self.worksheetfunction.CoupNum(*arguments))
 
     # Lower case alias for CoupNum
     def coupnum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -47838,7 +47838,7 @@ class WorksheetFunction:
 
     def Covar(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Covar(*arguments)
+        return Double(self.worksheetfunction.Covar(*arguments))
 
     # Lower case alias for Covar
     def covar(self, Arg1=None, Arg2=None):
@@ -47847,7 +47847,7 @@ class WorksheetFunction:
 
     def Covariance_P(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Covariance_P(*arguments)
+        return Double(self.worksheetfunction.Covariance_P(*arguments))
 
     # Lower case alias for Covariance_P
     def covariance_p(self, Arg1=None, Arg2=None):
@@ -47856,7 +47856,7 @@ class WorksheetFunction:
 
     def Covariance_S(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Covariance_S(*arguments)
+        return Double(self.worksheetfunction.Covariance_S(*arguments))
 
     # Lower case alias for Covariance_S
     def covariance_s(self, Arg1=None, Arg2=None):
@@ -47865,7 +47865,7 @@ class WorksheetFunction:
 
     def CritBinom(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.CritBinom(*arguments)
+        return Double(self.worksheetfunction.CritBinom(*arguments))
 
     # Lower case alias for CritBinom
     def critbinom(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47874,7 +47874,7 @@ class WorksheetFunction:
 
     def CumIPmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.CumIPmt(*arguments)
+        return Double(self.worksheetfunction.CumIPmt(*arguments))
 
     # Lower case alias for CumIPmt
     def cumipmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -47883,7 +47883,7 @@ class WorksheetFunction:
 
     def CumPrinc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.CumPrinc(*arguments)
+        return Double(self.worksheetfunction.CumPrinc(*arguments))
 
     # Lower case alias for CumPrinc
     def cumprinc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -47892,7 +47892,7 @@ class WorksheetFunction:
 
     def DAverage(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DAverage(*arguments)
+        return Double(self.worksheetfunction.DAverage(*arguments))
 
     # Lower case alias for DAverage
     def daverage(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47901,7 +47901,7 @@ class WorksheetFunction:
 
     def Days360(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Days360(*arguments)
+        return Double(self.worksheetfunction.Days360(*arguments))
 
     # Lower case alias for Days360
     def days360(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47910,7 +47910,7 @@ class WorksheetFunction:
 
     def Db(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Db(*arguments)
+        return Double(self.worksheetfunction.Db(*arguments))
 
     # Lower case alias for Db
     def db(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -47919,7 +47919,7 @@ class WorksheetFunction:
 
     def Dbcs(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Dbcs(*arguments)
+        return String(self.worksheetfunction.Dbcs(*arguments))
 
     # Lower case alias for Dbcs
     def dbcs(self, Arg1=None):
@@ -47928,7 +47928,7 @@ class WorksheetFunction:
 
     def DCount(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DCount(*arguments)
+        return Double(self.worksheetfunction.DCount(*arguments))
 
     # Lower case alias for DCount
     def dcount(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47937,7 +47937,7 @@ class WorksheetFunction:
 
     def DCountA(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DCountA(*arguments)
+        return Double(self.worksheetfunction.DCountA(*arguments))
 
     # Lower case alias for DCountA
     def dcounta(self, Arg1=None, Arg2=None, Arg3=None):
@@ -47946,7 +47946,7 @@ class WorksheetFunction:
 
     def Ddb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Ddb(*arguments)
+        return Double(self.worksheetfunction.Ddb(*arguments))
 
     # Lower case alias for Ddb
     def ddb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -47955,7 +47955,7 @@ class WorksheetFunction:
 
     def Dec2Bin(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Dec2Bin(*arguments)
+        return String(self.worksheetfunction.Dec2Bin(*arguments))
 
     # Lower case alias for Dec2Bin
     def dec2bin(self, Arg1=None, Arg2=None):
@@ -47964,7 +47964,7 @@ class WorksheetFunction:
 
     def Dec2Hex(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Dec2Hex(*arguments)
+        return String(self.worksheetfunction.Dec2Hex(*arguments))
 
     # Lower case alias for Dec2Hex
     def dec2hex(self, Arg1=None, Arg2=None):
@@ -47973,7 +47973,7 @@ class WorksheetFunction:
 
     def Dec2Oct(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Dec2Oct(*arguments)
+        return String(self.worksheetfunction.Dec2Oct(*arguments))
 
     # Lower case alias for Dec2Oct
     def dec2oct(self, Arg1=None, Arg2=None):
@@ -47982,7 +47982,7 @@ class WorksheetFunction:
 
     def Degrees(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Degrees(*arguments)
+        return Double(self.worksheetfunction.Degrees(*arguments))
 
     # Lower case alias for Degrees
     def degrees(self, Arg1=None):
@@ -47991,7 +47991,7 @@ class WorksheetFunction:
 
     def Delta(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Delta(*arguments)
+        return Double(self.worksheetfunction.Delta(*arguments))
 
     # Lower case alias for Delta
     def delta(self, Arg1=None, Arg2=None):
@@ -48000,7 +48000,7 @@ class WorksheetFunction:
 
     def DevSq(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.DevSq(*arguments)
+        return Double(self.worksheetfunction.DevSq(*arguments))
 
     # Lower case alias for DevSq
     def devsq(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48009,7 +48009,7 @@ class WorksheetFunction:
 
     def DGet(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DGet(*arguments)
+        return Variant(self.worksheetfunction.DGet(*arguments))
 
     # Lower case alias for DGet
     def dget(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48018,7 +48018,7 @@ class WorksheetFunction:
 
     def Disc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Disc(*arguments)
+        return Double(self.worksheetfunction.Disc(*arguments))
 
     # Lower case alias for Disc
     def disc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -48027,7 +48027,7 @@ class WorksheetFunction:
 
     def DMax(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DMax(*arguments)
+        return Double(self.worksheetfunction.DMax(*arguments))
 
     # Lower case alias for DMax
     def dmax(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48036,7 +48036,7 @@ class WorksheetFunction:
 
     def DMin(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DMin(*arguments)
+        return Double(self.worksheetfunction.DMin(*arguments))
 
     # Lower case alias for DMin
     def dmin(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48045,7 +48045,7 @@ class WorksheetFunction:
 
     def Dollar(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Dollar(*arguments)
+        return String(self.worksheetfunction.Dollar(*arguments))
 
     # Lower case alias for Dollar
     def dollar(self, Arg1=None, Arg2=None):
@@ -48054,7 +48054,7 @@ class WorksheetFunction:
 
     def DollarDe(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.DollarDe(*arguments)
+        return Double(self.worksheetfunction.DollarDe(*arguments))
 
     # Lower case alias for DollarDe
     def dollarde(self, Arg1=None, Arg2=None):
@@ -48063,7 +48063,7 @@ class WorksheetFunction:
 
     def DollarFr(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.DollarFr(*arguments)
+        return Double(self.worksheetfunction.DollarFr(*arguments))
 
     # Lower case alias for DollarFr
     def dollarfr(self, Arg1=None, Arg2=None):
@@ -48072,7 +48072,7 @@ class WorksheetFunction:
 
     def DProduct(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DProduct(*arguments)
+        return Double(self.worksheetfunction.DProduct(*arguments))
 
     # Lower case alias for DProduct
     def dproduct(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48081,7 +48081,7 @@ class WorksheetFunction:
 
     def DStDev(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DStDev(*arguments)
+        return Double(self.worksheetfunction.DStDev(*arguments))
 
     # Lower case alias for DStDev
     def dstdev(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48090,7 +48090,7 @@ class WorksheetFunction:
 
     def DStDevP(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DStDevP(*arguments)
+        return Double(self.worksheetfunction.DStDevP(*arguments))
 
     # Lower case alias for DStDevP
     def dstdevp(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48099,7 +48099,7 @@ class WorksheetFunction:
 
     def DSum(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DSum(*arguments)
+        return Double(self.worksheetfunction.DSum(*arguments))
 
     # Lower case alias for DSum
     def dsum(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48108,7 +48108,7 @@ class WorksheetFunction:
 
     def Duration(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.Duration(*arguments)
+        return Double(self.worksheetfunction.Duration(*arguments))
 
     # Lower case alias for Duration
     def duration(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -48117,7 +48117,7 @@ class WorksheetFunction:
 
     def DVar(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DVar(*arguments)
+        return Double(self.worksheetfunction.DVar(*arguments))
 
     # Lower case alias for DVar
     def dvar(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48126,7 +48126,7 @@ class WorksheetFunction:
 
     def DVarP(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.DVarP(*arguments)
+        return Double(self.worksheetfunction.DVarP(*arguments))
 
     # Lower case alias for DVarP
     def dvarp(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48135,7 +48135,7 @@ class WorksheetFunction:
 
     def EDate(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.EDate(*arguments)
+        return Double(self.worksheetfunction.EDate(*arguments))
 
     # Lower case alias for EDate
     def edate(self, Arg1=None, Arg2=None):
@@ -48144,7 +48144,7 @@ class WorksheetFunction:
 
     def Effect(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Effect(*arguments)
+        return Double(self.worksheetfunction.Effect(*arguments))
 
     # Lower case alias for Effect
     def effect(self, Arg1=None, Arg2=None):
@@ -48153,7 +48153,7 @@ class WorksheetFunction:
 
     def EoMonth(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.EoMonth(*arguments)
+        return Double(self.worksheetfunction.EoMonth(*arguments))
 
     # Lower case alias for EoMonth
     def eomonth(self, Arg1=None, Arg2=None):
@@ -48162,7 +48162,7 @@ class WorksheetFunction:
 
     def Erf(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Erf(*arguments)
+        return Double(self.worksheetfunction.Erf(*arguments))
 
     # Lower case alias for Erf
     def erf(self, Arg1=None, Arg2=None):
@@ -48171,7 +48171,7 @@ class WorksheetFunction:
 
     def ErfC(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ErfC(*arguments)
+        return Double(self.worksheetfunction.ErfC(*arguments))
 
     # Lower case alias for ErfC
     def erfc(self, Arg1=None, Arg2=None):
@@ -48180,7 +48180,7 @@ class WorksheetFunction:
 
     def ErfC_Precise(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ErfC_Precise(*arguments)
+        return Double(self.worksheetfunction.ErfC_Precise(*arguments))
 
     # Lower case alias for ErfC_Precise
     def erfc_precise(self, Arg1=None):
@@ -48189,7 +48189,7 @@ class WorksheetFunction:
 
     def Erf_Precise(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Erf_Precise(*arguments)
+        return Double(self.worksheetfunction.Erf_Precise(*arguments))
 
     # Lower case alias for Erf_Precise
     def erf_precise(self, Arg1=None):
@@ -48198,7 +48198,7 @@ class WorksheetFunction:
 
     def Even(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Even(*arguments)
+        return Double(self.worksheetfunction.Even(*arguments))
 
     # Lower case alias for Even
     def even(self, Arg1=None):
@@ -48207,7 +48207,7 @@ class WorksheetFunction:
 
     def ExponDist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.ExponDist(*arguments)
+        return Double(self.worksheetfunction.ExponDist(*arguments))
 
     # Lower case alias for ExponDist
     def expondist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48216,7 +48216,7 @@ class WorksheetFunction:
 
     def Expon_Dist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Expon_Dist(*arguments)
+        return Double(self.worksheetfunction.Expon_Dist(*arguments))
 
     # Lower case alias for Expon_Dist
     def expon_dist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48225,7 +48225,7 @@ class WorksheetFunction:
 
     def Fact(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Fact(*arguments)
+        return Double(self.worksheetfunction.Fact(*arguments))
 
     # Lower case alias for Fact
     def fact(self, Arg1=None):
@@ -48234,7 +48234,7 @@ class WorksheetFunction:
 
     def FactDouble(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.FactDouble(*arguments)
+        return Double(self.worksheetfunction.FactDouble(*arguments))
 
     # Lower case alias for FactDouble
     def factdouble(self, Arg1=None):
@@ -48243,7 +48243,7 @@ class WorksheetFunction:
 
     def FDist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.FDist(*arguments)
+        return Double(self.worksheetfunction.FDist(*arguments))
 
     # Lower case alias for FDist
     def fdist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48252,7 +48252,7 @@ class WorksheetFunction:
 
     def Find(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Find(*arguments)
+        return Double(self.worksheetfunction.Find(*arguments))
 
     # Lower case alias for Find
     def find(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48261,7 +48261,7 @@ class WorksheetFunction:
 
     def FindB(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.FindB(*arguments)
+        return Double(self.worksheetfunction.FindB(*arguments))
 
     # Lower case alias for FindB
     def findb(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48270,7 +48270,7 @@ class WorksheetFunction:
 
     def FInv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.FInv(*arguments)
+        return Double(self.worksheetfunction.FInv(*arguments))
 
     # Lower case alias for FInv
     def finv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48279,7 +48279,7 @@ class WorksheetFunction:
 
     def Fisher(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Fisher(*arguments)
+        return Double(self.worksheetfunction.Fisher(*arguments))
 
     # Lower case alias for Fisher
     def fisher(self, Arg1=None):
@@ -48288,7 +48288,7 @@ class WorksheetFunction:
 
     def FisherInv(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.FisherInv(*arguments)
+        return Double(self.worksheetfunction.FisherInv(*arguments))
 
     # Lower case alias for FisherInv
     def fisherinv(self, Arg1=None):
@@ -48297,7 +48297,7 @@ class WorksheetFunction:
 
     def Fixed(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Fixed(*arguments)
+        return String(self.worksheetfunction.Fixed(*arguments))
 
     # Lower case alias for Fixed
     def fixed(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48306,7 +48306,7 @@ class WorksheetFunction:
 
     def Floor(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Floor(*arguments)
+        return Double(self.worksheetfunction.Floor(*arguments))
 
     # Lower case alias for Floor
     def floor(self, Arg1=None, Arg2=None):
@@ -48315,7 +48315,7 @@ class WorksheetFunction:
 
     def Floor_Precise(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Floor_Precise(*arguments)
+        return Double(self.worksheetfunction.Floor_Precise(*arguments))
 
     # Lower case alias for Floor_Precise
     def floor_precise(self, Arg1=None, Arg2=None):
@@ -48324,7 +48324,7 @@ class WorksheetFunction:
 
     def Forecast(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Forecast(*arguments)
+        return Double(self.worksheetfunction.Forecast(*arguments))
 
     # Lower case alias for Forecast
     def forecast(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48333,7 +48333,7 @@ class WorksheetFunction:
 
     def Frequency(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Frequency(*arguments)
+        return Variant(self.worksheetfunction.Frequency(*arguments))
 
     # Lower case alias for Frequency
     def frequency(self, Arg1=None, Arg2=None):
@@ -48342,7 +48342,7 @@ class WorksheetFunction:
 
     def FTest(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.FTest(*arguments)
+        return Double(self.worksheetfunction.FTest(*arguments))
 
     # Lower case alias for FTest
     def ftest(self, Arg1=None, Arg2=None):
@@ -48351,7 +48351,7 @@ class WorksheetFunction:
 
     def Fv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Fv(*arguments)
+        return Double(self.worksheetfunction.Fv(*arguments))
 
     # Lower case alias for Fv
     def fv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -48360,7 +48360,7 @@ class WorksheetFunction:
 
     def FVSchedule(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.FVSchedule(*arguments)
+        return Double(self.worksheetfunction.FVSchedule(*arguments))
 
     # Lower case alias for FVSchedule
     def fvschedule(self, Arg1=None, Arg2=None):
@@ -48369,7 +48369,7 @@ class WorksheetFunction:
 
     def F_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.F_Dist(*arguments)
+        return Double(self.worksheetfunction.F_Dist(*arguments))
 
     # Lower case alias for F_Dist
     def f_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48378,7 +48378,7 @@ class WorksheetFunction:
 
     def F_Dist_RT(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.F_Dist_RT(*arguments)
+        return Double(self.worksheetfunction.F_Dist_RT(*arguments))
 
     # Lower case alias for F_Dist_RT
     def f_dist_rt(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48387,7 +48387,7 @@ class WorksheetFunction:
 
     def F_Inv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.F_Inv(*arguments)
+        return Double(self.worksheetfunction.F_Inv(*arguments))
 
     # Lower case alias for F_Inv
     def f_inv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48396,7 +48396,7 @@ class WorksheetFunction:
 
     def F_Inv_RT(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.F_Inv_RT(*arguments)
+        return Double(self.worksheetfunction.F_Inv_RT(*arguments))
 
     # Lower case alias for F_Inv_RT
     def f_inv_rt(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48405,7 +48405,7 @@ class WorksheetFunction:
 
     def F_Test(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.F_Test(*arguments)
+        return Double(self.worksheetfunction.F_Test(*arguments))
 
     # Lower case alias for F_Test
     def f_test(self, Arg1=None, Arg2=None):
@@ -48414,7 +48414,7 @@ class WorksheetFunction:
 
     def GammaDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.GammaDist(*arguments)
+        return Double(self.worksheetfunction.GammaDist(*arguments))
 
     # Lower case alias for GammaDist
     def gammadist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48423,7 +48423,7 @@ class WorksheetFunction:
 
     def GammaInv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.GammaInv(*arguments)
+        return Double(self.worksheetfunction.GammaInv(*arguments))
 
     # Lower case alias for GammaInv
     def gammainv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48432,7 +48432,7 @@ class WorksheetFunction:
 
     def GammaLn(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.GammaLn(*arguments)
+        return Double(self.worksheetfunction.GammaLn(*arguments))
 
     # Lower case alias for GammaLn
     def gammaln(self, Arg1=None):
@@ -48441,7 +48441,7 @@ class WorksheetFunction:
 
     def GammaLn_Precise(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.GammaLn_Precise(*arguments)
+        return Double(self.worksheetfunction.GammaLn_Precise(*arguments))
 
     # Lower case alias for GammaLn_Precise
     def gammaln_precise(self, Arg1=None):
@@ -48450,7 +48450,7 @@ class WorksheetFunction:
 
     def Gamma_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Gamma_Dist(*arguments)
+        return Double(self.worksheetfunction.Gamma_Dist(*arguments))
 
     # Lower case alias for Gamma_Dist
     def gamma_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48459,7 +48459,7 @@ class WorksheetFunction:
 
     def Gamma_Inv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Gamma_Inv(*arguments)
+        return Double(self.worksheetfunction.Gamma_Inv(*arguments))
 
     # Lower case alias for Gamma_Inv
     def gamma_inv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48468,7 +48468,7 @@ class WorksheetFunction:
 
     def Gcd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Gcd(*arguments)
+        return Double(self.worksheetfunction.Gcd(*arguments))
 
     # Lower case alias for Gcd
     def gcd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48477,7 +48477,7 @@ class WorksheetFunction:
 
     def GeoMean(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.GeoMean(*arguments)
+        return Double(self.worksheetfunction.GeoMean(*arguments))
 
     # Lower case alias for GeoMean
     def geomean(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48486,7 +48486,7 @@ class WorksheetFunction:
 
     def GeStep(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.GeStep(*arguments)
+        return Double(self.worksheetfunction.GeStep(*arguments))
 
     # Lower case alias for GeStep
     def gestep(self, Arg1=None, Arg2=None):
@@ -48495,7 +48495,7 @@ class WorksheetFunction:
 
     def Growth(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Growth(*arguments)
+        return Variant(self.worksheetfunction.Growth(*arguments))
 
     # Lower case alias for Growth
     def growth(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48504,7 +48504,7 @@ class WorksheetFunction:
 
     def HarMean(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.HarMean(*arguments)
+        return Double(self.worksheetfunction.HarMean(*arguments))
 
     # Lower case alias for HarMean
     def harmean(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48513,7 +48513,7 @@ class WorksheetFunction:
 
     def Hex2Bin(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Hex2Bin(*arguments)
+        return String(self.worksheetfunction.Hex2Bin(*arguments))
 
     # Lower case alias for Hex2Bin
     def hex2bin(self, Arg1=None, Arg2=None):
@@ -48522,7 +48522,7 @@ class WorksheetFunction:
 
     def Hex2Dec(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Hex2Dec(*arguments)
+        return String(self.worksheetfunction.Hex2Dec(*arguments))
 
     # Lower case alias for Hex2Dec
     def hex2dec(self, Arg1=None):
@@ -48531,7 +48531,7 @@ class WorksheetFunction:
 
     def Hex2Oct(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Hex2Oct(*arguments)
+        return String(self.worksheetfunction.Hex2Oct(*arguments))
 
     # Lower case alias for Hex2Oct
     def hex2oct(self, Arg1=None, Arg2=None):
@@ -48540,7 +48540,7 @@ class WorksheetFunction:
 
     def HLookup(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.HLookup(*arguments)
+        return Variant(self.worksheetfunction.HLookup(*arguments))
 
     # Lower case alias for HLookup
     def hlookup(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48549,7 +48549,7 @@ class WorksheetFunction:
 
     def HypGeomDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.HypGeomDist(*arguments)
+        return Double(self.worksheetfunction.HypGeomDist(*arguments))
 
     # Lower case alias for HypGeomDist
     def hypgeomdist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48558,7 +48558,7 @@ class WorksheetFunction:
 
     def HypGeom_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.HypGeom_Dist(*arguments)
+        return Double(self.worksheetfunction.HypGeom_Dist(*arguments))
 
     # Lower case alias for HypGeom_Dist
     def hypgeom_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -48567,7 +48567,7 @@ class WorksheetFunction:
 
     def IfError(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.IfError(*arguments)
+        return Variant(self.worksheetfunction.IfError(*arguments))
 
     # Lower case alias for IfError
     def iferror(self, Arg1=None, Arg2=None):
@@ -48576,7 +48576,7 @@ class WorksheetFunction:
 
     def ImAbs(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImAbs(*arguments)
+        return String(self.worksheetfunction.ImAbs(*arguments))
 
     # Lower case alias for ImAbs
     def imabs(self, Arg1=None):
@@ -48585,7 +48585,7 @@ class WorksheetFunction:
 
     def Imaginary(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Imaginary(*arguments)
+        return Double(self.worksheetfunction.Imaginary(*arguments))
 
     # Lower case alias for Imaginary
     def imaginary(self, Arg1=None):
@@ -48594,7 +48594,7 @@ class WorksheetFunction:
 
     def ImArgument(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImArgument(*arguments)
+        return String(self.worksheetfunction.ImArgument(*arguments))
 
     # Lower case alias for ImArgument
     def imargument(self, Arg1=None):
@@ -48603,7 +48603,7 @@ class WorksheetFunction:
 
     def ImConjugate(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImConjugate(*arguments)
+        return String(self.worksheetfunction.ImConjugate(*arguments))
 
     # Lower case alias for ImConjugate
     def imconjugate(self, Arg1=None):
@@ -48612,7 +48612,7 @@ class WorksheetFunction:
 
     def ImCos(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImCos(*arguments)
+        return String(self.worksheetfunction.ImCos(*arguments))
 
     # Lower case alias for ImCos
     def imcos(self, Arg1=None):
@@ -48621,7 +48621,7 @@ class WorksheetFunction:
 
     def ImDiv(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ImDiv(*arguments)
+        return String(self.worksheetfunction.ImDiv(*arguments))
 
     # Lower case alias for ImDiv
     def imdiv(self, Arg1=None, Arg2=None):
@@ -48630,7 +48630,7 @@ class WorksheetFunction:
 
     def ImExp(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImExp(*arguments)
+        return String(self.worksheetfunction.ImExp(*arguments))
 
     # Lower case alias for ImExp
     def imexp(self, Arg1=None):
@@ -48639,7 +48639,7 @@ class WorksheetFunction:
 
     def ImLn(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImLn(*arguments)
+        return String(self.worksheetfunction.ImLn(*arguments))
 
     # Lower case alias for ImLn
     def imln(self, Arg1=None):
@@ -48648,7 +48648,7 @@ class WorksheetFunction:
 
     def ImLog10(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImLog10(*arguments)
+        return String(self.worksheetfunction.ImLog10(*arguments))
 
     # Lower case alias for ImLog10
     def imlog10(self, Arg1=None):
@@ -48657,7 +48657,7 @@ class WorksheetFunction:
 
     def ImLog2(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImLog2(*arguments)
+        return String(self.worksheetfunction.ImLog2(*arguments))
 
     # Lower case alias for ImLog2
     def imlog2(self, Arg1=None):
@@ -48666,7 +48666,7 @@ class WorksheetFunction:
 
     def ImPower(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ImPower(*arguments)
+        return String(self.worksheetfunction.ImPower(*arguments))
 
     # Lower case alias for ImPower
     def impower(self, Arg1=None, Arg2=None):
@@ -48675,7 +48675,7 @@ class WorksheetFunction:
 
     def ImProduct(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.ImProduct(*arguments)
+        return String(self.worksheetfunction.ImProduct(*arguments))
 
     # Lower case alias for ImProduct
     def improduct(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48684,7 +48684,7 @@ class WorksheetFunction:
 
     def ImReal(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImReal(*arguments)
+        return Double(self.worksheetfunction.ImReal(*arguments))
 
     # Lower case alias for ImReal
     def imreal(self, Arg1=None):
@@ -48693,7 +48693,7 @@ class WorksheetFunction:
 
     def ImSin(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImSin(*arguments)
+        return String(self.worksheetfunction.ImSin(*arguments))
 
     # Lower case alias for ImSin
     def imsin(self, Arg1=None):
@@ -48702,7 +48702,7 @@ class WorksheetFunction:
 
     def ImSqrt(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.ImSqrt(*arguments)
+        return String(self.worksheetfunction.ImSqrt(*arguments))
 
     # Lower case alias for ImSqrt
     def imsqrt(self, Arg1=None):
@@ -48711,7 +48711,7 @@ class WorksheetFunction:
 
     def ImSub(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ImSub(*arguments)
+        return String(self.worksheetfunction.ImSub(*arguments))
 
     # Lower case alias for ImSub
     def imsub(self, Arg1=None, Arg2=None):
@@ -48720,7 +48720,7 @@ class WorksheetFunction:
 
     def ImSum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.ImSum(*arguments)
+        return String(self.worksheetfunction.ImSum(*arguments))
 
     # Lower case alias for ImSum
     def imsum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48729,7 +48729,7 @@ class WorksheetFunction:
 
     def Intercept(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Intercept(*arguments)
+        return Double(self.worksheetfunction.Intercept(*arguments))
 
     # Lower case alias for Intercept
     def intercept(self, Arg1=None, Arg2=None):
@@ -48738,7 +48738,7 @@ class WorksheetFunction:
 
     def IntRate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.IntRate(*arguments)
+        return Double(self.worksheetfunction.IntRate(*arguments))
 
     # Lower case alias for IntRate
     def intrate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -48747,7 +48747,7 @@ class WorksheetFunction:
 
     def Ipmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.Ipmt(*arguments)
+        return Double(self.worksheetfunction.Ipmt(*arguments))
 
     # Lower case alias for Ipmt
     def ipmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -48756,7 +48756,7 @@ class WorksheetFunction:
 
     def Irr(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Irr(*arguments)
+        return Double(self.worksheetfunction.Irr(*arguments))
 
     # Lower case alias for Irr
     def irr(self, Arg1=None, Arg2=None):
@@ -48765,7 +48765,7 @@ class WorksheetFunction:
 
     def IsErr(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsErr(*arguments)
+        return Boolean(self.worksheetfunction.IsErr(*arguments))
 
     # Lower case alias for IsErr
     def iserr(self, Arg1=None):
@@ -48774,7 +48774,7 @@ class WorksheetFunction:
 
     def IsError(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsError(*arguments)
+        return Boolean(self.worksheetfunction.IsError(*arguments))
 
     # Lower case alias for IsError
     def iserror(self, Arg1=None):
@@ -48783,7 +48783,7 @@ class WorksheetFunction:
 
     def IsEven(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsEven(*arguments)
+        return Boolean(self.worksheetfunction.IsEven(*arguments))
 
     # Lower case alias for IsEven
     def iseven(self, Arg1=None):
@@ -48792,7 +48792,7 @@ class WorksheetFunction:
 
     def IsLogical(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsLogical(*arguments)
+        return Boolean(self.worksheetfunction.IsLogical(*arguments))
 
     # Lower case alias for IsLogical
     def islogical(self, Arg1=None):
@@ -48801,7 +48801,7 @@ class WorksheetFunction:
 
     def IsNA(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsNA(*arguments)
+        return Boolean(self.worksheetfunction.IsNA(*arguments))
 
     # Lower case alias for IsNA
     def isna(self, Arg1=None):
@@ -48810,7 +48810,7 @@ class WorksheetFunction:
 
     def IsNonText(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsNonText(*arguments)
+        return Boolean(self.worksheetfunction.IsNonText(*arguments))
 
     # Lower case alias for IsNonText
     def isnontext(self, Arg1=None):
@@ -48819,7 +48819,7 @@ class WorksheetFunction:
 
     def IsNumber(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsNumber(*arguments)
+        return Boolean(self.worksheetfunction.IsNumber(*arguments))
 
     # Lower case alias for IsNumber
     def isnumber(self, Arg1=None):
@@ -48828,7 +48828,7 @@ class WorksheetFunction:
 
     def IsOdd(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsOdd(*arguments)
+        return Boolean(self.worksheetfunction.IsOdd(*arguments))
 
     # Lower case alias for IsOdd
     def isodd(self, Arg1=None):
@@ -48837,7 +48837,7 @@ class WorksheetFunction:
 
     def ISO_Ceiling(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.ISO_Ceiling(*arguments)
+        return Double(self.worksheetfunction.ISO_Ceiling(*arguments))
 
     # Lower case alias for ISO_Ceiling
     def iso_ceiling(self, Arg1=None, Arg2=None):
@@ -48846,7 +48846,7 @@ class WorksheetFunction:
 
     def Ispmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Ispmt(*arguments)
+        return Double(self.worksheetfunction.Ispmt(*arguments))
 
     # Lower case alias for Ispmt
     def ispmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48855,7 +48855,7 @@ class WorksheetFunction:
 
     def IsText(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.IsText(*arguments)
+        return Boolean(self.worksheetfunction.IsText(*arguments))
 
     # Lower case alias for IsText
     def istext(self, Arg1=None):
@@ -48864,7 +48864,7 @@ class WorksheetFunction:
 
     def Kurt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Kurt(*arguments)
+        return Double(self.worksheetfunction.Kurt(*arguments))
 
     # Lower case alias for Kurt
     def kurt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48873,7 +48873,7 @@ class WorksheetFunction:
 
     def Large(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Large(*arguments)
+        return Double(self.worksheetfunction.Large(*arguments))
 
     # Lower case alias for Large
     def large(self, Arg1=None, Arg2=None):
@@ -48882,7 +48882,7 @@ class WorksheetFunction:
 
     def Lcm(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Lcm(*arguments)
+        return Double(self.worksheetfunction.Lcm(*arguments))
 
     # Lower case alias for Lcm
     def lcm(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48891,7 +48891,7 @@ class WorksheetFunction:
 
     def LinEst(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.LinEst(*arguments)
+        return Variant(self.worksheetfunction.LinEst(*arguments))
 
     # Lower case alias for LinEst
     def linest(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48900,7 +48900,7 @@ class WorksheetFunction:
 
     def Ln(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Ln(*arguments)
+        return Double(self.worksheetfunction.Ln(*arguments))
 
     # Lower case alias for Ln
     def ln(self, Arg1=None):
@@ -48909,7 +48909,7 @@ class WorksheetFunction:
 
     def Log(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Log(*arguments)
+        return Double(self.worksheetfunction.Log(*arguments))
 
     # Lower case alias for Log
     def log(self, Arg1=None, Arg2=None):
@@ -48918,7 +48918,7 @@ class WorksheetFunction:
 
     def Log10(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Log10(*arguments)
+        return Double(self.worksheetfunction.Log10(*arguments))
 
     # Lower case alias for Log10
     def log10(self, Arg1=None):
@@ -48927,7 +48927,7 @@ class WorksheetFunction:
 
     def LogEst(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.LogEst(*arguments)
+        return Variant(self.worksheetfunction.LogEst(*arguments))
 
     # Lower case alias for LogEst
     def logest(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48936,7 +48936,7 @@ class WorksheetFunction:
 
     def LogInv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.LogInv(*arguments)
+        return Double(self.worksheetfunction.LogInv(*arguments))
 
     # Lower case alias for LogInv
     def loginv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48945,7 +48945,7 @@ class WorksheetFunction:
 
     def LogNormDist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.LogNormDist(*arguments)
+        return Double(self.worksheetfunction.LogNormDist(*arguments))
 
     # Lower case alias for LogNormDist
     def lognormdist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48954,7 +48954,7 @@ class WorksheetFunction:
 
     def LogNorm_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.LogNorm_Dist(*arguments)
+        return Double(self.worksheetfunction.LogNorm_Dist(*arguments))
 
     # Lower case alias for LogNorm_Dist
     def lognorm_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -48963,7 +48963,7 @@ class WorksheetFunction:
 
     def LogNorm_Inv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.LogNorm_Inv(*arguments)
+        return Double(self.worksheetfunction.LogNorm_Inv(*arguments))
 
     # Lower case alias for LogNorm_Inv
     def lognorm_inv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48972,7 +48972,7 @@ class WorksheetFunction:
 
     def Lookup(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Lookup(*arguments)
+        return Variant(self.worksheetfunction.Lookup(*arguments))
 
     # Lower case alias for Lookup
     def lookup(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48981,7 +48981,7 @@ class WorksheetFunction:
 
     def Match(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Match(*arguments)
+        return Double(self.worksheetfunction.Match(*arguments))
 
     # Lower case alias for Match
     def match(self, Arg1=None, Arg2=None, Arg3=None):
@@ -48990,7 +48990,7 @@ class WorksheetFunction:
 
     def Max(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Max(*arguments)
+        return Double(self.worksheetfunction.Max(*arguments))
 
     # Lower case alias for Max
     def max(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -48999,7 +48999,7 @@ class WorksheetFunction:
 
     def MDeterm(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.MDeterm(*arguments)
+        return Double(self.worksheetfunction.MDeterm(*arguments))
 
     # Lower case alias for MDeterm
     def mdeterm(self, Arg1=None):
@@ -49008,7 +49008,7 @@ class WorksheetFunction:
 
     def MDuration(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.MDuration(*arguments)
+        return Double(self.worksheetfunction.MDuration(*arguments))
 
     # Lower case alias for MDuration
     def mduration(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -49017,7 +49017,7 @@ class WorksheetFunction:
 
     def Median(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Median(*arguments)
+        return Double(self.worksheetfunction.Median(*arguments))
 
     # Lower case alias for Median
     def median(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49026,7 +49026,7 @@ class WorksheetFunction:
 
     def Min(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Min(*arguments)
+        return Double(self.worksheetfunction.Min(*arguments))
 
     # Lower case alias for Min
     def min(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49035,7 +49035,7 @@ class WorksheetFunction:
 
     def MInverse(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.MInverse(*arguments)
+        return Variant(self.worksheetfunction.MInverse(*arguments))
 
     # Lower case alias for MInverse
     def minverse(self, Arg1=None):
@@ -49044,7 +49044,7 @@ class WorksheetFunction:
 
     def MIrr(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.MIrr(*arguments)
+        return Double(self.worksheetfunction.MIrr(*arguments))
 
     # Lower case alias for MIrr
     def mirr(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49053,7 +49053,7 @@ class WorksheetFunction:
 
     def MMult(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.MMult(*arguments)
+        return Variant(self.worksheetfunction.MMult(*arguments))
 
     # Lower case alias for MMult
     def mmult(self, Arg1=None, Arg2=None):
@@ -49062,7 +49062,7 @@ class WorksheetFunction:
 
     def Mode(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Mode(*arguments)
+        return Double(self.worksheetfunction.Mode(*arguments))
 
     # Lower case alias for Mode
     def mode(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49071,7 +49071,7 @@ class WorksheetFunction:
 
     def Mode_Mult(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Mode_Mult(*arguments)
+        return Variant(self.worksheetfunction.Mode_Mult(*arguments))
 
     # Lower case alias for Mode_Mult
     def mode_mult(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49080,7 +49080,7 @@ class WorksheetFunction:
 
     def Mode_Sngl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Mode_Sngl(*arguments)
+        return Double(self.worksheetfunction.Mode_Sngl(*arguments))
 
     # Lower case alias for Mode_Sngl
     def mode_sngl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49089,7 +49089,7 @@ class WorksheetFunction:
 
     def MRound(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.MRound(*arguments)
+        return Double(self.worksheetfunction.MRound(*arguments))
 
     # Lower case alias for MRound
     def mround(self, Arg1=None, Arg2=None):
@@ -49098,7 +49098,7 @@ class WorksheetFunction:
 
     def MultiNomial(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.MultiNomial(*arguments)
+        return Double(self.worksheetfunction.MultiNomial(*arguments))
 
     # Lower case alias for MultiNomial
     def multinomial(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49107,7 +49107,7 @@ class WorksheetFunction:
 
     def NegBinomDist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.NegBinomDist(*arguments)
+        return Double(self.worksheetfunction.NegBinomDist(*arguments))
 
     # Lower case alias for NegBinomDist
     def negbinomdist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49116,7 +49116,7 @@ class WorksheetFunction:
 
     def NegBinom_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.NegBinom_Dist(*arguments)
+        return Double(self.worksheetfunction.NegBinom_Dist(*arguments))
 
     # Lower case alias for NegBinom_Dist
     def negbinom_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49125,7 +49125,7 @@ class WorksheetFunction:
 
     def NetworkDays(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.NetworkDays(*arguments)
+        return Double(self.worksheetfunction.NetworkDays(*arguments))
 
     # Lower case alias for NetworkDays
     def networkdays(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49134,7 +49134,7 @@ class WorksheetFunction:
 
     def NetworkDays_Intl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.NetworkDays_Intl(*arguments)
+        return Double(self.worksheetfunction.NetworkDays_Intl(*arguments))
 
     # Lower case alias for NetworkDays_Intl
     def networkdays_intl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49143,7 +49143,7 @@ class WorksheetFunction:
 
     def Nominal(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Nominal(*arguments)
+        return Double(self.worksheetfunction.Nominal(*arguments))
 
     # Lower case alias for Nominal
     def nominal(self, Arg1=None, Arg2=None):
@@ -49152,7 +49152,7 @@ class WorksheetFunction:
 
     def NormDist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.NormDist(*arguments)
+        return Double(self.worksheetfunction.NormDist(*arguments))
 
     # Lower case alias for NormDist
     def normdist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49161,7 +49161,7 @@ class WorksheetFunction:
 
     def NormInv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.NormInv(*arguments)
+        return Double(self.worksheetfunction.NormInv(*arguments))
 
     # Lower case alias for NormInv
     def norminv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49170,7 +49170,7 @@ class WorksheetFunction:
 
     def NormSDist(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.NormSDist(*arguments)
+        return Double(self.worksheetfunction.NormSDist(*arguments))
 
     # Lower case alias for NormSDist
     def normsdist(self, Arg1=None):
@@ -49179,7 +49179,7 @@ class WorksheetFunction:
 
     def NormSInv(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.NormSInv(*arguments)
+        return Double(self.worksheetfunction.NormSInv(*arguments))
 
     # Lower case alias for NormSInv
     def normsinv(self, Arg1=None):
@@ -49188,7 +49188,7 @@ class WorksheetFunction:
 
     def Norm_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Norm_Dist(*arguments)
+        return Double(self.worksheetfunction.Norm_Dist(*arguments))
 
     # Lower case alias for Norm_Dist
     def norm_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49197,7 +49197,7 @@ class WorksheetFunction:
 
     def Norm_Inv(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Norm_Inv(*arguments)
+        return Double(self.worksheetfunction.Norm_Inv(*arguments))
 
     # Lower case alias for Norm_Inv
     def norm_inv(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49206,7 +49206,7 @@ class WorksheetFunction:
 
     def Norm_S_Dist(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Norm_S_Dist(*arguments)
+        return Double(self.worksheetfunction.Norm_S_Dist(*arguments))
 
     # Lower case alias for Norm_S_Dist
     def norm_s_dist(self, Arg1=None, Arg2=None):
@@ -49215,7 +49215,7 @@ class WorksheetFunction:
 
     def Norm_S_Inv(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Norm_S_Inv(*arguments)
+        return Double(self.worksheetfunction.Norm_S_Inv(*arguments))
 
     # Lower case alias for Norm_S_Inv
     def norm_s_inv(self, Arg1=None):
@@ -49224,7 +49224,7 @@ class WorksheetFunction:
 
     def NPer(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.NPer(*arguments)
+        return Double(self.worksheetfunction.NPer(*arguments))
 
     # Lower case alias for NPer
     def nper(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -49233,7 +49233,7 @@ class WorksheetFunction:
 
     def Npv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Npv(*arguments)
+        return Double(self.worksheetfunction.Npv(*arguments))
 
     # Lower case alias for Npv
     def npv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49242,7 +49242,7 @@ class WorksheetFunction:
 
     def Oct2Bin(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Oct2Bin(*arguments)
+        return String(self.worksheetfunction.Oct2Bin(*arguments))
 
     # Lower case alias for Oct2Bin
     def oct2bin(self, Arg1=None, Arg2=None):
@@ -49251,7 +49251,7 @@ class WorksheetFunction:
 
     def Oct2Dec(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Oct2Dec(*arguments)
+        return String(self.worksheetfunction.Oct2Dec(*arguments))
 
     # Lower case alias for Oct2Dec
     def oct2dec(self, Arg1=None):
@@ -49260,7 +49260,7 @@ class WorksheetFunction:
 
     def Oct2Hex(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Oct2Hex(*arguments)
+        return String(self.worksheetfunction.Oct2Hex(*arguments))
 
     # Lower case alias for Oct2Hex
     def oct2hex(self, Arg1=None, Arg2=None):
@@ -49269,7 +49269,7 @@ class WorksheetFunction:
 
     def Odd(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Odd(*arguments)
+        return Double(self.worksheetfunction.Odd(*arguments))
 
     # Lower case alias for Odd
     def odd(self, Arg1=None):
@@ -49278,7 +49278,7 @@ class WorksheetFunction:
 
     def OddFPrice(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9])
-        return self.worksheetfunction.OddFPrice(*arguments)
+        return Double(self.worksheetfunction.OddFPrice(*arguments))
 
     # Lower case alias for OddFPrice
     def oddfprice(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
@@ -49287,7 +49287,7 @@ class WorksheetFunction:
 
     def OddFYield(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9])
-        return self.worksheetfunction.OddFYield(*arguments)
+        return Double(self.worksheetfunction.OddFYield(*arguments))
 
     # Lower case alias for OddFYield
     def oddfyield(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None):
@@ -49296,7 +49296,7 @@ class WorksheetFunction:
 
     def OddLPrice(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8])
-        return self.worksheetfunction.OddLPrice(*arguments)
+        return Double(self.worksheetfunction.OddLPrice(*arguments))
 
     # Lower case alias for OddLPrice
     def oddlprice(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
@@ -49305,7 +49305,7 @@ class WorksheetFunction:
 
     def OddLYield(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8])
-        return self.worksheetfunction.OddLYield(*arguments)
+        return Double(self.worksheetfunction.OddLYield(*arguments))
 
     # Lower case alias for OddLYield
     def oddlyield(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None):
@@ -49314,11 +49314,11 @@ class WorksheetFunction:
 
     def Or(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Or(*arguments)
+        return Boolean(self.worksheetfunction.Or(*arguments))
 
     def Pearson(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Pearson(*arguments)
+        return Double(self.worksheetfunction.Pearson(*arguments))
 
     # Lower case alias for Pearson
     def pearson(self, Arg1=None, Arg2=None):
@@ -49327,7 +49327,7 @@ class WorksheetFunction:
 
     def Percentile(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Percentile(*arguments)
+        return Double(self.worksheetfunction.Percentile(*arguments))
 
     # Lower case alias for Percentile
     def percentile(self, Arg1=None, Arg2=None):
@@ -49336,7 +49336,7 @@ class WorksheetFunction:
 
     def Percentile_Exc(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Percentile_Exc(*arguments)
+        return Double(self.worksheetfunction.Percentile_Exc(*arguments))
 
     # Lower case alias for Percentile_Exc
     def percentile_exc(self, Arg1=None, Arg2=None):
@@ -49345,7 +49345,7 @@ class WorksheetFunction:
 
     def Percentile_Inc(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Percentile_Inc(*arguments)
+        return Double(self.worksheetfunction.Percentile_Inc(*arguments))
 
     # Lower case alias for Percentile_Inc
     def percentile_inc(self, Arg1=None, Arg2=None):
@@ -49354,7 +49354,7 @@ class WorksheetFunction:
 
     def PercentRank(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.PercentRank(*arguments)
+        return Double(self.worksheetfunction.PercentRank(*arguments))
 
     # Lower case alias for PercentRank
     def percentrank(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49363,7 +49363,7 @@ class WorksheetFunction:
 
     def PercentRank_Exc(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.PercentRank_Exc(*arguments)
+        return Double(self.worksheetfunction.PercentRank_Exc(*arguments))
 
     # Lower case alias for PercentRank_Exc
     def percentrank_exc(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49372,7 +49372,7 @@ class WorksheetFunction:
 
     def PercentRank_Inc(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.PercentRank_Inc(*arguments)
+        return Double(self.worksheetfunction.PercentRank_Inc(*arguments))
 
     # Lower case alias for PercentRank_Inc
     def percentrank_inc(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49381,7 +49381,7 @@ class WorksheetFunction:
 
     def Permut(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Permut(*arguments)
+        return Double(self.worksheetfunction.Permut(*arguments))
 
     # Lower case alias for Permut
     def permut(self, Arg1=None, Arg2=None):
@@ -49390,7 +49390,7 @@ class WorksheetFunction:
 
     def Phonetic(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Phonetic(*arguments)
+        return Double(self.worksheetfunction.Phonetic(*arguments))
 
     # Lower case alias for Phonetic
     def phonetic(self, Arg1=None):
@@ -49398,7 +49398,7 @@ class WorksheetFunction:
         return self.Phonetic(*arguments)
 
     def Pi(self):
-        return self.worksheetfunction.Pi()
+        return Double(self.worksheetfunction.Pi())
 
     # Lower case alias for Pi
     def pi(self):
@@ -49406,7 +49406,7 @@ class WorksheetFunction:
 
     def Pmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Pmt(*arguments)
+        return Double(self.worksheetfunction.Pmt(*arguments))
 
     # Lower case alias for Pmt
     def pmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -49415,7 +49415,7 @@ class WorksheetFunction:
 
     def Poisson(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Poisson(*arguments)
+        return Double(self.worksheetfunction.Poisson(*arguments))
 
     # Lower case alias for Poisson
     def poisson(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49424,7 +49424,7 @@ class WorksheetFunction:
 
     def Poisson_Dist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Poisson_Dist(*arguments)
+        return Double(self.worksheetfunction.Poisson_Dist(*arguments))
 
     # Lower case alias for Poisson_Dist
     def poisson_dist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49433,7 +49433,7 @@ class WorksheetFunction:
 
     def Power(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Power(*arguments)
+        return Double(self.worksheetfunction.Power(*arguments))
 
     # Lower case alias for Power
     def power(self, Arg1=None, Arg2=None):
@@ -49442,7 +49442,7 @@ class WorksheetFunction:
 
     def Ppmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.Ppmt(*arguments)
+        return Double(self.worksheetfunction.Ppmt(*arguments))
 
     # Lower case alias for Ppmt
     def ppmt(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -49451,7 +49451,7 @@ class WorksheetFunction:
 
     def Price(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7])
-        return self.worksheetfunction.Price(*arguments)
+        return Double(self.worksheetfunction.Price(*arguments))
 
     # Lower case alias for Price
     def price(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
@@ -49460,7 +49460,7 @@ class WorksheetFunction:
 
     def PriceDisc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.PriceDisc(*arguments)
+        return Double(self.worksheetfunction.PriceDisc(*arguments))
 
     # Lower case alias for PriceDisc
     def pricedisc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -49469,7 +49469,7 @@ class WorksheetFunction:
 
     def PriceMat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.PriceMat(*arguments)
+        return Double(self.worksheetfunction.PriceMat(*arguments))
 
     # Lower case alias for PriceMat
     def pricemat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -49478,7 +49478,7 @@ class WorksheetFunction:
 
     def Prob(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Prob(*arguments)
+        return Double(self.worksheetfunction.Prob(*arguments))
 
     # Lower case alias for Prob
     def prob(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49487,7 +49487,7 @@ class WorksheetFunction:
 
     def Product(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Product(*arguments)
+        return Double(self.worksheetfunction.Product(*arguments))
 
     # Lower case alias for Product
     def product(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49496,7 +49496,7 @@ class WorksheetFunction:
 
     def Proper(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Proper(*arguments)
+        return String(self.worksheetfunction.Proper(*arguments))
 
     # Lower case alias for Proper
     def proper(self, Arg1=None):
@@ -49505,7 +49505,7 @@ class WorksheetFunction:
 
     def Pv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Pv(*arguments)
+        return Double(self.worksheetfunction.Pv(*arguments))
 
     # Lower case alias for Pv
     def pv(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -49514,7 +49514,7 @@ class WorksheetFunction:
 
     def Quartile(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Quartile(*arguments)
+        return Double(self.worksheetfunction.Quartile(*arguments))
 
     # Lower case alias for Quartile
     def quartile(self, Arg1=None, Arg2=None):
@@ -49523,7 +49523,7 @@ class WorksheetFunction:
 
     def Quartile_Exc(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Quartile_Exc(*arguments)
+        return Double(self.worksheetfunction.Quartile_Exc(*arguments))
 
     # Lower case alias for Quartile_Exc
     def quartile_exc(self, Arg1=None, Arg2=None):
@@ -49532,7 +49532,7 @@ class WorksheetFunction:
 
     def Quartile_Inc(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Quartile_Inc(*arguments)
+        return Double(self.worksheetfunction.Quartile_Inc(*arguments))
 
     # Lower case alias for Quartile_Inc
     def quartile_inc(self, Arg1=None, Arg2=None):
@@ -49541,7 +49541,7 @@ class WorksheetFunction:
 
     def Quotient(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Quotient(*arguments)
+        return Double(self.worksheetfunction.Quotient(*arguments))
 
     # Lower case alias for Quotient
     def quotient(self, Arg1=None, Arg2=None):
@@ -49550,7 +49550,7 @@ class WorksheetFunction:
 
     def Radians(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Radians(*arguments)
+        return Double(self.worksheetfunction.Radians(*arguments))
 
     # Lower case alias for Radians
     def radians(self, Arg1=None):
@@ -49559,7 +49559,7 @@ class WorksheetFunction:
 
     def RandBetween(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.RandBetween(*arguments)
+        return Double(self.worksheetfunction.RandBetween(*arguments))
 
     # Lower case alias for RandBetween
     def randbetween(self, Arg1=None, Arg2=None):
@@ -49568,7 +49568,7 @@ class WorksheetFunction:
 
     def Rank(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Rank(*arguments)
+        return Double(self.worksheetfunction.Rank(*arguments))
 
     # Lower case alias for Rank
     def rank(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49577,7 +49577,7 @@ class WorksheetFunction:
 
     def Rank_Avg(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Rank_Avg(*arguments)
+        return Double(self.worksheetfunction.Rank_Avg(*arguments))
 
     # Lower case alias for Rank_Avg
     def rank_avg(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49586,7 +49586,7 @@ class WorksheetFunction:
 
     def Rank_Eq(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Rank_Eq(*arguments)
+        return Double(self.worksheetfunction.Rank_Eq(*arguments))
 
     # Lower case alias for Rank_Eq
     def rank_eq(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49595,7 +49595,7 @@ class WorksheetFunction:
 
     def Rate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.Rate(*arguments)
+        return Double(self.worksheetfunction.Rate(*arguments))
 
     # Lower case alias for Rate
     def rate(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -49604,7 +49604,7 @@ class WorksheetFunction:
 
     def Received(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.Received(*arguments)
+        return Double(self.worksheetfunction.Received(*arguments))
 
     # Lower case alias for Received
     def received(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -49613,7 +49613,7 @@ class WorksheetFunction:
 
     def Replace(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Replace(*arguments)
+        return String(self.worksheetfunction.Replace(*arguments))
 
     # Lower case alias for Replace
     def replace(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49622,7 +49622,7 @@ class WorksheetFunction:
 
     def ReplaceB(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.ReplaceB(*arguments)
+        return String(self.worksheetfunction.ReplaceB(*arguments))
 
     # Lower case alias for ReplaceB
     def replaceb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49631,7 +49631,7 @@ class WorksheetFunction:
 
     def Rept(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Rept(*arguments)
+        return String(self.worksheetfunction.Rept(*arguments))
 
     # Lower case alias for Rept
     def rept(self, Arg1=None, Arg2=None):
@@ -49640,7 +49640,7 @@ class WorksheetFunction:
 
     def Roman(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Roman(*arguments)
+        return String(self.worksheetfunction.Roman(*arguments))
 
     # Lower case alias for Roman
     def roman(self, Arg1=None, Arg2=None):
@@ -49649,7 +49649,7 @@ class WorksheetFunction:
 
     def Round(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Round(*arguments)
+        return Double(self.worksheetfunction.Round(*arguments))
 
     # Lower case alias for Round
     def round(self, Arg1=None, Arg2=None):
@@ -49658,7 +49658,7 @@ class WorksheetFunction:
 
     def RoundDown(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.RoundDown(*arguments)
+        return Double(self.worksheetfunction.RoundDown(*arguments))
 
     # Lower case alias for RoundDown
     def rounddown(self, Arg1=None, Arg2=None):
@@ -49667,7 +49667,7 @@ class WorksheetFunction:
 
     def RoundUp(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.RoundUp(*arguments)
+        return Double(self.worksheetfunction.RoundUp(*arguments))
 
     # Lower case alias for RoundUp
     def roundup(self, Arg1=None, Arg2=None):
@@ -49676,7 +49676,7 @@ class WorksheetFunction:
 
     def RSq(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.RSq(*arguments)
+        return Double(self.worksheetfunction.RSq(*arguments))
 
     # Lower case alias for RSq
     def rsq(self, Arg1=None, Arg2=None):
@@ -49685,7 +49685,7 @@ class WorksheetFunction:
 
     def RTD(self, progID=None, server=None, topic1=None, topic2=None, topic3=None, topic4=None, topic5=None, topic6=None, topic7=None, topic8=None, topic9=None, topic10=None, topic11=None, topic12=None, topic13=None, topic14=None, topic15=None, topic16=None, topic17=None, topic18=None, topic19=None, topic20=None, topic21=None, topic22=None, topic23=None, topic24=None, topic25=None, topic26=None, topic27=None, topic28=None):
         arguments = com_arguments([progID, server, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11, topic12, topic13, topic14, topic15, topic16, topic17, topic18, topic19, topic20, topic21, topic22, topic23, topic24, topic25, topic26, topic27, topic28])
-        return self.worksheetfunction.RTD(*arguments)
+        return Variant(self.worksheetfunction.RTD(*arguments))
 
     # Lower case alias for RTD
     def rtd(self, progID=None, server=None, topic1=None, topic2=None, topic3=None, topic4=None, topic5=None, topic6=None, topic7=None, topic8=None, topic9=None, topic10=None, topic11=None, topic12=None, topic13=None, topic14=None, topic15=None, topic16=None, topic17=None, topic18=None, topic19=None, topic20=None, topic21=None, topic22=None, topic23=None, topic24=None, topic25=None, topic26=None, topic27=None, topic28=None):
@@ -49694,7 +49694,7 @@ class WorksheetFunction:
 
     def Search(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Search(*arguments)
+        return Double(self.worksheetfunction.Search(*arguments))
 
     # Lower case alias for Search
     def search(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49703,7 +49703,7 @@ class WorksheetFunction:
 
     def SearchB(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.SearchB(*arguments)
+        return Double(self.worksheetfunction.SearchB(*arguments))
 
     # Lower case alias for SearchB
     def searchb(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49712,7 +49712,7 @@ class WorksheetFunction:
 
     def SeriesSum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.SeriesSum(*arguments)
+        return Double(self.worksheetfunction.SeriesSum(*arguments))
 
     # Lower case alias for SeriesSum
     def seriessum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49721,7 +49721,7 @@ class WorksheetFunction:
 
     def Sinh(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Sinh(*arguments)
+        return Double(self.worksheetfunction.Sinh(*arguments))
 
     # Lower case alias for Sinh
     def sinh(self, Arg1=None):
@@ -49730,7 +49730,7 @@ class WorksheetFunction:
 
     def Skew(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Skew(*arguments)
+        return Double(self.worksheetfunction.Skew(*arguments))
 
     # Lower case alias for Skew
     def skew(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49739,7 +49739,7 @@ class WorksheetFunction:
 
     def Sln(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Sln(*arguments)
+        return Double(self.worksheetfunction.Sln(*arguments))
 
     # Lower case alias for Sln
     def sln(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49748,7 +49748,7 @@ class WorksheetFunction:
 
     def Slope(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Slope(*arguments)
+        return Double(self.worksheetfunction.Slope(*arguments))
 
     # Lower case alias for Slope
     def slope(self, Arg1=None, Arg2=None):
@@ -49757,7 +49757,7 @@ class WorksheetFunction:
 
     def Small(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Small(*arguments)
+        return Double(self.worksheetfunction.Small(*arguments))
 
     # Lower case alias for Small
     def small(self, Arg1=None, Arg2=None):
@@ -49766,7 +49766,7 @@ class WorksheetFunction:
 
     def SqrtPi(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.SqrtPi(*arguments)
+        return Double(self.worksheetfunction.SqrtPi(*arguments))
 
     # Lower case alias for SqrtPi
     def sqrtpi(self, Arg1=None):
@@ -49775,7 +49775,7 @@ class WorksheetFunction:
 
     def Standardize(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Standardize(*arguments)
+        return Double(self.worksheetfunction.Standardize(*arguments))
 
     # Lower case alias for Standardize
     def standardize(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49784,7 +49784,7 @@ class WorksheetFunction:
 
     def StDev(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.StDev(*arguments)
+        return Double(self.worksheetfunction.StDev(*arguments))
 
     # Lower case alias for StDev
     def stdev(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49793,7 +49793,7 @@ class WorksheetFunction:
 
     def StDevP(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.StDevP(*arguments)
+        return Double(self.worksheetfunction.StDevP(*arguments))
 
     # Lower case alias for StDevP
     def stdevp(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49802,7 +49802,7 @@ class WorksheetFunction:
 
     def StDev_P(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.StDev_P(*arguments)
+        return Double(self.worksheetfunction.StDev_P(*arguments))
 
     # Lower case alias for StDev_P
     def stdev_p(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49811,7 +49811,7 @@ class WorksheetFunction:
 
     def StDev_S(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.StDev_S(*arguments)
+        return Double(self.worksheetfunction.StDev_S(*arguments))
 
     # Lower case alias for StDev_S
     def stdev_s(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49820,7 +49820,7 @@ class WorksheetFunction:
 
     def StEyx(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.StEyx(*arguments)
+        return Double(self.worksheetfunction.StEyx(*arguments))
 
     # Lower case alias for StEyx
     def steyx(self, Arg1=None, Arg2=None):
@@ -49829,7 +49829,7 @@ class WorksheetFunction:
 
     def Substitute(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Substitute(*arguments)
+        return String(self.worksheetfunction.Substitute(*arguments))
 
     # Lower case alias for Substitute
     def substitute(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49838,7 +49838,7 @@ class WorksheetFunction:
 
     def Subtotal(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Subtotal(*arguments)
+        return Double(self.worksheetfunction.Subtotal(*arguments))
 
     # Lower case alias for Subtotal
     def subtotal(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49847,7 +49847,7 @@ class WorksheetFunction:
 
     def Sum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Sum(*arguments)
+        return Double(self.worksheetfunction.Sum(*arguments))
 
     # Lower case alias for Sum
     def sum(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49856,7 +49856,7 @@ class WorksheetFunction:
 
     def SumIf(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.SumIf(*arguments)
+        return Double(self.worksheetfunction.SumIf(*arguments))
 
     # Lower case alias for SumIf
     def sumif(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49865,7 +49865,7 @@ class WorksheetFunction:
 
     def SumIfs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.SumIfs(*arguments)
+        return Double(self.worksheetfunction.SumIfs(*arguments))
 
     # Lower case alias for SumIfs
     def sumifs(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49874,7 +49874,7 @@ class WorksheetFunction:
 
     def SumProduct(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.SumProduct(*arguments)
+        return Double(self.worksheetfunction.SumProduct(*arguments))
 
     # Lower case alias for SumProduct
     def sumproduct(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49883,7 +49883,7 @@ class WorksheetFunction:
 
     def SumSq(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.SumSq(*arguments)
+        return Double(self.worksheetfunction.SumSq(*arguments))
 
     # Lower case alias for SumSq
     def sumsq(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -49892,7 +49892,7 @@ class WorksheetFunction:
 
     def SumX2MY2(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.SumX2MY2(*arguments)
+        return Double(self.worksheetfunction.SumX2MY2(*arguments))
 
     # Lower case alias for SumX2MY2
     def sumx2my2(self, Arg1=None, Arg2=None):
@@ -49901,7 +49901,7 @@ class WorksheetFunction:
 
     def SumX2PY2(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.SumX2PY2(*arguments)
+        return Double(self.worksheetfunction.SumX2PY2(*arguments))
 
     # Lower case alias for SumX2PY2
     def sumx2py2(self, Arg1=None, Arg2=None):
@@ -49910,7 +49910,7 @@ class WorksheetFunction:
 
     def SumXMY2(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.SumXMY2(*arguments)
+        return Double(self.worksheetfunction.SumXMY2(*arguments))
 
     # Lower case alias for SumXMY2
     def sumxmy2(self, Arg1=None, Arg2=None):
@@ -49919,7 +49919,7 @@ class WorksheetFunction:
 
     def Syd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Syd(*arguments)
+        return Double(self.worksheetfunction.Syd(*arguments))
 
     # Lower case alias for Syd
     def syd(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -49928,7 +49928,7 @@ class WorksheetFunction:
 
     def Tanh(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Tanh(*arguments)
+        return Double(self.worksheetfunction.Tanh(*arguments))
 
     # Lower case alias for Tanh
     def tanh(self, Arg1=None):
@@ -49937,7 +49937,7 @@ class WorksheetFunction:
 
     def TBillEq(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.TBillEq(*arguments)
+        return Double(self.worksheetfunction.TBillEq(*arguments))
 
     # Lower case alias for TBillEq
     def tbilleq(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49946,7 +49946,7 @@ class WorksheetFunction:
 
     def TBillPrice(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.TBillPrice(*arguments)
+        return Double(self.worksheetfunction.TBillPrice(*arguments))
 
     # Lower case alias for TBillPrice
     def tbillprice(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49955,7 +49955,7 @@ class WorksheetFunction:
 
     def TBillYield(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.TBillYield(*arguments)
+        return Double(self.worksheetfunction.TBillYield(*arguments))
 
     # Lower case alias for TBillYield
     def tbillyield(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49964,7 +49964,7 @@ class WorksheetFunction:
 
     def TDist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.TDist(*arguments)
+        return Double(self.worksheetfunction.TDist(*arguments))
 
     # Lower case alias for TDist
     def tdist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -49973,7 +49973,7 @@ class WorksheetFunction:
 
     def Text(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Text(*arguments)
+        return String(self.worksheetfunction.Text(*arguments))
 
     # Lower case alias for Text
     def text(self, Arg1=None, Arg2=None):
@@ -49982,7 +49982,7 @@ class WorksheetFunction:
 
     def TInv(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.TInv(*arguments)
+        return Double(self.worksheetfunction.TInv(*arguments))
 
     # Lower case alias for TInv
     def tinv(self, Arg1=None, Arg2=None):
@@ -49991,7 +49991,7 @@ class WorksheetFunction:
 
     def Transpose(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Transpose(*arguments)
+        return Variant(self.worksheetfunction.Transpose(*arguments))
 
     # Lower case alias for Transpose
     def transpose(self, Arg1=None):
@@ -50000,7 +50000,7 @@ class WorksheetFunction:
 
     def Trend(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Trend(*arguments)
+        return Variant(self.worksheetfunction.Trend(*arguments))
 
     # Lower case alias for Trend
     def trend(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50009,7 +50009,7 @@ class WorksheetFunction:
 
     def Trim(self, Arg1=None):
         arguments = com_arguments([Arg1])
-        return self.worksheetfunction.Trim(*arguments)
+        return String(self.worksheetfunction.Trim(*arguments))
 
     # Lower case alias for Trim
     def trim(self, Arg1=None):
@@ -50018,7 +50018,7 @@ class WorksheetFunction:
 
     def TrimMean(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.TrimMean(*arguments)
+        return Double(self.worksheetfunction.TrimMean(*arguments))
 
     # Lower case alias for TrimMean
     def trimmean(self, Arg1=None, Arg2=None):
@@ -50027,7 +50027,7 @@ class WorksheetFunction:
 
     def TTest(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.TTest(*arguments)
+        return Double(self.worksheetfunction.TTest(*arguments))
 
     # Lower case alias for TTest
     def ttest(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50036,7 +50036,7 @@ class WorksheetFunction:
 
     def T_Dist(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.T_Dist(*arguments)
+        return Double(self.worksheetfunction.T_Dist(*arguments))
 
     # Lower case alias for T_Dist
     def t_dist(self, Arg1=None, Arg2=None, Arg3=None):
@@ -50045,7 +50045,7 @@ class WorksheetFunction:
 
     def T_Dist_2T(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.T_Dist_2T(*arguments)
+        return Double(self.worksheetfunction.T_Dist_2T(*arguments))
 
     # Lower case alias for T_Dist_2T
     def t_dist_2t(self, Arg1=None, Arg2=None):
@@ -50054,7 +50054,7 @@ class WorksheetFunction:
 
     def T_Dist_RT(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.T_Dist_RT(*arguments)
+        return Double(self.worksheetfunction.T_Dist_RT(*arguments))
 
     # Lower case alias for T_Dist_RT
     def t_dist_rt(self, Arg1=None, Arg2=None):
@@ -50063,7 +50063,7 @@ class WorksheetFunction:
 
     def T_Inv(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.T_Inv(*arguments)
+        return Double(self.worksheetfunction.T_Inv(*arguments))
 
     # Lower case alias for T_Inv
     def t_inv(self, Arg1=None, Arg2=None):
@@ -50072,7 +50072,7 @@ class WorksheetFunction:
 
     def T_Inv_2T(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.T_Inv_2T(*arguments)
+        return Double(self.worksheetfunction.T_Inv_2T(*arguments))
 
     # Lower case alias for T_Inv_2T
     def t_inv_2t(self, Arg1=None, Arg2=None):
@@ -50081,7 +50081,7 @@ class WorksheetFunction:
 
     def T_Test(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.T_Test(*arguments)
+        return Double(self.worksheetfunction.T_Test(*arguments))
 
     # Lower case alias for T_Test
     def t_test(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50090,7 +50090,7 @@ class WorksheetFunction:
 
     def USDollar(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.USDollar(*arguments)
+        return String(self.worksheetfunction.USDollar(*arguments))
 
     # Lower case alias for USDollar
     def usdollar(self, Arg1=None, Arg2=None):
@@ -50099,7 +50099,7 @@ class WorksheetFunction:
 
     def Var(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Var(*arguments)
+        return Double(self.worksheetfunction.Var(*arguments))
 
     # Lower case alias for Var
     def var(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -50108,7 +50108,7 @@ class WorksheetFunction:
 
     def VarP(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.VarP(*arguments)
+        return Double(self.worksheetfunction.VarP(*arguments))
 
     # Lower case alias for VarP
     def varp(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -50117,7 +50117,7 @@ class WorksheetFunction:
 
     def Var_P(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Var_P(*arguments)
+        return Double(self.worksheetfunction.Var_P(*arguments))
 
     # Lower case alias for Var_P
     def var_p(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -50126,7 +50126,7 @@ class WorksheetFunction:
 
     def Var_S(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30])
-        return self.worksheetfunction.Var_S(*arguments)
+        return Double(self.worksheetfunction.Var_S(*arguments))
 
     # Lower case alias for Var_S
     def var_s(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -50135,7 +50135,7 @@ class WorksheetFunction:
 
     def Vdb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7])
-        return self.worksheetfunction.Vdb(*arguments)
+        return Double(self.worksheetfunction.Vdb(*arguments))
 
     # Lower case alias for Vdb
     def vdb(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None):
@@ -50144,7 +50144,7 @@ class WorksheetFunction:
 
     def VLookup(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.VLookup(*arguments)
+        return Variant(self.worksheetfunction.VLookup(*arguments))
 
     # Lower case alias for VLookup
     def vlookup(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50153,7 +50153,7 @@ class WorksheetFunction:
 
     def Weekday(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Weekday(*arguments)
+        return Double(self.worksheetfunction.Weekday(*arguments))
 
     # Lower case alias for Weekday
     def weekday(self, Arg1=None, Arg2=None):
@@ -50162,7 +50162,7 @@ class WorksheetFunction:
 
     def WeekNum(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.WeekNum(*arguments)
+        return Double(self.worksheetfunction.WeekNum(*arguments))
 
     # Lower case alias for WeekNum
     def weeknum(self, Arg1=None, Arg2=None):
@@ -50171,7 +50171,7 @@ class WorksheetFunction:
 
     def Weibull(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Weibull(*arguments)
+        return Double(self.worksheetfunction.Weibull(*arguments))
 
     # Lower case alias for Weibull
     def weibull(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50180,7 +50180,7 @@ class WorksheetFunction:
 
     def Weibull_Dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.Weibull_Dist(*arguments)
+        return Double(self.worksheetfunction.Weibull_Dist(*arguments))
 
     # Lower case alias for Weibull_Dist
     def weibull_dist(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50189,7 +50189,7 @@ class WorksheetFunction:
 
     def WorkDay(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.WorkDay(*arguments)
+        return Double(self.worksheetfunction.WorkDay(*arguments))
 
     # Lower case alias for WorkDay
     def workday(self, Arg1=None, Arg2=None, Arg3=None):
@@ -50198,7 +50198,7 @@ class WorksheetFunction:
 
     def WorkDay_Intl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4])
-        return self.worksheetfunction.WorkDay_Intl(*arguments)
+        return Double(self.worksheetfunction.WorkDay_Intl(*arguments))
 
     # Lower case alias for WorkDay_Intl
     def workday_intl(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
@@ -50207,7 +50207,7 @@ class WorksheetFunction:
 
     def Xirr(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Xirr(*arguments)
+        return Double(self.worksheetfunction.Xirr(*arguments))
 
     # Lower case alias for Xirr
     def xirr(self, Arg1=None, Arg2=None, Arg3=None):
@@ -50216,7 +50216,7 @@ class WorksheetFunction:
 
     def Xnpv(self, Arg1=None, Arg2=None):
         arguments = com_arguments([Arg1, Arg2])
-        return self.worksheetfunction.Xnpv(*arguments)
+        return Double(self.worksheetfunction.Xnpv(*arguments))
 
     # Lower case alias for Xnpv
     def xnpv(self, Arg1=None, Arg2=None):
@@ -50225,7 +50225,7 @@ class WorksheetFunction:
 
     def YearFrac(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.YearFrac(*arguments)
+        return Double(self.worksheetfunction.YearFrac(*arguments))
 
     # Lower case alias for YearFrac
     def yearfrac(self, Arg1=None, Arg2=None, Arg3=None):
@@ -50234,7 +50234,7 @@ class WorksheetFunction:
 
     def YieldDisc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5])
-        return self.worksheetfunction.YieldDisc(*arguments)
+        return Double(self.worksheetfunction.YieldDisc(*arguments))
 
     # Lower case alias for YieldDisc
     def yielddisc(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None):
@@ -50243,7 +50243,7 @@ class WorksheetFunction:
 
     def YieldMat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
         arguments = com_arguments([Arg1, Arg2, Arg3, Arg4, Arg5, Arg6])
-        return self.worksheetfunction.YieldMat(*arguments)
+        return Double(self.worksheetfunction.YieldMat(*arguments))
 
     # Lower case alias for YieldMat
     def yieldmat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
@@ -50252,7 +50252,7 @@ class WorksheetFunction:
 
     def ZTest(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.ZTest(*arguments)
+        return Double(self.worksheetfunction.ZTest(*arguments))
 
     # Lower case alias for ZTest
     def ztest(self, Arg1=None, Arg2=None, Arg3=None):
@@ -50261,7 +50261,7 @@ class WorksheetFunction:
 
     def Z_Test(self, Arg1=None, Arg2=None, Arg3=None):
         arguments = com_arguments([Arg1, Arg2, Arg3])
-        return self.worksheetfunction.Z_Test(*arguments)
+        return Double(self.worksheetfunction.Z_Test(*arguments))
 
     # Lower case alias for Z_Test
     def z_test(self, Arg1=None, Arg2=None, Arg3=None):
@@ -50400,7 +50400,7 @@ class Worksheets:
 
     def PrintOut(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
         arguments = com_arguments([From, To, Copies, Preview, ActivePrinter, PrintToFile, Collate, PrToFileName, IgnorePrintAreas])
-        return self.worksheets.PrintOut(*arguments)
+        return Variant(self.worksheets.PrintOut(*arguments))
 
     # Lower case alias for PrintOut
     def printout(self, From=None, To=None, Copies=None, Preview=None, ActivePrinter=None, PrintToFile=None, Collate=None, PrToFileName=None, IgnorePrintAreas=None):
