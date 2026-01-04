@@ -237,24 +237,24 @@ class DocPage:
             return None
 
         code = []
-        code.append("class " + self.object_name + ":")
-        code.append("")
-        code.append("    def __init__(self, " + self.object_name.lower() + "=None):")
-        code.append("        self." + self.object_name.lower() + " = " + self.object_name.lower())
-        code.append("")
+        code.append(f"class {self.object_name}:")
+        code.append(f"")
+        code.append(f"    def __init__(self, {self.object_name.lower()}=None):")
+        code.append(f"        self.com_object= {self.object_name.lower()}")
+        code.append(f"")
 
         # New method for Application objects
         if self.object_name == "Application":
             code.append(f"    def new(self):")
-            code.append(f"        self.application = win32com.client.Dispatch(\"{self.module_name}.Application\")")
+            code.append(f"        self.com_object = win32com.client.Dispatch(\"{self.module_name}.Application\")")
             code.append(f"        return self")
             code.append(f"")
 
         # Call method for collections
         if self.is_collection:
             code.append(f"    def __call__(self, item):")
-            code.append(f"        return {self.object_name[:-1]}(self.{self.object_name.lower()}(item))")
-            code.append("")
+            code.append(f"        return {self.object_name[:-1]}(self.com_object(item))")
+            code.append(f"")
 
         code += self.to_python_properties()
         code += self.to_python_methods()
@@ -281,26 +281,26 @@ class DocPage:
             if self.property_class is not None:
                 code.append("    @property")
                 code.append(f"    def {self.property_name}(self):")
-                code.append(f"        return {self.property_class}(self.{self.object_name.lower()}.{self.property_name})")
+                code.append(f"        return {self.property_class}(self.com_object.{self.property_name})")
             else:
                 code.append("    @property")
                 code.append(f"    def {self.property_name}(self):")
-                code.append(f"        return self.{self.object_name.lower()}.{self.property_name}")
+                code.append(f"        return self.com_object.{self.property_name}")
             code.append(f"")
         # Getter method - with arguments
         else:
             code.append(f"    def {self.property_name}(self, {self.parameters_code()}):")
             code.append(self.to_python_arguments_expansion())
             if self.property_class is not None:
-                code.append(f"        if callable(self.{self.object_name.lower()}.{self.property_name}):")
-                code.append(f"            return {self.property_class}(self.{self.object_name.lower()}.{self.property_name}(*arguments))")
+                code.append(f"        if callable(self.com_object.{self.property_name}):")
+                code.append(f"            return {self.property_class}(self.com_object.{self.property_name}(*arguments))")
                 code.append(f"        else:")
-                code.append(f"            return {self.property_class}(self.{self.object_name.lower()}.Get{self.property_name}(*arguments))")
+                code.append(f"            return {self.property_class}(self.com_object.Get{self.property_name}(*arguments))")
             else:
-                code.append(f"        if callable(self.{self.object_name.lower()}.{self.property_name}):")
-                code.append(f"            return self.{self.object_name.lower()}.{self.property_name}(*arguments)")
+                code.append(f"        if callable(self.com_object.{self.property_name}):")
+                code.append(f"            return self.com_object.{self.property_name}(*arguments)")
                 code.append(f"        else:")
-                code.append(f"            return self.{self.object_name.lower()}.Get{self.property_name}(*arguments)")
+                code.append(f"            return self.com_object.Get{self.property_name}(*arguments)")
             code.append(f"")
 
         return code
@@ -316,7 +316,7 @@ class DocPage:
         if not self.is_read_only_property:
             code.append(f"    @{self.property_name}.setter")
             code.append(f"    def {self.property_name}(self, value):")
-            code.append(f"        self.{self.object_name.lower()}.{self.property_name} = value")
+            code.append(f"        self.com_object.{self.property_name} = value")
             code.append("")
 
         return code
@@ -379,11 +379,11 @@ class DocPage:
         code = []
         if len(self.parameters) == 0:
             code.append(f"    def {self.method_name}(self):")
-            code_line = f"self.{self.object_name.lower()}.{self.method_name}()"
+            code_line = f"self.com_object.{self.method_name}()"
         else:
             code.append(f"    def {self.method_name}(self, {self.parameters_code()}):")
             code.append(self.to_python_arguments_expansion())
-            code_line = f"self.{self.object_name.lower()}.{self.method_name}(*arguments)"
+            code_line = f"self.com_object.{self.method_name}(*arguments)"
         if self.has_return_value:
             if self.return_value_class is not None:
                 code_line = f"{self.return_value_class}({code_line})"
