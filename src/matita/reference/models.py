@@ -482,14 +482,17 @@ class VbaDocs:
     def to_python(self, application):
         code = [
             "from . import com_arguments",
+            "from .office import *",
             "",
             "import win32com.client",
-            "import pythoncom",
             "",]
         for page_key, page in self.pages.items():
             if page.module_name is None:
                 continue
             if page.module_name.lower() != application.lower():
+                continue
+            # For the `office` module, only include enumerations
+            if page.module_name.lower() == "office" and not page.is_enumeration:
                 continue
             try:
                 page_code = page.to_python()

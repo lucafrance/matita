@@ -1,7 +1,7 @@
 from . import com_arguments
+from .office import *
 
 import win32com.client
-import pythoncom
 
 # AcAggregateType enumeration
 acAggregateAverage = 2
