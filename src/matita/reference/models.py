@@ -395,11 +395,11 @@ class DocPage:
         code.append(f"    # Lower case alias for {self.method_name}")
         if len(self.parameters) == 0:
             code.append(f"    def {self.method_name.lower()}(self):")
-            code.append(f"        self.{self.method_name}()")
+            code.append(f"        return self.{self.method_name}()")
         else:
             code.append(f"    def {self.method_name.lower()}(self, {self.parameters_code()}):")
             code.append(f"        arguments = [{", ".join(self.parameters)}]")
-            code.append(f"        self.{self.method_name}(*arguments)")
+            code.append(f"        return self.{self.method_name}(*arguments)")
         code.append("")
 
         return code

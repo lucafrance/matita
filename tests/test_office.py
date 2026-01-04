@@ -83,6 +83,13 @@ class TestOffice(unittest.TestCase):
         self.assertIs(type(pp_app), powerpoint.Application)
         pp_app.Visible = True
         self.assertTrue(pp_app.Visible)
+
+        # Add presentation with Add method and alias
+        prs = pp_app.Presentations.Add()
+        self.assertIs(type(prs), powerpoint.Presentation)
+        prs = pp_app.Presentations.add()
+        self.assertIs(type(prs), powerpoint.Presentation)
+        
         pp_app.Quit()
 
     def test_word(self):
