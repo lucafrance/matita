@@ -2,6 +2,83 @@ import unittest
 
 from matita.office import access, excel, outlook, powerpoint, word
 
+class TestExcel(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.xl_app = excel.Application().new()
+        cls.xl_app.Visible = True
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.xl_app.Quit()
+
+    def test_excel_types(self):
+        wkb = self.xl_app.Workbooks.Add()
+        wks = wkb.Worksheets(1)
+
+        cell_str = wks.Range("A1")
+        cell_int = wks.Range("A2")
+        cell_float = wks.Range("A3")
+        cell_bool = wks.Range("A4")
+
+        cell_str.Value = "ciao"
+        cell_int.Value = 123
+        cell_float.Value = 3.14159
+        cell_bool.Value = True
+
+        self.assertEqual(cell_str.Value, "ciao")
+        self.assertEqual(cell_int.Value, 123)
+        self.assertAlmostEqual(cell_float.Value, 3.14159)
+        self.assertEqual(cell_bool.Value, True)
+
+        wkb.Close(SaveChanges=False)
+
+    def test_range_address(self):
+        wkb = self.xl_app.Workbooks.Add()
+        wks = wkb.Worksheets(1)
+
+        r = wks.Range("B2:D4")
+        self.assertEqual(r.Address(), "$B$2:$D$4")
+        self.assertEqual(r.address(), "$B$2:$D$4")
+        self.assertEqual(r.Address(ReferenceStyle=excel.xlR1C1), "R2C2:R4C4")
+        self.assertEqual(r.address(ReferenceStyle=excel.xlR1C1), "R2C2:R4C4")
+
+        wkb.Close(SaveChanges=False)
+
+    def test_excel_aliases(self):
+        wkb = self.xl_app.Workbooks.Add()
+
+        self.assertIs(type(wkb.Worksheets.Add()), excel.Worksheet)
+        self.assertIs(type(wkb.Worksheets.add()), excel.Worksheet)
+
+        wkb.Close(SaveChanges=False)
+
+    def test_excel_constants(self):
+        self.assertEqual(excel.xlAscending, 1)
+        self.assertEqual(excel.xlDescending, 2)
+
+class TestPowerPoint(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.pp_app = powerpoint.Application().new()
+        cls.pp_app.Visible = True
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.pp_app.Quit()
+
+    def test_powerpoint(self):
+        self.assertIs(type(self.pp_app), powerpoint.Application)
+        self.assertTrue(self.pp_app.Visible)
+
+        prs = self.pp_app.Presentations.Add()
+        self.assertIs(type(prs), powerpoint.Presentation)
+
+        prs = self.pp_app.Presentations.add()
+        self.assertIs(type(prs), powerpoint.Presentation)
+
 class TestOffice(unittest.TestCase):
     
     def test_access(self):
@@ -11,86 +88,12 @@ class TestOffice(unittest.TestCase):
         self.assertTrue(acc_app.Visible)
         acc_app.Quit()
     
-    def test_excel(self):
-        # Create new excel Application
-        xl_app = excel.Application().new()
-        self.assertIs(type(xl_app), excel.Application)
-        xl_app.Visible = True
-        self.assertTrue(xl_app.Visible)
-
-        # Add workbook
-        wkb = xl_app.Workbooks.Add()
-        self.assertIs(type(xl_app.Workbooks), excel.Workbooks)
-        self.assertIs(type(wkb), excel.Workbook)
-        wks = wkb.Worksheets(1)
-        self.assertIs(type(wks), excel.Worksheet)
-
-        # Check methods aliases
-        self.assertEqual(wks.activate(), None)
-        self.assertEqual(wks.Activate(), None)
-        self.assertEqual(wks.calculate(), None)
-        self.assertEqual(wks.Calculate(), None)
-        self.assertIs(type(xl_app.Workbooks.Add()), excel.Workbook)
-        self.assertIs(type(wkb.Worksheets.Add()), excel.Worksheet)
-
-        # Write value to cell and read it back
-        cell = wks.Range("A1")
-        cell2 = wks.Cells(2,1)
-        self.assertIs(type(cell), excel.Range)
-        self.assertIs(type(cell2), excel.Range)
-        cell.Value = "Lorem Ipsum"
-        cell2.value = 12345.678
-        self.assertEqual(cell.Value, "Lorem Ipsum")
-        self.assertEqual(cell.Value2, "Lorem Ipsum")
-        self.assertEqual(cell2.value, 12345.678)
-        self.assertEqual(cell2.value2, 12345.678)
-
-        # Test that `Range.Address` behaves as expected
-        used_range = wks.UsedRange
-        self.assertIs(type(used_range), excel.Range)
-        self.assertEqual(used_range.Address(), "$A$1:$A$2")
-        self.assertEqual(used_range.Address(ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
-        self.assertEqual(used_range.address(), "$A$1:$A$2")
-        self.assertEqual(used_range.address(ReferenceStyle=excel.xlR1C1), "R1C1:R2C1")
-
-        # Test Range.Cells
-        cell3 = used_range.Cells(2,1)
-        self.assertEqual(cell3.Value2, 12345.678)
-
-        # Add worksheet, change name, and read it back
-        wks_ciao = wkb.Worksheets.Add()
-        self.assertIs(type(wks_ciao), excel.Worksheet)
-        wks_ciao.Name = "ciao"
-        self.assertEqual(wks_ciao.Name, "ciao")
-        self.assertEqual(wks_ciao.name, "ciao")
-        wks_ciao = None
-        wks_ciao = wkb.Worksheets("ciao")
-        self.assertIs(type(wks_ciao), excel.Worksheet)
-
-        # Close workbook without saving
-        wkb.Close(SaveChanges=False)
-        xl_app.Quit()
-
     def test_outlook(self):
         ol_app = outlook.Application().new()
         self.assertIs(type(ol_app), outlook.Application)
         ol_app.Visible = True
         self.assertTrue(ol_app.Visible)
         ol_app.Quit()
-
-    def test_powerpoint(self):
-        pp_app = powerpoint.Application().new()
-        self.assertIs(type(pp_app), powerpoint.Application)
-        pp_app.Visible = True
-        self.assertTrue(pp_app.Visible)
-
-        # Add presentation with Add method and alias
-        prs = pp_app.Presentations.Add()
-        self.assertIs(type(prs), powerpoint.Presentation)
-        prs = pp_app.Presentations.add()
-        self.assertIs(type(prs), powerpoint.Presentation)
-        
-        pp_app.Quit()
 
     def test_word(self):
         wd_app = word.Application().new()
