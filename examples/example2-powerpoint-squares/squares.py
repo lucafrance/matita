@@ -30,7 +30,11 @@ def squares():
             pp.msoAnimDirectionBottom
         ])
         eff.effectparameters.direction = direction
-        eff.timing.duration = 0.2 # TODO direction is not updated
+        # The Timing.Duration property is no supported yet, because it can't be parsed from the documentation
+        # Fill be fixed by:
+        # - Addition of api_key: https://github.com/MicrosoftDocs/VBA-Docs/pull/1936
+        # - Formatting adjustment: https://github.com/MicrosoftDocs/VBA-Docs/pull/1938
+        eff.timing.timing.duration = 0.2
 
 if __name__ == "__main__":
     squares()
