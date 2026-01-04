@@ -16,3 +16,10 @@ def com_arguments(arguments: list) -> list:
             com_arguments.insert(0, p)
             replacement_value = None
     return com_arguments
+
+def unwrap(obj):
+    """Return the underlying COM object if available"""
+    
+    if hasattr(obj, "com_object"):
+        return obj.com_object
+    return obj

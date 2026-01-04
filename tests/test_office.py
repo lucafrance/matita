@@ -78,14 +78,16 @@ class TestPowerPoint(unittest.TestCase):
         cls.pp_app.Quit()
 
     def test_powerpoint(self):
-        self.assertIs(type(self.pp_app), powerpoint.Application)
         self.assertTrue(self.pp_app.Visible)
-
-        prs = self.pp_app.Presentations.Add()
-        self.assertIs(type(prs), powerpoint.Presentation)
-
-        prs = self.pp_app.Presentations.add()
-        self.assertIs(type(prs), powerpoint.Presentation)
+        prs = self.pp_app.presentations.add()
+        sld = powerpoint.Slide(prs.slides.com_object.Add(1, powerpoint.ppLayoutBlank))
+        shp = sld.shapes.addshape(powerpoint.msoShapeRectangle, 30, 30 , 30, 30)
+        eff = sld.timeline.mainsequence.addeffect(
+            Shape=shp,
+            effectId=powerpoint.msoAnimEffectFly,
+            Level=powerpoint.msoAnimateLevelNone,
+            trigger=powerpoint.msoAnimTriggerAfterPrevious,
+    )
 
 class TestOffice(unittest.TestCase):
     

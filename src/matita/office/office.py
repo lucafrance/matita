@@ -1,4 +1,4 @@
-from . import com_arguments
+from . import com_arguments, unwrap
 from .office import *
 
 import win32com.client

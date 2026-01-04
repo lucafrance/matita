@@ -18,7 +18,7 @@ def squares():
         shp.line.visible = False
         shp.fill.forecolor.rgb = random.randint(0, 256 ** 3)
         eff = sld.timeline.mainsequence.addeffect(
-            Shape=shp.com_object, # TODO Fix how arguments are passed, so that .shape is not needed `TypeError: The Python instance can not be converted to a COM object`
+            Shape=shp,
             effectId=pp.msoAnimEffectFly,
             Level=pp.msoAnimateLevelNone, # TODO Passing None does not work in this case `TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'`
             trigger=pp.msoAnimTriggerAfterPrevious,

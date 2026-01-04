@@ -267,7 +267,7 @@ class DocPage:
 
     def to_python_arguments_expansion(self):
         """Return python code to expand arguments for COM calls"""
-        return "        arguments = com_arguments([" + ", ".join(self.parameters) + "])"
+        return f"        arguments = com_arguments([unwrap(a) for a in [{", ".join(self.parameters)}]])"
 
     def to_python_property_getter(self):
         """Return python code for getter and setter of the property"""
@@ -490,7 +490,7 @@ class VbaDocs:
 
     def to_python(self, application):
         code = [
-            "from . import com_arguments",
+            "from . import com_arguments, unwrap",
             "from .office import *",
             "",
             "import win32com.client",

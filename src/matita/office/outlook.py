@@ -1,4 +1,4 @@
-from . import com_arguments
+from . import com_arguments, unwrap
 from .office import *
 
 import win32com.client
@@ -134,7 +134,7 @@ class Account:
         return self.UserName
 
     def GetAddressEntryFromID(self, ID=None):
-        arguments = com_arguments([ID])
+        arguments = com_arguments([unwrap(a) for a in [ID]])
         return ID(self.com_object.GetAddressEntryFromID(*arguments))
 
     # Lower case alias for GetAddressEntryFromID
@@ -143,7 +143,7 @@ class Account:
         return self.GetAddressEntryFromID(*arguments)
 
     def GetRecipientFromID(self, EntryID=None):
-        arguments = com_arguments([EntryID])
+        arguments = com_arguments([unwrap(a) for a in [EntryID]])
         return Recipient(self.com_object.GetRecipientFromID(*arguments))
 
     # Lower case alias for GetRecipientFromID
@@ -268,7 +268,7 @@ class Accounts:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Account(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -548,7 +548,7 @@ class Actions:
         return self.Add()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Action(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -557,7 +557,7 @@ class Actions:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -607,7 +607,7 @@ class AddressEntries:
         return self.Session
 
     def Add(self, Type=None, Name=None, Address=None):
-        arguments = com_arguments([Type, Name, Address])
+        arguments = com_arguments([unwrap(a) for a in [Type, Name, Address]])
         return AddressEntry(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -644,7 +644,7 @@ class AddressEntries:
         return self.GetPrevious()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return AddressEntry(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -653,7 +653,7 @@ class AddressEntries:
         return self.Item(*arguments)
 
     def Sort(self, Property=None, Order=None):
-        arguments = com_arguments([Property, Order])
+        arguments = com_arguments([unwrap(a) for a in [Property, Order]])
         self.com_object.Sort(*arguments)
 
     # Lower case alias for Sort
@@ -788,7 +788,7 @@ class AddressEntry:
         return self.Delete()
 
     def Details(self, HWnd=None):
-        arguments = com_arguments([HWnd])
+        arguments = com_arguments([unwrap(a) for a in [HWnd]])
         self.com_object.Details(*arguments)
 
     # Lower case alias for Details
@@ -818,7 +818,7 @@ class AddressEntry:
         return self.GetExchangeUser()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        arguments = com_arguments([unwrap(a) for a in [Start, MinPerChar, CompleteFormat]])
         return self.com_object.GetFreeBusy(*arguments)
 
     # Lower case alias for GetFreeBusy
@@ -827,7 +827,7 @@ class AddressEntry:
         return self.GetFreeBusy(*arguments)
 
     def Update(self, MakePermanent=None, Refresh=None):
-        arguments = com_arguments([MakePermanent, Refresh])
+        arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
 
     # Lower case alias for Update
@@ -997,7 +997,7 @@ class AddressLists:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return AddressList(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -1263,7 +1263,7 @@ class Application:
         return self.ActiveWindow()
 
     def AdvancedSearch(self, Scope=None, Filter=None, SearchSubFolders=None, Tag=None):
-        arguments = com_arguments([Scope, Filter, SearchSubFolders, Tag])
+        arguments = com_arguments([unwrap(a) for a in [Scope, Filter, SearchSubFolders, Tag]])
         return Search(self.com_object.AdvancedSearch(*arguments))
 
     # Lower case alias for AdvancedSearch
@@ -1272,7 +1272,7 @@ class Application:
         return self.AdvancedSearch(*arguments)
 
     def CopyFile(self, FilePath=None, DestFolderPath=None):
-        arguments = com_arguments([FilePath, DestFolderPath])
+        arguments = com_arguments([unwrap(a) for a in [FilePath, DestFolderPath]])
         return Object(self.com_object.CopyFile(*arguments))
 
     # Lower case alias for CopyFile
@@ -1281,7 +1281,7 @@ class Application:
         return self.CopyFile(*arguments)
 
     def CreateItem(self, ItemType=None):
-        arguments = com_arguments([ItemType])
+        arguments = com_arguments([unwrap(a) for a in [ItemType]])
         return Object(self.com_object.CreateItem(*arguments))
 
     # Lower case alias for CreateItem
@@ -1290,7 +1290,7 @@ class Application:
         return self.CreateItem(*arguments)
 
     def CreateItemFromTemplate(self, TemplatePath=None, InFolder=None):
-        arguments = com_arguments([TemplatePath, InFolder])
+        arguments = com_arguments([unwrap(a) for a in [TemplatePath, InFolder]])
         return Object(self.com_object.CreateItemFromTemplate(*arguments))
 
     # Lower case alias for CreateItemFromTemplate
@@ -1299,7 +1299,7 @@ class Application:
         return self.CreateItemFromTemplate(*arguments)
 
     def CreateObject(self, ObjectName=None):
-        arguments = com_arguments([ObjectName])
+        arguments = com_arguments([unwrap(a) for a in [ObjectName]])
         return CreateObject(self.com_object.CreateObject(*arguments))
 
     # Lower case alias for CreateObject
@@ -1308,7 +1308,7 @@ class Application:
         return self.CreateObject(*arguments)
 
     def GetNamespace(self, Type=None):
-        arguments = com_arguments([Type])
+        arguments = com_arguments([unwrap(a) for a in [Type]])
         return NameSpace(self.com_object.GetNamespace(*arguments))
 
     # Lower case alias for GetNamespace
@@ -1317,7 +1317,7 @@ class Application:
         return self.GetNamespace(*arguments)
 
     def GetObjectReference(self, Item=None, ReferenceType=None):
-        arguments = com_arguments([Item, ReferenceType])
+        arguments = com_arguments([unwrap(a) for a in [Item, ReferenceType]])
         return Object(self.com_object.GetObjectReference(*arguments))
 
     # Lower case alias for GetObjectReference
@@ -1326,7 +1326,7 @@ class Application:
         return self.GetObjectReference(*arguments)
 
     def IsSearchSynchronous(self, LookInFolders=None):
-        arguments = com_arguments([LookInFolders])
+        arguments = com_arguments([unwrap(a) for a in [LookInFolders]])
         return self.com_object.IsSearchSynchronous(*arguments)
 
     # Lower case alias for IsSearchSynchronous
@@ -1342,7 +1342,7 @@ class Application:
         return self.Quit()
 
     def RefreshFormRegionDefinition(self, RegionName=None):
-        arguments = com_arguments([RegionName])
+        arguments = com_arguments([unwrap(a) for a in [RegionName]])
         self.com_object.RefreshFormRegionDefinition(*arguments)
 
     # Lower case alias for RefreshFormRegionDefinition
@@ -2305,7 +2305,7 @@ class AppointmentItem:
         return self.ClearRecurrencePattern()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -2321,7 +2321,7 @@ class AppointmentItem:
         return self.Copy()
 
     def CopyTo(self, DestinationFolder=None, CopyOptions=None):
-        arguments = com_arguments([DestinationFolder, CopyOptions])
+        arguments = com_arguments([unwrap(a) for a in [DestinationFolder, CopyOptions]])
         return AppointmentItem(self.com_object.CopyTo(*arguments))
 
     # Lower case alias for CopyTo
@@ -2337,7 +2337,7 @@ class AppointmentItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -2374,7 +2374,7 @@ class AppointmentItem:
         return self.GetRecurrencePattern()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -2390,7 +2390,7 @@ class AppointmentItem:
         return self.PrintOut()
 
     def Respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
-        arguments = com_arguments([Response, fNoUI, fAdditionalTextDialog])
+        arguments = com_arguments([unwrap(a) for a in [Response, fNoUI, fAdditionalTextDialog]])
         return MeetingItem(self.com_object.Respond(*arguments))
 
     # Lower case alias for Respond
@@ -2406,7 +2406,7 @@ class AppointmentItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -2647,7 +2647,7 @@ class Attachment:
         return self.GetTemporaryFilePath()
 
     def SaveAsFile(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         self.com_object.SaveAsFile(*arguments)
 
     # Lower case alias for SaveAsFile
@@ -2697,7 +2697,7 @@ class Attachments:
         return self.Session
 
     def Add(self, Source=None, Type=None, Position=None, DisplayName=None):
-        arguments = com_arguments([Source, Type, Position, DisplayName])
+        arguments = com_arguments([unwrap(a) for a in [Source, Type, Position, DisplayName]])
         return Attachment(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -2706,7 +2706,7 @@ class Attachments:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Attachment(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -2715,7 +2715,7 @@ class Attachments:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -2774,7 +2774,7 @@ class AttachmentSelection:
         return self.Session
 
     def GetSelection(self, SelectionContents=None):
-        arguments = com_arguments([SelectionContents])
+        arguments = com_arguments([unwrap(a) for a in [SelectionContents]])
         return Selection(self.com_object.GetSelection(*arguments))
 
     # Lower case alias for GetSelection
@@ -2783,7 +2783,7 @@ class AttachmentSelection:
         return self.GetSelection(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Attachment(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -2934,7 +2934,7 @@ class AutoFormatRules:
         return self.Session
 
     def Add(self, Name=None):
-        arguments = com_arguments([Name])
+        arguments = com_arguments([unwrap(a) for a in [Name]])
         return AutoFormatRule(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -2943,7 +2943,7 @@ class AutoFormatRules:
         return self.Add(*arguments)
 
     def Insert(self, Name=None, Index=None):
-        arguments = com_arguments([Name, Index])
+        arguments = com_arguments([unwrap(a) for a in [Name, Index]])
         return AutoFormatRule(self.com_object.Insert(*arguments))
 
     # Lower case alias for Insert
@@ -2952,7 +2952,7 @@ class AutoFormatRules:
         return self.Insert(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return AutoFormatRule(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -2961,7 +2961,7 @@ class AutoFormatRules:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -3170,7 +3170,7 @@ class BusinessCardView:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         return View(self.com_object.Copy(*arguments))
 
     # Lower case alias for Copy
@@ -3186,7 +3186,7 @@ class BusinessCardView:
         return self.Delete()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -3462,7 +3462,7 @@ class CalendarSharing:
         self.StartDate = value
 
     def ForwardAsICal(self, MailFormat=None):
-        arguments = com_arguments([MailFormat])
+        arguments = com_arguments([unwrap(a) for a in [MailFormat]])
         return MailItem(self.com_object.ForwardAsICal(*arguments))
 
     # Lower case alias for ForwardAsICal
@@ -3471,7 +3471,7 @@ class CalendarSharing:
         return self.ForwardAsICal(*arguments)
 
     def SaveAsICal(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         self.com_object.SaveAsICal(*arguments)
 
     # Lower case alias for SaveAsICal
@@ -3803,7 +3803,7 @@ class CalendarView:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         return View(self.com_object.Copy(*arguments))
 
     # Lower case alias for Copy
@@ -3819,7 +3819,7 @@ class CalendarView:
         return self.Delete()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -4106,7 +4106,7 @@ class CardView:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         return View(self.com_object.Copy(*arguments))
 
     # Lower case alias for Copy
@@ -4122,7 +4122,7 @@ class CardView:
         return self.Delete()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -4186,7 +4186,7 @@ class Categories:
         return self.Session
 
     def Add(self, Name=None, Color=None, ShortcutKey=None):
-        arguments = com_arguments([Name, Color, ShortcutKey])
+        arguments = com_arguments([unwrap(a) for a in [Name, Color, ShortcutKey]])
         return Category(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -4195,7 +4195,7 @@ class Categories:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Category(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -4204,7 +4204,7 @@ class Categories:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -4598,7 +4598,7 @@ class Columns:
         return self.Session
 
     def Add(self, Name=None):
-        arguments = com_arguments([Name])
+        arguments = com_arguments([unwrap(a) for a in [Name]])
         return Column(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -4607,7 +4607,7 @@ class Columns:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Item(*arguments)
 
     # Lower case alias for Item
@@ -4616,7 +4616,7 @@ class Columns:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -4760,7 +4760,7 @@ class Conflicts:
         return self.GetPrevious()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Conflict(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -7285,7 +7285,7 @@ class ContactItem:
         self.YomiLastName = value
 
     def AddBusinessCardLogoPicture(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         self.com_object.AddBusinessCardLogoPicture(*arguments)
 
     # Lower case alias for AddBusinessCardLogoPicture
@@ -7294,7 +7294,7 @@ class ContactItem:
         return self.AddBusinessCardLogoPicture(*arguments)
 
     def AddPicture(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         self.com_object.AddPicture(*arguments)
 
     # Lower case alias for AddPicture
@@ -7310,7 +7310,7 @@ class ContactItem:
         return self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -7333,7 +7333,7 @@ class ContactItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -7363,7 +7363,7 @@ class ContactItem:
         return self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        arguments = com_arguments([MarkInterval])
+        arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
         self.com_object.MarkAsTask(*arguments)
 
     # Lower case alias for MarkAsTask
@@ -7372,7 +7372,7 @@ class ContactItem:
         return self.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -7409,7 +7409,7 @@ class ContactItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -7418,7 +7418,7 @@ class ContactItem:
         return self.SaveAs(*arguments)
 
     def SaveBusinessCardImage(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         self.com_object.SaveBusinessCardImage(*arguments)
 
     # Lower case alias for SaveBusinessCardImage
@@ -7441,7 +7441,7 @@ class ContactItem:
         return self.ShowCategoriesDialog()
 
     def ShowCheckPhoneDialog(self, PhoneNumber=None):
-        arguments = com_arguments([PhoneNumber])
+        arguments = com_arguments([unwrap(a) for a in [PhoneNumber]])
         self.com_object.ShowCheckPhoneDialog(*arguments)
 
     # Lower case alias for ShowCheckPhoneDialog
@@ -7584,7 +7584,7 @@ class Conversation:
         return self.Session
 
     def ClearAlwaysAssignCategories(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         self.com_object.ClearAlwaysAssignCategories(*arguments)
 
     # Lower case alias for ClearAlwaysAssignCategories
@@ -7593,7 +7593,7 @@ class Conversation:
         return self.ClearAlwaysAssignCategories(*arguments)
 
     def GetAlwaysAssignCategories(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         return String(self.com_object.GetAlwaysAssignCategories(*arguments))
 
     # Lower case alias for GetAlwaysAssignCategories
@@ -7602,7 +7602,7 @@ class Conversation:
         return self.GetAlwaysAssignCategories(*arguments)
 
     def GetAlwaysDelete(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         return OlAlwaysDeleteConversation(self.com_object.GetAlwaysDelete(*arguments))
 
     # Lower case alias for GetAlwaysDelete
@@ -7611,7 +7611,7 @@ class Conversation:
         return self.GetAlwaysDelete(*arguments)
 
     def GetAlwaysMoveToFolder(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         return Folder(self.com_object.GetAlwaysMoveToFolder(*arguments))
 
     # Lower case alias for GetAlwaysMoveToFolder
@@ -7620,7 +7620,7 @@ class Conversation:
         return self.GetAlwaysMoveToFolder(*arguments)
 
     def GetChildren(self, Item=None):
-        arguments = com_arguments([Item])
+        arguments = com_arguments([unwrap(a) for a in [Item]])
         return SimpleItems(self.com_object.GetChildren(*arguments))
 
     # Lower case alias for GetChildren
@@ -7629,7 +7629,7 @@ class Conversation:
         return self.GetChildren(*arguments)
 
     def GetParent(self, Item=None):
-        arguments = com_arguments([Item])
+        arguments = com_arguments([unwrap(a) for a in [Item]])
         return Object(self.com_object.GetParent(*arguments))
 
     # Lower case alias for GetParent
@@ -7666,7 +7666,7 @@ class Conversation:
         return self.MarkAsUnread()
 
     def SetAlwaysAssignCategories(self, Categories=None, Store=None):
-        arguments = com_arguments([Categories, Store])
+        arguments = com_arguments([unwrap(a) for a in [Categories, Store]])
         self.com_object.SetAlwaysAssignCategories(*arguments)
 
     # Lower case alias for SetAlwaysAssignCategories
@@ -7675,7 +7675,7 @@ class Conversation:
         return self.SetAlwaysAssignCategories(*arguments)
 
     def SetAlwaysDelete(self, AlwaysDelete=None, Store=None):
-        arguments = com_arguments([AlwaysDelete, Store])
+        arguments = com_arguments([unwrap(a) for a in [AlwaysDelete, Store]])
         self.com_object.SetAlwaysDelete(*arguments)
 
     # Lower case alias for SetAlwaysDelete
@@ -7684,7 +7684,7 @@ class Conversation:
         return self.SetAlwaysDelete(*arguments)
 
     def SetAlwaysMoveToFolder(self, MoveToFolder=None, Store=None):
-        arguments = com_arguments([MoveToFolder, Store])
+        arguments = com_arguments([unwrap(a) for a in [MoveToFolder, Store]])
         self.com_object.SetAlwaysMoveToFolder(*arguments)
 
     # Lower case alias for SetAlwaysMoveToFolder
@@ -7693,7 +7693,7 @@ class Conversation:
         return self.SetAlwaysMoveToFolder(*arguments)
 
     def StopAlwaysDelete(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         self.com_object.StopAlwaysDelete(*arguments)
 
     # Lower case alias for StopAlwaysDelete
@@ -7702,7 +7702,7 @@ class Conversation:
         return self.StopAlwaysDelete(*arguments)
 
     def StopAlwaysMoveToFolder(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         self.com_object.StopAlwaysMoveToFolder(*arguments)
 
     # Lower case alias for StopAlwaysMoveToFolder
@@ -8422,7 +8422,7 @@ class DistListItem:
         return self.UserProperties
 
     def AddMember(self, Recipient=None):
-        arguments = com_arguments([Recipient])
+        arguments = com_arguments([unwrap(a) for a in [Recipient]])
         self.com_object.AddMember(*arguments)
 
     # Lower case alias for AddMember
@@ -8431,7 +8431,7 @@ class DistListItem:
         return self.AddMember(*arguments)
 
     def AddMembers(self, Recipients=None):
-        arguments = com_arguments([Recipients])
+        arguments = com_arguments([unwrap(a) for a in [Recipients]])
         self.com_object.AddMembers(*arguments)
 
     # Lower case alias for AddMembers
@@ -8447,7 +8447,7 @@ class DistListItem:
         return self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -8470,7 +8470,7 @@ class DistListItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -8486,7 +8486,7 @@ class DistListItem:
         return self.GetConversation()
 
     def GetMember(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Recipient(self.com_object.GetMember(*arguments))
 
     # Lower case alias for GetMember
@@ -8495,7 +8495,7 @@ class DistListItem:
         return self.GetMember(*arguments)
 
     def MarkAsTask(self, MarkInterval=None):
-        arguments = com_arguments([MarkInterval])
+        arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
         self.com_object.MarkAsTask(*arguments)
 
     # Lower case alias for MarkAsTask
@@ -8504,7 +8504,7 @@ class DistListItem:
         return self.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -8520,7 +8520,7 @@ class DistListItem:
         return self.PrintOut()
 
     def RemoveMember(self, Recipient=None):
-        arguments = com_arguments([Recipient])
+        arguments = com_arguments([unwrap(a) for a in [Recipient]])
         self.com_object.RemoveMember(*arguments)
 
     # Lower case alias for RemoveMember
@@ -8529,7 +8529,7 @@ class DistListItem:
         return self.RemoveMember(*arguments)
 
     def RemoveMembers(self, Recipients=None):
-        arguments = com_arguments([Recipients])
+        arguments = com_arguments([unwrap(a) for a in [Recipients]])
         self.com_object.RemoveMembers(*arguments)
 
     # Lower case alias for RemoveMembers
@@ -8545,7 +8545,7 @@ class DistListItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -8961,7 +8961,7 @@ class DocumentItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -8984,7 +8984,7 @@ class DocumentItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -8993,7 +8993,7 @@ class DocumentItem:
         return self.Display(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -9016,7 +9016,7 @@ class DocumentItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -9132,7 +9132,7 @@ class Exceptions:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Exception(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -9302,7 +9302,7 @@ class ExchangeDistributionList:
         return self.Delete()
 
     def Details(self, HWnd=None):
-        arguments = com_arguments([HWnd])
+        arguments = com_arguments([unwrap(a) for a in [HWnd]])
         self.com_object.Details(*arguments)
 
     # Lower case alias for Details
@@ -9339,7 +9339,7 @@ class ExchangeDistributionList:
         return self.GetExchangeUser()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        arguments = com_arguments([unwrap(a) for a in [Start, MinPerChar, CompleteFormat]])
         self.com_object.GetFreeBusy(*arguments)
 
     # Lower case alias for GetFreeBusy
@@ -9362,7 +9362,7 @@ class ExchangeDistributionList:
         return self.GetOwners()
 
     def Update(self, MakePermanent=None, Refresh=None):
-        arguments = com_arguments([MakePermanent, Refresh])
+        arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
 
     # Lower case alias for Update
@@ -9838,7 +9838,7 @@ class ExchangeUser:
         return self.Delete()
 
     def Details(self, HWnd=None):
-        arguments = com_arguments([HWnd])
+        arguments = com_arguments([unwrap(a) for a in [HWnd]])
         self.com_object.Details(*arguments)
 
     # Lower case alias for Details
@@ -9882,7 +9882,7 @@ class ExchangeUser:
         return self.GetExchangeUserManager()
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        arguments = com_arguments([unwrap(a) for a in [Start, MinPerChar, CompleteFormat]])
         return String(self.com_object.GetFreeBusy(*arguments))
 
     # Lower case alias for GetFreeBusy
@@ -9905,7 +9905,7 @@ class ExchangeUser:
         return self.GetPicture()
 
     def Update(self, MakePermanent=None, Refresh=None):
-        arguments = com_arguments([MakePermanent, Refresh])
+        arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
 
     # Lower case alias for Update
@@ -10135,7 +10135,7 @@ class Explorer:
         return self.Activate()
 
     def AddToSelection(self, Item=None):
-        arguments = com_arguments([Item])
+        arguments = com_arguments([unwrap(a) for a in [Item]])
         self.com_object.AddToSelection(*arguments)
 
     # Lower case alias for AddToSelection
@@ -10172,7 +10172,7 @@ class Explorer:
         return self.Display()
 
     def IsItemSelectableInView(self, Item=None):
-        arguments = com_arguments([Item])
+        arguments = com_arguments([unwrap(a) for a in [Item]])
         return Boolean(self.com_object.IsItemSelectableInView(*arguments))
 
     # Lower case alias for IsItemSelectableInView
@@ -10181,7 +10181,7 @@ class Explorer:
         return self.IsItemSelectableInView(*arguments)
 
     def IsPaneVisible(self, Pane=None):
-        arguments = com_arguments([Pane])
+        arguments = com_arguments([unwrap(a) for a in [Pane]])
         return self.com_object.IsPaneVisible(*arguments)
 
     # Lower case alias for IsPaneVisible
@@ -10190,7 +10190,7 @@ class Explorer:
         return self.IsPaneVisible(*arguments)
 
     def RemoveFromSelection(self, Item=None):
-        arguments = com_arguments([Item])
+        arguments = com_arguments([unwrap(a) for a in [Item]])
         self.com_object.RemoveFromSelection(*arguments)
 
     # Lower case alias for RemoveFromSelection
@@ -10199,7 +10199,7 @@ class Explorer:
         return self.RemoveFromSelection(*arguments)
 
     def Search(self, Query=None, SearchScope=None):
-        arguments = com_arguments([Query, SearchScope])
+        arguments = com_arguments([unwrap(a) for a in [Query, SearchScope]])
         self.com_object.Search(*arguments)
 
     # Lower case alias for Search
@@ -10215,7 +10215,7 @@ class Explorer:
         return self.SelectAllItems()
 
     def ShowPane(self, Pane=None, Visible=None):
-        arguments = com_arguments([Pane, Visible])
+        arguments = com_arguments([unwrap(a) for a in [Pane, Visible]])
         self.com_object.ShowPane(*arguments)
 
     # Lower case alias for ShowPane
@@ -10265,7 +10265,7 @@ class Explorers:
         return self.Session
 
     def Add(self, Folder=None, DisplayMode=None):
-        arguments = com_arguments([Folder, DisplayMode])
+        arguments = com_arguments([unwrap(a) for a in [Folder, DisplayMode]])
         return Explorer(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -10274,7 +10274,7 @@ class Explorers:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Explorer(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -10601,7 +10601,7 @@ class Folder:
         return self.AddToPFFavorites()
 
     def CopyTo(self, DestinationFolder=None):
-        arguments = com_arguments([DestinationFolder])
+        arguments = com_arguments([unwrap(a) for a in [DestinationFolder]])
         return Folder(self.com_object.CopyTo(*arguments))
 
     # Lower case alias for CopyTo
@@ -10638,7 +10638,7 @@ class Folder:
         return self.GetCustomIcon()
 
     def GetExplorer(self, DisplayMode=None):
-        arguments = com_arguments([DisplayMode])
+        arguments = com_arguments([unwrap(a) for a in [DisplayMode]])
         return Explorer(self.com_object.GetExplorer(*arguments))
 
     # Lower case alias for GetExplorer
@@ -10654,7 +10654,7 @@ class Folder:
         return self.GetOrganizer()
 
     def GetStorage(self, StorageIdentifier=None, StorageIdentifierType=None):
-        arguments = com_arguments([StorageIdentifier, StorageIdentifierType])
+        arguments = com_arguments([unwrap(a) for a in [StorageIdentifier, StorageIdentifierType]])
         return StorageItem(self.com_object.GetStorage(*arguments))
 
     # Lower case alias for GetStorage
@@ -10663,7 +10663,7 @@ class Folder:
         return self.GetStorage(*arguments)
 
     def GetTable(self, Filter=None, TableContents=None):
-        arguments = com_arguments([Filter, TableContents])
+        arguments = com_arguments([unwrap(a) for a in [Filter, TableContents]])
         return Folder(self.com_object.GetTable(*arguments))
 
     # Lower case alias for GetTable
@@ -10672,7 +10672,7 @@ class Folder:
         return self.GetTable(*arguments)
 
     def MoveTo(self, DestinationFolder=None):
-        arguments = com_arguments([DestinationFolder])
+        arguments = com_arguments([unwrap(a) for a in [DestinationFolder]])
         self.com_object.MoveTo(*arguments)
 
     # Lower case alias for MoveTo
@@ -10681,7 +10681,7 @@ class Folder:
         return self.MoveTo(*arguments)
 
     def SetCustomIcon(self, Picture=None):
-        arguments = com_arguments([Picture])
+        arguments = com_arguments([unwrap(a) for a in [Picture]])
         self.com_object.SetCustomIcon(*arguments)
 
     # Lower case alias for SetCustomIcon
@@ -10731,7 +10731,7 @@ class Folders:
         return self.Session
 
     def Add(self, Name=None, Type=None):
-        arguments = com_arguments([Name, Type])
+        arguments = com_arguments([unwrap(a) for a in [Name, Type]])
         return Folder(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -10768,7 +10768,7 @@ class Folders:
         return self.GetPrevious()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Folder(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -10777,7 +10777,7 @@ class Folders:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -11091,7 +11091,7 @@ class FormDescription:
         self.Version = value
 
     def PublishForm(self, Registry=None, Folder=None):
-        arguments = com_arguments([Registry, Folder])
+        arguments = com_arguments([unwrap(a) for a in [Registry, Folder]])
         self.com_object.PublishForm(*arguments)
 
     # Lower case alias for PublishForm
@@ -11361,7 +11361,7 @@ class FormRegion:
         return self.Select()
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
-        arguments = com_arguments([Control, PropertyName])
+        arguments = com_arguments([unwrap(a) for a in [Control, PropertyName]])
         self.com_object.SetControlItemProperty(*arguments)
 
     # Lower case alias for SetControlItemProperty
@@ -11639,7 +11639,7 @@ class IconView:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         return View(self.com_object.Copy(*arguments))
 
     # Lower case alias for Copy
@@ -11655,7 +11655,7 @@ class IconView:
         return self.Delete()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -11931,7 +11931,7 @@ class Inspector:
         return self.Activate()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -11940,7 +11940,7 @@ class Inspector:
         return self.Close(*arguments)
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -11949,7 +11949,7 @@ class Inspector:
         return self.Display(*arguments)
 
     def HideFormPage(self, PageName=None):
-        arguments = com_arguments([PageName])
+        arguments = com_arguments([unwrap(a) for a in [PageName]])
         self.com_object.HideFormPage(*arguments)
 
     # Lower case alias for HideFormPage
@@ -11972,7 +11972,7 @@ class Inspector:
         return self.NewFormRegion()
 
     def OpenFormRegion(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         return Object(self.com_object.OpenFormRegion(*arguments))
 
     # Lower case alias for OpenFormRegion
@@ -11981,7 +11981,7 @@ class Inspector:
         return self.OpenFormRegion(*arguments)
 
     def SaveFormRegion(self, Page=None, FileName=None):
-        arguments = com_arguments([Page, FileName])
+        arguments = com_arguments([unwrap(a) for a in [Page, FileName]])
         self.com_object.SaveFormRegion(*arguments)
 
     # Lower case alias for SaveFormRegion
@@ -11990,7 +11990,7 @@ class Inspector:
         return self.SaveFormRegion(*arguments)
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
-        arguments = com_arguments([Control, PropertyName])
+        arguments = com_arguments([unwrap(a) for a in [Control, PropertyName]])
         self.com_object.SetControlItemProperty(*arguments)
 
     # Lower case alias for SetControlItemProperty
@@ -11999,7 +11999,7 @@ class Inspector:
         return self.SetControlItemProperty(*arguments)
 
     def SetCurrentFormPage(self, PageName=None):
-        arguments = com_arguments([PageName])
+        arguments = com_arguments([unwrap(a) for a in [PageName]])
         self.com_object.SetCurrentFormPage(*arguments)
 
     # Lower case alias for SetCurrentFormPage
@@ -12008,7 +12008,7 @@ class Inspector:
         return self.SetCurrentFormPage(*arguments)
 
     def SetSchedulingStartTime(self, Start=None):
-        arguments = com_arguments([Start])
+        arguments = com_arguments([unwrap(a) for a in [Start]])
         self.com_object.SetSchedulingStartTime(*arguments)
 
     # Lower case alias for SetSchedulingStartTime
@@ -12017,7 +12017,7 @@ class Inspector:
         return self.SetSchedulingStartTime(*arguments)
 
     def ShowFormPage(self, PageName=None):
-        arguments = com_arguments([PageName])
+        arguments = com_arguments([unwrap(a) for a in [PageName]])
         self.com_object.ShowFormPage(*arguments)
 
     # Lower case alias for ShowFormPage
@@ -12074,7 +12074,7 @@ class Inspectors:
         return self.Add()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Inspector(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -12127,7 +12127,7 @@ class ItemProperties:
         return self.Session
 
     def Add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
-        arguments = com_arguments([Name, Type, AddToFolderFields, DisplayFormat])
+        arguments = com_arguments([unwrap(a) for a in [Name, Type, AddToFolderFields, DisplayFormat]])
         self.com_object.Add(*arguments)
 
     # Lower case alias for Add
@@ -12136,7 +12136,7 @@ class ItemProperties:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return ItemProperty(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -12145,7 +12145,7 @@ class ItemProperties:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -12303,7 +12303,7 @@ class Items:
         return self.Add()
 
     def Find(self, Filter=None):
-        arguments = com_arguments([Filter])
+        arguments = com_arguments([unwrap(a) for a in [Filter]])
         return self.com_object.Find(*arguments)
 
     # Lower case alias for Find
@@ -12347,7 +12347,7 @@ class Items:
         return self.GetPrevious()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -12356,7 +12356,7 @@ class Items:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -12372,7 +12372,7 @@ class Items:
         return self.ResetColumns()
 
     def Restrict(self, Filter=None):
-        arguments = com_arguments([Filter])
+        arguments = com_arguments([unwrap(a) for a in [Filter]])
         return Items(self.com_object.Restrict(*arguments))
 
     # Lower case alias for Restrict
@@ -12381,7 +12381,7 @@ class Items:
         return self.Restrict(*arguments)
 
     def SetColumns(self, Columns=None):
-        arguments = com_arguments([Columns])
+        arguments = com_arguments([unwrap(a) for a in [Columns]])
         self.com_object.SetColumns(*arguments)
 
     # Lower case alias for SetColumns
@@ -12390,7 +12390,7 @@ class Items:
         return self.SetColumns(*arguments)
 
     def Sort(self, Property=None, Descending=None):
-        arguments = com_arguments([Property, Descending])
+        arguments = com_arguments([unwrap(a) for a in [Property, Descending]])
         self.com_object.Sort(*arguments)
 
     # Lower case alias for Sort
@@ -12986,7 +12986,7 @@ class JournalItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -13009,7 +13009,7 @@ class JournalItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -13032,7 +13032,7 @@ class JournalItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -13069,7 +13069,7 @@ class JournalItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -14374,7 +14374,7 @@ class MailItem:
         self.VotingResponse = value
 
     def AddBusinessCard(self, contact=None):
-        arguments = com_arguments([contact])
+        arguments = com_arguments([unwrap(a) for a in [contact]])
         self.com_object.AddBusinessCard(*arguments)
 
     # Lower case alias for AddBusinessCard
@@ -14397,7 +14397,7 @@ class MailItem:
         return self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -14420,7 +14420,7 @@ class MailItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -14443,7 +14443,7 @@ class MailItem:
         return self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        arguments = com_arguments([MarkInterval])
+        arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
         self.com_object.MarkAsTask(*arguments)
 
     # Lower case alias for MarkAsTask
@@ -14452,7 +14452,7 @@ class MailItem:
         return self.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -14489,7 +14489,7 @@ class MailItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -15409,7 +15409,7 @@ class MeetingItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -15432,7 +15432,7 @@ class MeetingItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -15448,7 +15448,7 @@ class MeetingItem:
         return self.Forward()
 
     def GetAssociatedAppointment(self, AddToCalendar=None):
-        arguments = com_arguments([AddToCalendar])
+        arguments = com_arguments([unwrap(a) for a in [AddToCalendar]])
         return AppointmentItem(self.com_object.GetAssociatedAppointment(*arguments))
 
     # Lower case alias for GetAssociatedAppointment
@@ -15464,7 +15464,7 @@ class MeetingItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -15501,7 +15501,7 @@ class MeetingItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -15783,7 +15783,7 @@ class NameSpace:
         return self.Type
 
     def AddStore(self, Store=None):
-        arguments = com_arguments([Store])
+        arguments = com_arguments([unwrap(a) for a in [Store]])
         self.com_object.AddStore(*arguments)
 
     # Lower case alias for AddStore
@@ -15792,7 +15792,7 @@ class NameSpace:
         return self.AddStore(*arguments)
 
     def AddStoreEx(self, Store=None, Type=None):
-        arguments = com_arguments([Store, Type])
+        arguments = com_arguments([unwrap(a) for a in [Store, Type]])
         self.com_object.AddStoreEx(*arguments)
 
     # Lower case alias for AddStoreEx
@@ -15801,7 +15801,7 @@ class NameSpace:
         return self.AddStoreEx(*arguments)
 
     def CompareEntryIDs(self, FirstEntryID=None, SecondEntryID=None):
-        arguments = com_arguments([FirstEntryID, SecondEntryID])
+        arguments = com_arguments([unwrap(a) for a in [FirstEntryID, SecondEntryID]])
         return self.com_object.CompareEntryIDs(*arguments)
 
     # Lower case alias for CompareEntryIDs
@@ -15810,7 +15810,7 @@ class NameSpace:
         return self.CompareEntryIDs(*arguments)
 
     def CreateContactCard(self, Address=None):
-        arguments = com_arguments([Address])
+        arguments = com_arguments([unwrap(a) for a in [Address]])
         return Office.ContactCard(self.com_object.CreateContactCard(*arguments))
 
     # Lower case alias for CreateContactCard
@@ -15819,7 +15819,7 @@ class NameSpace:
         return self.CreateContactCard(*arguments)
 
     def CreateRecipient(self, RecipientName=None):
-        arguments = com_arguments([RecipientName])
+        arguments = com_arguments([unwrap(a) for a in [RecipientName]])
         return Recipient(self.com_object.CreateRecipient(*arguments))
 
     # Lower case alias for CreateRecipient
@@ -15828,7 +15828,7 @@ class NameSpace:
         return self.CreateRecipient(*arguments)
 
     def CreateSharingItem(self, Context=None, Provider=None):
-        arguments = com_arguments([Context, Provider])
+        arguments = com_arguments([unwrap(a) for a in [Context, Provider]])
         return SharingItem(self.com_object.CreateSharingItem(*arguments))
 
     # Lower case alias for CreateSharingItem
@@ -15837,7 +15837,7 @@ class NameSpace:
         return self.CreateSharingItem(*arguments)
 
     def Dial(self, ContactItem=None):
-        arguments = com_arguments([ContactItem])
+        arguments = com_arguments([unwrap(a) for a in [ContactItem]])
         self.com_object.Dial(*arguments)
 
     # Lower case alias for Dial
@@ -15846,7 +15846,7 @@ class NameSpace:
         return self.Dial(*arguments)
 
     def GetAddressEntryFromID(self, ID=None):
-        arguments = com_arguments([ID])
+        arguments = com_arguments([unwrap(a) for a in [ID]])
         return ID(self.com_object.GetAddressEntryFromID(*arguments))
 
     # Lower case alias for GetAddressEntryFromID
@@ -15855,7 +15855,7 @@ class NameSpace:
         return self.GetAddressEntryFromID(*arguments)
 
     def GetDefaultFolder(self, FolderType=None):
-        arguments = com_arguments([FolderType])
+        arguments = com_arguments([unwrap(a) for a in [FolderType]])
         return Folder(self.com_object.GetDefaultFolder(*arguments))
 
     # Lower case alias for GetDefaultFolder
@@ -15864,7 +15864,7 @@ class NameSpace:
         return self.GetDefaultFolder(*arguments)
 
     def GetFolderFromID(self, EntryIDFolder=None, EntryIDStore=None):
-        arguments = com_arguments([EntryIDFolder, EntryIDStore])
+        arguments = com_arguments([unwrap(a) for a in [EntryIDFolder, EntryIDStore]])
         return Folder(self.com_object.GetFolderFromID(*arguments))
 
     # Lower case alias for GetFolderFromID
@@ -15880,7 +15880,7 @@ class NameSpace:
         return self.GetGlobalAddressList()
 
     def GetItemFromID(self, EntryIDItem=None, EntryIDStore=None):
-        arguments = com_arguments([EntryIDItem, EntryIDStore])
+        arguments = com_arguments([unwrap(a) for a in [EntryIDItem, EntryIDStore]])
         return Object(self.com_object.GetItemFromID(*arguments))
 
     # Lower case alias for GetItemFromID
@@ -15889,7 +15889,7 @@ class NameSpace:
         return self.GetItemFromID(*arguments)
 
     def GetRecipientFromID(self, EntryID=None):
-        arguments = com_arguments([EntryID])
+        arguments = com_arguments([unwrap(a) for a in [EntryID]])
         return Recipient(self.com_object.GetRecipientFromID(*arguments))
 
     # Lower case alias for GetRecipientFromID
@@ -15905,7 +15905,7 @@ class NameSpace:
         return self.GetSelectNamesDialog()
 
     def GetSharedDefaultFolder(self, Recipient=None, FolderType=None):
-        arguments = com_arguments([Recipient, FolderType])
+        arguments = com_arguments([unwrap(a) for a in [Recipient, FolderType]])
         return Folder(self.com_object.GetSharedDefaultFolder(*arguments))
 
     # Lower case alias for GetSharedDefaultFolder
@@ -15914,7 +15914,7 @@ class NameSpace:
         return self.GetSharedDefaultFolder(*arguments)
 
     def GetStoreFromID(self, ID=None):
-        arguments = com_arguments([ID])
+        arguments = com_arguments([unwrap(a) for a in [ID]])
         return StoreID(self.com_object.GetStoreFromID(*arguments))
 
     # Lower case alias for GetStoreFromID
@@ -15930,7 +15930,7 @@ class NameSpace:
         return self.Logoff()
 
     def Logon(self, Profile=None, Password=None, ShowDialog=None, NewSession=None):
-        arguments = com_arguments([Profile, Password, ShowDialog, NewSession])
+        arguments = com_arguments([unwrap(a) for a in [Profile, Password, ShowDialog, NewSession]])
         self.com_object.Logon(*arguments)
 
     # Lower case alias for Logon
@@ -15939,7 +15939,7 @@ class NameSpace:
         return self.Logon(*arguments)
 
     def OpenSharedFolder(self, Path=None, Name=None, DownloadAttachments=None, UseTTL=None):
-        arguments = com_arguments([Path, Name, DownloadAttachments, UseTTL])
+        arguments = com_arguments([unwrap(a) for a in [Path, Name, DownloadAttachments, UseTTL]])
         return Folder(self.com_object.OpenSharedFolder(*arguments))
 
     # Lower case alias for OpenSharedFolder
@@ -15948,7 +15948,7 @@ class NameSpace:
         return self.OpenSharedFolder(*arguments)
 
     def OpenSharedItem(self, Path=None):
-        arguments = com_arguments([Path])
+        arguments = com_arguments([unwrap(a) for a in [Path]])
         return Object(self.com_object.OpenSharedItem(*arguments))
 
     # Lower case alias for OpenSharedItem
@@ -15964,7 +15964,7 @@ class NameSpace:
         return self.PickFolder()
 
     def RemoveStore(self, Folder=None):
-        arguments = com_arguments([Folder])
+        arguments = com_arguments([unwrap(a) for a in [Folder]])
         self.com_object.RemoveStore(*arguments)
 
     # Lower case alias for RemoveStore
@@ -15973,7 +15973,7 @@ class NameSpace:
         return self.RemoveStore(*arguments)
 
     def SendAndReceive(self, showProgressDialog=None):
-        arguments = com_arguments([showProgressDialog])
+        arguments = com_arguments([unwrap(a) for a in [showProgressDialog]])
         self.com_object.SendAndReceive(*arguments)
 
     # Lower case alias for SendAndReceive
@@ -16133,7 +16133,7 @@ class NavigationFolders:
         return self.Session
 
     def Add(self, Folder=None):
-        arguments = com_arguments([Folder])
+        arguments = com_arguments([unwrap(a) for a in [Folder]])
         return NavigationFolder(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -16142,7 +16142,7 @@ class NavigationFolders:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return NavigationFolder(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -16151,7 +16151,7 @@ class NavigationFolders:
         return self.Item(*arguments)
 
     def Remove(self, RemovableFolder=None):
-        arguments = com_arguments([RemovableFolder])
+        arguments = com_arguments([unwrap(a) for a in [RemovableFolder]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -16285,7 +16285,7 @@ class NavigationGroups:
         return self.Session
 
     def Create(self, GroupDisplayName=None):
-        arguments = com_arguments([GroupDisplayName])
+        arguments = com_arguments([unwrap(a) for a in [GroupDisplayName]])
         return NavigationGroup(self.com_object.Create(*arguments))
 
     # Lower case alias for Create
@@ -16294,7 +16294,7 @@ class NavigationGroups:
         return self.Create(*arguments)
 
     def Delete(self, Group=None):
-        arguments = com_arguments([Group])
+        arguments = com_arguments([unwrap(a) for a in [Group]])
         self.com_object.Delete(*arguments)
 
     # Lower case alias for Delete
@@ -16303,7 +16303,7 @@ class NavigationGroups:
         return self.Delete(*arguments)
 
     def GetDefaultNavigationGroup(self, DefaultFolderGroup=None):
-        arguments = com_arguments([DefaultFolderGroup])
+        arguments = com_arguments([unwrap(a) for a in [DefaultFolderGroup]])
         return NavigationGroup(self.com_object.GetDefaultNavigationGroup(*arguments))
 
     # Lower case alias for GetDefaultNavigationGroup
@@ -16312,7 +16312,7 @@ class NavigationGroups:
         return self.GetDefaultNavigationGroup(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return NavigationGroup(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -16446,7 +16446,7 @@ class NavigationModules:
         return self.Session
 
     def GetNavigationModule(self, ModuleType=None):
-        arguments = com_arguments([ModuleType])
+        arguments = com_arguments([unwrap(a) for a in [ModuleType]])
         return NavigationModule(self.com_object.GetNavigationModule(*arguments))
 
     # Lower case alias for GetNavigationModule
@@ -16455,7 +16455,7 @@ class NavigationModules:
         return self.GetNavigationModule(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return NavigationModule(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -16924,7 +16924,7 @@ class NoteItem:
         self.Width = value
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -16947,7 +16947,7 @@ class NoteItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -16956,7 +16956,7 @@ class NoteItem:
         return self.Display(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -16979,7 +16979,7 @@ class NoteItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -18380,7 +18380,7 @@ class OlkComboBox:
         self.Value = value
 
     def AddItem(self, ItemText=None, Index=None):
-        arguments = com_arguments([ItemText, Index])
+        arguments = com_arguments([unwrap(a) for a in [ItemText, Index]])
         self.com_object.AddItem(*arguments)
 
     # Lower case alias for AddItem
@@ -18417,7 +18417,7 @@ class OlkComboBox:
         return self.DropDown()
 
     def GetItem(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return String(self.com_object.GetItem(*arguments))
 
     # Lower case alias for GetItem
@@ -18433,7 +18433,7 @@ class OlkComboBox:
         return self.Paste()
 
     def RemoveItem(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.RemoveItem(*arguments)
 
     # Lower case alias for RemoveItem
@@ -18442,7 +18442,7 @@ class OlkComboBox:
         return self.RemoveItem(*arguments)
 
     def SetItem(self, Index=None, Item=None):
-        arguments = com_arguments([Index, Item])
+        arguments = com_arguments([unwrap(a) for a in [Index, Item]])
         self.com_object.SetItem(*arguments)
 
     # Lower case alias for SetItem
@@ -19659,7 +19659,7 @@ class OlkListBox:
         self.Value = value
 
     def AddItem(self, ItemText=None, Index=None):
-        arguments = com_arguments([ItemText, Index])
+        arguments = com_arguments([unwrap(a) for a in [ItemText, Index]])
         self.com_object.AddItem(*arguments)
 
     # Lower case alias for AddItem
@@ -19682,7 +19682,7 @@ class OlkListBox:
         return self.Copy()
 
     def GetItem(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return String(self.com_object.GetItem(*arguments))
 
     # Lower case alias for GetItem
@@ -19691,7 +19691,7 @@ class OlkListBox:
         return self.GetItem(*arguments)
 
     def GetSelected(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.GetSelected(*arguments)
 
     # Lower case alias for GetSelected
@@ -19700,7 +19700,7 @@ class OlkListBox:
         return self.GetSelected(*arguments)
 
     def RemoveItem(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.RemoveItem(*arguments)
 
     # Lower case alias for RemoveItem
@@ -19709,7 +19709,7 @@ class OlkListBox:
         return self.RemoveItem(*arguments)
 
     def SetItem(self, Index=None, Item=None):
-        arguments = com_arguments([Index, Item])
+        arguments = com_arguments([unwrap(a) for a in [Index, Item]])
         self.com_object.SetItem(*arguments)
 
     # Lower case alias for SetItem
@@ -19718,7 +19718,7 @@ class OlkListBox:
         return self.SetItem(*arguments)
 
     def SetSelected(self, Index=None, Selected=None):
-        arguments = com_arguments([Index, Selected])
+        arguments = com_arguments([unwrap(a) for a in [Index, Selected]])
         self.com_object.SetSelected(*arguments)
 
     # Lower case alias for SetSelected
@@ -21706,7 +21706,7 @@ class OrderFields:
         return self.Session
 
     def Add(self, PropertyName=None, IsDescending=None):
-        arguments = com_arguments([PropertyName, IsDescending])
+        arguments = com_arguments([unwrap(a) for a in [PropertyName, IsDescending]])
         return OrderField(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -21715,7 +21715,7 @@ class OrderFields:
         return self.Add(*arguments)
 
     def Insert(self, PropertyName=None, Index=None, IsDescending=None):
-        arguments = com_arguments([PropertyName, Index, IsDescending])
+        arguments = com_arguments([unwrap(a) for a in [PropertyName, Index, IsDescending]])
         return OrderField(self.com_object.Insert(*arguments))
 
     # Lower case alias for Insert
@@ -21724,7 +21724,7 @@ class OrderFields:
         return self.Insert(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return OrderField(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -21733,7 +21733,7 @@ class OrderFields:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -21865,7 +21865,7 @@ class OutlookBarGroups:
         return self.Session
 
     def Add(self, Name=None, Index=None):
-        arguments = com_arguments([Name, Index])
+        arguments = com_arguments([unwrap(a) for a in [Name, Index]])
         return OutlookBarGroup(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -21874,7 +21874,7 @@ class OutlookBarGroups:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return OutlookBarGroup(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -21883,7 +21883,7 @@ class OutlookBarGroups:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -22017,7 +22017,7 @@ class OutlookBarShortcut:
         return self.Target
 
     def SetIcon(self, Icon=None):
-        arguments = com_arguments([Icon])
+        arguments = com_arguments([unwrap(a) for a in [Icon]])
         self.com_object.SetIcon(*arguments)
 
     # Lower case alias for SetIcon
@@ -22067,7 +22067,7 @@ class OutlookBarShortcuts:
         return self.Session
 
     def Add(self, Target=None, Name=None, Index=None):
-        arguments = com_arguments([Target, Name, Index])
+        arguments = com_arguments([unwrap(a) for a in [Target, Name, Index]])
         return OutlookBarShortcut(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -22076,7 +22076,7 @@ class OutlookBarShortcuts:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return OutlookBarShortcut(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -22085,7 +22085,7 @@ class OutlookBarShortcuts:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -22183,7 +22183,7 @@ class Pages:
         return self.Add()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -22192,7 +22192,7 @@ class Pages:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -22242,7 +22242,7 @@ class Panes:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -23074,7 +23074,7 @@ class PostItem:
         return self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -23097,7 +23097,7 @@ class PostItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -23120,7 +23120,7 @@ class PostItem:
         return self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        arguments = com_arguments([MarkInterval])
+        arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
         self.com_object.MarkAsTask(*arguments)
 
     # Lower case alias for MarkAsTask
@@ -23129,7 +23129,7 @@ class PostItem:
         return self.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -23166,7 +23166,7 @@ class PostItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -23214,7 +23214,7 @@ class PropertyAccessor:
         return self.Session
 
     def BinaryToString(self, Value=None):
-        arguments = com_arguments([Value])
+        arguments = com_arguments([unwrap(a) for a in [Value]])
         return String(self.com_object.BinaryToString(*arguments))
 
     # Lower case alias for BinaryToString
@@ -23223,7 +23223,7 @@ class PropertyAccessor:
         return self.BinaryToString(*arguments)
 
     def DeleteProperties(self, SchemaNames=None):
-        arguments = com_arguments([SchemaNames])
+        arguments = com_arguments([unwrap(a) for a in [SchemaNames]])
         return self.com_object.DeleteProperties(*arguments)
 
     # Lower case alias for DeleteProperties
@@ -23232,7 +23232,7 @@ class PropertyAccessor:
         return self.DeleteProperties(*arguments)
 
     def DeleteProperty(self, SchemaName=None):
-        arguments = com_arguments([SchemaName])
+        arguments = com_arguments([unwrap(a) for a in [SchemaName]])
         self.com_object.DeleteProperty(*arguments)
 
     # Lower case alias for DeleteProperty
@@ -23241,7 +23241,7 @@ class PropertyAccessor:
         return self.DeleteProperty(*arguments)
 
     def GetProperties(self, SchemaNames=None):
-        arguments = com_arguments([SchemaNames])
+        arguments = com_arguments([unwrap(a) for a in [SchemaNames]])
         return Err(self.com_object.GetProperties(*arguments))
 
     # Lower case alias for GetProperties
@@ -23250,7 +23250,7 @@ class PropertyAccessor:
         return self.GetProperties(*arguments)
 
     def GetProperty(self, SchemaName=None):
-        arguments = com_arguments([SchemaName])
+        arguments = com_arguments([unwrap(a) for a in [SchemaName]])
         return Variant(self.com_object.GetProperty(*arguments))
 
     # Lower case alias for GetProperty
@@ -23259,7 +23259,7 @@ class PropertyAccessor:
         return self.GetProperty(*arguments)
 
     def LocalTimeToUTC(self, Value=None):
-        arguments = com_arguments([Value])
+        arguments = com_arguments([unwrap(a) for a in [Value]])
         return Date(self.com_object.LocalTimeToUTC(*arguments))
 
     # Lower case alias for LocalTimeToUTC
@@ -23268,7 +23268,7 @@ class PropertyAccessor:
         return self.LocalTimeToUTC(*arguments)
 
     def SetProperties(self, SchemaNames=None, Values=None):
-        arguments = com_arguments([SchemaNames, Values])
+        arguments = com_arguments([unwrap(a) for a in [SchemaNames, Values]])
         return self.com_object.SetProperties(*arguments)
 
     # Lower case alias for SetProperties
@@ -23277,7 +23277,7 @@ class PropertyAccessor:
         return self.SetProperties(*arguments)
 
     def SetProperty(self, SchemaName=None, Value=None):
-        arguments = com_arguments([SchemaName, Value])
+        arguments = com_arguments([unwrap(a) for a in [SchemaName, Value]])
         self.com_object.SetProperty(*arguments)
 
     # Lower case alias for SetProperty
@@ -23286,7 +23286,7 @@ class PropertyAccessor:
         return self.SetProperty(*arguments)
 
     def StringToBinary(self, Value=None):
-        arguments = com_arguments([Value])
+        arguments = com_arguments([unwrap(a) for a in [Value]])
         return Variant(self.com_object.StringToBinary(*arguments))
 
     # Lower case alias for StringToBinary
@@ -23295,7 +23295,7 @@ class PropertyAccessor:
         return self.StringToBinary(*arguments)
 
     def UTCToLocalTime(self, Value=None):
-        arguments = com_arguments([Value])
+        arguments = com_arguments([unwrap(a) for a in [Value]])
         return Date(self.com_object.UTCToLocalTime(*arguments))
 
     # Lower case alias for UTCToLocalTime
@@ -23310,7 +23310,7 @@ class PropertyPage:
         self.com_object= propertypage
 
     def Dirty(self, Dirty=None):
-        arguments = com_arguments([Dirty])
+        arguments = com_arguments([unwrap(a) for a in [Dirty]])
         if callable(self.com_object.Dirty):
             return self.com_object.Dirty(*arguments)
         else:
@@ -23329,7 +23329,7 @@ class PropertyPage:
         return self.Apply()
 
     def GetPageInfo(self, HelpFile=None, HelpContext=None):
-        arguments = com_arguments([HelpFile, HelpContext])
+        arguments = com_arguments([unwrap(a) for a in [HelpFile, HelpContext]])
         return HRESULT(self.com_object.GetPageInfo(*arguments))
 
     # Lower case alias for GetPageInfo
@@ -23379,7 +23379,7 @@ class PropertyPages:
         return self.Session
 
     def Add(self, Page=None, Title=None):
-        arguments = com_arguments([Page, Title])
+        arguments = com_arguments([unwrap(a) for a in [Page, Title]])
         self.com_object.Add(*arguments)
 
     # Lower case alias for Add
@@ -23388,7 +23388,7 @@ class PropertyPages:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -23397,7 +23397,7 @@ class PropertyPages:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -23658,7 +23658,7 @@ class Recipient:
         return self.Delete()
 
     def FreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
-        arguments = com_arguments([Start, MinPerChar, CompleteFormat])
+        arguments = com_arguments([unwrap(a) for a in [Start, MinPerChar, CompleteFormat]])
         return String(self.com_object.FreeBusy(*arguments))
 
     # Lower case alias for FreeBusy
@@ -23715,7 +23715,7 @@ class Recipients:
         return self.Session
 
     def Add(self, Name=None):
-        arguments = com_arguments([Name])
+        arguments = com_arguments([unwrap(a) for a in [Name]])
         return Recipient(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -23724,7 +23724,7 @@ class Recipients:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Recipient(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -23733,7 +23733,7 @@ class Recipients:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -24028,7 +24028,7 @@ class RecurrencePattern:
         self.StartTime = value
 
     def GetOccurrence(self, StartDate=None):
-        arguments = com_arguments([StartDate])
+        arguments = com_arguments([unwrap(a) for a in [StartDate]])
         return AppointmentItem(self.com_object.GetOccurrence(*arguments))
 
     # Lower case alias for GetOccurrence
@@ -24121,7 +24121,7 @@ class Reminder:
         return self.Dismiss()
 
     def Snooze(self, SnoozeTime=None):
-        arguments = com_arguments([SnoozeTime])
+        arguments = com_arguments([unwrap(a) for a in [SnoozeTime]])
         self.com_object.Snooze(*arguments)
 
     # Lower case alias for Snooze
@@ -24171,7 +24171,7 @@ class Reminders:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Reminder(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -24180,7 +24180,7 @@ class Reminders:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -24650,7 +24650,7 @@ class RemoteItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -24673,7 +24673,7 @@ class RemoteItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -24689,7 +24689,7 @@ class RemoteItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -24712,7 +24712,7 @@ class RemoteItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -25171,7 +25171,7 @@ class ReportItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -25194,7 +25194,7 @@ class ReportItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -25210,7 +25210,7 @@ class ReportItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -25233,7 +25233,7 @@ class ReportItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -25335,7 +25335,7 @@ class Results:
         return self.GetPrevious()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -25351,7 +25351,7 @@ class Results:
         return self.ResetColumns()
 
     def SetColumns(self, Columns=None):
-        arguments = com_arguments([Columns])
+        arguments = com_arguments([unwrap(a) for a in [Columns]])
         self.com_object.SetColumns(*arguments)
 
     # Lower case alias for SetColumns
@@ -25360,7 +25360,7 @@ class Results:
         return self.SetColumns(*arguments)
 
     def Sort(self, Property=None, Descending=None):
-        arguments = com_arguments([Property, Descending])
+        arguments = com_arguments([unwrap(a) for a in [Property, Descending]])
         self.com_object.Sort(*arguments)
 
     # Lower case alias for Sort
@@ -25401,7 +25401,7 @@ class Row:
         return self.Session
 
     def BinaryToString(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return String(self.com_object.BinaryToString(*arguments))
 
     # Lower case alias for BinaryToString
@@ -25417,7 +25417,7 @@ class Row:
         return self.GetValues()
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Variant(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -25426,7 +25426,7 @@ class Row:
         return self.Item(*arguments)
 
     def LocalTimeToUTC(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Date(self.com_object.LocalTimeToUTC(*arguments))
 
     # Lower case alias for LocalTimeToUTC
@@ -25435,7 +25435,7 @@ class Row:
         return self.LocalTimeToUTC(*arguments)
 
     def UTCToLocalTime(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Date(self.com_object.UTCToLocalTime(*arguments))
 
     # Lower case alias for UTCToLocalTime
@@ -25572,7 +25572,7 @@ class Rule:
         return self.Session
 
     def Execute(self, ShowProgress=None, Folder=None, IncludeSubfolders=None, RuleExecuteOption=None):
-        arguments = com_arguments([ShowProgress, Folder, IncludeSubfolders, RuleExecuteOption])
+        arguments = com_arguments([unwrap(a) for a in [ShowProgress, Folder, IncludeSubfolders, RuleExecuteOption]])
         self.com_object.Execute(*arguments)
 
     # Lower case alias for Execute
@@ -25833,7 +25833,7 @@ class RuleActions:
         return self.Stop
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return RuleAction(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -26161,7 +26161,7 @@ class RuleConditions:
         return self.ToOrCc
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return RuleCondition(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -26228,7 +26228,7 @@ class Rules:
         return self.Session
 
     def Create(self, Name=None, RuleType=None):
-        arguments = com_arguments([Name, RuleType])
+        arguments = com_arguments([unwrap(a) for a in [Name, RuleType]])
         return Rule(self.com_object.Create(*arguments))
 
     # Lower case alias for Create
@@ -26237,7 +26237,7 @@ class Rules:
         return self.Create(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Rule(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -26246,7 +26246,7 @@ class Rules:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -26255,7 +26255,7 @@ class Rules:
         return self.Remove(*arguments)
 
     def Save(self, ShowProgress=None):
-        arguments = com_arguments([ShowProgress])
+        arguments = com_arguments([unwrap(a) for a in [ShowProgress]])
         self.com_object.Save(*arguments)
 
     # Lower case alias for Save
@@ -26357,7 +26357,7 @@ class Search:
         return self.GetTable()
 
     def Save(self, SchFldrName=None):
-        arguments = com_arguments([SchFldrName])
+        arguments = com_arguments([unwrap(a) for a in [SchFldrName]])
         self.com_object.Save(*arguments)
 
     # Lower case alias for Save
@@ -26423,7 +26423,7 @@ class Selection:
         return self.Session
 
     def GetSelection(self, SelectionContents=None):
-        arguments = com_arguments([SelectionContents])
+        arguments = com_arguments([unwrap(a) for a in [SelectionContents]])
         return Selection(self.com_object.GetSelection(*arguments))
 
     # Lower case alias for GetSelection
@@ -26432,7 +26432,7 @@ class Selection:
         return self.GetSelection(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -26650,7 +26650,7 @@ class SelectNamesDialog:
         return self.Display()
 
     def SetDefaultDisplayMode(self, defaultMode=None):
-        arguments = com_arguments([defaultMode])
+        arguments = com_arguments([unwrap(a) for a in [defaultMode]])
         self.com_object.SetDefaultDisplayMode(*arguments)
 
     # Lower case alias for SetDefaultDisplayMode
@@ -28011,7 +28011,7 @@ class SharingItem:
         return self.UserProperties
 
     def AddBusinessCard(self, contact=None):
-        arguments = com_arguments([contact])
+        arguments = com_arguments([unwrap(a) for a in [contact]])
         self.com_object.AddBusinessCard(*arguments)
 
     # Lower case alias for AddBusinessCard
@@ -28041,7 +28041,7 @@ class SharingItem:
         return self.ClearTaskFlag()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -28071,7 +28071,7 @@ class SharingItem:
         return self.Deny()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -28094,7 +28094,7 @@ class SharingItem:
         return self.GetConversation()
 
     def MarkAsTask(self, MarkInterval=None):
-        arguments = com_arguments([MarkInterval])
+        arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
         self.com_object.MarkAsTask(*arguments)
 
     # Lower case alias for MarkAsTask
@@ -28103,7 +28103,7 @@ class SharingItem:
         return self.MarkAsTask(*arguments)
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -28147,7 +28147,7 @@ class SharingItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -28211,7 +28211,7 @@ class SimpleItems:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Object(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -28304,7 +28304,7 @@ class SolutionsModule:
         self.Visible = value
 
     def AddSolution(self, Solution=None, Scope=None):
-        arguments = com_arguments([Solution, Scope])
+        arguments = com_arguments([unwrap(a) for a in [Solution, Scope]])
         self.com_object.AddSolution(*arguments)
 
     # Lower case alias for AddSolution
@@ -28604,7 +28604,7 @@ class Store:
         return self.StoreID
 
     def GetDefaultFolder(self, FolderType=None):
-        arguments = com_arguments([FolderType])
+        arguments = com_arguments([unwrap(a) for a in [FolderType]])
         return self.com_object.GetDefaultFolder(*arguments)
 
     # Lower case alias for GetDefaultFolder
@@ -28634,7 +28634,7 @@ class Store:
         return self.GetSearchFolders()
 
     def GetSpecialFolder(self, FolderType=None):
-        arguments = com_arguments([FolderType])
+        arguments = com_arguments([unwrap(a) for a in [FolderType]])
         return Folder(self.com_object.GetSpecialFolder(*arguments))
 
     # Lower case alias for GetSpecialFolder
@@ -28691,7 +28691,7 @@ class Stores:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return Stores(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -28805,7 +28805,7 @@ class SyncObjects:
         return self.Session
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return SyncObject(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -28871,7 +28871,7 @@ class Table:
         return self.FindNextRow()
 
     def FindRow(self, Filter=None):
-        arguments = com_arguments([Filter])
+        arguments = com_arguments([unwrap(a) for a in [Filter]])
         return self.com_object.FindRow(*arguments)
 
     # Lower case alias for FindRow
@@ -28880,7 +28880,7 @@ class Table:
         return self.FindRow(*arguments)
 
     def GetArray(self, MaxRows=None):
-        arguments = com_arguments([MaxRows])
+        arguments = com_arguments([unwrap(a) for a in [MaxRows]])
         return Variant(self.com_object.GetArray(*arguments))
 
     # Lower case alias for GetArray
@@ -28910,7 +28910,7 @@ class Table:
         return self.MoveToStart()
 
     def Restrict(self, Filter=None):
-        arguments = com_arguments([Filter])
+        arguments = com_arguments([unwrap(a) for a in [Filter]])
         return Table(self.com_object.Restrict(*arguments))
 
     # Lower case alias for Restrict
@@ -28919,7 +28919,7 @@ class Table:
         return self.Restrict(*arguments)
 
     def Sort(self, SortProperty=None, Descending=None):
-        arguments = com_arguments([SortProperty, Descending])
+        arguments = com_arguments([unwrap(a) for a in [SortProperty, Descending]])
         self.com_object.Sort(*arguments)
 
     # Lower case alias for Sort
@@ -29431,7 +29431,7 @@ class TableView:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         return View(self.com_object.Copy(*arguments))
 
     # Lower case alias for Copy
@@ -29454,7 +29454,7 @@ class TableView:
         return self.GetTable()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -30419,7 +30419,7 @@ class TaskItem:
         return self.ClearRecurrencePattern()
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -30442,7 +30442,7 @@ class TaskItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -30472,7 +30472,7 @@ class TaskItem:
         return self.MarkComplete()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -30488,7 +30488,7 @@ class TaskItem:
         return self.PrintOut()
 
     def Respond(self, Response=None, fNoUI=None, fAdditionalTextDialog=None):
-        arguments = com_arguments([Response, fNoUI, fAdditionalTextDialog])
+        arguments = com_arguments([unwrap(a) for a in [Response, fNoUI, fAdditionalTextDialog]])
         return TaskItem(self.com_object.Respond(*arguments))
 
     # Lower case alias for Respond
@@ -30504,7 +30504,7 @@ class TaskItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -30983,7 +30983,7 @@ class TaskRequestAcceptItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -31006,7 +31006,7 @@ class TaskRequestAcceptItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -31015,7 +31015,7 @@ class TaskRequestAcceptItem:
         return self.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        arguments = com_arguments([AddToTaskList])
+        arguments = com_arguments([unwrap(a) for a in [AddToTaskList]])
         return TaskItem(self.com_object.GetAssociatedTask(*arguments))
 
     # Lower case alias for GetAssociatedTask
@@ -31031,7 +31031,7 @@ class TaskRequestAcceptItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -31054,7 +31054,7 @@ class TaskRequestAcceptItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -31512,7 +31512,7 @@ class TaskRequestDeclineItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -31535,7 +31535,7 @@ class TaskRequestDeclineItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -31544,7 +31544,7 @@ class TaskRequestDeclineItem:
         return self.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        arguments = com_arguments([AddToTaskList])
+        arguments = com_arguments([unwrap(a) for a in [AddToTaskList]])
         return TaskItem(self.com_object.GetAssociatedTask(*arguments))
 
     # Lower case alias for GetAssociatedTask
@@ -31560,7 +31560,7 @@ class TaskRequestDeclineItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -31583,7 +31583,7 @@ class TaskRequestDeclineItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -32041,7 +32041,7 @@ class TaskRequestItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -32064,7 +32064,7 @@ class TaskRequestItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -32073,7 +32073,7 @@ class TaskRequestItem:
         return self.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        arguments = com_arguments([AddToTaskList])
+        arguments = com_arguments([unwrap(a) for a in [AddToTaskList]])
         return TaskItem(self.com_object.GetAssociatedTask(*arguments))
 
     # Lower case alias for GetAssociatedTask
@@ -32089,7 +32089,7 @@ class TaskRequestItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -32112,7 +32112,7 @@ class TaskRequestItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -32570,7 +32570,7 @@ class TaskRequestUpdateItem:
         return self.UserProperties
 
     def Close(self, SaveMode=None):
-        arguments = com_arguments([SaveMode])
+        arguments = com_arguments([unwrap(a) for a in [SaveMode]])
         self.com_object.Close(*arguments)
 
     # Lower case alias for Close
@@ -32593,7 +32593,7 @@ class TaskRequestUpdateItem:
         return self.Delete()
 
     def Display(self, Modal=None):
-        arguments = com_arguments([Modal])
+        arguments = com_arguments([unwrap(a) for a in [Modal]])
         self.com_object.Display(*arguments)
 
     # Lower case alias for Display
@@ -32602,7 +32602,7 @@ class TaskRequestUpdateItem:
         return self.Display(*arguments)
 
     def GetAssociatedTask(self, AddToTaskList=None):
-        arguments = com_arguments([AddToTaskList])
+        arguments = com_arguments([unwrap(a) for a in [AddToTaskList]])
         return TaskItem(self.com_object.GetAssociatedTask(*arguments))
 
     # Lower case alias for GetAssociatedTask
@@ -32618,7 +32618,7 @@ class TaskRequestUpdateItem:
         return self.GetConversation()
 
     def Move(self, DestFldr=None):
-        arguments = com_arguments([DestFldr])
+        arguments = com_arguments([unwrap(a) for a in [DestFldr]])
         return Object(self.com_object.Move(*arguments))
 
     # Lower case alias for Move
@@ -32641,7 +32641,7 @@ class TaskRequestUpdateItem:
         return self.Save()
 
     def SaveAs(self, Path=None, Type=None):
-        arguments = com_arguments([Path, Type])
+        arguments = com_arguments([unwrap(a) for a in [Path, Type]])
         self.com_object.SaveAs(*arguments)
 
     # Lower case alias for SaveAs
@@ -33131,7 +33131,7 @@ class TimelineView:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         return View(self.com_object.Copy(*arguments))
 
     # Lower case alias for Copy
@@ -33147,7 +33147,7 @@ class TimelineView:
         return self.Delete()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -33336,7 +33336,7 @@ class TimeZones:
         return self.Session
 
     def ConvertTime(self, SourceDateTime=None, SourceTimeZone=None, DestinationTimeZone=None):
-        arguments = com_arguments([SourceDateTime, SourceTimeZone, DestinationTimeZone])
+        arguments = com_arguments([unwrap(a) for a in [SourceDateTime, SourceTimeZone, DestinationTimeZone]])
         return Date(self.com_object.ConvertTime(*arguments))
 
     # Lower case alias for ConvertTime
@@ -33345,7 +33345,7 @@ class TimeZones:
         return self.ConvertTime(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return TimeZone(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -33462,7 +33462,7 @@ class UserDefinedProperties:
         return self.Session
 
     def Add(self, Name=None, Type=None, DisplayFormat=None, Formula=None):
-        arguments = com_arguments([Name, Type, DisplayFormat, Formula])
+        arguments = com_arguments([unwrap(a) for a in [Name, Type, DisplayFormat, Formula]])
         return UserDefinedProperty(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -33471,7 +33471,7 @@ class UserDefinedProperties:
         return self.Add(*arguments)
 
     def Find(self, Name=None):
-        arguments = com_arguments([Name])
+        arguments = com_arguments([unwrap(a) for a in [Name]])
         return self.com_object.Find(*arguments)
 
     # Lower case alias for Find
@@ -33480,7 +33480,7 @@ class UserDefinedProperties:
         return self.Find(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return UserDefinedProperty(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -33496,7 +33496,7 @@ class UserDefinedProperties:
         return self.Refresh()
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -33621,7 +33621,7 @@ class UserProperties:
         return self.Session
 
     def Add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
-        arguments = com_arguments([Name, Type, AddToFolderFields, DisplayFormat])
+        arguments = com_arguments([unwrap(a) for a in [Name, Type, AddToFolderFields, DisplayFormat]])
         return UserProperty(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -33630,7 +33630,7 @@ class UserProperties:
         return self.Add(*arguments)
 
     def Find(self, Name=None, Custom=None):
-        arguments = com_arguments([Name, Custom])
+        arguments = com_arguments([unwrap(a) for a in [Name, Custom]])
         return self.com_object.Find(*arguments)
 
     # Lower case alias for Find
@@ -33639,7 +33639,7 @@ class UserProperties:
         return self.Find(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return UserProperty(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -33648,7 +33648,7 @@ class UserProperties:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -33933,7 +33933,7 @@ class View:
         return self.Apply()
 
     def Copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([Name, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
         self.com_object.Copy(*arguments)
 
     # Lower case alias for Copy
@@ -33949,7 +33949,7 @@ class View:
         return self.Delete()
 
     def GoToDate(self, Date=None):
-        arguments = com_arguments([Date])
+        arguments = com_arguments([unwrap(a) for a in [Date]])
         self.com_object.GoToDate(*arguments)
 
     # Lower case alias for GoToDate
@@ -34063,7 +34063,7 @@ class ViewFields:
         return self.Session
 
     def Add(self, PropertyName=None):
-        arguments = com_arguments([PropertyName])
+        arguments = com_arguments([unwrap(a) for a in [PropertyName]])
         return ViewField(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -34072,7 +34072,7 @@ class ViewFields:
         return self.Add(*arguments)
 
     def Insert(self, PropertyName=None, Index=None):
-        arguments = com_arguments([PropertyName, Index])
+        arguments = com_arguments([unwrap(a) for a in [PropertyName, Index]])
         return ViewField(self.com_object.Insert(*arguments))
 
     # Lower case alias for Insert
@@ -34081,7 +34081,7 @@ class ViewFields:
         return self.Insert(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return ViewField(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -34090,7 +34090,7 @@ class ViewFields:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
@@ -34308,7 +34308,7 @@ class Views:
         return self.Session
 
     def Add(self, Name=None, ViewType=None, SaveOption=None):
-        arguments = com_arguments([Name, ViewType, SaveOption])
+        arguments = com_arguments([unwrap(a) for a in [Name, ViewType, SaveOption]])
         return View(self.com_object.Add(*arguments))
 
     # Lower case alias for Add
@@ -34317,7 +34317,7 @@ class Views:
         return self.Add(*arguments)
 
     def Item(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         return View(self.com_object.Item(*arguments))
 
     # Lower case alias for Item
@@ -34326,7 +34326,7 @@ class Views:
         return self.Item(*arguments)
 
     def Remove(self, Index=None):
-        arguments = com_arguments([Index])
+        arguments = com_arguments([unwrap(a) for a in [Index]])
         self.com_object.Remove(*arguments)
 
     # Lower case alias for Remove
