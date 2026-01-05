@@ -1087,7 +1087,7 @@ class Application:
         self.com_object= application
 
     def new(self):
-        self.com_object = win32com.client.Dispatch("Outlook.Application")
+        self.com_object = win32com.client.gencache.EnsureDispatch("Outlook.Application")
         return self
 
     @property

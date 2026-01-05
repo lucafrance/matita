@@ -2003,7 +2003,7 @@ class Application:
         self.com_object= application
 
     def new(self):
-        self.com_object = win32com.client.Dispatch("Access.Application")
+        self.com_object = win32com.client.gencache.EnsureDispatch("Access.Application")
         return self
 
     @property

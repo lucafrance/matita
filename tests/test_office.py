@@ -1,7 +1,5 @@
 import unittest
 
-import win32com.client
-
 from matita.office import access as ac, excel as xl, outlook as ol, powerpoint as pp, word as wd
 
 class TestExcel(unittest.TestCase):
@@ -63,8 +61,13 @@ class TestExcel(unittest.TestCase):
     def test_excel_com_object(self):
         wkb = self.xl_app.Workbooks.Add()
         self.assertIs(type(wkb), xl.Workbook)
-        self.assertIs(type(wkb.com_object), win32com.client.CDispatch)
+        self.assertIn("win32", str(type(wkb.com_object)))
         wkb.Close(SaveChanges=False)
+
+    def test_range_operations(self):
+        wkb = self.xl_app.Workbooks.Add()
+        rng1 = wkb.cells(1,1)
+
 
 class TestPowerPoint(unittest.TestCase):
 
@@ -87,7 +90,15 @@ class TestPowerPoint(unittest.TestCase):
             effectId=pp.msoAnimEffectFly,
             Level=pp.msoAnimateLevelNone,
             trigger=pp.msoAnimTriggerAfterPrevious,
-    )
+        )
+        prs.close()
+        
+    def test_powerpoint_com_object(self):
+        prs = self.pp_app.presentations.add()
+        self.assertIs(type(prs), pp.Presentation)
+        self.assertIn("win32", str(type(prs.com_object)))
+        prs.close()
+
 
 class TestOffice(unittest.TestCase):
     

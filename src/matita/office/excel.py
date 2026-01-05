@@ -752,7 +752,7 @@ class Application:
         self.com_object= application
 
     def new(self):
-        self.com_object = win32com.client.Dispatch("Excel.Application")
+        self.com_object = win32com.client.gencache.EnsureDispatch("Excel.Application")
         return self
 
     @property

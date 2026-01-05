@@ -246,7 +246,7 @@ class DocPage:
         # New method for Application objects
         if self.object_name == "Application":
             code.append(f"    def new(self):")
-            code.append(f"        self.com_object = win32com.client.Dispatch(\"{self.module_name}.Application\")")
+            code.append(f"        self.com_object = win32com.client.gencache.EnsureDispatch(\"{self.module_name}.Application\")")
             code.append(f"        return self")
             code.append(f"")
 
