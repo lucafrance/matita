@@ -9,21 +9,21 @@ I recommend making the application visible as long as you are developing.
 Once your code is stable, you may decide to keep the application invisible unless an exception aris
 
 ```python
-from matita.office import access, excel, outlook, powerpoint, word
+from matita.office import access as ac, excel as xl, outlook as ol, powerpoint as pp, word as wd
 
-ac_app = access.application.new()
+ac_app = ac.Application().new()
 ac_app.visible = True
 
-xl_app = excel.application.new()
+xl_app = xl.Application().new()
 xl_app.visible = True
 
-ol_app = outlook.application.new()
+ol_app = ol.Application().new()
 ol_app.visible = True
 
-pp_app = powerpoint.application.new()
+pp_app = pp.Application().new()
 pp_app.visible = True
 
-wd_app = word.application.new()
+wd_app = wd.Application().new()
 wd_app.visible = True
 ```
 

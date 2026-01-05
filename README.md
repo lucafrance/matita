@@ -6,9 +6,9 @@ There are modules for Microsoft Access, Excel, Outlook, PowerPoint, Word.
 It can be used for Microsoft Office automation.
 
 ```python
-from matita.office import excel
+from matita.office import excel as xl
 
-xl_app = excel.Application().new()
+xl_app = xl.Application().new()
 xl_app.Visible = True
 
 wkb = xl_app.Workbooks.Add()
@@ -16,7 +16,7 @@ wks = wkb.Worksheets(1)
 c = wks.Cells(1,1)
 
 c.Value = "Hello World"
-print(c.Address(excel.xlR1C1))
+print(c.Address(xl.xlR1C1))
 ```
 
 VBA equivalent:

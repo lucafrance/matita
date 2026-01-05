@@ -2,13 +2,13 @@ import unittest
 
 import win32com.client
 
-from matita.office import access, excel, outlook, powerpoint, word
+from matita.office import access as ac, excel as xl, outlook as ol, powerpoint as pp, word as wd
 
 class TestExcel(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.xl_app = excel.Application().new()
+        cls.xl_app = xl.Application().new()
         cls.xl_app.Visible = True
 
     @classmethod
@@ -43,26 +43,26 @@ class TestExcel(unittest.TestCase):
         r = wks.Range("B2:D4")
         self.assertEqual(r.Address(), "$B$2:$D$4")
         self.assertEqual(r.address(), "$B$2:$D$4")
-        self.assertEqual(r.Address(ReferenceStyle=excel.xlR1C1), "R2C2:R4C4")
-        self.assertEqual(r.address(ReferenceStyle=excel.xlR1C1), "R2C2:R4C4")
+        self.assertEqual(r.Address(ReferenceStyle=xl.xlR1C1), "R2C2:R4C4")
+        self.assertEqual(r.address(ReferenceStyle=xl.xlR1C1), "R2C2:R4C4")
 
         wkb.Close(SaveChanges=False)
 
     def test_excel_aliases(self):
         wkb = self.xl_app.Workbooks.Add()
 
-        self.assertIs(type(wkb.Worksheets.Add()), excel.Worksheet)
-        self.assertIs(type(wkb.Worksheets.add()), excel.Worksheet)
+        self.assertIs(type(wkb.Worksheets.Add()), xl.Worksheet)
+        self.assertIs(type(wkb.Worksheets.add()), xl.Worksheet)
 
         wkb.Close(SaveChanges=False)
 
     def test_excel_constants(self):
-        self.assertEqual(excel.xlAscending, 1)
-        self.assertEqual(excel.xlDescending, 2)
+        self.assertEqual(xl.xlAscending, 1)
+        self.assertEqual(xl.xlDescending, 2)
 
     def test_excel_com_object(self):
         wkb = self.xl_app.Workbooks.Add()
-        self.assertIs(type(wkb), excel.Workbook)
+        self.assertIs(type(wkb), xl.Workbook)
         self.assertIs(type(wkb.com_object), win32com.client.CDispatch)
         wkb.Close(SaveChanges=False)
 
@@ -70,7 +70,7 @@ class TestPowerPoint(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.pp_app = powerpoint.Application().new()
+        cls.pp_app = pp.Application().new()
         cls.pp_app.Visible = True
 
     @classmethod
@@ -80,34 +80,34 @@ class TestPowerPoint(unittest.TestCase):
     def test_powerpoint(self):
         self.assertTrue(self.pp_app.Visible)
         prs = self.pp_app.presentations.add()
-        sld = powerpoint.Slide(prs.slides.com_object.Add(1, powerpoint.ppLayoutBlank))
-        shp = sld.shapes.addshape(powerpoint.msoShapeRectangle, 30, 30 , 30, 30)
+        sld = pp.Slide(prs.slides.com_object.Add(1, pp.ppLayoutBlank))
+        shp = sld.shapes.addshape(pp.msoShapeRectangle, 30, 30 , 30, 30)
         eff = sld.timeline.mainsequence.addeffect(
             Shape=shp,
-            effectId=powerpoint.msoAnimEffectFly,
-            Level=powerpoint.msoAnimateLevelNone,
-            trigger=powerpoint.msoAnimTriggerAfterPrevious,
+            effectId=pp.msoAnimEffectFly,
+            Level=pp.msoAnimateLevelNone,
+            trigger=pp.msoAnimTriggerAfterPrevious,
     )
 
 class TestOffice(unittest.TestCase):
     
     def test_access(self):
-        acc_app = access.Application().new()
-        self.assertIs(type(acc_app), access.Application)
+        acc_app = ac.Application().new()
+        self.assertIs(type(acc_app), ac.Application)
         acc_app.Visible = True
         self.assertTrue(acc_app.Visible)
         acc_app.Quit()
     
     def test_outlook(self):
-        ol_app = outlook.Application().new()
-        self.assertIs(type(ol_app), outlook.Application)
+        ol_app = ol.Application().new()
+        self.assertIs(type(ol_app), ol.Application)
         ol_app.Visible = True
         self.assertTrue(ol_app.Visible)
         ol_app.Quit()
 
     def test_word(self):
-        wd_app = word.Application().new()
-        self.assertIs(type(wd_app), word.Application)
+        wd_app = wd.Application().new()
+        self.assertIs(type(wd_app), wd.Application)
         wd_app.Visible = True
         self.assertTrue(wd_app.Visible)
         wd_app.Quit()
