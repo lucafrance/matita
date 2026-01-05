@@ -10,7 +10,7 @@ def squares():
     # Will be fixed with https://github.com/MicrosoftDocs/VBA-Docs/pull/1937
     sld = pp.Slide(prs.slides.com_object.Add(1, pp.ppLayoutBlank))
 
-    for _ in range(10):
+    for _ in range(1000):
         side = random.random() * prs.pagesetup.slideheight / 3
         left = -side + random.random() * (side + prs.pagesetup.slidewidth)
         top = -side + random.random() * (side + prs.pagesetup.slideheight)
@@ -20,7 +20,7 @@ def squares():
         eff = sld.timeline.mainsequence.addeffect(
             Shape=shp,
             effectId=pp.msoAnimEffectFly,
-            Level=pp.msoAnimateLevelNone, # TODO Passing None does not work in this case `TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'`
+            Level=pp.msoAnimateLevelNone,
             trigger=pp.msoAnimTriggerAfterPrevious,
         )
         direction = random.choice([
