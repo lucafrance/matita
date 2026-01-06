@@ -70,6 +70,24 @@ class TestExcel(unittest.TestCase):
         rng = wks.cells(2,3)
         self.assertEqual(rng.resize(4,5).address(), "$C$2:$G$5")
 
+        rng = wks.range("$A$1:$C$2")
+        self.assertEqual(rng.offset(2,3).address(), "$D$3:$F$4")
+
+        cell1 = wks.cells(2,2)
+        cell2 = wks.cells(5,5)
+        rng = wks.Range(cell1, cell2)
+        self.assertEqual(rng.address(), "$B$2:$E$5")
+
+        rng1 = wks.range("B2:D5")
+        rng2 = wks.range("C4:E7")
+        rng = self.xl_app.intersect(rng1, rng2)
+        self.assertEqual(rng.address(), "$C$4:$D$5")
+
+        cell1 = wks.cells(1,1)
+        cell2 = wks.cells(2,2)
+        rng = self.xl_app.intersect(cell1, cell2)
+        self.assertIsNone(rng.com_object)
+
 
 class TestPowerPoint(unittest.TestCase):
 
