@@ -346,10 +346,10 @@ class Actions:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Actions(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Actions(self.com_object.GetItem(*arguments))
+        else:
+            return Actions(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -497,10 +497,10 @@ class AddIns:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -558,10 +558,10 @@ class AddIns2:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -726,10 +726,10 @@ class AllowEditRanges:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -1092,10 +1092,10 @@ class Application:
 
     def Caller(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Caller):
-            return self.com_object.Caller(*arguments)
-        else:
+        if hasattr(self.com_object, "GetCaller"):
             return self.com_object.GetCaller(*arguments)
+        else:
+            return self.com_object.Caller(*arguments)
 
     # Lower case aliases for Caller
     def caller(self, Index=None):
@@ -1156,10 +1156,10 @@ class Application:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return Range(self.com_object.Cells(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return Range(self.com_object.GetCells(*arguments))
+        else:
+            return Range(self.com_object.Cells(*arguments))
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -1177,10 +1177,10 @@ class Application:
 
     def ClipboardFormats(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ClipboardFormats):
-            return self.com_object.ClipboardFormats(*arguments)
-        else:
+        if hasattr(self.com_object, "GetClipboardFormats"):
             return self.com_object.GetClipboardFormats(*arguments)
+        else:
+            return self.com_object.ClipboardFormats(*arguments)
 
     # Lower case aliases for ClipboardFormats
     def clipboardformats(self, Index=None):
@@ -1960,10 +1960,10 @@ class Application:
 
     def FileConverters(self, Index1=None, Index2=None):
         arguments = com_arguments([unwrap(a) for a in [Index1, Index2]])
-        if callable(self.com_object.FileConverters):
-            return self.com_object.FileConverters(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileConverters"):
             return self.com_object.GetFileConverters(*arguments)
+        else:
+            return self.com_object.FileConverters(*arguments)
 
     # Lower case aliases for FileConverters
     def fileconverters(self, Index1=None, Index2=None):
@@ -1972,10 +1972,10 @@ class Application:
 
     def FileDialog(self, fileDialogType=None):
         arguments = com_arguments([unwrap(a) for a in [fileDialogType]])
-        if callable(self.com_object.FileDialog):
-            return self.com_object.FileDialog(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileDialog"):
             return self.com_object.GetFileDialog(*arguments)
+        else:
+            return self.com_object.FileDialog(*arguments)
 
     # Lower case aliases for FileDialog
     def filedialog(self, fileDialogType=None):
@@ -2591,10 +2591,10 @@ class Application:
 
     def PreviousSelections(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.PreviousSelections):
-            return Range(self.com_object.PreviousSelections(*arguments))
-        else:
+        if hasattr(self.com_object, "GetPreviousSelections"):
             return Range(self.com_object.GetPreviousSelections(*arguments))
+        else:
+            return Range(self.com_object.PreviousSelections(*arguments))
 
     # Lower case aliases for PreviousSelections
     def previousselections(self, Index=None):
@@ -2655,10 +2655,10 @@ class Application:
 
     def Range(self, Cell1=None, Cell2=None):
         arguments = com_arguments([unwrap(a) for a in [Cell1, Cell2]])
-        if callable(self.com_object.Range):
-            return Range(self.com_object.Range(*arguments))
-        else:
+        if hasattr(self.com_object, "GetRange"):
             return Range(self.com_object.GetRange(*arguments))
+        else:
+            return Range(self.com_object.Range(*arguments))
 
     # Lower case aliases for Range
     def range(self, Cell1=None, Cell2=None):
@@ -2711,10 +2711,10 @@ class Application:
 
     def RegisteredFunctions(self, Index1=None, Index2=None):
         arguments = com_arguments([unwrap(a) for a in [Index1, Index2]])
-        if callable(self.com_object.RegisteredFunctions):
-            return self.com_object.RegisteredFunctions(*arguments)
-        else:
+        if hasattr(self.com_object, "GetRegisteredFunctions"):
             return self.com_object.GetRegisteredFunctions(*arguments)
+        else:
+            return self.com_object.RegisteredFunctions(*arguments)
 
     # Lower case aliases for RegisteredFunctions
     def registeredfunctions(self, Index1=None, Index2=None):
@@ -3885,10 +3885,10 @@ class Areas:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -4091,10 +4091,10 @@ class AutoCorrect:
 
     def ReplacementList(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ReplacementList):
-            return self.com_object.ReplacementList(*arguments)
-        else:
+        if hasattr(self.com_object, "GetReplacementList"):
             return self.com_object.GetReplacementList(*arguments)
+        else:
+            return self.com_object.ReplacementList(*arguments)
 
     # Lower case aliases for ReplacementList
     def replacementlist(self, Index=None):
@@ -5091,10 +5091,10 @@ class AxisTitle:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return Characters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return Characters(self.com_object.GetCharacters(*arguments))
+        else:
+            return Characters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -5604,10 +5604,10 @@ class Borders:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Border(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Border(self.com_object.GetItem(*arguments))
+        else:
+            return Border(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -5990,10 +5990,10 @@ class CalculatedMembers:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -9069,10 +9069,10 @@ class Charts:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -9195,10 +9195,10 @@ class ChartTitle:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return Characters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return Characters(self.com_object.GetCharacters(*arguments))
+        else:
+            return Characters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -9852,10 +9852,10 @@ class ColorScaleCriteria:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return ColorScaleCriterion(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return ColorScaleCriterion(self.com_object.GetItem(*arguments))
+        else:
+            return ColorScaleCriterion(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -11522,10 +11522,10 @@ class CubeFields:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -11583,10 +11583,10 @@ class CustomProperties:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -12208,10 +12208,10 @@ class DataLabel:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return Characters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return Characters(self.com_object.GetCharacters(*arguments))
+        else:
+            return Characters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -13597,10 +13597,10 @@ class Dialogs:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -13683,10 +13683,10 @@ class DisplayFormat:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return Characters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return Characters(self.com_object.GetCharacters(*arguments))
+        else:
+            return Characters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -13875,10 +13875,10 @@ class DisplayUnitLabel:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return Characters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return Characters(self.com_object.GetCharacters(*arguments))
+        else:
+            return Characters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -14686,10 +14686,10 @@ class Errors:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Error(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Error(self.com_object.GetItem(*arguments))
+        else:
+            return Error(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -14793,10 +14793,10 @@ class FileExportConverters:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return FileExportConverter(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return FileExportConverter(self.com_object.GetItem(*arguments))
+        else:
+            return FileExportConverter(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -15336,10 +15336,10 @@ class Filters:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -16575,10 +16575,10 @@ class GroupShapes:
 
     def Range(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Range):
-            return ShapeRange(self.com_object.Range(*arguments))
-        else:
+        if hasattr(self.com_object, "GetRange"):
             return ShapeRange(self.com_object.GetRange(*arguments))
+        else:
+            return ShapeRange(self.com_object.Range(*arguments))
 
     # Lower case aliases for Range
     def range(self, Index=None):
@@ -16812,10 +16812,10 @@ class HPageBreaks:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -17051,10 +17051,10 @@ class Hyperlinks:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -17140,10 +17140,10 @@ class IconCriteria:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return IconCriterion(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return IconCriterion(self.com_object.GetItem(*arguments))
+        else:
+            return IconCriterion(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -17264,10 +17264,10 @@ class IconSet:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Icon(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Icon(self.com_object.GetItem(*arguments))
+        else:
+            return Icon(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -17543,10 +17543,10 @@ class IconSets:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return IconSet(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return IconSet(self.com_object.GetItem(*arguments))
+        else:
+            return IconSet(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -19107,10 +19107,10 @@ class ListColumns:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -19741,10 +19741,10 @@ class ListObjects:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -19855,10 +19855,10 @@ class ListRows:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -22634,10 +22634,10 @@ class Pages:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Page(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Page(self.com_object.GetItem(*arguments))
+        else:
+            return Page(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -23554,10 +23554,10 @@ class Panes:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -23943,10 +23943,10 @@ class Phonetics:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -25150,10 +25150,10 @@ class PivotField:
 
     def ChildItems(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ChildItems):
-            return PivotItem(self.com_object.ChildItems(*arguments))
-        else:
+        if hasattr(self.com_object, "GetChildItems"):
             return PivotItem(self.com_object.GetChildItems(*arguments))
+        else:
+            return PivotItem(self.com_object.ChildItems(*arguments))
 
     # Lower case aliases for ChildItems
     def childitems(self, Index=None):
@@ -25505,10 +25505,10 @@ class PivotField:
 
     def HiddenItems(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.HiddenItems):
-            return PivotItem(self.com_object.HiddenItems(*arguments))
-        else:
+        if hasattr(self.com_object, "GetHiddenItems"):
             return PivotItem(self.com_object.GetHiddenItems(*arguments))
+        else:
+            return PivotItem(self.com_object.HiddenItems(*arguments))
 
     # Lower case aliases for HiddenItems
     def hiddenitems(self, Index=None):
@@ -25758,10 +25758,10 @@ class PivotField:
 
     def ParentItems(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ParentItems):
-            return PivotItem(self.com_object.ParentItems(*arguments))
-        else:
+        if hasattr(self.com_object, "GetParentItems"):
             return PivotItem(self.com_object.GetParentItems(*arguments))
+        else:
+            return PivotItem(self.com_object.ParentItems(*arguments))
 
     # Lower case aliases for ParentItems
     def parentitems(self, Index=None):
@@ -26019,10 +26019,10 @@ class PivotField:
 
     def VisibleItems(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.VisibleItems):
-            return PivotItem(self.com_object.VisibleItems(*arguments))
-        else:
+        if hasattr(self.com_object, "GetVisibleItems"):
             return PivotItem(self.com_object.GetVisibleItems(*arguments))
+        else:
+            return PivotItem(self.com_object.VisibleItems(*arguments))
 
     # Lower case aliases for VisibleItems
     def visibleitems(self, Index=None):
@@ -26403,10 +26403,10 @@ class PivotFilters:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return PivotFilters(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return PivotFilters(self.com_object.GetItem(*arguments))
+        else:
+            return PivotFilters(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -26610,10 +26610,10 @@ class PivotItem:
 
     def ChildItems(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ChildItems):
-            return PivotItem(self.com_object.ChildItems(*arguments))
-        else:
+        if hasattr(self.com_object, "GetChildItems"):
             return PivotItem(self.com_object.GetChildItems(*arguments))
+        else:
+            return PivotItem(self.com_object.ChildItems(*arguments))
 
     # Lower case aliases for ChildItems
     def childitems(self, Index=None):
@@ -27099,10 +27099,10 @@ class PivotLineCells:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return PivotLineCells(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return PivotLineCells(self.com_object.GetItem(*arguments))
+        else:
+            return PivotLineCells(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -27148,10 +27148,10 @@ class PivotLines:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return PivotLines(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return PivotLines(self.com_object.GetItem(*arguments))
+        else:
+            return PivotLines(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -27342,10 +27342,10 @@ class PivotTable:
 
     def ColumnFields(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ColumnFields):
-            return PivotField(self.com_object.ColumnFields(*arguments))
-        else:
+        if hasattr(self.com_object, "GetColumnFields"):
             return PivotField(self.com_object.GetColumnFields(*arguments))
+        else:
+            return PivotField(self.com_object.ColumnFields(*arguments))
 
     # Lower case aliases for ColumnFields
     def columnfields(self, Index=None):
@@ -27458,10 +27458,10 @@ class PivotTable:
 
     def DataFields(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.DataFields):
-            return PivotField(self.com_object.DataFields(*arguments))
-        else:
+        if hasattr(self.com_object, "GetDataFields"):
             return PivotField(self.com_object.GetDataFields(*arguments))
+        else:
+            return PivotField(self.com_object.DataFields(*arguments))
 
     # Lower case aliases for DataFields
     def datafields(self, Index=None):
@@ -27777,10 +27777,10 @@ class PivotTable:
 
     def HiddenFields(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.HiddenFields):
-            return PivotField(self.com_object.HiddenFields(*arguments))
-        else:
+        if hasattr(self.com_object, "GetHiddenFields"):
             return PivotField(self.com_object.GetHiddenFields(*arguments))
+        else:
+            return PivotField(self.com_object.HiddenFields(*arguments))
 
     # Lower case aliases for HiddenFields
     def hiddenfields(self, Index=None):
@@ -27951,10 +27951,10 @@ class PivotTable:
 
     def PageFields(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.PageFields):
-            return PivotField(self.com_object.PageFields(*arguments))
-        else:
+        if hasattr(self.com_object, "GetPageFields"):
             return PivotField(self.com_object.GetPageFields(*arguments))
+        else:
+            return PivotField(self.com_object.PageFields(*arguments))
 
     # Lower case aliases for PageFields
     def pagefields(self, Index=None):
@@ -28163,10 +28163,10 @@ class PivotTable:
 
     def RowFields(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.RowFields):
-            return PivotField(self.com_object.RowFields(*arguments))
-        else:
+        if hasattr(self.com_object, "GetRowFields"):
             return PivotField(self.com_object.GetRowFields(*arguments))
+        else:
+            return PivotField(self.com_object.RowFields(*arguments))
 
     # Lower case aliases for RowFields
     def rowfields(self, Index=None):
@@ -28577,10 +28577,10 @@ class PivotTable:
 
     def VisibleFields(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.VisibleFields):
-            return PivotField(self.com_object.VisibleFields(*arguments))
-        else:
+        if hasattr(self.com_object, "GetVisibleFields"):
             return PivotField(self.com_object.GetVisibleFields(*arguments))
+        else:
+            return PivotField(self.com_object.VisibleFields(*arguments))
 
     # Lower case aliases for VisibleFields
     def visiblefields(self, Index=None):
@@ -28863,10 +28863,10 @@ class PivotTableChangeList:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return ValueChange(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return ValueChange(self.com_object.GetItem(*arguments))
+        else:
+            return ValueChange(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -29869,10 +29869,10 @@ class ProtectedViewWindows:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -30192,10 +30192,10 @@ class PublishObjects:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -31307,10 +31307,10 @@ class Range:
 
     def Address(self, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
         arguments = com_arguments([unwrap(a) for a in [RowAbsolute, ColumnAbsolute, ReferenceStyle, External, RelativeTo]])
-        if callable(self.com_object.Address):
-            return self.com_object.Address(*arguments)
-        else:
+        if hasattr(self.com_object, "GetAddress"):
             return self.com_object.GetAddress(*arguments)
+        else:
+            return self.com_object.Address(*arguments)
 
     # Lower case aliases for Address
     def address(self, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
@@ -31319,10 +31319,10 @@ class Range:
 
     def AddressLocal(self, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
         arguments = com_arguments([unwrap(a) for a in [RowAbsolute, ColumnAbsolute, ReferenceStyle, External, RelativeTo]])
-        if callable(self.com_object.AddressLocal):
-            return self.com_object.AddressLocal(*arguments)
-        else:
+        if hasattr(self.com_object, "GetAddressLocal"):
             return self.com_object.GetAddressLocal(*arguments)
+        else:
+            return self.com_object.AddressLocal(*arguments)
 
     # Lower case aliases for AddressLocal
     def addresslocal(self, RowAbsolute=None, ColumnAbsolute=None, ReferenceStyle=None, External=None, RelativeTo=None):
@@ -31362,10 +31362,10 @@ class Range:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return Range(self.com_object.Cells(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return Range(self.com_object.GetCells(*arguments))
+        else:
+            return Range(self.com_object.Cells(*arguments))
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -31374,10 +31374,10 @@ class Range:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return Characters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return Characters(self.com_object.GetCharacters(*arguments))
+        else:
+            return Characters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -31520,10 +31520,10 @@ class Range:
 
     def End(self, Direction=None):
         arguments = com_arguments([unwrap(a) for a in [Direction]])
-        if callable(self.com_object.End):
-            return Range(self.com_object.End(*arguments))
-        else:
+        if hasattr(self.com_object, "GetEnd"):
             return Range(self.com_object.GetEnd(*arguments))
+        else:
+            return Range(self.com_object.End(*arguments))
 
     # Lower case aliases for End
     def end(self, Direction=None):
@@ -31854,10 +31854,10 @@ class Range:
 
     def Item(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Item):
-            return Range(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Range(self.com_object.GetItem(*arguments))
+        else:
+            return Range(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, RowIndex=None, ColumnIndex=None):
@@ -32023,10 +32023,10 @@ class Range:
 
     def Offset(self, RowOffset=None, ColumnOffset=None):
         arguments = com_arguments([unwrap(a) for a in [RowOffset, ColumnOffset]])
-        if callable(self.com_object.Offset):
-            return Range(self.com_object.Offset(*arguments))
-        else:
+        if hasattr(self.com_object, "GetOffset"):
             return Range(self.com_object.GetOffset(*arguments))
+        else:
+            return Range(self.com_object.Offset(*arguments))
 
     # Lower case aliases for Offset
     def offset(self, RowOffset=None, ColumnOffset=None):
@@ -32185,10 +32185,10 @@ class Range:
 
     def Range(self, Cell1=None, Cell2=None):
         arguments = com_arguments([unwrap(a) for a in [Cell1, Cell2]])
-        if callable(self.com_object.Range):
-            return Range(self.com_object.Range(*arguments))
-        else:
+        if hasattr(self.com_object, "GetRange"):
             return Range(self.com_object.GetRange(*arguments))
+        else:
+            return Range(self.com_object.Range(*arguments))
 
     # Lower case aliases for Range
     def range(self, Cell1=None, Cell2=None):
@@ -32214,10 +32214,10 @@ class Range:
 
     def Resize(self, RowSize=None, ColumnSize=None):
         arguments = com_arguments([unwrap(a) for a in [RowSize, ColumnSize]])
-        if callable(self.com_object.Resize):
-            return Range(self.com_object.Resize(*arguments))
-        else:
+        if hasattr(self.com_object, "GetResize"):
             return Range(self.com_object.GetResize(*arguments))
+        else:
+            return Range(self.com_object.Resize(*arguments))
 
     # Lower case aliases for Resize
     def resize(self, RowSize=None, ColumnSize=None):
@@ -33238,10 +33238,10 @@ class Ranges:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Range(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Range(self.com_object.GetItem(*arguments))
+        else:
+            return Range(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -33356,10 +33356,10 @@ class RecentFiles:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -33812,10 +33812,10 @@ class Scenario:
 
     def Values(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Values):
-            return self.com_object.Values(*arguments)
-        else:
+        if hasattr(self.com_object, "GetValues"):
             return self.com_object.GetValues(*arguments)
+        else:
+            return self.com_object.Values(*arguments)
 
     # Lower case aliases for Values
     def values(self, Index=None):
@@ -36151,10 +36151,10 @@ class Shapes:
 
     def Range(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Range):
-            return ShapeRange(self.com_object.Range(*arguments))
-        else:
+        if hasattr(self.com_object, "GetRange"):
             return ShapeRange(self.com_object.GetRange(*arguments))
+        else:
+            return ShapeRange(self.com_object.Range(*arguments))
 
     # Lower case aliases for Range
     def range(self, Index=None):
@@ -36354,10 +36354,10 @@ class Sheets:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -36502,10 +36502,10 @@ class SheetViews:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -37199,10 +37199,10 @@ class SlicerCacheLevels:
 
     def Item(self, Level=None):
         arguments = com_arguments([unwrap(a) for a in [Level]])
-        if callable(self.com_object.Item):
-            return SlicerCacheLevel(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return SlicerCacheLevel(self.com_object.GetItem(*arguments))
+        else:
+            return SlicerCacheLevel(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Level=None):
@@ -37248,10 +37248,10 @@ class SlicerCaches:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return SlicerCache(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return SlicerCache(self.com_object.GetItem(*arguments))
+        else:
+            return SlicerCache(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -37405,10 +37405,10 @@ class SlicerItems:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return SlicerItem(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return SlicerItem(self.com_object.GetItem(*arguments))
+        else:
+            return SlicerItem(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -37454,10 +37454,10 @@ class SlicerPivotTables:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return PivotTable(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return PivotTable(self.com_object.GetItem(*arguments))
+        else:
+            return PivotTable(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -37524,10 +37524,10 @@ class Slicers:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Slicer(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Slicer(self.com_object.GetItem(*arguments))
+        else:
+            return Slicer(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -37868,10 +37868,10 @@ class SortFields:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return SortField(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return SortField(self.com_object.GetItem(*arguments))
+        else:
+            return SortField(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -38228,10 +38228,10 @@ class SparklineGroup:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return Sparkline(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return Sparkline(self.com_object.GetItem(*arguments))
+        else:
+            return Sparkline(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -38397,10 +38397,10 @@ class SparklineGroups:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return SparklineGroup(self.com_object.Item(*arguments))
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return SparklineGroup(self.com_object.GetItem(*arguments))
+        else:
+            return SparklineGroup(self.com_object.Item(*arguments))
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -39473,10 +39473,10 @@ class Styles:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -42390,10 +42390,10 @@ class UsedObjects:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -42476,10 +42476,10 @@ class UserAccessList:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -42981,10 +42981,10 @@ class VPageBreaks:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -43204,10 +43204,10 @@ class Watches:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -44371,10 +44371,10 @@ class Windows:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -46291,10 +46291,10 @@ class Workbooks:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -46418,10 +46418,10 @@ class Worksheet:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return Range(self.com_object.Cells(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return Range(self.com_object.GetCells(*arguments))
+        else:
+            return Range(self.com_object.Cells(*arguments))
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -46836,10 +46836,10 @@ class Worksheet:
 
     def Range(self, Cell1=None, Cell2=None):
         arguments = com_arguments([unwrap(a) for a in [Cell1, Cell2]])
-        if callable(self.com_object.Range):
-            return Range(self.com_object.Range(*arguments))
-        else:
+        if hasattr(self.com_object, "GetRange"):
             return Range(self.com_object.GetRange(*arguments))
+        else:
+            return Range(self.com_object.Range(*arguments))
 
     # Lower case aliases for Range
     def range(self, Cell1=None, Cell2=None):
@@ -50310,10 +50310,10 @@ class Worksheets:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -53401,10 +53401,10 @@ class XmlMaps:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -53505,10 +53505,10 @@ class XmlNamespaces:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -53627,10 +53627,10 @@ class XmlSchemas:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):

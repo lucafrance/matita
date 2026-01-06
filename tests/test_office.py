@@ -66,7 +66,9 @@ class TestExcel(unittest.TestCase):
 
     def test_range_operations(self):
         wkb = self.xl_app.Workbooks.Add()
-        rng1 = wkb.cells(1,1)
+        wks = wkb.worksheets(1)
+        rng = wks.cells(2,3)
+        self.assertEqual(rng.resize(4,5).address(), "$C$2:$G$5")
 
 
 class TestPowerPoint(unittest.TestCase):

@@ -717,10 +717,10 @@ class Application:
 
     def FileDialog(self, FileDialogType=None):
         arguments = com_arguments([unwrap(a) for a in [FileDialogType]])
-        if callable(self.com_object.FileDialog):
-            return self.com_object.FileDialog(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileDialog"):
             return self.com_object.GetFileDialog(*arguments)
+        else:
+            return self.com_object.FileDialog(*arguments)
 
     # Lower case aliases for FileDialog
     def filedialog(self, FileDialogType=None):
@@ -746,10 +746,10 @@ class Application:
 
     def FindKey(self, KeyCode=None, KeyCode2=None):
         arguments = com_arguments([unwrap(a) for a in [KeyCode, KeyCode2]])
-        if callable(self.com_object.FindKey):
-            return KeyBinding(self.com_object.FindKey(*arguments))
-        else:
+        if hasattr(self.com_object, "GetFindKey"):
             return KeyBinding(self.com_object.GetFindKey(*arguments))
+        else:
+            return KeyBinding(self.com_object.FindKey(*arguments))
 
     # Lower case aliases for FindKey
     def findkey(self, KeyCode=None, KeyCode2=None):
@@ -802,10 +802,10 @@ class Application:
 
     def International(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.International):
-            return self.com_object.International(*arguments)
-        else:
+        if hasattr(self.com_object, "GetInternational"):
             return self.com_object.GetInternational(*arguments)
+        else:
+            return self.com_object.International(*arguments)
 
     # Lower case aliases for International
     def international(self, Index=None):
@@ -814,10 +814,10 @@ class Application:
 
     def IsObjectValid(self, Object=None):
         arguments = com_arguments([unwrap(a) for a in [Object]])
-        if callable(self.com_object.IsObjectValid):
-            return self.com_object.IsObjectValid(*arguments)
-        else:
+        if hasattr(self.com_object, "GetIsObjectValid"):
             return self.com_object.GetIsObjectValid(*arguments)
+        else:
+            return self.com_object.IsObjectValid(*arguments)
 
     # Lower case aliases for IsObjectValid
     def isobjectvalid(self, Object=None):
@@ -844,10 +844,10 @@ class Application:
 
     def KeysBoundTo(self, KeyCategory=None, Command=None, CommandParameter=None):
         arguments = com_arguments([unwrap(a) for a in [KeyCategory, Command, CommandParameter]])
-        if callable(self.com_object.KeysBoundTo):
-            return self.com_object.KeysBoundTo(*arguments)
-        else:
+        if hasattr(self.com_object, "GetKeysBoundTo"):
             return self.com_object.GetKeysBoundTo(*arguments)
+        else:
+            return self.com_object.KeysBoundTo(*arguments)
 
     # Lower case aliases for KeysBoundTo
     def keysboundto(self, KeyCategory=None, Command=None, CommandParameter=None):
@@ -1297,10 +1297,10 @@ class Application:
 
     def SynonymInfo(self, Word=None, LanguageID=None):
         arguments = com_arguments([unwrap(a) for a in [Word, LanguageID]])
-        if callable(self.com_object.SynonymInfo):
-            return SynonymInfo(self.com_object.SynonymInfo(*arguments))
-        else:
+        if hasattr(self.com_object, "GetSynonymInfo"):
             return SynonymInfo(self.com_object.GetSynonymInfo(*arguments))
+        else:
+            return SynonymInfo(self.com_object.SynonymInfo(*arguments))
 
     # Lower case aliases for SynonymInfo
     def synonyminfo(self, Word=None, LanguageID=None):
@@ -3439,10 +3439,10 @@ class AxisTitle:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -5652,10 +5652,10 @@ class Chart:
 
     def ChartGroups(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ChartGroups):
-            return self.com_object.ChartGroups(*arguments)
-        else:
+        if hasattr(self.com_object, "GetChartGroups"):
             return self.com_object.GetChartGroups(*arguments)
+        else:
+            return self.com_object.ChartGroups(*arguments)
 
     # Lower case aliases for ChartGroups
     def chartgroups(self, Index=None):
@@ -7590,10 +7590,10 @@ class ChartTitle:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -8531,10 +8531,10 @@ class Column:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return self.com_object.Cells(*arguments)
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return self.com_object.GetCells(*arguments)
+        else:
+            return self.com_object.Cells(*arguments)
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -10108,10 +10108,10 @@ class DataLabel:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -11656,10 +11656,10 @@ class DisplayUnitLabel:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -20204,10 +20204,10 @@ class Frameset:
 
     def ChildFramesetItem(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ChildFramesetItem):
-            return Frameset(self.com_object.ChildFramesetItem(*arguments))
-        else:
+        if hasattr(self.com_object, "GetChildFramesetItem"):
             return Frameset(self.com_object.GetChildFramesetItem(*arguments))
+        else:
+            return Frameset(self.com_object.ChildFramesetItem(*arguments))
 
     # Lower case aliases for ChildFramesetItem
     def childframesetitem(self, Index=None):
@@ -24758,10 +24758,10 @@ class ListGallery:
 
     def Modified(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Modified):
-            return self.com_object.Modified(*arguments)
-        else:
+        if hasattr(self.com_object, "GetModified"):
             return self.com_object.GetModified(*arguments)
+        else:
+            return self.com_object.Modified(*arguments)
 
     # Lower case aliases for Modified
     def modified(self, Index=None):
@@ -28648,10 +28648,10 @@ class OMathMat:
 
     def Cell(self, Row=None, Col=None):
         arguments = com_arguments([unwrap(a) for a in [Row, Col]])
-        if callable(self.com_object.Cell):
-            return OMath(self.com_object.Cell(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCell"):
             return OMath(self.com_object.GetCell(*arguments))
+        else:
+            return OMath(self.com_object.Cell(*arguments))
 
     # Lower case aliases for Cell
     def cell(self, Row=None, Col=None):
@@ -35188,10 +35188,10 @@ class Paragraph:
 
     def ListNumberOriginal(self, Level=None):
         arguments = com_arguments([unwrap(a) for a in [Level]])
-        if callable(self.com_object.ListNumberOriginal):
-            return self.com_object.ListNumberOriginal(*arguments)
-        else:
+        if hasattr(self.com_object, "GetListNumberOriginal"):
             return self.com_object.GetListNumberOriginal(*arguments)
+        else:
+            return self.com_object.ListNumberOriginal(*arguments)
 
     # Lower case aliases for ListNumberOriginal
     def listnumberoriginal(self, Level=None):
@@ -37679,10 +37679,10 @@ class Range:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return self.com_object.Cells(*arguments)
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return self.com_object.GetCells(*arguments)
+        else:
+            return self.com_object.Cells(*arguments)
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -38093,10 +38093,10 @@ class Range:
 
     def Information(self, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Type]])
-        if callable(self.com_object.Information):
-            return self.com_object.Information(*arguments)
-        else:
+        if hasattr(self.com_object, "GetInformation"):
             return self.com_object.GetInformation(*arguments)
+        else:
+            return self.com_object.Information(*arguments)
 
     # Lower case aliases for Information
     def information(self, Type=None):
@@ -38708,10 +38708,10 @@ class Range:
 
     def XML(self, DataOnly=None):
         arguments = com_arguments([unwrap(a) for a in [DataOnly]])
-        if callable(self.com_object.XML):
-            return self.com_object.XML(*arguments)
-        else:
+        if hasattr(self.com_object, "GetXML"):
             return self.com_object.GetXML(*arguments)
+        else:
+            return self.com_object.XML(*arguments)
 
     # Lower case aliases for XML
     def xml(self, DataOnly=None):
@@ -40118,10 +40118,10 @@ class Revision:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return self.com_object.Cells(*arguments)
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return self.com_object.GetCells(*arguments)
+        else:
+            return self.com_object.Cells(*arguments)
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -40278,10 +40278,10 @@ class Row:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return self.com_object.Cells(*arguments)
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return self.com_object.GetCells(*arguments)
+        else:
+            return self.com_object.Cells(*arguments)
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -40668,10 +40668,10 @@ class Selection:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return self.com_object.Cells(*arguments)
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return self.com_object.GetCells(*arguments)
+        else:
+            return self.com_object.Cells(*arguments)
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -40979,10 +40979,10 @@ class Selection:
 
     def Information(self, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Type]])
-        if callable(self.com_object.Information):
-            return self.com_object.Information(*arguments)
-        else:
+        if hasattr(self.com_object, "GetInformation"):
             return self.com_object.GetInformation(*arguments)
+        else:
+            return self.com_object.Information(*arguments)
 
     # Lower case aliases for Information
     def information(self, Type=None):
@@ -41367,10 +41367,10 @@ class Selection:
 
     def XML(self, DataOnly=None):
         arguments = com_arguments([unwrap(a) for a in [DataOnly]])
-        if callable(self.com_object.XML):
-            return self.com_object.XML(*arguments)
-        else:
+        if hasattr(self.com_object, "GetXML"):
             return self.com_object.GetXML(*arguments)
+        else:
+            return self.com_object.XML(*arguments)
 
     # Lower case aliases for XML
     def xml(self, DataOnly=None):
@@ -44568,10 +44568,10 @@ class Source:
 
     def Field(self, Name=None):
         arguments = com_arguments([unwrap(a) for a in [Name]])
-        if callable(self.com_object.Field):
-            return self.com_object.Field(*arguments)
-        else:
+        if hasattr(self.com_object, "GetField"):
             return self.com_object.GetField(*arguments)
+        else:
+            return self.com_object.Field(*arguments)
 
     # Lower case aliases for Field
     def field(self, Name=None):
@@ -45514,10 +45514,10 @@ class SynonymInfo:
 
     def SynonymList(self, Meaning=None):
         arguments = com_arguments([unwrap(a) for a in [Meaning]])
-        if callable(self.com_object.SynonymList):
-            return self.com_object.SynonymList(*arguments)
-        else:
+        if hasattr(self.com_object, "GetSynonymList"):
             return self.com_object.GetSynonymList(*arguments)
+        else:
+            return self.com_object.SynonymList(*arguments)
 
     # Lower case aliases for SynonymList
     def synonymlist(self, Meaning=None):
@@ -56437,10 +56437,10 @@ class XMLNode:
 
     def ValidationErrorText(self, Advanced=None):
         arguments = com_arguments([unwrap(a) for a in [Advanced]])
-        if callable(self.com_object.ValidationErrorText):
-            return self.com_object.ValidationErrorText(*arguments)
-        else:
+        if hasattr(self.com_object, "GetValidationErrorText"):
             return self.com_object.GetValidationErrorText(*arguments)
+        else:
+            return self.com_object.ValidationErrorText(*arguments)
 
     # Lower case aliases for ValidationErrorText
     def validationerrortext(self, Advanced=None):

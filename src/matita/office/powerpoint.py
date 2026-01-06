@@ -1206,10 +1206,10 @@ class Application:
 
     def FileConverters(self, Index1=None, Index2=None):
         arguments = com_arguments([unwrap(a) for a in [Index1, Index2]])
-        if callable(self.com_object.FileConverters):
-            return self.com_object.FileConverters(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileConverters"):
             return self.com_object.GetFileConverters(*arguments)
+        else:
+            return self.com_object.FileConverters(*arguments)
 
     # Lower case aliases for FileConverters
     def fileconverters(self, Index1=None, Index2=None):
@@ -1218,10 +1218,10 @@ class Application:
 
     def FileDialog(self, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Type]])
-        if callable(self.com_object.FileDialog):
-            return self.com_object.FileDialog(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileDialog"):
             return self.com_object.GetFileDialog(*arguments)
+        else:
+            return self.com_object.FileDialog(*arguments)
 
     # Lower case aliases for FileDialog
     def filedialog(self, Type=None):
@@ -2400,10 +2400,10 @@ class AxisTitle:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -5271,10 +5271,10 @@ class ChartTitle:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -5940,10 +5940,10 @@ class Column:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return CellRange(self.com_object.Cells(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return CellRange(self.com_object.GetCells(*arguments))
+        else:
+            return CellRange(self.com_object.Cells(*arguments))
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):
@@ -6793,10 +6793,10 @@ class DataLabel:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -7932,10 +7932,10 @@ class DisplayUnitLabel:
 
     def Characters(self, Start=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length]])
-        if callable(self.com_object.Characters):
-            return ChartCharacters(self.com_object.Characters(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCharacters"):
             return ChartCharacters(self.com_object.GetCharacters(*arguments))
+        else:
+            return ChartCharacters(self.com_object.Characters(*arguments))
 
     # Lower case aliases for Characters
     def characters(self, Start=None, Length=None):
@@ -18199,10 +18199,10 @@ class Row:
 
     def Cells(self, RowIndex=None, ColumnIndex=None):
         arguments = com_arguments([unwrap(a) for a in [RowIndex, ColumnIndex]])
-        if callable(self.com_object.Cells):
-            return CellRange(self.com_object.Cells(*arguments))
-        else:
+        if hasattr(self.com_object, "GetCells"):
             return CellRange(self.com_object.GetCells(*arguments))
+        else:
+            return CellRange(self.com_object.Cells(*arguments))
 
     # Lower case aliases for Cells
     def cells(self, RowIndex=None, ColumnIndex=None):

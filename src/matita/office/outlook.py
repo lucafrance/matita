@@ -23311,10 +23311,10 @@ class PropertyPage:
 
     def Dirty(self, Dirty=None):
         arguments = com_arguments([unwrap(a) for a in [Dirty]])
-        if callable(self.com_object.Dirty):
-            return self.com_object.Dirty(*arguments)
-        else:
+        if hasattr(self.com_object, "GetDirty"):
             return self.com_object.GetDirty(*arguments)
+        else:
+            return self.com_object.Dirty(*arguments)
 
     # Lower case aliases for Dirty
     def dirty(self, Dirty=None):

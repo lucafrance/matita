@@ -79,14 +79,6 @@ For Excel specifically [`xlwings`](https://docs.xlwings.org/en/latest/missing_fe
 
 This is different from other popular Python packages for Office automation, such as [`openpyxl`](https://openpyxl.readthedocs.io) for Excel, [`python-docx`](https://python-docx.readthedocs.io) for Word, or [`python-pptx`](https://pypi.org/project/python-pptx/) for PowerPoint, which implement their own object models and do not use the Office VBA Object Library.
 
-## Parser for the Office VBA Reference
-
-This project is based on the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft Corporation, [licensed](https://github.com/MicrosoftDocs/VBA-Docs/blob/main/LICENSE) under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
-
-The subpackage `matita.reference`:
-- parses of the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview),
-- saves the object model to `data/office-vba-api.json`,
-- creates the subpackage `matita.office`.
 
 ### Advantages of `matita` over `pywin32` directly
 
@@ -149,6 +141,48 @@ c = wks.Range("A1")
 # Works, Range.Address is a method with arguments
 print(c.Address(ReferenceStyle=xl.xlR1C1)) #R1C1
 ```
+
+Sometimes there are methods from `pywin32` which [don't behave as expected](https://stackoverflow.com/questions/63112880/why-does-pythons-version-of-excels-range-resize-not-work-as-expected).
+This is addressed in `matita`.
+
+```python
+import win32com.client
+
+xl_app = win32com.client.Dispatch("Excel.Application")
+wkb = xl_app.Workbooks.Add()
+wks = wkb.Worksheets(1)
+
+rng = wks.Cells(1,1)
+print(rng.Resize(2,3).Address) # $C$2, wrong result
+print(rng.GetResize(2,3).Address) # $A$1:$C$2, correct result
+
+wkb.Close(False)
+xl_app.Quit()
+```
+
+```python
+from matita.office import excel as xl
+
+xl_app = xl.Application().new()
+wkb = xl_app.Workbooks.add()
+wks = wkb.Worksheets(1)
+
+rng = wks.Cells(1,1)
+print(rng.resize(2,3).Address()) # $A$1:$C$2, correct result
+
+wkb.close(False)
+xl_app.Quit()
+```
+
+
+## Parser for the Office VBA Reference
+
+This project is based on the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft Corporation, [licensed](https://github.com/MicrosoftDocs/VBA-Docs/blob/main/LICENSE) under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+
+The subpackage `matita.reference`:
+- parses of the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview),
+- saves the object model to [`data/office-vba-api.json`](./data/office-vba-api.json),
+- creates the subpackage `matita.office`.
 
 ## Limitations of `matita`
 

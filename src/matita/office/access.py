@@ -171,10 +171,10 @@ class AccessObjectProperties:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -1600,10 +1600,10 @@ class AdditionalData:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -1657,10 +1657,10 @@ class AllDatabaseDiagrams:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1697,10 +1697,10 @@ class AllForms:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1737,10 +1737,10 @@ class AllFunctions:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1777,10 +1777,10 @@ class AllModules:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1817,10 +1817,10 @@ class AllQueries:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1857,10 +1857,10 @@ class AllReports:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1897,10 +1897,10 @@ class AllStoredProcedures:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1937,10 +1937,10 @@ class AllTables:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -1977,10 +1977,10 @@ class AllViews:
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, var=None):
@@ -2199,10 +2199,10 @@ class Application:
 
     def FileDialog(self, dialogType=None):
         arguments = com_arguments([unwrap(a) for a in [dialogType]])
-        if callable(self.com_object.FileDialog):
-            return self.com_object.FileDialog(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileDialog"):
             return self.com_object.GetFileDialog(*arguments)
+        else:
+            return self.com_object.FileDialog(*arguments)
 
     # Lower case aliases for FileDialog
     def filedialog(self, dialogType=None):
@@ -3607,10 +3607,10 @@ class Attachment:
 
     def FileName(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.FileName):
-            return self.com_object.FileName(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileName"):
             return self.com_object.GetFileName(*arguments)
+        else:
+            return self.com_object.FileName(*arguments)
 
     # Lower case aliases for FileName
     def filename(self, var=None):
@@ -3619,10 +3619,10 @@ class Attachment:
 
     def FileType(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.FileType):
-            return self.com_object.FileType(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileType"):
             return self.com_object.GetFileType(*arguments)
+        else:
+            return self.com_object.FileType(*arguments)
 
     # Lower case aliases for FileType
     def filetype(self, var=None):
@@ -3631,10 +3631,10 @@ class Attachment:
 
     def FileURL(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
-        if callable(self.com_object.FileURL):
-            return self.com_object.FileURL(*arguments)
-        else:
+        if hasattr(self.com_object, "GetFileURL"):
             return self.com_object.GetFileURL(*arguments)
+        else:
+            return self.com_object.FileURL(*arguments)
 
     # Lower case aliases for FileURL
     def fileurl(self, var=None):
@@ -5628,10 +5628,10 @@ class BoundObjectFrame:
 
     def ObjectVerbs(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ObjectVerbs):
-            return self.com_object.ObjectVerbs(*arguments)
-        else:
+        if hasattr(self.com_object, "GetObjectVerbs"):
             return self.com_object.GetObjectVerbs(*arguments)
+        else:
+            return self.com_object.ObjectVerbs(*arguments)
 
     # Lower case aliases for ObjectVerbs
     def objectverbs(self, Index=None):
@@ -9612,10 +9612,10 @@ class ComboBox:
 
     def Column(self, Index=None, Row=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Row]])
-        if callable(self.com_object.Column):
-            return self.com_object.Column(*arguments)
-        else:
+        if hasattr(self.com_object, "GetColumn"):
             return self.com_object.GetColumn(*arguments)
+        else:
+            return self.com_object.Column(*arguments)
 
     # Lower case aliases for Column
     def column(self, Index=None, Row=None):
@@ -10410,10 +10410,10 @@ class ComboBox:
 
     def ItemData(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ItemData):
-            return self.com_object.ItemData(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItemData"):
             return self.com_object.GetItemData(*arguments)
+        else:
+            return self.com_object.ItemData(*arguments)
 
     # Lower case aliases for ItemData
     def itemdata(self, Index=None):
@@ -13689,10 +13689,10 @@ class Control:
 
     def Column(self, Index=None, Row=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Row]])
-        if callable(self.com_object.Column):
-            return self.com_object.Column(*arguments)
-        else:
+        if hasattr(self.com_object, "GetColumn"):
             return self.com_object.GetColumn(*arguments)
+        else:
+            return self.com_object.Column(*arguments)
 
     # Lower case aliases for Column
     def column(self, Index=None, Row=None):
@@ -13898,10 +13898,10 @@ class Control:
 
     def ItemData(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ItemData):
-            return self.com_object.ItemData(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItemData"):
             return self.com_object.GetItemData(*arguments)
+        else:
+            return self.com_object.ItemData(*arguments)
 
     # Lower case aliases for ItemData
     def itemdata(self, Index=None):
@@ -13972,10 +13972,10 @@ class Control:
 
     def ObjectVerbs(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ObjectVerbs):
-            return self.com_object.ObjectVerbs(*arguments)
-        else:
+        if hasattr(self.com_object, "GetObjectVerbs"):
             return self.com_object.GetObjectVerbs(*arguments)
+        else:
+            return self.com_object.ObjectVerbs(*arguments)
 
     # Lower case aliases for ObjectVerbs
     def objectverbs(self, Index=None):
@@ -14169,10 +14169,10 @@ class Controls:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -15155,10 +15155,10 @@ class CustomControl:
 
     def ObjectVerbs(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ObjectVerbs):
-            return self.com_object.ObjectVerbs(*arguments)
-        else:
+        if hasattr(self.com_object, "GetObjectVerbs"):
             return self.com_object.GetObjectVerbs(*arguments)
+        else:
+            return self.com_object.ObjectVerbs(*arguments)
 
     # Lower case aliases for ObjectVerbs
     def objectverbs(self, Index=None):
@@ -15653,10 +15653,10 @@ class DependencyObjects:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -17066,10 +17066,10 @@ class Entities:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -18041,10 +18041,10 @@ class Form:
 
     def DefaultControl(self, ControlType=None):
         arguments = com_arguments([unwrap(a) for a in [ControlType]])
-        if callable(self.com_object.DefaultControl):
-            return self.com_object.DefaultControl(*arguments)
-        else:
+        if hasattr(self.com_object, "GetDefaultControl"):
             return self.com_object.GetDefaultControl(*arguments)
+        else:
+            return self.com_object.DefaultControl(*arguments)
 
     # Lower case aliases for DefaultControl
     def defaultcontrol(self, ControlType=None):
@@ -19689,10 +19689,10 @@ class Form:
 
     def Section(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Section):
-            return self.com_object.Section(*arguments)
-        else:
+        if hasattr(self.com_object, "GetSection"):
             return self.com_object.GetSection(*arguments)
+        else:
+            return self.com_object.Section(*arguments)
 
     # Lower case aliases for Section
     def section(self, Index=None):
@@ -20488,10 +20488,10 @@ class FormatConditions:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -20544,10 +20544,10 @@ class Forms:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -22099,10 +22099,10 @@ class ImportExportSpecifications:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -24144,10 +24144,10 @@ class ListBox:
 
     def Column(self, Index=None, Row=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Row]])
-        if callable(self.com_object.Column):
-            return self.com_object.Column(*arguments)
-        else:
+        if hasattr(self.com_object, "GetColumn"):
             return self.com_object.GetColumn(*arguments)
+        else:
+            return self.com_object.Column(*arguments)
 
     # Lower case aliases for Column
     def column(self, Index=None, Row=None):
@@ -24865,10 +24865,10 @@ class ListBox:
 
     def ItemData(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ItemData):
-            return self.com_object.ItemData(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItemData"):
             return self.com_object.GetItemData(*arguments)
+        else:
+            return self.com_object.ItemData(*arguments)
 
     # Lower case aliases for ItemData
     def itemdata(self, Index=None):
@@ -25890,10 +25890,10 @@ class Module:
 
     def Lines(self, Line=None, NumLines=None):
         arguments = com_arguments([unwrap(a) for a in [Line, NumLines]])
-        if callable(self.com_object.Lines):
-            return self.com_object.Lines(*arguments)
-        else:
+        if hasattr(self.com_object, "GetLines"):
             return self.com_object.GetLines(*arguments)
+        else:
+            return self.com_object.Lines(*arguments)
 
     # Lower case aliases for Lines
     def lines(self, Line=None, NumLines=None):
@@ -25928,10 +25928,10 @@ class Module:
 
     def ProcBodyLine(self, ProcName=None, ProcKind=None):
         arguments = com_arguments([unwrap(a) for a in [ProcName, ProcKind]])
-        if callable(self.com_object.ProcBodyLine):
-            return self.com_object.ProcBodyLine(*arguments)
-        else:
+        if hasattr(self.com_object, "GetProcBodyLine"):
             return self.com_object.GetProcBodyLine(*arguments)
+        else:
+            return self.com_object.ProcBodyLine(*arguments)
 
     # Lower case aliases for ProcBodyLine
     def procbodyline(self, ProcName=None, ProcKind=None):
@@ -25940,10 +25940,10 @@ class Module:
 
     def ProcCountLines(self, ProcName=None, ProcKind=None):
         arguments = com_arguments([unwrap(a) for a in [ProcName, ProcKind]])
-        if callable(self.com_object.ProcCountLines):
-            return self.com_object.ProcCountLines(*arguments)
-        else:
+        if hasattr(self.com_object, "GetProcCountLines"):
             return self.com_object.GetProcCountLines(*arguments)
+        else:
+            return self.com_object.ProcCountLines(*arguments)
 
     # Lower case aliases for ProcCountLines
     def proccountlines(self, ProcName=None, ProcKind=None):
@@ -25952,10 +25952,10 @@ class Module:
 
     def ProcOfLine(self, Line=None, ProcKind=None):
         arguments = com_arguments([unwrap(a) for a in [Line, ProcKind]])
-        if callable(self.com_object.ProcOfLine):
-            return self.com_object.ProcOfLine(*arguments)
-        else:
+        if hasattr(self.com_object, "GetProcOfLine"):
             return self.com_object.GetProcOfLine(*arguments)
+        else:
+            return self.com_object.ProcOfLine(*arguments)
 
     # Lower case aliases for ProcOfLine
     def procofline(self, Line=None, ProcKind=None):
@@ -25964,10 +25964,10 @@ class Module:
 
     def ProcStartLine(self, ProcName=None, ProcKind=None):
         arguments = com_arguments([unwrap(a) for a in [ProcName, ProcKind]])
-        if callable(self.com_object.ProcStartLine):
-            return self.com_object.ProcStartLine(*arguments)
-        else:
+        if hasattr(self.com_object, "GetProcStartLine"):
             return self.com_object.GetProcStartLine(*arguments)
+        else:
+            return self.com_object.ProcStartLine(*arguments)
 
     # Lower case aliases for ProcStartLine
     def procstartline(self, ProcName=None, ProcKind=None):
@@ -26076,10 +26076,10 @@ class Modules:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -30313,10 +30313,10 @@ class ObjectFrame:
 
     def ObjectVerbs(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.ObjectVerbs):
-            return self.com_object.ObjectVerbs(*arguments)
-        else:
+        if hasattr(self.com_object, "GetObjectVerbs"):
             return self.com_object.GetObjectVerbs(*arguments)
+        else:
+            return self.com_object.ObjectVerbs(*arguments)
 
     # Lower case aliases for ObjectVerbs
     def objectverbs(self, Index=None):
@@ -31062,10 +31062,10 @@ class Operations:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -34283,10 +34283,10 @@ class Pages:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -34688,10 +34688,10 @@ class Printers:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -34728,10 +34728,10 @@ class Properties:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -35776,10 +35776,10 @@ class Report:
 
     def DefaultControl(self, ControlType=None):
         arguments = com_arguments([unwrap(a) for a in [ControlType]])
-        if callable(self.com_object.DefaultControl):
-            return self.com_object.DefaultControl(*arguments)
-        else:
+        if hasattr(self.com_object, "GetDefaultControl"):
             return self.com_object.GetDefaultControl(*arguments)
+        else:
+            return self.com_object.DefaultControl(*arguments)
 
     # Lower case aliases for DefaultControl
     def defaultcontrol(self, ControlType=None):
@@ -36122,10 +36122,10 @@ class Report:
 
     def GroupLevel(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.GroupLevel):
-            return self.com_object.GroupLevel(*arguments)
-        else:
+        if hasattr(self.com_object, "GetGroupLevel"):
             return self.com_object.GetGroupLevel(*arguments)
+        else:
+            return self.com_object.GroupLevel(*arguments)
 
     # Lower case aliases for GroupLevel
     def grouplevel(self, Index=None):
@@ -37522,10 +37522,10 @@ class Report:
 
     def Section(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Section):
-            return self.com_object.Section(*arguments)
-        else:
+        if hasattr(self.com_object, "GetSection"):
             return self.com_object.GetSection(*arguments)
+        else:
+            return self.com_object.Section(*arguments)
 
     # Lower case aliases for Section
     def section(self, Index=None):
@@ -37820,10 +37820,10 @@ class Reports:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -37884,10 +37884,10 @@ class ReturnVars:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -38675,10 +38675,10 @@ class SharedResources:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -38821,10 +38821,10 @@ class SmartTagActions:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -38864,10 +38864,10 @@ class SmartTagProperties:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -38960,10 +38960,10 @@ class SmartTags:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -41700,10 +41700,10 @@ class TempVars:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -47218,10 +47218,10 @@ class WebServices:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):
@@ -47295,10 +47295,10 @@ class WSParameters:
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        if callable(self.com_object.Item):
-            return self.com_object.Item(*arguments)
-        else:
+        if hasattr(self.com_object, "GetItem"):
             return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
 
     # Lower case aliases for Item
     def item(self, Index=None):

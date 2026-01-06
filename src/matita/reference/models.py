@@ -292,15 +292,15 @@ class DocPage:
             code.append(f"    def {self.property_name}(self, {self.parameters_code()}):")
             code.append(self.to_python_arguments_expansion())
             if self.property_class is not None:
-                code.append(f"        if callable(self.com_object.{self.property_name}):")
-                code.append(f"            return {self.property_class}(self.com_object.{self.property_name}(*arguments))")
-                code.append(f"        else:")
+                code.append(f"        if hasattr(self.com_object, \"Get{self.property_name}\"):")
                 code.append(f"            return {self.property_class}(self.com_object.Get{self.property_name}(*arguments))")
-            else:
-                code.append(f"        if callable(self.com_object.{self.property_name}):")
-                code.append(f"            return self.com_object.{self.property_name}(*arguments)")
                 code.append(f"        else:")
+                code.append(f"            return {self.property_class}(self.com_object.{self.property_name}(*arguments))")
+            else:
+                code.append(f"        if hasattr(self.com_object, \"Get{self.property_name}\"):")
                 code.append(f"            return self.com_object.Get{self.property_name}(*arguments)")
+                code.append(f"        else:")
+                code.append(f"            return self.com_object.{self.property_name}(*arguments)")
             code.append(f"")
 
         return code
