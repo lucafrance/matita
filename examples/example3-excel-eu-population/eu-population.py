@@ -72,33 +72,7 @@ def generate_report():
 
     first_wks.delete()
     data_wkb.close(False)
+    report_wkb.worksheets(1).activate()
 
 if __name__ == "__main__":
     generate_report()
-
-# TODO adapt vba code
-
-# Sub GenerateReport()
-#     For i = LBound(euCountries) To UBound(euCountries)
-        
-#         With countryWks
-            
-#             Dim c As Chart
-#             Set c = shp.Chart
-#             c.HasTitle = False
-#             c.fullseriescollection(1).name = .cells(4, 2).Address
-#             c.fullseriescollection(1).values = "'" & country & "'!" & country_tbl.listcolumns("Population").databodyrange.Address
-#             c.fullseriescollection(1).Xvalues = "'" & country & "'!" & country_tbl.listcolumns("Year").databodyrange.Address
-#         End With
-        
-#         dataWks.ShowAllData
-#     Next i
-    
-#     dataWkb.Close False
-    
-#     Application.DisplayAlerts = False
-#     firstWks.Delete
-#     Application.DisplayAlerts = True
-    
-#     reportWkb.Worksheets(1).Activate
-# End Sub
