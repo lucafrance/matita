@@ -11,7 +11,7 @@ def generate_report():
     
     data_wkb = xl_app.Workbooks.Open(file_path, ReadOnly=True, Format=xlFormatCommas)
     data_wks = data_wkb.worksheets(1)
-    data_tbl = data_wks.ListObjects.add(
+    data_tbl = data_wks.listobjects.add(
         SourceType=xl.xlSrcRange,
         Source=data_wks.usedrange,
         XlListObjectHasHeaders=xl.xlYes,
@@ -33,18 +33,44 @@ def generate_report():
         last_wks = report_wkb.worksheets(report_wkb.worksheets.count)
         country_wks = report_wkb.worksheets.add(After=last_wks)
 
+        # Add heading
         country_wks.name = country
         country_wks.cells(2, 2).value = f"Population of {country}"
         country_wks.rows.item(2).style = "Heading 1"
         country_wks.columns.item(1).ColumnWidth = 3
 
+        # Add table
         country_wks.cells(4, 2).Value = "Year"
         country_wks.cells(4, 3).Value = "Population"
         country_wks.cells(5, 2).Value = start_year
-        country_wks.cells(5, 2).DataSeries(Rowcol=xl.xlColumns, Type=xl.xlLinear, Step=1, Stop=end_year)
+        country_wks.cells(5, 2).DataSeries(Rowcol=xl.xlColumns, Type=xl.xlLinear, Date=xl.xlDay, Step=1, Stop=end_year)
+
+        data_tbl.databodyrange.autofilter(Field=countries_clm.Index, Criteria1=country)
+        country_wks.cells(5, 3).Resize(num_rows).Value = population_clm.databodyrange.specialcells(xl.xlCellTypeVisible).Value
+
+        country_tbl = country_wks.listobjects.add(
+            SourceType=xl.xlSrcRange,
+            Source=country_wks.cells(4, 2).currentregion,
+            XlListObjectHasHeaders=xl.xlYes
+        )
+        country_tbl.listcolumns("Population").databodyrange.numberformat = "#,##0"
+
+        # TODO `api_name` missing for `excel.shapes.addchart2`
+        # Will be fixed by https://github.com/MicrosoftDocs/VBA-Docs/pull/1936
+        shp = xl.Shape(country_wks.shapes.com_object.AddChart2( 
+            XlChartType=xl.xlLineMarkers,
+            Left=country_wks.cells(4, 5).left,
+            Top=country_wks.cells(4, 5).top,
+        ))
+        c = shp.chart
+        c.hastitle = False
+        # TODO `api_name` missing for `excel.chart.fullseriescollection`
+        chart_series = xl.SeriesCollection(c.com_object.FullSeriesCollection)(1)
+        chart_series.name = country_wks.cells(4, 2).address()
+        chart_series.values  = f"'{country}'!{country_tbl.listcolumns("Population").databodyrange.address()}"
+        chart_series.xvalues = f"'{country}'!{country_tbl.listcolumns("Year").databodyrange.address()}"
 
     first_wks.delete()
-
     data_wkb.close(False)
 
 if __name__ == "__main__":
@@ -57,30 +83,12 @@ if __name__ == "__main__":
         
 #         With countryWks
             
-#             .cells(4, 2).Value = "Year"
-#             .cells(4, 3).Value = "Population"
-#             .cells(5, 2).Value = start_year
-#             .cells(5, 2).DataSeries Rowcol=xlColumns, Type=xlLinear, Step=1, Stop=end_year
-            
-#             dataTbl.DataBodyRange.AutoFilter field=countriesClm.Index, Criteria1=country
-#             .cells(5, 3).Resize(numRows).Value = populationClm.DataBodyRange.SpecialCells(xlCellTypeVisible).Value
-            
-#             Dim countryTbl As ListObject
-#             Set countryTbl = .ListObjects.Add(Source=.cells(4, 2).CurrentRegion, XlListObjectHasHeaders=xlYes)
-#             countryTbl.ListColumns("Population").DataBodyRange.NumberFormat = "#,##0"
-            
-#             Dim shp As Shape
-#             Set shp = .Shapes.AddChart2( _
-#                 XlChartType=xlLineMarkers, _
-#                 Left=.cells(4, 5).Left, _
-#                 Top=.cells(4, 5).Top)
-            
 #             Dim c As Chart
 #             Set c = shp.Chart
 #             c.HasTitle = False
-#             c.FullSeriesCollection(1).Name = .cells(4, 2).Address
-#             c.FullSeriesCollection(1).Values = "'" & country & "'!" & countryTbl.ListColumns("Population").DataBodyRange.Address
-#             c.FullSeriesCollection(1).XValues = "'" & country & "'!" & countryTbl.ListColumns("Year").DataBodyRange.Address
+#             c.fullseriescollection(1).name = .cells(4, 2).Address
+#             c.fullseriescollection(1).values = "'" & country & "'!" & country_tbl.listcolumns("Population").databodyrange.Address
+#             c.fullseriescollection(1).Xvalues = "'" & country & "'!" & country_tbl.listcolumns("Year").databodyrange.Address
 #         End With
         
 #         dataWks.ShowAllData

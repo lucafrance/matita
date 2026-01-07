@@ -259,8 +259,15 @@ class DocPage:
 
         # Call method for collections
         if self.is_collection:
+            item_class = self.object_name
+            if self.object_name.endswith("s"):
+                item_class = self.object_name[:-1]
+            elif self.object_name.endswith("Collection"):
+                item_class = self.object_name.removesuffix("Collection")
+            else:
+                logging.warning(f"Unexpected collection name, unable to identify item class of '{self.process_api_name}'.")
             code.append(f"    def __call__(self, item):")
-            code.append(f"        return {self.object_name[:-1]}(self.com_object(item))")
+            code.append(f"        return {item_class}(self.com_object(item))")
             code.append(f"")
 
         code += self.to_python_properties()

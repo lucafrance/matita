@@ -7156,7 +7156,7 @@ class ChartAxisCollection:
         self.com_object= chartaxiscollection
 
     def __call__(self, item):
-        return ChartAxisCollectio(self.com_object(item))
+        return ChartAxis(self.com_object(item))
 
 
 class ChartSeries:
@@ -7622,7 +7622,7 @@ class ChartSeriesCollection:
         self.com_object= chartseriescollection
 
     def __call__(self, item):
-        return ChartSeriesCollectio(self.com_object(item))
+        return ChartSeries(self.com_object(item))
 
 
 class ChartValues:
@@ -7663,7 +7663,7 @@ class ChartValuesCollection:
         self.com_object= chartvaluescollection
 
     def __call__(self, item):
-        return ChartValuesCollectio(self.com_object(item))
+        return ChartValues(self.com_object(item))
 
 
 class CheckBox:

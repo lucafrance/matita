@@ -6,7 +6,7 @@ def squares():
     pp_app = pp.Application().new()
     pp_app.visible = True
     prs = pp_app.presentations.add()
-    # Direct `Slides.add()` method unavailable
+    # TODO Direct `Slides.add()` method unavailable
     # Will be fixed with https://github.com/MicrosoftDocs/VBA-Docs/pull/1937
     sld = pp.Slide(prs.slides.com_object.Add(1, pp.ppLayoutBlank))
 
@@ -30,7 +30,7 @@ def squares():
             pp.msoAnimDirectionBottom
         ])
         eff.effectparameters.direction = direction
-        # The Timing.Duration property is no supported yet, because it can't be parsed from the documentation
+        # TODO The Timing.Duration property is no supported yet, because it can't be parsed from the documentation
         # Fill be fixed by:
         # - Addition of api_key: https://github.com/MicrosoftDocs/VBA-Docs/pull/1936
         # - Formatting adjustment: https://github.com/MicrosoftDocs/VBA-Docs/pull/1938

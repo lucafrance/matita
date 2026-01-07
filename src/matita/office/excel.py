@@ -577,7 +577,7 @@ class AddIns2:
         self.com_object= addins2
 
     def __call__(self, item):
-        return AddIns(self.com_object(item))
+        return AddIns2(self.com_object(item))
 
     @property
     def Application(self):
@@ -10207,7 +10207,7 @@ class ColorScaleCriteria:
         self.com_object= colorscalecriteria
 
     def __call__(self, item):
-        return ColorScaleCriteri(self.com_object(item))
+        return ColorScaleCriteria(self.com_object(item))
 
     @property
     def Count(self):
@@ -10637,7 +10637,7 @@ class CommentsThreaded:
         self.com_object= commentsthreaded
 
     def __call__(self, item):
-        return CommentsThreade(self.com_object(item))
+        return CommentsThreaded(self.com_object(item))
 
     @property
     def Application(self):
@@ -28176,7 +28176,7 @@ class PivotItemList:
         self.com_object= pivotitemlist
 
     def __call__(self, item):
-        return PivotItemLis(self.com_object(item))
+        return PivotItemList(self.com_object(item))
 
     @property
     def Application(self):
@@ -36231,7 +36231,7 @@ class SeriesCollection:
         self.com_object= seriescollection
 
     def __call__(self, item):
-        return SeriesCollectio(self.com_object(item))
+        return Series(self.com_object(item))
 
     @property
     def Application(self):
@@ -44450,7 +44450,7 @@ class UserAccessList:
         self.com_object= useraccesslist
 
     def __call__(self, item):
-        return UserAccessLis(self.com_object(item))
+        return UserAccessList(self.com_object(item))
 
     @property
     def Count(self):

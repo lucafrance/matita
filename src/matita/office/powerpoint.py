@@ -3496,7 +3496,7 @@ class CellRange:
         self.com_object= cellrange
 
     def __call__(self, item):
-        return CellRang(self.com_object(item))
+        return CellRange(self.com_object(item))
 
     @property
     def Application(self):
@@ -24457,7 +24457,7 @@ class SlideRange:
         self.com_object= sliderange
 
     def __call__(self, item):
-        return SlideRang(self.com_object(item))
+        return SlideRange(self.com_object(item))
 
     @property
     def Application(self):
