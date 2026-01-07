@@ -82,8 +82,9 @@ class DocPage:
             if "Returns a collection of" in p and property_class is not None:
                 if not property_class.endswith("s"):
                     property_class += "s"
-            if property_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
-                property_class = None
+            if property_class is not None:
+                if property_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
+                    property_class = None
             self.property_class = property_class
 
         # Check whether the property is read only
@@ -129,8 +130,9 @@ class DocPage:
                 logging.warning(f"Unexpected format in 'Return value' section, could not parse '{self.title}': '{line}'")
             else:
                 self.return_value_class = line
-            if self.return_value_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
-                self.return_value_class = None
+            if self.return_value_class is not None:
+                if self.return_value_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
+                    self.return_value_class = None
 
     def process_title(self):
         if self.title is None:
