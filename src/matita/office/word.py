@@ -1598,7 +1598,7 @@ class Application:
 
     def CheckGrammar(self, String=None):
         arguments = com_arguments([unwrap(a) for a in [String]])
-        return Boolean(self.com_object.CheckGrammar(*arguments))
+        return self.com_object.CheckGrammar(*arguments)
 
     # Lower case alias for CheckGrammar
     def checkgrammar(self, String=None):
@@ -1607,7 +1607,7 @@ class Application:
 
     def CheckSpelling(self, Word=None, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
         arguments = com_arguments([unwrap(a) for a in [Word, CustomDictionary, IgnoreUppercase, MainDictionary, CustomDictionary2, CustomDictionary3, CustomDictionary4, CustomDictionary5, CustomDictionary6, CustomDictionary7, CustomDictionary8, CustomDictionary9, CustomDictionary10]])
-        return Boolean(self.com_object.CheckSpelling(*arguments))
+        return self.com_object.CheckSpelling(*arguments)
 
     # Lower case alias for CheckSpelling
     def checkspelling(self, Word=None, CustomDictionary=None, IgnoreUppercase=None, MainDictionary=None, CustomDictionary2=None, CustomDictionary3=None, CustomDictionary4=None, CustomDictionary5=None, CustomDictionary6=None, CustomDictionary7=None, CustomDictionary8=None, CustomDictionary9=None, CustomDictionary10=None):
@@ -1992,7 +1992,7 @@ class Application:
 
     def Repeat(self, Times=None):
         arguments = com_arguments([unwrap(a) for a in [Times]])
-        return Boolean(self.com_object.Repeat(*arguments))
+        return self.com_object.Repeat(*arguments)
 
     # Lower case alias for Repeat
     def repeat(self, Times=None):
@@ -6214,7 +6214,7 @@ class Chart:
 
     def Export(self, FileName=None, FilterName=None, Interactive=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, FilterName, Interactive]])
-        return Boolean(self.com_object.Export(*arguments))
+        return self.com_object.Export(*arguments)
 
     # Lower case alias for Export
     def export(self, FileName=None, FilterName=None, Interactive=None):
@@ -14350,7 +14350,7 @@ class Document:
         return self.AutoFormat()
 
     def CanCheckin(self):
-        return Boolean(self.com_object.CanCheckin())
+        return self.com_object.CanCheckin()
 
     # Lower case alias for CanCheckin
     def cancheckin(self):
@@ -14706,7 +14706,7 @@ class Document:
 
     def Redo(self, Times=None):
         arguments = com_arguments([unwrap(a) for a in [Times]])
-        return Boolean(self.com_object.Redo(*arguments))
+        return self.com_object.Redo(*arguments)
 
     # Lower case alias for Redo
     def redo(self, Times=None):
@@ -14981,7 +14981,7 @@ class Document:
 
     def Undo(self, Times=None):
         arguments = com_arguments([unwrap(a) for a in [Times]])
-        return Boolean(self.com_object.Undo(*arguments))
+        return self.com_object.Undo(*arguments)
 
     # Lower case alias for Undo
     def undo(self, Times=None):
@@ -17297,7 +17297,7 @@ class Field:
         return self.Unlink()
 
     def Update(self):
-        return Boolean(self.com_object.Update())
+        return self.com_object.Update()
 
     # Lower case alias for Update
     def update(self):
@@ -18417,7 +18417,7 @@ class Find:
         return self.ClearFormatting()
 
     def ClearHitHighlight(self):
-        return Boolean(self.com_object.ClearHitHighlight())
+        return self.com_object.ClearHitHighlight()
 
     # Lower case alias for ClearHitHighlight
     def clearhithighlight(self):
@@ -18425,7 +18425,7 @@ class Find:
 
     def Execute(self, FindText=None, MatchCase=None, MatchWholeWord=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, Forward=None, Wrap=None, Format=None, ReplaceWith=None, Replace=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None):
         arguments = com_arguments([unwrap(a) for a in [FindText, MatchCase, MatchWholeWord, MatchWildcards, MatchSoundsLike, MatchAllWordForms, Forward, Wrap, Format, ReplaceWith, Replace, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl]])
-        return Boolean(self.com_object.Execute(*arguments))
+        return self.com_object.Execute(*arguments)
 
     # Lower case alias for Execute
     def execute(self, FindText=None, MatchCase=None, MatchWholeWord=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, Forward=None, Wrap=None, Format=None, ReplaceWith=None, Replace=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None):
@@ -18434,7 +18434,7 @@ class Find:
 
     def Execute2007(self, FindText=None, MatchCase=None, MatchWholeWord=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, Forward=None, Wrap=None, Format=None, ReplaceWith=None, Replace=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, IgnoreSpace=None, IgnorePunct=None):
         arguments = com_arguments([unwrap(a) for a in [FindText, MatchCase, MatchWholeWord, MatchWildcards, MatchSoundsLike, MatchAllWordForms, Forward, Wrap, Format, ReplaceWith, Replace, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl, MatchPrefix, MatchSuffix, MatchPhrase, IgnoreSpace, IgnorePunct]])
-        return Boolean(self.com_object.Execute2007(*arguments))
+        return self.com_object.Execute2007(*arguments)
 
     # Lower case alias for Execute2007
     def execute2007(self, FindText=None, MatchCase=None, MatchWholeWord=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, Forward=None, Wrap=None, Format=None, ReplaceWith=None, Replace=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, IgnoreSpace=None, IgnorePunct=None):
@@ -18443,7 +18443,7 @@ class Find:
 
     def HitHighlight(self, FindText=None, HighlightColor=None, TextColor=None, MatchCase=None, MatchWholeWord=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, MatchByte=None, MatchFuzzy=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, IgnoreSpace=None, IgnorePunct=None, HanjaPhoneticHangul=None):
         arguments = com_arguments([unwrap(a) for a in [FindText, HighlightColor, TextColor, MatchCase, MatchWholeWord, MatchPrefix, MatchSuffix, MatchPhrase, MatchWildcards, MatchSoundsLike, MatchAllWordForms, MatchByte, MatchFuzzy, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl, IgnoreSpace, IgnorePunct, HanjaPhoneticHangul]])
-        return Boolean(self.com_object.HitHighlight(*arguments))
+        return self.com_object.HitHighlight(*arguments)
 
     # Lower case alias for HitHighlight
     def hithighlight(self, FindText=None, HighlightColor=None, TextColor=None, MatchCase=None, MatchWholeWord=None, MatchPrefix=None, MatchSuffix=None, MatchPhrase=None, MatchWildcards=None, MatchSoundsLike=None, MatchAllWordForms=None, MatchByte=None, MatchFuzzy=None, MatchKashida=None, MatchDiacritics=None, MatchAlefHamza=None, MatchControl=None, IgnoreSpace=None, IgnorePunct=None, HanjaPhoneticHangul=None):
@@ -25864,7 +25864,7 @@ class MailMergeDataSource:
 
     def FindRecord(self, FindText=None, Field=None):
         arguments = com_arguments([unwrap(a) for a in [FindText, Field]])
-        return Boolean(self.com_object.FindRecord(*arguments))
+        return self.com_object.FindRecord(*arguments)
 
     # Lower case alias for FindRecord
     def findrecord(self, FindText=None, Field=None):
@@ -38938,7 +38938,7 @@ class Range:
 
     def InRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        return Boolean(self.com_object.InRange(*arguments))
+        return self.com_object.InRange(*arguments)
 
     # Lower case alias for InRange
     def inrange(self, Range=None):
@@ -39074,7 +39074,7 @@ class Range:
 
     def InStory(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        return Boolean(self.com_object.InStory(*arguments))
+        return self.com_object.InStory(*arguments)
 
     # Lower case alias for InStory
     def instory(self, Range=None):
@@ -39083,7 +39083,7 @@ class Range:
 
     def IsEqual(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        return Boolean(self.com_object.IsEqual(*arguments))
+        return self.com_object.IsEqual(*arguments)
 
     # Lower case alias for IsEqual
     def isequal(self, Range=None):
@@ -39978,7 +39978,7 @@ class Research:
 
     def IsResearchService(self, ServiceID=None):
         arguments = com_arguments([unwrap(a) for a in [ServiceID]])
-        return Boolean(self.com_object.IsResearchService(*arguments))
+        return self.com_object.IsResearchService(*arguments)
 
     # Lower case alias for IsResearchService
     def isresearchservice(self, ServiceID=None):
@@ -41635,7 +41635,7 @@ class Selection:
 
     def InRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        return Boolean(self.com_object.InRange(*arguments))
+        return self.com_object.InRange(*arguments)
 
     # Lower case alias for InRange
     def inrange(self, Range=None):
@@ -41815,7 +41815,7 @@ class Selection:
 
     def InStory(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        return Boolean(self.com_object.InStory(*arguments))
+        return self.com_object.InStory(*arguments)
 
     # Lower case alias for InStory
     def instory(self, Range=None):
@@ -41824,7 +41824,7 @@ class Selection:
 
     def IsEqual(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        return Boolean(self.com_object.IsEqual(*arguments))
+        return self.com_object.IsEqual(*arguments)
 
     # Lower case alias for IsEqual
     def isequal(self, Range=None):
@@ -48620,7 +48620,7 @@ class TextFrame:
 
     def ValidLinkTarget(self, TargetTextFrame=None):
         arguments = com_arguments([unwrap(a) for a in [TargetTextFrame]])
-        return Boolean(self.com_object.ValidLinkTarget(*arguments))
+        return self.com_object.ValidLinkTarget(*arguments)
 
     # Lower case alias for ValidLinkTarget
     def validlinktarget(self, TargetTextFrame=None):
@@ -56134,7 +56134,7 @@ class XMLMapping:
 
     def SetMapping(self, XPath=None, PrefixMapping=None, Source=None):
         arguments = com_arguments([unwrap(a) for a in [XPath, PrefixMapping, Source]])
-        return Boolean(self.com_object.SetMapping(*arguments))
+        return self.com_object.SetMapping(*arguments)
 
     # Lower case alias for SetMapping
     def setmapping(self, XPath=None, PrefixMapping=None, Source=None):
@@ -56143,7 +56143,7 @@ class XMLMapping:
 
     def SetMappingByNode(self, Node=None):
         arguments = com_arguments([unwrap(a) for a in [Node]])
-        return Boolean(self.com_object.SetMappingByNode(*arguments))
+        return self.com_object.SetMappingByNode(*arguments)
 
     # Lower case alias for SetMappingByNode
     def setmappingbynode(self, Node=None):

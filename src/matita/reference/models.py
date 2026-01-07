@@ -128,7 +128,8 @@ class DocPage:
                 logging.warning(f"Unexpected format in 'Return value' section, could not parse '{self.title}': '{line}'")
             else:
                 self.return_value_class = line
-            
+            if self.return_value_class == "Boolean":
+                self.return_value_class = None
 
     def process_title(self):
         if self.title is None:

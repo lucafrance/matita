@@ -10173,7 +10173,7 @@ class Explorer:
 
     def IsItemSelectableInView(self, Item=None):
         arguments = com_arguments([unwrap(a) for a in [Item]])
-        return Boolean(self.com_object.IsItemSelectableInView(*arguments))
+        return self.com_object.IsItemSelectableInView(*arguments)
 
     # Lower case alias for IsItemSelectableInView
     def isitemselectableinview(self, Item=None):

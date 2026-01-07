@@ -3586,7 +3586,7 @@ class Application:
         return self.ExecuteExcel4Macro(*arguments)
 
     def FindFile(self):
-        return Boolean(self.com_object.FindFile())
+        return self.com_object.FindFile()
 
     # Lower case alias for FindFile
     def findfile(self):
@@ -3768,7 +3768,7 @@ class Application:
 
     def RegisterXLL(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        return Boolean(self.com_object.RegisterXLL(*arguments))
+        return self.com_object.RegisterXLL(*arguments)
 
     # Lower case alias for RegisterXLL
     def registerxll(self, FileName=None):
@@ -3845,7 +3845,7 @@ class Application:
 
     def Wait(self, Time=None):
         arguments = com_arguments([unwrap(a) for a in [Time]])
-        return Boolean(self.com_object.Wait(*arguments))
+        return self.com_object.Wait(*arguments)
 
     # Lower case alias for Wait
     def wait(self, Time=None):
@@ -7501,7 +7501,7 @@ class Chart:
 
     def Export(self, FileName=None, FilterName=None, Interactive=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, FilterName, Interactive]])
-        return Boolean(self.com_object.Export(*arguments))
+        return self.com_object.Export(*arguments)
 
     # Lower case alias for Export
     def export(self, FileName=None, FilterName=None, Interactive=None):
@@ -23470,7 +23470,7 @@ class Pane:
         return self.VisibleRange
 
     def Activate(self):
-        return Boolean(self.com_object.Activate())
+        return self.com_object.Activate()
 
     # Lower case alias for Activate
     def activate(self):
@@ -28784,7 +28784,7 @@ class PivotTable:
         return self.RefreshDataSourceValues()
 
     def RefreshTable(self):
-        return Boolean(self.com_object.RefreshTable())
+        return self.com_object.RefreshTable()
 
     # Lower case alias for RefreshTable
     def refreshtable(self):
@@ -29821,7 +29821,7 @@ class ProtectedViewWindow:
         return self.Activate()
 
     def Close(self):
-        return Boolean(self.com_object.Close())
+        return self.com_object.Close()
 
     # Lower case alias for Close
     def close(self):
@@ -31201,7 +31201,7 @@ class QueryTable:
 
     def Refresh(self, BackgroundQuery=None):
         arguments = com_arguments([unwrap(a) for a in [BackgroundQuery]])
-        return Boolean(self.com_object.Refresh(*arguments))
+        return self.com_object.Refresh(*arguments)
 
     # Lower case alias for Refresh
     def refresh(self, BackgroundQuery=None):
@@ -33019,7 +33019,7 @@ class Range:
 
     def Replace(self, What=None, Replacement=None, LookAt=None, SearchOrder=None, MatchCase=None, MatchByte=None, SearchFormat=None, ReplaceFormat=None, FormulaVersion=None):
         arguments = com_arguments([unwrap(a) for a in [What, Replacement, LookAt, SearchOrder, MatchCase, MatchByte, SearchFormat, ReplaceFormat, FormulaVersion]])
-        return Boolean(self.com_object.Replace(*arguments))
+        return self.com_object.Replace(*arguments)
 
     # Lower case alias for Replace
     def replace(self, What=None, Replacement=None, LookAt=None, SearchOrder=None, MatchCase=None, MatchByte=None, SearchFormat=None, ReplaceFormat=None, FormulaVersion=None):
@@ -33536,7 +33536,7 @@ class Research:
 
     def IsResearchService(self, ServiceID=None):
         arguments = com_arguments([unwrap(a) for a in [ServiceID]])
-        return Boolean(self.com_object.IsResearchService(*arguments))
+        return self.com_object.IsResearchService(*arguments)
 
     # Lower case alias for IsResearchService
     def isresearchservice(self, ServiceID=None):
@@ -44409,7 +44409,7 @@ class Windows:
         return self.Arrange(*arguments)
 
     def BreakSideBySide(self):
-        return Boolean(self.com_object.BreakSideBySide())
+        return self.com_object.BreakSideBySide()
 
     # Lower case alias for BreakSideBySide
     def breaksidebyside(self):
@@ -44417,7 +44417,7 @@ class Windows:
 
     def CompareSideBySideWith(self, WindowName=None):
         arguments = com_arguments([unwrap(a) for a in [WindowName]])
-        return Boolean(self.com_object.CompareSideBySideWith(*arguments))
+        return self.com_object.CompareSideBySideWith(*arguments)
 
     # Lower case alias for CompareSideBySideWith
     def comparesidebysidewith(self, WindowName=None):
@@ -45775,7 +45775,7 @@ class Workbook:
         return self.BreakLink(*arguments)
 
     def CanCheckIn(self):
-        return Boolean(self.com_object.CanCheckIn())
+        return self.com_object.CanCheckIn()
 
     # Lower case alias for CanCheckIn
     def cancheckin(self):
@@ -45857,7 +45857,7 @@ class Workbook:
         return self.EndReview()
 
     def ExclusiveAccess(self):
-        return Boolean(self.com_object.ExclusiveAccess())
+        return self.com_object.ExclusiveAccess()
 
     # Lower case alias for ExclusiveAccess
     def exclusiveaccess(self):
@@ -46321,7 +46321,7 @@ class Workbooks:
 
     def CanCheckOut(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        return Boolean(self.com_object.CanCheckOut(*arguments))
+        return self.com_object.CanCheckOut(*arguments)
 
     # Lower case alias for CanCheckOut
     def cancheckout(self, FileName=None):
@@ -47066,7 +47066,7 @@ class Worksheet:
         return self.Copy(*arguments)
 
     def Delete(self):
-        return Boolean(self.com_object.Delete())
+        return self.com_object.Delete()
 
     # Lower case alias for Delete
     def delete(self):
@@ -47348,7 +47348,7 @@ class WorksheetFunction:
 
     def And(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30]])
-        return Boolean(self.com_object.And(*arguments))
+        return self.com_object.And(*arguments)
 
     def Asc(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
@@ -48765,7 +48765,7 @@ class WorksheetFunction:
 
     def IsErr(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsErr(*arguments))
+        return self.com_object.IsErr(*arguments)
 
     # Lower case alias for IsErr
     def iserr(self, Arg1=None):
@@ -48774,7 +48774,7 @@ class WorksheetFunction:
 
     def IsError(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsError(*arguments))
+        return self.com_object.IsError(*arguments)
 
     # Lower case alias for IsError
     def iserror(self, Arg1=None):
@@ -48783,7 +48783,7 @@ class WorksheetFunction:
 
     def IsEven(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsEven(*arguments))
+        return self.com_object.IsEven(*arguments)
 
     # Lower case alias for IsEven
     def iseven(self, Arg1=None):
@@ -48792,7 +48792,7 @@ class WorksheetFunction:
 
     def IsLogical(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsLogical(*arguments))
+        return self.com_object.IsLogical(*arguments)
 
     # Lower case alias for IsLogical
     def islogical(self, Arg1=None):
@@ -48801,7 +48801,7 @@ class WorksheetFunction:
 
     def IsNA(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsNA(*arguments))
+        return self.com_object.IsNA(*arguments)
 
     # Lower case alias for IsNA
     def isna(self, Arg1=None):
@@ -48810,7 +48810,7 @@ class WorksheetFunction:
 
     def IsNonText(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsNonText(*arguments))
+        return self.com_object.IsNonText(*arguments)
 
     # Lower case alias for IsNonText
     def isnontext(self, Arg1=None):
@@ -48819,7 +48819,7 @@ class WorksheetFunction:
 
     def IsNumber(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsNumber(*arguments))
+        return self.com_object.IsNumber(*arguments)
 
     # Lower case alias for IsNumber
     def isnumber(self, Arg1=None):
@@ -48828,7 +48828,7 @@ class WorksheetFunction:
 
     def IsOdd(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsOdd(*arguments))
+        return self.com_object.IsOdd(*arguments)
 
     # Lower case alias for IsOdd
     def isodd(self, Arg1=None):
@@ -48855,7 +48855,7 @@ class WorksheetFunction:
 
     def IsText(self, Arg1=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1]])
-        return Boolean(self.com_object.IsText(*arguments))
+        return self.com_object.IsText(*arguments)
 
     # Lower case alias for IsText
     def istext(self, Arg1=None):
@@ -49314,7 +49314,7 @@ class WorksheetFunction:
 
     def Or(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30]])
-        return Boolean(self.com_object.Or(*arguments))
+        return self.com_object.Or(*arguments)
 
     def Pearson(self, Arg1=None, Arg2=None):
         arguments = com_arguments([unwrap(a) for a in [Arg1, Arg2]])

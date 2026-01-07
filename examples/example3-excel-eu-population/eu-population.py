@@ -16,11 +16,32 @@ def generate_report():
         Source=data_wks.usedrange,
         XlListObjectHasHeaders=xl.xlYes,
     )
-    countries_clm = data_tbl.ListColumns("Geopolitical entity (reporting)")
-    population_clm = data_tbl.ListColumns("OBS_VALUE")
+    countries_clm = data_tbl.listcolumns("Geopolitical entity (reporting)")
+    population_clm = data_tbl.listcolumns("OBS_VALUE")
+
     eu_countries = sorted(set(countries_clm.databodyrange.value))
     eu_countries = [x[0] for x in eu_countries.copy()]
-    print(eu_countries)
+
+    years = [x[0] for x in data_tbl.listcolumns("TIME_PERIOD").databodyrange.value]
+    start_year = int(min(years))
+    end_year = int(max(years))
+    num_rows = end_year - start_year + 1
+
+    report_wkb = xl_app.workbooks.add()
+    first_wks = report_wkb.worksheets(1)
+    for country in eu_countries:
+        last_wks = report_wkb.worksheets(report_wkb.worksheets.count)
+        country_wks = report_wkb.worksheets.add(After=last_wks)
+
+        country_wks.name = country
+        country_wks.Cells(2, 2).value = f"Population of {country}"
+        country_wks.rows.item(2).style = "Heading 1"
+        country_wks.columns.item(1).ColumnWidth = 3
+
+
+
+
+    first_wks.delete()
 
     data_wkb.close(False)
 
@@ -30,25 +51,7 @@ if __name__ == "__main__":
 # TODO adapt vba code
 
 # Sub GenerateReport()
-
-#     Dim startYear As Long, endYear As Long, numRows As Long
-#     startYear = WorksheetFunction.Min(dataTbl.ListColumns("TIME_PERIOD").DataBodyRange)
-#     endYear = WorksheetFunction.Max(dataTbl.ListColumns("TIME_PERIOD").DataBodyRange)
-#     numRows = endYear - startYear + 1
-    
-#     Dim reportWkb As Workbook
-#     Set reportWkb = Workbooks.Add
-    
-#     Dim firstWks As Worksheet
-#     Set firstWks = reportWkb.Worksheets(1)
-    
-#     Dim i As Long
 #     For i = LBound(euCountries) To UBound(euCountries)
-#         Dim country As String
-#         country = euCountries(i, 1)
-        
-#         Dim countryWks As Worksheet
-#         Set countryWks = reportWkb.Worksheets.Add(After:=reportWkb.Worksheets(reportWkb.Worksheets.Count))
         
 #         With countryWks
 #             .Name = country

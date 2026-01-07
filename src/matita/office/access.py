@@ -143,7 +143,7 @@ class AccessObject:
 
     def IsDependentUpon(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([unwrap(a) for a in [ObjectType, ObjectName]])
-        return Boolean(self.com_object.IsDependentUpon(*arguments))
+        return self.com_object.IsDependentUpon(*arguments)
 
     # Lower case alias for IsDependentUpon
     def isdependentupon(self, ObjectType=None, ObjectName=None):
@@ -2838,7 +2838,7 @@ class Application:
 
     def GetHiddenAttribute(self, ObjectType=None, ObjectName=None):
         arguments = com_arguments([unwrap(a) for a in [ObjectType, ObjectName]])
-        return Boolean(self.com_object.GetHiddenAttribute(*arguments))
+        return self.com_object.GetHiddenAttribute(*arguments)
 
     # Lower case alias for GetHiddenAttribute
     def gethiddenattribute(self, ObjectType=None, ObjectName=None):
@@ -2917,7 +2917,7 @@ class Application:
 
     def IsCurrentWebUserInGroup(self, GroupNameOrID=None):
         arguments = com_arguments([unwrap(a) for a in [GroupNameOrID]])
-        return Boolean(self.com_object.IsCurrentWebUserInGroup(*arguments))
+        return self.com_object.IsCurrentWebUserInGroup(*arguments)
 
     # Lower case alias for IsCurrentWebUserInGroup
     def iscurrentwebuseringroup(self, GroupNameOrID=None):
@@ -26021,7 +26021,7 @@ class Module:
 
     def Find(self, Target=None, StartLine=None, StartColumn=None, EndLine=None, EndColumn=None, WholeWord=None, MatchCase=None, PatternSearch=None):
         arguments = com_arguments([unwrap(a) for a in [Target, StartLine, StartColumn, EndLine, EndColumn, WholeWord, MatchCase, PatternSearch]])
-        return Boolean(self.com_object.Find(*arguments))
+        return self.com_object.Find(*arguments)
 
     # Lower case alias for Find
     def find(self, Target=None, StartLine=None, StartColumn=None, EndLine=None, EndColumn=None, WholeWord=None, MatchCase=None, PatternSearch=None):

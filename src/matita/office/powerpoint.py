@@ -8498,7 +8498,7 @@ class DocumentWindow:
 
     def IsSectionExpanded(self, sectionIndex=None):
         arguments = com_arguments([unwrap(a) for a in [sectionIndex]])
-        return Boolean(self.com_object.IsSectionExpanded(*arguments))
+        return self.com_object.IsSectionExpanded(*arguments)
 
     # Lower case alias for IsSectionExpanded
     def issectionexpanded(self, sectionIndex=None):
@@ -16826,7 +16826,7 @@ class Presentation:
         return self.ApplyTheme(*arguments)
 
     def CanCheckIn(self):
-        return Boolean(self.com_object.CanCheckIn())
+        return self.com_object.CanCheckIn()
 
     # Lower case alias for CanCheckIn
     def cancheckin(self):
@@ -17088,7 +17088,7 @@ class Presentations:
 
     def CanCheckOut(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        return Boolean(self.com_object.CanCheckOut(*arguments))
+        return self.com_object.CanCheckOut(*arguments)
 
     # Lower case alias for CanCheckOut
     def cancheckout(self, FileName=None):
@@ -18065,7 +18065,7 @@ class Research:
 
     def IsResearchService(self, ServiceID=None):
         arguments = com_arguments([unwrap(a) for a in [ServiceID]])
-        return Boolean(self.com_object.IsResearchService(*arguments))
+        return self.com_object.IsResearchService(*arguments)
 
     # Lower case alias for IsResearchService
     def isresearchservice(self, ServiceID=None):
@@ -23804,7 +23804,7 @@ class SlideShowView:
         return self.First()
 
     def FirstAnimationIsAutomatic(self):
-        return Boolean(self.com_object.FirstAnimationIsAutomatic())
+        return self.com_object.FirstAnimationIsAutomatic()
 
     # Lower case alias for FirstAnimationIsAutomatic
     def firstanimationisautomatic(self):
