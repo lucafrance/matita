@@ -63,6 +63,7 @@ class DocPage:
         # Examples
         # -------------------------------------------
         # A collection of all the **[Worksheet](Excel.Worksheet.md)** objects in the specified or active workbook. Each **Worksheet** object represents a worksheet.
+        # Returns a collection of **[ListObject](Excel.ListObject.md)** objects on the worksheet. Read-only **[ListObjects](excel.listobjects.md)** collection.
         # Returns or sets a **String** value that represents the object name.
         # Returns a **[Range](Excel.Range(object).md)** object that represents all the cells on the worksheet (not just the cells that are currently in use).
         # Returns a **Range** object that represents the columns in the specified range.
@@ -78,6 +79,10 @@ class DocPage:
                 property_class = p.split("**[", 1)[1].split("]", 1)[0]
             elif "**" in p:
                 property_class = p.split("**", 1)[1].split("**", 1)[0]
+            if "Returns a collection of" in p and property_class is not None:
+                if not property_class.endswith("s"):
+                    property_class += "s"
+                self.property_class = property_class
             self.property_class = property_class
 
         # Check whether the property is read only
@@ -324,13 +329,13 @@ class DocPage:
     def to_python_property_aliases(self):
         """Return python code of lower case aliases if the DocPage is a property"""
         if not self.is_property:
-            logging.info(f"Property '{self.title}' ignored when exporting lower case aliases for '{self.object_name}', because it is not a property.")
+            logging.info(f"Property '{self.title}' ignored when exporting lower case aliases for '{self.api_name}', because it is not a property.")
             return []
 
         # Don't create lower case alias for reserved words in Python
         # E.g. `Access.BoundObjectFrame.Class`
         if self.property_name.lower() in self.RESERVED_WORDS:
-            logging.info(f"Lower case alias for property '{self.property_name}' of '{self.object_name}' ignored, because it is a reserved word in Python.")
+            logging.info(f"Lower case alias for property '{self.property_name}' of '{self.api_name}' ignored, because it is a reserved word in Python.")
             return []
 
         code = []
@@ -475,6 +480,7 @@ class VbaDocs:
             if page.property_class is not None:
                 if f"{page.module_name}.{page.property_class}".lower() not in self.pages:
                     page.property_class = None
+                    logging.warning(f"Removing 'property_class' from {page.api_name}. Class '{page.property_class}' not found.")
         self.apply_manual_adjustments()
     
     def to_dict(self):

@@ -1,28 +1,36 @@
+import os
+
+from matita.office import excel as xl
+
+def generate_report():
+    xlFormatCommas = 2
+    file_path = os.path.dirname(os.path.abspath(__file__)) + "/tps00001__custom_19561911_linear_2_0.csv"
+
+    xl_app = xl.Application().new()
+    xl_app.visible = True
+    
+    data_wkb = xl_app.Workbooks.Open(file_path, ReadOnly=True, Format=xlFormatCommas)
+    data_wks = data_wkb.worksheets(1)
+    data_tbl = data_wks.ListObjects.add(
+        SourceType=xl.xlSrcRange,
+        Source=data_wks.usedrange,
+        XlListObjectHasHeaders=xl.xlYes,
+    )
+    countries_clm = data_tbl.ListColumns("Geopolitical entity (reporting)")
+    population_clm = data_tbl.ListColumns("OBS_VALUE")
+    eu_countries = sorted(set(countries_clm.databodyrange.value))
+    eu_countries = [x[0] for x in eu_countries.copy()]
+    print(eu_countries)
+
+    data_wkb.close(False)
+
+if __name__ == "__main__":
+    generate_report()
+
 # TODO adapt vba code
 
 # Sub GenerateReport()
-#     Const xlFormatCommas As Long = 2
-#     Dim filePath As String
-#     filePath = ThisWorkbook.Path & "/" & "tps00001__custom_19561911_linear_2_0.csv"
-    
-#     Dim dataWkb As Workbook
-#     Set dataWkb = Workbooks.Open(filePath, ReadOnly:=True, Format:=xlFormatCommas)
-    
-#     Dim dataWks As Worksheet
-#     Set dataWks = dataWkb.Worksheets(1)
-    
-#     Dim dataTbl As ListObject
-#     Set dataTbl = dataWks.ListObjects.Add(Source:=dataWks.UsedRange, XlListObjectHasHeaders:=xlYes)
-    
-#     Dim countriesClm As ListColumn
-#     Dim populationClm As ListColumn
-#     Set countriesClm = dataTbl.ListColumns("Geopolitical entity (reporting)")
-#     Set populationClm = dataTbl.ListColumns("OBS_VALUE")
-    
-#     Dim euCountries As Variant
-#     euCountries = Application.WorksheetFunction.Sort( _
-#                     Application.WorksheetFunction.Unique(countriesClm.DataBodyRange))
-    
+
 #     Dim startYear As Long, endYear As Long, numRows As Long
 #     startYear = WorksheetFunction.Min(dataTbl.ListColumns("TIME_PERIOD").DataBodyRange)
 #     endYear = WorksheetFunction.Max(dataTbl.ListColumns("TIME_PERIOD").DataBodyRange)

@@ -27045,7 +27045,7 @@ class PivotLine:
 
     @property
     def PivotLineCells(self):
-        return PivotCell(self.com_object.PivotLineCells)
+        return self.com_object.PivotLineCells
 
     # Lower case aliases for PivotLineCells
     @property
@@ -46684,7 +46684,7 @@ class Worksheet:
 
     @property
     def ListObjects(self):
-        return ListObject(self.com_object.ListObjects)
+        return ListObjects(self.com_object.ListObjects)
 
     # Lower case aliases for ListObjects
     @property

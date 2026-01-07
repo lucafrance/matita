@@ -31,6 +31,7 @@ class TestExcel(unittest.TestCase):
         self.assertEqual(cell_int.Value, 123)
         self.assertAlmostEqual(cell_float.Value, 3.14159)
         self.assertEqual(cell_bool.Value, True)
+        self.assertIs(type(wks.listobjects), xl.ListObjects)
 
         wkb.Close(SaveChanges=False)
 
