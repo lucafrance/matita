@@ -111,10 +111,18 @@ class AccessObject:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -185,10 +193,18 @@ class AccessObjectProperties:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def Add(self, PropertyName=None, Value=None):
         arguments = com_arguments([unwrap(a) for a in [PropertyName, Value]])
@@ -1671,10 +1687,18 @@ class AllDatabaseDiagrams:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllForms:
@@ -1711,10 +1735,18 @@ class AllForms:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllFunctions:
@@ -1751,10 +1783,18 @@ class AllFunctions:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllModules:
@@ -1791,10 +1831,18 @@ class AllModules:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllQueries:
@@ -1831,10 +1879,18 @@ class AllQueries:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllReports:
@@ -1871,10 +1927,18 @@ class AllReports:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllStoredProcedures:
@@ -1911,10 +1975,18 @@ class AllStoredProcedures:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllTables:
@@ -1951,10 +2023,18 @@ class AllTables:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class AllViews:
@@ -1991,10 +2071,18 @@ class AllViews:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class Application:
@@ -2293,10 +2381,18 @@ class Application:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Printer(self):
@@ -2449,7 +2545,7 @@ class Application:
 
     def AccessError(self, ErrorNumber=None):
         arguments = com_arguments([unwrap(a) for a in [ErrorNumber]])
-        return Variant(self.com_object.AccessError(*arguments))
+        return self.com_object.AccessError(*arguments)
 
     # Lower case alias for AccessError
     def accesserror(self, ErrorNumber=None):
@@ -2465,7 +2561,7 @@ class Application:
 
     def BuildCriteria(self, Field=None, FieldType=None, Expression=None):
         arguments = com_arguments([unwrap(a) for a in [Field, FieldType, Expression]])
-        return String(self.com_object.BuildCriteria(*arguments))
+        return self.com_object.BuildCriteria(*arguments)
 
     # Lower case alias for BuildCriteria
     def buildcriteria(self, Field=None, FieldType=None, Expression=None):
@@ -2480,7 +2576,7 @@ class Application:
         return self.CloseCurrentDatabase()
 
     def CodeDb(self):
-        return Database(self.com_object.CodeDb())
+        return self.com_object.CodeDb()
 
     # Lower case alias for CodeDb
     def codedb(self):
@@ -2488,7 +2584,7 @@ class Application:
 
     def ColumnHistory(self, TableName=None, ColumnName=None, queryString=None):
         arguments = com_arguments([unwrap(a) for a in [TableName, ColumnName, queryString]])
-        return String(self.com_object.ColumnHistory(*arguments))
+        return self.com_object.ColumnHistory(*arguments)
 
     # Lower case alias for ColumnHistory
     def columnhistory(self, TableName=None, ColumnName=None, queryString=None):
@@ -2540,7 +2636,7 @@ class Application:
 
     def CreateGroupLevel(self, ReportName=None, Expression=None, Header=None, Footer=None):
         arguments = com_arguments([unwrap(a) for a in [ReportName, Expression, Header, Footer]])
-        return Long(self.com_object.CreateGroupLevel(*arguments))
+        return self.com_object.CreateGroupLevel(*arguments)
 
     # Lower case alias for CreateGroupLevel
     def creategrouplevel(self, ReportName=None, Expression=None, Header=None, Footer=None):
@@ -2566,14 +2662,14 @@ class Application:
         return self.CreateReportControl(*arguments)
 
     def CurrentDb(self):
-        return Database(self.com_object.CurrentDb())
+        return self.com_object.CurrentDb()
 
     # Lower case alias for CurrentDb
     def currentdb(self):
         return self.CurrentDb()
 
     def CurrentUser(self):
-        return String(self.com_object.CurrentUser())
+        return self.com_object.CurrentUser()
 
     # Lower case alias for CurrentUser
     def currentuser(self):
@@ -2581,7 +2677,7 @@ class Application:
 
     def CurrentWebUser(self, DisplayOption=None):
         arguments = com_arguments([unwrap(a) for a in [DisplayOption]])
-        return Variant(self.com_object.CurrentWebUser(*arguments))
+        return self.com_object.CurrentWebUser(*arguments)
 
     # Lower case alias for CurrentWebUser
     def currentwebuser(self, DisplayOption=None):
@@ -2590,7 +2686,7 @@ class Application:
 
     def CurrentWebUserGroups(self, DisplayOption=None):
         arguments = com_arguments([unwrap(a) for a in [DisplayOption]])
-        return Variant(self.com_object.CurrentWebUserGroups(*arguments))
+        return self.com_object.CurrentWebUserGroups(*arguments)
 
     # Lower case alias for CurrentWebUserGroups
     def currentwebusergroups(self, DisplayOption=None):
@@ -2599,7 +2695,7 @@ class Application:
 
     def DCount(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DCount(*arguments))
+        return self.com_object.DCount(*arguments)
 
     # Lower case alias for DCount
     def dcount(self, Expr=None, Domain=None, Criteria=None):
@@ -2617,7 +2713,7 @@ class Application:
 
     def DDEInitiate(self, Application=None, Topic=None):
         arguments = com_arguments([unwrap(a) for a in [Application, Topic]])
-        return Variant(self.com_object.DDEInitiate(*arguments))
+        return self.com_object.DDEInitiate(*arguments)
 
     # Lower case alias for DDEInitiate
     def ddeinitiate(self, Application=None, Topic=None):
@@ -2635,7 +2731,7 @@ class Application:
 
     def DDERequest(self, ChanNum=None, Item=None):
         arguments = com_arguments([unwrap(a) for a in [ChanNum, Item]])
-        return String(self.com_object.DDERequest(*arguments))
+        return self.com_object.DDERequest(*arguments)
 
     # Lower case alias for DDERequest
     def dderequest(self, ChanNum=None, Item=None):
@@ -2659,7 +2755,7 @@ class Application:
         return self.DDETerminateAll()
 
     def DefaultWorkspaceClone(self):
-        return Workspace(self.com_object.DefaultWorkspaceClone())
+        return self.com_object.DefaultWorkspaceClone()
 
     # Lower case alias for DefaultWorkspaceClone
     def defaultworkspaceclone(self):
@@ -2685,7 +2781,7 @@ class Application:
 
     def DFirst(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DFirst(*arguments))
+        return self.com_object.DFirst(*arguments)
 
     # Lower case alias for DFirst
     def dfirst(self, Expr=None, Domain=None, Criteria=None):
@@ -2703,7 +2799,7 @@ class Application:
 
     def DLast(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DLast(*arguments))
+        return self.com_object.DLast(*arguments)
 
     # Lower case alias for DLast
     def dlast(self, Expr=None, Domain=None, Criteria=None):
@@ -2712,7 +2808,7 @@ class Application:
 
     def DLookup(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DLookup(*arguments))
+        return self.com_object.DLookup(*arguments)
 
     # Lower case alias for DLookup
     def dlookup(self, Expr=None, Domain=None, Criteria=None):
@@ -2721,7 +2817,7 @@ class Application:
 
     def DMax(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DMax(*arguments))
+        return self.com_object.DMax(*arguments)
 
     # Lower case alias for DMax
     def dmax(self, Expr=None, Domain=None, Criteria=None):
@@ -2730,7 +2826,7 @@ class Application:
 
     def DMin(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DMin(*arguments))
+        return self.com_object.DMin(*arguments)
 
     # Lower case alias for DMin
     def dmin(self, Expr=None, Domain=None, Criteria=None):
@@ -2739,7 +2835,7 @@ class Application:
 
     def DStDev(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DStDev(*arguments))
+        return self.com_object.DStDev(*arguments)
 
     # Lower case alias for DStDev
     def dstdev(self, Expr=None, Domain=None, Criteria=None):
@@ -2748,7 +2844,7 @@ class Application:
 
     def DStDevP(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DStDevP(*arguments))
+        return self.com_object.DStDevP(*arguments)
 
     # Lower case alias for DStDevP
     def dstdevp(self, Expr=None, Domain=None, Criteria=None):
@@ -2757,7 +2853,7 @@ class Application:
 
     def DSum(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DSum(*arguments))
+        return self.com_object.DSum(*arguments)
 
     # Lower case alias for DSum
     def dsum(self, Expr=None, Domain=None, Criteria=None):
@@ -2766,7 +2862,7 @@ class Application:
 
     def DVar(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DVar(*arguments))
+        return self.com_object.DVar(*arguments)
 
     # Lower case alias for DVar
     def dvar(self, Expr=None, Domain=None, Criteria=None):
@@ -2775,7 +2871,7 @@ class Application:
 
     def DVarP(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return Variant(self.com_object.DVarP(*arguments))
+        return self.com_object.DVarP(*arguments)
 
     # Lower case alias for DVarP
     def dvarp(self, Expr=None, Domain=None, Criteria=None):
@@ -2793,7 +2889,7 @@ class Application:
 
     def EuroConvert(self, Number=None, SourceCurrency=None, TargetCurrency=None, FullPrecision=None, TriangulationPrecision=None):
         arguments = com_arguments([unwrap(a) for a in [Number, SourceCurrency, TargetCurrency, FullPrecision, TriangulationPrecision]])
-        return Double(self.com_object.EuroConvert(*arguments))
+        return self.com_object.EuroConvert(*arguments)
 
     # Lower case alias for EuroConvert
     def euroconvert(self, Number=None, SourceCurrency=None, TargetCurrency=None, FullPrecision=None, TriangulationPrecision=None):
@@ -2802,7 +2898,7 @@ class Application:
 
     def Eval(self, StringExpr=None):
         arguments = com_arguments([unwrap(a) for a in [StringExpr]])
-        return Variant(self.com_object.Eval(*arguments))
+        return self.com_object.Eval(*arguments)
 
     # Lower case alias for Eval
     def eval(self, StringExpr=None):
@@ -2847,7 +2943,7 @@ class Application:
 
     def GetOption(self, OptionName=None):
         arguments = com_arguments([unwrap(a) for a in [OptionName]])
-        return Variant(self.com_object.GetOption(*arguments))
+        return self.com_object.GetOption(*arguments)
 
     # Lower case alias for GetOption
     def getoption(self, OptionName=None):
@@ -2856,7 +2952,7 @@ class Application:
 
     def GUIDFromString(self, String=None):
         arguments = com_arguments([unwrap(a) for a in [String]])
-        return Variant(self.com_object.GUIDFromString(*arguments))
+        return self.com_object.GUIDFromString(*arguments)
 
     # Lower case alias for GUIDFromString
     def guidfromstring(self, String=None):
@@ -2865,7 +2961,7 @@ class Application:
 
     def HtmlEncode(self, PlainText=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [PlainText, Length]])
-        return String(self.com_object.HtmlEncode(*arguments))
+        return self.com_object.HtmlEncode(*arguments)
 
     # Lower case alias for HtmlEncode
     def htmlencode(self, PlainText=None, Length=None):
@@ -2873,7 +2969,7 @@ class Application:
         return self.HtmlEncode(*arguments)
 
     def hWndAccessApp(self):
-        return Long(self.com_object.hWndAccessApp())
+        return self.com_object.hWndAccessApp()
 
     # Lower case alias for hWndAccessApp
     def hwndaccessapp(self):
@@ -2881,7 +2977,7 @@ class Application:
 
     def HyperlinkPart(self, Hyperlink=None, Part=None):
         arguments = com_arguments([unwrap(a) for a in [Hyperlink, Part]])
-        return String(self.com_object.HyperlinkPart(*arguments))
+        return self.com_object.HyperlinkPart(*arguments)
 
     # Lower case alias for HyperlinkPart
     def hyperlinkpart(self, Hyperlink=None, Part=None):
@@ -2944,7 +3040,7 @@ class Application:
 
     def LoadPicture(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        return Object(self.com_object.LoadPicture(*arguments))
+        return self.com_object.LoadPicture(*arguments)
 
     # Lower case alias for LoadPicture
     def loadpicture(self, FileName=None):
@@ -2971,7 +3067,7 @@ class Application:
 
     def Nz(self, Value=None, ValueIfNull=None):
         arguments = com_arguments([unwrap(a) for a in [Value, ValueIfNull]])
-        return Variant(self.com_object.Nz(*arguments))
+        return self.com_object.Nz(*arguments)
 
     # Lower case alias for Nz
     def nz(self, Value=None, ValueIfNull=None):
@@ -2998,7 +3094,7 @@ class Application:
 
     def PlainText(self, RichText=None, Length=None):
         arguments = com_arguments([unwrap(a) for a in [RichText, Length]])
-        return String(self.com_object.PlainText(*arguments))
+        return self.com_object.PlainText(*arguments)
 
     # Lower case alias for PlainText
     def plaintext(self, RichText=None, Length=None):
@@ -3030,7 +3126,7 @@ class Application:
 
     def Run(self, Procedure=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
         arguments = com_arguments([unwrap(a) for a in [Procedure, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30]])
-        return Variant(self.com_object.Run(*arguments))
+        return self.com_object.Run(*arguments)
 
     # Lower case alias for Run
     def run(self, Procedure=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None, Arg7=None, Arg8=None, Arg9=None, Arg10=None, Arg11=None, Arg12=None, Arg13=None, Arg14=None, Arg15=None, Arg16=None, Arg17=None, Arg18=None, Arg19=None, Arg20=None, Arg21=None, Arg22=None, Arg23=None, Arg24=None, Arg25=None, Arg26=None, Arg27=None, Arg28=None, Arg29=None, Arg30=None):
@@ -3093,7 +3189,7 @@ class Application:
 
     def StringFromGUID(self, Guid=None):
         arguments = com_arguments([unwrap(a) for a in [Guid]])
-        return Variant(self.com_object.StringFromGUID(*arguments))
+        return self.com_object.StringFromGUID(*arguments)
 
     # Lower case alias for StringFromGUID
     def stringfromguid(self, Guid=None):
@@ -3102,7 +3198,7 @@ class Application:
 
     def SysCmd(self, Action=None, Argument2=None, Argument3=None):
         arguments = com_arguments([unwrap(a) for a in [Action, Argument2, Argument3]])
-        return Variant(self.com_object.SysCmd(*arguments))
+        return self.com_object.SysCmd(*arguments)
 
     # Lower case alias for SysCmd
     def syscmd(self, Action=None, Argument2=None, Argument3=None):
@@ -4352,10 +4448,18 @@ class Attachment:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def PictureAlignment(self):
@@ -5932,10 +6036,18 @@ class BoundObjectFrame:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -8581,10 +8693,18 @@ class CheckBox:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -9138,10 +9258,18 @@ class CodeProject:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Path(self):
@@ -10979,10 +11107,18 @@ class ComboBox:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -13072,10 +13208,18 @@ class CommandButton:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Picture(self):
@@ -14004,10 +14148,18 @@ class Control:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -14183,10 +14335,18 @@ class Controls:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class CurrentData:
@@ -14388,10 +14548,18 @@ class CurrentProject:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Path(self):
@@ -15298,10 +15466,18 @@ class CustomControl:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -15618,10 +15794,18 @@ class DependencyInfo:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def UnsupportedObjects(self):
@@ -15667,10 +15851,18 @@ class DependencyObjects:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class DoCmd:
@@ -16298,14 +16490,12 @@ class EdgeBrowserControl:
     def refresh(self):
         return self.Refresh()
 
-    def RetrieveJavascriptValue(self, expression=None):
-        arguments = com_arguments([unwrap(a) for a in [expression]])
-        self.com_object.RetrieveJavascriptValue(*arguments)
+    def RetrieveJavascriptValue(self):
+        self.com_object.RetrieveJavascriptValue()
 
     # Lower case alias for RetrieveJavascriptValue
-    def retrievejavascriptvalue(self, expression=None):
-        arguments = [expression]
-        return self.RetrieveJavascriptValue(*arguments)
+    def retrievejavascriptvalue(self):
+        return self.RetrieveJavascriptValue()
 
 
 class EmptyCell:
@@ -16832,10 +17022,18 @@ class EmptyCell:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -17080,10 +17278,18 @@ class Entities:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class Entity:
@@ -17121,10 +17327,18 @@ class Entity:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class Form:
@@ -19272,10 +19486,18 @@ class Form:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Picture(self):
@@ -20502,10 +20724,18 @@ class FormatConditions:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def Add(self, Type=None, Operator=None, Expression1=None, Expression2=None):
         arguments = com_arguments([unwrap(a) for a in [Type, Operator, Expression1, Expression2]])
@@ -20558,10 +20788,18 @@ class Forms:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class GroupLevel:
@@ -20679,10 +20917,18 @@ class GroupLevel:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -21684,10 +21930,18 @@ class Image:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Picture(self):
@@ -23114,10 +23368,18 @@ class Label:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -23728,10 +23990,18 @@ class Line:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -25323,10 +25593,18 @@ class ListBox:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -25921,10 +26199,18 @@ class Module:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def ProcBodyLine(self, ProcName=None, ProcKind=None):
         arguments = com_arguments([unwrap(a) for a in [ProcName, ProcKind]])
@@ -26003,7 +26289,7 @@ class Module:
 
     def CreateEventProc(self, EventName=None, ObjectName=None):
         arguments = com_arguments([unwrap(a) for a in [EventName, ObjectName]])
-        return Long(self.com_object.CreateEventProc(*arguments))
+        return self.com_object.CreateEventProc(*arguments)
 
     # Lower case alias for CreateEventProc
     def createeventproc(self, EventName=None, ObjectName=None):
@@ -26090,10 +26376,18 @@ class Modules:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class NavigationButton:
@@ -27559,10 +27853,18 @@ class NavigationButton:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def ParentTab(self):
@@ -29074,10 +29376,18 @@ class NavigationControl:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -30575,10 +30885,18 @@ class ObjectFrame:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -31022,10 +31340,18 @@ class Operation:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def WSParameters(self):
@@ -31038,7 +31364,7 @@ class Operation:
 
     def Execute(self, bstrParameters=None):
         arguments = com_arguments([unwrap(a) for a in [bstrParameters]])
-        return Variant(self.com_object.Execute(*arguments))
+        return self.com_object.Execute(*arguments)
 
     # Lower case alias for Execute
     def execute(self, bstrParameters=None):
@@ -31076,10 +31402,18 @@ class Operations:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class OptionButton:
@@ -32117,10 +32451,18 @@ class OptionButton:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -33230,10 +33572,18 @@ class OptionGroup:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -33831,10 +34181,18 @@ class Page:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Picture(self):
@@ -34168,10 +34526,18 @@ class PageBreak:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -34702,10 +35068,18 @@ class Printers:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class Properties:
@@ -34721,10 +35095,18 @@ class Properties:
     def Count(self):
         return self.com_object.Count
 
+    @Count.setter
+    def Count(self, value):
+        self.com_object.Count = value
+
     # Lower case aliases for Count
     @property
     def count(self):
         return self.Count
+
+    @count.setter
+    def count(self, value):
+        self.Count = value
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -34742,10 +35124,18 @@ class Properties:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class Rectangle:
@@ -35203,10 +35593,18 @@ class Rectangle:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -35458,10 +35856,18 @@ class References:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def AddFromFile(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
@@ -37063,10 +37469,18 @@ class Report:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Picture(self):
@@ -37783,7 +38197,7 @@ class Report:
 
     def TextHeight(self, Expr=None):
         arguments = com_arguments([unwrap(a) for a in [Expr]])
-        return Single(self.com_object.TextHeight(*arguments))
+        return self.com_object.TextHeight(*arguments)
 
     # Lower case alias for TextHeight
     def textheight(self, Expr=None):
@@ -37792,7 +38206,7 @@ class Report:
 
     def TextWidth(self, Expr=None):
         arguments = com_arguments([unwrap(a) for a in [Expr]])
-        return Single(self.com_object.TextWidth(*arguments))
+        return self.com_object.TextWidth(*arguments)
 
     # Lower case alias for TextWidth
     def textwidth(self, Expr=None):
@@ -37834,10 +38248,18 @@ class Reports:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class ReturnVar:
@@ -37970,10 +38392,18 @@ class Screen:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def PreviousControl(self):
@@ -38500,10 +38930,18 @@ class Section:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -38633,10 +39071,18 @@ class SharedResource:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Type(self):
@@ -38689,10 +39135,18 @@ class SharedResources:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class SmartTag:
@@ -38726,10 +39180,18 @@ class SmartTag:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -38788,10 +39250,18 @@ class SmartTagAction:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def Execute(self):
         self.com_object.Execute()
@@ -38835,10 +39305,18 @@ class SmartTagActions:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class SmartTagProperties:
@@ -38878,10 +39356,18 @@ class SmartTagProperties:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def Add(self, Name=None, Value=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Value]])
@@ -38974,10 +39460,18 @@ class SmartTags:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     def Add(self, Name=None):
         arguments = com_arguments([unwrap(a) for a in [Name]])
@@ -39786,10 +40280,18 @@ class SubForm:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Properties(self):
@@ -41158,10 +41660,18 @@ class TabControl:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def PressedColor(self):
@@ -43319,10 +43829,18 @@ class TextBox:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def PostalAddress(self):
@@ -45361,10 +45879,18 @@ class ToggleButton:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Picture(self):
@@ -46798,10 +47324,18 @@ class WebBrowserControl:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Progress(self):
@@ -47192,10 +47726,18 @@ class WebService:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class WebServices:
@@ -47232,10 +47774,18 @@ class WebServices:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
 
 class WSParameter:
@@ -47264,10 +47814,18 @@ class WSParameter:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 
     @property
     def Type(self):
@@ -47309,8 +47867,16 @@ class WSParameters:
     def Parent(self):
         return self.com_object.Parent
 
+    @Parent.setter
+    def Parent(self, value):
+        self.com_object.Parent = value
+
     # Lower case aliases for Parent
     @property
     def parent(self):
         return self.Parent
+
+    @parent.setter
+    def parent(self, value):
+        self.Parent = value
 

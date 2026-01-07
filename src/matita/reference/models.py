@@ -82,7 +82,8 @@ class DocPage:
             if "Returns a collection of" in p and property_class is not None:
                 if not property_class.endswith("s"):
                     property_class += "s"
-                self.property_class = property_class
+            if property_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
+                property_class = None
             self.property_class = property_class
 
         # Check whether the property is read only
@@ -128,7 +129,7 @@ class DocPage:
                 logging.warning(f"Unexpected format in 'Return value' section, could not parse '{self.title}': '{line}'")
             else:
                 self.return_value_class = line
-            if self.return_value_class == "Boolean":
+            if self.return_value_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
                 self.return_value_class = None
 
     def process_title(self):
@@ -476,12 +477,17 @@ class VbaDocs:
             else:
                 if page.is_property or page.is_method:
                     logging.warning(f"Page'{page_key}' is a property or method, but the key of the parent object of is None.")
+
         # Remove invalid class types
         for page in self.pages.values():
             if page.property_class is not None:
                 if f"{page.module_name}.{page.property_class}".lower() not in self.pages:
-                    page.property_class = None
                     logging.warning(f"Removing 'property_class' from {page.api_name}. Class '{page.property_class}' not found.")
+                    page.property_class = None
+            if page.return_value_class is not None:
+                if f"{page.module_name}.{page.return_value_class}".lower() not in self.pages:
+                    logging.warning(f"Removing 'return_value_class' from {page.api_name}. Class '{page.return_value_class}' not found.")
+                    page.return_value_class = None
         self.apply_manual_adjustments()
     
     def to_dict(self):

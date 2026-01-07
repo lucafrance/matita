@@ -34,12 +34,14 @@ def generate_report():
         country_wks = report_wkb.worksheets.add(After=last_wks)
 
         country_wks.name = country
-        country_wks.Cells(2, 2).value = f"Population of {country}"
+        country_wks.cells(2, 2).value = f"Population of {country}"
         country_wks.rows.item(2).style = "Heading 1"
         country_wks.columns.item(1).ColumnWidth = 3
 
-
-
+        country_wks.cells(4, 2).Value = "Year"
+        country_wks.cells(4, 3).Value = "Population"
+        country_wks.cells(5, 2).Value = start_year
+        country_wks.cells(5, 2).DataSeries(Rowcol=xl.xlColumns, Type=xl.xlLinear, Step=1, Stop=end_year)
 
     first_wks.delete()
 
@@ -54,33 +56,29 @@ if __name__ == "__main__":
 #     For i = LBound(euCountries) To UBound(euCountries)
         
 #         With countryWks
-#             .Name = country
-#             .Cells(2, 2).Value = "Population of " & country
-#             .Rows(2).Style = "Heading 1"
-#             .Columns(1).ColumnWidth = 3
             
-#             .Cells(4, 2).Value = "Year"
-#             .Cells(4, 3).Value = "Population"
-#             .Cells(5, 2).Value = startYear
-#             .Cells(5, 2).DataSeries Rowcol:=xlColumns, Type:=xlLinear, Step:=1, Stop:=endYear
+#             .cells(4, 2).Value = "Year"
+#             .cells(4, 3).Value = "Population"
+#             .cells(5, 2).Value = start_year
+#             .cells(5, 2).DataSeries Rowcol=xlColumns, Type=xlLinear, Step=1, Stop=end_year
             
-#             dataTbl.DataBodyRange.AutoFilter field:=countriesClm.Index, Criteria1:=country
-#             .Cells(5, 3).Resize(numRows).Value = populationClm.DataBodyRange.SpecialCells(xlCellTypeVisible).Value
+#             dataTbl.DataBodyRange.AutoFilter field=countriesClm.Index, Criteria1=country
+#             .cells(5, 3).Resize(numRows).Value = populationClm.DataBodyRange.SpecialCells(xlCellTypeVisible).Value
             
 #             Dim countryTbl As ListObject
-#             Set countryTbl = .ListObjects.Add(Source:=.Cells(4, 2).CurrentRegion, XlListObjectHasHeaders:=xlYes)
+#             Set countryTbl = .ListObjects.Add(Source=.cells(4, 2).CurrentRegion, XlListObjectHasHeaders=xlYes)
 #             countryTbl.ListColumns("Population").DataBodyRange.NumberFormat = "#,##0"
             
 #             Dim shp As Shape
 #             Set shp = .Shapes.AddChart2( _
-#                 XlChartType:=xlLineMarkers, _
-#                 Left:=.Cells(4, 5).Left, _
-#                 Top:=.Cells(4, 5).Top)
+#                 XlChartType=xlLineMarkers, _
+#                 Left=.cells(4, 5).Left, _
+#                 Top=.cells(4, 5).Top)
             
 #             Dim c As Chart
 #             Set c = shp.Chart
 #             c.HasTitle = False
-#             c.FullSeriesCollection(1).Name = .Cells(4, 2).Address
+#             c.FullSeriesCollection(1).Name = .cells(4, 2).Address
 #             c.FullSeriesCollection(1).Values = "'" & country & "'!" & countryTbl.ListColumns("Population").DataBodyRange.Address
 #             c.FullSeriesCollection(1).XValues = "'" & country & "'!" & countryTbl.ListColumns("Year").DataBodyRange.Address
 #         End With
