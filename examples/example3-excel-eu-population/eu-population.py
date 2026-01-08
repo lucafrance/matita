@@ -55,14 +55,14 @@ def generate_report():
         )
         country_tbl.listcolumns("Population").databodyrange.numberformat = "#,##0"
 
-        shp = country_wks.shapes.AddChart2( 
+        shp = country_wks.shapes.addchart2( 
             XlChartType=xl.xlLineMarkers,
             Left=country_wks.cells(4, 5).left,
             Top=country_wks.cells(4, 5).top,
         )
         c = shp.chart
         c.hastitle = False
-        chart_series = c.FullSeriesCollection(1)
+        chart_series = c.fullseriescollection().item(1)
         chart_series.name = country_wks.cells(4, 2).address()
         chart_series.values  = f"'{country}'!{country_tbl.listcolumns("Population").databodyrange.address()}"
         chart_series.xvalues = f"'{country}'!{country_tbl.listcolumns("Year").databodyrange.address()}"
