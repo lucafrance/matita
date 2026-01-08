@@ -1760,6 +1760,46 @@ class AllFunctions:
         return self.Parent
 
 
+class allmacros:
+
+    def __init__(self, allmacros=None):
+        self.com_object= allmacros
+
+    @property
+    def Application(self):
+        return self.com_object.Application
+
+    @property
+    def Count(self):
+        return self.com_object.Count
+
+    @property
+    def count(self):
+        """Lower case alias for Count"""
+        return self.Count
+
+    def Item(self, var=None):
+        arguments = com_arguments([unwrap(a) for a in [var]])
+        if hasattr(self.com_object, "GetItem"):
+            return self.com_object.GetItem(*arguments)
+        else:
+            return self.com_object.Item(*arguments)
+
+    def item(self, var=None):
+        """Lower case alias for Item"""
+        arguments = [var]
+        return self.Item(*arguments)
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
+
+    @property
+    def parent(self):
+        """Lower case alias for Parent"""
+        return self.Parent
+
+
 class AllModules:
 
     def __init__(self, allmodules=None):
@@ -2358,6 +2398,15 @@ class Application:
         return self.Reports
 
     @property
+    def returnvars(self):
+        return ReturnVars(self.com_object.returnvars)
+
+    @property
+    def returnvars(self):
+        """Lower case alias for returnvars"""
+        return self.returnvars
+
+    @property
     def Screen(self):
         return self.com_object.Screen
 
@@ -2605,6 +2654,15 @@ class Application:
     def currentwebusergroups(self, DisplayOption=None):
         arguments = [DisplayOption]
         return self.CurrentWebUserGroups(*arguments)
+
+    def davg(self, Expr=None, Domain=None, Criteria=None):
+        arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
+        return self.com_object.davg(*arguments)
+
+    # Lower case alias for davg
+    def davg(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        return self.davg(*arguments)
 
     def DCount(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
@@ -9428,6 +9486,15 @@ class CodeProject:
         return self.IsConnected
 
     @property
+    def IsSQLBackend(self):
+        return self.com_object.IsSQLBackend
+
+    @property
+    def issqlbackend(self):
+        """Lower case alias for IsSQLBackend"""
+        return self.IsSQLBackend
+
+    @property
     def IsTrusted(self):
         return self.com_object.IsTrusted
 
@@ -13845,6 +13912,24 @@ class CommandButton:
     def quickstyle(self, value):
         """Lower case alias for QuickStyle.setter"""
         self.QuickStyle = value
+
+    @property
+    def quickstylemask(self):
+        return self.com_object.quickstylemask
+
+    @quickstylemask.setter
+    def quickstylemask(self, value):
+        self.com_object.quickstylemask = value
+
+    @property
+    def quickstylemask(self):
+        """Lower case alias for quickstylemask"""
+        return self.quickstylemask
+
+    @quickstylemask.setter
+    def quickstylemask(self, value):
+        """Lower case alias for quickstylemask.setter"""
+        self.quickstylemask = value
 
     @property
     def ReadingOrder(self):
@@ -20393,6 +20478,24 @@ class Form:
     def recordsetclone(self):
         """Lower case alias for RecordsetClone"""
         return self.RecordsetClone
+
+    @property
+    def recordsettype(self):
+        return self.com_object.recordsettype
+
+    @recordsettype.setter
+    def recordsettype(self, value):
+        self.com_object.recordsettype = value
+
+    @property
+    def recordsettype(self):
+        """Lower case alias for recordsettype"""
+        return self.recordsettype
+
+    @recordsettype.setter
+    def recordsettype(self, value):
+        """Lower case alias for recordsettype.setter"""
+        self.recordsettype = value
 
     @property
     def RecordSource(self):
@@ -29016,6 +29119,24 @@ class NavigationButton:
     def quickstyle(self, value):
         """Lower case alias for QuickStyle.setter"""
         self.QuickStyle = value
+
+    @property
+    def quickstylemask(self):
+        return self.com_object.quickstylemask
+
+    @quickstylemask.setter
+    def quickstylemask(self, value):
+        self.com_object.quickstylemask = value
+
+    @property
+    def quickstylemask(self):
+        """Lower case alias for quickstylemask"""
+        return self.quickstylemask
+
+    @quickstylemask.setter
+    def quickstylemask(self, value):
+        """Lower case alias for quickstylemask.setter"""
+        self.quickstylemask = value
 
     @property
     def ReadingOrder(self):
@@ -39265,6 +39386,15 @@ class Report:
         self.ServerFilter = value
 
     @property
+    def shape(self):
+        return self.com_object.shape
+
+    @property
+    def shape(self):
+        """Lower case alias for shape"""
+        return self.shape
+
+    @property
     def ShortcutMenuBar(self):
         return self.com_object.ShortcutMenuBar
 
@@ -47693,6 +47823,24 @@ class ToggleButton:
     def quickstyle(self, value):
         """Lower case alias for QuickStyle.setter"""
         self.QuickStyle = value
+
+    @property
+    def quickstylemask(self):
+        return self.com_object.quickstylemask
+
+    @quickstylemask.setter
+    def quickstylemask(self, value):
+        self.com_object.quickstylemask = value
+
+    @property
+    def quickstylemask(self):
+        """Lower case alias for quickstylemask"""
+        return self.quickstylemask
+
+    @quickstylemask.setter
+    def quickstylemask(self, value):
+        """Lower case alias for quickstylemask.setter"""
+        self.quickstylemask = value
 
     @property
     def ReadingOrder(self):
