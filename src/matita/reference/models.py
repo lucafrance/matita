@@ -351,13 +351,14 @@ class DocPage:
 
         code = []
         # Getter method
-        code.append(f"    # Lower case aliases for {self.property_name}")
         if len(self.parameters) == 0 or not self.is_read_only_property:
             code.append(f"    @property")
             code.append(f"    def {self.property_name.lower()}(self):")
+            code.append(f"        \"\"\"Lower case alias for {self.property_name}\"\"\"")
             code.append(f"        return self.{self.property_name}")
         else:
             code.append(f"    def {self.property_name.lower()}(self, {self.parameters_code()}):")
+            code.append(f"        \"\"\"Lower case alias for {self.property_name}\"\"\"")
             code.append(f"        arguments = [{", ".join(self.parameters)}]")
             code.append(f"        return self.{self.property_name}(*arguments)")
         code.append(f"")
@@ -366,6 +367,7 @@ class DocPage:
         if not self.is_read_only_property:
             code.append(f"    @{self.property_name.lower()}.setter")
             code.append(f"    def {self.property_name.lower()}(self, value):")
+            code.append(f"        \"\"\"Lower case alias for {self.property_name}.setter\"\"\"")
             code.append(f"        self.{self.property_name} = value")
             code.append(f"")
 
