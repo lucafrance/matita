@@ -1,8 +1,8 @@
 import logging
 import os
+import string
 
 from .markdown import MarkdownTree
-
 
 def page_filename_to_key(filename):
     key = filename.removesuffix(".md")
@@ -10,6 +10,15 @@ def page_filename_to_key(filename):
     # e.g. "(Object)" from "Excel.Application(Object)"
     key = key.split("(", 1)[0]
     return key
+
+def camel_to_snake_case(s):
+    """anyVariableName -> any_variable_name"""
+
+    snake_s =  "".join(
+        [f"_{c.lower()}" if c in string.ascii_uppercase else c for c in s]
+    )
+    snake_s = snake_s.strip("_")
+    return snake_s
 
 class DocPage:
 
@@ -357,40 +366,43 @@ class DocPage:
         """Return python code of lower case aliases if the DocPage is a property"""
 
         if not self.is_property:
-            logging.info(f"Property '{self.title}' ignored when exporting lower case aliases for '{self.api_name}', because it is not a property.")
-            return []
-
-        if self.property_name == self.property_name.lower():
-            # Skip creating the alias
+            logging.info(f"Property '{self.title}' ignored when exporting aliases for '{self.api_name}', because it is not a property.")
             return []
 
         # Don't create lower case alias for reserved words in Python
         # E.g. `Access.BoundObjectFrame.Class`
         if self.property_name.lower() in self.RESERVED_WORDS:
-            logging.info(f"Lower case alias for property '{self.property_name}' of '{self.api_name}' ignored, because it is a reserved word in Python.")
+            logging.info(f"Aliases for property '{self.property_name}' of '{self.api_name}' ignored, because it is a reserved word in Python.")
             return []
+        
+        aliases = []
+        if self.property_name != self.property_name.lower():
+            aliases.append(self.property_name.lower())
+        if self.property_name.lower() != camel_to_snake_case(self.property_name):
+            aliases.append(camel_to_snake_case(self.property_name))
 
         code = []
-        # Getter method
-        if len(self.parameters) == 0 or not self.is_read_only_property:
-            code.append(f"    @property")
-            code.append(f"    def {self.property_name.lower()}(self):")
-            code.append(f"        \"\"\"Lower case alias for {self.property_name}\"\"\"")
-            code.append(f"        return self.{self.property_name}")
-        else:
-            code.append(f"    def {self.property_name.lower()}(self, {self.parameters_code()}):")
-            code.append(f"        \"\"\"Lower case alias for {self.property_name}\"\"\"")
-            code.append(f"        arguments = [{", ".join(self.parameters)}]")
-            code.append(f"        return self.{self.property_name}(*arguments)")
-        code.append(f"")
-
-        # Setter method
-        if not self.is_read_only_property:
-            code.append(f"    @{self.property_name.lower()}.setter")
-            code.append(f"    def {self.property_name.lower()}(self, value):")
-            code.append(f"        \"\"\"Lower case alias for {self.property_name}.setter\"\"\"")
-            code.append(f"        self.{self.property_name} = value")
+        for alias in aliases:
+            # Getter method
+            if len(self.parameters) == 0 or not self.is_read_only_property:
+                code.append(f"    @property")
+                code.append(f"    def {alias}(self):")
+                code.append(f"        \"\"\"Alias for {self.property_name}\"\"\"")
+                code.append(f"        return self.{self.property_name}")
+            else:
+                code.append(f"    def {alias}(self, {self.parameters_code()}):")
+                code.append(f"        \"\"\"Alias for {self.property_name}\"\"\"")
+                code.append(f"        arguments = [{", ".join(self.parameters)}]")
+                code.append(f"        return self.{self.property_name}(*arguments)")
             code.append(f"")
+
+            # Setter method
+            if not self.is_read_only_property:
+                code.append(f"    @{alias}.setter")
+                code.append(f"    def {alias}(self, value):")
+                code.append(f"        \"\"\"Alias for {self.property_name}.setter\"\"\"")
+                code.append(f"        self.{self.property_name} = value")
+                code.append(f"")
 
         return code
 
@@ -435,23 +447,32 @@ class DocPage:
         code_line = " "*8 + code_line
         code.append(code_line)
         code.append("")
+        return code
 
-        # Lower case alias
-        if self.method_name == self.method_name.lower():
-            # Skip creating the alias
-            return []
+    def to_python_method_function_aliases(self):
+
+        code = []
         if self.method_name.lower() in self.RESERVED_WORDS:
-            logging.info(f"Lower case alias for method '{self.method_name}' of '{self.object_name}' ignored, because it is a reserved word in Python.")
+            logging.info(f"Aliases for method '{self.method_name}' of '{self.object_name}' ignored, because it is a reserved word in Python.")
             return code
-        code.append(f"    # Lower case alias for {self.method_name}")
-        if len(self.parameters) == 0:
-            code.append(f"    def {self.method_name.lower()}(self):")
-            code.append(f"        return self.{self.method_name}()")
-        else:
-            code.append(f"    def {self.method_name.lower()}(self, {self.parameters_code()}):")
-            code.append(f"        arguments = [{", ".join(self.parameters)}]")
-            code.append(f"        return self.{self.method_name}(*arguments)")
-        code.append("")
+        
+        aliases = []
+        if self.method_name != self.method_name.lower():
+            aliases.append(self.method_name.lower())
+        if self.method_name.lower() != camel_to_snake_case(self.method_name):
+            aliases.append(camel_to_snake_case(self.method_name))
+
+        for alias in aliases:
+            if len(self.parameters) == 0:
+                code.append(f"    def {alias}(self):")
+                code.append(f"        \"\"\"Alias for {self.method_name}\"\"\"")
+                code.append(f"        return self.{self.method_name}()")
+            else:
+                code.append(f"    def {alias}(self, {self.parameters_code()}):")
+                code.append(f"        \"\"\"Alias for {self.method_name}\"\"\"")
+                code.append(f"        arguments = [{", ".join(self.parameters)}]")
+                code.append(f"        return self.{self.method_name}(*arguments)")
+            code.append("")
 
         return code
     
@@ -460,6 +481,7 @@ class DocPage:
         code = []
         for m in self.methods:
             code += m.to_python_method_function(parent_is_collection=self.is_collection)
+            code += m.to_python_method_function_aliases()
         return code
 
 class VbaDocs:

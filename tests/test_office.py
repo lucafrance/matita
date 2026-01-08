@@ -1,6 +1,35 @@
+import inspect
 import unittest
 
 from matita.office import access as ac, excel as xl, outlook as ol, powerpoint as pp, word as wd
+
+
+class TestAccess(unittest.TestCase):
+    
+    @classmethod
+    def setUpClass(cls):
+        cls.ac_app = ac.Application()
+        cls.ac_app.Visible = True
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.ac_app.Quit()
+    
+    def test_aliases(self):
+        membs = inspect.getmembers(ac.Application)
+        membs = [m[0] for m in membs.copy()]
+        # Parameter
+        self.assertIn("AppIcon", membs)
+        self.assertIn("appicon", membs)
+        self.assertIn("app_icon", membs)
+        #Method
+        self.assertIn("FileDialog", membs)
+        self.assertIn("filedialog", membs)
+        self.assertIn("file_dialog", membs)
+
+    def test_access_visibility(self):
+        self.assertTrue(self.ac_app.Visible)
+
 
 class TestExcel(unittest.TestCase):
 
@@ -122,13 +151,6 @@ class TestPowerPoint(unittest.TestCase):
 
 
 class TestOffice(unittest.TestCase):
-    
-    def test_access(self):
-        acc_app = ac.Application()
-        self.assertIs(type(acc_app), ac.Application)
-        acc_app.Visible = True
-        self.assertTrue(acc_app.Visible)
-        acc_app.Quit()
     
     def test_outlook(self):
         ol_app = ol.Application()

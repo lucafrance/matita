@@ -1,5 +1,3 @@
-import string
-
 import pythoncom
 
 def com_arguments(arguments: list) -> list:
@@ -25,10 +23,3 @@ def unwrap(obj):
     if hasattr(obj, "com_object"):
         return obj.com_object
     return obj
-
-def camel_to_snake_case(s):
-    snake_s =  "".join(
-        [f"_{c.lower()}" if c in string.ascii_uppercase else c for c in s]
-    )
-    snake_s = snake_s.strip("_")
-    return snake_s
