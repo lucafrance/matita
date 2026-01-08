@@ -2462,11 +2462,6 @@ class Application:
         return ReturnVars(self.com_object.returnvars)
 
     @property
-    def returnvars(self):
-        """Lower case alias for returnvars"""
-        return self.returnvars
-
-    @property
     def Screen(self):
         return self.com_object.Screen
 
@@ -2714,15 +2709,6 @@ class Application:
     def currentwebusergroups(self, DisplayOption=None):
         arguments = [DisplayOption]
         return self.CurrentWebUserGroups(*arguments)
-
-    def davg(self, Expr=None, Domain=None, Criteria=None):
-        arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
-        return self.com_object.davg(*arguments)
-
-    # Lower case alias for davg
-    def davg(self, Expr=None, Domain=None, Criteria=None):
-        arguments = [Expr, Domain, Criteria]
-        return self.davg(*arguments)
 
     def DCount(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
@@ -14012,16 +13998,6 @@ class CommandButton:
         self.com_object.quickstylemask = value
 
     @property
-    def quickstylemask(self):
-        """Lower case alias for quickstylemask"""
-        return self.quickstylemask
-
-    @quickstylemask.setter
-    def quickstylemask(self, value):
-        """Lower case alias for quickstylemask.setter"""
-        self.quickstylemask = value
-
-    @property
     def ReadingOrder(self):
         return self.com_object.ReadingOrder
 
@@ -20611,16 +20587,6 @@ class Form:
     @recordsettype.setter
     def recordsettype(self, value):
         self.com_object.recordsettype = value
-
-    @property
-    def recordsettype(self):
-        """Lower case alias for recordsettype"""
-        return self.recordsettype
-
-    @recordsettype.setter
-    def recordsettype(self, value):
-        """Lower case alias for recordsettype.setter"""
-        self.recordsettype = value
 
     @property
     def RecordSource(self):
@@ -29312,16 +29278,6 @@ class NavigationButton:
     @quickstylemask.setter
     def quickstylemask(self, value):
         self.com_object.quickstylemask = value
-
-    @property
-    def quickstylemask(self):
-        """Lower case alias for quickstylemask"""
-        return self.quickstylemask
-
-    @quickstylemask.setter
-    def quickstylemask(self, value):
-        """Lower case alias for quickstylemask.setter"""
-        self.quickstylemask = value
 
     @property
     def ReadingOrder(self):
@@ -39625,11 +39581,6 @@ class Report:
         return self.com_object.shape
 
     @property
-    def shape(self):
-        """Lower case alias for shape"""
-        return self.shape
-
-    @property
     def ShortcutMenuBar(self):
         return self.com_object.ShortcutMenuBar
 
@@ -48141,16 +48092,6 @@ class ToggleButton:
     @quickstylemask.setter
     def quickstylemask(self, value):
         self.com_object.quickstylemask = value
-
-    @property
-    def quickstylemask(self):
-        """Lower case alias for quickstylemask"""
-        return self.quickstylemask
-
-    @quickstylemask.setter
-    def quickstylemask(self, value):
-        """Lower case alias for quickstylemask.setter"""
-        self.quickstylemask = value
 
     @property
     def ReadingOrder(self):

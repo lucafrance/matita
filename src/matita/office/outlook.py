@@ -7856,22 +7856,6 @@ class ContactItem:
     def showcategoriesdialog(self):
         return self.ShowCategoriesDialog()
 
-    def showcheckaddressdialog(self, MailingAddress=None):
-        arguments = com_arguments([unwrap(a) for a in [MailingAddress]])
-        self.com_object.showcheckaddressdialog(*arguments)
-
-    # Lower case alias for showcheckaddressdialog
-    def showcheckaddressdialog(self, MailingAddress=None):
-        arguments = [MailingAddress]
-        return self.showcheckaddressdialog(*arguments)
-
-    def showcheckfullnamedialog(self):
-        self.com_object.showcheckfullnamedialog()
-
-    # Lower case alias for showcheckfullnamedialog
-    def showcheckfullnamedialog(self):
-        return self.showcheckfullnamedialog()
-
     def ShowCheckPhoneDialog(self, PhoneNumber=None):
         arguments = com_arguments([unwrap(a) for a in [PhoneNumber]])
         self.com_object.ShowCheckPhoneDialog(*arguments)
@@ -9873,27 +9857,6 @@ class ExchangeDistributionList:
     def getowners(self):
         return self.GetOwners()
 
-    def getunifiedgroup(self):
-        return self.com_object.getunifiedgroup()
-
-    # Lower case alias for getunifiedgroup
-    def getunifiedgroup(self):
-        return self.getunifiedgroup()
-
-    def getunifiedgroupfromstore(self):
-        return self.com_object.getunifiedgroupfromstore()
-
-    # Lower case alias for getunifiedgroupfromstore
-    def getunifiedgroupfromstore(self):
-        return self.getunifiedgroupfromstore()
-
-    def isunifiedgroup(self):
-        return self.com_object.isunifiedgroup()
-
-    # Lower case alias for isunifiedgroup
-    def isunifiedgroup(self):
-        return self.isunifiedgroup()
-
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
@@ -10464,27 +10427,6 @@ class ExchangeUser:
     def getpicture(self):
         return self.GetPicture()
 
-    def getunifiedgroup(self):
-        return self.com_object.getunifiedgroup()
-
-    # Lower case alias for getunifiedgroup
-    def getunifiedgroup(self):
-        return self.getunifiedgroup()
-
-    def getunifiedgroupfromstore(self):
-        return self.com_object.getunifiedgroupfromstore()
-
-    # Lower case alias for getunifiedgroupfromstore
-    def getunifiedgroupfromstore(self):
-        return self.getunifiedgroupfromstore()
-
-    def isunifiedgroup(self):
-        return self.com_object.isunifiedgroup()
-
-    # Lower case alias for isunifiedgroup
-    def isunifiedgroup(self):
-        return self.isunifiedgroup()
-
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
@@ -10514,18 +10456,8 @@ class Explorer:
         return self.com_object.activeinlineresponse
 
     @property
-    def activeinlineresponse(self):
-        """Lower case alias for activeinlineresponse"""
-        return self.activeinlineresponse
-
-    @property
     def activeinlineresponsewordeditor(self):
         return self.com_object.activeinlineresponsewordeditor
-
-    @property
-    def activeinlineresponsewordeditor(self):
-        """Lower case alias for activeinlineresponsewordeditor"""
-        return self.activeinlineresponsewordeditor
 
     @property
     def Application(self):
@@ -10597,11 +10529,6 @@ class Explorer:
     @property
     def displaymode(self):
         return self.com_object.displaymode
-
-    @property
-    def displaymode(self):
-        """Lower case alias for displaymode"""
-        return self.displaymode
 
     @property
     def Height(self):
@@ -10678,11 +10605,6 @@ class Explorer:
     @property
     def previewpane(self):
         return self.com_object.previewpane
-
-    @property
-    def previewpane(self):
-        """Lower case alias for previewpane"""
-        return self.previewpane
 
     @property
     def Selection(self):
@@ -23721,27 +23643,12 @@ class peopleview:
         return self.com_object.application
 
     @property
-    def application(self):
-        """Lower case alias for application"""
-        return self.application
-
-    @property
     def filter(self):
         return self.com_object.filter
 
     @filter.setter
     def filter(self, value):
         self.com_object.filter = value
-
-    @property
-    def filter(self):
-        """Lower case alias for filter"""
-        return self.filter
-
-    @filter.setter
-    def filter(self, value):
-        """Lower case alias for filter.setter"""
-        self.filter = value
 
     @property
     def language(self):
@@ -23752,32 +23659,12 @@ class peopleview:
         self.com_object.language = value
 
     @property
-    def language(self):
-        """Lower case alias for language"""
-        return self.language
-
-    @language.setter
-    def language(self, value):
-        """Lower case alias for language.setter"""
-        self.language = value
-
-    @property
     def lockuserchanges(self):
         return self.com_object.lockuserchanges
 
     @lockuserchanges.setter
     def lockuserchanges(self, value):
         self.com_object.lockuserchanges = value
-
-    @property
-    def lockuserchanges(self):
-        """Lower case alias for lockuserchanges"""
-        return self.lockuserchanges
-
-    @lockuserchanges.setter
-    def lockuserchanges(self, value):
-        """Lower case alias for lockuserchanges.setter"""
-        self.lockuserchanges = value
 
     @property
     def name(self):
@@ -23788,68 +23675,28 @@ class peopleview:
         self.com_object.name = value
 
     @property
-    def name(self):
-        """Lower case alias for name"""
-        return self.name
-
-    @name.setter
-    def name(self, value):
-        """Lower case alias for name.setter"""
-        self.name = value
-
-    @property
     def parent(self):
         return self.com_object.parent
-
-    @property
-    def parent(self):
-        """Lower case alias for parent"""
-        return self.parent
 
     @property
     def saveoption(self):
         return self.com_object.saveoption
 
     @property
-    def saveoption(self):
-        """Lower case alias for saveoption"""
-        return self.saveoption
-
-    @property
     def session(self):
         return self.com_object.session
-
-    @property
-    def session(self):
-        """Lower case alias for session"""
-        return self.session
 
     @property
     def sortfields(self):
         return self.com_object.sortfields
 
     @property
-    def sortfields(self):
-        """Lower case alias for sortfields"""
-        return self.sortfields
-
-    @property
     def standard(self):
         return self.com_object.standard
 
     @property
-    def standard(self):
-        """Lower case alias for standard"""
-        return self.standard
-
-    @property
     def viewtype(self):
         return self.com_object.viewtype
-
-    @property
-    def viewtype(self):
-        """Lower case alias for viewtype"""
-        return self.viewtype
 
     @property
     def xml(self):
@@ -23858,62 +23705,6 @@ class peopleview:
     @xml.setter
     def xml(self, value):
         self.com_object.xml = value
-
-    @property
-    def xml(self):
-        """Lower case alias for xml"""
-        return self.xml
-
-    @xml.setter
-    def xml(self, value):
-        """Lower case alias for xml.setter"""
-        self.xml = value
-
-    def apply(self):
-        self.com_object.apply()
-
-    # Lower case alias for apply
-    def apply(self):
-        return self.apply()
-
-    def copy(self, Name=None, SaveOption=None):
-        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
-        self.com_object.copy(*arguments)
-
-    # Lower case alias for copy
-    def copy(self, Name=None, SaveOption=None):
-        arguments = [Name, SaveOption]
-        return self.copy(*arguments)
-
-    def delete(self):
-        self.com_object.delete()
-
-    # Lower case alias for delete
-    def delete(self):
-        return self.delete()
-
-    def gotodate(self, Date=None):
-        arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.gotodate(*arguments)
-
-    # Lower case alias for gotodate
-    def gotodate(self, Date=None):
-        arguments = [Date]
-        return self.gotodate(*arguments)
-
-    def reset(self):
-        self.com_object.reset()
-
-    # Lower case alias for reset
-    def reset(self):
-        return self.reset()
-
-    def save(self):
-        self.com_object.save()
-
-    # Lower case alias for save
-    def save(self):
-        return self.save()
 
 
 class PlaySoundRuleAction:
@@ -24896,36 +24687,16 @@ class previewpane:
         return self.com_object.application
 
     @property
-    def application(self):
-        """Lower case alias for application"""
-        return self.application
-
-    @property
     def parent(self):
         return PreviewPane(self.com_object.parent)
-
-    @property
-    def parent(self):
-        """Lower case alias for parent"""
-        return self.parent
 
     @property
     def session(self):
         return self.com_object.session
 
     @property
-    def session(self):
-        """Lower case alias for session"""
-        return self.session
-
-    @property
     def wordeditor(self):
         return self.com_object.wordeditor
-
-    @property
-    def wordeditor(self):
-        """Lower case alias for wordeditor"""
-        return self.wordeditor
 
 
 class PropertyAccessor:
@@ -30615,22 +30386,6 @@ class Store:
     def storeid(self):
         """Lower case alias for StoreID"""
         return self.StoreID
-
-    def createunifiedgroup(self, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
-        arguments = com_arguments([unwrap(a) for a in [Name, Alias, Description, FAutoSubscribeMembers, GroupType]])
-        return self.com_object.createunifiedgroup(*arguments)
-
-    # Lower case alias for createunifiedgroup
-    def createunifiedgroup(self, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
-        arguments = [Name, Alias, Description, FAutoSubscribeMembers, GroupType]
-        return self.createunifiedgroup(*arguments)
-
-    def deleteunifiedgroup(self):
-        return self.com_object.deleteunifiedgroup()
-
-    # Lower case alias for deleteunifiedgroup
-    def deleteunifiedgroup(self):
-        return self.deleteunifiedgroup()
 
     def GetDefaultFolder(self, FolderType=None):
         arguments = com_arguments([unwrap(a) for a in [FolderType]])

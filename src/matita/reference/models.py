@@ -350,8 +350,13 @@ class DocPage:
 
     def to_python_property_aliases(self):
         """Return python code of lower case aliases if the DocPage is a property"""
+
         if not self.is_property:
             logging.info(f"Property '{self.title}' ignored when exporting lower case aliases for '{self.api_name}', because it is not a property.")
+            return []
+
+        if self.property_name == self.property_name.lower():
+            # Skip creating the alias
             return []
 
         # Don't create lower case alias for reserved words in Python
@@ -427,6 +432,9 @@ class DocPage:
         code.append("")
 
         # Lower case alias
+        if self.method_name == self.method_name.lower():
+            # Skip creating the alias
+            return []
         if self.method_name.lower() in self.RESERVED_WORDS:
             logging.info(f"Lower case alias for method '{self.method_name}' of '{self.object_name}' ignored, because it is a reserved word in Python.")
             return code
