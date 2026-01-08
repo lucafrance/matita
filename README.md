@@ -8,9 +8,9 @@ from matita.office import excel as xl
 xl_app = xl.Application()
 xl_app.visible = True
 
-wkb = xl_app.Workbooks.add()
-wks = wkb.Worksheets(1)
-c = wks.Cells(1,1)
+wkb = xl_app.workbooks.add()
+wks = wkb.worksheets(1)
+c = wks.cells(1,1)
 
 c.value = "Hello World"
 ```
