@@ -9,13 +9,13 @@ def squares():
     sld = prs.slides.Add(1, pp.ppLayoutBlank)
 
     for _ in range(1000):
-        side = random.random() * prs.pagesetup.slideheight / 3
-        left = -side + random.random() * (side + prs.pagesetup.slidewidth)
-        top = -side + random.random() * (side + prs.pagesetup.slideheight)
-        shp = sld.shapes.addshape(pp.msoShapeRectangle, left, top, side, side)
+        side = random.random() * prs.page_setup.slideheight / 3
+        left = -side + random.random() * (side + prs.page_setup.slide_width)
+        top = -side + random.random() * (side + prs.page_setup.slide_height)
+        shp = sld.shapes.add_shape(pp.msoShapeRectangle, left, top, side, side)
         shp.line.visible = False
-        shp.fill.forecolor.rgb = random.randint(0, 256 ** 3)
-        eff = sld.timeline.mainsequence.addeffect(
+        shp.fill.fore_color.rgb = random.randint(0, 256 ** 3)
+        eff = sld.timeline.main_sequence.add_effect(
             Shape=shp,
             effectId=pp.msoAnimEffectFly,
             Level=pp.msoAnimateLevelNone,
@@ -27,7 +27,7 @@ def squares():
             pp.msoAnimDirectionRight,
             pp.msoAnimDirectionBottom
         ])
-        eff.effectparameters.direction = direction
+        eff.effect_parameters.direction = direction
         eff.timing.duration = 0.2
 
 if __name__ == "__main__":
