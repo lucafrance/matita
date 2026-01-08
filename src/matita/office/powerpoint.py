@@ -25465,14 +25465,14 @@ class Slides:
         """Lower case alias for Parent"""
         return self.Parent
 
-    def AddSlide(self, Index=None, Layout=None):
+    def Add(self, Index=None, Layout=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Layout]])
-        return Slide(self.com_object.AddSlide(*arguments))
+        return Slide(self.com_object.Add(*arguments))
 
-    # Lower case alias for AddSlide
-    def addslide(self, Index=None, Layout=None):
+    # Lower case alias for Add
+    def add(self, Index=None, Layout=None):
         arguments = [Index, Layout]
-        return self.AddSlide(*arguments)
+        return self.Add(*arguments)
 
     def AddSlide(self, Index=None, pCustomLayout=None):
         arguments = com_arguments([unwrap(a) for a in [Index, pCustomLayout]])
