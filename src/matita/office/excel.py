@@ -8131,7 +8131,7 @@ class Chart:
 
     def FullSeriesCollection(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        return self.com_object.FullSeriesCollection(*arguments)
+        return FullSeriesCollection(self.com_object.FullSeriesCollection(*arguments))
 
     # Lower case alias for FullSeriesCollection
     def fullseriescollection(self, Index=None):
