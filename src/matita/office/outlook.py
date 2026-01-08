@@ -30616,13 +30616,13 @@ class Store:
         """Lower case alias for StoreID"""
         return self.StoreID
 
-    def createunifiedgroup(self, Name=None, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
-        arguments = com_arguments([unwrap(a) for a in [Name, Name, Alias, Description, FAutoSubscribeMembers, GroupType]])
+    def createunifiedgroup(self, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
+        arguments = com_arguments([unwrap(a) for a in [Name, Alias, Description, FAutoSubscribeMembers, GroupType]])
         return self.com_object.createunifiedgroup(*arguments)
 
     # Lower case alias for createunifiedgroup
-    def createunifiedgroup(self, Name=None, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
-        arguments = [Name, Name, Alias, Description, FAutoSubscribeMembers, GroupType]
+    def createunifiedgroup(self, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
+        arguments = [Name, Alias, Description, FAutoSubscribeMembers, GroupType]
         return self.createunifiedgroup(*arguments)
 
     def deleteunifiedgroup(self):
