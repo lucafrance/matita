@@ -55,17 +55,14 @@ def generate_report():
         )
         country_tbl.listcolumns("Population").databodyrange.numberformat = "#,##0"
 
-        # TODO `api_name` missing for `excel.shapes.addchart2`
-        # Will be fixed by https://github.com/MicrosoftDocs/VBA-Docs/pull/1936
-        shp = xl.Shape(country_wks.shapes.com_object.AddChart2( 
+        shp = country_wks.shapes.AddChart2( 
             XlChartType=xl.xlLineMarkers,
             Left=country_wks.cells(4, 5).left,
             Top=country_wks.cells(4, 5).top,
-        ))
+        )
         c = shp.chart
         c.hastitle = False
-        # TODO `api_name` missing for `excel.chart.fullseriescollection`
-        chart_series = xl.SeriesCollection(c.com_object.FullSeriesCollection)(1)
+        chart_series = c.FullSeriesCollection(1)
         chart_series.name = country_wks.cells(4, 2).address()
         chart_series.values  = f"'{country}'!{country_tbl.listcolumns("Population").databodyrange.address()}"
         chart_series.xvalues = f"'{country}'!{country_tbl.listcolumns("Year").databodyrange.address()}"
