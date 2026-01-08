@@ -3,7 +3,7 @@ import random
 from matita.office import powerpoint as pp
 
 def squares():
-    pp_app = pp.Application().new()
+    pp_app = pp.Application()
     pp_app.visible = True
     prs = pp_app.presentations.add()
     # TODO Direct `Slides.add()` method unavailable

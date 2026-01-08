@@ -11,19 +11,19 @@ Once your code is stable, you may decide to keep the application invisible unles
 ```python
 from matita.office import access as ac, excel as xl, outlook as ol, powerpoint as pp, word as wd
 
-ac_app = ac.Application().new()
+ac_app = ac.Application()
 ac_app.visible = True
 
-xl_app = xl.Application().new()
+xl_app = xl.Application()
 xl_app.visible = True
 
-ol_app = ol.Application().new()
+ol_app = ol.Application()
 ol_app.visible = True
 
-pp_app = pp.Application().new()
+pp_app = pp.Application()
 pp_app.visible = True
 
-wd_app = wd.Application().new()
+wd_app = wd.Application()
 wd_app.visible = True
 ```
 
@@ -68,7 +68,7 @@ Every `matita.office` class includes an underlying COM object, accessible via th
 ```python
 from matita.office import word as wd
 
-wd_app = wd.Application().new()
+wd_app = wd.Application()
 print(type(wd_app)) # <class 'matita.office.word.Application'>
 print(type(wd_app.com_object)) # <class 'win32com.client.CDispatch'>
 wd_app.Quit()
@@ -117,7 +117,7 @@ xl_app.Quit()
 ```python
 from matita.office import excel as xl
 
-xl_app = xl.Application().new()
+xl_app = xl.Application()
 # lower case aliases for all properties and methods
 xl_app.visible = True
 wkb = xl_app.workbooks.add()

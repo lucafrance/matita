@@ -246,17 +246,20 @@ class DocPage:
             return None
 
         code = []
-        code.append(f"class {self.object_name}:")
-        code.append(f"")
-        code.append(f"    def __init__(self, {self.object_name.lower()}=None):")
-        code.append(f"        self.com_object= {self.object_name.lower()}")
-        code.append(f"")
-
-        # New method for Application objects
         if self.object_name == "Application":
-            code.append(f"    def new(self):")
-            code.append(f"        self.com_object = win32com.client.gencache.EnsureDispatch(\"{self.module_name}.Application\")")
-            code.append(f"        return self")
+            code.append(f"class {self.object_name}:")
+            code.append(f"")
+            code.append(f"    def __init__(self, application=None):")
+            code.append(f"        if application is None:")
+            code.append(f"            self.com_object = win32com.client.gencache.EnsureDispatch(\"{self.module_name}.Application\")")
+            code.append(f"        else:")
+            code.append(f"            self.com_object = application")
+            code.append(f"")
+        else:
+            code.append(f"class {self.object_name}:")
+            code.append(f"")
+            code.append(f"    def __init__(self, {self.object_name.lower()}=None):")
+            code.append(f"        self.com_object= {self.object_name.lower()}")
             code.append(f"")
 
         # Call method for collections

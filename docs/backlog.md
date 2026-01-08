@@ -9,7 +9,7 @@ Add snake_case aliases for all methods and properties to improve intuitiveness f
 
 ```python
 from matita.office import excel
-wks = excel.application().new().workbooks.open("file.xlsx").worksheets(1)
+wks = excel.Application().workbooks.open("file.xlsx").worksheets(1)
 
 # Supported
 wks.AutoFilter

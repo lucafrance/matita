@@ -1099,11 +1099,10 @@ class AddressRuleCondition:
 class Application:
 
     def __init__(self, application=None):
-        self.com_object= application
-
-    def new(self):
-        self.com_object = win32com.client.gencache.EnsureDispatch("Outlook.Application")
-        return self
+        if application is None:
+            self.com_object = win32com.client.gencache.EnsureDispatch("Outlook.Application")
+        else:
+            self.com_object = application
 
     @property
     def Application(self):

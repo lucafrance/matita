@@ -1,6 +1,6 @@
 from matita.office import excel as xl
 
-xl_app = xl.Application().new()
+xl_app = xl.Application()
 xl_app.Visible = True
 
 wkb = xl_app.Workbooks.Add()

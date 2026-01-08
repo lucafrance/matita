@@ -6,7 +6,7 @@ def generate_report():
     xlFormatCommas = 2
     file_path = os.path.dirname(os.path.abspath(__file__)) + "/tps00001__custom_19561911_linear_2_0.csv"
 
-    xl_app = xl.Application().new()
+    xl_app = xl.Application()
     xl_app.visible = True
     
     data_wkb = xl_app.Workbooks.Open(file_path, ReadOnly=True, Format=xlFormatCommas)

@@ -6,7 +6,7 @@ class TestExcel(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.xl_app = xl.Application().new()
+        cls.xl_app = xl.Application()
         cls.xl_app.Visible = True
 
     @classmethod
@@ -94,7 +94,7 @@ class TestPowerPoint(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.pp_app = pp.Application().new()
+        cls.pp_app = pp.Application()
         cls.pp_app.Visible = True
 
     @classmethod
@@ -124,21 +124,21 @@ class TestPowerPoint(unittest.TestCase):
 class TestOffice(unittest.TestCase):
     
     def test_access(self):
-        acc_app = ac.Application().new()
+        acc_app = ac.Application()
         self.assertIs(type(acc_app), ac.Application)
         acc_app.Visible = True
         self.assertTrue(acc_app.Visible)
         acc_app.Quit()
     
     def test_outlook(self):
-        ol_app = ol.Application().new()
+        ol_app = ol.Application()
         self.assertIs(type(ol_app), ol.Application)
         ol_app.Visible = True
         self.assertTrue(ol_app.Visible)
         ol_app.Quit()
 
     def test_word(self):
-        wd_app = wd.Application().new()
+        wd_app = wd.Application()
         self.assertIs(type(wd_app), wd.Application)
         wd_app.Visible = True
         self.assertTrue(wd_app.Visible)
