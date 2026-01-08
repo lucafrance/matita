@@ -106,13 +106,13 @@ class AddIn:
         return self.Delete()
 
 
-class addins:
+class AddIns:
 
     def __init__(self, addins=None):
         self.com_object= addins
 
     def __call__(self, item):
-        return addin(self.com_object(item))
+        return AddIn(self.com_object(item))
 
     @property
     def Application(self):
@@ -481,12 +481,22 @@ class Application:
         return self.CaptionLabels
 
     @property
+    def ChartDataPointTrack(self):
+        return self.com_object.ChartDataPointTrack
+
+    @ChartDataPointTrack.setter
+    def ChartDataPointTrack(self, value):
+        self.com_object.ChartDataPointTrack = value
+
+    @property
     def chartdatapointtrack(self):
-        return self.com_object.chartdatapointtrack
+        """Lower case alias for ChartDataPointTrack"""
+        return self.ChartDataPointTrack
 
     @chartdatapointtrack.setter
     def chartdatapointtrack(self, value):
-        self.com_object.chartdatapointtrack = value
+        """Lower case alias for ChartDataPointTrack.setter"""
+        self.ChartDataPointTrack = value
 
     @property
     def CheckLanguage(self):
@@ -1305,8 +1315,13 @@ class Application:
         return self.SensitivityLabelPolicy
 
     @property
+    def ShowAnimation(self):
+        return self.com_object.ShowAnimation
+
+    @property
     def showanimation(self):
-        return self.com_object.showanimation
+        """Lower case alias for ShowAnimation"""
+        return self.ShowAnimation
 
     @property
     def ShowStartupDialog(self):
@@ -1696,12 +1711,12 @@ class Application:
         arguments = [TagID, Value]
         return self.AddAddress(*arguments)
 
-    def Application(self):
-        self.com_object.Application()
+    def NextLetter(self):
+        self.com_object.NextLetter()
 
-    # Lower case alias for Application
-    def application(self):
-        return self.Application()
+    # Lower case alias for NextLetter
+    def nextletter(self):
+        return self.NextLetter()
 
     def AutomaticChange(self):
         self.com_object.AutomaticChange()
@@ -2308,13 +2323,13 @@ class AutoCaption:
         return self.Parent
 
 
-class autocaptions:
+class AutoCaptions:
 
     def __init__(self, autocaptions=None):
         self.com_object= autocaptions
 
     def __call__(self, item):
-        return autocaption(self.com_object(item))
+        return AutoCaption(self.com_object(item))
 
     @property
     def Application(self):
@@ -2699,13 +2714,13 @@ class AutoCorrect:
         return self.TwoInitialCapsExceptions
 
 
-class autocorrectentries:
+class AutoCorrectEntries:
 
     def __init__(self, autocorrectentries=None):
         self.com_object= autocorrectentries
 
     def __call__(self, item):
-        return autocorrectentrie(self.com_object(item))
+        return AutoCorrectEntrie(self.com_object(item))
 
     @property
     def Application(self):
@@ -2874,13 +2889,13 @@ class AutoCorrectEntry:
         return self.Delete()
 
 
-class autotextentries:
+class AutoTextEntries:
 
     def __init__(self, autotextentries=None):
         self.com_object= autotextentries
 
     def __call__(self, item):
-        return autotextentrie(self.com_object(item))
+        return AutoTextEntrie(self.com_object(item))
 
     @property
     def Application(self):
@@ -4409,13 +4424,13 @@ class Bookmark:
         return self.Select()
 
 
-class bookmarks:
+class Bookmarks:
 
     def __init__(self, bookmarks=None):
         self.com_object= bookmarks
 
     def __call__(self, item):
-        return bookmark(self.com_object(item))
+        return Bookmark(self.com_object(item))
 
     @property
     def Application(self):
@@ -4685,13 +4700,13 @@ class Border:
         self.Visible = value
 
 
-class borders:
+class Borders:
 
     def __init__(self, borders=None):
         self.com_object= borders
 
     def __call__(self, item):
-        return border(self.com_object(item))
+        return Border(self.com_object(item))
 
     @property
     def AlwaysInFront(self):
@@ -5196,38 +5211,112 @@ class Breaks:
         return self.Item(*arguments)
 
 
-class broadcast:
+class Broadcast:
 
     def __init__(self, broadcast=None):
         self.com_object= broadcast
 
     @property
+    def Application(self):
+        return Application(self.com_object.Application)
+
+    @property
     def application(self):
-        return Application(self.com_object.application)
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def AttendeeUrl(self):
+        return self.com_object.AttendeeUrl
 
     @property
     def attendeeurl(self):
-        return self.com_object.attendeeurl
+        """Lower case alias for AttendeeUrl"""
+        return self.AttendeeUrl
+
+    @property
+    def Capabilities(self):
+        return self.com_object.Capabilities
 
     @property
     def capabilities(self):
-        return self.com_object.capabilities
+        """Lower case alias for Capabilities"""
+        return self.Capabilities
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    @property
+    def PresenterServiceUrl(self):
+        return self.com_object.PresenterServiceUrl
 
     @property
     def presenterserviceurl(self):
-        return self.com_object.presenterserviceurl
+        """Lower case alias for PresenterServiceUrl"""
+        return self.PresenterServiceUrl
+
+    @property
+    def SessionID(self):
+        return self.com_object.SessionID
 
     @property
     def sessionid(self):
-        return self.com_object.sessionid
+        """Lower case alias for SessionID"""
+        return self.SessionID
+
+    @property
+    def State(self):
+        return self.com_object.State
 
     @property
     def state(self):
-        return self.com_object.state
+        """Lower case alias for State"""
+        return self.State
+
+    def AddMeetingNotes(self, notesUrl=None, notesWacUrl=None):
+        arguments = com_arguments([unwrap(a) for a in [notesUrl, notesWacUrl]])
+        return self.com_object.AddMeetingNotes(*arguments)
+
+    # Lower case alias for AddMeetingNotes
+    def addmeetingnotes(self, notesUrl=None, notesWacUrl=None):
+        arguments = [notesUrl, notesWacUrl]
+        return self.AddMeetingNotes(*arguments)
+
+    def End(self):
+        return self.com_object.End()
+
+    # Lower case alias for End
+    def end(self):
+        return self.End()
+
+    def Pause(self):
+        return self.com_object.Pause()
+
+    # Lower case alias for Pause
+    def pause(self):
+        return self.Pause()
+
+    def Resume(self):
+        return self.com_object.Resume()
+
+    # Lower case alias for Resume
+    def resume(self):
+        return self.Resume()
+
+    def Start(self, serverUrl=None):
+        arguments = com_arguments([unwrap(a) for a in [serverUrl]])
+        return self.com_object.Start(*arguments)
+
+    # Lower case alias for Start
+    def start(self, serverUrl=None):
+        arguments = [serverUrl]
+        return self.Start(*arguments)
 
 
 class Browser:
@@ -6192,13 +6281,13 @@ class CaptionLabel:
         return self.Delete()
 
 
-class captionlabels:
+class CaptionLabels:
 
     def __init__(self, captionlabels=None):
         self.com_object= captionlabels
 
     def __call__(self, item):
-        return captionlabel(self.com_object(item))
+        return CaptionLabel(self.com_object(item))
 
     @property
     def Application(self):
@@ -6375,26 +6464,55 @@ class Category:
         return self.Type
 
 
-class categorycollection:
+class CategoryCollection:
 
     def __init__(self, categorycollection=None):
         self.com_object= categorycollection
 
     @property
+    def Application(self):
+        return Application(self.com_object.Application)
+
+    @property
     def application(self):
-        return Application(self.com_object.application)
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def Count(self):
+        return self.com_object.Count
 
     @property
     def count(self):
-        return self.com_object.count
+        """Lower case alias for Count"""
+        return self.Count
+
+    @property
+    def Creator(self):
+        return self.com_object.Creator
 
     @property
     def creator(self):
-        return self.com_object.creator
+        """Lower case alias for Creator"""
+        return self.Creator
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    def Item(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return CHARTCATEGORY(self.com_object.Item(*arguments))
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        return self.Item(*arguments)
 
 
 class Cell:
@@ -6520,22 +6638,22 @@ class Cell:
         self.HeightRule = value
 
     @property
-    def Id(self):
-        return self.com_object.Id
+    def ID(self):
+        return self.com_object.ID
 
-    @Id.setter
-    def Id(self, value):
-        self.com_object.Id = value
+    @ID.setter
+    def ID(self, value):
+        self.com_object.ID = value
 
     @property
     def id(self):
-        """Lower case alias for Id"""
-        return self.Id
+        """Lower case alias for ID"""
+        return self.ID
 
     @id.setter
     def id(self, value):
-        """Lower case alias for Id.setter"""
-        self.Id = value
+        """Lower case alias for ID.setter"""
+        self.ID = value
 
     @property
     def LeftPadding(self):
@@ -6831,13 +6949,13 @@ class Cell:
         return self.Split(*arguments)
 
 
-class cells:
+class Cells:
 
     def __init__(self, cells=None):
         self.com_object= cells
 
     def __call__(self, item):
-        return cell(self.com_object(item))
+        return Cell(self.com_object(item))
 
     @property
     def Application(self):
@@ -7093,13 +7211,13 @@ class cells:
         return self.Split(*arguments)
 
 
-class characters:
+class Characters:
 
     def __init__(self, characters=None):
         self.com_object= characters
 
     def __call__(self, item):
-        return character(self.com_object(item))
+        return Character(self.com_object(item))
 
     @property
     def Application(self):
@@ -7225,12 +7343,22 @@ class Chart:
         self.BarShape = value
 
     @property
+    def CategoryLabelLevel(self):
+        return self.com_object.CategoryLabelLevel
+
+    @CategoryLabelLevel.setter
+    def CategoryLabelLevel(self, value):
+        self.com_object.CategoryLabelLevel = value
+
+    @property
     def categorylabellevel(self):
-        return self.com_object.categorylabellevel
+        """Lower case alias for CategoryLabelLevel"""
+        return self.CategoryLabelLevel
 
     @categorylabellevel.setter
     def categorylabellevel(self, value):
-        self.com_object.categorylabellevel = value
+        """Lower case alias for CategoryLabelLevel.setter"""
+        self.CategoryLabelLevel = value
 
     @property
     def ChartArea(self):
@@ -7242,12 +7370,22 @@ class Chart:
         return self.ChartArea
 
     @property
+    def ChartColor(self):
+        return self.com_object.ChartColor
+
+    @ChartColor.setter
+    def ChartColor(self, value):
+        self.com_object.ChartColor = value
+
+    @property
     def chartcolor(self):
-        return self.com_object.chartcolor
+        """Lower case alias for ChartColor"""
+        return self.ChartColor
 
     @chartcolor.setter
     def chartcolor(self, value):
-        self.com_object.chartcolor = value
+        """Lower case alias for ChartColor.setter"""
+        self.ChartColor = value
 
     @property
     def ChartData(self):
@@ -7631,12 +7769,22 @@ class Chart:
         self.Rotation = value
 
     @property
+    def SeriesNameLevel(self):
+        return self.com_object.SeriesNameLevel
+
+    @SeriesNameLevel.setter
+    def SeriesNameLevel(self, value):
+        self.com_object.SeriesNameLevel = value
+
+    @property
     def seriesnamelevel(self):
-        return self.com_object.seriesnamelevel
+        """Lower case alias for SeriesNameLevel"""
+        return self.SeriesNameLevel
 
     @seriesnamelevel.setter
     def seriesnamelevel(self, value):
-        self.com_object.seriesnamelevel = value
+        """Lower case alias for SeriesNameLevel.setter"""
+        self.SeriesNameLevel = value
 
     @property
     def Shapes(self):
@@ -7818,6 +7966,13 @@ class Chart:
         arguments = [Source, Gallery, Format, PlotBy, CategoryLabels, SeriesLabels, HasLegend, Title, CategoryTitle, ValueTitle, ExtraTitle]
         return self.ChartWizard(*arguments)
 
+    def ClearToMatchColorStyle(self):
+        return self.com_object.ClearToMatchColorStyle()
+
+    # Lower case alias for ClearToMatchColorStyle
+    def cleartomatchcolorstyle(self):
+        return self.ClearToMatchColorStyle()
+
     def ClearToMatchStyle(self):
         self.com_object.ClearToMatchStyle()
 
@@ -7858,6 +8013,15 @@ class Chart:
     def export(self, FileName=None, FilterName=None, Interactive=None):
         arguments = [FileName, FilterName, Interactive]
         return self.Export(*arguments)
+
+    def FullSeriesCollection(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return self.com_object.FullSeriesCollection(*arguments)
+
+    # Lower case alias for FullSeriesCollection
+    def fullseriescollection(self, Index=None):
+        arguments = [Index]
+        return self.FullSeriesCollection(*arguments)
 
     def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
         arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
@@ -8229,30 +8393,55 @@ class ChartBorder:
         self.Weight = value
 
 
-class chartcategory:
+class ChartCategory:
 
     def __init__(self, chartcategory=None):
         self.com_object= chartcategory
 
     @property
+    def IsFiltered(self):
+        return self.com_object.IsFiltered
+
+    @IsFiltered.setter
+    def IsFiltered(self, value):
+        self.com_object.IsFiltered = value
+
+    @property
     def isfiltered(self):
-        return self.com_object.isfiltered
+        """Lower case alias for IsFiltered"""
+        return self.IsFiltered
 
     @isfiltered.setter
     def isfiltered(self, value):
-        self.com_object.isfiltered = value
+        """Lower case alias for IsFiltered.setter"""
+        self.IsFiltered = value
+
+    @property
+    def Name(self):
+        return self.com_object.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.com_object.Name = value
 
     @property
     def name(self):
-        return self.com_object.name
+        """Lower case alias for Name"""
+        return self.Name
 
     @name.setter
     def name(self, value):
-        self.com_object.name = value
+        """Lower case alias for Name.setter"""
+        self.Name = value
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
 
 
 class ChartCharacters:
@@ -8465,6 +8654,13 @@ class ChartData:
     # Lower case alias for Activate
     def activate(self):
         return self.Activate()
+
+    def ActivateChartDataWindow(self):
+        return self.com_object.ActivateChartDataWindow()
+
+    # Lower case alias for ActivateChartDataWindow
+    def activatechartdatawindow(self):
+        return self.ActivateChartDataWindow()
 
     def BreakLink(self):
         self.com_object.BreakLink()
@@ -8729,8 +8925,13 @@ class ChartFormat:
         self.com_object= chartformat
 
     @property
+    def Adjustments(self):
+        return self.com_object.Adjustments
+
+    @property
     def adjustments(self):
-        return self.com_object.adjustments
+        """Lower case alias for Adjustments"""
+        return self.Adjustments
 
     @property
     def Application(self):
@@ -8742,12 +8943,22 @@ class ChartFormat:
         return self.Application
 
     @property
+    def AutoShapeType(self):
+        return self.com_object.AutoShapeType
+
+    @AutoShapeType.setter
+    def AutoShapeType(self, value):
+        self.com_object.AutoShapeType = value
+
+    @property
     def autoshapetype(self):
-        return self.com_object.autoshapetype
+        """Lower case alias for AutoShapeType"""
+        return self.AutoShapeType
 
     @autoshapetype.setter
     def autoshapetype(self, value):
-        self.com_object.autoshapetype = value
+        """Lower case alias for AutoShapeType.setter"""
+        self.AutoShapeType = value
 
     @property
     def Creator(self):
@@ -8873,60 +9084,130 @@ class ChartGroup:
         self.AxisGroup = value
 
     @property
+    def BinsCountValue(self):
+        return self.com_object.BinsCountValue
+
+    @BinsCountValue.setter
+    def BinsCountValue(self, value):
+        self.com_object.BinsCountValue = value
+
+    @property
     def binscountvalue(self):
-        return self.com_object.binscountvalue
+        """Lower case alias for BinsCountValue"""
+        return self.BinsCountValue
 
     @binscountvalue.setter
     def binscountvalue(self, value):
-        self.com_object.binscountvalue = value
+        """Lower case alias for BinsCountValue.setter"""
+        self.BinsCountValue = value
+
+    @property
+    def BinsOverflowEnabled(self):
+        return self.com_object.BinsOverflowEnabled
+
+    @BinsOverflowEnabled.setter
+    def BinsOverflowEnabled(self, value):
+        self.com_object.BinsOverflowEnabled = value
 
     @property
     def binsoverflowenabled(self):
-        return self.com_object.binsoverflowenabled
+        """Lower case alias for BinsOverflowEnabled"""
+        return self.BinsOverflowEnabled
 
     @binsoverflowenabled.setter
     def binsoverflowenabled(self, value):
-        self.com_object.binsoverflowenabled = value
+        """Lower case alias for BinsOverflowEnabled.setter"""
+        self.BinsOverflowEnabled = value
+
+    @property
+    def BinsOverflowValue(self):
+        return self.com_object.BinsOverflowValue
+
+    @BinsOverflowValue.setter
+    def BinsOverflowValue(self, value):
+        self.com_object.BinsOverflowValue = value
 
     @property
     def binsoverflowvalue(self):
-        return self.com_object.binsoverflowvalue
+        """Lower case alias for BinsOverflowValue"""
+        return self.BinsOverflowValue
 
     @binsoverflowvalue.setter
     def binsoverflowvalue(self, value):
-        self.com_object.binsoverflowvalue = value
+        """Lower case alias for BinsOverflowValue.setter"""
+        self.BinsOverflowValue = value
+
+    @property
+    def BinsType(self):
+        return self.com_object.BinsType
+
+    @BinsType.setter
+    def BinsType(self, value):
+        self.com_object.BinsType = value
 
     @property
     def binstype(self):
-        return self.com_object.binstype
+        """Lower case alias for BinsType"""
+        return self.BinsType
 
     @binstype.setter
     def binstype(self, value):
-        self.com_object.binstype = value
+        """Lower case alias for BinsType.setter"""
+        self.BinsType = value
+
+    @property
+    def BinsUnderflowEnabled(self):
+        return self.com_object.BinsUnderflowEnabled
+
+    @BinsUnderflowEnabled.setter
+    def BinsUnderflowEnabled(self, value):
+        self.com_object.BinsUnderflowEnabled = value
 
     @property
     def binsunderflowenabled(self):
-        return self.com_object.binsunderflowenabled
+        """Lower case alias for BinsUnderflowEnabled"""
+        return self.BinsUnderflowEnabled
 
     @binsunderflowenabled.setter
     def binsunderflowenabled(self, value):
-        self.com_object.binsunderflowenabled = value
+        """Lower case alias for BinsUnderflowEnabled.setter"""
+        self.BinsUnderflowEnabled = value
+
+    @property
+    def BinsUnderflowValue(self):
+        return self.com_object.BinsUnderflowValue
+
+    @BinsUnderflowValue.setter
+    def BinsUnderflowValue(self, value):
+        self.com_object.BinsUnderflowValue = value
 
     @property
     def binsunderflowvalue(self):
-        return self.com_object.binsunderflowvalue
+        """Lower case alias for BinsUnderflowValue"""
+        return self.BinsUnderflowValue
 
     @binsunderflowvalue.setter
     def binsunderflowvalue(self, value):
-        self.com_object.binsunderflowvalue = value
+        """Lower case alias for BinsUnderflowValue.setter"""
+        self.BinsUnderflowValue = value
+
+    @property
+    def BinWidthValue(self):
+        return self.com_object.BinWidthValue
+
+    @BinWidthValue.setter
+    def BinWidthValue(self, value):
+        self.com_object.BinWidthValue = value
 
     @property
     def binwidthvalue(self):
-        return self.com_object.binwidthvalue
+        """Lower case alias for BinWidthValue"""
+        return self.BinWidthValue
 
     @binwidthvalue.setter
     def binwidthvalue(self, value):
-        self.com_object.binwidthvalue = value
+        """Lower case alias for BinWidthValue.setter"""
+        self.BinWidthValue = value
 
     @property
     def BubbleScale(self):
@@ -9314,6 +9595,24 @@ class ChartGroup:
     def varybycategories(self, value):
         """Lower case alias for VaryByCategories.setter"""
         self.VaryByCategories = value
+
+    def CategoryCollection(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return self.com_object.CategoryCollection(*arguments)
+
+    # Lower case alias for CategoryCollection
+    def categorycollection(self, Index=None):
+        arguments = [Index]
+        return self.CategoryCollection(*arguments)
+
+    def FullCategoryCollection(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return self.com_object.FullCategoryCollection(*arguments)
+
+    # Lower case alias for FullCategoryCollection
+    def fullcategorycollection(self, Index=None):
+        arguments = [Index]
+        return self.FullCategoryCollection(*arguments)
 
     def SeriesCollection(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -9914,6 +10213,15 @@ class CoAuthLock:
         """Lower case alias for Type"""
         return self.Type
 
+    @property
+    def Owner(self):
+        return CoAuthor(self.com_object.Owner)
+
+    @property
+    def owner(self):
+        """Lower case alias for Owner"""
+        return self.Owner
+
     def Unlock(self):
         return self.com_object.Unlock()
 
@@ -10271,13 +10579,13 @@ class CoAuthUpdate:
         return self.Range
 
 
-class coauthupdates:
+class CoAuthUpdates:
 
     def __init__(self, coauthupdates=None):
         self.com_object= coauthupdates
 
     def __call__(self, item):
-        return coauthupdate(self.com_object(item))
+        return CoAuthUpdate(self.com_object(item))
 
     @property
     def Application(self):
@@ -10658,13 +10966,13 @@ class Column:
         return self.Sort(*arguments)
 
 
-class columns:
+class Columns:
 
     def __init__(self, columns=None):
         self.com_object= columns
 
     def __call__(self, item):
-        return column(self.com_object(item))
+        return Column(self.com_object(item))
 
     @property
     def Application(self):
@@ -10863,8 +11171,13 @@ class Comment:
         self.com_object= comment
 
     @property
+    def Ancestor(self):
+        return self.com_object.Ancestor
+
+    @property
     def ancestor(self):
-        return self.com_object.ancestor
+        """Lower case alias for Ancestor"""
+        return self.Ancestor
 
     @property
     def Application(self):
@@ -10876,8 +11189,13 @@ class Comment:
         return self.Application
 
     @property
+    def Contact(self):
+        return self.com_object.Contact
+
+    @property
     def contact(self):
-        return self.com_object.contact
+        """Lower case alias for Contact"""
+        return self.Contact
 
     @property
     def Creator(self):
@@ -10898,12 +11216,22 @@ class Comment:
         return self.Date
 
     @property
+    def Done(self):
+        return self.com_object.Done
+
+    @Done.setter
+    def Done(self, value):
+        self.com_object.Done = value
+
+    @property
     def done(self):
-        return self.com_object.done
+        """Lower case alias for Done"""
+        return self.Done
 
     @done.setter
     def done(self, value):
-        self.com_object.done = value
+        """Lower case alias for Done.setter"""
+        self.Done = value
 
     @property
     def Index(self):
@@ -10951,8 +11279,13 @@ class Comment:
         return self.Reference
 
     @property
+    def Replies(self):
+        return Comment(self.com_object.Replies)
+
+    @property
     def replies(self):
-        return Comment(self.com_object.replies)
+        """Lower case alias for Replies"""
+        return self.Replies
 
     @property
     def Scope(self):
@@ -10963,6 +11296,13 @@ class Comment:
         """Lower case alias for Scope"""
         return self.Scope
 
+    def DeleteRecursively(self):
+        return self.com_object.DeleteRecursively()
+
+    # Lower case alias for DeleteRecursively
+    def deleterecursively(self):
+        return self.DeleteRecursively()
+
     def Edit(self):
         self.com_object.Edit()
 
@@ -10971,13 +11311,13 @@ class Comment:
         return self.Edit()
 
 
-class comments:
+class Comments:
 
     def __init__(self, comments=None):
         self.com_object= comments
 
     def __call__(self, item):
-        return comment(self.com_object(item))
+        return Comment(self.com_object(item))
 
     @property
     def Application(self):
@@ -11359,16 +11699,31 @@ class ContentControl:
         self.com_object= contentcontrol
 
     @property
+    def AllowInsertDeleteSection(self):
+        return self.com_object.AllowInsertDeleteSection
+
+    @property
     def allowinsertdeletesection(self):
-        return self.com_object.allowinsertdeletesection
+        """Lower case alias for AllowInsertDeleteSection"""
+        return self.AllowInsertDeleteSection
+
+    @property
+    def Appearance(self):
+        return self.com_object.Appearance
+
+    @Appearance.setter
+    def Appearance(self, value):
+        self.com_object.Appearance = value
 
     @property
     def appearance(self):
-        return self.com_object.appearance
+        """Lower case alias for Appearance"""
+        return self.Appearance
 
     @appearance.setter
     def appearance(self, value):
-        self.com_object.appearance = value
+        """Lower case alias for Appearance.setter"""
+        self.Appearance = value
 
     @property
     def Application(self):
@@ -11434,12 +11789,22 @@ class ContentControl:
         self.Checked = value
 
     @property
+    def Color(self):
+        return self.com_object.Color
+
+    @Color.setter
+    def Color(self, value):
+        self.com_object.Color = value
+
+    @property
     def color(self):
-        return self.com_object.color
+        """Lower case alias for Color"""
+        return self.Color
 
     @color.setter
     def color(self, value):
-        self.com_object.color = value
+        """Lower case alias for Color.setter"""
+        self.Color = value
 
     @property
     def Creator(self):
@@ -11559,8 +11924,13 @@ class ContentControl:
         return self.ID
 
     @property
+    def Level(self):
+        return self.com_object.Level
+
+    @property
     def level(self):
-        return self.com_object.level
+        """Lower case alias for Level"""
+        return self.Level
 
     @property
     def LockContentControl(self):
@@ -11653,16 +12023,31 @@ class ContentControl:
         return self.Range
 
     @property
+    def RepeatingSectionItems(self):
+        return self.com_object.RepeatingSectionItems
+
+    @property
     def repeatingsectionitems(self):
-        return self.com_object.repeatingsectionitems
+        """Lower case alias for RepeatingSectionItems"""
+        return self.RepeatingSectionItems
+
+    @property
+    def RepeatingSectionItemTitle(self):
+        return self.com_object.RepeatingSectionItemTitle
+
+    @RepeatingSectionItemTitle.setter
+    def RepeatingSectionItemTitle(self, value):
+        self.com_object.RepeatingSectionItemTitle = value
 
     @property
     def repeatingsectionitemtitle(self):
-        return self.com_object.repeatingsectionitemtitle
+        """Lower case alias for RepeatingSectionItemTitle"""
+        return self.RepeatingSectionItemTitle
 
     @repeatingsectionitemtitle.setter
     def repeatingsectionitemtitle(self, value):
-        self.com_object.repeatingsectionitemtitle = value
+        """Lower case alias for RepeatingSectionItemTitle.setter"""
+        self.RepeatingSectionItemTitle = value
 
     @property
     def ShowingPlaceholderText(self):
@@ -12304,13 +12689,13 @@ class CustomLabel:
         return self.Delete()
 
 
-class customlabels:
+class CustomLabels:
 
     def __init__(self, customlabels=None):
         self.com_object= customlabels
 
     def __call__(self, item):
-        return customlabel(self.com_object(item))
+        return CustomLabel(self.com_object(item))
 
     @property
     def Application(self):
@@ -12938,12 +13323,22 @@ class DataLabel:
         self.ShowPercentage = value
 
     @property
+    def ShowRange(self):
+        return self.com_object.ShowRange
+
+    @ShowRange.setter
+    def ShowRange(self, value):
+        self.com_object.ShowRange = value
+
+    @property
     def showrange(self):
-        return self.com_object.showrange
+        """Lower case alias for ShowRange"""
+        return self.ShowRange
 
     @showrange.setter
     def showrange(self, value):
-        self.com_object.showrange = value
+        """Lower case alias for ShowRange.setter"""
+        self.ShowRange = value
 
     @property
     def ShowSeriesName(self):
@@ -13383,12 +13778,22 @@ class DataLabels:
         self.ShowPercentage = value
 
     @property
+    def ShowRange(self):
+        return self.com_object.ShowRange
+
+    @ShowRange.setter
+    def ShowRange(self, value):
+        self.com_object.ShowRange = value
+
+    @property
     def showrange(self):
-        return self.com_object.showrange
+        """Lower case alias for ShowRange"""
+        return self.ShowRange
 
     @showrange.setter
     def showrange(self, value):
-        self.com_object.showrange = value
+        """Lower case alias for ShowRange.setter"""
+        self.ShowRange = value
 
     @property
     def ShowSeriesName(self):
@@ -13459,6 +13864,15 @@ class DataLabels:
     def item(self, Index=None):
         arguments = [Index]
         return self.Item(*arguments)
+
+    def Propagate(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return self.com_object.Propagate(*arguments)
+
+    # Lower case alias for Propagate
+    def propagate(self, Index=None):
+        arguments = [Index]
+        return self.Propagate(*arguments)
 
     def Select(self):
         self.com_object.Select()
@@ -14063,13 +14477,13 @@ class Dialog:
         return self.Update()
 
 
-class dialogs:
+class Dialogs:
 
     def __init__(self, dialogs=None):
         self.com_object= dialogs
 
     def __call__(self, item):
-        return dialog(self.com_object(item))
+        return Dialog(self.com_object(item))
 
     @property
     def Application(self):
@@ -14117,13 +14531,13 @@ class dialogs:
         return self.Item(*arguments)
 
 
-class dictionaries:
+class Dictionaries:
 
     def __init__(self, dictionaries=None):
         self.com_object= dictionaries
 
     def __call__(self, item):
-        return dictionarie(self.com_object(item))
+        return Dictionarie(self.com_object(item))
 
     @property
     def ActiveCustomDictionary(self):
@@ -14850,8 +15264,13 @@ class Document:
         return self.Bookmarks
 
     @property
+    def Broadcast(self):
+        return self.com_object.Broadcast
+
+    @property
     def broadcast(self):
-        return self.com_object.broadcast
+        """Lower case alias for Broadcast"""
+        return self.Broadcast
 
     @property
     def BuiltInDocumentProperties(self):
@@ -14872,12 +15291,22 @@ class Document:
         return self.Characters
 
     @property
+    def ChartDataPointTrack(self):
+        return self.com_object.ChartDataPointTrack
+
+    @ChartDataPointTrack.setter
+    def ChartDataPointTrack(self, value):
+        self.com_object.ChartDataPointTrack = value
+
+    @property
     def chartdatapointtrack(self):
-        return self.com_object.chartdatapointtrack
+        """Lower case alias for ChartDataPointTrack"""
+        return self.ChartDataPointTrack
 
     @chartdatapointtrack.setter
     def chartdatapointtrack(self, value):
-        self.com_object.chartdatapointtrack = value
+        """Lower case alias for ChartDataPointTrack.setter"""
+        self.ChartDataPointTrack = value
 
     @property
     def ClickAndTypeParagraphStyle(self):
@@ -15762,8 +16191,13 @@ class Document:
         return self.InlineShapes
 
     @property
+    def IsInAutosave(self):
+        return self.com_object.IsInAutosave
+
+    @property
     def isinautosave(self):
-        return self.com_object.isinautosave
+        """Lower case alias for IsInAutosave"""
+        return self.IsInAutosave
 
     @property
     def IsMasterDocument(self):
@@ -17514,6 +17948,15 @@ class Document:
     def printpreview(self):
         return self.PrintPreview()
 
+    def Protect(self, Type=None, NoReset=None, Password=None, UseIRM=None, EnforceStyleLock=None):
+        arguments = com_arguments([unwrap(a) for a in [Type, NoReset, Password, UseIRM, EnforceStyleLock]])
+        return self.com_object.Protect(*arguments)
+
+    # Lower case alias for Protect
+    def protect(self, Type=None, NoReset=None, Password=None, UseIRM=None, EnforceStyleLock=None):
+        arguments = [Type, NoReset, Password, UseIRM, EnforceStyleLock]
+        return self.Protect(*arguments)
+
     def Range(self, Start=None, End=None):
         arguments = com_arguments([unwrap(a) for a in [Start, End]])
         return Range(self.com_object.Range(*arguments))
@@ -17616,6 +18059,13 @@ class Document:
     # Lower case alias for ResetFormFields
     def resetformfields(self):
         return self.ResetFormFields()
+
+    def ReturnToLastReadPosition(self):
+        return self.com_object.ReturnToLastReadPosition()
+
+    # Lower case alias for ReturnToLastReadPosition
+    def returntolastreadposition(self):
+        return self.ReturnToLastReadPosition()
 
     def RunAutoMacro(self, Which=None):
         arguments = com_arguments([unwrap(a) for a in [Which]])
@@ -17851,14 +18301,32 @@ class Document:
     def webpagepreview(self):
         return self.WebPagePreview()
 
+    def SaveAs2(self, FileName=None, FileFormat=None, LockComments=None, Password=None, AddToRecentFiles=None, WritePassword=None, ReadOnlyRecommended=None, EmbedTrueTypeFonts=None, SaveNativePictureFormat=None, SaveFormsData=None, SaveAsAOCELetter=None, Encoding=None, InsertLineBreaks=None, AllowSubstitutions=None, LineEnding=None, AddBiDiMarks=None, CompatibilityMode=None):
+        arguments = com_arguments([unwrap(a) for a in [FileName, FileFormat, LockComments, Password, AddToRecentFiles, WritePassword, ReadOnlyRecommended, EmbedTrueTypeFonts, SaveNativePictureFormat, SaveFormsData, SaveAsAOCELetter, Encoding, InsertLineBreaks, AllowSubstitutions, LineEnding, AddBiDiMarks, CompatibilityMode]])
+        return self.com_object.SaveAs2(*arguments)
 
-class documents:
+    # Lower case alias for SaveAs2
+    def saveas2(self, FileName=None, FileFormat=None, LockComments=None, Password=None, AddToRecentFiles=None, WritePassword=None, ReadOnlyRecommended=None, EmbedTrueTypeFonts=None, SaveNativePictureFormat=None, SaveFormsData=None, SaveAsAOCELetter=None, Encoding=None, InsertLineBreaks=None, AllowSubstitutions=None, LineEnding=None, AddBiDiMarks=None, CompatibilityMode=None):
+        arguments = [FileName, FileFormat, LockComments, Password, AddToRecentFiles, WritePassword, ReadOnlyRecommended, EmbedTrueTypeFonts, SaveNativePictureFormat, SaveFormsData, SaveAsAOCELetter, Encoding, InsertLineBreaks, AllowSubstitutions, LineEnding, AddBiDiMarks, CompatibilityMode]
+        return self.SaveAs2(*arguments)
+
+    def SetCompatibilityMode(self, Mode=None):
+        arguments = com_arguments([unwrap(a) for a in [Mode]])
+        self.com_object.SetCompatibilityMode(*arguments)
+
+    # Lower case alias for SetCompatibilityMode
+    def setcompatibilitymode(self, Mode=None):
+        arguments = [Mode]
+        return self.SetCompatibilityMode(*arguments)
+
+
+class Documents:
 
     def __init__(self, documents=None):
         self.com_object= documents
 
     def __call__(self, item):
-        return document(self.com_object(item))
+        return Document(self.com_object(item))
 
     @property
     def Application(self):
@@ -19585,13 +20053,13 @@ class EndnoteOptions:
         self.StartingNumber = value
 
 
-class endnotes:
+class Endnotes:
 
     def __init__(self, endnotes=None):
         self.com_object= endnotes
 
     def __call__(self, item):
-        return endnote(self.com_object(item))
+        return Endnote(self.com_object(item))
 
     @property
     def Application(self):
@@ -20611,13 +21079,13 @@ class Field:
         return self.UpdateSource()
 
 
-class fields:
+class Fields:
 
     def __init__(self, fields=None):
         self.com_object= fields
 
     def __call__(self, item):
-        return field(self.com_object(item))
+        return Field(self.com_object(item))
 
     @property
     def Application(self):
@@ -20834,13 +21302,13 @@ class FileConverter:
         return self.SaveFormat
 
 
-class fileconverters:
+class FileConverters:
 
     def __init__(self, fileconverters=None):
         self.com_object= fileconverters
 
     def __call__(self, item):
-        return fileconverter(self.com_object(item))
+        return FileConverter(self.com_object(item))
 
     @property
     def Application(self):
@@ -22055,13 +22523,13 @@ class FirstLetterException:
         return self.Delete()
 
 
-class firstletterexceptions:
+class FirstLetterExceptions:
 
     def __init__(self, firstletterexceptions=None):
         self.com_object= firstletterexceptions
 
     def __call__(self, item):
-        return firstletterexception(self.com_object(item))
+        return FirstLetterException(self.com_object(item))
 
     @property
     def Application(self):
@@ -23203,12 +23671,22 @@ class FootnoteOptions:
         return self.Creator
 
     @property
+    def LayoutColumns(self):
+        return self.com_object.LayoutColumns
+
+    @LayoutColumns.setter
+    def LayoutColumns(self, value):
+        self.com_object.LayoutColumns = value
+
+    @property
     def layoutcolumns(self):
-        return self.com_object.layoutcolumns
+        """Lower case alias for LayoutColumns"""
+        return self.LayoutColumns
 
     @layoutcolumns.setter
     def layoutcolumns(self, value):
-        self.com_object.layoutcolumns = value
+        """Lower case alias for LayoutColumns.setter"""
+        self.LayoutColumns = value
 
     @property
     def Location(self):
@@ -23292,13 +23770,13 @@ class FootnoteOptions:
         self.StartingNumber = value
 
 
-class footnotes:
+class Footnotes:
 
     def __init__(self, footnotes=None):
         self.com_object= footnotes
 
     def __call__(self, item):
-        return footnote(self.com_object(item))
+        return Footnote(self.com_object(item))
 
     @property
     def Application(self):
@@ -23793,13 +24271,13 @@ class FormField:
         return self.Select()
 
 
-class formfields:
+class FormFields:
 
     def __init__(self, formfields=None):
         self.com_object= formfields
 
     def __call__(self, item):
-        return formfield(self.com_object(item))
+        return FormField(self.com_object(item))
 
     @property
     def Application(self):
@@ -24533,26 +25011,55 @@ class FreeformBuilder:
         return self.ConvertToShape(*arguments)
 
 
-class fullseriescollection:
+class FullSeriesCollection:
 
     def __init__(self, fullseriescollection=None):
         self.com_object= fullseriescollection
 
     @property
+    def Application(self):
+        return Application(self.com_object.Application)
+
+    @property
     def application(self):
-        return Application(self.com_object.application)
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def Count(self):
+        return self.com_object.Count
 
     @property
     def count(self):
-        return self.com_object.count
+        """Lower case alias for Count"""
+        return self.Count
+
+    @property
+    def Creator(self):
+        return self.com_object.Creator
 
     @property
     def creator(self):
-        return self.com_object.creator
+        """Lower case alias for Creator"""
+        return self.Creator
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    def Item(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return SERIES(self.com_object.Item(*arguments))
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        return self.Item(*arguments)
 
 
 class GlowFormat:
@@ -24614,8 +25121,26 @@ class GlowFormat:
         """Lower case alias for Radius.setter"""
         self.Radius = value
 
+    @property
+    def Transparency(self):
+        return self.com_object.Transparency
 
-class GridLines:
+    @Transparency.setter
+    def Transparency(self, value):
+        self.com_object.Transparency = value
+
+    @property
+    def transparency(self):
+        """Lower case alias for Transparency"""
+        return self.Transparency
+
+    @transparency.setter
+    def transparency(self, value):
+        """Lower case alias for Transparency.setter"""
+        self.Transparency = value
+
+
+class Gridlines:
 
     def __init__(self, gridlines=None):
         self.com_object= gridlines
@@ -24689,7 +25214,7 @@ class GridLines:
         return self.Select()
 
 
-class groupshapes:
+class GroupShapes:
 
     def __init__(self, groupshapes=None):
         self.com_object= groupshapes
@@ -24807,13 +25332,13 @@ class HangulAndAlphabetException:
         return self.Delete()
 
 
-class hangulandalphabetexceptions:
+class HangulAndAlphabetExceptions:
 
     def __init__(self, hangulandalphabetexceptions=None):
         self.com_object= hangulandalphabetexceptions
 
     def __call__(self, item):
-        return hangulandalphabetexception(self.com_object(item))
+        return HangulAndAlphabetException(self.com_object(item))
 
     @property
     def Application(self):
@@ -24870,13 +25395,13 @@ class hangulandalphabetexceptions:
         return self.Item(*arguments)
 
 
-class hangulhanjaconversiondictionaries:
+class HangulHanjaConversionDictionaries:
 
     def __init__(self, hangulhanjaconversiondictionaries=None):
         self.com_object= hangulhanjaconversiondictionaries
 
     def __call__(self, item):
-        return hangulhanjaconversiondictionarie(self.com_object(item))
+        return HangulHanjaConversionDictionarie(self.com_object(item))
 
     @property
     def ActiveCustomDictionary(self):
@@ -25081,13 +25606,13 @@ class HeaderFooter:
         return self.Shapes
 
 
-class headersfooters:
+class HeadersFooters:
 
     def __init__(self, headersfooters=None):
         self.com_object= headersfooters
 
     def __call__(self, item):
-        return headersfooter(self.com_object(item))
+        return HeadersFooter(self.com_object(item))
 
     @property
     def Application(self):
@@ -25211,13 +25736,13 @@ class HeadingStyle:
         return self.Delete()
 
 
-class headingstyles:
+class HeadingStyles:
 
     def __init__(self, headingstyles=None):
         self.com_object= headingstyles
 
     def __call__(self, item):
-        return headingstyle(self.com_object(item))
+        return HeadingStyle(self.com_object(item))
 
     @property
     def Application(self):
@@ -25891,7 +26416,7 @@ class Hyperlink:
         return self.Follow(*arguments)
 
 
-class hyperlinks:
+class Hyperlinks:
 
     def __init__(self, hyperlinks=None):
         self.com_object= hyperlinks
@@ -26169,13 +26694,13 @@ class Index:
         return self.Update()
 
 
-class indexes:
+class Indexes:
 
     def __init__(self, indexes=None):
         self.com_object= indexes
 
     def __call__(self, item):
-        return indexe(self.com_object(item))
+        return Indexe(self.com_object(item))
 
     @property
     def Application(self):
@@ -26671,13 +27196,13 @@ class InlineShape:
         return self.Select()
 
 
-class inlineshapes:
+class InlineShapes:
 
     def __init__(self, inlineshapes=None):
         self.com_object= inlineshapes
 
     def __call__(self, item):
-        return inlineshape(self.com_object(item))
+        return InlineShape(self.com_object(item))
 
     @property
     def Application(self):
@@ -26714,6 +27239,15 @@ class inlineshapes:
     def parent(self):
         """Lower case alias for Parent"""
         return self.Parent
+
+    def AddChart2(self, Style=None, Type=None, Range=None, NewLayout=None):
+        arguments = com_arguments([unwrap(a) for a in [Style, Type, Range, NewLayout]])
+        return INLINESHAPE(self.com_object.AddChart2(*arguments))
+
+    # Lower case alias for AddChart2
+    def addchart2(self, Style=None, Type=None, Range=None, NewLayout=None):
+        arguments = [Style, Type, Range, NewLayout]
+        return self.AddChart2(*arguments)
 
     def AddHorizontalLine(self, FileName=None, Range=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, Range]])
@@ -26777,6 +27311,15 @@ class inlineshapes:
     def addsmartart(self, Layout=None, Range=None):
         arguments = [Layout, Range]
         return self.AddSmartArt(*arguments)
+
+    def AddWebVideo(self, EmbedCode=None, VideoWidth=None, VideoHeight=None, PosterFrameImage=None, Url=None, Range=None):
+        arguments = com_arguments([unwrap(a) for a in [EmbedCode, VideoWidth, VideoHeight, PosterFrameImage, Url, Range]])
+        return INLINESHAPE(self.com_object.AddWebVideo(*arguments))
+
+    # Lower case alias for AddWebVideo
+    def addwebvideo(self, EmbedCode=None, VideoWidth=None, VideoHeight=None, PosterFrameImage=None, Url=None, Range=None):
+        arguments = [EmbedCode, VideoWidth, VideoHeight, PosterFrameImage, Url, Range]
+        return self.AddWebVideo(*arguments)
 
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -27073,13 +27616,13 @@ class KeyBinding:
         return self.Rebind(*arguments)
 
 
-class keybindings:
+class KeyBindings:
 
     def __init__(self, keybindings=None):
         self.com_object= keybindings
 
     def __call__(self, item):
-        return keybinding(self.com_object(item))
+        return KeyBinding(self.com_object(item))
 
     @property
     def Application(self):
@@ -27161,13 +27704,13 @@ class keybindings:
         return self.Key(*arguments)
 
 
-class keysboundto:
+class KeysBoundTo:
 
     def __init__(self, keysboundto=None):
         self.com_object= keysboundto
 
     def __call__(self, item):
-        return keysboundto(self.com_object(item))
+        return KeysBoundTo(self.com_object(item))
 
     @property
     def Application(self):
@@ -27401,13 +27944,13 @@ class Language:
         return self.WritingStyleList
 
 
-class languages:
+class Languages:
 
     def __init__(self, languages=None):
         self.com_object= languages
 
     def __call__(self, item):
-        return language(self.com_object(item))
+        return Language(self.com_object(item))
 
     @property
     def Application(self):
@@ -29620,13 +30163,13 @@ class List:
         return self.RemoveNumbers(*arguments)
 
 
-class listentries:
+class ListEntries:
 
     def __init__(self, listentries=None):
         self.com_object= listentries
 
     def __call__(self, item):
-        return listentrie(self.com_object(item))
+        return ListEntrie(self.com_object(item))
 
     @property
     def Application(self):
@@ -29971,13 +30514,13 @@ class ListFormat:
         return self.RemoveNumbers(*arguments)
 
 
-class listgalleries:
+class ListGalleries:
 
     def __init__(self, listgalleries=None):
         self.com_object= listgalleries
 
     def __call__(self, item):
-        return listgallerie(self.com_object(item))
+        return ListGallerie(self.com_object(item))
 
     @property
     def Application(self):
@@ -30346,13 +30889,13 @@ class ListLevel:
         return self.ApplyPictureBullet(*arguments)
 
 
-class listlevels:
+class ListLevels:
 
     def __init__(self, listlevels=None):
         self.com_object= listlevels
 
     def __call__(self, item):
-        return listlevel(self.com_object(item))
+        return ListLevel(self.com_object(item))
 
     @property
     def Application(self):
@@ -30400,13 +30943,13 @@ class listlevels:
         return self.Item(*arguments)
 
 
-class listparagraphs:
+class ListParagraphs:
 
     def __init__(self, listparagraphs=None):
         self.com_object= listparagraphs
 
     def __call__(self, item):
-        return listparagraph(self.com_object(item))
+        return ListParagraph(self.com_object(item))
 
     @property
     def Application(self):
@@ -30454,13 +30997,13 @@ class listparagraphs:
         return self.Item(*arguments)
 
 
-class lists:
+class Lists:
 
     def __init__(self, lists=None):
         self.com_object= lists
 
     def __call__(self, item):
-        return list(self.com_object(item))
+        return List(self.com_object(item))
 
     @property
     def Application(self):
@@ -30595,13 +31138,13 @@ class ListTemplate:
         return self.Convert(*arguments)
 
 
-class listtemplates:
+class ListTemplates:
 
     def __init__(self, listtemplates=None):
         self.com_object= listtemplates
 
     def __call__(self, item):
-        return listtemplate(self.com_object(item))
+        return ListTemplate(self.com_object(item))
 
     @property
     def Application(self):
@@ -31197,13 +31740,13 @@ class MailMergeDataField:
         return self.Value
 
 
-class mailmergedatafields:
+class MailMergeDataFields:
 
     def __init__(self, mailmergedatafields=None):
         self.com_object= mailmergedatafields
 
     def __call__(self, item):
-        return mailmergedatafield(self.com_object(item))
+        return MailMergeDataField(self.com_object(item))
 
     @property
     def Application(self):
@@ -31709,13 +32252,13 @@ class MailMergeFieldName:
         return self.Parent
 
 
-class mailmergefields:
+class MailMergeFields:
 
     def __init__(self, mailmergefields=None):
         self.com_object= mailmergefields
 
     def __call__(self, item):
-        return mailmergefield(self.com_object(item))
+        return MailMergeField(self.com_object(item))
 
     @property
     def Application(self):
@@ -35946,12 +36489,22 @@ class Options:
         self.AddHebDoubleQuote = value
 
     @property
+    def AlertIfNotDefault(self):
+        return self.com_object.AlertIfNotDefault
+
+    @AlertIfNotDefault.setter
+    def AlertIfNotDefault(self, value):
+        self.com_object.AlertIfNotDefault = value
+
+    @property
     def alertifnotdefault(self):
-        return self.com_object.alertifnotdefault
+        """Lower case alias for AlertIfNotDefault"""
+        return self.AlertIfNotDefault
 
     @alertifnotdefault.setter
     def alertifnotdefault(self, value):
-        self.com_object.alertifnotdefault = value
+        """Lower case alias for AlertIfNotDefault.setter"""
+        self.AlertIfNotDefault = value
 
     @property
     def AllowAccentedUppercase(self):
@@ -37079,12 +37632,22 @@ class Options:
         self.CheckSpellingAsYouType = value
 
     @property
+    def CloudSignInOption(self):
+        return self.com_object.CloudSignInOption
+
+    @CloudSignInOption.setter
+    def CloudSignInOption(self, value):
+        self.com_object.CloudSignInOption = value
+
+    @property
     def cloudsigninoption(self):
-        return self.com_object.cloudsigninoption
+        """Lower case alias for CloudSignInOption"""
+        return self.CloudSignInOption
 
     @cloudsigninoption.setter
     def cloudsigninoption(self, value):
-        self.com_object.cloudsigninoption = value
+        """Lower case alias for CloudSignInOption.setter"""
+        self.CloudSignInOption = value
 
     @property
     def CommentsColor(self):
@@ -37528,12 +38091,22 @@ class Options:
         self.DisableFeaturesIntroducedAfterbyDefault = value
 
     @property
+    def DisplayAlignmentGuides(self):
+        return self.com_object.DisplayAlignmentGuides
+
+    @DisplayAlignmentGuides.setter
+    def DisplayAlignmentGuides(self, value):
+        self.com_object.DisplayAlignmentGuides = value
+
+    @property
     def displayalignmentguides(self):
-        return self.com_object.displayalignmentguides
+        """Lower case alias for DisplayAlignmentGuides"""
+        return self.DisplayAlignmentGuides
 
     @displayalignmentguides.setter
     def displayalignmentguides(self, value):
-        self.com_object.displayalignmentguides = value
+        """Lower case alias for DisplayAlignmentGuides.setter"""
+        self.DisplayAlignmentGuides = value
 
     @property
     def DisplayGridLines(self):
@@ -37644,12 +38217,22 @@ class Options:
         self.EnableLegacyIMEMode = value
 
     @property
+    def EnableLiveDrag(self):
+        return self.com_object.EnableLiveDrag
+
+    @EnableLiveDrag.setter
+    def EnableLiveDrag(self, value):
+        self.com_object.EnableLiveDrag = value
+
+    @property
     def enablelivedrag(self):
-        return self.com_object.enablelivedrag
+        """Lower case alias for EnableLiveDrag"""
+        return self.EnableLiveDrag
 
     @enablelivedrag.setter
     def enablelivedrag(self, value):
-        self.com_object.enablelivedrag = value
+        """Lower case alias for EnableLiveDrag.setter"""
+        self.EnableLiveDrag = value
 
     @property
     def EnableLivePreview(self):
@@ -37688,12 +38271,22 @@ class Options:
         self.EnableMisusedWordsDictionary = value
 
     @property
+    def EnableProofingToolsAdvertisement(self):
+        return self.com_object.EnableProofingToolsAdvertisement
+
+    @EnableProofingToolsAdvertisement.setter
+    def EnableProofingToolsAdvertisement(self, value):
+        self.com_object.EnableProofingToolsAdvertisement = value
+
+    @property
     def enableproofingtoolsadvertisement(self):
-        return self.com_object.enableproofingtoolsadvertisement
+        """Lower case alias for EnableProofingToolsAdvertisement"""
+        return self.EnableProofingToolsAdvertisement
 
     @enableproofingtoolsadvertisement.setter
     def enableproofingtoolsadvertisement(self, value):
-        self.com_object.enableproofingtoolsadvertisement = value
+        """Lower case alias for EnableProofingToolsAdvertisement.setter"""
+        self.EnableProofingToolsAdvertisement = value
 
     @property
     def EnableSound(self):
@@ -37723,12 +38316,22 @@ class Options:
         return self.EnvelopeFeederInstalled
 
     @property
+    def ExpandHeadingsOnOpen(self):
+        return self.com_object.ExpandHeadingsOnOpen
+
+    @ExpandHeadingsOnOpen.setter
+    def ExpandHeadingsOnOpen(self, value):
+        self.com_object.ExpandHeadingsOnOpen = value
+
+    @property
     def expandheadingsonopen(self):
-        return self.com_object.expandheadingsonopen
+        """Lower case alias for ExpandHeadingsOnOpen"""
+        return self.ExpandHeadingsOnOpen
 
     @expandheadingsonopen.setter
     def expandheadingsonopen(self, value):
-        self.com_object.expandheadingsonopen = value
+        """Lower case alias for ExpandHeadingsOnOpen.setter"""
+        self.ExpandHeadingsOnOpen = value
 
     @property
     def FormatScanning(self):
@@ -38109,12 +38712,22 @@ class Options:
         self.MapPaperSize = value
 
     @property
+    def MarginAlignmentGuides(self):
+        return self.com_object.MarginAlignmentGuides
+
+    @MarginAlignmentGuides.setter
+    def MarginAlignmentGuides(self, value):
+        self.com_object.MarginAlignmentGuides = value
+
+    @property
     def marginalignmentguides(self):
-        return self.com_object.marginalignmentguides
+        """Lower case alias for MarginAlignmentGuides"""
+        return self.MarginAlignmentGuides
 
     @marginalignmentguides.setter
     def marginalignmentguides(self, value):
-        self.com_object.marginalignmentguides = value
+        """Lower case alias for MarginAlignmentGuides.setter"""
+        self.MarginAlignmentGuides = value
 
     @property
     def MatchFuzzyAY(self):
@@ -38639,13 +39252,13 @@ class Options:
         self.OptimizeForWord97byDefault = value
 
     @property
-    def Options(self):
-        return self.com_object.Options
+    def ShortMenuNames(self):
+        return self.com_object.ShortMenuNames
 
     @property
-    def options(self):
-        """Lower case alias for Options"""
-        return self.Options
+    def shortmenunames(self):
+        """Lower case alias for ShortMenuNames"""
+        return self.ShortMenuNames
 
     @property
     def Overtype(self):
@@ -38666,12 +39279,22 @@ class Options:
         self.Overtype = value
 
     @property
+    def PageAlignmentGuides(self):
+        return self.com_object.PageAlignmentGuides
+
+    @PageAlignmentGuides.setter
+    def PageAlignmentGuides(self, value):
+        self.com_object.PageAlignmentGuides = value
+
+    @property
     def pagealignmentguides(self):
-        return self.com_object.pagealignmentguides
+        """Lower case alias for PageAlignmentGuides"""
+        return self.PageAlignmentGuides
 
     @pagealignmentguides.setter
     def pagealignmentguides(self, value):
-        self.com_object.pagealignmentguides = value
+        """Lower case alias for PageAlignmentGuides.setter"""
+        self.PageAlignmentGuides = value
 
     @property
     def Pagination(self):
@@ -38692,12 +39315,22 @@ class Options:
         self.Pagination = value
 
     @property
+    def ParagraphAlignmentGuides(self):
+        return self.com_object.ParagraphAlignmentGuides
+
+    @ParagraphAlignmentGuides.setter
+    def ParagraphAlignmentGuides(self, value):
+        self.com_object.ParagraphAlignmentGuides = value
+
+    @property
     def paragraphalignmentguides(self):
-        return self.com_object.paragraphalignmentguides
+        """Lower case alias for ParagraphAlignmentGuides"""
+        return self.ParagraphAlignmentGuides
 
     @paragraphalignmentguides.setter
     def paragraphalignmentguides(self, value):
-        self.com_object.paragraphalignmentguides = value
+        """Lower case alias for ParagraphAlignmentGuides.setter"""
+        self.ParagraphAlignmentGuides = value
 
     @property
     def Parent(self):
@@ -39015,12 +39648,22 @@ class Options:
         self.PrecisePositioning = value
 
     @property
+    def PreferCloudSaveLocations(self):
+        return self.com_object.PreferCloudSaveLocations
+
+    @PreferCloudSaveLocations.setter
+    def PreferCloudSaveLocations(self, value):
+        self.com_object.PreferCloudSaveLocations = value
+
+    @property
     def prefercloudsavelocations(self):
-        return self.com_object.prefercloudsavelocations
+        """Lower case alias for PreferCloudSaveLocations"""
+        return self.PreferCloudSaveLocations
 
     @prefercloudsavelocations.setter
     def prefercloudsavelocations(self, value):
-        self.com_object.prefercloudsavelocations = value
+        """Lower case alias for PreferCloudSaveLocations.setter"""
+        self.PreferCloudSaveLocations = value
 
     @property
     def PrintBackground(self):
@@ -39365,8 +40008,13 @@ class Options:
         self.RevisionsBalloonPrintOrientation = value
 
     @property
+    def RTFInClipboard(self):
+        return self.com_object.RTFInClipboard
+
+    @property
     def rtfinclipboard(self):
-        return self.com_object.rtfinclipboard
+        """Lower case alias for RTFInClipboard"""
+        return self.RTFInClipboard
 
     @property
     def SaveInterval(self):
@@ -39603,12 +40251,22 @@ class Options:
         self.ShowSelectionFloaties = value
 
     @property
+    def SkyDriveSignInOption(self):
+        return self.com_object.SkyDriveSignInOption
+
+    @SkyDriveSignInOption.setter
+    def SkyDriveSignInOption(self, value):
+        self.com_object.SkyDriveSignInOption = value
+
+    @property
     def skydrivesigninoption(self):
-        return self.com_object.skydrivesigninoption
+        """Lower case alias for SkyDriveSignInOption"""
+        return self.SkyDriveSignInOption
 
     @skydrivesigninoption.setter
     def skydrivesigninoption(self, value):
-        self.com_object.skydrivesigninoption = value
+        """Lower case alias for SkyDriveSignInOption.setter"""
+        self.SkyDriveSignInOption = value
 
     @property
     def SmartCursoring(self):
@@ -40043,12 +40701,22 @@ class Options:
         self.UseGermanSpellingReform = value
 
     @property
+    def UseLocalUserInfo(self):
+        return self.com_object.UseLocalUserInfo
+
+    @UseLocalUserInfo.setter
+    def UseLocalUserInfo(self, value):
+        self.com_object.UseLocalUserInfo = value
+
+    @property
     def uselocaluserinfo(self):
-        return self.com_object.uselocaluserinfo
+        """Lower case alias for UseLocalUserInfo"""
+        return self.UseLocalUserInfo
 
     @uselocaluserinfo.setter
     def uselocaluserinfo(self, value):
-        self.com_object.uselocaluserinfo = value
+        """Lower case alias for UseLocalUserInfo.setter"""
+        self.UseLocalUserInfo = value
 
     @property
     def UseNormalStyleForList(self):
@@ -40069,12 +40737,22 @@ class Options:
         self.UseNormalStyleForList = value
 
     @property
+    def UseSubPixelPositioning(self):
+        return self.com_object.UseSubPixelPositioning
+
+    @UseSubPixelPositioning.setter
+    def UseSubPixelPositioning(self, value):
+        self.com_object.UseSubPixelPositioning = value
+
+    @property
     def usesubpixelpositioning(self):
-        return self.com_object.usesubpixelpositioning
+        """Lower case alias for UseSubPixelPositioning"""
+        return self.UseSubPixelPositioning
 
     @usesubpixelpositioning.setter
     def usesubpixelpositioning(self, value):
-        self.com_object.usesubpixelpositioning = value
+        """Lower case alias for UseSubPixelPositioning.setter"""
+        self.UseSubPixelPositioning = value
 
     @property
     def VisualSelection(self):
@@ -40171,13 +40849,13 @@ class OtherCorrectionsException:
         return self.Delete()
 
 
-class othercorrectionsexceptions:
+class OtherCorrectionsExceptions:
 
     def __init__(self, othercorrectionsexceptions=None):
         self.com_object= othercorrectionsexceptions
 
     def __call__(self, item):
-        return othercorrectionsexception(self.com_object(item))
+        return OtherCorrectionsException(self.com_object(item))
 
     @property
     def Application(self):
@@ -40418,13 +41096,13 @@ class PageNumber:
         return self.Select()
 
 
-class pagenumbers:
+class PageNumbers:
 
     def __init__(self, pagenumbers=None):
         self.com_object= pagenumbers
 
     def __call__(self, item):
-        return pagenumber(self.com_object(item))
+        return PageNumber(self.com_object(item))
 
     @property
     def Application(self):
@@ -40625,13 +41303,13 @@ class pagenumbers:
         return self.Item(*arguments)
 
 
-class pages:
+class Pages:
 
     def __init__(self, pages=None):
         self.com_object= pages
 
     def __call__(self, item):
-        return page(self.com_object(item))
+        return Page(self.com_object(item))
 
     @property
     def Application(self):
@@ -41180,12 +41858,22 @@ class PageSetup:
         self.SectionStart = value
 
     @property
+    def ShowGrid(self):
+        return self.com_object.ShowGrid
+
+    @ShowGrid.setter
+    def ShowGrid(self, value):
+        self.com_object.ShowGrid = value
+
+    @property
     def showgrid(self):
-        return self.com_object.showgrid
+        """Lower case alias for ShowGrid"""
+        return self.ShowGrid
 
     @showgrid.setter
     def showgrid(self, value):
-        self.com_object.showgrid = value
+        """Lower case alias for ShowGrid.setter"""
+        self.ShowGrid = value
 
     @property
     def SuppressEndnotes(self):
@@ -41560,13 +42248,13 @@ class Pane:
         return self.TOCInFrameset()
 
 
-class panes:
+class Panes:
 
     def __init__(self, panes=None):
         self.com_object= panes
 
     def __call__(self, item):
-        return pane(self.com_object(item))
+        return Pane(self.com_object(item))
 
     @property
     def Application(self):
@@ -41791,20 +42479,40 @@ class Paragraph:
         self.CharacterUnitRightIndent = value
 
     @property
+    def CollapsedState(self):
+        return self.com_object.CollapsedState
+
+    @CollapsedState.setter
+    def CollapsedState(self, value):
+        self.com_object.CollapsedState = value
+
+    @property
     def collapsedstate(self):
-        return self.com_object.collapsedstate
+        """Lower case alias for CollapsedState"""
+        return self.CollapsedState
 
     @collapsedstate.setter
     def collapsedstate(self, value):
-        self.com_object.collapsedstate = value
+        """Lower case alias for CollapsedState.setter"""
+        self.CollapsedState = value
+
+    @property
+    def CollapseHeadingByDefault(self):
+        return self.com_object.CollapseHeadingByDefault
+
+    @CollapseHeadingByDefault.setter
+    def CollapseHeadingByDefault(self, value):
+        self.com_object.CollapseHeadingByDefault = value
 
     @property
     def collapseheadingbydefault(self):
-        return self.com_object.collapseheadingbydefault
+        """Lower case alias for CollapseHeadingByDefault"""
+        return self.CollapseHeadingByDefault
 
     @collapseheadingbydefault.setter
     def collapseheadingbydefault(self, value):
-        self.com_object.collapseheadingbydefault = value
+        """Lower case alias for CollapseHeadingByDefault.setter"""
+        self.CollapseHeadingByDefault = value
 
     @property
     def Creator(self):
@@ -42756,12 +43464,22 @@ class ParagraphFormat:
         self.CharacterUnitRightIndent = value
 
     @property
+    def CollapsedByDefault(self):
+        return self.com_object.CollapsedByDefault
+
+    @CollapsedByDefault.setter
+    def CollapsedByDefault(self, value):
+        self.com_object.CollapsedByDefault = value
+
+    @property
     def collapsedbydefault(self):
-        return self.com_object.collapsedbydefault
+        """Lower case alias for CollapsedByDefault"""
+        return self.CollapsedByDefault
 
     @collapsedbydefault.setter
     def collapsedbydefault(self, value):
-        self.com_object.collapsedbydefault = value
+        """Lower case alias for CollapsedByDefault.setter"""
+        self.CollapsedByDefault = value
 
     @property
     def Creator(self):
@@ -43389,13 +44107,13 @@ class ParagraphFormat:
         return self.TabIndent(*arguments)
 
 
-class paragraphs:
+class Paragraphs:
 
     def __init__(self, paragraphs=None):
         self.com_object= paragraphs
 
     def __call__(self, item):
-        return paragraph(self.com_object(item))
+        return Paragraph(self.com_object(item))
 
     @property
     def AddSpaceBetweenFarEastAndAlpha(self):
@@ -44887,12 +45605,22 @@ class Point:
         self.InvertIfNegative = value
 
     @property
+    def IsTotal(self):
+        return self.com_object.IsTotal
+
+    @IsTotal.setter
+    def IsTotal(self, value):
+        self.com_object.IsTotal = value
+
+    @property
     def istotal(self):
-        return self.com_object.istotal
+        """Lower case alias for IsTotal"""
+        return self.IsTotal
 
     @istotal.setter
     def istotal(self, value):
-        self.com_object.istotal = value
+        """Lower case alias for IsTotal.setter"""
+        self.IsTotal = value
 
     @property
     def Left(self):
@@ -45227,13 +45955,13 @@ class Points:
         return self.Item(*arguments)
 
 
-class proofreadingerrors:
+class ProofreadingErrors:
 
     def __init__(self, proofreadingerrors=None):
         self.com_object= proofreadingerrors
 
     def __call__(self, item):
-        return proofreadingerror(self.com_object(item))
+        return ProofreadingError(self.com_object(item))
 
     @property
     def Application(self):
@@ -46661,8 +47389,13 @@ class Range:
         self.TextRetrievalMode = value
 
     @property
+    def TextVisibleOnScreen(self):
+        return self.com_object.TextVisibleOnScreen
+
+    @property
     def textvisibleonscreen(self):
-        return self.com_object.textvisibleonscreen
+        """Lower case alias for TextVisibleOnScreen"""
+        return self.TextVisibleOnScreen
 
     @property
     def TopLevelTables(self):
@@ -47356,6 +48089,15 @@ class Range:
     def sortascending(self):
         return self.SortAscending()
 
+    def SortByHeadings(self, SortFieldType=None, SortOrder=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
+        arguments = com_arguments([unwrap(a) for a in [SortFieldType, SortOrder, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID]])
+        return self.com_object.SortByHeadings(*arguments)
+
+    # Lower case alias for SortByHeadings
+    def sortbyheadings(self, SortFieldType=None, SortOrder=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
+        arguments = [SortFieldType, SortOrder, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID]
+        return self.SortByHeadings(*arguments)
+
     def SortDescending(self):
         self.com_object.SortDescending()
 
@@ -47440,13 +48182,13 @@ class ReadabilityStatistic:
         return self.Value
 
 
-class readabilitystatistics:
+class ReadabilityStatistics:
 
     def __init__(self, readabilitystatistics=None):
         self.com_object= readabilitystatistics
 
     def __call__(self, item):
-        return readabilitystatistic(self.com_object(item))
+        return ReadabilityStatistic(self.com_object(item))
 
     @property
     def Application(self):
@@ -47586,13 +48328,13 @@ class RecentFile:
         return self.Open()
 
 
-class recentfiles:
+class RecentFiles:
 
     def __init__(self, recentfiles=None):
         self.com_object= recentfiles
 
     def __call__(self, item):
-        return recentfile(self.com_object(item))
+        return RecentFile(self.com_object(item))
 
     @property
     def Application(self):
@@ -47949,48 +48691,118 @@ class ReflectionFormat:
         self.Type = value
 
 
-class repeatingsectionitem:
+class RepeatingSectionItem:
 
     def __init__(self, repeatingsectionitem=None):
         self.com_object= repeatingsectionitem
 
     @property
+    def Application(self):
+        return Application(self.com_object.Application)
+
+    @property
     def application(self):
-        return Application(self.com_object.application)
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def Creator(self):
+        return self.com_object.Creator
 
     @property
     def creator(self):
-        return self.com_object.creator
+        """Lower case alias for Creator"""
+        return self.Creator
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    @property
+    def Range(self):
+        return self.com_object.Range
 
     @property
     def range(self):
-        return self.com_object.range
+        """Lower case alias for Range"""
+        return self.Range
+
+    def Delete(self):
+        return self.com_object.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        return self.Delete()
+
+    def InsertItemAfter(self):
+        return REPEATINGSECTIONITEM(self.com_object.InsertItemAfter())
+
+    # Lower case alias for InsertItemAfter
+    def insertitemafter(self):
+        return self.InsertItemAfter()
+
+    def InsertItemBefore(self):
+        return REPEATINGSECTIONITEM(self.com_object.InsertItemBefore())
+
+    # Lower case alias for InsertItemBefore
+    def insertitembefore(self):
+        return self.InsertItemBefore()
 
 
-class repeatingsectionitemcoll:
+class RepeatingSectionItemColl:
 
     def __init__(self, repeatingsectionitemcoll=None):
         self.com_object= repeatingsectionitemcoll
 
     @property
+    def Application(self):
+        return Application(self.com_object.Application)
+
+    @property
     def application(self):
-        return Application(self.com_object.application)
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def Count(self):
+        return self.com_object.Count
 
     @property
     def count(self):
-        return self.com_object.count
+        """Lower case alias for Count"""
+        return self.Count
+
+    @property
+    def Creator(self):
+        return self.com_object.Creator
 
     @property
     def creator(self):
-        return self.com_object.creator
+        """Lower case alias for Creator"""
+        return self.Creator
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    def Item(self, Index=None):
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return REPEATINGSECTIONITEM(self.com_object.Item(*arguments))
+
+    # Lower case alias for Item
+    def item(self, Index=None):
+        arguments = [Index]
+        return self.Item(*arguments)
 
 
 class Replacement:
@@ -48500,13 +49312,13 @@ class Revision:
         return self.Reject()
 
 
-class revisions:
+class Revisions:
 
     def __init__(self, revisions=None):
         self.com_object= revisions
 
     def __call__(self, item):
-        return revision(self.com_object(item))
+        return Revision(self.com_object(item))
 
     @property
     def Application(self):
@@ -48561,30 +49373,62 @@ class revisions:
         return self.Item(*arguments)
 
 
-class revisionsfilter:
+class RevisionsFilter:
 
     def __init__(self, revisionsfilter=None):
         self.com_object= revisionsfilter
 
     @property
+    def Markup(self):
+        return self.com_object.Markup
+
+    @Markup.setter
+    def Markup(self, value):
+        self.com_object.Markup = value
+
+    @property
     def markup(self):
-        return self.com_object.markup
+        """Lower case alias for Markup"""
+        return self.Markup
 
     @markup.setter
     def markup(self, value):
-        self.com_object.markup = value
+        """Lower case alias for Markup.setter"""
+        self.Markup = value
+
+    @property
+    def Reviewers(self):
+        return self.com_object.Reviewers
 
     @property
     def reviewers(self):
-        return self.com_object.reviewers
+        """Lower case alias for Reviewers"""
+        return self.Reviewers
+
+    @property
+    def View(self):
+        return self.com_object.View
+
+    @View.setter
+    def View(self, value):
+        self.com_object.View = value
 
     @property
     def view(self):
-        return self.com_object.view
+        """Lower case alias for View"""
+        return self.View
 
     @view.setter
     def view(self, value):
-        self.com_object.view = value
+        """Lower case alias for View.setter"""
+        self.View = value
+
+    def ToggleShowAllReviewers(self):
+        return self.com_object.ToggleShowAllReviewers()
+
+    # Lower case alias for ToggleShowAllReviewers
+    def toggleshowallreviewers(self):
+        return self.ToggleShowAllReviewers()
 
 
 class Row:
@@ -48898,13 +49742,13 @@ class Row:
         return self.SetLeftIndent(*arguments)
 
 
-class rows:
+class Rows:
 
     def __init__(self, rows=None):
         self.com_object= rows
 
     def __call__(self, item):
-        return row(self.com_object(item))
+        return Row(self.com_object(item))
 
     @property
     def Alignment(self):
@@ -49483,13 +50327,13 @@ class Section:
         return self.Range
 
 
-class sections:
+class Sections:
 
     def __init__(self, sections=None):
         self.com_object= sections
 
     def __call__(self, item):
-        return section(self.com_object(item))
+        return Section(self.com_object(item))
 
     @property
     def Application(self):
@@ -51200,6 +52044,15 @@ class Selection:
     def sortascending(self):
         return self.SortAscending()
 
+    def SortByHeadings(self, SortFieldType=None, SortOrder=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
+        arguments = com_arguments([unwrap(a) for a in [SortFieldType, SortOrder, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID]])
+        return self.com_object.SortByHeadings(*arguments)
+
+    # Lower case alias for SortByHeadings
+    def sortbyheadings(self, SortFieldType=None, SortOrder=None, CaseSensitive=None, BidiSort=None, IgnoreThe=None, IgnoreKashida=None, IgnoreDiacritics=None, IgnoreHe=None, LanguageID=None):
+        arguments = [SortFieldType, SortOrder, CaseSensitive, BidiSort, IgnoreThe, IgnoreKashida, IgnoreDiacritics, IgnoreHe, LanguageID]
+        return self.SortByHeadings(*arguments)
+
     def SortDescending(self):
         self.com_object.SortDescending()
 
@@ -51261,13 +52114,13 @@ class Selection:
         return self.WholeStory()
 
 
-class sentences:
+class Sentences:
 
     def __init__(self, sentences=None):
         self.com_object= sentences
 
     def __call__(self, item):
-        return sentence(self.com_object(item))
+        return Sentence(self.com_object(item))
 
     @property
     def Application(self):
@@ -51726,12 +52579,22 @@ class Series:
         self.InvertIfNegative = value
 
     @property
+    def IsFiltered(self):
+        return self.com_object.IsFiltered
+
+    @IsFiltered.setter
+    def IsFiltered(self, value):
+        self.com_object.IsFiltered = value
+
+    @property
     def isfiltered(self):
-        return self.com_object.isfiltered
+        """Lower case alias for IsFiltered"""
+        return self.IsFiltered
 
     @isfiltered.setter
     def isfiltered(self, value):
-        self.com_object.isfiltered = value
+        """Lower case alias for IsFiltered.setter"""
+        self.IsFiltered = value
 
     @property
     def LeaderLines(self):
@@ -51878,12 +52741,22 @@ class Series:
         return self.Parent
 
     @property
+    def ParentDataLabelOption(self):
+        return self.com_object.ParentDataLabelOption
+
+    @ParentDataLabelOption.setter
+    def ParentDataLabelOption(self, value):
+        self.com_object.ParentDataLabelOption = value
+
+    @property
     def parentdatalabeloption(self):
-        return self.com_object.parentdatalabeloption
+        """Lower case alias for ParentDataLabelOption"""
+        return self.ParentDataLabelOption
 
     @parentdatalabeloption.setter
     def parentdatalabeloption(self, value):
-        self.com_object.parentdatalabeloption = value
+        """Lower case alias for ParentDataLabelOption.setter"""
+        self.ParentDataLabelOption = value
 
     @property
     def PictureType(self):
@@ -51949,12 +52822,22 @@ class Series:
         self.PlotOrder = value
 
     @property
+    def QuartileCalculationInclusiveMedian(self):
+        return self.com_object.QuartileCalculationInclusiveMedian
+
+    @QuartileCalculationInclusiveMedian.setter
+    def QuartileCalculationInclusiveMedian(self, value):
+        self.com_object.QuartileCalculationInclusiveMedian = value
+
+    @property
     def quartilecalculationinclusivemedian(self):
-        return self.com_object.quartilecalculationinclusivemedian
+        """Lower case alias for QuartileCalculationInclusiveMedian"""
+        return self.QuartileCalculationInclusiveMedian
 
     @quartilecalculationinclusivemedian.setter
     def quartilecalculationinclusivemedian(self, value):
-        self.com_object.quartilecalculationinclusivemedian = value
+        """Lower case alias for QuartileCalculationInclusiveMedian.setter"""
+        self.QuartileCalculationInclusiveMedian = value
 
     @property
     def Shadow(self):
@@ -53657,13 +54540,13 @@ class ShapeNode:
         return self.SegmentType
 
 
-class shapenodes:
+class ShapeNodes:
 
     def __init__(self, shapenodes=None):
         self.com_object= shapenodes
 
     def __call__(self, item):
-        return shapenode(self.com_object(item))
+        return ShapeNode(self.com_object(item))
 
     @property
     def Application(self):
@@ -53756,7 +54639,7 @@ class shapenodes:
         return self.SetSegmentType(*arguments)
 
 
-class shaperange:
+class ShapeRange:
 
     def __init__(self, shaperange=None):
         self.com_object= shaperange
@@ -54682,13 +55565,13 @@ class shaperange:
         return self.ZOrder(*arguments)
 
 
-class shapes:
+class Shapes:
 
     def __init__(self, shapes=None):
         self.com_object= shapes
 
     def __call__(self, item):
-        return shape(self.com_object(item))
+        return Shape(self.com_object(item))
 
     @property
     def Application(self):
@@ -54752,6 +55635,15 @@ class shapes:
     def addcanvas(self, Left=None, Top=None, Width=None, Height=None, Anchor=None):
         arguments = [Left, Top, Width, Height, Anchor]
         return self.AddCanvas(*arguments)
+
+    def AddChart2(self, Style=None, Type=None, Left=None, Top=None, Width=None, Height=None, Anchor=None, NewLayout=None):
+        arguments = com_arguments([unwrap(a) for a in [Style, Type, Left, Top, Width, Height, Anchor, NewLayout]])
+        return SHAPE(self.com_object.AddChart2(*arguments))
+
+    # Lower case alias for AddChart2
+    def addchart2(self, Style=None, Type=None, Left=None, Top=None, Width=None, Height=None, Anchor=None, NewLayout=None):
+        arguments = [Style, Type, Left, Top, Width, Height, Anchor, NewLayout]
+        return self.AddChart2(*arguments)
 
     def AddCurve(self, SafeArrayOfPoints=None):
         arguments = com_arguments([unwrap(a) for a in [SafeArrayOfPoints]])
@@ -54851,6 +55743,15 @@ class shapes:
     def addtexteffect(self, PresetTextEffect=None, Text=None, FontName=None, FontSize=None, FontBold=None, FontItalic=None, Left=None, Top=None):
         arguments = [PresetTextEffect, Text, FontName, FontSize, FontBold, FontItalic, Left, Top]
         return self.AddTextEffect(*arguments)
+
+    def AddWebVideo(self, EmbedCode=None, VideoWidth=None, VideoHeight=None, PosterFrameImage=None, Url=None, Left=None, Top=None, Width=None, Height=None, Anchor=None):
+        arguments = com_arguments([unwrap(a) for a in [EmbedCode, VideoWidth, VideoHeight, PosterFrameImage, Url, Left, Top, Width, Height, Anchor]])
+        return SHAPE(self.com_object.AddWebVideo(*arguments))
+
+    # Lower case alias for AddWebVideo
+    def addwebvideo(self, EmbedCode=None, VideoWidth=None, VideoHeight=None, PosterFrameImage=None, Url=None, Left=None, Top=None, Width=None, Height=None, Anchor=None):
+        arguments = [EmbedCode, VideoWidth, VideoHeight, PosterFrameImage, Url, Left, Top, Width, Height, Anchor]
+        return self.AddWebVideo(*arguments)
 
     def BuildFreeform(self, EditingType=None, X1=None, Y1=None):
         arguments = com_arguments([unwrap(a) for a in [EditingType, X1, Y1]])
@@ -55137,13 +56038,13 @@ class SpellingSuggestion:
         return self.Parent
 
 
-class spellingsuggestions:
+class SpellingSuggestions:
 
     def __init__(self, spellingsuggestions=None):
         self.com_object= spellingsuggestions
 
     def __call__(self, item):
-        return spellingsuggestion(self.com_object(item))
+        return SpellingSuggestion(self.com_object(item))
 
     @property
     def Application(self):
@@ -55200,13 +56101,13 @@ class spellingsuggestions:
         return self.Item(*arguments)
 
 
-class storyranges:
+class StoryRanges:
 
     def __init__(self, storyranges=None):
         self.com_object= storyranges
 
     def __call__(self, item):
-        return storyrange(self.com_object(item))
+        return StoryRange(self.com_object(item))
 
     @property
     def Application(self):
@@ -55708,13 +56609,13 @@ class Style:
         return self.LinkToListTemplate(*arguments)
 
 
-class styles:
+class Styles:
 
     def __init__(self, styles=None):
         self.com_object= styles
 
     def __call__(self, item):
-        return style(self.com_object(item))
+        return Style(self.com_object(item))
 
     @property
     def Application(self):
@@ -56074,13 +56975,13 @@ class Subdocument:
         return self.Split(*arguments)
 
 
-class subdocuments:
+class Subdocuments:
 
     def __init__(self, subdocuments=None):
         self.com_object= subdocuments
 
     def __call__(self, item):
-        return subdocument(self.com_object(item))
+        return Subdocument(self.com_object(item))
 
     @property
     def Application(self):
@@ -56128,8 +57029,13 @@ class subdocuments:
         self.Expanded = value
 
     @property
+    def Parent(self):
+        return self.com_object.Parent
+
+    @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
 
     def AddFromFile(self, Name=None, ConfirmConversions=None, ReadOnly=None, PasswordDocument=None, PasswordTemplate=None, Revert=None, WritePasswordDocument=None, WritePasswordTemplate=None):
         arguments = com_arguments([unwrap(a) for a in [Name, ConfirmConversions, ReadOnly, PasswordDocument, PasswordTemplate, Revert, WritePasswordDocument, WritePasswordTemplate]])
@@ -56440,31 +57346,31 @@ class System:
         self.ProfileString = value
 
     @property
-    def System(self):
-        return self.com_object.System
+    def ComputerType(self):
+        return self.com_object.ComputerType
 
     @property
-    def system(self):
-        """Lower case alias for System"""
-        return self.System
+    def computertype(self):
+        """Lower case alias for ComputerType"""
+        return self.ComputerType
 
     @property
-    def System(self):
-        return self.com_object.System
+    def MacintoshName(self):
+        return self.com_object.MacintoshName
 
     @property
-    def system(self):
-        """Lower case alias for System"""
-        return self.System
+    def macintoshname(self):
+        """Lower case alias for MacintoshName"""
+        return self.MacintoshName
 
     @property
-    def System(self):
-        return self.com_object.System
+    def QuickDrawInstalled(self):
+        return self.com_object.QuickDrawInstalled
 
     @property
-    def system(self):
-        """Lower case alias for System"""
-        return self.System
+    def quickdrawinstalled(self):
+        """Lower case alias for QuickDrawInstalled"""
+        return self.QuickDrawInstalled
 
     @property
     def Version(self):
@@ -57900,13 +58806,13 @@ class TableOfFigures:
         return self.UpdatePageNumbers()
 
 
-class tables:
+class Tables:
 
     def __init__(self, tables=None):
         self.com_object= tables
 
     def __call__(self, item):
-        return table(self.com_object(item))
+        return Table(self.com_object(item))
 
     @property
     def Application(self):
@@ -57972,13 +58878,13 @@ class tables:
         return self.Item(*arguments)
 
 
-class tablesofauthorities:
+class TablesOfAuthorities:
 
     def __init__(self, tablesofauthorities=None):
         self.com_object= tablesofauthorities
 
     def __call__(self, item):
-        return tablesofauthoritie(self.com_object(item))
+        return TablesOfAuthoritie(self.com_object(item))
 
     @property
     def Application(self):
@@ -58080,13 +58986,13 @@ class tablesofauthorities:
         return self.NextCitation(*arguments)
 
 
-class tablesofauthoritiescategories:
+class TablesOfAuthoritiesCategories:
 
     def __init__(self, tablesofauthoritiescategories=None):
         self.com_object= tablesofauthoritiescategories
 
     def __call__(self, item):
-        return tablesofauthoritiescategorie(self.com_object(item))
+        return TablesOfAuthoritiesCategorie(self.com_object(item))
 
     @property
     def Application(self):
@@ -58134,13 +59040,13 @@ class tablesofauthoritiescategories:
         return self.Item(*arguments)
 
 
-class tablesofcontents:
+class TablesOfContents:
 
     def __init__(self, tablesofcontents=None):
         self.com_object= tablesofcontents
 
     def __call__(self, item):
-        return tablesofcontent(self.com_object(item))
+        return TablesOfContent(self.com_object(item))
 
     @property
     def Application(self):
@@ -58224,13 +59130,13 @@ class tablesofcontents:
         return self.MarkEntry(*arguments)
 
 
-class tablesoffigures:
+class TablesOfFigures:
 
     def __init__(self, tablesoffigures=None):
         self.com_object= tablesoffigures
 
     def __call__(self, item):
-        return tablesoffigure(self.com_object(item))
+        return TablesOfFigure(self.com_object(item))
 
     @property
     def Application(self):
@@ -58711,13 +59617,13 @@ class TabStop:
         return self.Clear()
 
 
-class tabstops:
+class TabStops:
 
     def __init__(self, tabstops=None):
         self.com_object= tabstops
 
     def __call__(self, item):
-        return tabstop(self.com_object(item))
+        return TabStop(self.com_object(item))
 
     @property
     def Application(self):
@@ -59097,13 +60003,13 @@ class TaskPanes:
         return self.Item(*arguments)
 
 
-class tasks:
+class Tasks:
 
     def __init__(self, tasks=None):
         self.com_object= tasks
 
     def __call__(self, item):
-        return task(self.com_object(item))
+        return Task(self.com_object(item))
 
     @property
     def Application(self):
@@ -59484,13 +60390,13 @@ class Template:
         return self.Save()
 
 
-class templates:
+class Templates:
 
     def __init__(self, templates=None):
         self.com_object= templates
 
     def __call__(self, item):
-        return template(self.com_object(item))
+        return Template(self.com_object(item))
 
     @property
     def Application(self):
@@ -61626,13 +62532,13 @@ class TwoInitialCapsException:
         return self.Delete()
 
 
-class twoinitialcapsexceptions:
+class TwoInitialCapsExceptions:
 
     def __init__(self, twoinitialcapsexceptions=None):
         self.com_object= twoinitialcapsexceptions
 
     def __call__(self, item):
-        return twoinitialcapsexception(self.com_object(item))
+        return TwoInitialCapsException(self.com_object(item))
 
     @property
     def Application(self):
@@ -61933,13 +62839,13 @@ class Variable:
         return self.Delete()
 
 
-class variables:
+class Variables:
 
     def __init__(self, variables=None):
         self.com_object= variables
 
     def __call__(self, item):
-        return variable(self.com_object(item))
+        return Variable(self.com_object(item))
 
     @property
     def Application(self):
@@ -61969,8 +62875,13 @@ class variables:
         return self.Creator
 
     @property
+    def Parent(self):
+        return self.com_object.Parent
+
+    @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
 
     def Add(self, Name=None, Value=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Value]])
@@ -62089,12 +63000,22 @@ class View:
         return self.Application
 
     @property
+    def ColumnWidth(self):
+        return self.com_object.ColumnWidth
+
+    @ColumnWidth.setter
+    def ColumnWidth(self, value):
+        self.com_object.ColumnWidth = value
+
+    @property
     def columnwidth(self):
-        return self.com_object.columnwidth
+        """Lower case alias for ColumnWidth"""
+        return self.ColumnWidth
 
     @columnwidth.setter
     def columnwidth(self, value):
-        self.com_object.columnwidth = value
+        """Lower case alias for ColumnWidth.setter"""
+        self.ColumnWidth = value
 
     @property
     def ConflictMode(self):
@@ -62268,12 +63189,22 @@ class View:
         self.MarkupMode = value
 
     @property
+    def PageColor(self):
+        return self.com_object.PageColor
+
+    @PageColor.setter
+    def PageColor(self, value):
+        self.com_object.PageColor = value
+
+    @property
     def pagecolor(self):
-        return self.com_object.pagecolor
+        """Lower case alias for PageColor"""
+        return self.PageColor
 
     @pagecolor.setter
     def pagecolor(self, value):
-        self.com_object.pagecolor = value
+        """Lower case alias for PageColor.setter"""
+        self.PageColor = value
 
     @property
     def PageMovementType(self):
@@ -62420,8 +63351,13 @@ class View:
         self.RevisionsBalloonWidthType = value
 
     @property
+    def RevisionsFilter(self):
+        return RevisionsFilter(self.com_object.RevisionsFilter)
+
+    @property
     def revisionsfilter(self):
-        return RevisionsFilter(self.com_object.revisionsfilter)
+        """Lower case alias for RevisionsFilter"""
+        return self.RevisionsFilter
 
     @property
     def SeekView(self):
@@ -62999,6 +63935,13 @@ class View:
         """Lower case alias for Zoom"""
         return self.Zoom
 
+    def CollapseAllHeadings(self):
+        return self.com_object.CollapseAllHeadings()
+
+    # Lower case alias for CollapseAllHeadings
+    def collapseallheadings(self):
+        return self.CollapseAllHeadings()
+
     def CollapseOutline(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
         self.com_object.CollapseOutline(*arguments)
@@ -63007,6 +63950,13 @@ class View:
     def collapseoutline(self, Range=None):
         arguments = [Range]
         return self.CollapseOutline(*arguments)
+
+    def ExpandAllHeadings(self):
+        return self.com_object.ExpandAllHeadings()
+
+    # Lower case alias for ExpandAllHeadings
+    def expandallheadings(self):
+        return self.ExpandAllHeadings()
 
     def ExpandOutline(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
@@ -63612,7 +64562,7 @@ wdViolet = 12
 wdWhite = 8
 wdYellow = 7
 
-# wdcolumnwidth enumeration
+# WdColumnWidth enumeration
 wdColumnWidthDefault = 2
 wdColumnWidthNarrow = 1
 wdColumnWidthWide = 3
@@ -63720,7 +64670,7 @@ wdForward = 1073741823
 wdToggle = 9999998
 wdUndefined = 9999999
 
-# wdcontentcontrolappearance enumeration
+# WdContentControlAppearance enumeration
 wdContentControlBoundingBox = 0
 wdContentControlTags = 1
 wdContentControlHidden = 2
@@ -63730,7 +64680,7 @@ wdContentControlDateStorageDate = 1
 wdContentControlDateStorageDateTime = 2
 wdContentControlDateStorageText = 0
 
-# wdcontentcontrollevel enumeration
+# WdContentControlLevel enumeration
 wdContentControlLevelCell = 3
 wdContentControlLevelInline = 0
 wdContentControlLevelParagraph = 1
@@ -65484,7 +66434,7 @@ wdArtZanyTriangles = 112
 wdArtZigZag = 137
 wdArtZigZagStitch = 143
 
-# wdpagecolor enumeration
+# WdPageColor enumeration
 wdPageColorInverse = 2
 wdPageColorNone = 0
 wdPageColorSepia = 1
@@ -65860,7 +66810,7 @@ wdBalloonPrintOrientationPreserve = 1
 wdBalloonWidthPercent = 0
 wdBalloonWidthPoints = 1
 
-# wdrevisionsmarkup enumeration
+# WdRevisionsMarkup enumeration
 wdRevisionsMarkupAll = 2
 wdRevisionsMarkupNone = 0
 wdRevisionsMarkupSimple = 1
@@ -67399,8 +68349,13 @@ class Window:
         self.HorizontalPercentScrolled = value
 
     @property
+    def Hwnd(self):
+        return self.com_object.Hwnd
+
+    @property
     def hwnd(self):
-        return self.com_object.hwnd
+        """Lower case alias for Hwnd"""
+        return self.Hwnd
 
     @property
     def IMEMode(self):
@@ -67699,6 +68654,15 @@ class Window:
         """Lower case alias for WindowState.setter"""
         self.WindowState = value
 
+    @property
+    def WindowNumber(self):
+        return self.com_object.WindowNumber
+
+    @property
+    def windownumber(self):
+        """Lower case alias for WindowNumber"""
+        return self.WindowNumber
+
     def Activate(self):
         self.com_object.Activate()
 
@@ -67800,13 +68764,31 @@ class Window:
         return self.ToggleRibbon()
 
 
-class windows:
+class Windows:
 
     def __init__(self, windows=None):
         self.com_object= windows
 
     def __call__(self, item):
-        return window(self.com_object(item))
+        return Window(self.com_object(item))
+
+    @property
+    def SyncScrollingSideBySide(self):
+        return self.com_object.SyncScrollingSideBySide
+
+    @SyncScrollingSideBySide.setter
+    def SyncScrollingSideBySide(self, value):
+        self.com_object.SyncScrollingSideBySide = value
+
+    @property
+    def syncscrollingsidebyside(self):
+        """Lower case alias for SyncScrollingSideBySide"""
+        return self.SyncScrollingSideBySide
+
+    @syncscrollingsidebyside.setter
+    def syncscrollingsidebyside(self, value):
+        """Lower case alias for SyncScrollingSideBySide.setter"""
+        self.SyncScrollingSideBySide = value
 
     @property
     def Application(self):
@@ -67895,13 +68877,13 @@ class windows:
         return self.ResetPositionsSideBySide()
 
 
-class words:
+class Words:
 
     def __init__(self, words=None):
         self.com_object= words
 
     def __call__(self, item):
-        return word(self.com_object(item))
+        return Word(self.com_object(item))
 
     @property
     def Application(self):
@@ -68126,27 +69108,27 @@ class WrapFormat:
         self.Type = value
 
 
-# xlaxiscrosses enumeration
+# XlAxisCrosses enumeration
 xlAxisCrossesAutomatic = -4105
 xlAxisCrossesCustom = -4114
 xlAxisCrossesMaximum = 2
 xlAxisCrossesMinimum = 4
 
-# xlaxisgroup enumeration
+# XlAxisGroup enumeration
 xlPrimary = 1
 xlSecondary = 2
 
-# xlaxistype enumeration
+# XlAxisType enumeration
 xlCategory = 1
 xlSeriesAxis = 3
 xlValue = 2
 
-# xlbackground enumeration
+# XlBackground enumeration
 xlBackgroundAutomatic = -4105
 xlBackgroundOpaque = 3
 xlBackgroundTransparent = 2
 
-# xlbarshape enumeration
+# XlBarShape enumeration
 xlBox = 0
 xlConeToMax = 5
 xlConeToPoint = 4
@@ -68154,39 +69136,39 @@ xlCylinder = 3
 xlPyramidToMax = 2
 xlPyramidToPoint = 1
 
-# xlbinstype enumeration
+# XlBinsType enumeration
 xlBinsTypeAutomatic = 0
 xlBinsTypeCategorical = 1
 xlBinsTypeManual = 2
 xlBinsTypeBinSize = 3
 xlBinsTypeBinCount = 4
 
-# xlborderweight enumeration
+# XlBorderWeight enumeration
 xlHairline = 1
 xlMedium = -4138
 xlThick = 4
 xlThin = 2
 
-# xlcategorylabellevel enumeration
+# XlCategoryLabelLevel enumeration
 xlCategoryLabelLevelAll = -1
 xlCategoryLabelLevelCustom = -2
 xlCategoryLabelLevelNone = -3
 
-# xlcategorytype enumeration
+# XlCategoryType enumeration
 xlAutomaticScale = -4105
 xlCategoryScale = 2
 xlTimeScale = 3
 
-# xlchartelementposition enumeration
+# XlChartElementPosition enumeration
 xlChartElementPositionAutomatic = -4105
 xlChartElementPositionCustom = -4114
 
-# xlchartgallery enumeration
+# XlChartGallery enumeration
 xlAnyGallery = 23
 xlBuiltIn = 21
 xlUserDefined = 22
 
-# xlchartitem enumeration
+# XlChartItem enumeration
 xlAxis = 21
 xlAxisTitle = 17
 xlChartArea = 2
@@ -68220,7 +69202,7 @@ xlWalls = 5
 xlXErrorBars = 10
 xlYErrorBars = 11
 
-# xlchartpictureplacement enumeration
+# XlChartPicturePlacement enumeration
 xlAllFaces = 7
 xlEnd = 2
 xlEndSides = 3
@@ -68229,18 +69211,18 @@ xlFrontEnd = 6
 xlFrontSides = 5
 xlSides = 1
 
-# xlchartpicturetype enumeration
+# XlChartPictureType enumeration
 xlStack = 2
 xlStackScale = 3
 xlStretch = 1
 
-# xlchartsplittype enumeration
+# XlChartSplitType enumeration
 xlSplitByCustomSplit = 4
 xlSplitByPercentValue = 3
 xlSplitByPosition = 1
 xlSplitByValue = 2
 
-# xlcolorindex enumeration
+# XlColorIndex enumeration
 xlColorIndexAutomatic = -4105
 xlColorIndexNone = -4142
 
@@ -68309,11 +69291,11 @@ xlTop = -4160
 xlTransparent = 2
 xlTriangle = 3
 
-# xlcopypictureformat enumeration
+# XlCopyPictureFormat enumeration
 xlBitmap = 2
 xlPicture = -4147
 
-# xldatalabelposition enumeration
+# XlDataLabelPosition enumeration
 xlLabelPositionAbove = 0
 xlLabelPositionBelow = 1
 xlLabelPositionBestFit = 5
@@ -68326,10 +69308,10 @@ xlLabelPositionMixed = 6
 xlLabelPositionOutsideEnd = 2
 xlLabelPositionRight = -4152
 
-# xldatalabelseparator enumeration
+# XlDataLabelSeparator enumeration
 xlDataLabelSeparatorDefault = 1
 
-# xldatalabelstype enumeration
+# XlDataLabelsType enumeration
 xlDataLabelsShowBubbleSizes = 6
 xlDataLabelsShowLabel = 4
 xlDataLabelsShowLabelAndPercent = 5
@@ -68337,12 +69319,12 @@ xlDataLabelsShowNone = -4142
 xlDataLabelsShowPercent = 3
 xlDataLabelsShowValue = 2
 
-# xldisplayblanksas enumeration
+# XlDisplayBlanksAs enumeration
 xlInterpolated = 3
 xlNotPlotted = 1
 xlZero = 2
 
-# xldisplayunit enumeration
+# XlDisplayUnit enumeration
 xlHundredMillions = -8
 xlHundreds = -2
 xlHundredThousands = -5
@@ -68353,28 +69335,28 @@ xlTenThousands = -4
 xlThousandMillions = -9
 xlThousands = -3
 
-# xlendstylecap enumeration
+# XlEndStyleCap enumeration
 xlCap = 1
 xlNoCap = 2
 
-# xlerrorbardirection enumeration
+# XlErrorBarDirection enumeration
 xlChartX = -4168
 xlChartY = 1
 
-# xlerrorbarinclude enumeration
+# XlErrorBarInclude enumeration
 xlErrorBarIncludeBoth = 1
 xlErrorBarIncludeMinusValues = 3
 xlErrorBarIncludeNone = -4142
 xlErrorBarIncludePlusValues = 2
 
-# xlerrorbartype enumeration
+# XlErrorBarType enumeration
 xlErrorBarTypeCustom = -4114
 xlErrorBarTypeFixedValue = 1
 xlErrorBarTypePercent = 2
 xlErrorBarTypeStDev = -4155
 xlErrorBarTypeStError = 4
 
-# xlhalign enumeration
+# XlHAlign enumeration
 xlHAlignCenter = -4108
 xlHAlignCenterAcrossSelection = 7
 xlHAlignDistributed = -4117
@@ -68384,7 +69366,7 @@ xlHAlignJustify = -4130
 xlHAlignLeft = -4131
 xlHAlignRight = -4152
 
-# xllegendposition enumeration
+# XlLegendPosition enumeration
 xlLegendPositionBottom = -4107
 xlLegendPositionCorner = 2
 xlLegendPositionCustom = -4161
@@ -68392,7 +69374,7 @@ xlLegendPositionLeft = -4131
 xlLegendPositionRight = -4152
 xlLegendPositionTop = -4160
 
-# xllinestyle enumeration
+# XlLineStyle enumeration
 xlContinuous = 1
 xlDash = -4115
 xlDashDot = 4
@@ -68402,7 +69384,7 @@ xlDouble = -4119
 xlLineStyleNone = -4142
 xlSlantDashDot = 13
 
-# xlmarkerstyle enumeration
+# XlMarkerStyle enumeration
 xlMarkerStyleAutomatic = -4105
 xlMarkerStyleCircle = 8
 xlMarkerStyleDash = -4115
@@ -68416,18 +69398,18 @@ xlMarkerStyleStar = 5
 xlMarkerStyleTriangle = 3
 xlMarkerStyleX = -4168
 
-# xlorientation enumeration
+# XlOrientation enumeration
 xlDownward = -4170
 xlHorizontal = -4128
 xlUpward = -4171
 xlVertical = -4166
 
-# xlparentdatalabeloptions enumeration
+# XlParentDataLabelOptions enumeration
 xlParentDataLabelOptionsNone = 0
 xlParentDataLabelOptionsBanner = 1
 xlParentDataLabelOptionsOverlapping = 2
 
-# xlpattern enumeration
+# XlPattern enumeration
 xlPatternAutomatic = -4105
 xlPatternChecker = 9
 xlPatternCrissCross = 16
@@ -68451,11 +69433,11 @@ xlPatternSolid = 1
 xlPatternUp = -4162
 xlPatternVertical = -4166
 
-# xlpictureappearance enumeration
+# XlPictureAppearance enumeration
 xlPrinter = 2
 xlScreen = 1
 
-# xlpiesliceindex enumeration
+# XlPieSliceIndex enumeration
 xlCenterPoint = 5
 xlInnerCenterPoint = 8
 xlInnerClockwisePoint = 7
@@ -68466,7 +69448,7 @@ xlOuterCenterPoint = 2
 xlOuterClockwisePoint = 3
 xlOuterCounterClockwisePoint = 1
 
-# xlpieslicelocation enumeration
+# XlPieSliceLocation enumeration
 xlCenterPoint = 5
 xlInnerCenterPoint = 8
 xlInnerClockwisePoint = 7
@@ -68477,7 +69459,7 @@ xlOuterCenterPoint = 2
 xlOuterClockwisePoint = 3
 xlOuterCounterClockwisePoint = 1
 
-# xlpivotfieldorientation enumeration
+# XlPivotFieldOrientation enumeration
 xlColumnField = 2
 xlDataField = 4
 xlHidden = 0
@@ -68489,7 +69471,7 @@ xlContext = -5002
 xlLTR = -5003
 xlRTL = -5004
 
-# xlrgbcolor enumeration
+# XlRgbColor enumeration
 xlAliceBlue = 16775408
 xlAntiqueWhite = 14150650
 xlAqua = 16776960
@@ -68635,48 +69617,48 @@ xlWhiteSmoke = 16119285
 xlYellow = 65535
 xlYellowGreen = 3329434
 
-# xlrowcol enumeration
+# XlRowCol enumeration
 xlColumns = 2
 xlRows = 1
 
-# xlscaletype enumeration
+# XlScaleType enumeration
 xlScaleLinear = -4132
 xlScaleLogarithmic = -4133
 
-# xlseriesnamelevel enumeration
+# XlSeriesNameLevel enumeration
 xlSeriesNameLevelAll = -1
 xlSeriesNameLevelCustom = -2
 xlSeriesNameLevelNone = -3
 
-# xlsizerepresents enumeration
+# XlSizeRepresents enumeration
 xlSizeIsArea = 1
 xlSizeIsWidth = 2
 
-# xlticklabelorientation enumeration
+# XlTickLabelOrientation enumeration
 xlTickLabelOrientationAutomatic = -4105
 xlTickLabelOrientationDownward = -4170
 xlTickLabelOrientationHorizontal = -4128
 xlTickLabelOrientationUpward = -4171
 xlTickLabelOrientationVertical = -4166
 
-# xlticklabelposition enumeration
+# XlTickLabelPosition enumeration
 xlTickLabelPositionHigh = -4127
 xlTickLabelPositionLow = -4134
 xlTickLabelPositionNextToAxis = 4
 xlTickLabelPositionNone = -4142
 
-# xltickmark enumeration
+# XlTickMark enumeration
 xlTickMarkCross = 4
 xlTickMarkInside = 2
 xlTickMarkNone = -4142
 xlTickMarkOutside = 3
 
-# xltimeunit enumeration
+# XlTimeUnit enumeration
 xlDays = 0
 xlMonths = 1
 xlYears = 2
 
-# xltrendlinetype enumeration
+# XlTrendlineType enumeration
 xlExponential = 5
 xlLinear = -4132
 xlLogarithmic = -4133
@@ -68684,14 +69666,14 @@ xlMovingAvg = 6
 xlPolynomial = 3
 xlPower = 4
 
-# xlunderlinestyle enumeration
+# XlUnderlineStyle enumeration
 xlUnderlineStyleDouble = -4119
 xlUnderlineStyleDoubleAccounting = 5
 xlUnderlineStyleNone = -4142
 xlUnderlineStyleSingle = 2
 xlUnderlineStyleSingleAccounting = 4
 
-# xlvalign enumeration
+# XlVAlign enumeration
 xlVAlignBottom = -4107
 xlVAlignCenter = -4108
 xlVAlignDistributed = -4117
@@ -68807,6 +69789,15 @@ class XMLNamespace:
         self.com_object= xmlnamespace
 
     @property
+    def URI(self):
+        return self.com_object.URI
+
+    @property
+    def uri(self):
+        """Lower case alias for URI"""
+        return self.URI
+
+    @property
     def Alias(self):
         return self.com_object.Alias
 
@@ -68899,6 +69890,18 @@ class XMLNode:
 
     def __init__(self, xmlnode=None):
         self.com_object= xmlnode
+
+    def XML(self, DataOnly=None):
+        arguments = com_arguments([unwrap(a) for a in [DataOnly]])
+        if hasattr(self.com_object, "GetXML"):
+            return self.com_object.GetXML(*arguments)
+        else:
+            return self.com_object.XML(*arguments)
+
+    def xml(self, DataOnly=None):
+        """Lower case alias for XML"""
+        arguments = [DataOnly]
+        return self.XML(*arguments)
 
     @property
     def Application(self):
@@ -69617,13 +70620,13 @@ class Zoom:
         self.Percentage = value
 
 
-class zooms:
+class Zooms:
 
     def __init__(self, zooms=None):
         self.com_object= zooms
 
     def __call__(self, item):
-        return zoom(self.com_object(item))
+        return Zoom(self.com_object(item))
 
     @property
     def Application(self):

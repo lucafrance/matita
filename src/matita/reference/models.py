@@ -159,19 +159,24 @@ class DocPage:
             self.is_method = True
         elif "enumeration" in self.title:
             self.is_enumeration = True
-    
+
+        try:
+            title_split = self.title.split(" ")[0].split(".")
+            self.object_name = title_split[0]
+            if len(title_split) > 1:
+                if title_split[1].lower() != "enumerations":
+                    if self.is_property:
+                        self.property_name = title_split[1]
+                    elif self.is_method:
+                        self.method_name = title_split[1]
+        except Exception as e:
+            logging.error(f"Failed parsing title {self.title}. {e}")
+
     def process_api_name(self):
         if self.api_name is None:
             return
         api_name_split = self.api_name.split(".")
         self.module_name = api_name_split[0]
-        self.object_name = api_name_split[1]
-        if len(api_name_split) > 2:
-            suffix = api_name_split[2].strip()
-            if self.is_property:
-                self.property_name = suffix
-            elif self.is_method:
-                self.method_name = suffix
     
     def process_enumeration(self):
         """Parse enumeration information. Assumes that the page refers to an enumeration.

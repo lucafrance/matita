@@ -1780,7 +1780,7 @@ class AllFunctions:
         return self.Parent
 
 
-class allmacros:
+class AllMacros:
 
     def __init__(self, allmacros=None):
         self.com_object= allmacros
@@ -2458,8 +2458,13 @@ class Application:
         return self.Reports
 
     @property
+    def ReturnVars(self):
+        return ReturnVars(self.com_object.ReturnVars)
+
+    @property
     def returnvars(self):
-        return ReturnVars(self.com_object.returnvars)
+        """Lower case alias for ReturnVars"""
+        return self.ReturnVars
 
     @property
     def Screen(self):
@@ -2709,6 +2714,15 @@ class Application:
     def currentwebusergroups(self, DisplayOption=None):
         arguments = [DisplayOption]
         return self.CurrentWebUserGroups(*arguments)
+
+    def DAvg(self, Expr=None, Domain=None, Criteria=None):
+        arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
+        return self.com_object.DAvg(*arguments)
+
+    # Lower case alias for DAvg
+    def davg(self, Expr=None, Domain=None, Criteria=None):
+        arguments = [Expr, Domain, Criteria]
+        return self.DAvg(*arguments)
 
     def DCount(self, Expr=None, Domain=None, Criteria=None):
         arguments = com_arguments([unwrap(a) for a in [Expr, Domain, Criteria]])
@@ -7148,22 +7162,22 @@ class Chart:
         self.PrimaryValuesAxisRange = value
 
     @property
-    def CategoryAxisTitle(self):
-        return self.com_object.CategoryAxisTitle
+    def PrimaryValuesAxisTitle(self):
+        return self.com_object.PrimaryValuesAxisTitle
 
-    @CategoryAxisTitle.setter
-    def CategoryAxisTitle(self, value):
-        self.com_object.CategoryAxisTitle = value
+    @PrimaryValuesAxisTitle.setter
+    def PrimaryValuesAxisTitle(self, value):
+        self.com_object.PrimaryValuesAxisTitle = value
 
     @property
-    def categoryaxistitle(self):
-        """Lower case alias for CategoryAxisTitle"""
-        return self.CategoryAxisTitle
+    def primaryvaluesaxistitle(self):
+        """Lower case alias for PrimaryValuesAxisTitle"""
+        return self.PrimaryValuesAxisTitle
 
-    @categoryaxistitle.setter
-    def categoryaxistitle(self, value):
-        """Lower case alias for CategoryAxisTitle.setter"""
-        self.CategoryAxisTitle = value
+    @primaryvaluesaxistitle.setter
+    def primaryvaluesaxistitle(self, value):
+        """Lower case alias for PrimaryValuesAxisTitle.setter"""
+        self.PrimaryValuesAxisTitle = value
 
     @property
     def RowSource(self):
@@ -9692,10 +9706,10 @@ class CodeProject:
         return self.UpdateDependencyInfo()
 
 
-class ComboBox:
+class ComboBoxUse:
 
-    def __init__(self, combobox=None):
-        self.com_object= combobox
+    def __init__(self, comboboxuse=None):
+        self.com_object= comboboxuse
 
 
 class ComboBox:
@@ -13990,12 +14004,22 @@ class CommandButton:
         self.QuickStyle = value
 
     @property
+    def QuickStyleMask(self):
+        return self.com_object.QuickStyleMask
+
+    @QuickStyleMask.setter
+    def QuickStyleMask(self, value):
+        self.com_object.QuickStyleMask = value
+
+    @property
     def quickstylemask(self):
-        return self.com_object.quickstylemask
+        """Lower case alias for QuickStyleMask"""
+        return self.QuickStyleMask
 
     @quickstylemask.setter
     def quickstylemask(self, value):
-        self.com_object.quickstylemask = value
+        """Lower case alias for QuickStyleMask.setter"""
+        self.QuickStyleMask = value
 
     @property
     def ReadingOrder(self):
@@ -19276,22 +19300,22 @@ class Form:
         self.HorizontalDatasheetGridlineStyle = value
 
     @property
-    def Hwnd(self):
-        return self.com_object.Hwnd
+    def hWnd(self):
+        return self.com_object.hWnd
 
-    @Hwnd.setter
-    def Hwnd(self, value):
-        self.com_object.Hwnd = value
+    @hWnd.setter
+    def hWnd(self, value):
+        self.com_object.hWnd = value
 
     @property
     def hwnd(self):
-        """Lower case alias for Hwnd"""
-        return self.Hwnd
+        """Lower case alias for hWnd"""
+        return self.hWnd
 
     @hwnd.setter
     def hwnd(self, value):
-        """Lower case alias for Hwnd.setter"""
-        self.Hwnd = value
+        """Lower case alias for hWnd.setter"""
+        self.hWnd = value
 
     @property
     def InsideHeight(self):
@@ -20581,12 +20605,22 @@ class Form:
         return self.RecordsetClone
 
     @property
+    def RecordsetType(self):
+        return self.com_object.RecordsetType
+
+    @RecordsetType.setter
+    def RecordsetType(self, value):
+        self.com_object.RecordsetType = value
+
+    @property
     def recordsettype(self):
-        return self.com_object.recordsettype
+        """Lower case alias for RecordsetType"""
+        return self.RecordsetType
 
     @recordsettype.setter
     def recordsettype(self, value):
-        self.com_object.recordsettype = value
+        """Lower case alias for RecordsetType.setter"""
+        self.RecordsetType = value
 
     @property
     def RecordSource(self):
@@ -27175,6 +27209,15 @@ class MacroError:
         self.com_object= macroerror
 
     @property
+    def ActionName(self):
+        return self.com_object.ActionName
+
+    @property
+    def actionname(self):
+        """Lower case alias for ActionName"""
+        return self.ActionName
+
+    @property
     def Arguments(self):
         return self.com_object.Arguments
 
@@ -29272,12 +29315,22 @@ class NavigationButton:
         self.QuickStyle = value
 
     @property
+    def QuickStyleMask(self):
+        return self.com_object.QuickStyleMask
+
+    @QuickStyleMask.setter
+    def QuickStyleMask(self, value):
+        self.com_object.QuickStyleMask = value
+
+    @property
     def quickstylemask(self):
-        return self.com_object.quickstylemask
+        """Lower case alias for QuickStyleMask"""
+        return self.QuickStyleMask
 
     @quickstylemask.setter
     def quickstylemask(self, value):
-        self.com_object.quickstylemask = value
+        """Lower case alias for QuickStyleMask.setter"""
+        self.QuickStyleMask = value
 
     @property
     def ReadingOrder(self):
@@ -37297,13 +37350,13 @@ class Reference:
         return self.FullPath
 
     @property
-    def Guid(self):
-        return self.com_object.Guid
+    def GUID(self):
+        return self.com_object.GUID
 
     @property
     def guid(self):
-        """Lower case alias for Guid"""
-        return self.Guid
+        """Lower case alias for GUID"""
+        return self.GUID
 
     @property
     def IsBroken(self):
@@ -37383,14 +37436,14 @@ class References:
         arguments = [FileName]
         return self.AddFromFile(*arguments)
 
-    def AddFromGuid(self, Guid=None, Major=None, Minor=None):
+    def AddFromGUID(self, Guid=None, Major=None, Minor=None):
         arguments = com_arguments([unwrap(a) for a in [Guid, Major, Minor]])
-        return Reference(self.com_object.AddFromGuid(*arguments))
+        return Reference(self.com_object.AddFromGUID(*arguments))
 
-    # Lower case alias for AddFromGuid
+    # Lower case alias for AddFromGUID
     def addfromguid(self, Guid=None, Major=None, Minor=None):
         arguments = [Guid, Major, Minor]
-        return self.AddFromGuid(*arguments)
+        return self.AddFromGUID(*arguments)
 
     def Item(self, var=None):
         arguments = com_arguments([unwrap(a) for a in [var]])
@@ -38188,22 +38241,22 @@ class Report:
         self.HelpFile = value
 
     @property
-    def Hwnd(self):
-        return self.com_object.Hwnd
+    def hWnd(self):
+        return self.com_object.hWnd
 
-    @Hwnd.setter
-    def Hwnd(self, value):
-        self.com_object.Hwnd = value
+    @hWnd.setter
+    def hWnd(self, value):
+        self.com_object.hWnd = value
 
     @property
     def hwnd(self):
-        """Lower case alias for Hwnd"""
-        return self.Hwnd
+        """Lower case alias for hWnd"""
+        return self.hWnd
 
     @hwnd.setter
     def hwnd(self, value):
-        """Lower case alias for Hwnd.setter"""
-        self.Hwnd = value
+        """Lower case alias for hWnd.setter"""
+        self.hWnd = value
 
     @property
     def KeyPreview(self):
@@ -39577,8 +39630,13 @@ class Report:
         self.ServerFilter = value
 
     @property
+    def Shape(self):
+        return self.com_object.Shape
+
+    @property
     def shape(self):
-        return self.com_object.shape
+        """Lower case alias for Shape"""
+        return self.Shape
 
     @property
     def ShortcutMenuBar(self):
@@ -48086,12 +48144,22 @@ class ToggleButton:
         self.QuickStyle = value
 
     @property
+    def QuickStyleMask(self):
+        return self.com_object.QuickStyleMask
+
+    @QuickStyleMask.setter
+    def QuickStyleMask(self, value):
+        self.com_object.QuickStyleMask = value
+
+    @property
     def quickstylemask(self):
-        return self.com_object.quickstylemask
+        """Lower case alias for QuickStyleMask"""
+        return self.QuickStyleMask
 
     @quickstylemask.setter
     def quickstylemask(self, value):
-        self.com_object.quickstylemask = value
+        """Lower case alias for QuickStyleMask.setter"""
+        self.QuickStyleMask = value
 
     @property
     def ReadingOrder(self):

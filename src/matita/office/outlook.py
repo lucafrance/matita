@@ -4645,7 +4645,7 @@ class CategoryRuleCondition:
         return self.Session
 
 
-class checkbox:
+class CheckBox:
 
     def __init__(self, checkbox=None):
         self.com_object= checkbox
@@ -4895,13 +4895,13 @@ class Columns:
         return self.RemoveAll()
 
 
-class combobox:
+class ComboBox:
 
     def __init__(self, combobox=None):
         self.com_object= combobox
 
 
-class commandbutton:
+class CommandButton:
 
     def __init__(self, commandbutton=None):
         self.com_object= commandbutton
@@ -7856,6 +7856,22 @@ class ContactItem:
     def showcategoriesdialog(self):
         return self.ShowCategoriesDialog()
 
+    def ShowCheckAddressDialog(self, MailingAddress=None):
+        arguments = com_arguments([unwrap(a) for a in [MailingAddress]])
+        self.com_object.ShowCheckAddressDialog(*arguments)
+
+    # Lower case alias for ShowCheckAddressDialog
+    def showcheckaddressdialog(self, MailingAddress=None):
+        arguments = [MailingAddress]
+        return self.ShowCheckAddressDialog(*arguments)
+
+    def ShowCheckFullNameDialog(self):
+        self.com_object.ShowCheckFullNameDialog()
+
+    # Lower case alias for ShowCheckFullNameDialog
+    def showcheckfullnamedialog(self):
+        return self.ShowCheckFullNameDialog()
+
     def ShowCheckPhoneDialog(self, PhoneNumber=None):
         arguments = com_arguments([unwrap(a) for a in [PhoneNumber]])
         self.com_object.ShowCheckPhoneDialog(*arguments)
@@ -9857,6 +9873,27 @@ class ExchangeDistributionList:
     def getowners(self):
         return self.GetOwners()
 
+    def GetUnifiedGroup(self):
+        return self.com_object.GetUnifiedGroup()
+
+    # Lower case alias for GetUnifiedGroup
+    def getunifiedgroup(self):
+        return self.GetUnifiedGroup()
+
+    def GetUnifiedGroupFromStore(self):
+        return self.com_object.GetUnifiedGroupFromStore()
+
+    # Lower case alias for GetUnifiedGroupFromStore
+    def getunifiedgroupfromstore(self):
+        return self.GetUnifiedGroupFromStore()
+
+    def IsUnifiedGroup(self):
+        return self.com_object.IsUnifiedGroup()
+
+    # Lower case alias for IsUnifiedGroup
+    def isunifiedgroup(self):
+        return self.IsUnifiedGroup()
+
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
@@ -10427,6 +10464,27 @@ class ExchangeUser:
     def getpicture(self):
         return self.GetPicture()
 
+    def GetUnifiedGroup(self):
+        return self.com_object.GetUnifiedGroup()
+
+    # Lower case alias for GetUnifiedGroup
+    def getunifiedgroup(self):
+        return self.GetUnifiedGroup()
+
+    def GetUnifiedGroupFromStore(self):
+        return self.com_object.GetUnifiedGroupFromStore()
+
+    # Lower case alias for GetUnifiedGroupFromStore
+    def getunifiedgroupfromstore(self):
+        return self.GetUnifiedGroupFromStore()
+
+    def IsUnifiedGroup(self):
+        return self.com_object.IsUnifiedGroup()
+
+    # Lower case alias for IsUnifiedGroup
+    def isunifiedgroup(self):
+        return self.IsUnifiedGroup()
+
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
         self.com_object.Update(*arguments)
@@ -10452,12 +10510,22 @@ class Explorer:
         return self.AccountSelector
 
     @property
+    def ActiveInlineResponse(self):
+        return self.com_object.ActiveInlineResponse
+
+    @property
     def activeinlineresponse(self):
-        return self.com_object.activeinlineresponse
+        """Lower case alias for ActiveInlineResponse"""
+        return self.ActiveInlineResponse
+
+    @property
+    def ActiveInlineResponseWordEditor(self):
+        return self.com_object.ActiveInlineResponseWordEditor
 
     @property
     def activeinlineresponsewordeditor(self):
-        return self.com_object.activeinlineresponsewordeditor
+        """Lower case alias for ActiveInlineResponseWordEditor"""
+        return self.ActiveInlineResponseWordEditor
 
     @property
     def Application(self):
@@ -10527,8 +10595,13 @@ class Explorer:
         self.CurrentView = value
 
     @property
+    def DisplayMode(self):
+        return self.com_object.DisplayMode
+
+    @property
     def displaymode(self):
-        return self.com_object.displaymode
+        """Lower case alias for DisplayMode"""
+        return self.DisplayMode
 
     @property
     def Height(self):
@@ -10603,8 +10676,13 @@ class Explorer:
         return self.Parent
 
     @property
+    def PreviewPane(self):
+        return self.com_object.PreviewPane
+
+    @property
     def previewpane(self):
-        return self.com_object.previewpane
+        """Lower case alias for PreviewPane"""
+        return self.PreviewPane
 
     @property
     def Selection(self):
@@ -11216,12 +11294,12 @@ class Folder:
         arguments = [DisplayMode]
         return self.GetExplorer(*arguments)
 
-    def GetOrganizer(self):
-        return AddressEntry(self.com_object.GetOrganizer())
+    def GetOwner(self):
+        return AddressEntry(self.com_object.GetOwner())
 
-    # Lower case alias for GetOrganizer
-    def getorganizer(self):
-        return self.GetOrganizer()
+    # Lower case alias for GetOwner
+    def getowner(self):
+        return self.GetOwner()
 
     def GetStorage(self, StorageIdentifier=None, StorageIdentifierType=None):
         arguments = com_arguments([unwrap(a) for a in [StorageIdentifier, StorageIdentifierType]])
@@ -11361,7 +11439,7 @@ class Folders:
         return self.Remove(*arguments)
 
 
-class font:
+class Font:
 
     def __init__(self, font=None):
         self.com_object= font
@@ -11987,7 +12065,7 @@ class FormRegion:
         return self.SetControlItemProperty(*arguments)
 
 
-class formregionstartup:
+class FormRegionStartup:
 
     def __init__(self, formregionstartup=None):
         self.com_object= formregionstartup
@@ -12029,7 +12107,7 @@ class formregionstartup:
         return self.GetFormRegionStorage(*arguments)
 
 
-class frame:
+class Frame:
 
     def __init__(self, frame=None):
         self.com_object= frame
@@ -12362,7 +12440,7 @@ class IconView:
         return self.Save()
 
 
-class image:
+class Image:
 
     def __init__(self, image=None):
         self.com_object= image
@@ -13955,13 +14033,13 @@ class JournalModule:
         self.Visible = value
 
 
-class label:
+class Label:
 
     def __init__(self, label=None):
         self.com_object= label
 
 
-class listbox:
+class ListBox:
 
     def __init__(self, listbox=None):
         self.com_object= listbox
@@ -16475,7 +16553,7 @@ class MoveOrCopyRuleAction:
         return self.Session
 
 
-class multipage:
+class MultiPage:
 
     def __init__(self, multipage=None):
         self.com_object= multipage
@@ -19729,7 +19807,7 @@ class OlkContactPhoto:
         self.MousePointer = value
 
 
-class olkcontrol:
+class OlkControl:
 
     def __init__(self, olkcontrol=None):
         self.com_object= olkcontrol
@@ -21601,22 +21679,22 @@ class OlkTextBox:
         self.MousePointer = value
 
     @property
-    def Multiline(self):
-        return self.com_object.Multiline
+    def MultiLine(self):
+        return self.com_object.MultiLine
 
-    @Multiline.setter
-    def Multiline(self, value):
-        self.com_object.Multiline = value
+    @MultiLine.setter
+    def MultiLine(self, value):
+        self.com_object.MultiLine = value
 
     @property
     def multiline(self):
-        """Lower case alias for Multiline"""
-        return self.Multiline
+        """Lower case alias for MultiLine"""
+        return self.MultiLine
 
     @multiline.setter
     def multiline(self, value):
-        """Lower case alias for Multiline.setter"""
-        self.Multiline = value
+        """Lower case alias for MultiLine.setter"""
+        self.MultiLine = value
 
     @property
     def PasswordChar(self):
@@ -22872,11 +22950,11 @@ olTrackingRecallFailure = 4
 olTrackingRecallSuccess = 5
 olTrackingReplied = 7
 
-# olunifiedgroupfoldertype enumeration
+# OlUnifiedGroupFolderType enumeration
 olGroupCalendarFolder = 1
 olGroupMailFolder = 0
 
-# olunifiedgrouptype enumeration
+# OlUnifiedGroupType enumeration
 PrivateGroup = 1
 PublicGroup = 2
 
@@ -22922,7 +23000,7 @@ olMaximized = 0
 olMinimized = 1
 olNormalWindow = 2
 
-class optionbutton:
+class OptionButton:
 
     def __init__(self, optionbutton=None):
         self.com_object= optionbutton
@@ -23501,7 +23579,7 @@ class OutlookBarStorage:
         return self.Session
 
 
-class page:
+class Page:
 
     def __init__(self, page=None):
         self.com_object= page
@@ -23633,78 +23711,213 @@ class Panes:
         return self.Item(*arguments)
 
 
-class peopleview:
+class PeopleView:
 
     def __init__(self, peopleview=None):
         self.com_object= peopleview
 
     @property
+    def Application(self):
+        return self.com_object.Application
+
+    @property
     def application(self):
-        return self.com_object.application
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def Class(self):
+        return self.com_object.Class
+
+    @property
+    def Filter(self):
+        return self.com_object.Filter
+
+    @Filter.setter
+    def Filter(self, value):
+        self.com_object.Filter = value
 
     @property
     def filter(self):
-        return self.com_object.filter
+        """Lower case alias for Filter"""
+        return self.Filter
 
     @filter.setter
     def filter(self, value):
-        self.com_object.filter = value
+        """Lower case alias for Filter.setter"""
+        self.Filter = value
+
+    @property
+    def Language(self):
+        return self.com_object.Language
+
+    @Language.setter
+    def Language(self, value):
+        self.com_object.Language = value
 
     @property
     def language(self):
-        return self.com_object.language
+        """Lower case alias for Language"""
+        return self.Language
 
     @language.setter
     def language(self, value):
-        self.com_object.language = value
+        """Lower case alias for Language.setter"""
+        self.Language = value
+
+    @property
+    def LockUserChanges(self):
+        return self.com_object.LockUserChanges
+
+    @LockUserChanges.setter
+    def LockUserChanges(self, value):
+        self.com_object.LockUserChanges = value
 
     @property
     def lockuserchanges(self):
-        return self.com_object.lockuserchanges
+        """Lower case alias for LockUserChanges"""
+        return self.LockUserChanges
 
     @lockuserchanges.setter
     def lockuserchanges(self, value):
-        self.com_object.lockuserchanges = value
+        """Lower case alias for LockUserChanges.setter"""
+        self.LockUserChanges = value
+
+    @property
+    def Name(self):
+        return self.com_object.Name
+
+    @Name.setter
+    def Name(self, value):
+        self.com_object.Name = value
 
     @property
     def name(self):
-        return self.com_object.name
+        """Lower case alias for Name"""
+        return self.Name
 
     @name.setter
     def name(self, value):
-        self.com_object.name = value
+        """Lower case alias for Name.setter"""
+        self.Name = value
+
+    @property
+    def Parent(self):
+        return self.com_object.Parent
 
     @property
     def parent(self):
-        return self.com_object.parent
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    @property
+    def SaveOption(self):
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
-        return self.com_object.saveoption
+        """Lower case alias for SaveOption"""
+        return self.SaveOption
+
+    @property
+    def Session(self):
+        return self.com_object.Session
 
     @property
     def session(self):
-        return self.com_object.session
+        """Lower case alias for Session"""
+        return self.Session
+
+    @property
+    def SortFields(self):
+        return self.com_object.SortFields
 
     @property
     def sortfields(self):
-        return self.com_object.sortfields
+        """Lower case alias for SortFields"""
+        return self.SortFields
+
+    @property
+    def Standard(self):
+        return self.com_object.Standard
 
     @property
     def standard(self):
-        return self.com_object.standard
+        """Lower case alias for Standard"""
+        return self.Standard
+
+    @property
+    def ViewType(self):
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
-        return self.com_object.viewtype
+        """Lower case alias for ViewType"""
+        return self.ViewType
+
+    @property
+    def XML(self):
+        return self.com_object.XML
+
+    @XML.setter
+    def XML(self, value):
+        self.com_object.XML = value
 
     @property
     def xml(self):
-        return self.com_object.xml
+        """Lower case alias for XML"""
+        return self.XML
 
     @xml.setter
     def xml(self, value):
-        self.com_object.xml = value
+        """Lower case alias for XML.setter"""
+        self.XML = value
+
+    def Apply(self):
+        self.com_object.Apply()
+
+    # Lower case alias for Apply
+    def apply(self):
+        return self.Apply()
+
+    def Copy(self, Name=None, SaveOption=None):
+        arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
+        self.com_object.Copy(*arguments)
+
+    # Lower case alias for Copy
+    def copy(self, Name=None, SaveOption=None):
+        arguments = [Name, SaveOption]
+        return self.Copy(*arguments)
+
+    def Delete(self):
+        self.com_object.Delete()
+
+    # Lower case alias for Delete
+    def delete(self):
+        return self.Delete()
+
+    def GoToDate(self, Date=None):
+        arguments = com_arguments([unwrap(a) for a in [Date]])
+        self.com_object.GoToDate(*arguments)
+
+    # Lower case alias for GoToDate
+    def gotodate(self, Date=None):
+        arguments = [Date]
+        return self.GoToDate(*arguments)
+
+    def Reset(self):
+        self.com_object.Reset()
+
+    # Lower case alias for Reset
+    def reset(self):
+        return self.Reset()
+
+    def Save(self):
+        self.com_object.Save()
+
+    # Lower case alias for Save
+    def save(self):
+        return self.Save()
 
 
 class PlaySoundRuleAction:
@@ -24677,26 +24890,50 @@ class PostItem:
         return self.ShowCategoriesDialog()
 
 
-class previewpane:
+class PreviewPane:
 
     def __init__(self, previewpane=None):
         self.com_object= previewpane
 
     @property
+    def Application(self):
+        return self.com_object.Application
+
+    @property
     def application(self):
-        return self.com_object.application
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
+    def Class(self):
+        return self.com_object.Class
+
+    @property
+    def Parent(self):
+        return PreviewPane(self.com_object.Parent)
 
     @property
     def parent(self):
-        return PreviewPane(self.com_object.parent)
+        """Lower case alias for Parent"""
+        return self.Parent
+
+    @property
+    def Session(self):
+        return self.com_object.Session
 
     @property
     def session(self):
-        return self.com_object.session
+        """Lower case alias for Session"""
+        return self.Session
+
+    @property
+    def WordEditor(self):
+        return self.com_object.WordEditor
 
     @property
     def wordeditor(self):
-        return self.com_object.wordeditor
+        """Lower case alias for WordEditor"""
+        return self.WordEditor
 
 
 class PropertyAccessor:
@@ -27922,7 +28159,7 @@ class Rules:
         return self.Save(*arguments)
 
 
-class scrollbar:
+class ScrollBar:
 
     def __init__(self, scrollbar=None):
         self.com_object= scrollbar
@@ -30078,7 +30315,7 @@ class SolutionsModule:
         return self.AddSolution(*arguments)
 
 
-class spinbutton:
+class SpinButton:
 
     def __init__(self, spinbutton=None):
         self.com_object= spinbutton
@@ -30387,6 +30624,22 @@ class Store:
         """Lower case alias for StoreID"""
         return self.StoreID
 
+    def CreateUnifiedGroup(self, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
+        arguments = com_arguments([unwrap(a) for a in [Name, Alias, Description, FAutoSubscribeMembers, GroupType]])
+        return self.com_object.CreateUnifiedGroup(*arguments)
+
+    # Lower case alias for CreateUnifiedGroup
+    def createunifiedgroup(self, Name=None, Alias=None, Description=None, FAutoSubscribeMembers=None, GroupType=None):
+        arguments = [Name, Alias, Description, FAutoSubscribeMembers, GroupType]
+        return self.CreateUnifiedGroup(*arguments)
+
+    def DeleteUnifiedGroup(self):
+        return self.com_object.DeleteUnifiedGroup()
+
+    # Lower case alias for DeleteUnifiedGroup
+    def deleteunifiedgroup(self):
+        return self.DeleteUnifiedGroup()
+
     def GetDefaultFolder(self, FolderType=None):
         arguments = com_arguments([unwrap(a) for a in [FolderType]])
         return self.com_object.GetDefaultFolder(*arguments)
@@ -30613,7 +30866,7 @@ class SyncObjects:
         return self.Item(*arguments)
 
 
-class tab:
+class Tab:
 
     def __init__(self, tab=None):
         self.com_object= tab
@@ -31009,22 +31262,22 @@ class TableView:
         self.MaxLinesInMultiLineView = value
 
     @property
-    def Multiline(self):
-        return OlMultiLine(self.com_object.Multiline)
+    def MultiLine(self):
+        return OlMultiLine(self.com_object.MultiLine)
 
-    @Multiline.setter
-    def Multiline(self, value):
-        self.com_object.Multiline = value
+    @MultiLine.setter
+    def MultiLine(self, value):
+        self.com_object.MultiLine = value
 
     @property
     def multiline(self):
-        """Lower case alias for Multiline"""
-        return self.Multiline
+        """Lower case alias for MultiLine"""
+        return self.MultiLine
 
     @multiline.setter
     def multiline(self, value):
-        """Lower case alias for Multiline.setter"""
-        self.Multiline = value
+        """Lower case alias for MultiLine.setter"""
+        self.MultiLine = value
 
     @property
     def MultiLineWidth(self):
@@ -31314,13 +31567,13 @@ class TableView:
         return self.Save()
 
 
-class tabs:
+class Tabs:
 
     def __init__(self, tabs=None):
         self.com_object= tabs
 
 
-class tabstrip:
+class TabStrip:
 
     def __init__(self, tabstrip=None):
         self.com_object= tabstrip
@@ -34721,7 +34974,7 @@ class TasksModule:
         self.Visible = value
 
 
-class textbox:
+class TextBox:
 
     def __init__(self, textbox=None):
         self.com_object= textbox
@@ -35365,7 +35618,7 @@ class TimeZones:
         return self.Item(*arguments)
 
 
-class togglebutton:
+class ToggleButton:
 
     def __init__(self, togglebutton=None):
         self.com_object= togglebutton
