@@ -7,7 +7,7 @@ name = "matita"
 version = "0.1.0"
 description = "Parser for Office VBA Reference documentation"
 authors = [{name = "Luca Franceschini", email = "lucaf@lucaf.eu"}]
-license = "MIT"
+license = "GPL-3.0-only"
 license-files = ["LICENSE.md"]
 readme = "README.md"
 requires-python = ">=3.13"
