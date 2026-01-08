@@ -3032,13 +3032,13 @@ class Broadcast:
         """Lower case alias for state"""
         return self.state
 
-    def addmeetingnotes(self, notesUrl,_ _notesWacUrl=None):
-        arguments = com_arguments([unwrap(a) for a in [notesUrl,_ _notesWacUrl]])
+    def addmeetingnotes(self, notesUrl=None, notesWacUrl=None):
+        arguments = com_arguments([unwrap(a) for a in [notesUrl, notesWacUrl]])
         return self.com_object.addmeetingnotes(*arguments)
 
     # Lower case alias for addmeetingnotes
-    def addmeetingnotes(self, notesUrl,_ _notesWacUrl=None):
-        arguments = [notesUrl,_ _notesWacUrl]
+    def addmeetingnotes(self, notesUrl=None, notesWacUrl=None):
+        arguments = [notesUrl, notesWacUrl]
         return self.addmeetingnotes(*arguments)
 
     def End(self):
@@ -11948,14 +11948,12 @@ class guides:
         """Lower case alias for parent"""
         return self.parent
 
-    def add(self, Orientation,_ _Position=None):
-        arguments = com_arguments([unwrap(a) for a in [Orientation,_ _Position]])
-        return self.com_object.add(*arguments)
+    def add(self):
+        return self.com_object.add()
 
     # Lower case alias for add
-    def add(self, Orientation,_ _Position=None):
-        arguments = [Orientation,_ _Position]
-        return self.add(*arguments)
+    def add(self):
+        return self.add()
 
     def item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -18647,14 +18645,12 @@ class Presentation:
         arguments = [FileName]
         return self.ApplyTemplate(*arguments)
 
-    def applytemplate2(self, FileName,_ _Variant=None):
-        arguments = com_arguments([unwrap(a) for a in [FileName,_ _Variant]])
-        return self.com_object.applytemplate2(*arguments)
+    def applytemplate2(self):
+        return self.com_object.applytemplate2()
 
     # Lower case alias for applytemplate2
-    def applytemplate2(self, FileName,_ _Variant=None):
-        arguments = [FileName,_ _Variant]
-        return self.applytemplate2(*arguments)
+    def applytemplate2(self):
+        return self.applytemplate2()
 
     def ApplyTheme(self, themeName=None):
         arguments = com_arguments([unwrap(a) for a in [themeName]])
@@ -24137,14 +24133,12 @@ class ShapeRange:
         arguments = [Index]
         return self.Item(*arguments)
 
-    def mergeshapes(self, MergeCmd,_ _PrimaryShape=None):
-        arguments = com_arguments([unwrap(a) for a in [MergeCmd,_ _PrimaryShape]])
-        return self.com_object.mergeshapes(*arguments)
+    def mergeshapes(self):
+        return self.com_object.mergeshapes()
 
     # Lower case alias for mergeshapes
-    def mergeshapes(self, MergeCmd,_ _PrimaryShape=None):
-        arguments = [MergeCmd,_ _PrimaryShape]
-        return self.mergeshapes(*arguments)
+    def mergeshapes(self):
+        return self.mergeshapes()
 
     def PickUp(self):
         self.com_object.PickUp()
@@ -24321,14 +24315,12 @@ class Shapes:
         arguments = [Type, Left, Top, Width, Height]
         return self.AddCallout(*arguments)
 
-    def addchart2(self, Style,_ _Type,_ _Left,_ _Top,_ _Width,_ _Height,_ _NewLayout=None):
-        arguments = com_arguments([unwrap(a) for a in [Style,_ _Type,_ _Left,_ _Top,_ _Width,_ _Height,_ _NewLayout]])
-        return SHAPE(self.com_object.addchart2(*arguments))
+    def addchart2(self):
+        return SHAPE(self.com_object.addchart2())
 
     # Lower case alias for addchart2
-    def addchart2(self, Style,_ _Type,_ _Left,_ _Top,_ _Width,_ _Height,_ _NewLayout=None):
-        arguments = [Style,_ _Type,_ _Left,_ _Top,_ _Width,_ _Height,_ _NewLayout]
-        return self.addchart2(*arguments)
+    def addchart2(self):
+        return self.addchart2()
 
     def AddConnector(self, Type=None, BeginX=None, BeginY=None, EndX=None, EndY=None):
         arguments = com_arguments([unwrap(a) for a in [Type, BeginX, BeginY, EndX, EndY]])
@@ -24861,14 +24853,12 @@ class Slide:
         arguments = [FileName]
         return self.ApplyTemplate(*arguments)
 
-    def applytemplate2(self, FileName,_ _Variant=None):
-        arguments = com_arguments([unwrap(a) for a in [FileName,_ _Variant]])
-        return self.com_object.applytemplate2(*arguments)
+    def applytemplate2(self):
+        return self.com_object.applytemplate2()
 
     # Lower case alias for applytemplate2
-    def applytemplate2(self, FileName,_ _Variant=None):
-        arguments = [FileName,_ _Variant]
-        return self.applytemplate2(*arguments)
+    def applytemplate2(self):
+        return self.applytemplate2()
 
     def ApplyTheme(self, themeName=None):
         arguments = com_arguments([unwrap(a) for a in [themeName]])
@@ -25334,14 +25324,12 @@ class SlideRange:
         arguments = [FileName]
         return self.ApplyTemplate(*arguments)
 
-    def applytemplate2(self, FileName,_ _Variant=None):
-        arguments = com_arguments([unwrap(a) for a in [FileName,_ _Variant]])
-        return self.com_object.applytemplate2(*arguments)
+    def applytemplate2(self):
+        return self.com_object.applytemplate2()
 
     # Lower case alias for applytemplate2
-    def applytemplate2(self, FileName,_ _Variant=None):
-        arguments = [FileName,_ _Variant]
-        return self.applytemplate2(*arguments)
+    def applytemplate2(self):
+        return self.applytemplate2()
 
     def ApplyTheme(self, themeName=None):
         arguments = com_arguments([unwrap(a) for a in [themeName]])
@@ -28627,14 +28615,12 @@ class textrange2:
         arguments = [NewText]
         return self.insertbefore(*arguments)
 
-    def insertchartfield(self, ChartFieldType,_ _Formula,_ _Position=None):
-        arguments = com_arguments([unwrap(a) for a in [ChartFieldType,_ _Formula,_ _Position]])
-        return self.com_object.insertchartfield(*arguments)
+    def insertchartfield(self):
+        return self.com_object.insertchartfield()
 
     # Lower case alias for insertchartfield
-    def insertchartfield(self, ChartFieldType,_ _Formula,_ _Position=None):
-        arguments = [ChartFieldType,_ _Formula,_ _Position]
-        return self.insertchartfield(*arguments)
+    def insertchartfield(self):
+        return self.insertchartfield()
 
     def insertsymbol(self, FontName=None, CharNumber=None, Unicode=None):
         arguments = com_arguments([unwrap(a) for a in [FontName, CharNumber, Unicode]])

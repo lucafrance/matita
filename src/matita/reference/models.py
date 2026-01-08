@@ -105,7 +105,11 @@ class DocPage:
             if "(" in line:
                 parameters = line.split("(", 1)[1].split(")", 1)[0]
                 parameters = parameters.split(", ")
-                parameters = [p.strip(" _`[]*\\").replace("\\_", "_") for p in parameters]
+                parameters = [p.strip(" _`[]*\\").replace("\\_", "_").strip("_ ") for p in parameters]
+                for p in parameters:
+                    if "," in p:
+                        logging.warning(f"Parsing error in '{self.api_name}'. Parameter `{p}` ignored. This is probably due to a formatting error in the source file.")
+                        parameters.remove(p)
                 self.parameters = parameters
         
         # Find the return value of a property. The section looks like this:
