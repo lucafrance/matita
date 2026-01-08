@@ -162,6 +162,11 @@ class AccessObjectProperties:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -1650,6 +1655,11 @@ class AllDatabaseDiagrams:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -1688,6 +1698,11 @@ class AllForms:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -1730,6 +1745,11 @@ class AllFunctions:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -1768,6 +1788,11 @@ class allmacros:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -1810,6 +1835,11 @@ class AllModules:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -1848,6 +1878,11 @@ class AllQueries:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -1890,6 +1925,11 @@ class AllReports:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -1928,6 +1968,11 @@ class AllStoredProcedures:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -1970,6 +2015,11 @@ class AllTables:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -2008,6 +2058,11 @@ class AllViews:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -2060,6 +2115,11 @@ class Application:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AppTitle(self):
@@ -3212,6 +3272,11 @@ class Attachment:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AttachmentCount(self):
@@ -4901,6 +4966,11 @@ class BoundObjectFrame:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoActivate(self):
@@ -7885,6 +7955,11 @@ class CheckBox:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def AutoLabel(self):
         return self.com_object.AutoLabel
 
@@ -9432,6 +9507,11 @@ class CodeProject:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def BaseConnectionString(self):
         return self.com_object.BaseConnectionString
 
@@ -9694,6 +9774,11 @@ class ComboBox:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoExpand(self):
@@ -12168,6 +12253,11 @@ class CommandButton:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def AutoLabel(self):
         return self.com_object.AutoLabel
 
@@ -14314,6 +14404,11 @@ class Control:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def BottomPadding(self):
         return self.com_object.BottomPadding
 
@@ -14818,6 +14913,11 @@ class Controls:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -14961,6 +15061,11 @@ class CurrentProject:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BaseConnectionString(self):
@@ -15174,6 +15279,11 @@ class CustomControl:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BorderColor(self):
@@ -16358,6 +16468,11 @@ class DependencyObjects:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -17032,6 +17147,11 @@ class EmptyCell:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BackColor(self):
@@ -18153,6 +18273,11 @@ class Form:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoCenter(self):
@@ -21430,6 +21555,11 @@ class FormatConditions:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -21486,6 +21616,11 @@ class Forms:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -21524,6 +21659,11 @@ class GroupLevel:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def ControlSource(self):
@@ -21799,6 +21939,11 @@ class Image:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BackColor(self):
@@ -23029,6 +23174,11 @@ class ImportExportSpecification:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Description(self):
         return self.com_object.Description
 
@@ -23118,6 +23268,11 @@ class ImportExportSpecifications:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -23165,6 +23320,11 @@ class Label:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BackColor(self):
@@ -24534,6 +24694,11 @@ class Line:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def BorderColor(self):
         return self.com_object.BorderColor
 
@@ -25044,6 +25209,11 @@ class ListBox:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoLabel(self):
@@ -27094,6 +27264,11 @@ class Module:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def CountOfDeclarationLines(self):
         return self.com_object.CountOfDeclarationLines
 
@@ -27290,6 +27465,11 @@ class Modules:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -27364,6 +27544,11 @@ class NavigationButton:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoLabel(self):
@@ -29503,6 +29688,11 @@ class NavigationControl:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def AutoTab(self):
         return self.com_object.AutoTab
 
@@ -30907,6 +31097,11 @@ class ObjectFrame:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoActivate(self):
@@ -32613,6 +32808,11 @@ class OptionButton:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def AutoLabel(self):
         return self.com_object.AutoLabel
 
@@ -34075,6 +34275,11 @@ class OptionGroup:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def AutoLabel(self):
         return self.com_object.AutoLabel
 
@@ -35166,6 +35371,11 @@ class Page:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Caption(self):
         return self.com_object.Caption
 
@@ -35724,6 +35934,11 @@ class PageBreak:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def ControlType(self):
@@ -36370,6 +36585,11 @@ class Printers:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -36410,6 +36630,11 @@ class Properties:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -36448,6 +36673,11 @@ class Rectangle:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BackColor(self):
@@ -37278,6 +37508,11 @@ class Report:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoCenter(self):
@@ -39664,6 +39899,11 @@ class Reports:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -39726,6 +39966,11 @@ class ReturnVars:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -39802,6 +40047,11 @@ class Screen:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def MousePointer(self):
@@ -39920,6 +40170,11 @@ class Section:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoHeight(self):
@@ -40555,6 +40810,11 @@ class SharedResources:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -40593,6 +40853,11 @@ class SmartTag:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def IsMissing(self):
@@ -40666,6 +40931,11 @@ class SmartTagAction:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Name(self):
         return self.com_object.Name
 
@@ -40699,6 +40969,11 @@ class SmartTagActions:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -40742,6 +41017,11 @@ class SmartTagProperties:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):
@@ -40842,6 +41122,11 @@ class SmartTags:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -40907,6 +41192,11 @@ class SubForm:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AutoLabel(self):
@@ -42018,6 +42308,11 @@ class TabControl:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def BackColor(self):
@@ -43726,6 +44021,11 @@ class TempVars:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def Count(self):
         return self.com_object.Count
 
@@ -43825,6 +44125,11 @@ class TextBox:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def AsianLineBreak(self):
@@ -46106,6 +46411,11 @@ class ToggleButton:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def AutoLabel(self):
         return self.com_object.AutoLabel
 
@@ -48286,6 +48596,11 @@ class WebBrowserControl:
         return self.com_object.Application
 
     @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
+
+    @property
     def BorderColor(self):
         return self.com_object.BorderColor
 
@@ -49552,6 +49867,11 @@ class WebServices:
     @property
     def Application(self):
         return self.com_object.Application
+
+    @property
+    def application(self):
+        """Lower case alias for Application"""
+        return self.Application
 
     @property
     def Count(self):

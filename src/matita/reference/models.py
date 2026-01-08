@@ -13,7 +13,7 @@ def page_filename_to_key(filename):
 
 class DocPage:
 
-    RESERVED_WORDS = ["and", "application", "class", "from", "import", "property", "or"]
+    RESERVED_WORDS = ["and", "class", "from", "import", "property", "or"]
 
     def __init__(self, markdown_src):
         self.md = markdown_src
@@ -291,7 +291,11 @@ class DocPage:
     def to_python_property_getter(self):
         """Return python code for getter and setter of the property"""
         if not self.is_property:
-            logging.info(f"Property '{self.title}' ignored when exporting getter for '{self.object_name}', because it is not a property.")
+            logging.warning(f"Property '{self.title}' ignored when exporting getter for '{self.object_name}', because it is not a property.")
+            return []
+        
+        if self.property_name in self.RESERVED_WORDS:
+            logging.warning(f"Property '{self.title}' ignored when exporting getter for '{self.object_name}', because it is a reserved word in Python.")
             return []
         
         code = []
