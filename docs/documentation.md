@@ -61,7 +61,6 @@ Consult the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/
 
 ## Comparison with other Python packages
 
-
 `Matita` wraps Microsoft Office [COM](https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model) objects created with [`pywin32`](https://pypi.org/project/pywin32/) and provides a Pythonic interface that closely matches the VBA syntax.
 
 Every `matita.office` class includes an underlying COM object, accessible via the `com_object` property.
@@ -75,84 +74,36 @@ print(type(wd_app.com_object)) # <class 'win32com.client.CDispatch'>
 wd_app.Quit()
 ```
 
-For Excel specifically [`xlwings`](https://docs.xlwings.org/en/latest/missing_features.html) follows a similar approach.
+Excel COM objects [can similarly be access with`xlwings`](https://docs.xlwings.org/en/latest/missing_features.html).
 
 This is different from other popular Python packages for Office automation, such as [`openpyxl`](https://openpyxl.readthedocs.io) for Excel, [`python-docx`](https://python-docx.readthedocs.io) for Word, or [`python-pptx`](https://pypi.org/project/python-pptx/) for PowerPoint, which implement their own object models and do not use the Office VBA Object Library.
 
 
-### Advantages of `matita` over `pywin32` directly
+### `matita` vs `win32com` (part of `pywin32`)
 
-Lower case aliases for all objects, methods, and properties. Consistent with Python naming conventions.
-
-```python
-import win32com.client
-
-xl_app = win32com.client.Dispatch("Excel.Application")
-# Does not work
-# xl_app.visible = True
-xl_app.Visible = True
-
-# Does not work
-# wkb = xl_app.Workbooks.add()
-wkb = xl_app.Workbooks.Add()
-```
-
-```python
-from matita.office import excel as xl
-
-xl_app = xl.Application().new()
-
-# Equally valid
-xl_app.visible = True
-xl_app.Visible = True
-
-# Equally valid
-wkb1 = xl_app.Workbooks.add()
-wkb2 = xl_app.Workbooks.Add()
-```
-
-For compatibility reasons `pywin32` sometimes uses different names for methods and properties compared to the Office VBA Object Library. All names in `matita` match the VBA reference.
-
-Enumerations values can be retrieved with `pywin32`, but they are easier to access with `matita`.
+`win32com` is the typical way in Python to dispatch COM objects.
+There are some quirks with `win32com` for compatibility reasons.
 
 ```python
 import win32com.client
 
 xl_app = win32com.client.gencache.EnsureDispatch("Excel.Application")
-constants = win32com.client.constants
 xl_app.Visible = True
+
 wkb = xl_app.Workbooks.Add()
 wks = wkb.Worksheets(1)
 c = wks.Cells(1,1)
-# Fails, Range.Address is just a string
-# print(c.Address(ReferenceStyle=constants.xlR1C1))
-print(c.GetAddress(ReferenceStyle=constants.xlR1C1)) #R1C1
-```
 
-```python
-from matita.office import excel as xl
+# Some properties are available over separate getter and setter methods.
+# Constants (like `xlR1C1`) must be retrieved separately.
+constants = win32com.client.constants
+print(c.Address(ReferenceStyle=constants.xlR1C1)) # Fails
+print(c.GetAddress(ReferenceStyle=constants.xlR1C1)) # R1C1
 
-xl_app = xl.Application().new()
-xl_app.visible = True
-wkb = xl_app.Workbooks.add()
-wks = wkb.Worksheets(1)
-c = wks.Range("A1")
-
-# Works, Range.Address is a method with arguments
-print(c.Address(ReferenceStyle=xl.xlR1C1)) #R1C1
-```
-
-Sometimes there are methods from `pywin32` which [don't behave as expected](https://stackoverflow.com/questions/63112880/why-does-pythons-version-of-excels-range-resize-not-work-as-expected).
-This is addressed in `matita`.
-
-```python
-import win32com.client
-
-xl_app = win32com.client.Dispatch("Excel.Application")
-wkb = xl_app.Workbooks.Add()
-wks = wkb.Worksheets(1)
-
-rng = wks.Cells(1,1)
+# Some methods exist but don't work as expected.
+# The getter method is needed in those cases.
+# There is no general way to know what should be used when.
+# https://stackoverflow.com/q/63112880
 print(rng.Resize(2,3).Address) # $C$2, wrong result
 print(rng.GetResize(2,3).Address) # $A$1:$C$2, correct result
 
@@ -160,20 +111,29 @@ wkb.Close(False)
 xl_app.Quit()
 ```
 
+`matita` addresses the quirks and adds improvements to be more intuitive.
+
+
 ```python
 from matita.office import excel as xl
 
 xl_app = xl.Application().new()
-wkb = xl_app.Workbooks.add()
-wks = wkb.Worksheets(1)
+# lower case aliases for all properties and methods
+xl_app.visible = True
+wkb = xl_app.workbooks.add()
+c = wks.cells(1,1)
 
-rng = wks.Cells(1,1)
-print(rng.resize(2,3).Address()) # $A$1:$C$2, correct result
+# `Range.address` works
+# Constants (like `xlR1C1`) are available in the same module
+print(c.address(ReferenceStyle=xl.xlR1C1)) #R1C1
+
+
+# `Range.resize` works a expected
+print(rng.resize(2,3).address()) # $A$1:$C$2, correct result
 
 wkb.close(False)
-xl_app.Quit()
+xl_app.quit()
 ```
-
 
 ## Parser for the Office VBA Reference
 
