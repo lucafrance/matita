@@ -54021,13 +54021,13 @@ class WorksheetFunction:
         arguments = [Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7]
         return self.forecast_ets_confint(*arguments)
 
-    def forecast_ets_seasonality(self, Arg1=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = com_arguments([unwrap(a) for a in [Arg1, Arg1, Arg2, Arg3, Arg4]])
+    def forecast_ets_seasonality(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        arguments = com_arguments([unwrap(a) for a in [Arg1, Arg2, Arg3, Arg4]])
         return self.com_object.forecast_ets_seasonality(*arguments)
 
     # Lower case alias for forecast_ets_seasonality
-    def forecast_ets_seasonality(self, Arg1=None, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
-        arguments = [Arg1, Arg1, Arg2, Arg3, Arg4]
+    def forecast_ets_seasonality(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None):
+        arguments = [Arg1, Arg2, Arg3, Arg4]
         return self.forecast_ets_seasonality(*arguments)
 
     def forecast_ets_stat(self, Arg1=None, Arg2=None, Arg3=None, Arg4=None, Arg5=None, Arg6=None):
