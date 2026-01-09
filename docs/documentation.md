@@ -80,7 +80,7 @@ print(type(wd_app.com_object)) # <class 'win32com.client.CDispatch'>
 wd_app.Quit()
 ```
 
-Excel COM objects [can similarly be access with`xlwings`](https://docs.xlwings.org/en/latest/missing_features.html).
+Excel COM objects [can similarly be accessed with`xlwings`](https://docs.xlwings.org/en/latest/missing_features.html).
 
 This is different from other popular Python packages for Office automation, such as [`openpyxl`](https://openpyxl.readthedocs.io) for Excel, [`python-docx`](https://python-docx.readthedocs.io) for Word, or [`python-pptx`](https://pypi.org/project/python-pptx/) for PowerPoint, which implement their own object models and do not use the VBA Object Library.
 
