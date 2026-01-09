@@ -18,6 +18,9 @@ classifiers = [
 ]
 dependencies = ["pywin32"]
 
+[project.urls]
+github = "https://github.com/lucafrance/matita"
+
 [tool.hatch.build.targets.sdist]
 exclude = ["office-vba-reference/*"]
 
