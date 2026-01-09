@@ -13,6 +13,8 @@ project:
     
 site:
   template: book-theme
+  logo_text: Matita ✏️
+
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
