@@ -51,6 +51,8 @@ def hello_world():
 ## Outlook 📧
 
 ```python
+from matita.office import outlook as ol
+
 def hello_world():
     ol_app = ol.Application()
     mail = ol.MailItem(ol_app.create_item(ol.olMailItem))
