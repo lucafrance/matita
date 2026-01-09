@@ -30,37 +30,44 @@ class TestAccess(unittest.TestCase):
     def test_access_visibility(self):
         self.assertTrue(self.ac_app.Visible)
 
-
 class TestExcel(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
         cls.xl_app = xl.Application()
-        cls.xl_app.Visible = True
+        cls.xl_app.visible = True
 
     @classmethod
     def tearDownClass(cls):
         cls.xl_app.Quit()
 
+    def test_hello_world(self):
+        wkb = self.xl_app.workbooks.Add()
+        wks = wkb.worksheets(1)
+        c = wks.cells(1,1)
+        c.value = "Hello world!"
+        self.assertEqual(c.com_object.Value, "Hello world!")
+        wkb.Close(SaveChanges=False)
+
     def test_excel_types(self):
-        wkb = self.xl_app.Workbooks.Add()
-        wks = wkb.Worksheets(1)
+        wkb = self.xl_app.workbooks.add()
+        wks = wkb.worksheets(1)
 
-        cell_str = wks.Range("A1")
-        cell_int = wks.Range("A2")
-        cell_float = wks.Range("A3")
-        cell_bool = wks.Range("A4")
+        cell_str = wks.range("A1")
+        cell_int = wks.range("A2")
+        cell_float = wks.range("A3")
+        cell_bool = wks.range("A4")
 
-        cell_str.Value = "ciao"
-        cell_int.Value = 123
-        cell_float.Value = 3.14159
-        cell_bool.Value = True
+        cell_str.value = "ciao"
+        cell_int.value = 123
+        cell_float.value = 3.14159
+        cell_bool.value = True
 
-        self.assertEqual(cell_str.Value, "ciao")
-        self.assertEqual(cell_int.Value, 123)
-        self.assertAlmostEqual(cell_float.Value, 3.14159)
-        self.assertEqual(cell_bool.Value, True)
-        self.assertIs(type(wks.listobjects), xl.ListObjects)
+        self.assertEqual(cell_str.value, "ciao")
+        self.assertEqual(cell_int.value, 123)
+        self.assertAlmostEqual(cell_float.value, 3.14159)
+        self.assertEqual(cell_bool.value, True)
+        self.assertIs(type(wks.list_objects), xl.ListObjects)
 
         wkb.Close(SaveChanges=False)
 
@@ -68,7 +75,7 @@ class TestExcel(unittest.TestCase):
         wkb = self.xl_app.Workbooks.Add()
         wks = wkb.Worksheets(1)
 
-        r = wks.Range("B2:D4")
+        r = wks.range("B2:D4")
         self.assertEqual(r.Address(), "$B$2:$D$4")
         self.assertEqual(r.address(), "$B$2:$D$4")
         self.assertEqual(r.Address(ReferenceStyle=xl.xlR1C1), "R2C2:R4C4")
@@ -105,7 +112,7 @@ class TestExcel(unittest.TestCase):
 
         cell1 = wks.cells(2,2)
         cell2 = wks.cells(5,5)
-        rng = wks.Range(cell1, cell2)
+        rng = wks.range(cell1, cell2)
         self.assertEqual(rng.address(), "$B$2:$E$5")
 
         rng1 = wks.range("B2:D5")
@@ -118,24 +125,46 @@ class TestExcel(unittest.TestCase):
         rng = self.xl_app.intersect(cell1, cell2)
         self.assertIsNone(rng.com_object)
 
+class TestOutlook(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.ol_app = ol.Application()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.ol_app.Quit()
+        
+    def test_hello_world(self):
+        mail = ol.MailItem(self.ol_app.create_item(ol.olMailItem))
+        mail.body = "Hello world!"
+        self.assertTrue(mail.com_object.Body.startswith("Hello world!"))
 
 class TestPowerPoint(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
         cls.pp_app = pp.Application()
-        cls.pp_app.Visible = True
+        cls.pp_app.visible = True
 
     @classmethod
     def tearDownClass(cls):
         cls.pp_app.Quit()
 
-    def test_powerpoint(self):
-        self.assertTrue(self.pp_app.Visible)
+    def test_hello_world(self):
         prs = self.pp_app.presentations.add()
-        sld = pp.Slide(prs.slides.com_object.Add(1, pp.ppLayoutBlank))
-        shp = sld.shapes.addshape(pp.msoShapeRectangle, 30, 30 , 30, 30)
-        eff = sld.timeline.mainsequence.addeffect(
+        sld = prs.slides.add(1, pp.ppLayoutBlank)
+        shp = sld.shapes.add_shape(pp.msoShapeRectangle, 30, 30 , 30, 30)
+        shp.text_frame.text_range.text = "Hello world!"
+        self.assertEqual(shp.text_frame.text_range.com_object.Text, "Hello world!")
+        prs.close()
+
+    def test_powerpoint(self):
+        self.assertTrue(self.pp_app.visible)
+        prs = self.pp_app.presentations.add()
+        sld = prs.slides.add(1, pp.ppLayoutBlank)
+        shp = sld.shapes.add_shape(pp.msoShapeRectangle, 30, 30 , 30, 30)
+        eff = sld.timeline.main_sequence.add_effect(
             Shape=shp,
             effectId=pp.msoAnimEffectFly,
             Level=pp.msoAnimateLevelNone,
@@ -149,20 +178,19 @@ class TestPowerPoint(unittest.TestCase):
         self.assertIn("win32", str(type(prs.com_object)))
         prs.close()
 
-
-class TestOffice(unittest.TestCase):
+class TestWord(unittest.TestCase):
     
-    def test_outlook(self):
-        ol_app = ol.Application()
-        self.assertIs(type(ol_app), ol.Application)
-        ol_app.Visible = True
-        self.assertTrue(ol_app.Visible)
-        ol_app.Quit()
+    @classmethod
+    def setUpClass(cls):
+        cls.wd_app = wd.Application()
+        cls.wd_app.visible = True
 
-    def test_word(self):
-        wd_app = wd.Application()
-        self.assertIs(type(wd_app), wd.Application)
-        wd_app.Visible = True
-        self.assertTrue(wd_app.Visible)
-        wd_app.Quit()
-        
+    @classmethod
+    def tearDownClass(cls):
+        cls.wd_app.Quit(SaveChanges=wd.wdDoNotSaveChanges)
+
+    def test_hello_world(self):
+        doc = self.wd_app.documents.add()
+        par = doc.content.paragraphs.add()
+        par.range.text = "Hello world!"
+        self.assertTrue(par.range.com_object.Text.startswith("Hello world!"))
