@@ -1,4 +1,6 @@
-# `matita` backlog
+---
+title: Backlog
+---
 
 ## Open items
 

@@ -1,4 +1,6 @@
-# Matita ✏️ - Documentation
+---
+title: Documentation
+---
 
 ## Get started
 
