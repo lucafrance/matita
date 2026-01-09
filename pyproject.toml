@@ -19,6 +19,8 @@ classifiers = [
 dependencies = ["pywin32"]
 
 [project.urls]
+homepage = "https://matita.readthedocs.io"
+documentation = "https://matita.readthedocs.io/en/latest/documentation"
 github = "https://github.com/lucafrance/matita"
 
 [tool.hatch.build.targets.sdist]

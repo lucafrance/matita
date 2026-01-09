@@ -4,7 +4,7 @@
 
 You get the full power of VBA with the convenience of Python.
 
-See the [documentation](./docs/documentation.md) for more details.
+See the [documentation](https://matita.readthedocs.io/en/latest/documentation) for more details.
 
 ## Excel 📊
 
