@@ -1,23 +1,62 @@
-# Matita - Full Microsoft Office automation in Python ✏️
+# *Matita* - Full Microsoft Office automation in Python ✏️
 
 *Matita* is a Python wrapper for the [VBA Object library](https://learn.microsoft.com/en-us/office/vba/api/overview/).
+
+You get the full power of VBA with the convenience of Python.
+
+See the [documentation](./docs/documentation.md) for more details.
+
+## Excel 📊
 
 ```python
 from matita.office import excel as xl
 
-xl_app = xl.Application()
-xl_app.visible = True
+def hello_world():
+    xl_app = xl.Application()
+    xl_app.visible = True
 
-wkb = xl_app.workbooks.add()
-wks = wkb.worksheets(1)
-c = wks.cells(1,1)
-
-c.value = "Hello World"
+    wkb = xl_app.workbooks.Add()
+    wks = wkb.worksheets(1)
+    c = wks.cells(1,1)
+    c.value = "Hello world!"
 ```
 
-There are modules for Microsoft Access, Excel, Outlook, PowerPoint, Word.
+## PowerPoint 🖼️
 
-See the [documentation](./docs/documentation.md) for more details.
+```python
+from matita.office import powerpoint as pp
+
+def hello_world():
+    pp_app = pp.Application()
+    pp_app.visible = True
+    prs = pp_app.presentations.add()
+    sld = prs.slides.add(1, pp.ppLayoutText)
+    shp = sld.shapes.addshape(pp.msoShapeRectangle, 100, 100, 200, 100)
+    shp.text_frame.text_range.text = "Hello world!"
+```
+
+## Word 📄
+
+```python
+from matita.office import word as wd
+
+def hello_world():
+    wd_app = wd.Application()
+    wd_app.visible = True
+    doc = wd_app.documents.add()
+    par = doc.content.paragraphs.add()
+    par.range.text = "Hello world!"
+```
+
+## Outlook 📧
+
+```python
+def hello_world():
+    ol_app = ol.Application()
+    mail = ol.MailItem(ol_app.create_item(ol.olMailItem))
+    mail.body = "Hello world!"
+    mail.display()
+```
 
 ## Installation
 
