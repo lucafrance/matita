@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "matita"
-version = "0.1.0"
-description = "Parser for Office VBA Reference documentation"
+version = "1.0.0"
+description = "Python wrapper for the VBA Object library"
 authors = [{name = "Luca Franceschini", email = "lucaf@lucaf.eu"}]
 license = "GPL-3.0-only"
 license-files = ["LICENSE.md"]
