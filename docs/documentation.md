@@ -2,7 +2,7 @@
 title: Documentation
 ---
 
-## Get started
+## Quickstart
 
 You start by creating an object for the application you need.
 
@@ -29,7 +29,7 @@ wd_app = wd.Application()
 wd_app.visible = True
 ```
 
-With the application object created, you can start creating [documents](https://learn.microsoft.com/en-gb/office/vba/api/word.documents), [workbooks](https://learn.microsoft.com/en-gb/office/vba/api/excel.workbooks), [presentations](https://learn.microsoft.com/en-gb/office/vba/api/powerpoint.presentations), [emails](https://learn.microsoft.com/en-gb/office/vba/api/outlook.application.createitem), and more.
+With the `Application` instance, you can start creating [documents](https://learn.microsoft.com/en-gb/office/vba/api/word.documents), [workbooks](https://learn.microsoft.com/en-gb/office/vba/api/excel.workbooks), [presentations](https://learn.microsoft.com/en-gb/office/vba/api/powerpoint.presentations), [emails](https://learn.microsoft.com/en-gb/office/vba/api/outlook.application.createitem), and more.
 
 ```python
 # Create a new Excel workbook
@@ -61,11 +61,42 @@ doc = wd_app.documents.open("C:\\path\\to\\your\\document.docx")
 You have access to all objects, methods, and properties of the VBA Object Library for:
 - [Access](https://learn.microsoft.com/en-gb/office/vba/api/overview/access)
 - [Excel](https://learn.microsoft.com/en-gb/office/vba/api/overview/excel)
-- [PowerPoint](https://learn.microsoft.com/en-gb/office/vba/api/overview/powerpoint)
 - [Outlook](https://learn.microsoft.com/en-gb/office/vba/api/overview/outlook)
+- [PowerPoint](https://learn.microsoft.com/en-gb/office/vba/api/overview/powerpoint)
 - [Word](https://learn.microsoft.com/en-gb/office/vba/api/overview/word)
 
-Consult the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) for details.
+See the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) for details.
+
+## Package Structure
+
+```
+matita
+    - office
+        - access
+        - excel
+        - office
+        - outlook
+        - powerpoint
+        - word
+    - reference
+        - markdown
+        - models
+```
+
+### `matita.office`
+
+The modules `access`, `excel`, `outlook`, `powerpoint`, `word` include classes and enumerations for the corresponding application.
+
+The `office` module includes additional enumerations available to all applications.
+
+### `matita.reference`
+
+The subpackage `matita.reference` parses the git submodule `office-vba-reference`, which is the repository of the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft.
+The `markdown` module creates a `MarkdownTree` instance for each page of the documentation.
+
+The `models` module creates a `VbaDocs` instance based on the parsed information.
+The `VbaDocs` instance first exports its information to [`data/office-vba-api.json`](https://github.com/lucafrance/matita/blob/main/data/office-vba-api.json).
+The information is then exported as the `office.matita` modules.
 
 ## Comparison with other Python packages
 
@@ -82,7 +113,7 @@ print(type(wd_app.com_object)) # <class 'win32com.client.CDispatch'>
 wd_app.Quit()
 ```
 
-Excel COM objects [can similarly be accessed with`xlwings`](https://docs.xlwings.org/en/latest/missing_features.html).
+This approach is [similar to the one of `xlwings`](https://docs.xlwings.org/en/latest/missing_features.html), which offers additional Excel automation features.
 
 This is different from other popular Python packages for Office automation, such as [`openpyxl`](https://openpyxl.readthedocs.io) for Excel, [`python-docx`](https://python-docx.readthedocs.io) for Word, or [`python-pptx`](https://pypi.org/project/python-pptx/) for PowerPoint, which implement their own object models and do not use the VBA Object Library.
 
@@ -144,14 +175,6 @@ wkb.close(False)
 xl_app.quit()
 ```
 
-## Parser for the Office VBA Reference
-
-This library is based on the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft Corporation, [licensed](https://github.com/MicrosoftDocs/VBA-Docs/blob/main/LICENSE) under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
-
-The subpackage `matita.reference`:
-- parses of the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview),
-- saves the object model to [`data/office-vba-api.json`](./data/office-vba-api.json),
-- creates the subpackage `matita.office` accordingly.
 
 ## Limitations of `matita`
 
