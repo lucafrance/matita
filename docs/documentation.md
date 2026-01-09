@@ -2,7 +2,7 @@
 
 ## Get started
 
-You need to create an object for the application you need.
+You start by creating an object for the application you need.
 
 Unlike starting Microsoft Office normally, all application objects are by default invisible.
 I recommend making the application visible as long as you are developing.
@@ -27,7 +27,7 @@ wd_app = wd.Application()
 wd_app.visible = True
 ```
 
-With the application object created, you can start creating [documents](https://learn.microsoft.com/en-gb/office/vba/api/word.documents), [workbooks](https://learn.microsoft.com/en-gb/office/vba/api/excel.workbooks), [presentations](https://learn.microsoft.com/en-gb/office/vba/api/powerpoint.presentations), emails, and so on.
+With the application object created, you can start creating [documents](https://learn.microsoft.com/en-gb/office/vba/api/word.documents), [workbooks](https://learn.microsoft.com/en-gb/office/vba/api/excel.workbooks), [presentations](https://learn.microsoft.com/en-gb/office/vba/api/powerpoint.presentations), [emails](https://learn.microsoft.com/en-gb/office/vba/api/outlook.application.createitem), and more.
 
 ```python
 # Create a new Excel workbook
@@ -56,12 +56,18 @@ ppt = pp_app.presentations.open("C:\\path\\to\\your\\presentation.pptx")
 doc = wd_app.documents.open("C:\\path\\to\\your\\document.docx")
 ```
 
-You have access to all objects, methods, and properties of the Office VBA Object Library.
+You have access to all objects, methods, and properties of the VBA Object Library for:
+- [Access](https://learn.microsoft.com/en-gb/office/vba/api/overview/access)
+- [Excel](https://learn.microsoft.com/en-gb/office/vba/api/overview/excel)
+- [PowerPoint](https://learn.microsoft.com/en-gb/office/vba/api/overview/powerpoint)
+- [Outlook](https://learn.microsoft.com/en-gb/office/vba/api/overview/outlook)
+- [Word](https://learn.microsoft.com/en-gb/office/vba/api/overview/word)
+
 Consult the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) for details.
 
 ## Comparison with other Python packages
 
-`Matita` wraps Microsoft Office [COM](https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model) objects created with [`pywin32`](https://pypi.org/project/pywin32/) and provides a Pythonic interface that closely matches the VBA syntax.
+`Matita` wraps Microsoft Office [COM](https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model) objects created with [`win32com`](https://pypi.org/project/pywin32/) and provides a Pythonic interface that closely matches the VBA syntax.
 
 Every `matita.office` class includes an underlying COM object, accessible via the `com_object` property.
 
@@ -76,13 +82,13 @@ wd_app.Quit()
 
 Excel COM objects [can similarly be access with`xlwings`](https://docs.xlwings.org/en/latest/missing_features.html).
 
-This is different from other popular Python packages for Office automation, such as [`openpyxl`](https://openpyxl.readthedocs.io) for Excel, [`python-docx`](https://python-docx.readthedocs.io) for Word, or [`python-pptx`](https://pypi.org/project/python-pptx/) for PowerPoint, which implement their own object models and do not use the Office VBA Object Library.
+This is different from other popular Python packages for Office automation, such as [`openpyxl`](https://openpyxl.readthedocs.io) for Excel, [`python-docx`](https://python-docx.readthedocs.io) for Word, or [`python-pptx`](https://pypi.org/project/python-pptx/) for PowerPoint, which implement their own object models and do not use the VBA Object Library.
 
 
 ### `matita` vs `win32com` (part of `pywin32`)
 
 `win32com` is the typical way in Python to dispatch COM objects.
-There are some quirks with `win32com` for compatibility reasons.
+There are some quirks with `win32com` objects due differences in how COM and Python work.
 
 ```python
 import win32com.client
@@ -94,9 +100,10 @@ wkb = xl_app.Workbooks.Add()
 wks = wkb.Worksheets(1)
 c = wks.Cells(1,1)
 
-# Some properties are available over separate getter and setter methods.
 # Constants (like `xlR1C1`) must be retrieved separately.
 constants = win32com.client.constants
+
+# Some properties are available over separate getter and setter methods.
 print(c.Address(ReferenceStyle=constants.xlR1C1)) # Fails
 print(c.GetAddress(ReferenceStyle=constants.xlR1C1)) # R1C1
 
@@ -123,12 +130,12 @@ xl_app.visible = True
 wkb = xl_app.workbooks.add()
 c = wks.cells(1,1)
 
-# `Range.address` works
+# Methods are available in their original name
 # Constants (like `xlR1C1`) are available in the same module
 print(c.address(ReferenceStyle=xl.xlR1C1)) #R1C1
 
 
-# `Range.resize` works a expected
+# Methods are working as expected in their original name
 print(rng.resize(2,3).address()) # $A$1:$C$2, correct result
 
 wkb.close(False)
@@ -137,12 +144,12 @@ xl_app.quit()
 
 ## Parser for the Office VBA Reference
 
-This project is based on the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft Corporation, [licensed](https://github.com/MicrosoftDocs/VBA-Docs/blob/main/LICENSE) under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+This library is based on the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview) by Microsoft Corporation, [licensed](https://github.com/MicrosoftDocs/VBA-Docs/blob/main/LICENSE) under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
 The subpackage `matita.reference`:
 - parses of the [Office VBA Reference](https://learn.microsoft.com/en-us/office/vba/api/overview),
 - saves the object model to [`data/office-vba-api.json`](./data/office-vba-api.json),
-- creates the subpackage `matita.office`.
+- creates the subpackage `matita.office` accordingly.
 
 ## Limitations of `matita`
 
