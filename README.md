@@ -1,12 +1,12 @@
 # *Matita* - Full Microsoft Office automation in Python ✏️
 
 *Matita* is a Python wrapper for the [VBA Object library](https://learn.microsoft.com/en-us/office/vba/api/overview/).
-
 You get the full power of VBA with the convenience of Python.
-
 See the [documentation](https://matita.readthedocs.io/en/latest/documentation) for more details.
 
-## Excel 📊
+## Hello world with *matita*
+
+### Excel 📊
 
 ```python
 from matita.office import excel as xl
@@ -21,7 +21,7 @@ def hello_world():
     c.value = "Hello world!"
 ```
 
-## PowerPoint 🖼️
+### PowerPoint 🖼️
 
 ```python
 from matita.office import powerpoint as pp
@@ -35,7 +35,7 @@ def hello_world():
     shp.text_frame.text_range.text = "Hello world!"
 ```
 
-## Word 📄
+### Word 📄
 
 ```python
 from matita.office import word as wd
@@ -48,7 +48,7 @@ def hello_world():
     par.range.text = "Hello world!"
 ```
 
-## Outlook 📧
+### Outlook 📧
 
 ```python
 from matita.office import outlook as ol
@@ -65,3 +65,12 @@ def hello_world():
 ```powershell
 python -m pip install matita
 ```
+
+## License
+
+Copyright 2026 Luca Franceschini (lucaf.eu)
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see [https://www.gnu.org/licenses](https://www.gnu.org/licenses).
