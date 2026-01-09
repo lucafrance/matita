@@ -6,7 +6,7 @@ You need to create an object for the application you need.
 
 Unlike starting Microsoft Office normally, all application objects are by default invisible.
 I recommend making the application visible as long as you are developing.
-Once your code is stable, you may decide to keep the application invisible unless an exception aris
+Once your code is stable, you may decide to keep the application invisible unless an exception arises.
 
 ```python
 from matita.office import access as ac, excel as xl, outlook as ol, powerpoint as pp, word as wd
