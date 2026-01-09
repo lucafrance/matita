@@ -3,6 +3,8 @@
 dist/
 notebooks/
 __pycache__
+# MyST build outputs
+docs/_build
 
 *.log
 *.ipynb
