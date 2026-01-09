@@ -2,11 +2,15 @@
 version: 1
 project:
   id: 3b18b9f1-78e3-4a08-9f00-54cbd28de2a0
-  title: matita
-  # keywords: []
-  # authors: []
+  title: Matita
+  description: Matita - Full Microsoft Office automation in Python ✏️
   github: https://github.com/lucafrance/matita
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  license: GPL-3.0-only
+  toc:
+    - file: index.md
+    - file: documentation.md
+    - file: backlog.md
+    
 site:
   template: book-theme
   # options:
