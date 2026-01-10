@@ -10580,10 +10580,8 @@ class Chart:
         return self.Select(*arguments)
 
     def SeriesCollection(self, Index=None):
-        if Index is None:
-            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
-        else:
-            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -12571,10 +12569,8 @@ class ChartGroup:
         return self.FullCategoryCollection(*arguments)
 
     def SeriesCollection(self, Index=None):
-        if Index is None:
-            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
-        else:
-            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -69525,10 +69521,8 @@ class Series:
         return self.Paste()
 
     def Points(self, Index=None):
-        if Index is None:
-            return Points(self.com_object.Points(com_arguments([None])[0]))
-        else:
-            return Points(self.com_object.Points(com_arguments([None])[0])).Item(Index)
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return Points(self.com_object.Points(*arguments))
 
     def points(self, Index=None):
         """Alias for Points"""
@@ -69543,10 +69537,8 @@ class Series:
         return self.Select()
 
     def Trendlines(self, Index=None):
-        if Index is None:
-            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0]))
-        else:
-            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0])).Item(Index)
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return Trendlines(self.com_object.Trendlines(*arguments))
 
     def trendlines(self, Index=None):
         """Alias for Trendlines"""

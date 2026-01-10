@@ -11019,10 +11019,8 @@ class Chart:
         return self.ExportAsFixedFormat(*arguments)
 
     def FullSeriesCollection(self, Index=None):
-        if Index is None:
-            return FullSeriesCollection(self.com_object.FullSeriesCollection(com_arguments([None])[0]))
-        else:
-            return FullSeriesCollection(self.com_object.FullSeriesCollection(com_arguments([None])[0])).Item(Index)
+        arguments = com_arguments([unwrap(a) for a in [Index]])
+        return FullSeriesCollection(self.com_object.FullSeriesCollection(*arguments))
 
     def fullseriescollection(self, Index=None):
         """Alias for FullSeriesCollection"""
