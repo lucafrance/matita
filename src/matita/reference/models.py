@@ -430,16 +430,33 @@ class DocPage:
         return code
     
     def to_python_method_function(self, parent_is_collection=False):
-        """Return python code for a single method of the object"""
+        """Return python code for a single method of the object
+
+        Example output for methods that return sets or collections:
+        ```python
+            def FullSeriesCollection(self):
+               return FullSeriesCollection(self.com_object.FullSeriesCollection)
+        ```
+
+        Example output without arguments:
+        ```python
+           def Refresh(self):
+              self.com_object.Refresh()
+        ```
+
+        Example output with arguments:
+        ```python
+           def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
+              arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
+              self.com_object.GetChartElement(*arguments)
+        ```
+        """
         
         if not self.is_method:
             logging.info(f"Method '{self.title}' ignored when exporting for '{self.object_name}', because it is not a method.")
             return []
         
         code = []
-        # Example output:
-        #    def FullSeriesCollection(self):
-        #       return FullSeriesCollection(self.com_object.FullSeriesCollection)
         if self.method_name == self.return_value_class \
         and len(self.parameters) == 1:
             code.append(f"    def {self.method_name}(self, Index=None):")
@@ -450,13 +467,6 @@ class DocPage:
             code.append("")
             return code
         
-        # Example output without arguments:
-        #    def Refresh(self):
-        #       self.com_object.Refresh()
-        # Example output with arguments:
-        #    def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
-        #       arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
-        #       self.com_object.GetChartElement(*arguments)
         if len(self.parameters) == 0:
             code.append(f"    def {self.method_name}(self):")
             code_line = f"self.com_object.{self.method_name}()"
