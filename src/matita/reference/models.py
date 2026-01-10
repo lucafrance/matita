@@ -432,23 +432,26 @@ class DocPage:
     def to_python_method_function(self, parent_is_collection=False):
         """Return python code for a single method of the object
 
-        Example output for methods that return sets or collections:
+        Example output for method that returns sets or collections:
         ```python
-            def FullSeriesCollection(self):
-               return FullSeriesCollection(self.com_object.FullSeriesCollection)
+        def FullSeriesCollection(self, Index=None):
+            if Index is None:
+                return FullSeriesCollection(self.com_object.FullSeriesCollection(com_arguments([None])[0]))
+            else:
+                return FullSeriesCollection(self.com_object.FullSeriesCollection(com_arguments([None])[0])).Item(Index)
         ```
 
         Example output without arguments:
         ```python
-           def Refresh(self):
-              self.com_object.Refresh()
+        def Refresh(self):
+            self.com_object.Refresh()
         ```
 
         Example output with arguments:
         ```python
-           def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
-              arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
-              self.com_object.GetChartElement(*arguments)
+        def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
+            arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
+            self.com_object.GetChartElement(*arguments)
         ```
         """
         
