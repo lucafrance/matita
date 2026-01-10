@@ -960,7 +960,7 @@ class AnimationSettings:
 
     @property
     def AfterEffect(self):
-        return PpAfterEffect(self.com_object.AfterEffect)
+        return self.com_object.AfterEffect
 
     @AfterEffect.setter
     def AfterEffect(self, value):
@@ -2321,7 +2321,7 @@ class Axis:
 
     @property
     def AxisGroup(self):
-        return XlAxisGroup(self.com_object.AxisGroup)
+        return self.com_object.AxisGroup
 
     @property
     def axisgroup(self):
@@ -2349,7 +2349,7 @@ class Axis:
 
     @property
     def BaseUnit(self):
-        return XlTimeUnit(self.com_object.BaseUnit)
+        return self.com_object.BaseUnit
 
     @BaseUnit.setter
     def BaseUnit(self, value):
@@ -2442,7 +2442,7 @@ class Axis:
 
     @property
     def CategoryType(self):
-        return XlCategoryType(self.com_object.CategoryType)
+        return self.com_object.CategoryType
 
     @CategoryType.setter
     def CategoryType(self, value):
@@ -2525,7 +2525,7 @@ class Axis:
 
     @property
     def DisplayUnit(self):
-        return XlDisplayUnit(self.com_object.DisplayUnit)
+        return self.com_object.DisplayUnit
 
     @DisplayUnit.setter
     def DisplayUnit(self, value):
@@ -2776,7 +2776,7 @@ class Axis:
 
     @property
     def MajorTickMark(self):
-        return XlTickMark(self.com_object.MajorTickMark)
+        return self.com_object.MajorTickMark
 
     @MajorTickMark.setter
     def MajorTickMark(self, value):
@@ -3014,7 +3014,7 @@ class Axis:
 
     @property
     def MinorTickMark(self):
-        return XlTickMark(self.com_object.MinorTickMark)
+        return self.com_object.MinorTickMark
 
     @MinorTickMark.setter
     def MinorTickMark(self, value):
@@ -3163,7 +3163,7 @@ class Axis:
 
     @property
     def ScaleType(self):
-        return XlScaleType(self.com_object.ScaleType)
+        return self.com_object.ScaleType
 
     @ScaleType.setter
     def ScaleType(self, value):
@@ -3326,7 +3326,7 @@ class Axis:
 
     @property
     def Type(self):
-        return XlAxisType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -3642,7 +3642,7 @@ class AxisTitle:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -3660,7 +3660,7 @@ class AxisTitle:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -4714,7 +4714,7 @@ class Chart:
 
     @property
     def BarShape(self):
-        return XlBarShape(self.com_object.BarShape)
+        return self.com_object.BarShape
 
     @BarShape.setter
     def BarShape(self, value):
@@ -4947,7 +4947,7 @@ class Chart:
 
     @property
     def DisplayBlanksAs(self):
-        return XlDisplayBlanksAs(self.com_object.DisplayBlanksAs)
+        return self.com_object.DisplayBlanksAs
 
     @DisplayBlanksAs.setter
     def DisplayBlanksAs(self, value):
@@ -6128,7 +6128,7 @@ class ChartBorder:
 
     @property
     def LineStyle(self):
-        return XlLineStyle(self.com_object.LineStyle)
+        return self.com_object.LineStyle
 
     @LineStyle.setter
     def LineStyle(self, value):
@@ -6165,7 +6165,7 @@ class ChartBorder:
 
     @property
     def Weight(self):
-        return XlBorderWeight(self.com_object.Weight)
+        return self.com_object.Weight
 
     @Weight.setter
     def Weight(self, value):
@@ -6439,7 +6439,7 @@ class ChartFont:
 
     @property
     def Background(self):
-        return XlBackground(self.com_object.Background)
+        return self.com_object.Background
 
     @Background.setter
     def Background(self, value):
@@ -6675,7 +6675,7 @@ class ChartFont:
 
     @property
     def Underline(self):
-        return XlUnderlineStyle(self.com_object.Underline)
+        return self.com_object.Underline
 
     @Underline.setter
     def Underline(self, value):
@@ -6870,7 +6870,7 @@ class ChartGroup:
 
     @property
     def AxisGroup(self):
-        return XlAxisGroup(self.com_object.AxisGroup)
+        return self.com_object.AxisGroup
 
     @AxisGroup.setter
     def AxisGroup(self, value):
@@ -7573,7 +7573,7 @@ class ChartGroup:
 
     @property
     def SplitType(self):
-        return XlChartSplitType(self.com_object.SplitType)
+        return self.com_object.SplitType
 
     @SplitType.setter
     def SplitType(self, value):
@@ -8062,7 +8062,7 @@ class ChartTitle:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -8080,7 +8080,7 @@ class ChartTitle:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -10082,7 +10082,7 @@ class DataLabel:
 
     @property
     def Position(self):
-        return XlDataLabelPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -10100,7 +10100,7 @@ class DataLabel:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -10686,7 +10686,7 @@ class DataLabels:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -11621,7 +11621,7 @@ class DisplayUnitLabel:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -11639,7 +11639,7 @@ class DisplayUnitLabel:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -12694,7 +12694,7 @@ class EffectInformation:
 
     @property
     def AfterEffect(self):
-        return PpAfterEffect(self.com_object.AfterEffect)
+        return self.com_object.AfterEffect
 
     @property
     def aftereffect(self):
@@ -15601,7 +15601,7 @@ class Interior:
 
     @property
     def Pattern(self):
-        return XlPattern(self.com_object.Pattern)
+        return self.com_object.Pattern
 
     @Pattern.setter
     def Pattern(self, value):
@@ -15647,7 +15647,7 @@ class Interior:
 
     @property
     def PatternColorIndex(self):
-        return XlColorIndex(self.com_object.PatternColorIndex)
+        return self.com_object.PatternColorIndex
 
     @PatternColorIndex.setter
     def PatternColorIndex(self, value):
@@ -15846,7 +15846,7 @@ class Legend:
 
     @property
     def Position(self):
-        return XlLegendPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -16235,7 +16235,7 @@ class LegendKey:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -16291,7 +16291,7 @@ class LegendKey:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -16347,7 +16347,7 @@ class LegendKey:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -16384,7 +16384,7 @@ class LegendKey:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -20666,7 +20666,7 @@ class PlotArea:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -21045,7 +21045,7 @@ class Point:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -21101,7 +21101,7 @@ class Point:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -21157,7 +21157,7 @@ class Point:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -21203,7 +21203,7 @@ class Point:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -25124,7 +25124,7 @@ class RGBColor:
 
     @property
     def RGB(self):
-        return PpColorSchemeIndex(self.com_object.RGB)
+        return self.com_object.RGB
 
     @RGB.setter
     def RGB(self, value):
@@ -26320,7 +26320,7 @@ class Series:
 
     @property
     def AxisGroup(self):
-        return XlAxisGroup(self.com_object.AxisGroup)
+        return self.com_object.AxisGroup
 
     @AxisGroup.setter
     def AxisGroup(self, value):
@@ -26348,7 +26348,7 @@ class Series:
 
     @property
     def BarShape(self):
-        return XlBarShape(self.com_object.BarShape)
+        return self.com_object.BarShape
 
     @BarShape.setter
     def BarShape(self, value):
@@ -26850,7 +26850,7 @@ class Series:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -26906,7 +26906,7 @@ class Series:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -26962,7 +26962,7 @@ class Series:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -27045,7 +27045,7 @@ class Series:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -31141,7 +31141,7 @@ class Slide:
 
     @property
     def Layout(self):
-        return PpSlideLayout(self.com_object.Layout)
+        return self.com_object.Layout
 
     @Layout.setter
     def Layout(self, value):
@@ -31742,7 +31742,7 @@ class SlideRange:
 
     @property
     def Layout(self):
-        return PpSlideLayout(self.com_object.Layout)
+        return self.com_object.Layout
 
     @Layout.setter
     def Layout(self, value):
@@ -37735,7 +37735,7 @@ class TickLabels:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -38573,7 +38573,7 @@ class Trendline:
 
     @property
     def Type(self):
-        return XlTrendlineType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):

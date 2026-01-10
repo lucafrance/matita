@@ -805,7 +805,7 @@ class Application:
 
     @property
     def DisplayAlerts(self):
-        return WdAlertLevel(self.com_object.DisplayAlerts)
+        return self.com_object.DisplayAlerts
 
     @DisplayAlerts.setter
     def DisplayAlerts(self, value):
@@ -1052,7 +1052,7 @@ class Application:
 
     @property
     def EnableCancelKey(self):
-        return WdEnableCancelKey(self.com_object.EnableCancelKey)
+        return self.com_object.EnableCancelKey
 
     @EnableCancelKey.setter
     def EnableCancelKey(self, value):
@@ -1438,7 +1438,7 @@ class Application:
 
     @property
     def MailSystem(self):
-        return WdMailSystem(self.com_object.MailSystem)
+        return self.com_object.MailSystem
 
     @property
     def mailsystem(self):
@@ -2271,7 +2271,7 @@ class Application:
 
     @property
     def WindowState(self):
-        return WdWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -4254,7 +4254,7 @@ class Axis:
 
     @property
     def AxisGroup(self):
-        return XlAxisGroup(self.com_object.AxisGroup)
+        return self.com_object.AxisGroup
 
     @property
     def axisgroup(self):
@@ -4282,7 +4282,7 @@ class Axis:
 
     @property
     def BaseUnit(self):
-        return XlTimeUnit(self.com_object.BaseUnit)
+        return self.com_object.BaseUnit
 
     @BaseUnit.setter
     def BaseUnit(self, value):
@@ -4375,7 +4375,7 @@ class Axis:
 
     @property
     def CategoryType(self):
-        return XlCategoryType(self.com_object.CategoryType)
+        return self.com_object.CategoryType
 
     @CategoryType.setter
     def CategoryType(self, value):
@@ -4458,7 +4458,7 @@ class Axis:
 
     @property
     def DisplayUnit(self):
-        return XlDisplayUnit(self.com_object.DisplayUnit)
+        return self.com_object.DisplayUnit
 
     @DisplayUnit.setter
     def DisplayUnit(self, value):
@@ -4709,7 +4709,7 @@ class Axis:
 
     @property
     def MajorTickMark(self):
-        return XlTickMark(self.com_object.MajorTickMark)
+        return self.com_object.MajorTickMark
 
     @MajorTickMark.setter
     def MajorTickMark(self, value):
@@ -4947,7 +4947,7 @@ class Axis:
 
     @property
     def MinorTickMark(self):
-        return XlTickMark(self.com_object.MinorTickMark)
+        return self.com_object.MinorTickMark
 
     @MinorTickMark.setter
     def MinorTickMark(self, value):
@@ -5096,7 +5096,7 @@ class Axis:
 
     @property
     def ScaleType(self):
-        return XlScaleType(self.com_object.ScaleType)
+        return self.com_object.ScaleType
 
     @ScaleType.setter
     def ScaleType(self, value):
@@ -5259,7 +5259,7 @@ class Axis:
 
     @property
     def Type(self):
-        return XlAxisType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -5575,7 +5575,7 @@ class AxisTitle:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -5593,7 +5593,7 @@ class AxisTitle:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -5912,7 +5912,7 @@ class Bookmark:
 
     @property
     def StoryType(self):
-        return WdStoryType(self.com_object.StoryType)
+        return self.com_object.StoryType
 
     @property
     def storytype(self):
@@ -6092,7 +6092,7 @@ class Border:
 
     @property
     def ArtStyle(self):
-        return WdPageBorderArt(self.com_object.ArtStyle)
+        return self.com_object.ArtStyle
 
     @ArtStyle.setter
     def ArtStyle(self, value):
@@ -6166,7 +6166,7 @@ class Border:
 
     @property
     def ColorIndex(self):
-        return WdColorIndex(self.com_object.ColorIndex)
+        return self.com_object.ColorIndex
 
     @ColorIndex.setter
     def ColorIndex(self, value):
@@ -6212,7 +6212,7 @@ class Border:
 
     @property
     def LineStyle(self):
-        return WdLineStyle(self.com_object.LineStyle)
+        return self.com_object.LineStyle
 
     @LineStyle.setter
     def LineStyle(self, value):
@@ -6359,7 +6359,7 @@ class Borders:
 
     @property
     def DistanceFrom(self):
-        return WdBorderDistanceFrom(self.com_object.DistanceFrom)
+        return self.com_object.DistanceFrom
 
     @DistanceFrom.setter
     def DistanceFrom(self, value):
@@ -6629,7 +6629,7 @@ class Borders:
 
     @property
     def InsideColorIndex(self):
-        return WdColorIndex(self.com_object.InsideColorIndex)
+        return self.com_object.InsideColorIndex
 
     @InsideColorIndex.setter
     def InsideColorIndex(self, value):
@@ -6769,7 +6769,7 @@ class Borders:
 
     @property
     def OutsideColorIndex(self):
-        return WdColorIndex(self.com_object.OutsideColorIndex)
+        return self.com_object.OutsideColorIndex
 
     @OutsideColorIndex.setter
     def OutsideColorIndex(self, value):
@@ -8114,7 +8114,7 @@ class CaptionLabel:
 
     @property
     def ID(self):
-        return WdCaptionLabelID(self.com_object.ID)
+        return self.com_object.ID
 
     @property
     def id(self):
@@ -8202,7 +8202,7 @@ class CaptionLabel:
 
     @property
     def Position(self):
-        return WdCaptionPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -8220,7 +8220,7 @@ class CaptionLabel:
 
     @property
     def Separator(self):
-        return WdSeparatorType(self.com_object.Separator)
+        return self.com_object.Separator
 
     @Separator.setter
     def Separator(self, value):
@@ -8620,7 +8620,7 @@ class Cell:
 
     @property
     def HeightRule(self):
-        return WdRowHeightRule(self.com_object.HeightRule)
+        return self.com_object.HeightRule
 
     @HeightRule.setter
     def HeightRule(self, value):
@@ -8764,7 +8764,7 @@ class Cell:
 
     @property
     def PreferredWidthType(self):
-        return WdPreferredWidthType(self.com_object.PreferredWidthType)
+        return self.com_object.PreferredWidthType
 
     @PreferredWidthType.setter
     def PreferredWidthType(self, value):
@@ -8907,7 +8907,7 @@ class Cell:
 
     @property
     def VerticalAlignment(self):
-        return WdCellVerticalAlignment(self.com_object.VerticalAlignment)
+        return self.com_object.VerticalAlignment
 
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
@@ -9126,7 +9126,7 @@ class Cells:
 
     @property
     def HeightRule(self):
-        return WdRowHeightRule(self.com_object.HeightRule)
+        return self.com_object.HeightRule
 
     @HeightRule.setter
     def HeightRule(self, value):
@@ -9205,7 +9205,7 @@ class Cells:
 
     @property
     def PreferredWidthType(self):
-        return WdPreferredWidthType(self.com_object.PreferredWidthType)
+        return self.com_object.PreferredWidthType
 
     @PreferredWidthType.setter
     def PreferredWidthType(self, value):
@@ -9242,7 +9242,7 @@ class Cells:
 
     @property
     def VerticalAlignment(self):
-        return WdCellVerticalAlignment(self.com_object.VerticalAlignment)
+        return self.com_object.VerticalAlignment
 
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
@@ -9521,7 +9521,7 @@ class Chart:
 
     @property
     def BarShape(self):
-        return XlBarShape(self.com_object.BarShape)
+        return self.com_object.BarShape
 
     @BarShape.setter
     def BarShape(self, value):
@@ -9771,7 +9771,7 @@ class Chart:
 
     @property
     def DisplayBlanksAs(self):
-        return XlDisplayBlanksAs(self.com_object.DisplayBlanksAs)
+        return self.com_object.DisplayBlanksAs
 
     @DisplayBlanksAs.setter
     def DisplayBlanksAs(self, value):
@@ -10907,7 +10907,7 @@ class ChartBorder:
 
     @property
     def LineStyle(self):
-        return XlLineStyle(self.com_object.LineStyle)
+        return self.com_object.LineStyle
 
     @LineStyle.setter
     def LineStyle(self, value):
@@ -10944,7 +10944,7 @@ class ChartBorder:
 
     @property
     def Weight(self):
-        return XlBorderWeight(self.com_object.Weight)
+        return self.com_object.Weight
 
     @Weight.setter
     def Weight(self, value):
@@ -11302,7 +11302,7 @@ class ChartFont:
 
     @property
     def Background(self):
-        return XlBackground(self.com_object.Background)
+        return self.com_object.Background
 
     @Background.setter
     def Background(self, value):
@@ -11548,7 +11548,7 @@ class ChartFont:
 
     @property
     def Underline(self):
-        return XlUnderlineStyle(self.com_object.Underline)
+        return self.com_object.Underline
 
     @Underline.setter
     def Underline(self, value):
@@ -11743,7 +11743,7 @@ class ChartGroup:
 
     @property
     def AxisGroup(self):
-        return XlAxisGroup(self.com_object.AxisGroup)
+        return self.com_object.AxisGroup
 
     @AxisGroup.setter
     def AxisGroup(self, value):
@@ -12446,7 +12446,7 @@ class ChartGroup:
 
     @property
     def SplitType(self):
-        return XlChartSplitType(self.com_object.SplitType)
+        return self.com_object.SplitType
 
     @SplitType.setter
     def SplitType(self, value):
@@ -12926,7 +12926,7 @@ class ChartTitle:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -12944,7 +12944,7 @@ class ChartTitle:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -13761,7 +13761,7 @@ class ColorFormat:
 
     @property
     def ObjectThemeColor(self):
-        return WdThemeColorIndex(self.com_object.ObjectThemeColor)
+        return self.com_object.ObjectThemeColor
 
     @ObjectThemeColor.setter
     def ObjectThemeColor(self, value):
@@ -14014,7 +14014,7 @@ class Column:
 
     @property
     def PreferredWidthType(self):
-        return WdPreferredWidthType(self.com_object.PreferredWidthType)
+        return self.com_object.PreferredWidthType
 
     @PreferredWidthType.setter
     def PreferredWidthType(self, value):
@@ -14240,7 +14240,7 @@ class Columns:
 
     @property
     def PreferredWidthType(self):
-        return WdPreferredWidthType(self.com_object.PreferredWidthType)
+        return self.com_object.PreferredWidthType
 
     @PreferredWidthType.setter
     def PreferredWidthType(self, value):
@@ -15043,7 +15043,7 @@ class ContentControl:
 
     @property
     def BuildingBlockType(self):
-        return WdBuildingBlockTypes(self.com_object.BuildingBlockType)
+        return self.com_object.BuildingBlockType
 
     @BuildingBlockType.setter
     def BuildingBlockType(self, value):
@@ -15116,7 +15116,7 @@ class ContentControl:
 
     @property
     def DateCalendarType(self):
-        return WdCalendarType(self.com_object.DateCalendarType)
+        return self.com_object.DateCalendarType
 
     @DateCalendarType.setter
     def DateCalendarType(self, value):
@@ -15172,7 +15172,7 @@ class ContentControl:
 
     @property
     def DateDisplayLocale(self):
-        return WdLanguageID(self.com_object.DateDisplayLocale)
+        return self.com_object.DateDisplayLocale
 
     @DateDisplayLocale.setter
     def DateDisplayLocale(self, value):
@@ -15200,7 +15200,7 @@ class ContentControl:
 
     @property
     def DateStorageFormat(self):
-        return WdContentControlDateStorageFormat(self.com_object.DateStorageFormat)
+        return self.com_object.DateStorageFormat
 
     @DateStorageFormat.setter
     def DateStorageFormat(self, value):
@@ -15533,7 +15533,7 @@ class ContentControl:
 
     @property
     def Type(self):
-        return WdContentControlType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -16057,7 +16057,7 @@ class CustomLabel:
 
     @property
     def PageSize(self):
-        return WdCustomLabelPageSize(self.com_object.PageSize)
+        return self.com_object.PageSize
 
     @PageSize.setter
     def PageSize(self, value):
@@ -16782,7 +16782,7 @@ class DataLabel:
 
     @property
     def Position(self):
-        return XlDataLabelPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -16800,7 +16800,7 @@ class DataLabel:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -17377,7 +17377,7 @@ class DataLabels:
 
     @property
     def Position(self):
-        return XlDataLabelPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -17395,7 +17395,7 @@ class DataLabels:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -17972,7 +17972,7 @@ class DefaultWebOptions:
 
     @property
     def BrowserLevel(self):
-        return WdBrowserLevel(self.com_object.BrowserLevel)
+        return self.com_object.BrowserLevel
 
     @BrowserLevel.setter
     def BrowserLevel(self, value):
@@ -18447,7 +18447,7 @@ class Dialog:
 
     @property
     def DefaultTab(self):
-        return WdWordDialogTab(self.com_object.DefaultTab)
+        return self.com_object.DefaultTab
 
     @DefaultTab.setter
     def DefaultTab(self, value):
@@ -18484,7 +18484,7 @@ class Dialog:
 
     @property
     def Type(self):
-        return WdWordDialog(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -18714,7 +18714,7 @@ class Dictionary:
 
     @property
     def LanguageID(self):
-        return WdLanguageID(self.com_object.LanguageID)
+        return self.com_object.LanguageID
 
     @LanguageID.setter
     def LanguageID(self, value):
@@ -18811,7 +18811,7 @@ class Dictionary:
 
     @property
     def Type(self):
-        return WdDictionaryType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -19111,7 +19111,7 @@ class DisplayUnitLabel:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -19129,7 +19129,7 @@ class DisplayUnitLabel:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -20117,7 +20117,7 @@ class Document:
 
     @property
     def FarEastLineBreakLanguage(self):
-        return WdFarEastLineBreakLanguageID(self.com_object.FarEastLineBreakLanguage)
+        return self.com_object.FarEastLineBreakLanguage
 
     @FarEastLineBreakLanguage.setter
     def FarEastLineBreakLanguage(self, value):
@@ -20145,7 +20145,7 @@ class Document:
 
     @property
     def FarEastLineBreakLevel(self):
-        return WdFarEastLineBreakLevel(self.com_object.FarEastLineBreakLevel)
+        return self.com_object.FarEastLineBreakLevel
 
     @FarEastLineBreakLevel.setter
     def FarEastLineBreakLevel(self, value):
@@ -20875,7 +20875,7 @@ class Document:
 
     @property
     def JustificationMode(self):
-        return WdJustificationMode(self.com_object.JustificationMode)
+        return self.com_object.JustificationMode
 
     @JustificationMode.setter
     def JustificationMode(self, value):
@@ -20931,7 +20931,7 @@ class Document:
 
     @property
     def Kind(self):
-        return WdDocumentKind(self.com_object.Kind)
+        return self.com_object.Kind
 
     @Kind.setter
     def Kind(self, value):
@@ -21163,7 +21163,7 @@ class Document:
 
     @property
     def OMathBreakBin(self):
-        return WdOMathBreakBin(self.com_object.OMathBreakBin)
+        return self.com_object.OMathBreakBin
 
     @OMathBreakBin.setter
     def OMathBreakBin(self, value):
@@ -21191,7 +21191,7 @@ class Document:
 
     @property
     def OMathBreakSub(self):
-        return WdOMathBreakSub(self.com_object.OMathBreakSub)
+        return self.com_object.OMathBreakSub
 
     @OMathBreakSub.setter
     def OMathBreakSub(self, value):
@@ -21275,7 +21275,7 @@ class Document:
 
     @property
     def OMathJc(self):
-        return WdOMathJc(self.com_object.OMathJc)
+        return self.com_object.OMathJc
 
     @OMathJc.setter
     def OMathJc(self, value):
@@ -21712,7 +21712,7 @@ class Document:
 
     @property
     def ProtectionType(self):
-        return WdProtectionType(self.com_object.ProtectionType)
+        return self.com_object.ProtectionType
 
     @property
     def protectiontype(self):
@@ -22292,7 +22292,7 @@ class Document:
 
     @property
     def StyleSortMethod(self):
-        return WdStyleSort(self.com_object.StyleSortMethod)
+        return self.com_object.StyleSortMethod
 
     @StyleSortMethod.setter
     def StyleSortMethod(self, value):
@@ -22431,7 +22431,7 @@ class Document:
 
     @property
     def TextLineEnding(self):
-        return WdLineEndingType(self.com_object.TextLineEnding)
+        return self.com_object.TextLineEnding
 
     @TextLineEnding.setter
     def TextLineEnding(self, value):
@@ -22543,7 +22543,7 @@ class Document:
 
     @property
     def Type(self):
-        return WdDocumentType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -24280,7 +24280,7 @@ class DropCap:
 
     @property
     def Position(self):
-        return WdDropPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -26042,7 +26042,7 @@ class EndnoteOptions:
 
     @property
     def Location(self):
-        return WdEndnoteLocation(self.com_object.Location)
+        return self.com_object.Location
 
     @Location.setter
     def Location(self, value):
@@ -26060,7 +26060,7 @@ class EndnoteOptions:
 
     @property
     def NumberingRule(self):
-        return WdNumberingRule(self.com_object.NumberingRule)
+        return self.com_object.NumberingRule
 
     @NumberingRule.setter
     def NumberingRule(self, value):
@@ -26088,7 +26088,7 @@ class EndnoteOptions:
 
     @property
     def NumberStyle(self):
-        return WdNoteNumberStyle(self.com_object.NumberStyle)
+        return self.com_object.NumberStyle
 
     @NumberStyle.setter
     def NumberStyle(self, value):
@@ -26217,7 +26217,7 @@ class Endnotes:
 
     @property
     def Location(self):
-        return WdEndnoteLocation(self.com_object.Location)
+        return self.com_object.Location
 
     @Location.setter
     def Location(self, value):
@@ -26235,7 +26235,7 @@ class Endnotes:
 
     @property
     def NumberingRule(self):
-        return WdNumberingRule(self.com_object.NumberingRule)
+        return self.com_object.NumberingRule
 
     @NumberingRule.setter
     def NumberingRule(self, value):
@@ -26263,7 +26263,7 @@ class Endnotes:
 
     @property
     def NumberStyle(self):
-        return WdNoteNumberStyle(self.com_object.NumberStyle)
+        return self.com_object.NumberStyle
 
     @NumberStyle.setter
     def NumberStyle(self, value):
@@ -26593,7 +26593,7 @@ class Envelope:
 
     @property
     def DefaultOrientation(self):
-        return WdEnvelopeOrientation(self.com_object.DefaultOrientation)
+        return self.com_object.DefaultOrientation
 
     @DefaultOrientation.setter
     def DefaultOrientation(self, value):
@@ -26705,7 +26705,7 @@ class Envelope:
 
     @property
     def FeedSource(self):
-        return WdPaperTray(self.com_object.FeedSource)
+        return self.com_object.FeedSource
 
     @FeedSource.setter
     def FeedSource(self, value):
@@ -27305,7 +27305,7 @@ class Field:
 
     @property
     def Kind(self):
-        return WdFieldKind(self.com_object.Kind)
+        return self.com_object.Kind
 
     @property
     def kind(self):
@@ -27433,7 +27433,7 @@ class Field:
 
     @property
     def Type(self):
-        return WdFieldType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -28691,7 +28691,7 @@ class Find:
 
     @property
     def LanguageID(self):
-        return WdLanguageID(self.com_object.LanguageID)
+        return self.com_object.LanguageID
 
     @LanguageID.setter
     def LanguageID(self, value):
@@ -28719,7 +28719,7 @@ class Find:
 
     @property
     def LanguageIDFarEast(self):
-        return WdLanguageID(self.com_object.LanguageIDFarEast)
+        return self.com_object.LanguageIDFarEast
 
     @LanguageIDFarEast.setter
     def LanguageIDFarEast(self, value):
@@ -28747,7 +28747,7 @@ class Find:
 
     @property
     def LanguageIDOther(self):
-        return WdLanguageID(self.com_object.LanguageIDOther)
+        return self.com_object.LanguageIDOther
 
     @LanguageIDOther.setter
     def LanguageIDOther(self, value):
@@ -29712,7 +29712,7 @@ class Font:
 
     @property
     def ColorIndex(self):
-        return WdColorIndex(self.com_object.ColorIndex)
+        return self.com_object.ColorIndex
 
     @ColorIndex.setter
     def ColorIndex(self, value):
@@ -29902,7 +29902,7 @@ class Font:
 
     @property
     def EmphasisMark(self):
-        return WdEmphasisMark(self.com_object.EmphasisMark)
+        return self.com_object.EmphasisMark
 
     @EmphasisMark.setter
     def EmphasisMark(self, value):
@@ -30595,7 +30595,7 @@ class Font:
 
     @property
     def Underline(self):
-        return WdUnderline(self.com_object.Underline)
+        return self.com_object.Underline
 
     @Underline.setter
     def Underline(self, value):
@@ -30846,7 +30846,7 @@ class FootnoteOptions:
 
     @property
     def Location(self):
-        return WdFootnoteLocation(self.com_object.Location)
+        return self.com_object.Location
 
     @Location.setter
     def Location(self, value):
@@ -30864,7 +30864,7 @@ class FootnoteOptions:
 
     @property
     def NumberingRule(self):
-        return WdNumberingRule(self.com_object.NumberingRule)
+        return self.com_object.NumberingRule
 
     @NumberingRule.setter
     def NumberingRule(self, value):
@@ -30892,7 +30892,7 @@ class FootnoteOptions:
 
     @property
     def NumberStyle(self):
-        return WdNoteNumberStyle(self.com_object.NumberStyle)
+        return self.com_object.NumberStyle
 
     @NumberStyle.setter
     def NumberStyle(self, value):
@@ -31021,7 +31021,7 @@ class Footnotes:
 
     @property
     def Location(self):
-        return WdFootnoteLocation(self.com_object.Location)
+        return self.com_object.Location
 
     @Location.setter
     def Location(self, value):
@@ -31039,7 +31039,7 @@ class Footnotes:
 
     @property
     def NumberingRule(self):
-        return WdNumberingRule(self.com_object.NumberingRule)
+        return self.com_object.NumberingRule
 
     @NumberingRule.setter
     def NumberingRule(self, value):
@@ -31067,7 +31067,7 @@ class Footnotes:
 
     @property
     def NumberStyle(self):
-        return WdNoteNumberStyle(self.com_object.NumberStyle)
+        return self.com_object.NumberStyle
 
     @NumberStyle.setter
     def NumberStyle(self, value):
@@ -31562,7 +31562,7 @@ class FormField:
 
     @property
     def Type(self):
-        return WdFieldType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -31731,7 +31731,7 @@ class Frame:
 
     @property
     def HeightRule(self):
-        return WdFrameSizeRule(self.com_object.HeightRule)
+        return self.com_object.HeightRule
 
     @HeightRule.setter
     def HeightRule(self, value):
@@ -32028,7 +32028,7 @@ class Frame:
 
     @property
     def WidthRule(self):
-        return WdFrameSizeRule(self.com_object.WidthRule)
+        return self.com_object.WidthRule
 
     @WidthRule.setter
     def WidthRule(self, value):
@@ -32279,7 +32279,7 @@ class Frameset:
 
     @property
     def FrameScrollbarType(self):
-        return WdScrollbarType(self.com_object.FrameScrollbarType)
+        return self.com_object.FrameScrollbarType
 
     @FrameScrollbarType.setter
     def FrameScrollbarType(self, value):
@@ -32381,7 +32381,7 @@ class Frameset:
 
     @property
     def HeightType(self):
-        return WdFramesetSizeType(self.com_object.HeightType)
+        return self.com_object.HeightType
 
     @HeightType.setter
     def HeightType(self, value):
@@ -32432,7 +32432,7 @@ class Frameset:
 
     @property
     def Type(self):
-        return WdFramesetType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -33112,7 +33112,7 @@ class HeaderFooter:
 
     @property
     def Index(self):
-        return WdHeaderFooterIndex(self.com_object.Index)
+        return self.com_object.Index
 
     @property
     def index(self):
@@ -33477,7 +33477,7 @@ class HorizontalLineFormat:
 
     @property
     def Alignment(self):
-        return WdHorizontalLineAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -34283,7 +34283,7 @@ class Index:
 
     @property
     def HeadingSeparator(self):
-        return WdHeadingSeparator(self.com_object.HeadingSeparator)
+        return self.com_object.HeadingSeparator
 
     @HeadingSeparator.setter
     def HeadingSeparator(self, value):
@@ -34311,7 +34311,7 @@ class Index:
 
     @property
     def IndexLanguage(self):
-        return WdLanguageID(self.com_object.IndexLanguage)
+        return self.com_object.IndexLanguage
 
     @IndexLanguage.setter
     def IndexLanguage(self, value):
@@ -34413,7 +34413,7 @@ class Index:
 
     @property
     def SortBy(self):
-        return WdIndexSortBy(self.com_object.SortBy)
+        return self.com_object.SortBy
 
     @SortBy.setter
     def SortBy(self, value):
@@ -34441,7 +34441,7 @@ class Index:
 
     @property
     def TabLeader(self):
-        return WdTabLeader(self.com_object.TabLeader)
+        return self.com_object.TabLeader
 
     @TabLeader.setter
     def TabLeader(self, value):
@@ -34469,7 +34469,7 @@ class Index:
 
     @property
     def Type(self):
-        return WdIndexType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -34537,7 +34537,7 @@ class Indexes:
 
     @property
     def Format(self):
-        return WdIndexFormat(self.com_object.Format)
+        return self.com_object.Format
 
     @Format.setter
     def Format(self, value):
@@ -35058,7 +35058,7 @@ class InlineShape:
 
     @property
     def Type(self):
-        return WdInlineShapeType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -35413,7 +35413,7 @@ class Interior:
 
     @property
     def Pattern(self):
-        return XlPattern(self.com_object.Pattern)
+        return self.com_object.Pattern
 
     @Pattern.setter
     def Pattern(self, value):
@@ -35459,7 +35459,7 @@ class Interior:
 
     @property
     def PatternColorIndex(self):
-        return XlColorIndex(self.com_object.PatternColorIndex)
+        return self.com_object.PatternColorIndex
 
     @PatternColorIndex.setter
     def PatternColorIndex(self, value):
@@ -35543,7 +35543,7 @@ class KeyBinding:
 
     @property
     def KeyCategory(self):
-        return WdKeyCategory(self.com_object.KeyCategory)
+        return self.com_object.KeyCategory
 
     @property
     def keycategory(self):
@@ -35807,7 +35807,7 @@ class KeysBoundTo:
 
     @property
     def KeyCategory(self):
-        return WdKeyCategory(self.com_object.KeyCategory)
+        return self.com_object.KeyCategory
 
     @property
     def keycategory(self):
@@ -35956,7 +35956,7 @@ class Language:
 
     @property
     def ID(self):
-        return WdLanguageID(self.com_object.ID)
+        return self.com_object.ID
 
     @property
     def id(self):
@@ -36002,7 +36002,7 @@ class Language:
 
     @property
     def SpellingDictionaryType(self):
-        return WdDictionaryType(self.com_object.SpellingDictionaryType)
+        return self.com_object.SpellingDictionaryType
 
     @SpellingDictionaryType.setter
     def SpellingDictionaryType(self, value):
@@ -36269,7 +36269,7 @@ class Legend:
 
     @property
     def Position(self):
-        return XlLegendPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -36658,7 +36658,7 @@ class LegendKey:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -36714,7 +36714,7 @@ class LegendKey:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -36770,7 +36770,7 @@ class LegendKey:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -36807,7 +36807,7 @@ class LegendKey:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -37158,7 +37158,7 @@ class LetterContent:
 
     @property
     def LetterheadLocation(self):
-        return WdLetterheadLocation(self.com_object.LetterheadLocation)
+        return self.com_object.LetterheadLocation
 
     @LetterheadLocation.setter
     def LetterheadLocation(self, value):
@@ -37214,7 +37214,7 @@ class LetterContent:
 
     @property
     def LetterStyle(self):
-        return WdLetterStyle(self.com_object.LetterStyle)
+        return self.com_object.LetterStyle
 
     @LetterStyle.setter
     def LetterStyle(self, value):
@@ -37363,7 +37363,7 @@ class LetterContent:
 
     @property
     def RecipientGender(self):
-        return WdSalutationGender(self.com_object.RecipientGender)
+        return self.com_object.RecipientGender
 
     @RecipientGender.setter
     def RecipientGender(self, value):
@@ -37521,7 +37521,7 @@ class LetterContent:
 
     @property
     def SalutationType(self):
-        return WdSalutationType(self.com_object.SalutationType)
+        return self.com_object.SalutationType
 
     @SalutationType.setter
     def SalutationType(self, value):
@@ -37633,7 +37633,7 @@ class LetterContent:
 
     @property
     def SenderGender(self):
-        return WdSalutationGender(self.com_object.SenderGender)
+        return self.com_object.SenderGender
 
     @SenderGender.setter
     def SenderGender(self, value):
@@ -37842,7 +37842,7 @@ class Line:
 
     @property
     def LineType(self):
-        return wdLineType(self.com_object.LineType)
+        return self.com_object.LineType
 
     @property
     def linetype(self):
@@ -38411,7 +38411,7 @@ class LineNumbering:
 
     @property
     def RestartMode(self):
-        return WdNumberingRule(self.com_object.RestartMode)
+        return self.com_object.RestartMode
 
     @RestartMode.setter
     def RestartMode(self, value):
@@ -38684,7 +38684,7 @@ class LinkFormat:
 
     @property
     def Type(self):
-        return WdLinkType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -39448,7 +39448,7 @@ class ListLevel:
 
     @property
     def Alignment(self):
-        return WdListLevelAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -39758,7 +39758,7 @@ class ListLevel:
 
     @property
     def TrailingCharacter(self):
-        return WdTrailingCharacter(self.com_object.TrailingCharacter)
+        return self.com_object.TrailingCharacter
 
     @TrailingCharacter.setter
     def TrailingCharacter(self, value):
@@ -40193,7 +40193,7 @@ class MailingLabel:
 
     @property
     def DefaultLaserTray(self):
-        return WdPaperTray(self.com_object.DefaultLaserTray)
+        return self.com_object.DefaultLaserTray
 
     @DefaultLaserTray.setter
     def DefaultLaserTray(self, value):
@@ -40353,7 +40353,7 @@ class MailMerge:
 
     @property
     def Destination(self):
-        return WdMailMergeDestination(self.com_object.Destination)
+        return self.com_object.Destination
 
     @Destination.setter
     def Destination(self, value):
@@ -40464,7 +40464,7 @@ class MailMerge:
 
     @property
     def MailFormat(self):
-        return WdMailMergeMailFormat(self.com_object.MailFormat)
+        return self.com_object.MailFormat
 
     @MailFormat.setter
     def MailFormat(self, value):
@@ -40520,7 +40520,7 @@ class MailMerge:
 
     @property
     def MainDocumentType(self):
-        return WdMailMergeMainDocType(self.com_object.MainDocumentType)
+        return self.com_object.MainDocumentType
 
     @MainDocumentType.setter
     def MainDocumentType(self, value):
@@ -40585,7 +40585,7 @@ class MailMerge:
 
     @property
     def State(self):
-        return WdMailMergeState(self.com_object.State)
+        return self.com_object.State
 
     @property
     def state(self):
@@ -40917,7 +40917,7 @@ class MailMergeDataSource:
 
     @property
     def ActiveRecord(self):
-        return WdMailMergeActiveRecord(self.com_object.ActiveRecord)
+        return self.com_object.ActiveRecord
 
     @ActiveRecord.setter
     def ActiveRecord(self, value):
@@ -41047,7 +41047,7 @@ class MailMergeDataSource:
 
     @property
     def HeaderSourceType(self):
-        return WdMailMergeDataSource(self.com_object.HeaderSourceType)
+        return self.com_object.HeaderSourceType
 
     @property
     def headersourcetype(self):
@@ -41251,7 +41251,7 @@ class MailMergeDataSource:
 
     @property
     def Type(self):
-        return WdMailMergeDataSource(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -41396,7 +41396,7 @@ class MailMergeField:
 
     @property
     def Type(self):
-        return WdFieldType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -42804,7 +42804,7 @@ class OMath:
 
     @property
     def Justification(self):
-        return WdOMathJc(self.com_object.Justification)
+        return self.com_object.Justification
 
     @Justification.setter
     def Justification(self, value):
@@ -42924,7 +42924,7 @@ class OMath:
 
     @property
     def Type(self):
-        return WdOMathType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -44161,7 +44161,7 @@ class OMathDelim:
 
     @property
     def Shape(self):
-        return WdOMathShapeType(self.com_object.Shape)
+        return self.com_object.Shape
 
     @Shape.setter
     def Shape(self, value):
@@ -44185,7 +44185,7 @@ class OMathEqArray:
 
     @property
     def Align(self):
-        return WdOMathVertAlignType(self.com_object.Align)
+        return self.com_object.Align
 
     @Align.setter
     def Align(self, value):
@@ -44323,7 +44323,7 @@ class OMathEqArray:
 
     @property
     def RowSpacingRule(self):
-        return WdOMathSpacingRule(self.com_object.RowSpacingRule)
+        return self.com_object.RowSpacingRule
 
     @RowSpacingRule.setter
     def RowSpacingRule(self, value):
@@ -44402,7 +44402,7 @@ class OMathFrac:
 
     @property
     def Type(self):
-        return WdOMathFracType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -44757,7 +44757,7 @@ class OMathFunction:
 
     @property
     def Type(self):
-        return WdOMathFunctionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -45079,7 +45079,7 @@ class OMathMat:
 
     @property
     def Align(self):
-        return WdOMathVertAlignType(self.com_object.Align)
+        return self.com_object.Align
 
     @Align.setter
     def Align(self, value):
@@ -45146,7 +45146,7 @@ class OMathMat:
 
     @property
     def ColGapRule(self):
-        return WdOMathSpacingRule(self.com_object.ColGapRule)
+        return self.com_object.ColGapRule
 
     @ColGapRule.setter
     def ColGapRule(self, value):
@@ -45294,7 +45294,7 @@ class OMathMat:
 
     @property
     def RowSpacingRule(self):
-        return WdOMathSpacingRule(self.com_object.RowSpacingRule)
+        return self.com_object.RowSpacingRule
 
     @RowSpacingRule.setter
     def RowSpacingRule(self, value):
@@ -45328,7 +45328,7 @@ class OMathMatCol:
 
     @property
     def Align(self):
-        return WdOMathHorizAlignType(self.com_object.Align)
+        return self.com_object.Align
 
     @Align.setter
     def Align(self, value):
@@ -46939,7 +46939,7 @@ class Options:
 
     @property
     def ArabicMode(self):
-        return WdAraSpeller(self.com_object.ArabicMode)
+        return self.com_object.ArabicMode
 
     @ArabicMode.setter
     def ArabicMode(self, value):
@@ -46967,7 +46967,7 @@ class Options:
 
     @property
     def ArabicNumeral(self):
-        return WdArabicNumeral(self.com_object.ArabicNumeral)
+        return self.com_object.ArabicNumeral
 
     @ArabicNumeral.setter
     def ArabicNumeral(self, value):
@@ -48423,7 +48423,7 @@ class Options:
 
     @property
     def CommentsColor(self):
-        return WdColorIndex(self.com_object.CommentsColor)
+        return self.com_object.CommentsColor
 
     @CommentsColor.setter
     def CommentsColor(self, value):
@@ -48600,7 +48600,7 @@ class Options:
 
     @property
     def CursorMovement(self):
-        return WdCursorMovement(self.com_object.CursorMovement)
+        return self.com_object.CursorMovement
 
     @CursorMovement.setter
     def CursorMovement(self, value):
@@ -48656,7 +48656,7 @@ class Options:
 
     @property
     def DefaultBorderColorIndex(self):
-        return WdColorIndex(self.com_object.DefaultBorderColorIndex)
+        return self.com_object.DefaultBorderColorIndex
 
     @DefaultBorderColorIndex.setter
     def DefaultBorderColorIndex(self, value):
@@ -48684,7 +48684,7 @@ class Options:
 
     @property
     def DefaultBorderLineStyle(self):
-        return WdLineStyle(self.com_object.DefaultBorderLineStyle)
+        return self.com_object.DefaultBorderLineStyle
 
     @DefaultBorderLineStyle.setter
     def DefaultBorderLineStyle(self, value):
@@ -48712,7 +48712,7 @@ class Options:
 
     @property
     def DefaultBorderLineWidth(self):
-        return WdLineWidth(self.com_object.DefaultBorderLineWidth)
+        return self.com_object.DefaultBorderLineWidth
 
     @DefaultBorderLineWidth.setter
     def DefaultBorderLineWidth(self, value):
@@ -48908,7 +48908,7 @@ class Options:
 
     @property
     def DefaultTrayID(self):
-        return WdPaperTray(self.com_object.DefaultTrayID)
+        return self.com_object.DefaultTrayID
 
     @DefaultTrayID.setter
     def DefaultTrayID(self, value):
@@ -48936,7 +48936,7 @@ class Options:
 
     @property
     def DeletedCellColor(self):
-        return WdCellColor(self.com_object.DeletedCellColor)
+        return self.com_object.DeletedCellColor
 
     @DeletedCellColor.setter
     def DeletedCellColor(self, value):
@@ -48964,7 +48964,7 @@ class Options:
 
     @property
     def DeletedTextColor(self):
-        return WdColorIndex(self.com_object.DeletedTextColor)
+        return self.com_object.DeletedTextColor
 
     @DeletedTextColor.setter
     def DeletedTextColor(self, value):
@@ -48992,7 +48992,7 @@ class Options:
 
     @property
     def DeletedTextMark(self):
-        return WdDeletedTextMark(self.com_object.DeletedTextMark)
+        return self.com_object.DeletedTextMark
 
     @DeletedTextMark.setter
     def DeletedTextMark(self, value):
@@ -49188,7 +49188,7 @@ class Options:
 
     @property
     def DocumentViewDirection(self):
-        return WdDocumentViewDirection(self.com_object.DocumentViewDirection)
+        return self.com_object.DocumentViewDirection
 
     @DocumentViewDirection.setter
     def DocumentViewDirection(self, value):
@@ -49510,7 +49510,7 @@ class Options:
 
     @property
     def FrenchReform(self):
-        return WdFrenchSpeller(self.com_object.FrenchReform)
+        return self.com_object.FrenchReform
 
     @FrenchReform.setter
     def FrenchReform(self, value):
@@ -49678,7 +49678,7 @@ class Options:
 
     @property
     def HebrewMode(self):
-        return WdHebSpellStart(self.com_object.HebrewMode)
+        return self.com_object.HebrewMode
 
     @HebrewMode.setter
     def HebrewMode(self, value):
@@ -49846,7 +49846,7 @@ class Options:
 
     @property
     def InsertedCellColor(self):
-        return WdCellColor(self.com_object.InsertedCellColor)
+        return self.com_object.InsertedCellColor
 
     @InsertedCellColor.setter
     def InsertedCellColor(self, value):
@@ -49874,7 +49874,7 @@ class Options:
 
     @property
     def InsertedTextColor(self):
-        return WdColorIndex(self.com_object.InsertedTextColor)
+        return self.com_object.InsertedTextColor
 
     @InsertedTextColor.setter
     def InsertedTextColor(self, value):
@@ -49986,7 +49986,7 @@ class Options:
 
     @property
     def InterpretHighAnsi(self):
-        return WdHighAnsiText(self.com_object.InterpretHighAnsi)
+        return self.com_object.InterpretHighAnsi
 
     @InterpretHighAnsi.setter
     def InterpretHighAnsi(self, value):
@@ -50602,7 +50602,7 @@ class Options:
 
     @property
     def MeasurementUnit(self):
-        return WdMeasurementUnits(self.com_object.MeasurementUnit)
+        return self.com_object.MeasurementUnit
 
     @MeasurementUnit.setter
     def MeasurementUnit(self, value):
@@ -50630,7 +50630,7 @@ class Options:
 
     @property
     def MergedCellColor(self):
-        return WdCellColor(self.com_object.MergedCellColor)
+        return self.com_object.MergedCellColor
 
     @MergedCellColor.setter
     def MergedCellColor(self, value):
@@ -50658,7 +50658,7 @@ class Options:
 
     @property
     def MonthNames(self):
-        return WdMonthNames(self.com_object.MonthNames)
+        return self.com_object.MonthNames
 
     @MonthNames.setter
     def MonthNames(self, value):
@@ -50686,7 +50686,7 @@ class Options:
 
     @property
     def MoveFromTextColor(self):
-        return WdColorIndex(self.com_object.MoveFromTextColor)
+        return self.com_object.MoveFromTextColor
 
     @MoveFromTextColor.setter
     def MoveFromTextColor(self, value):
@@ -50714,7 +50714,7 @@ class Options:
 
     @property
     def MoveFromTextMark(self):
-        return WdMoveFromTextMark(self.com_object.MoveFromTextMark)
+        return self.com_object.MoveFromTextMark
 
     @MoveFromTextMark.setter
     def MoveFromTextMark(self, value):
@@ -50742,7 +50742,7 @@ class Options:
 
     @property
     def MoveToTextColor(self):
-        return WdColorIndex(self.com_object.MoveToTextColor)
+        return self.com_object.MoveToTextColor
 
     @MoveToTextColor.setter
     def MoveToTextColor(self, value):
@@ -50770,7 +50770,7 @@ class Options:
 
     @property
     def MoveToTextMark(self):
-        return WdMoveToTextMark(self.com_object.MoveToTextMark)
+        return self.com_object.MoveToTextMark
 
     @MoveToTextMark.setter
     def MoveToTextMark(self, value):
@@ -50798,7 +50798,7 @@ class Options:
 
     @property
     def MultipleWordConversionsMode(self):
-        return WdMultipleWordConversionsMode(self.com_object.MultipleWordConversionsMode)
+        return self.com_object.MultipleWordConversionsMode
 
     @MultipleWordConversionsMode.setter
     def MultipleWordConversionsMode(self, value):
@@ -51109,7 +51109,7 @@ class Options:
 
     @property
     def PasteFormatBetweenDocuments(self):
-        return WdPasteOptions(self.com_object.PasteFormatBetweenDocuments)
+        return self.com_object.PasteFormatBetweenDocuments
 
     @PasteFormatBetweenDocuments.setter
     def PasteFormatBetweenDocuments(self, value):
@@ -51137,7 +51137,7 @@ class Options:
 
     @property
     def PasteFormatBetweenStyledDocuments(self):
-        return WdPasteOptions(self.com_object.PasteFormatBetweenStyledDocuments)
+        return self.com_object.PasteFormatBetweenStyledDocuments
 
     @PasteFormatBetweenStyledDocuments.setter
     def PasteFormatBetweenStyledDocuments(self, value):
@@ -51165,7 +51165,7 @@ class Options:
 
     @property
     def PasteFormatFromExternalSource(self):
-        return WdPasteOptions(self.com_object.PasteFormatFromExternalSource)
+        return self.com_object.PasteFormatFromExternalSource
 
     @PasteFormatFromExternalSource.setter
     def PasteFormatFromExternalSource(self, value):
@@ -51193,7 +51193,7 @@ class Options:
 
     @property
     def PasteFormatWithinDocument(self):
-        return WdPasteOptions(self.com_object.PasteFormatWithinDocument)
+        return self.com_object.PasteFormatWithinDocument
 
     @PasteFormatWithinDocument.setter
     def PasteFormatWithinDocument(self, value):
@@ -51921,7 +51921,7 @@ class Options:
 
     @property
     def RevisedLinesColor(self):
-        return WdColorIndex(self.com_object.RevisedLinesColor)
+        return self.com_object.RevisedLinesColor
 
     @RevisedLinesColor.setter
     def RevisedLinesColor(self, value):
@@ -51949,7 +51949,7 @@ class Options:
 
     @property
     def RevisedLinesMark(self):
-        return WdRevisedLinesMark(self.com_object.RevisedLinesMark)
+        return self.com_object.RevisedLinesMark
 
     @RevisedLinesMark.setter
     def RevisedLinesMark(self, value):
@@ -51977,7 +51977,7 @@ class Options:
 
     @property
     def RevisedPropertiesColor(self):
-        return WdColorIndex(self.com_object.RevisedPropertiesColor)
+        return self.com_object.RevisedPropertiesColor
 
     @RevisedPropertiesColor.setter
     def RevisedPropertiesColor(self, value):
@@ -52005,7 +52005,7 @@ class Options:
 
     @property
     def RevisedPropertiesMark(self):
-        return WdRevisedPropertiesMark(self.com_object.RevisedPropertiesMark)
+        return self.com_object.RevisedPropertiesMark
 
     @RevisedPropertiesMark.setter
     def RevisedPropertiesMark(self, value):
@@ -52033,7 +52033,7 @@ class Options:
 
     @property
     def RevisionsBalloonPrintOrientation(self):
-        return WdRevisionsBalloonPrintOrientation(self.com_object.RevisionsBalloonPrintOrientation)
+        return self.com_object.RevisionsBalloonPrintOrientation
 
     @RevisionsBalloonPrintOrientation.setter
     def RevisionsBalloonPrintOrientation(self, value):
@@ -52635,7 +52635,7 @@ class Options:
 
     @property
     def SplitCellColor(self):
-        return WdCellColor(self.com_object.SplitCellColor)
+        return self.com_object.SplitCellColor
 
     @SplitCellColor.setter
     def SplitCellColor(self, value):
@@ -53223,7 +53223,7 @@ class Options:
 
     @property
     def VisualSelection(self):
-        return WdVisualSelection(self.com_object.VisualSelection)
+        return self.com_object.VisualSelection
 
     @VisualSelection.setter
     def VisualSelection(self, value):
@@ -53507,7 +53507,7 @@ class PageNumber:
 
     @property
     def Alignment(self):
-        return WdPageNumberAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -53607,7 +53607,7 @@ class PageNumbers:
 
     @property
     def ChapterPageSeparator(self):
-        return WdSeparatorType(self.com_object.ChapterPageSeparator)
+        return self.com_object.ChapterPageSeparator
 
     @ChapterPageSeparator.setter
     def ChapterPageSeparator(self, value):
@@ -53737,7 +53737,7 @@ class PageNumbers:
 
     @property
     def NumberStyle(self):
-        return WdPageNumberStyle(self.com_object.NumberStyle)
+        return self.com_object.NumberStyle
 
     @NumberStyle.setter
     def NumberStyle(self, value):
@@ -54122,7 +54122,7 @@ class PageSetup:
 
     @property
     def FirstPageTray(self):
-        return WdPaperTray(self.com_object.FirstPageTray)
+        return self.com_object.FirstPageTray
 
     @FirstPageTray.setter
     def FirstPageTray(self, value):
@@ -54196,7 +54196,7 @@ class PageSetup:
 
     @property
     def GutterPos(self):
-        return WdGutterStyle(self.com_object.GutterPos)
+        return self.com_object.GutterPos
 
     @GutterPos.setter
     def GutterPos(self, value):
@@ -54224,7 +54224,7 @@ class PageSetup:
 
     @property
     def GutterStyle(self):
-        return WdGutterStyleOld(self.com_object.GutterStyle)
+        return self.com_object.GutterStyle
 
     @GutterStyle.setter
     def GutterStyle(self, value):
@@ -54280,7 +54280,7 @@ class PageSetup:
 
     @property
     def LayoutMode(self):
-        return WdLayoutMode(self.com_object.LayoutMode)
+        return self.com_object.LayoutMode
 
     @LayoutMode.setter
     def LayoutMode(self, value):
@@ -54448,7 +54448,7 @@ class PageSetup:
 
     @property
     def Orientation(self):
-        return WdOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -54466,7 +54466,7 @@ class PageSetup:
 
     @property
     def OtherPagesTray(self):
-        return WdPaperTray(self.com_object.OtherPagesTray)
+        return self.com_object.OtherPagesTray
 
     @OtherPagesTray.setter
     def OtherPagesTray(self, value):
@@ -54550,7 +54550,7 @@ class PageSetup:
 
     @property
     def PaperSize(self):
-        return WdPaperSize(self.com_object.PaperSize)
+        return self.com_object.PaperSize
 
     @PaperSize.setter
     def PaperSize(self, value):
@@ -54615,7 +54615,7 @@ class PageSetup:
 
     @property
     def SectionDirection(self):
-        return WdSectionDirection(self.com_object.SectionDirection)
+        return self.com_object.SectionDirection
 
     @SectionDirection.setter
     def SectionDirection(self, value):
@@ -54643,7 +54643,7 @@ class PageSetup:
 
     @property
     def SectionStart(self):
-        return WdSectionStart(self.com_object.SectionStart)
+        return self.com_object.SectionStart
 
     @SectionStart.setter
     def SectionStart(self, value):
@@ -54797,7 +54797,7 @@ class PageSetup:
 
     @property
     def VerticalAlignment(self):
-        return WdVerticalAlignment(self.com_object.VerticalAlignment)
+        return self.com_object.VerticalAlignment
 
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
@@ -55332,7 +55332,7 @@ class Paragraph:
 
     @property
     def Alignment(self):
-        return WdParagraphAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -55387,7 +55387,7 @@ class Paragraph:
 
     @property
     def BaseLineAlignment(self):
-        return WdBaselineAlignment(self.com_object.BaseLineAlignment)
+        return self.com_object.BaseLineAlignment
 
     @BaseLineAlignment.setter
     def BaseLineAlignment(self, value):
@@ -55917,7 +55917,7 @@ class Paragraph:
 
     @property
     def LineSpacingRule(self):
-        return WdLineSpacing(self.com_object.LineSpacingRule)
+        return self.com_object.LineSpacingRule
 
     @LineSpacingRule.setter
     def LineSpacingRule(self, value):
@@ -56074,7 +56074,7 @@ class Paragraph:
 
     @property
     def OutlineLevel(self):
-        return WdOutlineLevel(self.com_object.OutlineLevel)
+        return self.com_object.OutlineLevel
 
     @OutlineLevel.setter
     def OutlineLevel(self, value):
@@ -56148,7 +56148,7 @@ class Paragraph:
 
     @property
     def ReadingOrder(self):
-        return WdReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -56371,7 +56371,7 @@ class Paragraph:
 
     @property
     def TextboxTightWrap(self):
-        return WdTextboxTightWrap(self.com_object.TextboxTightWrap)
+        return self.com_object.TextboxTightWrap
 
     @TextboxTightWrap.setter
     def TextboxTightWrap(self, value):
@@ -56757,7 +56757,7 @@ class ParagraphFormat:
 
     @property
     def Alignment(self):
-        return WdParagraphAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -56812,7 +56812,7 @@ class ParagraphFormat:
 
     @property
     def BaseLineAlignment(self):
-        return WdBaselineAlignment(self.com_object.BaseLineAlignment)
+        return self.com_object.BaseLineAlignment
 
     @BaseLineAlignment.setter
     def BaseLineAlignment(self, value):
@@ -57249,7 +57249,7 @@ class ParagraphFormat:
 
     @property
     def LineSpacingRule(self):
-        return WdLineSpacing(self.com_object.LineSpacingRule)
+        return self.com_object.LineSpacingRule
 
     @LineSpacingRule.setter
     def LineSpacingRule(self, value):
@@ -57389,7 +57389,7 @@ class ParagraphFormat:
 
     @property
     def OutlineLevel(self):
-        return WdOutlineLevel(self.com_object.OutlineLevel)
+        return self.com_object.OutlineLevel
 
     @OutlineLevel.setter
     def OutlineLevel(self, value):
@@ -57454,7 +57454,7 @@ class ParagraphFormat:
 
     @property
     def ReadingOrder(self):
-        return WdReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -57677,7 +57677,7 @@ class ParagraphFormat:
 
     @property
     def TextboxTightWrap(self):
-        return WdTextboxTightWrap(self.com_object.TextboxTightWrap)
+        return self.com_object.TextboxTightWrap
 
     @TextboxTightWrap.setter
     def TextboxTightWrap(self, value):
@@ -57943,7 +57943,7 @@ class Paragraphs:
 
     @property
     def Alignment(self):
-        return WdParagraphAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -57998,7 +57998,7 @@ class Paragraphs:
 
     @property
     def BaseLineAlignment(self):
-        return WdBaselineAlignment(self.com_object.BaseLineAlignment)
+        return self.com_object.BaseLineAlignment
 
     @BaseLineAlignment.setter
     def BaseLineAlignment(self, value):
@@ -58443,7 +58443,7 @@ class Paragraphs:
 
     @property
     def LineSpacingRule(self):
-        return WdLineSpacing(self.com_object.LineSpacingRule)
+        return self.com_object.LineSpacingRule
 
     @LineSpacingRule.setter
     def LineSpacingRule(self, value):
@@ -58555,7 +58555,7 @@ class Paragraphs:
 
     @property
     def OutlineLevel(self):
-        return WdOutlineLevel(self.com_object.OutlineLevel)
+        return self.com_object.OutlineLevel
 
     @OutlineLevel.setter
     def OutlineLevel(self, value):
@@ -58620,7 +58620,7 @@ class Paragraphs:
 
     @property
     def ReadingOrder(self):
-        return WdReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -59613,7 +59613,7 @@ class PlotArea:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -59992,7 +59992,7 @@ class Point:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -60048,7 +60048,7 @@ class Point:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -60104,7 +60104,7 @@ class Point:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -60150,7 +60150,7 @@ class Point:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -60436,7 +60436,7 @@ class ProofreadingErrors:
 
     @property
     def Type(self):
-        return WdProofreadingErrorType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -60859,7 +60859,7 @@ class Range:
 
     @property
     def Case(self):
-        return WdCharacterCase(self.com_object.Case)
+        return self.com_object.Case
 
     @Case.setter
     def Case(self, value):
@@ -60912,7 +60912,7 @@ class Range:
 
     @property
     def CharacterWidth(self):
-        return WdCharacterWidth(self.com_object.CharacterWidth)
+        return self.com_object.CharacterWidth
 
     @CharacterWidth.setter
     def CharacterWidth(self, value):
@@ -61073,7 +61073,7 @@ class Range:
 
     @property
     def EmphasisMark(self):
-        return WdEmphasisMark(self.com_object.EmphasisMark)
+        return self.com_object.EmphasisMark
 
     @EmphasisMark.setter
     def EmphasisMark(self, value):
@@ -61336,7 +61336,7 @@ class Range:
 
     @property
     def HighlightColorIndex(self):
-        return WdColorIndex(self.com_object.HighlightColorIndex)
+        return self.com_object.HighlightColorIndex
 
     @HighlightColorIndex.setter
     def HighlightColorIndex(self, value):
@@ -61364,7 +61364,7 @@ class Range:
 
     @property
     def HorizontalInVertical(self):
-        return WdHorizontalInVerticalType(self.com_object.HorizontalInVertical)
+        return self.com_object.HorizontalInVertical
 
     @HorizontalInVertical.setter
     def HorizontalInVertical(self, value):
@@ -61529,7 +61529,7 @@ class Range:
 
     @property
     def Kana(self):
-        return WdKana(self.com_object.Kana)
+        return self.com_object.Kana
 
     @Kana.setter
     def Kana(self, value):
@@ -61575,7 +61575,7 @@ class Range:
 
     @property
     def LanguageID(self):
-        return WdLanguageID(self.com_object.LanguageID)
+        return self.com_object.LanguageID
 
     @LanguageID.setter
     def LanguageID(self, value):
@@ -61603,7 +61603,7 @@ class Range:
 
     @property
     def LanguageIDFarEast(self):
-        return WdLanguageID(self.com_object.LanguageIDFarEast)
+        return self.com_object.LanguageIDFarEast
 
     @LanguageIDFarEast.setter
     def LanguageIDFarEast(self, value):
@@ -61631,7 +61631,7 @@ class Range:
 
     @property
     def LanguageIDOther(self):
-        return WdLanguageID(self.com_object.LanguageIDOther)
+        return self.com_object.LanguageIDOther
 
     @LanguageIDOther.setter
     def LanguageIDOther(self, value):
@@ -61766,7 +61766,7 @@ class Range:
 
     @property
     def Orientation(self):
-        return WdTextOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -62070,7 +62070,7 @@ class Range:
 
     @property
     def StoryType(self):
-        return WdStoryType(self.com_object.StoryType)
+        return self.com_object.StoryType
 
     @property
     def storytype(self):
@@ -62222,7 +62222,7 @@ class Range:
 
     @property
     def TwoLinesInOne(self):
-        return WdTwoLinesInOneType(self.com_object.TwoLinesInOne)
+        return self.com_object.TwoLinesInOne
 
     @TwoLinesInOne.setter
     def TwoLinesInOne(self, value):
@@ -62250,7 +62250,7 @@ class Range:
 
     @property
     def Underline(self):
-        return WdUnderline(self.com_object.Underline)
+        return self.com_object.Underline
 
     @Underline.setter
     def Underline(self, value):
@@ -63626,7 +63626,7 @@ class Rectangle:
 
     @property
     def RectangleType(self):
-        return WdRectangleType(self.com_object.RectangleType)
+        return self.com_object.RectangleType
 
     @property
     def rectangletype(self):
@@ -64038,7 +64038,7 @@ class Replacement:
 
     @property
     def LanguageID(self):
-        return WdLanguageID(self.com_object.LanguageID)
+        return self.com_object.LanguageID
 
     @LanguageID.setter
     def LanguageID(self, value):
@@ -64066,7 +64066,7 @@ class Replacement:
 
     @property
     def LanguageIDFarEast(self):
-        return WdLanguageID(self.com_object.LanguageIDFarEast)
+        return self.com_object.LanguageIDFarEast
 
     @LanguageIDFarEast.setter
     def LanguageIDFarEast(self, value):
@@ -64159,7 +64159,7 @@ class Replacement:
 
     @property
     def Style(self):
-        return WdBuiltinStyle(self.com_object.Style)
+        return self.com_object.Style
 
     @Style.setter
     def Style(self, value):
@@ -64527,7 +64527,7 @@ class Revision:
 
     @property
     def Type(self):
-        return WdRevisionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -64683,7 +64683,7 @@ class Row:
 
     @property
     def Alignment(self):
-        return WdRowAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -64814,7 +64814,7 @@ class Row:
 
     @property
     def HeightRule(self):
-        return WdRowHeightRule(self.com_object.HeightRule)
+        return self.com_object.HeightRule
 
     @HeightRule.setter
     def HeightRule(self, value):
@@ -65087,7 +65087,7 @@ class Rows:
 
     @property
     def Alignment(self):
-        return WdRowAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -65364,7 +65364,7 @@ class Rows:
 
     @property
     def HeightRule(self):
-        return WdRowHeightRule(self.com_object.HeightRule)
+        return self.com_object.HeightRule
 
     @HeightRule.setter
     def HeightRule(self, value):
@@ -65573,7 +65573,7 @@ class Rows:
 
     @property
     def TableDirection(self):
-        return WdTableDirection(self.com_object.TableDirection)
+        return self.com_object.TableDirection
 
     @TableDirection.setter
     def TableDirection(self, value):
@@ -66250,7 +66250,7 @@ class Selection:
 
     @property
     def Flags(self):
-        return WdSelectionFlags(self.com_object.Flags)
+        return self.com_object.Flags
 
     @Flags.setter
     def Flags(self, value):
@@ -66521,7 +66521,7 @@ class Selection:
 
     @property
     def LanguageIDFarEast(self):
-        return WdLanguageID(self.com_object.LanguageIDFarEast)
+        return self.com_object.LanguageIDFarEast
 
     @LanguageIDFarEast.setter
     def LanguageIDFarEast(self, value):
@@ -66549,7 +66549,7 @@ class Selection:
 
     @property
     def LanguageIDOther(self):
-        return WdLanguageID(self.com_object.LanguageIDOther)
+        return self.com_object.LanguageIDOther
 
     @LanguageIDOther.setter
     def LanguageIDOther(self, value):
@@ -66619,7 +66619,7 @@ class Selection:
 
     @property
     def Orientation(self):
-        return WdTextOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -66830,7 +66830,7 @@ class Selection:
 
     @property
     def StoryType(self):
-        return WdStoryType(self.com_object.StoryType)
+        return self.com_object.StoryType
 
     @property
     def storytype(self):
@@ -66844,7 +66844,7 @@ class Selection:
 
     @property
     def Style(self):
-        return WdBuiltinStyle(self.com_object.Style)
+        return self.com_object.Style
 
     @Style.setter
     def Style(self, value):
@@ -66903,7 +66903,7 @@ class Selection:
 
     @property
     def Type(self):
-        return WdSelectionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -68492,7 +68492,7 @@ class Series:
 
     @property
     def AxisGroup(self):
-        return XlAxisGroup(self.com_object.AxisGroup)
+        return self.com_object.AxisGroup
 
     @AxisGroup.setter
     def AxisGroup(self, value):
@@ -68520,7 +68520,7 @@ class Series:
 
     @property
     def BarShape(self):
-        return XlBarShape(self.com_object.BarShape)
+        return self.com_object.BarShape
 
     @BarShape.setter
     def BarShape(self, value):
@@ -69031,7 +69031,7 @@ class Series:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -69087,7 +69087,7 @@ class Series:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -69143,7 +69143,7 @@ class Series:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -69226,7 +69226,7 @@ class Series:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -69854,7 +69854,7 @@ class Shading:
 
     @property
     def Texture(self):
-        return WdTextureIndex(self.com_object.Texture)
+        return self.com_object.Texture
 
     @Texture.setter
     def Texture(self, value):
@@ -70541,7 +70541,7 @@ class Shape:
 
     @property
     def Left(self):
-        return WdShapePosition(self.com_object.Left)
+        return self.com_object.Left
 
     @Left.setter
     def Left(self, value):
@@ -70795,7 +70795,7 @@ class Shape:
 
     @property
     def RelativeHorizontalSize(self):
-        return WdRelativeVerticalSize(self.com_object.RelativeHorizontalSize)
+        return self.com_object.RelativeHorizontalSize
 
     @RelativeHorizontalSize.setter
     def RelativeHorizontalSize(self, value):
@@ -70851,7 +70851,7 @@ class Shape:
 
     @property
     def RelativeVerticalSize(self):
-        return WdRelativeVerticalSize(self.com_object.RelativeVerticalSize)
+        return self.com_object.RelativeVerticalSize
 
     @RelativeVerticalSize.setter
     def RelativeVerticalSize(self, value):
@@ -71965,7 +71965,7 @@ class ShapeRange:
 
     @property
     def Left(self):
-        return WdShapePosition(self.com_object.Left)
+        return self.com_object.Left
 
     @Left.setter
     def Left(self, value):
@@ -72191,7 +72191,7 @@ class ShapeRange:
 
     @property
     def RelativeHorizontalSize(self):
-        return WdRelativeHorizontalSize(self.com_object.RelativeHorizontalSize)
+        return self.com_object.RelativeHorizontalSize
 
     @RelativeHorizontalSize.setter
     def RelativeHorizontalSize(self, value):
@@ -72247,7 +72247,7 @@ class ShapeRange:
 
     @property
     def RelativeVerticalSize(self):
-        return WdRelativeVerticalSize(self.com_object.RelativeVerticalSize)
+        return self.com_object.RelativeVerticalSize
 
     @RelativeVerticalSize.setter
     def RelativeVerticalSize(self, value):
@@ -73453,7 +73453,7 @@ class SpellingSuggestions:
 
     @property
     def SpellingErrorType(self):
-        return WdSpellingErrorType(self.com_object.SpellingErrorType)
+        return self.com_object.SpellingErrorType
 
     @property
     def spellingerrortype(self):
@@ -73701,7 +73701,7 @@ class Style:
 
     @property
     def LanguageID(self):
-        return WdLanguageID(self.com_object.LanguageID)
+        return self.com_object.LanguageID
 
     @LanguageID.setter
     def LanguageID(self, value):
@@ -73729,7 +73729,7 @@ class Style:
 
     @property
     def LanguageIDFarEast(self):
-        return WdLanguageID(self.com_object.LanguageIDFarEast)
+        return self.com_object.LanguageIDFarEast
 
     @LanguageIDFarEast.setter
     def LanguageIDFarEast(self, value):
@@ -74053,7 +74053,7 @@ class Style:
 
     @property
     def Type(self):
-        return WdStyleType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -74284,7 +74284,7 @@ class StyleSheet:
 
     @property
     def Type(self):
-        return WdStyleSheetLinkType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -74795,7 +74795,7 @@ class System:
 
     @property
     def CountryRegion(self):
-        return WdCountry(self.com_object.CountryRegion)
+        return self.com_object.CountryRegion
 
     @property
     def countryregion(self):
@@ -74818,7 +74818,7 @@ class System:
 
     @property
     def Cursor(self):
-        return WdCursorType(self.com_object.Cursor)
+        return self.com_object.Cursor
 
     @Cursor.setter
     def Cursor(self, value):
@@ -75461,7 +75461,7 @@ class Table:
 
     @property
     def PreferredWidthType(self):
-        return WdPreferredWidthType(self.com_object.PreferredWidthType)
+        return self.com_object.PreferredWidthType
 
     @PreferredWidthType.setter
     def PreferredWidthType(self, value):
@@ -75580,7 +75580,7 @@ class Table:
 
     @property
     def TableDirection(self):
-        return WdTableDirection(self.com_object.TableDirection)
+        return self.com_object.TableDirection
 
     @TableDirection.setter
     def TableDirection(self, value):
@@ -76084,7 +76084,7 @@ class TableOfAuthorities:
 
     @property
     def TabLeader(self):
-        return WdTabLeader(self.com_object.TabLeader)
+        return self.com_object.TabLeader
 
     @TabLeader.setter
     def TabLeader(self, value):
@@ -76345,7 +76345,7 @@ class TableOfContents:
 
     @property
     def TabLeader(self):
-        return WdTabLeader(self.com_object.TabLeader)
+        return self.com_object.TabLeader
 
     @TabLeader.setter
     def TabLeader(self, value):
@@ -76752,7 +76752,7 @@ class TableOfFigures:
 
     @property
     def TabLeader(self):
-        return WdTabLeader(self.com_object.TabLeader)
+        return self.com_object.TabLeader
 
     @TabLeader.setter
     def TabLeader(self, value):
@@ -77058,7 +77058,7 @@ class TablesOfAuthorities:
 
     @property
     def Format(self):
-        return WdToaFormat(self.com_object.Format)
+        return self.com_object.Format
 
     @Format.setter
     def Format(self, value):
@@ -77235,7 +77235,7 @@ class TablesOfContents:
 
     @property
     def Format(self):
-        return WdTocFormat(self.com_object.Format)
+        return self.com_object.Format
 
     @Format.setter
     def Format(self, value):
@@ -77330,7 +77330,7 @@ class TablesOfFigures:
 
     @property
     def Format(self):
-        return WdTofFormat(self.com_object.Format)
+        return self.com_object.Format
 
     @Format.setter
     def Format(self, value):
@@ -77395,7 +77395,7 @@ class TableStyle:
 
     @property
     def Alignment(self):
-        return WdRowAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -77700,7 +77700,7 @@ class TableStyle:
 
     @property
     def TableDirection(self):
-        return WdTableDirection(self.com_object.TableDirection)
+        return self.com_object.TableDirection
 
     @TableDirection.setter
     def TableDirection(self, value):
@@ -77771,7 +77771,7 @@ class TabStop:
 
     @property
     def Alignment(self):
-        return WdTabAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -78115,7 +78115,7 @@ class Task:
 
     @property
     def WindowState(self):
-        return WdWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -78450,7 +78450,7 @@ class Template:
 
     @property
     def FarEastLineBreakLanguage(self):
-        return WdFarEastLineBreakLanguageID(self.com_object.FarEastLineBreakLanguage)
+        return self.com_object.FarEastLineBreakLanguage
 
     @FarEastLineBreakLanguage.setter
     def FarEastLineBreakLanguage(self, value):
@@ -78478,7 +78478,7 @@ class Template:
 
     @property
     def FarEastLineBreakLevel(self):
-        return WdFarEastLineBreakLevel(self.com_object.FarEastLineBreakLevel)
+        return self.com_object.FarEastLineBreakLevel
 
     @FarEastLineBreakLevel.setter
     def FarEastLineBreakLevel(self, value):
@@ -78520,7 +78520,7 @@ class Template:
 
     @property
     def JustificationMode(self):
-        return WdJustificationMode(self.com_object.JustificationMode)
+        return self.com_object.JustificationMode
 
     @JustificationMode.setter
     def JustificationMode(self, value):
@@ -78576,7 +78576,7 @@ class Template:
 
     @property
     def LanguageID(self):
-        return WdLanguageID(self.com_object.LanguageID)
+        return self.com_object.LanguageID
 
     @LanguageID.setter
     def LanguageID(self, value):
@@ -78604,7 +78604,7 @@ class Template:
 
     @property
     def LanguageIDFarEast(self):
-        return WdLanguageID(self.com_object.LanguageIDFarEast)
+        return self.com_object.LanguageIDFarEast
 
     @LanguageIDFarEast.setter
     def LanguageIDFarEast(self, value):
@@ -78775,7 +78775,7 @@ class Template:
 
     @property
     def Type(self):
-        return WdTemplateType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -79857,7 +79857,7 @@ class TextInput:
 
     @property
     def Type(self):
-        return WdTextFormFieldType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -81105,7 +81105,7 @@ class TickLabels:
 
     @property
     def ReadingOrder(self):
-        return XlReadingOrder(self.com_object.ReadingOrder)
+        return self.com_object.ReadingOrder
 
     @ReadingOrder.setter
     def ReadingOrder(self, value):
@@ -81441,7 +81441,7 @@ class Trendline:
 
     @property
     def Type(self):
-        return XlTrendlineType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -82238,7 +82238,7 @@ class View:
 
     @property
     def FieldShading(self):
-        return WdFieldShading(self.com_object.FieldShading)
+        return self.com_object.FieldShading
 
     @FieldShading.setter
     def FieldShading(self, value):
@@ -82340,7 +82340,7 @@ class View:
 
     @property
     def MarkupMode(self):
-        return WdRevisionsMode(self.com_object.MarkupMode)
+        return self.com_object.MarkupMode
 
     @MarkupMode.setter
     def MarkupMode(self, value):
@@ -82396,7 +82396,7 @@ class View:
 
     @property
     def PageMovementType(self):
-        return WdPageMovementType(self.com_object.PageMovementType)
+        return self.com_object.PageMovementType
 
     @PageMovementType.setter
     def PageMovementType(self, value):
@@ -82479,7 +82479,7 @@ class View:
 
     @property
     def ReadingLayoutTruncateMargins(self):
-        return WdReadingLayoutMargin(self.com_object.ReadingLayoutTruncateMargins)
+        return self.com_object.ReadingLayoutTruncateMargins
 
     @ReadingLayoutTruncateMargins.setter
     def ReadingLayoutTruncateMargins(self, value):
@@ -82619,7 +82619,7 @@ class View:
 
     @property
     def SeekView(self):
-        return WdSeekView(self.com_object.SeekView)
+        return self.com_object.SeekView
 
     @SeekView.setter
     def SeekView(self, value):
@@ -83389,7 +83389,7 @@ class View:
 
     @property
     def SplitSpecial(self):
-        return WdSpecialPane(self.com_object.SplitSpecial)
+        return self.com_object.SplitSpecial
 
     @SplitSpecial.setter
     def SplitSpecial(self, value):
@@ -83445,7 +83445,7 @@ class View:
 
     @property
     def Type(self):
-        return WdViewType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -87501,7 +87501,7 @@ class WebOptions:
 
     @property
     def BrowserLevel(self):
-        return WdBrowserLevel(self.com_object.BrowserLevel)
+        return self.com_object.BrowserLevel
 
     @BrowserLevel.setter
     def BrowserLevel(self, value):
@@ -88195,7 +88195,7 @@ class Window:
 
     @property
     def IMEMode(self):
-        return WdIMEMode(self.com_object.IMEMode)
+        return self.com_object.IMEMode
 
     @IMEMode.setter
     def IMEMode(self, value):
@@ -88295,7 +88295,7 @@ class Window:
 
     @property
     def ShowSourceDocuments(self):
-        return WdShowSourceDocuments(self.com_object.ShowSourceDocuments)
+        return self.com_object.ShowSourceDocuments
 
     @ShowSourceDocuments.setter
     def ShowSourceDocuments(self, value):
@@ -88424,7 +88424,7 @@ class Window:
 
     @property
     def Type(self):
-        return WdWindowType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -88534,7 +88534,7 @@ class Window:
 
     @property
     def WindowState(self):
-        return WdWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -89104,7 +89104,7 @@ class WrapFormat:
 
     @property
     def Side(self):
-        return WdWrapSideType(self.com_object.Side)
+        return self.com_object.Side
 
     @Side.setter
     def Side(self, value):
@@ -89122,7 +89122,7 @@ class WrapFormat:
 
     @property
     def Type(self):
-        return WdWrapType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -90804,7 +90804,7 @@ class Zoom:
 
     @property
     def PageFit(self):
-        return WdPageFit(self.com_object.PageFit)
+        return self.com_object.PageFit
 
     @PageFit.setter
     def PageFit(self, value):

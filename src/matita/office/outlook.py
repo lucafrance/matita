@@ -10,7 +10,7 @@ class Account:
 
     @property
     def AccountType(self):
-        return OlAccountType(self.com_object.AccountType)
+        return self.com_object.AccountType
 
     @property
     def accounttype(self):
@@ -33,7 +33,7 @@ class Account:
 
     @property
     def AutoDiscoverConnectionMode(self):
-        return OlAutoDiscoverConnectionMode(self.com_object.AutoDiscoverConnectionMode)
+        return self.com_object.AutoDiscoverConnectionMode
 
     @property
     def autodiscoverconnectionmode(self):
@@ -61,7 +61,7 @@ class Account:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CurrentUser(self):
@@ -107,7 +107,7 @@ class Account:
 
     @property
     def ExchangeConnectionMode(self):
-        return OlExchangeConnectionMode(self.com_object.ExchangeConnectionMode)
+        return self.com_object.ExchangeConnectionMode
 
     @property
     def exchangeconnectionmode(self):
@@ -256,11 +256,11 @@ class AccountRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -328,7 +328,7 @@ class Accounts:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -383,7 +383,7 @@ class AccountSelector:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Parent(self):
@@ -434,11 +434,11 @@ class Action:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CopyLike(self):
-        return OlActionCopyLike(self.com_object.CopyLike)
+        return self.com_object.CopyLike
 
     @CopyLike.setter
     def CopyLike(self, value):
@@ -557,7 +557,7 @@ class Action:
 
     @property
     def ReplyStyle(self):
-        return OlActionReplyStyle(self.com_object.ReplyStyle)
+        return self.com_object.ReplyStyle
 
     @ReplyStyle.setter
     def ReplyStyle(self, value):
@@ -585,7 +585,7 @@ class Action:
 
     @property
     def ResponseStyle(self):
-        return OlActionResponseStyle(self.com_object.ResponseStyle)
+        return self.com_object.ResponseStyle
 
     @ResponseStyle.setter
     def ResponseStyle(self, value):
@@ -622,7 +622,7 @@ class Action:
 
     @property
     def ShowOn(self):
-        return OlActionShowOn(self.com_object.ShowOn)
+        return self.com_object.ShowOn
 
     @ShowOn.setter
     def ShowOn(self, value):
@@ -679,7 +679,7 @@ class Actions:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -750,7 +750,7 @@ class AddressEntries:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -876,7 +876,7 @@ class AddressEntry:
 
     @property
     def AddressEntryUserType(self):
-        return OlAddressEntryUserType(self.com_object.AddressEntryUserType)
+        return self.com_object.AddressEntryUserType
 
     @property
     def addressentryusertype(self):
@@ -899,11 +899,11 @@ class AddressEntry:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DisplayType(self):
-        return OlDisplayType(self.com_object.DisplayType)
+        return self.com_object.DisplayType
 
     @property
     def displaytype(self):
@@ -1091,7 +1091,7 @@ class AddressList:
 
     @property
     def AddressListType(self):
-        return OlAddressListType(self.com_object.AddressListType)
+        return self.com_object.AddressListType
 
     @property
     def addresslisttype(self):
@@ -1114,7 +1114,7 @@ class AddressList:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ID(self):
@@ -1253,7 +1253,7 @@ class AddressLists:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -1326,11 +1326,11 @@ class AddressRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -1407,7 +1407,7 @@ class Application:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def COMAddIns(self):
@@ -1868,7 +1868,7 @@ class AppointmentItem:
 
     @property
     def BusyStatus(self):
-        return OlBusyStatus(self.com_object.BusyStatus)
+        return self.com_object.BusyStatus
 
     @BusyStatus.setter
     def BusyStatus(self, value):
@@ -1914,7 +1914,7 @@ class AppointmentItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -2001,7 +2001,7 @@ class AppointmentItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -2219,7 +2219,7 @@ class AppointmentItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -2339,7 +2339,7 @@ class AppointmentItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -2367,7 +2367,7 @@ class AppointmentItem:
 
     @property
     def MeetingStatus(self):
-        return OlMeetingStatus(self.com_object.MeetingStatus)
+        return self.com_object.MeetingStatus
 
     @MeetingStatus.setter
     def MeetingStatus(self, value):
@@ -2580,7 +2580,7 @@ class AppointmentItem:
 
     @property
     def RecurrenceState(self):
-        return OlRecurrenceState(self.com_object.RecurrenceState)
+        return self.com_object.RecurrenceState
 
     @property
     def recurrencestate(self):
@@ -2836,7 +2836,7 @@ class AppointmentItem:
 
     @property
     def ResponseStatus(self):
-        return OlResponseStatus(self.com_object.ResponseStatus)
+        return self.com_object.ResponseStatus
 
     @property
     def responsestatus(self):
@@ -2915,7 +2915,7 @@ class AppointmentItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -3288,7 +3288,7 @@ class AssignToCategoryRuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -3329,7 +3329,7 @@ class AssignToCategoryRuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -3384,7 +3384,7 @@ class Attachment:
 
     @property
     def BlockLevel(self):
-        return OlAttachmentBlockLevel(self.com_object.BlockLevel)
+        return self.com_object.BlockLevel
 
     @property
     def blocklevel(self):
@@ -3398,7 +3398,7 @@ class Attachment:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DisplayName(self):
@@ -3526,7 +3526,7 @@ class Attachment:
 
     @property
     def Type(self):
-        return OlAttachmentType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -3582,7 +3582,7 @@ class Attachments:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -3658,7 +3658,7 @@ class AttachmentSelection:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -3671,7 +3671,7 @@ class AttachmentSelection:
 
     @property
     def Location(self):
-        return OlSelectionLocation(self.com_object.Location)
+        return self.com_object.Location
 
     @property
     def location(self):
@@ -3736,7 +3736,7 @@ class AutoFormatRule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -3845,7 +3845,7 @@ class AutoFormatRules:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -3973,7 +3973,7 @@ class BusinessCardView:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Filter(self):
@@ -4082,7 +4082,7 @@ class BusinessCardView:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -4128,7 +4128,7 @@ class BusinessCardView:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -4236,7 +4236,7 @@ class CalendarModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -4263,7 +4263,7 @@ class CalendarModule:
 
     @property
     def NavigationModuleType(self):
-        return OlNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -4346,7 +4346,7 @@ class CalendarSharing:
 
     @property
     def CalendarDetail(self):
-        return OlCalendarDetail(self.com_object.CalendarDetail)
+        return self.com_object.CalendarDetail
 
     @CalendarDetail.setter
     def CalendarDetail(self, value):
@@ -4374,7 +4374,7 @@ class CalendarSharing:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def EndDate(self):
@@ -4686,7 +4686,7 @@ class CalendarView:
 
     @property
     def CalendarViewMode(self):
-        return OlCalendarViewMode(self.com_object.CalendarViewMode)
+        return self.com_object.CalendarViewMode
 
     @CalendarViewMode.setter
     def CalendarViewMode(self, value):
@@ -4714,7 +4714,7 @@ class CalendarView:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DaysInMultiDayMode(self):
@@ -4746,7 +4746,7 @@ class CalendarView:
 
     @property
     def DayWeekTimeScale(self):
-        return OlDayWeekTimeScale(self.com_object.DayWeekTimeScale)
+        return self.com_object.DayWeekTimeScale
 
     @DayWeekTimeScale.setter
     def DayWeekTimeScale(self, value):
@@ -4935,7 +4935,7 @@ class CalendarView:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -5023,7 +5023,7 @@ class CalendarView:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -5187,7 +5187,7 @@ class CardView:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Filter(self):
@@ -5324,7 +5324,7 @@ class CardView:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -5412,7 +5412,7 @@ class CardView:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -5538,7 +5538,7 @@ class Categories:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -5667,11 +5667,11 @@ class Category:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Color(self):
-        return OlCategoryColor(self.com_object.Color)
+        return self.com_object.Color
 
     @Color.setter
     def Color(self, value):
@@ -5725,7 +5725,7 @@ class Category:
 
     @property
     def ShortcutKey(self):
-        return OlCategoryShortcutKey(self.com_object.ShortcutKey)
+        return self.com_object.ShortcutKey
 
     @ShortcutKey.setter
     def ShortcutKey(self, value):
@@ -5786,11 +5786,11 @@ class CategoryRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -5861,7 +5861,7 @@ class Column:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -5898,7 +5898,7 @@ class ColumnFormat:
 
     @property
     def Align(self):
-        return OlAlign(self.com_object.Align)
+        return self.com_object.Align
 
     @Align.setter
     def Align(self, value):
@@ -5925,7 +5925,7 @@ class ColumnFormat:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def FieldFormat(self):
@@ -5957,7 +5957,7 @@ class ColumnFormat:
 
     @property
     def FieldType(self):
-        return OlUserPropertyType(self.com_object.FieldType)
+        return self.com_object.FieldType
 
     @property
     def fieldtype(self):
@@ -6040,7 +6040,7 @@ class Columns:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -6136,7 +6136,7 @@ class Conflict:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Item(self):
@@ -6176,7 +6176,7 @@ class Conflict:
 
     @property
     def Type(self):
-        return OlObjectClass(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -6203,7 +6203,7 @@ class Conflicts:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -6742,7 +6742,7 @@ class ContactItem:
 
     @property
     def BusinessCardType(self):
-        return OlBusinessCardType(self.com_object.BusinessCardType)
+        return self.com_object.BusinessCardType
 
     @property
     def businesscardtype(self):
@@ -6932,7 +6932,7 @@ class ContactItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -7191,7 +7191,7 @@ class ContactItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -7653,7 +7653,7 @@ class ContactItem:
 
     @property
     def Gender(self):
-        return OlGender(self.com_object.Gender)
+        return self.com_object.Gender
 
     @Gender.setter
     def Gender(self, value):
@@ -8053,7 +8053,7 @@ class ContactItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -8615,7 +8615,7 @@ class ContactItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -9551,7 +9551,7 @@ class ContactItem:
 
     @property
     def SelectedMailingAddress(self):
-        return OlMailingAddress(self.com_object.SelectedMailingAddress)
+        return self.com_object.SelectedMailingAddress
 
     @SelectedMailingAddress.setter
     def SelectedMailingAddress(self, value):
@@ -9579,7 +9579,7 @@ class ContactItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -10380,7 +10380,7 @@ class ContactsModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -10407,7 +10407,7 @@ class ContactsModule:
 
     @property
     def NavigationModuleType(self):
-        return olNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -10490,7 +10490,7 @@ class Conversation:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConversationID(self):
@@ -10739,7 +10739,7 @@ class ConversationHeader:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConversationID(self):
@@ -10922,7 +10922,7 @@ class DistListItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -11037,7 +11037,7 @@ class DistListItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -11093,7 +11093,7 @@ class DistListItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -11167,7 +11167,7 @@ class DistListItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -11511,7 +11511,7 @@ class DistListItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -12039,7 +12039,7 @@ class DocumentItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -12112,7 +12112,7 @@ class DocumentItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -12168,7 +12168,7 @@ class DocumentItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -12376,7 +12376,7 @@ class DocumentItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -12585,7 +12585,7 @@ class Exception:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Deleted(self):
@@ -12648,7 +12648,7 @@ class Exceptions:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -12712,7 +12712,7 @@ class ExchangeDistributionList:
 
     @property
     def AddressEntryUserType(self):
-        return OlAddressEntryUserType(self.com_object.AddressEntryUserType)
+        return self.com_object.AddressEntryUserType
 
     @property
     def addressentryusertype(self):
@@ -12744,7 +12744,7 @@ class ExchangeDistributionList:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Comments(self):
@@ -12766,7 +12766,7 @@ class ExchangeDistributionList:
 
     @property
     def DisplayType(self):
-        return OlDisplayType(self.com_object.DisplayType)
+        return self.com_object.DisplayType
 
     @property
     def displaytype(self):
@@ -13038,7 +13038,7 @@ class ExchangeUser:
 
     @property
     def AddressEntryUserType(self):
-        return OlAddressEntryUserType(self.com_object.AddressEntryUserType)
+        return self.com_object.AddressEntryUserType
 
     @property
     def addressentryusertype(self):
@@ -13144,7 +13144,7 @@ class ExchangeUser:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Comments(self):
@@ -13212,7 +13212,7 @@ class ExchangeUser:
 
     @property
     def DisplayType(self):
-        return OlDisplayType(self.com_object.DisplayType)
+        return self.com_object.DisplayType
 
     @property
     def displaytype(self):
@@ -13915,7 +13915,7 @@ class Explorer:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CurrentFolder(self):
@@ -14139,7 +14139,7 @@ class Explorer:
 
     @property
     def WindowState(self):
-        return OlWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -14315,7 +14315,7 @@ class Explorers:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -14407,7 +14407,7 @@ class Folder:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CurrentView(self):
@@ -14453,7 +14453,7 @@ class Folder:
 
     @property
     def DefaultItemType(self):
-        return OlItemType(self.com_object.DefaultItemType)
+        return self.com_object.DefaultItemType
 
     @property
     def defaultitemtype(self):
@@ -14966,7 +14966,7 @@ class Folders:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -15135,7 +15135,7 @@ class FormDescription:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Comment(self):
@@ -15498,11 +15498,11 @@ class FormNameRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -15595,7 +15595,7 @@ class FormRegion:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Detail(self):
@@ -15668,7 +15668,7 @@ class FormRegion:
 
     @property
     def FormRegionMode(self):
-        return OlFormRegionMode(self.com_object.FormRegionMode)
+        return self.com_object.FormRegionMode
 
     @property
     def formregionmode(self):
@@ -15912,11 +15912,11 @@ class FromRssFeedRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -16009,7 +16009,7 @@ class IconView:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Filter(self):
@@ -16031,7 +16031,7 @@ class IconView:
 
     @property
     def IconPlacement(self):
-        return OlIconViewPlacement(self.com_object.IconPlacement)
+        return self.com_object.IconPlacement
 
     @IconPlacement.setter
     def IconPlacement(self, value):
@@ -16059,7 +16059,7 @@ class IconView:
 
     @property
     def IconViewType(self):
-        return OlIconViewType(self.com_object.IconViewType)
+        return self.com_object.IconViewType
 
     @IconViewType.setter
     def IconViewType(self, value):
@@ -16160,7 +16160,7 @@ class IconView:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -16206,7 +16206,7 @@ class IconView:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -16320,11 +16320,11 @@ class ImportanceRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -16356,7 +16356,7 @@ class ImportanceRuleCondition:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -16430,7 +16430,7 @@ class Inspector:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CurrentItem(self):
@@ -16448,7 +16448,7 @@ class Inspector:
 
     @property
     def EditorType(self):
-        return OlEditorType(self.com_object.EditorType)
+        return self.com_object.EditorType
 
     @property
     def editortype(self):
@@ -16566,7 +16566,7 @@ class Inspector:
 
     @property
     def WindowState(self):
-        return OlWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -16768,7 +16768,7 @@ class Inspectors:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -16833,7 +16833,7 @@ class ItemProperties:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -16906,7 +16906,7 @@ class ItemProperty:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def IsUserProperty(self):
@@ -16960,7 +16960,7 @@ class ItemProperty:
 
     @property
     def Type(self):
-        return OlUserPropertyType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -17002,7 +17002,7 @@ class Items:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -17304,7 +17304,7 @@ class JournalItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -17531,7 +17531,7 @@ class JournalItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -17623,7 +17623,7 @@ class JournalItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -17683,7 +17683,7 @@ class JournalItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -17854,7 +17854,7 @@ class JournalItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -18143,7 +18143,7 @@ class JournalModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -18170,7 +18170,7 @@ class JournalModule:
 
     @property
     def NavigationModuleType(self):
-        return olNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -18427,7 +18427,7 @@ class MailItem:
 
     @property
     def BodyFormat(self):
-        return OlBodyFormat(self.com_object.BodyFormat)
+        return self.com_object.BodyFormat
 
     @BodyFormat.setter
     def BodyFormat(self, value):
@@ -18501,7 +18501,7 @@ class MailItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -18644,7 +18644,7 @@ class MailItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -18784,7 +18784,7 @@ class MailItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -18886,7 +18886,7 @@ class MailItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -19402,7 +19402,7 @@ class MailItem:
 
     @property
     def RemoteStatus(self):
-        return OlRemoteStatus(self.com_object.RemoteStatus)
+        return self.com_object.RemoteStatus
 
     @RemoteStatus.setter
     def RemoteStatus(self, value):
@@ -19639,7 +19639,7 @@ class MailItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -20201,7 +20201,7 @@ class MailModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -20228,7 +20228,7 @@ class MailModule:
 
     @property
     def NavigationModuleType(self):
-        return olNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -20302,7 +20302,7 @@ class MarkAsTaskRuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -20325,7 +20325,7 @@ class MarkAsTaskRuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -20375,7 +20375,7 @@ class MarkAsTaskRuleAction:
 
     @property
     def MarkInterval(self):
-        return OlMarkInterval(self.com_object.MarkInterval)
+        return self.com_object.MarkInterval
 
     @MarkInterval.setter
     def MarkInterval(self, value):
@@ -20560,7 +20560,7 @@ class MeetingItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -20703,7 +20703,7 @@ class MeetingItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -20787,7 +20787,7 @@ class MeetingItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -20861,7 +20861,7 @@ class MeetingItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -21312,7 +21312,7 @@ class MeetingItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -21587,7 +21587,7 @@ class MoveOrCopyRuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -21610,7 +21610,7 @@ class MoveOrCopyRuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -21712,7 +21712,7 @@ class NameSpace:
 
     @property
     def AutoDiscoverConnectionMode(self):
-        return OlAutoDiscoverConnectionMode(self.com_object.AutoDiscoverConnectionMode)
+        return self.com_object.AutoDiscoverConnectionMode
 
     @property
     def autodiscoverconnectionmode(self):
@@ -21758,7 +21758,7 @@ class NameSpace:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CurrentProfileName(self):
@@ -21804,7 +21804,7 @@ class NameSpace:
 
     @property
     def ExchangeConnectionMode(self):
-        return OlExchangeConnectionMode(self.com_object.ExchangeConnectionMode)
+        return self.com_object.ExchangeConnectionMode
 
     @property
     def exchangeconnectionmode(self):
@@ -22225,7 +22225,7 @@ class NavigationFolder:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DisplayName(self):
@@ -22373,7 +22373,7 @@ class NavigationFolders:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -22446,11 +22446,11 @@ class NavigationGroup:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def GroupType(self):
-        return OlGroupType(self.com_object.GroupType)
+        return self.com_object.GroupType
 
     @property
     def grouptype(self):
@@ -22550,7 +22550,7 @@ class NavigationGroups:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -22637,7 +22637,7 @@ class NavigationModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -22650,7 +22650,7 @@ class NavigationModule:
 
     @property
     def NavigationModuleType(self):
-        return olNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -22736,7 +22736,7 @@ class NavigationModules:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -22805,7 +22805,7 @@ class NavigationPane:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CurrentModule(self):
@@ -22926,7 +22926,7 @@ class NewItemAlertRuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -22949,7 +22949,7 @@ class NewItemAlertRuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -23072,7 +23072,7 @@ class NoteItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Conflicts(self):
@@ -23099,7 +23099,7 @@ class NoteItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -23219,7 +23219,7 @@ class NoteItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -23467,7 +23467,7 @@ class NotesModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -23494,7 +23494,7 @@ class NotesModule:
 
     @property
     def NavigationModuleType(self):
-        return olNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -24087,7 +24087,7 @@ class OlkBusinessCardControl:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -24177,7 +24177,7 @@ class OlkCategory:
 
     @property
     def BackStyle(self):
-        return olBackStyle(self.com_object.BackStyle)
+        return self.com_object.BackStyle
 
     @BackStyle.setter
     def BackStyle(self, value):
@@ -24279,7 +24279,7 @@ class OlkCategory:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -24331,7 +24331,7 @@ class OlkCheckBox:
 
     @property
     def Alignment(self):
-        return olAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -24377,7 +24377,7 @@ class OlkCheckBox:
 
     @property
     def BackStyle(self):
-        return olBackStyle(self.com_object.BackStyle)
+        return self.com_object.BackStyle
 
     @BackStyle.setter
     def BackStyle(self, value):
@@ -24506,7 +24506,7 @@ class OlkCheckBox:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -24726,7 +24726,7 @@ class OlkComboBox:
 
     @property
     def BorderStyle(self):
-        return OlBorderStyle(self.com_object.BorderStyle)
+        return self.com_object.BorderStyle
 
     @BorderStyle.setter
     def BorderStyle(self, value):
@@ -24800,7 +24800,7 @@ class OlkComboBox:
 
     @property
     def EnterFieldBehavior(self):
-        return olEnterFieldBehavior(self.com_object.EnterFieldBehavior)
+        return self.com_object.EnterFieldBehavior
 
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
@@ -25009,7 +25009,7 @@ class OlkComboBox:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -25135,7 +25135,7 @@ class OlkComboBox:
 
     @property
     def Style(self):
-        return OlComboBoxStyle(self.com_object.Style)
+        return self.com_object.Style
 
     @Style.setter
     def Style(self, value):
@@ -25171,7 +25171,7 @@ class OlkComboBox:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -25493,7 +25493,7 @@ class OlkCommandButton:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -25539,7 +25539,7 @@ class OlkCommandButton:
 
     @property
     def PictureAlignment(self):
-        return OlPictureAlignment(self.com_object.PictureAlignment)
+        return self.com_object.PictureAlignment
 
     @PictureAlignment.setter
     def PictureAlignment(self, value):
@@ -25567,7 +25567,7 @@ class OlkCommandButton:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -25675,7 +25675,7 @@ class OlkContactPhoto:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -25783,7 +25783,7 @@ class OlkControl:
 
     @property
     def HorizontalLayout(self):
-        return OlHorizontalLayout(self.com_object.HorizontalLayout)
+        return self.com_object.HorizontalLayout
 
     @HorizontalLayout.setter
     def HorizontalLayout(self, value):
@@ -25923,7 +25923,7 @@ class OlkControl:
 
     @property
     def VerticalLayout(self):
-        return OlVerticalLayout(self.com_object.VerticalLayout)
+        return self.com_object.VerticalLayout
 
     @VerticalLayout.setter
     def VerticalLayout(self, value):
@@ -26041,7 +26041,7 @@ class OlkDateControl:
 
     @property
     def BackStyle(self):
-        return olBackStyle(self.com_object.BackStyle)
+        return self.com_object.BackStyle
 
     @BackStyle.setter
     def BackStyle(self, value):
@@ -26105,7 +26105,7 @@ class OlkDateControl:
 
     @property
     def EnterFieldBehavior(self):
-        return olEnterFieldBehavior(self.com_object.EnterFieldBehavior)
+        return self.com_object.EnterFieldBehavior
 
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
@@ -26244,7 +26244,7 @@ class OlkDateControl:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -26318,7 +26318,7 @@ class OlkDateControl:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -26381,7 +26381,7 @@ class OlkFrameHeader:
 
     @property
     def Alignment(self):
-        return olAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -26500,7 +26500,7 @@ class OlkFrameHeader:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -26562,7 +26562,7 @@ class OlkInfoBar:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -26670,7 +26670,7 @@ class OlkLabel:
 
     @property
     def BackStyle(self):
-        return olBackStyle(self.com_object.BackStyle)
+        return self.com_object.BackStyle
 
     @BackStyle.setter
     def BackStyle(self, value):
@@ -26698,7 +26698,7 @@ class OlkLabel:
 
     @property
     def BorderStyle(self):
-        return OlBorderStyle(self.com_object.BorderStyle)
+        return self.com_object.BorderStyle
 
     @BorderStyle.setter
     def BorderStyle(self, value):
@@ -26827,7 +26827,7 @@ class OlkLabel:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -26855,7 +26855,7 @@ class OlkLabel:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -26973,7 +26973,7 @@ class OlkListBox:
 
     @property
     def BorderStyle(self):
-        return OlBorderStyle(self.com_object.BorderStyle)
+        return self.com_object.BorderStyle
 
     @BorderStyle.setter
     def BorderStyle(self, value):
@@ -27116,7 +27116,7 @@ class OlkListBox:
 
     @property
     def MatchEntry(self):
-        return olMatchEntry(self.com_object.MatchEntry)
+        return self.com_object.MatchEntry
 
     @MatchEntry.setter
     def MatchEntry(self, value):
@@ -27172,7 +27172,7 @@ class OlkListBox:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -27200,7 +27200,7 @@ class OlkListBox:
 
     @property
     def MultiSelect(self):
-        return OlMultiSelect(self.com_object.MultiSelect)
+        return self.com_object.MultiSelect
 
     @MultiSelect.setter
     def MultiSelect(self, value):
@@ -27246,7 +27246,7 @@ class OlkListBox:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -27442,7 +27442,7 @@ class OlkOptionButton:
 
     @property
     def Alignment(self):
-        return olAlignment(self.com_object.Alignment)
+        return self.com_object.Alignment
 
     @Alignment.setter
     def Alignment(self, value):
@@ -27488,7 +27488,7 @@ class OlkOptionButton:
 
     @property
     def BackStyle(self):
-        return olBackStyle(self.com_object.BackStyle)
+        return self.com_object.BackStyle
 
     @BackStyle.setter
     def BackStyle(self, value):
@@ -27645,7 +27645,7 @@ class OlkOptionButton:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -27725,7 +27725,7 @@ class OlkPageControl:
 
     @property
     def Page(self):
-        return OlPageType(self.com_object.Page)
+        return self.com_object.Page
 
     @Page.setter
     def Page(self, value):
@@ -27795,7 +27795,7 @@ class OlkSenderPhoto:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -27969,7 +27969,7 @@ class OlkTextBox:
 
     @property
     def BorderStyle(self):
-        return OlBorderStyle(self.com_object.BorderStyle)
+        return self.com_object.BorderStyle
 
     @BorderStyle.setter
     def BorderStyle(self, value):
@@ -28043,7 +28043,7 @@ class OlkTextBox:
 
     @property
     def EnterFieldBehavior(self):
-        return olEnterFieldBehavior(self.com_object.EnterFieldBehavior)
+        return self.com_object.EnterFieldBehavior
 
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
@@ -28266,7 +28266,7 @@ class OlkTextBox:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -28350,7 +28350,7 @@ class OlkTextBox:
 
     @property
     def Scrollbars(self):
-        return olScrollBars(self.com_object.Scrollbars)
+        return self.com_object.Scrollbars
 
     @Scrollbars.setter
     def Scrollbars(self, value):
@@ -28512,7 +28512,7 @@ class OlkTextBox:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -28704,7 +28704,7 @@ class OlkTimeControl:
 
     @property
     def BackStyle(self):
-        return olBackStyle(self.com_object.BackStyle)
+        return self.com_object.BackStyle
 
     @BackStyle.setter
     def BackStyle(self, value):
@@ -28750,7 +28750,7 @@ class OlkTimeControl:
 
     @property
     def EnterFieldBehavior(self):
-        return olEnterFieldBehavior(self.com_object.EnterFieldBehavior)
+        return self.com_object.EnterFieldBehavior
 
     @EnterFieldBehavior.setter
     def EnterFieldBehavior(self, value):
@@ -28917,7 +28917,7 @@ class OlkTimeControl:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -28973,7 +28973,7 @@ class OlkTimeControl:
 
     @property
     def Style(self):
-        return OlTimeStyle(self.com_object.Style)
+        return self.com_object.Style
 
     @Style.setter
     def Style(self, value):
@@ -29009,7 +29009,7 @@ class OlkTimeControl:
 
     @property
     def TextAlign(self):
-        return OlTextAlign(self.com_object.TextAlign)
+        return self.com_object.TextAlign
 
     @TextAlign.setter
     def TextAlign(self, value):
@@ -29090,7 +29090,7 @@ class OlkTimeZoneControl:
 
     @property
     def AppointmentTimeField(self):
-        return OlAppointmentTimeField(self.com_object.AppointmentTimeField)
+        return self.com_object.AppointmentTimeField
 
     @AppointmentTimeField.setter
     def AppointmentTimeField(self, value):
@@ -29118,7 +29118,7 @@ class OlkTimeZoneControl:
 
     @property
     def BorderStyle(self):
-        return OlBorderStyle(self.com_object.BorderStyle)
+        return self.com_object.BorderStyle
 
     @BorderStyle.setter
     def BorderStyle(self, value):
@@ -29210,7 +29210,7 @@ class OlkTimeZoneControl:
 
     @property
     def MousePointer(self):
-        return OlMousePointer(self.com_object.MousePointer)
+        return self.com_object.MousePointer
 
     @MousePointer.setter
     def MousePointer(self, value):
@@ -29899,7 +29899,7 @@ class OrderField:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def IsDescending(self):
@@ -29978,7 +29978,7 @@ class OrderFields:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -30071,7 +30071,7 @@ class OutlookBarGroup:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -30120,7 +30120,7 @@ class OutlookBarGroup:
 
     @property
     def ViewType(self):
-        return OlOutlookBarViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @ViewType.setter
     def ViewType(self, value):
@@ -30163,7 +30163,7 @@ class OutlookBarGroups:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -30236,7 +30236,7 @@ class OutlookBarPane:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Contents(self):
@@ -30309,7 +30309,7 @@ class OutlookBarShortcut:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -30387,7 +30387,7 @@ class OutlookBarShortcuts:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -30460,7 +30460,7 @@ class OutlookBarStorage:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Groups(self):
@@ -30512,7 +30512,7 @@ class Pages:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -30586,7 +30586,7 @@ class Panes:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -30881,7 +30881,7 @@ class PlaySoundRuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -30904,7 +30904,7 @@ class PlaySoundRuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -31065,7 +31065,7 @@ class PostItem:
 
     @property
     def BodyFormat(self):
-        return OlBodyFormat(self.com_object.BodyFormat)
+        return self.com_object.BodyFormat
 
     @BodyFormat.setter
     def BodyFormat(self, value):
@@ -31111,7 +31111,7 @@ class PostItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -31198,7 +31198,7 @@ class PostItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -31310,7 +31310,7 @@ class PostItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -31412,7 +31412,7 @@ class PostItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -31798,7 +31798,7 @@ class PostItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -32482,7 +32482,7 @@ class PropertyPages:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -32555,7 +32555,7 @@ class PropertyPageSite:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Parent(self):
@@ -32668,11 +32668,11 @@ class Recipient:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DisplayType(self):
-        return OlDisplayType(self.com_object.DisplayType)
+        return self.com_object.DisplayType
 
     @property
     def displaytype(self):
@@ -32709,7 +32709,7 @@ class Recipient:
 
     @property
     def MeetingResponseStatus(self):
-        return OlResponseStatus(self.com_object.MeetingResponseStatus)
+        return self.com_object.MeetingResponseStatus
 
     @property
     def meetingresponsestatus(self):
@@ -32791,7 +32791,7 @@ class Recipient:
 
     @property
     def TrackingStatus(self):
-        return OlTrackingStatus(self.com_object.TrackingStatus)
+        return self.com_object.TrackingStatus
 
     @TrackingStatus.setter
     def TrackingStatus(self, value):
@@ -32908,7 +32908,7 @@ class Recipients:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -32992,7 +32992,7 @@ class RecurrencePattern:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DayOfMonth(self):
@@ -33024,7 +33024,7 @@ class RecurrencePattern:
 
     @property
     def DayOfWeekMask(self):
-        return OlDaysOfWeek(self.com_object.DayOfWeekMask)
+        return self.com_object.DayOfWeekMask
 
     @DayOfWeekMask.setter
     def DayOfWeekMask(self, value):
@@ -33282,7 +33282,7 @@ class RecurrencePattern:
 
     @property
     def RecurrenceType(self):
-        return OlRecurrenceType(self.com_object.RecurrenceType)
+        return self.com_object.RecurrenceType
 
     @RecurrenceType.setter
     def RecurrenceType(self, value):
@@ -33403,7 +33403,7 @@ class Reminder:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def IsVisible(self):
@@ -33510,7 +33510,7 @@ class Reminders:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -33670,7 +33670,7 @@ class RemoteItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -33757,7 +33757,7 @@ class RemoteItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -33827,7 +33827,7 @@ class RemoteItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -33887,7 +33887,7 @@ class RemoteItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -34063,7 +34063,7 @@ class RemoteItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -34393,7 +34393,7 @@ class ReportItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -34480,7 +34480,7 @@ class ReportItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -34536,7 +34536,7 @@ class ReportItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -34596,7 +34596,7 @@ class ReportItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -34786,7 +34786,7 @@ class ReportItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -34995,7 +34995,7 @@ class Results:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -35008,7 +35008,7 @@ class Results:
 
     @property
     def DefaultItemType(self):
-        return OlItemType(self.com_object.DefaultItemType)
+        return self.com_object.DefaultItemType
 
     @DefaultItemType.setter
     def DefaultItemType(self, value):
@@ -35159,7 +35159,7 @@ class Row:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Parent(self):
@@ -35267,7 +35267,7 @@ class Rule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Conditions(self):
@@ -35376,7 +35376,7 @@ class Rule:
 
     @property
     def RuleType(self):
-        return OlRuleType(self.com_object.RuleType)
+        return self.com_object.RuleType
 
     @property
     def ruletype(self):
@@ -35414,7 +35414,7 @@ class RuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -35437,7 +35437,7 @@ class RuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -35523,7 +35523,7 @@ class RuleActions:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ClearCategories(self):
@@ -35768,11 +35768,11 @@ class RuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -35909,7 +35909,7 @@ class RuleConditions:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -36213,7 +36213,7 @@ class Rules:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -36329,7 +36329,7 @@ class Search:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Filter(self):
@@ -36460,7 +36460,7 @@ class Selection:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -36473,7 +36473,7 @@ class Selection:
 
     @property
     def Location(self):
-        return OlSelectionLocation(self.com_object.Location)
+        return self.com_object.Location
 
     @property
     def location(self):
@@ -36640,7 +36640,7 @@ class SelectNamesDialog:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ForceResolution(self):
@@ -36700,7 +36700,7 @@ class SelectNamesDialog:
 
     @property
     def NumberOfRecipientSelectors(self):
-        return OlRecipientSelectors(self.com_object.NumberOfRecipientSelectors)
+        return self.com_object.NumberOfRecipientSelectors
 
     @NumberOfRecipientSelectors.setter
     def NumberOfRecipientSelectors(self, value):
@@ -36884,11 +36884,11 @@ class SenderInAddressListRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -36944,7 +36944,7 @@ class SendRuleAction:
 
     @property
     def ActionType(self):
-        return OlRuleActionType(self.com_object.ActionType)
+        return self.com_object.ActionType
 
     @property
     def actiontype(self):
@@ -36967,7 +36967,7 @@ class SendRuleAction:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Enabled(self):
@@ -37207,7 +37207,7 @@ class SharingItem:
 
     @property
     def BodyFormat(self):
-        return OlBodyFormat(self.com_object.BodyFormat)
+        return self.com_object.BodyFormat
 
     @BodyFormat.setter
     def BodyFormat(self, value):
@@ -37281,7 +37281,7 @@ class SharingItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -37424,7 +37424,7 @@ class SharingItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -37564,7 +37564,7 @@ class SharingItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -37666,7 +37666,7 @@ class SharingItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -38224,7 +38224,7 @@ class SharingItem:
 
     @property
     def RemoteStatus(self):
-        return OlRemoteStatus(self.com_object.RemoteStatus)
+        return self.com_object.RemoteStatus
 
     @RemoteStatus.setter
     def RemoteStatus(self, value):
@@ -38280,7 +38280,7 @@ class SharingItem:
 
     @property
     def RequestedFolder(self):
-        return OlDefaultFolders(self.com_object.RequestedFolder)
+        return self.com_object.RequestedFolder
 
     @property
     def requestedfolder(self):
@@ -38457,7 +38457,7 @@ class SharingItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -38535,7 +38535,7 @@ class SharingItem:
 
     @property
     def SharingProvider(self):
-        return OlSharingProvider(self.com_object.SharingProvider)
+        return self.com_object.SharingProvider
 
     @property
     def sharingprovider(self):
@@ -38757,7 +38757,7 @@ class SharingItem:
 
     @property
     def Type(self):
-        return OlSharingMsgType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -39037,7 +39037,7 @@ class SimpleItems:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -39092,7 +39092,7 @@ class SolutionsModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -39105,7 +39105,7 @@ class SolutionsModule:
 
     @property
     def NavigationModuleType(self):
-        return OlNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -39235,7 +39235,7 @@ class StorageItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def CreationTime(self):
@@ -39410,7 +39410,7 @@ class Store:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DisplayName(self):
@@ -39428,7 +39428,7 @@ class Store:
 
     @property
     def ExchangeStoreType(self):
-        return OlExchangeStoreType(self.com_object.ExchangeStoreType)
+        return self.com_object.ExchangeStoreType
 
     @property
     def exchangestoretype(self):
@@ -39687,7 +39687,7 @@ class Stores:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -39742,7 +39742,7 @@ class SyncObject:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -39819,7 +39819,7 @@ class SyncObjects:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -39880,7 +39880,7 @@ class Table:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Columns(self):
@@ -40156,7 +40156,7 @@ class TableView:
 
     @property
     def AutoPreview(self):
-        return OlAutoPreview(self.com_object.AutoPreview)
+        return self.com_object.AutoPreview
 
     @AutoPreview.setter
     def AutoPreview(self, value):
@@ -40198,7 +40198,7 @@ class TableView:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ColumnFont(self):
@@ -40216,7 +40216,7 @@ class TableView:
 
     @property
     def DefaultExpandCollapseSetting(self):
-        return OlDefaultExpandCollapseSetting(self.com_object.DefaultExpandCollapseSetting)
+        return self.com_object.DefaultExpandCollapseSetting
 
     @DefaultExpandCollapseSetting.setter
     def DefaultExpandCollapseSetting(self, value):
@@ -40262,7 +40262,7 @@ class TableView:
 
     @property
     def GridLineStyle(self):
-        return OlGridLineStyle(self.com_object.GridLineStyle)
+        return self.com_object.GridLineStyle
 
     @GridLineStyle.setter
     def GridLineStyle(self, value):
@@ -40406,7 +40406,7 @@ class TableView:
 
     @property
     def MultiLine(self):
-        return OlMultiLine(self.com_object.MultiLine)
+        return self.com_object.MultiLine
 
     @MultiLine.setter
     def MultiLine(self, value):
@@ -40503,7 +40503,7 @@ class TableView:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -40731,7 +40731,7 @@ class TableView:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -41014,7 +41014,7 @@ class TaskItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -41175,7 +41175,7 @@ class TaskItem:
 
     @property
     def DelegationState(self):
-        return OlTaskDelegationState(self.com_object.DelegationState)
+        return self.com_object.DelegationState
 
     @property
     def delegationstate(self):
@@ -41198,7 +41198,7 @@ class TaskItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -41282,7 +41282,7 @@ class TaskItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -41384,7 +41384,7 @@ class TaskItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -41550,7 +41550,7 @@ class TaskItem:
 
     @property
     def Ownership(self):
-        return OlTaskOwnership(self.com_object.Ownership)
+        return self.com_object.Ownership
 
     @property
     def ownership(self):
@@ -41759,7 +41759,7 @@ class TaskItem:
 
     @property
     def ResponseState(self):
-        return OlTaskResponse(self.com_object.ResponseState)
+        return self.com_object.ResponseState
 
     @property
     def responsestate(self):
@@ -41884,7 +41884,7 @@ class TaskItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -41948,7 +41948,7 @@ class TaskItem:
 
     @property
     def Status(self):
-        return OlTaskStatus(self.com_object.Status)
+        return self.com_object.Status
 
     @Status.setter
     def Status(self, value):
@@ -42461,7 +42461,7 @@ class TaskRequestAcceptItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -42548,7 +42548,7 @@ class TaskRequestAcceptItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -42604,7 +42604,7 @@ class TaskRequestAcceptItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -42664,7 +42664,7 @@ class TaskRequestAcceptItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -42854,7 +42854,7 @@ class TaskRequestAcceptItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -43170,7 +43170,7 @@ class TaskRequestDeclineItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -43257,7 +43257,7 @@ class TaskRequestDeclineItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -43313,7 +43313,7 @@ class TaskRequestDeclineItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -43373,7 +43373,7 @@ class TaskRequestDeclineItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -43563,7 +43563,7 @@ class TaskRequestDeclineItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -43879,7 +43879,7 @@ class TaskRequestItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -43966,7 +43966,7 @@ class TaskRequestItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -44022,7 +44022,7 @@ class TaskRequestItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -44082,7 +44082,7 @@ class TaskRequestItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -44272,7 +44272,7 @@ class TaskRequestItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -44588,7 +44588,7 @@ class TaskRequestUpdateItem:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Companies(self):
@@ -44675,7 +44675,7 @@ class TaskRequestUpdateItem:
 
     @property
     def DownloadState(self):
-        return OlDownloadState(self.com_object.DownloadState)
+        return self.com_object.DownloadState
 
     @property
     def downloadstate(self):
@@ -44731,7 +44731,7 @@ class TaskRequestUpdateItem:
 
     @property
     def Importance(self):
-        return OlImportance(self.com_object.Importance)
+        return self.com_object.Importance
 
     @Importance.setter
     def Importance(self, value):
@@ -44791,7 +44791,7 @@ class TaskRequestUpdateItem:
 
     @property
     def MarkForDownload(self):
-        return OlRemoteStatus(self.com_object.MarkForDownload)
+        return self.com_object.MarkForDownload
 
     @MarkForDownload.setter
     def MarkForDownload(self, value):
@@ -44981,7 +44981,7 @@ class TaskRequestUpdateItem:
 
     @property
     def Sensitivity(self):
-        return OlSensitivity(self.com_object.Sensitivity)
+        return self.com_object.Sensitivity
 
     @Sensitivity.setter
     def Sensitivity(self, value):
@@ -45201,7 +45201,7 @@ class TasksModule:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Name(self):
@@ -45228,7 +45228,7 @@ class TasksModule:
 
     @property
     def NavigationModuleType(self):
-        return OlNavigationModuleType(self.com_object.NavigationModuleType)
+        return self.com_object.NavigationModuleType
 
     @property
     def navigationmoduletype(self):
@@ -45317,11 +45317,11 @@ class TextRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -45404,11 +45404,11 @@ class TimelineView:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DefaultExpandCollapseSetting(self):
-        return OlDefaultExpandCollapseSetting(self.com_object.DefaultExpandCollapseSetting)
+        return self.com_object.DefaultExpandCollapseSetting
 
     @DefaultExpandCollapseSetting.setter
     def DefaultExpandCollapseSetting(self, value):
@@ -45625,7 +45625,7 @@ class TimelineView:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -45741,7 +45741,7 @@ class TimelineView:
 
     @property
     def TimelineViewMode(self):
-        return OlTimelineViewMode(self.com_object.TimelineViewMode)
+        return self.com_object.TimelineViewMode
 
     @TimelineViewMode.setter
     def TimelineViewMode(self, value):
@@ -45783,7 +45783,7 @@ class TimelineView:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -45900,7 +45900,7 @@ class TimeZone:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DaylightBias(self):
@@ -46047,7 +46047,7 @@ class TimeZones:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -46136,11 +46136,11 @@ class ToOrFromRuleCondition:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ConditionType(self):
-        return OlRuleConditionType(self.com_object.ConditionType)
+        return self.com_object.ConditionType
 
     @property
     def conditiontype(self):
@@ -46214,7 +46214,7 @@ class UserDefinedProperties:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -46303,7 +46303,7 @@ class UserDefinedProperty:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def DisplayFormat(self):
@@ -46357,7 +46357,7 @@ class UserDefinedProperty:
 
     @property
     def Type(self):
-        return OlUserPropertyType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -46388,7 +46388,7 @@ class UserProperties:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -46470,7 +46470,7 @@ class UserProperty:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Formula(self):
@@ -46519,7 +46519,7 @@ class UserProperty:
 
     @property
     def Type(self):
-        return OlUserPropertyType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -46624,7 +46624,7 @@ class View:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Filter(self):
@@ -46719,7 +46719,7 @@ class View:
 
     @property
     def SaveOption(self):
-        return OlViewSaveOption(self.com_object.SaveOption)
+        return self.com_object.SaveOption
 
     @property
     def saveoption(self):
@@ -46751,7 +46751,7 @@ class View:
 
     @property
     def ViewType(self):
-        return OlViewType(self.com_object.ViewType)
+        return self.com_object.ViewType
 
     @property
     def viewtype(self):
@@ -46859,7 +46859,7 @@ class ViewField:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def ColumnFormat(self):
@@ -46924,7 +46924,7 @@ class ViewFields:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):
@@ -47024,11 +47024,11 @@ class ViewFont:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Color(self):
-        return OlColor(self.com_object.Color)
+        return self.com_object.Color
 
     @Color.setter
     def Color(self, value):
@@ -47046,7 +47046,7 @@ class ViewFont:
 
     @property
     def ExtendedColor(self):
-        return OlCategoryColor(self.com_object.ExtendedColor)
+        return self.com_object.ExtendedColor
 
     @ExtendedColor.setter
     def ExtendedColor(self, value):
@@ -47197,7 +47197,7 @@ class Views:
 
     @property
     def Class(self):
-        return OlObjectClass(self.com_object.Class)
+        return self.com_object.Class
 
     @property
     def Count(self):

@@ -38,7 +38,7 @@ class AccessObject:
 
     @property
     def CurrentView(self):
-        return AcCurrentView(self.com_object.CurrentView)
+        return self.com_object.CurrentView
 
     @property
     def currentview(self):
@@ -163,7 +163,7 @@ class AccessObject:
 
     @property
     def Type(self):
-        return AcObjectType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -5205,7 +5205,7 @@ class Attachment:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -7564,7 +7564,7 @@ class BoundObjectFrame:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -9095,7 +9095,7 @@ class Chart:
 
     @property
     def ChartType(self):
-        return AcChartType(self.com_object.ChartType)
+        return self.com_object.ChartType
 
     @ChartType.setter
     def ChartType(self, value):
@@ -9277,7 +9277,7 @@ class Chart:
 
     @property
     def LegendPosition(self):
-        return AcLegendPosition(self.com_object.LegendPosition)
+        return self.com_object.LegendPosition
 
     @LegendPosition.setter
     def LegendPosition(self, value):
@@ -9361,7 +9361,7 @@ class Chart:
 
     @property
     def PrimaryValuesAxisDisplayUnits(self):
-        return AcAxisUnits(self.com_object.PrimaryValuesAxisDisplayUnits)
+        return self.com_object.PrimaryValuesAxisDisplayUnits
 
     @PrimaryValuesAxisDisplayUnits.setter
     def PrimaryValuesAxisDisplayUnits(self, value):
@@ -9529,7 +9529,7 @@ class Chart:
 
     @property
     def PrimaryValuesAxisRange(self):
-        return AcAxisRange(self.com_object.PrimaryValuesAxisRange)
+        return self.com_object.PrimaryValuesAxisRange
 
     @PrimaryValuesAxisRange.setter
     def PrimaryValuesAxisRange(self, value):
@@ -9613,7 +9613,7 @@ class Chart:
 
     @property
     def SecondaryValuesAxisDisplayUnits(self):
-        return AcAxisUnits(self.com_object.SecondaryValuesAxisDisplayUnits)
+        return self.com_object.SecondaryValuesAxisDisplayUnits
 
     @SecondaryValuesAxisDisplayUnits.setter
     def SecondaryValuesAxisDisplayUnits(self, value):
@@ -9781,7 +9781,7 @@ class Chart:
 
     @property
     def SecondaryValuesAxisRange(self):
-        return AcAxisRange(self.com_object.SecondaryValuesAxisRange)
+        return self.com_object.SecondaryValuesAxisRange
 
     @SecondaryValuesAxisRange.setter
     def SecondaryValuesAxisRange(self, value):
@@ -9857,7 +9857,7 @@ class ChartAxis:
 
     @property
     def GroupType(self):
-        return AcDateGroupType(self.com_object.GroupType)
+        return self.com_object.GroupType
 
     @GroupType.setter
     def GroupType(self, value):
@@ -9937,7 +9937,7 @@ class ChartSeries:
 
     @property
     def ComboChartType(self):
-        return AcChartType(self.com_object.ComboChartType)
+        return self.com_object.ComboChartType
 
     @ComboChartType.setter
     def ComboChartType(self, value):
@@ -9993,7 +9993,7 @@ class ChartSeries:
 
     @property
     def DataLabelDisplayFormat(self):
-        return AcDataLabelDisplayFormat(self.com_object.DataLabelDisplayFormat)
+        return self.com_object.DataLabelDisplayFormat
 
     @DataLabelDisplayFormat.setter
     def DataLabelDisplayFormat(self, value):
@@ -10021,7 +10021,7 @@ class ChartSeries:
 
     @property
     def DataLabelPosition(self):
-        return AcDataLabelPosition(self.com_object.DataLabelPosition)
+        return self.com_object.DataLabelPosition
 
     @DataLabelPosition.setter
     def DataLabelPosition(self, value):
@@ -10217,7 +10217,7 @@ class ChartSeries:
 
     @property
     def GridlinesType(self):
-        return AcGridlineType(self.com_object.GridlinesType)
+        return self.com_object.GridlinesType
 
     @GridlinesType.setter
     def GridlinesType(self, value):
@@ -10273,7 +10273,7 @@ class ChartSeries:
 
     @property
     def MarkerType(self):
-        return AcMarkerType(self.com_object.MarkerType)
+        return self.com_object.MarkerType
 
     @MarkerType.setter
     def MarkerType(self, value):
@@ -10301,7 +10301,7 @@ class ChartSeries:
 
     @property
     def MissingDataPolicy(self):
-        return AcMissingDataPolicy(self.com_object.MissingDataPolicy)
+        return self.com_object.MissingDataPolicy
 
     @MissingDataPolicy.setter
     def MissingDataPolicy(self, value):
@@ -10366,7 +10366,7 @@ class ChartSeries:
 
     @property
     def PercentageDataLabelDecimalPlaces(self):
-        return AcPercentageDataLabelDecimalPlaces(self.com_object.PercentageDataLabelDecimalPlaces)
+        return self.com_object.PercentageDataLabelDecimalPlaces
 
     @PercentageDataLabelDecimalPlaces.setter
     def PercentageDataLabelDecimalPlaces(self, value):
@@ -10394,7 +10394,7 @@ class ChartSeries:
 
     @property
     def PlotSeriesOn(self):
-        return AcValueAxis(self.com_object.PlotSeriesOn)
+        return self.com_object.PlotSeriesOn
 
     @PlotSeriesOn.setter
     def PlotSeriesOn(self, value):
@@ -10506,7 +10506,7 @@ class ChartSeries:
 
     @property
     def SortOrderType(self):
-        return AcSortOrderType(self.com_object.SortOrderType)
+        return self.com_object.SortOrderType
 
     @SortOrderType.setter
     def SortOrderType(self, value):
@@ -10562,7 +10562,7 @@ class ChartSeries:
 
     @property
     def TrendlineOptions(self):
-        return AcTrendlineOptions(self.com_object.TrendlineOptions)
+        return self.com_object.TrendlineOptions
 
     @TrendlineOptions.setter
     def TrendlineOptions(self, value):
@@ -10590,7 +10590,7 @@ class ChartSeries:
 
     @property
     def WordCloudShape(self):
-        return AcWordCloudShape(self.com_object.WordCloudShape)
+        return self.com_object.WordCloudShape
 
     @WordCloudShape.setter
     def WordCloudShape(self, value):
@@ -10618,7 +10618,7 @@ class ChartSeries:
 
     @property
     def WordCloudWordOrientation(self):
-        return AcWordCloudWordOrientation(self.com_object.WordCloudWordOrientation)
+        return self.com_object.WordCloudWordOrientation
 
     @WordCloudWordOrientation.setter
     def WordCloudWordOrientation(self, value):
@@ -10661,7 +10661,7 @@ class ChartValues:
 
     @property
     def AggregateType(self):
-        return AcAggregateType(self.com_object.AggregateType)
+        return self.com_object.AggregateType
 
     @AggregateType.setter
     def AggregateType(self, value):
@@ -11817,7 +11817,7 @@ class CheckBox:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -13033,7 +13033,7 @@ class CodeProject:
 
     @property
     def FileFormat(self):
-        return AcFileFormat(self.com_object.FileFormat)
+        return self.com_object.FileFormat
 
     @property
     def fileformat(self):
@@ -15271,7 +15271,7 @@ class ComboBox:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -18743,7 +18743,7 @@ class CommandButton:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -20519,7 +20519,7 @@ class Control:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -21066,7 +21066,7 @@ class CurrentProject:
 
     @property
     def FileFormat(self):
-        return AcFileFormat(self.com_object.FileFormat)
+        return self.com_object.FileFormat
 
     @property
     def fileformat(self):
@@ -22141,7 +22141,7 @@ class CustomControl:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -24651,7 +24651,7 @@ class EmptyCell:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -30282,7 +30282,7 @@ class FormatCondition:
 
     @property
     def Type(self):
-        return AcFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -31871,7 +31871,7 @@ class Image:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -34006,7 +34006,7 @@ class Label:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -37096,7 +37096,7 @@ class ListBox:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -40510,7 +40510,7 @@ class NavigationButton:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -42970,7 +42970,7 @@ class NavigationControl:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -45053,7 +45053,7 @@ class ObjectFrame:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -47492,7 +47492,7 @@ class OptionButton:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -51179,7 +51179,7 @@ class Printer:
 
     @property
     def ColorMode(self):
-        return AcPrintColor(self.com_object.ColorMode)
+        return self.com_object.ColorMode
 
     @ColorMode.setter
     def ColorMode(self, value):
@@ -51337,7 +51337,7 @@ class Printer:
 
     @property
     def Duplex(self):
-        return AcPrintDuplex(self.com_object.Duplex)
+        return self.com_object.Duplex
 
     @Duplex.setter
     def Duplex(self, value):
@@ -51355,7 +51355,7 @@ class Printer:
 
     @property
     def ItemLayout(self):
-        return AcPrintItemLayout(self.com_object.ItemLayout)
+        return self.com_object.ItemLayout
 
     @ItemLayout.setter
     def ItemLayout(self, value):
@@ -51513,7 +51513,7 @@ class Printer:
 
     @property
     def PaperBin(self):
-        return AcPrintPaperBin(self.com_object.PaperBin)
+        return self.com_object.PaperBin
 
     @PaperBin.setter
     def PaperBin(self, value):
@@ -51541,7 +51541,7 @@ class Printer:
 
     @property
     def PaperSize(self):
-        return AcPrintPaperSize(self.com_object.PaperSize)
+        return self.com_object.PaperSize
 
     @PaperSize.setter
     def PaperSize(self, value):
@@ -51578,7 +51578,7 @@ class Printer:
 
     @property
     def PrintQuality(self):
-        return AcPrintObjQuality(self.com_object.PrintQuality)
+        return self.com_object.PrintQuality
 
     @PrintQuality.setter
     def PrintQuality(self, value):
@@ -58985,7 +58985,7 @@ class SubForm:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -60952,7 +60952,7 @@ class TabControl:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -64042,7 +64042,7 @@ class TextBox:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -67300,7 +67300,7 @@ class ToggleButton:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):
@@ -69589,7 +69589,7 @@ class WebBrowserControl:
 
     @property
     def Layout(self):
-        return AcLayoutType(self.com_object.Layout)
+        return self.com_object.Layout
 
     @property
     def layout(self):

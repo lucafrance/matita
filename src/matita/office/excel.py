@@ -10,7 +10,7 @@ class AboveAverage:
 
     @property
     def AboveBelow(self):
-        return XlAboveBelow(self.com_object.AboveBelow)
+        return self.com_object.AboveBelow
 
     @AboveBelow.setter
     def AboveBelow(self, value):
@@ -70,7 +70,7 @@ class AboveAverage:
 
     @property
     def CalcFor(self):
-        return XlCalcFor(self.com_object.CalcFor)
+        return self.com_object.CalcFor
 
     @CalcFor.setter
     def CalcFor(self, value):
@@ -222,7 +222,7 @@ class AboveAverage:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -278,7 +278,7 @@ class AboveAverage:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -399,7 +399,7 @@ class Action:
 
     @property
     def Type(self):
-        return XlActionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -1356,7 +1356,7 @@ class Application:
 
     @property
     def Calculation(self):
-        return XlCalculation(self.com_object.Calculation)
+        return self.com_object.Calculation
 
     @Calculation.setter
     def Calculation(self, value):
@@ -1402,7 +1402,7 @@ class Application:
 
     @property
     def CalculationState(self):
-        return XlCalculationState(self.com_object.CalculationState)
+        return self.com_object.CalculationState
 
     @property
     def calculationstate(self):
@@ -1633,7 +1633,7 @@ class Application:
 
     @property
     def CommandUnderlines(self):
-        return XlCommandUnderlines(self.com_object.CommandUnderlines)
+        return self.com_object.CommandUnderlines
 
     @CommandUnderlines.setter
     def CommandUnderlines(self, value):
@@ -1754,7 +1754,7 @@ class Application:
 
     @property
     def Cursor(self):
-        return XlMousePointer(self.com_object.Cursor)
+        return self.com_object.Cursor
 
     @Cursor.setter
     def Cursor(self, value):
@@ -1814,7 +1814,7 @@ class Application:
 
     @property
     def CutCopyMode(self):
-        return XLCutCopyMode(self.com_object.CutCopyMode)
+        return self.com_object.CutCopyMode
 
     @CutCopyMode.setter
     def CutCopyMode(self, value):
@@ -2103,7 +2103,7 @@ class Application:
 
     @property
     def DisplayCommentIndicator(self):
-        return XlCommentDisplayMode(self.com_object.DisplayCommentIndicator)
+        return self.com_object.DisplayCommentIndicator
 
     @DisplayCommentIndicator.setter
     def DisplayCommentIndicator(self, value):
@@ -3422,7 +3422,7 @@ class Application:
 
     @property
     def MailSystem(self):
-        return XlMailSystem(self.com_object.MailSystem)
+        return self.com_object.MailSystem
 
     @property
     def mailsystem(self):
@@ -3632,7 +3632,7 @@ class Application:
 
     @property
     def MoveAfterReturnDirection(self):
-        return XlDirection(self.com_object.MoveAfterReturnDirection)
+        return self.com_object.MoveAfterReturnDirection
 
     @MoveAfterReturnDirection.setter
     def MoveAfterReturnDirection(self, value):
@@ -4056,7 +4056,7 @@ class Application:
 
     @property
     def ReferenceStyle(self):
-        return XlReferenceStyle(self.com_object.ReferenceStyle)
+        return self.com_object.ReferenceStyle
 
     @ReferenceStyle.setter
     def ReferenceStyle(self, value):
@@ -5095,7 +5095,7 @@ class Application:
 
     @property
     def WindowState(self):
-        return XlWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -6517,7 +6517,7 @@ class Axis:
 
     @property
     def BaseUnit(self):
-        return XlTimeUnit(self.com_object.BaseUnit)
+        return self.com_object.BaseUnit
 
     @BaseUnit.setter
     def BaseUnit(self, value):
@@ -6610,7 +6610,7 @@ class Axis:
 
     @property
     def CategoryType(self):
-        return XlCategoryType(self.com_object.CategoryType)
+        return self.com_object.CategoryType
 
     @CategoryType.setter
     def CategoryType(self, value):
@@ -6693,7 +6693,7 @@ class Axis:
 
     @property
     def DisplayUnit(self):
-        return XlDisplayUnit(self.com_object.DisplayUnit)
+        return self.com_object.DisplayUnit
 
     @DisplayUnit.setter
     def DisplayUnit(self, value):
@@ -6944,7 +6944,7 @@ class Axis:
 
     @property
     def MajorTickMark(self):
-        return XlTickMark(self.com_object.MajorTickMark)
+        return self.com_object.MajorTickMark
 
     @MajorTickMark.setter
     def MajorTickMark(self, value):
@@ -7182,7 +7182,7 @@ class Axis:
 
     @property
     def MinorTickMark(self):
-        return XlTickMark(self.com_object.MinorTickMark)
+        return self.com_object.MinorTickMark
 
     @MinorTickMark.setter
     def MinorTickMark(self, value):
@@ -7331,7 +7331,7 @@ class Axis:
 
     @property
     def ScaleType(self):
-        return XlScaleType(self.com_object.ScaleType)
+        return self.com_object.ScaleType
 
     @ScaleType.setter
     def ScaleType(self, value):
@@ -7494,7 +7494,7 @@ class Axis:
 
     @property
     def Type(self):
-        return XlAxisType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -7810,7 +7810,7 @@ class AxisTitle:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -8031,7 +8031,7 @@ class Border:
 
     @property
     def LineStyle(self):
-        return XlLineStyle(self.com_object.LineStyle)
+        return self.com_object.LineStyle
 
     @LineStyle.setter
     def LineStyle(self, value):
@@ -8124,7 +8124,7 @@ class Border:
 
     @property
     def Weight(self):
-        return XlBorderWeight(self.com_object.Weight)
+        return self.com_object.Weight
 
     @Weight.setter
     def Weight(self, value):
@@ -8236,7 +8236,7 @@ class Borders:
 
     @property
     def LineStyle(self):
-        return XlLineStyle(self.com_object.LineStyle)
+        return self.com_object.LineStyle
 
     @LineStyle.setter
     def LineStyle(self, value):
@@ -8338,7 +8338,7 @@ class Borders:
 
     @property
     def Weight(self):
-        return XlBorderWeight(self.com_object.Weight)
+        return self.com_object.Weight
 
     @Weight.setter
     def Weight(self, value):
@@ -8631,7 +8631,7 @@ class CalculatedMember:
 
     @property
     def NumberFormat(self):
-        return XlCalcMemNumberFormatType(self.com_object.NumberFormat)
+        return self.com_object.NumberFormat
 
     @property
     def numberformat(self):
@@ -8710,7 +8710,7 @@ class CalculatedMember:
 
     @property
     def Type(self):
-        return XlCalculatedMemberType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -9695,7 +9695,7 @@ class Chart:
 
     @property
     def BarShape(self):
-        return XlBarShape(self.com_object.BarShape)
+        return self.com_object.BarShape
 
     @BarShape.setter
     def BarShape(self, value):
@@ -9723,7 +9723,7 @@ class Chart:
 
     @property
     def CategoryLabelLevel(self):
-        return XlCategoryLabelLevel(self.com_object.CategoryLabelLevel)
+        return self.com_object.CategoryLabelLevel
 
     @CategoryLabelLevel.setter
     def CategoryLabelLevel(self, value):
@@ -9835,7 +9835,7 @@ class Chart:
 
     @property
     def ChartType(self):
-        return XlChartType(self.com_object.ChartType)
+        return self.com_object.ChartType
 
     @ChartType.setter
     def ChartType(self, value):
@@ -9928,7 +9928,7 @@ class Chart:
 
     @property
     def DisplayBlanksAs(self):
-        return XlDisplayBlanksAs(self.com_object.DisplayBlanksAs)
+        return self.com_object.DisplayBlanksAs
 
     @DisplayBlanksAs.setter
     def DisplayBlanksAs(self, value):
@@ -10288,7 +10288,7 @@ class Chart:
 
     @property
     def PlotBy(self):
-        return XlRowCol(self.com_object.PlotBy)
+        return self.com_object.PlotBy
 
     @PlotBy.setter
     def PlotBy(self, value):
@@ -10539,7 +10539,7 @@ class Chart:
 
     @property
     def SeriesNameLevel(self):
-        return XlSeriesNameLevel(self.com_object.SeriesNameLevel)
+        return self.com_object.SeriesNameLevel
 
     @SeriesNameLevel.setter
     def SeriesNameLevel(self, value):
@@ -10795,7 +10795,7 @@ class Chart:
 
     @property
     def Visible(self):
-        return XlSheetVisibility(self.com_object.Visible)
+        return self.com_object.Visible
 
     @Visible.setter
     def Visible(self, value):
@@ -12360,7 +12360,7 @@ class ChartGroup:
 
     @property
     def SizeRepresents(self):
-        return XlSizeRepresents(self.com_object.SizeRepresents)
+        return self.com_object.SizeRepresents
 
     @SizeRepresents.setter
     def SizeRepresents(self, value):
@@ -12388,7 +12388,7 @@ class ChartGroup:
 
     @property
     def SplitType(self):
-        return XlChartSplitType(self.com_object.SplitType)
+        return self.com_object.SplitType
 
     @SplitType.setter
     def SplitType(self, value):
@@ -12710,7 +12710,7 @@ class ChartObject:
 
     @property
     def Placement(self):
-        return XlPlacement(self.com_object.Placement)
+        return self.com_object.Placement
 
     @Placement.setter
     def Placement(self, value):
@@ -13105,7 +13105,7 @@ class ChartObjects:
 
     @property
     def Placement(self):
-        return XlPlacement(self.com_object.Placement)
+        return self.com_object.Placement
 
     @Placement.setter
     def Placement(self, value):
@@ -13774,7 +13774,7 @@ class ChartTitle:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -14250,7 +14250,7 @@ class ColorScale:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -14306,7 +14306,7 @@ class ColorScale:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -14417,7 +14417,7 @@ class ColorScaleCriterion:
 
     @property
     def Type(self):
-        return XlConditionValueTypes(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -14999,7 +14999,7 @@ class ConditionValue:
 
     @property
     def Type(self):
-        return XlConditionValueTypes(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -16268,7 +16268,7 @@ class CubeField:
 
     @property
     def LayoutForm(self):
-        return XlLayoutFormType(self.com_object.LayoutForm)
+        return self.com_object.LayoutForm
 
     @LayoutForm.setter
     def LayoutForm(self, value):
@@ -16296,7 +16296,7 @@ class CubeField:
 
     @property
     def LayoutSubtotalLocation(self):
-        return XlSubtotalLocationType(self.com_object.LayoutSubtotalLocation)
+        return self.com_object.LayoutSubtotalLocation
 
     @LayoutSubtotalLocation.setter
     def LayoutSubtotalLocation(self, value):
@@ -16333,7 +16333,7 @@ class CubeField:
 
     @property
     def Orientation(self):
-        return XlPivotFieldOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -17176,7 +17176,7 @@ class Databar:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -17260,7 +17260,7 @@ class Databar:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -17623,7 +17623,7 @@ class DataFeedConnection:
 
     @property
     def ServerCredentialsMethod(self):
-        return XlCredentialsMethod(self.com_object.ServerCredentialsMethod)
+        return self.com_object.ServerCredentialsMethod
 
     @ServerCredentialsMethod.setter
     def ServerCredentialsMethod(self, value):
@@ -18116,7 +18116,7 @@ class DataLabel:
 
     @property
     def Position(self):
-        return XlDataLabelPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -18702,7 +18702,7 @@ class DataLabels:
 
     @property
     def Position(self):
-        return XlDataLabelPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -20398,7 +20398,7 @@ class DisplayUnitLabel:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -20781,7 +20781,7 @@ class ErrorBars:
 
     @property
     def EndStyle(self):
-        return XlEndStyleCap(self.com_object.EndStyle)
+        return self.com_object.EndStyle
 
     @EndStyle.setter
     def EndStyle(self, value):
@@ -21025,7 +21025,7 @@ class ErrorCheckingOptions:
 
     @property
     def IndicatorColorIndex(self):
-        return XlColorIndex(self.com_object.IndicatorColorIndex)
+        return self.com_object.IndicatorColorIndex
 
     @IndicatorColorIndex.setter
     def IndicatorColorIndex(self, value):
@@ -22045,7 +22045,7 @@ class Filter:
 
     @property
     def Operator(self):
-        return XlAutoFilterOperator(self.com_object.Operator)
+        return self.com_object.Operator
 
     @property
     def operator(self):
@@ -22257,7 +22257,7 @@ class Font:
 
     @property
     def Background(self):
-        return XlBackground(self.com_object.Background)
+        return self.com_object.Background
 
     @Background.setter
     def Background(self, value):
@@ -22521,7 +22521,7 @@ class Font:
 
     @property
     def ThemeFont(self):
-        return XlThemeFont(self.com_object.ThemeFont)
+        return self.com_object.ThemeFont
 
     @ThemeFont.setter
     def ThemeFont(self, value):
@@ -22628,7 +22628,7 @@ class FormatColor:
 
     @property
     def ColorIndex(self):
-        return XlColorIndex(self.com_object.ColorIndex)
+        return self.com_object.ColorIndex
 
     @ColorIndex.setter
     def ColorIndex(self, value):
@@ -22674,7 +22674,7 @@ class FormatColor:
 
     @property
     def ThemeColor(self):
-        return XlThemeColor(self.com_object.ThemeColor)
+        return self.com_object.ThemeColor
 
     @ThemeColor.setter
     def ThemeColor(self, value):
@@ -22919,7 +22919,7 @@ class FormatCondition:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -22993,7 +22993,7 @@ class FormatCondition:
 
     @property
     def TextOperator(self):
-        return XlContainsOperator(self.com_object.TextOperator)
+        return self.com_object.TextOperator
 
     @TextOperator.setter
     def TextOperator(self, value):
@@ -23021,7 +23021,7 @@ class FormatCondition:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -23892,7 +23892,7 @@ class HPageBreak:
 
     @property
     def Extent(self):
-        return XlPageBreakExtent(self.com_object.Extent)
+        return self.com_object.Extent
 
     @property
     def extent(self):
@@ -23928,7 +23928,7 @@ class HPageBreak:
 
     @property
     def Type(self):
-        return XlPageBreak(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -24442,7 +24442,7 @@ class IconCriterion:
 
     @property
     def Operator(self):
-        return XlFormatConditionOperator(self.com_object.Operator)
+        return self.com_object.Operator
 
     @Operator.setter
     def Operator(self, value):
@@ -24460,7 +24460,7 @@ class IconCriterion:
 
     @property
     def Type(self):
-        return XlConditionValueTypes(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -24520,7 +24520,7 @@ class IconSet:
 
     @property
     def ID(self):
-        return XlIconSet(self.com_object.ID)
+        return self.com_object.ID
 
     @property
     def id(self):
@@ -24750,7 +24750,7 @@ class IconSetCondition:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -24834,7 +24834,7 @@ class IconSetCondition:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -25065,7 +25065,7 @@ class Interior:
 
     @property
     def Pattern(self):
-        return XlPattern(self.com_object.Pattern)
+        return self.com_object.Pattern
 
     @Pattern.setter
     def Pattern(self, value):
@@ -25111,7 +25111,7 @@ class Interior:
 
     @property
     def PatternColorIndex(self):
-        return XlColorIndex(self.com_object.PatternColorIndex)
+        return self.com_object.PatternColorIndex
 
     @PatternColorIndex.setter
     def PatternColorIndex(self, value):
@@ -25195,7 +25195,7 @@ class Interior:
 
     @property
     def ThemeColor(self):
-        return XlThemeColor(self.com_object.ThemeColor)
+        return self.com_object.ThemeColor
 
     @ThemeColor.setter
     def ThemeColor(self, value):
@@ -25563,7 +25563,7 @@ class Legend:
 
     @property
     def Position(self):
-        return XlLegendPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -25955,7 +25955,7 @@ class LegendKey:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -26011,7 +26011,7 @@ class LegendKey:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -26067,7 +26067,7 @@ class LegendKey:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -26104,7 +26104,7 @@ class LegendKey:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -27146,7 +27146,7 @@ class ListDataFormat:
 
     @property
     def Type(self):
-        return XlListDataType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -27666,7 +27666,7 @@ class ListObject:
 
     @property
     def SourceType(self):
-        return XlListObjectSourceType(self.com_object.SourceType)
+        return self.com_object.SourceType
 
     @property
     def sourcetype(self):
@@ -29043,7 +29043,7 @@ class ModelConnection:
 
     @property
     def CommandType(self):
-        return XlCmdType(self.com_object.CommandType)
+        return self.com_object.CommandType
 
     @CommandType.setter
     def CommandType(self, value):
@@ -30237,7 +30237,7 @@ class ModelTableColumn:
 
     @property
     def DataType(self):
-        return XlParameterDataType(self.com_object.DataType)
+        return self.com_object.DataType
 
     @property
     def datatype(self):
@@ -30653,7 +30653,7 @@ class MultiThreadedCalculation:
 
     @property
     def ThreadMode(self):
-        return XlThreadMode(self.com_object.ThreadMode)
+        return self.com_object.ThreadMode
 
     @ThreadMode.setter
     def ThreadMode(self, value):
@@ -30955,7 +30955,7 @@ class ODBCConnection:
 
     @property
     def CommandType(self):
-        return XlCmdType(self.com_object.CommandType)
+        return self.com_object.CommandType
 
     @CommandType.setter
     def CommandType(self, value):
@@ -31135,7 +31135,7 @@ class ODBCConnection:
 
     @property
     def RobustConnect(self):
-        return XlRobustConnect(self.com_object.RobustConnect)
+        return self.com_object.RobustConnect
 
     @RobustConnect.setter
     def RobustConnect(self, value):
@@ -31191,7 +31191,7 @@ class ODBCConnection:
 
     @property
     def ServerCredentialsMethod(self):
-        return XlCredentialsMethod(self.com_object.ServerCredentialsMethod)
+        return self.com_object.ServerCredentialsMethod
 
     @ServerCredentialsMethod.setter
     def ServerCredentialsMethod(self, value):
@@ -31605,7 +31605,7 @@ class OLEDBConnection:
 
     @property
     def CommandType(self):
-        return XlCmdType(self.com_object.CommandType)
+        return self.com_object.CommandType
 
     @CommandType.setter
     def CommandType(self, value):
@@ -31953,7 +31953,7 @@ class OLEDBConnection:
 
     @property
     def RobustConnect(self):
-        return XlRobustConnect(self.com_object.RobustConnect)
+        return self.com_object.RobustConnect
 
     @RobustConnect.setter
     def RobustConnect(self, value):
@@ -32009,7 +32009,7 @@ class OLEDBConnection:
 
     @property
     def ServerCredentialsMethod(self):
-        return XlCredentialsMethod(self.com_object.ServerCredentialsMethod)
+        return self.com_object.ServerCredentialsMethod
 
     @ServerCredentialsMethod.setter
     def ServerCredentialsMethod(self, value):
@@ -32787,7 +32787,7 @@ class OLEObject:
 
     @property
     def OLEType(self):
-        return XlOLEType(self.com_object.OLEType)
+        return self.com_object.OLEType
 
     @property
     def oletype(self):
@@ -32810,7 +32810,7 @@ class OLEObject:
 
     @property
     def Placement(self):
-        return XlPlacement(self.com_object.Placement)
+        return self.com_object.Placement
 
     @Placement.setter
     def Placement(self, value):
@@ -33271,7 +33271,7 @@ class OLEObjects:
 
     @property
     def Placement(self):
-        return XlPlacement(self.com_object.Placement)
+        return self.com_object.Placement
 
     @Placement.setter
     def Placement(self, value):
@@ -33597,7 +33597,7 @@ class Outline:
 
     @property
     def SummaryColumn(self):
-        return XlSummaryColumn(self.com_object.SummaryColumn)
+        return self.com_object.SummaryColumn
 
     @SummaryColumn.setter
     def SummaryColumn(self, value):
@@ -33625,7 +33625,7 @@ class Outline:
 
     @property
     def SummaryRow(self):
-        return XlSummaryRow(self.com_object.SummaryRow)
+        return self.com_object.SummaryRow
 
     @SummaryRow.setter
     def SummaryRow(self, value):
@@ -34417,7 +34417,7 @@ class PageSetup:
 
     @property
     def Order(self):
-        return XlOrder(self.com_object.Order)
+        return self.com_object.Order
 
     @Order.setter
     def Order(self, value):
@@ -34435,7 +34435,7 @@ class PageSetup:
 
     @property
     def Orientation(self):
-        return XlPageOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -34471,7 +34471,7 @@ class PageSetup:
 
     @property
     def PaperSize(self):
-        return XlPaperSize(self.com_object.PaperSize)
+        return self.com_object.PaperSize
 
     @PaperSize.setter
     def PaperSize(self, value):
@@ -34536,7 +34536,7 @@ class PageSetup:
 
     @property
     def PrintComments(self):
-        return XlPrintLocation(self.com_object.PrintComments)
+        return self.com_object.PrintComments
 
     @PrintComments.setter
     def PrintComments(self, value):
@@ -35216,7 +35216,7 @@ class Parameter:
 
     @property
     def DataType(self):
-        return XlParameterDataType(self.com_object.DataType)
+        return self.com_object.DataType
 
     @DataType.setter
     def DataType(self, value):
@@ -35327,7 +35327,7 @@ class Parameter:
 
     @property
     def Type(self):
-        return XlParameterType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -35462,7 +35462,7 @@ class Phonetic:
 
     @property
     def CharacterType(self):
-        return XlPhoneticCharacterType(self.com_object.CharacterType)
+        return self.com_object.CharacterType
 
     @CharacterType.setter
     def CharacterType(self, value):
@@ -35589,7 +35589,7 @@ class Phonetics:
 
     @property
     def CharacterType(self):
-        return XlPhoneticCharacterType(self.com_object.CharacterType)
+        return self.com_object.CharacterType
 
     @CharacterType.setter
     def CharacterType(self, value):
@@ -36169,7 +36169,7 @@ class PivotCache:
 
     @property
     def CommandType(self):
-        return XlCmdType(self.com_object.CommandType)
+        return self.com_object.CommandType
 
     @CommandType.setter
     def CommandType(self, value):
@@ -36345,7 +36345,7 @@ class PivotCache:
 
     @property
     def MissingItemsLimit(self):
-        return XlPivotTableMissingItems(self.com_object.MissingItemsLimit)
+        return self.com_object.MissingItemsLimit
 
     @MissingItemsLimit.setter
     def MissingItemsLimit(self, value):
@@ -36554,7 +36554,7 @@ class PivotCache:
 
     @property
     def RobustConnect(self):
-        return XlRobustConnect(self.com_object.RobustConnect)
+        return self.com_object.RobustConnect
 
     @RobustConnect.setter
     def RobustConnect(self, value):
@@ -36680,7 +36680,7 @@ class PivotCache:
 
     @property
     def SourceType(self):
-        return XlPivotTableSourceType(self.com_object.SourceType)
+        return self.com_object.SourceType
 
     @property
     def sourcetype(self):
@@ -36750,7 +36750,7 @@ class PivotCache:
 
     @property
     def Version(self):
-        return XlPivotTableVersionList(self.com_object.Version)
+        return self.com_object.Version
 
     @property
     def version(self):
@@ -36959,7 +36959,7 @@ class PivotCell:
 
     @property
     def CustomSubtotalFunction(self):
-        return XlConsolidationFunction(self.com_object.CustomSubtotalFunction)
+        return self.com_object.CustomSubtotalFunction
 
     @property
     def customsubtotalfunction(self):
@@ -37024,7 +37024,7 @@ class PivotCell:
 
     @property
     def PivotCellType(self):
-        return XlPivotCellType(self.com_object.PivotCellType)
+        return self.com_object.PivotCellType
 
     @property
     def pivotcelltype(self):
@@ -37280,7 +37280,7 @@ class PivotField:
 
     @property
     def AutoSortOrder(self):
-        return XlSortOrder(self.com_object.AutoSortOrder)
+        return self.com_object.AutoSortOrder
 
     @property
     def autosortorder(self):
@@ -37364,7 +37364,7 @@ class PivotField:
 
     @property
     def Calculation(self):
-        return XlPivotFieldCalculation(self.com_object.Calculation)
+        return self.com_object.Calculation
 
     @Calculation.setter
     def Calculation(self, value):
@@ -37571,7 +37571,7 @@ class PivotField:
 
     @property
     def DataType(self):
-        return XlPivotFieldDataType(self.com_object.DataType)
+        return self.com_object.DataType
 
     @property
     def datatype(self):
@@ -37897,7 +37897,7 @@ class PivotField:
 
     @property
     def Function(self):
-        return XlConsolidationFunction(self.com_object.Function)
+        return self.com_object.Function
 
     @Function.setter
     def Function(self, value):
@@ -38118,7 +38118,7 @@ class PivotField:
 
     @property
     def LayoutForm(self):
-        return XlLayoutFormType(self.com_object.LayoutForm)
+        return self.com_object.LayoutForm
 
     @LayoutForm.setter
     def LayoutForm(self, value):
@@ -38174,7 +38174,7 @@ class PivotField:
 
     @property
     def LayoutSubtotalLocation(self):
-        return XlSubtotalLocationType(self.com_object.LayoutSubtotalLocation)
+        return self.com_object.LayoutSubtotalLocation
 
     @LayoutSubtotalLocation.setter
     def LayoutSubtotalLocation(self, value):
@@ -38290,7 +38290,7 @@ class PivotField:
 
     @property
     def Orientation(self):
-        return XlPivotFieldOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -40040,7 +40040,7 @@ class PivotLine:
 
     @property
     def LineType(self):
-        return XlPivotLineType(self.com_object.LineType)
+        return self.com_object.LineType
 
     @property
     def linetype(self):
@@ -41470,7 +41470,7 @@ class PivotTable:
 
     @property
     def PageFieldOrder(self):
-        return XlOrder(self.com_object.PageFieldOrder)
+        return self.com_object.PageFieldOrder
 
     @PageFieldOrder.setter
     def PageFieldOrder(self, value):
@@ -41933,7 +41933,7 @@ class PivotTable:
 
     @property
     def SelectionMode(self):
-        return XlPTSelectionMode(self.com_object.SelectionMode)
+        return self.com_object.SelectionMode
 
     @SelectionMode.setter
     def SelectionMode(self, value):
@@ -42472,7 +42472,7 @@ class PivotTable:
 
     @property
     def Version(self):
-        return XlPivotTableVersionList(self.com_object.Version)
+        return self.com_object.Version
 
     @property
     def version(self):
@@ -43371,7 +43371,7 @@ class PlotArea:
 
     @property
     def Position(self):
-        return XlChartElementPosition(self.com_object.Position)
+        return self.com_object.Position
 
     @Position.setter
     def Position(self, value):
@@ -43750,7 +43750,7 @@ class Point:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -43806,7 +43806,7 @@ class Point:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -43862,7 +43862,7 @@ class Point:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -43908,7 +43908,7 @@ class Point:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -44703,7 +44703,7 @@ class PublishObject:
 
     @property
     def HtmlType(self):
-        return XlHtmlType(self.com_object.HtmlType)
+        return self.com_object.HtmlType
 
     @HtmlType.setter
     def HtmlType(self, value):
@@ -44758,7 +44758,7 @@ class PublishObject:
 
     @property
     def SourceType(self):
-        return XlSourceType(self.com_object.SourceType)
+        return self.com_object.SourceType
 
     @property
     def sourcetype(self):
@@ -45073,7 +45073,7 @@ class QueryTable:
 
     @property
     def CommandType(self):
-        return XlCmdType(self.com_object.CommandType)
+        return self.com_object.CommandType
 
     @CommandType.setter
     def CommandType(self, value):
@@ -45536,7 +45536,7 @@ class QueryTable:
 
     @property
     def RefreshStyle(self):
-        return XlCellInsertionMode(self.com_object.RefreshStyle)
+        return self.com_object.RefreshStyle
 
     @RefreshStyle.setter
     def RefreshStyle(self, value):
@@ -45578,7 +45578,7 @@ class QueryTable:
 
     @property
     def RobustConnect(self):
-        return XlRobustConnect(self.com_object.RobustConnect)
+        return self.com_object.RobustConnect
 
     @RobustConnect.setter
     def RobustConnect(self, value):
@@ -45923,7 +45923,7 @@ class QueryTable:
 
     @property
     def TextFileParseType(self):
-        return XlTextParsingType(self.com_object.TextFileParseType)
+        return self.com_object.TextFileParseType
 
     @TextFileParseType.setter
     def TextFileParseType(self, value):
@@ -45951,7 +45951,7 @@ class QueryTable:
 
     @property
     def TextFilePlatform(self):
-        return XlPlatform(self.com_object.TextFilePlatform)
+        return self.com_object.TextFilePlatform
 
     @TextFilePlatform.setter
     def TextFilePlatform(self, value):
@@ -46119,7 +46119,7 @@ class QueryTable:
 
     @property
     def TextFileTextQualifier(self):
-        return XlTextQualifier(self.com_object.TextFileTextQualifier)
+        return self.com_object.TextFileTextQualifier
 
     @TextFileTextQualifier.setter
     def TextFileTextQualifier(self, value):
@@ -46203,7 +46203,7 @@ class QueryTable:
 
     @property
     def TextFileVisualLayout(self):
-        return XlTextVisualLayoutType(self.com_object.TextFileVisualLayout)
+        return self.com_object.TextFileVisualLayout
 
     @TextFileVisualLayout.setter
     def TextFileVisualLayout(self, value):
@@ -46315,7 +46315,7 @@ class QueryTable:
 
     @property
     def WebFormatting(self):
-        return XlWebFormatting(self.com_object.WebFormatting)
+        return self.com_object.WebFormatting
 
     @WebFormatting.setter
     def WebFormatting(self, value):
@@ -46371,7 +46371,7 @@ class QueryTable:
 
     @property
     def WebSelectionType(self):
-        return XlWebSelectionType(self.com_object.WebSelectionType)
+        return self.com_object.WebSelectionType
 
     @WebSelectionType.setter
     def WebSelectionType(self, value):
@@ -47439,7 +47439,7 @@ class Range:
 
     @property
     def LinkedDataTypeState(self):
-        return XlLinkedDataTypeState(self.com_object.LinkedDataTypeState)
+        return self.com_object.LinkedDataTypeState
 
     @property
     def linkeddatatypestate(self):
@@ -47710,7 +47710,7 @@ class Range:
 
     @property
     def PageBreak(self):
-        return XlPageBreak(self.com_object.PageBreak)
+        return self.com_object.PageBreak
 
     @PageBreak.setter
     def PageBreak(self, value):
@@ -50286,7 +50286,7 @@ class Series:
 
     @property
     def BarShape(self):
-        return XlBarShape(self.com_object.BarShape)
+        return self.com_object.BarShape
 
     @BarShape.setter
     def BarShape(self, value):
@@ -50342,7 +50342,7 @@ class Series:
 
     @property
     def ChartType(self):
-        return XlChartType(self.com_object.ChartType)
+        return self.com_object.ChartType
 
     @ChartType.setter
     def ChartType(self, value):
@@ -50788,7 +50788,7 @@ class Series:
 
     @property
     def MarkerBackgroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerBackgroundColorIndex)
+        return self.com_object.MarkerBackgroundColorIndex
 
     @MarkerBackgroundColorIndex.setter
     def MarkerBackgroundColorIndex(self, value):
@@ -50844,7 +50844,7 @@ class Series:
 
     @property
     def MarkerForegroundColorIndex(self):
-        return XlColorIndex(self.com_object.MarkerForegroundColorIndex)
+        return self.com_object.MarkerForegroundColorIndex
 
     @MarkerForegroundColorIndex.setter
     def MarkerForegroundColorIndex(self, value):
@@ -50900,7 +50900,7 @@ class Series:
 
     @property
     def MarkerStyle(self):
-        return XlMarkerStyle(self.com_object.MarkerStyle)
+        return self.com_object.MarkerStyle
 
     @MarkerStyle.setter
     def MarkerStyle(self, value):
@@ -50983,7 +50983,7 @@ class Series:
 
     @property
     def PictureType(self):
-        return XlChartPictureType(self.com_object.PictureType)
+        return self.com_object.PictureType
 
     @PictureType.setter
     def PictureType(self, value):
@@ -52144,7 +52144,7 @@ class Shape:
 
     @property
     def FormControlType(self):
-        return XlFormControl(self.com_object.FormControlType)
+        return self.com_object.FormControlType
 
     @property
     def formcontroltype(self):
@@ -52499,7 +52499,7 @@ class Shape:
 
     @property
     def Placement(self):
-        return XlPlacement(self.com_object.Placement)
+        return self.com_object.Placement
 
     @Placement.setter
     def Placement(self, value):
@@ -54064,7 +54064,7 @@ class Slicer:
 
     @property
     def SlicerCacheType(self):
-        return XlSlicerCacheType(self.com_object.SlicerCacheType)
+        return self.com_object.SlicerCacheType
 
     @property
     def slicercachetype(self):
@@ -54390,7 +54390,7 @@ class SlicerCache:
 
     @property
     def SlicerCacheType(self):
-        return XlSlicerCacheType(self.com_object.SlicerCacheType)
+        return self.com_object.SlicerCacheType
 
     @property
     def slicercachetype(self):
@@ -54427,7 +54427,7 @@ class SlicerCache:
 
     @property
     def SortItems(self):
-        return XlSlicerSort(self.com_object.SortItems)
+        return self.com_object.SortItems
 
     @SortItems.setter
     def SortItems(self, value):
@@ -55521,7 +55521,7 @@ class SortField:
 
     @property
     def SortOn(self):
-        return XlSortOn(self.com_object.SortOn)
+        return self.com_object.SortOn
 
     @SortOn.setter
     def SortOn(self, value):
@@ -56634,7 +56634,7 @@ class Speech:
 
     @property
     def Direction(self):
-        return XlSpeakDirection(self.com_object.Direction)
+        return self.com_object.Direction
 
     @Direction.setter
     def Direction(self, value):
@@ -56695,7 +56695,7 @@ class SpellingOptions:
 
     @property
     def ArabicModes(self):
-        return XlArabicModes(self.com_object.ArabicModes)
+        return self.com_object.ArabicModes
 
     @ArabicModes.setter
     def ArabicModes(self, value):
@@ -56891,7 +56891,7 @@ class SpellingOptions:
 
     @property
     def HebrewModes(self):
-        return XlHebrewModes(self.com_object.HebrewModes)
+        return self.com_object.HebrewModes
 
     @HebrewModes.setter
     def HebrewModes(self, value):
@@ -57339,7 +57339,7 @@ class Style:
 
     @property
     def HorizontalAlignment(self):
-        return XlHAlign(self.com_object.HorizontalAlignment)
+        return self.com_object.HorizontalAlignment
 
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
@@ -57711,7 +57711,7 @@ class Style:
 
     @property
     def Orientation(self):
-        return XlOrientation(self.com_object.Orientation)
+        return self.com_object.Orientation
 
     @Orientation.setter
     def Orientation(self, value):
@@ -57803,7 +57803,7 @@ class Style:
 
     @property
     def VerticalAlignment(self):
-        return XlVAlign(self.com_object.VerticalAlignment)
+        return self.com_object.VerticalAlignment
 
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
@@ -58020,7 +58020,7 @@ class Tab:
 
     @property
     def ThemeColor(self):
-        return XlThemeColor(self.com_object.ThemeColor)
+        return self.com_object.ThemeColor
 
     @ThemeColor.setter
     def ThemeColor(self, value):
@@ -58286,7 +58286,7 @@ class TableObject:
 
     @property
     def RefreshStyle(self):
-        return XlCellInsertionMode(self.com_object.RefreshStyle)
+        return self.com_object.RefreshStyle
 
     @RefreshStyle.setter
     def RefreshStyle(self, value):
@@ -59080,7 +59080,7 @@ class TextConnection:
 
     @property
     def TextFileParseType(self):
-        return XlTextParsingType(self.com_object.TextFileParseType)
+        return self.com_object.TextFileParseType
 
     @TextFileParseType.setter
     def TextFileParseType(self, value):
@@ -59108,7 +59108,7 @@ class TextConnection:
 
     @property
     def TextFilePlatform(self):
-        return XlPlatform(self.com_object.TextFilePlatform)
+        return self.com_object.TextFilePlatform
 
     @TextFilePlatform.setter
     def TextFilePlatform(self, value):
@@ -59276,7 +59276,7 @@ class TextConnection:
 
     @property
     def TextFileTextQualifier(self):
-        return XlTextQualifier(self.com_object.TextFileTextQualifier)
+        return self.com_object.TextFileTextQualifier
 
     @TextFileTextQualifier.setter
     def TextFileTextQualifier(self, value):
@@ -59360,7 +59360,7 @@ class TextConnection:
 
     @property
     def TextFileVisualLayout(self):
-        return XlTextVisualLayoutType(self.com_object.TextFileVisualLayout)
+        return self.com_object.TextFileVisualLayout
 
     @TextFileVisualLayout.setter
     def TextFileVisualLayout(self, value):
@@ -59818,7 +59818,7 @@ class TextFrame:
 
     @property
     def HorizontalAlignment(self):
-        return XlHAlign(self.com_object.HorizontalAlignment)
+        return self.com_object.HorizontalAlignment
 
     @HorizontalAlignment.setter
     def HorizontalAlignment(self, value):
@@ -60041,7 +60041,7 @@ class TextFrame:
 
     @property
     def VerticalAlignment(self):
-        return XlVAlign(self.com_object.VerticalAlignment)
+        return self.com_object.VerticalAlignment
 
     @VerticalAlignment.setter
     def VerticalAlignment(self, value):
@@ -61695,7 +61695,7 @@ class TimelineState:
 
     @property
     def FilterType(self):
-        return XlPivotFilterType(self.com_object.FilterType)
+        return self.com_object.FilterType
 
     @property
     def filtertype(self):
@@ -61989,7 +61989,7 @@ class Top10:
 
     @property
     def CalcFor(self):
-        return XlCalcFor(self.com_object.CalcFor)
+        return self.com_object.CalcFor
 
     @CalcFor.setter
     def CalcFor(self, value):
@@ -62149,7 +62149,7 @@ class Top10:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -62205,7 +62205,7 @@ class Top10:
 
     @property
     def TopBottom(self):
-        return XlTopBottom(self.com_object.TopBottom)
+        return self.com_object.TopBottom
 
     @TopBottom.setter
     def TopBottom(self, value):
@@ -62233,7 +62233,7 @@ class Top10:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -62603,7 +62603,7 @@ class Trendline:
 
     @property
     def Order(self):
-        return XlTrendlineType(self.com_object.Order)
+        return self.com_object.Order
 
     @Order.setter
     def Order(self, value):
@@ -62648,7 +62648,7 @@ class Trendline:
 
     @property
     def Type(self):
-        return XlTrendlineType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -62801,7 +62801,7 @@ class UniqueValues:
 
     @property
     def DupeUnique(self):
-        return XlDupeUnique(self.com_object.DupeUnique)
+        return self.com_object.DupeUnique
 
     @DupeUnique.setter
     def DupeUnique(self, value):
@@ -62916,7 +62916,7 @@ class UniqueValues:
 
     @property
     def ScopeType(self):
-        return XlPivotConditionScope(self.com_object.ScopeType)
+        return self.com_object.ScopeType
 
     @ScopeType.setter
     def ScopeType(self, value):
@@ -62972,7 +62972,7 @@ class UniqueValues:
 
     @property
     def Type(self):
-        return XlFormatConditionType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -63258,7 +63258,7 @@ class Validation:
 
     @property
     def AlertStyle(self):
-        return XlDVAlertStyle(self.com_object.AlertStyle)
+        return self.com_object.AlertStyle
 
     @property
     def alertstyle(self):
@@ -63392,7 +63392,7 @@ class Validation:
 
     @property
     def IMEMode(self):
-        return XlIMEMode(self.com_object.IMEMode)
+        return self.com_object.IMEMode
 
     @IMEMode.setter
     def IMEMode(self, value):
@@ -63504,7 +63504,7 @@ class Validation:
 
     @property
     def Operator(self):
-        return XlFormatConditionOperator(self.com_object.Operator)
+        return self.com_object.Operator
 
     @property
     def operator(self):
@@ -63578,7 +63578,7 @@ class Validation:
 
     @property
     def Type(self):
-        return XlDVType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -63782,7 +63782,7 @@ class VPageBreak:
 
     @property
     def Extent(self):
-        return XlPageBreakExtent(self.com_object.Extent)
+        return self.com_object.Extent
 
     @property
     def extent(self):
@@ -63809,7 +63809,7 @@ class VPageBreak:
 
     @property
     def Type(self):
-        return XlPageBreak(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -65060,7 +65060,7 @@ class Window:
 
     @property
     def GridlineColorIndex(self):
-        return XlColorIndex(self.com_object.GridlineColorIndex)
+        return self.com_object.GridlineColorIndex
 
     @GridlineColorIndex.setter
     def GridlineColorIndex(self, value):
@@ -65476,7 +65476,7 @@ class Window:
 
     @property
     def Type(self):
-        return XlWindowType(self.com_object.Type)
+        return self.com_object.Type
 
     @Type.setter
     def Type(self, value):
@@ -65522,7 +65522,7 @@ class Window:
 
     @property
     def View(self):
-        return XlWindowView(self.com_object.View)
+        return self.com_object.View
 
     @View.setter
     def View(self, value):
@@ -65604,7 +65604,7 @@ class Window:
 
     @property
     def WindowState(self):
-        return XlWindowState(self.com_object.WindowState)
+        return self.com_object.WindowState
 
     @WindowState.setter
     def WindowState(self, value):
@@ -66291,7 +66291,7 @@ class Workbook:
 
     @property
     def ConflictResolution(self):
-        return XlSaveConflictResolution(self.com_object.ConflictResolution)
+        return self.com_object.ConflictResolution
 
     @ConflictResolution.setter
     def ConflictResolution(self, value):
@@ -66812,7 +66812,7 @@ class Workbook:
 
     @property
     def FileFormat(self):
-        return XlFileFormat(self.com_object.FileFormat)
+        return self.com_object.FileFormat
 
     @property
     def fileformat(self):
@@ -69214,7 +69214,7 @@ class Worksheet:
 
     @property
     def ConsolidationFunction(self):
-        return XlConsolidationFunction(self.com_object.ConsolidationFunction)
+        return self.com_object.ConsolidationFunction
 
     @property
     def consolidationfunction(self):
@@ -69461,7 +69461,7 @@ class Worksheet:
 
     @property
     def EnableSelection(self):
-        return XlEnableSelection(self.com_object.EnableSelection)
+        return self.com_object.EnableSelection
 
     @EnableSelection.setter
     def EnableSelection(self, value):
@@ -69907,7 +69907,7 @@ class Worksheet:
 
     @property
     def Type(self):
-        return XlSheetType(self.com_object.Type)
+        return self.com_object.Type
 
     @property
     def type(self):
@@ -69930,7 +69930,7 @@ class Worksheet:
 
     @property
     def Visible(self):
-        return XlSheetVisibility(self.com_object.Visible)
+        return self.com_object.Visible
 
     @Visible.setter
     def Visible(self, value):
@@ -70346,7 +70346,7 @@ class WorksheetDataConnection:
 
     @property
     def CommandType(self):
-        return XlCmdType(self.com_object.CommandType)
+        return self.com_object.CommandType
 
     @CommandType.setter
     def CommandType(self, value):

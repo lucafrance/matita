@@ -604,13 +604,19 @@ class VbaDocs:
         # Remove invalid class types
         for page in self.pages.values():
             if page.property_class is not None:
-                if f"{page.module_name}.{page.property_class}".lower() not in self.pages:
+                property_class_key = f"{page.module_name}.{page.property_class}".lower()
+                if property_class_key not in self.pages:
                     logging.warning(f"Removing 'property_class' from {page.api_name}. Class '{page.property_class}' not found.")
                     page.property_class = None
+                elif self.pages[property_class_key].is_enumeration:
+                    logging.info(f"Removing 'property_class' from {page.api_name}. '{page.property_class}' is an enumeration.")
+                    page.property_class = None
+                    
             if page.return_value_class is not None:
                 if f"{page.module_name}.{page.return_value_class}".lower() not in self.pages:
                     logging.warning(f"Removing 'return_value_class' from {page.api_name}. Class '{page.return_value_class}' not found.")
                     page.return_value_class = None
+
         self.apply_manual_adjustments()
     
     def to_dict(self):
