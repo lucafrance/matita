@@ -4,7 +4,7 @@ title: Backlog
 
 ## Open items
 
-### item-2 Parse *data type* of parameters
+### item-02 Parse *data type* of parameters
 
 The column `data type` of the parameters table is not yet parsed.
 E.g. from [Sequence.AddEffect method (PowerPoint)](https://learn.microsoft.com/en-us/office/vba/api/powerpoint.sequence.addeffect).
@@ -34,12 +34,12 @@ Enums are defined as `int`.
 **Attention** Some functions accept different type of arguments.
 E.g. [`Worksheet.Range`](https://learn.microsoft.com/en-gb/office/vba/api/excel.worksheet.range) can take a `str` and an `Excel.Range` as first argument.
 
-### item-3 Parse *default value* of parameters
+### item-03 Parse *default value* of parameters
 
-Follow-up to item-2.
+Follow-up to item-02.
 More complex, because the default value is embedded in the description text.
 
-### item-4 `matita.office` Classes to `None` if defining com_object is `None`
+### item-04 `matita.office` Classes to `None` if defining com_object is `None`
 
 There are operations which return `None` (`null` or `nothing` in VBA).
 To be more intuitive, the class instance should be set to `None` directly if the initiation COM object is already `None`.
@@ -53,7 +53,7 @@ print(rng.com_object is None) # True
 print(rng is None) # False, should be True instead
 ```
 
-### item-5 Define `__len__` method for collection
+### item-05 Define `__len__` method for collection
 
 E.g.:
 ```python
@@ -61,7 +61,7 @@ num_worksheets = wkb.worksheets.count
 num_worksheets = len(wkb.worksheets)
 ```
 
-### item-6 Add support for `Worksheet.Rows(index)` ans `Worksheet.Columns(index)`
+### item-06 Add support for `Worksheet.Rows(index)` ans `Worksheet.Columns(index)`
 
 ```
 # Works now
@@ -71,13 +71,8 @@ wks.rows.item(2).style = "Heading 1"
 wks.rows(2).style = "Heading 1"
 ```
 
-### item-7 bug `Excel.Chart.FullSeriesCollection(i)` returns a `FullSeriesCollection` instead of `Series`
 
-`Excel.Chart.FullSeriesCollection` is not a collection, despite the name.
-It is a set of the collection `Excel.Chart.Series`.
-When a class method (like `Excel.Chart.FullSeriesCollection`) has a class with itself an `item` method (like `Excel.Item`), then `return_value_class` of the class method should be set to the same as the `item` method.
-
-### item-8 Smart return type for `Outlook.Application.CreateItem`
+### item-08 Smart return type for `Outlook.Application.CreateItem`
 
 [`Outlook.Application.CreateItem`](https://learn.microsoft.com/en-gb/office/vba/api/outlook.application.createitem) can return different types depending on the given argument.
 
@@ -94,9 +89,38 @@ mail = ol.MailItem(ol_app.create_item(ol.olMailItem))
 mail = ol_app.create_item(ol.olMailItem) 
 ```
 
-## Done items
+### item-09 Infer return type object
 
-### item-1 Add snake case aliases for all methods and properties
+*Return value* is often just *object* in the documentation.
+It can usually be inferred from context.
+E.g. *Chart.SeriesCollection* returns a *SeriesCollection*.
+https://learn.microsoft.com/en-gb/office/vba/api/excel.chart.seriescollection
+
+Fix by updating the documentation or inferring the class.
+
+### item-10 bug `Excel.FullSeriesCollection.Count` returns a `Excel.Series` instead of a `int`
+
+Something is wrong in the parsing and/or processing.
+```
+    "excel.fullseriescollection.count": {
+        "title": "FullSeriesCollection.Count property (Excel)",
+        ...
+        "property_class": "Series",
+        ...
+    },
+```
+
+## Done v1.0.1
+
+### item-07 bug `Excel.Chart.FullSeriesCollection(i)` returns a `FullSeriesCollection` instead of `Series`
+
+`Excel.Chart.FullSeriesCollection` is not a collection, despite the name.
+It is a set of the collection `Excel.Chart.Series`.
+When a class method (like `Excel.Chart.FullSeriesCollection`) has a class with itself an `item` method (like `Excel.Item`), then `return_value_class` of the class method should be set to the same as the `item` method.
+
+## Done v1.0.0
+
+### item-01 Add snake case aliases for all methods and properties
 
 VBA properties and methods are written in [CamelCase](https://developer.mozilla.org/en-US/docs/Glossary/Camel_case).
 In Python, the [PEP8](https://peps.python.org/pep-0008/#function-and-variable-names) naming convention is [snake_case](https://developer.mozilla.org/en-US/docs/Glossary/Snake_case).

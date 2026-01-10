@@ -4161,6 +4161,9 @@ class Axes:
     def __init__(self, axes=None):
         self.com_object= axes
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return self.com_object.Application
@@ -7556,6 +7559,9 @@ class BuildingBlockTypes:
     def __init__(self, buildingblocktypes=None):
         self.com_object= buildingblocktypes
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -7817,6 +7823,9 @@ class CanvasShapes:
 
     def __init__(self, canvasshapes=None):
         self.com_object= canvasshapes
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8303,6 +8312,9 @@ class Categories:
     def __init__(self, categories=None):
         self.com_object= categories
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -8427,6 +8439,9 @@ class CategoryCollection:
 
     def __init__(self, categorycollection=None):
         self.com_object= categorycollection
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -10565,8 +10580,10 @@ class Chart:
         return self.Select(*arguments)
 
     def SeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
+        if Index is None:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
+        else:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -12554,8 +12571,10 @@ class ChartGroup:
         return self.FullCategoryCollection(*arguments)
 
     def SeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
+        if Index is None:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
+        else:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -12572,6 +12591,9 @@ class ChartGroups:
 
     def __init__(self, chartgroups=None):
         self.com_object= chartgroups
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30655,6 +30677,9 @@ class FontNames:
     def __init__(self, fontnames=None):
         self.com_object= fontnames
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -32548,6 +32573,9 @@ class FullSeriesCollection:
     def __init__(self, fullseriescollection=None):
         self.com_object= fullseriescollection
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -32750,6 +32778,9 @@ class GroupShapes:
 
     def __init__(self, groupshapes=None):
         self.com_object= groupshapes
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -63888,6 +63919,9 @@ class RepeatingSectionItemColl:
     def __init__(self, repeatingsectionitemcoll=None):
         self.com_object= repeatingsectionitemcoll
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -69491,8 +69525,10 @@ class Series:
         return self.Paste()
 
     def Points(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return Points(self.com_object.Points(*arguments))
+        if Index is None:
+            return Points(self.com_object.Points(com_arguments([None])[0]))
+        else:
+            return Points(self.com_object.Points(com_arguments([None])[0])).Item(Index)
 
     def points(self, Index=None):
         """Alias for Points"""
@@ -69507,8 +69543,10 @@ class Series:
         return self.Select()
 
     def Trendlines(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return Trendlines(self.com_object.Trendlines(*arguments))
+        if Index is None:
+            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0]))
+        else:
+            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0])).Item(Index)
 
     def trendlines(self, Index=None):
         """Alias for Trendlines"""
@@ -71585,6 +71623,9 @@ class ShapeRange:
 
     def __init__(self, shaperange=None):
         self.com_object= shaperange
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Adjustments(self):

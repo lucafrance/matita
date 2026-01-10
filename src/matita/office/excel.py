@@ -9074,6 +9074,9 @@ class CategoryCollection:
     def __init__(self, categorycollection=None):
         self.com_object= categorycollection
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -11016,8 +11019,10 @@ class Chart:
         return self.ExportAsFixedFormat(*arguments)
 
     def FullSeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return FullSeriesCollection(self.com_object.FullSeriesCollection(*arguments))
+        if Index is None:
+            return FullSeriesCollection(self.com_object.FullSeriesCollection(com_arguments([None])[0]))
+        else:
+            return FullSeriesCollection(self.com_object.FullSeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def fullseriescollection(self, Index=None):
         """Alias for FullSeriesCollection"""
@@ -12526,6 +12531,9 @@ class ChartGroups:
 
     def __init__(self, chartgroups=None):
         self.com_object= chartgroups
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -23272,6 +23280,9 @@ class FullSeriesCollection:
     def __init__(self, fullseriescollection=None):
         self.com_object= fullseriescollection
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -23687,6 +23698,9 @@ class GroupShapes:
 
     def __init__(self, groupshapes=None):
         self.com_object= groupshapes
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30259,6 +30273,9 @@ class ModelTableColumns:
     def __init__(self, modeltablecolumns=None):
         self.com_object= modeltablecolumns
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -36830,6 +36847,9 @@ class PivotCaches:
 
     def __init__(self, pivotcaches=None):
         self.com_object= pivotcaches
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -58702,6 +58722,9 @@ class TableStyleElements:
 
     def __init__(self, tablestyleelements=None):
         self.com_object= tablestyleelements
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):

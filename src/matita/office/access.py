@@ -52788,6 +52788,9 @@ class References:
     def __init__(self, references=None):
         self.com_object= references
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Count(self):
         return self.com_object.Count

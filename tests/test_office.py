@@ -124,6 +124,25 @@ class TestExcel(unittest.TestCase):
         cell2 = wks.cells(2,2)
         rng = self.xl_app.intersect(cell1, cell2)
         self.assertIsNone(rng.com_object)
+        wkb.Close(SaveChanges=False)
+    
+    def test_collection_and_sets_methods(self):
+        wkb = self.xl_app.Workbooks.Add()
+        wks = wkb.worksheets(1)
+        # Add at least one value to the worksheet, otherwise the SeriesCollection will be empty
+        wks.cells(1,1).value = 12345 
+        chart = wks.shapes.add_chart2(XlChartType=xl.xlLineMarkers).chart
+        # set
+        self.assertIs(type(chart.full_series_collection()), xl.FullSeriesCollection)
+        self.assertIs(type(chart.full_series_collection().item(1)), xl.Series)
+        self.assertIs(type(chart.full_series_collection()(1)), xl.Series)
+        # collection - fails, depends on backlog item 9 to work
+        # self.assertIs(type(chart.series_collection()), xl.SeriesCollection)
+        # self.assertIs(type(chart.series_collection().item(1)), xl.Series)
+        # self.assertIs(type(chart.series_collection(1)), xl.Series)
+        
+        wkb.Close(SaveChanges=False)
+
 
 class TestOutlook(unittest.TestCase):
 

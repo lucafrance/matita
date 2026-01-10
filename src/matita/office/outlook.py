@@ -314,6 +314,9 @@ class Accounts:
     def __init__(self, accounts=None):
         self.com_object= accounts
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -1235,6 +1238,9 @@ class AddressLists:
 
     def __init__(self, addresslists=None):
         self.com_object= addresslists
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -3637,6 +3643,9 @@ class AttachmentSelection:
 
     def __init__(self, attachmentselection=None):
         self.com_object= attachmentselection
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -6179,6 +6188,9 @@ class Conflicts:
 
     def __init__(self, conflicts=None):
         self.com_object= conflicts
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -12621,6 +12633,9 @@ class Exceptions:
 
     def __init__(self, exceptions=None):
         self.com_object= exceptions
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -22521,6 +22536,9 @@ class NavigationGroups:
     def __init__(self, navigationgroups=None):
         self.com_object= navigationgroups
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -22703,6 +22721,9 @@ class NavigationModules:
 
     def __init__(self, navigationmodules=None):
         self.com_object= navigationmodules
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30551,6 +30572,9 @@ class Panes:
     def __init__(self, panes=None):
         self.com_object= panes
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -33472,6 +33496,9 @@ class Reminders:
     def __init__(self, reminders=None):
         self.com_object= reminders
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -34954,6 +34981,9 @@ class Results:
     def __init__(self, results=None):
         self.com_object= results
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -35114,6 +35144,9 @@ class Row:
 
     def __init__(self, row=None):
         self.com_object= row
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35447,6 +35480,9 @@ class RuleActions:
 
     def __init__(self, ruleactions=None):
         self.com_object= ruleactions
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35789,6 +35825,9 @@ class RuleConditions:
 
     def __init__(self, ruleconditions=None):
         self.com_object= ruleconditions
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Account(self):
@@ -36160,6 +36199,9 @@ class Rules:
     def __init__(self, rules=None):
         self.com_object= rules
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -36403,6 +36445,9 @@ class Selection:
 
     def __init__(self, selection=None):
         self.com_object= selection
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -38978,6 +39023,9 @@ class SimpleItems:
     def __init__(self, simpleitems=None):
         self.com_object= simpleitems
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -39625,6 +39673,9 @@ class Stores:
     def __init__(self, stores=None):
         self.com_object= stores
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -39739,6 +39790,9 @@ class SyncObjects:
 
     def __init__(self, syncobjects=None):
         self.com_object= syncobjects
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def AppFolders(self):

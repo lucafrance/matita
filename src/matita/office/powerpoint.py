@@ -2228,6 +2228,9 @@ class Axes:
     def __init__(self, axes=None):
         self.com_object= axes
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return self.com_object.Application
@@ -4446,6 +4449,9 @@ class CategoryCollection:
     def __init__(self, categorycollection=None):
         self.com_object= categorycollection
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return self.com_object.Application
@@ -5795,8 +5801,10 @@ class Chart:
         return self.Select(*arguments)
 
     def SeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
+        if Index is None:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
+        else:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -7690,8 +7698,10 @@ class ChartGroup:
         return self.FullCategoryCollection(*arguments)
 
     def SeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
+        if Index is None:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
+        else:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -7708,6 +7718,9 @@ class ChartGroups:
 
     def __init__(self, chartgroups=None):
         self.com_object= chartgroups
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14615,6 +14628,9 @@ class FullSeriesCollection:
     def __init__(self, fullseriescollection=None):
         self.com_object= fullseriescollection
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return self.com_object.Application
@@ -14739,6 +14755,9 @@ class GroupShapes:
 
     def __init__(self, groupshapes=None):
         self.com_object= groupshapes
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -18839,6 +18858,9 @@ class ObjectVerbs:
 
     def __init__(self, objectverbs=None):
         self.com_object= objectverbs
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -24633,6 +24655,9 @@ class ProtectedViewWindows:
     def __init__(self, protectedviewwindows=None):
         self.com_object= protectedviewwindows
 
+    def __call__(self, index):
+        return self.Item(index)
+
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -25968,6 +25993,9 @@ class Sequence:
 
     def __init__(self, sequence=None):
         self.com_object= sequence
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -27316,8 +27344,10 @@ class Series:
         return self.Paste()
 
     def Points(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return Points(self.com_object.Points(*arguments))
+        if Index is None:
+            return Points(self.com_object.Points(com_arguments([None])[0]))
+        else:
+            return Points(self.com_object.Points(com_arguments([None])[0])).Item(Index)
 
     def points(self, Index=None):
         """Alias for Points"""
@@ -27332,8 +27362,10 @@ class Series:
         return self.Select()
 
     def Trendlines(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return Trendlines(self.com_object.Trendlines(*arguments))
+        if Index is None:
+            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0]))
+        else:
+            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0])).Item(Index)
 
     def trendlines(self, Index=None):
         """Alias for Trendlines"""
@@ -29216,6 +29248,9 @@ class ShapeRange:
 
     def __init__(self, shaperange=None):
         self.com_object= shaperange
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def ActionSettings(self):
@@ -33271,9 +33306,11 @@ class SlideShowView:
         """Alias for Next"""
         return self.Next()
 
-    def Player(self, ShapeId=None):
-        arguments = com_arguments([unwrap(a) for a in [ShapeId]])
-        return Player(self.com_object.Player(*arguments))
+    def Player(self, Index=None):
+        if Index is None:
+            return Player(self.com_object.Player(com_arguments([None])[0]))
+        else:
+            return Player(self.com_object.Player(com_arguments([None])[0])).Item(Index)
 
     def player(self, ShapeId=None):
         """Alias for Player"""
@@ -35839,6 +35876,9 @@ class TextRange2:
 
     def __init__(self, textrange2=None):
         self.com_object= textrange2
+
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -38952,9 +38992,11 @@ class View:
         arguments = [DataType, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Link]
         return self.PasteSpecial(*arguments)
 
-    def Player(self, ShapeId=None):
-        arguments = com_arguments([unwrap(a) for a in [ShapeId]])
-        return Player(self.com_object.Player(*arguments))
+    def Player(self, Index=None):
+        if Index is None:
+            return Player(self.com_object.Player(com_arguments([None])[0]))
+        else:
+            return Player(self.com_object.Player(com_arguments([None])[0])).Item(Index)
 
     def player(self, ShapeId=None):
         """Alias for Player"""

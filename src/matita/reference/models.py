@@ -37,6 +37,7 @@ class DocPage:
         
         self.is_object = None
         self.is_collection = None
+        self.is_set = None
         self.is_property = None
         self.is_method = None
         self.is_enumeration = None
@@ -232,6 +233,7 @@ class DocPage:
             "method_name": self.method_name,
             "is_object": self.is_object,
             "is_collection": self.is_collection,
+            "is_set": self.is_set,
             "is_method": self.is_method,
             "is_property": self.is_property,
             "is_enumeration": self.is_enumeration,
@@ -281,6 +283,9 @@ class DocPage:
             code.append(f"")
 
         # Call method for collections
+        # If the object is a collection, then the class name can be evinced by the object name.
+        # If the object is a set, that is not the case.
+        # To return the right class, sets depend on the return class being defined on the Item method page.
         if self.is_collection:
             item_class = self.object_name
             if self.object_name.endswith("s"):
@@ -291,6 +296,10 @@ class DocPage:
                 logging.warning(f"Unexpected collection name, unable to identify item class of '{self.process_api_name}'.")
             code.append(f"    def __call__(self, item):")
             code.append(f"        return {item_class}(self.com_object(item))")
+            code.append(f"")
+        elif self.is_set:
+            code.append(f"    def __call__(self, index):")
+            code.append(f"        return self.Item(index)")
             code.append(f"")
 
         code += self.to_python_properties()
@@ -428,6 +437,26 @@ class DocPage:
             return []
         
         code = []
+        # Example output:
+        #    def FullSeriesCollection(self):
+        #       return FullSeriesCollection(self.com_object.FullSeriesCollection)
+        if self.method_name == self.return_value_class \
+        and len(self.parameters) == 1:
+            code.append(f"    def {self.method_name}(self, Index=None):")
+            code.append(f"        if Index is None:")
+            code.append(f"            return {self.return_value_class}(self.com_object.{self.method_name}(com_arguments([None])[0]))")
+            code.append(f"        else:")
+            code.append(f"            return {self.return_value_class}(self.com_object.{self.method_name}(com_arguments([None])[0])).Item(Index)")
+            code.append("")
+            return code
+        
+        # Example output without arguments:
+        #    def Refresh(self):
+        #       self.com_object.Refresh()
+        # Example output with arguments:
+        #    def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
+        #       arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
+        #       self.com_object.GetChartElement(*arguments)
         if len(self.parameters) == 0:
             code.append(f"    def {self.method_name}(self):")
             code_line = f"self.com_object.{self.method_name}()"
@@ -534,6 +563,30 @@ class VbaDocs:
             else:
                 if page.is_property or page.is_method:
                     logging.warning(f"Page'{page_key}' is a property or method, but the key of the parent object of is None.")
+        
+        # Find sets
+        # In this context, a set is an object similar to a collection.
+        # A set allows to retrieve part of the items of a collection.
+        # E.g. Excel.FullSeriesCollection is a set, Excel.SeriesCollection is a collection.
+        # All Series in Excel.SeriesCollection are in Excel.FullSeriesCollection, but not vice versa.
+        # [FullSeriesCollection object (Excel)](https://learn.microsoft.com/en-gb/office/vba/api/Excel.FullSeriesCollection)
+        # [SeriesCollection object (Excel)](https://learn.microsoft.com/en-gb/office/vba/api/excel.seriescollection)
+        for page_key, page in self.pages.items():
+            page.is_set = False
+            if page.is_collection:
+                continue
+            has_item_method = False
+            has_add_method = False
+            for m in page.methods:
+                if m.method_name is None:
+                    logging.warning(f"{m.api_name} is supposed to be a method, but has no method name. Title {m.title}")
+                    continue
+                if m.method_name.lower() == "item":
+                    has_item_method = True
+                if m.method_name.lower() == "add":
+                    has_add_method = True
+            if has_item_method and not has_add_method:
+                page.is_set = True
 
         # Remove invalid class types
         for page in self.pages.values():
