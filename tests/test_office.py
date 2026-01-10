@@ -136,6 +136,7 @@ class TestExcel(unittest.TestCase):
         self.assertIs(type(chart.full_series_collection()), xl.FullSeriesCollection)
         self.assertIs(type(chart.full_series_collection().item(1)), xl.Series)
         self.assertIs(type(chart.full_series_collection()(1)), xl.Series)
+        self.assertIs(type(chart.full_series_collection(1)), xl.Series)
         # collection - fails, depends on backlog item 9 to work
         # self.assertIs(type(chart.series_collection()), xl.SeriesCollection)
         # self.assertIs(type(chart.series_collection().item(1)), xl.Series)

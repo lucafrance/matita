@@ -62,7 +62,7 @@ def generate_report():
         )
         c = shp.chart
         c.has_title = False
-        chart_series = c.full_series_collection().item(1)
+        chart_series = c.full_series_collection(1)
         chart_series.name = country_wks.cells(4, 2).address()
         chart_series.values  = f"'{country}'!{country_tbl.list_columns("Population").data_body_range.address()}"
         chart_series.x_values = f"'{country}'!{country_tbl.list_columns("Year").data_body_range.address()}"
