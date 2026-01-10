@@ -4,11 +4,12 @@ from matita.office import powerpoint as pp
 
 def squares():
     pp_app = pp.Application()
-    pp_app.visible = True
     prs = pp_app.presentations.add()
     sld = prs.slides.Add(1, pp.ppLayoutBlank)
+    pp_app.window_state = pp.ppWindowMinimized
 
-    for _ in range(1000):
+    num_squares = 1000
+    for i in range(num_squares):
         side = random.random() * prs.page_setup.slideheight / 3
         left = -side + random.random() * (side + prs.page_setup.slide_width)
         top = -side + random.random() * (side + prs.page_setup.slide_height)
@@ -29,6 +30,10 @@ def squares():
         ])
         eff.effect_parameters.direction = direction
         eff.timing.duration = 0.2
+        print(f"Added {i}/{num_squares} squares.")
+
+    pp_app.window_state = pp.ppWindowMaximized
+    print("Squares added, try starting the slide show.")
 
 if __name__ == "__main__":
     squares()
