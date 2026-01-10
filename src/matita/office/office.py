@@ -15216,12 +15216,14 @@ class SharedWorkspaceTasks:
         """Alias for Parent"""
         return self.Parent
 
-    def Add(self):
-        self.com_object.Add()
+    def Add(self, Title=None, Status=None, Priority=None, Assignee=None, Description=None, DueDate=None):
+        arguments = com_arguments([unwrap(a) for a in [Title, Status, Priority, Assignee, Description, DueDate]])
+        self.com_object.Add(*arguments)
 
-    def add(self):
+    def add(self, Title=None, Status=None, Priority=None, Assignee=None, Description=None, DueDate=None):
         """Alias for Add"""
-        return self.Add()
+        arguments = [Title, Status, Priority, Assignee, Description, DueDate]
+        return self.Add(*arguments)
 
 
 class Signature:

@@ -121,8 +121,8 @@ class DocPage:
                         logging.warning(f"Parsing error in '{self.api_name}'. Parameter `{p}` ignored. This is probably due to a formatting error in the source file.")
                         parameters.remove(p)
                     if " " in p:
-                        logging.warning(f"Unexpected empty space in parameter '{p}' of '{self.api_name}'. Replacing with `{p.strip(" ")}`. This is probably due to a formatting error in the source file.")
-                        parameters[parameters.index[p]] = p.strip(" ")
+                        logging.warning(f"Unexpected empty space in parameter '{p}' of '{self.api_name}'. Replacing with `{p.replace(" ", "")}`. This is probably due to a formatting error in the source file.")
+                        parameters[parameters.index(p)] = p.replace(" ", "")
                 self.parameters = parameters
         
         # Find the return value of a property. The section looks like this:
