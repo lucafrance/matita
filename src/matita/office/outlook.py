@@ -649,7 +649,7 @@ class Action:
         self.ShowOn = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -726,7 +726,7 @@ class Actions:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -843,7 +843,7 @@ class AddressEntries:
 
     def Sort(self, Property=None, Order=None):
         arguments = com_arguments([unwrap(a) for a in [Property, Order]])
-        self.com_object.Sort(*arguments)
+        return self.com_object.Sort(*arguments)
 
     def sort(self, Property=None, Order=None):
         """Alias for Sort"""
@@ -998,7 +998,7 @@ class AddressEntry:
         self.Type = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -1006,7 +1006,7 @@ class AddressEntry:
 
     def Details(self, HWnd=None):
         arguments = com_arguments([unwrap(a) for a in [HWnd]])
-        self.com_object.Details(*arguments)
+        return self.com_object.Details(*arguments)
 
     def details(self, HWnd=None):
         """Alias for Details"""
@@ -1062,7 +1062,7 @@ class AddressEntry:
 
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
-        self.com_object.Update(*arguments)
+        return self.com_object.Update(*arguments)
 
     def update(self, MakePermanent=None, Refresh=None):
         """Alias for Update"""
@@ -1725,7 +1725,7 @@ class Application:
         return self.IsSearchSynchronous(*arguments)
 
     def Quit(self):
-        self.com_object.Quit()
+        return self.com_object.Quit()
 
     def quit(self):
         """Alias for Quit"""
@@ -1733,7 +1733,7 @@ class Application:
 
     def RefreshFormRegionDefinition(self, RegionName=None):
         arguments = com_arguments([unwrap(a) for a in [RegionName]])
-        self.com_object.RefreshFormRegionDefinition(*arguments)
+        return self.com_object.RefreshFormRegionDefinition(*arguments)
 
     def refreshformregiondefinition(self, RegionName=None):
         """Alias for RefreshFormRegionDefinition"""
@@ -3112,7 +3112,7 @@ class AppointmentItem:
         return self.UserProperties
 
     def ClearRecurrencePattern(self):
-        self.com_object.ClearRecurrencePattern()
+        return self.com_object.ClearRecurrencePattern()
 
     def clearrecurrencepattern(self):
         """Alias for ClearRecurrencePattern"""
@@ -3124,7 +3124,7 @@ class AppointmentItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -3132,7 +3132,7 @@ class AppointmentItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
@@ -3153,7 +3153,7 @@ class AppointmentItem:
         return self.CopyTo(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -3161,7 +3161,7 @@ class AppointmentItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -3222,7 +3222,7 @@ class AppointmentItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -3242,7 +3242,7 @@ class AppointmentItem:
         return self.Respond(*arguments)
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -3250,7 +3250,7 @@ class AppointmentItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -3263,14 +3263,14 @@ class AppointmentItem:
         return self.SaveAs(*arguments)
 
     def Send(self):
-        self.com_object.Send()
+        return self.com_object.Send()
 
     def send(self):
         """Alias for Send"""
         return self.Send()
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -3534,7 +3534,7 @@ class Attachment:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -3553,7 +3553,7 @@ class Attachment:
 
     def SaveAsFile(self, Path=None):
         arguments = com_arguments([unwrap(a) for a in [Path]])
-        self.com_object.SaveAsFile(*arguments)
+        return self.com_object.SaveAsFile(*arguments)
 
     def saveasfile(self, Path=None):
         """Alias for SaveAsFile"""
@@ -3631,7 +3631,7 @@ class Attachments:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -3903,7 +3903,7 @@ class AutoFormatRules:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -3911,7 +3911,7 @@ class AutoFormatRules:
         return self.Remove(*arguments)
 
     def RemoveAll(self):
-        self.com_object.RemoveAll()
+        return self.com_object.RemoveAll()
 
     def removeall(self):
         """Alias for RemoveAll"""
@@ -3922,7 +3922,7 @@ class AutoFormatRules:
         return self.RemoveAll()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -4169,7 +4169,7 @@ class BusinessCardView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -4185,7 +4185,7 @@ class BusinessCardView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -4193,7 +4193,7 @@ class BusinessCardView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -4206,14 +4206,14 @@ class BusinessCardView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -4587,7 +4587,7 @@ class CalendarSharing:
 
     def SaveAsICal(self, Path=None):
         arguments = com_arguments([unwrap(a) for a in [Path]])
-        self.com_object.SaveAsICal(*arguments)
+        return self.com_object.SaveAsICal(*arguments)
 
     def saveasical(self, Path=None):
         """Alias for SaveAsICal"""
@@ -5064,7 +5064,7 @@ class CalendarView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -5080,7 +5080,7 @@ class CalendarView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -5088,7 +5088,7 @@ class CalendarView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -5101,14 +5101,14 @@ class CalendarView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -5471,7 +5471,7 @@ class CardView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -5487,7 +5487,7 @@ class CardView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -5495,7 +5495,7 @@ class CardView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -5508,14 +5508,14 @@ class CardView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -5587,7 +5587,7 @@ class Categories:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -6089,7 +6089,7 @@ class Columns:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -6097,7 +6097,7 @@ class Columns:
         return self.Remove(*arguments)
 
     def RemoveAll(self):
-        self.com_object.RemoveAll()
+        return self.com_object.RemoveAll()
 
     def removeall(self):
         """Alias for RemoveAll"""
@@ -10109,7 +10109,7 @@ class ContactItem:
 
     def AddBusinessCardLogoPicture(self, Path=None):
         arguments = com_arguments([unwrap(a) for a in [Path]])
-        self.com_object.AddBusinessCardLogoPicture(*arguments)
+        return self.com_object.AddBusinessCardLogoPicture(*arguments)
 
     def addbusinesscardlogopicture(self, Path=None):
         """Alias for AddBusinessCardLogoPicture"""
@@ -10123,7 +10123,7 @@ class ContactItem:
 
     def AddPicture(self, Path=None):
         arguments = com_arguments([unwrap(a) for a in [Path]])
-        self.com_object.AddPicture(*arguments)
+        return self.com_object.AddPicture(*arguments)
 
     def addpicture(self, Path=None):
         """Alias for AddPicture"""
@@ -10136,7 +10136,7 @@ class ContactItem:
         return self.AddPicture(*arguments)
 
     def ClearTaskFlag(self):
-        self.com_object.ClearTaskFlag()
+        return self.com_object.ClearTaskFlag()
 
     def cleartaskflag(self):
         """Alias for ClearTaskFlag"""
@@ -10148,7 +10148,7 @@ class ContactItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -10156,14 +10156,14 @@ class ContactItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -10171,7 +10171,7 @@ class ContactItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -10213,7 +10213,7 @@ class ContactItem:
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
-        self.com_object.MarkAsTask(*arguments)
+        return self.com_object.MarkAsTask(*arguments)
 
     def markastask(self, MarkInterval=None):
         """Alias for MarkAsTask"""
@@ -10235,7 +10235,7 @@ class ContactItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -10246,7 +10246,7 @@ class ContactItem:
         return self.PrintOut()
 
     def RemovePicture(self):
-        self.com_object.RemovePicture()
+        return self.com_object.RemovePicture()
 
     def removepicture(self):
         """Alias for RemovePicture"""
@@ -10257,7 +10257,7 @@ class ContactItem:
         return self.RemovePicture()
 
     def ResetBusinessCard(self):
-        self.com_object.ResetBusinessCard()
+        return self.com_object.ResetBusinessCard()
 
     def resetbusinesscard(self):
         """Alias for ResetBusinessCard"""
@@ -10268,7 +10268,7 @@ class ContactItem:
         return self.ResetBusinessCard()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -10276,7 +10276,7 @@ class ContactItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -10290,7 +10290,7 @@ class ContactItem:
 
     def SaveBusinessCardImage(self, Path=None):
         arguments = com_arguments([unwrap(a) for a in [Path]])
-        self.com_object.SaveBusinessCardImage(*arguments)
+        return self.com_object.SaveBusinessCardImage(*arguments)
 
     def savebusinesscardimage(self, Path=None):
         """Alias for SaveBusinessCardImage"""
@@ -10303,7 +10303,7 @@ class ContactItem:
         return self.SaveBusinessCardImage(*arguments)
 
     def ShowBusinessCardEditor(self):
-        self.com_object.ShowBusinessCardEditor()
+        return self.com_object.ShowBusinessCardEditor()
 
     def showbusinesscardeditor(self):
         """Alias for ShowBusinessCardEditor"""
@@ -10314,7 +10314,7 @@ class ContactItem:
         return self.ShowBusinessCardEditor()
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -10326,7 +10326,7 @@ class ContactItem:
 
     def ShowCheckAddressDialog(self, MailingAddress=None):
         arguments = com_arguments([unwrap(a) for a in [MailingAddress]])
-        self.com_object.ShowCheckAddressDialog(*arguments)
+        return self.com_object.ShowCheckAddressDialog(*arguments)
 
     def showcheckaddressdialog(self, MailingAddress=None):
         """Alias for ShowCheckAddressDialog"""
@@ -10339,7 +10339,7 @@ class ContactItem:
         return self.ShowCheckAddressDialog(*arguments)
 
     def ShowCheckFullNameDialog(self):
-        self.com_object.ShowCheckFullNameDialog()
+        return self.com_object.ShowCheckFullNameDialog()
 
     def showcheckfullnamedialog(self):
         """Alias for ShowCheckFullNameDialog"""
@@ -10351,7 +10351,7 @@ class ContactItem:
 
     def ShowCheckPhoneDialog(self, PhoneNumber=None):
         arguments = com_arguments([unwrap(a) for a in [PhoneNumber]])
-        self.com_object.ShowCheckPhoneDialog(*arguments)
+        return self.com_object.ShowCheckPhoneDialog(*arguments)
 
     def showcheckphonedialog(self, PhoneNumber=None):
         """Alias for ShowCheckPhoneDialog"""
@@ -10526,7 +10526,7 @@ class Conversation:
 
     def ClearAlwaysAssignCategories(self, Store=None):
         arguments = com_arguments([unwrap(a) for a in [Store]])
-        self.com_object.ClearAlwaysAssignCategories(*arguments)
+        return self.com_object.ClearAlwaysAssignCategories(*arguments)
 
     def clearalwaysassigncategories(self, Store=None):
         """Alias for ClearAlwaysAssignCategories"""
@@ -10631,7 +10631,7 @@ class Conversation:
         return self.GetTable()
 
     def MarkAsRead(self):
-        self.com_object.MarkAsRead()
+        return self.com_object.MarkAsRead()
 
     def markasread(self):
         """Alias for MarkAsRead"""
@@ -10642,7 +10642,7 @@ class Conversation:
         return self.MarkAsRead()
 
     def MarkAsUnread(self):
-        self.com_object.MarkAsUnread()
+        return self.com_object.MarkAsUnread()
 
     def markasunread(self):
         """Alias for MarkAsUnread"""
@@ -10654,7 +10654,7 @@ class Conversation:
 
     def SetAlwaysAssignCategories(self, Categories=None, Store=None):
         arguments = com_arguments([unwrap(a) for a in [Categories, Store]])
-        self.com_object.SetAlwaysAssignCategories(*arguments)
+        return self.com_object.SetAlwaysAssignCategories(*arguments)
 
     def setalwaysassigncategories(self, Categories=None, Store=None):
         """Alias for SetAlwaysAssignCategories"""
@@ -10668,7 +10668,7 @@ class Conversation:
 
     def SetAlwaysDelete(self, AlwaysDelete=None, Store=None):
         arguments = com_arguments([unwrap(a) for a in [AlwaysDelete, Store]])
-        self.com_object.SetAlwaysDelete(*arguments)
+        return self.com_object.SetAlwaysDelete(*arguments)
 
     def setalwaysdelete(self, AlwaysDelete=None, Store=None):
         """Alias for SetAlwaysDelete"""
@@ -10682,7 +10682,7 @@ class Conversation:
 
     def SetAlwaysMoveToFolder(self, MoveToFolder=None, Store=None):
         arguments = com_arguments([unwrap(a) for a in [MoveToFolder, Store]])
-        self.com_object.SetAlwaysMoveToFolder(*arguments)
+        return self.com_object.SetAlwaysMoveToFolder(*arguments)
 
     def setalwaysmovetofolder(self, MoveToFolder=None, Store=None):
         """Alias for SetAlwaysMoveToFolder"""
@@ -10696,7 +10696,7 @@ class Conversation:
 
     def StopAlwaysDelete(self, Store=None):
         arguments = com_arguments([unwrap(a) for a in [Store]])
-        self.com_object.StopAlwaysDelete(*arguments)
+        return self.com_object.StopAlwaysDelete(*arguments)
 
     def stopalwaysdelete(self, Store=None):
         """Alias for StopAlwaysDelete"""
@@ -10710,7 +10710,7 @@ class Conversation:
 
     def StopAlwaysMoveToFolder(self, Store=None):
         arguments = com_arguments([unwrap(a) for a in [Store]])
-        self.com_object.StopAlwaysMoveToFolder(*arguments)
+        return self.com_object.StopAlwaysMoveToFolder(*arguments)
 
     def stopalwaysmovetofolder(self, Store=None):
         """Alias for StopAlwaysMoveToFolder"""
@@ -11747,7 +11747,7 @@ class DistListItem:
 
     def AddMember(self, Recipient=None):
         arguments = com_arguments([unwrap(a) for a in [Recipient]])
-        self.com_object.AddMember(*arguments)
+        return self.com_object.AddMember(*arguments)
 
     def addmember(self, Recipient=None):
         """Alias for AddMember"""
@@ -11761,7 +11761,7 @@ class DistListItem:
 
     def AddMembers(self, Recipients=None):
         arguments = com_arguments([unwrap(a) for a in [Recipients]])
-        self.com_object.AddMembers(*arguments)
+        return self.com_object.AddMembers(*arguments)
 
     def addmembers(self, Recipients=None):
         """Alias for AddMembers"""
@@ -11774,7 +11774,7 @@ class DistListItem:
         return self.AddMembers(*arguments)
 
     def ClearTaskFlag(self):
-        self.com_object.ClearTaskFlag()
+        return self.com_object.ClearTaskFlag()
 
     def cleartaskflag(self):
         """Alias for ClearTaskFlag"""
@@ -11786,7 +11786,7 @@ class DistListItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -11794,14 +11794,14 @@ class DistListItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -11809,7 +11809,7 @@ class DistListItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -11843,7 +11843,7 @@ class DistListItem:
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
-        self.com_object.MarkAsTask(*arguments)
+        return self.com_object.MarkAsTask(*arguments)
 
     def markastask(self, MarkInterval=None):
         """Alias for MarkAsTask"""
@@ -11865,7 +11865,7 @@ class DistListItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -11877,7 +11877,7 @@ class DistListItem:
 
     def RemoveMember(self, Recipient=None):
         arguments = com_arguments([unwrap(a) for a in [Recipient]])
-        self.com_object.RemoveMember(*arguments)
+        return self.com_object.RemoveMember(*arguments)
 
     def removemember(self, Recipient=None):
         """Alias for RemoveMember"""
@@ -11891,7 +11891,7 @@ class DistListItem:
 
     def RemoveMembers(self, Recipients=None):
         arguments = com_arguments([unwrap(a) for a in [Recipients]])
-        self.com_object.RemoveMembers(*arguments)
+        return self.com_object.RemoveMembers(*arguments)
 
     def removemembers(self, Recipients=None):
         """Alias for RemoveMembers"""
@@ -11904,7 +11904,7 @@ class DistListItem:
         return self.RemoveMembers(*arguments)
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -11912,7 +11912,7 @@ class DistListItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -11925,7 +11925,7 @@ class DistListItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -12472,7 +12472,7 @@ class DocumentItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -12480,14 +12480,14 @@ class DocumentItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -12495,7 +12495,7 @@ class DocumentItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -12512,7 +12512,7 @@ class DocumentItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -12523,7 +12523,7 @@ class DocumentItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -12531,7 +12531,7 @@ class DocumentItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -12544,7 +12544,7 @@ class DocumentItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -12875,7 +12875,7 @@ class ExchangeDistributionList:
         self.Type = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -12883,7 +12883,7 @@ class ExchangeDistributionList:
 
     def Details(self, HWnd=None):
         arguments = com_arguments([unwrap(a) for a in [HWnd]])
-        self.com_object.Details(*arguments)
+        return self.com_object.Details(*arguments)
 
     def details(self, HWnd=None):
         """Alias for Details"""
@@ -12936,7 +12936,7 @@ class ExchangeDistributionList:
 
     def GetFreeBusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
         arguments = com_arguments([unwrap(a) for a in [Start, MinPerChar, CompleteFormat]])
-        self.com_object.GetFreeBusy(*arguments)
+        return self.com_object.GetFreeBusy(*arguments)
 
     def getfreebusy(self, Start=None, MinPerChar=None, CompleteFormat=None):
         """Alias for GetFreeBusy"""
@@ -13005,7 +13005,7 @@ class ExchangeDistributionList:
 
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
-        self.com_object.Update(*arguments)
+        return self.com_object.Update(*arguments)
 
     def update(self, MakePermanent=None, Refresh=None):
         """Alias for Update"""
@@ -13685,7 +13685,7 @@ class ExchangeUser:
         self.YomiLastName = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -13693,7 +13693,7 @@ class ExchangeUser:
 
     def Details(self, HWnd=None):
         arguments = com_arguments([unwrap(a) for a in [HWnd]])
-        self.com_object.Details(*arguments)
+        return self.com_object.Details(*arguments)
 
     def details(self, HWnd=None):
         """Alias for Details"""
@@ -13826,7 +13826,7 @@ class ExchangeUser:
 
     def Update(self, MakePermanent=None, Refresh=None):
         arguments = com_arguments([unwrap(a) for a in [MakePermanent, Refresh]])
-        self.com_object.Update(*arguments)
+        return self.com_object.Update(*arguments)
 
     def update(self, MakePermanent=None, Refresh=None):
         """Alias for Update"""
@@ -14166,7 +14166,7 @@ class Explorer:
         self.WindowState = value
 
     def Activate(self):
-        self.com_object.Activate()
+        return self.com_object.Activate()
 
     def activate(self):
         """Alias for Activate"""
@@ -14174,7 +14174,7 @@ class Explorer:
 
     def AddToSelection(self, Item=None):
         arguments = com_arguments([unwrap(a) for a in [Item]])
-        self.com_object.AddToSelection(*arguments)
+        return self.com_object.AddToSelection(*arguments)
 
     def addtoselection(self, Item=None):
         """Alias for AddToSelection"""
@@ -14187,7 +14187,7 @@ class Explorer:
         return self.AddToSelection(*arguments)
 
     def ClearSearch(self):
-        self.com_object.ClearSearch()
+        return self.com_object.ClearSearch()
 
     def clearsearch(self):
         """Alias for ClearSearch"""
@@ -14198,7 +14198,7 @@ class Explorer:
         return self.ClearSearch()
 
     def ClearSelection(self):
-        self.com_object.ClearSelection()
+        return self.com_object.ClearSelection()
 
     def clearselection(self):
         """Alias for ClearSelection"""
@@ -14209,14 +14209,14 @@ class Explorer:
         return self.ClearSelection()
 
     def Close(self):
-        self.com_object.Close()
+        return self.com_object.Close()
 
     def close(self):
         """Alias for Close"""
         return self.Close()
 
     def Display(self):
-        self.com_object.Display()
+        return self.com_object.Display()
 
     def display(self):
         """Alias for Display"""
@@ -14252,7 +14252,7 @@ class Explorer:
 
     def RemoveFromSelection(self, Item=None):
         arguments = com_arguments([unwrap(a) for a in [Item]])
-        self.com_object.RemoveFromSelection(*arguments)
+        return self.com_object.RemoveFromSelection(*arguments)
 
     def removefromselection(self, Item=None):
         """Alias for RemoveFromSelection"""
@@ -14266,7 +14266,7 @@ class Explorer:
 
     def Search(self, Query=None, SearchScope=None):
         arguments = com_arguments([unwrap(a) for a in [Query, SearchScope]])
-        self.com_object.Search(*arguments)
+        return self.com_object.Search(*arguments)
 
     def search(self, Query=None, SearchScope=None):
         """Alias for Search"""
@@ -14274,7 +14274,7 @@ class Explorer:
         return self.Search(*arguments)
 
     def SelectAllItems(self):
-        self.com_object.SelectAllItems()
+        return self.com_object.SelectAllItems()
 
     def selectallitems(self):
         """Alias for SelectAllItems"""
@@ -14286,7 +14286,7 @@ class Explorer:
 
     def ShowPane(self, Pane=None, Visible=None):
         arguments = com_arguments([unwrap(a) for a in [Pane, Visible]])
-        self.com_object.ShowPane(*arguments)
+        return self.com_object.ShowPane(*arguments)
 
     def showpane(self, Pane=None, Visible=None):
         """Alias for ShowPane"""
@@ -14808,7 +14808,7 @@ class Folder:
         self.WebViewURL = value
 
     def AddToPFFavorites(self):
-        self.com_object.AddToPFFavorites()
+        return self.com_object.AddToPFFavorites()
 
     def addtopffavorites(self):
         """Alias for AddToPFFavorites"""
@@ -14833,14 +14833,14 @@ class Folder:
         return self.CopyTo(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def Display(self):
-        self.com_object.Display()
+        return self.com_object.Display()
 
     def display(self):
         """Alias for Display"""
@@ -14923,7 +14923,7 @@ class Folder:
 
     def MoveTo(self, DestinationFolder=None):
         arguments = com_arguments([unwrap(a) for a in [DestinationFolder]])
-        self.com_object.MoveTo(*arguments)
+        return self.com_object.MoveTo(*arguments)
 
     def moveto(self, DestinationFolder=None):
         """Alias for MoveTo"""
@@ -14937,7 +14937,7 @@ class Folder:
 
     def SetCustomIcon(self, Picture=None):
         arguments = com_arguments([unwrap(a) for a in [Picture]])
-        self.com_object.SetCustomIcon(*arguments)
+        return self.com_object.SetCustomIcon(*arguments)
 
     def setcustomicon(self, Picture=None):
         """Alias for SetCustomIcon"""
@@ -15059,7 +15059,7 @@ class Folders:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -15469,7 +15469,7 @@ class FormDescription:
 
     def PublishForm(self, Registry=None, Folder=None):
         arguments = com_arguments([unwrap(a) for a in [Registry, Folder]])
-        self.com_object.PublishForm(*arguments)
+        return self.com_object.PublishForm(*arguments)
 
     def publishform(self, Registry=None, Folder=None):
         """Alias for PublishForm"""
@@ -15800,14 +15800,14 @@ class FormRegion:
         self.Visible = value
 
     def Reflow(self):
-        self.com_object.Reflow()
+        return self.com_object.Reflow()
 
     def reflow(self):
         """Alias for Reflow"""
         return self.Reflow()
 
     def Select(self):
-        self.com_object.Select()
+        return self.com_object.Select()
 
     def select(self):
         """Alias for Select"""
@@ -15815,7 +15815,7 @@ class FormRegion:
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
         arguments = com_arguments([unwrap(a) for a in [Control, PropertyName]])
-        self.com_object.SetControlItemProperty(*arguments)
+        return self.com_object.SetControlItemProperty(*arguments)
 
     def setcontrolitemproperty(self, Control=None, PropertyName=None):
         """Alias for SetControlItemProperty"""
@@ -15835,7 +15835,7 @@ class FormRegionStartup:
 
     def BeforeFormRegionShow(self, FormRegion=None):
         arguments = com_arguments([unwrap(a) for a in [FormRegion]])
-        self.com_object.BeforeFormRegionShow(*arguments)
+        return self.com_object.BeforeFormRegionShow(*arguments)
 
     def beforeformregionshow(self, FormRegion=None):
         """Alias for BeforeFormRegionShow"""
@@ -16247,7 +16247,7 @@ class IconView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -16263,7 +16263,7 @@ class IconView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -16271,7 +16271,7 @@ class IconView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -16284,14 +16284,14 @@ class IconView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -16607,7 +16607,7 @@ class Inspector:
         return self.WordEditor
 
     def Activate(self):
-        self.com_object.Activate()
+        return self.com_object.Activate()
 
     def activate(self):
         """Alias for Activate"""
@@ -16615,7 +16615,7 @@ class Inspector:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -16624,7 +16624,7 @@ class Inspector:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -16633,7 +16633,7 @@ class Inspector:
 
     def HideFormPage(self, PageName=None):
         arguments = com_arguments([unwrap(a) for a in [PageName]])
-        self.com_object.HideFormPage(*arguments)
+        return self.com_object.HideFormPage(*arguments)
 
     def hideformpage(self, PageName=None):
         """Alias for HideFormPage"""
@@ -16683,7 +16683,7 @@ class Inspector:
 
     def SaveFormRegion(self, Page=None, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [Page, FileName]])
-        self.com_object.SaveFormRegion(*arguments)
+        return self.com_object.SaveFormRegion(*arguments)
 
     def saveformregion(self, Page=None, FileName=None):
         """Alias for SaveFormRegion"""
@@ -16697,7 +16697,7 @@ class Inspector:
 
     def SetControlItemProperty(self, Control=None, PropertyName=None):
         arguments = com_arguments([unwrap(a) for a in [Control, PropertyName]])
-        self.com_object.SetControlItemProperty(*arguments)
+        return self.com_object.SetControlItemProperty(*arguments)
 
     def setcontrolitemproperty(self, Control=None, PropertyName=None):
         """Alias for SetControlItemProperty"""
@@ -16711,7 +16711,7 @@ class Inspector:
 
     def SetCurrentFormPage(self, PageName=None):
         arguments = com_arguments([unwrap(a) for a in [PageName]])
-        self.com_object.SetCurrentFormPage(*arguments)
+        return self.com_object.SetCurrentFormPage(*arguments)
 
     def setcurrentformpage(self, PageName=None):
         """Alias for SetCurrentFormPage"""
@@ -16725,7 +16725,7 @@ class Inspector:
 
     def SetSchedulingStartTime(self, Start=None):
         arguments = com_arguments([unwrap(a) for a in [Start]])
-        self.com_object.SetSchedulingStartTime(*arguments)
+        return self.com_object.SetSchedulingStartTime(*arguments)
 
     def setschedulingstarttime(self, Start=None):
         """Alias for SetSchedulingStartTime"""
@@ -16739,7 +16739,7 @@ class Inspector:
 
     def ShowFormPage(self, PageName=None):
         arguments = com_arguments([unwrap(a) for a in [PageName]])
-        self.com_object.ShowFormPage(*arguments)
+        return self.com_object.ShowFormPage(*arguments)
 
     def showformpage(self, PageName=None):
         """Alias for ShowFormPage"""
@@ -16864,7 +16864,7 @@ class ItemProperties:
 
     def Add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Type, AddToFolderFields, DisplayFormat]])
-        self.com_object.Add(*arguments)
+        return self.com_object.Add(*arguments)
 
     def add(self, Name=None, Type=None, AddToFolderFields=None, DisplayFormat=None):
         """Alias for Add"""
@@ -16882,7 +16882,7 @@ class ItemProperties:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -17141,7 +17141,7 @@ class Items:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -17149,7 +17149,7 @@ class Items:
         return self.Remove(*arguments)
 
     def ResetColumns(self):
-        self.com_object.ResetColumns()
+        return self.com_object.ResetColumns()
 
     def resetcolumns(self):
         """Alias for ResetColumns"""
@@ -17170,7 +17170,7 @@ class Items:
 
     def SetColumns(self, Columns=None):
         arguments = com_arguments([unwrap(a) for a in [Columns]])
-        self.com_object.SetColumns(*arguments)
+        return self.com_object.SetColumns(*arguments)
 
     def setcolumns(self, Columns=None):
         """Alias for SetColumns"""
@@ -17184,7 +17184,7 @@ class Items:
 
     def Sort(self, Property=None, Descending=None):
         arguments = com_arguments([unwrap(a) for a in [Property, Descending]])
-        self.com_object.Sort(*arguments)
+        return self.com_object.Sort(*arguments)
 
     def sort(self, Property=None, Descending=None):
         """Alias for Sort"""
@@ -17986,7 +17986,7 @@ class JournalItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -17994,14 +17994,14 @@ class JournalItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -18009,7 +18009,7 @@ class JournalItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -18044,7 +18044,7 @@ class JournalItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -18073,7 +18073,7 @@ class JournalItem:
         return self.ReplyAll()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -18081,7 +18081,7 @@ class JournalItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -18094,7 +18094,7 @@ class JournalItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -18105,7 +18105,7 @@ class JournalItem:
         return self.ShowCategoriesDialog()
 
     def StartTimer(self):
-        self.com_object.StartTimer()
+        return self.com_object.StartTimer()
 
     def starttimer(self):
         """Alias for StartTimer"""
@@ -18116,7 +18116,7 @@ class JournalItem:
         return self.StartTimer()
 
     def StopTimer(self):
-        self.com_object.StopTimer()
+        return self.com_object.StopTimer()
 
     def stoptimer(self):
         """Alias for StopTimer"""
@@ -20009,7 +20009,7 @@ class MailItem:
 
     def AddBusinessCard(self, contact=None):
         arguments = com_arguments([unwrap(a) for a in [contact]])
-        self.com_object.AddBusinessCard(*arguments)
+        return self.com_object.AddBusinessCard(*arguments)
 
     def addbusinesscard(self, contact=None):
         """Alias for AddBusinessCard"""
@@ -20022,7 +20022,7 @@ class MailItem:
         return self.AddBusinessCard(*arguments)
 
     def ClearConversationIndex(self):
-        self.com_object.ClearConversationIndex()
+        return self.com_object.ClearConversationIndex()
 
     def clearconversationindex(self):
         """Alias for ClearConversationIndex"""
@@ -20033,7 +20033,7 @@ class MailItem:
         return self.ClearConversationIndex()
 
     def ClearTaskFlag(self):
-        self.com_object.ClearTaskFlag()
+        return self.com_object.ClearTaskFlag()
 
     def cleartaskflag(self):
         """Alias for ClearTaskFlag"""
@@ -20045,7 +20045,7 @@ class MailItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -20053,14 +20053,14 @@ class MailItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -20068,7 +20068,7 @@ class MailItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -20095,7 +20095,7 @@ class MailItem:
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
-        self.com_object.MarkAsTask(*arguments)
+        return self.com_object.MarkAsTask(*arguments)
 
     def markastask(self, MarkInterval=None):
         """Alias for MarkAsTask"""
@@ -20117,7 +20117,7 @@ class MailItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -20146,7 +20146,7 @@ class MailItem:
         return self.ReplyAll()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -20154,7 +20154,7 @@ class MailItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -20167,14 +20167,14 @@ class MailItem:
         return self.SaveAs(*arguments)
 
     def Send(self):
-        self.com_object.Send()
+        return self.com_object.Send()
 
     def send(self):
         """Alias for Send"""
         return self.Send()
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -21440,7 +21440,7 @@ class MeetingItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -21448,14 +21448,14 @@ class MeetingItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -21463,7 +21463,7 @@ class MeetingItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -21512,7 +21512,7 @@ class MeetingItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -21541,7 +21541,7 @@ class MeetingItem:
         return self.ReplyAll()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -21549,7 +21549,7 @@ class MeetingItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -21562,14 +21562,14 @@ class MeetingItem:
         return self.SaveAs(*arguments)
 
     def Send(self):
-        self.com_object.Send()
+        return self.com_object.Send()
 
     def send(self):
         """Alias for Send"""
         return self.Send()
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -21914,7 +21914,7 @@ class NameSpace:
 
     def AddStore(self, Store=None):
         arguments = com_arguments([unwrap(a) for a in [Store]])
-        self.com_object.AddStore(*arguments)
+        return self.com_object.AddStore(*arguments)
 
     def addstore(self, Store=None):
         """Alias for AddStore"""
@@ -21928,7 +21928,7 @@ class NameSpace:
 
     def AddStoreEx(self, Store=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Store, Type]])
-        self.com_object.AddStoreEx(*arguments)
+        return self.com_object.AddStoreEx(*arguments)
 
     def addstoreex(self, Store=None, Type=None):
         """Alias for AddStoreEx"""
@@ -21998,7 +21998,7 @@ class NameSpace:
 
     def Dial(self, ContactItem=None):
         arguments = com_arguments([unwrap(a) for a in [ContactItem]])
-        self.com_object.Dial(*arguments)
+        return self.com_object.Dial(*arguments)
 
     def dial(self, ContactItem=None):
         """Alias for Dial"""
@@ -22126,7 +22126,7 @@ class NameSpace:
         return self.GetStoreFromID(*arguments)
 
     def Logoff(self):
-        self.com_object.Logoff()
+        return self.com_object.Logoff()
 
     def logoff(self):
         """Alias for Logoff"""
@@ -22134,7 +22134,7 @@ class NameSpace:
 
     def Logon(self, Profile=None, Password=None, ShowDialog=None, NewSession=None):
         arguments = com_arguments([unwrap(a) for a in [Profile, Password, ShowDialog, NewSession]])
-        self.com_object.Logon(*arguments)
+        return self.com_object.Logon(*arguments)
 
     def logon(self, Profile=None, Password=None, ShowDialog=None, NewSession=None):
         """Alias for Logon"""
@@ -22182,7 +22182,7 @@ class NameSpace:
 
     def RemoveStore(self, Folder=None):
         arguments = com_arguments([unwrap(a) for a in [Folder]])
-        self.com_object.RemoveStore(*arguments)
+        return self.com_object.RemoveStore(*arguments)
 
     def removestore(self, Folder=None):
         """Alias for RemoveStore"""
@@ -22196,7 +22196,7 @@ class NameSpace:
 
     def SendAndReceive(self, showProgressDialog=None):
         arguments = com_arguments([unwrap(a) for a in [showProgressDialog]])
-        self.com_object.SendAndReceive(*arguments)
+        return self.com_object.SendAndReceive(*arguments)
 
     def sendandreceive(self, showProgressDialog=None):
         """Alias for SendAndReceive"""
@@ -22422,7 +22422,7 @@ class NavigationFolders:
 
     def Remove(self, RemovableFolder=None):
         arguments = com_arguments([unwrap(a) for a in [RemovableFolder]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, RemovableFolder=None):
         """Alias for Remove"""
@@ -22590,7 +22590,7 @@ class NavigationGroups:
 
     def Delete(self, Group=None):
         arguments = com_arguments([unwrap(a) for a in [Group]])
-        self.com_object.Delete(*arguments)
+        return self.com_object.Delete(*arguments)
 
     def delete(self, Group=None):
         """Alias for Delete"""
@@ -23379,7 +23379,7 @@ class NoteItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -23394,7 +23394,7 @@ class NoteItem:
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -23402,7 +23402,7 @@ class NoteItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -23419,7 +23419,7 @@ class NoteItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -23430,7 +23430,7 @@ class NoteItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -23438,7 +23438,7 @@ class NoteItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -25245,7 +25245,7 @@ class OlkComboBox:
 
     def AddItem(self, ItemText=None, Index=None):
         arguments = com_arguments([unwrap(a) for a in [ItemText, Index]])
-        self.com_object.AddItem(*arguments)
+        return self.com_object.AddItem(*arguments)
 
     def additem(self, ItemText=None, Index=None):
         """Alias for AddItem"""
@@ -25258,28 +25258,28 @@ class OlkComboBox:
         return self.AddItem(*arguments)
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
         return self.Clear()
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Cut(self):
-        self.com_object.Cut()
+        return self.com_object.Cut()
 
     def cut(self):
         """Alias for Cut"""
         return self.Cut()
 
     def DropDown(self):
-        self.com_object.DropDown()
+        return self.com_object.DropDown()
 
     def dropdown(self):
         """Alias for DropDown"""
@@ -25304,7 +25304,7 @@ class OlkComboBox:
         return self.GetItem(*arguments)
 
     def Paste(self):
-        self.com_object.Paste()
+        return self.com_object.Paste()
 
     def paste(self):
         """Alias for Paste"""
@@ -25312,7 +25312,7 @@ class OlkComboBox:
 
     def RemoveItem(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.RemoveItem(*arguments)
+        return self.com_object.RemoveItem(*arguments)
 
     def removeitem(self, Index=None):
         """Alias for RemoveItem"""
@@ -25326,7 +25326,7 @@ class OlkComboBox:
 
     def SetItem(self, Index=None, Item=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Item]])
-        self.com_object.SetItem(*arguments)
+        return self.com_object.SetItem(*arguments)
 
     def setitem(self, Index=None, Item=None):
         """Alias for SetItem"""
@@ -26363,7 +26363,7 @@ class OlkDateControl:
         self.Value = value
 
     def DropDown(self):
-        self.com_object.DropDown()
+        return self.com_object.DropDown()
 
     def dropdown(self):
         """Alias for DropDown"""
@@ -27320,7 +27320,7 @@ class OlkListBox:
 
     def AddItem(self, ItemText=None, Index=None):
         arguments = com_arguments([unwrap(a) for a in [ItemText, Index]])
-        self.com_object.AddItem(*arguments)
+        return self.com_object.AddItem(*arguments)
 
     def additem(self, ItemText=None, Index=None):
         """Alias for AddItem"""
@@ -27333,14 +27333,14 @@ class OlkListBox:
         return self.AddItem(*arguments)
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
         return self.Clear()
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
@@ -27376,7 +27376,7 @@ class OlkListBox:
 
     def RemoveItem(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.RemoveItem(*arguments)
+        return self.com_object.RemoveItem(*arguments)
 
     def removeitem(self, Index=None):
         """Alias for RemoveItem"""
@@ -27390,7 +27390,7 @@ class OlkListBox:
 
     def SetItem(self, Index=None, Item=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Item]])
-        self.com_object.SetItem(*arguments)
+        return self.com_object.SetItem(*arguments)
 
     def setitem(self, Index=None, Item=None):
         """Alias for SetItem"""
@@ -27404,7 +27404,7 @@ class OlkListBox:
 
     def SetSelected(self, Index=None, Selected=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Selected]])
-        self.com_object.SetSelected(*arguments)
+        return self.com_object.SetSelected(*arguments)
 
     def setselected(self, Index=None, Selected=None):
         """Alias for SetSelected"""
@@ -28585,28 +28585,28 @@ class OlkTextBox:
         self.WordWrap = value
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
         return self.Clear()
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Cut(self):
-        self.com_object.Cut()
+        return self.com_object.Cut()
 
     def cut(self):
         """Alias for Cut"""
         return self.Cut()
 
     def Paste(self):
-        self.com_object.Paste()
+        return self.com_object.Paste()
 
     def paste(self):
         """Alias for Paste"""
@@ -29072,7 +29072,7 @@ class OlkTimeControl:
         self.Value = value
 
     def DropDown(self):
-        self.com_object.DropDown()
+        return self.com_object.DropDown()
 
     def dropdown(self):
         """Alias for DropDown"""
@@ -29283,7 +29283,7 @@ class OlkTimeZoneControl:
         self.Value = value
 
     def DropDown(self):
-        self.com_object.DropDown()
+        return self.com_object.DropDown()
 
     def dropdown(self):
         """Alias for DropDown"""
@@ -30036,7 +30036,7 @@ class OrderFields:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -30044,7 +30044,7 @@ class OrderFields:
         return self.Remove(*arguments)
 
     def RemoveAll(self):
-        self.com_object.RemoveAll()
+        return self.com_object.RemoveAll()
 
     def removeall(self):
         """Alias for RemoveAll"""
@@ -30212,7 +30212,7 @@ class OutlookBarGroups:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -30358,7 +30358,7 @@ class OutlookBarShortcut:
 
     def SetIcon(self, Icon=None):
         arguments = com_arguments([unwrap(a) for a in [Icon]])
-        self.com_object.SetIcon(*arguments)
+        return self.com_object.SetIcon(*arguments)
 
     def seticon(self, Icon=None):
         """Alias for SetIcon"""
@@ -30436,7 +30436,7 @@ class OutlookBarShortcuts:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -30559,7 +30559,7 @@ class Pages:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -30823,7 +30823,7 @@ class PeopleView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -30831,7 +30831,7 @@ class PeopleView:
 
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Name=None, SaveOption=None):
         """Alias for Copy"""
@@ -30839,7 +30839,7 @@ class PeopleView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -30847,7 +30847,7 @@ class PeopleView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -30860,14 +30860,14 @@ class PeopleView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -32047,7 +32047,7 @@ class PostItem:
         return self.UserProperties
 
     def ClearConversationIndex(self):
-        self.com_object.ClearConversationIndex()
+        return self.com_object.ClearConversationIndex()
 
     def clearconversationindex(self):
         """Alias for ClearConversationIndex"""
@@ -32058,7 +32058,7 @@ class PostItem:
         return self.ClearConversationIndex()
 
     def ClearTaskFlag(self):
-        self.com_object.ClearTaskFlag()
+        return self.com_object.ClearTaskFlag()
 
     def cleartaskflag(self):
         """Alias for ClearTaskFlag"""
@@ -32070,7 +32070,7 @@ class PostItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -32078,14 +32078,14 @@ class PostItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -32093,7 +32093,7 @@ class PostItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -32120,7 +32120,7 @@ class PostItem:
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
-        self.com_object.MarkAsTask(*arguments)
+        return self.com_object.MarkAsTask(*arguments)
 
     def markastask(self, MarkInterval=None):
         """Alias for MarkAsTask"""
@@ -32142,14 +32142,14 @@ class PostItem:
         return self.Move(*arguments)
 
     def Post(self):
-        self.com_object.Post()
+        return self.com_object.Post()
 
     def post(self):
         """Alias for Post"""
         return self.Post()
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -32167,7 +32167,7 @@ class PostItem:
         return self.Reply()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -32175,7 +32175,7 @@ class PostItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -32188,7 +32188,7 @@ class PostItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -32316,7 +32316,7 @@ class PropertyAccessor:
 
     def DeleteProperty(self, SchemaName=None):
         arguments = com_arguments([unwrap(a) for a in [SchemaName]])
-        self.com_object.DeleteProperty(*arguments)
+        return self.com_object.DeleteProperty(*arguments)
 
     def deleteproperty(self, SchemaName=None):
         """Alias for DeleteProperty"""
@@ -32386,7 +32386,7 @@ class PropertyAccessor:
 
     def SetProperty(self, SchemaName=None, Value=None):
         arguments = com_arguments([unwrap(a) for a in [SchemaName, Value]])
-        self.com_object.SetProperty(*arguments)
+        return self.com_object.SetProperty(*arguments)
 
     def setproperty(self, SchemaName=None, Value=None):
         """Alias for SetProperty"""
@@ -32513,7 +32513,7 @@ class PropertyPages:
 
     def Add(self, Page=None, Title=None):
         arguments = com_arguments([unwrap(a) for a in [Page, Title]])
-        self.com_object.Add(*arguments)
+        return self.com_object.Add(*arguments)
 
     def add(self, Page=None, Title=None):
         """Alias for Add"""
@@ -32531,7 +32531,7 @@ class PropertyPages:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -32576,7 +32576,7 @@ class PropertyPageSite:
         return self.Session
 
     def OnStatusChange(self):
-        self.com_object.OnStatusChange()
+        return self.com_object.OnStatusChange()
 
     def onstatuschange(self):
         """Alias for OnStatusChange"""
@@ -32864,7 +32864,7 @@ class Recipient:
         self.Type = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -32957,7 +32957,7 @@ class Recipients:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -33475,7 +33475,7 @@ class Reminder:
         return self.Session
 
     def Dismiss(self):
-        self.com_object.Dismiss()
+        return self.com_object.Dismiss()
 
     def dismiss(self):
         """Alias for Dismiss"""
@@ -33483,7 +33483,7 @@ class Reminder:
 
     def Snooze(self, SnoozeTime=None):
         arguments = com_arguments([unwrap(a) for a in [SnoozeTime]])
-        self.com_object.Snooze(*arguments)
+        return self.com_object.Snooze(*arguments)
 
     def snooze(self, SnoozeTime=None):
         """Alias for Snooze"""
@@ -33550,7 +33550,7 @@ class Reminders:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -34187,7 +34187,7 @@ class RemoteItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -34195,14 +34195,14 @@ class RemoteItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -34210,7 +34210,7 @@ class RemoteItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -34238,7 +34238,7 @@ class RemoteItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -34249,7 +34249,7 @@ class RemoteItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -34257,7 +34257,7 @@ class RemoteItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -34270,7 +34270,7 @@ class RemoteItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -34882,7 +34882,7 @@ class ReportItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -34890,14 +34890,14 @@ class ReportItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -34905,7 +34905,7 @@ class ReportItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -34933,7 +34933,7 @@ class ReportItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -34944,7 +34944,7 @@ class ReportItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -34952,7 +34952,7 @@ class ReportItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -34965,7 +34965,7 @@ class ReportItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -35106,7 +35106,7 @@ class Results:
         return self.Item(*arguments)
 
     def ResetColumns(self):
-        self.com_object.ResetColumns()
+        return self.com_object.ResetColumns()
 
     def resetcolumns(self):
         """Alias for ResetColumns"""
@@ -35118,7 +35118,7 @@ class Results:
 
     def SetColumns(self, Columns=None):
         arguments = com_arguments([unwrap(a) for a in [Columns]])
-        self.com_object.SetColumns(*arguments)
+        return self.com_object.SetColumns(*arguments)
 
     def setcolumns(self, Columns=None):
         """Alias for SetColumns"""
@@ -35132,7 +35132,7 @@ class Results:
 
     def Sort(self, Property=None, Descending=None):
         arguments = com_arguments([unwrap(a) for a in [Property, Descending]])
-        self.com_object.Sort(*arguments)
+        return self.com_object.Sort(*arguments)
 
     def sort(self, Property=None, Descending=None):
         """Alias for Sort"""
@@ -35399,7 +35399,7 @@ class Rule:
 
     def Execute(self, ShowProgress=None, Folder=None, IncludeSubfolders=None, RuleExecuteOption=None):
         arguments = com_arguments([unwrap(a) for a in [ShowProgress, Folder, IncludeSubfolders, RuleExecuteOption]])
-        self.com_object.Execute(*arguments)
+        return self.com_object.Execute(*arguments)
 
     def execute(self, ShowProgress=None, Folder=None, IncludeSubfolders=None, RuleExecuteOption=None):
         """Alias for Execute"""
@@ -36290,7 +36290,7 @@ class Rules:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -36299,7 +36299,7 @@ class Rules:
 
     def Save(self, ShowProgress=None):
         arguments = com_arguments([unwrap(a) for a in [ShowProgress]])
-        self.com_object.Save(*arguments)
+        return self.com_object.Save(*arguments)
 
     def save(self, ShowProgress=None):
         """Alias for Save"""
@@ -36426,7 +36426,7 @@ class Search:
 
     def Save(self, SchFldrName=None):
         arguments = com_arguments([unwrap(a) for a in [SchFldrName]])
-        self.com_object.Save(*arguments)
+        return self.com_object.Save(*arguments)
 
     def save(self, SchFldrName=None):
         """Alias for Save"""
@@ -36434,7 +36434,7 @@ class Search:
         return self.Save(*arguments)
 
     def Stop(self):
-        self.com_object.Stop()
+        return self.com_object.Stop()
 
     def stop(self):
         """Alias for Stop"""
@@ -36827,7 +36827,7 @@ class SelectNamesDialog:
 
     def SetDefaultDisplayMode(self, defaultMode=None):
         arguments = com_arguments([unwrap(a) for a in [defaultMode]])
-        self.com_object.SetDefaultDisplayMode(*arguments)
+        return self.com_object.SetDefaultDisplayMode(*arguments)
 
     def setdefaultdisplaymode(self, defaultMode=None):
         """Alias for SetDefaultDisplayMode"""
@@ -38817,7 +38817,7 @@ class SharingItem:
 
     def AddBusinessCard(self, contact=None):
         arguments = com_arguments([unwrap(a) for a in [contact]])
-        self.com_object.AddBusinessCard(*arguments)
+        return self.com_object.AddBusinessCard(*arguments)
 
     def addbusinesscard(self, contact=None):
         """Alias for AddBusinessCard"""
@@ -38830,14 +38830,14 @@ class SharingItem:
         return self.AddBusinessCard(*arguments)
 
     def Allow(self):
-        self.com_object.Allow()
+        return self.com_object.Allow()
 
     def allow(self):
         """Alias for Allow"""
         return self.Allow()
 
     def ClearConversationIndex(self):
-        self.com_object.ClearConversationIndex()
+        return self.com_object.ClearConversationIndex()
 
     def clearconversationindex(self):
         """Alias for ClearConversationIndex"""
@@ -38848,7 +38848,7 @@ class SharingItem:
         return self.ClearConversationIndex()
 
     def ClearTaskFlag(self):
-        self.com_object.ClearTaskFlag()
+        return self.com_object.ClearTaskFlag()
 
     def cleartaskflag(self):
         """Alias for ClearTaskFlag"""
@@ -38860,7 +38860,7 @@ class SharingItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -38868,14 +38868,14 @@ class SharingItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -38890,7 +38890,7 @@ class SharingItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -38917,7 +38917,7 @@ class SharingItem:
 
     def MarkAsTask(self, MarkInterval=None):
         arguments = com_arguments([unwrap(a) for a in [MarkInterval]])
-        self.com_object.MarkAsTask(*arguments)
+        return self.com_object.MarkAsTask(*arguments)
 
     def markastask(self, MarkInterval=None):
         """Alias for MarkAsTask"""
@@ -38950,7 +38950,7 @@ class SharingItem:
         return self.OpenSharedFolder()
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -38979,7 +38979,7 @@ class SharingItem:
         return self.ReplyAll()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -38987,7 +38987,7 @@ class SharingItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -39000,14 +39000,14 @@ class SharingItem:
         return self.SaveAs(*arguments)
 
     def Send(self):
-        self.com_object.Send()
+        return self.com_object.Send()
 
     def send(self):
         """Alias for Send"""
         return self.Send()
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -39173,7 +39173,7 @@ class SolutionsModule:
 
     def AddSolution(self, Solution=None, Scope=None):
         arguments = com_arguments([unwrap(a) for a in [Solution, Scope]])
-        self.com_object.AddSolution(*arguments)
+        return self.com_object.AddSolution(*arguments)
 
     def addsolution(self, Solution=None, Scope=None):
         """Alias for AddSolution"""
@@ -39371,14 +39371,14 @@ class StorageItem:
         return self.UserProperties
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -39657,7 +39657,7 @@ class Store:
         return self.GetSpecialFolder(*arguments)
 
     def RefreshQuotaDisplay(self):
-        self.com_object.RefreshQuotaDisplay()
+        return self.com_object.RefreshQuotaDisplay()
 
     def refreshquotadisplay(self):
         """Alias for RefreshQuotaDisplay"""
@@ -39772,14 +39772,14 @@ class SyncObject:
         return self.Session
 
     def Start(self):
-        self.com_object.Start()
+        return self.com_object.Start()
 
     def start(self):
         """Alias for Start"""
         return self.Start()
 
     def Stop(self):
-        self.com_object.Stop()
+        return self.com_object.Stop()
 
     def stop(self):
         """Alias for Stop"""
@@ -39985,7 +39985,7 @@ class Table:
         return self.GetRowCount()
 
     def MoveToStart(self):
-        self.com_object.MoveToStart()
+        return self.com_object.MoveToStart()
 
     def movetostart(self):
         """Alias for MoveToStart"""
@@ -40006,7 +40006,7 @@ class Table:
 
     def Sort(self, SortProperty=None, Descending=None):
         arguments = com_arguments([unwrap(a) for a in [SortProperty, Descending]])
-        self.com_object.Sort(*arguments)
+        return self.com_object.Sort(*arguments)
 
     def sort(self, SortProperty=None, Descending=None):
         """Alias for Sort"""
@@ -40772,7 +40772,7 @@ class TableView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -40788,7 +40788,7 @@ class TableView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -40807,7 +40807,7 @@ class TableView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -40820,14 +40820,14 @@ class TableView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -42172,7 +42172,7 @@ class TaskItem:
         return self.Assign()
 
     def CancelResponseState(self):
-        self.com_object.CancelResponseState()
+        return self.com_object.CancelResponseState()
 
     def cancelresponsestate(self):
         """Alias for CancelResponseState"""
@@ -42183,7 +42183,7 @@ class TaskItem:
         return self.CancelResponseState()
 
     def ClearRecurrencePattern(self):
-        self.com_object.ClearRecurrencePattern()
+        return self.com_object.ClearRecurrencePattern()
 
     def clearrecurrencepattern(self):
         """Alias for ClearRecurrencePattern"""
@@ -42195,7 +42195,7 @@ class TaskItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -42203,14 +42203,14 @@ class TaskItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -42218,7 +42218,7 @@ class TaskItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -42248,7 +42248,7 @@ class TaskItem:
         return self.GetRecurrencePattern()
 
     def MarkComplete(self):
-        self.com_object.MarkComplete()
+        return self.com_object.MarkComplete()
 
     def markcomplete(self):
         """Alias for MarkComplete"""
@@ -42268,7 +42268,7 @@ class TaskItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -42288,7 +42288,7 @@ class TaskItem:
         return self.Respond(*arguments)
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -42296,7 +42296,7 @@ class TaskItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -42309,14 +42309,14 @@ class TaskItem:
         return self.SaveAs(*arguments)
 
     def Send(self):
-        self.com_object.Send()
+        return self.com_object.Send()
 
     def send(self):
         """Alias for Send"""
         return self.Send()
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -42950,7 +42950,7 @@ class TaskRequestAcceptItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -42958,14 +42958,14 @@ class TaskRequestAcceptItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -42973,7 +42973,7 @@ class TaskRequestAcceptItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -43015,7 +43015,7 @@ class TaskRequestAcceptItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -43026,7 +43026,7 @@ class TaskRequestAcceptItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -43034,7 +43034,7 @@ class TaskRequestAcceptItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -43047,7 +43047,7 @@ class TaskRequestAcceptItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -43659,7 +43659,7 @@ class TaskRequestDeclineItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -43667,14 +43667,14 @@ class TaskRequestDeclineItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -43682,7 +43682,7 @@ class TaskRequestDeclineItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -43724,7 +43724,7 @@ class TaskRequestDeclineItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -43735,7 +43735,7 @@ class TaskRequestDeclineItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -43743,7 +43743,7 @@ class TaskRequestDeclineItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -43756,7 +43756,7 @@ class TaskRequestDeclineItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -44368,7 +44368,7 @@ class TaskRequestItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -44376,14 +44376,14 @@ class TaskRequestItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -44391,7 +44391,7 @@ class TaskRequestItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -44433,7 +44433,7 @@ class TaskRequestItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -44444,7 +44444,7 @@ class TaskRequestItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -44452,7 +44452,7 @@ class TaskRequestItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -44465,7 +44465,7 @@ class TaskRequestItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -45077,7 +45077,7 @@ class TaskRequestUpdateItem:
 
     def Close(self, SaveMode=None):
         arguments = com_arguments([unwrap(a) for a in [SaveMode]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveMode=None):
         """Alias for Close"""
@@ -45085,14 +45085,14 @@ class TaskRequestUpdateItem:
         return self.Close(*arguments)
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -45100,7 +45100,7 @@ class TaskRequestUpdateItem:
 
     def Display(self, Modal=None):
         arguments = com_arguments([unwrap(a) for a in [Modal]])
-        self.com_object.Display(*arguments)
+        return self.com_object.Display(*arguments)
 
     def display(self, Modal=None):
         """Alias for Display"""
@@ -45142,7 +45142,7 @@ class TaskRequestUpdateItem:
         return self.Move(*arguments)
 
     def PrintOut(self):
-        self.com_object.PrintOut()
+        return self.com_object.PrintOut()
 
     def printout(self):
         """Alias for PrintOut"""
@@ -45153,7 +45153,7 @@ class TaskRequestUpdateItem:
         return self.PrintOut()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -45161,7 +45161,7 @@ class TaskRequestUpdateItem:
 
     def SaveAs(self, Path=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Path, Type]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, Path=None, Type=None):
         """Alias for SaveAs"""
@@ -45174,7 +45174,7 @@ class TaskRequestUpdateItem:
         return self.SaveAs(*arguments)
 
     def ShowCategoriesDialog(self):
-        self.com_object.ShowCategoriesDialog()
+        return self.com_object.ShowCategoriesDialog()
 
     def showcategoriesdialog(self):
         """Alias for ShowCategoriesDialog"""
@@ -45824,7 +45824,7 @@ class TimelineView:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -45840,7 +45840,7 @@ class TimelineView:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -45848,7 +45848,7 @@ class TimelineView:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -45861,14 +45861,14 @@ class TimelineView:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -46271,7 +46271,7 @@ class UserDefinedProperties:
         return self.Item(*arguments)
 
     def Refresh(self):
-        self.com_object.Refresh()
+        return self.com_object.Refresh()
 
     def refresh(self):
         """Alias for Refresh"""
@@ -46279,7 +46279,7 @@ class UserDefinedProperties:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -46365,7 +46365,7 @@ class UserDefinedProperty:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -46446,7 +46446,7 @@ class UserProperties:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -46601,7 +46601,7 @@ class UserProperty:
         self.Value = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -46792,7 +46792,7 @@ class View:
         self.XML = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -46800,7 +46800,7 @@ class View:
 
     def Copy(self, Name=None, SaveOption=None):
         arguments = com_arguments([unwrap(a) for a in [Name, SaveOption]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Name=None, SaveOption=None):
         """Alias for Copy"""
@@ -46808,7 +46808,7 @@ class View:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -46816,7 +46816,7 @@ class View:
 
     def GoToDate(self, Date=None):
         arguments = com_arguments([unwrap(a) for a in [Date]])
-        self.com_object.GoToDate(*arguments)
+        return self.com_object.GoToDate(*arguments)
 
     def gotodate(self, Date=None):
         """Alias for GoToDate"""
@@ -46829,14 +46829,14 @@ class View:
         return self.GoToDate(*arguments)
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
         return self.Reset()
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -46982,7 +46982,7 @@ class ViewFields:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""
@@ -47246,7 +47246,7 @@ class Views:
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Remove(*arguments)
+        return self.com_object.Remove(*arguments)
 
     def remove(self, Index=None):
         """Alias for Remove"""

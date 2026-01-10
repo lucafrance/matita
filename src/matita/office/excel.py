@@ -286,7 +286,7 @@ class AboveAverage:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -294,7 +294,7 @@ class AboveAverage:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -307,7 +307,7 @@ class AboveAverage:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -318,7 +318,7 @@ class AboveAverage:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -407,7 +407,7 @@ class Action:
         return self.Type
 
     def Execute(self):
-        self.com_object.Execute()
+        return self.com_object.Execute()
 
     def execute(self):
         """Alias for Execute"""
@@ -831,7 +831,7 @@ class AllowEditRange:
 
     def ChangePassword(self, Password=None):
         arguments = com_arguments([unwrap(a) for a in [Password]])
-        self.com_object.ChangePassword(*arguments)
+        return self.com_object.ChangePassword(*arguments)
 
     def changepassword(self, Password=None):
         """Alias for ChangePassword"""
@@ -844,7 +844,7 @@ class AllowEditRange:
         return self.ChangePassword(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -852,7 +852,7 @@ class AllowEditRange:
 
     def Unprotect(self, Password=None):
         arguments = com_arguments([unwrap(a) for a in [Password]])
-        self.com_object.Unprotect(*arguments)
+        return self.com_object.Unprotect(*arguments)
 
     def unprotect(self, Password=None):
         """Alias for Unprotect"""
@@ -5155,7 +5155,7 @@ class Application:
 
     def ActivateMicrosoftApp(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.ActivateMicrosoftApp(*arguments)
+        return self.com_object.ActivateMicrosoftApp(*arguments)
 
     def activatemicrosoftapp(self, Index=None):
         """Alias for ActivateMicrosoftApp"""
@@ -5169,7 +5169,7 @@ class Application:
 
     def AddCustomList(self, ListArray=None, ByRow=None):
         arguments = com_arguments([unwrap(a) for a in [ListArray, ByRow]])
-        self.com_object.AddCustomList(*arguments)
+        return self.com_object.AddCustomList(*arguments)
 
     def addcustomlist(self, ListArray=None, ByRow=None):
         """Alias for AddCustomList"""
@@ -5182,14 +5182,14 @@ class Application:
         return self.AddCustomList(*arguments)
 
     def Calculate(self):
-        self.com_object.Calculate()
+        return self.com_object.Calculate()
 
     def calculate(self):
         """Alias for Calculate"""
         return self.Calculate()
 
     def CalculateFull(self):
-        self.com_object.CalculateFull()
+        return self.com_object.CalculateFull()
 
     def calculatefull(self):
         """Alias for CalculateFull"""
@@ -5200,7 +5200,7 @@ class Application:
         return self.CalculateFull()
 
     def CalculateFullRebuild(self):
-        self.com_object.CalculateFullRebuild()
+        return self.com_object.CalculateFullRebuild()
 
     def calculatefullrebuild(self):
         """Alias for CalculateFullRebuild"""
@@ -5211,7 +5211,7 @@ class Application:
         return self.CalculateFullRebuild()
 
     def CalculateUntilAsyncQueriesDone(self):
-        self.com_object.CalculateUntilAsyncQueriesDone()
+        return self.com_object.CalculateUntilAsyncQueriesDone()
 
     def calculateuntilasyncqueriesdone(self):
         """Alias for CalculateUntilAsyncQueriesDone"""
@@ -5237,7 +5237,7 @@ class Application:
 
     def CheckAbort(self, KeepAbort=None):
         arguments = com_arguments([unwrap(a) for a in [KeepAbort]])
-        self.com_object.CheckAbort(*arguments)
+        return self.com_object.CheckAbort(*arguments)
 
     def checkabort(self, KeepAbort=None):
         """Alias for CheckAbort"""
@@ -5279,7 +5279,7 @@ class Application:
 
     def DDEExecute(self, Channel=None, String=None):
         arguments = com_arguments([unwrap(a) for a in [Channel, String]])
-        self.com_object.DDEExecute(*arguments)
+        return self.com_object.DDEExecute(*arguments)
 
     def ddeexecute(self, Channel=None, String=None):
         """Alias for DDEExecute"""
@@ -5307,7 +5307,7 @@ class Application:
 
     def DDEPoke(self, Channel=None, Item=None, Data=None):
         arguments = com_arguments([unwrap(a) for a in [Channel, Item, Data]])
-        self.com_object.DDEPoke(*arguments)
+        return self.com_object.DDEPoke(*arguments)
 
     def ddepoke(self, Channel=None, Item=None, Data=None):
         """Alias for DDEPoke"""
@@ -5335,7 +5335,7 @@ class Application:
 
     def DDETerminate(self, Channel=None):
         arguments = com_arguments([unwrap(a) for a in [Channel]])
-        self.com_object.DDETerminate(*arguments)
+        return self.com_object.DDETerminate(*arguments)
 
     def ddeterminate(self, Channel=None):
         """Alias for DDETerminate"""
@@ -5349,7 +5349,7 @@ class Application:
 
     def DeleteCustomList(self, ListNum=None):
         arguments = com_arguments([unwrap(a) for a in [ListNum]])
-        self.com_object.DeleteCustomList(*arguments)
+        return self.com_object.DeleteCustomList(*arguments)
 
     def deletecustomlist(self, ListNum=None):
         """Alias for DeleteCustomList"""
@@ -5363,7 +5363,7 @@ class Application:
 
     def DisplayXMLSourcePane(self, XmlMap=None):
         arguments = com_arguments([unwrap(a) for a in [XmlMap]])
-        self.com_object.DisplayXMLSourcePane(*arguments)
+        return self.com_object.DisplayXMLSourcePane(*arguments)
 
     def displayxmlsourcepane(self, XmlMap=None):
         """Alias for DisplayXMLSourcePane"""
@@ -5376,7 +5376,7 @@ class Application:
         return self.DisplayXMLSourcePane(*arguments)
 
     def DoubleClick(self):
-        self.com_object.DoubleClick()
+        return self.com_object.DoubleClick()
 
     def doubleclick(self):
         """Alias for DoubleClick"""
@@ -5492,7 +5492,7 @@ class Application:
 
     def Goto(self, Reference=None, Scroll=None):
         arguments = com_arguments([unwrap(a) for a in [Reference, Scroll]])
-        self.com_object.Goto(*arguments)
+        return self.com_object.Goto(*arguments)
 
     def goto(self, Reference=None, Scroll=None):
         """Alias for Goto"""
@@ -5501,7 +5501,7 @@ class Application:
 
     def Help(self, HelpFile=None, HelpContextID=None):
         arguments = com_arguments([unwrap(a) for a in [HelpFile, HelpContextID]])
-        self.com_object.Help(*arguments)
+        return self.com_object.Help(*arguments)
 
     def help(self, HelpFile=None, HelpContextID=None):
         """Alias for Help"""
@@ -5547,7 +5547,7 @@ class Application:
 
     def MacroOptions(self, Macro=None, Description=None, HasMenu=None, MenuText=None, HasShortcutKey=None, ShortcutKey=None, Category=None, StatusBar=None, HelpContextID=None, HelpFile=None, ArgumentDescriptions=None):
         arguments = com_arguments([unwrap(a) for a in [Macro, Description, HasMenu, MenuText, HasShortcutKey, ShortcutKey, Category, StatusBar, HelpContextID, HelpFile, ArgumentDescriptions]])
-        self.com_object.MacroOptions(*arguments)
+        return self.com_object.MacroOptions(*arguments)
 
     def macrooptions(self, Macro=None, Description=None, HasMenu=None, MenuText=None, HasShortcutKey=None, ShortcutKey=None, Category=None, StatusBar=None, HelpContextID=None, HelpFile=None, ArgumentDescriptions=None):
         """Alias for MacroOptions"""
@@ -5560,7 +5560,7 @@ class Application:
         return self.MacroOptions(*arguments)
 
     def MailLogoff(self):
-        self.com_object.MailLogoff()
+        return self.com_object.MailLogoff()
 
     def maillogoff(self):
         """Alias for MailLogoff"""
@@ -5572,7 +5572,7 @@ class Application:
 
     def MailLogon(self, Name=None, Password=None, DownloadNewMail=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Password, DownloadNewMail]])
-        self.com_object.MailLogon(*arguments)
+        return self.com_object.MailLogon(*arguments)
 
     def maillogon(self, Name=None, Password=None, DownloadNewMail=None):
         """Alias for MailLogon"""
@@ -5597,7 +5597,7 @@ class Application:
 
     def OnKey(self, Key=None, Procedure=None):
         arguments = com_arguments([unwrap(a) for a in [Key, Procedure]])
-        self.com_object.OnKey(*arguments)
+        return self.com_object.OnKey(*arguments)
 
     def onkey(self, Key=None, Procedure=None):
         """Alias for OnKey"""
@@ -5611,7 +5611,7 @@ class Application:
 
     def OnRepeat(self, Text=None, Procedure=None):
         arguments = com_arguments([unwrap(a) for a in [Text, Procedure]])
-        self.com_object.OnRepeat(*arguments)
+        return self.com_object.OnRepeat(*arguments)
 
     def onrepeat(self, Text=None, Procedure=None):
         """Alias for OnRepeat"""
@@ -5625,7 +5625,7 @@ class Application:
 
     def OnTime(self, EarliestTime=None, Procedure=None, LatestTime=None, Schedule=None):
         arguments = com_arguments([unwrap(a) for a in [EarliestTime, Procedure, LatestTime, Schedule]])
-        self.com_object.OnTime(*arguments)
+        return self.com_object.OnTime(*arguments)
 
     def ontime(self, EarliestTime=None, Procedure=None, LatestTime=None, Schedule=None):
         """Alias for OnTime"""
@@ -5639,7 +5639,7 @@ class Application:
 
     def OnUndo(self, Text=None, Procedure=None):
         arguments = com_arguments([unwrap(a) for a in [Text, Procedure]])
-        self.com_object.OnUndo(*arguments)
+        return self.com_object.OnUndo(*arguments)
 
     def onundo(self, Text=None, Procedure=None):
         """Alias for OnUndo"""
@@ -5652,7 +5652,7 @@ class Application:
         return self.OnUndo(*arguments)
 
     def Quit(self):
-        self.com_object.Quit()
+        return self.com_object.Quit()
 
     def quit(self):
         """Alias for Quit"""
@@ -5660,7 +5660,7 @@ class Application:
 
     def RecordMacro(self, BasicCode=None, XlmCode=None):
         arguments = com_arguments([unwrap(a) for a in [BasicCode, XlmCode]])
-        self.com_object.RecordMacro(*arguments)
+        return self.com_object.RecordMacro(*arguments)
 
     def recordmacro(self, BasicCode=None, XlmCode=None):
         """Alias for RecordMacro"""
@@ -5687,7 +5687,7 @@ class Application:
         return self.RegisterXLL(*arguments)
 
     def Repeat(self):
-        self.com_object.Repeat()
+        return self.com_object.Repeat()
 
     def repeat(self):
         """Alias for Repeat"""
@@ -5704,7 +5704,7 @@ class Application:
 
     def SaveWorkspace(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.SaveWorkspace(*arguments)
+        return self.com_object.SaveWorkspace(*arguments)
 
     def saveworkspace(self, FileName=None):
         """Alias for SaveWorkspace"""
@@ -5718,7 +5718,7 @@ class Application:
 
     def SendKeys(self, Keys=None, Wait=None):
         arguments = com_arguments([unwrap(a) for a in [Keys, Wait]])
-        self.com_object.SendKeys(*arguments)
+        return self.com_object.SendKeys(*arguments)
 
     def sendkeys(self, Keys=None, Wait=None):
         """Alias for SendKeys"""
@@ -5745,7 +5745,7 @@ class Application:
         return self.SharePointVersion(*arguments)
 
     def Undo(self):
-        self.com_object.Undo()
+        return self.com_object.Undo()
 
     def undo(self):
         """Alias for Undo"""
@@ -5762,7 +5762,7 @@ class Application:
 
     def Volatile(self, Volatile=None):
         arguments = com_arguments([unwrap(a) for a in [Volatile]])
-        self.com_object.Volatile(*arguments)
+        return self.com_object.Volatile(*arguments)
 
     def volatile(self, Volatile=None):
         """Alias for Volatile"""
@@ -6282,7 +6282,7 @@ class AutoFilter:
         return self.Sort
 
     def ApplyFilter(self):
-        self.com_object.ApplyFilter()
+        return self.com_object.ApplyFilter()
 
     def applyfilter(self):
         """Alias for ApplyFilter"""
@@ -6293,7 +6293,7 @@ class AutoFilter:
         return self.ApplyFilter()
 
     def ShowAllData(self):
-        self.com_object.ShowAllData()
+        return self.com_object.ShowAllData()
 
     def showalldata(self):
         """Alias for ShowAllData"""
@@ -8718,7 +8718,7 @@ class CalculatedMember:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -9016,7 +9016,7 @@ class CalloutFormat:
         self.Type = value
 
     def AutomaticLength(self):
-        self.com_object.AutomaticLength()
+        return self.com_object.AutomaticLength()
 
     def automaticlength(self):
         """Alias for AutomaticLength"""
@@ -9028,7 +9028,7 @@ class CalloutFormat:
 
     def CustomDrop(self, Drop=None):
         arguments = com_arguments([unwrap(a) for a in [Drop]])
-        self.com_object.CustomDrop(*arguments)
+        return self.com_object.CustomDrop(*arguments)
 
     def customdrop(self, Drop=None):
         """Alias for CustomDrop"""
@@ -9042,7 +9042,7 @@ class CalloutFormat:
 
     def CustomLength(self, Length=None):
         arguments = com_arguments([unwrap(a) for a in [Length]])
-        self.com_object.CustomLength(*arguments)
+        return self.com_object.CustomLength(*arguments)
 
     def customlength(self, Length=None):
         """Alias for CustomLength"""
@@ -9056,7 +9056,7 @@ class CalloutFormat:
 
     def PresetDrop(self, DropType=None):
         arguments = com_arguments([unwrap(a) for a in [DropType]])
-        self.com_object.PresetDrop(*arguments)
+        return self.com_object.PresetDrop(*arguments)
 
     def presetdrop(self, DropType=None):
         """Alias for PresetDrop"""
@@ -9508,7 +9508,7 @@ class CellFormat:
         self.WrapText = value
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
@@ -10821,7 +10821,7 @@ class Chart:
         return self.Walls
 
     def Activate(self):
-        self.com_object.Activate()
+        return self.com_object.Activate()
 
     def activate(self):
         """Alias for Activate"""
@@ -10829,7 +10829,7 @@ class Chart:
 
     def ApplyChartTemplate(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.ApplyChartTemplate(*arguments)
+        return self.com_object.ApplyChartTemplate(*arguments)
 
     def applycharttemplate(self, FileName=None):
         """Alias for ApplyChartTemplate"""
@@ -10843,7 +10843,7 @@ class Chart:
 
     def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
         arguments = com_arguments([unwrap(a) for a in [Type, LegendKey, AutoText, HasLeaderLines, ShowSeriesName, ShowCategoryName, ShowValue, ShowPercentage, ShowBubbleSize, Separator]])
-        self.com_object.ApplyDataLabels(*arguments)
+        return self.com_object.ApplyDataLabels(*arguments)
 
     def applydatalabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
         """Alias for ApplyDataLabels"""
@@ -10857,7 +10857,7 @@ class Chart:
 
     def ApplyLayout(self, Layout=None, ChartType=None):
         arguments = com_arguments([unwrap(a) for a in [Layout, ChartType]])
-        self.com_object.ApplyLayout(*arguments)
+        return self.com_object.ApplyLayout(*arguments)
 
     def applylayout(self, Layout=None, ChartType=None):
         """Alias for ApplyLayout"""
@@ -10908,7 +10908,7 @@ class Chart:
 
     def ChartWizard(self, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
         arguments = com_arguments([unwrap(a) for a in [Source, Gallery, Format, PlotBy, CategoryLabels, SeriesLabels, HasLegend, Title, CategoryTitle, ValueTitle, ExtraTitle]])
-        self.com_object.ChartWizard(*arguments)
+        return self.com_object.ChartWizard(*arguments)
 
     def chartwizard(self, Source=None, Gallery=None, Format=None, PlotBy=None, CategoryLabels=None, SeriesLabels=None, HasLegend=None, Title=None, CategoryTitle=None, ValueTitle=None, ExtraTitle=None):
         """Alias for ChartWizard"""
@@ -10922,7 +10922,7 @@ class Chart:
 
     def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
         arguments = com_arguments([unwrap(a) for a in [CustomDictionary, IgnoreUppercase, AlwaysSuggest, SpellLang]])
-        self.com_object.CheckSpelling(*arguments)
+        return self.com_object.CheckSpelling(*arguments)
 
     def checkspelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
         """Alias for CheckSpelling"""
@@ -10946,7 +10946,7 @@ class Chart:
         return self.ClearToMatchColorStyle()
 
     def ClearToMatchStyle(self):
-        self.com_object.ClearToMatchStyle()
+        return self.com_object.ClearToMatchStyle()
 
     def cleartomatchstyle(self):
         """Alias for ClearToMatchStyle"""
@@ -10958,7 +10958,7 @@ class Chart:
 
     def Copy(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Before=None, After=None):
         """Alias for Copy"""
@@ -10967,7 +10967,7 @@ class Chart:
 
     def CopyPicture(self, Appearance=None, Format=None, Size=None):
         arguments = com_arguments([unwrap(a) for a in [Appearance, Format, Size]])
-        self.com_object.CopyPicture(*arguments)
+        return self.com_object.CopyPicture(*arguments)
 
     def copypicture(self, Appearance=None, Format=None, Size=None):
         """Alias for CopyPicture"""
@@ -10980,7 +10980,7 @@ class Chart:
         return self.CopyPicture(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -11006,7 +11006,7 @@ class Chart:
 
     def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         arguments = com_arguments([unwrap(a) for a in [Type, FileName, Quality, IncludeDocProperties, IgnorePrintAreas, From, To, OpenAfterPublish, FixedFormatExtClassPtr]])
-        self.com_object.ExportAsFixedFormat(*arguments)
+        return self.com_object.ExportAsFixedFormat(*arguments)
 
     def exportasfixedformat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         """Alias for ExportAsFixedFormat"""
@@ -11036,7 +11036,7 @@ class Chart:
 
     def GetChartElement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
         arguments = com_arguments([unwrap(a) for a in [x, y, ElementID, Arg1, Arg2]])
-        self.com_object.GetChartElement(*arguments)
+        return self.com_object.GetChartElement(*arguments)
 
     def getchartelement(self, x=None, y=None, ElementID=None, Arg1=None, Arg2=None):
         """Alias for GetChartElement"""
@@ -11059,7 +11059,7 @@ class Chart:
 
     def Move(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Move(*arguments)
+        return self.com_object.Move(*arguments)
 
     def move(self, Before=None, After=None):
         """Alias for Move"""
@@ -11082,7 +11082,7 @@ class Chart:
 
     def Paste(self, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Type]])
-        self.com_object.Paste(*arguments)
+        return self.com_object.Paste(*arguments)
 
     def paste(self, Type=None):
         """Alias for Paste"""
@@ -11105,7 +11105,7 @@ class Chart:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([unwrap(a) for a in [EnableChanges]])
-        self.com_object.PrintPreview(*arguments)
+        return self.com_object.PrintPreview(*arguments)
 
     def printpreview(self, EnableChanges=None):
         """Alias for PrintPreview"""
@@ -11119,7 +11119,7 @@ class Chart:
 
     def Protect(self, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None):
         arguments = com_arguments([unwrap(a) for a in [Password, DrawingObjects, Contents, Scenarios, UserInterfaceOnly]])
-        self.com_object.Protect(*arguments)
+        return self.com_object.Protect(*arguments)
 
     def protect(self, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None):
         """Alias for Protect"""
@@ -11127,7 +11127,7 @@ class Chart:
         return self.Protect(*arguments)
 
     def Refresh(self):
-        self.com_object.Refresh()
+        return self.com_object.Refresh()
 
     def refresh(self):
         """Alias for Refresh"""
@@ -11135,7 +11135,7 @@ class Chart:
 
     def SaveAs(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, FileFormat, Password, WriteResPassword, ReadOnlyRecommended, CreateBackup, AddToMru, TextCodepage, TextVisualLayout, Local]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
         """Alias for SaveAs"""
@@ -11149,7 +11149,7 @@ class Chart:
 
     def SaveChartTemplate(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.SaveChartTemplate(*arguments)
+        return self.com_object.SaveChartTemplate(*arguments)
 
     def savecharttemplate(self, FileName=None):
         """Alias for SaveChartTemplate"""
@@ -11163,7 +11163,7 @@ class Chart:
 
     def Select(self, Replace=None):
         arguments = com_arguments([unwrap(a) for a in [Replace]])
-        self.com_object.Select(*arguments)
+        return self.com_object.Select(*arguments)
 
     def select(self, Replace=None):
         """Alias for Select"""
@@ -11186,7 +11186,7 @@ class Chart:
 
     def SetBackgroundPicture(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.SetBackgroundPicture(*arguments)
+        return self.com_object.SetBackgroundPicture(*arguments)
 
     def setbackgroundpicture(self, FileName=None):
         """Alias for SetBackgroundPicture"""
@@ -11200,7 +11200,7 @@ class Chart:
 
     def SetDefaultChart(self, Name=None):
         arguments = com_arguments([unwrap(a) for a in [Name]])
-        self.com_object.SetDefaultChart(*arguments)
+        return self.com_object.SetDefaultChart(*arguments)
 
     def setdefaultchart(self, Name=None):
         """Alias for SetDefaultChart"""
@@ -11228,7 +11228,7 @@ class Chart:
 
     def SetSourceData(self, Source=None, PlotBy=None):
         arguments = com_arguments([unwrap(a) for a in [Source, PlotBy]])
-        self.com_object.SetSourceData(*arguments)
+        return self.com_object.SetSourceData(*arguments)
 
     def setsourcedata(self, Source=None, PlotBy=None):
         """Alias for SetSourceData"""
@@ -11242,7 +11242,7 @@ class Chart:
 
     def Unprotect(self, Password=None):
         arguments = com_arguments([unwrap(a) for a in [Password]])
-        self.com_object.Unprotect(*arguments)
+        return self.com_object.Unprotect(*arguments)
 
     def unprotect(self, Password=None):
         """Alias for Unprotect"""
@@ -13428,7 +13428,7 @@ class Charts:
 
     def Copy(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Before=None, After=None):
         """Alias for Copy"""
@@ -13436,7 +13436,7 @@ class Charts:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -13444,7 +13444,7 @@ class Charts:
 
     def Move(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Move(*arguments)
+        return self.com_object.Move(*arguments)
 
     def move(self, Before=None, After=None):
         """Alias for Move"""
@@ -13467,7 +13467,7 @@ class Charts:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([unwrap(a) for a in [EnableChanges]])
-        self.com_object.PrintPreview(*arguments)
+        return self.com_object.PrintPreview(*arguments)
 
     def printpreview(self, EnableChanges=None):
         """Alias for PrintPreview"""
@@ -13481,7 +13481,7 @@ class Charts:
 
     def Select(self, Replace=None):
         arguments = com_arguments([unwrap(a) for a in [Replace]])
-        self.com_object.Select(*arguments)
+        return self.com_object.Select(*arguments)
 
     def select(self, Replace=None):
         """Alias for Select"""
@@ -14314,7 +14314,7 @@ class ColorScale:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -14322,7 +14322,7 @@ class ColorScale:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -14335,7 +14335,7 @@ class ColorScale:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -14346,7 +14346,7 @@ class ColorScale:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -14723,7 +14723,7 @@ class Comment:
         self.Visible = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -14935,7 +14935,7 @@ class CommentThreaded:
         return self.AddReply(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -15026,7 +15026,7 @@ class ConditionValue:
 
     def Modify(self, NewType=None, NewValue=None):
         arguments = com_arguments([unwrap(a) for a in [NewType, NewValue]])
-        self.com_object.Modify(*arguments)
+        return self.com_object.Modify(*arguments)
 
     def modify(self, NewType=None, NewValue=None):
         """Alias for Modify"""
@@ -15247,7 +15247,7 @@ class ConnectorFormat:
 
     def BeginConnect(self, ConnectedShape=None, ConnectionSite=None):
         arguments = com_arguments([unwrap(a) for a in [ConnectedShape, ConnectionSite]])
-        self.com_object.BeginConnect(*arguments)
+        return self.com_object.BeginConnect(*arguments)
 
     def beginconnect(self, ConnectedShape=None, ConnectionSite=None):
         """Alias for BeginConnect"""
@@ -15260,7 +15260,7 @@ class ConnectorFormat:
         return self.BeginConnect(*arguments)
 
     def BeginDisconnect(self):
-        self.com_object.BeginDisconnect()
+        return self.com_object.BeginDisconnect()
 
     def begindisconnect(self):
         """Alias for BeginDisconnect"""
@@ -15272,7 +15272,7 @@ class ConnectorFormat:
 
     def EndConnect(self, ConnectedShape=None, ConnectionSite=None):
         arguments = com_arguments([unwrap(a) for a in [ConnectedShape, ConnectionSite]])
-        self.com_object.EndConnect(*arguments)
+        return self.com_object.EndConnect(*arguments)
 
     def endconnect(self, ConnectedShape=None, ConnectionSite=None):
         """Alias for EndConnect"""
@@ -15285,7 +15285,7 @@ class ConnectorFormat:
         return self.EndConnect(*arguments)
 
     def EndDisconnect(self):
-        self.com_object.EndDisconnect()
+        return self.com_object.EndDisconnect()
 
     def enddisconnect(self):
         """Alias for EndDisconnect"""
@@ -15837,7 +15837,7 @@ class ControlFormat:
 
     def AddItem(self, Text=None, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Text, Index]])
-        self.com_object.AddItem(*arguments)
+        return self.com_object.AddItem(*arguments)
 
     def additem(self, Text=None, Index=None):
         """Alias for AddItem"""
@@ -15859,7 +15859,7 @@ class ControlFormat:
         return self.List(*arguments)
 
     def RemoveAllItems(self):
-        self.com_object.RemoveAllItems()
+        return self.com_object.RemoveAllItems()
 
     def removeallitems(self):
         """Alias for RemoveAllItems"""
@@ -15871,7 +15871,7 @@ class ControlFormat:
 
     def RemoveItem(self, Index=None, Count=None):
         arguments = com_arguments([unwrap(a) for a in [Index, Count]])
-        self.com_object.RemoveItem(*arguments)
+        return self.com_object.RemoveItem(*arguments)
 
     def removeitem(self, Index=None, Count=None):
         """Alias for RemoveItem"""
@@ -16443,7 +16443,7 @@ class CubeField:
 
     def AddMemberPropertyField(self, Property=None, PropertyOrder=None, PropertyDisplayedIn=None):
         arguments = com_arguments([unwrap(a) for a in [Property, PropertyOrder, PropertyDisplayedIn]])
-        self.com_object.AddMemberPropertyField(*arguments)
+        return self.com_object.AddMemberPropertyField(*arguments)
 
     def addmemberpropertyfield(self, Property=None, PropertyOrder=None, PropertyDisplayedIn=None):
         """Alias for AddMemberPropertyField"""
@@ -16457,7 +16457,7 @@ class CubeField:
 
     def AutoGroup(self, Orientation=None, Position=None):
         arguments = com_arguments([unwrap(a) for a in [Orientation, Position]])
-        self.com_object.AutoGroup(*arguments)
+        return self.com_object.AutoGroup(*arguments)
 
     def autogroup(self, Orientation=None, Position=None):
         """Alias for AutoGroup"""
@@ -16470,7 +16470,7 @@ class CubeField:
         return self.AutoGroup(*arguments)
 
     def ClearManualFilter(self):
-        self.com_object.ClearManualFilter()
+        return self.com_object.ClearManualFilter()
 
     def clearmanualfilter(self):
         """Alias for ClearManualFilter"""
@@ -16481,7 +16481,7 @@ class CubeField:
         return self.ClearManualFilter()
 
     def CreatePivotFields(self):
-        self.com_object.CreatePivotFields()
+        return self.com_object.CreatePivotFields()
 
     def createpivotfields(self):
         """Alias for CreatePivotFields"""
@@ -16492,7 +16492,7 @@ class CubeField:
         return self.CreatePivotFields()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -16710,7 +16710,7 @@ class CustomProperty:
         return self.Value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -16787,14 +16787,14 @@ class CustomView:
         return self.RowColSettings
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def Show(self):
-        self.com_object.Show()
+        return self.com_object.Show()
 
     def show(self):
         """Alias for Show"""
@@ -17268,7 +17268,7 @@ class Databar:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -17276,7 +17276,7 @@ class Databar:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -17289,7 +17289,7 @@ class Databar:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -17300,7 +17300,7 @@ class Databar:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -19211,14 +19211,14 @@ class DataTable:
         self.ShowLegendKey = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def Select(self):
-        self.com_object.Select()
+        return self.com_object.Select()
 
     def select(self):
         """Alias for Select"""
@@ -21885,7 +21885,7 @@ class FillFormat:
 
     def OneColorGradient(self, Style=None, Variant=None, Degree=None):
         arguments = com_arguments([unwrap(a) for a in [Style, Variant, Degree]])
-        self.com_object.OneColorGradient(*arguments)
+        return self.com_object.OneColorGradient(*arguments)
 
     def onecolorgradient(self, Style=None, Variant=None, Degree=None):
         """Alias for OneColorGradient"""
@@ -21899,7 +21899,7 @@ class FillFormat:
 
     def Patterned(self, Pattern=None):
         arguments = com_arguments([unwrap(a) for a in [Pattern]])
-        self.com_object.Patterned(*arguments)
+        return self.com_object.Patterned(*arguments)
 
     def patterned(self, Pattern=None):
         """Alias for Patterned"""
@@ -21908,7 +21908,7 @@ class FillFormat:
 
     def PresetGradient(self, Style=None, Variant=None, PresetGradientType=None):
         arguments = com_arguments([unwrap(a) for a in [Style, Variant, PresetGradientType]])
-        self.com_object.PresetGradient(*arguments)
+        return self.com_object.PresetGradient(*arguments)
 
     def presetgradient(self, Style=None, Variant=None, PresetGradientType=None):
         """Alias for PresetGradient"""
@@ -21922,7 +21922,7 @@ class FillFormat:
 
     def PresetTextured(self, PresetTexture=None):
         arguments = com_arguments([unwrap(a) for a in [PresetTexture]])
-        self.com_object.PresetTextured(*arguments)
+        return self.com_object.PresetTextured(*arguments)
 
     def presettextured(self, PresetTexture=None):
         """Alias for PresetTextured"""
@@ -21935,7 +21935,7 @@ class FillFormat:
         return self.PresetTextured(*arguments)
 
     def Solid(self):
-        self.com_object.Solid()
+        return self.com_object.Solid()
 
     def solid(self):
         """Alias for Solid"""
@@ -21943,7 +21943,7 @@ class FillFormat:
 
     def TwoColorGradient(self, Style=None, Variant=None):
         arguments = com_arguments([unwrap(a) for a in [Style, Variant]])
-        self.com_object.TwoColorGradient(*arguments)
+        return self.com_object.TwoColorGradient(*arguments)
 
     def twocolorgradient(self, Style=None, Variant=None):
         """Alias for TwoColorGradient"""
@@ -21957,7 +21957,7 @@ class FillFormat:
 
     def UserPicture(self, PictureFile=None):
         arguments = com_arguments([unwrap(a) for a in [PictureFile]])
-        self.com_object.UserPicture(*arguments)
+        return self.com_object.UserPicture(*arguments)
 
     def userpicture(self, PictureFile=None):
         """Alias for UserPicture"""
@@ -21971,7 +21971,7 @@ class FillFormat:
 
     def UserTextured(self, TextureFile=None):
         arguments = com_arguments([unwrap(a) for a in [TextureFile]])
-        self.com_object.UserTextured(*arguments)
+        return self.com_object.UserTextured(*arguments)
 
     def usertextured(self, TextureFile=None):
         """Alias for UserTextured"""
@@ -22227,7 +22227,7 @@ class Floor:
         return self.ClearFormats()
 
     def Paste(self):
-        self.com_object.Paste()
+        return self.com_object.Paste()
 
     def paste(self):
         """Alias for Paste"""
@@ -23029,7 +23029,7 @@ class FormatCondition:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -23037,7 +23037,7 @@ class FormatCondition:
 
     def Modify(self, Type=None, Operator=None, Formula1=None, Formula2=None):
         arguments = com_arguments([unwrap(a) for a in [Type, Operator, Formula1, Formula2]])
-        self.com_object.Modify(*arguments)
+        return self.com_object.Modify(*arguments)
 
     def modify(self, Type=None, Operator=None, Formula1=None, Formula2=None):
         """Alias for Modify"""
@@ -23046,7 +23046,7 @@ class FormatCondition:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -23059,7 +23059,7 @@ class FormatCondition:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -23070,7 +23070,7 @@ class FormatCondition:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -23201,7 +23201,7 @@ class FormatConditions:
         return self.AddUniqueValues()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -23251,7 +23251,7 @@ class FreeformBuilder:
 
     def AddNodes(self, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
         arguments = com_arguments([unwrap(a) for a in [SegmentType, EditingType, X1, Y1, X2, Y2, X3, Y3]])
-        self.com_object.AddNodes(*arguments)
+        return self.com_object.AddNodes(*arguments)
 
     def addnodes(self, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
         """Alias for AddNodes"""
@@ -23945,7 +23945,7 @@ class HPageBreak:
         self.Type = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -23953,7 +23953,7 @@ class HPageBreak:
 
     def DragOff(self, Direction=None, RegionIndex=None):
         arguments = com_arguments([unwrap(a) for a in [Direction, RegionIndex]])
-        self.com_object.DragOff(*arguments)
+        return self.com_object.DragOff(*arguments)
 
     def dragoff(self, Direction=None, RegionIndex=None):
         """Alias for DragOff"""
@@ -24228,7 +24228,7 @@ class Hyperlink:
         return self.Type
 
     def AddToFavorites(self):
-        self.com_object.AddToFavorites()
+        return self.com_object.AddToFavorites()
 
     def addtofavorites(self):
         """Alias for AddToFavorites"""
@@ -24240,7 +24240,7 @@ class Hyperlink:
 
     def CreateNewDocument(self, FileName=None, EditNow=None, Overwrite=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, EditNow, Overwrite]])
-        self.com_object.CreateNewDocument(*arguments)
+        return self.com_object.CreateNewDocument(*arguments)
 
     def createnewdocument(self, FileName=None, EditNow=None, Overwrite=None):
         """Alias for CreateNewDocument"""
@@ -24253,7 +24253,7 @@ class Hyperlink:
         return self.CreateNewDocument(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -24261,7 +24261,7 @@ class Hyperlink:
 
     def Follow(self, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
         arguments = com_arguments([unwrap(a) for a in [NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo]])
-        self.com_object.Follow(*arguments)
+        return self.com_object.Follow(*arguments)
 
     def follow(self, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
         """Alias for Follow"""
@@ -24332,7 +24332,7 @@ class Hyperlinks:
         return self.Add(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -24842,7 +24842,7 @@ class IconSetCondition:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -24850,7 +24850,7 @@ class IconSetCondition:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -24863,7 +24863,7 @@ class IconSetCondition:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -24874,7 +24874,7 @@ class IconSetCondition:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -25271,7 +25271,7 @@ class IRtdServer:
 
     def DisconnectData(self, TopicID=None):
         arguments = com_arguments([unwrap(a) for a in [TopicID]])
-        self.com_object.DisconnectData(*arguments)
+        return self.com_object.DisconnectData(*arguments)
 
     def disconnectdata(self, TopicID=None):
         """Alias for DisconnectData"""
@@ -25319,7 +25319,7 @@ class IRtdServer:
         return self.ServerStart(*arguments)
 
     def ServerTerminate(self):
-        self.com_object.ServerTerminate()
+        return self.com_object.ServerTerminate()
 
     def serverterminate(self):
         """Alias for ServerTerminate"""
@@ -25364,14 +25364,14 @@ class IRTDUpdateEvent:
         self.HeartbeatInterval = value
 
     def Disconnect(self):
-        self.com_object.Disconnect()
+        return self.com_object.Disconnect()
 
     def disconnect(self):
         """Alias for Disconnect"""
         return self.Disconnect()
 
     def UpdateNotify(self):
-        self.com_object.UpdateNotify()
+        return self.com_object.UpdateNotify()
 
     def updatenotify(self):
         """Alias for UpdateNotify"""
@@ -25433,14 +25433,14 @@ class LeaderLines:
         return self.Parent
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def Select(self):
-        self.com_object.Select()
+        return self.com_object.Select()
 
     def select(self):
         """Alias for Select"""
@@ -26764,7 +26764,7 @@ class LinkFormat:
         return self.Parent
 
     def Update(self):
-        self.com_object.Update()
+        return self.com_object.Update()
 
     def update(self):
         """Alias for Update"""
@@ -26905,7 +26905,7 @@ class ListColumn:
         return self.XPath
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -27767,14 +27767,14 @@ class ListObject:
         return self.XmlMap
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def ExportToVisio(self):
-        self.com_object.ExportToVisio()
+        return self.com_object.ExportToVisio()
 
     def exporttovisio(self):
         """Alias for ExportToVisio"""
@@ -27794,7 +27794,7 @@ class ListObject:
         return self.Publish(*arguments)
 
     def Refresh(self):
-        self.com_object.Refresh()
+        return self.com_object.Refresh()
 
     def refresh(self):
         """Alias for Refresh"""
@@ -27802,7 +27802,7 @@ class ListObject:
 
     def Resize(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.Resize(*arguments)
+        return self.com_object.Resize(*arguments)
 
     def resize(self, Range=None):
         """Alias for Resize"""
@@ -27810,14 +27810,14 @@ class ListObject:
         return self.Resize(*arguments)
 
     def Unlink(self):
-        self.com_object.Unlink()
+        return self.com_object.Unlink()
 
     def unlink(self):
         """Alias for Unlink"""
         return self.Unlink()
 
     def Unlist(self):
-        self.com_object.Unlist()
+        return self.com_object.Unlist()
 
     def unlist(self):
         """Alias for Unlist"""
@@ -27941,7 +27941,7 @@ class ListRow:
         return self.Range
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -28504,7 +28504,7 @@ class Model3DFormat:
 
     def IncrementRotationX(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationX(*arguments)
+        return self.com_object.IncrementRotationX(*arguments)
 
     def incrementrotationx(self, Increment=None):
         """Alias for IncrementRotationX"""
@@ -28518,7 +28518,7 @@ class Model3DFormat:
 
     def IncrementRotationY(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationY(*arguments)
+        return self.com_object.IncrementRotationY(*arguments)
 
     def incrementrotationy(self, Increment=None):
         """Alias for IncrementRotationY"""
@@ -28532,7 +28532,7 @@ class Model3DFormat:
 
     def IncrementRotationZ(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationZ(*arguments)
+        return self.com_object.IncrementRotationZ(*arguments)
 
     def incrementrotationz(self, Increment=None):
         """Alias for IncrementRotationZ"""
@@ -28546,7 +28546,7 @@ class Model3DFormat:
 
     def ResetModel(self, ResetSize=None):
         arguments = com_arguments([unwrap(a) for a in [ResetSize]])
-        self.com_object.ResetModel(*arguments)
+        return self.com_object.ResetModel(*arguments)
 
     def resetmodel(self, ResetSize=None):
         """Alias for ResetModel"""
@@ -31330,7 +31330,7 @@ class ODBCConnection:
         self.SourceDataFile = value
 
     def CancelRefresh(self):
-        self.com_object.CancelRefresh()
+        return self.com_object.CancelRefresh()
 
     def cancelrefresh(self):
         """Alias for CancelRefresh"""
@@ -31341,7 +31341,7 @@ class ODBCConnection:
         return self.CancelRefresh()
 
     def Refresh(self):
-        self.com_object.Refresh()
+        return self.com_object.Refresh()
 
     def refresh(self):
         """Alias for Refresh"""
@@ -32260,7 +32260,7 @@ class OLEDBConnection:
         self.UseLocalConnection = value
 
     def CancelRefresh(self):
-        self.com_object.CancelRefresh()
+        return self.com_object.CancelRefresh()
 
     def cancelrefresh(self):
         """Alias for CancelRefresh"""
@@ -32282,14 +32282,14 @@ class OLEDBConnection:
         return self.MakeConnection()
 
     def Reconnect(self):
-        self.com_object.Reconnect()
+        return self.com_object.Reconnect()
 
     def reconnect(self):
         """Alias for Reconnect"""
         return self.Reconnect()
 
     def Refresh(self):
-        self.com_object.Refresh()
+        return self.com_object.Refresh()
 
     def refresh(self):
         """Alias for Refresh"""
@@ -32297,7 +32297,7 @@ class OLEDBConnection:
 
     def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
         arguments = com_arguments([unwrap(a) for a in [ODCFileName, Description, Keywords]])
-        self.com_object.SaveAsODC(*arguments)
+        return self.com_object.SaveAsODC(*arguments)
 
     def saveasodc(self, ODCFileName=None, Description=None, Keywords=None):
         """Alias for SaveAsODC"""
@@ -32508,7 +32508,7 @@ class OLEFormat:
         return self.progID
 
     def Activate(self):
-        self.com_object.Activate()
+        return self.com_object.Activate()
 
     def activate(self):
         """Alias for Activate"""
@@ -32516,7 +32516,7 @@ class OLEFormat:
 
     def Verb(self, Verb=None):
         arguments = com_arguments([unwrap(a) for a in [Verb]])
-        self.com_object.Verb(*arguments)
+        return self.com_object.Verb(*arguments)
 
     def verb(self, Verb=None):
         """Alias for Verb"""
@@ -35107,7 +35107,7 @@ class Pane:
 
     def ScrollIntoView(self, Left=None, Top=None, Width=None, Height=None, Start=None):
         arguments = com_arguments([unwrap(a) for a in [Left, Top, Width, Height, Start]])
-        self.com_object.ScrollIntoView(*arguments)
+        return self.com_object.ScrollIntoView(*arguments)
 
     def scrollintoview(self, Left=None, Top=None, Width=None, Height=None, Start=None):
         """Alias for ScrollIntoView"""
@@ -35345,7 +35345,7 @@ class Parameter:
 
     def SetParam(self, Type=None, Value=None):
         arguments = com_arguments([unwrap(a) for a in [Type, Value]])
-        self.com_object.SetParam(*arguments)
+        return self.com_object.SetParam(*arguments)
 
     def setparam(self, Type=None, Value=None):
         """Alias for SetParam"""
@@ -35412,7 +35412,7 @@ class Parameters:
         return self.Add(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -35719,7 +35719,7 @@ class Phonetics:
 
     def Add(self, Start=None, Length=None, Text=None):
         arguments = com_arguments([unwrap(a) for a in [Start, Length, Text]])
-        self.com_object.Add(*arguments)
+        return self.com_object.Add(*arguments)
 
     def add(self, Start=None, Length=None, Text=None):
         """Alias for Add"""
@@ -35727,7 +35727,7 @@ class Phonetics:
         return self.Add(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -36009,7 +36009,7 @@ class PictureFormat:
 
     def IncrementBrightness(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementBrightness(*arguments)
+        return self.com_object.IncrementBrightness(*arguments)
 
     def incrementbrightness(self, Increment=None):
         """Alias for IncrementBrightness"""
@@ -36023,7 +36023,7 @@ class PictureFormat:
 
     def IncrementContrast(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementContrast(*arguments)
+        return self.com_object.IncrementContrast(*arguments)
 
     def incrementcontrast(self, Increment=None):
         """Alias for IncrementContrast"""
@@ -36800,7 +36800,7 @@ class PivotCache:
         return self.CreatePivotTable(*arguments)
 
     def MakeConnection(self):
-        self.com_object.MakeConnection()
+        return self.com_object.MakeConnection()
 
     def makeconnection(self):
         """Alias for MakeConnection"""
@@ -36811,14 +36811,14 @@ class PivotCache:
         return self.MakeConnection()
 
     def Refresh(self):
-        self.com_object.Refresh()
+        return self.com_object.Refresh()
 
     def refresh(self):
         """Alias for Refresh"""
         return self.Refresh()
 
     def ResetTimer(self):
-        self.com_object.ResetTimer()
+        return self.com_object.ResetTimer()
 
     def resettimer(self):
         """Alias for ResetTimer"""
@@ -36830,7 +36830,7 @@ class PivotCache:
 
     def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
         arguments = com_arguments([unwrap(a) for a in [ODCFileName, Description, Keywords]])
-        self.com_object.SaveAsODC(*arguments)
+        return self.com_object.SaveAsODC(*arguments)
 
     def saveasodc(self, ODCFileName=None, Description=None, Keywords=None):
         """Alias for SaveAsODC"""
@@ -38769,7 +38769,7 @@ class PivotField:
 
     def AddPageItem(self, Item=None, ClearList=None):
         arguments = com_arguments([unwrap(a) for a in [Item, ClearList]])
-        self.com_object.AddPageItem(*arguments)
+        return self.com_object.AddPageItem(*arguments)
 
     def addpageitem(self, Item=None, ClearList=None):
         """Alias for AddPageItem"""
@@ -38782,7 +38782,7 @@ class PivotField:
         return self.AddPageItem(*arguments)
 
     def AutoGroup(self):
-        self.com_object.AutoGroup()
+        return self.com_object.AutoGroup()
 
     def autogroup(self):
         """Alias for AutoGroup"""
@@ -38794,7 +38794,7 @@ class PivotField:
 
     def AutoShow(self, Type=None, Range=None, Count=None, Field=None):
         arguments = com_arguments([unwrap(a) for a in [Type, Range, Count, Field]])
-        self.com_object.AutoShow(*arguments)
+        return self.com_object.AutoShow(*arguments)
 
     def autoshow(self, Type=None, Range=None, Count=None, Field=None):
         """Alias for AutoShow"""
@@ -38808,7 +38808,7 @@ class PivotField:
 
     def AutoSort(self, Order=None, Field=None, PivotLine=None, CustomSubtotal=None):
         arguments = com_arguments([unwrap(a) for a in [Order, Field, PivotLine, CustomSubtotal]])
-        self.com_object.AutoSort(*arguments)
+        return self.com_object.AutoSort(*arguments)
 
     def autosort(self, Order=None, Field=None, PivotLine=None, CustomSubtotal=None):
         """Alias for AutoSort"""
@@ -38832,7 +38832,7 @@ class PivotField:
         return self.CalculatedItems()
 
     def ClearAllFilters(self):
-        self.com_object.ClearAllFilters()
+        return self.com_object.ClearAllFilters()
 
     def clearallfilters(self):
         """Alias for ClearAllFilters"""
@@ -38843,7 +38843,7 @@ class PivotField:
         return self.ClearAllFilters()
 
     def ClearLabelFilters(self):
-        self.com_object.ClearLabelFilters()
+        return self.com_object.ClearLabelFilters()
 
     def clearlabelfilters(self):
         """Alias for ClearLabelFilters"""
@@ -38854,7 +38854,7 @@ class PivotField:
         return self.ClearLabelFilters()
 
     def ClearManualFilter(self):
-        self.com_object.ClearManualFilter()
+        return self.com_object.ClearManualFilter()
 
     def clearmanualfilter(self):
         """Alias for ClearManualFilter"""
@@ -38865,7 +38865,7 @@ class PivotField:
         return self.ClearManualFilter()
 
     def ClearValueFilters(self):
-        self.com_object.ClearValueFilters()
+        return self.com_object.ClearValueFilters()
 
     def clearvaluefilters(self):
         """Alias for ClearValueFilters"""
@@ -38876,7 +38876,7 @@ class PivotField:
         return self.ClearValueFilters()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -38884,7 +38884,7 @@ class PivotField:
 
     def DrillTo(self, PivotFieldName=None):
         arguments = com_arguments([unwrap(a) for a in [PivotFieldName]])
-        self.com_object.DrillTo(*arguments)
+        return self.com_object.DrillTo(*arguments)
 
     def drillto(self, PivotFieldName=None):
         """Alias for DrillTo"""
@@ -39233,7 +39233,7 @@ class PivotFilter:
         self.WholeDayFilter = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -39418,7 +39418,7 @@ class PivotFormula:
         self.Value = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -39830,7 +39830,7 @@ class PivotItem:
         self.Visible = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -39838,7 +39838,7 @@ class PivotItem:
 
     def DrillTo(self, PivotItemName=None):
         arguments = com_arguments([unwrap(a) for a in [PivotItemName]])
-        self.com_object.DrillTo(*arguments)
+        return self.com_object.DrillTo(*arguments)
 
     def drillto(self, PivotItemName=None):
         """Alias for DrillTo"""
@@ -39951,7 +39951,7 @@ class PivotItems:
 
     def Add(self, Name=None):
         arguments = com_arguments([unwrap(a) for a in [Name]])
-        self.com_object.Add(*arguments)
+        return self.com_object.Add(*arguments)
 
     def add(self, Name=None):
         """Alias for Add"""
@@ -42632,7 +42632,7 @@ class PivotTable:
 
     def ChangeConnection(self, conn=None):
         arguments = com_arguments([unwrap(a) for a in [conn]])
-        self.com_object.ChangeConnection(*arguments)
+        return self.com_object.ChangeConnection(*arguments)
 
     def changeconnection(self, conn=None):
         """Alias for ChangeConnection"""
@@ -42646,7 +42646,7 @@ class PivotTable:
 
     def ChangePivotCache(self, bstr=None):
         arguments = com_arguments([unwrap(a) for a in [bstr]])
-        self.com_object.ChangePivotCache(*arguments)
+        return self.com_object.ChangePivotCache(*arguments)
 
     def changepivotcache(self, bstr=None):
         """Alias for ChangePivotCache"""
@@ -42659,7 +42659,7 @@ class PivotTable:
         return self.ChangePivotCache(*arguments)
 
     def ClearAllFilters(self):
-        self.com_object.ClearAllFilters()
+        return self.com_object.ClearAllFilters()
 
     def clearallfilters(self):
         """Alias for ClearAllFilters"""
@@ -42670,7 +42670,7 @@ class PivotTable:
         return self.ClearAllFilters()
 
     def ClearTable(self):
-        self.com_object.ClearTable()
+        return self.com_object.ClearTable()
 
     def cleartable(self):
         """Alias for ClearTable"""
@@ -42693,7 +42693,7 @@ class PivotTable:
 
     def ConvertToFormulas(self, ConvertFilters=None):
         arguments = com_arguments([unwrap(a) for a in [ConvertFilters]])
-        self.com_object.ConvertToFormulas(*arguments)
+        return self.com_object.ConvertToFormulas(*arguments)
 
     def converttoformulas(self, ConvertFilters=None):
         """Alias for ConvertToFormulas"""
@@ -42801,7 +42801,7 @@ class PivotTable:
         return self.GetPivotData(*arguments)
 
     def ListFormulas(self):
-        self.com_object.ListFormulas()
+        return self.com_object.ListFormulas()
 
     def listformulas(self):
         """Alias for ListFormulas"""
@@ -42838,7 +42838,7 @@ class PivotTable:
 
     def PivotSelect(self, Name=None, Mode=None, UseStandardName=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Mode, UseStandardName]])
-        self.com_object.PivotSelect(*arguments)
+        return self.com_object.PivotSelect(*arguments)
 
     def pivotselect(self, Name=None, Mode=None, UseStandardName=None):
         """Alias for PivotSelect"""
@@ -42852,7 +42852,7 @@ class PivotTable:
 
     def PivotTableWizard(self, SourceType=None, SourceData=None, TableDestination=None, TableName=None, RowGrand=None, ColumnGrand=None, SaveData=None, HasAutoFormat=None, AutoPage=None, Reserved=None, BackgroundQuery=None, OptimizeCache=None, PageFieldOrder=None, PageFieldWrapCount=None, ReadData=None, Connection=None):
         arguments = com_arguments([unwrap(a) for a in [SourceType, SourceData, TableDestination, TableName, RowGrand, ColumnGrand, SaveData, HasAutoFormat, AutoPage, Reserved, BackgroundQuery, OptimizeCache, PageFieldOrder, PageFieldWrapCount, ReadData, Connection]])
-        self.com_object.PivotTableWizard(*arguments)
+        return self.com_object.PivotTableWizard(*arguments)
 
     def pivottablewizard(self, SourceType=None, SourceData=None, TableDestination=None, TableName=None, RowGrand=None, ColumnGrand=None, SaveData=None, HasAutoFormat=None, AutoPage=None, Reserved=None, BackgroundQuery=None, OptimizeCache=None, PageFieldOrder=None, PageFieldWrapCount=None, ReadData=None, Connection=None):
         """Alias for PivotTableWizard"""
@@ -42916,7 +42916,7 @@ class PivotTable:
 
     def RowAxisLayout(self, RowLayout=None):
         arguments = com_arguments([unwrap(a) for a in [RowLayout]])
-        self.com_object.RowAxisLayout(*arguments)
+        return self.com_object.RowAxisLayout(*arguments)
 
     def rowaxislayout(self, RowLayout=None):
         """Alias for RowAxisLayout"""
@@ -42944,7 +42944,7 @@ class PivotTable:
 
     def SubtotalLocation(self, Location=None):
         arguments = com_arguments([unwrap(a) for a in [Location]])
-        self.com_object.SubtotalLocation(*arguments)
+        return self.com_object.SubtotalLocation(*arguments)
 
     def subtotallocation(self, Location=None):
         """Alias for SubtotalLocation"""
@@ -42957,7 +42957,7 @@ class PivotTable:
         return self.SubtotalLocation(*arguments)
 
     def Update(self):
-        self.com_object.Update()
+        return self.com_object.Update()
 
     def update(self):
         """Alias for Update"""
@@ -44028,7 +44028,7 @@ class Point:
 
     def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
         arguments = com_arguments([unwrap(a) for a in [Type, LegendKey, AutoText, HasLeaderLines, ShowSeriesName, ShowCategoryName, ShowValue, ShowPercentage, ShowBubbleSize, Separator]])
-        self.com_object.ApplyDataLabels(*arguments)
+        return self.com_object.ApplyDataLabels(*arguments)
 
     def applydatalabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
         """Alias for ApplyDataLabels"""
@@ -44789,7 +44789,7 @@ class PublishObject:
         self.Title = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -44797,7 +44797,7 @@ class PublishObject:
 
     def Publish(self, Create=None):
         arguments = com_arguments([unwrap(a) for a in [Create]])
-        self.com_object.Publish(*arguments)
+        return self.com_object.Publish(*arguments)
 
     def publish(self, Create=None):
         """Alias for Publish"""
@@ -44871,14 +44871,14 @@ class PublishObjects:
         return self.Add(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
         return self.Delete()
 
     def Publish(self):
-        self.com_object.Publish()
+        return self.com_object.Publish()
 
     def publish(self):
         """Alias for Publish"""
@@ -46468,7 +46468,7 @@ class QueryTable:
         return self.WorkbookConnection
 
     def CancelRefresh(self):
-        self.com_object.CancelRefresh()
+        return self.com_object.CancelRefresh()
 
     def cancelrefresh(self):
         """Alias for CancelRefresh"""
@@ -46479,7 +46479,7 @@ class QueryTable:
         return self.CancelRefresh()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -46495,7 +46495,7 @@ class QueryTable:
         return self.Refresh(*arguments)
 
     def ResetTimer(self):
-        self.com_object.ResetTimer()
+        return self.com_object.ResetTimer()
 
     def resettimer(self):
         """Alias for ResetTimer"""
@@ -46507,7 +46507,7 @@ class QueryTable:
 
     def SaveAsODC(self, ODCFileName=None, Description=None, Keywords=None):
         arguments = com_arguments([unwrap(a) for a in [ODCFileName, Description, Keywords]])
-        self.com_object.SaveAsODC(*arguments)
+        return self.com_object.SaveAsODC(*arguments)
 
     def saveasodc(self, ODCFileName=None, Description=None, Keywords=None):
         """Alias for SaveAsODC"""
@@ -48373,7 +48373,7 @@ class Range:
         return self.AdvancedFilter(*arguments)
 
     def AllocateChanges(self):
-        self.com_object.AllocateChanges()
+        return self.com_object.AllocateChanges()
 
     def allocatechanges(self):
         """Alias for AllocateChanges"""
@@ -48526,7 +48526,7 @@ class Range:
         return self.Clear()
 
     def ClearComments(self):
-        self.com_object.ClearComments()
+        return self.com_object.ClearComments()
 
     def clearcomments(self):
         """Alias for ClearComments"""
@@ -48616,7 +48616,7 @@ class Range:
 
     def ConvertToLinkedDataType(self, ServiceID=None, LanguageCulture=None):
         arguments = com_arguments([unwrap(a) for a in [ServiceID, LanguageCulture]])
-        self.com_object.ConvertToLinkedDataType(*arguments)
+        return self.com_object.ConvertToLinkedDataType(*arguments)
 
     def converttolinkeddatatype(self, ServiceID=None, LanguageCulture=None):
         """Alias for ConvertToLinkedDataType"""
@@ -48703,7 +48703,7 @@ class Range:
         return self.DataSeries(*arguments)
 
     def DataTypeToText(self):
-        self.com_object.DataTypeToText()
+        return self.com_object.DataTypeToText()
 
     def datatypetotext(self):
         """Alias for DataTypeToText"""
@@ -48734,14 +48734,14 @@ class Range:
         return self.DialogBox()
 
     def Dirty(self):
-        self.com_object.Dirty()
+        return self.com_object.Dirty()
 
     def dirty(self):
         """Alias for Dirty"""
         return self.Dirty()
 
     def DiscardChanges(self):
-        self.com_object.DiscardChanges()
+        return self.com_object.DiscardChanges()
 
     def discardchanges(self):
         """Alias for DiscardChanges"""
@@ -48767,7 +48767,7 @@ class Range:
 
     def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         arguments = com_arguments([unwrap(a) for a in [Type, FileName, Quality, IncludeDocProperties, IgnorePrintAreas, From, To, OpenAfterPublish, FixedFormatExtClassPtr]])
-        self.com_object.ExportAsFixedFormat(*arguments)
+        return self.com_object.ExportAsFixedFormat(*arguments)
 
     def exportasfixedformat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         """Alias for ExportAsFixedFormat"""
@@ -48902,7 +48902,7 @@ class Range:
 
     def InsertIndent(self, InsertAmount=None):
         arguments = com_arguments([unwrap(a) for a in [InsertAmount]])
-        self.com_object.InsertIndent(*arguments)
+        return self.com_object.InsertIndent(*arguments)
 
     def insertindent(self, InsertAmount=None):
         """Alias for InsertIndent"""
@@ -48934,7 +48934,7 @@ class Range:
 
     def Merge(self, Across=None):
         arguments = com_arguments([unwrap(a) for a in [Across]])
-        self.com_object.Merge(*arguments)
+        return self.com_object.Merge(*arguments)
 
     def merge(self, Across=None):
         """Alias for Merge"""
@@ -49022,7 +49022,7 @@ class Range:
 
     def RemoveDuplicates(self, Columns=None, Header=None):
         arguments = com_arguments([unwrap(a) for a in [Columns, Header]])
-        self.com_object.RemoveDuplicates(*arguments)
+        return self.com_object.RemoveDuplicates(*arguments)
 
     def removeduplicates(self, Columns=None, Header=None):
         """Alias for RemoveDuplicates"""
@@ -49055,7 +49055,7 @@ class Range:
         return self.Replace(*arguments)
 
     def ResetContents(self):
-        self.com_object.ResetContents()
+        return self.com_object.ResetContents()
 
     def resetcontents(self):
         """Alias for ResetContents"""
@@ -49097,7 +49097,7 @@ class Range:
 
     def SetCellDataTypeFromCell(self, Range=None, LanguageCulture=None):
         arguments = com_arguments([unwrap(a) for a in [Range, LanguageCulture]])
-        self.com_object.SetCellDataTypeFromCell(*arguments)
+        return self.com_object.SetCellDataTypeFromCell(*arguments)
 
     def setcelldatatypefromcell(self, Range=None, LanguageCulture=None):
         """Alias for SetCellDataTypeFromCell"""
@@ -49110,7 +49110,7 @@ class Range:
         return self.SetCellDataTypeFromCell(*arguments)
 
     def SetPhonetic(self):
-        self.com_object.SetPhonetic()
+        return self.com_object.SetPhonetic()
 
     def setphonetic(self):
         """Alias for SetPhonetic"""
@@ -49128,7 +49128,7 @@ class Range:
         return self.Show()
 
     def ShowCard(self):
-        self.com_object.ShowCard()
+        return self.com_object.ShowCard()
 
     def showcard(self):
         """Alias for ShowCard"""
@@ -49202,7 +49202,7 @@ class Range:
 
     def Speak(self, SpeakDirection=None, SpeakFormulas=None):
         arguments = com_arguments([unwrap(a) for a in [SpeakDirection, SpeakFormulas]])
-        self.com_object.Speak(*arguments)
+        return self.com_object.Speak(*arguments)
 
     def speak(self, SpeakDirection=None, SpeakFormulas=None):
         """Alias for Speak"""
@@ -49277,7 +49277,7 @@ class Range:
         return self.Ungroup()
 
     def UnMerge(self):
-        self.com_object.UnMerge()
+        return self.com_object.UnMerge()
 
     def unmerge(self):
         """Alias for UnMerge"""
@@ -49411,7 +49411,7 @@ class RecentFile:
         return self.Path
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -49841,7 +49841,7 @@ class RoutingSlip:
         return self.TrackStatus
 
     def Reset(self):
-        self.com_object.Reset()
+        return self.com_object.Reset()
 
     def reset(self):
         """Alias for Reset"""
@@ -49882,7 +49882,7 @@ class RTD:
         self.ThrottleInterval = value
 
     def RefreshData(self):
-        self.com_object.RefreshData()
+        return self.com_object.RefreshData()
 
     def refreshdata(self):
         """Alias for RefreshData"""
@@ -49893,7 +49893,7 @@ class RTD:
         return self.RefreshData()
 
     def RestartServers(self):
-        self.com_object.RestartServers()
+        return self.com_object.RestartServers()
 
     def restartservers(self):
         """Alias for RestartServers"""
@@ -51209,7 +51209,7 @@ class Series:
 
     def ApplyDataLabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
         arguments = com_arguments([unwrap(a) for a in [Type, LegendKey, AutoText, HasLeaderLines, ShowSeriesName, ShowCategoryName, ShowValue, ShowPercentage, ShowBubbleSize, Separator]])
-        self.com_object.ApplyDataLabels(*arguments)
+        return self.com_object.ApplyDataLabels(*arguments)
 
     def applydatalabels(self, Type=None, LegendKey=None, AutoText=None, HasLeaderLines=None, ShowSeriesName=None, ShowCategoryName=None, ShowValue=None, ShowPercentage=None, ShowBubbleSize=None, Separator=None):
         """Alias for ApplyDataLabels"""
@@ -51275,7 +51275,7 @@ class Series:
         return self.ErrorBar(*arguments)
 
     def GeoMappingLevel(self):
-        self.com_object.GeoMappingLevel()
+        return self.com_object.GeoMappingLevel()
 
     def geomappinglevel(self):
         """Alias for GeoMappingLevel"""
@@ -51286,7 +51286,7 @@ class Series:
         return self.GeoMappingLevel()
 
     def GeoProjectionType(self):
-        self.com_object.GeoProjectionType()
+        return self.com_object.GeoProjectionType()
 
     def geoprojectiontype(self):
         """Alias for GeoProjectionType"""
@@ -51313,7 +51313,7 @@ class Series:
         return self.Points(*arguments)
 
     def RegionLabelOptions(self):
-        self.com_object.RegionLabelOptions()
+        return self.com_object.RegionLabelOptions()
 
     def regionlabeloptions(self):
         """Alias for RegionLabelOptions"""
@@ -51561,7 +51561,7 @@ class ServerViewableItems:
 
     def Delete(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Delete(*arguments)
+        return self.com_object.Delete(*arguments)
 
     def delete(self, Index=None):
         """Alias for Delete"""
@@ -51569,7 +51569,7 @@ class ServerViewableItems:
         return self.Delete(*arguments)
 
     def DeleteAll(self):
-        self.com_object.DeleteAll()
+        return self.com_object.DeleteAll()
 
     def deleteall(self):
         """Alias for DeleteAll"""
@@ -51852,7 +51852,7 @@ class ShadowFormat:
 
     def IncrementOffsetX(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementOffsetX(*arguments)
+        return self.com_object.IncrementOffsetX(*arguments)
 
     def incrementoffsetx(self, Increment=None):
         """Alias for IncrementOffsetX"""
@@ -51866,7 +51866,7 @@ class ShadowFormat:
 
     def IncrementOffsetY(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementOffsetY(*arguments)
+        return self.com_object.IncrementOffsetY(*arguments)
 
     def incrementoffsety(self, Increment=None):
         """Alias for IncrementOffsetY"""
@@ -52805,14 +52805,14 @@ class Shape:
         return self.ZOrderPosition
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
         return self.Apply()
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
@@ -52820,7 +52820,7 @@ class Shape:
 
     def CopyPicture(self, Appearance=None, Format=None):
         arguments = com_arguments([unwrap(a) for a in [Appearance, Format]])
-        self.com_object.CopyPicture(*arguments)
+        return self.com_object.CopyPicture(*arguments)
 
     def copypicture(self, Appearance=None, Format=None):
         """Alias for CopyPicture"""
@@ -52840,7 +52840,7 @@ class Shape:
         return self.Cut()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -52855,7 +52855,7 @@ class Shape:
 
     def Flip(self, FlipCmd=None):
         arguments = com_arguments([unwrap(a) for a in [FlipCmd]])
-        self.com_object.Flip(*arguments)
+        return self.com_object.Flip(*arguments)
 
     def flip(self, FlipCmd=None):
         """Alias for Flip"""
@@ -52864,7 +52864,7 @@ class Shape:
 
     def IncrementLeft(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementLeft(*arguments)
+        return self.com_object.IncrementLeft(*arguments)
 
     def incrementleft(self, Increment=None):
         """Alias for IncrementLeft"""
@@ -52878,7 +52878,7 @@ class Shape:
 
     def IncrementRotation(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotation(*arguments)
+        return self.com_object.IncrementRotation(*arguments)
 
     def incrementrotation(self, Increment=None):
         """Alias for IncrementRotation"""
@@ -52892,7 +52892,7 @@ class Shape:
 
     def IncrementTop(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementTop(*arguments)
+        return self.com_object.IncrementTop(*arguments)
 
     def incrementtop(self, Increment=None):
         """Alias for IncrementTop"""
@@ -52905,7 +52905,7 @@ class Shape:
         return self.IncrementTop(*arguments)
 
     def PickUp(self):
-        self.com_object.PickUp()
+        return self.com_object.PickUp()
 
     def pickup(self):
         """Alias for PickUp"""
@@ -52916,7 +52916,7 @@ class Shape:
         return self.PickUp()
 
     def RerouteConnections(self):
-        self.com_object.RerouteConnections()
+        return self.com_object.RerouteConnections()
 
     def rerouteconnections(self):
         """Alias for RerouteConnections"""
@@ -52928,7 +52928,7 @@ class Shape:
 
     def ScaleHeight(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
         arguments = com_arguments([unwrap(a) for a in [Factor, RelativeToOriginalSize, Scale]])
-        self.com_object.ScaleHeight(*arguments)
+        return self.com_object.ScaleHeight(*arguments)
 
     def scaleheight(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
         """Alias for ScaleHeight"""
@@ -52942,7 +52942,7 @@ class Shape:
 
     def ScaleWidth(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
         arguments = com_arguments([unwrap(a) for a in [Factor, RelativeToOriginalSize, Scale]])
-        self.com_object.ScaleWidth(*arguments)
+        return self.com_object.ScaleWidth(*arguments)
 
     def scalewidth(self, Factor=None, RelativeToOriginalSize=None, Scale=None):
         """Alias for ScaleWidth"""
@@ -52956,7 +52956,7 @@ class Shape:
 
     def Select(self, Replace=None):
         arguments = com_arguments([unwrap(a) for a in [Replace]])
-        self.com_object.Select(*arguments)
+        return self.com_object.Select(*arguments)
 
     def select(self, Replace=None):
         """Alias for Select"""
@@ -52964,7 +52964,7 @@ class Shape:
         return self.Select(*arguments)
 
     def SetShapesDefaultProperties(self):
-        self.com_object.SetShapesDefaultProperties()
+        return self.com_object.SetShapesDefaultProperties()
 
     def setshapesdefaultproperties(self):
         """Alias for SetShapesDefaultProperties"""
@@ -52983,7 +52983,7 @@ class Shape:
 
     def ZOrder(self, ZOrderCmd=None):
         arguments = com_arguments([unwrap(a) for a in [ZOrderCmd]])
-        self.com_object.ZOrder(*arguments)
+        return self.com_object.ZOrder(*arguments)
 
     def zorder(self, ZOrderCmd=None):
         """Alias for ZOrder"""
@@ -53112,7 +53112,7 @@ class ShapeNodes:
 
     def Delete(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.Delete(*arguments)
+        return self.com_object.Delete(*arguments)
 
     def delete(self, Index=None):
         """Alias for Delete"""
@@ -53121,7 +53121,7 @@ class ShapeNodes:
 
     def Insert(self, Index=None, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
         arguments = com_arguments([unwrap(a) for a in [Index, SegmentType, EditingType, X1, Y1, X2, Y2, X3, Y3]])
-        self.com_object.Insert(*arguments)
+        return self.com_object.Insert(*arguments)
 
     def insert(self, Index=None, SegmentType=None, EditingType=None, X1=None, Y1=None, X2=None, Y2=None, X3=None, Y3=None):
         """Alias for Insert"""
@@ -53139,7 +53139,7 @@ class ShapeNodes:
 
     def SetEditingType(self, Index=None, EditingType=None):
         arguments = com_arguments([unwrap(a) for a in [Index, EditingType]])
-        self.com_object.SetEditingType(*arguments)
+        return self.com_object.SetEditingType(*arguments)
 
     def seteditingtype(self, Index=None, EditingType=None):
         """Alias for SetEditingType"""
@@ -53153,7 +53153,7 @@ class ShapeNodes:
 
     def SetPosition(self, Index=None, X1=None, Y1=None):
         arguments = com_arguments([unwrap(a) for a in [Index, X1, Y1]])
-        self.com_object.SetPosition(*arguments)
+        return self.com_object.SetPosition(*arguments)
 
     def setposition(self, Index=None, X1=None, Y1=None):
         """Alias for SetPosition"""
@@ -53167,7 +53167,7 @@ class ShapeNodes:
 
     def SetSegmentType(self, Index=None, SegmentType=None):
         arguments = com_arguments([unwrap(a) for a in [Index, SegmentType]])
-        self.com_object.SetSegmentType(*arguments)
+        return self.com_object.SetSegmentType(*arguments)
 
     def setsegmenttype(self, Index=None, SegmentType=None):
         """Alias for SetSegmentType"""
@@ -53484,7 +53484,7 @@ class Shapes:
         return self.Item(*arguments)
 
     def SelectAll(self):
-        self.com_object.SelectAll()
+        return self.com_object.SelectAll()
 
     def selectall(self):
         """Alias for SelectAll"""
@@ -53617,7 +53617,7 @@ class Sheets:
 
     def Copy(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Before=None, After=None):
         """Alias for Copy"""
@@ -53625,7 +53625,7 @@ class Sheets:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -53633,7 +53633,7 @@ class Sheets:
 
     def FillAcrossSheets(self, Range=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Range, Type]])
-        self.com_object.FillAcrossSheets(*arguments)
+        return self.com_object.FillAcrossSheets(*arguments)
 
     def fillacrosssheets(self, Range=None, Type=None):
         """Alias for FillAcrossSheets"""
@@ -53647,7 +53647,7 @@ class Sheets:
 
     def Move(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Move(*arguments)
+        return self.com_object.Move(*arguments)
 
     def move(self, Before=None, After=None):
         """Alias for Move"""
@@ -53670,7 +53670,7 @@ class Sheets:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([unwrap(a) for a in [EnableChanges]])
-        self.com_object.PrintPreview(*arguments)
+        return self.com_object.PrintPreview(*arguments)
 
     def printpreview(self, EnableChanges=None):
         """Alias for PrintPreview"""
@@ -53684,7 +53684,7 @@ class Sheets:
 
     def Select(self, Replace=None):
         arguments = com_arguments([unwrap(a) for a in [Replace]])
-        self.com_object.Select(*arguments)
+        return self.com_object.Select(*arguments)
 
     def select(self, Replace=None):
         """Alias for Select"""
@@ -54145,14 +54145,14 @@ class Slicer:
         self.Width = value
 
     def Copy(self):
-        self.com_object.Copy()
+        return self.com_object.Copy()
 
     def copy(self):
         """Alias for Copy"""
         return self.Copy()
 
     def Cut(self):
-        self.com_object.Cut()
+        return self.com_object.Cut()
 
     def cut(self):
         """Alias for Cut"""
@@ -54627,7 +54627,7 @@ class SlicerCache:
         return self.ClearManualFilter()
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -55365,7 +55365,7 @@ class Sort:
         self.SortMethod = value
 
     def Apply(self):
-        self.com_object.Apply()
+        return self.com_object.Apply()
 
     def apply(self):
         """Alias for Apply"""
@@ -55373,7 +55373,7 @@ class Sort:
 
     def SetRange(self, Rng=None):
         arguments = com_arguments([unwrap(a) for a in [Rng]])
-        self.com_object.SetRange(*arguments)
+        return self.com_object.SetRange(*arguments)
 
     def setrange(self, Rng=None):
         """Alias for SetRange"""
@@ -55562,7 +55562,7 @@ class SortField:
         return self.SortOnValue
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -55570,7 +55570,7 @@ class SortField:
 
     def ModifyKey(self, Key=None):
         arguments = com_arguments([unwrap(a) for a in [Key]])
-        self.com_object.ModifyKey(*arguments)
+        return self.com_object.ModifyKey(*arguments)
 
     def modifykey(self, Key=None):
         """Alias for ModifyKey"""
@@ -55584,7 +55584,7 @@ class SortField:
 
     def SetIcon(self, Icon=None):
         arguments = com_arguments([unwrap(a) for a in [Icon]])
-        self.com_object.SetIcon(*arguments)
+        return self.com_object.SetIcon(*arguments)
 
     def seticon(self, Icon=None):
         """Alias for SetIcon"""
@@ -55669,7 +55669,7 @@ class SortFields:
         return self.Add2(*arguments)
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
@@ -56680,7 +56680,7 @@ class Speech:
 
     def Speak(self, Text=None, SpeakAsync=None, SpeakXML=None, Purge=None):
         arguments = com_arguments([unwrap(a) for a in [Text, SpeakAsync, SpeakXML, Purge]])
-        self.com_object.Speak(*arguments)
+        return self.com_object.Speak(*arguments)
 
     def speak(self, Text=None, SpeakAsync=None, SpeakXML=None, Purge=None):
         """Alias for Speak"""
@@ -58711,7 +58711,7 @@ class TableStyleElement:
         self.StripeSize = value
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
@@ -59726,7 +59726,7 @@ class TextEffectFormat:
         self.Tracking = value
 
     def ToggleVerticalText(self):
-        self.com_object.ToggleVerticalText()
+        return self.com_object.ToggleVerticalText()
 
     def toggleverticaltext(self):
         """Alias for ToggleVerticalText"""
@@ -60552,7 +60552,7 @@ class TextFrame2:
         self.WordWrap = value
 
     def DeleteText(self):
-        self.com_object.DeleteText()
+        return self.com_object.DeleteText()
 
     def deletetext(self):
         """Alias for DeleteText"""
@@ -61257,7 +61257,7 @@ class ThreeDFormat:
 
     def IncrementRotationHorizontal(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationHorizontal(*arguments)
+        return self.com_object.IncrementRotationHorizontal(*arguments)
 
     def incrementrotationhorizontal(self, Increment=None):
         """Alias for IncrementRotationHorizontal"""
@@ -61271,7 +61271,7 @@ class ThreeDFormat:
 
     def IncrementRotationVertical(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationVertical(*arguments)
+        return self.com_object.IncrementRotationVertical(*arguments)
 
     def incrementrotationvertical(self, Increment=None):
         """Alias for IncrementRotationVertical"""
@@ -61285,7 +61285,7 @@ class ThreeDFormat:
 
     def IncrementRotationX(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationX(*arguments)
+        return self.com_object.IncrementRotationX(*arguments)
 
     def incrementrotationx(self, Increment=None):
         """Alias for IncrementRotationX"""
@@ -61299,7 +61299,7 @@ class ThreeDFormat:
 
     def IncrementRotationY(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationY(*arguments)
+        return self.com_object.IncrementRotationY(*arguments)
 
     def incrementrotationy(self, Increment=None):
         """Alias for IncrementRotationY"""
@@ -61313,7 +61313,7 @@ class ThreeDFormat:
 
     def IncrementRotationZ(self, Increment=None):
         arguments = com_arguments([unwrap(a) for a in [Increment]])
-        self.com_object.IncrementRotationZ(*arguments)
+        return self.com_object.IncrementRotationZ(*arguments)
 
     def incrementrotationz(self, Increment=None):
         """Alias for IncrementRotationZ"""
@@ -61326,7 +61326,7 @@ class ThreeDFormat:
         return self.IncrementRotationZ(*arguments)
 
     def ResetRotation(self):
-        self.com_object.ResetRotation()
+        return self.com_object.ResetRotation()
 
     def resetrotation(self):
         """Alias for ResetRotation"""
@@ -61338,7 +61338,7 @@ class ThreeDFormat:
 
     def SetExtrusionDirection(self, PresetExtrusionDirection=None):
         arguments = com_arguments([unwrap(a) for a in [PresetExtrusionDirection]])
-        self.com_object.SetExtrusionDirection(*arguments)
+        return self.com_object.SetExtrusionDirection(*arguments)
 
     def setextrusiondirection(self, PresetExtrusionDirection=None):
         """Alias for SetExtrusionDirection"""
@@ -61352,7 +61352,7 @@ class ThreeDFormat:
 
     def SetPresetCamera(self, PresetCamera=None):
         arguments = com_arguments([unwrap(a) for a in [PresetCamera]])
-        self.com_object.SetPresetCamera(*arguments)
+        return self.com_object.SetPresetCamera(*arguments)
 
     def setpresetcamera(self, PresetCamera=None):
         """Alias for SetPresetCamera"""
@@ -61366,7 +61366,7 @@ class ThreeDFormat:
 
     def SetThreeDFormat(self, PresetThreeDFormat=None):
         arguments = com_arguments([unwrap(a) for a in [PresetThreeDFormat]])
-        self.com_object.SetThreeDFormat(*arguments)
+        return self.com_object.SetThreeDFormat(*arguments)
 
     def setthreedformat(self, PresetThreeDFormat=None):
         """Alias for SetThreeDFormat"""
@@ -62241,7 +62241,7 @@ class Top10:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -62249,7 +62249,7 @@ class Top10:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -62262,7 +62262,7 @@ class Top10:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -62273,7 +62273,7 @@ class Top10:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -62980,7 +62980,7 @@ class UniqueValues:
         return self.Type
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -62988,7 +62988,7 @@ class UniqueValues:
 
     def ModifyAppliesToRange(self, Range=None):
         arguments = com_arguments([unwrap(a) for a in [Range]])
-        self.com_object.ModifyAppliesToRange(*arguments)
+        return self.com_object.ModifyAppliesToRange(*arguments)
 
     def modifyappliestorange(self, Range=None):
         """Alias for ModifyAppliesToRange"""
@@ -63001,7 +63001,7 @@ class UniqueValues:
         return self.ModifyAppliesToRange(*arguments)
 
     def SetFirstPriority(self):
-        self.com_object.SetFirstPriority()
+        return self.com_object.SetFirstPriority()
 
     def setfirstpriority(self):
         """Alias for SetFirstPriority"""
@@ -63012,7 +63012,7 @@ class UniqueValues:
         return self.SetFirstPriority()
 
     def SetLastPriority(self):
-        self.com_object.SetLastPriority()
+        return self.com_object.SetLastPriority()
 
     def setlastpriority(self):
         """Alias for SetLastPriority"""
@@ -63194,7 +63194,7 @@ class UserAccess:
         self.Name = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -63240,7 +63240,7 @@ class UserAccessList:
         return self.Add(*arguments)
 
     def DeleteAll(self):
-        self.com_object.DeleteAll()
+        return self.com_object.DeleteAll()
 
     def deleteall(self):
         """Alias for DeleteAll"""
@@ -63596,7 +63596,7 @@ class Validation:
 
     def Add(self, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
         arguments = com_arguments([unwrap(a) for a in [Type, AlertStyle, Operator, Formula1, Formula2]])
-        self.com_object.Add(*arguments)
+        return self.com_object.Add(*arguments)
 
     def add(self, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
         """Alias for Add"""
@@ -63604,7 +63604,7 @@ class Validation:
         return self.Add(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -63612,7 +63612,7 @@ class Validation:
 
     def Modify(self, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
         arguments = com_arguments([unwrap(a) for a in [Type, AlertStyle, Operator, Formula1, Formula2]])
-        self.com_object.Modify(*arguments)
+        return self.com_object.Modify(*arguments)
 
     def modify(self, Type=None, AlertStyle=None, Operator=None, Formula1=None, Formula2=None):
         """Alias for Modify"""
@@ -63750,7 +63750,7 @@ class ValueChange:
         return self.VisibleInPivotTable
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -63826,7 +63826,7 @@ class VPageBreak:
         self.Type = value
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -63834,7 +63834,7 @@ class VPageBreak:
 
     def DragOff(self, Direction=None, RegionIndex=None):
         arguments = com_arguments([unwrap(a) for a in [Direction, RegionIndex]])
-        self.com_object.DragOff(*arguments)
+        return self.com_object.DragOff(*arguments)
 
     def dragoff(self, Direction=None, RegionIndex=None):
         """Alias for DragOff"""
@@ -64049,7 +64049,7 @@ class Walls:
         return self.ClearFormats()
 
     def Paste(self):
-        self.com_object.Paste()
+        return self.com_object.Paste()
 
     def paste(self):
         """Alias for Paste"""
@@ -64105,7 +64105,7 @@ class Watch:
         return self.Source
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -64178,7 +64178,7 @@ class Watches:
         return self.Add(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -64530,7 +64530,7 @@ class WebOptions:
         self.UseLongFileNames = value
 
     def UseDefaultFolderSuffix(self):
-        self.com_object.UseDefaultFolderSuffix()
+        return self.com_object.UseDefaultFolderSuffix()
 
     def usedefaultfoldersuffix(self):
         """Alias for UseDefaultFolderSuffix"""
@@ -65783,7 +65783,7 @@ class Window:
 
     def ScrollIntoView(self, Left=None, Top=None, Width=None, Height=None, Start=None):
         arguments = com_arguments([unwrap(a) for a in [Left, Top, Width, Height, Start]])
-        self.com_object.ScrollIntoView(*arguments)
+        return self.com_object.ScrollIntoView(*arguments)
 
     def scrollintoview(self, Left=None, Top=None, Width=None, Height=None, Start=None):
         """Alias for ScrollIntoView"""
@@ -65929,7 +65929,7 @@ class Windows:
         return self.CompareSideBySideWith(*arguments)
 
     def ResetPositionsSideBySide(self):
-        self.com_object.ResetPositionsSideBySide()
+        return self.com_object.ResetPositionsSideBySide()
 
     def resetpositionssidebyside(self):
         """Alias for ResetPositionsSideBySide"""
@@ -68018,7 +68018,7 @@ class Workbook:
 
     def AcceptAllChanges(self, When=None, Who=None, Where=None):
         arguments = com_arguments([unwrap(a) for a in [When, Who, Where]])
-        self.com_object.AcceptAllChanges(*arguments)
+        return self.com_object.AcceptAllChanges(*arguments)
 
     def acceptallchanges(self, When=None, Who=None, Where=None):
         """Alias for AcceptAllChanges"""
@@ -68031,14 +68031,14 @@ class Workbook:
         return self.AcceptAllChanges(*arguments)
 
     def Activate(self):
-        self.com_object.Activate()
+        return self.com_object.Activate()
 
     def activate(self):
         """Alias for Activate"""
         return self.Activate()
 
     def AddToFavorites(self):
-        self.com_object.AddToFavorites()
+        return self.com_object.AddToFavorites()
 
     def addtofavorites(self):
         """Alias for AddToFavorites"""
@@ -68050,7 +68050,7 @@ class Workbook:
 
     def ApplyTheme(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.ApplyTheme(*arguments)
+        return self.com_object.ApplyTheme(*arguments)
 
     def applytheme(self, FileName=None):
         """Alias for ApplyTheme"""
@@ -68064,7 +68064,7 @@ class Workbook:
 
     def BreakLink(self, Name=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Type]])
-        self.com_object.BreakLink(*arguments)
+        return self.com_object.BreakLink(*arguments)
 
     def breaklink(self, Name=None, Type=None):
         """Alias for BreakLink"""
@@ -68089,7 +68089,7 @@ class Workbook:
 
     def ChangeFileAccess(self, Mode=None, WritePassword=None, Notify=None):
         arguments = com_arguments([unwrap(a) for a in [Mode, WritePassword, Notify]])
-        self.com_object.ChangeFileAccess(*arguments)
+        return self.com_object.ChangeFileAccess(*arguments)
 
     def changefileaccess(self, Mode=None, WritePassword=None, Notify=None):
         """Alias for ChangeFileAccess"""
@@ -68103,7 +68103,7 @@ class Workbook:
 
     def ChangeLink(self, Name=None, NewName=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Name, NewName, Type]])
-        self.com_object.ChangeLink(*arguments)
+        return self.com_object.ChangeLink(*arguments)
 
     def changelink(self, Name=None, NewName=None, Type=None):
         """Alias for ChangeLink"""
@@ -68117,7 +68117,7 @@ class Workbook:
 
     def CheckIn(self, SaveChanges=None, Comments=None, MakePublic=None):
         arguments = com_arguments([unwrap(a) for a in [SaveChanges, Comments, MakePublic]])
-        self.com_object.CheckIn(*arguments)
+        return self.com_object.CheckIn(*arguments)
 
     def checkin(self, SaveChanges=None, Comments=None, MakePublic=None):
         """Alias for CheckIn"""
@@ -68145,7 +68145,7 @@ class Workbook:
 
     def Close(self, SaveChanges=None, FileName=None, RouteWorkbook=None):
         arguments = com_arguments([unwrap(a) for a in [SaveChanges, FileName, RouteWorkbook]])
-        self.com_object.Close(*arguments)
+        return self.com_object.Close(*arguments)
 
     def close(self, SaveChanges=None, FileName=None, RouteWorkbook=None):
         """Alias for Close"""
@@ -68153,7 +68153,7 @@ class Workbook:
         return self.Close(*arguments)
 
     def ConvertComments(self):
-        self.com_object.ConvertComments()
+        return self.com_object.ConvertComments()
 
     def convertcomments(self):
         """Alias for ConvertComments"""
@@ -68179,7 +68179,7 @@ class Workbook:
 
     def DeleteNumberFormat(self, NumberFormat=None):
         arguments = com_arguments([unwrap(a) for a in [NumberFormat]])
-        self.com_object.DeleteNumberFormat(*arguments)
+        return self.com_object.DeleteNumberFormat(*arguments)
 
     def deletenumberformat(self, NumberFormat=None):
         """Alias for DeleteNumberFormat"""
@@ -68192,7 +68192,7 @@ class Workbook:
         return self.DeleteNumberFormat(*arguments)
 
     def EnableConnections(self):
-        self.com_object.EnableConnections()
+        return self.com_object.EnableConnections()
 
     def enableconnections(self):
         """Alias for EnableConnections"""
@@ -68203,7 +68203,7 @@ class Workbook:
         return self.EnableConnections()
 
     def EndReview(self):
-        self.com_object.EndReview()
+        return self.com_object.EndReview()
 
     def endreview(self):
         """Alias for EndReview"""
@@ -68226,7 +68226,7 @@ class Workbook:
 
     def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         arguments = com_arguments([unwrap(a) for a in [Type, FileName, Quality, IncludeDocProperties, IgnorePrintAreas, From, To, OpenAfterPublish, FixedFormatExtClassPtr]])
-        self.com_object.ExportAsFixedFormat(*arguments)
+        return self.com_object.ExportAsFixedFormat(*arguments)
 
     def exportasfixedformat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         """Alias for ExportAsFixedFormat"""
@@ -68240,7 +68240,7 @@ class Workbook:
 
     def FollowHyperlink(self, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
         arguments = com_arguments([unwrap(a) for a in [Address, SubAddress, NewWindow, AddHistory, ExtraInfo, Method, HeaderInfo]])
-        self.com_object.FollowHyperlink(*arguments)
+        return self.com_object.FollowHyperlink(*arguments)
 
     def followhyperlink(self, Address=None, SubAddress=None, NewWindow=None, AddHistory=None, ExtraInfo=None, Method=None, HeaderInfo=None):
         """Alias for FollowHyperlink"""
@@ -68253,7 +68253,7 @@ class Workbook:
         return self.FollowHyperlink(*arguments)
 
     def ForwardMailer(self):
-        self.com_object.ForwardMailer()
+        return self.com_object.ForwardMailer()
 
     def forwardmailer(self):
         """Alias for ForwardMailer"""
@@ -68287,7 +68287,7 @@ class Workbook:
 
     def HighlightChangesOptions(self, When=None, Who=None, Where=None):
         arguments = com_arguments([unwrap(a) for a in [When, Who, Where]])
-        self.com_object.HighlightChangesOptions(*arguments)
+        return self.com_object.HighlightChangesOptions(*arguments)
 
     def highlightchangesoptions(self, When=None, Who=None, Where=None):
         """Alias for HighlightChangesOptions"""
@@ -68328,7 +68328,7 @@ class Workbook:
         return self.LinkSources(*arguments)
 
     def LockServerFile(self):
-        self.com_object.LockServerFile()
+        return self.com_object.LockServerFile()
 
     def lockserverfile(self):
         """Alias for LockServerFile"""
@@ -68340,7 +68340,7 @@ class Workbook:
 
     def MergeWorkbook(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.MergeWorkbook(*arguments)
+        return self.com_object.MergeWorkbook(*arguments)
 
     def mergeworkbook(self, FileName=None):
         """Alias for MergeWorkbook"""
@@ -68365,7 +68365,7 @@ class Workbook:
 
     def OpenLinks(self, Name=None, ReadOnly=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Name, ReadOnly, Type]])
-        self.com_object.OpenLinks(*arguments)
+        return self.com_object.OpenLinks(*arguments)
 
     def openlinks(self, Name=None, ReadOnly=None, Type=None):
         """Alias for OpenLinks"""
@@ -68390,7 +68390,7 @@ class Workbook:
 
     def Post(self, DestName=None):
         arguments = com_arguments([unwrap(a) for a in [DestName]])
-        self.com_object.Post(*arguments)
+        return self.com_object.Post(*arguments)
 
     def post(self, DestName=None):
         """Alias for Post"""
@@ -68413,7 +68413,7 @@ class Workbook:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([unwrap(a) for a in [EnableChanges]])
-        self.com_object.PrintPreview(*arguments)
+        return self.com_object.PrintPreview(*arguments)
 
     def printpreview(self, EnableChanges=None):
         """Alias for PrintPreview"""
@@ -68427,7 +68427,7 @@ class Workbook:
 
     def Protect(self, Password=None, Structure=None, Windows=None):
         arguments = com_arguments([unwrap(a) for a in [Password, Structure, Windows]])
-        self.com_object.Protect(*arguments)
+        return self.com_object.Protect(*arguments)
 
     def protect(self, Password=None, Structure=None, Windows=None):
         """Alias for Protect"""
@@ -68436,7 +68436,7 @@ class Workbook:
 
     def ProtectSharing(self, FileName=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, SharingPassword=None, FileFormat=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, Password, WriteResPassword, ReadOnlyRecommended, CreateBackup, SharingPassword, FileFormat]])
-        self.com_object.ProtectSharing(*arguments)
+        return self.com_object.ProtectSharing(*arguments)
 
     def protectsharing(self, FileName=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, SharingPassword=None, FileFormat=None):
         """Alias for ProtectSharing"""
@@ -68449,7 +68449,7 @@ class Workbook:
         return self.ProtectSharing(*arguments)
 
     def PublishToDocs(self):
-        self.com_object.PublishToDocs()
+        return self.com_object.PublishToDocs()
 
     def publishtodocs(self):
         """Alias for PublishToDocs"""
@@ -68461,7 +68461,7 @@ class Workbook:
 
     def PurgeChangeHistoryNow(self, Days=None, SharingPassword=None):
         arguments = com_arguments([unwrap(a) for a in [Days, SharingPassword]])
-        self.com_object.PurgeChangeHistoryNow(*arguments)
+        return self.com_object.PurgeChangeHistoryNow(*arguments)
 
     def purgechangehistorynow(self, Days=None, SharingPassword=None):
         """Alias for PurgeChangeHistoryNow"""
@@ -68474,7 +68474,7 @@ class Workbook:
         return self.PurgeChangeHistoryNow(*arguments)
 
     def RefreshAll(self):
-        self.com_object.RefreshAll()
+        return self.com_object.RefreshAll()
 
     def refreshall(self):
         """Alias for RefreshAll"""
@@ -68486,7 +68486,7 @@ class Workbook:
 
     def RejectAllChanges(self, When=None, Who=None, Where=None):
         arguments = com_arguments([unwrap(a) for a in [When, Who, Where]])
-        self.com_object.RejectAllChanges(*arguments)
+        return self.com_object.RejectAllChanges(*arguments)
 
     def rejectallchanges(self, When=None, Who=None, Where=None):
         """Alias for RejectAllChanges"""
@@ -68500,7 +68500,7 @@ class Workbook:
 
     def ReloadAs(self, Encoding=None):
         arguments = com_arguments([unwrap(a) for a in [Encoding]])
-        self.com_object.ReloadAs(*arguments)
+        return self.com_object.ReloadAs(*arguments)
 
     def reloadas(self, Encoding=None):
         """Alias for ReloadAs"""
@@ -68514,7 +68514,7 @@ class Workbook:
 
     def RemoveDocumentInformation(self, RemoveDocInfoType=None):
         arguments = com_arguments([unwrap(a) for a in [RemoveDocInfoType]])
-        self.com_object.RemoveDocumentInformation(*arguments)
+        return self.com_object.RemoveDocumentInformation(*arguments)
 
     def removedocumentinformation(self, RemoveDocInfoType=None):
         """Alias for RemoveDocumentInformation"""
@@ -68528,7 +68528,7 @@ class Workbook:
 
     def RemoveUser(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
-        self.com_object.RemoveUser(*arguments)
+        return self.com_object.RemoveUser(*arguments)
 
     def removeuser(self, Index=None):
         """Alias for RemoveUser"""
@@ -68541,14 +68541,14 @@ class Workbook:
         return self.RemoveUser(*arguments)
 
     def Reply(self):
-        self.com_object.Reply()
+        return self.com_object.Reply()
 
     def reply(self):
         """Alias for Reply"""
         return self.Reply()
 
     def ReplyAll(self):
-        self.com_object.ReplyAll()
+        return self.com_object.ReplyAll()
 
     def replyall(self):
         """Alias for ReplyAll"""
@@ -68560,7 +68560,7 @@ class Workbook:
 
     def ReplyWithChanges(self, ShowMessage=None):
         arguments = com_arguments([unwrap(a) for a in [ShowMessage]])
-        self.com_object.ReplyWithChanges(*arguments)
+        return self.com_object.ReplyWithChanges(*arguments)
 
     def replywithchanges(self, ShowMessage=None):
         """Alias for ReplyWithChanges"""
@@ -68573,7 +68573,7 @@ class Workbook:
         return self.ReplyWithChanges(*arguments)
 
     def ResetColors(self):
-        self.com_object.ResetColors()
+        return self.com_object.ResetColors()
 
     def resetcolors(self):
         """Alias for ResetColors"""
@@ -68585,7 +68585,7 @@ class Workbook:
 
     def RunAutoMacros(self, Which=None):
         arguments = com_arguments([unwrap(a) for a in [Which]])
-        self.com_object.RunAutoMacros(*arguments)
+        return self.com_object.RunAutoMacros(*arguments)
 
     def runautomacros(self, Which=None):
         """Alias for RunAutoMacros"""
@@ -68598,7 +68598,7 @@ class Workbook:
         return self.RunAutoMacros(*arguments)
 
     def Save(self):
-        self.com_object.Save()
+        return self.com_object.Save()
 
     def save(self):
         """Alias for Save"""
@@ -68606,7 +68606,7 @@ class Workbook:
 
     def SaveAs(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AccessMode=None, ConflictResolution=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, FileFormat, Password, WriteResPassword, ReadOnlyRecommended, CreateBackup, AccessMode, ConflictResolution, AddToMru, TextCodepage, TextVisualLayout, Local]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AccessMode=None, ConflictResolution=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
         """Alias for SaveAs"""
@@ -68620,7 +68620,7 @@ class Workbook:
 
     def SaveAsXMLData(self, FileName=None, Map=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, Map]])
-        self.com_object.SaveAsXMLData(*arguments)
+        return self.com_object.SaveAsXMLData(*arguments)
 
     def saveasxmldata(self, FileName=None, Map=None):
         """Alias for SaveAsXMLData"""
@@ -68634,7 +68634,7 @@ class Workbook:
 
     def SaveCopyAs(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.SaveCopyAs(*arguments)
+        return self.com_object.SaveCopyAs(*arguments)
 
     def savecopyas(self, FileName=None):
         """Alias for SaveCopyAs"""
@@ -68648,7 +68648,7 @@ class Workbook:
 
     def SendFaxOverInternet(self, Recipients=None, Subject=None, ShowMessage=None):
         arguments = com_arguments([unwrap(a) for a in [Recipients, Subject, ShowMessage]])
-        self.com_object.SendFaxOverInternet(*arguments)
+        return self.com_object.SendFaxOverInternet(*arguments)
 
     def sendfaxoverinternet(self, Recipients=None, Subject=None, ShowMessage=None):
         """Alias for SendFaxOverInternet"""
@@ -68662,7 +68662,7 @@ class Workbook:
 
     def SendForReview(self, Recipients=None, Subject=None, ShowMessage=None, IncludeAttachment=None):
         arguments = com_arguments([unwrap(a) for a in [Recipients, Subject, ShowMessage, IncludeAttachment]])
-        self.com_object.SendForReview(*arguments)
+        return self.com_object.SendForReview(*arguments)
 
     def sendforreview(self, Recipients=None, Subject=None, ShowMessage=None, IncludeAttachment=None):
         """Alias for SendForReview"""
@@ -68676,7 +68676,7 @@ class Workbook:
 
     def SendMail(self, Recipients=None, Subject=None, ReturnReceipt=None):
         arguments = com_arguments([unwrap(a) for a in [Recipients, Subject, ReturnReceipt]])
-        self.com_object.SendMail(*arguments)
+        return self.com_object.SendMail(*arguments)
 
     def sendmail(self, Recipients=None, Subject=None, ReturnReceipt=None):
         """Alias for SendMail"""
@@ -68690,7 +68690,7 @@ class Workbook:
 
     def SendMailer(self, FileFormat=None, Priority=None):
         arguments = com_arguments([unwrap(a) for a in [FileFormat, Priority]])
-        self.com_object.SendMailer(*arguments)
+        return self.com_object.SendMailer(*arguments)
 
     def sendmailer(self, FileFormat=None, Priority=None):
         """Alias for SendMailer"""
@@ -68704,7 +68704,7 @@ class Workbook:
 
     def SetLinkOnData(self, Name=None, Procedure=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Procedure]])
-        self.com_object.SetLinkOnData(*arguments)
+        return self.com_object.SetLinkOnData(*arguments)
 
     def setlinkondata(self, Name=None, Procedure=None):
         """Alias for SetLinkOnData"""
@@ -68718,7 +68718,7 @@ class Workbook:
 
     def SetPasswordEncryptionOptions(self, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
         arguments = com_arguments([unwrap(a) for a in [PasswordEncryptionProvider, PasswordEncryptionAlgorithm, PasswordEncryptionKeyLength, PasswordEncryptionFileProperties]])
-        self.com_object.SetPasswordEncryptionOptions(*arguments)
+        return self.com_object.SetPasswordEncryptionOptions(*arguments)
 
     def setpasswordencryptionoptions(self, PasswordEncryptionProvider=None, PasswordEncryptionAlgorithm=None, PasswordEncryptionKeyLength=None, PasswordEncryptionFileProperties=None):
         """Alias for SetPasswordEncryptionOptions"""
@@ -68731,7 +68731,7 @@ class Workbook:
         return self.SetPasswordEncryptionOptions(*arguments)
 
     def ToggleFormsDesign(self):
-        self.com_object.ToggleFormsDesign()
+        return self.com_object.ToggleFormsDesign()
 
     def toggleformsdesign(self):
         """Alias for ToggleFormsDesign"""
@@ -68743,7 +68743,7 @@ class Workbook:
 
     def Unprotect(self, Password=None):
         arguments = com_arguments([unwrap(a) for a in [Password]])
-        self.com_object.Unprotect(*arguments)
+        return self.com_object.Unprotect(*arguments)
 
     def unprotect(self, Password=None):
         """Alias for Unprotect"""
@@ -68752,7 +68752,7 @@ class Workbook:
 
     def UnprotectSharing(self, SharingPassword=None):
         arguments = com_arguments([unwrap(a) for a in [SharingPassword]])
-        self.com_object.UnprotectSharing(*arguments)
+        return self.com_object.UnprotectSharing(*arguments)
 
     def unprotectsharing(self, SharingPassword=None):
         """Alias for UnprotectSharing"""
@@ -68765,7 +68765,7 @@ class Workbook:
         return self.UnprotectSharing(*arguments)
 
     def UpdateFromFile(self):
-        self.com_object.UpdateFromFile()
+        return self.com_object.UpdateFromFile()
 
     def updatefromfile(self):
         """Alias for UpdateFromFile"""
@@ -68777,7 +68777,7 @@ class Workbook:
 
     def UpdateLink(self, Name=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Name, Type]])
-        self.com_object.UpdateLink(*arguments)
+        return self.com_object.UpdateLink(*arguments)
 
     def updatelink(self, Name=None, Type=None):
         """Alias for UpdateLink"""
@@ -68790,7 +68790,7 @@ class Workbook:
         return self.UpdateLink(*arguments)
 
     def WebPagePreview(self):
-        self.com_object.WebPagePreview()
+        return self.com_object.WebPagePreview()
 
     def webpagepreview(self):
         """Alias for WebPagePreview"""
@@ -69013,7 +69013,7 @@ class Workbooks:
 
     def CheckOut(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.CheckOut(*arguments)
+        return self.com_object.CheckOut(*arguments)
 
     def checkout(self, FileName=None):
         """Alias for CheckOut"""
@@ -69026,7 +69026,7 @@ class Workbooks:
         return self.CheckOut(*arguments)
 
     def Close(self):
-        self.com_object.Close()
+        return self.com_object.Close()
 
     def close(self):
         """Alias for Close"""
@@ -69057,7 +69057,7 @@ class Workbooks:
 
     def OpenText(self, FileName=None, Origin=None, StartRow=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, TextVisualLayout=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None, Local=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, Origin, StartRow, DataType, TextQualifier, ConsecutiveDelimiter, Tab, Semicolon, Comma, Space, Other, OtherChar, FieldInfo, TextVisualLayout, DecimalSeparator, ThousandsSeparator, TrailingMinusNumbers, Local]])
-        self.com_object.OpenText(*arguments)
+        return self.com_object.OpenText(*arguments)
 
     def opentext(self, FileName=None, Origin=None, StartRow=None, DataType=None, TextQualifier=None, ConsecutiveDelimiter=None, Tab=None, Semicolon=None, Comma=None, Space=None, Other=None, OtherChar=None, FieldInfo=None, TextVisualLayout=None, DecimalSeparator=None, ThousandsSeparator=None, TrailingMinusNumbers=None, Local=None):
         """Alias for OpenText"""
@@ -69961,14 +69961,14 @@ class Worksheet:
         return self.VPageBreaks
 
     def Activate(self):
-        self.com_object.Activate()
+        return self.com_object.Activate()
 
     def activate(self):
         """Alias for Activate"""
         return self.Activate()
 
     def Calculate(self):
-        self.com_object.Calculate()
+        return self.com_object.Calculate()
 
     def calculate(self):
         """Alias for Calculate"""
@@ -69990,7 +69990,7 @@ class Worksheet:
 
     def CheckSpelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
         arguments = com_arguments([unwrap(a) for a in [CustomDictionary, IgnoreUppercase, AlwaysSuggest, SpellLang]])
-        self.com_object.CheckSpelling(*arguments)
+        return self.com_object.CheckSpelling(*arguments)
 
     def checkspelling(self, CustomDictionary=None, IgnoreUppercase=None, AlwaysSuggest=None, SpellLang=None):
         """Alias for CheckSpelling"""
@@ -70003,7 +70003,7 @@ class Worksheet:
         return self.CheckSpelling(*arguments)
 
     def CircleInvalid(self):
-        self.com_object.CircleInvalid()
+        return self.com_object.CircleInvalid()
 
     def circleinvalid(self):
         """Alias for CircleInvalid"""
@@ -70014,7 +70014,7 @@ class Worksheet:
         return self.CircleInvalid()
 
     def ClearArrows(self):
-        self.com_object.ClearArrows()
+        return self.com_object.ClearArrows()
 
     def cleararrows(self):
         """Alias for ClearArrows"""
@@ -70025,7 +70025,7 @@ class Worksheet:
         return self.ClearArrows()
 
     def ClearCircles(self):
-        self.com_object.ClearCircles()
+        return self.com_object.ClearCircles()
 
     def clearcircles(self):
         """Alias for ClearCircles"""
@@ -70037,7 +70037,7 @@ class Worksheet:
 
     def Copy(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Before=None, After=None):
         """Alias for Copy"""
@@ -70062,7 +70062,7 @@ class Worksheet:
 
     def ExportAsFixedFormat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         arguments = com_arguments([unwrap(a) for a in [Type, FileName, Quality, IncludeDocProperties, IgnorePrintAreas, From, To, OpenAfterPublish, FixedFormatExtClassPtr]])
-        self.com_object.ExportAsFixedFormat(*arguments)
+        return self.com_object.ExportAsFixedFormat(*arguments)
 
     def exportasfixedformat(self, Type=None, FileName=None, Quality=None, IncludeDocProperties=None, IgnorePrintAreas=None, From=None, To=None, OpenAfterPublish=None, FixedFormatExtClassPtr=None):
         """Alias for ExportAsFixedFormat"""
@@ -70076,7 +70076,7 @@ class Worksheet:
 
     def Move(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Move(*arguments)
+        return self.com_object.Move(*arguments)
 
     def move(self, Before=None, After=None):
         """Alias for Move"""
@@ -70099,7 +70099,7 @@ class Worksheet:
 
     def Paste(self, Destination=None, Link=None):
         arguments = com_arguments([unwrap(a) for a in [Destination, Link]])
-        self.com_object.Paste(*arguments)
+        return self.com_object.Paste(*arguments)
 
     def paste(self, Destination=None, Link=None):
         """Alias for Paste"""
@@ -70108,7 +70108,7 @@ class Worksheet:
 
     def PasteSpecial(self, Format=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, NoHTMLFormatting=None):
         arguments = com_arguments([unwrap(a) for a in [Format, Link, DisplayAsIcon, IconFileName, IconIndex, IconLabel, NoHTMLFormatting]])
-        self.com_object.PasteSpecial(*arguments)
+        return self.com_object.PasteSpecial(*arguments)
 
     def pastespecial(self, Format=None, Link=None, DisplayAsIcon=None, IconFileName=None, IconIndex=None, IconLabel=None, NoHTMLFormatting=None):
         """Alias for PasteSpecial"""
@@ -70164,7 +70164,7 @@ class Worksheet:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([unwrap(a) for a in [EnableChanges]])
-        self.com_object.PrintPreview(*arguments)
+        return self.com_object.PrintPreview(*arguments)
 
     def printpreview(self, EnableChanges=None):
         """Alias for PrintPreview"""
@@ -70178,7 +70178,7 @@ class Worksheet:
 
     def Protect(self, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None, AllowFormattingCells=None, AllowFormattingColumns=None, AllowFormattingRows=None, AllowInsertingColumns=None, AllowInsertingRows=None, AllowInsertingHyperlinks=None, AllowDeletingColumns=None, AllowDeletingRows=None, AllowSorting=None, AllowFiltering=None, AllowUsingPivotTables=None):
         arguments = com_arguments([unwrap(a) for a in [Password, DrawingObjects, Contents, Scenarios, UserInterfaceOnly, AllowFormattingCells, AllowFormattingColumns, AllowFormattingRows, AllowInsertingColumns, AllowInsertingRows, AllowInsertingHyperlinks, AllowDeletingColumns, AllowDeletingRows, AllowSorting, AllowFiltering, AllowUsingPivotTables]])
-        self.com_object.Protect(*arguments)
+        return self.com_object.Protect(*arguments)
 
     def protect(self, Password=None, DrawingObjects=None, Contents=None, Scenarios=None, UserInterfaceOnly=None, AllowFormattingCells=None, AllowFormattingColumns=None, AllowFormattingRows=None, AllowInsertingColumns=None, AllowInsertingRows=None, AllowInsertingHyperlinks=None, AllowDeletingColumns=None, AllowDeletingRows=None, AllowSorting=None, AllowFiltering=None, AllowUsingPivotTables=None):
         """Alias for Protect"""
@@ -70186,7 +70186,7 @@ class Worksheet:
         return self.Protect(*arguments)
 
     def ResetAllPageBreaks(self):
-        self.com_object.ResetAllPageBreaks()
+        return self.com_object.ResetAllPageBreaks()
 
     def resetallpagebreaks(self):
         """Alias for ResetAllPageBreaks"""
@@ -70198,7 +70198,7 @@ class Worksheet:
 
     def SaveAs(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, FileFormat, Password, WriteResPassword, ReadOnlyRecommended, CreateBackup, AddToMru, TextCodepage, TextVisualLayout, Local]])
-        self.com_object.SaveAs(*arguments)
+        return self.com_object.SaveAs(*arguments)
 
     def saveas(self, FileName=None, FileFormat=None, Password=None, WriteResPassword=None, ReadOnlyRecommended=None, CreateBackup=None, AddToMru=None, TextCodepage=None, TextVisualLayout=None, Local=None):
         """Alias for SaveAs"""
@@ -70221,7 +70221,7 @@ class Worksheet:
 
     def Select(self, Replace=None):
         arguments = com_arguments([unwrap(a) for a in [Replace]])
-        self.com_object.Select(*arguments)
+        return self.com_object.Select(*arguments)
 
     def select(self, Replace=None):
         """Alias for Select"""
@@ -70230,7 +70230,7 @@ class Worksheet:
 
     def SetBackgroundPicture(self, FileName=None):
         arguments = com_arguments([unwrap(a) for a in [FileName]])
-        self.com_object.SetBackgroundPicture(*arguments)
+        return self.com_object.SetBackgroundPicture(*arguments)
 
     def setbackgroundpicture(self, FileName=None):
         """Alias for SetBackgroundPicture"""
@@ -70243,7 +70243,7 @@ class Worksheet:
         return self.SetBackgroundPicture(*arguments)
 
     def ShowAllData(self):
-        self.com_object.ShowAllData()
+        return self.com_object.ShowAllData()
 
     def showalldata(self):
         """Alias for ShowAllData"""
@@ -70254,7 +70254,7 @@ class Worksheet:
         return self.ShowAllData()
 
     def ShowDataForm(self):
-        self.com_object.ShowDataForm()
+        return self.com_object.ShowDataForm()
 
     def showdataform(self):
         """Alias for ShowDataForm"""
@@ -70266,7 +70266,7 @@ class Worksheet:
 
     def Unprotect(self, Password=None):
         arguments = com_arguments([unwrap(a) for a in [Password]])
-        self.com_object.Unprotect(*arguments)
+        return self.com_object.Unprotect(*arguments)
 
     def unprotect(self, Password=None):
         """Alias for Unprotect"""
@@ -75243,7 +75243,7 @@ class Worksheets:
 
     def Copy(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Copy(*arguments)
+        return self.com_object.Copy(*arguments)
 
     def copy(self, Before=None, After=None):
         """Alias for Copy"""
@@ -75251,7 +75251,7 @@ class Worksheets:
         return self.Copy(*arguments)
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -75259,7 +75259,7 @@ class Worksheets:
 
     def FillAcrossSheets(self, Range=None, Type=None):
         arguments = com_arguments([unwrap(a) for a in [Range, Type]])
-        self.com_object.FillAcrossSheets(*arguments)
+        return self.com_object.FillAcrossSheets(*arguments)
 
     def fillacrosssheets(self, Range=None, Type=None):
         """Alias for FillAcrossSheets"""
@@ -75273,7 +75273,7 @@ class Worksheets:
 
     def Move(self, Before=None, After=None):
         arguments = com_arguments([unwrap(a) for a in [Before, After]])
-        self.com_object.Move(*arguments)
+        return self.com_object.Move(*arguments)
 
     def move(self, Before=None, After=None):
         """Alias for Move"""
@@ -75296,7 +75296,7 @@ class Worksheets:
 
     def PrintPreview(self, EnableChanges=None):
         arguments = com_arguments([unwrap(a) for a in [EnableChanges]])
-        self.com_object.PrintPreview(*arguments)
+        return self.com_object.PrintPreview(*arguments)
 
     def printpreview(self, EnableChanges=None):
         """Alias for PrintPreview"""
@@ -75310,7 +75310,7 @@ class Worksheets:
 
     def Select(self, Replace=None):
         arguments = com_arguments([unwrap(a) for a in [Replace]])
-        self.com_object.Select(*arguments)
+        return self.com_object.Select(*arguments)
 
     def select(self, Replace=None):
         """Alias for Select"""
@@ -78092,7 +78092,7 @@ class XmlDataBinding:
         return self.SourceUrl
 
     def ClearSettings(self):
-        self.com_object.ClearSettings()
+        return self.com_object.ClearSettings()
 
     def clearsettings(self):
         """Alias for ClearSettings"""
@@ -78104,7 +78104,7 @@ class XmlDataBinding:
 
     def LoadSettings(self, Url=None):
         arguments = com_arguments([unwrap(a) for a in [Url]])
-        self.com_object.LoadSettings(*arguments)
+        return self.com_object.LoadSettings(*arguments)
 
     def loadsettings(self, Url=None):
         """Alias for LoadSettings"""
@@ -78394,7 +78394,7 @@ class XmlMap:
         return self.WorkbookConnection
 
     def Delete(self):
-        self.com_object.Delete()
+        return self.com_object.Delete()
 
     def delete(self):
         """Alias for Delete"""
@@ -78620,7 +78620,7 @@ class XmlNamespaces:
 
     def InstallManifest(self, Path=None, InstallForAllUsers=None):
         arguments = com_arguments([unwrap(a) for a in [Path, InstallForAllUsers]])
-        self.com_object.InstallManifest(*arguments)
+        return self.com_object.InstallManifest(*arguments)
 
     def installmanifest(self, Path=None, InstallForAllUsers=None):
         """Alias for InstallManifest"""
@@ -78812,7 +78812,7 @@ class XPath:
         return self.Value
 
     def Clear(self):
-        self.com_object.Clear()
+        return self.com_object.Clear()
 
     def clear(self):
         """Alias for Clear"""
@@ -78820,7 +78820,7 @@ class XPath:
 
     def SetValue(self, Map=None, XPath=None, SelectionNamespace=None, Repeating=None):
         arguments = com_arguments([unwrap(a) for a in [Map, XPath, SelectionNamespace, Repeating]])
-        self.com_object.SetValue(*arguments)
+        return self.com_object.SetValue(*arguments)
 
     def setvalue(self, Map=None, XPath=None, SelectionNamespace=None, Repeating=None):
         """Alias for SetValue"""

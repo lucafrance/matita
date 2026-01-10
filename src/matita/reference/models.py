@@ -488,7 +488,7 @@ class DocPage:
             # `.startswith("Open") is for methods like `Workbooks.OpenText`
             elif parent_is_collection and (self.method_name == "Add" or self.method_name.startswith("Open")):
                 code_line = f"{self.object_name[:-1]}({code_line})"
-            code_line = "return " + code_line
+        code_line = "return " + code_line
         code_line = " "*8 + code_line
         code.append(code_line)
         code.append("")
