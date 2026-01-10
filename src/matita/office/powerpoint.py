@@ -5801,8 +5801,10 @@ class Chart:
         return self.Select(*arguments)
 
     def SeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
+        if Index is None:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
+        else:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -7696,8 +7698,10 @@ class ChartGroup:
         return self.FullCategoryCollection(*arguments)
 
     def SeriesCollection(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return SeriesCollection(self.com_object.SeriesCollection(*arguments))
+        if Index is None:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0]))
+        else:
+            return SeriesCollection(self.com_object.SeriesCollection(com_arguments([None])[0])).Item(Index)
 
     def seriescollection(self, Index=None):
         """Alias for SeriesCollection"""
@@ -27340,8 +27344,10 @@ class Series:
         return self.Paste()
 
     def Points(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return Points(self.com_object.Points(*arguments))
+        if Index is None:
+            return Points(self.com_object.Points(com_arguments([None])[0]))
+        else:
+            return Points(self.com_object.Points(com_arguments([None])[0])).Item(Index)
 
     def points(self, Index=None):
         """Alias for Points"""
@@ -27356,8 +27362,10 @@ class Series:
         return self.Select()
 
     def Trendlines(self, Index=None):
-        arguments = com_arguments([unwrap(a) for a in [Index]])
-        return Trendlines(self.com_object.Trendlines(*arguments))
+        if Index is None:
+            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0]))
+        else:
+            return Trendlines(self.com_object.Trendlines(com_arguments([None])[0])).Item(Index)
 
     def trendlines(self, Index=None):
         """Alias for Trendlines"""
@@ -33298,9 +33306,11 @@ class SlideShowView:
         """Alias for Next"""
         return self.Next()
 
-    def Player(self, ShapeId=None):
-        arguments = com_arguments([unwrap(a) for a in [ShapeId]])
-        return Player(self.com_object.Player(*arguments))
+    def Player(self, Index=None):
+        if Index is None:
+            return Player(self.com_object.Player(com_arguments([None])[0]))
+        else:
+            return Player(self.com_object.Player(com_arguments([None])[0])).Item(Index)
 
     def player(self, ShapeId=None):
         """Alias for Player"""
@@ -38982,9 +38992,11 @@ class View:
         arguments = [DataType, DisplayAsIcon, IconFileName, IconIndex, IconLabel, Link]
         return self.PasteSpecial(*arguments)
 
-    def Player(self, ShapeId=None):
-        arguments = com_arguments([unwrap(a) for a in [ShapeId]])
-        return Player(self.com_object.Player(*arguments))
+    def Player(self, Index=None):
+        if Index is None:
+            return Player(self.com_object.Player(com_arguments([None])[0]))
+        else:
+            return Player(self.com_object.Player(com_arguments([None])[0])).Item(Index)
 
     def player(self, ShapeId=None):
         """Alias for Player"""
