@@ -14917,7 +14917,7 @@ class Guides:
         return self.Parent
 
     def Add(self):
-        return Guide(self.com_object.Add())
+        self.com_object.Add()
 
     def add(self):
         """Alias for Add"""
@@ -23321,7 +23321,7 @@ class Presentation:
         return self.ApplyTemplate(*arguments)
 
     def ApplyTemplate2(self):
-        return self.com_object.ApplyTemplate2()
+        self.com_object.ApplyTemplate2()
 
     def applytemplate2(self):
         """Alias for ApplyTemplate2"""
@@ -30347,7 +30347,7 @@ class ShapeRange:
         return self.Item(*arguments)
 
     def MergeShapes(self):
-        return self.com_object.MergeShapes()
+        self.com_object.MergeShapes()
 
     def mergeshapes(self):
         """Alias for MergeShapes"""
@@ -30583,7 +30583,7 @@ class Shapes:
         return self.AddCallout(*arguments)
 
     def AddChart2(self):
-        return SHAPE(self.com_object.AddChart2())
+        self.com_object.AddChart2()
 
     def addchart2(self):
         """Alias for AddChart2"""
@@ -31343,7 +31343,7 @@ class Slide:
         return self.ApplyTemplate(*arguments)
 
     def ApplyTemplate2(self):
-        return self.com_object.ApplyTemplate2()
+        self.com_object.ApplyTemplate2()
 
     def applytemplate2(self):
         """Alias for ApplyTemplate2"""
@@ -31953,7 +31953,7 @@ class SlideRange:
         return self.ApplyTemplate(*arguments)
 
     def ApplyTemplate2(self):
-        return self.com_object.ApplyTemplate2()
+        self.com_object.ApplyTemplate2()
 
     def applytemplate2(self):
         """Alias for ApplyTemplate2"""
@@ -36232,7 +36232,7 @@ class TextRange2:
         return self.InsertBefore(*arguments)
 
     def InsertChartField(self):
-        return self.com_object.InsertChartField()
+        self.com_object.InsertChartField()
 
     def insertchartfield(self):
         """Alias for InsertChartField"""
