@@ -4,8 +4,6 @@
 You get the full power of VBA with the convenience of Python.
 See the [documentation](https://matita.readthedocs.io/en/latest/documentation) for more details.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l5CBSrZSH-g?si=mrPU2qZWQlwfYbCF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Hello world with *matita*
 
 ### Excel 📊
