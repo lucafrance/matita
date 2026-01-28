@@ -419,8 +419,8 @@ class Actions:
     def __init__(self, actions=None):
         self.com_object= actions
 
-    def __call__(self, item):
-        return Action(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -601,8 +601,8 @@ class AddIns:
     def __init__(self, addins=None):
         self.com_object= addins
 
-    def __call__(self, item):
-        return AddIn(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -667,8 +667,8 @@ class AddIns2:
     def __init__(self, addins2=None):
         self.com_object= addins2
 
-    def __call__(self, item):
-        return AddIns2(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -865,8 +865,8 @@ class AllowEditRanges:
     def __init__(self, alloweditranges=None):
         self.com_object= alloweditranges
 
-    def __call__(self, item):
-        return AllowEditRange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -5784,8 +5784,8 @@ class Areas:
     def __init__(self, areas=None):
         self.com_object= areas
 
-    def __call__(self, item):
-        return Area(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -6396,8 +6396,8 @@ class Axes:
     def __init__(self, axes=None):
         self.com_object= axes
 
-    def __call__(self, item):
-        return Axe(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8146,8 +8146,8 @@ class Borders:
     def __init__(self, borders=None):
         self.com_object= borders
 
-    def __call__(self, item):
-        return Border(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8360,8 +8360,8 @@ class CalculatedFields:
     def __init__(self, calculatedfields=None):
         self.com_object= calculatedfields
 
-    def __call__(self, item):
-        return CalculatedField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8423,8 +8423,8 @@ class CalculatedItems:
     def __init__(self, calculateditems=None):
         self.com_object= calculateditems
 
-    def __call__(self, item):
-        return CalculatedItem(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8730,8 +8730,8 @@ class CalculatedMembers:
     def __init__(self, calculatedmembers=None):
         self.com_object= calculatedmembers
 
-    def __call__(self, item):
-        return CalculatedMember(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13010,8 +13010,8 @@ class ChartObjects:
     def __init__(self, chartobjects=None):
         self.com_object= chartobjects
 
-    def __call__(self, item):
-        return ChartObject(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13320,8 +13320,8 @@ class Charts:
     def __init__(self, charts=None):
         self.com_object= charts
 
-    def __call__(self, item):
-        return Chart(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14362,8 +14362,8 @@ class ColorScaleCriteria:
     def __init__(self, colorscalecriteria=None):
         self.com_object= colorscalecriteria
 
-    def __call__(self, item):
-        return ColorScaleCriteria(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -14580,8 +14580,8 @@ class ColorStops:
     def __init__(self, colorstops=None):
         self.com_object= colorstops
 
-    def __call__(self, item):
-        return ColorStop(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14758,8 +14758,8 @@ class Comments:
     def __init__(self, comments=None):
         self.com_object= comments
 
-    def __call__(self, item):
-        return Comment(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14812,8 +14812,8 @@ class CommentsThreaded:
     def __init__(self, commentsthreaded=None):
         self.com_object= commentsthreaded
 
-    def __call__(self, item):
-        return CommentsThreaded(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -15039,8 +15039,8 @@ class Connections:
     def __init__(self, connections=None):
         self.com_object= connections
 
-    def __call__(self, item):
-        return Connection(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -16504,8 +16504,8 @@ class CubeFields:
     def __init__(self, cubefields=None):
         self.com_object= cubefields
 
-    def __call__(self, item):
-        return CubeField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -16589,8 +16589,8 @@ class CustomProperties:
     def __init__(self, customproperties=None):
         self.com_object= customproperties
 
-    def __call__(self, item):
-        return CustomPropertie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -16806,8 +16806,8 @@ class CustomViews:
     def __init__(self, customviews=None):
         self.com_object= customviews
 
-    def __call__(self, item):
-        return CustomView(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -18485,8 +18485,8 @@ class DataLabels:
     def __init__(self, datalabels=None):
         self.com_object= datalabels
 
-    def __call__(self, item):
-        return DataLabel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -19794,8 +19794,8 @@ class Dialogs:
     def __init__(self, dialogs=None):
         self.com_object= dialogs
 
-    def __call__(self, item):
-        return Dialog(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -21316,8 +21316,8 @@ class FileExportConverters:
     def __init__(self, fileexportconverters=None):
         self.com_object= fileexportconverters
 
-    def __call__(self, item):
-        return FileExportConverter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -22067,8 +22067,8 @@ class Filters:
     def __init__(self, filters=None):
         self.com_object= filters
 
-    def __call__(self, item):
-        return Filter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -25674,8 +25674,8 @@ class LegendEntries:
     def __init__(self, legendentries=None):
         self.com_object= legendentries
 
-    def __call__(self, item):
-        return LegendEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -26917,8 +26917,8 @@ class ListColumns:
     def __init__(self, listcolumns=None):
         self.com_object= listcolumns
 
-    def __call__(self, item):
-        return ListColumn(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -27829,8 +27829,8 @@ class ListObjects:
     def __init__(self, listobjects=None):
         self.com_object= listobjects
 
-    def __call__(self, item):
-        return ListObject(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -27953,8 +27953,8 @@ class ListRows:
     def __init__(self, listrows=None):
         self.com_object= listrows
 
-    def __call__(self, item):
-        return ListRow(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -28807,8 +28807,8 @@ class ModelColumnChanges:
     def __init__(self, modelcolumnchanges=None):
         self.com_object= modelcolumnchanges
 
-    def __call__(self, item):
-        return ModelColumnChange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -28922,8 +28922,8 @@ class ModelColumnNames:
     def __init__(self, modelcolumnnames=None):
         self.com_object= modelcolumnnames
 
-    def __call__(self, item):
-        return ModelColumnName(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -29810,8 +29810,8 @@ class ModelMeasureNames:
     def __init__(self, modelmeasurenames=None):
         self.com_object= modelmeasurenames
 
-    def __call__(self, item):
-        return ModelMeasureName(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30388,8 +30388,8 @@ class ModelTableNameChanges:
     def __init__(self, modeltablenamechanges=None):
         self.com_object= modeltablenamechanges
 
-    def __call__(self, item):
-        return ModelTableNameChange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30442,8 +30442,8 @@ class ModelTableNames:
     def __init__(self, modeltablenames=None):
         self.com_object= modeltablenames
 
-    def __call__(self, item):
-        return ModelTableName(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30496,8 +30496,8 @@ class ModelTables:
     def __init__(self, modeltables=None):
         self.com_object= modeltables
 
-    def __call__(self, item):
-        return ModelTable(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30685,8 +30685,8 @@ class Names:
     def __init__(self, names=None):
         self.com_object= names
 
-    def __call__(self, item):
-        return Name(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -31428,8 +31428,8 @@ class ODBCErrors:
     def __init__(self, odbcerrors=None):
         self.com_object= odbcerrors
 
-    def __call__(self, item):
-        return ODBCError(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -32403,8 +32403,8 @@ class OLEDBErrors:
     def __init__(self, oledberrors=None):
         self.com_object= oledberrors
 
-    def __call__(self, item):
-        return OLEDBError(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -33112,8 +33112,8 @@ class OLEObjects:
     def __init__(self, oleobjects=None):
         self.com_object= oleobjects
 
-    def __call__(self, item):
-        return OLEObject(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -33761,8 +33761,8 @@ class Pages:
     def __init__(self, pages=None):
         self.com_object= pages
 
-    def __call__(self, item):
-        return Page(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -35139,8 +35139,8 @@ class Panes:
     def __init__(self, panes=None):
         self.com_object= panes
 
-    def __call__(self, item):
-        return Pane(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35363,8 +35363,8 @@ class Parameters:
     def __init__(self, parameters=None):
         self.com_object= parameters
 
-    def __call__(self, item):
-        return Parameter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35557,8 +35557,8 @@ class Phonetics:
     def __init__(self, phonetics=None):
         self.com_object= phonetics
 
-    def __call__(self, item):
-        return Phonetic(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Alignment(self):
@@ -38916,8 +38916,8 @@ class PivotFields:
     def __init__(self, pivotfields=None):
         self.com_object= pivotfields
 
-    def __call__(self, item):
-        return PivotField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -39856,8 +39856,8 @@ class PivotItemList:
     def __init__(self, pivotitemlist=None):
         self.com_object= pivotitemlist
 
-    def __call__(self, item):
-        return PivotItemList(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -39910,8 +39910,8 @@ class PivotItems:
     def __init__(self, pivotitems=None):
         self.com_object= pivotitems
 
-    def __call__(self, item):
-        return PivotItem(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -43032,8 +43032,8 @@ class PivotTables:
     def __init__(self, pivottables=None):
         self.com_object= pivottables
 
-    def __call__(self, item):
-        return PivotTable(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -44099,8 +44099,8 @@ class Points:
     def __init__(self, points=None):
         self.com_object= points
 
-    def __call__(self, item):
-        return Point(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -44383,8 +44383,8 @@ class ProtectedViewWindows:
     def __init__(self, protectedviewwindows=None):
         self.com_object= protectedviewwindows
 
-    def __call__(self, item):
-        return ProtectedViewWindow(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -44810,8 +44810,8 @@ class PublishObjects:
     def __init__(self, publishobjects=None):
         self.com_object= publishobjects
 
-    def __call__(self, item):
-        return PublishObject(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -46525,8 +46525,8 @@ class QueryTables:
     def __init__(self, querytables=None):
         self.com_object= querytables
 
-    def __call__(self, item):
-        return QueryTable(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -49299,8 +49299,8 @@ class Ranges:
     def __init__(self, ranges=None):
         self.com_object= ranges
 
-    def __call__(self, item):
-        return Range(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -50077,8 +50077,8 @@ class Scenarios:
     def __init__(self, scenarios=None):
         self.com_object= scenarios
 
-    def __call__(self, item):
-        return Scenario(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -51345,8 +51345,8 @@ class SeriesCollection:
     def __init__(self, seriescollection=None):
         self.com_object= seriescollection
 
-    def __call__(self, item):
-        return Series(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -51511,8 +51511,8 @@ class ServerViewableItems:
     def __init__(self, serverviewableitems=None):
         self.com_object= serverviewableitems
 
-    def __call__(self, item):
-        return ServerViewableItem(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53071,8 +53071,8 @@ class ShapeNodes:
     def __init__(self, shapenodes=None):
         self.com_object= shapenodes
 
-    def __call__(self, item):
-        return ShapeNode(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53185,8 +53185,8 @@ class Shapes:
     def __init__(self, shapes=None):
         self.com_object= shapes
 
-    def __call__(self, item):
-        return Shape(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53500,8 +53500,8 @@ class Sheets:
     def __init__(self, sheets=None):
         self.com_object= sheets
 
-    def __call__(self, item):
-        return Sheet(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53697,8 +53697,8 @@ class SheetViews:
     def __init__(self, sheetviews=None):
         self.com_object= sheetviews
 
-    def __call__(self, item):
-        return SheetView(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -55156,8 +55156,8 @@ class Slicers:
     def __init__(self, slicers=None):
         self.com_object= slicers
 
-    def __call__(self, item):
-        return Slicer(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -57870,8 +57870,8 @@ class Styles:
     def __init__(self, styles=None):
         self.com_object= styles
 
-    def __call__(self, item):
-        return Style(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -62695,8 +62695,8 @@ class Trendlines:
     def __init__(self, trendlines=None):
         self.com_object= trendlines
 
-    def __call__(self, item):
-        return Trendline(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -63206,8 +63206,8 @@ class UserAccessList:
     def __init__(self, useraccesslist=None):
         self.com_object= useraccesslist
 
-    def __call__(self, item):
-        return UserAccessList(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -63852,8 +63852,8 @@ class VPageBreaks:
     def __init__(self, vpagebreaks=None):
         self.com_object= vpagebreaks
 
-    def __call__(self, item):
-        return VPageBreak(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -64117,8 +64117,8 @@ class Watches:
     def __init__(self, watches=None):
         self.com_object= watches
 
-    def __call__(self, item):
-        return Watche(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -65829,8 +65829,8 @@ class Windows:
     def __init__(self, windows=None):
         self.com_object= windows
 
-    def __call__(self, item):
-        return Window(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -68937,8 +68937,8 @@ class Workbooks:
     def __init__(self, workbooks=None):
         self.com_object= workbooks
 
-    def __call__(self, item):
-        return Workbook(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -75126,8 +75126,8 @@ class Worksheets:
     def __init__(self, worksheets=None):
         self.com_object= worksheets
 
-    def __call__(self, item):
-        return Worksheet(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):

@@ -384,8 +384,8 @@ class COMAddIns:
     def __init__(self, comaddins=None):
         self.com_object= comaddins
 
-    def __call__(self, item):
-        return COMAddIn(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -2731,8 +2731,8 @@ class CommandBarControls:
     def __init__(self, commandbarcontrols=None):
         self.com_object= commandbarcontrols
 
-    def __call__(self, item):
-        return CommandBarControl(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -3346,8 +3346,8 @@ class CommandBars:
     def __init__(self, commandbars=None):
         self.com_object= commandbars
 
-    def __call__(self, item):
-        return CommandBar(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def ActionControl(self):
@@ -5830,8 +5830,8 @@ class DocumentProperties:
     def __init__(self, documentproperties=None):
         self.com_object= documentproperties
 
-    def __call__(self, item):
-        return DocumentPropertie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     def Application(self, ppidisp=None):
         arguments = com_arguments([unwrap(a) for a in [ppidisp]])
@@ -6583,8 +6583,8 @@ class FileDialogFilters:
     def __init__(self, filedialogfilters=None):
         self.com_object= filedialogfilters
 
-    def __call__(self, item):
-        return FileDialogFilter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -6662,8 +6662,8 @@ class FileDialogSelectedItems:
     def __init__(self, filedialogselecteditems=None):
         self.com_object= filedialogselecteditems
 
-    def __call__(self, item):
-        return FileDialogSelectedItem(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -6716,8 +6716,8 @@ class FileTypes:
     def __init__(self, filetypes=None):
         self.com_object= filetypes
 
-    def __call__(self, item):
-        return FileType(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -11071,8 +11071,8 @@ class ODSOColumns:
     def __init__(self, odsocolumns=None):
         self.com_object= odsocolumns
 
-    def __call__(self, item):
-        return ODSOColumn(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -12490,8 +12490,8 @@ class PickerFields:
     def __init__(self, pickerfields=None):
         self.com_object= pickerfields
 
-    def __call__(self, item):
-        return PickerField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -12538,8 +12538,8 @@ class PickerProperties:
     def __init__(self, pickerproperties=None):
         self.com_object= pickerproperties
 
-    def __call__(self, item):
-        return PickerPropertie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -12841,8 +12841,8 @@ class PickerResults:
     def __init__(self, pickerresults=None):
         self.com_object= pickerresults
 
-    def __call__(self, item):
-        return PickerResult(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13383,8 +13383,8 @@ class RulerLevels2:
     def __init__(self, rulerlevels2=None):
         self.com_object= rulerlevels2
 
-    def __call__(self, item):
-        return RulerLevels2(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13504,8 +13504,8 @@ class ScopeFolders:
     def __init__(self, scopefolders=None):
         self.com_object= scopefolders
 
-    def __call__(self, item):
-        return ScopeFolder(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13552,8 +13552,8 @@ class SearchFolders:
     def __init__(self, searchfolders=None):
         self.com_object= searchfolders
 
-    def __call__(self, item):
-        return SearchFolder(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13665,8 +13665,8 @@ class SearchScopes:
     def __init__(self, searchscopes=None):
         self.com_object= searchscopes
 
-    def __call__(self, item):
-        return SearchScope(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14301,8 +14301,8 @@ class SharedWorkspaceFiles:
     def __init__(self, sharedworkspacefiles=None):
         self.com_object= sharedworkspacefiles
 
-    def __call__(self, item):
-        return SharedWorkspaceFile(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14437,8 +14437,8 @@ class SharedWorkspaceFolders:
     def __init__(self, sharedworkspacefolders=None):
         self.com_object= sharedworkspacefolders
 
-    def __call__(self, item):
-        return SharedWorkspaceFolder(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14686,8 +14686,8 @@ class SharedWorkspaceLinks:
     def __init__(self, sharedworkspacelinks=None):
         self.com_object= sharedworkspacelinks
 
-    def __call__(self, item):
-        return SharedWorkspaceLink(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14838,8 +14838,8 @@ class SharedWorkspaceMembers:
     def __init__(self, sharedworkspacemembers=None):
         self.com_object= sharedworkspacemembers
 
-    def __call__(self, item):
-        return SharedWorkspaceMember(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -15151,8 +15151,8 @@ class SharedWorkspaceTasks:
     def __init__(self, sharedworkspacetasks=None):
         self.com_object= sharedworkspacetasks
 
-    def __call__(self, item):
-        return SharedWorkspaceTask(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -15836,8 +15836,8 @@ class SignatureSet:
     def __init__(self, signatureset=None):
         self.com_object= signatureset
 
-    def __call__(self, item):
-        return SignatureSet(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -16458,8 +16458,8 @@ class SmartArtColors:
     def __init__(self, smartartcolors=None):
         self.com_object= smartartcolors
 
-    def __call__(self, item):
-        return SmartArtColor(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -19167,8 +19167,8 @@ class WebPageFonts:
     def __init__(self, webpagefonts=None):
         self.com_object= webpagefonts
 
-    def __call__(self, item):
-        return WebPageFont(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):

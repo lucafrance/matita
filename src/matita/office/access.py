@@ -9898,8 +9898,8 @@ class ChartAxisCollection:
     def __init__(self, chartaxiscollection=None):
         self.com_object= chartaxiscollection
 
-    def __call__(self, item):
-        return ChartAxis(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
 
 class ChartSeries:
@@ -10650,8 +10650,8 @@ class ChartSeriesCollection:
     def __init__(self, chartseriescollection=None):
         self.com_object= chartseriescollection
 
-    def __call__(self, item):
-        return ChartSeries(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
 
 class ChartValues:
@@ -10702,8 +10702,8 @@ class ChartValuesCollection:
     def __init__(self, chartvaluescollection=None):
         self.com_object= chartvaluescollection
 
-    def __call__(self, item):
-        return ChartValues(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
 
 class CheckBox:
@@ -57836,8 +57836,8 @@ class SmartTagProperties:
     def __init__(self, smarttagproperties=None):
         self.com_object= smarttagproperties
 
-    def __call__(self, item):
-        return SmartTagPropertie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):

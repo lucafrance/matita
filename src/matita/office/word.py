@@ -111,8 +111,8 @@ class AddIns:
     def __init__(self, addins=None):
         self.com_object= addins
 
-    def __call__(self, item):
-        return AddIn(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -3236,8 +3236,8 @@ class AutoCaptions:
     def __init__(self, autocaptions=None):
         self.com_object= autocaptions
 
-    def __call__(self, item):
-        return AutoCaption(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -3791,8 +3791,8 @@ class AutoCorrectEntries:
     def __init__(self, autocorrectentries=None):
         self.com_object= autocorrectentries
 
-    def __call__(self, item):
-        return AutoCorrectEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -3976,8 +3976,8 @@ class AutoTextEntries:
     def __init__(self, autotextentries=None):
         self.com_object= autotextentries
 
-    def __call__(self, item):
-        return AutoTextEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -5953,8 +5953,8 @@ class Bookmarks:
     def __init__(self, bookmarks=None):
         self.com_object= bookmarks
 
-    def __call__(self, item):
-        return Bookmark(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -6299,8 +6299,8 @@ class Borders:
     def __init__(self, borders=None):
         self.com_object= borders
 
-    def __call__(self, item):
-        return Border(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def AlwaysInFront(self):
@@ -6960,8 +6960,8 @@ class Breaks:
     def __init__(self, breaks=None):
         self.com_object= breaks
 
-    def __call__(self, item):
-        return Break(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8249,8 +8249,8 @@ class CaptionLabels:
     def __init__(self, captionlabels=None):
         self.com_object= captionlabels
 
-    def __call__(self, item):
-        return CaptionLabel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -9067,8 +9067,8 @@ class Cells:
     def __init__(self, cells=None):
         self.com_object= cells
 
-    def __call__(self, item):
-        return Cell(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -9396,8 +9396,8 @@ class Characters:
     def __init__(self, characters=None):
         self.com_object= characters
 
-    def __call__(self, item):
-        return Character(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13286,8 +13286,8 @@ class CoAuthLocks:
     def __init__(self, coauthlocks=None):
         self.com_object= coauthlocks
 
-    def __call__(self, item):
-        return CoAuthLock(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13573,8 +13573,8 @@ class CoAuthors:
     def __init__(self, coauthors=None):
         self.com_object= coauthors
 
-    def __call__(self, item):
-        return CoAuthor(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13669,8 +13669,8 @@ class CoAuthUpdates:
     def __init__(self, coauthupdates=None):
         self.com_object= coauthupdates
 
-    def __call__(self, item):
-        return CoAuthUpdate(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14130,8 +14130,8 @@ class Columns:
     def __init__(self, columns=None):
         self.com_object= columns
 
-    def __call__(self, item):
-        return Column(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14522,8 +14522,8 @@ class Comments:
     def __init__(self, comments=None):
         self.com_object= comments
 
-    def __call__(self, item):
-        return Comment(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14896,8 +14896,8 @@ class Conflicts:
     def __init__(self, conflicts=None):
         self.com_object= conflicts
 
-    def __call__(self, item):
-        return Conflict(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -15831,8 +15831,8 @@ class ContentControls:
     def __init__(self, contentcontrols=None):
         self.com_object= contentcontrols
 
-    def __call__(self, item):
-        return ContentControl(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -16216,8 +16216,8 @@ class CustomLabels:
     def __init__(self, customlabels=None):
         self.com_object= customlabels
 
-    def __call__(self, item):
-        return CustomLabel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -16279,8 +16279,8 @@ class CustomProperties:
     def __init__(self, customproperties=None):
         self.com_object= customproperties
 
-    def __call__(self, item):
-        return CustomPropertie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -17160,8 +17160,8 @@ class DataLabels:
     def __init__(self, datalabels=None):
         self.com_object= datalabels
 
-    def __call__(self, item):
-        return DataLabel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -18529,8 +18529,8 @@ class Dialogs:
     def __init__(self, dialogs=None):
         self.com_object= dialogs
 
-    def __call__(self, item):
-        return Dialog(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -18583,8 +18583,8 @@ class Dictionaries:
     def __init__(self, dictionaries=None):
         self.com_object= dictionaries
 
-    def __call__(self, item):
-        return Dictionarie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def ActiveCustomDictionary(self):
@@ -23956,8 +23956,8 @@ class Documents:
     def __init__(self, documents=None):
         self.com_object= documents
 
-    def __call__(self, item):
-        return Document(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -24613,8 +24613,8 @@ class Editors:
     def __init__(self, editors=None):
         self.com_object= editors
 
-    def __call__(self, item):
-        return Editor(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -25825,8 +25825,8 @@ class EmailSignatureEntries:
     def __init__(self, emailsignatureentries=None):
         self.com_object= emailsignatureentries
 
-    def __call__(self, item):
-        return EmailSignatureEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -26157,8 +26157,8 @@ class Endnotes:
     def __init__(self, endnotes=None):
         self.com_object= endnotes
 
-    def __call__(self, item):
-        return Endnote(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -27510,8 +27510,8 @@ class Fields:
     def __init__(self, fields=None):
         self.com_object= fields
 
-    def __call__(self, item):
-        return Field(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -27771,8 +27771,8 @@ class FileConverters:
     def __init__(self, fileconverters=None):
         self.com_object= fileconverters
 
-    def __call__(self, item):
-        return FileConverter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -29433,8 +29433,8 @@ class FirstLetterExceptions:
     def __init__(self, firstletterexceptions=None):
         self.com_object= firstletterexceptions
 
-    def __call__(self, item):
-        return FirstLetterException(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30961,8 +30961,8 @@ class Footnotes:
     def __init__(self, footnotes=None):
         self.com_object= footnotes
 
-    def __call__(self, item):
-        return Footnote(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -31603,8 +31603,8 @@ class FormFields:
     def __init__(self, formfields=None):
         self.com_object= formfields
 
-    def __call__(self, item):
-        return FormField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -32900,8 +32900,8 @@ class HangulAndAlphabetExceptions:
     def __init__(self, hangulandalphabetexceptions=None):
         self.com_object= hangulandalphabetexceptions
 
-    def __call__(self, item):
-        return HangulAndAlphabetException(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -32963,8 +32963,8 @@ class HangulHanjaConversionDictionaries:
     def __init__(self, hangulhanjaconversiondictionaries=None):
         self.com_object= hangulhanjaconversiondictionaries
 
-    def __call__(self, item):
-        return HangulHanjaConversionDictionarie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def ActiveCustomDictionary(self):
@@ -33208,8 +33208,8 @@ class HeadersFooters:
     def __init__(self, headersfooters=None):
         self.com_object= headersfooters
 
-    def __call__(self, item):
-        return HeadersFooter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -33338,8 +33338,8 @@ class HeadingStyles:
     def __init__(self, headingstyles=None):
         self.com_object= headingstyles
 
-    def __call__(self, item):
-        return HeadingStyle(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -33808,8 +33808,8 @@ class HTMLDivisions:
     def __init__(self, htmldivisions=None):
         self.com_object= htmldivisions
 
-    def __call__(self, item):
-        return HTMLDivision(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -34505,8 +34505,8 @@ class Indexes:
     def __init__(self, indexes=None):
         self.com_object= indexes
 
-    def __call__(self, item):
-        return Indexe(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35121,8 +35121,8 @@ class InlineShapes:
     def __init__(self, inlineshapes=None):
         self.com_object= inlineshapes
 
-    def __call__(self, item):
-        return InlineShape(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35651,8 +35651,8 @@ class KeyBindings:
     def __init__(self, keybindings=None):
         self.com_object= keybindings
 
-    def __call__(self, item):
-        return KeyBinding(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -35743,8 +35743,8 @@ class KeysBoundTo:
     def __init__(self, keysboundto=None):
         self.com_object= keysboundto
 
-    def __call__(self, item):
-        return KeysBoundTo(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -36048,8 +36048,8 @@ class Languages:
     def __init__(self, languages=None):
         self.com_object= languages
 
-    def __call__(self, item):
-        return Language(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -36377,8 +36377,8 @@ class LegendEntries:
     def __init__(self, legendentries=None):
         self.com_object= legendentries
 
-    def __call__(self, item):
-        return LegendEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -38471,8 +38471,8 @@ class Lines:
     def __init__(self, lines=None):
         self.com_object= lines
 
-    def __call__(self, item):
-        return Line(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -38877,8 +38877,8 @@ class ListEntries:
     def __init__(self, listentries=None):
         self.com_object= listentries
 
-    def __call__(self, item):
-        return ListEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -39324,8 +39324,8 @@ class ListGalleries:
     def __init__(self, listgalleries=None):
         self.com_object= listgalleries
 
-    def __call__(self, item):
-        return ListGallerie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -39804,8 +39804,8 @@ class ListLevels:
     def __init__(self, listlevels=None):
         self.com_object= listlevels
 
-    def __call__(self, item):
-        return ListLevel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -39858,8 +39858,8 @@ class ListParagraphs:
     def __init__(self, listparagraphs=None):
         self.com_object= listparagraphs
 
-    def __call__(self, item):
-        return ListParagraph(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -39912,8 +39912,8 @@ class Lists:
     def __init__(self, lists=None):
         self.com_object= lists
 
-    def __call__(self, item):
-        return List(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -40068,8 +40068,8 @@ class ListTemplates:
     def __init__(self, listtemplates=None):
         self.com_object= listtemplates
 
-    def __call__(self, item):
-        return ListTemplate(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -40861,8 +40861,8 @@ class MailMergeDataFields:
     def __init__(self, mailmergedatafields=None):
         self.com_object= mailmergedatafields
 
-    def __call__(self, item):
-        return MailMergeDataField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -41488,8 +41488,8 @@ class MailMergeFields:
     def __init__(self, mailmergefields=None):
         self.com_object= mailmergefields
 
-    def __call__(self, item):
-        return MailMergeField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -41935,8 +41935,8 @@ class MappedDataFields:
     def __init__(self, mappeddatafields=None):
         self.com_object= mappeddatafields
 
-    def __call__(self, item):
-        return MappedDataField(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -46161,8 +46161,8 @@ class OMaths:
     def __init__(self, omaths=None):
         self.com_object= omaths
 
-    def __call__(self, item):
-        return OMath(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53341,8 +53341,8 @@ class OtherCorrectionsExceptions:
     def __init__(self, othercorrectionsexceptions=None):
         self.com_object= othercorrectionsexceptions
 
-    def __call__(self, item):
-        return OtherCorrectionsException(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53593,8 +53593,8 @@ class PageNumbers:
     def __init__(self, pagenumbers=None):
         self.com_object= pagenumbers
 
-    def __call__(self, item):
-        return PageNumber(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -53880,8 +53880,8 @@ class Pages:
     def __init__(self, pages=None):
         self.com_object= pages
 
-    def __call__(self, item):
-        return Page(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -55211,8 +55211,8 @@ class Panes:
     def __init__(self, panes=None):
         self.com_object= panes
 
-    def __call__(self, item):
-        return Pane(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -57882,8 +57882,8 @@ class Paragraphs:
     def __init__(self, paragraphs=None):
         self.com_object= paragraphs
 
-    def __call__(self, item):
-        return Paragraph(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def AddSpaceBetweenFarEastAndAlpha(self):
@@ -60341,8 +60341,8 @@ class Points:
     def __init__(self, points=None):
         self.com_object= points
 
-    def __call__(self, item):
-        return Point(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -60395,8 +60395,8 @@ class ProofreadingErrors:
     def __init__(self, proofreadingerrors=None):
         self.com_object= proofreadingerrors
 
-    def __call__(self, item):
-        return ProofreadingError(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -60707,8 +60707,8 @@ class ProtectedViewWindows:
     def __init__(self, protectedviewwindows=None):
         self.com_object= protectedviewwindows
 
-    def __call__(self, item):
-        return ProtectedViewWindow(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -63324,8 +63324,8 @@ class ReadabilityStatistics:
     def __init__(self, readabilitystatistics=None):
         self.com_object= readabilitystatistics
 
-    def __call__(self, item):
-        return ReadabilityStatistic(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -63480,8 +63480,8 @@ class RecentFiles:
     def __init__(self, recentfiles=None):
         self.com_object= recentfiles
 
-    def __call__(self, item):
-        return RecentFile(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -63671,8 +63671,8 @@ class Rectangles:
     def __init__(self, rectangles=None):
         self.com_object= rectangles
 
-    def __call__(self, item):
-        return Rectangle(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -64359,8 +64359,8 @@ class Reviewers:
     def __init__(self, reviewers=None):
         self.com_object= reviewers
 
-    def __call__(self, item):
-        return Reviewer(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -64554,8 +64554,8 @@ class Revisions:
     def __init__(self, revisions=None):
         self.com_object= revisions
 
-    def __call__(self, item):
-        return Revision(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -65082,8 +65082,8 @@ class Rows:
     def __init__(self, rows=None):
         self.com_object= rows
 
-    def __call__(self, item):
-        return Row(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Alignment(self):
@@ -65866,8 +65866,8 @@ class Sections:
     def __init__(self, sections=None):
         self.com_object= sections
 
-    def __call__(self, item):
-        return Section(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -68325,8 +68325,8 @@ class Sentences:
     def __init__(self, sentences=None):
         self.com_object= sentences
 
-    def __call__(self, item):
-        return Sentence(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -71510,8 +71510,8 @@ class ShapeNodes:
     def __init__(self, shapenodes=None):
         self.com_object= shapenodes
 
-    def __call__(self, item):
-        return ShapeNode(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -72845,8 +72845,8 @@ class Shapes:
     def __init__(self, shapes=None):
         self.com_object= shapes
 
-    def __call__(self, item):
-        return Shape(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -73412,8 +73412,8 @@ class SpellingSuggestions:
     def __init__(self, spellingsuggestions=None):
         self.com_object= spellingsuggestions
 
-    def __call__(self, item):
-        return SpellingSuggestion(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -73480,8 +73480,8 @@ class StoryRanges:
     def __init__(self, storyranges=None):
         self.com_object= storyranges
 
-    def __call__(self, item):
-        return StoryRange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -74133,8 +74133,8 @@ class Styles:
     def __init__(self, styles=None):
         self.com_object= styles
 
-    def __call__(self, item):
-        return Style(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -74322,8 +74322,8 @@ class StyleSheets:
     def __init__(self, stylesheets=None):
         self.com_object= stylesheets
 
-    def __call__(self, item):
-        return StyleSheet(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -74509,8 +74509,8 @@ class Subdocuments:
     def __init__(self, subdocuments=None):
         self.com_object= subdocuments
 
-    def __call__(self, item):
-        return Subdocument(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -76949,8 +76949,8 @@ class Tables:
     def __init__(self, tables=None):
         self.com_object= tables
 
-    def __call__(self, item):
-        return Table(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -77026,8 +77026,8 @@ class TablesOfAuthorities:
     def __init__(self, tablesofauthorities=None):
         self.com_object= tablesofauthorities
 
-    def __call__(self, item):
-        return TablesOfAuthoritie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -77149,8 +77149,8 @@ class TablesOfAuthoritiesCategories:
     def __init__(self, tablesofauthoritiescategories=None):
         self.com_object= tablesofauthoritiescategories
 
-    def __call__(self, item):
-        return TablesOfAuthoritiesCategorie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -77203,8 +77203,8 @@ class TablesOfContents:
     def __init__(self, tablesofcontents=None):
         self.com_object= tablesofcontents
 
-    def __call__(self, item):
-        return TablesOfContent(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -77298,8 +77298,8 @@ class TablesOfFigures:
     def __init__(self, tablesoffigures=None):
         self.com_object= tablesoffigures
 
-    def __call__(self, item):
-        return TablesOfFigure(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -77895,8 +77895,8 @@ class TabStops:
     def __init__(self, tabstops=None):
         self.com_object= tabstops
 
-    def __call__(self, item):
-        return TabStop(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -78246,8 +78246,8 @@ class TaskPanes:
     def __init__(self, taskpanes=None):
         self.com_object= taskpanes
 
-    def __call__(self, item):
-        return TaskPane(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -78300,8 +78300,8 @@ class Tasks:
     def __init__(self, tasks=None):
         self.com_object= tasks
 
-    def __call__(self, item):
-        return Task(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -78820,8 +78820,8 @@ class Templates:
     def __init__(self, templates=None):
         self.com_object= templates
 
-    def __call__(self, item):
-        return Template(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -81606,8 +81606,8 @@ class TwoInitialCapsExceptions:
     def __init__(self, twoinitialcapsexceptions=None):
         self.com_object= twoinitialcapsexceptions
 
-    def __call__(self, item):
-        return TwoInitialCapsException(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -81937,8 +81937,8 @@ class Variables:
     def __init__(self, variables=None):
         self.com_object= variables
 
-    def __call__(self, item):
-        return Variable(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -88727,8 +88727,8 @@ class Windows:
     def __init__(self, windows=None):
         self.com_object= windows
 
-    def __call__(self, item):
-        return Window(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def SyncScrollingSideBySide(self):
@@ -88863,8 +88863,8 @@ class Words:
     def __init__(self, words=None):
         self.com_object= words
 
-    def __call__(self, item):
-        return Word(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -90397,8 +90397,8 @@ class XMLNodes:
     def __init__(self, xmlnodes=None):
         self.com_object= xmlnodes
 
-    def __call__(self, item):
-        return XMLNode(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -90521,8 +90521,8 @@ class XMLSchemaReferences:
     def __init__(self, xmlschemareferences=None):
         self.com_object= xmlschemareferences
 
-    def __call__(self, item):
-        return XMLSchemaReference(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -90891,8 +90891,8 @@ class Zooms:
     def __init__(self, zooms=None):
         self.com_object= zooms
 
-    def __call__(self, item):
-        return Zoom(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):

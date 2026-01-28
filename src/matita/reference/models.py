@@ -295,22 +295,10 @@ class DocPage:
             code.append(f"        self.com_object= {self.object_name.lower()}")
             code.append(f"")
 
-        # Call method for collections
-        # If the object is a collection, then the class name can be evinced by the object name.
-        # If the object is a set, that is not the case.
-        # To return the right class, sets depend on the return class being defined on the Item method page.
-        if self.is_collection:
-            item_class = self.object_name
-            if self.object_name.endswith("s"):
-                item_class = self.object_name[:-1]
-            elif self.object_name.endswith("Collection"):
-                item_class = self.object_name.removesuffix("Collection")
-            else:
-                logging.warning(f"Unexpected collection name, unable to identify item class of '{self.process_api_name}'.")
-            code.append(f"    def __call__(self, item):")
-            code.append(f"        return {item_class}(self.com_object(item))")
-            code.append(f"")
-        elif self.is_set:
+        # Call method for collections and sets
+        # I expect an `Item` property to be always there to retrieve the individual items.
+        # The `Item` property is expected to return the COM object wrapped in the right *matita* class
+        if self.is_collection or self.is_set:
             code.append(f"    def __call__(self, index):")
             code.append(f"        return self.Item(index)")
             code.append(f"")

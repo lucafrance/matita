@@ -203,8 +203,8 @@ class ActionSettings:
     def __init__(self, actionsettings=None):
         self.com_object= actionsettings
 
-    def __call__(self, item):
-        return ActionSetting(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -368,8 +368,8 @@ class AddIns:
     def __init__(self, addins=None):
         self.com_object= addins
 
-    def __call__(self, item):
-        return AddIn(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -3797,8 +3797,8 @@ class Borders:
     def __init__(self, borders=None):
         self.com_object= borders
 
-    def __call__(self, item):
-        return Border(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -4579,8 +4579,8 @@ class CellRange:
     def __init__(self, cellrange=None):
         self.com_object= cellrange
 
-    def __call__(self, item):
-        return CellRange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8593,8 +8593,8 @@ class ColorSchemes:
     def __init__(self, colorschemes=None):
         self.com_object= colorschemes
 
-    def __call__(self, item):
-        return ColorScheme(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -8715,8 +8715,8 @@ class Columns:
     def __init__(self, columns=None):
         self.com_object= columns
 
-    def __call__(self, item):
-        return Column(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -10451,8 +10451,8 @@ class DataLabels:
     def __init__(self, datalabels=None):
         self.com_object= datalabels
 
-    def __call__(self, item):
-        return DataLabel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -12228,8 +12228,8 @@ class DocumentWindows:
     def __init__(self, documentwindows=None):
         self.com_object= documentwindows
 
-    def __call__(self, item):
-        return DocumentWindow(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -13285,8 +13285,8 @@ class FileConverters:
     def __init__(self, fileconverters=None):
         self.com_object= fileconverters
 
-    def __call__(self, item):
-        return FileConverter(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -14516,8 +14516,8 @@ class Fonts:
     def __init__(self, fonts=None):
         self.com_object= fonts
 
-    def __call__(self, item):
-        return Font(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -14886,8 +14886,8 @@ class Guides:
     def __init__(self, guides=None):
         self.com_object= guides
 
-    def __call__(self, item):
-        return Guide(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -15453,8 +15453,8 @@ class Hyperlinks:
     def __init__(self, hyperlinks=None):
         self.com_object= hyperlinks
 
-    def __call__(self, item):
-        return Hyperlink(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -15954,8 +15954,8 @@ class LegendEntries:
     def __init__(self, legendentries=None):
         self.com_object= legendentries
 
-    def __call__(self, item):
-        return LegendEntrie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -17341,8 +17341,8 @@ class MediaBookmarks:
     def __init__(self, mediabookmarks=None):
         self.com_object= mediabookmarks
 
-    def __call__(self, item):
-        return MediaBookmark(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -18805,8 +18805,8 @@ class NamedSlideShows:
     def __init__(self, namedslideshows=None):
         self.com_object= namedslideshows
 
-    def __call__(self, item):
-        return NamedSlideShow(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -19308,8 +19308,8 @@ class Panes:
     def __init__(self, panes=None):
         self.com_object= panes
 
-    def __call__(self, item):
-        return Pane(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -20088,8 +20088,8 @@ class Placeholders:
     def __init__(self, placeholders=None):
         self.com_object= placeholders
 
-    def __call__(self, item):
-        return Placeholder(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -21394,8 +21394,8 @@ class Points:
     def __init__(self, points=None):
         self.com_object= points
 
-    def __call__(self, item):
-        return Point(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -23715,8 +23715,8 @@ class Presentations:
     def __init__(self, presentations=None):
         self.com_object= presentations
 
-    def __call__(self, item):
-        return Presentation(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -24321,8 +24321,8 @@ class PrintRanges:
     def __init__(self, printranges=None):
         self.com_object= printranges
 
-    def __call__(self, item):
-        return PrintRange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -24936,8 +24936,8 @@ class PublishObjects:
     def __init__(self, publishobjects=None):
         self.com_object= publishobjects
 
-    def __call__(self, item):
-        return PublishObject(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -24981,8 +24981,8 @@ class ResampleMediaTasks:
     def __init__(self, resamplemediatasks=None):
         self.com_object= resamplemediatasks
 
-    def __call__(self, item):
-        return ResampleMediaTask(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Count(self):
@@ -25292,8 +25292,8 @@ class Rows:
     def __init__(self, rows=None):
         self.com_object= rows
 
-    def __call__(self, item):
-        return Row(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -25473,8 +25473,8 @@ class RulerLevels:
     def __init__(self, rulerlevels=None):
         self.com_object= rulerlevels
 
-    def __call__(self, item):
-        return RulerLevel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -29135,8 +29135,8 @@ class ShapeNodes:
     def __init__(self, shapenodes=None):
         self.com_object= shapenodes
 
-    def __call__(self, item):
-        return ShapeNode(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -30483,8 +30483,8 @@ class Shapes:
     def __init__(self, shapes=None):
         self.com_object= shapes
 
-    def __call__(self, item):
-        return Shape(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -31515,8 +31515,8 @@ class SlideRange:
     def __init__(self, sliderange=None):
         self.com_object= sliderange
 
-    def __call__(self, item):
-        return SlideRange(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -32092,8 +32092,8 @@ class Slides:
     def __init__(self, slides=None):
         self.com_object= slides
 
-    def __call__(self, item):
-        return Slide(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -33499,8 +33499,8 @@ class SlideShowWindows:
     def __init__(self, slideshowwindows=None):
         self.com_object= slideshowwindows
 
-    def __call__(self, item):
-        return SlideShowWindow(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -34097,8 +34097,8 @@ class TabStops:
     def __init__(self, tabstops=None):
         self.com_object= tabstops
 
-    def __call__(self, item):
-        return TabStop(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -36469,8 +36469,8 @@ class TextStyleLevels:
     def __init__(self, textstylelevels=None):
         self.com_object= textstylelevels
 
-    def __call__(self, item):
-        return TextStyleLevel(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -36514,8 +36514,8 @@ class TextStyles:
     def __init__(self, textstyles=None):
         self.com_object= textstyles
 
-    def __call__(self, item):
-        return TextStyle(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -36657,8 +36657,8 @@ class ThemeVariants:
     def __init__(self, themevariants=None):
         self.com_object= themevariants
 
-    def __call__(self, item):
-        return ThemeVariant(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):

@@ -16819,8 +16819,8 @@ class ItemProperties:
     def __init__(self, itemproperties=None):
         self.com_object= itemproperties
 
-    def __call__(self, item):
-        return ItemPropertie(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
@@ -46033,8 +46033,8 @@ class TimeZones:
     def __init__(self, timezones=None):
         self.com_object= timezones
 
-    def __call__(self, item):
-        return TimeZone(self.com_object(item))
+    def __call__(self, index):
+        return self.Item(index)
 
     @property
     def Application(self):
