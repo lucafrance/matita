@@ -53,6 +53,8 @@ class TestExcel(unittest.TestCase):
         wkb = self.xl_app.workbooks.add()
         self.assertIsInstance(self.xl_app.workbooks.item(1), xl.Workbook)
         self.assertIsInstance(wkb.worksheets.item(1), xl.Worksheet)
+        rng = wkb.worksheets(1).cells(1,1)
+        self.assertIsInstance(rng.Areas.item(1), xl.Range)
         wkb.Close(SaveChanges=False)
 
     def test_excel_types(self):

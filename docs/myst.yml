@@ -19,8 +19,10 @@ project:
       - file: backlog/item-08.md
       - file: backlog/item-09.md
       - file: backlog/item-10.md
-      - file: backlog/item-11.md
       - file: backlog/item-12.md
+      - title: Done v.1.0.2
+        children:
+        - file: backlog/item-11.md
       - title: Done v.1.0.1
         children:
         - file: backlog/done/item-07.md

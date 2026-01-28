@@ -5817,9 +5817,9 @@ class Areas:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Range(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Range(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""

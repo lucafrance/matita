@@ -13281,12 +13281,6 @@ class CodeProject:
         return self.UpdateDependencyInfo()
 
 
-class ComboBoxUse:
-
-    def __init__(self, comboboxuse=None):
-        self.com_object= comboboxuse
-
-
 class ComboBox:
 
     def __init__(self, combobox=None):
@@ -14985,6 +14979,15 @@ class ComboBox:
     def horizontal_anchor(self, value):
         """Alias for HorizontalAnchor.setter"""
         self.HorizontalAnchor = value
+
+    @property
+    def Hyperlink(self):
+        return self.com_object.Hyperlink
+
+    @property
+    def hyperlink(self):
+        """Alias for Hyperlink"""
+        return self.Hyperlink
 
     @property
     def IMEHold(self):
