@@ -634,9 +634,9 @@ class AddIns:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return AddIn(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return AddIn(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -880,9 +880,9 @@ class AllowEditRanges:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return AllowEditRange(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return AllowEditRange(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -8763,9 +8763,9 @@ class CalculatedMembers:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return CalculatedMember(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return CalculatedMember(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -13367,9 +13367,9 @@ class Charts:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Chart(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Chart(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -16537,9 +16537,9 @@ class CubeFields:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return CubeField(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return CubeField(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -19827,9 +19827,9 @@ class Dialogs:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Dialog(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Dialog(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -22100,9 +22100,9 @@ class Filters:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Filter(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Filter(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -24001,9 +24001,9 @@ class HPageBreaks:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return HPageBreak(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return HPageBreak(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -24304,9 +24304,9 @@ class Hyperlinks:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Hyperlink(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Hyperlink(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -26950,9 +26950,9 @@ class ListColumns:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return ListColumn(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return ListColumn(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -27862,9 +27862,9 @@ class ListObjects:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return ListObject(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return ListObject(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -27986,9 +27986,9 @@ class ListRows:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return ListRow(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return ListRow(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -35172,9 +35172,9 @@ class Panes:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Pane(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Pane(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -35645,9 +35645,9 @@ class Phonetics:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Phonetic(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Phonetic(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -44416,9 +44416,9 @@ class ProtectedViewWindows:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return ProtectedViewWindow(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return ProtectedViewWindow(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -44843,9 +44843,9 @@ class PublishObjects:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return PublishObject(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return PublishObject(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -49460,9 +49460,9 @@ class RecentFiles:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return RecentFile(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return RecentFile(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -57903,9 +57903,9 @@ class Styles:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Style(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Style(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -63885,9 +63885,9 @@ class VPageBreaks:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return VPageBreak(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return VPageBreak(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -65862,9 +65862,9 @@ class Windows:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Window(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Window(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -68970,9 +68970,9 @@ class Workbooks:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Workbook(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Workbook(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -75173,9 +75173,9 @@ class Worksheets:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return Worksheet(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return Worksheet(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -78477,9 +78477,9 @@ class XmlMaps:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return XmlMap(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return XmlMap(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -78591,9 +78591,9 @@ class XmlNamespaces:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return XmlNamespace(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return XmlNamespace(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""
@@ -78733,9 +78733,9 @@ class XmlSchemas:
     def Item(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         if hasattr(self.com_object, "GetItem"):
-            return self.com_object.GetItem(*arguments)
+            return XmlSchema(self.com_object.GetItem(*arguments))
         else:
-            return self.com_object.Item(*arguments)
+            return XmlSchema(self.com_object.Item(*arguments))
 
     def item(self, Index=None):
         """Alias for Item"""

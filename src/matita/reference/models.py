@@ -95,6 +95,16 @@ class DocPage:
             if property_class is not None:
                 if property_class.lower() in ["boolean", "variant", "string", "long", "double", "single", "integer"]:
                     property_class = None
+            # If property_class can't be parsed and the property is called `Item`,
+            # try to infer the class from the parent object
+            if self.property_name is not None:
+                if property_class is None and self.property_name.lower() == "item":
+                    if self.object_name.endswith("s"):
+                        property_class = self.object_name[:-1]
+                    elif self.object_name.endswith("Collection"):
+                        property_class = self.object_name.removesuffix("Collection")
+                    else:
+                        logging.warning(f"Unexpected collection name, unable to identify the class of '{self.process_api_name}'.")
             self.property_class = property_class
 
         # Check whether the property is read only

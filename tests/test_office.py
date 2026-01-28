@@ -49,6 +49,12 @@ class TestExcel(unittest.TestCase):
         self.assertEqual(c.com_object.Value, "Hello world!")
         wkb.Close(SaveChanges=False)
 
+    def test_item_return_type(self):
+        wkb = self.xl_app.workbooks.add()
+        self.assertIsInstance(self.xl_app.workbooks.item(1), xl.Workbook)
+        self.assertIsInstance(wkb.worksheets.item(1), xl.Worksheet)
+        wkb.Close(SaveChanges=False)
+
     def test_excel_types(self):
         wkb = self.xl_app.workbooks.add()
         wks = wkb.worksheets(1)
