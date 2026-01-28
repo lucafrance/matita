@@ -23,10 +23,10 @@ project:
       - file: backlog/item-12.md
       - title: Done v.1.0.1
         children:
-        - file: backlog/item-07.md
+        - file: backlog/done/item-07.md
       - title: Done v.1.0.0
         children:
-        - file: backlog/item-01.md
+        - file: backlog/done/item-01.md
 
     
 site:
