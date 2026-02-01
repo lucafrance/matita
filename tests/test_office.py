@@ -51,10 +51,20 @@ class TestExcel(unittest.TestCase):
 
     def test_item_return_type(self):
         wkb = self.xl_app.workbooks.add()
+        self.assertIsInstance(self.xl_app.workbooks(1), xl.Workbook)
         self.assertIsInstance(self.xl_app.workbooks.item(1), xl.Workbook)
+        self.assertIsInstance(wkb.worksheets(1), xl.Worksheet)
         self.assertIsInstance(wkb.worksheets.item(1), xl.Worksheet)
+
         rng = wkb.worksheets(1).cells(1,1)
+        
+        self.assertIsInstance(rng.Areas(1), xl.Range)
         self.assertIsInstance(rng.Areas.item(1), xl.Range)
+        self.assertIsInstance(rng.Columns(1), xl.Range)
+        self.assertIsInstance(rng.Columns.item(1), xl.Range)
+        self.assertIsInstance(rng.Rows(1), xl.Range)
+        self.assertIsInstance(rng.Rows.item(1), xl.Range)
+
         wkb.Close(SaveChanges=False)
 
     def test_excel_types(self):
@@ -134,7 +144,7 @@ class TestExcel(unittest.TestCase):
         self.assertIsNone(rng.com_object)
         wkb.Close(SaveChanges=False)
     
-    def test_collection_and_sets_methods(self):
+    def test_charts(self):
         wkb = self.xl_app.Workbooks.Add()
         wks = wkb.worksheets(1)
         # Add at least one value to the worksheet, otherwise the SeriesCollection will be empty
