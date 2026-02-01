@@ -406,6 +406,12 @@ class DocPage:
                 code.append(f"        self.{self.property_name} = value")
                 code.append(f"")
 
+        # Add `__call__` method for `item` properties
+        if self.property_name.lower() == "item" and len(self.parameters) > 0:
+            code.append(f"    def __call__(self, {self.parameters_code()}):")
+            code.append(f"        return self.Item({self.parameters_code()})")
+            code.append("")
+
         return code
 
     def to_python_properties(self):
@@ -483,11 +489,6 @@ class DocPage:
         code.append(code_line)
         code.append("")
 
-        if self.method_name.lower() == "item":
-            code.append(f"    def __call__(self, {self.parameters_code()}):")
-            code.append(f"        return self.Item({self.parameters_code()})")
-            code.append("")
-
         return code
 
     def to_python_method_function_aliases(self):
@@ -513,6 +514,12 @@ class DocPage:
                 code.append(f"        \"\"\"Alias for {self.method_name}\"\"\"")
                 code.append(f"        arguments = [{", ".join(self.parameters)}]")
                 code.append(f"        return self.{self.method_name}(*arguments)")
+            code.append("")
+        
+        # Add `__call__` method for `item` methods
+        if self.method_name.lower() == "item":
+            code.append(f"    def __call__(self, {self.parameters_code()}):")
+            code.append(f"        return self.Item({self.parameters_code()})")
             code.append("")
 
         return code
