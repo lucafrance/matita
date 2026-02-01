@@ -231,6 +231,9 @@ class AccessObjectProperties:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -1661,6 +1664,9 @@ class AdditionalData:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Name(self):
         return self.com_object.Name
@@ -1724,6 +1730,9 @@ class AllDatabaseDiagrams:
         arguments = [var]
         return self.Item(*arguments)
 
+    def __call__(self, var=None):
+        return self.Item(var)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -1768,6 +1777,9 @@ class AllForms:
         """Alias for Item"""
         arguments = [var]
         return self.Item(*arguments)
+
+    def __call__(self, var=None):
+        return self.Item(var)
 
     @property
     def Parent(self):
@@ -1814,6 +1826,9 @@ class AllFunctions:
         arguments = [var]
         return self.Item(*arguments)
 
+    def __call__(self, var=None):
+        return self.Item(var)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -1858,6 +1873,9 @@ class AllMacros:
         """Alias for Item"""
         arguments = [var]
         return self.Item(*arguments)
+
+    def __call__(self, var=None):
+        return self.Item(var)
 
     @property
     def Parent(self):
@@ -1904,6 +1922,9 @@ class AllModules:
         arguments = [var]
         return self.Item(*arguments)
 
+    def __call__(self, var=None):
+        return self.Item(var)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -1948,6 +1969,9 @@ class AllQueries:
         """Alias for Item"""
         arguments = [var]
         return self.Item(*arguments)
+
+    def __call__(self, var=None):
+        return self.Item(var)
 
     @property
     def Parent(self):
@@ -1994,6 +2018,9 @@ class AllReports:
         arguments = [var]
         return self.Item(*arguments)
 
+    def __call__(self, var=None):
+        return self.Item(var)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -2038,6 +2065,9 @@ class AllStoredProcedures:
         """Alias for Item"""
         arguments = [var]
         return self.Item(*arguments)
+
+    def __call__(self, var=None):
+        return self.Item(var)
 
     @property
     def Parent(self):
@@ -2084,6 +2114,9 @@ class AllTables:
         arguments = [var]
         return self.Item(*arguments)
 
+    def __call__(self, var=None):
+        return self.Item(var)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -2128,6 +2161,9 @@ class AllViews:
         """Alias for Item"""
         arguments = [var]
         return self.Item(*arguments)
+
+    def __call__(self, var=None):
+        return self.Item(var)
 
     @property
     def Parent(self):
@@ -9898,9 +9934,6 @@ class ChartAxisCollection:
     def __init__(self, chartaxiscollection=None):
         self.com_object= chartaxiscollection
 
-    def __call__(self, index):
-        return self.Item(index)
-
 
 class ChartSeries:
 
@@ -10650,9 +10683,6 @@ class ChartSeriesCollection:
     def __init__(self, chartseriescollection=None):
         self.com_object= chartseriescollection
 
-    def __call__(self, index):
-        return self.Item(index)
-
 
 class ChartValues:
 
@@ -10701,9 +10731,6 @@ class ChartValuesCollection:
 
     def __init__(self, chartvaluescollection=None):
         self.com_object= chartvaluescollection
-
-    def __call__(self, index):
-        return self.Item(index)
 
 
 class CheckBox:
@@ -20860,6 +20887,9 @@ class Controls:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -22986,6 +23016,9 @@ class DependencyObjects:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -25061,6 +25094,9 @@ class Entities:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -30344,6 +30380,9 @@ class FormatConditions:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -30404,6 +30443,9 @@ class Forms:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -32738,6 +32780,9 @@ class ImportExportSpecifications:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -38760,6 +38805,9 @@ class Modules:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -46360,6 +46408,9 @@ class Operations:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -51128,6 +51179,9 @@ class Pages:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Add(self, Before=None):
         arguments = com_arguments([unwrap(a) for a in [Before]])
         return Page(self.com_object.Add(*arguments))
@@ -51727,6 +51781,9 @@ class Printers:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -51771,6 +51828,9 @@ class Properties:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -52791,9 +52851,6 @@ class References:
     def __init__(self, references=None):
         self.com_object= references
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Count(self):
         return self.com_object.Count
@@ -52848,6 +52905,9 @@ class References:
         """Alias for Item"""
         arguments = [var]
         return self.Item(*arguments)
+
+    def __call__(self, var=None):
+        return self.Item(var)
 
     def Remove(self, Reference=None):
         arguments = com_arguments([unwrap(a) for a in [Reference]])
@@ -56398,6 +56458,9 @@ class Reports:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -56466,6 +56529,9 @@ class ReturnVars:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -57648,6 +57714,9 @@ class SharedResources:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -57824,6 +57893,9 @@ class SmartTagActions:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -57838,9 +57910,6 @@ class SmartTagProperties:
 
     def __init__(self, smarttagproperties=None):
         self.com_object= smarttagproperties
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -57871,6 +57940,9 @@ class SmartTagProperties:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -57974,6 +58046,9 @@ class SmartTags:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -62125,6 +62200,9 @@ class TempVars:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -70592,6 +70670,9 @@ class WebServices:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     @property
     def Parent(self):
         return self.com_object.Parent
@@ -70669,6 +70750,9 @@ class WSParameters:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):

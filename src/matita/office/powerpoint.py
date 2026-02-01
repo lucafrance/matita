@@ -203,9 +203,6 @@ class ActionSettings:
     def __init__(self, actionsettings=None):
         self.com_object= actionsettings
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -241,6 +238,9 @@ class ActionSettings:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class AddIn:
@@ -368,9 +368,6 @@ class AddIns:
     def __init__(self, addins=None):
         self.com_object= addins
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -415,6 +412,9 @@ class AddIns:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -475,6 +475,9 @@ class Adjustments:
     def item(self, value):
         """Alias for Item.setter"""
         self.Item = value
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     @property
     def Parent(self):
@@ -742,6 +745,9 @@ class AnimationBehaviors:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class AnimationPoint:
 
@@ -895,6 +901,9 @@ class AnimationPoints:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class AnimationSettings:
@@ -2228,9 +2237,6 @@ class Axes:
     def __init__(self, axes=None):
         self.com_object= axes
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -2275,6 +2281,9 @@ class Axes:
         """Alias for Item"""
         arguments = [Type, AxisGroup]
         return self.Item(*arguments)
+
+    def __call__(self, Type=None, AxisGroup=None):
+        return self.Item(Type, AxisGroup)
 
 
 class Axis:
@@ -3797,9 +3806,6 @@ class Borders:
     def __init__(self, borders=None):
         self.com_object= borders
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -3835,6 +3841,9 @@ class Borders:
         """Alias for Item"""
         arguments = [BorderType]
         return self.Item(*arguments)
+
+    def __call__(self, BorderType=None):
+        return self.Item(BorderType)
 
 
 class Broadcast:
@@ -4449,9 +4458,6 @@ class CategoryCollection:
     def __init__(self, categorycollection=None):
         self.com_object= categorycollection
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -4496,6 +4502,9 @@ class CategoryCollection:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Cell:
@@ -4579,9 +4588,6 @@ class CellRange:
     def __init__(self, cellrange=None):
         self.com_object= cellrange
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -4626,6 +4632,9 @@ class CellRange:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Chart:
@@ -7719,9 +7728,6 @@ class ChartGroups:
     def __init__(self, chartgroups=None):
         self.com_object= chartgroups
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -7766,6 +7772,9 @@ class ChartGroups:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ChartTitle:
@@ -8593,9 +8602,6 @@ class ColorSchemes:
     def __init__(self, colorschemes=None):
         self.com_object= colorschemes
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -8640,6 +8646,9 @@ class ColorSchemes:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Column:
@@ -8715,9 +8724,6 @@ class Columns:
     def __init__(self, columns=None):
         self.com_object= columns
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -8762,6 +8768,9 @@ class Columns:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class CommandEffect:
@@ -9060,6 +9069,9 @@ class Comments:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class ConnectorFormat:
 
@@ -9316,6 +9328,9 @@ class CustomerData:
         """Alias for Item"""
         arguments = [Id]
         return self.Item(*arguments)
+
+    def __call__(self, Id=None):
+        return self.Item(Id)
 
 
 class CustomLayout:
@@ -9702,6 +9717,9 @@ class CustomLayouts:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Paste(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -10451,9 +10469,6 @@ class DataLabels:
     def __init__(self, datalabels=None):
         self.com_object= datalabels
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -10988,6 +11003,9 @@ class DataLabels:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Propagate(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Propagate(*arguments)
@@ -11353,6 +11371,9 @@ class Designs:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Load(self, TemplateName=None, Index=None):
         arguments = com_arguments([unwrap(a) for a in [TemplateName, Index]])
@@ -12228,9 +12249,6 @@ class DocumentWindows:
     def __init__(self, documentwindows=None):
         self.com_object= documentwindows
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -12275,6 +12293,9 @@ class DocumentWindows:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class DownBars:
@@ -13135,6 +13156,9 @@ class ExtraColors:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class FileConverter:
 
@@ -13285,9 +13309,6 @@ class FileConverters:
     def __init__(self, fileconverters=None):
         self.com_object= fileconverters
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Count(self):
         return self.com_object.Count
@@ -13305,6 +13326,9 @@ class FileConverters:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class FillFormat:
@@ -14516,9 +14540,6 @@ class Fonts:
     def __init__(self, fonts=None):
         self.com_object= fonts
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -14554,6 +14575,9 @@ class Fonts:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Replace(self, Original=None, Replacement=None):
         arguments = com_arguments([unwrap(a) for a in [Original, Replacement]])
@@ -14628,9 +14652,6 @@ class FullSeriesCollection:
     def __init__(self, fullseriescollection=None):
         self.com_object= fullseriescollection
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -14675,6 +14696,9 @@ class FullSeriesCollection:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Gridlines:
@@ -14756,9 +14780,6 @@ class GroupShapes:
     def __init__(self, groupshapes=None):
         self.com_object= groupshapes
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -14803,6 +14824,9 @@ class GroupShapes:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Range(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -14886,9 +14910,6 @@ class Guides:
     def __init__(self, guides=None):
         self.com_object= guides
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -14931,6 +14952,9 @@ class Guides:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class HeaderFooter:
@@ -15453,9 +15477,6 @@ class Hyperlinks:
     def __init__(self, hyperlinks=None):
         self.com_object= hyperlinks
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -15491,6 +15512,9 @@ class Hyperlinks:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Interior:
@@ -15954,9 +15978,6 @@ class LegendEntries:
     def __init__(self, legendentries=None):
         self.com_object= legendentries
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -16001,6 +16022,9 @@ class LegendEntries:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class LegendEntry:
@@ -17341,9 +17365,6 @@ class MediaBookmarks:
     def __init__(self, mediabookmarks=None):
         self.com_object= mediabookmarks
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Count(self):
         return self.com_object.Count
@@ -17370,6 +17391,9 @@ class MediaBookmarks:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class MediaFormat:
@@ -18805,9 +18829,6 @@ class NamedSlideShows:
     def __init__(self, namedslideshows=None):
         self.com_object= namedslideshows
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -18853,14 +18874,14 @@ class NamedSlideShows:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class ObjectVerbs:
 
     def __init__(self, objectverbs=None):
         self.com_object= objectverbs
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -18897,6 +18918,9 @@ class ObjectVerbs:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class OLEFormat:
@@ -19308,9 +19332,6 @@ class Panes:
     def __init__(self, panes=None):
         self.com_object= panes
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -19346,6 +19367,9 @@ class Panes:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ParagraphFormat:
@@ -20088,9 +20112,6 @@ class Placeholders:
     def __init__(self, placeholders=None):
         self.com_object= placeholders
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -20140,6 +20161,9 @@ class Placeholders:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Player:
@@ -21394,9 +21418,6 @@ class Points:
     def __init__(self, points=None):
         self.com_object= points
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -21441,6 +21462,9 @@ class Points:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 # PpActionType enumeration
@@ -23715,9 +23739,6 @@ class Presentations:
     def __init__(self, presentations=None):
         self.com_object= presentations
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -23790,6 +23811,9 @@ class Presentations:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Open(self, FileName=None, ReadOnly=None, Untitled=None, WithWindow=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, ReadOnly, Untitled, WithWindow]])
@@ -24321,9 +24345,6 @@ class PrintRanges:
     def __init__(self, printranges=None):
         self.com_object= printranges
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -24379,6 +24400,9 @@ class PrintRanges:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class PropertyEffect:
@@ -24655,9 +24679,6 @@ class ProtectedViewWindows:
     def __init__(self, protectedviewwindows=None):
         self.com_object= protectedviewwindows
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -24693,6 +24714,9 @@ class ProtectedViewWindows:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Open(self, FileName=None, ReadPassword=None, OpenAndRepair=None):
         arguments = com_arguments([unwrap(a) for a in [FileName, ReadPassword, OpenAndRepair]])
@@ -24936,9 +24960,6 @@ class PublishObjects:
     def __init__(self, publishobjects=None):
         self.com_object= publishobjects
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -24975,14 +24996,14 @@ class PublishObjects:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class ResampleMediaTasks:
 
     def __init__(self, resamplemediatasks=None):
         self.com_object= resamplemediatasks
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Count(self):
@@ -25022,6 +25043,9 @@ class ResampleMediaTasks:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Pause(self):
         return self.com_object.Pause()
@@ -25292,9 +25316,6 @@ class Rows:
     def __init__(self, rows=None):
         self.com_object= rows
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -25339,6 +25360,9 @@ class Rows:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Ruler:
@@ -25473,9 +25497,6 @@ class RulerLevels:
     def __init__(self, rulerlevels=None):
         self.com_object= rulerlevels
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -25511,6 +25532,9 @@ class RulerLevels:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ScaleEffect:
@@ -25994,9 +26018,6 @@ class Sequence:
     def __init__(self, sequence=None):
         self.com_object= sequence
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -26168,6 +26189,9 @@ class Sequence:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class Sequences:
 
@@ -26218,6 +26242,9 @@ class Sequences:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Series:
@@ -27440,6 +27467,9 @@ class SeriesCollection:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def NewSeries(self):
         return Series(self.com_object.NewSeries())
@@ -29135,9 +29165,6 @@ class ShapeNodes:
     def __init__(self, shapenodes=None):
         self.com_object= shapenodes
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -29201,6 +29228,9 @@ class ShapeNodes:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def SetEditingType(self, Index=None, EditingType=None):
         arguments = com_arguments([unwrap(a) for a in [Index, EditingType]])
         return self.com_object.SetEditingType(*arguments)
@@ -29248,9 +29278,6 @@ class ShapeRange:
 
     def __init__(self, shaperange=None):
         self.com_object= shaperange
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def ActionSettings(self):
@@ -30346,6 +30373,9 @@ class ShapeRange:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def MergeShapes(self):
         return self.com_object.MergeShapes()
 
@@ -30482,9 +30512,6 @@ class Shapes:
 
     def __init__(self, shapes=None):
         self.com_object= shapes
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -30878,6 +30905,9 @@ class Shapes:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Paste(self):
         return ShapeRange(self.com_object.Paste())
@@ -31515,9 +31545,6 @@ class SlideRange:
     def __init__(self, sliderange=None):
         self.com_object= sliderange
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -32037,6 +32064,9 @@ class SlideRange:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def MoveTo(self, toPos=None):
         arguments = com_arguments([unwrap(a) for a in [toPos]])
         return self.com_object.MoveTo(*arguments)
@@ -32091,9 +32121,6 @@ class Slides:
 
     def __init__(self, slides=None):
         self.com_object= slides
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -32181,6 +32208,9 @@ class Slides:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Paste(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -33499,9 +33529,6 @@ class SlideShowWindows:
     def __init__(self, slideshowwindows=None):
         self.com_object= slideshowwindows
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -33537,6 +33564,9 @@ class SlideShowWindows:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class SoundEffect:
@@ -34097,9 +34127,6 @@ class TabStops:
     def __init__(self, tabstops=None):
         self.com_object= tabstops
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -34173,6 +34200,9 @@ class TabStops:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class Tags:
 
@@ -34232,6 +34262,9 @@ class Tags:
         """Alias for Item"""
         arguments = [Name]
         return self.Item(*arguments)
+
+    def __call__(self, Name=None):
+        return self.Item(Name)
 
     def Name(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -35877,9 +35910,6 @@ class TextRange2:
     def __init__(self, textrange2=None):
         self.com_object= textrange2
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -36265,6 +36295,9 @@ class TextRange2:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def LtrRun(self):
         return self.com_object.LtrRun()
 
@@ -36469,9 +36502,6 @@ class TextStyleLevels:
     def __init__(self, textstylelevels=None):
         self.com_object= textstylelevels
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -36508,14 +36538,14 @@ class TextStyleLevels:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class TextStyles:
 
     def __init__(self, textstyles=None):
         self.com_object= textstyles
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -36552,6 +36582,9 @@ class TextStyles:
         """Alias for Item"""
         arguments = [Type]
         return self.Item(*arguments)
+
+    def __call__(self, Type=None):
+        return self.Item(Type)
 
 
 class Theme:
@@ -36657,9 +36690,6 @@ class ThemeVariants:
     def __init__(self, themevariants=None):
         self.com_object= themevariants
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return self.com_object.Application
@@ -36695,6 +36725,9 @@ class ThemeVariants:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ThreeDFormat:
@@ -38673,6 +38706,9 @@ class Trendlines:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class UpBars:

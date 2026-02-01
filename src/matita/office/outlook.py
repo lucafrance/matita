@@ -314,9 +314,6 @@ class Accounts:
     def __init__(self, accounts=None):
         self.com_object= accounts
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -365,6 +362,9 @@ class Accounts:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class AccountSelector:
@@ -724,6 +724,9 @@ class Actions:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -840,6 +843,9 @@ class AddressEntries:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Sort(self, Property=None, Order=None):
         arguments = com_arguments([unwrap(a) for a in [Property, Order]])
@@ -1239,9 +1245,6 @@ class AddressLists:
     def __init__(self, addresslists=None):
         self.com_object= addresslists
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -1290,6 +1293,9 @@ class AddressLists:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class AddressRuleCondition:
@@ -3629,6 +3635,9 @@ class Attachments:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -3643,9 +3652,6 @@ class AttachmentSelection:
 
     def __init__(self, attachmentselection=None):
         self.com_object= attachmentselection
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -3718,6 +3724,9 @@ class AttachmentSelection:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class AutoFormatRule:
@@ -3900,6 +3909,9 @@ class AutoFormatRules:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -5585,6 +5597,9 @@ class Categories:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -6087,6 +6102,9 @@ class Columns:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -6189,9 +6207,6 @@ class Conflicts:
     def __init__(self, conflicts=None):
         self.com_object= conflicts
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -6284,6 +6299,9 @@ class Conflicts:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ContactItem:
@@ -12634,9 +12652,6 @@ class Exceptions:
     def __init__(self, exceptions=None):
         self.com_object= exceptions
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -12685,6 +12700,9 @@ class Exceptions:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ExchangeDistributionList:
@@ -14362,6 +14380,9 @@ class Explorers:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class Folder:
 
@@ -15056,6 +15077,9 @@ class Folders:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -16813,14 +16837,14 @@ class Inspectors:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class ItemProperties:
 
     def __init__(self, itemproperties=None):
         self.com_object= itemproperties
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -16879,6 +16903,9 @@ class ItemProperties:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -17138,6 +17165,9 @@ class Items:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -22420,6 +22450,9 @@ class NavigationFolders:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, RemovableFolder=None):
         arguments = com_arguments([unwrap(a) for a in [RemovableFolder]])
         return self.com_object.Remove(*arguments)
@@ -22536,9 +22569,6 @@ class NavigationGroups:
     def __init__(self, navigationgroups=None):
         self.com_object= navigationgroups
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -22619,6 +22649,9 @@ class NavigationGroups:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class NavigationModule:
@@ -22722,9 +22755,6 @@ class NavigationModules:
     def __init__(self, navigationmodules=None):
         self.com_object= navigationmodules
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -22787,6 +22817,9 @@ class NavigationModules:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class NavigationPane:
@@ -30034,6 +30067,9 @@ class OrderFields:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -30209,6 +30245,9 @@ class OutlookBarGroups:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -30434,6 +30473,9 @@ class OutlookBarShortcuts:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -30557,6 +30599,9 @@ class Pages:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -30571,9 +30616,6 @@ class Panes:
 
     def __init__(self, panes=None):
         self.com_object= panes
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -30623,6 +30665,9 @@ class Panes:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class PeopleView:
@@ -32529,6 +32574,9 @@ class PropertyPages:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -32954,6 +33002,9 @@ class Recipients:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -33496,9 +33547,6 @@ class Reminders:
     def __init__(self, reminders=None):
         self.com_object= reminders
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -33547,6 +33595,9 @@ class Reminders:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -34981,9 +35032,6 @@ class Results:
     def __init__(self, results=None):
         self.com_object= results
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -35105,6 +35153,9 @@ class Results:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def ResetColumns(self):
         return self.com_object.ResetColumns()
 
@@ -35144,9 +35195,6 @@ class Row:
 
     def __init__(self, row=None):
         self.com_object= row
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -35212,6 +35260,9 @@ class Row:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def LocalTimeToUTC(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -35481,9 +35532,6 @@ class RuleActions:
     def __init__(self, ruleactions=None):
         self.com_object= ruleactions
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -35751,6 +35799,9 @@ class RuleActions:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class RuleCondition:
 
@@ -35825,9 +35876,6 @@ class RuleConditions:
 
     def __init__(self, ruleconditions=None):
         self.com_object= ruleconditions
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Account(self):
@@ -36193,14 +36241,14 @@ class RuleConditions:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
 
 class Rules:
 
     def __init__(self, rules=None):
         self.com_object= rules
-
-    def __call__(self, index):
-        return self.Item(index)
 
     @property
     def Application(self):
@@ -36287,6 +36335,9 @@ class Rules:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -36446,9 +36497,6 @@ class Selection:
     def __init__(self, selection=None):
         self.com_object= selection
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -36520,6 +36568,9 @@ class Selection:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class SelectNamesDialog:
@@ -39023,9 +39074,6 @@ class SimpleItems:
     def __init__(self, simpleitems=None):
         self.com_object= simpleitems
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -39074,6 +39122,9 @@ class SimpleItems:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class SolutionsModule:
@@ -39673,9 +39724,6 @@ class Stores:
     def __init__(self, stores=None):
         self.com_object= stores
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -39724,6 +39772,9 @@ class Stores:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class SyncObject:
@@ -39791,9 +39842,6 @@ class SyncObjects:
     def __init__(self, syncobjects=None):
         self.com_object= syncobjects
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def AppFolders(self):
         return self.com_object.AppFolders
@@ -39856,6 +39904,9 @@ class SyncObjects:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class Tab:
@@ -46033,9 +46084,6 @@ class TimeZones:
     def __init__(self, timezones=None):
         self.com_object= timezones
 
-    def __call__(self, index):
-        return self.Item(index)
-
     @property
     def Application(self):
         return Application(self.com_object.Application)
@@ -46112,6 +46160,9 @@ class TimeZones:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
 
 class ToggleButton:
@@ -46269,6 +46320,9 @@ class UserDefinedProperties:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Refresh(self):
         return self.com_object.Refresh()
@@ -46443,6 +46497,9 @@ class UserProperties:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
@@ -46980,6 +47037,9 @@ class ViewFields:
         arguments = [Index]
         return self.Item(*arguments)
 
+    def __call__(self, Index=None):
+        return self.Item(Index)
+
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])
         return self.com_object.Remove(*arguments)
@@ -47243,6 +47303,9 @@ class Views:
         """Alias for Item"""
         arguments = [Index]
         return self.Item(*arguments)
+
+    def __call__(self, Index=None):
+        return self.Item(Index)
 
     def Remove(self, Index=None):
         arguments = com_arguments([unwrap(a) for a in [Index]])

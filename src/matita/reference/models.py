@@ -409,7 +409,7 @@ class DocPage:
         # Add `__call__` method for `item` properties
         if self.property_name.lower() == "item" and len(self.parameters) > 0:
             code.append(f"    def __call__(self, {self.parameters_code()}):")
-            code.append(f"        return self.Item({self.parameters_code()})")
+            code.append(f"        return self.Item({", ".join(self.parameters)})")
             code.append("")
 
         return code
@@ -517,9 +517,9 @@ class DocPage:
             code.append("")
         
         # Add `__call__` method for `item` methods
-        if self.method_name.lower() == "item":
+        if self.method_name.lower() == "item" and len(self.parameters) > 0:
             code.append(f"    def __call__(self, {self.parameters_code()}):")
-            code.append(f"        return self.Item({self.parameters_code()})")
+            code.append(f"        return self.Item({", ".join(self.parameters)})")
             code.append("")
 
         return code
