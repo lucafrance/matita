@@ -36,8 +36,8 @@ def generate_report():
         # Add heading
         country_wks.name = country
         country_wks.cells(2, 2).value = f"Population of {country}"
-        country_wks.rows.item(2).style = "Heading 1"
-        country_wks.columns.item(1).column_width = 3
+        country_wks.rows(2).style = "Heading 1"
+        country_wks.columns(1).column_width = 3
 
         # Add table
         country_wks.cells(4, 2).Value = "Year"
