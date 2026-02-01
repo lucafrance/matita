@@ -21,7 +21,7 @@ project:
       - file: backlog/item-12.md
       - title: Done v.1.0.3
         children:
-        - file: backlog/item-06.md
+        - file: backlog/done/item-06.md
       - title: Done v.1.0.2
         children:
         - file: backlog/done/item-11.md
