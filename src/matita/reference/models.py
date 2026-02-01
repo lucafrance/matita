@@ -295,14 +295,6 @@ class DocPage:
             code.append(f"        self.com_object= {self.object_name.lower()}")
             code.append(f"")
 
-        # Call method for collections and sets
-        # I expect an `Item` property to be always there to retrieve the individual items.
-        # The `Item` property is expected to return the COM object wrapped in the right *matita* class
-        if self.is_collection or self.is_set:
-            code.append(f"    def __call__(self, index):")
-            code.append(f"        return self.Item(index)")
-            code.append(f"")
-
         code += self.to_python_properties()
         code += self.to_python_methods()
         code.append("")
@@ -490,6 +482,12 @@ class DocPage:
         code_line = " "*8 + code_line
         code.append(code_line)
         code.append("")
+
+        if self.method_name.lower() == "item":
+            code.append(f"    def __call__(self, {self.parameters_code()}):")
+            code.append(f"        return self.Item({self.parameters_code()})")
+            code.append("")
+
         return code
 
     def to_python_method_function_aliases(self):
