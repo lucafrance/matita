@@ -121,7 +121,7 @@ This is different from other popular Python packages for Office automation, such
 ### `matita` vs `win32com` (part of `pywin32`)
 
 `win32com` is the typical way in Python to dispatch COM objects.
-There are some quirks with `win32com` objects due differences in how COM and Python work.
+There are some quirks with `win32com` objects due to differences in how COM and Python work.
 
 ```python
 import win32com.client
